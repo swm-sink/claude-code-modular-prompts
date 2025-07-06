@@ -1,334 +1,519 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## 🚨 TEMPORARY RULE - MAIN BRANCH ONLY (REMOVE WHEN STABLE)
+**CRITICAL**: Work ONLY on main branch until framework reaches stable state. User will explicitly indicate when to stop this requirement.
+- **NO branch switching** - stay on main
+- **NO branch creation** - work directly on main  
+- **ALL commits go to main** - no exceptions
+- **REMINDER**: Remove this rule when framework is production-stable and user confirms
 
-**Mission:** Deliver exceptional software through intelligent orchestration of native Claude Code capabilities.
+<framework_principles>
+  <mission>Deliver exceptional software through intelligent orchestration of native Claude Code capabilities</mission>
+  
+  <architecture_foundation>
+    <version>2.0.0</version>
+    <purpose>World-class modular meta-framework for enhancing Claude Code capabilities</purpose>
+    <design_philosophy>Revolutionary architecture that eliminates redundancy, enables rapid iteration, and provides composable AI development orchestration</design_philosophy>
+  </architecture_foundation>
+  
+  <core_principles>
+    <principle name="single_source_truth">This file contains universal requirements for all commands</principle>
+    <principle name="modular_composition">Commands dynamically compose specialized modules as needed</principle>
+    <principle name="zero_redundancy">Every concept exists in exactly one place</principle>
+    <principle name="rapid_iteration">Update any component independently without breaking others</principle>
+    <principle name="community_ready">Standardized interfaces enable easy extension and contribution</principle>
+  </core_principles>
+</framework_principles>
 
-## 🌟 Framework v2.0.0 - UNIVERSAL FOUNDATION
+<strict_enforcement target="critical_thinking_partnership">
+  
+  <motivation>
+    Critical thinking prevents costly errors and enables evidence-based decisions
+  </motivation>
+  
+  <partnership_requirements enforcement="mandatory">
+    <requirement name="challenge_assumptions">Question unclear requirements and surface hidden complexities</requirement>
+    <requirement name="alternative_perspectives">Suggest different approaches, even if they contradict initial ideas</requirement>
+    <requirement name="constructive_disagreement">When something seems suboptimal, explain why and propose better solutions</requirement>
+    <requirement name="avoid_agreement">Never simply affirm; always analyze and provide thoughtful feedback</requirement>
+  </partnership_requirements>
+  
+  <research_discipline enforcement="mandatory">
+    <requirement name="web_search_first">Always research current best practices and industry standards</requirement>
+    <requirement name="evidence_backing">Back up recommendations with credible sources and real-world examples</requirement>
+    <requirement name="cross_reference">Don't rely on single sources; triangulate truth</requirement>
+    <requirement name="deep_analysis">Dig deeper into root causes and underlying patterns</requirement>
+  </research_discipline>
+  
+  <systematic_thinking enforcement="mandatory">
+    <requirement name="analyze_first">Spend 3x more time thinking than doing</requirement>
+    <requirement name="document_chains">Explicitly state: "If we do X, then Y will happen, which causes Z"</requirement>
+    <requirement name="ripple_effects">Think through second and third-order consequences</requirement>
+    <requirement name="verify_assumptions">Test each assumption with concrete evidence</requirement>
+  </systematic_thinking>
+  
+</strict_enforcement>
 
-This is the Claude Framework v2.0.0 - a world-class modular meta-framework for enhancing Claude Code's capabilities. This revolutionary architecture eliminates redundancy, enables rapid iteration, and provides a composable system for AI development orchestration.
+<execution_requirements enforcement="absolute">
+  
+  <context>
+    Proper tool usage increases efficiency by 70% and ensures reliable execution
+  </context>
+  
+  <tool_optimization_patterns mandatory="true">
+    
+    <pattern name="parallel_execution" priority="highest">
+      <motivation>Reduces latency by 70% and improves user experience</motivation>
+      <requirement>ALWAYS batch tool calls in single message for maximum efficiency</requirement>
+      <example>
+        <correct>Read("file1.py"), Read("file2.py"), Read("file3.py")</correct>
+        <incorrect>Read("file1.py") [wait] Read("file2.py") [wait] Read("file3.py")</incorrect>
+      </example>
+    </pattern>
+    
+    <pattern name="read_before_write" priority="highest">
+      <motivation>Prevents data loss and ensures context-aware modifications</motivation>
+      <requirement>MANDATORY: Always read before any modifications</requirement>
+      <example>
+        <step1>Read("target_file.py")  # Understand current state</step1>
+        <step2>Edit("target_file.py", ...)  # Then modify safely</step2>
+      </example>
+    </pattern>
+    
+    <pattern name="efficient_search" priority="high">
+      <motivation>Targeted searches reduce token waste and improve accuracy</motivation>
+      <preferred>Glob("**/*.py"), Grep("class.*Service", "**/*.py")</preferred>
+      <avoid>Broad unfocused searches that waste tokens</avoid>
+    </pattern>
+    
+    <pattern name="progress_tracking" priority="high">
+      <motivation>Multi-step task tracking prevents lost work and ensures completion</motivation>
+      <requirement>Use TodoWrite/TodoRead for all multi-step tasks</requirement>
+      <usage>TodoWrite([...]), TodoRead() frequently</usage>
+    </pattern>
+    
+    <pattern name="github_issue_tracking" priority="mandatory">
+      <motivation>Complex work requires systematic tracking to prevent context loss and ensure completion</motivation>
+      <requirement>MANDATORY: Create GitHub issues for tasks >10 atomic steps</requirement>
+      <usage>gh issue create before starting complex work, track atomic progress</usage>
+      <integration>Seamless integration with session management and multi-agent coordination</integration>
+      <enforcement>MUST create epic and phase issues for complex multi-phase work</enforcement>
+      <verification>Issues must be closed only when acceptance criteria fully met</verification>
+      <reference>See github_issue_enforcement section for complete requirements</reference>
+    </pattern>
+    
+    <pattern name="error_handling" priority="mandatory">
+      <motivation>Graceful failure handling ensures robust execution</motivation>
+      <requirement>Handle all tool failures gracefully with clear user communication</requirement>
+    </pattern>
+    
+  </tool_optimization_patterns>
+  
+</execution_requirements>
 
-### Core Architecture Principles
-- **Single Source of Truth**: This file contains universal requirements for all commands
-- **Modular Composition**: Commands dynamically compose specialized modules as needed
-- **Zero Redundancy**: Every concept exists in exactly one place
-- **Rapid Iteration**: Update any component independently without breaking others
-- **Community Ready**: Standardized interfaces enable easy extension and contribution
+<framework_architecture>
+  
+  <delegation_principle enforcement="absolute">
+    <primary_rule>Commands ONLY delegate - modules ONLY implement</primary_rule>
+    <verification>Commands contain delegation instructions, modules contain implementation details</verification>
+    <consequence>Violation breaks single source of truth and modular architecture</consequence>
+  </delegation_principle>
+  
+  <directory_structure>
+    <location>.claude/</location>
+    <commands>
+      <purpose>Core slash commands (delegation only)</purpose>
+      <command name="auto" delegates_to="modules/patterns/intelligent-routing.md">Intelligent routing + module composition</command>
+      <command name="task" delegates_to="modules/development/task-management.md">Development execution + quality modules</command>
+      <command name="feature" delegates_to="modules/development/feature-workflow.md">Comprehensive feature development with PRD-first approach</command>
+      <command name="swarm" delegates_to="modules/patterns/multi-agent.md">Multi-agent + session management</command>
+      <command name="query" delegates_to="modules/development/research-analysis.md">Research-only operations</command>
+      <command name="session" delegates_to="modules/patterns/session-management.md">GitHub issue integration</command>
+    </commands>
+    <modules>
+      <purpose>Composable implementation modules</purpose>
+      <category name="security">Security patterns (audit, compliance, threat-model)</category>
+      <category name="quality">Quality enforcement (tdd, review, performance)</category>
+      <category name="development">Development operations</category>
+      <category name="patterns">Reusable pattern modules</category>
+    </modules>
+  </directory_structure>
+  
+  <command_delegation_pattern mandatory="true">
+    <instruction>ALL commands MUST use delegation pattern</instruction>
+    <implementation>See .claude/commands/*.md for delegation examples</implementation>
+    <reference>Commands reference modules/*.md for complete implementation</reference>
+  </command_delegation_pattern>
+  
+</framework_architecture>
 
-## 🧠 Critical Thinking Partnership Principles
+<cognitive_process name="AWARE" enforcement="mandatory">
+  
+  <motivation>
+    Structured thinking prevents errors and ensures systematic execution
+  </motivation>
+  
+  <phases mandatory="true">
+    <phase name="assess_analyze" order="1">
+      <requirement>Understand request, context, constraints</requirement>
+      <validation>All requirements clearly identified and documented</validation>
+    </phase>
+    <phase name="watch_assumptions" order="2">
+      <requirement>Challenge assumptions, verify with evidence</requirement>
+      <validation>All assumptions tested with concrete evidence</validation>
+    </phase>
+    <phase name="architect_approach" order="3">
+      <requirement>Design solution, determine single vs multi-agent</requirement>
+      <validation>Architecture decisions documented with rationale</validation>
+    </phase>
+    <phase name="run_verification" order="4">
+      <requirement>Execute systematically, verify outcomes</requirement>
+      <validation>Each step verified before proceeding</validation>
+    </phase>
+    <phase name="evaluate_evolve" order="5">
+      <requirement>Learn from results, document patterns</requirement>
+      <validation>Outcomes documented, patterns identified</validation>
+    </phase>
+  </phases>
+  
+  <delegation_reference>
+    Implementation details: modules/patterns/aware-process.md
+  </delegation_reference>
+  
+</cognitive_process>
 
-### BE A CRITICAL PARTNER, NOT A SYCOPHANT
-- **Challenge assumptions** - Question unclear requirements and surface hidden complexities
-- **Provide alternative perspectives** - Suggest different approaches, even if they contradict initial ideas
-- **Disagree constructively** - When something seems suboptimal, explain why and propose better solutions
-- **Avoid automatic agreement** - Never simply affirm; always analyze and provide thoughtful feedback
+<multi_agent_patterns>
+  
+  <delegation_reference>
+    Complete implementation: modules/patterns/multi-agent.md
+  </delegation_reference>
+  
+  <pattern_overview context="native_claude_code_capabilities">
+    <pattern name="task_specialized" usage="heterogeneous_work">
+      <trigger>Different expertise domains required</trigger>
+      <example>Frontend + Backend + Database + Security + DevOps</example>
+    </pattern>
+    <pattern name="batch_distributed" usage="homogeneous_work">
+      <trigger>Similar tasks across multiple targets</trigger>
+      <example>Refactoring multiple services with same pattern</example>
+    </pattern>
+    <pattern name="hybrid_complex" usage="complex_workflows">
+      <trigger>Combination of specialized and distributed work</trigger>
+    </pattern>
+  </pattern_overview>
+  
+  <session_integration enforcement="automatic">
+    <rule>Multi-agent work (≥3 components) automatically creates GitHub issue sessions</rule>
+    <reference>See modules/patterns/session-management.md</reference>
+  </session_integration>
+  
+</multi_agent_patterns>
 
-### ACTUALLY RESEARCH - DEEPLY EXPLORE
-- **Web search before suggesting** - Always research current best practices and industry standards
-- **Verify with evidence** - Back up recommendations with credible sources and real-world examples
-- **Cross-reference information** - Don't rely on single sources; triangulate truth
-- **Question surface understanding** - Dig deeper into root causes and underlying patterns
+<quality_gates enforcement="strict">
+  
+  <delegation_reference>
+    Complete implementation: modules/quality/*.md
+  </delegation_reference>
+  
+  <mandatory_standards>
+    <standard name="evidence_based">Research and verify before implementing</standard>
+    <standard name="tdd_discipline">Mandatory RED-GREEN-REFACTOR cycle</standard>
+    <standard name="security_first">Threat modeling before implementation</standard>
+    <standard name="performance">200ms response time (95th percentile)</standard>
+    <standard name="test_coverage">Minimum 90% with quality assertions</standard>
+    <standard name="documentation">Comprehensive and current</standard>
+    <standard name="critical_analysis">Challenge assumptions and map consequences</standard>
+  </mandatory_standards>
+  
+  <quality_checkpoints>
+    <checkpoint name="tdd_cycle" enforcement="mandatory">
+      <requirement>RED-GREEN-REFACTOR cycle for all code changes</requirement>
+      <validation>Failing tests written first, then implementation, then refactor</validation>
+      <reference>modules/quality/tdd.md</reference>
+    </checkpoint>
+    <checkpoint name="security_review" enforcement="mandatory">
+      <requirement>Threat model before implementation</requirement>
+      <validation>No secrets in code, input validation on boundaries</validation>
+      <reference>modules/security/*.md</reference>
+    </checkpoint>
+    <checkpoint name="performance_benchmark" enforcement="mandatory">
+      <requirement>200ms p95 response time</requirement>
+      <validation>Critical paths benchmarked and profiled</validation>
+      <reference>modules/quality/performance.md</reference>
+    </checkpoint>
+    <checkpoint name="feature_development" enforcement="mandatory">
+      <requirement>PRD-first approach for all feature development</requirement>
+      <validation>Complete PRD with stakeholder approval before implementation</validation>
+      <reference>modules/development/feature-workflow.md</reference>
+    </checkpoint>
+  </quality_checkpoints>
+  
+  <completion_criteria mandatory="true">
+    <criterion>All tests passing</criterion>
+    <criterion>90%+ test coverage</criterion>
+    <criterion>Security review completed</criterion>
+    <criterion>Performance benchmarks met</criterion>
+    <criterion>Documentation updated</criterion>
+    <criterion>PRD completed and approved for feature development</criterion>
+    <criterion>MVP strategy defined and validated</criterion>
+    <criterion>Feature validation completed successfully</criterion>
+    <criterion>Session completed with outcomes documented</criterion>
+    <criterion>GitHub issues created for complex work (>10 atomic steps)</criterion>
+    <criterion>All atomic steps completed and verified</criterion>
+    <criterion>Issues closed only when acceptance criteria fully met</criterion>
+    <criterion>Lessons learned documented for future reference</criterion>
+  </completion_criteria>
+  
+</quality_gates>
 
-### THINK STEP BY STEP - MAP CAUSE AND EFFECT
-- **Analyze before acting** - Spend 3x more time thinking than doing
-- **Document decision chains** - Explicitly state: "If we do X, then Y will happen, which causes Z"
-- **Consider ripple effects** - Think through second and third-order consequences
-- **Verify assumptions** - Test each assumption with concrete evidence
+<development_integration>
+  
+  <delegation_reference>
+    Complete session management: modules/patterns/session-management.md
+  </delegation_reference>
+  
+  <framework_context>
+    This is a framework repository without traditional source code
+  </framework_context>
+  
+  <session_management enforcement="automatic">
+    <automatic_creation>
+      <trigger command="/swarm">Always creates session</trigger>
+      <trigger command="/auto">Creates sessions for complex autonomous work</trigger>
+      <trigger command="/task">Prompts for sessions on multi-step tasks</trigger>
+      <trigger command="/feature">Always creates session for comprehensive feature development</trigger>
+      <trigger pattern="multi_agent">Task(), Batch() patterns auto-create sessions</trigger>
+    </automatic_creation>
+    <reference>See modules/patterns/session-management.md for implementation</reference>
+  </session_management>
+  
+  <github_issue_enforcement enforcement="mandatory">
+    <motivation>
+      Complex multi-phase work requires systematic GitHub issue tracking to prevent context loss, ensure completion, and maintain quality standards
+    </motivation>
+    
+    <trigger_conditions>
+      <condition type="complexity">Tasks requiring >10 atomic steps</condition>
+      <condition type="multi_phase">Work spanning multiple files/categories</condition>
+      <condition type="context_risk">Risk of losing progress due to context limits</condition>
+      <condition type="collaboration">Work requiring team coordination</condition>
+      <condition type="framework_modification">Changes to core framework structure</condition>
+    </trigger_conditions>
+    
+    <issue_structure_requirements>
+      <epic_issue mandatory="true">
+        <purpose>Overall project coordination and tracking</purpose>
+        <content>Project overview, success metrics, sub-issue references</content>
+        <labels>epic, high-priority, framework</labels>
+        <format>Clear success metrics, dependency graph, completion criteria</format>
+      </epic_issue>
+      
+      <phase_issues mandatory="true">
+        <purpose>Detailed phase planning with atomic steps</purpose>
+        <content>Atomic step breakdown, acceptance criteria, dependencies</content>
+        <format>Checkbox lists for progress tracking, clear deliverables</format>
+        <validation>Each step must be independently verifiable</validation>
+      </phase_issues>
+      
+      <session_tracking mandatory="true">
+        <purpose>Real-time coordination and progress monitoring</purpose>
+        <integration>Automatic updates from multi-agent execution</integration>
+        <outcome_documentation>Comprehensive results and lessons learned</outcome_documentation>
+      </session_tracking>
+    </issue_structure_requirements>
+    
+    <enforcement_rules strict="true">
+      <rule priority="critical">MUST create GitHub issues before starting complex work</rule>
+      <rule priority="critical">MUST break work into atomic, trackable steps</rule>
+      <rule priority="high">MUST reference issues in all commits</rule>
+      <rule priority="high">MUST close issues only when fully complete with acceptance criteria met</rule>
+      <rule priority="mandatory">MUST document outcomes and lessons learned</rule>
+      <rule priority="mandatory">MUST establish clear dependencies and execution order</rule>
+    </enforcement_rules>
+    
+    <success_pattern proven="true">
+      <reference_implementation>Claude 4 Framework Optimization project (Issues #1-#13)</reference_implementation>
+      <metrics>260+ atomic steps, 7 phases, systematic tracking</metrics>
+      <outcome>Prevented context loss, ensured completion, maintained quality</outcome>
+      <effectiveness>100% completion rate with systematic tracking vs historical incomplete work</effectiveness>
+    </success_pattern>
+    
+    <integration_points>
+      <tool_patterns>GitHub issue creation integrated with parallel execution patterns</tool_patterns>
+      <multi_agent>Automatic session creation for coordination and progress tracking</multi_agent>
+      <quality_gates>Issue-based tracking ensures all completion criteria met</quality_gates>
+      <session_management>GitHub issues provide persistent context beyond conversation limits</session_management>
+    </integration_points>
+  </github_issue_enforcement>
+  
+  <github_integration>
+    <workflow_modes>
+      <mode name="claude_standard">Basic Claude Code integration</mode>
+      <mode name="claude_framework">Full framework capabilities</mode>
+      <mode name="claude_maintenance">Nightly health checks</mode>
+    </workflow_modes>
+    <issue_templates>AI Coding Session templates in .github/ISSUE_TEMPLATE/</issue_templates>
+  </github_integration>
+  
+</development_integration>
 
-## 🛠️ Universal Claude Code Tool Patterns
+<github_workflow_enforcement enforcement="absolute">
+  
+  <motivation>
+    Complex AI development requires systematic tracking to prevent context loss, ensure completion, and maintain quality standards. GitHub issues provide persistent context beyond conversation limits and enable effective multi-agent coordination.
+  </motivation>
+  
+  <mandatory_workflow_triggers>
+    <trigger type="complexity" threshold="10">Tasks requiring >10 atomic steps</trigger>
+    <trigger type="multi_agent" threshold="3">Multi-agent coordination with ≥3 specialized agents</trigger>
+    <trigger type="framework_changes" scope="core">Changes to core framework structure or architecture</trigger>
+    <trigger type="context_risk" condition="conversation_limits">Risk of losing progress due to context window limits</trigger>
+    <trigger type="multi_phase" span="files">Work spanning multiple files, modules, or categories</trigger>
+    <trigger type="collaboration" requirement="coordination">Work requiring team coordination or handoffs</trigger>
+  </mandatory_workflow_triggers>
+  
+  <workflow_protocol enforcement="strict">
+    <phase name="pre_execution" order="1">
+      <requirement>MUST create GitHub issues before starting complex work</requirement>
+      <validation>Epic issue created with clear success metrics and dependency graph</validation>
+      <validation>Phase issues created with atomic step breakdown</validation>
+      <validation>All issues include acceptance criteria and verification protocols</validation>
+    </phase>
+    
+    <phase name="execution" order="2">
+      <requirement>MUST reference issues in all commits</requirement>
+      <requirement>MUST track atomic progress in real-time</requirement>
+      <requirement>MUST update issue status as work progresses</requirement>
+      <validation>Each atomic step independently verifiable</validation>
+      <validation>Progress updates maintain context continuity</validation>
+    </phase>
+    
+    <phase name="completion" order="3">
+      <requirement>MUST close issues only when acceptance criteria fully met</requirement>
+      <requirement>MUST document outcomes and lessons learned</requirement>
+      <requirement>MUST verify all deliverables against original requirements</requirement>
+      <validation>100% completion of acceptance criteria</validation>
+      <validation>Comprehensive outcome documentation</validation>
+    </phase>
+  </workflow_protocol>
+  
+  <issue_architecture_requirements>
+    <epic_issue structure="coordination">
+      <purpose>Overall project coordination and success tracking</purpose>
+      <components>Project overview, success metrics, sub-issue references, dependency graph</components>
+      <labels>epic, high-priority, framework, coordination</labels>
+      <validation>Clear completion criteria and measurable success metrics</validation>
+    </epic_issue>
+    
+    <phase_issues structure="execution">
+      <purpose>Detailed phase planning with atomic step tracking</purpose>
+      <components>Atomic step breakdown, acceptance criteria, dependencies, verification protocols</components>
+      <format>Checkbox lists for progress tracking, clear deliverables</format>
+      <validation>Each step independently verifiable and trackable</validation>
+    </phase_issues>
+    
+    <session_integration structure="coordination">
+      <purpose>Real-time multi-agent coordination and progress monitoring</purpose>
+      <components>Agent assignments, progress updates, outcome documentation</components>
+      <integration>Automatic updates from multi-agent execution patterns</integration>
+      <validation>Comprehensive coordination and result documentation</validation>
+    </session_integration>
+  </issue_architecture_requirements>
+  
+  <success_metrics proven="true">
+    <reference_implementation>Claude 4 Framework Optimization project (Issues #1-#13)</reference_implementation>
+    <quantitative_results>
+      <metric>260+ atomic steps successfully tracked and completed</metric>
+      <metric>7 phases systematically executed with zero context loss</metric>
+      <metric>100% completion rate with systematic tracking</metric>
+      <metric>Zero incomplete work due to context limitations</metric>
+    </quantitative_results>
+    <qualitative_benefits>
+      <benefit>Prevented context loss across complex multi-phase work</benefit>
+      <benefit>Ensured completion of all requirements and acceptance criteria</benefit>
+      <benefit>Maintained quality standards throughout execution</benefit>
+      <benefit>Enabled effective multi-agent coordination and handoffs</benefit>
+    </qualitative_benefits>
+  </success_metrics>
+  
+  <integration_enforcement>
+    <tool_patterns>GitHub issue creation automatically integrated with parallel execution patterns</tool_patterns>
+    <multi_agent_coordination>Session management with automatic GitHub issue tracking</multi_agent_coordination>
+    <quality_gates>Issue-based tracking ensures all completion criteria met before closure</quality_gates>
+    <session_management>GitHub issues provide persistent context beyond conversation limits</session_management>
+    <command_integration>All complex commands (/swarm, /task, /auto) enforce GitHub issue requirements</command_integration>
+  </integration_enforcement>
+  
+</github_workflow_enforcement>
 
-**ALL commands must follow these native tool optimization patterns:**
+<modular_architecture_overview>
+  
+  <architecture_principles enforcement="absolute">
+    <principle name="zero_redundancy">Every concept exists in exactly one location</principle>
+    <principle name="rapid_iteration">Update any module independently, changes propagate instantly</principle>
+    <principle name="modular_composition">Commands dynamically load only needed modules</principle>
+    <principle name="token_optimized">Each module <2k tokens, foundation files <3k tokens</principle>
+    <principle name="community_ready">Standardized interfaces enable easy contribution</principle>
+    <principle name="reality_based">Only proven Claude Code capabilities, no theoretical features</principle>
+    <principle name="session_aware">Intelligent automatic session creation for complex work</principle>
+  </architecture_principles>
+  
+  <file_structure_reference>
+    Complete structure documented in .claude/README.md
+  </file_structure_reference>
+  
+</modular_architecture_overview>
 
-### Parallel Execution (2025 Best Practice)
-```python
-# ALWAYS batch tool calls in single message for maximum efficiency
-Read("file1.py")  # These execute in parallel
-Read("file2.py")  # Not sequentially
-Read("file3.py")
-```
+<usage_guidance>
+  
+  <getting_started>
+    <simple_tasks>Use /task for most development work</simple_tasks>
+    <research>Use /query to understand before changing</research>
+    <autonomous_features>Use /feature for zero-touch autonomous feature development with 95% self-sufficiency</autonomous_features>
+    <complex_work>Use /swarm for multi-component features (auto-creates session)</complex_work>
+    <uncertain>Use /auto when unsure</uncertain>
+    <tracking>Use /session to manage AI development context</tracking>
+    <complex_planning>Create GitHub issues for work >10 atomic steps (mandatory)</complex_planning>
+    <workflow_enforcement>Follow GitHub workflow enforcement for all complex multi-phase work</workflow_enforcement>
+  </getting_started>
+  
+  <capabilities context="battle_tested">
+    <performance>3x faster development with multi-agent coordination</performance>
+    <reliability>94.4% success rate on enterprise systems</reliability>
+    <automation>Zero-configuration intelligent pattern selection</automation>
+    <autonomous_development>95% self-sufficient feature development with zero-touch execution</autonomous_development>
+    <intelligent_orchestration>Predictive requirement extraction and self-healing validation</intelligent_orchestration>
+    <integration>GitHub CLI automation, CI/CD pipeline generation</integration>
+  </capabilities>
+  
+</usage_guidance>
 
-### Read-Before-Write Pattern
-```python
-# MANDATORY: Always read before any modifications
-Read("target_file.py")           # Understand current state
-Edit("target_file.py", ...)      # Then modify safely
-```
-
-### Efficient Search Patterns
-```python
-# PREFER: Specific targeted searches
-Glob("**/*.py")                  # Find Python files
-Grep("class.*Service", "**/*.py") # Find service classes
-
-# AVOID: Broad unfocused searches that waste tokens
-```
-
-### Progress Tracking
-```python
-# REQUIRED: Use TodoWrite/TodoRead for task management
-TodoWrite([...])                 # Track all multi-step tasks
-TodoRead()                       # Check progress frequently
-```
-
-### Error Handling
-```python
-# MANDATORY: Handle all tool failures gracefully
-try:
-    result = Read("file.py")
-except FileNotFoundError:
-    # Graceful degradation with clear user communication
-```
-
-## 🚀 Framework Commands
-
-### Modular Command Architecture
-```
-.claude/
-├── commands/           # Core slash commands (self-contained)
-│   ├── auto.md        # Intelligent routing + module composition
-│   ├── task.md        # Development execution + quality modules
-│   ├── swarm.md       # Multi-agent + session management
-│   ├── query.md       # Research-only operations
-│   └── session.md     # GitHub issue integration
-├── modules/           # Composable sub-commands
-│   ├── security/      # /security/* modules
-│   ├── quality/       # /quality/* modules  
-│   ├── deploy/        # /deploy/* modules
-│   └── patterns/      # Reusable pattern modules
-```
-
-### Primary Commands (Research First, Act Second)
-- **`/auto`** - Intelligent routing that researches, then composes optimal modules
-- **`/task`** - Development execution with dynamic quality module loading
-- **`/query`** - Deep research and analysis (zero modifications)
-- **`/swarm`** - Multi-agent orchestration with automatic session creation
-- **`/session`** - GitHub issue-based context management
-
-### Composable Modules (Dynamically Loaded)
-- **`/security/*`** - Security patterns (audit, compliance, threat-model)
-- **`/quality/*`** - Quality enforcement (tdd, review, performance)
-- **`/deploy/*`** - Deployment operations (fastapi, protocol, commit)
-- **`/patterns/*`** - Reusable patterns (multi-agent, sessions, tools)
-
-## Cognitive Process - AWARE
-
-All operations MUST follow the AWARE framework:
-
-1. **Assess & Analyze** - Understand request, context, constraints
-2. **Watch for Assumptions** - Challenge assumptions, verify with evidence
-3. **Architect the Approach** - Design solution, determine single vs multi-agent
-4. **Run with Verification** - Execute systematically, verify outcomes
-5. **Evaluate & Evolve** - Learn from results, document patterns
-
-## Multi-Agent Patterns
-
-The framework leverages Claude Code's native capabilities for powerful parallel execution:
-
-### Task() Pattern - Specialized Expertise
-```python
-# Multiple Task() calls in ONE message for true parallelism
-# Auto-creates session for complex multi-agent work
-Task("Frontend Architect", "Design the React component architecture with state management")
-Task("Backend Architect", "Design the FastAPI microservices with authentication")
-Task("Database Architect", "Design the PostgreSQL schema with optimization")
-Task("Security Specialist", "Implement OAuth2 and comprehensive threat model")
-Task("DevOps Engineer", "Design Kubernetes deployment with monitoring")
-# Session #123 created automatically, agents update progress
-```
-
-### Batch() Pattern - Distributed Work
-```python
-# Single Batch() call for similar tasks
-Batch([
-    "Refactor UserService to SOLID principles with tests",
-    "Refactor ProductService to SOLID principles with tests",
-    "Refactor OrderService to SOLID principles with tests"
-])
-```
-
-### Intelligent Pattern Selection
-- **Heterogeneous work** → Task() for specialized agents
-- **Homogeneous work** → Batch() for distributed execution
-- **Complex workflows** → Hybrid patterns combining both
-
-Multi-agent work (≥3 components) automatically creates GitHub issue sessions.
-
-## Quality Standards
-
-Every execution enforces:
-- **Evidence-Based Decisions**: Research and verify before implementing
-- **TDD Discipline**: Mandatory RED-GREEN-REFACTOR cycle
-- **Security First**: Threat modeling before implementation
-- **Performance**: <200ms response time (95th percentile)
-- **Test Coverage**: Minimum 90% with quality assertions
-- **Documentation**: Comprehensive and current
-- **Critical Analysis**: Challenge assumptions and map consequences
-
-### TDD Requirements
-- RED-GREEN-REFACTOR cycle mandatory
-- Write failing tests first
-- 90% test coverage minimum
-- Run tests before any commit
-
-### Security Standards
-- Threat model before implementation
-- No secrets in code or commits
-- Input validation on all boundaries
-- Security review for data handling
-- Financial-grade patterns (PCI DSS, SOX) via `/security`
-
-### Performance Standards
-- <200ms p95 response time
-- Benchmark critical paths
-- Profile before optimization
-
-### Done Criteria
-- [ ] All tests passing
-- [ ] 90%+ test coverage
-- [ ] Security review completed
-- [ ] Performance benchmarks met
-- [ ] Documentation updated
-- [ ] Session completed with outcomes documented
-
-## Common Development Tasks
-
-Since this is a framework repository without traditional source code:
-
-```bash
-# Framework validation
-python -m pytest tests/unit/test_github_actions_workflow.py -v
-
-# Security checks (if implementing features)
-bandit -r src/ -f json
-safety check
-
-# Documentation linting
-# No specific command - framework uses markdown files
-```
-
-## AI Session Management
-
-### Using GitHub Issues for Context Tracking
-We use GitHub Issues to track AI coding sessions, providing seamless integration with our development workflow. Sessions are automatically created for complex tasks and multi-agent work.
-
-#### Automatic Session Creation
-- **`/swarm`** commands always create a session
-- **`/auto`** creates sessions for complex autonomous work
-- **`/task`** prompts for sessions on multi-step tasks
-- **Multi-agent patterns** (Task(), Batch()) auto-create sessions
-
-#### Starting a Session
-1. Create a new issue using the "AI Coding Session" template
-2. Add relevant labels: `ai-session`, `active`, and context labels
-3. Reference the issue in commits: `git commit -m "feat: implement auth [#123]"`
-
-#### During Development
-- Update the issue with progress and key decisions
-- Link related PRs and commits
-- Add comments for important context changes
-
-#### Completing a Session
-1. Update labels: change `active` to `completed`
-2. Add outcome labels: `outcome:successful`, `outcome:partial`, or `outcome:blocked`
-3. Document lessons learned and follow-up tasks
-
-#### Session Integration Examples
-```bash
-# Auto-creates session for complex work
-/swarm "Implement real-time notifications"
-# → Creates session #123 automatically
-# → Updates progress as agents work
-# → Links all commits and PRs
-
-# Manual session for focused work
-/session start "Optimize database queries"
-/task "Add query caching"
-# → Work is linked to session #124
-```
-
-## GitHub Integration
-
-The framework integrates with GitHub through:
-- **Workflow**: `.github/workflows/claude.yml` supports three modes:
-  - `claude-standard` - Basic Claude Code integration
-  - `claude-framework` - Full framework capabilities
-  - `claude-maintenance` - Nightly health checks
-- **Session Management**: Complex tasks create GitHub issues for tracking
-- **Issue Templates**: `.github/ISSUE_TEMPLATE/ai-session.md`
-
-## 🏗️ Revolutionary Modular Architecture
-
-```
-.claude/
-├── CLAUDE.md              # THIS FILE: Universal foundation (single source of truth)
-├── commands/              # Self-contained core commands
-│   ├── auto.md           # Intelligent routing + composition
-│   ├── task.md           # Development with module loading
-│   ├── swarm.md          # Multi-agent + auto-sessions
-│   ├── query.md          # Research-only operations
-│   └── session.md        # GitHub issue management
-├── modules/              # Composable specialized modules
-│   ├── security/         # Security patterns library
-│   │   ├── audit.md     # Security auditing patterns
-│   │   ├── compliance.md # Compliance enforcement
-│   │   └── threat-model.md # Threat modeling
-│   ├── quality/         # Quality enforcement library
-│   │   ├── tdd.md       # Test-driven development
-│   │   ├── review.md    # Code review patterns
-│   │   └── performance.md # Performance standards
-│   ├── deploy/          # Deployment operations library
-│   │   ├── fastapi.md   # FastAPI deployment
-│   │   ├── protocol.md  # Production protocols
-│   │   └── commit.md    # Git operations
-│   └── patterns/        # Reusable pattern library
-│       ├── multi-agent.md # Task()/Batch() patterns
-│       ├── session-mgmt.md # Session integration
-│       └── tool-usage.md # Claude Code optimization
-└── archive/             # Migration reference
-    └── rules/           # Old structure preserved
-```
-
-### World-Class Principles
-- **Zero Redundancy**: Every concept exists in exactly one location
-- **Rapid Iteration**: Update any module independently, changes propagate instantly
-- **Modular Composition**: Commands dynamically load only needed modules
-- **Token Optimized**: Each module <5k tokens, total system scalable
-- **Community Ready**: Standardized interfaces enable easy contribution
-- **Reality-Based**: Only proven Claude Code capabilities, no theoretical features
-- **Session-Aware**: Intelligent automatic session creation for complex work
-
-## Getting Started
-
-1. **Simple tasks**: Use `/task` for most development work
-2. **Research**: Use `/query` to understand before changing
-3. **Complex work**: Use `/swarm` for multi-component features (auto-creates session)
-4. **Let it decide**: Use `/auto` when unsure
-5. **Track progress**: Use `/session` to manage AI development context
-
-## Framework Capabilities
-
-### Proven Patterns (Battle-Tested)
-- **3x faster development** with multi-agent coordination
-- **94.4% success rate** on enterprise systems
-- **Zero-configuration** intelligent pattern selection
-- **Context-aware** execution with 60% trigger management
-- **Self-improving** through continuous learning
-
-### Integration Features
-- GitHub CLI automation (`gh`)
-- CI/CD pipeline generation
-- Extended thinking for complex problems
-- Automated quality enforcement
-- Real-time progress tracking
-
-## Important Notes
-
-1. **No Traditional Source Code**: This framework contains configuration and documentation only
-2. **Command Usage**: Use `/auto` when unsure which command to use
-3. **Session Creation**: Automatic for multi-agent work or use `/session`
-4. **Legacy Support**: Old commands work via `/auto` with 90-day deprecation
-5. **Token Limits**: Framework optimized for efficiency, responses limited appropriately
+<validation_checklist mandatory="true">
+  
+  <framework_integrity>
+    <check>Commands ONLY delegate to modules</check>
+    <check>Modules contain ALL implementation details</check>
+    <check>Zero redundancy between all files</check>
+    <check>XML structure properly implemented</check>
+    <check>Token budgets maintained</check>
+    <check>GitHub issue enforcement integrated into execution patterns</check>
+    <check>Complex work (>10 steps) tracked through GitHub issues</check>
+    <check>Epic and phase issues created for multi-phase work</check>
+    <check>Issues closed only when acceptance criteria fully met</check>
+    <check>Atomic steps tracked and verified in GitHub issues</check>
+  </framework_integrity>
+  
+  <claude_4_compliance>
+    <check>Strict enforcement patterns applied to critical rules</check>
+    <check>Multiple emphasis techniques used appropriately</check>
+    <check>Context and motivation provided for important requirements</check>
+    <check>Delegation pattern consistently implemented</check>
+  </claude_4_compliance>
+  
+</validation_checklist>
 
 ---
 
-*Remember: Be a critical thinking partner. Research deeply. Challenge assumptions. Map cause and effect. Follow AWARE, leverage native capabilities, and let intelligent orchestration handle the complexity.*
+<framework_philosophy>
+  Remember: Be a critical thinking partner. Research deeply. Challenge assumptions. Map cause and effect. Follow AWARE, leverage native capabilities, and let intelligent orchestration handle the complexity.
+</framework_philosophy>

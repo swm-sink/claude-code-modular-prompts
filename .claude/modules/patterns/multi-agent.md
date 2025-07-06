@@ -1,155 +1,169 @@
-# /patterns/multi-agent - Multi-Agent Coordination Module
-
-**Purpose**: Define and implement native Claude Code multi-agent patterns using Task() and Batch() for parallel execution.
-
-## Module Interface
-- **Trigger**: Complex tasks requiring ≥3 components or specialized expertise
-- **Dependencies**: Automatically creates GitHub sessions via patterns/session-mgmt.md
-- **Session**: MANDATORY session creation for all multi-agent work
-- **Output**: Coordinated parallel execution with progress tracking
-
-## Native Multi-Agent Patterns
-
-### Task() Pattern - Specialized Expertise
-**Use Case**: Heterogeneous work requiring different specialized skills
-
-```python
-# CRITICAL: All Task() calls in ONE message for true parallelism
-# Auto-creates GitHub session for coordination and tracking
-
-Task("Frontend Architect", "Design React component architecture with TypeScript, Redux state management, and responsive design patterns")
-
-Task("Backend Architect", "Design FastAPI microservices with PostgreSQL, async operations, and comprehensive API documentation") 
-
-Task("Security Specialist", "Implement OAuth2 JWT authentication, role-based access control, and comprehensive threat model")
-
-Task("DevOps Engineer", "Design Kubernetes deployment with auto-scaling, monitoring, logging, and CI/CD pipeline")
-
-Task("Database Architect", "Design optimized PostgreSQL schema with indexing, migrations, and query performance analysis")
-
-# → Session #123 created automatically
-# → Each agent updates progress independently  
-# → All work coordinated through GitHub issue
-```
-
-### Batch() Pattern - Distributed Work
-**Use Case**: Homogeneous work that can be distributed in parallel
-
-```python
-# Single Batch() call for similar operations
-Batch([
-    "Refactor UserService to SOLID principles with comprehensive unit tests and documentation",
-    "Refactor ProductService to SOLID principles with comprehensive unit tests and documentation", 
-    "Refactor OrderService to SOLID principles with comprehensive unit tests and documentation",
-    "Refactor PaymentService to SOLID principles with comprehensive unit tests and documentation"
-])
-
-# → All services refactored in parallel
-# → Consistent patterns applied across all services
-# → Unified testing and documentation standards
-```
-
-## Intelligent Pattern Selection
-
-### Decision Matrix
-```python
-def select_pattern(task_complexity, component_count, expertise_diversity):
-    if expertise_diversity == "high" and component_count >= 3:
-        return "Task()"  # Different specialists needed
-    elif expertise_diversity == "low" and component_count >= 3:  
-        return "Batch()" # Similar work, different targets
-    elif component_count < 3:
-        return "single_agent"  # Use /task command
-    else:
-        return "hybrid"  # Combination of patterns
-```
-
-### Task() Scenarios
-- **System Architecture**: Frontend + Backend + Database + Security + DevOps
-- **Feature Development**: UI + API + Tests + Documentation + Deployment
-- **Migration Projects**: Data + Code + Infrastructure + Testing + Rollback
-
-### Batch() Scenarios  
-- **Code Refactoring**: Multiple similar services/modules
-- **Test Coverage**: Adding tests to multiple components
-- **Documentation**: Updating docs across multiple packages
-- **Migration Tasks**: Converting multiple files/databases
-
-## Multi-Agent Coordination Rules
-
-### No Dependencies Between Agents
-```python
-# CORRECT: Independent parallel work
-Task("Frontend", "Build user dashboard")
-Task("Backend", "Create user API endpoints") 
-Task("Database", "Design user tables")
-
-# INCORRECT: Sequential dependencies
-Task("Database", "Create tables FIRST")  
-Task("Backend", "THEN create APIs using those tables")
-Task("Frontend", "FINALLY build UI using the APIs")
-```
-
-### Session Management Integration
-- **Auto-Creation**: Multi-agent work always creates GitHub session
-- **Progress Tracking**: Each agent updates session with milestones
-- **Coordination**: Session serves as communication hub
-- **Completion**: Session closed when all agents finish
-
-### Communication Patterns
-- **Shared Context**: All agents access same session
-- **Progress Updates**: Regular status updates in session comments
-- **Blocking Issues**: Document blockers for team coordination
-- **Decision Log**: Record architectural decisions in session
-
-## Advanced Multi-Agent Patterns
-
-### Hybrid Execution
-```python
-# Combine Task() and Batch() for complex workflows
-Task("Architect", "Design overall system architecture")
-# → Wait for architecture completion
-Batch([
-    "Implement auth service based on architecture",
-    "Implement user service based on architecture", 
-    "Implement payment service based on architecture"
-])
-```
-
-### Specialized Roles
-- **Architect**: System design, technology decisions
-- **Security**: Threat modeling, vulnerability assessment
-- **Performance**: Optimization, scalability analysis
-- **Quality**: Testing strategies, code review
-- **DevOps**: Infrastructure, deployment, monitoring
-
-## Session Integration Examples
-
-```bash
-# Complex system development
-/swarm "Build e-commerce platform with microservices"
-# → Creates session #123: "E-commerce Platform Development"
-# → Automatically uses Task() pattern for heterogeneous work
-# → Progress tracked across all agents
-
-# Distributed refactoring  
-/swarm "Refactor all services to use new authentication middleware"
-# → Creates session #124: "Authentication Middleware Migration"
-# → Automatically uses Batch() pattern for similar work
-# → Consistent implementation across all services
-```
-
-## Quality Assurance
-
-### Multi-Agent Testing
-- Each agent responsible for testing their components
-- Integration testing coordinates between agents
-- End-to-end testing validates complete system
-
-### Documentation Standards
-- Shared documentation repository
-- API contracts defined upfront
-- Architecture decisions recorded
-- Implementation notes shared across agents
-
-**Token Budget**: <5k tokens (efficient multi-agent coordination)
+<module name="multi_agent" category="patterns">
+  
+  <purpose>
+    Define and implement native Claude Code multi-agent patterns using Task() and Batch() for parallel execution.
+  </purpose>
+  
+  <trigger_conditions>
+    <condition type="automatic">Complex tasks requiring 3+ components or specialized expertise</condition>
+    <condition type="explicit">User requests /swarm command or multi-agent coordination</condition>
+  </trigger_conditions>
+  
+  <implementation>
+    
+    <phase name="pattern_selection" order="1">
+      <requirements>
+        Task complexity assessed for heterogeneous vs homogeneous work
+        Component count and expertise diversity evaluated
+        GitHub session automatically created for coordination tracking
+      </requirements>
+      <actions>
+        Analyze task requirements for specialized expertise diversity
+        Count affected system components and integration complexity
+        Select Task() pattern for heterogeneous work or Batch() for homogeneous work
+        Create mandatory GitHub session for multi-agent coordination
+      </actions>
+      <validation>
+        Pattern selection justified by task analysis (Task() vs Batch())
+        Session created with proper multi-agent tracking labels
+        Agent assignments align with required specialized expertise
+      </validation>
+    </phase>
+    
+    <phase name="agent_coordination" order="2">
+      <requirements>
+        All Task() or Batch() calls executed in single message for true parallelism
+        Agents have independent, non-dependent work assignments
+        Session serves as communication and progress tracking hub
+      </requirements>
+      <actions>
+        Execute all agent assignments in parallel using single message
+        Ensure agent independence with no sequential dependencies
+        Document agent roles and responsibilities in session
+        Establish progress tracking and milestone reporting structure
+      </actions>
+      <validation>
+        All agents active and working in parallel coordination
+        No blocking dependencies between agent assignments
+        Session actively tracking progress from all agents
+      </validation>
+    </phase>
+    
+    <phase name="completion_coordination" order="3">
+      <requirements>
+        All agent work completed successfully with quality verification
+        Integration testing completed across all agent deliverables
+        Session documentation complete with lessons learned
+      </requirements>
+      <actions>
+        Verify all agent deliverables meet quality standards
+        Execute integration testing across all agent outputs
+        Document architectural decisions and coordination patterns
+        Complete session with comprehensive outcome documentation
+      </actions>
+      <validation>
+        All agent work integrated successfully without conflicts
+        Quality standards met across all deliverables
+        Session documentation complete with reusable patterns
+      </validation>
+    </phase>
+    
+  </implementation>
+  
+  <agent_patterns>
+    <task_pattern>
+      <description>Heterogeneous work requiring different specialized skills</description>
+      <usage>Task("Frontend Architect", "React component architecture with TypeScript and Redux")</usage>
+      <usage>Task("Backend Architect", "FastAPI microservices with PostgreSQL and async operations")</usage>
+      <usage>Task("Security Specialist", "OAuth2 JWT authentication with RBAC")</usage>
+      <usage>Task("DevOps Engineer", "Kubernetes deployment with auto-scaling and monitoring")</usage>
+      <coordination>All Task() calls in ONE message for true parallelism</coordination>
+    </task_pattern>
+    <batch_pattern>
+      <description>Homogeneous work distributed in parallel</description>
+      <usage>Batch(["Refactor UserService to SOLID principles", "Refactor ProductService to SOLID principles"])</usage>
+      <coordination>Single Batch() call for similar operations across multiple targets</coordination>
+    </batch_pattern>
+  </agent_patterns>
+  
+  <specialized_roles>
+    <system_architect>
+      Expertise: Overall system design, technology decisions, integration patterns
+      Deliverables: Architecture documentation, technology recommendations, integration specs
+    </system_architect>
+    <security_specialist>
+      Expertise: Threat modeling, vulnerability assessment, compliance implementation
+      Deliverables: Security documentation, threat models, compliance reports
+    </security_specialist>
+    <performance_engineer>
+      Expertise: Optimization, scalability analysis, benchmarking
+      Deliverables: Performance reports, optimization recommendations, scalability plans
+    </performance_engineer>
+    <frontend_architect>
+      Expertise: UI/UX implementation, client-side optimization, responsive design
+      Deliverables: UI components, frontend architecture, user experience flows
+    </frontend_architect>
+    <backend_engineer>
+      Expertise: Server-side logic, API design, database integration
+      Deliverables: Backend services, API documentation, database schemas
+    </backend_engineer>
+    <devops_engineer>
+      Expertise: Infrastructure, deployment, monitoring, CI/CD
+      Deliverables: Infrastructure code, deployment pipelines, monitoring systems
+    </devops_engineer>
+  </specialized_roles>
+  
+  <coordination_rules>
+    <independence_requirement>
+      No dependencies between agents - all work must be parallelizable
+      Agents cannot wait for other agent outputs to begin their work
+      Shared context provided through session documentation only
+    </independence_requirement>
+    <session_communication>
+      All agents access same session for shared context and decisions
+      Progress updates documented in session comments with agent attribution
+      Blocking issues escalated through session for team coordination
+      Architectural decisions recorded in session for future reference
+    </session_communication>
+  </coordination_rules>
+  
+  <quality_assurance>
+    <individual_responsibility>
+      Each agent responsible for testing their specific components
+      Code quality standards enforced for all agent deliverables
+      Documentation requirements met by each specialized agent
+    </individual_responsibility>
+    <integration_coordination>
+      Integration testing validates compatibility between agent outputs
+      End-to-end testing confirms complete system functionality
+      Performance testing verifies system meets SLA requirements
+    </integration_coordination>
+  </quality_assurance>
+  
+  <session_integration>
+    <mandatory_creation>
+      All multi-agent work automatically creates GitHub session
+      Session provides coordination hub for agent communication
+      Progress tracking enables visibility into parallel work streams
+    </mandatory_creation>
+    <session_documentation>
+      Agent assignments and specialized responsibilities
+      Progress milestones and completion status tracking
+      Architectural decisions requiring cross-agent coordination
+      Integration results and quality verification outcomes
+    </session_documentation>
+  </session_integration>
+  
+  <integration_points>
+    <depends_on>
+      patterns/session-management.md for automatic session creation
+      quality/tdd.md for individual agent testing requirements
+      development/task-management.md for quality standards enforcement
+    </depends_on>
+    <provides_to>
+      patterns/intelligent-routing.md for multi-agent escalation triggers
+      All commands for parallel execution coordination patterns
+    </provides_to>
+  </integration_points>
+  
+</module>

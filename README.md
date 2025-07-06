@@ -1,83 +1,131 @@
-# Claude Code Modular Agents
+# Claude Framework with Modular Agents
 
-A comprehensive modular agent system that integrates with the Claude Framework for enhanced AI development orchestration.
+<project_overview>
+  <description>Powerful AI development framework leveraging Claude Code's native capabilities for intelligent software orchestration</description>
+  <enhancement>Advanced modular agent patterns for enterprise-scale development</enhancement>
+  <version>2.0.0</version>
+  <status>Production Ready</status>
+  <optimization>Claude 4 optimized with XML structure and strict enforcement patterns</optimization>
+</project_overview>
 
-## Overview
+<architecture>
+  
+  <core_features>
+    <feature name="aware_process">Structured thinking methodology (Assess-Watch-Architect-Run-Evaluate)</feature>
+    <feature name="multi_agent_patterns">Native Task() and Batch() patterns for parallel execution</feature>
+    <feature name="command_architecture">10 optimized commands for different workflows</feature>
+    <feature name="quality_enforcement">TDD, security, and performance standards</feature>
+    <feature name="session_management">GitHub issue-based context tracking</feature>
+  </core_features>
+  
+  <claude_4_optimizations>
+    <optimization name="xml_structure">Full XML structure for deterministic parsing</optimization>
+    <optimization name="delegation_pattern">Commands delegate to modules (zero redundancy)</optimization>
+    <optimization name="strict_enforcement">Critical rules use multiple emphasis techniques</optimization>
+    <optimization name="token_budget">Foundation <3k, commands <4k, modules <2k tokens</optimization>
+  </claude_4_optimizations>
+  
+</architecture>
 
-This repository provides advanced modular agent patterns and templates that extend the Claude Framework's native multi-agent capabilities using Task() and Batch() patterns.
+<quick_start>
+  
+  <setup_instructions>
+    <step order="1">Copy the .claude folder to your project root</step>
+    <step order="2">Add CLAUDE.md to your project</step>
+    <step order="3">Use commands like /auto, /task, /swarm for development</step>
+    <step order="4">Follow the AWARE framework for all operations</step>
+  </setup_instructions>
+  
+  <usage_examples>
+    <example name="intelligent_routing">
+      <command>/auto "Build authentication system"</command>
+      <purpose>Automatic command selection and module composition</purpose>
+    </example>
+    <example name="development_task">
+      <command>/task "Implement user registration with tests"</command>
+      <purpose>Development with quality enforcement</purpose>
+    </example>
+    <example name="feature_development">
+      <command>/feature "User dashboard with analytics widgets"</command>
+      <purpose>Comprehensive feature development with PRD-first approach</purpose>
+    </example>
+    <example name="multi_agent_coordination">
+      <command>/swarm "Build microservices platform"</command>
+      <purpose>Complex multi-component development</purpose>
+    </example>
+  </usage_examples>
+  
+</quick_start>
 
-## Integration with Claude Framework
+<framework_structure>
+  
+  <file_organization>
+    <directory name=".claude/">
+      <commands purpose="Core slash commands (delegation only)">
+        <command name="auto.md">Intelligent routing + module composition</command>
+        <command name="task.md">Development execution + quality modules</command>
+        <command name="feature.md">Comprehensive feature development with PRD-first approach</command>
+        <command name="swarm.md">Multi-agent + session management</command>
+        <command name="query.md">Research-only operations</command>
+        <command name="session.md">GitHub issue integration</command>
+      </commands>
+      <modules purpose="Composable implementation modules">
+        <category name="security/">Security patterns (audit, compliance, threat-model)</category>
+        <category name="quality/">Quality enforcement (tdd, review, performance)</category>
+        <category name="development/">Development operations</category>
+        <category name="patterns/">Reusable pattern modules</category>
+      </modules>
+    </directory>
+  </file_organization>
+  
+  <documentation>
+    <file name="CLAUDE.md">Main framework documentation and universal foundation</file>
+    <file name=".claude/README.md">Framework structure overview</file>
+    <directory name=".claude/commands/">Command reference with delegation patterns</directory>
+    <directory name=".claude/modules/">Module documentation with implementation details</directory>
+  </documentation>
+  
+</framework_structure>
 
-This system is designed to integrate seamlessly with the Claude Framework v2.0.0, providing:
+<features>
+  
+  <architectural_benefits>
+    <benefit name="simplified_architecture">~35 focused files (from 157)</benefit>
+    <benefit name="token_optimized">Foundation <3k, commands <4k, modules <2k tokens</benefit>
+    <benefit name="reality_based">Only proven Claude Code capabilities</benefit>
+    <benefit name="native_integration">Works directly with Claude Code</benefit>
+    <benefit name="modular_composition">Commands dynamically compose specialized modules</benefit>
+    <benefit name="zero_redundancy">Every concept exists in exactly one place</benefit>
+    <benefit name="session_aware">Intelligent automatic session creation for complex work</benefit>
+  </architectural_benefits>
+  
+</features>
 
-- **Enhanced Agent Templates** - Pre-configured agent roles and specializations
-- **Advanced Coordination Patterns** - Complex multi-agent workflows
-- **Session Management Integration** - Deep GitHub integration for tracking
-- **Quality Modules** - Specialized modules for security, performance, and testing
-- **Deployment Patterns** - Production-ready agent orchestration
+<integration_points>
+  
+  <core_integrations>
+    <integration name="command_system">Core /swarm, /task, and /auto commands</integration>
+    <integration name="session_management">Enhanced GitHub session templates and tracking</integration>
+    <integration name="quality_modules">Security, performance, and TDD modules</integration>
+    <integration name="github_workflow">Three modes: standard, framework, maintenance</integration>
+  </core_integrations>
+  
+</integration_points>
 
-## Structure
+<framework_philosophy>
+  <principle>Follow AWARE methodology for structured thinking</principle>
+  <principle>Leverage native Claude Code capabilities</principle>
+  <principle>Let intelligent orchestration handle complexity</principle>
+  <principle>Be a critical thinking partner</principle>
+  <principle>Research deeply, challenge assumptions, map cause and effect</principle>
+</framework_philosophy>
 
-```
-.
-├── agents/                    # Agent role definitions and templates
-│   ├── architects/           # System and solution architects
-│   ├── specialists/          # Domain specialists (security, performance, etc.)
-│   ├── engineers/           # Implementation-focused agents
-│   └── coordinators/        # Project and process coordinators
-├── workflows/               # Multi-agent workflow templates
-│   ├── development/         # Development workflows
-│   ├── migration/          # Migration and refactoring workflows
-│   ├── security/           # Security-focused workflows
-│   └── optimization/       # Performance optimization workflows
-├── patterns/               # Advanced coordination patterns
-│   ├── hierarchical/       # Hierarchical agent structures
-│   ├── peer-to-peer/      # Peer-to-peer coordination
-│   └── hybrid/            # Mixed coordination approaches
-└── templates/             # Session and documentation templates
-    ├── sessions/          # GitHub session templates
-    ├── documentation/     # Documentation templates
-    └── reports/           # Progress and completion reports
-```
+<development_status>
+  <current_state>Complete Claude Framework v2.0.0 with modular agent capabilities</current_state>
+  <purpose>World-class AI development orchestration</purpose>
+  <optimization>Optimized for Claude 4 with XML structure and delegation patterns</optimization>
+</development_status>
 
-## Quick Start
-
-1. Ensure you have the Claude Framework v2.0.0 installed
-2. Clone this repository into your project
-3. Use the enhanced `/swarm` command with modular agent templates
-4. Leverage pre-built workflows for common development scenarios
-
-## Usage Examples
-
-### Using Enhanced Agent Templates
-```bash
-# Use specialized agent roles from templates
-/swarm "Build microservices platform" --agents=architects/system,specialists/security,engineers/backend
-```
-
-### Applying Workflow Templates
-```bash
-# Use pre-built migration workflow
-/swarm "Migrate to microservices" --workflow=migration/monolith-to-microservices
-```
-
-### Advanced Coordination Patterns
-```bash
-# Use hierarchical coordination for complex projects
-/swarm "Enterprise platform redesign" --pattern=hierarchical/lead-architect
-```
-
-## Integration Points
-
-- **Claude Framework Commands**: Extends `/swarm`, `/task`, and `/auto` commands
-- **Session Management**: Enhanced GitHub session templates and tracking
-- **Quality Modules**: Integrates with existing security, performance, and TDD modules
-- **Documentation**: Automated documentation generation for multi-agent projects
-
-## Development Status
-
-This repository is actively being developed to provide world-class modular agent capabilities for the Claude Framework ecosystem.
-
-## License
-
-MIT License - See LICENSE file for details.
+<license>
+  MIT License - See LICENSE file for details
+</license>

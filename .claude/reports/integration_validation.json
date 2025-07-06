@@ -1,0 +1,941 @@
+{
+  "command_module_delegation": {
+    "delegation_flows": [
+      {
+        "command": "auto",
+        "references": [
+          "patterns/intelligent-routing.md",
+          "patterns/intelligent-routing.md",
+          "patterns/multi-agent.md",
+          "patterns/session-management.md",
+          "development/research-analysis.md",
+          "quality/critical-thinking.md",
+          "patterns/intelligent-routing.md"
+        ],
+        "valid_references": [
+          "patterns/intelligent-routing.md",
+          "patterns/intelligent-routing.md",
+          "patterns/multi-agent.md",
+          "patterns/session-management.md",
+          "development/research-analysis.md",
+          "quality/critical-thinking.md",
+          "patterns/intelligent-routing.md"
+        ],
+        "broken_references": []
+      },
+      {
+        "command": "query",
+        "references": [
+          "development/research-analysis.md",
+          "development/research-analysis.md",
+          "patterns/tool-usage.md",
+          "quality/critical-thinking.md",
+          "security/audit.md",
+          "development/research-analysis.md"
+        ],
+        "valid_references": [
+          "development/research-analysis.md",
+          "development/research-analysis.md",
+          "patterns/tool-usage.md",
+          "quality/critical-thinking.md",
+          "security/audit.md",
+          "development/research-analysis.md"
+        ],
+        "broken_references": []
+      },
+      {
+        "command": "swarm",
+        "references": [
+          "patterns/multi-agent.md",
+          "patterns/multi-agent.md",
+          "patterns/session-management.md",
+          "quality/production-standards.md",
+          "security/audit.md",
+          "development/protocol-enforcement.md",
+          "patterns/multi-agent.md"
+        ],
+        "valid_references": [
+          "patterns/multi-agent.md",
+          "patterns/multi-agent.md",
+          "patterns/session-management.md",
+          "quality/production-standards.md",
+          "security/audit.md",
+          "development/protocol-enforcement.md",
+          "patterns/multi-agent.md"
+        ],
+        "broken_references": []
+      },
+      {
+        "command": "task",
+        "references": [
+          "development/task-management.md",
+          "development/task-management.md",
+          "quality/tdd.md",
+          "quality/production-standards.md",
+          "patterns/session-management.md",
+          "patterns/git-operations.md",
+          "development/task-management.md"
+        ],
+        "valid_references": [
+          "development/task-management.md",
+          "development/task-management.md",
+          "quality/tdd.md",
+          "quality/production-standards.md",
+          "patterns/session-management.md",
+          "patterns/git-operations.md",
+          "development/task-management.md"
+        ],
+        "broken_references": []
+      },
+      {
+        "command": "commit",
+        "references": [
+          "patterns/git-operations.md",
+          "patterns/git-operations.md",
+          "quality/production-standards.md",
+          "patterns/session-management.md",
+          "patterns/git-operations.md"
+        ],
+        "valid_references": [
+          "patterns/git-operations.md",
+          "patterns/git-operations.md",
+          "quality/production-standards.md",
+          "patterns/session-management.md",
+          "patterns/git-operations.md"
+        ],
+        "broken_references": []
+      },
+      {
+        "command": "session",
+        "references": [
+          "patterns/session-management.md",
+          "patterns/session-management.md",
+          "patterns/git-operations.md",
+          "quality/production-standards.md",
+          "patterns/session-management.md"
+        ],
+        "valid_references": [
+          "patterns/session-management.md",
+          "patterns/session-management.md",
+          "patterns/git-operations.md",
+          "quality/production-standards.md",
+          "patterns/session-management.md"
+        ],
+        "broken_references": []
+      },
+      {
+        "command": "feature",
+        "references": [
+          "development/autonomous-workflow.md",
+          "development/task-management.md",
+          "patterns/intelligent-routing.md",
+          "patterns/multi-agent.md",
+          "patterns/session-management.md",
+          "quality/tdd.md",
+          "security/audit.md",
+          "quality/production-standards.md",
+          "development/autonomous-workflow.md",
+          "development/task-management.md",
+          "patterns/intelligent-routing.md",
+          "patterns/multi-agent.md"
+        ],
+        "valid_references": [
+          "development/autonomous-workflow.md",
+          "development/task-management.md",
+          "patterns/intelligent-routing.md",
+          "patterns/multi-agent.md",
+          "patterns/session-management.md",
+          "quality/tdd.md",
+          "security/audit.md",
+          "quality/production-standards.md",
+          "development/autonomous-workflow.md",
+          "development/task-management.md",
+          "patterns/intelligent-routing.md",
+          "patterns/multi-agent.md"
+        ],
+        "broken_references": []
+      },
+      {
+        "command": "test",
+        "references": [
+          "quality/tdd.md",
+          "quality/tdd.md",
+          "quality/production-standards.md",
+          "patterns/session-management.md",
+          "development/task-management.md",
+          "quality/tdd.md"
+        ],
+        "valid_references": [
+          "quality/tdd.md",
+          "quality/tdd.md",
+          "quality/production-standards.md",
+          "patterns/session-management.md",
+          "development/task-management.md",
+          "quality/tdd.md"
+        ],
+        "broken_references": []
+      },
+      {
+        "command": "fastapi",
+        "references": [
+          "patterns/api-development.md",
+          "patterns/api-development.md",
+          "security/audit.md",
+          "quality/production-standards.md",
+          "patterns/session-management.md",
+          "patterns/api-development.md"
+        ],
+        "valid_references": [
+          "patterns/api-development.md",
+          "patterns/api-development.md",
+          "security/audit.md",
+          "quality/production-standards.md",
+          "patterns/session-management.md",
+          "patterns/api-development.md"
+        ],
+        "broken_references": []
+      },
+      {
+        "command": "security",
+        "references": [
+          "security/audit.md",
+          "security/audit.md",
+          "security/threat-modeling.md",
+          "security/financial-compliance.md",
+          "patterns/session-management.md",
+          "quality/production-standards.md",
+          "security/audit.md"
+        ],
+        "valid_references": [
+          "security/audit.md",
+          "security/audit.md",
+          "security/threat-modeling.md",
+          "security/financial-compliance.md",
+          "patterns/session-management.md",
+          "quality/production-standards.md",
+          "security/audit.md"
+        ],
+        "broken_references": []
+      },
+      {
+        "command": "protocol",
+        "references": [
+          "development/protocol-enforcement.md",
+          "development/protocol-enforcement.md",
+          "quality/tdd.md",
+          "security/audit.md",
+          "quality/production-standards.md",
+          "patterns/session-management.md",
+          "development/protocol-enforcement.md"
+        ],
+        "valid_references": [
+          "development/protocol-enforcement.md",
+          "development/protocol-enforcement.md",
+          "quality/tdd.md",
+          "security/audit.md",
+          "quality/production-standards.md",
+          "patterns/session-management.md",
+          "development/protocol-enforcement.md"
+        ],
+        "broken_references": []
+      }
+    ],
+    "broken_flows": [],
+    "orphaned_modules": [
+      "quality/honesty-policy.md"
+    ],
+    "commands_tested": 11
+  },
+  "module_interdependencies": {
+    "dependency_map": {
+      "patterns/api-development.md": [
+        "session-management.md",
+        "financial-compliance.md",
+        "production-standards.md",
+        "task-management.md"
+      ],
+      "patterns/git-operations.md": [
+        "session-management.md",
+        "tool-usage.md",
+        "production-standards.md"
+      ],
+      "patterns/multi-agent.md": [
+        "intelligent-routing.md",
+        "session-management.md",
+        "task-management.md",
+        "tdd.md"
+      ],
+      "patterns/tool-usage.md": [
+        "multi-agent.md",
+        "task-management.md"
+      ],
+      "patterns/session-management.md": [
+        "intelligent-routing.md",
+        "multi-agent.md",
+        "protocol-enforcement.md"
+      ],
+      "patterns/intelligent-routing.md": [
+        "session-management.md",
+        "critical-thinking.md"
+      ],
+      "quality/honesty-policy.md": [
+        "session-management.md",
+        "production-standards.md",
+        "critical-thinking.md"
+      ],
+      "quality/tdd.md": [
+        "tool-usage.md",
+        "task-management.md",
+        "critical-thinking.md",
+        "protocol-enforcement.md",
+        "production-standards.md"
+      ],
+      "quality/production-standards.md": [
+        "financial-compliance.md",
+        "task-management.md",
+        "protocol-enforcement.md",
+        "session-management.md",
+        "tdd.md"
+      ],
+      "quality/critical-thinking.md": [
+        "session-management.md"
+      ],
+      "security/threat-modeling.md": [
+        "financial-compliance.md",
+        "audit.md",
+        "critical-thinking.md",
+        "protocol-enforcement.md",
+        "session-management.md",
+        "production-standards.md"
+      ],
+      "security/audit.md": [
+        "tool-usage.md",
+        "threat-modeling.md",
+        "production-standards.md",
+        "financial-compliance.md"
+      ],
+      "security/financial-compliance.md": [
+        "audit.md",
+        "threat-modeling.md",
+        "protocol-enforcement.md",
+        "session-management.md",
+        "production-standards.md"
+      ],
+      "development/task-management.md": [
+        "critical-thinking.md",
+        "protocol-enforcement.md",
+        "session-management.md",
+        "multi-agent.md",
+        "tdd.md"
+      ],
+      "development/autonomous-workflow.md": [],
+      "development/protocol-enforcement.md": [
+        "financial-compliance.md",
+        "threat-modeling.md",
+        "task-management.md",
+        "session-management.md",
+        "tdd.md",
+        "production-standards.md"
+      ],
+      "development/research-analysis.md": [
+        "tool-usage.md",
+        "audit.md",
+        "task-management.md",
+        "critical-thinking.md"
+      ]
+    },
+    "circular_dependencies": [],
+    "missing_dependencies": [
+      {
+        "module": "patterns/api-development.md",
+        "missing_dependency": "session-management.md"
+      },
+      {
+        "module": "patterns/api-development.md",
+        "missing_dependency": "financial-compliance.md"
+      },
+      {
+        "module": "patterns/api-development.md",
+        "missing_dependency": "production-standards.md"
+      },
+      {
+        "module": "patterns/api-development.md",
+        "missing_dependency": "task-management.md"
+      },
+      {
+        "module": "patterns/git-operations.md",
+        "missing_dependency": "session-management.md"
+      },
+      {
+        "module": "patterns/git-operations.md",
+        "missing_dependency": "tool-usage.md"
+      },
+      {
+        "module": "patterns/git-operations.md",
+        "missing_dependency": "production-standards.md"
+      },
+      {
+        "module": "patterns/multi-agent.md",
+        "missing_dependency": "intelligent-routing.md"
+      },
+      {
+        "module": "patterns/multi-agent.md",
+        "missing_dependency": "session-management.md"
+      },
+      {
+        "module": "patterns/multi-agent.md",
+        "missing_dependency": "task-management.md"
+      },
+      {
+        "module": "patterns/multi-agent.md",
+        "missing_dependency": "tdd.md"
+      },
+      {
+        "module": "patterns/tool-usage.md",
+        "missing_dependency": "multi-agent.md"
+      },
+      {
+        "module": "patterns/tool-usage.md",
+        "missing_dependency": "task-management.md"
+      },
+      {
+        "module": "patterns/session-management.md",
+        "missing_dependency": "intelligent-routing.md"
+      },
+      {
+        "module": "patterns/session-management.md",
+        "missing_dependency": "multi-agent.md"
+      },
+      {
+        "module": "patterns/session-management.md",
+        "missing_dependency": "protocol-enforcement.md"
+      },
+      {
+        "module": "patterns/intelligent-routing.md",
+        "missing_dependency": "session-management.md"
+      },
+      {
+        "module": "patterns/intelligent-routing.md",
+        "missing_dependency": "critical-thinking.md"
+      },
+      {
+        "module": "quality/honesty-policy.md",
+        "missing_dependency": "session-management.md"
+      },
+      {
+        "module": "quality/honesty-policy.md",
+        "missing_dependency": "production-standards.md"
+      },
+      {
+        "module": "quality/honesty-policy.md",
+        "missing_dependency": "critical-thinking.md"
+      },
+      {
+        "module": "quality/tdd.md",
+        "missing_dependency": "tool-usage.md"
+      },
+      {
+        "module": "quality/tdd.md",
+        "missing_dependency": "task-management.md"
+      },
+      {
+        "module": "quality/tdd.md",
+        "missing_dependency": "critical-thinking.md"
+      },
+      {
+        "module": "quality/tdd.md",
+        "missing_dependency": "protocol-enforcement.md"
+      },
+      {
+        "module": "quality/tdd.md",
+        "missing_dependency": "production-standards.md"
+      },
+      {
+        "module": "quality/production-standards.md",
+        "missing_dependency": "financial-compliance.md"
+      },
+      {
+        "module": "quality/production-standards.md",
+        "missing_dependency": "task-management.md"
+      },
+      {
+        "module": "quality/production-standards.md",
+        "missing_dependency": "protocol-enforcement.md"
+      },
+      {
+        "module": "quality/production-standards.md",
+        "missing_dependency": "session-management.md"
+      },
+      {
+        "module": "quality/production-standards.md",
+        "missing_dependency": "tdd.md"
+      },
+      {
+        "module": "quality/critical-thinking.md",
+        "missing_dependency": "session-management.md"
+      },
+      {
+        "module": "security/threat-modeling.md",
+        "missing_dependency": "financial-compliance.md"
+      },
+      {
+        "module": "security/threat-modeling.md",
+        "missing_dependency": "audit.md"
+      },
+      {
+        "module": "security/threat-modeling.md",
+        "missing_dependency": "critical-thinking.md"
+      },
+      {
+        "module": "security/threat-modeling.md",
+        "missing_dependency": "protocol-enforcement.md"
+      },
+      {
+        "module": "security/threat-modeling.md",
+        "missing_dependency": "session-management.md"
+      },
+      {
+        "module": "security/threat-modeling.md",
+        "missing_dependency": "production-standards.md"
+      },
+      {
+        "module": "security/audit.md",
+        "missing_dependency": "tool-usage.md"
+      },
+      {
+        "module": "security/audit.md",
+        "missing_dependency": "threat-modeling.md"
+      },
+      {
+        "module": "security/audit.md",
+        "missing_dependency": "production-standards.md"
+      },
+      {
+        "module": "security/audit.md",
+        "missing_dependency": "financial-compliance.md"
+      },
+      {
+        "module": "security/financial-compliance.md",
+        "missing_dependency": "audit.md"
+      },
+      {
+        "module": "security/financial-compliance.md",
+        "missing_dependency": "threat-modeling.md"
+      },
+      {
+        "module": "security/financial-compliance.md",
+        "missing_dependency": "protocol-enforcement.md"
+      },
+      {
+        "module": "security/financial-compliance.md",
+        "missing_dependency": "session-management.md"
+      },
+      {
+        "module": "security/financial-compliance.md",
+        "missing_dependency": "production-standards.md"
+      },
+      {
+        "module": "development/task-management.md",
+        "missing_dependency": "critical-thinking.md"
+      },
+      {
+        "module": "development/task-management.md",
+        "missing_dependency": "protocol-enforcement.md"
+      },
+      {
+        "module": "development/task-management.md",
+        "missing_dependency": "session-management.md"
+      },
+      {
+        "module": "development/task-management.md",
+        "missing_dependency": "multi-agent.md"
+      },
+      {
+        "module": "development/task-management.md",
+        "missing_dependency": "tdd.md"
+      },
+      {
+        "module": "development/protocol-enforcement.md",
+        "missing_dependency": "financial-compliance.md"
+      },
+      {
+        "module": "development/protocol-enforcement.md",
+        "missing_dependency": "threat-modeling.md"
+      },
+      {
+        "module": "development/protocol-enforcement.md",
+        "missing_dependency": "task-management.md"
+      },
+      {
+        "module": "development/protocol-enforcement.md",
+        "missing_dependency": "session-management.md"
+      },
+      {
+        "module": "development/protocol-enforcement.md",
+        "missing_dependency": "tdd.md"
+      },
+      {
+        "module": "development/protocol-enforcement.md",
+        "missing_dependency": "production-standards.md"
+      },
+      {
+        "module": "development/research-analysis.md",
+        "missing_dependency": "tool-usage.md"
+      },
+      {
+        "module": "development/research-analysis.md",
+        "missing_dependency": "audit.md"
+      },
+      {
+        "module": "development/research-analysis.md",
+        "missing_dependency": "task-management.md"
+      },
+      {
+        "module": "development/research-analysis.md",
+        "missing_dependency": "critical-thinking.md"
+      }
+    ],
+    "modules_analyzed": 17
+  },
+  "session_workflows": {
+    "session_triggers": [
+      {
+        "file": "README.md",
+        "pattern": "issue.*tracking"
+      },
+      {
+        "file": "commands/swarm.md",
+        "pattern": "GitHub.*session"
+      },
+      {
+        "file": "commands/session.md",
+        "pattern": "GitHub.*session"
+      },
+      {
+        "file": "modules/patterns/api-development.md",
+        "pattern": "<session_integration>"
+      },
+      {
+        "file": "modules/patterns/git-operations.md",
+        "pattern": "<session_integration>"
+      },
+      {
+        "file": "modules/patterns/multi-agent.md",
+        "pattern": "<session_integration>"
+      },
+      {
+        "file": "modules/patterns/session-management.md",
+        "pattern": "GitHub.*session"
+      },
+      {
+        "file": "modules/quality/honesty-policy.md",
+        "pattern": "<session_integration>"
+      },
+      {
+        "file": "modules/quality/tdd.md",
+        "pattern": "<session_integration>"
+      },
+      {
+        "file": "modules/quality/production-standards.md",
+        "pattern": "<session_integration>"
+      },
+      {
+        "file": "modules/quality/critical-thinking.md",
+        "pattern": "<session_integration>"
+      },
+      {
+        "file": "modules/security/threat-modeling.md",
+        "pattern": "<session_integration>"
+      },
+      {
+        "file": "modules/security/audit.md",
+        "pattern": "<session_integration>"
+      },
+      {
+        "file": "modules/security/financial-compliance.md",
+        "pattern": "<session_integration>"
+      },
+      {
+        "file": "modules/development/task-management.md",
+        "pattern": "<session_integration>"
+      },
+      {
+        "file": "modules/development/protocol-enforcement.md",
+        "pattern": "<session_integration>"
+      },
+      {
+        "file": "modules/development/research-analysis.md",
+        "pattern": "<session_integration>"
+      }
+    ],
+    "workflow_patterns": [
+      {
+        "file": "VALIDATION_DASHBOARD.md",
+        "pattern": "multi-agent"
+      },
+      {
+        "file": "README.md",
+        "pattern": "multi-agent"
+      },
+      {
+        "file": "archive/README.md",
+        "pattern": "multi-agent"
+      },
+      {
+        "file": "commands/auto.md",
+        "pattern": "multi-agent"
+      },
+      {
+        "file": "commands/swarm.md",
+        "pattern": "multi-agent"
+      },
+      {
+        "file": "commands/swarm.md",
+        "pattern": "swarm.*execution"
+      },
+      {
+        "file": "commands/session.md",
+        "pattern": "multi-agent"
+      },
+      {
+        "file": "commands/feature.md",
+        "pattern": "multi-agent"
+      },
+      {
+        "file": "modules/patterns/api-development.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/patterns/git-operations.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/patterns/multi-agent.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/patterns/multi-agent.md",
+        "pattern": "multi-agent"
+      },
+      {
+        "file": "modules/patterns/tool-usage.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/patterns/tool-usage.md",
+        "pattern": "multi-agent"
+      },
+      {
+        "file": "modules/patterns/session-management.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/patterns/session-management.md",
+        "pattern": "multi-agent"
+      },
+      {
+        "file": "modules/patterns/intelligent-routing.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/patterns/intelligent-routing.md",
+        "pattern": "multi-agent"
+      },
+      {
+        "file": "modules/patterns/intelligent-routing.md",
+        "pattern": "swarm.*execution"
+      },
+      {
+        "file": "modules/quality/honesty-policy.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/quality/tdd.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/quality/production-standards.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/quality/critical-thinking.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/security/threat-modeling.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/security/audit.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/security/financial-compliance.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/development/task-management.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/development/task-management.md",
+        "pattern": "multi-agent"
+      },
+      {
+        "file": "modules/development/autonomous-workflow.md",
+        "pattern": "multi-agent"
+      },
+      {
+        "file": "modules/development/protocol-enforcement.md",
+        "pattern": "<phase[^>]*order="
+      },
+      {
+        "file": "modules/development/research-analysis.md",
+        "pattern": "<phase[^>]*order="
+      }
+    ],
+    "missing_session_integration": [
+      "VALIDATION_DASHBOARD.md",
+      "archive/README.md",
+      "commands/auto.md",
+      "commands/feature.md",
+      "commands/protocol.md",
+      "modules/patterns/tool-usage.md",
+      "modules/patterns/intelligent-routing.md",
+      "modules/development/autonomous-workflow.md"
+    ],
+    "files_checked": 32
+  },
+  "multi_agent_coordination": {
+    "multi_agent_files": [
+      "VALIDATION_DASHBOARD.md",
+      "README.md",
+      "archive/README.md",
+      "commands/auto.md",
+      "commands/swarm.md",
+      "commands/task.md",
+      "commands/session.md",
+      "commands/feature.md",
+      "modules/patterns/multi-agent.md",
+      "modules/patterns/tool-usage.md",
+      "modules/patterns/session-management.md",
+      "modules/patterns/intelligent-routing.md",
+      "modules/quality/tdd.md",
+      "modules/security/financial-compliance.md",
+      "modules/development/task-management.md",
+      "modules/development/autonomous-workflow.md",
+      "modules/development/research-analysis.md"
+    ],
+    "coordination_patterns": [
+      {
+        "file": "VALIDATION_DASHBOARD.md",
+        "pattern": "agent.*coordination"
+      },
+      {
+        "file": "commands/swarm.md",
+        "pattern": "agent.*coordination"
+      },
+      {
+        "file": "commands/session.md",
+        "pattern": "agent.*coordination"
+      },
+      {
+        "file": "commands/feature.md",
+        "pattern": "agent.*coordination"
+      },
+      {
+        "file": "modules/patterns/multi-agent.md",
+        "pattern": "parallel.*execution"
+      },
+      {
+        "file": "modules/patterns/multi-agent.md",
+        "pattern": "agent.*coordination"
+      },
+      {
+        "file": "modules/patterns/tool-usage.md",
+        "pattern": "parallel.*execution"
+      },
+      {
+        "file": "modules/patterns/tool-usage.md",
+        "pattern": "agent.*coordination"
+      },
+      {
+        "file": "modules/patterns/session-management.md",
+        "pattern": "agent.*coordination"
+      },
+      {
+        "file": "modules/patterns/intelligent-routing.md",
+        "pattern": "agent.*coordination"
+      },
+      {
+        "file": "modules/quality/tdd.md",
+        "pattern": "parallel.*execution"
+      },
+      {
+        "file": "modules/development/autonomous-workflow.md",
+        "pattern": "parallel.*execution"
+      },
+      {
+        "file": "modules/development/autonomous-workflow.md",
+        "pattern": "agent.*coordination"
+      },
+      {
+        "file": "modules/development/research-analysis.md",
+        "pattern": "parallel.*execution"
+      }
+    ],
+    "task_patterns": 11,
+    "batch_patterns": 10,
+    "swarm_patterns": 21
+  },
+  "quality_gate_enforcement": {
+    "quality_gates_found": 32,
+    "enforcement_levels": {
+      "strict": 4,
+      "mandatory": 1
+    },
+    "gate_types": {
+      "red_phase_compliance": 1,
+      "green_phase_compliance": 1,
+      "refactor_phase_compliance": 1,
+      "coverage_standards": 1,
+      "test_quality": 1,
+      "tdd_compliance": 2,
+      "security_standards": 1,
+      "performance_slas": 1,
+      "code_quality": 2,
+      "documentation": 1,
+      "operational_readiness": 1,
+      "test_coverage": 1,
+      "integration_testing": 1,
+      "security_review": 1,
+      "threat_model_complete": 1,
+      "enhanced_test_coverage": 1,
+      "security_scan_clean": 1,
+      "performance_sla_met": 1,
+      "compliance_documentation": 1,
+      "penetration_test_passed": 1,
+      "read_only_compliance": 1,
+      "comprehensive_coverage": 1,
+      "actionable_insights": 1,
+      "evidence_based": 1
+    },
+    "files_with_gates": [
+      "modules/quality/tdd.md",
+      "modules/quality/production-standards.md",
+      "modules/development/task-management.md",
+      "modules/development/autonomous-workflow.md",
+      "modules/development/protocol-enforcement.md",
+      "modules/development/research-analysis.md"
+    ],
+    "missing_gates": [
+      "commands/security.md",
+      "commands/protocol.md",
+      "modules/quality/honesty-policy.md",
+      "modules/quality/critical-thinking.md",
+      "modules/security/threat-modeling.md",
+      "modules/security/audit.md",
+      "modules/security/financial-compliance.md"
+    ]
+  }
+}

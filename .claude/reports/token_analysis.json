@@ -1,0 +1,502 @@
+{
+  "files": [
+    {
+      "path": "VALIDATION_DASHBOARD.md",
+      "tokens": 559,
+      "category": "other",
+      "size_bytes": 4124,
+      "lines": 118
+    },
+    {
+      "path": "PERMISSION_VALIDATION.md",
+      "tokens": 323,
+      "category": "foundation",
+      "size_bytes": 1663,
+      "lines": 68
+    },
+    {
+      "path": "README.md",
+      "tokens": 611,
+      "category": "foundation",
+      "size_bytes": 3254,
+      "lines": 106
+    },
+    {
+      "path": "archive/README.md",
+      "tokens": 476,
+      "category": "archive",
+      "size_bytes": 3435,
+      "lines": 90
+    },
+    {
+      "path": "commands/auto.md",
+      "tokens": 219,
+      "category": "command",
+      "size_bytes": 2300,
+      "lines": 41
+    },
+    {
+      "path": "commands/query.md",
+      "tokens": 223,
+      "category": "command",
+      "size_bytes": 2252,
+      "lines": 41
+    },
+    {
+      "path": "commands/swarm.md",
+      "tokens": 216,
+      "category": "command",
+      "size_bytes": 2291,
+      "lines": 42
+    },
+    {
+      "path": "commands/task.md",
+      "tokens": 231,
+      "category": "command",
+      "size_bytes": 2334,
+      "lines": 42
+    },
+    {
+      "path": "commands/commit.md",
+      "tokens": 133,
+      "category": "command",
+      "size_bytes": 1351,
+      "lines": 28
+    },
+    {
+      "path": "commands/session.md",
+      "tokens": 210,
+      "category": "command",
+      "size_bytes": 2139,
+      "lines": 42
+    },
+    {
+      "path": "commands/feature.md",
+      "tokens": 577,
+      "category": "command",
+      "size_bytes": 4801,
+      "lines": 114
+    },
+    {
+      "path": "commands/test.md",
+      "tokens": 170,
+      "category": "command",
+      "size_bytes": 1710,
+      "lines": 34
+    },
+    {
+      "path": "commands/fastapi.md",
+      "tokens": 130,
+      "category": "command",
+      "size_bytes": 1439,
+      "lines": 28
+    },
+    {
+      "path": "commands/security.md",
+      "tokens": 182,
+      "category": "command",
+      "size_bytes": 1916,
+      "lines": 36
+    },
+    {
+      "path": "commands/protocol.md",
+      "tokens": 168,
+      "category": "command",
+      "size_bytes": 1850,
+      "lines": 35
+    },
+    {
+      "path": "modules/patterns/api-development.md",
+      "tokens": 937,
+      "category": "module",
+      "size_bytes": 9150,
+      "lines": 181
+    },
+    {
+      "path": "modules/patterns/git-operations.md",
+      "tokens": 779,
+      "category": "module",
+      "size_bytes": 7623,
+      "lines": 175
+    },
+    {
+      "path": "modules/patterns/multi-agent.md",
+      "tokens": 887,
+      "category": "module",
+      "size_bytes": 7639,
+      "lines": 169
+    },
+    {
+      "path": "modules/patterns/tool-usage.md",
+      "tokens": 609,
+      "category": "module",
+      "size_bytes": 5480,
+      "lines": 123
+    },
+    {
+      "path": "modules/patterns/session-management.md",
+      "tokens": 1034,
+      "category": "module",
+      "size_bytes": 8527,
+      "lines": 178
+    },
+    {
+      "path": "modules/patterns/intelligent-routing.md",
+      "tokens": 833,
+      "category": "module",
+      "size_bytes": 7134,
+      "lines": 163
+    },
+    {
+      "path": "modules/quality/honesty-policy.md",
+      "tokens": 642,
+      "category": "module",
+      "size_bytes": 5943,
+      "lines": 118
+    },
+    {
+      "path": "modules/quality/tdd.md",
+      "tokens": 1016,
+      "category": "module",
+      "size_bytes": 7954,
+      "lines": 182
+    },
+    {
+      "path": "modules/quality/production-standards.md",
+      "tokens": 1121,
+      "category": "module",
+      "size_bytes": 10066,
+      "lines": 182
+    },
+    {
+      "path": "modules/quality/critical-thinking.md",
+      "tokens": 820,
+      "category": "module",
+      "size_bytes": 7168,
+      "lines": 139
+    },
+    {
+      "path": "modules/security/threat-modeling.md",
+      "tokens": 790,
+      "category": "module",
+      "size_bytes": 7328,
+      "lines": 153
+    },
+    {
+      "path": "modules/security/audit.md",
+      "tokens": 1117,
+      "category": "module",
+      "size_bytes": 10797,
+      "lines": 199
+    },
+    {
+      "path": "modules/security/financial-compliance.md",
+      "tokens": 731,
+      "category": "module",
+      "size_bytes": 6692,
+      "lines": 137
+    },
+    {
+      "path": "modules/development/task-management.md",
+      "tokens": 569,
+      "category": "module",
+      "size_bytes": 5005,
+      "lines": 119
+    },
+    {
+      "path": "modules/development/autonomous-workflow.md",
+      "tokens": 623,
+      "category": "module",
+      "size_bytes": 7870,
+      "lines": 181
+    },
+    {
+      "path": "modules/development/protocol-enforcement.md",
+      "tokens": 734,
+      "category": "module",
+      "size_bytes": 6189,
+      "lines": 138
+    },
+    {
+      "path": "modules/development/research-analysis.md",
+      "tokens": 594,
+      "category": "module",
+      "size_bytes": 5391,
+      "lines": 132
+    },
+    {
+      "path": "../CLAUDE.md",
+      "tokens": 1836,
+      "category": "foundation",
+      "size_bytes": 20082,
+      "lines": 404
+    }
+  ],
+  "summary": {
+    "total_files": 33,
+    "total_tokens": 20100,
+    "by_category": {
+      "other": {
+        "count": 1,
+        "tokens": 559,
+        "files": [
+          {
+            "path": "VALIDATION_DASHBOARD.md",
+            "tokens": 559,
+            "category": "other",
+            "size_bytes": 4124,
+            "lines": 118
+          }
+        ]
+      },
+      "foundation": {
+        "count": 3,
+        "tokens": 2770,
+        "files": [
+          {
+            "path": "PERMISSION_VALIDATION.md",
+            "tokens": 323,
+            "category": "foundation",
+            "size_bytes": 1663,
+            "lines": 68
+          },
+          {
+            "path": "README.md",
+            "tokens": 611,
+            "category": "foundation",
+            "size_bytes": 3254,
+            "lines": 106
+          },
+          {
+            "path": "../CLAUDE.md",
+            "tokens": 1836,
+            "category": "foundation",
+            "size_bytes": 20082,
+            "lines": 404
+          }
+        ]
+      },
+      "archive": {
+        "count": 1,
+        "tokens": 476,
+        "files": [
+          {
+            "path": "archive/README.md",
+            "tokens": 476,
+            "category": "archive",
+            "size_bytes": 3435,
+            "lines": 90
+          }
+        ]
+      },
+      "command": {
+        "count": 11,
+        "tokens": 2459,
+        "files": [
+          {
+            "path": "commands/auto.md",
+            "tokens": 219,
+            "category": "command",
+            "size_bytes": 2300,
+            "lines": 41
+          },
+          {
+            "path": "commands/query.md",
+            "tokens": 223,
+            "category": "command",
+            "size_bytes": 2252,
+            "lines": 41
+          },
+          {
+            "path": "commands/swarm.md",
+            "tokens": 216,
+            "category": "command",
+            "size_bytes": 2291,
+            "lines": 42
+          },
+          {
+            "path": "commands/task.md",
+            "tokens": 231,
+            "category": "command",
+            "size_bytes": 2334,
+            "lines": 42
+          },
+          {
+            "path": "commands/commit.md",
+            "tokens": 133,
+            "category": "command",
+            "size_bytes": 1351,
+            "lines": 28
+          },
+          {
+            "path": "commands/session.md",
+            "tokens": 210,
+            "category": "command",
+            "size_bytes": 2139,
+            "lines": 42
+          },
+          {
+            "path": "commands/feature.md",
+            "tokens": 577,
+            "category": "command",
+            "size_bytes": 4801,
+            "lines": 114
+          },
+          {
+            "path": "commands/test.md",
+            "tokens": 170,
+            "category": "command",
+            "size_bytes": 1710,
+            "lines": 34
+          },
+          {
+            "path": "commands/fastapi.md",
+            "tokens": 130,
+            "category": "command",
+            "size_bytes": 1439,
+            "lines": 28
+          },
+          {
+            "path": "commands/security.md",
+            "tokens": 182,
+            "category": "command",
+            "size_bytes": 1916,
+            "lines": 36
+          },
+          {
+            "path": "commands/protocol.md",
+            "tokens": 168,
+            "category": "command",
+            "size_bytes": 1850,
+            "lines": 35
+          }
+        ]
+      },
+      "module": {
+        "count": 17,
+        "tokens": 13836,
+        "files": [
+          {
+            "path": "modules/patterns/api-development.md",
+            "tokens": 937,
+            "category": "module",
+            "size_bytes": 9150,
+            "lines": 181
+          },
+          {
+            "path": "modules/patterns/git-operations.md",
+            "tokens": 779,
+            "category": "module",
+            "size_bytes": 7623,
+            "lines": 175
+          },
+          {
+            "path": "modules/patterns/multi-agent.md",
+            "tokens": 887,
+            "category": "module",
+            "size_bytes": 7639,
+            "lines": 169
+          },
+          {
+            "path": "modules/patterns/tool-usage.md",
+            "tokens": 609,
+            "category": "module",
+            "size_bytes": 5480,
+            "lines": 123
+          },
+          {
+            "path": "modules/patterns/session-management.md",
+            "tokens": 1034,
+            "category": "module",
+            "size_bytes": 8527,
+            "lines": 178
+          },
+          {
+            "path": "modules/patterns/intelligent-routing.md",
+            "tokens": 833,
+            "category": "module",
+            "size_bytes": 7134,
+            "lines": 163
+          },
+          {
+            "path": "modules/quality/honesty-policy.md",
+            "tokens": 642,
+            "category": "module",
+            "size_bytes": 5943,
+            "lines": 118
+          },
+          {
+            "path": "modules/quality/tdd.md",
+            "tokens": 1016,
+            "category": "module",
+            "size_bytes": 7954,
+            "lines": 182
+          },
+          {
+            "path": "modules/quality/production-standards.md",
+            "tokens": 1121,
+            "category": "module",
+            "size_bytes": 10066,
+            "lines": 182
+          },
+          {
+            "path": "modules/quality/critical-thinking.md",
+            "tokens": 820,
+            "category": "module",
+            "size_bytes": 7168,
+            "lines": 139
+          },
+          {
+            "path": "modules/security/threat-modeling.md",
+            "tokens": 790,
+            "category": "module",
+            "size_bytes": 7328,
+            "lines": 153
+          },
+          {
+            "path": "modules/security/audit.md",
+            "tokens": 1117,
+            "category": "module",
+            "size_bytes": 10797,
+            "lines": 199
+          },
+          {
+            "path": "modules/security/financial-compliance.md",
+            "tokens": 731,
+            "category": "module",
+            "size_bytes": 6692,
+            "lines": 137
+          },
+          {
+            "path": "modules/development/task-management.md",
+            "tokens": 569,
+            "category": "module",
+            "size_bytes": 5005,
+            "lines": 119
+          },
+          {
+            "path": "modules/development/autonomous-workflow.md",
+            "tokens": 623,
+            "category": "module",
+            "size_bytes": 7870,
+            "lines": 181
+          },
+          {
+            "path": "modules/development/protocol-enforcement.md",
+            "tokens": 734,
+            "category": "module",
+            "size_bytes": 6189,
+            "lines": 138
+          },
+          {
+            "path": "modules/development/research-analysis.md",
+            "tokens": 594,
+            "category": "module",
+            "size_bytes": 5391,
+            "lines": 132
+          }
+        ]
+      }
+    }
+  }
+}
