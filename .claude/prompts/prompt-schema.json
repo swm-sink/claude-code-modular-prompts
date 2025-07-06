@@ -1,0 +1,217 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Claude Code Prompt Metadata Schema",
+  "description": "Schema for storing and managing prompts with metadata, versioning, and categorization",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "category",
+    "name",
+    "description",
+    "prompt",
+    "metadata"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique identifier for the prompt (lowercase, alphanumeric with hyphens)"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semantic version (e.g., 1.0.0)"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["queries", "features", "reviews", "patterns", "templates"],
+      "description": "Primary category of the prompt"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 100,
+      "description": "Human-readable name for the prompt"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 500,
+      "description": "Detailed description of what the prompt does"
+    },
+    "prompt": {
+      "type": "object",
+      "required": ["template", "variables"],
+      "properties": {
+        "template": {
+          "type": "string",
+          "description": "The prompt template with {{variable}} placeholders"
+        },
+        "variables": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "description", "type"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "pattern": "^[a-zA-Z_][a-zA-Z0-9_]*$"
+              },
+              "description": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["string", "number", "boolean", "array", "object"]
+              },
+              "required": {
+                "type": "boolean",
+                "default": true
+              },
+              "default": {
+                "description": "Default value if not provided"
+              },
+              "examples": {
+                "type": "array",
+                "items": {}
+              }
+            }
+          }
+        },
+        "examples": {
+          "type": "array",
+          "description": "Complete example prompts with variables filled",
+          "items": {
+            "type": "object",
+            "required": ["variables", "result"],
+            "properties": {
+              "variables": {
+                "type": "object"
+              },
+              "result": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["created", "updated", "author", "tags"],
+      "properties": {
+        "created": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "author": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "uniqueItems": true
+        },
+        "dependencies": {
+          "type": "array",
+          "description": "Other prompts or modules this prompt depends on",
+          "items": {
+            "type": "string"
+          }
+        },
+        "deprecated": {
+          "type": "boolean",
+          "default": false
+        },
+        "deprecationReason": {
+          "type": "string"
+        },
+        "replacedBy": {
+          "type": "string",
+          "description": "ID of the prompt that replaces this one"
+        }
+      }
+    },
+    "performance": {
+      "type": "object",
+      "description": "Performance characteristics and requirements",
+      "properties": {
+        "estimatedTokens": {
+          "type": "integer",
+          "description": "Estimated token count for typical usage"
+        },
+        "complexity": {
+          "type": "string",
+          "enum": ["low", "medium", "high"],
+          "description": "Computational complexity"
+        },
+        "timeout": {
+          "type": "integer",
+          "description": "Recommended timeout in seconds"
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "description": "Validation rules for prompt outputs",
+      "properties": {
+        "outputFormat": {
+          "type": "string",
+          "enum": ["text", "json", "markdown", "code", "mixed"]
+        },
+        "outputSchema": {
+          "type": "object",
+          "description": "JSON schema for structured outputs"
+        },
+        "successCriteria": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "versioning": {
+      "type": "object",
+      "description": "Version history and changelog",
+      "properties": {
+        "previousVersions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "changelog": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["version", "date", "changes"],
+            "properties": {
+              "version": {
+                "type": "string"
+              },
+              "date": {
+                "type": "string",
+                "format": "date"
+              },
+              "changes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

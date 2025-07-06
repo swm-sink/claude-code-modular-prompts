@@ -1,0 +1,71 @@
+{
+  "id": "code-analysis-comprehensive",
+  "version": "1.0.0",
+  "category": "queries",
+  "name": "Comprehensive Code Analysis",
+  "description": "Analyzes code for quality, patterns, performance, and security considerations",
+  "prompt": {
+    "template": "Perform a comprehensive analysis of the {{language}} code in {{file_path}}:\n\n1. **Code Quality**\n   - Identify code smells and anti-patterns\n   - Assess readability and maintainability\n   - Check adherence to {{language}} best practices\n\n2. **Architecture & Design**\n   - Evaluate design patterns used\n   - Identify architectural concerns\n   - Assess modularity and coupling\n\n3. **Performance**\n   - Identify potential performance bottlenecks\n   - Analyze algorithmic complexity\n   - Suggest optimization opportunities\n\n4. **Security**\n   - Identify potential security vulnerabilities\n   - Check for common {{language}} security issues\n   - Assess input validation and error handling\n\n{{#if include_refactoring}}\n5. **Refactoring Suggestions**\n   - Provide specific refactoring recommendations\n   - Suggest modern {{language}} idioms\n   - Identify opportunities for simplification\n{{/if}}\n\n{{#if focus_areas}}\n**Special Focus Areas:**\n{{#each focus_areas}}\n- {{this}}\n{{/each}}\n{{/if}}\n\nProvide actionable insights with code examples where applicable.",
+    "variables": [
+      {
+        "name": "language",
+        "description": "Programming language of the code",
+        "type": "string",
+        "required": true,
+        "examples": ["Python", "JavaScript", "TypeScript", "Go", "Rust"]
+      },
+      {
+        "name": "file_path",
+        "description": "Path to the file to analyze",
+        "type": "string",
+        "required": true,
+        "examples": ["src/components/UserAuth.tsx", "internal/services/payment.go"]
+      },
+      {
+        "name": "include_refactoring",
+        "description": "Whether to include refactoring suggestions",
+        "type": "boolean",
+        "required": false,
+        "default": true
+      },
+      {
+        "name": "focus_areas",
+        "description": "Specific areas to focus on",
+        "type": "array",
+        "required": false,
+        "examples": [["concurrency", "error handling"], ["memory management", "API design"]]
+      }
+    ],
+    "examples": [
+      {
+        "variables": {
+          "language": "Python",
+          "file_path": "src/services/user_service.py",
+          "include_refactoring": true,
+          "focus_areas": ["async patterns", "database queries"]
+        },
+        "result": "Perform a comprehensive analysis of the Python code in src/services/user_service.py..."
+      }
+    ]
+  },
+  "metadata": {
+    "created": "2024-01-06T00:00:00Z",
+    "updated": "2024-01-06T00:00:00Z",
+    "author": "system",
+    "tags": ["analysis", "code-quality", "security", "performance"],
+    "dependencies": []
+  },
+  "performance": {
+    "estimatedTokens": 800,
+    "complexity": "medium",
+    "timeout": 30
+  },
+  "validation": {
+    "outputFormat": "markdown",
+    "successCriteria": [
+      "Identifies at least one issue or improvement",
+      "Provides specific code examples",
+      "Covers all requested analysis areas"
+    ]
+  }
+}

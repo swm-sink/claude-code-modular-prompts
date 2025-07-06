@@ -114,4 +114,4 @@ build/
 dist/
 *.egg-info/
 out/
-target/
+target/.claude/settings.local.json

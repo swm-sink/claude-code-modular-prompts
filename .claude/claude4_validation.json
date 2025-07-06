@@ -1,0 +1,136 @@
+{
+  "xml_structure": {
+    "files_with_xml": 41,
+    "total_files": 56,
+    "xml_coverage": 73.21428571428571,
+    "issues": [
+      "archive/rules/production-standards.md: Missing root XML structure",
+      "examples/feature-development-examples.md: Missing root XML structure",
+      "modules/development/auto-testing.md: Missing root XML structure",
+      "modules/development/intelligent-prd.md: Missing root XML structure",
+      "modules/development/predictive-enhancement.md: Missing root XML structure",
+      "modules/development/self-executing-mvp.md: Missing root XML structure",
+      "reports/REVIEWER_AGENT_RESEARCH.md: Missing root XML structure"
+    ]
+  },
+  "enforcement_patterns": {
+    "enforcement_attributes": 26,
+    "strict_enforcement_tags": 8,
+    "valid_enforcement_values": 22,
+    "invalid_enforcement_values": [
+      {
+        "file": "modules/quality/feature-validation.md",
+        "value": "measurable"
+      },
+      {
+        "file": "modules/development/mvp-strategy.md",
+        "value": "best_practice"
+      },
+      {
+        "file": "modules/development/prd-generation.md",
+        "value": "standard"
+      },
+      {
+        "file": "modules/development/iterative-testing.md",
+        "value": "comprehensive"
+      }
+    ],
+    "files_with_enforcement": [
+      "commands/query.md",
+      "modules/quality/honesty-policy.md",
+      "modules/quality/feature-validation.md",
+      "modules/quality/tdd.md",
+      "modules/quality/production-standards.md",
+      "modules/quality/critical-thinking.md",
+      "modules/development/mvp-strategy.md",
+      "modules/development/task-management.md",
+      "modules/development/protocol-enforcement.md",
+      "modules/development/prd-generation.md",
+      "modules/development/research-analysis.md",
+      "modules/development/iterative-testing.md",
+      "modules/development/feature-workflow.md"
+    ]
+  },
+  "emphasis_techniques": {
+    "caps_emphasis": 1204,
+    "bold_emphasis": 633,
+    "xml_emphasis": 26,
+    "repetition_emphasis": 11,
+    "files_analyzed": 56
+  },
+  "deterministic_execution": {
+    "structured_workflows": 19,
+    "ordered_phases": 64,
+    "validation_checkpoints": 69,
+    "quality_gates": 13,
+    "files_with_structure": [
+      "modules/patterns/api-development.md",
+      "modules/patterns/git-operations.md",
+      "modules/patterns/multi-agent.md",
+      "modules/patterns/tool-usage.md",
+      "modules/patterns/session-management.md",
+      "modules/patterns/intelligent-routing.md",
+      "modules/quality/honesty-policy.md",
+      "modules/quality/feature-validation.md",
+      "modules/quality/tdd.md",
+      "modules/quality/production-standards.md",
+      "modules/quality/critical-thinking.md",
+      "modules/security/threat-modeling.md",
+      "modules/security/audit.md",
+      "modules/security/financial-compliance.md",
+      "modules/development/auto-testing.md",
+      "modules/development/mvp-strategy.md",
+      "modules/development/task-management.md",
+      "modules/development/autonomous-workflow.md",
+      "modules/development/protocol-enforcement.md",
+      "modules/development/prd-generation.md",
+      "modules/development/research-analysis.md",
+      "modules/development/iterative-testing.md",
+      "modules/development/feature-workflow.md",
+      "modules/development/self-executing-mvp.md",
+      "reports/REVIEWER_AGENT_RESEARCH.md"
+    ]
+  },
+  "claude4_optimizations": {
+    "context_provided": 0,
+    "motivation_explained": 0,
+    "enforcement_targets": 22,
+    "comprehensive_coverage": 24,
+    "files_optimized": [
+      "commands/auto.md",
+      "commands/query.md",
+      "commands/swarm.md",
+      "commands/task.md",
+      "commands/commit.md",
+      "commands/session.md",
+      "commands/test.md",
+      "commands/fastapi.md",
+      "commands/security.md",
+      "commands/protocol.md",
+      "modules/patterns/api-development.md",
+      "modules/patterns/git-operations.md",
+      "modules/patterns/multi-agent.md",
+      "modules/patterns/tool-usage.md",
+      "modules/patterns/session-management.md",
+      "modules/patterns/intelligent-routing.md",
+      "modules/quality/honesty-policy.md",
+      "modules/quality/feature-validation.md",
+      "modules/quality/tdd.md",
+      "modules/quality/production-standards.md",
+      "modules/quality/critical-thinking.md",
+      "modules/security/threat-modeling.md",
+      "modules/security/audit.md",
+      "modules/security/financial-compliance.md",
+      "modules/development/auto-testing.md",
+      "modules/development/mvp-strategy.md",
+      "modules/development/task-management.md",
+      "modules/development/autonomous-workflow.md",
+      "modules/development/protocol-enforcement.md",
+      "modules/development/prd-generation.md",
+      "modules/development/research-analysis.md",
+      "modules/development/iterative-testing.md",
+      "modules/development/feature-workflow.md",
+      "modules/development/self-executing-mvp.md"
+    ]
+  }
+}

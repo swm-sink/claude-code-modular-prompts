@@ -1,6 +1,13 @@
 {
   "files": [
     {
+      "path": "VALIDATION_DASHBOARD.md",
+      "tokens": 566,
+      "category": "other",
+      "size_bytes": 4156,
+      "lines": 119
+    },
+    {
       "path": "README.md",
       "tokens": 611,
       "category": "foundation",
@@ -34,6 +41,69 @@
       "category": "archive",
       "size_bytes": 3435,
       "lines": 90
+    },
+    {
+      "path": "archive/rules/native-patterns.md",
+      "tokens": 1017,
+      "category": "archive",
+      "size_bytes": 5790,
+      "lines": 218
+    },
+    {
+      "path": "archive/rules/honesty-policy.md",
+      "tokens": 641,
+      "category": "archive",
+      "size_bytes": 3458,
+      "lines": 167
+    },
+    {
+      "path": "archive/rules/tdd-standards.md",
+      "tokens": 813,
+      "category": "archive",
+      "size_bytes": 4068,
+      "lines": 175
+    },
+    {
+      "path": "archive/rules/claude-code-integration.md",
+      "tokens": 860,
+      "category": "archive",
+      "size_bytes": 4755,
+      "lines": 232
+    },
+    {
+      "path": "archive/rules/aware-framework.md",
+      "tokens": 626,
+      "category": "archive",
+      "size_bytes": 3122,
+      "lines": 127
+    },
+    {
+      "path": "archive/rules/production-standards.md",
+      "tokens": 855,
+      "category": "archive",
+      "size_bytes": 4778,
+      "lines": 245
+    },
+    {
+      "path": "archive/rules/critical-thinking-enforcement.md",
+      "tokens": 831,
+      "category": "archive",
+      "size_bytes": 4609,
+      "lines": 183
+    },
+    {
+      "path": "tests/feature-workflow-integration-test.md",
+      "tokens": 998,
+      "category": "other",
+      "size_bytes": 5873,
+      "lines": 165
+    },
+    {
+      "path": "examples/feature-development-examples.md",
+      "tokens": 2037,
+      "category": "other",
+      "size_bytes": 12312,
+      "lines": 283
     },
     {
       "path": "commands/auto.md",
@@ -79,10 +149,10 @@
     },
     {
       "path": "commands/feature.md",
-      "tokens": 345,
+      "tokens": 653,
       "category": "command",
-      "size_bytes": 3344,
-      "lines": 84
+      "size_bytes": 7642,
+      "lines": 174
     },
     {
       "path": "commands/test.md",
@@ -111,34 +181,6 @@
       "category": "command",
       "size_bytes": 1834,
       "lines": 35
-    },
-    {
-      "path": "reports/PERMISSION_VALIDATION.md",
-      "tokens": 323,
-      "category": "other",
-      "size_bytes": 1663,
-      "lines": 68
-    },
-    {
-      "path": "reports/REVIEWER_AGENT_RESEARCH.md",
-      "tokens": 1489,
-      "category": "other",
-      "size_bytes": 11228,
-      "lines": 283
-    },
-    {
-      "path": "reports/OBJECTIVES_SYNTHESIS_PLAN.md",
-      "tokens": 2568,
-      "category": "other",
-      "size_bytes": 15323,
-      "lines": 386
-    },
-    {
-      "path": "reports/PROJECT_STRUCTURE_ANALYSIS.md",
-      "tokens": 2424,
-      "category": "other",
-      "size_bytes": 15460,
-      "lines": 413
     },
     {
       "path": "modules/patterns/api-development.md",
@@ -190,6 +232,13 @@
       "lines": 118
     },
     {
+      "path": "modules/quality/feature-validation.md",
+      "tokens": 1335,
+      "category": "module",
+      "size_bytes": 12015,
+      "lines": 306
+    },
+    {
       "path": "modules/quality/tdd.md",
       "tokens": 1016,
       "category": "module",
@@ -232,6 +281,20 @@
       "lines": 137
     },
     {
+      "path": "modules/development/auto-testing.md",
+      "tokens": 903,
+      "category": "module",
+      "size_bytes": 10760,
+      "lines": 226
+    },
+    {
+      "path": "modules/development/mvp-strategy.md",
+      "tokens": 1028,
+      "category": "module",
+      "size_bytes": 9892,
+      "lines": 227
+    },
+    {
       "path": "modules/development/task-management.md",
       "tokens": 569,
       "category": "module",
@@ -240,10 +303,10 @@
     },
     {
       "path": "modules/development/autonomous-workflow.md",
-      "tokens": 661,
+      "tokens": 840,
       "category": "module",
-      "size_bytes": 8333,
-      "lines": 194
+      "size_bytes": 10840,
+      "lines": 243
     },
     {
       "path": "modules/development/protocol-enforcement.md",
@@ -253,6 +316,20 @@
       "lines": 138
     },
     {
+      "path": "modules/development/intelligent-prd.md",
+      "tokens": 762,
+      "category": "module",
+      "size_bytes": 9109,
+      "lines": 192
+    },
+    {
+      "path": "modules/development/prd-generation.md",
+      "tokens": 887,
+      "category": "module",
+      "size_bytes": 8107,
+      "lines": 192
+    },
+    {
       "path": "modules/development/research-analysis.md",
       "tokens": 594,
       "category": "module",
@@ -260,41 +337,84 @@
       "lines": 132
     },
     {
+      "path": "modules/development/predictive-enhancement.md",
+      "tokens": 819,
+      "category": "module",
+      "size_bytes": 10401,
+      "lines": 206
+    },
+    {
+      "path": "modules/development/iterative-testing.md",
+      "tokens": 1252,
+      "category": "module",
+      "size_bytes": 10653,
+      "lines": 266
+    },
+    {
+      "path": "modules/development/feature-workflow.md",
+      "tokens": 996,
+      "category": "module",
+      "size_bytes": 8980,
+      "lines": 203
+    },
+    {
+      "path": "modules/development/self-executing-mvp.md",
+      "tokens": 863,
+      "category": "module",
+      "size_bytes": 10538,
+      "lines": 227
+    },
+    {
+      "path": "reports/PERMISSION_VALIDATION.md",
+      "tokens": 323,
+      "category": "other",
+      "size_bytes": 1663,
+      "lines": 68
+    },
+    {
+      "path": "reports/REVIEWER_AGENT_RESEARCH.md",
+      "tokens": 1489,
+      "category": "other",
+      "size_bytes": 11228,
+      "lines": 283
+    },
+    {
+      "path": "reports/OBJECTIVES_SYNTHESIS_PLAN.md",
+      "tokens": 2568,
+      "category": "other",
+      "size_bytes": 15323,
+      "lines": 386
+    },
+    {
+      "path": "reports/PROJECT_STRUCTURE_ANALYSIS.md",
+      "tokens": 2424,
+      "category": "other",
+      "size_bytes": 15460,
+      "lines": 413
+    },
+    {
       "path": "../CLAUDE.md",
-      "tokens": 1836,
+      "tokens": 2625,
       "category": "foundation",
-      "size_bytes": 20082,
-      "lines": 404
+      "size_bytes": 27532,
+      "lines": 519
     }
   ],
   "summary": {
-    "total_files": 38,
-    "total_tokens": 29074,
+    "total_files": 57,
+    "total_tokens": 48439,
     "by_category": {
-      "foundation": {
-        "count": 2,
-        "tokens": 2447,
-        "files": [
-          {
-            "path": "README.md",
-            "tokens": 611,
-            "category": "foundation",
-            "size_bytes": 3254,
-            "lines": 106
-          },
-          {
-            "path": "../CLAUDE.md",
-            "tokens": 1836,
-            "category": "foundation",
-            "size_bytes": 20082,
-            "lines": 404
-          }
-        ]
-      },
       "other": {
-        "count": 7,
-        "tokens": 10064,
+        "count": 10,
+        "tokens": 13665,
         "files": [
+          {
+            "path": "VALIDATION_DASHBOARD.md",
+            "tokens": 566,
+            "category": "other",
+            "size_bytes": 4156,
+            "lines": 119
+          },
           {
             "path": "memory/PHASE_7_FINAL_OPTIMIZATION_REPORT.md",
             "tokens": 1078,
@@ -315,6 +435,20 @@
             "category": "other",
             "size_bytes": 9187,
             "lines": 225
+          },
+          {
+            "path": "tests/feature-workflow-integration-test.md",
+            "tokens": 998,
+            "category": "other",
+            "size_bytes": 5873,
+            "lines": 165
+          },
+          {
+            "path": "examples/feature-development-examples.md",
+            "tokens": 2037,
+            "category": "other",
+            "size_bytes": 12312,
+            "lines": 283
           },
           {
             "path": "reports/PERMISSION_VALIDATION.md",
@@ -346,9 +480,29 @@
           }
         ]
       },
+      "foundation": {
+        "count": 2,
+        "tokens": 3236,
+        "files": [
+          {
+            "path": "README.md",
+            "tokens": 611,
+            "category": "foundation",
+            "size_bytes": 3254,
+            "lines": 106
+          },
+          {
+            "path": "../CLAUDE.md",
+            "tokens": 2625,
+            "category": "foundation",
+            "size_bytes": 27532,
+            "lines": 519
+          }
+        ]
+      },
       "archive": {
-        "count": 1,
-        "tokens": 476,
+        "count": 8,
+        "tokens": 6119,
         "files": [
           {
             "path": "archive/README.md",
@@ -356,12 +510,61 @@
             "category": "archive",
             "size_bytes": 3435,
             "lines": 90
+          },
+          {
+            "path": "archive/rules/native-patterns.md",
+            "tokens": 1017,
+            "category": "archive",
+            "size_bytes": 5790,
+            "lines": 218
+          },
+          {
+            "path": "archive/rules/honesty-policy.md",
+            "tokens": 641,
+            "category": "archive",
+            "size_bytes": 3458,
+            "lines": 167
+          },
+          {
+            "path": "archive/rules/tdd-standards.md",
+            "tokens": 813,
+            "category": "archive",
+            "size_bytes": 4068,
+            "lines": 175
+          },
+          {
+            "path": "archive/rules/claude-code-integration.md",
+            "tokens": 860,
+            "category": "archive",
+            "size_bytes": 4755,
+            "lines": 232
+          },
+          {
+            "path": "archive/rules/aware-framework.md",
+            "tokens": 626,
+            "category": "archive",
+            "size_bytes": 3122,
+            "lines": 127
+          },
+          {
+            "path": "archive/rules/production-standards.md",
+            "tokens": 855,
+            "category": "archive",
+            "size_bytes": 4778,
+            "lines": 245
+          },
+          {
+            "path": "archive/rules/critical-thinking-enforcement.md",
+            "tokens": 831,
+            "category": "archive",
+            "size_bytes": 4609,
+            "lines": 183
           }
         ]
       },
       "command": {
         "count": 11,
-        "tokens": 2213,
+        "tokens": 2521,
         "files": [
           {
             "path": "commands/auto.md",
@@ -407,10 +610,10 @@
           },
           {
             "path": "commands/feature.md",
-            "tokens": 345,
+            "tokens": 653,
             "category": "command",
-            "size_bytes": 3344,
-            "lines": 84
+            "size_bytes": 7642,
+            "lines": 174
           },
           {
             "path": "commands/test.md",
@@ -443,8 +646,8 @@
         ]
       },
       "module": {
-        "count": 17,
-        "tokens": 13874,
+        "count": 26,
+        "tokens": 22898,
         "files": [
           {
             "path": "modules/patterns/api-development.md",
@@ -496,6 +699,13 @@
             "lines": 118
           },
           {
+            "path": "modules/quality/feature-validation.md",
+            "tokens": 1335,
+            "category": "module",
+            "size_bytes": 12015,
+            "lines": 306
+          },
+          {
             "path": "modules/quality/tdd.md",
             "tokens": 1016,
             "category": "module",
@@ -538,6 +748,20 @@
             "lines": 137
           },
           {
+            "path": "modules/development/auto-testing.md",
+            "tokens": 903,
+            "category": "module",
+            "size_bytes": 10760,
+            "lines": 226
+          },
+          {
+            "path": "modules/development/mvp-strategy.md",
+            "tokens": 1028,
+            "category": "module",
+            "size_bytes": 9892,
+            "lines": 227
+          },
+          {
             "path": "modules/development/task-management.md",
             "tokens": 569,
             "category": "module",
@@ -546,10 +770,10 @@
           },
           {
             "path": "modules/development/autonomous-workflow.md",
-            "tokens": 661,
+            "tokens": 840,
             "category": "module",
-            "size_bytes": 8333,
-            "lines": 194
+            "size_bytes": 10840,
+            "lines": 243
           },
           {
             "path": "modules/development/protocol-enforcement.md",
@@ -559,11 +783,53 @@
             "lines": 138
           },
           {
+            "path": "modules/development/intelligent-prd.md",
+            "tokens": 762,
+            "category": "module",
+            "size_bytes": 9109,
+            "lines": 192
+          },
+          {
+            "path": "modules/development/prd-generation.md",
+            "tokens": 887,
+            "category": "module",
+            "size_bytes": 8107,
+            "lines": 192
+          },
+          {
             "path": "modules/development/research-analysis.md",
             "tokens": 594,
             "category": "module",
             "size_bytes": 5391,
             "lines": 132
+          },
+          {
+            "path": "modules/development/predictive-enhancement.md",
+            "tokens": 819,
+            "category": "module",
+            "size_bytes": 10401,
+            "lines": 206
+          },
+          {
+            "path": "modules/development/iterative-testing.md",
+            "tokens": 1252,
+            "category": "module",
+            "size_bytes": 10653,
+            "lines": 266
+          },
+          {
+            "path": "modules/development/feature-workflow.md",
+            "tokens": 996,
+            "category": "module",
+            "size_bytes": 8980,
+            "lines": 203
+          },
+          {
+            "path": "modules/development/self-executing-mvp.md",
+            "tokens": 863,
+            "category": "module",
+            "size_bytes": 10538,
+            "lines": 227
           }
         ]
       }
