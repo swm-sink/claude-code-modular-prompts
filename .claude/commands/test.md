@@ -1,4 +1,4 @@
-<command name="test" purpose="Test-driven development with strict RED-GREEN-REFACTOR discipline and coverage enforcement">
+<command purpose="Test-driven development with strict RED-GREEN-REFACTOR discipline and coverage enforcement">
   
   <delegation target="modules/quality/tdd.md">
     This command delegates ALL implementation to the TDD module which provides comprehensive test-driven development workflows including strict RED-GREEN-REFACTOR cycle enforcement, coverage standards, and quality gate validation.

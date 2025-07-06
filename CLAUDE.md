@@ -85,6 +85,14 @@
       <usage>TodoWrite([...]), TodoRead() frequently</usage>
     </pattern>
     
+    <pattern name="github_issue_tracking" priority="mandatory">
+      <motivation>Complex work requires systematic tracking to prevent context loss</motivation>
+      <requirement>MANDATORY: Create GitHub issues for tasks >10 atomic steps</requirement>
+      <usage>gh issue create before starting complex work, track atomic progress</usage>
+      <integration>Seamless integration with session management and multi-agent coordination</integration>
+      <reference>See github_issue_enforcement section for complete requirements</reference>
+    </pattern>
+    
     <pattern name="error_handling" priority="mandatory">
       <motivation>Graceful failure handling ensures robust execution</motivation>
       <requirement>Handle all tool failures gracefully with clear user communication</requirement>
@@ -232,6 +240,10 @@
     <criterion>Performance benchmarks met</criterion>
     <criterion>Documentation updated</criterion>
     <criterion>Session completed with outcomes documented</criterion>
+    <criterion>GitHub issues created for complex work (>10 atomic steps)</criterion>
+    <criterion>All atomic steps completed and verified</criterion>
+    <criterion>Issues closed only when acceptance criteria fully met</criterion>
+    <criterion>Lessons learned documented for future reference</criterion>
   </completion_criteria>
   
 </quality_gates>
@@ -255,6 +267,65 @@
     </automatic_creation>
     <reference>See modules/patterns/session-management.md for implementation</reference>
   </session_management>
+  
+  <github_issue_enforcement enforcement="mandatory">
+    <motivation>
+      Complex multi-phase work requires systematic GitHub issue tracking to prevent context loss, ensure completion, and maintain quality standards
+    </motivation>
+    
+    <trigger_conditions>
+      <condition type="complexity">Tasks requiring >10 atomic steps</condition>
+      <condition type="multi_phase">Work spanning multiple files/categories</condition>
+      <condition type="context_risk">Risk of losing progress due to context limits</condition>
+      <condition type="collaboration">Work requiring team coordination</condition>
+      <condition type="framework_modification">Changes to core framework structure</condition>
+    </trigger_conditions>
+    
+    <issue_structure_requirements>
+      <epic_issue mandatory="true">
+        <purpose>Overall project coordination and tracking</purpose>
+        <content>Project overview, success metrics, sub-issue references</content>
+        <labels>epic, high-priority, framework</labels>
+        <format>Clear success metrics, dependency graph, completion criteria</format>
+      </epic_issue>
+      
+      <phase_issues mandatory="true">
+        <purpose>Detailed phase planning with atomic steps</purpose>
+        <content>Atomic step breakdown, acceptance criteria, dependencies</content>
+        <format>Checkbox lists for progress tracking, clear deliverables</format>
+        <validation>Each step must be independently verifiable</validation>
+      </phase_issues>
+      
+      <session_tracking mandatory="true">
+        <purpose>Real-time coordination and progress monitoring</purpose>
+        <integration>Automatic updates from multi-agent execution</integration>
+        <outcome_documentation>Comprehensive results and lessons learned</outcome_documentation>
+      </session_tracking>
+    </issue_structure_requirements>
+    
+    <enforcement_rules strict="true">
+      <rule priority="critical">MUST create GitHub issues before starting complex work</rule>
+      <rule priority="critical">MUST break work into atomic, trackable steps</rule>
+      <rule priority="high">MUST reference issues in all commits</rule>
+      <rule priority="high">MUST close issues only when fully complete with acceptance criteria met</rule>
+      <rule priority="mandatory">MUST document outcomes and lessons learned</rule>
+      <rule priority="mandatory">MUST establish clear dependencies and execution order</rule>
+    </enforcement_rules>
+    
+    <success_pattern proven="true">
+      <reference_implementation>Claude 4 Framework Optimization project (Issues #1-#13)</reference_implementation>
+      <metrics>260+ atomic steps, 7 phases, systematic tracking</metrics>
+      <outcome>Prevented context loss, ensured completion, maintained quality</outcome>
+      <effectiveness>100% completion rate with systematic tracking vs historical incomplete work</effectiveness>
+    </success_pattern>
+    
+    <integration_points>
+      <tool_patterns>GitHub issue creation integrated with parallel execution patterns</tool_patterns>
+      <multi_agent>Automatic session creation for coordination and progress tracking</multi_agent>
+      <quality_gates>Issue-based tracking ensures all completion criteria met</quality_gates>
+      <session_management>GitHub issues provide persistent context beyond conversation limits</session_management>
+    </integration_points>
+  </github_issue_enforcement>
   
   <github_integration>
     <workflow_modes>
@@ -293,6 +364,7 @@
     <complex_work>Use /swarm for multi-component features (auto-creates session)</complex_work>
     <uncertain>Use /auto when unsure</uncertain>
     <tracking>Use /session to manage AI development context</tracking>
+    <complex_planning>Create GitHub issues for work >10 atomic steps (mandatory)</complex_planning>
   </getting_started>
   
   <capabilities context="battle_tested">
@@ -312,6 +384,8 @@
     <check>Zero redundancy between all files</check>
     <check>XML structure properly implemented</check>
     <check>Token budgets maintained</check>
+    <check>GitHub issue enforcement integrated into execution patterns</check>
+    <check>Complex work (>10 steps) tracked through GitHub issues</check>
   </framework_integrity>
   
   <claude_4_compliance>

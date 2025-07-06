@@ -3,10 +3,10 @@ CLAUDE FRAMEWORK DELEGATION PATTERN VALIDATION REPORT
 ================================================================================
 
 SUMMARY STATISTICS:
-- Command files analyzed: 10
-- Command files compliant: 10
-- Module files analyzed: 16
-- Module files compliant: 16
+- Command files analyzed: 11
+- Command files compliant: 11
+- Module files analyzed: 17
+- Module files compliant: 17
 - Broken references found: 0
 - Redundancy issues found: 0
 

@@ -1,4 +1,4 @@
-<command name="commit" purpose="Intelligent git operations with automatic staging and conventional commits">
+<command purpose="Intelligent git operations with automatic staging and conventional commits">
   
   <delegation target="modules/patterns/git-operations.md">
     This command delegates ALL implementation to the git operations module which provides comprehensive git workflow automation including conventional commits, intelligent staging, release management, and PR creation.

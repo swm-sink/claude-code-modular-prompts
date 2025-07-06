@@ -1,9 +1,11 @@
 {
   "xml_structure": {
-    "files_with_xml": 27,
-    "total_files": 29,
-    "xml_coverage": 93.10344827586206,
-    "issues": []
+    "files_with_xml": 29,
+    "total_files": 32,
+    "xml_coverage": 90.625,
+    "issues": [
+      "modules/development/autonomous-workflow.md: Missing root XML structure"
+    ]
   },
   "enforcement_patterns": {
     "enforcement_attributes": 11,
@@ -22,17 +24,17 @@
     ]
   },
   "emphasis_techniques": {
-    "caps_emphasis": 282,
-    "bold_emphasis": 40,
+    "caps_emphasis": 346,
+    "bold_emphasis": 56,
     "xml_emphasis": 11,
     "repetition_emphasis": 9,
-    "files_analyzed": 29
+    "files_analyzed": 32
   },
   "deterministic_execution": {
-    "structured_workflows": 14,
+    "structured_workflows": 15,
     "ordered_phases": 48,
     "validation_checkpoints": 48,
-    "quality_gates": 4,
+    "quality_gates": 5,
     "files_with_structure": [
       "modules/patterns/api-development.md",
       "modules/patterns/git-operations.md",
@@ -48,6 +50,7 @@
       "modules/security/audit.md",
       "modules/security/financial-compliance.md",
       "modules/development/task-management.md",
+      "modules/development/autonomous-workflow.md",
       "modules/development/protocol-enforcement.md",
       "modules/development/research-analysis.md"
     ]
@@ -56,7 +59,7 @@
     "context_provided": 0,
     "motivation_explained": 0,
     "enforcement_targets": 17,
-    "comprehensive_coverage": 16,
+    "comprehensive_coverage": 17,
     "files_optimized": [
       "commands/auto.md",
       "commands/query.md",
@@ -82,6 +85,7 @@
       "modules/security/audit.md",
       "modules/security/financial-compliance.md",
       "modules/development/task-management.md",
+      "modules/development/autonomous-workflow.md",
       "modules/development/protocol-enforcement.md",
       "modules/development/research-analysis.md"
     ]

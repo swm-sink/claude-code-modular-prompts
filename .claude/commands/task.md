@@ -1,4 +1,4 @@
-<command name="task" purpose="General development execution for single-component work with automatic quality enforcement">
+<command purpose="General development execution for single-component work with automatic quality enforcement">
   
   <delegation target="modules/development/task-management.md">
     This command delegates ALL implementation to the task management module which provides comprehensive single-component development workflows including TDD enforcement, quality gates, and intelligent escalation patterns.

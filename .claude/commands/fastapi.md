@@ -1,4 +1,4 @@
-<command name="fastapi" purpose="Enterprise FastAPI development with production-ready patterns and performance optimization">
+<command purpose="Enterprise FastAPI development with production-ready patterns and performance optimization">
   
   <delegation target="modules/patterns/api-development.md">
     This command delegates ALL implementation to the API development module which provides comprehensive FastAPI application development including enterprise patterns, performance optimization, security integration, and microservice architecture.

@@ -1,4 +1,4 @@
-<command name="security" purpose="Financial-grade security implementation with compliance frameworks and threat modeling">
+<command purpose="Financial-grade security implementation with compliance frameworks and threat modeling">
   
   <delegation target="modules/security/audit.md">
     This command delegates ALL implementation to the security audit module which provides comprehensive enterprise security patterns including PCI DSS, SOX, GDPR compliance, threat modeling, and financial-grade security controls.

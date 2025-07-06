@@ -1,4 +1,4 @@
-<command name="session" purpose="AI session management via GitHub Issues for development tracking and coordination">
+<command purpose="AI session management via GitHub Issues for development tracking and coordination">
   
   <delegation target="modules/patterns/session-management.md">
     This command delegates ALL implementation to the session management module which provides comprehensive GitHub Issues integration for AI coding session tracking, progress updates, and team coordination.

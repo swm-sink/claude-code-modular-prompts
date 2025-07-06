@@ -1,6 +1,13 @@
 {
   "files": [
     {
+      "path": "VALIDATION_DASHBOARD.md",
+      "tokens": 559,
+      "category": "other",
+      "size_bytes": 4124,
+      "lines": 118
+    },
+    {
       "path": "PERMISSION_VALIDATION.md",
       "tokens": 323,
       "category": "foundation",
@@ -62,6 +69,13 @@
       "category": "command",
       "size_bytes": 2139,
       "lines": 42
+    },
+    {
+      "path": "commands/feature.md",
+      "tokens": 577,
+      "category": "command",
+      "size_bytes": 4801,
+      "lines": 114
     },
     {
       "path": "commands/test.md",
@@ -190,6 +204,13 @@
       "lines": 119
     },
     {
+      "path": "modules/development/autonomous-workflow.md",
+      "tokens": 623,
+      "category": "module",
+      "size_bytes": 7870,
+      "lines": 181
+    },
+    {
       "path": "modules/development/protocol-enforcement.md",
       "tokens": 734,
       "category": "module",
@@ -205,19 +226,32 @@
     },
     {
       "path": "../CLAUDE.md",
-      "tokens": 1373,
+      "tokens": 1836,
       "category": "foundation",
-      "size_bytes": 15541,
-      "lines": 330
+      "size_bytes": 20082,
+      "lines": 404
     }
   ],
   "summary": {
-    "total_files": 30,
-    "total_tokens": 17878,
+    "total_files": 33,
+    "total_tokens": 20100,
     "by_category": {
+      "other": {
+        "count": 1,
+        "tokens": 559,
+        "files": [
+          {
+            "path": "VALIDATION_DASHBOARD.md",
+            "tokens": 559,
+            "category": "other",
+            "size_bytes": 4124,
+            "lines": 118
+          }
+        ]
+      },
       "foundation": {
         "count": 3,
-        "tokens": 2307,
+        "tokens": 2770,
         "files": [
           {
             "path": "PERMISSION_VALIDATION.md",
@@ -235,10 +269,10 @@
           },
           {
             "path": "../CLAUDE.md",
-            "tokens": 1373,
+            "tokens": 1836,
             "category": "foundation",
-            "size_bytes": 15541,
-            "lines": 330
+            "size_bytes": 20082,
+            "lines": 404
           }
         ]
       },
@@ -256,8 +290,8 @@
         ]
       },
       "command": {
-        "count": 10,
-        "tokens": 1882,
+        "count": 11,
+        "tokens": 2459,
         "files": [
           {
             "path": "commands/auto.md",
@@ -302,6 +336,13 @@
             "lines": 42
           },
           {
+            "path": "commands/feature.md",
+            "tokens": 577,
+            "category": "command",
+            "size_bytes": 4801,
+            "lines": 114
+          },
+          {
             "path": "commands/test.md",
             "tokens": 170,
             "category": "command",
@@ -332,8 +373,8 @@
         ]
       },
       "module": {
-        "count": 16,
-        "tokens": 13213,
+        "count": 17,
+        "tokens": 13836,
         "files": [
           {
             "path": "modules/patterns/api-development.md",
@@ -432,6 +473,13 @@
             "category": "module",
             "size_bytes": 5005,
             "lines": 119
+          },
+          {
+            "path": "modules/development/autonomous-workflow.md",
+            "tokens": 623,
+            "category": "module",
+            "size_bytes": 7870,
+            "lines": 181
           },
           {
             "path": "modules/development/protocol-enforcement.md",

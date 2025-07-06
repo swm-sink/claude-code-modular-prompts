@@ -4,38 +4,38 @@ FRAMEWORK INTEGRATION VALIDATION REPORT
 
 COMMAND-TO-MODULE DELEGATION:
 ----------------------------------------
-✅ Commands tested: 10
-✅ Delegation flows: 10
+✅ Commands tested: 11
+✅ Delegation flows: 11
 ✅ No broken delegation flows
 ⚠️  Orphaned modules: 1
   ⚠️  quality/honesty-policy.md
 
 MODULE INTERDEPENDENCIES:
 ----------------------------------------
-✅ Modules analyzed: 16
-✅ Dependency relationships: 16
+✅ Modules analyzed: 17
+✅ Dependency relationships: 17
 ✅ No circular dependencies
 ❌ Missing dependencies: 62
 
 SESSION CREATION WORKFLOWS:
 ----------------------------------------
-✅ Files checked: 29
+✅ Files checked: 32
 ✅ Session triggers: 17
-✅ Workflow patterns: 28
-⚠️  Missing session integration: 5
+✅ Workflow patterns: 31
+⚠️  Missing session integration: 8
 
 MULTI-AGENT COORDINATION:
 ----------------------------------------
-✅ Multi-agent files: 14
+✅ Multi-agent files: 17
 ✅ Task() patterns: 11
 ✅ Batch() patterns: 10
-✅ Swarm patterns: 22
-✅ Coordination patterns: 10
+✅ Swarm patterns: 21
+✅ Coordination patterns: 14
 
 QUALITY GATE ENFORCEMENT:
 ----------------------------------------
-✅ Quality gates found: 31
-✅ Files with gates: 5
+✅ Quality gates found: 32
+✅ Files with gates: 6
 Enforcement levels:
   • strict: 4
   • mandatory: 1

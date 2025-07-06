@@ -1,4 +1,4 @@
-<command name="query" purpose="Research and analysis with zero modifications - understanding before action">
+<command purpose="Research and analysis with zero modifications - understanding before action">
   
   <delegation target="modules/development/research-analysis.md">
     This command delegates ALL implementation to the research analysis module which provides comprehensive read-only codebase investigation, architecture mapping, and pattern discovery with guaranteed zero modifications.

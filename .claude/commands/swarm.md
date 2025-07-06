@@ -1,4 +1,4 @@
-<command name="swarm" purpose="Multi-agent orchestration for complex systems with automatic session management">
+<command purpose="Multi-agent orchestration for complex systems with automatic session management">
   
   <delegation target="modules/patterns/multi-agent.md">
     This command delegates ALL implementation to the multi-agent patterns module which provides comprehensive orchestration using native Task() and Batch() patterns with mandatory session creation and intelligent coordination.

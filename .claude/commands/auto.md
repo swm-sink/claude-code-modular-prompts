@@ -1,4 +1,4 @@
-<command name="auto" purpose="Intelligent autonomous routing with dynamic module composition and research-first execution">
+<command purpose="Intelligent autonomous routing with dynamic module composition and research-first execution">
   
   <delegation target="modules/patterns/intelligent-routing.md">
     This command delegates ALL implementation to the intelligent routing module which provides comprehensive request analysis, complexity assessment, and optimal command selection with automatic module composition.

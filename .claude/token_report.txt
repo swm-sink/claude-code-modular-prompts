@@ -3,15 +3,20 @@ CLAUDE FRAMEWORK TOKEN ANALYSIS REPORT
 ================================================================================
 
 SUMMARY STATISTICS:
-- Total files analyzed: 30
-- Total tokens: 17,878
+- Total files analyzed: 33
+- Total tokens: 20,100
 
 TOKEN DISTRIBUTION BY CATEGORY:
 ----------------------------------------
+OTHER:
+  Files: 1
+  Tokens: 559
+  Average: 559 tokens/file
+
 FOUNDATION:
   Files: 3
-  Tokens: 2,307
-  Average: 769 tokens/file
+  Tokens: 2,770
+  Average: 923 tokens/file
 
 ARCHIVE:
   Files: 1
@@ -19,20 +24,20 @@ ARCHIVE:
   Average: 476 tokens/file
 
 COMMAND:
-  Files: 10
-  Tokens: 1,882
-  Average: 188 tokens/file
+  Files: 11
+  Tokens: 2,459
+  Average: 223 tokens/file
 
 MODULE:
-  Files: 16
-  Tokens: 13,213
-  Average: 825 tokens/file
+  Files: 17
+  Tokens: 13,836
+  Average: 813 tokens/file
 
 ✅ ALL BUDGET CONSTRAINTS MET
 
 DETAILED FILE ANALYSIS:
 ----------------------------------------
-✅ ../CLAUDE.md (1,373 tokens, foundation)
+✅ ../CLAUDE.md (1,836 tokens, foundation)
 ✅ modules/quality/production-standards.md (1,121 tokens, module)
 ✅ modules/security/audit.md (1,117 tokens, module)
 ✅ modules/patterns/session-management.md (1,034 tokens, module)
@@ -46,10 +51,13 @@ DETAILED FILE ANALYSIS:
 ✅ modules/development/protocol-enforcement.md (734 tokens, module)
 ✅ modules/security/financial-compliance.md (731 tokens, module)
 ✅ modules/quality/honesty-policy.md (642 tokens, module)
+✅ modules/development/autonomous-workflow.md (623 tokens, module)
 ✅ README.md (611 tokens, foundation)
 ✅ modules/patterns/tool-usage.md (609 tokens, module)
 ✅ modules/development/research-analysis.md (594 tokens, module)
+✅ commands/feature.md (577 tokens, command)
 ✅ modules/development/task-management.md (569 tokens, module)
+✅ VALIDATION_DASHBOARD.md (559 tokens, other)
 ✅ archive/README.md (476 tokens, archive)
 ✅ PERMISSION_VALIDATION.md (323 tokens, foundation)
 ✅ commands/task.md (231 tokens, command)

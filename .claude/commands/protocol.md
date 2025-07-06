@@ -1,4 +1,4 @@
-<command name="protocol" purpose="Production-ready development with mandatory quality gates and compliance standards">
+<command purpose="Production-ready development with mandatory quality gates and compliance standards">
   
   <delegation target="modules/development/protocol-enforcement.md">
     This command delegates ALL implementation to the protocol enforcement module which provides comprehensive production standards including mandatory TDD, security reviews, performance validation, and regulatory compliance for enterprise systems.
