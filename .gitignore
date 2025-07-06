@@ -1,0 +1,39 @@
+# Claude Framework
+.claude/settings.local.json
+.claude/.health_status
+.claude/.coverage
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test Coverage
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+
+# Build
+build/
+dist/
+*.egg-info/
