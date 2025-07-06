@@ -1,0 +1,117 @@
+<!--
+<gitignore_documentation>
+  <purpose>Comprehensive ignore patterns for Claude Framework development</purpose>
+  <optimization>Claude 4 optimized with structured categories</optimization>
+  <maintenance>Auto-updated by framework optimization scripts</maintenance>
+</gitignore_documentation>
+-->
+
+# ==========================================
+# CLAUDE FRAMEWORK SPECIFIC
+# ==========================================
+.claude/settings.local.json
+.claude/.health_status
+.claude/.coverage
+.claude/temp/
+.claude/cache/
+.claude/logs/
+
+# ==========================================
+# PROGRAMMING LANGUAGES
+# ==========================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.env
+.venv
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# Rust
+target/
+Cargo.lock
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# ==========================================
+# DEVELOPMENT ENVIRONMENTS
+# ==========================================
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.vim/
+.netrwhist
+
+# ==========================================
+# OPERATING SYSTEMS
+# ==========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ==========================================
+# LOGS & MONITORING
+# ==========================================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==========================================
+# TEST COVERAGE & BUILD ARTIFACTS
+# ==========================================
+htmlcov/
+.coverage
+coverage.xml
+*.cover
+.nyc_output
+.pytest_cache/
+.tox/
+.nox/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+out/
+target/

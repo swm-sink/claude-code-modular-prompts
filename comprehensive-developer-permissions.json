@@ -1,0 +1,1400 @@
+{
+  "_metadata": {
+    "version": "2.0.0",
+    "description": "Ultra-comprehensive Claude Code permission configuration for maximum developer autonomy",
+    "total_permissions": "1200+",
+    "last_updated": "2025-07-06",
+    "phase_2_modern_stack_coverage": [
+      "MCP (Model Context Protocol) integration",
+      "AI/ML development tools 2024/2025",
+      "Cloud-native and GitOps technologies",
+      "Modern DevOps and developer experience tools",
+      "Performance monitoring and observability stack",
+      "Security and compliance automation"
+    ],
+    "research_sources": [
+      "Programming language ecosystems",
+      "Cloud platform CLIs", 
+      "Database development tools",
+      "Security and testing tools",
+      "Documentation platforms",
+      "Development environments"
+    ]
+  },
+
+  "permissions": {
+    "allow": [
+      
+      // ==========================================
+      // PROGRAMMING LANGUAGE ECOSYSTEMS
+      // ==========================================
+      
+      // Python Ecosystem
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(pip:*)",
+      "Bash(pip3:*)",
+      "Bash(poetry:*)",
+      "Bash(conda:*)",
+      "Bash(mamba:*)",
+      "Bash(pipenv:*)",
+      "Bash(virtualenv:*)",
+      "Bash(venv:*)",
+      "Bash(pyenv:*)",
+      "Bash(pytest:*)",
+      "Bash(mypy:*)",
+      "Bash(black:*)",
+      "Bash(flake8:*)",
+      "Bash(pylint:*)",
+      "Bash(bandit:*)",
+      "Bash(isort:*)",
+      "Bash(autopep8:*)",
+      "Bash(coverage:*)",
+      "Bash(tox:*)",
+      "Bash(nox:*)",
+      "Bash(jupyter:*)",
+      "Bash(ipython:*)",
+      "Bash(sphinx:*)",
+      "Bash(pydocstyle:*)",
+      "Bash(ruff:*)",
+      "Bash(pdm:*)",
+      "Bash(hatch:*)",
+      "Bash(flit:*)",
+
+      // JavaScript/Node.js Ecosystem
+      "Bash(node:*)",
+      "Bash(npm:*)",
+      "Bash(yarn:*)",
+      "Bash(pnpm:*)",
+      "Bash(bun:*)",
+      "Bash(deno:*)",
+      "Bash(npx:*)",
+      "Bash(eslint:*)",
+      "Bash(prettier:*)",
+      "Bash(jest:*)",
+      "Bash(mocha:*)",
+      "Bash(vitest:*)",
+      "Bash(webpack:*)",
+      "Bash(vite:*)",
+      "Bash(rollup:*)",
+      "Bash(parcel:*)",
+      "Bash(esbuild:*)",
+      "Bash(tsc:*)",
+      "Bash(tsx:*)",
+      "Bash(next:*)",
+      "Bash(nuxt:*)",
+      "Bash(vue:*)",
+      "Bash(angular:*)",
+      "Bash(ng:*)",
+      "Bash(react:*)",
+      "Bash(create-react-app:*)",
+      "Bash(gatsby:*)",
+      "Bash(astro:*)",
+      "Bash(remix:*)",
+      "Bash(svelte:*)",
+      "Bash(sveltekit:*)",
+      "Bash(turbo:*)",
+      "Bash(lerna:*)",
+      "Bash(rush:*)",
+      "Bash(nx:*)",
+
+      // Rust Ecosystem
+      "Bash(cargo:*)",
+      "Bash(rustc:*)",
+      "Bash(rustup:*)",
+      "Bash(rustfmt:*)",
+      "Bash(clippy:*)",
+      "Bash(rust-analyzer:*)",
+      "Bash(wasm-pack:*)",
+      "Bash(tauri:*)",
+
+      // Go Ecosystem
+      "Bash(go:*)",
+      "Bash(gofmt:*)",
+      "Bash(golint:*)",
+      "Bash(goimports:*)",
+      "Bash(golangci-lint:*)",
+      "Bash(govulncheck:*)",
+      "Bash(goreleaser:*)",
+      "Bash(air:*)",
+
+      // Java Ecosystem
+      "Bash(java:*)",
+      "Bash(javac:*)",
+      "Bash(maven:*)",
+      "Bash(mvn:*)",
+      "Bash(gradle:*)",
+      "Bash(gradlew:*)",
+      "Bash(ant:*)",
+      "Bash(sbt:*)",
+      "Bash(kotlin:*)",
+      "Bash(kotlinc:*)",
+      "Bash(scalac:*)",
+      "Bash(scala:*)",
+
+      // C/C++ Ecosystem
+      "Bash(gcc:*)",
+      "Bash(g++:*)",
+      "Bash(clang:*)",
+      "Bash(clang++:*)",
+      "Bash(cmake:*)",
+      "Bash(make:*)",
+      "Bash(ninja:*)",
+      "Bash(autoconf:*)",
+      "Bash(automake:*)",
+      "Bash(libtool:*)",
+      "Bash(pkg-config:*)",
+      "Bash(vcpkg:*)",
+      "Bash(conan:*)",
+      "Bash(cppcheck:*)",
+      "Bash(valgrind:*)",
+      "Bash(gdb:*)",
+      "Bash(lldb:*)",
+
+      // Ruby Ecosystem
+      "Bash(ruby:*)",
+      "Bash(gem:*)",
+      "Bash(bundle:*)",
+      "Bash(bundler:*)",
+      "Bash(rake:*)",
+      "Bash(rails:*)",
+      "Bash(rspec:*)",
+      "Bash(rubocop:*)",
+      "Bash(yard:*)",
+      "Bash(irb:*)",
+
+      // PHP Ecosystem
+      "Bash(php:*)",
+      "Bash(composer:*)",
+      "Bash(artisan:*)",
+      "Bash(phpunit:*)",
+      "Bash(phpstan:*)",
+      "Bash(psalm:*)",
+      "Bash(php-cs-fixer:*)",
+      "Bash(phpcbf:*)",
+      "Bash(phpcs:*)",
+
+      // .NET Ecosystem
+      "Bash(dotnet:*)",
+      "Bash(nuget:*)",
+      "Bash(msbuild:*)",
+      "Bash(csc:*)",
+
+      // Swift Ecosystem
+      "Bash(swift:*)",
+      "Bash(swiftc:*)",
+      "Bash(xcodebuild:*)",
+      "Bash(xcrun:*)",
+
+      // Other Languages
+      "Bash(lua:*)",
+      "Bash(luac:*)",
+      "Bash(perl:*)",
+      "Bash(R:*)",
+      "Bash(Rscript:*)",
+      "Bash(julia:*)",
+      "Bash(dart:*)",
+      "Bash(flutter:*)",
+      "Bash(elixir:*)",
+      "Bash(mix:*)",
+      "Bash(erlang:*)",
+      "Bash(erl:*)",
+      "Bash(zig:*)",
+      "Bash(odin:*)",
+      "Bash(nim:*)",
+      "Bash(crystal:*)",
+      "Bash(haskell:*)",
+      "Bash(ghc:*)",
+      "Bash(stack:*)",
+      "Bash(cabal:*)",
+      "Bash(ocaml:*)",
+      "Bash(opam:*)",
+
+      // ==========================================
+      // CLOUD PLATFORMS & INFRASTRUCTURE
+      // ==========================================
+
+      // AWS CLI
+      "Bash(aws:*)",
+      "Bash(awscli:*)",
+      "Bash(sam:*)",
+      "Bash(cdk:*)",
+      "Bash(amplify:*)",
+      "Bash(eb:*)",
+      "Bash(ecs-cli:*)",
+      "Bash(eksctl:*)",
+      "Bash(copilot:*)",
+
+      // Google Cloud
+      "Bash(gcloud:*)",
+      "Bash(gsutil:*)",
+      "Bash(bq:*)",
+      "Bash(gcp:*)",
+
+      // Azure
+      "Bash(az:*)",
+      "Bash(azure:*)",
+      "Bash(azd:*)",
+
+      // Infrastructure as Code
+      "Bash(terraform:*)",
+      "Bash(terragrunt:*)",
+      "Bash(terraformer:*)",
+      "Bash(pulumi:*)",
+      "Bash(ansible:*)",
+      "Bash(ansible-playbook:*)",
+      "Bash(chef:*)",
+      "Bash(puppet:*)",
+      "Bash(vagrant:*)",
+      "Bash(packer:*)",
+      "Bash(consul:*)",
+      "Bash(vault:*)",
+      "Bash(nomad:*)",
+
+      // Kubernetes & Container Orchestration
+      "Bash(kubectl:*)",
+      "Bash(helm:*)",
+      "Bash(helmfile:*)",
+      "Bash(kustomize:*)",
+      "Bash(skaffold:*)",
+      "Bash(minikube:*)",
+      "Bash(kind:*)",
+      "Bash(k3s:*)",
+      "Bash(k3d:*)",
+      "Bash(istio:*)",
+      "Bash(linkerd:*)",
+      "Bash(flux:*)",
+      "Bash(argocd:*)",
+      "Bash(tekton:*)",
+
+      // Container Tools
+      "Bash(docker:*)",
+      "Bash(docker-compose:*)",
+      "Bash(podman:*)",
+      "Bash(buildah:*)",
+      "Bash(skopeo:*)",
+      "Bash(crane:*)",
+      "Bash(dive:*)",
+      "Bash(hadolint:*)",
+      "Bash(trivy:*)",
+      "Bash(syft:*)",
+      "Bash(grype:*)",
+
+      // ==========================================
+      // DATABASE TOOLS
+      // ==========================================
+
+      // PostgreSQL
+      "Bash(psql:*)",
+      "Bash(pg_dump:*)",
+      "Bash(pg_restore:*)",
+      "Bash(pg_ctl:*)",
+      "Bash(createdb:*)",
+      "Bash(dropdb:*)",
+      "Bash(pgbench:*)",
+      "Bash(pg_config:*)",
+
+      // MySQL/MariaDB
+      "Bash(mysql:*)",
+      "Bash(mysqldump:*)",
+      "Bash(mysqladmin:*)",
+      "Bash(mysqlcheck:*)",
+      "Bash(mariadb:*)",
+
+      // MongoDB
+      "Bash(mongosh:*)",
+      "Bash(mongo:*)",
+      "Bash(mongodump:*)",
+      "Bash(mongorestore:*)",
+      "Bash(mongoexport:*)",
+      "Bash(mongoimport:*)",
+      "Bash(mongostat:*)",
+      "Bash(mongotop:*)",
+
+      // Redis
+      "Bash(redis-cli:*)",
+      "Bash(redis-server:*)",
+      "Bash(redis-benchmark:*)",
+      "Bash(redis-check-aof:*)",
+      "Bash(redis-check-rdb:*)",
+      "Bash(iredis:*)",
+
+      // SQLite
+      "Bash(sqlite3:*)",
+      "Bash(sqlite-utils:*)",
+
+      // Other Databases
+      "Bash(cassandra:*)",
+      "Bash(cqlsh:*)",
+      "Bash(influx:*)",
+      "Bash(influxd:*)",
+      "Bash(clickhouse:*)",
+      "Bash(clickhouse-client:*)",
+      "Bash(neo4j:*)",
+      "Bash(cypher-shell:*)",
+
+      // Database Migration Tools
+      "Bash(flyway:*)",
+      "Bash(liquibase:*)",
+      "Bash(migrate:*)",
+      "Bash(atlas:*)",
+      "Bash(dbmate:*)",
+
+      // ==========================================
+      // DEVELOPMENT ENVIRONMENTS & EDITORS
+      // ==========================================
+
+      // VS Code CLI
+      "Bash(code:*)",
+      "Bash(code-insiders:*)",
+      "Bash(cursor:*)",
+
+      // Vim/Neovim
+      "Bash(vim:*)",
+      "Bash(nvim:*)",
+      "Bash(vi:*)",
+      "Bash(vimtutor:*)",
+
+      // Emacs
+      "Bash(emacs:*)",
+      "Bash(emacsclient:*)",
+
+      // Other Editors
+      "Bash(nano:*)",
+      "Bash(micro:*)",
+      "Bash(helix:*)",
+      "Bash(kakoune:*)",
+      "Bash(kak:*)",
+
+      // IDE Tools
+      "Bash(intellij:*)",
+      "Bash(idea:*)",
+      "Bash(webstorm:*)",
+      "Bash(pycharm:*)",
+      "Bash(phpstorm:*)",
+      "Bash(clion:*)",
+      "Bash(rider:*)",
+      "Bash(goland:*)",
+
+      // ==========================================
+      // BUILD SYSTEMS & AUTOMATION
+      // ==========================================
+
+      // Build Systems
+      "Bash(make:*)",
+      "Bash(cmake:*)",
+      "Bash(ninja:*)",
+      "Bash(bazel:*)",
+      "Bash(buck:*)",
+      "Bash(pants:*)",
+      "Bash(meson:*)",
+      "Bash(xmake:*)",
+
+      // CI/CD Tools
+      "Bash(jenkins:*)",
+      "Bash(gh:*)",
+      "Bash(hub:*)",
+      "Bash(glab:*)",
+      "Bash(circleci:*)",
+      "Bash(travis:*)",
+      "Bash(gitlab-ci:*)",
+      "Bash(buildkite:*)",
+      "Bash(drone:*)",
+      "Bash(act:*)",
+
+      // Task Runners
+      "Bash(task:*)",
+      "Bash(just:*)",
+      "Bash(invoke:*)",
+      "Bash(fabric:*)",
+      "Bash(gulp:*)",
+      "Bash(grunt:*)",
+
+      // ==========================================
+      // TESTING & QUALITY ASSURANCE
+      // ==========================================
+
+      // General Testing
+      "Bash(test:*)",
+      "Bash(check:*)",
+      "Bash(spec:*)",
+
+      // Coverage Tools
+      "Bash(coverage:*)",
+      "Bash(nyc:*)",
+      "Bash(c8:*)",
+      "Bash(lcov:*)",
+      "Bash(gcov:*)",
+
+      // Benchmark Tools
+      "Bash(hyperfine:*)",
+      "Bash(time:*)",
+      "Bash(perf:*)",
+      "Bash(flamegraph:*)",
+      "Bash(criterion:*)",
+
+      // Load Testing
+      "Bash(artillery:*)",
+      "Bash(k6:*)",
+      "Bash(wrk:*)",
+      "Bash(ab:*)",
+      "Bash(siege:*)",
+      "Bash(jmeter:*)",
+      "Bash(locust:*)",
+
+      // Property Testing
+      "Bash(quickcheck:*)",
+      "Bash(hypothesis:*)",
+
+      // ==========================================
+      // SECURITY TOOLS
+      // ==========================================
+
+      // Vulnerability Scanners
+      "Bash(trivy:*)",
+      "Bash(grype:*)",
+      "Bash(clair:*)",
+      "Bash(snyk:*)",
+      "Bash(safety:*)",
+      "Bash(bundler-audit:*)",
+      "Bash(npm-audit:*)",
+      "Bash(yarn-audit:*)",
+      "Bash(retire:*)",
+
+      // Static Analysis Security
+      "Bash(bandit:*)",
+      "Bash(semgrep:*)",
+      "Bash(codeql:*)",
+      "Bash(sonar:*)",
+      "Bash(sonar-scanner:*)",
+      "Bash(checkov:*)",
+      "Bash(tfsec:*)",
+      "Bash(kics:*)",
+
+      // Secret Scanning
+      "Bash(gitleaks:*)",
+      "Bash(truffleHog:*)",
+      "Bash(detect-secrets:*)",
+      "Bash(secretlint:*)",
+
+      // Penetration Testing
+      "Bash(nmap:*)",
+      "Bash(nikto:*)",
+      "Bash(sqlmap:*)",
+      "Bash(zap:*)",
+
+      // Cryptography
+      "Bash(openssl:*)",
+      "Bash(gpg:*)",
+      "Bash(gpg2:*)",
+      "Bash(age:*)",
+      "Bash(sops:*)",
+
+      // ==========================================
+      // MONITORING, LOGGING & OBSERVABILITY
+      // ==========================================
+
+      // Log Analysis
+      "Bash(tail:*)",
+      "Bash(head:*)",
+      "Bash(less:*)",
+      "Bash(more:*)",
+      "Bash(cat:*)",
+      "Bash(bat:*)",
+      "Bash(jq:*)",
+      "Bash(yq:*)",
+      "Bash(gron:*)",
+      "Bash(logstash:*)",
+      "Bash(fluentd:*)",
+
+      // Performance Monitoring
+      "Bash(htop:*)",
+      "Bash(top:*)",
+      "Bash(iotop:*)",
+      "Bash(nethogs:*)",
+      "Bash(iftop:*)",
+      "Bash(ss:*)",
+      "Bash(netstat:*)",
+      "Bash(lsof:*)",
+      "Bash(strace:*)",
+      "Bash(ltrace:*)",
+      "Bash(tcpdump:*)",
+      "Bash(wireshark:*)",
+      "Bash(tshark:*)",
+
+      // APM Tools
+      "Bash(prometheus:*)",
+      "Bash(grafana:*)",
+      "Bash(jaeger:*)",
+      "Bash(zipkin:*)",
+      "Bash(otel:*)",
+      "Bash(opentelemetry:*)",
+
+      // ==========================================
+      // DOCUMENTATION & CONTENT
+      // ==========================================
+
+      // Documentation Generators
+      "Bash(sphinx:*)",
+      "Bash(sphinx-build:*)",
+      "Bash(jsdoc:*)",
+      "Bash(typedoc:*)",
+      "Bash(rustdoc:*)",
+      "Bash(godoc:*)",
+      "Bash(javadoc:*)",
+      "Bash(doxygen:*)",
+      "Bash(yard:*)",
+      "Bash(rdoc:*)",
+
+      // Static Site Generators
+      "Bash(jekyll:*)",
+      "Bash(hugo:*)",
+      "Bash(gatsby:*)",
+      "Bash(next:*)",
+      "Bash(nuxt:*)",
+      "Bash(hexo:*)",
+      "Bash(gridsome:*)",
+      "Bash(eleventy:*)",
+      "Bash(vuepress:*)",
+      "Bash(docsify:*)",
+      "Bash(gitbook:*)",
+      "Bash(mkdocs:*)",
+      "Bash(mdbook:*)",
+
+      // Markdown Tools
+      "Bash(pandoc:*)",
+      "Bash(remark:*)",
+      "Bash(markdownlint:*)",
+      "Bash(vale:*)",
+      "Bash(alex:*)",
+      "Bash(textlint:*)",
+
+      // ==========================================
+      // PACKAGE MANAGERS & REPOSITORIES
+      // ==========================================
+
+      // System Package Managers (macOS)
+      "Bash(brew:*)",
+      "Bash(port:*)",
+      "Bash(fink:*)",
+
+      // System Package Managers (Linux)
+      "Bash(apt:*)",
+      "Bash(apt-get:*)",
+      "Bash(apt-cache:*)",
+      "Bash(dpkg:*)",
+      "Bash(yum:*)",
+      "Bash(dnf:*)",
+      "Bash(rpm:*)",
+      "Bash(zypper:*)",
+      "Bash(pacman:*)",
+      "Bash(yay:*)",
+      "Bash(paru:*)",
+      "Bash(emerge:*)",
+      "Bash(eix:*)",
+      "Bash(nix:*)",
+      "Bash(nix-env:*)",
+      "Bash(snap:*)",
+      "Bash(flatpak:*)",
+      "Bash(appimage:*)",
+
+      // Container Registries
+      "Bash(crane:*)",
+      "Bash(skopeo:*)",
+      "Bash(regctl:*)",
+
+      // ==========================================
+      // NETWORK & COMMUNICATION TOOLS
+      // ==========================================
+
+      // HTTP/API Testing
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(httpie:*)",
+      "Bash(http:*)",
+      "Bash(xh:*)",
+      "Bash(postman:*)",
+      "Bash(insomnia:*)",
+      "Bash(hurl:*)",
+
+      // Network Debugging
+      "Bash(ping:*)",
+      "Bash(traceroute:*)",
+      "Bash(dig:*)",
+      "Bash(nslookup:*)",
+      "Bash(host:*)",
+      "Bash(nc:*)",
+      "Bash(netcat:*)",
+      "Bash(socat:*)",
+      "Bash(telnet:*)",
+
+      // SSH Tools
+      "Bash(ssh:*)",
+      "Bash(scp:*)",
+      "Bash(sftp:*)",
+      "Bash(ssh-keygen:*)",
+      "Bash(ssh-add:*)",
+      "Bash(ssh-agent:*)",
+      "Bash(ssh-copy-id:*)",
+      "Bash(mosh:*)",
+
+      // VPN Tools
+      "Bash(openvpn:*)",
+      "Bash(wireguard:*)",
+      "Bash(wg:*)",
+      "Bash(strongswan:*)",
+
+      // ==========================================
+      // FILE & SYSTEM OPERATIONS
+      // ==========================================
+
+      // File Operations
+      "Bash(ls:*)",
+      "Bash(ll:*)",
+      "Bash(la:*)",
+      "Bash(tree:*)",
+      "Bash(exa:*)",
+      "Bash(lsd:*)",
+      "Bash(fd:*)",
+      "Bash(find:*)",
+      "Bash(locate:*)",
+      "Bash(which:*)",
+      "Bash(whereis:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(rm:*)",
+      "Bash(mkdir:*)",
+      "Bash(rmdir:*)",
+      "Bash(touch:*)",
+      "Bash(chmod:*)",
+      "Bash(chown:*)",
+      "Bash(chgrp:*)",
+      "Bash(ln:*)",
+      "Bash(symlink:*)",
+      "Bash(readlink:*)",
+
+      // Archive Tools
+      "Bash(tar:*)",
+      "Bash(gzip:*)",
+      "Bash(gunzip:*)",
+      "Bash(zip:*)",
+      "Bash(unzip:*)",
+      "Bash(7z:*)",
+      "Bash(rar:*)",
+      "Bash(unrar:*)",
+      "Bash(xz:*)",
+      "Bash(bzip2:*)",
+      "Bash(bunzip2:*)",
+
+      // File Synchronization
+      "Bash(rsync:*)",
+      "Bash(rclone:*)",
+      "Bash(syncthing:*)",
+
+      // Text Processing
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(ripgrep:*)",
+      "Bash(ag:*)",
+      "Bash(ack:*)",
+      "Bash(fzf:*)",
+      "Bash(sed:*)",
+      "Bash(awk:*)",
+      "Bash(sort:*)",
+      "Bash(uniq:*)",
+      "Bash(cut:*)",
+      "Bash(tr:*)",
+      "Bash(wc:*)",
+      "Bash(diff:*)",
+      "Bash(patch:*)",
+      "Bash(comm:*)",
+      "Bash(join:*)",
+
+      // System Monitoring
+      "Bash(ps:*)",
+      "Bash(pstree:*)",
+      "Bash(jobs:*)",
+      "Bash(bg:*)",
+      "Bash(fg:*)",
+      "Bash(nohup:*)",
+      "Bash(screen:*)",
+      "Bash(tmux:*)",
+      "Bash(zellij:*)",
+      "Bash(df:*)",
+      "Bash(du:*)",
+      "Bash(free:*)",
+      "Bash(uptime:*)",
+      "Bash(uname:*)",
+      "Bash(whoami:*)",
+      "Bash(id:*)",
+      "Bash(groups:*)",
+      "Bash(w:*)",
+      "Bash(who:*)",
+      "Bash(last:*)",
+
+      // Process Management
+      "Bash(kill:*)",
+      "Bash(killall:*)",
+      "Bash(pkill:*)",
+      "Bash(pgrep:*)",
+      "Bash(systemctl:*)",
+      "Bash(service:*)",
+      "Bash(launchctl:*)",
+
+      // ==========================================
+      // VERSION CONTROL SYSTEMS
+      // ==========================================
+
+      // Git
+      "Bash(git:*)",
+      "Bash(git-*)",
+      "Bash(gh:*)",
+      "Bash(hub:*)",
+      "Bash(glab:*)",
+      "Bash(delta:*)",
+      "Bash(difftastic:*)",
+      "Bash(gitui:*)",
+      "Bash(lazygit:*)",
+      "Bash(tig:*)",
+
+      // Other VCS
+      "Bash(svn:*)",
+      "Bash(hg:*)",
+      "Bash(bzr:*)",
+      "Bash(fossil:*)",
+      "Bash(darcs:*)",
+
+      // ==========================================
+      // SHELL & TERMINAL TOOLS
+      // ==========================================
+
+      // Shells
+      "Bash(bash:*)",
+      "Bash(zsh:*)",
+      "Bash(fish:*)",
+      "Bash(sh:*)",
+      "Bash(dash:*)",
+      "Bash(csh:*)",
+      "Bash(tcsh:*)",
+      "Bash(ksh:*)",
+      "Bash(pwsh:*)",
+      "Bash(powershell:*)",
+
+      // Shell Enhancement
+      "Bash(starship:*)",
+      "Bash(oh-my-zsh:*)",
+      "Bash(oh-my-fish:*)",
+      "Bash(fisher:*)",
+      "Bash(zinit:*)",
+      "Bash(antibody:*)",
+
+      // Terminal Multiplexers
+      "Bash(tmux:*)",
+      "Bash(screen:*)",
+      "Bash(zellij:*)",
+      "Bash(byobu:*)",
+
+      // Terminal Enhancement
+      "Bash(direnv:*)",
+      "Bash(autojump:*)",
+      "Bash(z:*)",
+      "Bash(zoxide:*)",
+      "Bash(fasd:*)",
+      "Bash(thefuck:*)",
+      "Bash(alias:*)",
+      "Bash(history:*)",
+
+      // ==========================================
+      // MISC DEVELOPMENT TOOLS
+      // ==========================================
+
+      // Code Formatters
+      "Bash(prettier:*)",
+      "Bash(black:*)",
+      "Bash(rustfmt:*)",
+      "Bash(gofmt:*)",
+      "Bash(clang-format:*)",
+      "Bash(autopep8:*)",
+      "Bash(yapf:*)",
+      "Bash(isort:*)",
+
+      // Code Generators
+      "Bash(yeoman:*)",
+      "Bash(yo:*)",
+      "Bash(cookiecutter:*)",
+      "Bash(copier:*)",
+      "Bash(plop:*)",
+
+      // Environment Management
+      "Bash(env:*)",
+      "Bash(printenv:*)",
+      "Bash(export:*)",
+      "Bash(source:*)",
+      "Bash(eval:*)",
+
+      // Miscellaneous
+      "Bash(echo:*)",
+      "Bash(printf:*)",
+      "Bash(read:*)",
+      "Bash(sleep:*)",
+      "Bash(wait:*)",
+      "Bash(timeout:*)",
+      "Bash(watch:*)",
+      "Bash(yes:*)",
+      "Bash(seq:*)",
+      "Bash(shuf:*)",
+      "Bash(cal:*)",
+      "Bash(date:*)",
+      "Bash(bc:*)",
+      "Bash(expr:*)",
+      "Bash(hexdump:*)",
+      "Bash(xxd:*)",
+      "Bash(base64:*)",
+      "Bash(md5sum:*)",
+      "Bash(sha256sum:*)",
+      "Bash(sha1sum:*)",
+      "Bash(shasum:*)",
+
+      // ==========================================
+      // MODERN DEVELOPMENT STACK 2024/2025
+      // ==========================================
+
+      // MCP (Model Context Protocol) Tools
+      "mcp__*",
+      "Bash(mcp__*)",
+      "mcp__github__*",
+      "Bash(mcp__github__*)",
+      "mcp__sentry__*",
+      "Bash(mcp__sentry__*)",
+      "mcp__linear__*",
+      "Bash(mcp__linear__*)",
+      "mcp__puppeteer__*",
+      "Bash(mcp__puppeteer__*)",
+      "mcp__slack__*",
+      "Bash(mcp__slack__*)",
+      "mcp__postgres__*",
+      "Bash(mcp__postgres__*)",
+      "mcp__stripe__*",
+      "Bash(mcp__stripe__*)",
+      "mcp__google_drive__*",
+      "Bash(mcp__google_drive__*)",
+      "mcp__git__*",
+      "Bash(mcp__git__*)",
+
+      // AI/ML Development Tools (2024/2025)
+      "Bash(anthropic:*)",
+      "Bash(@anthropic-ai/sdk:*)",
+      "Bash(openai:*)",
+      "Bash(claude:*)",
+      "Bash(claude-4:*)",
+      "Bash(gpt:*)",
+      "Bash(chatgpt:*)",
+      "Bash(copilot:*)",
+      "Bash(cursor:*)",
+      "Bash(ai-sdk:*)",
+      "Bash(openai-sdk:*)",
+      "Bash(ollama:*)",
+      "Bash(langchain:*)",
+      "Bash(llamaindex:*)",
+      "Bash(transformers:*)",
+      "Bash(huggingface:*)",
+      "Bash(pytorch:*)",
+      "Bash(tensorflow:*)",
+      "Bash(mlflow:*)",
+      "Bash(wandb:*)",
+      "Bash(clearml:*)",
+      "Bash(modal:*)",
+      "Bash(replicate:*)",
+      "Bash(gradio:*)",
+      "Bash(streamlit:*)",
+
+      // Cloud-Native & GitOps Tools
+      "Bash(argocd:*)",
+      "Bash(argocd-cli:*)",
+      "Bash(argo:*)",
+      "Bash(flux:*)",
+      "Bash(fluxctl:*)",
+      "Bash(flux2:*)",
+      "Bash(flagger:*)",
+      "Bash(istioctl:*)",
+      "Bash(linkerd:*)",
+      "Bash(linkerd2:*)",
+      "Bash(envoy:*)",
+      "Bash(envoyproxy:*)",
+      "Bash(consul-connect:*)",
+      "Bash(cilium:*)",
+      "Bash(calico:*)",
+      "Bash(weave:*)",
+      "Bash(flannel:*)",
+      "Bash(jaeger-operator:*)",
+      "Bash(prometheus-operator:*)",
+      "Bash(grafana-operator:*)",
+      "Bash(fluentbit:*)",
+      "Bash(fluent-operator:*)",
+      "Bash(cert-manager:*)",
+      "Bash(external-dns:*)",
+      "Bash(ingress-nginx:*)",
+      "Bash(traefik:*)",
+      "Bash(ambassador:*)",
+      "Bash(contour:*)",
+      "Bash(gloo:*)",
+      "Bash(kong:*)",
+
+      // Modern DevOps Tools (2024/2025)
+      "Bash(k9s:*)",
+      "Bash(lazydocker:*)",
+      "Bash(act:*)",
+      "Bash(devcontainer:*)",
+      "Bash(devcontainers:*)",
+      "Bash(dev-container:*)",
+      "Bash(vscode-remote:*)",
+      "Bash(gh-copilot:*)",
+      "Bash(github-copilot:*)",
+      "Bash(okteto:*)",
+      "Bash(telepresence:*)",
+      "Bash(tilt:*)",
+      "Bash(garden:*)",
+      "Bash(devspace:*)",
+      "Bash(draft:*)",
+      "Bash(scaffold:*)",
+      "Bash(kompose:*)",
+      "Bash(ctlptl:*)",
+      "Bash(localstack:*)",
+      "Bash(testcontainers:*)",
+      "Bash(colima:*)",
+      "Bash(lima:*)",
+      "Bash(podman-desktop:*)",
+      "Bash(rancher-desktop:*)",
+      "Bash(docker-desktop:*)",
+      "Bash(orbstack:*)",
+
+      // Modern Terminal & Developer Experience Tools
+      "Bash(starship:*)",
+      "Bash(zellij:*)",
+      "Bash(wezterm:*)",
+      "Bash(alacritty:*)",
+      "Bash(kitty:*)",
+      "Bash(iterm2:*)",
+      "Bash(exa:*)",
+      "Bash(eza:*)",
+      "Bash(lsd:*)",
+      "Bash(bat:*)",
+      "Bash(delta:*)",
+      "Bash(difftastic:*)",
+      "Bash(dust:*)",
+      "Bash(duf:*)",
+      "Bash(procs:*)",
+      "Bash(bottom:*)",
+      "Bash(btm:*)",
+      "Bash(tokei:*)",
+      "Bash(loc:*)",
+      "Bash(hyperfine:*)",
+      "Bash(just:*)",
+      "Bash(zoxide:*)",
+      "Bash(fzf:*)",
+      "Bash(sk:*)",
+      "Bash(skim:*)",
+      "Bash(mcfly:*)",
+      "Bash(atuin:*)",
+      "Bash(navi:*)",
+      "Bash(cheat:*)",
+      "Bash(tldr:*)",
+      "Bash(tealdeer:*)",
+      "Bash(broot:*)",
+      "Bash(ranger:*)",
+      "Bash(nnn:*)",
+      "Bash(lf:*)",
+      "Bash(vifm:*)",
+      "Bash(midnight-commander:*)",
+      "Bash(mc:*)",
+      "Bash(yazi:*)",
+
+      // Modern Performance & Monitoring Tools
+      "Bash(bandwhich:*)",
+      "Bash(gping:*)",
+      "Bash(dog:*)",
+      "Bash(xh:*)",
+      "Bash(httpie:*)",
+      "Bash(curlie:*)",
+      "Bash(grex:*)",
+      "Bash(sd:*)",
+      "Bash(choose:*)",
+      "Bash(fd:*)",
+      "Bash(rg:*)",
+      "Bash(ripgrep:*)",
+      "Bash(ag:*)",
+      "Bash(ack:*)",
+      "Bash(jq:*)",
+      "Bash(yq:*)",
+      "Bash(gron:*)",
+      "Bash(jless:*)",
+      "Bash(fx:*)",
+      "Bash(miller:*)",
+      "Bash(mlr:*)",
+      "Bash(pv:*)",
+      "Bash(progress:*)",
+      "Bash(parallel:*)",
+      "Bash(gnu-parallel:*)",
+      "Bash(rush:*)",
+      "Bash(xargs:*)",
+
+      // Modern Build & Package Tools
+      "Bash(mise:*)",
+      "Bash(asdf:*)",
+      "Bash(rtx:*)",
+      "Bash(fnm:*)",
+      "Bash(nodenv:*)",
+      "Bash(rbenv:*)",
+      "Bash(pyenv:*)",
+      "Bash(jenv:*)",
+      "Bash(gvm:*)",
+      "Bash(rustup:*)",
+      "Bash(cargo:*)",
+      "Bash(mold:*)",
+      "Bash(lld:*)",
+      "Bash(ccache:*)",
+      "Bash(sccache:*)",
+      "Bash(distcc:*)",
+      "Bash(buildkit:*)",
+      "Bash(buildx:*)",
+      "Bash(nerdctl:*)",
+      "Bash(podman:*)",
+      "Bash(buildah:*)",
+      "Bash(skopeo:*)",
+
+      // Modern Security & Compliance Tools
+      "Bash(cosign:*)",
+      "Bash(sigstore:*)",
+      "Bash(syft:*)",
+      "Bash(grype:*)",
+      "Bash(trivy:*)",
+      "Bash(scout:*)",
+      "Bash(docker-scout:*)",
+      "Bash(snyk:*)",
+      "Bash(safety:*)",
+      "Bash(semgrep:*)",
+      "Bash(codeql:*)",
+      "Bash(checkov:*)",
+      "Bash(tfsec:*)",
+      "Bash(terrascan:*)",
+      "Bash(kics:*)",
+      "Bash(kubesec:*)",
+      "Bash(polaris:*)",
+      "Bash(falco:*)",
+      "Bash(opa:*)",
+      "Bash(gatekeeper:*)",
+      "Bash(conftest:*)",
+      "Bash(policy-as-code:*)",
+
+      // Observability & APM (2024/2025)
+      "Bash(otel:*)",
+      "Bash(opentelemetry:*)",
+      "Bash(otelcol:*)",
+      "Bash(jaeger:*)",
+      "Bash(tempo:*)",
+      "Bash(loki:*)",
+      "Bash(promtail:*)",
+      "Bash(grafana:*)",
+      "Bash(prometheus:*)",
+      "Bash(alertmanager:*)",
+      "Bash(thanos:*)",
+      "Bash(cortex:*)",
+      "Bash(mimir:*)",
+      "Bash(victoriametrics:*)",
+      "Bash(datadog:*)",
+      "Bash(newrelic:*)",
+      "Bash(honeycomb:*)",
+      "Bash(lightstep:*)",
+      "Bash(elastic:*)",
+      "Bash(elasticsearch:*)",
+      "Bash(kibana:*)",
+      "Bash(logstash:*)",
+      "Bash(beats:*)",
+      "Bash(filebeat:*)",
+      "Bash(metricbeat:*)",
+      "Bash(heartbeat:*)",
+      "Bash(auditbeat:*)",
+      "Bash(winlogbeat:*)",
+      "Bash(packetbeat:*)",
+      "Bash(functionbeat:*)",
+
+      // ==========================================
+      // WEBFETCH DOMAINS
+      // ==========================================
+
+      // Official Documentation
+      "WebFetch(domain:docs.python.org)",
+      "WebFetch(domain:nodejs.org)",
+      "WebFetch(domain:doc.rust-lang.org)",
+      "WebFetch(domain:golang.org)",
+      "WebFetch(domain:docs.oracle.com)",
+      "WebFetch(domain:learn.microsoft.com)",
+      "WebFetch(domain:developer.apple.com)",
+      "WebFetch(domain:developer.mozilla.org)",
+      "WebFetch(domain:devdocs.io)",
+
+      // Package Managers
+      "WebFetch(domain:pypi.org)",
+      "WebFetch(domain:npmjs.com)",
+      "WebFetch(domain:crates.io)",
+      "WebFetch(domain:packagist.org)",
+      "WebFetch(domain:rubygems.org)",
+      "WebFetch(domain:nuget.org)",
+      "WebFetch(domain:mvnrepository.com)",
+      "WebFetch(domain:search.maven.org)",
+
+      // Cloud Platforms
+      "WebFetch(domain:docs.aws.amazon.com)",
+      "WebFetch(domain:cloud.google.com)",
+      "WebFetch(domain:azure.microsoft.com)",
+      "WebFetch(domain:docs.digitalocean.com)",
+      "WebFetch(domain:docs.linode.com)",
+      "WebFetch(domain:docs.vultr.com)",
+
+      // Container & Kubernetes
+      "WebFetch(domain:docs.docker.com)",
+      "WebFetch(domain:kubernetes.io)",
+      "WebFetch(domain:helm.sh)",
+      "WebFetch(domain:istio.io)",
+      "WebFetch(domain:linkerd.io)",
+
+      // Database Documentation
+      "WebFetch(domain:postgresql.org)",
+      "WebFetch(domain:dev.mysql.com)",
+      "WebFetch(domain:docs.mongodb.com)",
+      "WebFetch(domain:redis.io)",
+      "WebFetch(domain:sqlite.org)",
+      "WebFetch(domain:cassandra.apache.org)",
+      "WebFetch(domain:influxdata.com)",
+
+      // Development Platforms
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:gitlab.com)",
+      "WebFetch(domain:bitbucket.org)",
+      "WebFetch(domain:gitea.io)",
+      "WebFetch(domain:sourcehut.org)",
+
+      // Q&A and Learning
+      "WebFetch(domain:stackoverflow.com)",
+      "WebFetch(domain:stackexchange.com)",
+      "WebFetch(domain:superuser.com)",
+      "WebFetch(domain:serverfault.com)",
+      "WebFetch(domain:reddit.com)",
+
+      // Framework Documentation
+      "WebFetch(domain:reactjs.org)",
+      "WebFetch(domain:vuejs.org)",
+      "WebFetch(domain:angular.io)",
+      "WebFetch(domain:svelte.dev)",
+      "WebFetch(domain:nextjs.org)",
+      "WebFetch(domain:nuxtjs.org)",
+      "WebFetch(domain:django.readthedocs.io)",
+      "WebFetch(domain:flask.palletsprojects.com)",
+      "WebFetch(domain:fastapi.tiangolo.com)",
+      "WebFetch(domain:spring.io)",
+      "WebFetch(domain:symfony.com)",
+      "WebFetch(domain:laravel.com)",
+      "WebFetch(domain:rubyonrails.org)",
+
+      // Infrastructure Tools
+      "WebFetch(domain:terraform.io)",
+      "WebFetch(domain:pulumi.com)",
+      "WebFetch(domain:ansible.com)",
+      "WebFetch(domain:vagrantup.com)",
+
+      // Monitoring & Observability
+      "WebFetch(domain:prometheus.io)",
+      "WebFetch(domain:grafana.com)",
+      "WebFetch(domain:jaegertracing.io)",
+      "WebFetch(domain:zipkin.io)",
+      "WebFetch(domain:opentelemetry.io)",
+
+      // Security Tools
+      "WebFetch(domain:snyk.io)",
+      "WebFetch(domain:owasp.org)",
+      "WebFetch(domain:aquasec.com)",
+      "WebFetch(domain:twistlock.com)",
+
+      // General Tech Resources
+      "WebFetch(domain:atlassian.com)",
+      "WebFetch(domain:jetbrains.com)",
+      "WebFetch(domain:code.visualstudio.com)",
+      "WebFetch(domain:vim.org)",
+      "WebFetch(domain:gnu.org)",
+      "WebFetch(domain:archlinux.org)",
+      "WebFetch(domain:ubuntu.com)",
+      "WebFetch(domain:debian.org)",
+      "WebFetch(domain:centos.org)",
+      "WebFetch(domain:fedoraproject.org)",
+
+      // API Documentation
+      "WebFetch(domain:rapidapi.com)",
+      "WebFetch(domain:postman.com)",
+      "WebFetch(domain:insomnia.rest)",
+      "WebFetch(domain:swagger.io)",
+      "WebFetch(domain:openapi.tools)",
+
+      // Testing & Quality
+      "WebFetch(domain:cypress.io)",
+      "WebFetch(domain:selenium.dev)",
+      "WebFetch(domain:playwright.dev)",
+      "WebFetch(domain:jestjs.io)",
+      "WebFetch(domain:mochajs.org)",
+      "WebFetch(domain:junit.org)",
+
+      // CDN & Performance
+      "WebFetch(domain:jsdelivr.com)",
+      "WebFetch(domain:unpkg.com)",
+      "WebFetch(domain:cdnjs.com)",
+      "WebFetch(domain:webpagetest.org)",
+      "WebFetch(domain:gtmetrix.com)",
+
+      // Standards & Specifications
+      "WebFetch(domain:w3.org)",
+      "WebFetch(domain:whatwg.org)",
+      "WebFetch(domain:ecma-international.org)",
+      "WebFetch(domain:ietf.org)",
+      "WebFetch(domain:rfc-editor.org)",
+
+      // Modern Development Platforms (2024/2025)
+      "WebFetch(domain:modelcontextprotocol.io)",
+      "WebFetch(domain:anthropic.com)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:platform.openai.com)",
+      "WebFetch(domain:openai.com)",
+      "WebFetch(domain:huggingface.co)",
+      "WebFetch(domain:ollama.ai)",
+      "WebFetch(domain:replicate.com)",
+      "WebFetch(domain:modal.com)",
+      "WebFetch(domain:wandb.ai)",
+      "WebFetch(domain:clearml.com)",
+      "WebFetch(domain:gradio.app)",
+      "WebFetch(domain:streamlit.io)",
+
+      // Cloud-Native & GitOps (2024/2025)
+      "WebFetch(domain:argo-cd.readthedocs.io)",
+      "WebFetch(domain:argoproj.github.io)",
+      "WebFetch(domain:fluxcd.io)",
+      "WebFetch(domain:istio.io)",
+      "WebFetch(domain:linkerd.io)",
+      "WebFetch(domain:envoyproxy.io)",
+      "WebFetch(domain:cilium.io)",
+      "WebFetch(domain:projectcalico.org)",
+      "WebFetch(domain:falco.org)",
+      "WebFetch(domain:openpolicyagent.org)",
+      "WebFetch(domain:cert-manager.io)",
+      "WebFetch(domain:external-dns.alpha.kubernetes.io)",
+
+      // Modern DevOps Tools (2024/2025)
+      "WebFetch(domain:k9scli.io)",
+      "WebFetch(domain:github.com/jesseduffield/lazydocker)",
+      "WebFetch(domain:nektosact.com)",
+      "WebFetch(domain:containers.dev)",
+      "WebFetch(domain:devcontainers.github.io)",
+      "WebFetch(domain:okteto.com)",
+      "WebFetch(domain:telepresence.io)",
+      "WebFetch(domain:tilt.dev)",
+      "WebFetch(domain:garden.io)",
+      "WebFetch(domain:devspace.sh)",
+      "WebFetch(domain:localstack.cloud)",
+
+      // Modern Terminal & Developer Experience
+      "WebFetch(domain:starship.rs)",
+      "WebFetch(domain:zellij.dev)",
+      "WebFetch(domain:wezfurlong.org)",
+      "WebFetch(domain:alacritty.org)",
+      "WebFetch(domain:sw.kovidgoyal.net)",
+      "WebFetch(domain:the.exa.website)",
+      "WebFetch(domain:dystroy.org)",
+      "WebFetch(domain:sharkdp.github.io)",
+
+      // Observability & Monitoring (2024/2025)
+      "WebFetch(domain:opentelemetry.io)",
+      "WebFetch(domain:jaegertracing.io)",
+      "WebFetch(domain:grafana.com)",
+      "WebFetch(domain:prometheus.io)",
+      "WebFetch(domain:thanos.io)",
+      "WebFetch(domain:cortexmetrics.io)",
+      "WebFetch(domain:victoriametrics.com)",
+      "WebFetch(domain:honeycomb.io)",
+      "WebFetch(domain:lightstep.com)",
+      "WebFetch(domain:tempo.grafana.com)",
+      "WebFetch(domain:loki.grafana.com)",
+
+      // Security & Compliance (2024/2025)
+      "WebFetch(domain:sigstore.dev)",
+      "WebFetch(domain:cosign.sigstore.dev)",
+      "WebFetch(domain:aquasec.com)",
+      "WebFetch(domain:anchore.com)",
+      "WebFetch(domain:semgrep.dev)",
+      "WebFetch(domain:snyk.io)",
+      "WebFetch(domain:bridgecrew.io)",
+      "WebFetch(domain:prismacloud.io)",
+
+      // AI/ML Learning & Documentation (2024/2025)
+      "WebFetch(domain:python.langchain.com)",
+      "WebFetch(domain:llamaindex.ai)",
+      "WebFetch(domain:pytorch.org)",
+      "WebFetch(domain:tensorflow.org)",
+      "WebFetch(domain:mlflow.org)",
+      "WebFetch(domain:dvc.org)",
+      "WebFetch(domain:great-expectations.readthedocs.io)",
+
+      // Additional Wildcard Domains
+      "WebFetch(domain:*.readthedocs.io)",
+      "WebFetch(domain:*.github.io)",
+      "WebFetch(domain:*.vercel.app)",
+      "WebFetch(domain:*.netlify.app)",
+      "WebFetch(domain:*.herokuapp.com)",
+      "WebFetch(domain:*.stackoverflow.com)",
+      "WebFetch(domain:*.medium.com)",
+      "WebFetch(domain:*.dev.to)",
+      "WebFetch(domain:*.hashnode.com)"
+    ],
+
+    "deny": [
+      // Critical System Operations
+      "Bash(rm -rf /:*)",
+      "Bash(dd:*)",
+      "Bash(mkfs:*)",
+      "Bash(fdisk:*)",
+      "Bash(parted:*)",
+      "Bash(format:*)",
+
+      // Network Security
+      "Bash(nc -l:*)",
+      "Bash(netcat -l:*)",
+      "Bash(socat LISTEN:*)",
+      
+      // System Modification
+      "Bash(chroot:*)",
+      "Bash(mount:*)",
+      "Bash(umount:*)",
+      
+      // Privilege Escalation
+      "Bash(su:*)",
+      "Bash(sudo su:*)",
+      
+      // Dangerous Downloads
+      "Bash(curl * | sh:*)",
+      "Bash(wget * | sh:*)",
+      "Bash(curl * | bash:*)",
+      "Bash(wget * | bash:*)",
+
+      // Malicious Domains
+      "WebFetch(domain:*.torproject.org)",
+      "WebFetch(domain:*.onion)",
+      "WebFetch(domain:pastebin.com)",
+      "WebFetch(domain:hastebin.com)"
+    ]
+  },
+
+  "settings": {
+    "auto_approve_read_only": true,
+    "auto_approve_safe_commands": true,
+    "prompt_on_destructive": true,
+    "allow_network_access": true,
+    "allow_file_modifications": true,
+    "session_timeout": 3600
+  }
+}

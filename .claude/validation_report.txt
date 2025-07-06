@@ -1,0 +1,23 @@
+================================================================================
+CLAUDE FRAMEWORK XML VALIDATION REPORT
+================================================================================
+
+SUMMARY STATISTICS:
+- Total files analyzed: 29
+- Files with XML blocks: 27
+- Files with errors: 0
+- Files without XML: 2
+
+CLAUDE 4 PATTERN USAGE:
+- Enforcement patterns: 8
+- Priority patterns: 0
+- strict_enforcement tags: 8
+- quality_gates tags: 4
+
+
+FILES WITHOUT XML BLOCKS:
+----------------------------------------
+  ℹ️  PERMISSION_VALIDATION.md
+  ℹ️  README.md
+
+================================================================================
