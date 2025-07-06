@@ -142,6 +142,12 @@
       Maintain test suite integrity throughout refactoring process
       Add tests for any previously untested code discovered during refactoring
     </refactoring>
+    <prompt_engineering>
+      Write failing test scenarios that specify expected prompt behavior
+      Implement minimal prompt changes to make test scenarios pass
+      Refactor prompts for clarity and effectiveness while maintaining test success
+      Document prompt TDD compliance in prompt engineering sessions
+    </prompt_engineering>
   </tdd_workflows>
   
   <quality_gates enforcement="strict">
@@ -175,6 +181,7 @@
     <provides_to>
       development/task-management.md for TDD workflow integration
       development/protocol-enforcement.md for enhanced coverage requirements
+      development/prompt-engineering.md for prompt testing methodology
       quality/production-standards.md for enterprise testing standards
     </provides_to>
   </integration_points>

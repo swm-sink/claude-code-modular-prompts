@@ -83,6 +83,8 @@
     <trigger condition="architectural_changes">Changes affect system design → escalate to /swarm</trigger>
     <trigger condition="integration_heavy">Complex external system integration → escalate to /swarm</trigger>
     <trigger condition="performance_critical">Multi-layer optimization needed → escalate to /swarm</trigger>
+    <trigger condition="prompt_engineering">Complex prompt development → delegate to /prompt</trigger>
+    <trigger condition="prompt_evaluation">Multi-agent prompt evaluation → escalate to /swarm</trigger>
   </escalation_logic>
   
   <session_integration>
@@ -109,9 +111,11 @@
       quality/tdd.md for TDD cycle enforcement
       quality/critical-thinking.md for requirement analysis
       patterns/session-management.md for session decisions
+      development/prompt-engineering.md for prompt-related tasks
     </depends_on>
     <provides_to>
       development/protocol-enforcement.md for production standards
+      development/prompt-engineering.md for prompt task delegation
       patterns/multi-agent.md for escalation triggers
     </provides_to>
   </integration_points>

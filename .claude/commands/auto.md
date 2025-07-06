@@ -10,6 +10,7 @@
       <module>modules/patterns/multi-agent.md</module>
       <module>modules/patterns/session-management.md</module>
       <module>modules/development/research-analysis.md</module>
+      <module>modules/development/prompt-engineering.md</module>
       <module>modules/quality/critical-thinking.md</module>
     </supporting_modules>
   </module_integration>
@@ -18,6 +19,7 @@
     <example type="basic">/auto "Add user authentication to the API"</example>
     <example type="complex">/auto "Build microservices e-commerce platform with payment processing"</example>
     <example type="research">/auto "Understand how our current caching system works"</example>
+    <example type="prompt_engineering">/auto "Create and evaluate a comprehensive code review assistant prompt"</example>
     <example type="legacy">/auto "project:tdd" # Migrated to modern TDD module</example>
   </usage_examples>
   

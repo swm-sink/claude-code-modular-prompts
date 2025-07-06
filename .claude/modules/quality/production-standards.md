@@ -77,6 +77,7 @@
     <gate name="code_quality" requirement="Zero linting errors, complete type checking, peer review approved"/>
     <gate name="documentation" requirement="API documentation complete, code comments current, session updated"/>
     <gate name="operational_readiness" requirement="Monitoring configured, runbooks prepared, backup tested"/>
+    <gate name="prompt_quality" requirement="Prompt evaluation metrics passed, testing scenarios completed, improvement documented"/>
   </mandatory_quality_gates>
   
   <security_standards grade="financial">
@@ -171,10 +172,12 @@
       patterns/session-management.md for compliance tracking sessions
       security/financial-compliance.md for enterprise security standards
       quality/tdd.md for test-driven development enforcement
+      development/prompt-engineering.md for prompt quality standards
     </depends_on>
     <provides_to>
       development/task-management.md for quality gate integration
       development/protocol-enforcement.md for enhanced enterprise standards
+      development/prompt-engineering.md for production prompt standards
       All commands for mandatory production quality enforcement
     </provides_to>
   </integration_points>

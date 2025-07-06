@@ -84,6 +84,13 @@
       <usage>Batch(["Refactor UserService to SOLID principles", "Refactor ProductService to SOLID principles"])</usage>
       <coordination>Single Batch() call for similar operations across multiple targets</coordination>
     </batch_pattern>
+    <prompt_evaluation_pattern>
+      <description>Comprehensive prompt engineering evaluation using specialized agents</description>
+      <usage>Task("Prompt Engineer", "Evaluate prompt clarity and specificity metrics")</usage>
+      <usage>Task("Quality Specialist", "Assess robustness and error handling")</usage>
+      <usage>Task("Performance Analyst", "Benchmark effectiveness and response quality")</usage>
+      <coordination>Parallel evaluation from multiple expert perspectives in single message</coordination>
+    </prompt_evaluation_pattern>
   </agent_patterns>
   
   <specialized_roles>
@@ -111,6 +118,10 @@
       Expertise: Infrastructure, deployment, monitoring, CI/CD
       Deliverables: Infrastructure code, deployment pipelines, monitoring systems
     </devops_engineer>
+    <prompt_engineer>
+      Expertise: AI prompt design, evaluation frameworks, testing methodologies
+      Deliverables: Optimized prompts, evaluation reports, testing frameworks
+    </prompt_engineer>
   </specialized_roles>
   
   <coordination_rules>
@@ -159,9 +170,11 @@
       patterns/session-management.md for automatic session creation
       quality/tdd.md for individual agent testing requirements
       development/task-management.md for quality standards enforcement
+      development/prompt-engineering.md for prompt evaluation workflows
     </depends_on>
     <provides_to>
       patterns/intelligent-routing.md for multi-agent escalation triggers
+      development/prompt-engineering.md for parallel evaluation execution
       All commands for parallel execution coordination patterns
     </provides_to>
   </integration_points>

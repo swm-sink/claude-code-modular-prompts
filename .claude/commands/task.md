@@ -11,6 +11,7 @@
       <module>modules/quality/production-standards.md</module>
       <module>modules/patterns/session-management.md</module>
       <module>modules/patterns/git-operations.md</module>
+      <module>modules/development/prompt-engineering.md</module>
     </supporting_modules>
   </module_integration>
   
@@ -21,6 +22,7 @@
     <example type="docs">/task "Document the authentication API" --docs</example>
     <example type="issue_linked">/task "Add OAuth2 support" --issue #89</example>
     <example type="ci_setup">/task "Setup automated testing pipeline" --ci</example>
+    <example type="prompt_task">/task "Create a simple bug report template prompt" --prompt</example>
   </usage_examples>
   
   <escalation_triggers>

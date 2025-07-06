@@ -115,6 +115,11 @@
       Template: Enterprise compliance with regulatory tracking capabilities
       Features: Compliance checkpoints, audit trail, regulatory documentation
     </enterprise_sessions>
+    <prompt_engineering_sessions>
+      Purpose: Track comprehensive prompt development and evaluation workflows
+      Template: Prompt engineering with metrics tracking and iteration management
+      Features: Version control, evaluation metrics, improvement tracking, A/B testing results
+    </prompt_engineering_sessions>
   </session_types>
   
   <session_lifecycle_management>
@@ -170,6 +175,7 @@
     <provides_to>
       patterns/multi-agent.md for automatic session creation in multi-agent work
       development/protocol-enforcement.md for compliance tracking sessions
+      development/prompt-engineering.md for prompt development session tracking
       patterns/intelligent-routing.md for session decision logic
       All commands for progress tracking and context documentation
     </provides_to>

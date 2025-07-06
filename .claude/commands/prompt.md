@@ -94,6 +94,8 @@
   
   <reference>
     See modules/development/prompt-engineering.md for complete implementation details including creation patterns, evaluation frameworks, testing methodologies, improvement algorithms, and production deployment workflows.
+    
+    See modules/patterns/prompt-integration-examples.md for comprehensive integration examples with all framework components including multi-agent workflows, quality gates, and session management.
   </reference>
   
 </command>

@@ -13,9 +13,10 @@
   <core_features>
     <feature name="aware_process">Structured thinking methodology (Assess-Watch-Architect-Run-Evaluate)</feature>
     <feature name="multi_agent_patterns">Native Task() and Batch() patterns for parallel execution</feature>
-    <feature name="command_architecture">10 optimized commands for different workflows</feature>
+    <feature name="command_architecture">11 optimized commands for different workflows</feature>
     <feature name="quality_enforcement">TDD, security, and performance standards</feature>
     <feature name="session_management">GitHub issue-based context tracking</feature>
+    <feature name="prompt_engineering">Systematic AI prompt creation, evaluation, and improvement</feature>
   </core_features>
   
   <claude_4_optimizations>
@@ -53,6 +54,10 @@
       <command>/swarm "Build microservices platform"</command>
       <purpose>Complex multi-component development</purpose>
     </example>
+    <example name="prompt_engineering">
+      <command>/prompt create "API documentation generator" --type system</command>
+      <purpose>Systematic prompt creation, evaluation, and improvement</purpose>
+    </example>
   </usage_examples>
   
 </quick_start>
@@ -68,6 +73,7 @@
         <command name="swarm.md">Multi-agent + session management</command>
         <command name="query.md">Research-only operations</command>
         <command name="session.md">GitHub issue integration</command>
+        <command name="prompt.md">AI prompt engineering workflows</command>
       </commands>
       <modules purpose="Composable implementation modules">
         <category name="security/">Security patterns (audit, compliance, threat-model)</category>

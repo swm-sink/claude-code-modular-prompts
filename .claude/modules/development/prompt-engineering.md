@@ -216,6 +216,18 @@
         <module>patterns/session-management.md</module>
         <purpose>Complex workflow coordination</purpose>
       </integration>
+      <integration name="multi_agent_evaluation">
+        <module>patterns/multi-agent.md</module>
+        <purpose>Parallel evaluation from multiple expert perspectives</purpose>
+      </integration>
+      <integration name="quality_standards">
+        <module>quality/production-standards.md</module>
+        <purpose>Production-grade prompt quality enforcement</purpose>
+      </integration>
+      <integration name="tdd_methodology">
+        <module>quality/tdd.md</module>
+        <purpose>Test-driven prompt development methodology</purpose>
+      </integration>
     </integration_points>
     
     <best_practices>

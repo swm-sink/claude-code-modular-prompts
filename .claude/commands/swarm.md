@@ -11,6 +11,7 @@
       <module>modules/quality/production-standards.md</module>
       <module>modules/security/audit.md</module>
       <module>modules/development/protocol-enforcement.md</module>
+      <module>modules/development/prompt-engineering.md</module>
     </supporting_modules>
   </module_integration>
   
@@ -19,6 +20,7 @@
     <example type="performance">/swarm "Optimize entire application for 10x scale"</example>
     <example type="migration">/swarm "Migrate legacy monolith to cloud-native microservices"</example>
     <example type="integration">/swarm "Build real-time notification system with WebSockets and Redis"</example>
+    <example type="prompt_evaluation">/swarm "Comprehensive evaluation of AI assistant prompts across multiple domains"</example>
   </usage_examples>
   
   <trigger_conditions>
