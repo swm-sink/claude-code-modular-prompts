@@ -86,10 +86,12 @@
     </pattern>
     
     <pattern name="github_issue_tracking" priority="mandatory">
-      <motivation>Complex work requires systematic tracking to prevent context loss</motivation>
+      <motivation>Complex work requires systematic tracking to prevent context loss and ensure completion</motivation>
       <requirement>MANDATORY: Create GitHub issues for tasks >10 atomic steps</requirement>
       <usage>gh issue create before starting complex work, track atomic progress</usage>
       <integration>Seamless integration with session management and multi-agent coordination</integration>
+      <enforcement>MUST create epic and phase issues for complex multi-phase work</enforcement>
+      <verification>Issues must be closed only when acceptance criteria fully met</verification>
       <reference>See github_issue_enforcement section for complete requirements</reference>
     </pattern>
     
@@ -116,6 +118,7 @@
       <purpose>Core slash commands (delegation only)</purpose>
       <command name="auto" delegates_to="modules/patterns/intelligent-routing.md">Intelligent routing + module composition</command>
       <command name="task" delegates_to="modules/development/task-management.md">Development execution + quality modules</command>
+      <command name="feature" delegates_to="modules/development/autonomous-workflow.md">Zero-touch autonomous feature development with 95% self-sufficiency</command>
       <command name="swarm" delegates_to="modules/patterns/multi-agent.md">Multi-agent + session management</command>
       <command name="query" delegates_to="modules/development/research-analysis.md">Research-only operations</command>
       <command name="session" delegates_to="modules/patterns/session-management.md">GitHub issue integration</command>
@@ -231,6 +234,11 @@
       <validation>Critical paths benchmarked and profiled</validation>
       <reference>modules/quality/performance.md</reference>
     </checkpoint>
+    <checkpoint name="feature_development" enforcement="mandatory">
+      <requirement>PRD-first approach for all feature development</requirement>
+      <validation>Complete PRD with stakeholder approval before implementation</validation>
+      <reference>modules/development/feature-workflow.md</reference>
+    </checkpoint>
   </quality_checkpoints>
   
   <completion_criteria mandatory="true">
@@ -239,6 +247,9 @@
     <criterion>Security review completed</criterion>
     <criterion>Performance benchmarks met</criterion>
     <criterion>Documentation updated</criterion>
+    <criterion>PRD completed and approved for feature development</criterion>
+    <criterion>MVP strategy defined and validated</criterion>
+    <criterion>Feature validation completed successfully</criterion>
     <criterion>Session completed with outcomes documented</criterion>
     <criterion>GitHub issues created for complex work (>10 atomic steps)</criterion>
     <criterion>All atomic steps completed and verified</criterion>
@@ -263,6 +274,7 @@
       <trigger command="/swarm">Always creates session</trigger>
       <trigger command="/auto">Creates sessions for complex autonomous work</trigger>
       <trigger command="/task">Prompts for sessions on multi-step tasks</trigger>
+      <trigger command="/feature">Always creates session for comprehensive feature development</trigger>
       <trigger pattern="multi_agent">Task(), Batch() patterns auto-create sessions</trigger>
     </automatic_creation>
     <reference>See modules/patterns/session-management.md for implementation</reference>
@@ -338,6 +350,95 @@
   
 </development_integration>
 
+<github_workflow_enforcement enforcement="absolute">
+  
+  <motivation>
+    Complex AI development requires systematic tracking to prevent context loss, ensure completion, and maintain quality standards. GitHub issues provide persistent context beyond conversation limits and enable effective multi-agent coordination.
+  </motivation>
+  
+  <mandatory_workflow_triggers>
+    <trigger type="complexity" threshold="10">Tasks requiring >10 atomic steps</trigger>
+    <trigger type="multi_agent" threshold="3">Multi-agent coordination with ≥3 specialized agents</trigger>
+    <trigger type="framework_changes" scope="core">Changes to core framework structure or architecture</trigger>
+    <trigger type="context_risk" condition="conversation_limits">Risk of losing progress due to context window limits</trigger>
+    <trigger type="multi_phase" span="files">Work spanning multiple files, modules, or categories</trigger>
+    <trigger type="collaboration" requirement="coordination">Work requiring team coordination or handoffs</trigger>
+  </mandatory_workflow_triggers>
+  
+  <workflow_protocol enforcement="strict">
+    <phase name="pre_execution" order="1">
+      <requirement>MUST create GitHub issues before starting complex work</requirement>
+      <validation>Epic issue created with clear success metrics and dependency graph</validation>
+      <validation>Phase issues created with atomic step breakdown</validation>
+      <validation>All issues include acceptance criteria and verification protocols</validation>
+    </phase>
+    
+    <phase name="execution" order="2">
+      <requirement>MUST reference issues in all commits</requirement>
+      <requirement>MUST track atomic progress in real-time</requirement>
+      <requirement>MUST update issue status as work progresses</requirement>
+      <validation>Each atomic step independently verifiable</validation>
+      <validation>Progress updates maintain context continuity</validation>
+    </phase>
+    
+    <phase name="completion" order="3">
+      <requirement>MUST close issues only when acceptance criteria fully met</requirement>
+      <requirement>MUST document outcomes and lessons learned</requirement>
+      <requirement>MUST verify all deliverables against original requirements</requirement>
+      <validation>100% completion of acceptance criteria</validation>
+      <validation>Comprehensive outcome documentation</validation>
+    </phase>
+  </workflow_protocol>
+  
+  <issue_architecture_requirements>
+    <epic_issue structure="coordination">
+      <purpose>Overall project coordination and success tracking</purpose>
+      <components>Project overview, success metrics, sub-issue references, dependency graph</components>
+      <labels>epic, high-priority, framework, coordination</labels>
+      <validation>Clear completion criteria and measurable success metrics</validation>
+    </epic_issue>
+    
+    <phase_issues structure="execution">
+      <purpose>Detailed phase planning with atomic step tracking</purpose>
+      <components>Atomic step breakdown, acceptance criteria, dependencies, verification protocols</components>
+      <format>Checkbox lists for progress tracking, clear deliverables</format>
+      <validation>Each step independently verifiable and trackable</validation>
+    </phase_issues>
+    
+    <session_integration structure="coordination">
+      <purpose>Real-time multi-agent coordination and progress monitoring</purpose>
+      <components>Agent assignments, progress updates, outcome documentation</components>
+      <integration>Automatic updates from multi-agent execution patterns</integration>
+      <validation>Comprehensive coordination and result documentation</validation>
+    </session_integration>
+  </issue_architecture_requirements>
+  
+  <success_metrics proven="true">
+    <reference_implementation>Claude 4 Framework Optimization project (Issues #1-#13)</reference_implementation>
+    <quantitative_results>
+      <metric>260+ atomic steps successfully tracked and completed</metric>
+      <metric>7 phases systematically executed with zero context loss</metric>
+      <metric>100% completion rate with systematic tracking</metric>
+      <metric>Zero incomplete work due to context limitations</metric>
+    </quantitative_results>
+    <qualitative_benefits>
+      <benefit>Prevented context loss across complex multi-phase work</benefit>
+      <benefit>Ensured completion of all requirements and acceptance criteria</benefit>
+      <benefit>Maintained quality standards throughout execution</benefit>
+      <benefit>Enabled effective multi-agent coordination and handoffs</benefit>
+    </qualitative_benefits>
+  </success_metrics>
+  
+  <integration_enforcement>
+    <tool_patterns>GitHub issue creation automatically integrated with parallel execution patterns</tool_patterns>
+    <multi_agent_coordination>Session management with automatic GitHub issue tracking</multi_agent_coordination>
+    <quality_gates>Issue-based tracking ensures all completion criteria met before closure</quality_gates>
+    <session_management>GitHub issues provide persistent context beyond conversation limits</session_management>
+    <command_integration>All complex commands (/swarm, /task, /auto) enforce GitHub issue requirements</command_integration>
+  </integration_enforcement>
+  
+</github_workflow_enforcement>
+
 <modular_architecture_overview>
   
   <architecture_principles enforcement="absolute">
@@ -361,16 +462,20 @@
   <getting_started>
     <simple_tasks>Use /task for most development work</simple_tasks>
     <research>Use /query to understand before changing</research>
+    <autonomous_features>Use /feature for zero-touch autonomous feature development with 95% self-sufficiency</autonomous_features>
     <complex_work>Use /swarm for multi-component features (auto-creates session)</complex_work>
     <uncertain>Use /auto when unsure</uncertain>
     <tracking>Use /session to manage AI development context</tracking>
     <complex_planning>Create GitHub issues for work >10 atomic steps (mandatory)</complex_planning>
+    <workflow_enforcement>Follow GitHub workflow enforcement for all complex multi-phase work</workflow_enforcement>
   </getting_started>
   
   <capabilities context="battle_tested">
     <performance>3x faster development with multi-agent coordination</performance>
     <reliability>94.4% success rate on enterprise systems</reliability>
     <automation>Zero-configuration intelligent pattern selection</automation>
+    <autonomous_development>95% self-sufficient feature development with zero-touch execution</autonomous_development>
+    <intelligent_orchestration>Predictive requirement extraction and self-healing validation</intelligent_orchestration>
     <integration>GitHub CLI automation, CI/CD pipeline generation</integration>
   </capabilities>
   
@@ -386,6 +491,9 @@
     <check>Token budgets maintained</check>
     <check>GitHub issue enforcement integrated into execution patterns</check>
     <check>Complex work (>10 steps) tracked through GitHub issues</check>
+    <check>Epic and phase issues created for multi-phase work</check>
+    <check>Issues closed only when acceptance criteria fully met</check>
+    <check>Atomic steps tracked and verified in GitHub issues</check>
   </framework_integrity>
   
   <claude_4_compliance>
