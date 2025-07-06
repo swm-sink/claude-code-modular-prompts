@@ -45,6 +45,10 @@
       <command>/task "Implement user registration with tests"</command>
       <purpose>Development with quality enforcement</purpose>
     </example>
+    <example name="feature_development">
+      <command>/feature "User dashboard with analytics widgets"</command>
+      <purpose>Comprehensive feature development with PRD-first approach</purpose>
+    </example>
     <example name="multi_agent_coordination">
       <command>/swarm "Build microservices platform"</command>
       <purpose>Complex multi-component development</purpose>
@@ -60,6 +64,7 @@
       <commands purpose="Core slash commands (delegation only)">
         <command name="auto.md">Intelligent routing + module composition</command>
         <command name="task.md">Development execution + quality modules</command>
+        <command name="feature.md">Comprehensive feature development with PRD-first approach</command>
         <command name="swarm.md">Multi-agent + session management</command>
         <command name="query.md">Research-only operations</command>
         <command name="session.md">GitHub issue integration</command>

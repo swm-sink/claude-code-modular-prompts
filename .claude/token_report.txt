@@ -3,20 +3,20 @@ CLAUDE FRAMEWORK TOKEN ANALYSIS REPORT
 ================================================================================
 
 SUMMARY STATISTICS:
-- Total files analyzed: 33
-- Total tokens: 20,100
+- Total files analyzed: 38
+- Total tokens: 29,074
 
 TOKEN DISTRIBUTION BY CATEGORY:
 ----------------------------------------
-OTHER:
-  Files: 1
-  Tokens: 559
-  Average: 559 tokens/file
-
 FOUNDATION:
-  Files: 3
-  Tokens: 2,770
-  Average: 923 tokens/file
+  Files: 2
+  Tokens: 2,447
+  Average: 1,223 tokens/file
+
+OTHER:
+  Files: 7
+  Tokens: 10,064
+  Average: 1,437 tokens/file
 
 ARCHIVE:
   Files: 1
@@ -25,21 +25,26 @@ ARCHIVE:
 
 COMMAND:
   Files: 11
-  Tokens: 2,459
-  Average: 223 tokens/file
+  Tokens: 2,213
+  Average: 201 tokens/file
 
 MODULE:
   Files: 17
-  Tokens: 13,836
-  Average: 813 tokens/file
+  Tokens: 13,874
+  Average: 816 tokens/file
 
 ✅ ALL BUDGET CONSTRAINTS MET
 
 DETAILED FILE ANALYSIS:
 ----------------------------------------
+✅ reports/OBJECTIVES_SYNTHESIS_PLAN.md (2,568 tokens, other)
+✅ reports/PROJECT_STRUCTURE_ANALYSIS.md (2,424 tokens, other)
 ✅ ../CLAUDE.md (1,836 tokens, foundation)
+✅ memory/EPIC_PROGRESS_ANALYSIS.md (1,623 tokens, other)
+✅ reports/REVIEWER_AGENT_RESEARCH.md (1,489 tokens, other)
 ✅ modules/quality/production-standards.md (1,121 tokens, module)
 ✅ modules/security/audit.md (1,117 tokens, module)
+✅ memory/PHASE_7_FINAL_OPTIMIZATION_REPORT.md (1,078 tokens, other)
 ✅ modules/patterns/session-management.md (1,034 tokens, module)
 ✅ modules/quality/tdd.md (1,016 tokens, module)
 ✅ modules/patterns/api-development.md (937 tokens, module)
@@ -50,25 +55,25 @@ DETAILED FILE ANALYSIS:
 ✅ modules/patterns/git-operations.md (779 tokens, module)
 ✅ modules/development/protocol-enforcement.md (734 tokens, module)
 ✅ modules/security/financial-compliance.md (731 tokens, module)
+✅ modules/development/autonomous-workflow.md (661 tokens, module)
 ✅ modules/quality/honesty-policy.md (642 tokens, module)
-✅ modules/development/autonomous-workflow.md (623 tokens, module)
 ✅ README.md (611 tokens, foundation)
 ✅ modules/patterns/tool-usage.md (609 tokens, module)
 ✅ modules/development/research-analysis.md (594 tokens, module)
-✅ commands/feature.md (577 tokens, command)
 ✅ modules/development/task-management.md (569 tokens, module)
-✅ VALIDATION_DASHBOARD.md (559 tokens, other)
+✅ memory/VALIDATION_DASHBOARD.md (559 tokens, other)
 ✅ archive/README.md (476 tokens, archive)
-✅ PERMISSION_VALIDATION.md (323 tokens, foundation)
-✅ commands/task.md (231 tokens, command)
-✅ commands/query.md (223 tokens, command)
-✅ commands/auto.md (219 tokens, command)
-✅ commands/swarm.md (216 tokens, command)
-✅ commands/session.md (210 tokens, command)
-✅ commands/security.md (182 tokens, command)
-✅ commands/test.md (170 tokens, command)
-✅ commands/protocol.md (168 tokens, command)
-✅ commands/commit.md (133 tokens, command)
-✅ commands/fastapi.md (130 tokens, command)
+✅ commands/feature.md (345 tokens, command)
+✅ reports/PERMISSION_VALIDATION.md (323 tokens, other)
+✅ commands/task.md (230 tokens, command)
+✅ commands/query.md (222 tokens, command)
+✅ commands/auto.md (218 tokens, command)
+✅ commands/swarm.md (215 tokens, command)
+✅ commands/session.md (208 tokens, command)
+✅ commands/security.md (180 tokens, command)
+✅ commands/test.md (168 tokens, command)
+✅ commands/protocol.md (167 tokens, command)
+✅ commands/commit.md (131 tokens, command)
+✅ commands/fastapi.md (129 tokens, command)
 
 ================================================================================

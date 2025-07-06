@@ -3,22 +3,43 @@ CLAUDE FRAMEWORK XML VALIDATION REPORT
 ================================================================================
 
 SUMMARY STATISTICS:
-- Total files analyzed: 32
-- Files with XML blocks: 29
-- Files with errors: 0
-- Files without XML: 3
+- Total files analyzed: 49
+- Files with XML blocks: 40
+- Files with errors: 4
+- Files without XML: 9
 
 CLAUDE 4 PATTERN USAGE:
-- Enforcement patterns: 8
+- Enforcement patterns: 13
 - Priority patterns: 0
 - strict_enforcement tags: 8
-- quality_gates tags: 5
+- validation_checklist tags: 2
+- quality_gates tags: 14
 
+DETAILED ERRORS:
+----------------------------------------
+
+modules/quality/feature-validation.md:
+  ❌ Block 0: Invalid enforcement value 'measurable'. Valid values: {'absolute', 'mandatory', 'automatic', 'strict'}
+
+modules/development/mvp-strategy.md:
+  ❌ Block 0: Invalid enforcement value 'best_practice'. Valid values: {'absolute', 'mandatory', 'automatic', 'strict'}
+
+modules/development/prd-generation.md:
+  ❌ Block 0: Invalid enforcement value 'standard'. Valid values: {'absolute', 'mandatory', 'automatic', 'strict'}
+
+modules/development/iterative-testing.md:
+  ❌ Block 0: Invalid enforcement value 'comprehensive'. Valid values: {'absolute', 'mandatory', 'automatic', 'strict'}
 
 FILES WITHOUT XML BLOCKS:
 ----------------------------------------
   ℹ️  VALIDATION_DASHBOARD.md
-  ℹ️  PERMISSION_VALIDATION.md
   ℹ️  README.md
+  ℹ️  memory/PHASE_7_FINAL_OPTIMIZATION_REPORT.md
+  ℹ️  memory/VALIDATION_DASHBOARD.md
+  ℹ️  memory/EPIC_PROGRESS_ANALYSIS.md
+  ℹ️  tests/feature-workflow-integration-test.md
+  ℹ️  reports/PERMISSION_VALIDATION.md
+  ℹ️  reports/OBJECTIVES_SYNTHESIS_PLAN.md
+  ℹ️  reports/PROJECT_STRUCTURE_ANALYSIS.md
 
 ================================================================================

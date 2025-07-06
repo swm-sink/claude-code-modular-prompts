@@ -118,7 +118,7 @@
       <purpose>Core slash commands (delegation only)</purpose>
       <command name="auto" delegates_to="modules/patterns/intelligent-routing.md">Intelligent routing + module composition</command>
       <command name="task" delegates_to="modules/development/task-management.md">Development execution + quality modules</command>
-      <command name="feature" delegates_to="modules/development/autonomous-workflow.md">Zero-touch autonomous feature development with 95% self-sufficiency</command>
+      <command name="feature" delegates_to="modules/development/feature-workflow.md">Comprehensive feature development with PRD-first approach</command>
       <command name="swarm" delegates_to="modules/patterns/multi-agent.md">Multi-agent + session management</command>
       <command name="query" delegates_to="modules/development/research-analysis.md">Research-only operations</command>
       <command name="session" delegates_to="modules/patterns/session-management.md">GitHub issue integration</command>
