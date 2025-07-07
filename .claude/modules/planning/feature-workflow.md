@@ -13,6 +13,17 @@
     Execute comprehensive feature development workflow with PRD-first approach, MVP strategy, and iterative validation ensuring production-ready features.
   </purpose>
   
+  <thinking_pattern enforcement="MANDATORY">
+    <step>1. Generate comprehensive PRD using planning/prd-generation.md patterns</step>
+    <step>2. Auto-detect tech stack and existing patterns in codebase</step>
+    <step>3. Create GitHub session for tracking ALWAYS</step>
+    <step>4. Define MVP using planning/mvp-strategy.md with clear phases</step>
+    <step>5. Calculate complexity: >15 score triggers delegation to /swarm</step>
+    <step>6. Execute with TDD: Write ALL tests FIRST before implementation</step>
+    <step>7. Apply quality gates from production-standards.md throughout</step>
+    <step>8. Auto-generate documentation via development/documentation.md</step>
+  </thinking_pattern>
+  
   <trigger_conditions>
     <condition type="explicit">User requests /feature command or feature development</condition>
     <condition type="automatic">Complex feature requirements detected requiring structured approach</condition>

@@ -7,12 +7,22 @@
 ────────────────────────────────────────────────────────────────────────────────
 
 ```xml
-<module name="documentation" purpose="Intelligent documentation management, search, and generation">
+<module name="documentation" purpose="MANDATORY gateway for ALL documentation operations">
   
   <metadata>
     <category>development</category>
     <description>Comprehensive documentation system for navigation, search, and generation</description>
   </metadata>
+  
+  <thinking_pattern enforcement="CRITICAL">
+    <step>1. BLOCK any documentation creation outside /docs command</step>
+    <step>2. Parse request type (search/generate/validate/index)</step>
+    <step>3. For search: Use parallel Grep/Glob for efficiency</step>
+    <step>4. For generate: Apply Framework 3.0 standards ALWAYS</step>
+    <step>5. Ensure proper location (/docs directory ONLY)</step>
+    <step>6. Validate cross-references and consistency</step>
+    <step>7. Update DOCUMENTATION_INDEX.md automatically</step>
+  </thinking_pattern>
   
   <documentation_strategy>
     <principle name="user_focused">Documentation organized by user needs, not file structure</principle>

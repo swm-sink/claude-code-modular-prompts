@@ -576,4 +576,40 @@
 </command_thinking>
 ```
 
+## Module Execution Patterns
+
+```xml
+<module_execution enforcement="MANDATORY">
+  <critical_rule>EVERY module has explicit thinking_pattern section</critical_rule>
+  <critical_rule>Module thinking MUST align with command delegation</critical_rule>
+  <critical_rule>Modules guide Claude's internal reasoning paths</critical_rule>
+  
+  <module_patterns>
+    <intelligent_routing>Parse request → Calculate score → Apply thresholds → Route → Cache</intelligent_routing>
+    <task_management>Understand → RED test → GREEN code → REFACTOR → Quality gates</task_management>
+    <feature_workflow>PRD → Tech analysis → Session → MVP → Complexity → TDD → Gates → Docs</feature_workflow>
+    <multi_agent>Session → Analyze → Worktrees → Parallel Task() → Recovery → Merge</multi_agent>
+    <research_analysis>Parse → Parallel search → Read → Analyze → Map → Report → NO MODS</research_analysis>
+    <documentation>BLOCK → Parse type → Search/Generate → Standards → Location → Validate → Index</documentation>
+    <session_management>Type → Create/Update/Complete → Link → Context → Labels</session_management>
+    <production_standards>Session → Validate → TDD → Threat model → Gates → Compliance → Block</production_standards>
+  </module_patterns>
+  
+  <execution_flow>
+    <rule>Commands delegate to modules via thinking patterns</rule>
+    <rule>Modules execute internal thinking before action</rule>
+    <rule>All modules use parallel execution where possible</rule>
+    <rule>Error recovery integrated in every module workflow</rule>
+    <rule>Quality gates enforced at module level</rule>
+  </execution_flow>
+  
+  <performance_requirements>
+    <rule>Parallel tool calls MANDATORY (70% faster)</rule>
+    <rule>Module delegation must preserve context</rule>
+    <rule>Thinking patterns optimize for 200k token window</rule>
+    <rule>Module integration reduces cognitive overhead</rule>
+  </performance_requirements>
+</module_execution>
+```
+
 **Remember**: Critical thinking partner. Research deeply. Challenge assumptions. Map consequences.

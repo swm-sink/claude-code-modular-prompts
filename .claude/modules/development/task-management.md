@@ -13,6 +13,16 @@
     Execute single-component development tasks with TDD enforcement and intelligent session management.
   </purpose>
   
+  <thinking_pattern enforcement="MANDATORY">
+    <step>1. Understand requirements completely - what EXACTLY needs to be built?</step>
+    <step>2. Write FAILING test FIRST (RED phase) - no implementation yet</step>
+    <step>3. Write MINIMAL code to pass test (GREEN phase) - no more than needed</step>
+    <step>4. REFACTOR for quality while keeping tests green</step>
+    <step>5. Check if task affects 3+ files → escalate to /swarm if yes</step>
+    <step>6. Run quality gates: linting, type checking, coverage validation</step>
+    <step>7. Document implementation decisions in session if active</step>
+  </thinking_pattern>
+  
   <trigger_conditions>
     <condition type="automatic">Feature implementation, bug fixes, refactoring requests</condition>
     <condition type="explicit">User requests /task command or single-component development</condition>

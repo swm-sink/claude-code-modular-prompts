@@ -13,6 +13,16 @@
     Intelligent GitHub issue-based session management for AI development context tracking and coordination.
   </purpose>
   
+  <thinking_pattern enforcement="MANDATORY">
+    <step>1. Determine session type (start/update/complete/view)</step>
+    <step>2. For start: Create GitHub issue with AI template</step>
+    <step>3. For update: Add progress comment with context</step>
+    <step>4. For complete: Summarize outcomes and lessons learned</step>
+    <step>5. Auto-link commits, PRs, and related issues</step>
+    <step>6. Preserve context for /protocol resumption</step>
+    <step>7. Apply labels (ai-session, active, completed)</step>
+  </thinking_pattern>
+  
   <trigger_conditions>
     <condition type="automatic">Multi-agent work, complex tasks (3+ components), enterprise features</condition>
     <condition type="explicit">User requests session creation or complex task tracking</condition>

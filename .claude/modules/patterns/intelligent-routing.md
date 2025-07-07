@@ -13,6 +13,15 @@
     High-performance intelligent routing engine that analyzes requests, learns from patterns, and dynamically composes optimal command and module combinations with minimal latency.
   </purpose>
   
+  <thinking_pattern enforcement="MANDATORY">
+    <step>1. Parse user request and extract key components (services, integrations, security)</step>
+    <step>2. Calculate complexity score: components×5 + integrations×4 + security×3</step>
+    <step>3. Apply routing thresholds: ≤2→/query, 3-9→/task, 10-14→/feature, ≥15→/swarm</step>
+    <step>4. Verify routing decision with confidence scoring (≥80% required)</step>
+    <step>5. Execute routed command with full context and complexity score</step>
+    <step>6. Cache routing decision for pattern learning and optimization</step>
+  </thinking_pattern>
+  
   <performance_optimizations>
     <lazy_loading>
       Command handlers loaded only when selected, not at startup

@@ -13,6 +13,16 @@
     Define and implement native Claude Code multi-agent patterns using Task() and Batch() for parallel execution with git worktree isolation for maximum effectiveness.
   </purpose>
   
+  <thinking_pattern enforcement="MANDATORY">
+    <step>1. Create GitHub session for coordination tracking FIRST</step>
+    <step>2. Analyze components and assign specialized agents</step>
+    <step>3. Create git worktrees BEFORE Task() execution: ../worktrees/swarm-{session}-{agent}</step>
+    <step>4. Execute ALL Task() calls in ONE message for true parallelism</step>
+    <step>5. Ensure each agent has isolated environment with TDD enforcement</step>
+    <step>6. Apply 4-tier error recovery if any agent fails</step>
+    <step>7. Merge all agent work and clean up worktrees after completion</step>
+  </thinking_pattern>
+  
   <trigger_conditions>
     <condition type="automatic">Complex tasks requiring 3+ components or specialized expertise</condition>
     <condition type="explicit">User requests /swarm command or multi-agent coordination</condition>

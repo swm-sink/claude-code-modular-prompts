@@ -13,6 +13,16 @@
     Execute comprehensive read-only codebase research and analysis without modifications.
   </purpose>
   
+  <thinking_pattern enforcement="MANDATORY">
+    <step>1. Parse query and identify key search terms</step>
+    <step>2. Use Grep/Glob in PARALLEL for 70% faster search</step>
+    <step>3. Read relevant files with smart prioritization</step>
+    <step>4. Analyze patterns, dependencies, and relationships</step>
+    <step>5. Map findings to existing documentation</step>
+    <step>6. Generate comprehensive report with examples</step>
+    <step>7. NEVER modify any files - read-only guarantee ENFORCED</step>
+  </thinking_pattern>
+  
   <trigger_conditions>
     <condition type="automatic">Code understanding requests, architecture analysis, bug investigation</condition>
     <condition type="explicit">User requests /query command or read-only analysis</condition>

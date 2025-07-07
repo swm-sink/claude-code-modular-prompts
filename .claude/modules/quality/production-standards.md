@@ -13,6 +13,17 @@
     Mandatory enterprise quality gates, security standards, and performance requirements for production-ready code.
   </purpose>
   
+  <thinking_pattern enforcement="MANDATORY">
+    <step>1. Create GitHub session for compliance tracking</step>
+    <step>2. Validate ALL production requirements upfront</step>
+    <step>3. ENFORCE TDD: No code without failing tests first</step>
+    <step>4. Apply threat modeling from security/threat-modeling.md</step>
+    <step>5. Implement with performance benchmarks in mind</step>
+    <step>6. Run ALL quality gates (coverage, security, performance)</step>
+    <step>7. Generate compliance documentation automatically</step>
+    <step>8. Block deployment if ANY gate fails</step>
+  </thinking_pattern>
+  
   <trigger_conditions>
     <condition type="automatic">Production deployments, enterprise features, quality-focused development tasks</condition>
     <condition type="explicit">User requests production standards enforcement or enterprise compliance</condition>
