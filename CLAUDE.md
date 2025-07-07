@@ -1,8 +1,5 @@
 # CLAUDE.md
 
-## 🚨 TEMP: MAIN BRANCH ONLY (Remove when stable)
-**CRITICAL**: Work ONLY on main branch. NO branch switching/creation. Remove when user confirms.
-
 <framework version="2.0.0">
   <purpose>Personal Claude Code workflow efficiency tool - NOT enterprise software</purpose>
   <principles>Single source truth | Zero redundancy | Modular composition | Token optimized</principles>
