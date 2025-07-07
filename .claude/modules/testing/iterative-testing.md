@@ -1,9 +1,12 @@
----
-version: 1.0.0
-last_updated: 2025-01-07
-status: stable
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-07   | stable |
 
+# Iterative Testing Module
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <module name="iterative_testing" category="testing">
   
   <purpose>
@@ -107,68 +110,24 @@ status: stable
     
   </implementation>
   
-  <tdd_methodology enforcement="strict">
-    
-    <red_phase>
-      <purpose>Write failing tests that define desired behavior</purpose>
-      <requirements>
-        Test clearly defines expected behavior
-        Test fails for the right reason (missing implementation)
-        Test is minimal and focused on single behavior
-        Test follows naming conventions and best practices
-      </requirements>
-      <best_practices>
-        Use descriptive test names that explain behavior
-        Test one behavior per test method
-        Use arrange-act-assert pattern
-        Write tests from user perspective when possible
-      </best_practices>
-    </red_phase>
-    
-    <green_phase>
-      <purpose>Implement minimal code to make tests pass</purpose>
-      <requirements>
-        Implementation makes test pass with minimal code
-        No premature optimization or over-engineering
-        Code is simple and focused on test requirements
-        Implementation follows existing code patterns
-      </requirements>
-      <best_practices>
-        Implement simplest solution that makes test pass
-        Avoid adding functionality not required by tests
-        Focus on making tests pass, not perfect code
-        Use consistent coding style and patterns
-      </best_practices>
-    </green_phase>
-    
-    <refactor_phase>
-      <purpose>Improve code structure while maintaining green tests</purpose>
-      <requirements>
-        Code structure improved without changing behavior
-        All tests remain green after refactoring
-        Code quality metrics maintained or improved
-        Design patterns applied appropriately
-      </requirements>
-      <best_practices>
-        Remove duplication and improve code structure
-        Apply SOLID principles and design patterns
-        Improve readability and maintainability
-        Keep refactoring changes small and focused
-      </best_practices>
-    </refactor_phase>
-    
-  </tdd_methodology>
+  <tdd_reference>
+    <source>quality/tdd.md for complete TDD methodology</source>
+    <instruction>
+      This module follows the TDD RED-GREEN-REFACTOR cycle defined in quality/tdd.md.
+      Refer to that module for detailed TDD implementation requirements and best practices.
+    </instruction>
+    <focus>
+      This module extends TDD with continuous integration and stakeholder feedback loops
+    </focus>
+  </tdd_reference>
   
   <testing_strategy enforcement="comprehensive">
     
     <unit_testing>
-      <coverage_requirement>90% line coverage minimum</coverage_requirement>
-      <quality_standards>
-        Tests validate behavior, not implementation details
-        Tests are fast, reliable, and independent
-        Tests provide clear failure messages
-        Tests follow AAA (Arrange-Act-Assert) pattern
-      </quality_standards>
+      <coverage_reference>quality/tdd.md#coverage_requirements</coverage_reference>
+      <instruction>
+        Coverage requirements and quality standards defined in quality/tdd.md
+      </instruction>
     </unit_testing>
     
     <integration_testing>
@@ -258,8 +217,8 @@ status: stable
   
   <integration_points>
     <depends_on>
-      development/mvp-strategy.md for implementation guidance
-      quality/tdd.md for TDD methodology and best practices
+      quality/tdd.md for core TDD methodology and standards
+      planning/mvp-strategy.md for implementation guidance
       patterns/session-management.md for stakeholder collaboration
     </depends_on>
     <provides_to>
@@ -270,3 +229,4 @@ status: stable
   </integration_points>
   
 </module>
+```

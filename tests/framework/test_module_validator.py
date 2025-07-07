@@ -88,6 +88,11 @@ class TestModuleValidator:
         for module_file in modules_dir.rglob("*.md"):
             content = module_file.read_text()
             
+            # Check for version table at the beginning
+            lines = content.split('\n')
+            assert len(lines) >= 3, f"Module {module_file.relative_to(modules_dir)} too short"
+            assert lines[0].startswith('| version'), f"Module {module_file.relative_to(modules_dir)} missing version table"
+            
             # Check for metadata section - modules use XML structure
             assert any(pattern in content for pattern in [
                 "<metadata>", "## Metadata", 'name="', "<module name=", "<purpose>"

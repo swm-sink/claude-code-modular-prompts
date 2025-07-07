@@ -1,9 +1,12 @@
----
-version: 1.0.0
-last_updated: 2025-01-07
-status: stable
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-07   | stable |
 
+# Critical Thinking Module
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <module name="critical_thinking" category="quality">
   
   <purpose>
@@ -137,9 +140,18 @@ status: stable
     </depends_on>
     <provides_to>
       ALL modules for critical thinking enforcement
+      quality/tdd.md for rigorous test case analysis (referenced in integration_points)
+      quality/feature-validation.md for validation decision analysis
+      quality/production-standards.md for pre-implementation analysis gates
       patterns/session-management.md for decision documentation
       ALL commands for implementation verification
     </provides_to>
+    <quality_module_integration>
+      <tdd_enhancement>Applies 30-second analysis rule to test case design and RED-GREEN-REFACTOR decisions</tdd_enhancement>
+      <validation_enhancement>Enforces critical thinking in feature-validation.md validation phases</validation_enhancement>
+      <standards_enhancement>Mandates analysis before production-standards.md gate passage</standards_enhancement>
+    </quality_module_integration>
   </integration_points>
   
 </module>
+```

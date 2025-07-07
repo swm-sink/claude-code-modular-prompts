@@ -1,9 +1,12 @@
----
-version: 1.0.0
-last_updated: 2025-01-07
-status: stable
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-07   | stable |
 
+# Production Standards Module
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <module name="production_standards" category="quality">
   
   <purpose>
@@ -38,7 +41,7 @@ status: stable
     
     <phase name="code_completion_gates" order="2">
       <requirements>
-        TDD compliance with 90% line coverage and 85% branch coverage minimum
+        TDD compliance as defined in quality/tdd.md#coverage_requirements
         Zero linting errors and complete type checking with security scan passed
         Comprehensive documentation with API docs and code comments
       </requirements>
@@ -77,13 +80,13 @@ status: stable
   </implementation>
   
   <mandatory_quality_gates enforcement="strict">
-    <gate name="tdd_compliance" requirement="RED-GREEN-REFACTOR cycle documented with 90% line coverage, 85% branch coverage"/>
+    <gate name="tdd_compliance" requirement="Complete TDD compliance per quality/tdd.md#coverage_requirements and quality/tdd.md#quality_gates"/>
     <gate name="security_standards" requirement="Zero critical vulnerabilities, penetration test passed, threat model completed"/>
     <gate name="performance_slas" requirement="p95 response time under 200ms, load testing confirms capacity"/>
     <gate name="code_quality" requirement="Zero linting errors, complete type checking, peer review approved"/>
     <gate name="documentation" requirement="API documentation complete, code comments current, session updated"/>
     <gate name="operational_readiness" requirement="Monitoring configured, runbooks prepared, backup tested"/>
-    <gate name="prompt_quality" requirement="Prompt evaluation metrics passed, testing scenarios completed, improvement documented"/>
+    <gate name="feature_validation" requirement="All validation requirements per quality/feature-validation.md#validation_checklists met"/>
   </mandatory_quality_gates>
   
   <security_standards grade="financial">
@@ -189,3 +192,4 @@ status: stable
   </integration_points>
   
 </module>
+```

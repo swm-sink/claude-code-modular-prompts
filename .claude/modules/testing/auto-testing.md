@@ -1,9 +1,12 @@
----
-version: 1.0.0
-last_updated: 2025-01-07
-status: stable
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-07   | stable |
 
+# Auto Testing Module
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <module name="auto_testing" category="testing">
   
   <purpose>
@@ -215,7 +218,11 @@ status: stable
 
 ```xml
 <success_metrics>
-  <test_coverage>95% code coverage with quality assertions</test_coverage>
+  <test_coverage>
+    <autonomous_target>95% code coverage with quality assertions</autonomous_target>
+    <note>Higher than standard TDD requirement (90%) due to autonomous operation</note>
+    <baseline_reference>quality/tdd.md#coverage_requirements</baseline_reference>
+  </test_coverage>
   <defect_detection>99% defect detection rate before deployment</defect_detection>
   <self_healing_rate>90% automatic resolution of detected issues</self_healing_rate>
   <performance_validation>100% performance requirements validation</performance_validation>
@@ -228,7 +235,8 @@ status: stable
   </implementation>
   
 </module>
+```
 
----
+────────────────────────────────────────────────────────────────────────────────
 
 *Comprehensive autonomous testing with self-healing capabilities ensuring maximum quality, security, and reliability.*

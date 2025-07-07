@@ -61,7 +61,7 @@ All pattern templates follow this standardized XML structure:
     <category>reasoning</category>
     <effectiveness_score>0.85</effectiveness_score>
     <version>1.0.0</version>
-    <last_updated>2024-07-06</last_updated>
+    <last_updated>2025-07-07</last_updated>
   </metadata>
   
   <description>
@@ -131,7 +131,7 @@ All pattern templates follow this standardized XML structure:
     <category>reasoning</category>
     <effectiveness_score>0.78</effectiveness_score>
     <version>1.0.0</version>
-    <last_updated>2024-07-06</last_updated>
+    <last_updated>2025-07-07</last_updated>
   </metadata>
   
   <description>
@@ -223,7 +223,7 @@ All pattern templates follow this standardized XML structure:
     <category>learning</category>
     <effectiveness_score>0.89</effectiveness_score>
     <version>1.0.0</version>
-    <last_updated>2024-07-06</last_updated>
+    <last_updated>2025-07-07</last_updated>
   </metadata>
   
   <description>
@@ -299,7 +299,7 @@ All pattern templates follow this standardized XML structure:
     <category>structural</category>
     <effectiveness_score>0.92</effectiveness_score>
     <version>1.0.0</version>
-    <last_updated>2024-07-06</last_updated>
+    <last_updated>2025-07-07</last_updated>
   </metadata>
   
   <description>

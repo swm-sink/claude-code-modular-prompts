@@ -1,6 +1,15 @@
+| version | last_updated | status |
+|---------|--------------|--------|
+| 3.0.0   | 2025-07-07   | stable |
+
 # TDD Standards - Test-Driven Development
 
-**Purpose**: Enforce disciplined TDD practice with RED-GREEN-REFACTOR cycle for all development.
+────────────────────────────────────────────────────────────────────────────────
+
+**Purpose**: Enforce disciplined TDD practice with RED-GREEN-REFACTOR cycle for all development.  
+**CANONICAL IMPLEMENTATION**: `.claude/modules/quality/tdd.md`
+
+> **Note**: This document provides practical examples and patterns. For the authoritative implementation and enforcement rules, see the [TDD Module](../../.claude/modules/quality/tdd.md).
 
 ## Core Cycle
 

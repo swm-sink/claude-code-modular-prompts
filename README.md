@@ -120,16 +120,54 @@ Your Request → /auto → Intelligent Routing → Right Command → Quality Out
 │   ├── quality/     # TDD and quality prompts
 │   ├── development/ # Development workflow prompts
 │   └── patterns/    # Reusable pattern prompts
+├── templates/       # Format templates for new files
 └── settings/        # Your preferences
 ```
 
 **Philosophy**: *"Commands delegate, modules implement"*
+
+## File Format Standard (Framework 3.0)
+
+All framework files follow a standardized table-based format:
+
+### Version Table Header
+```markdown
+| version | last_updated | status |
+|---------|--------------|--------|
+| 2.0.0   | 2025-07-07   | stable |
+```
+
+### Document Structure
+```markdown
+# Document Title
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
+<command purpose="Clear purpose statement">
+  <!-- XML-structured content -->
+</command>
+```
+
+────────────────────────────────────────────────────────────────────────────────
+```
+
+### Key Format Elements
+- **Version table**: Tracks versions, updates, and status
+- **Horizontal separators**: 80-character lines using `────`
+- **XML configuration blocks**: Structured, semantic content
+- **Clear section organization**: Logical flow with proper spacing
+
+### Templates Available
+- **Command template**: `.claude/templates/command-template.md`
+- **Module template**: `.claude/templates/module-template.md`
 
 ## Documentation
 
 - **[Getting Started](docs/GETTING_STARTED.md)** - 3-minute quickstart
 - **[Documentation Index](docs/DOCUMENTATION_INDEX.md)** - Find anything quickly
 - **[CLAUDE.md](CLAUDE.md)** - Core framework rules (reference)
+- **[Templates](.claude/templates/)** - Format templates for new files
 - **[Framework Guides](docs/framework/)** - Deep dives on specific topics
 - **[Examples](projects-test/)** - See it in action
 

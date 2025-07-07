@@ -1,9 +1,12 @@
----
-version: 1.0.0
-last_updated: 2025-01-07
-status: stable
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-07   | stable |
 
+# Task Management Module
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <module name="task_management" category="development">
   
   <purpose>
@@ -39,7 +42,7 @@ status: stable
     <phase name="tdd_implementation" order="2">
       <requirements>
         TDD cycle strictly followed: RED-GREEN-REFACTOR
-        Test coverage >90% line, >85% branch maintained
+        Test coverage maintained per quality/tdd.md standards
         Code quality gates enforced throughout development
       </requirements>
       <actions>
@@ -78,7 +81,7 @@ status: stable
   
   <quality_gates enforcement="strict">
     <gate name="tdd_compliance" requirement="RED-GREEN-REFACTOR cycle documented and followed"/>
-    <gate name="test_coverage" requirement="90% line coverage and 85% branch coverage minimum"/>
+    <gate name="test_coverage" requirement="Coverage standards per quality/tdd.md"/>
     <gate name="code_quality" requirement="Zero linting errors, clean type checking"/>
     <gate name="integration_testing" requirement="All integration scenarios tested successfully"/>
     <gate name="security_review" requirement="Security implications identified and addressed"/>
@@ -125,3 +128,4 @@ status: stable
   </integration_points>
   
 </module>
+```

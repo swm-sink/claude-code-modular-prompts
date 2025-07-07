@@ -1,9 +1,12 @@
----
-version: 1.0.0
-last_updated: 2025-01-07
-status: stable
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-07   | stable |
 
+# MVP Strategy Module
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <module name="mvp_strategy" category="planning">
   
   <purpose>
@@ -219,15 +222,22 @@ status: stable
   
   <integration_points>
     <depends_on>
-      development/prd-generation.md for PRD requirements input
+      planning/prd-core.md for shared PRD concepts and standards
+      planning/prd-generation.md OR planning/intelligent-prd.md for PRD requirements input
       quality/critical-thinking.md for decision analysis methodology
       patterns/session-management.md for stakeholder collaboration
     </depends_on>
     <provides_to>
-      development/feature-workflow.md for Step 2 MVP strategy
-      development/iterative-testing.md for implementation guidance
+      planning/feature-workflow.md for Step 2 MVP strategy
+      testing/iterative-testing.md for implementation guidance
       quality/feature-validation.md for success criteria
     </provides_to>
+    <planning_module_synergy>
+      <prd_input_flexibility>Accepts input from either manual prd-generation.md or autonomous intelligent-prd.md</prd_input_flexibility>
+      <core_standards_compliance>All prioritization follows planning/prd-core.md user story standards</core_standards_compliance>
+      <feature_workflow_integration>Seamless handoff to feature-workflow.md with complete MVP specification</feature_workflow_integration>
+    </planning_module_synergy>
   </integration_points>
   
 </module>
+```

@@ -1,4 +1,10 @@
+| version | last_updated | status |
+|---------|--------------|--------|
+| 3.0.0   | 2025-07-07   | stable |
+
 # Claude Code Integration - Native Tool Usage
+
+────────────────────────────────────────────────────────────────────────────────
 
 **Purpose**: Define proper usage of Claude Code's native tools and capabilities for optimal performance.
 

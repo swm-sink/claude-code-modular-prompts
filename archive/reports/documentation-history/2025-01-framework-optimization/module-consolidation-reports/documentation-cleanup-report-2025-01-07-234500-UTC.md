@@ -1,6 +1,6 @@
 # Documentation Cleanup Report
 
-**Generated**: 2025-01-07 23:45:00 UTC  
+**Generated**: 2025-07-07 23:45:00 UTC  
 **Purpose**: Identify documentation that doesn't align with framework reality as a personal development tool
 
 ## Executive Summary

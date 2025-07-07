@@ -1,11 +1,12 @@
----
-version: 2.0.0
-last_updated: 2025-01-07
-status: minimal
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 2.0.0   | 2025-07-07   | minimal |
 
 # /task - Single-component development with quality gates
 
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <command purpose="Execute focused development tasks with TDD and quality enforcement">
   
   <delegation target="modules/development/task-management.md">
@@ -25,4 +26,16 @@ status: minimal
     • Escalates to /swarm if multi-component
   </rules>
   
+  <pattern_usage>
+    • Implements tdd_cycle pattern from pattern-library.md
+    • Uses parallel_execution for file operations
+    • Applies single_responsibility pattern
+    • Leverages explicit_validation for error handling
+    • Uses three_x_rule for implementation planning
+    
+    See modules/patterns/pattern-library.md for pattern details
+    See modules/development/task-management.md for full implementation
+  </pattern_usage>
+  
 </command>
+```

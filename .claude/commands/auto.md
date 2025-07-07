@@ -1,16 +1,23 @@
----
-version: 2.0.0
-last_updated: 2025-01-07
-status: minimal
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 2.0.0   | 2025-07-07   | minimal |
 
 # /auto - Smart routing for any request
 
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <command purpose="Intelligent routing with research-first approach">
   
   <delegation target="modules/patterns/intelligent-routing.md">
     Analyze request → Research deeply → Route to optimal command
   </delegation>
+  
+  <depends_on>
+    patterns/intelligent-routing.md for request analysis and routing
+    patterns/pattern-library.md for proven execution patterns
+    All commands and modules for dynamic routing decisions
+  </depends_on>
   
   <examples>
     /auto "Add user authentication"     → Routes to /task
@@ -21,4 +28,16 @@ status: minimal
   
   <rule>ALWAYS research first, then route intelligently</rule>
   
+  <pattern_usage>
+    • Uses three_x_rule pattern for routing decisions
+    • Implements consequence_mapping for impact analysis
+    • Leverages parallel_execution for research operations
+    • Applies explicit_validation pattern
+    • Uses smart_memoization for cached routing decisions
+    
+    See modules/patterns/pattern-library.md for pattern details
+    See modules/patterns/intelligent-routing.md for full implementation
+  </pattern_usage>
+  
 </command>
+```

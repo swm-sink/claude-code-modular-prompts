@@ -1,9 +1,12 @@
----
-version: 1.0.0
-last_updated: 2025-01-07
-status: stable
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-07   | stable |
 
+# Feature Validation Module
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <module name="feature_validation" category="quality">
   
   <purpose>
@@ -164,7 +167,7 @@ status: stable
     <technical_validation>
       <requirements>
         ✓ Code quality standards met
-        ✓ Test coverage above 90%
+        ✓ Test coverage meeting quality/tdd.md standards
         ✓ Linting and static analysis passed
         ✓ Documentation complete and accurate
         ✓ Dependencies up-to-date and secure
@@ -298,7 +301,7 @@ status: stable
   
   <integration_points>
     <depends_on>
-      development/iterative-testing.md for test implementation
+      testing/iterative-testing.md for test implementation
       quality/production-standards.md for quality standards
       security/audit.md for security assessment methodology
     </depends_on>
@@ -310,3 +313,4 @@ status: stable
   </integration_points>
   
 </module>
+```

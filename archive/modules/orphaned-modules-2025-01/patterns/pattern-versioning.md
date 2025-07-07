@@ -70,7 +70,7 @@ Systematic versioning and evolution tracking for prompt patterns, enabling contr
   <metadata_example>
     {
       "version": "1.2.0",
-      "release_date": "2024-07-06T10:30:00Z",
+      "release_date": "2025-07-07T10:30:00Z",
       "changelog": "Added support for conditional logic in templates, improved token efficiency by 15%",
       "compatibility": "backward_compatible",
       "contributors": ["alice@example.com", "bob@example.com"],

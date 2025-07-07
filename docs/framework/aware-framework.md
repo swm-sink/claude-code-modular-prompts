@@ -1,4 +1,10 @@
+| version | last_updated | status |
+|---------|--------------|--------|
+| 3.0.0   | 2025-07-07   | stable |
+
 # AWARE Framework - Unified Cognitive Process
+
+────────────────────────────────────────────────────────────────────────────────
 
 **Purpose**: Single authoritative cognitive process for all AI operations, ensuring quality and preventing errors.
 

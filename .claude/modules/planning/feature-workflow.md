@@ -1,9 +1,12 @@
----
-version: 1.0.0
-last_updated: 2025-01-07
-status: stable
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-07   | stable |
 
+# Feature Workflow Module
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <module name="feature_workflow" category="planning">
   
   <purpose>
@@ -26,7 +29,8 @@ status: stable
         Stakeholder approval obtained before proceeding
       </requirements>
       <actions>
-        Delegate to modules/planning/prd-generation.md for PRD creation
+        Delegate to planning/prd-generation.md for manual PRD OR planning/intelligent-prd.md for autonomous PRD creation
+        Ensure all PRD standards from planning/prd-core.md are followed
         Conduct stakeholder review and approval process
         Define clear success metrics and KPIs
         Document assumptions and constraints
@@ -89,7 +93,7 @@ status: stable
       </actions>
       <validation>
         All code follows TDD RED-GREEN-REFACTOR cycle
-        Test coverage maintained above 90% throughout development
+        Test coverage maintained per quality/tdd.md standards throughout development
         Stakeholder feedback integrated at each iteration
         No regression bugs introduced during development
       </validation>
@@ -193,9 +197,10 @@ status: stable
   
   <integration_points>
     <depends_on>
-      development/prd-generation.md for PRD creation process
-      development/mvp-strategy.md for MVP definition methodology
-      development/iterative-testing.md for TDD implementation
+      planning/prd-core.md for shared PRD standards and templates
+      planning/prd-generation.md OR planning/intelligent-prd.md for PRD creation process
+      planning/mvp-strategy.md for MVP definition methodology
+      testing/iterative-testing.md for TDD implementation
       quality/feature-validation.md for validation procedures
       patterns/session-management.md for GitHub issue integration
     </depends_on>
@@ -204,6 +209,12 @@ status: stable
       quality/production-standards.md for feature quality requirements
       patterns/multi-agent.md for complex feature coordination
     </provides_to>
+    <smart_planning_integration>
+      <prd_mode_selection>Automatically selects between manual and intelligent PRD based on context complexity</prd_mode_selection>
+      <quality_integration>All quality modules (tdd.md, feature-validation.md, production-standards.md) integrated at appropriate workflow steps</quality_integration>
+      <pattern_integration>Leverages patterns/session-management.md for coordination and patterns/multi-agent.md for complex features</pattern_integration>
+    </smart_planning_integration>
   </integration_points>
   
 </module>
+```

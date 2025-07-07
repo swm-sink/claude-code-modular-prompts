@@ -1,144 +1,110 @@
-# ==========================================
-# OS FILES
-# ==========================================
-# macOS
-.AppleDouble
-.DS_Store
-.LSOverride
-Icon?
-
-# Windows
-Desktop.ini
-ehthumbs.db
-Thumbs.db
-
-# Linux
-.directory
-.fuse_hidden*
-.Trash-*
-*~
-
-# ==========================================
-# IDE FILES
-# ==========================================
-.idea/
-.netrwhist
-.ropeproject
-.spyderproject
-.spyderworkspace
-.vim/
-.vscode/
-*.swo
-*.swp
-
-# ==========================================
-# BUILD ARTIFACTS
-# ==========================================
-build/
-dist/
-out/
-target/
-
-# ==========================================
-# DEPENDENCIES
-# ==========================================
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-share/python-wheels/
-var/
-wheels/
-
-# ==========================================
-# FRAMEWORK SPECIFIC
-# ==========================================
-# Claude Framework
-.claude/.coverage
-.claude/.health_status
-.claude/cache/
-.claude/logs/
-.claude/settings.local.json
-.claude/temp/
-
 # Python
 __pycache__/
-*.egg
-*.egg-info/
-*.manifest
-*.mo
-*.pot
-*.py,cover
 *.py[cod]
-*.sage.py
-*.so
-*.spec
 *$py.class
-.cache
+*.pyc
+.pytest_cache/
 .coverage
 .coverage.*
-.dmypy.json
-.hypothesis/
-.installed.cfg
-.mypy_cache/
-.nox/
-.pep8speaks.yml
-.pyre/
-.pytest_cache/
-.Python
-.pytype/
-.tox/
-.webassets-cache
-celerybeat-schedule
-celerybeat.pid
-coverage.xml
-cython_debug/
-db.sqlite3
-db.sqlite3-journal
-dmypy.json
 htmlcov/
-instance/
-ipython_config.py
-.ipynb_checkpoints
-local_settings.py
-MANIFEST
-nosetests.xml
-pip-delete-this-directory.txt
+.tox/
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 pip-log.txt
-profile_default/
-.scrapy
-/site
+pip-delete-this-directory.txt
+*.egg-info/
+dist/
+build/
+.Python
+*.pyo
+*.pyd
+.Python
 
-# ==========================================
-# LOGS AND TEMP FILES
-# ==========================================
-*.cover
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+*.tmproj
+*.tmproject
+tmtags
+
+# Project specific
+.claude/settings.local.json
+config/settings.local.json
+settings.local.json
 *.log
 logs/
+.cache/
+tmp/
+temp/
+
+# Testing
+test-results/
+coverage/
+*.coverage.*
+.hypothesis/
+.nox/
+
+# Documentation
+docs/_build/
+site/
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
+
+# OS generated files
+.directory
+*.desktop
+
+# Package managers
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.npm
+.yarn-integrity
 
-# ==========================================
-# ENVIRONMENT FILES
-# ==========================================
-.env
-.env*
-.venv
-env/
-ENV/
-env.bak/
-/env
-/venv
-venv/
-venv.bak/
-/.venv
-
-# ==========================================
-# CUSTOM IGNORES
-# ==========================================
-/personal
-personal
+# Security
+*.key
+*.pem
+*.p12
+*.pfx
+.env.local
+.env.*.local
+secrets/

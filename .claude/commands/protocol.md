@@ -1,30 +1,42 @@
----
-version: 1.0.0
-last_updated: 2025-01-07
-status: stable
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 2.0.0   | 2025-07-07   | stable |
 
+# /protocol - Production-ready development with mandatory quality gates
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <command purpose="Production-ready development with mandatory quality gates and compliance standards">
   
   <delegation target="modules/quality/production-standards.md">
     This command delegates ALL implementation to the protocol enforcement module which provides comprehensive production standards including mandatory TDD, security reviews, performance validation, and regulatory compliance for enterprise systems.
   </delegation>
   
-  <module_integration>
-    <primary_module>modules/quality/production-standards.md</primary_module>
-    <supporting_modules>
-      <module>modules/quality/tdd.md</module>
-      <module>modules/security/audit.md</module>
-      <module>modules/quality/production-standards.md</module>
-      <module>modules/patterns/session-management.md</module>
-    </supporting_modules>
-  </module_integration>
+  <depends_on>
+    quality/production-standards.md for complete protocol implementation
+    quality/tdd.md for test-driven development standards
+    security/audit.md for security compliance frameworks
+    patterns/session-management.md for GitHub issue coordination
+    patterns/pattern-library.md for proven execution patterns
+  </depends_on>
+  
+  <pattern_usage>
+    • Uses tdd_cycle pattern for mandatory RED-GREEN-REFACTOR discipline
+    • Applies explicit_validation for comprehensive error checking
+    • Implements issue_tracking for complex production workflows
+    • Leverages consequence_mapping for compliance impact analysis
+    • Uses quality_gates pattern for production readiness validation
+    
+    See modules/patterns/pattern-library.md for pattern details
+    See modules/quality/production-standards.md for full implementation
+  </pattern_usage>
   
   <usage_examples>
-    <example type="financial">/protocol "Implement wire transfer processing"</example>
-    <example type="healthcare">/protocol "Add patient record system"</example>
-    <example type="compliance">/protocol "Make payment processing SOX compliant"</example>
-    <example type="critical">/protocol "Build real-time trading platform"</example>
+    /protocol "Implement wire transfer processing"      → Financial compliance
+    /protocol "Add patient record system"               → Healthcare HIPAA
+    /protocol "Make payment processing SOX compliant"   → Regulatory compliance
+    /protocol "Build real-time trading platform"       → Critical systems
   </usage_examples>
   
   <strict_enforcement target="production_standards">
@@ -33,8 +45,48 @@ status: stable
     <consequence>Production deployment blocked until all compliance requirements satisfied</consequence>
   </strict_enforcement>
   
-  <reference>
-    See modules/quality/production-standards.md for complete implementation details including quality gate enforcement, compliance frameworks, and audit trail requirements.
-  </reference>
+  <escalation_triggers>
+    <trigger condition="multi_system_integration">Complex integrations → escalate to /swarm</trigger>
+    <trigger condition="regulatory_complexity">Multiple compliance frameworks → escalate to /swarm</trigger>
+    <trigger condition="enterprise_deployment">Large-scale deployment → escalate to /swarm</trigger>
+  </escalation_triggers>
+  
+  <quality_requirements>
+    <requirement name="test_coverage">Minimum 95% coverage with quality assertions</requirement>
+    <requirement name="security_scan">Automated security vulnerability assessment</requirement>
+    <requirement name="performance_baseline">p95 < 200ms performance validation</requirement>
+    <requirement name="compliance_check">Regulatory framework compliance verification</requirement>
+    <requirement name="documentation">Complete API and deployment documentation</requirement>
+  </quality_requirements>
   
 </command>
+```
+
+────────────────────────────────────────────────────────────────────────────────
+
+## Production Standards Enforcement
+
+```xml
+<production_enforcement>
+  <mandatory_gates>TDD compliance | Security audit | Performance validation | Documentation complete</mandatory_gates>
+  <compliance_frameworks>PCI DSS | SOX | HIPAA | GDPR | SOC2</compliance_frameworks>
+  <quality_metrics>95% test coverage | Zero critical vulnerabilities | <200ms p95 performance</quality_metrics>
+</production_enforcement>
+```
+
+────────────────────────────────────────────────────────────────────────────────
+
+## Usage Examples
+
+```xml
+<protocol_usage>
+  <financial>/protocol "Payment processing system" → PCI DSS compliance</financial>
+  <healthcare>/protocol "Patient data management" → HIPAA compliance</healthcare>
+  <enterprise>/protocol "Audit trail system" → SOX compliance</enterprise>
+  <critical>/protocol "Real-time trading platform" → High availability standards</critical>
+</protocol_usage>
+```
+
+────────────────────────────────────────────────────────────────────────────────
+
+**Reference**: Delegates to modules/quality/production-standards.md for complete implementation details including quality gate enforcement, compliance frameworks, and audit trail requirements.

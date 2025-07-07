@@ -1,9 +1,12 @@
----
-version: 1.0.0
-last_updated: 2025-01-07
-status: stable
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-07   | stable |
 
+# PRD Generation Module
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <module name="prd_generation" category="planning">
   
   <purpose>
@@ -107,59 +110,18 @@ status: stable
     
   </implementation>
   
-  <prd_template enforcement="standard">
-    
-    <section name="executive_summary">
-      <purpose>High-level overview of feature and business value</purpose>
-      <content>
-        Feature description and business objectives
-        Target user segments and use cases
-        Expected business impact and success metrics
-        High-level implementation timeline
-      </content>
-    </section>
-    
-    <section name="user_stories">
-      <purpose>Detailed user stories with acceptance criteria</purpose>
-      <content>
-        Complete user story mapping with priorities
-        Detailed acceptance criteria for each story
-        User journey flow and interaction patterns
-        Edge cases and error handling scenarios
-      </content>
-    </section>
-    
-    <section name="technical_requirements">
-      <purpose>Technical specifications and constraints</purpose>
-      <content>
-        Functional requirements and specifications
-        Non-functional requirements (performance, security, scalability)
-        Integration requirements and dependencies
-        Technical constraints and assumptions
-      </content>
-    </section>
-    
-    <section name="success_metrics">
-      <purpose>Measurable success criteria and KPIs</purpose>
-      <content>
-        Key Performance Indicators (KPIs) and metrics
-        Success criteria and acceptance thresholds
-        Measurement methodology and tools
-        Reporting and monitoring requirements
-      </content>
-    </section>
-    
-    <section name="implementation_strategy">
-      <purpose>High-level implementation approach and timeline</purpose>
-      <content>
-        MVP definition and core functionality
-        Implementation phases and milestones
-        Resource requirements and team allocation
-        Risk assessment and mitigation strategies
-      </content>
-    </section>
-    
-  </prd_template>
+  <prd_implementation>
+    <template_source>planning/prd-core.md#prd_template</template_source>
+    <instruction>
+      This module uses the standard PRD template defined in prd-core.md.
+      Refer to that module for the complete template structure and requirements.
+    </instruction>
+    <intelligent_integration>
+      <autonomous_mode>For autonomous requirement extraction, delegate to planning/intelligent-prd.md</autonomous_mode>
+      <standard_mode>Manual PRD generation follows this module's structured approach</standard_mode>
+      <shared_standards>Both approaches use planning/prd-core.md standards and templates</shared_standards>
+    </intelligent_integration>
+  </prd_implementation>
   
   <research_integration enforcement="mandatory">
     <requirement name="industry_best_practices">Research current industry standards and best practices</requirement>
@@ -185,6 +147,7 @@ status: stable
   
   <integration_points>
     <depends_on>
+      planning/prd-core.md for PRD template and quality standards
       quality/critical-thinking.md for requirement analysis methodology
       patterns/session-management.md for stakeholder collaboration
     </depends_on>
@@ -196,3 +159,4 @@ status: stable
   </integration_points>
   
 </module>
+```

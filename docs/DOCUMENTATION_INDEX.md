@@ -1,4 +1,10 @@
+| version | last_updated | status |
+|---------|--------------|--------|
+| 3.0.0   | 2025-07-07   | stable |
+
 # Documentation Index
+
+────────────────────────────────────────────────────────────────────────────────
 
 > **Quick Navigation**: Find exactly what you need in seconds!
 
@@ -10,6 +16,7 @@
 - **[Getting Started](GETTING_STARTED.md)** - 3-minute quickstart guide
 - **[CLAUDE.md](../CLAUDE.md)** - Core framework rules (reference only)
 - **[README](../README.md)** - Project overview
+- **[Templates](../.claude/templates/)** - Format templates for new files
 
 ### Quick References
 - **[All Commands](#-commands)** - What each command does
@@ -109,6 +116,7 @@
 ### 🎓 Best Practices
 - **[Critical Thinking](framework/critical-thinking-enforcement.md)** - Analysis patterns
 - **[Native Patterns](framework/native-patterns.md)** - Claude Code patterns
+- **[Pattern Integration Map](PATTERN_INTEGRATION_MAP.md)** - Pattern usage across framework
 - **[Honesty Policy](framework/honesty-policy.md)** - Framework limitations
 
 ### 📊 Advanced Topics

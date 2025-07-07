@@ -1,9 +1,12 @@
----
-version: 1.0.0
-last_updated: 2025-01-07
-status: stable
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-07   | stable |
 
+# Git Operations Module
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <module name="git_operations" category="patterns">
   
   <purpose>
@@ -179,3 +182,4 @@ status: stable
   </integration_points>
   
 </module>
+```

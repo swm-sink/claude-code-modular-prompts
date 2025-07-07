@@ -1,9 +1,12 @@
----
-version: 1.0.0
-last_updated: 2025-01-07
-status: stable
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-07   | stable |
 
+# /session - AI session management via GitHub Issues
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <command purpose="AI session management via GitHub Issues for development tracking and coordination">
   
   <delegation target="modules/patterns/session-management.md">
@@ -45,4 +48,15 @@ status: stable
     See modules/patterns/session-management.md for complete implementation details including GitHub CLI operations, session templates, workflow integration, and team coordination patterns.
   </reference>
   
+  <pattern_usage>
+    • Implements issue_tracking pattern from pattern-library.md
+    • Uses explicit_validation for session operations
+    • Applies single_responsibility pattern
+    • Leverages graceful_degradation for error handling
+    
+    See modules/patterns/pattern-library.md for pattern details
+    See modules/patterns/session-management.md for full implementation
+  </pattern_usage>
+  
 </command>
+```

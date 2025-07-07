@@ -1,7 +1,15 @@
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-07   | stable |
+
+# Documentation Module
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <module name="documentation" purpose="Intelligent documentation management, search, and generation">
   
   <metadata>
-    <version>1.0.0</version>
     <category>development</category>
     <description>Comprehensive documentation system for navigation, search, and generation</description>
   </metadata>
@@ -167,3 +175,4 @@
   </integration_points>
   
 </module>
+```

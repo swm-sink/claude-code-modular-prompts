@@ -74,8 +74,8 @@ Examples:
     ]
   },
   "metadata": {
-    "created": "2024-01-06T00:00:00Z",
-    "updated": "2024-01-06T00:00:00Z",
+    "created": "2025-07-07T00:00:00Z",
+    "updated": "2025-07-07T00:00:00Z",
     "author": "system",
     "tags": ["development", "automation"]
   }

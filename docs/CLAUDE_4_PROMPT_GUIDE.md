@@ -1,10 +1,18 @@
+| version | last_updated | status |
+|---------|--------------|--------|
+| 3.0.0   | 2025-07-07   | stable |
+
 # Claude 4 Optimization Guide
 
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <guide_metadata>
   <purpose>Claude 4 optimization patterns for framework files</purpose>
   <enforcement>MANDATORY consultation before editing .claude files</enforcement>
-  <version>2.0.0</version>
+  <version>3.0.0</version>
 </guide_metadata>
+```
 
 <optimization_principles>
   

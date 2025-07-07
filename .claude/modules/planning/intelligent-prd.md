@@ -1,10 +1,10 @@
----
-version: 1.0.0
-last_updated: 2025-01-07
-status: stable
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-07   | stable |
 
 # Intelligent PRD - Automatic Requirement Extraction Module
+
+────────────────────────────────────────────────────────────────────────────────
 
 ```xml
 <purpose>Autonomous requirement extraction and comprehensive product requirement documentation generation</purpose>
@@ -45,26 +45,26 @@ status: stable
 
 ```xml
 <prd_generation>
-  <functional_requirements>
-    <core_features>Primary feature functionality and behavior</core_features>
-    <user_interactions>Complete user interface and experience requirements</user_interactions>
-    <data_management>Data storage, retrieval, and manipulation requirements</data_management>
-    <integration_needs>External service and API integration requirements</integration_needs>
-  </functional_requirements>
+  <template_reference>
+    <source>planning/prd-core.md for standard PRD template structure</source>
+    <enhancement>This module enhances the core template with intelligent extraction</enhancement>
+  </template_reference>
   
-  <non_functional_requirements>
-    <performance_targets>Response time, throughput, and scalability requirements</performance_targets>
-    <security_standards>Authentication, authorization, and data protection requirements</security_standards>
-    <reliability_metrics>Uptime, error handling, and recovery requirements</reliability_metrics>
-    <maintainability_goals>Code quality, documentation, and testing requirements</maintainability_goals>
-  </non_functional_requirements>
-  
-  <technical_specifications>
-    <architecture_decisions>Framework and technology stack selections</architecture_decisions>
-    <implementation_approach>Development methodology and execution strategy</implementation_approach>
-    <testing_strategy>Comprehensive validation and quality assurance approach</testing_strategy>
-    <deployment_requirements>Infrastructure and deployment pipeline needs</deployment_requirements>
-  </technical_specifications>
+  <intelligent_extraction>
+    <functional_requirements>
+      <core_features>Automatically extract primary feature functionality from context</core_features>
+      <user_interactions>Infer user interface requirements from existing patterns</user_interactions>
+      <data_management>Derive data requirements from domain analysis</data_management>
+      <integration_needs>Identify integration points from codebase scanning</integration_needs>
+    </functional_requirements>
+    
+    <non_functional_requirements>
+      <performance_targets>Predict performance needs based on similar features</performance_targets>
+      <security_standards>Apply security patterns from existing implementations</security_standards>
+      <reliability_metrics>Derive reliability requirements from system standards</reliability_metrics>
+      <maintainability_goals>Follow established code quality patterns</maintainability_goals>
+    </non_functional_requirements>
+  </intelligent_extraction>
 </prd_generation>
 ```
 
@@ -206,6 +206,16 @@ status: stable
 
 ```xml
 <integration_points>
+  <planning_module_integration>
+    <prd_core_reference>All PRD concepts and templates from planning/prd-core.md</prd_core_reference>
+    <feature_workflow_integration>Provides autonomous PRD for planning/feature-workflow.md Step 1</feature_workflow_integration>
+    <mvp_strategy_input>Feeds prioritized requirements to planning/mvp-strategy.md</mvp_strategy_input>
+    <manual_fallback>Falls back to planning/prd-generation.md for manual refinement when needed</manual_fallback>
+  </planning_module_integration>
+  <quality_integration>
+    <critical_thinking>Uses quality/critical-thinking.md analysis patterns for requirement validation</critical_thinking>
+    <validation_preparation>Generates testable requirements for quality/feature-validation.md</validation_preparation>
+  </quality_integration>
   <autonomous_workflow>Provide comprehensive requirements to master orchestration</autonomous_workflow>
   <self_executing_mvp>Generate detailed implementation specifications</self_executing_mvp>
   <auto_testing>Provide testable requirements and acceptance criteria</auto_testing>

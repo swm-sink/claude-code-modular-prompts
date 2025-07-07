@@ -1,4 +1,10 @@
+| version | last_updated | status |
+|---------|--------------|--------|
+| 3.0.0   | 2025-07-07   | stable |
+
 # Claude Code Framework Documentation
+
+────────────────────────────────────────────────────────────────────────────────
 
 ## Overview
 
@@ -30,7 +36,7 @@ This directory contains documentation for the Claude Code Modular Agents framewo
 
 ### Templates and Standards
 - **[TEMPLATE_FORMAT.md](TEMPLATE_FORMAT.md)** - Documentation template standards
-- **[documentation-cleanup-report-*.md](documentation-cleanup-report-2025-01-07-234500-UTC.md)** - Documentation maintenance
+- **[documentation-cleanup-report-*.md](documentation-cleanup-report-2025-07-07-234500-UTC.md)** - Documentation maintenance
 
 ## Quick Navigation
 

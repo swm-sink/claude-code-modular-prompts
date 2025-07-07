@@ -1,6 +1,15 @@
+| version | last_updated | status |
+|---------|--------------|--------|
+| 3.0.0   | 2025-07-07   | stable |
+
 # CRITICAL THINKING ENFORCEMENT - EXTREME PRIORITY
 
-**STATUS**: MANDATORY | **SEVERITY**: CATASTROPHIC PREVENTION
+────────────────────────────────────────────────────────────────────────────────
+
+**STATUS**: MANDATORY | **SEVERITY**: CATASTROPHIC PREVENTION  
+**CANONICAL IMPLEMENTATION**: `.claude/modules/quality/critical-thinking.md`
+
+> **Note**: This document provides context and lessons learned. For the authoritative implementation, see the [Critical Thinking Module](../../.claude/modules/quality/critical-thinking.md).
 
 ## The Problem We're Solving
 
@@ -12,172 +21,53 @@ The recent framework refactor created:
 
 This represents a CATASTROPHIC FAILURE of thinking before acting.
 
-## EXTREME ENFORCEMENT RULES
+## Historical Context: Framework Disaster Lessons
 
-### 1. THINK DEEPLY - NO EXCEPTIONS
+The critical thinking rules were established after a catastrophic framework refactor that created 262+ duplicate files while claiming simplification. The key lessons learned are implemented in the Critical Thinking Module.
 
-Before ANY action:
-```
-STOP AND THINK:
-✓ What am I about to do?
-✓ Why am I doing this?
-✓ What could go wrong?
-✓ Have I verified my assumptions?
-✓ Am I creating MORE complexity?
-```
+### Key Enforcement Points (See Module for Implementation)
 
-**VIOLATIONS**:
-- Acting without 30+ seconds of analysis
-- Making changes based on surface understanding
-- Assuming without verification
-- Rushing to implementation
+1. **THINK DEEPLY** - Minimum 30-second analysis before any action
+2. **DRY PRINCIPLE** - Zero tolerance for duplication
+3. **FORENSIC VERIFICATION** - Every claim must be verified with evidence
 
-### 2. DRY (Don't Repeat Yourself) - ZERO TOLERANCE
+### What Failed During the Disaster
 
-```
-BEFORE CREATING ANY FILE:
-✓ Does this already exist?
-✓ Am I duplicating functionality?
-✓ Can I reuse existing code?
-✓ Will this create maintenance debt?
-```
+- Surface-level thinking led to massive duplication
+- Unverified claims ("35 files") while creating 300+
+- Ignored git status warnings showing the true impact
+- Lost critical capabilities without understanding dependencies
 
-**VIOLATIONS**:
-- Creating .claude/docs/ when commands/ exists
-- Creating .claude/runtime/ when components exist elsewhere
-- Copying instead of referencing
-- Duplicating patterns without abstraction
+## Real Examples From the Disaster
 
-### 3. ATTENTION TO DETAIL - FORENSIC LEVEL
+### ❌ What Went Wrong
+- **Claim**: "Simplifying from 157 to 35 files"  
+  **Reality**: Created 262 duplicate files in shadow directories
 
-```
-VERIFICATION CHECKLIST:
-✓ Read EVERY file path carefully
-✓ Check EVERY reference is valid
-✓ Verify EVERY claim matches reality
-✓ Test EVERY change thoroughly
-✓ Count files BEFORE and AFTER
-```
+- **Claim**: "Making the framework cleaner"  
+  **Reality**: Left battle test code scattered throughout src/
 
-**VIOLATIONS**:
-- Claiming "35 files" while creating 300+
-- Missing obvious duplications
-- Ignoring git status warnings
-- Not verifying outcomes match intentions
+- **Claim**: "No theoretical features"  
+  **Reality**: Kept framework_intelligence.py and battle tests
 
-## ENFORCEMENT MECHANISMS
+### ✅ What We Do Now
+All critical thinking enforcement is implemented through the module system. The module provides:
+- Mandatory pre-action analysis checklists
+- DRY principle enforcement with duplication scanning
+- Forensic verification protocols
+- Integration with AWARE framework
+- Session documentation requirements
 
-### Pre-Action Checkpoint
-```python
-def before_any_change():
-    # MANDATORY 30-second think time
-    think_deeply_about_consequences()
-    
-    # Check for duplications
-    if would_create_duplication():
-        STOP_IMMEDIATELY()
-    
-    # Verify understanding
-    if not fully_understand_impact():
-        RESEARCH_MORE()
-    
-    # Document reasoning
-    write_decision_rationale()
-```
+## Why This Document Exists
 
-### During Implementation
-```python
-def during_implementation():
-    # Constant verification
-    verify_each_step()
-    
-    # Check assumptions
-    if assumption_made():
-        VERIFY_WITH_EVIDENCE()
-    
-    # Monitor complexity
-    if adding_complexity():
-        JUSTIFY_OR_STOP()
-```
+This historical record exists to:
+1. Document the lessons learned from the framework disaster
+2. Provide context for why the critical thinking module is so strict
+3. Serve as a warning about the consequences of hasty action
+4. Point to the canonical implementation in the module system
 
-### Post-Action Validation
-```python
-def after_change():
-    # Count everything
-    verify_file_counts()
-    
-    # Test all paths
-    validate_all_references()
-    
-    # Check for regressions
-    ensure_no_functionality_lost()
-    
-    # Document outcomes
-    record_actual_vs_expected()
-```
+## Remember
 
-## CRITICAL QUESTIONS TO ASK
+Every framework change affects EVERYTHING. A moment of careless action creates hours of cleanup work. The critical thinking module exists to prevent another disaster.
 
-Before ANY framework change:
-
-1. **Am I solving a real problem or creating one?**
-2. **Have I counted the actual files involved?**
-3. **Will this truly simplify or add hidden complexity?**
-4. **Have I verified every claim I'm making?**
-5. **What will break if I'm wrong?**
-
-## EXAMPLES OF FAILURES TO AVOID
-
-### ❌ BAD: Surface-Level Thinking
-```
-"Let's simplify from 157 to 35 files"
-*Creates 262 duplicate files in shadow directories*
-```
-
-### ❌ BAD: Not Checking Reality
-```
-"This will make the framework cleaner"
-*Leaves battle test code throughout src/*
-```
-
-### ❌ BAD: Ignoring Evidence
-```
-"No theoretical features"
-*Keeps framework_intelligence.py and battle tests*
-```
-
-### ✅ GOOD: Deep Analysis First
-```
-1. Count actual files: find . -type f | wc -l
-2. Check for duplicates: find . -name "*.md" | sort | uniq -d
-3. Verify all references: grep -r "deleted_feature" .
-4. Test impact: Run framework validation
-5. Document findings: Write analysis before acting
-```
-
-## INTEGRATION WITH AWARE
-
-This rule ENHANCES the AWARE framework:
-
-- **Assess**: Spend 3x longer on assessment
-- **Watch**: Actively hunt for assumptions
-- **Architect**: Design with DRY as primary constraint
-- **Run**: Verify at every step
-- **Evaluate**: Forensic analysis of outcomes
-
-## CONSEQUENCES OF VIOLATION
-
-Violations of this rule create:
-- **Technical debt** that compounds exponentially
-- **Framework inconsistency** that breaks user trust
-- **Wasted effort** cleaning up preventable messes
-- **Lost capabilities** from hasty deletions
-- **Confused users** from contradictory states
-
-## REMEMBER
-
-Every framework change affects EVERYTHING. A moment of careless action creates hours of cleanup work. The recent refactor disaster proves this.
-
-**THINK DEEPLY. CHECK EVERYTHING. DUPLICATE NOTHING.**
-
-This is not optional. This is survival.
+**For implementation details, see: `.claude/modules/quality/critical-thinking.md`**

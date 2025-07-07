@@ -1,9 +1,12 @@
----
-version: 1.0.0
-last_updated: 2025-01-07
-status: stable
----
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-07   | stable |
 
+# /commit - Intelligent git operations
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
 <command purpose="Intelligent git operations with automatic staging and conventional commits">
   
   <delegation target="modules/patterns/git-operations.md">
@@ -31,3 +34,4 @@ status: stable
   </reference>
   
 </command>
+```

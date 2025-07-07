@@ -1,4 +1,10 @@
+| version | last_updated | status |
+|---------|--------------|--------|
+| 3.0.0   | 2025-07-07   | stable |
+
 # Honesty Policy - Evidence-Based Claims
+
+────────────────────────────────────────────────────────────────────────────────
 
 **Purpose**: Ensure all claims are accurate, evidence-based, and free from exaggeration.
 
