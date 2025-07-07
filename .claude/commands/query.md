@@ -1,3 +1,9 @@
+---
+version: 1.0.0
+last_updated: 2025-01-07
+status: stable
+---
+
 <command purpose="Research and analysis with zero modifications - understanding before action">
   
   <delegation target="modules/development/research-analysis.md">

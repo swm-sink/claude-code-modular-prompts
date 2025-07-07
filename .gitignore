@@ -212,3 +212,38 @@ dist/
 *.egg-info/
 out/
 target/.claude/settings.local.json
+
+# Folders to ignore
+/env
+/venv
+/.venv
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# MyPy
+.mypy_cache/
+
+# Pytest
+.pytest_cache/
+
+# Env
+.env*
+
+# Build artifacts
+/build
+/dist
+*.egg-info
+
+# Logs
+*.log
+
+# Personal files
+/personal
+personal
+
+# OS
+.DS_Store

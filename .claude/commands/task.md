@@ -1,3 +1,9 @@
+---
+version: 1.0.0
+last_updated: 2025-01-07
+status: stable
+---
+
 <command purpose="General development execution for single-component work with automatic quality enforcement">
   
   <delegation target="modules/development/task-management.md">

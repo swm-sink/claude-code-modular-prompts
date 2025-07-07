@@ -1,0 +1,31 @@
+{
+  "// Note": "Copy this file to settings.local.json to override default settings",
+  "// Warning": "settings.local.json is gitignored - do not commit personal settings",
+  
+  "user_preferences": {
+    "default_command": "auto",
+    "auto_session_creation": true,
+    "verbose_output": false,
+    "preferred_language": "python",
+    "timezone": "UTC"
+  },
+  
+  "development_overrides": {
+    "skip_quality_gates": false,
+    "allow_force_operations": false,
+    "debug_mode": false,
+    "test_coverage_minimum": 90
+  },
+  
+  "github_overrides": {
+    "default_labels": ["ai-generated", "claude-code"],
+    "auto_assign": null,
+    "custom_templates": false
+  },
+  
+  "experimental_features": {
+    "advanced_prompt_optimization": false,
+    "beta_commands": false,
+    "performance_profiling": false
+  }
+}

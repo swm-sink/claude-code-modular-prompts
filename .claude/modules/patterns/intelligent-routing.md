@@ -1,3 +1,9 @@
+---
+version: 1.0.0
+last_updated: 2025-01-07
+status: stable
+---
+
 <module name="intelligent_routing" category="patterns">
   
   <purpose>

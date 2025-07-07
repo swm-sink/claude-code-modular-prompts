@@ -1,33 +1,39 @@
+---
+version: 1.0.0
+last_updated: 2025-01-07
+status: stable
+---
+
 # Autonomous Feature Development
 
 **PURPOSE**: Zero-touch autonomous feature development with 95% self-sufficiency and intelligent orchestration
 
-## Delegation Pattern
-
-```xml
-<command_delegation>
-  <primary_modules>
-    <module>modules/development/autonomous-workflow.md</module>
-    <module>modules/development/intelligent-prd.md</module>
-    <module>modules/development/self-executing-mvp.md</module>
-    <module>modules/development/auto-testing.md</module>
-    <module>modules/development/predictive-enhancement.md</module>
-  </primary_modules>
+<command purpose="Comprehensive autonomous feature development with PRD-first approach">
   
-  <coordination_modules>
-    <module>modules/development/task-management.md</module>
-    <module>modules/patterns/intelligent-routing.md</module>
-    <module>modules/patterns/multi-agent.md</module>
-    <module>modules/patterns/session-management.md</module>
-  </coordination_modules>
+  <delegation target="modules/planning/feature-workflow.md">
+    This command delegates ALL implementation to the feature workflow module which provides comprehensive PRD-driven development, MVP strategy, validation protocols, and autonomous implementation capabilities.
+  </delegation>
   
-  <quality_modules>
-    <module>modules/quality/tdd.md</module>
-    <module>modules/security/audit.md</module>
-    <module>modules/quality/production-standards.md</module>
-  </quality_modules>
-</command_delegation>
-```
+  <module_integration>
+    <primary_module>modules/planning/feature-workflow.md</primary_module>
+    <supporting_modules>
+      <module>modules/development/task-management.md</module>
+      <module>modules/patterns/intelligent-routing.md</module>
+      <module>modules/patterns/multi-agent.md</module>
+      <module>modules/patterns/session-management.md</module>
+      <module>modules/quality/tdd.md</module>
+      <module>modules/security/audit.md</module>
+      <module>modules/quality/production-standards.md</module>
+    </supporting_modules>
+  </module_integration>
+  
+  <usage_examples>
+    <example>/feature "User authentication system with JWT"</example>
+    <example>/feature "Real-time chat with WebSockets"</example>
+    <example>/feature "Payment processing with Stripe"</example>
+  </usage_examples>
+  
+</command>
 
 ## Full Autonomy Directive
 
@@ -63,11 +69,11 @@
 
 This command delegates ALL implementation to specialized modules:
 
-See modules/development/autonomous-workflow.md for master orchestration and decision-making frameworks.
-See modules/development/intelligent-prd.md for automatic requirement extraction and analysis.
-See modules/development/self-executing-mvp.md for autonomous implementation patterns.
-See modules/development/auto-testing.md for self-healing validation and debugging.
-See modules/development/predictive-enhancement.md for future planning and optimization.
+See modules/automation/autonomous-workflow.md for master orchestration and decision-making frameworks.
+See modules/planning/intelligent-prd.md for automatic requirement extraction and analysis.
+See modules/automation/self-executing-mvp.md for autonomous implementation patterns.
+See modules/testing/auto-testing.md for self-healing validation and debugging.
+See modules/automation/predictive-enhancement.md for future planning and optimization.
 
 ## Input Requirements (MINIMAL)
 

@@ -1,8 +1,24 @@
-# Prompt Engineering Integration Examples
+---
+version: 1.0.0
+last_updated: 2025-01-07
+status: stable
+---
 
-## Framework Integration Patterns
+<module name="prompt_integration_examples" category="patterns">
+  
+  <purpose>
+    Demonstrate integration patterns for prompt engineering within the Claude Code framework, showing single and multi-agent workflows.
+  </purpose>
+  
+  <trigger_conditions>
+    <condition type="automatic">Examples needed for prompt engineering integration</condition>
+    <condition type="explicit">User requests prompt integration examples</condition>
+  </trigger_conditions>
 
-### Single Agent Prompt Development
+  <implementation>
+    
+    <section name="framework_integration_patterns">
+      <single_agent_development>
 ```bash
 # Simple prompt creation for straightforward use cases
 /prompt create "Bug report template" --type user --style structured

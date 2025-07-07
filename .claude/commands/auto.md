@@ -1,3 +1,9 @@
+---
+version: 1.0.0
+last_updated: 2025-01-07
+status: stable
+---
+
 <command purpose="Intelligent autonomous routing with dynamic module composition and research-first execution">
   
   <delegation target="modules/patterns/intelligent-routing.md">

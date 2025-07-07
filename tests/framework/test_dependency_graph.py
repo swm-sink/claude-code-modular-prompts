@@ -72,7 +72,9 @@ class TestDependencyGraph:
             if "README" not in str(module_path) and "index" not in str(module_path):
                 # Warning, not error - some modules might be indirectly used
                 if str(module_path) not in referenced_modules:
-                    pytest.warning(f"Module {module_path} is not referenced by any command")
+                    # Use warnings module instead of pytest.warning
+                    import warnings
+                    warnings.warn(f"Module {module_path} is not referenced by any command")
     
     def test_framework_file_count(self, framework_root):
         """Test that framework stays under file count limit."""
@@ -146,7 +148,8 @@ class TestArchitecturalIntegrity:
                     if concept in concept_locations:
                         # Some repetition is okay (references vs definitions)
                         if "definition" in content or "implementation" in content:
-                            pytest.warning(
+                            import warnings
+                            warnings.warn(
                                 f"Concept '{concept}' potentially defined in multiple places: "
                                 f"{concept_locations[concept]} and {file_path.relative_to(framework_root)}"
                             )

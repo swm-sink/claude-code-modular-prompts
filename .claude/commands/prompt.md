@@ -1,3 +1,9 @@
+---
+version: 1.0.0
+last_updated: 2025-01-07
+status: stable
+---
+
 <command purpose="AI prompt engineering workflows for creating, evaluating, testing, and improving prompts with systematic methodology">
   
   <delegation target="modules/development/prompt-engineering.md">
@@ -8,7 +14,7 @@
     <primary_module>modules/development/prompt-engineering.md</primary_module>
     <supporting_modules>
       <module>modules/quality/critical-thinking.md</module>
-      <module>modules/patterns/research-analysis.md</module>
+      <module>modules/development/research-analysis.md</module>
       <module>modules/patterns/session-management.md</module>
       <module>modules/quality/production-standards.md</module>
     </supporting_modules>

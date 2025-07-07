@@ -1,3 +1,9 @@
+---
+version: 1.0.0
+last_updated: 2025-01-07
+status: stable
+---
+
 <command purpose="AI session management via GitHub Issues for development tracking and coordination">
   
   <delegation target="modules/patterns/session-management.md">

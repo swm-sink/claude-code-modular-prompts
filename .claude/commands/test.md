@@ -1,3 +1,9 @@
+---
+version: 1.0.0
+last_updated: 2025-01-07
+status: stable
+---
+
 <command purpose="Test-driven development with strict RED-GREEN-REFACTOR discipline and coverage enforcement">
   
   <delegation target="modules/quality/tdd.md">

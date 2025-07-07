@@ -290,7 +290,7 @@
       <purpose>Core slash commands (delegation only)</purpose>
       <command name="auto" delegates_to="modules/patterns/intelligent-routing.md">Intelligent routing + module composition</command>
       <command name="task" delegates_to="modules/development/task-management.md">Development execution + quality modules</command>
-      <command name="feature" delegates_to="modules/development/feature-workflow.md">Comprehensive feature development with PRD-first approach</command>
+      <command name="feature" delegates_to="modules/planning/feature-workflow.md">Comprehensive feature development with PRD-first approach</command>
       <command name="swarm" delegates_to="modules/patterns/multi-agent.md">Multi-agent + session management</command>
       <command name="query" delegates_to="modules/development/research-analysis.md">Research-only operations</command>
       <command name="session" delegates_to="modules/patterns/session-management.md">GitHub issue integration</command>
@@ -342,7 +342,7 @@
   </phases>
   
   <delegation_reference>
-    Implementation details: modules/patterns/aware-process.md
+    Implementation details integrated into modules/patterns/intelligent-routing.md
   </delegation_reference>
   
 </cognitive_process>
@@ -404,12 +404,12 @@
     <checkpoint name="performance_benchmark" enforcement="mandatory">
       <requirement>200ms p95 response time</requirement>
       <validation>Critical paths benchmarked and profiled</validation>
-      <reference>modules/quality/performance.md</reference>
+      <reference>modules/quality/production-standards.md</reference>
     </checkpoint>
     <checkpoint name="feature_development" enforcement="mandatory">
       <requirement>PRD-first approach for all feature development</requirement>
       <validation>Complete PRD with stakeholder approval before implementation</validation>
-      <reference>modules/development/feature-workflow.md</reference>
+      <reference>modules/planning/feature-workflow.md</reference>
     </checkpoint>
   </quality_checkpoints>
   

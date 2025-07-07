@@ -1,3 +1,9 @@
+---
+version: 1.0.0
+last_updated: 2025-01-07
+status: stable
+---
+
 <command purpose="Enterprise FastAPI development with production-ready patterns and performance optimization">
   
   <delegation target="modules/patterns/api-development.md">

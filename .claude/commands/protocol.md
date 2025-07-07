@@ -1,11 +1,17 @@
+---
+version: 1.0.0
+last_updated: 2025-01-07
+status: stable
+---
+
 <command purpose="Production-ready development with mandatory quality gates and compliance standards">
   
-  <delegation target="modules/development/protocol-enforcement.md">
+  <delegation target="modules/automation/protocol-enforcement.md">
     This command delegates ALL implementation to the protocol enforcement module which provides comprehensive production standards including mandatory TDD, security reviews, performance validation, and regulatory compliance for enterprise systems.
   </delegation>
   
   <module_integration>
-    <primary_module>modules/development/protocol-enforcement.md</primary_module>
+    <primary_module>modules/automation/protocol-enforcement.md</primary_module>
     <supporting_modules>
       <module>modules/quality/tdd.md</module>
       <module>modules/security/audit.md</module>
@@ -28,7 +34,7 @@
   </strict_enforcement>
   
   <reference>
-    See modules/development/protocol-enforcement.md for complete implementation details including quality gate enforcement, compliance frameworks, and audit trail requirements.
+    See modules/automation/protocol-enforcement.md for complete implementation details including quality gate enforcement, compliance frameworks, and audit trail requirements.
   </reference>
   
 </command>

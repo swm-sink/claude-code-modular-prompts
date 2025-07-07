@@ -1,3 +1,9 @@
+---
+version: 1.0.0
+last_updated: 2025-01-07
+status: stable
+---
+
 <command purpose="Multi-agent orchestration for complex systems with automatic session management">
   
   <delegation target="modules/patterns/multi-agent.md">
@@ -10,7 +16,7 @@
       <module>modules/patterns/session-management.md</module>
       <module>modules/quality/production-standards.md</module>
       <module>modules/security/audit.md</module>
-      <module>modules/development/protocol-enforcement.md</module>
+      <module>modules/automation/protocol-enforcement.md</module>
       <module>modules/development/prompt-engineering.md</module>
     </supporting_modules>
   </module_integration>

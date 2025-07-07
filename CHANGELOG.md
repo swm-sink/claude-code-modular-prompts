@@ -5,6 +5,37 @@ All notable changes to the Claude Code Modular Agents Framework will be document
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2025-01-07
+
+### Added
+
+#### Archive System
+- Professional archive structure with comprehensive README
+- Archive categories: orphaned-modules, deprecated-commands, legacy-tools, documentation-history, experimental
+- Archive metadata documentation standards
+- Recovery procedures for archived content
+
+#### Version Management
+- Version headers (v1.0.0) added to all 41 active modules
+- Standardized version header format with status tracking
+- Module-level version independence
+
+#### Framework Enhancements
+- Auto-testing module for self-healing test automation
+- Intelligent PRD generation module
+- Predictive enhancement for next-step recommendations
+- Self-executing MVP implementation module
+
+### Changed
+- Moved tools-archive to proper archive/legacy-tools location
+- Enhanced archive documentation with historical context
+- Updated all module headers with version information
+
+### Fixed
+- Archive organization with proper categorization
+- Legacy tool documentation with lessons learned
+- Module version tracking consistency
+
 ## [2.1.0] - 2025-01-07
 
 ### Added

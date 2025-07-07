@@ -1,3 +1,9 @@
+---
+version: 1.0.0
+last_updated: 2025-01-07
+status: stable
+---
+
 <command purpose="Intelligent git operations with automatic staging and conventional commits">
   
   <delegation target="modules/patterns/git-operations.md">

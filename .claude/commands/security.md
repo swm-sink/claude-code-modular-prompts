@@ -1,3 +1,9 @@
+---
+version: 1.0.0
+last_updated: 2025-01-07
+status: stable
+---
+
 <command purpose="Financial-grade security implementation with compliance frameworks and threat modeling">
   
   <delegation target="modules/security/audit.md">
