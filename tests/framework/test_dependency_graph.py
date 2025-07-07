@@ -45,7 +45,7 @@ class TestDependencyGraph:
                     f"Command {command_file.name} references non-existent module: {ref}"
     
     def test_no_orphaned_modules(self, framework_root):
-        """Test that all modules are referenced by at least one command."""
+        """Test that all modules are referenced by at least one command or module."""
         modules_dir = framework_root / "modules"
         commands_dir = framework_root / "commands"
         
@@ -65,16 +65,36 @@ class TestDependencyGraph:
             module_refs = re.findall(r'modules/([\w/\-]+\.md)', content)
             referenced_modules.update(module_refs)
         
+        # Check module-to-module references
+        for module_file in modules_dir.rglob("*.md"):
+            content = module_file.read_text()
+            module_refs = re.findall(r'modules/([\w/\-]+\.md)', content)
+            referenced_modules.update(module_refs)
+        
         # Check all modules are referenced
+        orphaned_modules = []
         for module_file in modules_dir.rglob("*.md"):
             module_path = module_file.relative_to(modules_dir)
             # Some utility modules might not be directly referenced
             if "README" not in str(module_path) and "index" not in str(module_path):
-                # Warning, not error - some modules might be indirectly used
-                if str(module_path) not in referenced_modules:
-                    # Use warnings module instead of pytest.warning
-                    import warnings
-                    warnings.warn(f"Module {module_path} is not referenced by any command")
+                # Convert to string and normalize path separators
+                module_path_str = str(module_path).replace('\\', '/')
+                # Check if this module is referenced
+                if module_path_str not in referenced_modules:
+                    # Double-check by looking for partial matches (sometimes paths are referenced differently)
+                    is_referenced = False
+                    for ref in referenced_modules:
+                        if module_path_str in ref or ref in module_path_str:
+                            is_referenced = True
+                            break
+                    
+                    if not is_referenced:
+                        orphaned_modules.append(module_path_str)
+        
+        # Report orphaned modules if any found
+        if orphaned_modules:
+            import warnings
+            warnings.warn(f"Found {len(orphaned_modules)} orphaned modules: {', '.join(orphaned_modules)}")
     
     def test_framework_file_count(self, framework_root):
         """Test that framework stays under file count limit."""
@@ -91,7 +111,7 @@ class TestDependencyGraph:
         settings_dir = framework_root / "settings"
         assert settings_dir.exists(), "Settings directory not found"
         
-        required_settings = ["commands.json", "core.json", "patterns.json", "permissions.json"]
+        required_settings = ["settings.json"]
         
         for setting in required_settings:
             setting_path = settings_dir / setting

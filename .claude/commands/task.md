@@ -1,50 +1,28 @@
 ---
-version: 1.0.0
+version: 2.0.0
 last_updated: 2025-01-07
-status: stable
+status: minimal
 ---
 
-<command purpose="General development execution for single-component work with automatic quality enforcement">
+# /task - Single-component development with quality gates
+
+<command purpose="Execute focused development tasks with TDD and quality enforcement">
   
   <delegation target="modules/development/task-management.md">
-    This command delegates ALL implementation to the task management module which provides comprehensive single-component development workflows including TDD enforcement, quality gates, and intelligent escalation patterns.
+    Research → TDD cycle → Implement → Quality gates → Complete
   </delegation>
   
-  <module_integration>
-    <primary_module>modules/development/task-management.md</primary_module>
-    <supporting_modules>
-      <module>modules/quality/tdd.md</module>
-      <module>modules/quality/production-standards.md</module>
-      <module>modules/patterns/session-management.md</module>
-      <module>modules/patterns/git-operations.md</module>
-      <module>modules/development/prompt-engineering.md</module>
-    </supporting_modules>
-  </module_integration>
+  <examples>
+    /task "Add email validation"      # Feature development
+    /task "Fix memory leak" --fix     # Bug fixing
+    /task "Refactor to SOLID" --refactor # Code improvement
+    /task "Document API" --docs       # Documentation
+  </examples>
   
-  <usage_examples>
-    <example type="basic">/task "Add email validation to user registration"</example>
-    <example type="bug_fix">/task "Fix memory leak in image processor" --fix</example>
-    <example type="refactor">/task "Refactor user service to SOLID principles" --refactor</example>
-    <example type="docs">/task "Document the authentication API" --docs</example>
-    <example type="issue_linked">/task "Add OAuth2 support" --issue #89</example>
-    <example type="ci_setup">/task "Setup automated testing pipeline" --ci</example>
-    <example type="prompt_task">/task "Create a simple bug report template prompt" --prompt</example>
-  </usage_examples>
-  
-  <escalation_triggers>
-    <trigger condition="multi_component">Multiple components affected - escalates to /swarm</trigger>
-    <trigger condition="system_wide">System-wide changes needed - escalates to /swarm</trigger>
-    <trigger condition="complex_integration">Complex integration required - escalates to /swarm</trigger>
-  </escalation_triggers>
-  
-  <strict_enforcement target="quality_standards">
-    <primary_rule>ALL tasks MUST satisfy mandatory quality gates before completion</primary_rule>
-    <verification>Tests pass + linting clean + coverage >90% + types valid</verification>
-    <consequence>Incomplete quality gates prevent task completion and deployment</consequence>
-  </strict_enforcement>
-  
-  <reference>
-    See modules/development/task-management.md for complete implementation details including TDD workflows, quality enforcement, session integration, and escalation patterns.
-  </reference>
+  <rules>
+    • TDD mandatory (RED-GREEN-REFACTOR)
+    • 90%+ test coverage required
+    • Escalates to /swarm if multi-component
+  </rules>
   
 </command>

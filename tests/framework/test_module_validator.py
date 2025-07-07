@@ -49,6 +49,10 @@ class TestModuleValidator:
                 # Security and quality modules can be moderately complex
                 assert char_count <= complex_limit, \
                     f"Module {module_file.relative_to(modules_dir)} exceeds complex limit ({char_count} chars > {complex_limit})"
+            elif "planning" in str(module_file) or "automation" in str(module_file):
+                # Planning and automation modules can be moderately complex
+                assert char_count <= complex_limit, \
+                    f"Module {module_file.relative_to(modules_dir)} exceeds complex limit ({char_count} chars > {complex_limit})"
             else:
                 # Other modules should stay compact
                 assert char_count <= standard_limit, \

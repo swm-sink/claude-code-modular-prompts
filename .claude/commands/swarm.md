@@ -1,49 +1,27 @@
 ---
-version: 1.0.0
+version: 2.0.0
 last_updated: 2025-01-07
-status: stable
+status: minimal
 ---
 
-<command purpose="Multi-agent orchestration for complex systems with automatic session management">
+# /swarm - Multi-agent parallel execution
+
+<command purpose="Complex systems via Task() and Batch() patterns">
   
   <delegation target="modules/patterns/multi-agent.md">
-    This command delegates ALL implementation to the multi-agent patterns module which provides comprehensive orchestration using native Task() and Batch() patterns with mandatory session creation and intelligent coordination.
+    Create session → Decompose work → Parallel agents → Coordinate
   </delegation>
   
-  <module_integration>
-    <primary_module>modules/patterns/multi-agent.md</primary_module>
-    <supporting_modules>
-      <module>modules/patterns/session-management.md</module>
-      <module>modules/quality/production-standards.md</module>
-      <module>modules/security/audit.md</module>
-      <module>modules/automation/protocol-enforcement.md</module>
-      <module>modules/development/prompt-engineering.md</module>
-    </supporting_modules>
-  </module_integration>
+  <examples>
+    /swarm "Build e-commerce platform"     # Multi-service system
+    /swarm "Optimize for 10x scale"        # Performance across layers
+    /swarm "Migrate monolith to microservices" # Architecture shift
+  </examples>
   
-  <usage_examples>
-    <example type="basic">/swarm "Build microservices e-commerce platform"</example>
-    <example type="performance">/swarm "Optimize entire application for 10x scale"</example>
-    <example type="migration">/swarm "Migrate legacy monolith to cloud-native microservices"</example>
-    <example type="integration">/swarm "Build real-time notification system with WebSockets and Redis"</example>
-    <example type="prompt_evaluation">/swarm "Comprehensive evaluation of AI assistant prompts across multiple domains"</example>
-  </usage_examples>
-  
-  <trigger_conditions>
-    <condition type="complexity">Multi-component systems with ≥3 specialized areas</condition>
-    <condition type="architecture">System architecture and large-scale refactoring</condition>
-    <condition type="enterprise">Enterprise integrations with multiple touchpoints</condition>
-    <condition type="optimization">Performance optimization across multiple layers</condition>
-  </trigger_conditions>
-  
-  <strict_enforcement target="session_requirement">
-    <primary_rule>MUST create GitHub session for ALL /swarm executions</primary_rule>
-    <verification>Session creation is mandatory before any multi-agent work begins</verification>
-    <consequence>No /swarm execution permitted without session tracking and coordination</consequence>
-  </strict_enforcement>
-  
-  <reference>
-    See modules/patterns/multi-agent.md for complete implementation details including Task() and Batch() patterns, session coordination, and quality gate enforcement across all agents.
-  </reference>
+  <rules>
+    • AUTO-creates GitHub session
+    • For ≥3 component systems
+    • Native Task() and Batch() patterns
+  </rules>
   
 </command>

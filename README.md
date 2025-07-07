@@ -1,22 +1,24 @@
 # Claude Code Modular Agents Framework
 
-> 🚀 **Advanced prompt engineering framework that supercharges Claude Code with intelligent workflow automation, quality enforcement, and multi-agent orchestration**
+> 🚀 **A prompt engineering framework that improves Claude Code workflow efficiency through organized prompts and GitHub integration**
 
-[![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/swm-sink/claude-code-modular-agents)
+[![Version](https://img.shields.io/badge/version-2.2.0-blue.svg)](https://github.com/swm-sink/claude-code-modular-agents)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Claude 4](https://img.shields.io/badge/Claude-4%20Optimized-purple.svg)](CLAUDE.md)
 
 ## What is This?
 
-Claude Code Modular Agents is a sophisticated prompt engineering framework that transforms Claude Code into a powerhouse development environment. Through carefully crafted XML-structured prompts and modular patterns, it enables:
+Claude Code Modular Agents is a personal development tool that enhances your Claude Code workflow through:
 
-- **🧠 Intelligent Automation**: Self-routing commands that understand context and compose the right tools
-- **👥 Multi-Agent Orchestration**: Coordinate specialized agents for complex, multi-component projects  
-- **✅ Built-in Quality Gates**: Mandatory TDD, security reviews, and performance validation
-- **📊 Session Management**: GitHub issue-based tracking for complex multi-phase work
-- **🔧 Modular Architecture**: 40+ specialized modules you can mix and match
+- **🎯 Smart Commands**: Intelligent routing that understands context
+- **🧩 Modular Prompts**: Reusable components that reduce repetition  
+- **✅ Quality Reminders**: Built-in TDD and best practice prompts
+- **📊 GitHub Integration**: Issue-based tracking for complex work
+- **🔧 Organized Structure**: 29 specialized prompt modules across 7 categories
 
-## Quick Start
+**Reality Check**: This is a sophisticated prompt engineering system, NOT autonomous AI agents or enterprise software. It's a personal productivity tool.
+
+## Quick Start (30 seconds!)
 
 ### Installation
 
@@ -29,126 +31,128 @@ cp -r claude-code-modular-agents/.claude your-project/
 cp claude-code-modular-agents/CLAUDE.md your-project/
 ```
 
-### Basic Usage
+### Start Using Immediately
 
 ```bash
-# Let the framework decide the best approach
-/auto "Build a user authentication system"
+# Not sure what command to use? Start here:
+/auto "Add user authentication to my app"
 
-# Execute with quality enforcement
-/task "Add password reset functionality"
+# Quick focused task:
+/task "Fix the login bug"
 
-# Comprehensive feature development
-/feature "Real-time notifications system"
-
-# Multi-agent coordination for complex projects
-/swarm "Migrate monolith to microservices"
+# Just researching:
+/query "How does our caching work?"
 ```
 
-## Key Features
+📚 **[Full Getting Started Guide](docs/GETTING_STARTED.md)** - 3 minute read, working in 30 seconds!
 
-### 🎯 Intelligent Command System
+## Key Commands
 
-- **`/auto`** - Automatic routing and module composition based on task analysis
-- **`/task`** - Development execution with integrated quality checks
-- **`/feature`** - PRD-first comprehensive feature development
-- **`/swarm`** - Multi-agent orchestration for complex projects
-- **`/query`** - Research and analysis without modifications
-- **`/session`** - GitHub issue-based session management
+### The 5 Essential Commands
 
-### 🏗️ Modular Architecture
+| Command | Purpose | Example |
+|---------|---------|---------|
+| `/auto` | Smart routing - decides what you need | `/auto "add user login"` |
+| `/task` | Single component work with TDD | `/task "fix password reset"` |
+| `/feature` | Complete feature with PRD | `/feature "shopping cart"` |
+| `/swarm` | Complex multi-component work | `/swarm "migrate to GraphQL"` |
+| `/query` | Research without changes | `/query "explain auth flow"` |
+
+### Visual Command Flow
 
 ```
-.claude/
-├── commands/        # Core command definitions (delegation only)
-├── modules/         # Composable implementation modules
-│   ├── security/    # Security patterns and threat modeling
-│   ├── quality/     # TDD, code review, performance
-│   ├── development/ # Core development operations
-│   └── patterns/    # Reusable architectural patterns
-└── settings/        # Configuration and permissions
+Your Request → /auto → Intelligent Routing → Right Command → Quality Output
 ```
 
-### 🛡️ Enterprise-Grade Quality
+## What This Actually Does
 
-- **Mandatory TDD**: RED-GREEN-REFACTOR cycle enforcement
-- **Security First**: Threat modeling before implementation
-- **Performance Standards**: 200ms p95 response time
-- **90%+ Test Coverage**: With quality assertions
-- **Comprehensive Documentation**: Always up-to-date
+### ✅ What It Does Well
 
-### 🤖 Advanced Prompt Engineering
+- **Organizes complex prompts** into reusable modules
+- **Routes requests intelligently** to the right approach
+- **Enforces best practices** like TDD automatically
+- **Tracks complex work** with GitHub integration
+- **Provides helpful reminders** for quality code
 
-The framework leverages cutting-edge prompt engineering techniques:
+### ❌ What It Doesn't Do
 
-- **XML Structure Optimization**: 40% error reduction through structured reasoning
-- **Parallel Tool Execution**: 100% success rate with 70% latency reduction
-- **Context & Motivation**: 85% better compliance through clear "why"
-- **Advanced Frameworks**: ICO, RBROW, APE patterns for different scenarios
-- **Role-Based Prompting**: 45% quality improvement through expert personas
+- **Not autonomous agents** - it's organized prompts
+- **Not enterprise software** - it's a personal tool
+- **Not magic** - it enhances Claude Code, doesn't replace thinking
+- **Not a platform** - it's workflow automation
 
 ## Real-World Examples
 
-### Building a Payment System
+### Building a Feature
 ```bash
-/feature "Stripe payment integration with subscription management"
-# Creates PRD → Designs architecture → Implements with TDD → Validates security
+/feature "User profile with avatar upload"
+# → Creates requirements doc (PRD)
+# → Plans minimal viable approach
+# → Implements with tests
+# → Validates everything works
 ```
 
-### Refactoring Legacy Code
+### Fixing a Bug
 ```bash
-/swarm "Modernize legacy PHP application to Node.js microservices"
-# Coordinates multiple specialized agents for systematic migration
+/task "Fix: Users can't reset password"
+# → Writes test for the bug first
+# → Implements the fix
+# → Verifies test passes
+# → No regressions
 ```
 
-### Security Hardening
+### Complex Project
 ```bash
-/protocol "Implement SOC2 compliance for data handling"
-# Enforces strict security protocols with audit trails
+/swarm "Convert REST API to GraphQL"
+# → Creates GitHub tracking issue
+# → Breaks into manageable phases
+# → Coordinates the work
+# → Tracks progress
 ```
 
-## Architecture Philosophy
+## Framework Structure
 
-1. **AWARE Process**: Assess → Watch → Architect → Run → Evaluate
-2. **Single Source of Truth**: Every concept exists in exactly one location
-3. **Zero Redundancy**: Commands delegate, modules implement
-4. **Token Optimized**: Foundation <3k, commands <4k, modules <2k tokens
-5. **Reality Based**: Only proven Claude Code capabilities, no theoretical features
+```
+.claude/
+├── commands/        # Smart command routers (delegation only)
+├── modules/         # Actual implementation prompts
+│   ├── security/    # Security reminder prompts
+│   ├── quality/     # TDD and quality prompts
+│   ├── development/ # Development workflow prompts
+│   └── patterns/    # Reusable pattern prompts
+└── settings/        # Your preferences
+```
 
-## Framework Benefits
-
-- **🚀 3x Faster Development**: Through intelligent automation and quality gates
-- **🐛 75% Fewer Bugs**: Via mandatory TDD and systematic testing
-- **🔒 Security Built-in**: Threat modeling and security reviews on every feature
-- **📈 Consistent Quality**: Enforced standards across all development
-- **🧩 Extensible**: Easy to add custom modules and patterns
-
-## Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on:
-- Code standards and conventions
-- Testing requirements
-- PR process
-- Module development guidelines
+**Philosophy**: *"Commands delegate, modules implement"*
 
 ## Documentation
 
-- **[CLAUDE.md](CLAUDE.md)** - Complete framework reference and rules
-- **[Framework Structure](.claude/README.md)** - Detailed architecture documentation
-- **[Command Reference](.claude/commands/)** - Individual command documentation
-- **[Module Catalog](.claude/modules/)** - Available modules and patterns
-- **[Examples](projects-test/)** - Sample implementations
+- **[Getting Started](docs/GETTING_STARTED.md)** - 3-minute quickstart
+- **[Documentation Index](docs/DOCUMENTATION_INDEX.md)** - Find anything quickly
+- **[CLAUDE.md](CLAUDE.md)** - Core framework rules (reference)
+- **[Framework Guides](docs/framework/)** - Deep dives on specific topics
+- **[Examples](projects-test/)** - See it in action
 
 ## Requirements
 
 - Claude Code (Claude Desktop App)
-- Git and GitHub CLI (`gh`) 
-- Basic familiarity with terminal/command line
+- Git for version control
+- GitHub CLI (`gh`) for issue tracking
+- Basic terminal knowledge
+
+## Contributing
+
+We welcome contributions! The framework is designed to be extended:
+1. Commands go in `.claude/commands/`
+2. Implementation modules go in `.claude/modules/`
+3. Follow the delegation pattern
+4. Keep modules under 2k tokens
 
 ## Support
 
 - **Issues**: [GitHub Issues](https://github.com/swm-sink/claude-code-modular-agents/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/swm-sink/claude-code-modular-agents/discussions)
+- **Quick Help**: Use `/docs "your question"`
 
 ## License
 
@@ -157,5 +161,9 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ---
 
 <p align="center">
-  <strong>🚀 Transform your Claude Code experience with intelligent automation and quality enforcement</strong>
+  <strong>🚀 Start with <code>/auto</code> and let the framework handle the complexity!</strong>
+</p>
+
+<p align="center">
+  <em>"Let the framework think, so you can create."</em>
 </p>

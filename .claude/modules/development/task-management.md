@@ -117,11 +117,9 @@ status: stable
       quality/tdd.md for TDD cycle enforcement
       quality/critical-thinking.md for requirement analysis
       patterns/session-management.md for session decisions
-      development/prompt-engineering.md for prompt-related tasks
     </depends_on>
     <provides_to>
       development/protocol-enforcement.md for production standards
-      development/prompt-engineering.md for prompt task delegation
       patterns/multi-agent.md for escalation triggers
     </provides_to>
   </integration_points>

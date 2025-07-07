@@ -1,5 +1,5 @@
 ---
-version: 1.0.0
+version: 2.0.0
 last_updated: 2025-01-07
 status: stable
 ---
