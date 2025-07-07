@@ -1,0 +1,24 @@
+{
+  "timestamp": "2025-07-07T13:39:43.293197",
+  "complexity_metrics": {
+    "file_count": 56,
+    "total_lines": 13829,
+    "xml_blocks": 132,
+    "module_dependencies": 22,
+    "pattern_usage": 21,
+    "quality_gates": 47
+  },
+  "quality_analysis": {
+    "quality_score": 95.0,
+    "risk_level": "LOW",
+    "estimated_effort_hours": 0.0,
+    "critical_issues_count": 0,
+    "total_issues_count": 0,
+    "complexity_score": 100,
+    "recommendations": [
+      "\u26a0\ufe0f  High complexity detected - consider module refactoring",
+      "\u2705 Excellent quality - consider implementing automated quality gates"
+    ]
+  },
+  "framework_version": "2.3.0"
+}
