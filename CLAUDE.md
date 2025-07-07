@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.3.0   | 2025-07-07   | stable |
+| 2.3.1   | 2025-07-07   | stable |
 
 # CLAUDE.md - Framework Control Document
 
@@ -64,9 +64,9 @@
   <standard_rules>
     <rule>Docs in /docs only. One location per file. Clear naming</rule>
     <rule>Timestamps: filename-YYYY-MM-DD-HHMMSS-UTC</rule>
-    <rule>Temporal Standards: All dates MUST be July 2025 (2025-07-XX) in UTC format</rule>
+    <rule>Temporal Standards: All dates MUST use system-generated current dates $(date '+%Y-%m-%d') in UTC format</rule>
     <rule>Version Table Format: | version | last_updated | status | with YYYY-MM-DD format</rule>
-    <rule>Compliance: Use 2025-07-07 as standard date, increment days for sequencing</rule>
+    <rule>Compliance: Use $(date '+%Y-%m-%d') for current date, increment manually for sequencing when needed</rule>
     <rule>Update existing files before creating. Archive don't delete</rule>
   </standard_rules>
   <limits patterns="6" quality="4" planning="5" development="4" security="3" testing="2" reports="5" docs_per_dir="20"/>
@@ -330,6 +330,14 @@
       <condition>Unclear requirements or approach</condition>
       <action>/auto - Intelligent routing and planning</action>
     </node>
+    <node name="Documentation vs Research">
+      <condition>Need to understand how code works</condition>
+      <action>/query - Research and analysis without modifications</action>
+    </node>
+    <node name="Documentation vs Research">
+      <condition>Need to create or update documentation</condition>
+      <action>/docs - Generate or modify documentation files</action>
+    </node>
     <node name="Session Management">
       <condition>Long-running or multi-session work</condition>
       <action>/session - Context preservation</action>
@@ -346,6 +354,8 @@
     <rule>Single file + &lt;50 lines → /task</rule>
     <rule>Multiple files + clear spec → /feature</rule>
     <rule>Research required → /query then reassess</rule>
+    <rule>Understanding code → /query (read-only analysis)</rule>
+    <rule>Creating documentation → /docs (file generation)</rule>
     <rule>System-wide changes → /swarm</rule>
     <rule>Ambiguous requirements → /auto</rule>
     <rule>Session continuity needed → /session</rule>
@@ -519,16 +529,63 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+## Versioning Strategy
+
+```xml
+<versioning_strategy>
+  <framework_versioning>
+    <current_version>2.3.0</current_version>
+    <scheme>MAJOR.MINOR.PATCH (semantic versioning)</scheme>
+    <policy>
+      <major>Breaking changes to core framework architecture</major>
+      <minor>New commands, modules, or significant feature additions</minor>
+      <patch>Bug fixes, documentation updates, minor improvements</patch>
+    </policy>
+  </framework_versioning>
+  <component_versioning>
+    <commands>
+      <version_alignment>All commands follow framework version (2.3.0)</version_alignment>
+      <rationale>Commands are tightly coupled to framework capabilities</rationale>
+      <update_policy>Increment with framework version on any changes</update_policy>
+    </commands>
+    <modules>
+      <version_scheme>Independent semantic versioning starting from 1.x.x</version_scheme>
+      <rationale>Modules are modular components with independent evolution</rationale>
+      <update_policy>
+        <major>Breaking interface changes or complete rewrites</major>
+        <minor>New capabilities or significant enhancements</minor>
+        <patch>Bug fixes and minor improvements</patch>
+      </update_policy>
+    </modules>
+  </component_versioning>
+  <compatibility_matrix>
+    <framework_2_3_0>
+      <commands>All commands at 2.3.0</commands>
+      <modules>Support any 1.x.x version</modules>
+      <backward_compatibility>Full compatibility with 2.2.x commands</backward_compatibility>
+    </framework_2_3_0>
+  </compatibility_matrix>
+  <version_update_procedures>
+    <rule>Update version tables immediately when making changes</rule>
+    <rule>Maintain backward compatibility within major versions</rule>
+    <rule>Document breaking changes in CHANGELOG.md</rule>
+    <rule>Test all components after version updates</rule>
+  </version_update_procedures>
+</versioning_strategy>
+```
+
+────────────────────────────────────────────────────────────────────────────────
+
 ## Temporal Standards Enforcement
 
 ```xml
 <temporal_standards>
-  <rule>ALL version table dates MUST use July 2025 format: 2025-07-XX</rule>
-  <rule>Standard date is 2025-07-07, increment for sequencing if needed</rule>
+  <rule>ALL version table dates MUST use system-generated current dates: $(date '+%Y-%m-%d')</rule>
+  <rule>Standard date is $(date '+%Y-%m-%d'), increment manually for sequencing when needed</rule>
   <rule>Filename timestamps MUST use YYYY-MM-DD-HHMMSS-UTC format</rule>
-  <rule>NO dates from January 2025 or other months allowed</rule>
+  <rule>Templates and framework files MUST use $(date '+%Y-%m-%d') for dynamic date generation</rule>
   <validation>timestamp_compliance_check() in validation tool</validation>
-  <enforcement>Auto-update non-compliant timestamps to 2025-07-07</enforcement>
+  <enforcement>Auto-update non-compliant timestamps using system date commands</enforcement>
 </temporal_standards>
 ```
 

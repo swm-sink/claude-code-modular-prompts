@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 3.0.0   | 2025-01-08   | stable |
+| 3.0.0   | $(date '+%Y-%m-%d')   | stable |
 
 # Module Name
 
