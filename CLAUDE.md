@@ -8,12 +8,13 @@
 - **REMINDER**: Remove this rule when framework is production-stable and user confirms
 
 <framework_principles>
-  <mission>Deliver exceptional software through intelligent orchestration of native Claude Code capabilities</mission>
+  <mission>Personal development tool for improving Claude Code workflow efficiency</mission>
   
   <architecture_foundation>
     <version>2.0.0</version>
-    <purpose>World-class modular meta-framework for enhancing Claude Code capabilities</purpose>
-    <design_philosophy>Revolutionary architecture that eliminates redundancy, enables rapid iteration, and provides composable AI development orchestration</design_philosophy>
+    <purpose>Internal modular prompt system for Claude Code workflow automation</purpose>
+    <design_philosophy>Practical workflow improvements through organized prompts and GitHub integration - this is NOT enterprise software, it's a personal tool</design_philosophy>
+    <reality_check>This is a sophisticated prompt engineering system with GitHub integration, NOT autonomous AI agents or enterprise platform</reality_check>
   </architecture_foundation>
   
   <core_principles>
@@ -51,6 +52,46 @@
     <requirement name="ripple_effects">Think through second and third-order consequences</requirement>
     <requirement name="verify_assumptions">Test each assumption with concrete evidence</requirement>
   </systematic_thinking>
+  
+</strict_enforcement>
+
+<strict_enforcement target="code_minimalism">
+  
+  <motivation>
+    Every unnecessary line wastes tokens, increases debugging time, and adds complexity. Elegance means achieving the goal with the LEAST code possible.
+  </motivation>
+  
+  <minimal_code_philosophy enforcement="mandatory">
+    <requirement name="ruthless_simplicity">Write the absolute minimum code that solves the problem correctly</requirement>
+    <requirement name="no_premature_abstraction">Avoid abstractions until proven necessary by actual use cases</requirement>
+    <requirement name="token_consciousness">Every line costs tokens - make each one count</requirement>
+    <requirement name="maintenance_burden">More code = more bugs = more debugging time</requirement>
+  </minimal_code_philosophy>
+  
+  <anti_patterns enforcement="mandatory">
+    <avoid name="verbose_implementations">
+      <bad>10 lines when 3 would suffice</bad>
+      <bad>Unnecessary intermediate variables</bad>
+      <bad>Redundant error checking already handled elsewhere</bad>
+    </avoid>
+    <avoid name="premature_abstractions">
+      <bad>Creating interfaces for single implementations</bad>
+      <bad>Factory patterns for simple object creation</bad>
+      <bad>Unnecessary wrapper classes</bad>
+    </avoid>
+    <avoid name="defensive_overengineering">
+      <bad>Handling impossible edge cases</bad>
+      <bad>Building for hypothetical future requirements</bad>
+      <bad>Complex solutions to simple problems</bad>
+    </avoid>
+  </anti_patterns>
+  
+  <minimalism_rules enforcement="mandatory">
+    <rule name="delete_first">Before adding code, try deleting code that solves the problem</rule>
+    <rule name="inline_simple">Inline single-use functions and variables</rule>
+    <rule name="flatten_logic">Prefer flat code over deeply nested structures</rule>
+    <rule name="standard_library">Use built-in solutions over custom implementations</rule>
+  </minimalism_rules>
   
 </strict_enforcement>
 
@@ -477,13 +518,12 @@
     <workflow_enforcement>Follow GitHub workflow enforcement for all complex multi-phase work</workflow_enforcement>
   </getting_started>
   
-  <capabilities context="battle_tested">
-    <performance>3x faster development with multi-agent coordination</performance>
-    <reliability>94.4% success rate on enterprise systems</reliability>
-    <automation>Zero-configuration intelligent pattern selection</automation>
-    <autonomous_development>95% self-sufficient feature development with zero-touch execution</autonomous_development>
-    <intelligent_orchestration>Predictive requirement extraction and self-healing validation</intelligent_orchestration>
-    <integration>GitHub CLI automation, CI/CD pipeline generation</integration>
+  <capabilities context="realistic_internal_tool">
+    <workflow_improvement>Better organized prompts and GitHub integration for personal development</workflow_improvement>
+    <modular_prompts>Reusable prompt modules that reduce repetition</modular_prompts>
+    <github_integration>Session tracking with issues for complex multi-step work</github_integration>
+    <quality_reminders>Built-in TDD and security reminder prompts</quality_reminders>
+    <reality_check>This is prompt engineering automation, not AI agents - claims of "94.4% success" and "3x faster" are unsubstantiated</reality_check>
   </capabilities>
   
 </usage_guidance>
