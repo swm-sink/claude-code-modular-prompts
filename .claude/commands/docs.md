@@ -7,11 +7,29 @@
 ────────────────────────────────────────────────────────────────────────────────
 
 ```xml
-<command purpose="Navigate, search, and generate documentation with consistency checks">
+<command purpose="MANDATORY gateway for ALL documentation operations">
   
   <delegation target="modules/development/documentation.md">
-    Parse request → Search/Navigate → Display or Generate → Validate consistency
+    Validate request → Search/Generate → Apply standards → Ensure consistency
   </delegation>
+  
+  <thinking_pattern enforcement="CRITICAL">
+    <step>1. BLOCK any documentation creation outside this command</step>
+    <step>2. Parse request type (search/generate/validate/index)</step>
+    <step>3. For search: Use parallel Grep/Glob for efficiency</step>
+    <step>4. For generate: Apply Framework 3.0 standards ALWAYS</step>
+    <step>5. Ensure proper location (/docs directory ONLY)</step>
+    <step>6. Validate cross-references and consistency</step>
+    <step>7. Update DOCUMENTATION_INDEX.md automatically</step>
+  </thinking_pattern>
+  
+  <critical_enforcement>
+    <rule priority="MAXIMUM">ONLY /docs can create documentation files</rule>
+    <rule priority="MAXIMUM">ALL docs MUST go in /docs directory</rule>
+    <rule priority="MAXIMUM">Framework 3.0 format MANDATORY</rule>
+    <rule priority="HIGH">Auto-update documentation index</rule>
+    <rule priority="HIGH">Validate all cross-references</rule>
+  </critical_enforcement>
   
   <depends_on>
     development/documentation.md for documentation workflows
@@ -25,17 +43,18 @@
     • Implements explicit_validation for consistency checks
     • Leverages consequence_mapping for documentation impact
     • Uses single_responsibility for focused documentation
+    • ENFORCES documentation gateway pattern
     
     See modules/patterns/pattern-library.md for pattern details
     See modules/development/documentation.md for full implementation
   </pattern_usage>
   
   <usage_examples>
-    /docs "permission guide"        → Find specific topic
-    /docs "list all"                → Browse documentation
-    /docs "explain AWARE"           → Topic explanation
-    /docs "create contributor guide" → Generate new docs
-    /docs "check consistency"       → Validate documentation
+    /docs search "permission guide"     # Find specific topic
+    /docs index                         # Browse all documentation
+    /docs generate "API Guide"          # Create with standards
+    /docs validate                      # Check consistency
+    /docs "explain AWARE framework"     # Topic explanation
   </usage_examples>
   
   <capabilities>

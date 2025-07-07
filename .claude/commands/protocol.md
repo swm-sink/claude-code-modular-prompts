@@ -7,18 +7,31 @@
 ────────────────────────────────────────────────────────────────────────────────
 
 ```xml
-<command purpose="Production-ready development with mandatory quality gates and compliance standards">
+<command purpose="Production-ready development with MANDATORY quality gates">
   
   <delegation target="modules/quality/production-standards.md">
-    This command delegates ALL implementation to the protocol enforcement module which provides comprehensive production standards including mandatory TDD, security reviews, performance validation, and regulatory compliance for enterprise systems.
+    Validate requirements → Enforce TDD → Apply security → Verify performance → Ensure compliance
   </delegation>
+  
+  <thinking_pattern enforcement="MANDATORY">
+    <step>1. Create GitHub session for compliance tracking</step>
+    <step>2. Validate ALL production requirements upfront</step>
+    <step>3. ENFORCE TDD: No code without failing tests first</step>
+    <step>4. Apply threat modeling from security modules</step>
+    <step>5. Implement with performance benchmarks in mind</step>
+    <step>6. Run ALL quality gates (coverage, security, performance)</step>
+    <step>7. Generate compliance documentation automatically</step>
+    <step>8. Block deployment if ANY gate fails</step>
+  </thinking_pattern>
   
   <depends_on>
     quality/production-standards.md for complete protocol implementation
     quality/tdd.md for test-driven development standards
-    security/audit.md for security compliance frameworks
+    security/threat-modeling.md for security analysis
+    security/financial-compliance.md for regulatory requirements
     patterns/session-management.md for GitHub issue coordination
     patterns/pattern-library.md for proven execution patterns
+    quality/error-recovery.md for resilient implementations
   </depends_on>
   
   <pattern_usage>

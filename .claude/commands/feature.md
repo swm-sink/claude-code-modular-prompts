@@ -11,38 +11,59 @@
 ────────────────────────────────────────────────────────────────────────────────
 
 ```xml
-<command purpose="Comprehensive autonomous feature development with PRD-first approach">
+<command purpose="Autonomous PRD-driven feature development with intelligent orchestration">
   
   <delegation target="modules/planning/feature-workflow.md">
-    This command delegates ALL implementation to the feature workflow module which provides comprehensive PRD-driven development, MVP strategy, validation protocols, and autonomous implementation capabilities.
+    Generate PRD → Analyze complexity → Plan MVP → Execute autonomously → Validate
   </delegation>
+  
+  <thinking_pattern enforcement="MANDATORY">
+    <step>1. Generate comprehensive PRD using feature-workflow.md patterns</step>
+    <step>2. Auto-detect tech stack and existing patterns in codebase</step>
+    <step>3. Create GitHub session for tracking (ALWAYS)</step>
+    <step>4. Define MVP with clear phases and acceptance criteria</step>
+    <step>5. Calculate complexity: >15 score triggers /swarm delegation</step>
+    <step>6. Execute with TDD: Write ALL tests FIRST</step>
+    <step>7. Apply quality gates from production-standards.md</step>
+    <step>8. Auto-generate documentation via /docs patterns</step>
+  </thinking_pattern>
   
   <module_integration>
     <primary_module>modules/planning/feature-workflow.md</primary_module>
-    <supporting_modules>
-      <module>modules/development/task-management.md</module>
-      <module>modules/patterns/intelligent-routing.md</module>
-      <module>modules/patterns/multi-agent.md</module>
-      <module>modules/patterns/session-management.md</module>
-      <module>modules/quality/tdd.md</module>
-      <module>modules/security/audit.md</module>
-      <module>modules/quality/production-standards.md</module>
-    </supporting_modules>
+    <execution_flow>
+      <phase name="PRD">planning/feature-workflow.md → Generate requirements</phase>
+      <phase name="Session">patterns/session-management.md → Create GitHub tracking</phase>
+      <phase name="Analysis">patterns/intelligent-routing.md → Complexity scoring</phase>
+      <phase name="Delegation">IF score>15: patterns/multi-agent.md → Swarm execution</phase>
+      <phase name="Development">development/task-management.md → TDD implementation</phase>
+      <phase name="Quality">quality/production-standards.md → Gate enforcement</phase>
+      <phase name="Security">security/threat-modeling.md → Threat analysis</phase>
+      <phase name="Docs">development/documentation.md → Auto-documentation</phase>
+    </execution_flow>
   </module_integration>
   
   <usage_examples>
-    <example>/feature "User authentication system with JWT"</example>
-    <example>/feature "Real-time chat with WebSockets"</example>
-    <example>/feature "Payment processing with Stripe"</example>
+    <example>/feature "User authentication system with JWT" # Creates PRD, session, TDD tests</example>
+    <example>/feature "Real-time chat with WebSockets"     # Complex→delegates to /swarm</example>
+    <example>/feature "Payment processing with Stripe"     # Security-first, threat model</example>
   </usage_examples>
   
+  <rules enforcement="STRICT">
+    <rule priority="CRITICAL">ALWAYS generate PRD first using patterns</rule>
+    <rule priority="CRITICAL">ALWAYS create GitHub session for tracking</rule>
+    <rule priority="HIGH">Calculate complexity - delegate to /swarm if >15</rule>
+    <rule priority="HIGH">TDD mandatory - tests before implementation</rule>
+    <rule priority="HIGH">Quality gates from production-standards.md</rule>
+  </rules>
+  
   <pattern_usage>
-    • Implements prd_first pattern from pattern-library.md
-    • Uses issue_tracking pattern for complex features
-    • Applies tdd_cycle throughout development
-    • Leverages parallel_execution for multi-component work
-    • Uses graceful_degradation for error recovery
+    • Implements prd_first pattern EXPLICITLY with PRD generation
+    • Uses issue_tracking pattern for GitHub session creation
+    • Applies tdd_cycle with test-first enforcement
+    • Leverages parallel_execution when delegating to swarm
+    • Uses graceful_degradation from error-recovery.md
     • Implements consequence_mapping for architecture decisions
+    • Integrates git-operations.md for branch strategies
     
     See modules/patterns/pattern-library.md for pattern details
     See modules/planning/feature-workflow.md for full implementation

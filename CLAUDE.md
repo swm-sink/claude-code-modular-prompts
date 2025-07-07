@@ -127,14 +127,22 @@
 
 ```xml
 <architecture>
-  <commands location=".claude/commands/" delegate_only="true">
+  <commands location=".claude/commands/" delegate_only="true" enforcement="MANDATORY">
     <cmd name="/auto" module="patterns/intelligent-routing.md"/>
     <cmd name="/task" module="development/task-management.md"/>
     <cmd name="/feature" module="planning/feature-workflow.md"/>
     <cmd name="/swarm" module="patterns/multi-agent.md"/>
     <cmd name="/query" module="development/research-analysis.md"/>
     <cmd name="/session" module="patterns/session-management.md"/>
+    <cmd name="/docs" module="development/documentation.md" critical="true"/>
+    <cmd name="/protocol" module="patterns/session-management.md"/>
   </commands>
+  <documentation_enforcement>
+    <rule priority="CRITICAL">NEVER generate project documentation without /docs command</rule>
+    <rule priority="CRITICAL">All documentation MUST go through /docs for consistency</rule>
+    <rule priority="CRITICAL">README, guides, docs ONLY via /docs command</rule>
+    <exception>CLAUDE.md updates and command documentation are allowed</exception>
+  </documentation_enforcement>
   <modules location=".claude/modules/" implement_only="true">
     <category name="security|quality|development|patterns|planning|testing"/>
   </modules>
@@ -473,6 +481,29 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+## Command Usage Enforcement
+
+```xml
+<command_enforcement priority="CRITICAL">
+  <mandatory_usage>
+    <documentation>/docs - ALL documentation generation MUST use this</documentation>
+    <development>/task - Single file or focused development work</development>
+    <research>/query - Research and understanding BEFORE coding</research>
+    <features>/feature - PRD-driven autonomous development</features>
+    <complex>/swarm - Multi-component with git worktrees</complex>
+    <routing>/auto - When uncertain about approach</routing>
+    <sessions>/session - Long-running work requiring context</sessions>
+    <protocols>/protocol - Resuming interrupted work</protocols>
+  </mandatory_usage>
+  <prohibitions>
+    <rule>NEVER create documentation without /docs command</rule>
+    <rule>NEVER skip /query for research tasks</rule>
+    <rule>NEVER use manual approach when commands exist</rule>
+    <rule>NEVER ignore module capabilities in commands</rule>
+  </prohibitions>
+</command_enforcement>
+```
+
 ## Usage Patterns
 
 ```xml
@@ -482,6 +513,7 @@
   <features>/feature - autonomous development</features>
   <complex>/swarm - multi-component (auto-session)</complex>
   <uncertain>/auto - intelligent routing</uncertain>
+  <documentation>/docs - ALL documentation tasks</documentation>
 </usage>
 ```
 
@@ -515,5 +547,33 @@
 ```
 
 ────────────────────────────────────────────────────────────────────────────────
+
+## Command Thinking Patterns
+
+```xml
+<command_thinking enforcement="MANDATORY">
+  <critical_rule>EVERY command has explicit thinking_pattern section</critical_rule>
+  <critical_rule>Claude 4 MUST follow thinking steps in order</critical_rule>
+  <critical_rule>Commands EXPLICITLY guide module usage</critical_rule>
+  
+  <command_patterns>
+    <auto>Calculate complexity score → Research → Route intelligently</auto>
+    <task>Understand → Write FAILING test → Implement → Pass → Refactor</task>
+    <feature>Generate PRD → Create session → Calculate complexity → Execute</feature>
+    <swarm>Create session → Setup worktrees → Parallel Task() → Merge</swarm>
+    <query>Parse → Parallel search → Analyze → Report (NO modifications)</query>
+    <session>Create issue → Track progress → Link artifacts → Complete</session>
+    <docs>BLOCK external docs → Apply standards → Update index</docs>
+    <protocol>Validate → TDD → Security → Performance → Compliance</protocol>
+  </command_patterns>
+  
+  <module_integration>
+    <rule>Commands MUST explicitly reference module workflows</rule>
+    <rule>Thinking patterns MUST align with module capabilities</rule>
+    <rule>Error recovery MUST be integrated in all commands</rule>
+    <rule>Performance patterns MUST use parallel execution</rule>
+  </module_integration>
+</command_thinking>
+```
 
 **Remember**: Critical thinking partner. Research deeply. Challenge assumptions. Map consequences.

@@ -10,18 +10,30 @@
 <command purpose="Complex systems via Task() and Batch() patterns with worktree isolation">
   
   <delegation target="modules/patterns/multi-agent.md">
-    Create session → Setup worktrees → Decompose work → Parallel agents → Coordinate
+    Create session → Setup worktrees → Decompose work → Execute Task() calls → Merge results
   </delegation>
   
+  <thinking_pattern enforcement="MANDATORY">
+    <step>1. Create GitHub session for coordination tracking</step>
+    <step>2. Analyze components and assign specialized agents</step>
+    <step>3. Create git worktrees: ../worktrees/swarm-{session}-{agent}</step>
+    <step>4. Execute ALL Task() calls in ONE message for parallelism</step>
+    <step>5. Each agent works in isolated environment with TDD</step>
+    <step>6. Apply 4-tier error recovery if failures occur</step>
+    <step>7. Merge all agent work and clean up worktrees</step>
+  </thinking_pattern>
+  
   <critical_features>
-    <git_worktree_isolation>
-      Each agent works in isolated git worktree at ../worktrees/swarm-{session}-{agent}
-      Prevents workspace conflicts during parallel development
-      Clean merge process after agent completion
+    <git_worktree_isolation enforcement="MANDATORY">
+      ALWAYS create worktrees BEFORE Task() execution
+      Each agent MUST have isolated workspace
+      Pattern: ../worktrees/swarm-{session}-{agent}
+      Clean merge process after completion
     </git_worktree_isolation>
     <parallel_execution>
-      All Task() calls executed in single message for 70% latency reduction
+      ALL Task() calls in SINGLE message - 70% faster
       True parallelism with native Claude Code patterns
+      Example: Task("frontend", {...}), Task("backend", {...}), Task("database", {...})
     </parallel_execution>
   </critical_features>
   

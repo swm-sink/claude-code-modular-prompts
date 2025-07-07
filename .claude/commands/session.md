@@ -7,27 +7,37 @@
 ────────────────────────────────────────────────────────────────────────────────
 
 ```xml
-<command purpose="AI session management via GitHub Issues for development tracking and coordination">
+<command purpose="AI session management via GitHub Issues with context preservation">
   
   <delegation target="modules/patterns/session-management.md">
-    This command delegates ALL implementation to the session management module which provides comprehensive GitHub Issues integration for AI coding session tracking, progress updates, and team coordination.
+    Create issue → Track progress → Update status → Link artifacts → Complete with summary
   </delegation>
+  
+  <thinking_pattern enforcement="MANDATORY">
+    <step>1. Determine session type (start/update/complete/view)</step>
+    <step>2. For start: Create GitHub issue with AI template</step>
+    <step>3. For update: Add progress comment with context</step>
+    <step>4. For complete: Summarize outcomes and lessons learned</step>
+    <step>5. Auto-link commits, PRs, and related issues</step>
+    <step>6. Preserve context for /protocol resumption</step>
+    <step>7. Apply labels (ai-session, active, completed)</step>
+  </thinking_pattern>
   
   <module_integration>
     <primary_module>modules/patterns/session-management.md</primary_module>
     <supporting_modules>
-      <module>modules/patterns/git-operations.md</module>
-      <module>modules/quality/production-standards.md</module>
+      <module>modules/patterns/git-operations.md for commit linking</module>
+      <module>modules/quality/production-standards.md for compliance tracking</module>
+      <module>modules/patterns/multi-agent.md for swarm coordination</module>
     </supporting_modules>
   </module_integration>
   
   <usage_examples>
-    <example type="start">/session start "Implement OAuth2 authentication"</example>
-    <example type="update">/session update "Completed user model, starting auth middleware"</example>
-    <example type="link">/session link 123</example>
-    <example type="complete">/session complete successful</example>
-    <example type="list">/session list active</example>
-    <example type="view">/session view 123</example>
+    <example type="start">/session start "Implement OAuth2 authentication" # Creates #124</example>
+    <example type="update">/session update "Completed user model, TDD tests passing"</example>
+    <example type="link">/session link PR-456 # Links PR to current session</example>
+    <example type="complete">/session complete "OAuth2 fully implemented with 95% coverage"</example>
+    <example type="view">/session view 123 # Shows full session history</example>
   </usage_examples>
   
   <github_integration>
