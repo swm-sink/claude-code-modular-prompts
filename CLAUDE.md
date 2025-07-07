@@ -47,13 +47,36 @@
 
 ```xml
 <file_discipline>
-  <rule>Docs in /docs only. One location per file. Clear naming</rule>
-  <rule>Timestamps: filename-YYYY-MM-DD-HHMMSS-UTC</rule>
-  <rule>Temporal Standards: All dates MUST be July 2025 (2025-07-XX) in UTC format</rule>
-  <rule>Version Table Format: | version | last_updated | status | with YYYY-MM-DD format</rule>
-  <rule>Compliance: Use 2025-07-07 as standard date, increment days for sequencing</rule>
+  <critical_rules enforcement="MAXIMUM">
+    <rule priority="HIGHEST">NEVER create files/directories without explicit requirement</rule>
+    <rule priority="HIGHEST">ALWAYS use LS/Glob to verify location EXISTS before ANY file operation</rule>
+    <rule priority="HIGHEST">THINK 5X before creating ANY new file - check if it already exists</rule>
+    <rule priority="HIGHEST">NO test files, personal dirs, or redundant structures EVER</rule>
+    <rule priority="HIGHEST">Scripts go in /scripts, tests in /tests, docs in /docs - NO EXCEPTIONS</rule>
+  </critical_rules>
+  <verification_checklist mandatory="true">
+    <before_create>Does this file/directory already exist somewhere?</before_create>
+    <before_create>Is there an existing location where this belongs?</before_create>
+    <before_create>Have I checked with LS/Glob to verify the path?</before_create>
+    <before_create>Is this ABSOLUTELY necessary for the user's request?</before_create>
+    <before_create>Am I creating clutter or organizing properly?</before_create>
+  </verification_checklist>
+  <standard_rules>
+    <rule>Docs in /docs only. One location per file. Clear naming</rule>
+    <rule>Timestamps: filename-YYYY-MM-DD-HHMMSS-UTC</rule>
+    <rule>Temporal Standards: All dates MUST be July 2025 (2025-07-XX) in UTC format</rule>
+    <rule>Version Table Format: | version | last_updated | status | with YYYY-MM-DD format</rule>
+    <rule>Compliance: Use 2025-07-07 as standard date, increment days for sequencing</rule>
+    <rule>Update existing files before creating. Archive don't delete</rule>
+  </standard_rules>
   <limits patterns="6" quality="4" planning="5" development="4" security="3" testing="2" reports="5" docs_per_dir="20"/>
-  <rule>Update existing files before creating. Archive don't delete</rule>
+  <prohibited_actions>
+    <action>Creating 'personal/', 'local/', or user-specific directories</action>
+    <action>Duplicating existing project structures</action>
+    <action>Creating test files outside /tests directory</action>
+    <action>Making directories without checking if they exist first</action>
+    <action>Creating analytics or temporary files in tracked locations</action>
+  </prohibited_actions>
 </file_discipline>
 ```
 
@@ -63,10 +86,26 @@
 
 ```xml
 <claude_4_control>
-  <rule>ALWAYS use &lt;antml:thinking&gt; blocks before actions</rule>
-  <rule>Verify: purpose, location, naming, duplication before file ops</rule>
-  <rule>One concept = one location. Check existing before creating</rule>
-  <rule>Batch tool calls. Think 3x longer than acting</rule>
+  <mandatory_verification enforcement="ABSOLUTE">
+    <rule priority="CRITICAL">ALWAYS use &lt;antml:thinking&gt; blocks before EVERY action</rule>
+    <rule priority="CRITICAL">Think 5X longer than acting - NO EXCEPTIONS</rule>
+    <rule priority="CRITICAL">Verify location EXISTS with LS/Glob BEFORE any file operation</rule>
+    <rule priority="CRITICAL">Check for duplicates/existing files BEFORE creating anything</rule>
+  </mandatory_verification>
+  <file_operation_protocol>
+    <step order="1">THINK: What am I about to do and why?</step>
+    <step order="2">CHECK: Does this file/directory already exist? (USE LS/Glob)</step>
+    <step order="3">VERIFY: Is this the correct location per framework rules?</step>
+    <step order="4">VALIDATE: Is this absolutely necessary?</step>
+    <step order="5">EXECUTE: Only if all checks pass</step>
+  </file_operation_protocol>
+  <attention_to_detail>
+    <rule>One concept = one location. NEVER duplicate</rule>
+    <rule>Batch tool calls for efficiency</rule>
+    <rule>Read file organization rules BEFORE creating</rule>
+    <rule>Double-check paths and naming conventions</rule>
+    <rule>NO assumptions - verify everything</rule>
+  </attention_to_detail>
 </claude_4_control>
 ```
 

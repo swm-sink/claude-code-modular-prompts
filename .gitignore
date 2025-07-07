@@ -108,3 +108,64 @@ yarn-error.log*
 .env.local
 .env.*.local
 secrets/
+
+# Claude Code specific
+.claude/analytics/
+.claude/settings.local.json
+.claude/cache/
+.claude/tmp/
+
+# Git worktrees
+worktrees/
+../worktrees/
+
+# Test outputs
+tests/integration/test_report.json
+tests/**/*.log
+tests/**/*.coverage
+test_output/
+test_results.json
+*.test.json
+
+# Archive temporary files
+archive/**/*.tmp
+archive/**/*.bak
+archive/**/tmp/
+
+# Script outputs
+scripts/output/
+scripts/logs/
+*.output
+*.result
+
+# Personal/local directories
+personal/
+projects/claude-code-modular-agents/
+local/
+
+# Generated files
+*.generated
+generated/
+output/
+results/
+
+# Temporary analysis files
+*-analysis.json
+*-metrics.json
+analysis-*/
+metrics-*/
+
+# Session files
+.session
+.session.*
+session-*/
+
+# Performance benchmarks
+benchmarks/
+*.benchmark
+benchmark-results/
+
+# Validation reports (keep docs/reports but ignore root level)
+/validation-report-*.md
+/cleanup-report-*.md
+/*-report-*.json
