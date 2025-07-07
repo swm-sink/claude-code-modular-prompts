@@ -1,5 +1,8 @@
 import Foundation
 import Combine
+import VoiceModule
+@preconcurrency import CodegenModule
+import SimulatorModule
 
 #if canImport(AVFoundation)
 import AVFoundation
@@ -10,7 +13,7 @@ import Speech
 #endif
 
 @MainActor
-class AppCoordinator: ObservableObject {
+public class AppCoordinator: ObservableObject {
     
     // MARK: - Published Properties
     @Published var currentState: AppState = .idle
@@ -21,6 +24,9 @@ class AppCoordinator: ObservableObject {
     
     // MARK: - Private Properties
     private let projectManager: ProjectManager
+    private let voiceRecognition: VoiceRecognition
+    private let codeGenerator: SwiftCodeGenerator
+    private let simulatorManager: SimulatorManager
     private var cancellables = Set<AnyCancellable>()
     
     #if canImport(AVFoundation) && !os(macOS)
@@ -32,59 +38,71 @@ class AppCoordinator: ObservableObject {
     #endif
     
     // MARK: - Initialization
-    init(projectManager: ProjectManager = ProjectManager()) {
+    public init(projectManager: ProjectManager = ProjectManager()) {
         self.projectManager = projectManager
+        self.voiceRecognition = VoiceRecognition()
+        self.codeGenerator = SwiftCodeGenerator()
+        self.simulatorManager = SimulatorManager()
         setupAudioSession()
     }
     
     // MARK: - Voice Recording
-    func startVoiceRecording(completion: @escaping (Bool) -> Void) {
+    public func startVoiceRecording(completion: @escaping (Bool) -> Void) {
         guard currentState == .idle else {
             completion(false)
             return
         }
         
-        #if canImport(AVFoundation) && !os(macOS)
-        // Check microphone permissions on iOS
-        AVAudioSession.sharedInstance().requestRecordPermission { [weak self] granted in
-            DispatchQueue.main.async {
-                guard let self = self else { return }
+        // Use real VoiceRecognition module
+        voiceRecognition.requestMicrophonePermission { [weak self] micGranted in
+            guard let self = self, micGranted else {
+                DispatchQueue.main.async {
+                    self?.currentState = .error("Microphone permission denied")
+                    completion(false)
+                }
+                return
+            }
+            
+            self.voiceRecognition.requestSpeechPermission { [weak self] speechGranted in
+                guard let self = self, speechGranted else {
+                    DispatchQueue.main.async {
+                        self?.currentState = .error("Speech recognition permission denied")
+                        completion(false)
+                    }
+                    return
+                }
                 
-                if granted {
+                DispatchQueue.main.async {
                     self.currentState = .recording
                     self.feedbackMessage = "Listening..."
                     self.isProcessing = true
                     
-                    // Start actual recording (placeholder for now)
-                    self.simulateVoiceRecording()
-                    completion(true)
-                } else {
-                    self.currentState = .error("Microphone permission denied")
-                    completion(false)
+                    // Start real voice recognition
+                    self.voiceRecognition.startListening { result in
+                        DispatchQueue.main.async {
+                            switch result {
+                            case .success:
+                                completion(true)
+                                // Simulate some voice input for now - in real app this would come from recognition
+                                self.simulateVoiceRecording()
+                            case .failure(let error):
+                                self.currentState = .error("Voice recognition failed: \(error)")
+                                completion(false)
+                            }
+                        }
+                    }
                 }
             }
         }
-        #else
-        // For macOS and other platforms, simulate permission granted
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            
-            self.currentState = .recording
-            self.feedbackMessage = "Listening..."
-            self.isProcessing = true
-            
-            // Start simulated recording
-            self.simulateVoiceRecording()
-            completion(true)
-        }
-        #endif
     }
     
-    func stopVoiceRecording() {
+    public func stopVoiceRecording() {
         currentState = .processing
         feedbackMessage = "Processing your request..."
         
-        // Stop recording and process (placeholder)
+        // Stop real voice recognition
+        voiceRecognition.stopListening()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.isProcessing = false
             self.currentState = .idle
@@ -93,7 +111,7 @@ class AppCoordinator: ObservableObject {
     }
     
     // MARK: - Voice Processing
-    func processVoiceInput(_ input: String, completion: @escaping (Result<String, VoiceProcessingError>) -> Void) {
+    public func processVoiceInput(_ input: String, completion: @escaping (Result<String, VoiceProcessingError>) -> Void) {
         guard !input.isEmpty else {
             completion(.failure(.processingFailed))
             return
@@ -113,23 +131,26 @@ class AppCoordinator: ObservableObject {
     }
     
     // MARK: - Code Generation
-    func triggerCodeGeneration(for request: VoiceRequest, completion: @escaping (Result<String, CodeGenerationError>) -> Void) {
+    public func triggerCodeGeneration(for request: VoiceRequest, completion: @escaping (Result<String, CodeGenerationError>) -> Void) {
         currentState = .generating
         feedbackMessage = "Generating your app..."
         
-        // Simulate code generation
-        DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + 2.0) {
-            let generatedCode = AppCoordinator.generateCodeForRequest(request)
+        // Use real code generation module
+        Task { @MainActor in
+            // Parse voice request into UI components
+            let components = self.parseVoiceRequestToComponents(request)
             
-            DispatchQueue.main.async {
-                if !generatedCode.isEmpty {
-                    completion(.success(generatedCode))
-                    self.currentState = .completed
-                    self.feedbackMessage = "App generated successfully!"
-                } else {
-                    completion(.failure(.generationFailed("Failed to generate code")))
-                    self.currentState = .error("Code generation failed")
-                }
+            // Generate code using real module on main actor
+            let generatedCode = self.codeGenerator.generateView(components: components)
+            
+            // Back on main actor
+            if !generatedCode.isEmpty {
+                completion(.success(generatedCode))
+                self.currentState = .completed
+                self.feedbackMessage = "App generated successfully!"
+            } else {
+                completion(.failure(.generationFailed("Failed to generate code")))
+                self.currentState = .error("Code generation failed")
             }
         }
     }
@@ -203,36 +224,50 @@ class AppCoordinator: ObservableObject {
         }
     }
     
-    private static func generateCodeForRequest(_ request: VoiceRequest) -> String {
-        // Placeholder code generation
-        switch request.intent {
-        case .createApp:
-            return """
-            import SwiftUI
+    private func parseVoiceRequestToComponents(_ request: VoiceRequest) -> [UIComponent] {
+        var components: [UIComponent] = []
+        let text = request.processedText.lowercased()
+        
+        // Simple parsing logic - in a real app this would be more sophisticated
+        if text.contains("button") {
+            let title = extractButtonTitle(from: text)
+            let style: ButtonStyle = text.contains("primary") ? .primary : 
+                                   text.contains("destructive") ? .destructive : .secondary
             
-            struct ContentView: View {
-                var body: some View {
-                    VStack {
-                        Text("Generated App")
-                            .font(.largeTitle)
-                            .padding()
-                        
-                        Text("\(request.processedText)")
-                            .multilineTextAlignment(.center)
-                            .padding()
-                    }
-                }
-            }
-            
-            struct ContentView_Previews: PreviewProvider {
-                static var previews: some View {
-                    ContentView()
-                }
-            }
-            """
-        default:
-            return "// Generated code placeholder"
+            components.append(.button(ButtonConfig(
+                title: title,
+                action: "buttonAction",
+                style: style
+            )))
         }
+        
+        if text.contains("calculator") {
+            // Add calculator-specific buttons
+            components.append(.button(ButtonConfig(title: "0", action: "numberPressed", style: .secondary)))
+            components.append(.button(ButtonConfig(title: "1", action: "numberPressed", style: .secondary)))
+            components.append(.button(ButtonConfig(title: "+", action: "operatorPressed", style: .primary)))
+            components.append(.button(ButtonConfig(title: "=", action: "calculate", style: .primary)))
+        }
+        
+        // Default to a simple button if no specific components detected
+        if components.isEmpty {
+            components.append(.button(ButtonConfig(
+                title: "Get Started",
+                action: "getStarted", 
+                style: .primary
+            )))
+        }
+        
+        return components
+    }
+    
+    private func extractButtonTitle(from text: String) -> String {
+        // Simple title extraction
+        if text.contains("save") { return "Save" }
+        if text.contains("cancel") { return "Cancel" }
+        if text.contains("submit") { return "Submit" }
+        if text.contains("login") { return "Login" }
+        return "Action"
     }
     
     private func extractProjectName(from text: String) -> String {

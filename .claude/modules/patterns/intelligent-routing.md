@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.3.0   | 2025-07-07   | stable |
+| 1.3.0   | 2025-07-07   | stable |
 
 # Intelligent Routing Module
 

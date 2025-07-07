@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.4.0   | 2025-07-07   | stable |
+| 2.3.0   | 2025-07-07   | stable |
 
 # /swarm - Multi-agent parallel execution with git worktree isolation
 

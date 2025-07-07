@@ -1,12 +1,14 @@
 {
   "test_execution": "Integration Testing - Agent Coordination",
   "total_tests": 5,
-  "passed": 5,
-  "failed": 0,
+  "passed": 4,
+  "failed": 1,
   "details": {
     "Version Consistency": {
-      "passed": true,
-      "errors": []
+      "passed": false,
+      "errors": [
+        "swarm.md: Found version 2.4.0, expected 2.3.0"
+      ]
     },
     "Module Dependencies": {
       "passed": true,

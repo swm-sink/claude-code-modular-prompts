@@ -1,8 +1,9 @@
 import SwiftUI
 
-@main
-struct VoiceIOSBuilderApp: App {
-    var body: some Scene {
+public struct VoiceIOSBuilderApp: App {
+    public init() {}
+    
+    public var body: some Scene {
         WindowGroup {
             ContentView()
         }

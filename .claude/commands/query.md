@@ -2,7 +2,11 @@
 |---------|--------------|--------|
 | 2.3.0   | 2025-07-07   | stable |
 
-# /query - Research-only codebase analysis
+# /query - Research & Analysis ONLY (Zero Modifications)
+
+────────────────────────────────────────────────────────────────────────────────
+
+> **⚡ Clear Purpose**: Researches and explains code WITHOUT creating any files. Want to CREATE documentation? Use `/docs` instead!
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -24,11 +28,19 @@
   </thinking_pattern>
   
   <examples>
-    /query "How does authentication work?"  # Searches auth patterns, reads implementations
-    /query "Find Repository pattern uses"   # Greps for pattern, analyzes usage
-    /query "Identify security issues"       # Threat analysis without modifications
-    /query "Performance bottlenecks"        # Analyzes code for optimization opportunities
+    /query "How does authentication work?"  # Researches auth patterns, explains code
+    /query "Find Repository pattern uses"   # Analyzes pattern usage across codebase
+    /query "Identify security issues"       # Security analysis with NO modifications
+    /query "Performance bottlenecks"        # Code analysis for optimization opportunities
+    /query "Explain the data flow"          # Investigates and explains architecture
   </examples>
+  
+  <anti_examples>
+    ❌ /query "create API documentation"         # Use /docs instead!
+    ❌ /query "generate setup guide"             # Use /docs instead!
+    ❌ /query "write security guidelines"        # Use /docs instead!
+    ✅ /query "how does the security system work?" # Perfect for research!
+  </anti_examples>
   
   <rules enforcement="STRICT">
     <rule priority="CRITICAL">ZERO modifications - read-only analysis ONLY</rule>

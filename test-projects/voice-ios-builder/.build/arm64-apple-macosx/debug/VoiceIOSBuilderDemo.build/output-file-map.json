@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.build/master.swiftdeps"
+  },
+  "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/Demo/main.swift": {
+    "dependencies": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.build/main.d",
+    "object": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.build/main.swift.o",
+    "swiftmodule": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.build/main.swiftdeps"
+  }
+}

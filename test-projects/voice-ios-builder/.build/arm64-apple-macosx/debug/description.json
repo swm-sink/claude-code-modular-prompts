@@ -1,6 +1,10 @@
 {
   "builtTestProducts" : [
-
+    {
+      "binaryPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.xctest/Contents/MacOS/VoiceIOSBuilderPackageTests",
+      "packagePath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder",
+      "productName" : "VoiceIOSBuilderPackageTests"
+    }
   ],
   "copyCommands" : {
 
@@ -17,14 +21,42 @@
 
   ],
   "swiftCommands" : {
-    "C.SimpleTests-arm64-apple-macosx15.0-debug.module" : {
+    "C.CodegenModule-arm64-apple-macosx15.0-debug.module" : {
       "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
-      "fileList" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimpleTests.build/sources",
+      "fileList" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/sources",
       "importPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules",
       "inputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/SimpleTests.swift"
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/CodeValidator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/CodegenModule.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/Demo.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/IntegrationValidator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/SwiftCodeGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/TestRunner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/UIComponentTemplates.swift"
         },
         {
           "kind" : "file",
@@ -32,18 +64,21 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/VoiceIOSBuilder.swiftmodule"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimpleTests.build/sources"
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/sources"
         }
       ],
-      "isLibrary" : false,
-      "moduleName" : "SimpleTests",
-      "moduleOutputPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/SimpleTests.swiftmodule",
+      "isLibrary" : true,
+      "moduleName" : "CodegenModule",
+      "moduleOutputPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/CodegenModule.swiftmodule",
       "objects" : [
-        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimpleTests.build/SimpleTests.swift.o"
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/CodeValidator.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/CodegenModule.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/Demo.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/IntegrationValidator.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/Models.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/SwiftCodeGenerator.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/TestRunner.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/UIComponentTemplates.swift.o"
       ],
       "otherArguments" : [
         "-target",
@@ -59,11 +94,10 @@
         "-module-cache-path",
         "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/ModuleCache",
         "-parseable-output",
-        "-Xfrontend",
-        "-entry-point-function-name",
-        "-Xfrontend",
-        "SimpleTests_main",
         "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/CodegenModule-Swift.h",
         "-swift-version",
         "5",
         "-F",
@@ -82,22 +116,185 @@
         "-package-name",
         "voice_ios_builder"
       ],
-      "outputFileMapPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimpleTests.build/output-file-map.json",
+      "outputFileMapPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/output-file-map.json",
       "outputs" : [
         {
           "kind" : "file",
-          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimpleTests.build/SimpleTests.swift.o"
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/CodeValidator.swift.o"
         },
         {
           "kind" : "file",
-          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/SimpleTests.swiftmodule"
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/CodegenModule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/Demo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/IntegrationValidator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/SwiftCodeGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/TestRunner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/UIComponentTemplates.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/CodegenModule.swiftmodule"
         }
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/SimpleTests.swift"
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/CodeValidator.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/CodegenModule.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/Demo.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/IntegrationValidator.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/Models.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/SwiftCodeGenerator.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/TestRunner.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/UIComponentTemplates.swift"
       ],
-      "tempsPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimpleTests.build",
+      "tempsPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.SimulatorModule-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/sources",
+      "importPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/BuildValidator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/Errors.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/ScreenshotCapture.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/SimulatorManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/SimulatorModule.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SimulatorModule",
+      "moduleOutputPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/SimulatorModule.swiftmodule",
+      "objects" : [
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/BuildValidator.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/Errors.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/Models.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/ScreenshotCapture.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/SimulatorManager.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/SimulatorModule.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j14",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/SimulatorModule-Swift.h",
+        "-swift-version",
+        "5",
+        "-F",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "voice_ios_builder"
+      ],
+      "outputFileMapPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/BuildValidator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/Errors.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/ScreenshotCapture.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/SimulatorManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/SimulatorModule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/SimulatorModule.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/BuildValidator.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/Errors.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/Models.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/ScreenshotCapture.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/SimulatorManager.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/SimulatorModule.swift"
+      ],
+      "tempsPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build",
       "wholeModuleOptimization" : false
     },
     "C.VoiceIOSBuilder-arm64-apple-macosx15.0-debug.module" : {
@@ -128,6 +325,18 @@
         {
           "kind" : "file",
           "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/VoiceModule.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/CodegenModule.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/SimulatorModule.swiftmodule"
         },
         {
           "kind" : "file",
@@ -217,21 +426,404 @@
       ],
       "tempsPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build",
       "wholeModuleOptimization" : false
+    },
+    "C.VoiceIOSBuilderDemo-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.build/sources",
+      "importPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/Demo/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/VoiceIOSBuilder.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "VoiceIOSBuilderDemo",
+      "moduleOutputPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/VoiceIOSBuilderDemo.swiftmodule",
+      "objects" : [
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j14",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "VoiceIOSBuilderDemo_main",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-F",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "voice_ios_builder"
+      ],
+      "outputFileMapPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/VoiceIOSBuilderDemo.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/Demo/main.swift"
+      ],
+      "tempsPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.VoiceIOSBuilderPackageTests-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.build/sources",
+      "importPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/VoiceIOSBuilderTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "VoiceIOSBuilderPackageTests",
+      "moduleOutputPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/VoiceIOSBuilderPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j14",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.build/VoiceIOSBuilderPackageTests-Swift.h",
+        "-F",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "voice_ios_builder"
+      ],
+      "outputFileMapPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/VoiceIOSBuilderPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.VoiceIOSBuilderTests-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderTests.build/sources",
+      "importPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/Tests/IntegrationTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/VoiceIOSBuilder.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/VoiceModule.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/CodegenModule.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/SimulatorModule.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "VoiceIOSBuilderTests",
+      "moduleOutputPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/VoiceIOSBuilderTests.swiftmodule",
+      "objects" : [
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderTests.build/IntegrationTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j14",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-F",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "voice_ios_builder"
+      ],
+      "outputFileMapPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderTests.build/IntegrationTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/VoiceIOSBuilderTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/Tests/IntegrationTests.swift"
+      ],
+      "tempsPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.VoiceModule-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "fileList" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/sources",
+      "importPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceCommandParser.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceModule.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceModuleIntegration.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceModuleTypes.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceRecognition.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "VoiceModule",
+      "moduleOutputPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/VoiceModule.swiftmodule",
+      "objects" : [
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceCommandParser.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModule.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModuleIntegration.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModuleTypes.swift.o",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceRecognition.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j14",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModule-Swift.h",
+        "-swift-version",
+        "5",
+        "-F",
+        "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "voice_ios_builder"
+      ],
+      "outputFileMapPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceCommandParser.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModuleIntegration.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModuleTypes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceRecognition.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules/VoiceModule.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceCommandParser.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceModule.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceModuleIntegration.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceModuleTypes.swift",
+        "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceRecognition.swift"
+      ],
+      "tempsPath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build",
+      "wholeModuleOptimization" : false
     }
   },
   "swiftFrontendCommands" : {
 
   },
   "swiftTargetScanArgs" : {
-    "SimpleTests" : [
+    "CodegenModule" : [
       "/Library/Developer/CommandLineTools/usr/bin/swiftc",
       "-module-name",
-      "SimpleTests",
+      "CodegenModule",
       "-package-name",
       "voice_ios_builder",
       "-incremental",
       "-c",
-      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/SimpleTests.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/CodeValidator.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/CodegenModule.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/Demo.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/IntegrationValidator.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/Models.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/SwiftCodeGenerator.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/TestRunner.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/UIComponentTemplates.swift",
       "-I",
       "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules",
       "-target",
@@ -247,11 +839,63 @@
       "-module-cache-path",
       "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/ModuleCache",
       "-parseable-output",
-      "-Xfrontend",
-      "-entry-point-function-name",
-      "-Xfrontend",
-      "SimpleTests_main",
       "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/CodegenModule-Swift.h",
+      "-swift-version",
+      "5",
+      "-F",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "voice_ios_builder",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ],
+    "SimulatorModule" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "SimulatorModule",
+      "-package-name",
+      "voice_ios_builder",
+      "-incremental",
+      "-c",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/BuildValidator.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/Errors.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/Models.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/ScreenshotCapture.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/SimulatorManager.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/SimulatorModule.swift",
+      "-I",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j14",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/SimulatorModule-Swift.h",
       "-swift-version",
       "5",
       "-F",
@@ -323,13 +967,236 @@
       "voice_ios_builder",
       "-driver-use-frontend-path",
       "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ],
+    "VoiceIOSBuilderDemo" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "VoiceIOSBuilderDemo",
+      "-package-name",
+      "voice_ios_builder",
+      "-incremental",
+      "-c",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/Demo/main.swift",
+      "-I",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j14",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "VoiceIOSBuilderDemo_main",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-F",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "voice_ios_builder",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ],
+    "VoiceIOSBuilderPackageTests" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "VoiceIOSBuilderPackageTests",
+      "-package-name",
+      "voice_ios_builder",
+      "-incremental",
+      "-c",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j14",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.build/VoiceIOSBuilderPackageTests-Swift.h",
+      "-F",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "voice_ios_builder",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ],
+    "VoiceIOSBuilderTests" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "VoiceIOSBuilderTests",
+      "-package-name",
+      "voice_ios_builder",
+      "-incremental",
+      "-c",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/Tests/IntegrationTests.swift",
+      "-I",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j14",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-F",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "voice_ios_builder",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
+    ],
+    "VoiceModule" : [
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+      "-module-name",
+      "VoiceModule",
+      "-package-name",
+      "voice_ios_builder",
+      "-incremental",
+      "-c",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceCommandParser.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceModule.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceModuleIntegration.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceModuleTypes.swift",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceRecognition.swift",
+      "-I",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j14",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModule-Swift.h",
+      "-swift-version",
+      "5",
+      "-F",
+      "/Library/Developer/CommandLineTools/Library/Developer/Frameworks",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "voice_ios_builder",
+      "-driver-use-frontend-path",
+      "/Library/Developer/CommandLineTools/usr/bin/swiftc"
     ]
   },
   "targetDependencyMap" : {
-    "SimpleTests" : [
-      "VoiceIOSBuilder"
+    "CodegenModule" : [
+
+    ],
+    "SimulatorModule" : [
+
     ],
     "VoiceIOSBuilder" : [
+      "SimulatorModule",
+      "CodegenModule",
+      "VoiceModule"
+    ],
+    "VoiceIOSBuilderDemo" : [
+      "VoiceIOSBuilder",
+      "SimulatorModule",
+      "CodegenModule",
+      "VoiceModule"
+    ],
+    "VoiceIOSBuilderPackageTests" : [
+      "VoiceIOSBuilderTests",
+      "VoiceIOSBuilder",
+      "SimulatorModule",
+      "CodegenModule",
+      "VoiceModule"
+    ],
+    "VoiceIOSBuilderTests" : [
+      "VoiceIOSBuilder",
+      "SimulatorModule",
+      "CodegenModule",
+      "VoiceModule"
+    ],
+    "VoiceModule" : [
 
     ]
   },
@@ -337,27 +1204,23 @@
 
   },
   "testEntryPointCommands" : {
+    "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.derived/runner.swift" : {
+      "inputs" : [
 
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.derived/runner.swift"
+        }
+      ]
+    }
   },
   "traitConfiguration" : {
     "enableAllTraits" : false
   },
   "writeCommands" : {
-    "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimpleTests-entitlement.plist" : {
-      "alwaysOutOfDate" : false,
-      "inputs" : [
-        {
-          "kind" : "virtual",
-          "name" : "<entitlement-plist>"
-        },
-        {
-          "kind" : "virtual",
-          "name" : "<com.apple.security.get-task-allow>"
-        }
-      ],
-      "outputFilePath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimpleTests-entitlement.plist"
-    },
-    "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimpleTests.build/sources" : {
+    "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/sources" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -366,44 +1229,72 @@
         },
         {
           "kind" : "file",
-          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/SimpleTests.swift"
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/CodeValidator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/CodegenModule.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/Demo.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/IntegrationValidator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/Models.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/SwiftCodeGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/TestRunner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/UIComponentTemplates.swift"
         }
       ],
-      "outputFilePath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimpleTests.build/sources"
+      "outputFilePath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/sources"
     },
-    "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimpleTests.product/Objects.LinkFileList" : {
+    "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/sources" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
           "kind" : "virtual",
-          "name" : "<link-file-list>"
+          "name" : "<sources-file-list>"
         },
         {
           "kind" : "file",
-          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimpleTests.build/SimpleTests.swift.o"
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/BuildValidator.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/AppCoordinator.swift.o"
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/Errors.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/ContentView.swift.o"
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/Models.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/Models.swift.o"
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/ScreenshotCapture.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/ProjectManager.swift.o"
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/SimulatorManager.swift"
         },
         {
           "kind" : "file",
-          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/VoiceIOSBuilderApp.swift.o"
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Sources/SimulatorModule/SimulatorModule.swift"
         }
       ],
-      "outputFilePath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimpleTests.product/Objects.LinkFileList"
+      "outputFilePath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/sources"
     },
     "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/sources" : {
       "alwaysOutOfDate" : false,
@@ -434,6 +1325,316 @@
         }
       ],
       "outputFilePath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/sources"
+    },
+    "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo-entitlement.plist" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<entitlement-plist>"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<com.apple.security.get-task-allow>"
+        }
+      ],
+      "outputFilePath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo-entitlement.plist"
+    },
+    "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/Demo/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.build/sources"
+    },
+    "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/CodeValidator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/CodegenModule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/Demo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/IntegrationValidator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/SwiftCodeGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/TestRunner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/UIComponentTemplates.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/BuildValidator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/Errors.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/ScreenshotCapture.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/SimulatorManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/SimulatorModule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/AppCoordinator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/ProjectManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/VoiceIOSBuilderApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceCommandParser.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModuleIntegration.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModuleTypes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceRecognition.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderDemo.product/Objects.LinkFileList"
+    },
+    "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.build/sources"
+    },
+    "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/CodeValidator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/CodegenModule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/Demo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/IntegrationValidator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/SwiftCodeGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/TestRunner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/CodegenModule.build/UIComponentTemplates.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/BuildValidator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/Errors.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/ScreenshotCapture.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/SimulatorManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/SimulatorModule.build/SimulatorModule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/AppCoordinator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/Models.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/ProjectManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilder.build/VoiceIOSBuilderApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderTests.build/IntegrationTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceCommandParser.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModuleIntegration.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModuleTypes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceRecognition.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/Tests/IntegrationTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderTests.build/sources"
+    },
+    "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceCommandParser.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceModule.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceModuleIntegration.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceModuleTypes.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/Sources/VoiceModule/VoiceRecognition.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceModule.build/sources"
     },
     "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt" : {
       "alwaysOutOfDate" : true,

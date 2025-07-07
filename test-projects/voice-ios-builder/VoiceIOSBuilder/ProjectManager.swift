@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-class ProjectManager: ObservableObject {
+public class ProjectManager: ObservableObject {
     
     // MARK: - Published Properties
     @Published var projects: [Project] = []
@@ -13,7 +13,7 @@ class ProjectManager: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Initialization
-    init() {
+    public init() {
         // Create projects directory in Documents
         let documentsPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
         projectsDirectory = documentsPath.appendingPathComponent("VoiceGeneratedProjects")

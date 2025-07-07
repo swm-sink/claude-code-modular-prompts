@@ -1,7 +1,7 @@
 import Foundation
 
 // MARK: - App States
-enum AppState: Equatable {
+public enum AppState: Equatable {
     case idle
     case recording
     case processing
@@ -9,7 +9,7 @@ enum AppState: Equatable {
     case completed
     case error(String)
     
-    static func == (lhs: AppState, rhs: AppState) -> Bool {
+    public static func == (lhs: AppState, rhs: AppState) -> Bool {
         switch (lhs, rhs) {
         case (.idle, .idle), (.recording, .recording), (.processing, .processing), 
              (.generating, .generating), (.completed, .completed):
@@ -23,14 +23,14 @@ enum AppState: Equatable {
 }
 
 // MARK: - Voice Request Model
-struct VoiceRequest {
+public struct VoiceRequest {
     let id: UUID
     let originalText: String
     let processedText: String
     let intent: VoiceIntent
     let timestamp: Date
     
-    init(originalText: String, processedText: String, intent: VoiceIntent) {
+    public init(originalText: String, processedText: String, intent: VoiceIntent) {
         self.id = UUID()
         self.originalText = originalText
         self.processedText = processedText
@@ -40,7 +40,7 @@ struct VoiceRequest {
 }
 
 // MARK: - Voice Intent
-enum VoiceIntent {
+public enum VoiceIntent {
     case createApp
     case modifyApp
     case deleteApp
@@ -103,7 +103,7 @@ enum ProjectManagerError: Error, LocalizedError {
     case buildFailed(String)
     case fileSystemError(String)
     
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .projectNotFound:
             return "Project not found"
@@ -119,13 +119,13 @@ enum ProjectManagerError: Error, LocalizedError {
     }
 }
 
-enum VoiceProcessingError: Error, LocalizedError {
+public enum VoiceProcessingError: Error, LocalizedError {
     case recordingFailed
     case processingFailed
     case recognitionFailed
     case noPermission
     
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .recordingFailed:
             return "Voice recording failed"
@@ -139,13 +139,13 @@ enum VoiceProcessingError: Error, LocalizedError {
     }
 }
 
-enum CodeGenerationError: Error, LocalizedError {
+public enum CodeGenerationError: Error, LocalizedError {
     case invalidRequest
     case generationFailed(String)
     case networkError
     case timeout
     
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .invalidRequest:
             return "Invalid code generation request"

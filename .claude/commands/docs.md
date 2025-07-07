@@ -2,7 +2,11 @@
 |---------|--------------|--------|
 | 2.3.0   | 2025-07-07   | stable |
 
-# /docs - Instant documentation access and generation
+# /docs - Documentation Creation & Management ONLY
+
+────────────────────────────────────────────────────────────────────────────────
+
+> **⚡ Clear Purpose**: Creates, updates, and manages documentation files. Does NOT answer "how does X work" questions - use `/query` for research!
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -50,12 +54,21 @@
   </pattern_usage>
   
   <usage_examples>
-    /docs search "permission guide"     # Find specific topic
-    /docs index                         # Browse all documentation
-    /docs generate "API Guide"          # Create with standards
-    /docs validate                      # Check consistency
-    /docs "explain AWARE framework"     # Topic explanation
+    /docs search "permission guide"     # Find existing docs to update
+    /docs index                         # Browse documentation structure
+    /docs generate "API Guide"          # CREATE new documentation
+    /docs validate                      # Check docs consistency
+    /docs "create setup guide"          # Generate new documentation
+    
+    <!-- NOT FOR RESEARCH! Use /query for "how does X work" questions -->
   </usage_examples>
+  
+  <anti_examples>
+    ❌ /docs "how does authentication work?"     # Use /query instead!
+    ❌ /docs "explain the codebase"              # Use /query instead!
+    ❌ /docs "find security issues"              # Use /query instead!
+    ✅ /docs generate "Security Guidelines"      # Creates documentation
+  </anti_examples>
   
   <capabilities>
     • Smart search across all documentation

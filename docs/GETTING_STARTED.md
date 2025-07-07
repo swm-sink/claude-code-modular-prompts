@@ -17,7 +17,12 @@
 
 # Just researching:
 /query "How does the caching work?"
+
+# Creating documentation:
+/docs generate "API Guide"
 ```
+
+> **🚨 Confused about `/docs` vs `/query`?** → [**Command Selection Guide**](COMMAND_SELECTION_GUIDE.md) - 2 minute read!
 
 ---
 

@@ -19,6 +19,7 @@
 - **[Templates](../.claude/templates/)** - Format templates for new files
 
 ### Quick References
+- **[Command Selection Guide](COMMAND_SELECTION_GUIDE.md)** - Stop confusion between `/docs` and `/query`!
 - **[All Commands](#-commands)** - What each command does
 - **[Common Tasks](#-common-tasks)** - Solutions to everyday needs
 - **[Troubleshooting](#-troubleshooting)** - Fix common issues
@@ -34,7 +35,8 @@
 | `/task` | Single component work with TDD | `/task "fix login bug"` |
 | `/feature` | Complete feature with PRD & MVP | `/feature "shopping cart"` |
 | `/swarm` | Complex multi-component work | `/swarm "migrate to GraphQL"` |
-| `/query` | Research without changes | `/query "how does auth work?"` |
+| `/query` | **Research ONLY** - understand code, no file changes | `/query "how does auth work?"` |
+| `/docs` | **Documentation ONLY** - create/update docs | `/docs generate "API Guide"` |
 
 ### Specialized Commands
 | Command | Purpose | When to Use |
