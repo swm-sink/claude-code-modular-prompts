@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """Framework validation tool - detects and reports common issues.
-Version 2.0.0 - Updated for Framework 3.0 format validation."""
+Version 2.2.0 - Enhanced with predictive quality analytics and automation."""
 
 import os
 import re
 import sys
+import json
+import time
 from pathlib import Path
 from datetime import datetime
+from collections import defaultdict, Counter
+from typing import Dict, List, Tuple, Optional, Any
 
 def check_command_delegation(filepath):
     """Check if command has proper delegation block."""
@@ -372,10 +376,154 @@ def check_timestamp_compliance():
     
     return issues
 
+def analyze_complexity_patterns():
+    """Analyze codebase complexity patterns for predictive insights."""
+    complexity_metrics = {
+        'file_count': 0,
+        'total_lines': 0,
+        'xml_blocks': 0,
+        'module_dependencies': 0,
+        'pattern_usage': 0,
+        'quality_gates': 0
+    }
+    
+    quality_indicators = []
+    
+    for directory in ['.claude/modules', '.claude/commands', 'docs']:
+        if not Path(directory).exists():
+            continue
+        for file_path in Path(directory).rglob('*.md'):
+            complexity_metrics['file_count'] += 1
+            
+            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read()
+                lines = content.split('\n')
+                complexity_metrics['total_lines'] += len(lines)
+                
+                # Analyze content complexity
+                if '```xml' in content:
+                    complexity_metrics['xml_blocks'] += content.count('```xml')
+                
+                if '<depends_on>' in content:
+                    complexity_metrics['module_dependencies'] += 1
+                
+                if '<uses_pattern' in content:
+                    complexity_metrics['pattern_usage'] += content.count('<uses_pattern')
+                
+                if '<gate name=' in content:
+                    complexity_metrics['quality_gates'] += content.count('<gate name=')
+    
+    # Calculate complexity score
+    complexity_score = min(
+        (complexity_metrics['file_count'] * 0.5) +
+        (complexity_metrics['xml_blocks'] * 1.2) +
+        (complexity_metrics['module_dependencies'] * 2.0) +
+        (complexity_metrics['pattern_usage'] * 1.5) +
+        (complexity_metrics['quality_gates'] * 0.8),
+        100
+    )
+    
+    return complexity_metrics, complexity_score
+
+def predict_quality_score(issues: List[str], complexity_score: float) -> Dict[str, Any]:
+    """Predict overall quality score and identify improvement areas."""
+    
+    # Categorize issues by severity
+    critical_issues = [i for i in issues if any(word in i.lower() for word in ['missing', 'broken', 'failed', 'critical'])]
+    format_issues = [i for i in issues if any(word in i.lower() for word in ['format', 'table', 'separator'])]
+    compliance_issues = [i for i in issues if any(word in i.lower() for word in ['timestamp', 'compliance', 'non-compliant'])]
+    
+    # Calculate quality score (0-100)
+    base_score = 100
+    
+    # Deduct for issues
+    critical_deduction = len(critical_issues) * 10
+    format_deduction = len(format_issues) * 3
+    compliance_deduction = len(compliance_issues) * 2
+    other_deduction = (len(issues) - len(critical_issues) - len(format_issues) - len(compliance_issues)) * 1
+    
+    # Factor in complexity
+    complexity_factor = max(0, (complexity_score - 50) * 0.1)  # Penalty for high complexity
+    
+    quality_score = max(0, base_score - critical_deduction - format_deduction - 
+                       compliance_deduction - other_deduction - complexity_factor)
+    
+    # Predict remediation effort
+    effort_hours = (
+        len(critical_issues) * 2.0 +
+        len(format_issues) * 0.5 +
+        len(compliance_issues) * 0.25 +
+        (len(issues) - len(critical_issues) - len(format_issues) - len(compliance_issues)) * 0.1
+    )
+    
+    # Risk assessment
+    risk_level = 'LOW'
+    if len(critical_issues) > 5 or quality_score < 70:
+        risk_level = 'HIGH'
+    elif len(critical_issues) > 2 or quality_score < 85:
+        risk_level = 'MEDIUM'
+    
+    return {
+        'quality_score': round(quality_score, 1),
+        'risk_level': risk_level,
+        'estimated_effort_hours': round(effort_hours, 1),
+        'critical_issues_count': len(critical_issues),
+        'total_issues_count': len(issues),
+        'complexity_score': round(complexity_score, 1),
+        'recommendations': generate_recommendations(issues, quality_score, complexity_score)
+    }
+
+def generate_recommendations(issues: List[str], quality_score: float, complexity_score: float) -> List[str]:
+    """Generate actionable recommendations based on analysis."""
+    recommendations = []
+    
+    if quality_score < 70:
+        recommendations.append("🚨 CRITICAL: Immediate quality remediation required before production")
+    
+    if complexity_score > 70:
+        recommendations.append("⚠️  High complexity detected - consider module refactoring")
+    
+    critical_count = len([i for i in issues if 'missing' in i.lower() or 'broken' in i.lower()])
+    if critical_count > 3:
+        recommendations.append("🔧 Focus on resolving critical structural issues first")
+    
+    format_count = len([i for i in issues if 'format' in i.lower() or 'table' in i.lower()])
+    if format_count > 5:
+        recommendations.append("📋 Batch format corrections for efficiency")
+    
+    timestamp_count = len([i for i in issues if 'timestamp' in i.lower()])
+    if timestamp_count > 2:
+        recommendations.append("📅 Automated timestamp compliance update recommended")
+    
+    if quality_score > 90:
+        recommendations.append("✅ Excellent quality - consider implementing automated quality gates")
+    
+    return recommendations
+
+def save_analytics_report(complexity_metrics: Dict, quality_analysis: Dict):
+    """Save analytics report for trend analysis."""
+    report_data = {
+        'timestamp': datetime.now().isoformat(),
+        'complexity_metrics': complexity_metrics,
+        'quality_analysis': quality_analysis,
+        'framework_version': '2.3.0'
+    }
+    
+    # Ensure analytics directory exists
+    analytics_dir = Path('.claude/analytics')
+    analytics_dir.mkdir(exist_ok=True)
+    
+    # Save report
+    report_file = analytics_dir / f'quality-report-{datetime.now().strftime("%Y-%m-%d-%H%M%S")}.json'
+    with open(report_file, 'w') as f:
+        json.dump(report_data, f, indent=2)
+    
+    return report_file
+
 def main():
-    """Run all validation checks."""
-    print("🔍 Framework Validation Tool v2.1.0\n")
-    print("Validating Framework 3.0 format compliance...\n")
+    """Run all validation checks with predictive analytics."""
+    print("🔍 Framework Validation Tool v2.2.0\n")
+    print("Validating Framework 3.0 format compliance with predictive analytics...\n")
     
     all_issues = []
     check_count = 0
@@ -439,8 +587,35 @@ def main():
     all_issues.extend(check_timestamp_compliance())
     check_count += 1
     
+    # Enhanced analytics and prediction
+    print("[✓] Analyzing complexity patterns...")
+    complexity_metrics, complexity_score = analyze_complexity_patterns()
+    check_count += 1
+    
+    print("[✓] Generating quality predictions...")
+    quality_analysis = predict_quality_score(all_issues, complexity_score)
+    check_count += 1
+    
+    print("[✓] Saving analytics report...")
+    report_file = save_analytics_report(complexity_metrics, quality_analysis)
+    check_count += 1
+    
     print("\n" + "="*60 + "\n")
-    print(f"Completed {check_count} validation checks.\n")
+    print(f"Completed {check_count} validation checks with predictive analytics.\n")
+    
+    # Display predictive analytics
+    print("📊 QUALITY ANALYTICS:\n")
+    print(f"Quality Score: {quality_analysis['quality_score']}/100")
+    print(f"Risk Level: {quality_analysis['risk_level']}")
+    print(f"Complexity Score: {quality_analysis['complexity_score']}/100")
+    print(f"Estimated Effort: {quality_analysis['estimated_effort_hours']} hours")
+    print(f"Analytics Report: {report_file}\n")
+    
+    if quality_analysis['recommendations']:
+        print("🎯 RECOMMENDATIONS:")
+        for rec in quality_analysis['recommendations']:
+            print(f"  {rec}")
+        print()
     
     if all_issues:
         print(f"❌ Found {len(all_issues)} issues:\n")
@@ -482,10 +657,13 @@ def main():
             print()
         
         print("Please fix these issues to ensure framework compliance.")
+        print(f"\n📈 Track progress with: tail -f {report_file}")
         sys.exit(1)
     else:
         print("✅ All validation checks passed!")
         print("Framework is compliant with version 3.0 format.")
+        print(f"Quality Score: {quality_analysis['quality_score']}/100")
+        print(f"📊 Analytics Report: {report_file}")
         sys.exit(0)
 
 if __name__ == "__main__":
