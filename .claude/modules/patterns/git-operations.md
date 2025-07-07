@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-07-07   | stable |
+| 1.1.0   | 2025-07-07   | stable |
 
 # Git Operations Module
 
@@ -10,7 +10,7 @@
 <module name="git_operations" category="patterns">
   
   <purpose>
-    Comprehensive git operation patterns for intelligent staging, conventional commits, release management, and automated workflows.
+    Comprehensive git operation patterns for intelligent staging, conventional commits, release management, git worktree workflows, and automated workflows.
   </purpose>
   
   <trigger_conditions>
@@ -77,6 +77,26 @@
       </validation>
     </phase>
     
+    <phase name="worktree_management" order="4">
+      <requirements>
+        Efficient multi-branch management using git worktrees
+        Automated worktree creation for feature/hotfix branches
+        Context isolation between different work streams
+        Automatic cleanup of completed worktrees
+      </requirements>
+      <actions>
+        Create worktree for new feature/hotfix branches automatically
+        Maintain separate working directories for concurrent development
+        Synchronize worktree state with main repository
+        Clean up worktrees after branch merge or abandonment
+      </actions>
+      <validation>
+        Worktree created in appropriate directory structure
+        No conflicts between concurrent worktree operations
+        Proper cleanup after worktree lifecycle completion
+      </validation>
+    </phase>
+    
   </implementation>
   
   <commit_type_classification>
@@ -125,6 +145,264 @@
       <create_tag>true</create_tag>
     </release_workflow>
   </branching_workflows>
+  
+  <git_worktree_patterns>
+    <worktree_creation>
+      <description>Automated worktree creation for parallel development</description>
+      <implementation>
+        ```bash
+        # AUTOMATED WORKTREE CREATION PATTERN
+        create_feature_worktree() {
+          local branch_name="$1"
+          local ticket_id="$2"
+          local base_branch="${3:-develop}"
+          
+          # Standardized worktree directory structure
+          local worktree_dir="../worktrees/${branch_name}"
+          
+          # Create worktree from base branch
+          git worktree add -b "$branch_name" "$worktree_dir" "origin/$base_branch"
+          
+          # Initialize worktree environment
+          cd "$worktree_dir"
+          
+          # Install dependencies if needed
+          if [ -f "package.json" ]; then
+            npm install
+          elif [ -f "requirements.txt" ]; then
+            python -m venv .venv
+            source .venv/bin/activate
+            pip install -r requirements.txt
+          fi
+          
+          # Create initial commit for tracking
+          git commit --allow-empty -m "feat: initialize $branch_name for $ticket_id"
+          
+          echo "✅ Worktree created: $worktree_dir"
+          echo "📝 Branch: $branch_name"
+          echo "🎯 Ticket: $ticket_id"
+        }
+        ```
+      </implementation>
+      <benefits>
+        - Parallel development without stashing or context switching
+        - Isolated environments for each feature/fix
+        - Faster branch switching with pre-built dependencies
+      </benefits>
+    </worktree_creation>
+    
+    <worktree_management>
+      <description>Intelligent worktree lifecycle management</description>
+      <implementation>
+        ```bash
+        # WORKTREE LIFECYCLE MANAGEMENT
+        manage_worktrees() {
+          local action="$1"
+          
+          case "$action" in
+            "list")
+              # List all active worktrees with status
+              git worktree list --porcelain | while read -r line; do
+                if [[ $line =~ ^worktree ]]; then
+                  local path="${line#worktree }"
+                  local branch=$(cd "$path" 2>/dev/null && git branch --show-current)
+                  local status=$(cd "$path" 2>/dev/null && git status --porcelain | wc -l)
+                  echo "📁 $path"
+                  echo "   Branch: $branch"
+                  echo "   Uncommitted changes: $status"
+                fi
+              done
+              ;;
+              
+            "clean")
+              # Remove completed worktrees
+              git worktree list --porcelain | while read -r line; do
+                if [[ $line =~ ^worktree ]]; then
+                  local path="${line#worktree }"
+                  local branch=$(cd "$path" 2>/dev/null && git branch --show-current)
+                  
+                  # Check if branch is merged
+                  if git branch -r --merged | grep -q "origin/$branch"; then
+                    echo "🧹 Removing merged worktree: $path"
+                    git worktree remove "$path"
+                  fi
+                fi
+              done
+              ;;
+              
+            "sync")
+              # Sync all worktrees with remote
+              git worktree list --porcelain | while read -r line; do
+                if [[ $line =~ ^worktree ]]; then
+                  local path="${line#worktree }"
+                  echo "🔄 Syncing worktree: $path"
+                  (cd "$path" && git fetch origin && git pull --rebase)
+                fi
+              done
+              ;;
+          esac
+        }
+        ```
+      </implementation>
+      <automation>
+        - Automatic cleanup of merged worktrees
+        - Sync all worktrees with remote changes
+        - Status monitoring across all active worktrees
+      </automation>
+    </worktree_management>
+    
+    <worktree_workflows>
+      <concurrent_development>
+        <description>Efficient concurrent feature development using worktrees</description>
+        <pattern>
+          ```bash
+          # CONCURRENT FEATURE DEVELOPMENT
+          develop_features_concurrently() {
+            local features=("$@")
+            
+            for feature in "${features[@]}"; do
+              local branch_name="feature/$feature"
+              local worktree_dir="../worktrees/$feature"
+              
+              # Create worktree for each feature
+              git worktree add -b "$branch_name" "$worktree_dir" origin/develop
+              
+              # Open in separate terminal/IDE instance
+              echo "🚀 Feature worktree ready: $worktree_dir"
+              echo "   Run: cd $worktree_dir && code ."
+            done
+          }
+          ```
+        </pattern>
+        <use_cases>
+          - Developing multiple features simultaneously
+          - Quick context switching between tasks
+          - Isolated testing environments
+        </use_cases>
+      </concurrent_development>
+      
+      <hotfix_isolation>
+        <description>Emergency hotfix development without disrupting current work</description>
+        <pattern>
+          ```bash
+          # HOTFIX WORKTREE PATTERN
+          create_hotfix_worktree() {
+            local version="$1"
+            local description="$2"
+            local branch_name="hotfix/$version-$description"
+            local worktree_dir="../worktrees/hotfix-$version"
+            
+            # Create hotfix worktree from main
+            git worktree add -b "$branch_name" "$worktree_dir" origin/main
+            
+            cd "$worktree_dir"
+            
+            # Apply hotfix
+            echo "🚨 Hotfix worktree created: $worktree_dir"
+            echo "📌 Branch: $branch_name"
+            echo "⚡ Ready for emergency fix"
+            
+            # After fix is complete and tested
+            git push -u origin "$branch_name"
+            gh pr create --base main --title "Hotfix: $description" --label "hotfix,urgent"
+          }
+          ```
+        </pattern>
+        <benefits>
+          - No need to stash current work
+          - Immediate hotfix capability
+          - Clean separation from feature development
+        </benefits>
+      </hotfix_isolation>
+      
+      <review_worktrees>
+        <description>Dedicated worktrees for code review</description>
+        <pattern>
+          ```bash
+          # CODE REVIEW WORKTREE
+          create_review_worktree() {
+            local pr_number="$1"
+            local pr_info=$(gh pr view "$pr_number" --json headRefName,baseRefName)
+            local branch=$(echo "$pr_info" | jq -r .headRefName)
+            local base=$(echo "$pr_info" | jq -r .baseRefName)
+            local worktree_dir="../worktrees/review-pr-$pr_number"
+            
+            # Create review worktree
+            git fetch origin "pull/$pr_number/head:pr-$pr_number"
+            git worktree add "$worktree_dir" "pr-$pr_number"
+            
+            cd "$worktree_dir"
+            
+            # Set up for review
+            echo "👀 Review worktree created: $worktree_dir"
+            echo "🔍 PR #$pr_number: $branch → $base"
+            echo "📋 Run tests and review changes"
+          }
+          ```
+        </pattern>
+        <advantages>
+          - Review PRs without affecting current work
+          - Run full test suites on PR code
+          - Easy comparison with base branch
+        </advantages>
+      </review_worktrees>
+    </worktree_workflows>
+    
+    <worktree_best_practices>
+      <directory_structure>
+        ```
+        project/
+        ├── main/                    # Main repository
+        └── worktrees/              # All worktrees
+            ├── feature-auth/       # Feature worktree
+            ├── feature-api/        # Another feature
+            ├── hotfix-2.1.1/      # Hotfix worktree
+            └── review-pr-123/     # PR review worktree
+        ```
+      </directory_structure>
+      <naming_conventions>
+        <feature>../worktrees/feature-{description}</feature>
+        <hotfix>../worktrees/hotfix-{version}</hotfix>
+        <release>../worktrees/release-{version}</release>
+        <review>../worktrees/review-pr-{number}</review>
+      </naming_conventions>
+      <cleanup_policy>
+        <merged_branches>Remove worktree within 24 hours of merge</merged_branches>
+        <abandoned_branches>Clean up after 7 days of inactivity</abandoned_branches>
+        <review_worktrees>Remove after PR is closed</review_worktrees>
+      </cleanup_policy>
+    </worktree_best_practices>
+    
+    <worktree_automation>
+      <hooks_integration>
+        ```bash
+        # POST-MERGE HOOK FOR WORKTREE CLEANUP
+        #!/bin/bash
+        # .git/hooks/post-merge
+        
+        # Clean up merged worktrees automatically
+        current_branch=$(git branch --show-current)
+        
+        git worktree list --porcelain | while read -r line; do
+          if [[ $line =~ ^worktree ]]; then
+            path="${line#worktree }"
+            branch=$(cd "$path" 2>/dev/null && git branch --show-current)
+            
+            if [ "$branch" = "$current_branch" ] && [ "$path" != "$(pwd)" ]; then
+              echo "🧹 Cleaning up merged worktree: $path"
+              git worktree remove "$path"
+            fi
+          fi
+        done
+        ```
+      </hooks_integration>
+      <ci_integration>
+        <parallel_testing>Run tests in multiple worktrees simultaneously</parallel_testing>
+        <build_isolation>Separate build artifacts per worktree</build_isolation>
+        <deployment_staging>Use worktrees for deployment staging</deployment_staging>
+      </ci_integration>
+    </worktree_automation>
+  </git_worktree_patterns>
   
   <quality_integration>
     <pre_commit_checks>

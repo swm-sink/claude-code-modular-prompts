@@ -92,7 +92,7 @@
     <trigger condition="architectural_changes">Changes affect system design → escalate to /swarm</trigger>
     <trigger condition="integration_heavy">Complex external system integration → escalate to /swarm</trigger>
     <trigger condition="performance_critical">Multi-layer optimization needed → escalate to /swarm</trigger>
-    <trigger condition="prompt_engineering">Complex prompt development → delegate to /prompt</trigger>
+    <trigger condition="prompt_engineering">Complex prompt development → escalate to /auto</trigger>
     <trigger condition="prompt_evaluation">Multi-agent prompt evaluation → escalate to /swarm</trigger>
   </escalation_logic>
   
@@ -122,7 +122,7 @@
       patterns/session-management.md for session decisions
     </depends_on>
     <provides_to>
-      development/protocol-enforcement.md for production standards
+      quality/production-standards.md for production standards
       patterns/multi-agent.md for escalation triggers
     </provides_to>
   </integration_points>

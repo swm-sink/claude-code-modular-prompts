@@ -437,15 +437,418 @@
     <evaluate_evolve>Session captures lessons learned and improvement recommendations</evaluate_evolve>
   </aware_framework_integration>
   
+  <native_recovery_tracking>
+    <github_integration_recovery framework="claude_code_verified">
+      <automatic_recovery_sessions>
+        ```bash
+        # VERIFIED PATTERN: Native GitHub integration for recovery tracking
+        create_recovery_session() {
+          local failure_type="$1"
+          local original_session="$2"
+          local recovery_context="$3"
+          
+          gh issue create --title "🔧 Recovery: $failure_type" \
+            --label "recovery,automated,session-management" \
+            --body "$(cat <<'EOF'
+        ## Session Recovery Documentation
+        **Recovery Type**: $failure_type
+        **Original Session**: $original_session
+        **Recovery Initiated**: $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+        
+        ### Recovery Context
+        $recovery_context
+        
+        ### Recovery Progress Tracking
+        - [ ] Failure analysis and root cause identification
+        - [ ] Context reconstruction from session history
+        - [ ] Session state restoration and validation
+        - [ ] Progress tracking re-establishment
+        - [ ] Normal operation resumption verification
+        
+        ### Recovery Metrics
+        **Target Recovery Time**: Based on failure complexity
+        **Context Preservation**: 99%+ information retention target
+        **Success Criteria**: Full session functionality restored
+        
+        🤖 Generated with [Claude Code](https://claude.ai/code)
+        Recovery-Session: Auto-Generated
+        EOF
+        )"
+        }
+        ```
+      </automatic_recovery_sessions>
+      
+      <session_state_reconstruction>
+        ```bash
+        # SESSION STATE RECOVERY PATTERN
+        reconstruct_session_state() {
+          local failed_session_id="$1"
+          
+          # Extract session context from GitHub issue history
+          gh issue view $failed_session_id --json body,comments > session_context.json
+          
+          # Analyze progress checkpoints and decision points
+          extract_progress_checkpoints session_context.json
+          
+          # Reconstruct working context from documented decisions
+          rebuild_working_context session_context.json
+          
+          # Verify context completeness and integrity
+          verify_context_reconstruction $failed_session_id
+          
+          # Create recovery session with reconstructed context
+          create_recovery_session "session_state_reconstruction" $failed_session_id
+        }
+        ```
+      </session_state_reconstruction>
+      
+      <context_preservation_verification>
+        Real-time verification of context preservation across session boundaries
+        Automatic detection of context loss with immediate recovery initiation
+        GitHub-based context backup with intelligent compression
+        Session continuation preparation with optimized context handoff
+      </context_preservation_verification>
+    </github_integration_recovery>
+    
+    <failure_analysis_integration>
+      <root_cause_identification>
+        ```xml
+        <session_failure_analysis>
+          <common_failure_patterns>
+            <context_loss>Session context corrupted or lost across boundaries</context_loss>
+            <progress_tracking_failure>Progress updates not properly documented</progress_tracking_failure>
+            <integration_breakdown>Session integration with commands/modules failed</integration_breakdown>
+            <completion_verification_failure>Session completion not properly verified</completion_verification_failure>
+          </common_failure_patterns>
+          
+          <diagnostic_procedures>
+            <context_integrity_check>Verify session context preservation and completeness</context_integrity_check>
+            <progress_audit>Analyze progress documentation for gaps and inconsistencies</progress_audit>
+            <integration_testing>Test session integration points for proper functionality</integration_testing>
+            <completion_verification>Verify session completion criteria and documentation</completion_verification>
+          </diagnostic_procedures>
+          
+          <recovery_approach_selection>
+            <context_reconstruction>Rebuild context from GitHub issue history and artifacts</context_reconstruction>
+            <progress_restoration>Re-establish progress tracking from available documentation</progress_restoration>
+            <integration_repair>Restore session integration with commands and modules</integration_repair>
+            <completion_recovery>Complete session documentation and closure process</completion_recovery>
+          </recovery_approach_selection>
+        </session_failure_analysis>
+        ```
+      </root_cause_identification>
+      
+      <automated_failure_detection>
+        Continuous monitoring of session health metrics and completion rates
+        Early detection of session tracking degradation or context loss
+        Automatic escalation to recovery workflows for critical session failures
+        Statistical analysis of session failure patterns for proactive prevention
+      </automated_failure_detection>
+    </failure_analysis_integration>
+    
+    <recovery_metrics_and_optimization>
+      <performance_tracking>
+        ```bash
+        # RECOVERY METRICS COLLECTION PATTERN
+        track_recovery_metrics() {
+          local recovery_session_id="$1"
+          local recovery_start_time="$2"
+          local recovery_end_time="$3"
+          
+          # Calculate recovery performance metrics
+          local recovery_duration=$((recovery_end_time - recovery_start_time))
+          local context_preservation_score=$(calculate_context_preservation)
+          local recovery_success_score=$(verify_recovery_success)
+          
+          # Document recovery metrics in session
+          gh issue comment $recovery_session_id --body "$(cat <<'EOF'
+        ## 📊 Recovery Metrics Summary
+        **Recovery Duration**: ${recovery_duration} seconds
+        **Context Preservation**: ${context_preservation_score}%
+        **Recovery Success Score**: ${recovery_success_score}%
+        **Recovery Type**: Session management failure recovery
+        
+        ### Performance Analysis
+        **Target Recovery Time**: Under 30 minutes for session-level recovery
+        **Actual Recovery Time**: $(format_duration $recovery_duration)
+        **Context Information Retention**: ${context_preservation_score}% (target: 99%+)
+        **Functional Restoration**: ${recovery_success_score}% (target: 100%)
+        
+        ### Continuous Improvement
+        **Pattern Effectiveness**: Recovery pattern performed within acceptable parameters
+        **Lessons Learned**: Document insights for future recovery optimization
+        **Automation Opportunities**: Identify areas for further recovery automation
+        EOF
+        )"
+        }
+        ```
+      </performance_tracking>
+      
+      <continuous_improvement_integration>
+        Analysis of recovery patterns for effectiveness optimization
+        Machine learning integration for predictive session failure detection
+        A/B testing of recovery approaches for optimal performance
+        User feedback integration for recovery experience improvement
+      </continuous_improvement_integration>
+    </recovery_metrics_and_optimization>
+  </native_recovery_tracking>
+  
+  <error_recovery_integration>
+    <session_recovery_patterns verified="github_native">
+      <automatic_recovery_session_creation>
+        ```bash
+        # SESSION RECOVERY AUTOMATION WITH ERROR-RECOVERY INTEGRATION
+        create_session_recovery() {
+          local failed_session_id="$1"
+          local failure_type="$2"
+          local original_context="$3"
+          
+          # Create recovery session using error-recovery.md patterns
+          local recovery_session_id=$(create_recovery_session "$failure_type" "$original_context" "medium" "3-5 minutes")
+          
+          # Link recovery session to original session
+          if [ -n "$failed_session_id" ]; then
+            gh issue comment "$failed_session_id" --body "🔧 Recovery session created: $recovery_session_id"
+            gh issue comment "$recovery_session_id" --body "🔗 Recovering session: $failed_session_id"
+          fi
+          
+          # Begin session context reconstruction
+          reconstruct_session_context "$failed_session_id" "$recovery_session_id"
+          
+          return 0
+        }
+        ```
+      </automatic_recovery_session_creation>
+      
+      <session_health_monitoring>
+        ```bash
+        # CONTINUOUS SESSION HEALTH MONITORING
+        monitor_session_health() {
+          local session_id="$1"
+          
+          while session_is_active "$session_id"; do
+            # Check session context integrity
+            local context_integrity=$(verify_session_context_integrity "$session_id")
+            if (( $(echo "$context_integrity < 0.95" | bc -l) )); then
+              log_warning "Session context integrity degraded: $session_id ($context_integrity)"
+              trigger_session_context_recovery "$session_id"
+            fi
+            
+            # Check progress documentation completeness
+            local progress_completeness=$(check_session_progress_completeness "$session_id")
+            if (( $(echo "$progress_completeness < 0.8" | bc -l) )); then
+              log_warning "Session progress documentation incomplete: $session_id"
+              enhance_session_documentation "$session_id"
+            fi
+            
+            # Check GitHub integration health
+            local github_health=$(verify_github_session_integration "$session_id")
+            if [ "$github_health" != "healthy" ]; then
+              log_error "GitHub session integration failure: $session_id"
+              recover_github_session_integration "$session_id"
+            fi
+            
+            sleep 60  # Check every minute
+          done
+        }
+        ```
+      </session_health_monitoring>
+      
+      <session_context_recovery>
+        ```bash
+        # SESSION CONTEXT RECOVERY MECHANISMS
+        recover_session_context() {
+          local session_id="$1"
+          local recovery_strategy="$2"
+          
+          case "$recovery_strategy" in
+            "github_history")
+              # Primary: Recover from GitHub issue history
+              local issue_data=$(gh issue view "$session_id" --json body,comments)
+              if [ $? -eq 0 ]; then
+                extract_context_from_github_history "$issue_data" "$session_id"
+                log_success "Session context recovered from GitHub history: $session_id"
+                return 0
+              fi
+              ;;
+            "local_reconstruction")
+              # Fallback: Local context reconstruction
+              local git_context=$(git log --oneline -10)
+              local file_context=$(find . -name "*.md" -mtime -1 | head -5)
+              reconstruct_local_session_context "$git_context" "$file_context" "$session_id"
+              log_success "Session context reconstructed locally: $session_id"
+              return 0
+              ;;
+            "minimal_restart")
+              # Final fallback: Minimal session restart
+              create_minimal_session_context "$session_id"
+              log_info "Session restarted with minimal context: $session_id"
+              return 0
+              ;;
+          esac
+          
+          log_error "Session context recovery failed: $session_id"
+          return 1
+        }
+        
+        # CONTEXT INTEGRITY VERIFICATION
+        verify_session_context_integrity() {
+          local session_id="$1"
+          
+          # Check GitHub issue accessibility
+          if ! gh issue view "$session_id" >/dev/null 2>&1; then
+            echo "0.0"  # Complete failure
+            return
+          fi
+          
+          # Check context completeness
+          local issue_content=$(gh issue view "$session_id" --json body,comments | jq -r '.body + (.comments | map(.body) | join("\n"))')
+          local context_score=100
+          
+          # Deduct points for missing elements
+          if ! echo "$issue_content" | grep -q "Session Type:"; then
+            context_score=$((context_score - 20))
+          fi
+          
+          if ! echo "$issue_content" | grep -q "Progress Tracking"; then
+            context_score=$((context_score - 15))
+          fi
+          
+          if ! echo "$issue_content" | grep -q "Architecture"; then
+            context_score=$((context_score - 10))
+          fi
+          
+          # Convert to decimal percentage
+          echo "scale=2; $context_score / 100" | bc
+        }
+        ```
+      </session_context_recovery>
+    </session_recovery_patterns>
+    
+    <session_failure_detection>
+      <proactive_session_monitoring>
+        ```xml
+        <session_health_indicators>
+          <context_preservation_metrics>
+            <integrity_score>Percentage of session context elements preserved</integrity_score>
+            <documentation_completeness>Percentage of required documentation present</documentation_completeness>
+            <progress_tracking_health>Quality of progress tracking and updates</progress_tracking_health>
+          </context_preservation_metrics>
+          
+          <github_integration_metrics>
+            <api_response_time>GitHub API response times for session operations</api_response_time>
+            <authentication_health>GitHub CLI authentication status and validity</authentication_health>
+            <operation_success_rate>Success rate of GitHub operations within sessions</operation_success_rate>
+          </github_integration_metrics>
+          
+          <session_lifecycle_metrics>
+            <creation_success_rate>Percentage of successful session creations</creation_success_rate>
+            <completion_rate>Percentage of sessions reaching successful completion</completion_rate>
+            <abandonment_pattern>Analysis of session abandonment causes and timing</abandonment_pattern>
+          </session_lifecycle_metrics>
+        </session_health_indicators>
+        ```
+      </proactive_session_monitoring>
+      
+      <early_warning_triggers>
+        ```bash
+        # SESSION EARLY WARNING SYSTEM
+        check_session_early_warnings() {
+          local session_id="$1"
+          
+          local warnings=()
+          
+          # Context integrity warning
+          local context_integrity=$(verify_session_context_integrity "$session_id")
+          if (( $(echo "$context_integrity < 0.9" | bc -l) )); then
+            warnings+=("Context integrity below threshold: ${context_integrity}%")
+          fi
+          
+          # Progress stagnation warning
+          local last_update=$(get_session_last_update_time "$session_id")
+          local stagnation_hours=$(( ($(date +%s) - last_update) / 3600 ))
+          if [ $stagnation_hours -gt 4 ]; then
+            warnings+=("Session stagnant for $stagnation_hours hours")
+          fi
+          
+          # GitHub integration warning
+          local github_response_time=$(measure_github_api_response_time)
+          if (( $(echo "$github_response_time > 2000" | bc -l) )); then  # 2 seconds
+            warnings+=("GitHub API response time elevated: ${github_response_time}ms")
+          fi
+          
+          # Issue warning if any detected
+          if [ ${#warnings[@]} -gt 0 ]; then
+            for warning in "${warnings[@]}"; do
+              log_warning "Session early warning ($session_id): $warning"
+            done
+            
+            # Trigger preemptive measures for multiple warnings
+            if [ ${#warnings[@]} -ge 2 ]; then
+              trigger_preemptive_session_recovery "$session_id" "${warnings[@]}"
+            fi
+          fi
+        }
+        ```
+      </early_warning_triggers>
+    </session_failure_detection>
+    
+    <integration_with_error_recovery>
+      <seamless_recovery_escalation>
+        ```bash
+        # SEAMLESS INTEGRATION WITH ERROR RECOVERY SYSTEM
+        escalate_session_failure() {
+          local session_id="$1"
+          local failure_type="$2"
+          local failure_context="$3"
+          
+          # Extract session context for recovery
+          local session_context=$(extract_session_context_for_recovery "$session_id")
+          
+          # Determine recovery tier based on session failure type
+          local recovery_tier
+          case "$failure_type" in
+            "context_corruption")
+              recovery_tier="tier_2_command"
+              ;;
+            "github_integration_failure")
+              recovery_tier="tier_3_system"
+              ;;
+            "session_creation_failure")
+              recovery_tier="tier_2_command"
+              ;;
+            "progress_tracking_failure")
+              recovery_tier="tier_1_module"
+              ;;
+            *)
+              recovery_tier="tier_2_command"
+              ;;
+          esac
+          
+          # Create recovery session using error-recovery.md
+          log_info "Escalating session failure to recovery tier: $recovery_tier"
+          coordinate_with_recovery "session_failure_$session_id" "$failure_type" "high" "$session_context"
+          
+          # Update original session with recovery information
+          update_session_with_recovery_info "$session_id" "$recovery_tier" "$failure_context"
+        }
+        ```
+      </seamless_recovery_escalation>
+    </integration_with_error_recovery>
+  </error_recovery_integration>
+  
   <integration_points>
     <depends_on>
-      None - foundational pattern providing session capabilities to all other modules
+      quality/error-recovery.md for comprehensive recovery pattern integration
+      quality/error-recovery.md for session health monitoring and early warning
     </depends_on>
     <provides_to>
       patterns/multi-agent.md for automatic session creation in multi-agent work
-      development/protocol-enforcement.md for compliance tracking sessions
+      quality/production-standards.md for compliance tracking sessions
       development/prompt-engineering.md for prompt development session tracking
       patterns/intelligent-routing.md for session decision logic
+      quality/error-recovery.md for recovery session creation and tracking
+      quality/error-recovery.md for session health metrics and monitoring
       All commands for progress tracking and context documentation
     </provides_to>
   </integration_points>

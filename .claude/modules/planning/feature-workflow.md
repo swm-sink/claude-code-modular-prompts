@@ -114,7 +114,7 @@
         User experience validated through testing
       </requirements>
       <actions>
-        Delegate to modules/quality/feature-validation.md for validation execution
+        Delegate to modules/quality/production-standards.md for validation execution
         Execute comprehensive test suite including integration tests
         Conduct performance testing and optimization
         Perform security review and vulnerability assessment
@@ -201,7 +201,7 @@
       planning/prd-generation.md OR planning/intelligent-prd.md for PRD creation process
       planning/mvp-strategy.md for MVP definition methodology
       testing/iterative-testing.md for TDD implementation
-      quality/feature-validation.md for validation procedures
+      quality/production-standards.md for validation procedures
       patterns/session-management.md for GitHub issue integration
     </depends_on>
     <provides_to>

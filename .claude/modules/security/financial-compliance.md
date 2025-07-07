@@ -138,7 +138,7 @@
     </depends_on>
     <provides_to>
       security/audit.md for compliance-focused security scanning
-      development/protocol-enforcement.md for regulatory quality gates
+      quality/production-standards.md for regulatory quality gates
       quality/production-standards.md for financial-grade requirements
     </provides_to>
   </integration_points>

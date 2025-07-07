@@ -155,7 +155,7 @@
     <provides_to>
       security/audit.md for threat-based security scanning priorities
       quality/production-standards.md for security control integration
-      development/protocol-enforcement.md for enterprise security requirements
+      quality/production-standards.md for enterprise security requirements
     </provides_to>
   </integration_points>
   

@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 3.0.0   | 2025-07-07   | stable |
+| 2.3.0   | 2025-07-07   | stable |
 
 # Documentation Index
 
@@ -39,14 +39,7 @@
 ### Specialized Commands
 | Command | Purpose | When to Use |
 |---------|---------|-------------|
-| `/docs` | Find documentation | When you need help |
 | `/session` | Manage GitHub issues | Complex project tracking |
-| `/commit` | Smart git commits | Better commit messages |
-| `/test` | Testing workflows | Focus on test coverage |
-| `/security` | Security analysis | Threat modeling & audits |
-| `/prompt` | Prompt engineering | Create custom prompts |
-| `/protocol` | Enforce standards | Quality gates |
-| `/fastapi` | API development | FastAPI patterns |
 
 ---
 
@@ -88,7 +81,7 @@
 
 #### **Find documentation**
 ```bash
-/docs "show me TDD examples"
+/query "show me TDD examples"
 ```
 - Searches all docs
 - Returns relevant info
@@ -131,9 +124,9 @@
 ### Search by Topic
 ```bash
 # Find specific topics
-/docs "permission errors"
-/docs "TDD examples"
-/docs "swarm command"
+/query "permission errors"
+/query "TDD examples"
+/query "swarm command"
 ```
 
 ### Browse by Location
@@ -169,7 +162,7 @@ rm -f .claude/settings.local.json && ln -sf ~/.claude/settings.json .claude/sett
 #### Need Examples
 - Check [Common Tasks](#-common-tasks)
 - See [Feature Examples](framework/feature-development-examples.md)
-- Try `/docs "show examples"`
+- Try `/query "show examples"`
 
 ---
 
@@ -181,7 +174,7 @@ rm -f .claude/settings.local.json && ln -sf ~/.claude/settings.json .claude/sett
 /task "..."     # Single component work
 /feature "..."  # Complete features
 /query "..."    # Research only
-/docs "..."     # Find help
+/query "..."    # Find help
 ```
 
 ### Key Principles
@@ -212,4 +205,4 @@ rm -f .claude/settings.local.json && ln -sf ~/.claude/settings.json .claude/sett
 
 ---
 
-**Need help?** Start with `/docs "your question"` or `/auto "what you need"`!
+**Need help?** Start with `/query "your question"` or `/auto "what you need"`!

@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.0.0   | 2025-07-07   | minimal |
+| 2.3.0   | 2025-07-07   | stable |
 
 # /task - Single-component development with quality gates
 

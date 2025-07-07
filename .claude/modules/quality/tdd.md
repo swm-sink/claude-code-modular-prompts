@@ -189,7 +189,7 @@
     </depends_on>
     <provides_to>
       development/task-management.md for TDD workflow integration
-      development/protocol-enforcement.md for enhanced coverage requirements
+      quality/production-standards.md for enhanced coverage requirements
       development/prompt-engineering.md for prompt testing methodology
       quality/production-standards.md for enterprise testing standards
     </provides_to>

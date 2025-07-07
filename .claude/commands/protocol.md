@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.0.0   | 2025-07-07   | stable |
+| 2.3.0   | 2025-07-07   | stable |
 
 # /protocol - Production-ready development with mandatory quality gates
 

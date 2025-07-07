@@ -258,15 +258,15 @@
     </auto_command_routing>
     
     <swarm_trigger_logic native="true">
-      <description>Native /swarm escalation based on component count and integration complexity</description>
+      <description>Native /swarm escalation with git worktree isolation for parallel development</description>
       <implementation>
         ```xml
         <swarm_escalation_triggers>
           <mandatory_swarm score="15+">
-            <multi_service_systems>3+ microservices or distributed components</multi_service_systems>
-            <architecture_changes>System-wide architectural modifications</architecture_changes>
-            <integration_heavy>Complex third-party service integration (payment, auth, etc.)</integration_heavy>
-            <performance_critical>System-wide performance optimization requirements</performance_critical>
+            <multi_service_systems>3+ microservices requiring isolated worktrees</multi_service_systems>
+            <architecture_changes>System-wide modifications in parallel worktrees</architecture_changes>
+            <integration_heavy>Complex integrations developed in isolation</integration_heavy>
+            <performance_critical>Parallel optimization across isolated environments</performance_critical>
           </mandatory_swarm>
           
           <conditional_swarm score="10-14">
@@ -441,13 +441,11 @@
       patterns/pattern-library.md for proven execution patterns
       quality/critical-thinking.md for rigorous analysis methodology
       quality/error-recovery.md for error-aware routing and recovery integration
-      quality/failure-detection.md for routing health monitoring and optimization
     </depends_on>
     <provides_to>
       All commands for intelligent routing and module composition decisions
       patterns/session-management.md for automatic session creation logic
       quality/error-recovery.md for error escalation and recovery routing
-      quality/failure-detection.md for routing performance metrics and health data
     </provides_to>
   </integration_points>
   

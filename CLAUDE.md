@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.2.0   | 2025-07-07   | stable |
+| 2.3.0   | 2025-07-07   | stable |
 
 # CLAUDE.md - Framework Control Document
 
@@ -11,7 +11,7 @@
 ## Core Framework
 
 ```xml
-<framework version="2.2.0">
+<framework version="2.3.0">
   <purpose>Personal Claude Code workflow efficiency tool - NOT enterprise software</purpose>
   <principles>Single source truth | Zero redundancy | Modular composition | Token optimized</principles>
 </framework>
@@ -95,8 +95,6 @@
     <cmd name="/swarm" module="patterns/multi-agent.md"/>
     <cmd name="/query" module="development/research-analysis.md"/>
     <cmd name="/session" module="patterns/session-management.md"/>
-    <cmd name="/protocol" module="quality/production-standards.md"/>
-    <cmd name="/docs" module="development/documentation.md"/>
   </commands>
   <modules location=".claude/modules/" implement_only="true">
     <category name="security|quality|development|patterns|planning|testing"/>
@@ -146,7 +144,13 @@
   <epic>Project overview, metrics, dependencies</epic>
   <phases>Atomic steps, checkboxes, acceptance criteria</phases>
   <rule>Create issues BEFORE starting. Close only when 100% complete</rule>
+  <rule>UPDATE issues as work progresses. Comment on completion status</rule>
   <proven>260+ steps tracked, 100% completion vs historical failures</proven>
+  <enforcement>
+    <on_completion>Post completion comment to GitHub issue with summary</on_completion>
+    <on_progress>Update issue checklist items as completed</on_progress>
+    <on_error>Comment on issue with error details and recovery plan</on_error>
+  </enforcement>
 </github_workflow>
 ```
 
