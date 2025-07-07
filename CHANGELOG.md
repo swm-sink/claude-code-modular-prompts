@@ -5,6 +5,30 @@ All notable changes to the Claude Code Modular Agents Framework will be document
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.3.0] - 2025-01-08
+
+### Added
+- **Validation Tools Suite**: Created validate.py, optimize.py, and visualize.py for framework health monitoring
+- **Pattern Library 2.0**: Comprehensive library of proven patterns with performance metrics
+- **Framework Validation**: Automated validation of module references, version headers, and file locations
+- **Performance Analysis**: Tool for analyzing token usage and module complexity
+- **Framework Visualization**: ASCII diagrams for command-module relationships
+
+### Fixed
+- Broken module references in prompt.md, fastapi.md, protocol.md, and feature.md
+- Test failures in dependency_graph.py (settings location and module references)
+- Missing version headers in all modules (now support frontmatter, header, or metadata formats)
+- Removed non-markdown files from .claude directory
+
+### Changed
+- Updated validation script to recognize orchestrator commands that don't need delegation
+- Improved test suite to handle relocated settings directory (moved to config/)
+- Enhanced module metadata detection to support multiple formats
+
+### Removed
+- Outdated PROJECT_CLEANUP_REPORT.md
+- Obsolete VALIDATION_TOOLS.md (replaced with actual tools)
+
 ## [2.2.0] - 2025-01-07
 
 ### Added

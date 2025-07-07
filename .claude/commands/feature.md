@@ -69,11 +69,11 @@ status: stable
 
 This command delegates ALL implementation to specialized modules:
 
-See modules/automation/autonomous-workflow.md for master orchestration and decision-making frameworks.
+See modules/planning/feature-workflow.md for master orchestration and PRD-driven development.
 See modules/planning/intelligent-prd.md for automatic requirement extraction and analysis.
-See modules/automation/self-executing-mvp.md for autonomous implementation patterns.
+See modules/planning/mvp-strategy.md for MVP implementation patterns and strategies.
 See modules/testing/auto-testing.md for self-healing validation and debugging.
-See modules/automation/predictive-enhancement.md for future planning and optimization.
+See modules/patterns/multi-agent.md for autonomous multi-agent coordination.
 
 ## Input Requirements (MINIMAL)
 

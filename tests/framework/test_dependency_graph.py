@@ -108,13 +108,14 @@ class TestDependencyGraph:
     
     def test_settings_structure(self, framework_root):
         """Test that settings directory has correct structure."""
-        settings_dir = framework_root / "settings"
-        assert settings_dir.exists(), "Settings directory not found"
+        # Settings moved to config/ directory at project root
+        config_dir = framework_root.parent / "config"
+        assert config_dir.exists(), "Config directory not found"
         
         required_settings = ["settings.json"]
         
         for setting in required_settings:
-            setting_path = settings_dir / setting
+            setting_path = config_dir / setting
             assert setting_path.exists(), f"Required settings file {setting} not found"
             
             # Validate JSON structure

@@ -6,12 +6,12 @@ status: stable
 
 <command purpose="Enterprise FastAPI development with production-ready patterns and performance optimization">
   
-  <delegation target="modules/patterns/api-development.md">
-    This command delegates ALL implementation to the API development module which provides comprehensive FastAPI application development including enterprise patterns, performance optimization, security integration, and microservice architecture.
+  <delegation target="modules/development/task-management.md">
+    This command delegates ALL implementation to the task management module which coordinates FastAPI development through systematic task decomposition, TDD practices, and production standards.
   </delegation>
   
   <module_integration>
-    <primary_module>modules/patterns/api-development.md</primary_module>
+    <primary_module>modules/development/task-management.md</primary_module>
     <supporting_modules>
       <module>modules/security/audit.md</module>
       <module>modules/quality/production-standards.md</module>
@@ -27,7 +27,7 @@ status: stable
   </usage_examples>
   
   <reference>
-    See modules/patterns/api-development.md for complete implementation details including layered architecture, async patterns, security integration, and enterprise deployment strategies.
+    See modules/development/task-management.md for systematic API development workflows with FastAPI best practices, async patterns, and production deployment.
   </reference>
   
 </command>

@@ -6,12 +6,12 @@ status: stable
 
 <command purpose="AI prompt engineering workflows for creating, evaluating, testing, and improving prompts with systematic methodology">
   
-  <delegation target="modules/development/prompt-engineering.md">
-    This command delegates ALL implementation to the prompt engineering module which provides comprehensive prompt development workflows including creation patterns, evaluation frameworks, testing methodologies, and iterative improvement cycles.
+  <delegation target="modules/patterns/multi-agent.md">
+    This command delegates ALL implementation to the multi-agent patterns module which includes prompt engineering workflows through specialized agents for creation, evaluation, testing, and improvement.
   </delegation>
   
   <module_integration>
-    <primary_module>modules/development/prompt-engineering.md</primary_module>
+    <primary_module>modules/patterns/multi-agent.md</primary_module>
     <supporting_modules>
       <module>modules/quality/critical-thinking.md</module>
       <module>modules/development/research-analysis.md</module>
@@ -99,9 +99,9 @@ status: stable
   </integration_hooks>
   
   <reference>
-    See modules/development/prompt-engineering.md for complete implementation details including creation patterns, evaluation frameworks, testing methodologies, improvement algorithms, and production deployment workflows.
+    See modules/patterns/multi-agent.md for complete implementation details including prompt engineering through specialized agents with creation patterns, evaluation frameworks, testing methodologies, and improvement algorithms.
     
-    See modules/patterns/prompt-integration-examples.md for comprehensive integration examples with all framework components including multi-agent workflows, quality gates, and session management.
+    The multi-agent pattern provides comprehensive prompt engineering workflows integrated with all framework components including quality gates and session management.
   </reference>
   
 </command>
