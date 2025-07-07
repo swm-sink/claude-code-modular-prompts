@@ -1,0 +1,4 @@
+module VoiceIOSBuilderPackageTests {
+    header "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/.build/arm64-apple-macosx/debug/VoiceIOSBuilderPackageTests.build/VoiceIOSBuilderPackageTests-Swift.h"
+    requires objc
+}

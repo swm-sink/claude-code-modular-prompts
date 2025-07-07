@@ -1,0 +1,21 @@
+version: "Apple Swift version 6.1 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)"
+options: "d4f6a85e8f601f61bfde9a41742aa4aa2544d499f9698b3bc84d7469881807c4"
+build_start_time: [1751923840, 865313000]
+build_end_time: [1751923890, 68549000]
+inputs:
+  ? "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/CodeValidator.swift"
+  : [1751923183, 555023974]
+  ? "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/CodegenModule.swift"
+  : [1751923239, 215878241]
+  ? "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/Demo.swift"
+  : [1751923378, 658622426]
+  ? "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/IntegrationValidator.swift"
+  : [1751923513, 251261936]
+  ? "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/Models.swift"
+  : [1751923165, 80532748]
+  ? "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/SwiftCodeGenerator.swift"
+  : [1751923245, 380408922]
+  ? "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/TestRunner.swift"
+  : [1751923396, 315621123]
+  ? "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenModule/UIComponentTemplates.swift"
+  : [1751923216, 225018692]

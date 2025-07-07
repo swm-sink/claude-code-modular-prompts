@@ -1,0 +1,4 @@
+module CodegenModulePackageTests {
+    header "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/.build/arm64-apple-macosx/release/CodegenModulePackageTests.build/CodegenModulePackageTests-Swift.h"
+    requires objc
+}

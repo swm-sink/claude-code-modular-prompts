@@ -1,0 +1,23 @@
+{
+  "": {
+    "swift-dependencies": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/.build/arm64-apple-macosx/debug/SimulatorModuleTests.build/master.swiftdeps"
+  },
+  "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Tests/SimulatorModuleTests/BuildValidatorTests.swift": {
+    "dependencies": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/.build/arm64-apple-macosx/debug/SimulatorModuleTests.build/BuildValidatorTests.d",
+    "object": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/.build/arm64-apple-macosx/debug/SimulatorModuleTests.build/BuildValidatorTests.swift.o",
+    "swiftmodule": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/.build/arm64-apple-macosx/debug/SimulatorModuleTests.build/BuildValidatorTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/.build/arm64-apple-macosx/debug/SimulatorModuleTests.build/BuildValidatorTests.swiftdeps"
+  },
+  "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Tests/SimulatorModuleTests/ScreenshotCaptureTests.swift": {
+    "dependencies": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/.build/arm64-apple-macosx/debug/SimulatorModuleTests.build/ScreenshotCaptureTests.d",
+    "object": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/.build/arm64-apple-macosx/debug/SimulatorModuleTests.build/ScreenshotCaptureTests.swift.o",
+    "swiftmodule": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/.build/arm64-apple-macosx/debug/SimulatorModuleTests.build/ScreenshotCaptureTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/.build/arm64-apple-macosx/debug/SimulatorModuleTests.build/ScreenshotCaptureTests.swiftdeps"
+  },
+  "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/Tests/SimulatorModuleTests/SimulatorManagerTests.swift": {
+    "dependencies": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/.build/arm64-apple-macosx/debug/SimulatorModuleTests.build/SimulatorManagerTests.d",
+    "object": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/.build/arm64-apple-macosx/debug/SimulatorModuleTests.build/SimulatorManagerTests.swift.o",
+    "swiftmodule": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/.build/arm64-apple-macosx/debug/SimulatorModuleTests.build/SimulatorManagerTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/simulator-module/.build/arm64-apple-macosx/debug/SimulatorModuleTests.build/SimulatorManagerTests.swiftdeps"
+  }
+}

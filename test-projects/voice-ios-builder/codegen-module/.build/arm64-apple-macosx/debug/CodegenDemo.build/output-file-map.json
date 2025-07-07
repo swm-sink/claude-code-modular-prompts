@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/.build/arm64-apple-macosx/debug/CodegenDemo.build/master.swiftdeps"
+  },
+  "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenDemo/main.swift": {
+    "dependencies": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/.build/arm64-apple-macosx/debug/CodegenDemo.build/main.d",
+    "object": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/.build/arm64-apple-macosx/debug/CodegenDemo.build/main.swift.o",
+    "swiftmodule": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/.build/arm64-apple-macosx/debug/CodegenDemo.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/.build/arm64-apple-macosx/debug/CodegenDemo.build/main.swiftdeps"
+  }
+}
