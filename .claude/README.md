@@ -1,106 +1,24 @@
-# .claude Directory - Optimized Framework Structure
+# Claude Code Framework
 
-**Version**: 2.0.0 | **Files**: ~35 (from 157) | **Token-Optimized**: All files <20k tokens
+## 1. Overview
 
-## 📁 Directory Structure
+This directory contains the core implementation of the Claude Code Framework, a modular system for workflow automation. The framework is designed around a principle of clear separation of concerns:
 
-```
-.claude/
-├── commands/       # 10 core commands (from 33)
-├── rules/          # 6 focused rules (from 24)
-├── settings/       # 4 config files (from 163KB single file)
-├── archive/        # Legacy content for reference
-└── README.md       # This file
-```
+- **Commands (`commands/`):** Handle user-facing interactions and delegate tasks to modules. They should contain no direct implementation logic.
+- **Modules (`modules/`):** Contain all the implementation details for specific functionalities. They are composed by commands to execute complex workflows.
 
-## 🚀 Core Commands
+This architecture ensures that the framework is modular, scalable, and easy to maintain.
 
-| Command | Purpose | Absorbs |
-|---------|---------|---------|
-| `/auto` | Intelligent routing | Legacy command mapping |
-| `/task` | General development | single-agent, bug-fix, etc. |
-| `/swarm` | Multi-agent orchestration | lead_agent, batch |
-| `/query` | Research without changes | - |
-| `/test` | TDD enforcement | tdd, project:tdd |
-| `/security` | Enterprise security | code-audit |
-| `/fastapi` | API development | - |
-| `/session` | GitHub issue tracking | - |
-| `/protocol` | Production standards | production |
-| `/commit` | Git operations | commit-and-push, release |
+## 2. Directory Structure
 
-## 📏 Core Rules
+- **`.claude/commands/`**: This directory contains the core slash commands that serve as the primary entry points for user interactions. Each command is responsible for delegating tasks to the appropriate modules.
 
-1. **aware-framework.md** - The ONE cognitive process (AWARE)
-2. **tdd-standards.md** - Test-driven development enforcement
-3. **production-standards.md** - Quality, security, performance gates
-4. **native-patterns.md** - Task() and Batch() usage
-5. **honesty-policy.md** - Evidence-based claims only
-6. **claude-code-integration.md** - Native tool usage
+- **`.claude/modules/`**: This directory houses the reusable implementation modules, which are organized by category (e.g., `security`, `quality`, `development`). These modules provide the logic for all framework operations.
 
-## ⚙️ Settings Structure
+## 3. Guiding Principles
 
-- **core.json** - Framework configuration
-- **permissions.json** - Consolidated permission patterns
-- **patterns.json** - Multi-agent and execution patterns
-- **commands.json** - Command-specific settings
+- **Delegation, Not Implementation:** Commands orchestrate, modules execute.
+- **Zero Redundancy:** Every piece of logic has a single, authoritative source.
+- **Modular Composition:** Complex behaviors are built by combining simple, focused modules.
 
-## 🔄 Migration from v1.x
-
-### For Users
-- Old commands still work via `/auto` routing
-- 90-day deprecation warnings
-- See `MIGRATION_MAPPING.md` for details
-
-### For Developers  
-- Update imports from `.claude/docs/` to `.claude/`
-- Replace `spawn_agent` with Task() pattern
-- Use new simplified rule names
-
-## 🎯 Key Improvements
-
-1. **75% fewer files** - Focused and maintainable
-2. **Token-optimized** - All files under 20k tokens
-3. **Reality-based** - No theoretical features
-4. **Native patterns** - Actual Claude Code capabilities
-5. **Clear purpose** - Each file has distinct role
-
-## 📊 Framework Principles
-
-### Cognitive Process
-All operations follow AWARE:
-- **A**ssess & Analyze
-- **W**atch for Assumptions
-- **A**rchitect the Approach
-- **R**un with Verification
-- **E**valuate & Evolve
-
-### Multi-Agent Patterns
-- **Task()** for specialized expertise
-- **Batch()** for similar parallel work
-- Native Claude Code support only
-
-### Quality Standards
-- TDD: Mandatory RED-GREEN-REFACTOR
-- Security: Threat model first
-- Performance: <200ms p95
-- Coverage: 90% minimum
-
-## 🚫 What's Removed
-
-- Fantasy `spawn_agent` references
-- Theoretical disaster recovery scripts
-- Overlapping cognitive frameworks
-- Meta-rules about rules
-- Redundant commands
-- 4,929 individual permissions → ~50 patterns
-
-## 📚 Documentation
-
-- **Commands**: See `/commands/*.md`
-- **Rules**: See `/rules/*.md`
-- **Migration**: See `MIGRATION_MAPPING.md`
-- **Archive**: See `/archive/` for legacy content
-
----
-
-*Built for Claude Code reality, not theoretical possibilities.*
+Refer to the main `CLAUDE.md` file for the complete architectural philosophy and operational requirements. 

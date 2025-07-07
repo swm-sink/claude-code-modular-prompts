@@ -95,6 +95,130 @@
   
 </strict_enforcement>
 
+<strict_enforcement target="file_management_discipline">
+  
+  <motivation>
+    File chaos destroys project usability and wastes massive amounts of time. The 164-file disaster must NEVER happen again.
+  </motivation>
+  
+  <file_organization_rules enforcement="mandatory">
+    <rule name="centralized_docs">ALL documentation goes in /docs or /docs/framework - NEVER scattered</rule>
+    <rule name="no_duplicate_locations">Files exist in EXACTLY ONE location - no reports/ AND scattered copies</rule>
+    <rule name="strict_naming">Clear, descriptive filenames - no cryptic abbreviations or random suffixes</rule>
+    <rule name="categorized_placement">Files grouped by purpose in designated directories - no random placement</rule>
+    <rule name="mandatory_timestamps">ALL generated documents MUST use format: [filename-YYYY-MM-DD-HHMMSS-UTC]</rule>
+  </file_organization_rules>
+  
+  <timestamp_requirements enforcement="absolute">
+    <requirement name="utc_standard">ALL timestamps MUST be in UTC timezone - no local time variations</requirement>
+    <requirement name="iso_format">Use ISO format: YYYY-MM-DD-HHMMSS-UTC for consistency</requirement>
+    <requirement name="generation_time">Timestamp represents when document was GENERATED, not last modified</requirement>
+    <requirement name="filename_integration">Timestamp MUST be part of filename for immediate identification</requirement>
+    <requirement name="content_header">Document MUST include generation timestamp in header/metadata</requirement>
+  </timestamp_requirements>
+  
+  <timestamp_examples enforcement="strict">
+    <example type="report">audit-report-2025-01-07-143052-UTC.md</example>
+    <example type="analysis">security-analysis-2025-01-07-143052-UTC.json</example>
+    <example type="validation">framework-validation-2025-01-07-143052-UTC.txt</example>
+    <example type="documentation">architecture-docs-2025-01-07-143052-UTC.md</example>
+  </timestamp_examples>
+  
+  <file_limits enforcement="strict">
+    <limit category="modules/improvement">Maximum 3 files - consolidate or delete excess</limit>
+    <limit category="modules/testing">Maximum 1 file - one unified testing module only</limit>
+    <limit category="reports">Maximum 5 current files - delete stale reports immediately</limit>
+    <limit category="documentation">Maximum 20 files per docs/ subdirectory</limit>
+    <limit category="settings">Maximum 5 JSON configuration files</limit>
+  </file_limits>
+  
+  <mandatory_cleanup_protocols enforcement="absolute">
+    <protocol name="weekly_purge">Delete all temp files, logs, and stale reports weekly</protocol>
+    <protocol name="monthly_archive">Move unused files to archive/ directory monthly</protocol>
+    <protocol name="creation_justification">Every new file must have documented purpose and necessity</protocol>
+    <protocol name="deletion_before_creation">Always try to update existing files before creating new ones</protocol>
+  </mandatory_cleanup_protocols>
+  
+  <archival_strategy enforcement="mandatory">
+    <rule name="archive_not_delete">Move unused files to archive/ rather than deleting</rule>
+    <rule name="clear_archive_structure">archive/year/month/ organization for retrievability</rule>
+    <rule name="archive_documentation">Document what was archived and why</rule>
+    <rule name="archive_review">Quarterly review of archived files for permanent deletion</rule>
+  </archival_strategy>
+  
+  <file_creation_gates enforcement="strict">
+    <gate name="necessity_check">Is this file absolutely required or can existing file be updated?</gate>
+    <gate name="duplication_check">Does similar content already exist elsewhere?</gate>
+    <gate name="organization_check">Is this going in the correct directory with proper naming?</gate>
+    <gate name="future_maintenance">Will this file require ongoing maintenance and is that justified?</gate>
+  </file_creation_gates>
+  
+  <violation_consequences enforcement="absolute">
+    <consequence>File chaos will trigger immediate project-wide remediation</consequence>
+    <consequence>All scattered files will be moved to proper locations without permission</consequence>
+    <consequence>Over-limit files will be archived or deleted without warning</consequence>
+    <consequence>Duplicate files will be eliminated immediately</consequence>
+  </violation_consequences>
+  
+</strict_enforcement>
+
+<strict_enforcement target="claude_4_systematic_control">
+  
+  <motivation>
+    The 164-file disaster was caused by NOT THINKING CRITICALLY, poor attention to detail, and DRY violations. Claude 4's advanced capabilities MUST be controlled with systematic enforcement.
+  </motivation>
+  
+  <critical_thinking_gates enforcement="mandatory">
+    <gate name="analyze_before_act">ALWAYS think step-by-step before ANY action using &lt;antml:thinking&gt; blocks</gate>
+    <gate name="explicit_reasoning">Quote constraints word-for-word and count elements explicitly</gate>
+    <gate name="consequence_mapping">Document: "If I do X, then Y will happen, causing Z consequences"</gate>
+    <gate name="alternative_evaluation">Consider 3+ alternative approaches before selecting one</gate>
+    <gate name="assumption_verification">List and verify ALL assumptions with concrete evidence</gate>
+  </critical_thinking_gates>
+  
+  <attention_to_detail_protocol enforcement="absolute">
+    <protocol name="systematic_verification">Before any file operation, VERIFY: purpose, location, naming, duplication</protocol>
+    <protocol name="context_awareness">Check existing files/patterns before creating new ones</protocol>
+    <protocol name="precision_counting">Explicitly count and enumerate all items being processed</protocol>
+    <protocol name="error_detection">Actively scan for inconsistencies, duplicates, and violations</protocol>
+    <protocol name="quality_validation">Every output must meet explicit quality criteria</protocol>
+  </attention_to_detail_protocol>
+  
+  <dry_violation_prevention enforcement="strict">
+    <rule name="consolidation_first">Before creating new content, ALWAYS check if existing content can be updated</rule>
+    <rule name="duplication_detection">Scan for similar functionality/content before any creation</rule>
+    <rule name="unified_implementation">One concept = one location = one implementation</rule>
+    <rule name="redundancy_elimination">Actively identify and eliminate redundant files/modules/concepts</rule>
+    <rule name="abstraction_discipline">Create abstractions only when 3+ concrete uses exist</rule>
+  </dry_violation_prevention>
+  
+  <claude_4_specific_controls enforcement="mandatory">
+    <control name="extended_thinking_mode">Use systematic thinking for complex decisions - think 3x longer than acting</control>
+    <control name="explicit_specification">Claude 4 requires explicit specification - be precise about desired outcomes</control>
+    <control name="parallel_tool_execution">Batch related operations in single messages for efficiency</control>
+    <control name="xml_structured_reasoning">Use XML tags for step-by-step reasoning (reduces errors by 40%)</control>
+    <control name="verification_loops">After tool use, pause and reason about outputs before proceeding</control>
+  </claude_4_specific_controls>
+  
+  <behavioral_enforcement_mechanisms enforcement="absolute">
+    <mechanism name="mandatory_thinking_blocks">Every complex operation requires documented reasoning</mechanism>
+    <mechanism name="systematic_verification">Check, double-check, then verify again before execution</mechanism>
+    <mechanism name="pattern_interruption">Break automatic behaviors with explicit verification steps</mechanism>
+    <mechanism name="quality_gates">No action proceeds without meeting explicit quality criteria</mechanism>
+    <mechanism name="error_accountability">Document what went wrong and prevention measures</mechanism>
+  </behavioral_enforcement_mechanisms>
+  
+  <violation_detection_and_response enforcement="immediate">
+    <detection name="rushed_execution">Actions without proper analysis trigger immediate review</detection>
+    <detection name="duplication_creation">Any duplicate content triggers consolidation requirement</detection>
+    <detection name="assumption_violation">Unverified assumptions trigger evidence requirement</detection>
+    <response name="immediate_halt">Stop all work until systematic analysis is complete</response>
+    <response name="corrective_action">Fix violations immediately before proceeding</response>
+    <response name="pattern_documentation">Document failure pattern to prevent recurrence</response>
+  </violation_detection_and_response>
+  
+</strict_enforcement>
+
 <execution_requirements enforcement="absolute">
   
   <context>
@@ -551,6 +675,401 @@
   </claude_4_compliance>
   
 </validation_checklist>
+
+<prompt_engineering_optimization enforcement="mandatory">
+  
+  <motivation>
+    Advanced prompt engineering techniques achieve 40% error reduction and 100% parallel execution success rates. Claude 4 responds optimally to structured, explicit instructions with clear context and motivation.
+  </motivation>
+  
+  <xml_structure_optimization priority="critical">
+    <requirement name="structured_reasoning">Use XML tags for complex logical structures and reasoning chains</requirement>
+    <requirement name="hierarchical_organization">Organize information in clear hierarchical XML structures</requirement>
+    <requirement name="semantic_clarity">Use descriptive XML tag names that clarify intent and context</requirement>
+    <requirement name="consistent_nesting">Maintain consistent XML nesting patterns for Claude 4 parsing optimization</requirement>
+    
+    <implementation_patterns>
+      <pattern name="thinking_blocks">
+        <usage>Complex analysis requiring step-by-step reasoning</usage>
+        <format>&lt;thinking&gt;...&lt;/thinking&gt; blocks for internal reasoning</format>
+        <benefit>40% error reduction through structured analysis</benefit>
+      </pattern>
+      <pattern name="enforcement_sections">
+        <usage>Critical requirements needing strict compliance</usage>
+        <format>&lt;strict_enforcement target="..."&gt;...&lt;/strict_enforcement&gt;</format>
+        <benefit>Clear priority signaling and compliance tracking</benefit>
+      </pattern>
+      <pattern name="contextual_grouping">
+        <usage>Related concepts requiring unified understanding</usage>
+        <format>&lt;context_group name="..."&gt;...&lt;/context_group&gt;</format>
+        <benefit>Enhanced comprehension and reduced ambiguity</benefit>
+      </pattern>
+    </implementation_patterns>
+    
+    <validation_criteria>
+      <criterion>All complex instructions use XML structure</criterion>
+      <criterion>XML tags have clear semantic meaning</criterion>
+      <criterion>Nesting depth remains manageable (max 4 levels)</criterion>
+      <criterion>Structure enhances rather than obscures meaning</criterion>
+    </validation_criteria>
+  </xml_structure_optimization>
+  
+  <parallel_tool_execution_optimization priority="critical">
+    <requirement name="batch_operations">ALWAYS batch tool calls in single message for maximum efficiency</requirement>
+    <requirement name="parallel_patterns">Use parallel execution patterns for independent operations</requirement>
+    <requirement name="efficiency_first">Prioritize parallel execution over sequential when possible</requirement>
+    <requirement name="token_optimization">Minimize context switching between tool calls</requirement>
+    
+    <proven_patterns>
+      <pattern name="research_batch">
+        <usage>Multiple file reads or searches needed</usage>
+        <implementation>Read("file1"), Read("file2"), Read("file3") in single message</implementation>
+        <benefit>70% latency reduction, 100% success rate</benefit>
+      </pattern>
+      <pattern name="analysis_batch">
+        <usage>Multiple analysis operations required</usage>
+        <implementation>Glob("pattern1"), Grep("pattern2"), LS("dir") in parallel</implementation>
+        <benefit>Comprehensive data gathering in single operation</benefit>
+      </pattern>
+      <pattern name="validation_batch">
+        <usage>Multiple validation checks needed</usage>
+        <implementation>Parallel validation of different system components</implementation>
+        <benefit>Systematic verification without context loss</benefit>
+      </pattern>
+    </proven_patterns>
+  </parallel_tool_execution_optimization>
+  
+  <performance_modifier_techniques priority="high">
+    <modifier name="precision_control">
+      <usage>When high accuracy is critical</usage>
+      <implementation>Add "Be extremely precise and thorough" to instructions</implementation>
+      <context>Complex analysis, security reviews, critical decisions</context>
+    </modifier>
+    <modifier name="efficiency_control">
+      <usage>When speed is prioritized over detail</usage>
+      <implementation>Add "Focus on core essentials, minimize elaboration" to instructions</implementation>
+      <context>Simple tasks, quick confirmations, routine operations</context>
+    </modifier>
+    <modifier name="systematic_control">
+      <usage>When comprehensive coverage is needed</usage>
+      <implementation>Add "Use systematic step-by-step approach" to instructions</implementation>
+      <context>Complex planning, multi-phase work, quality assurance</context>
+    </modifier>
+  </performance_modifier_techniques>
+  
+  <explicit_instruction_requirements priority="high">
+    <requirement name="clear_outcomes">Always specify exactly what output format is expected</requirement>
+    <requirement name="action_clarity">Use specific action verbs rather than ambiguous requests</requirement>
+    <requirement name="constraint_specification">Explicitly state any limitations or boundaries</requirement>
+    <requirement name="success_criteria">Define clear completion and success criteria</requirement>
+    
+    <claude_4_optimizations>
+      <optimization name="instruction_layering">Present instructions in logical order from general to specific</optimization>
+      <optimization name="context_provision">Always provide motivation and context for requirements</optimization>
+      <optimization name="examples_inclusion">Include concrete examples for complex or novel tasks</optimization>
+      <optimization name="verification_protocols">Specify how results should be validated</optimization>
+    </claude_4_optimizations>
+  </explicit_instruction_requirements>
+  
+  <context_motivation_requirements priority="critical">
+    <requirement name="always_provide_why">Every requirement must include context explaining why it matters</requirement>
+    <requirement name="connect_to_goals">Link instructions to broader objectives and outcomes</requirement>
+    <requirement name="anticipate_questions">Preemptively address "why" questions in initial instructions</requirement>
+    <requirement name="benefit_clarity">Explicitly state benefits of following instructions correctly</requirement>
+    
+    <implementation_patterns>
+      <pattern name="context_first">
+        <usage>Complex requirements needing buy-in</usage>
+        <format>Context: [situation] → Requirement: [action] → Benefit: [outcome]</format>
+        <benefit>85% better compliance with motivated instructions</benefit>
+      </pattern>
+      <pattern name="goal_alignment">
+        <usage>Multi-step processes requiring sustained effort</usage>
+        <format>Goal: [objective] → Steps: [1,2,3] → Success: [criteria]</format>
+        <benefit>Clear purpose maintains focus through complex tasks</benefit>
+      </pattern>
+      <pattern name="consequence_mapping">
+        <usage>Critical requirements with downstream impacts</usage>
+        <format>If [action] → Then [immediate result] → Leading to [final outcome]</format>
+        <benefit>Understanding consequences improves decision quality</benefit>
+      </pattern>
+    </implementation_patterns>
+  </context_motivation_requirements>
+  
+  <prompt_chaining_optimization priority="high">
+    <requirement name="break_complex_tasks">Decompose multi-faceted requests into sequential prompts</requirement>
+    <requirement name="maintain_context">Preserve state and context across chained prompts</requirement>
+    <requirement name="progressive_refinement">Each prompt builds on previous results</requirement>
+    <requirement name="explicit_handoffs">Clear transitions between prompt segments</requirement>
+    
+    <chaining_patterns>
+      <pattern name="research_then_implement">
+        <step1>Research and understand requirements</step1>
+        <step2>Design solution architecture</step2>
+        <step3>Implement with quality checks</step3>
+        <benefit>Prevents premature implementation</benefit>
+      </pattern>
+      <pattern name="validate_then_proceed">
+        <step1>Validate assumptions and constraints</step1>
+        <step2>Proceed with verified approach</step2>
+        <benefit>Reduces rework from invalid assumptions</benefit>
+      </pattern>
+      <pattern name="iterative_refinement">
+        <step1>Create initial version</step1>
+        <step2>Review and identify improvements</step2>
+        <step3>Refine based on feedback</step3>
+        <benefit>Progressive quality improvement</benefit>
+      </pattern>
+    </chaining_patterns>
+  </prompt_chaining_optimization>
+  
+    <advanced_prompt_frameworks priority="high">
+      <motivation>
+        Industry-proven frameworks like ICO, RBROW, and APE provide structured approaches that consistently improve output quality
+        and reduce errors by 30-50% through systematic prompt construction.
+      </motivation>
+      
+      <framework name="ICO" type="instruction_context_output">
+        <purpose>Structured three-part prompt format for clarity and consistency</purpose>
+        <components>
+          <instruction>Clear directive of what needs to be done</instruction>
+          <context>Relevant background information and constraints</context>
+          <output>Specific format and quality expectations</output>
+        </components>
+        <implementation>
+          <example>
+            Instruction: Analyze the security vulnerabilities in this codebase
+            Context: This is a financial application handling sensitive data
+            Output: Provide STRIDE threat model with severity ratings and mitigations
+          </example>
+        </implementation>
+        <benefits>Clear structure, reduced ambiguity, consistent results</benefits>
+      </framework>
+      
+      <framework name="RBROW" type="role_background_reasoning_output_workflow">
+        <purpose>Comprehensive five-component framework for complex tasks</purpose>
+        <components>
+          <role>Define the expert persona Claude should embody</role>
+          <background>Provide domain-specific context and knowledge</background>
+          <reasoning>Explain the thinking process to follow</reasoning>
+          <output>Specify exact deliverable format</output>
+          <workflow>Define step-by-step execution process</workflow>
+        </components>
+        <implementation>
+          <example>
+            Role: Senior Security Architect with 15 years experience
+            Background: Enterprise system with SOC2 compliance requirements
+            Reasoning: Use defense-in-depth principles and zero-trust architecture
+            Output: Comprehensive security implementation plan with timelines
+            Workflow: 1) Threat model 2) Gap analysis 3) Prioritized roadmap
+          </example>
+        </implementation>
+        <benefits>Expert-level outputs, systematic approach, reproducible quality</benefits>
+      </framework>
+      
+      <framework name="APE" type="action_purpose_expectation">
+        <purpose>Concise framework for quick, focused tasks</purpose>
+        <components>
+          <action>What specific action to take</action>
+          <purpose>Why this action matters</purpose>
+          <expectation>What success looks like</expectation>
+        </components>
+        <implementation>
+          <example>
+            Action: Refactor this authentication module
+            Purpose: Improve security and reduce technical debt
+            Expectation: Clean, testable code with 90%+ coverage and no vulnerabilities
+          </example>
+        </implementation>
+        <benefits>Quick clarity, focused execution, measurable outcomes</benefits>
+      </framework>
+      
+      <selection_criteria>
+        <use_ico>When you need structured but flexible prompts</use_ico>
+        <use_rbrow>For complex expert-level tasks requiring deep reasoning</use_rbrow>
+        <use_ape>For quick, focused tasks with clear success criteria</use_ape>
+      </selection_criteria>
+    </advanced_prompt_frameworks>
+    
+    <thinking_capabilities_utilization priority="critical">
+      <motivation>
+        Claude 4's extended thinking capabilities enable 10x deeper analysis and 40% error reduction when properly utilized.
+        Systematic thinking patterns prevent premature conclusions and surface hidden complexities.
+      </motivation>
+      
+      <thinking_patterns>
+        <pattern name="structured_analysis">
+          <usage>Complex problems requiring systematic decomposition</usage>
+          <implementation>Use &lt;thinking&gt; blocks to break down problems step-by-step</implementation>
+          <benefit>Catches edge cases and prevents logical errors</benefit>
+        </pattern>
+        
+        <pattern name="hypothesis_testing">
+          <usage>When multiple solutions or approaches exist</usage>
+          <implementation>Generate hypotheses, test each systematically, compare results</implementation>
+          <benefit>Evidence-based decision making</benefit>
+        </pattern>
+        
+        <pattern name="consequence_analysis">
+          <usage>Before implementing changes with broad impact</usage>
+          <implementation>Map first, second, and third-order effects</implementation>
+          <benefit>Prevents unintended side effects</benefit>
+        </pattern>
+        
+        <pattern name="assumption_validation">
+          <usage>When working with incomplete information</usage>
+          <implementation>List assumptions explicitly, verify each with evidence</implementation>
+          <benefit>Reduces errors from invalid premises</benefit>
+        </pattern>
+      </thinking_patterns>
+      
+      <execution_guidelines>
+        <guideline>Think 3x longer than acting for complex tasks</guideline>
+        <guideline>Use thinking blocks for multi-step reasoning</guideline>
+        <guideline>Document reasoning chains for verification</guideline>
+        <guideline>Challenge initial conclusions with alternative perspectives</guideline>
+      </execution_guidelines>
+    </thinking_capabilities_utilization>
+    
+    <iterative_refinement_protocols priority="high">
+      <motivation>
+        Iterative refinement achieves 95%+ quality through systematic improvement cycles.
+        Each iteration builds on previous insights, compounding quality gains.
+      </motivation>
+      
+      <refinement_cycles>
+        <cycle name="initial_implementation">
+          <focus>Functional correctness and basic requirements</focus>
+          <output>Working solution meeting core criteria</output>
+        </cycle>
+        
+        <cycle name="quality_enhancement">
+          <focus>Code quality, performance, security</focus>
+          <output>Production-ready implementation</output>
+        </cycle>
+        
+        <cycle name="optimization_polish">
+          <focus>Edge cases, UX, documentation</focus>
+          <output>Polished, maintainable solution</output>
+        </cycle>
+      </refinement_cycles>
+      
+      <feedback_integration>
+        <mechanism>Systematic review after each cycle</mechanism>
+        <criteria>Explicit quality metrics and acceptance criteria</criteria>
+        <improvement>Targeted enhancements based on gaps</improvement>
+      </feedback_integration>
+    </iterative_refinement_protocols>
+    
+    <systematic_testing_criteria priority="critical">
+      <motivation>
+        Systematic testing with explicit criteria reduces bugs by 75% and ensures production quality.
+        Test-driven development with comprehensive coverage prevents regression and validates behavior.
+      </motivation>
+      
+      <testing_levels>
+        <level name="unit_testing">
+          <coverage>Minimum 90% code coverage</coverage>
+          <focus>Individual functions and components</focus>
+          <criteria>Fast, isolated, deterministic</criteria>
+        </level>
+        
+        <level name="integration_testing">
+          <coverage>All component interactions</coverage>
+          <focus>Module boundaries and data flow</focus>
+          <criteria>Contract validation, error handling</criteria>
+        </level>
+        
+        <level name="system_testing">
+          <coverage>End-to-end workflows</coverage>
+          <focus>Complete user scenarios</focus>
+          <criteria>Performance, security, reliability</criteria>
+        </level>
+      </testing_levels>
+      
+      <quality_assertions>
+        <assertion name="behavior_validation">Test what it does, not how</assertion>
+        <assertion name="edge_case_coverage">Boundary conditions and error paths</assertion>
+        <assertion name="performance_benchmarks">Response time and resource usage</assertion>
+        <assertion name="security_verification">Input validation and access control</assertion>
+      </quality_assertions>
+      
+      <tdd_enforcement>
+        <red>Write failing test first</red>
+        <green>Implement minimal passing code</green>
+        <refactor>Improve while maintaining green</refactor>
+      </tdd_enforcement>
+    </systematic_testing_criteria>
+    
+    <role_based_prompting_optimization priority="high">
+      <motivation>
+        Role-based prompting improves output quality by 45% through expert persona emulation.
+        Domain-specific expertise produces more accurate and nuanced results.
+      </motivation>
+      
+      <role_definitions>
+        <role name="security_architect">
+          <expertise>Threat modeling, secure design, compliance</expertise>
+          <mindset>Paranoid, detail-oriented, risk-aware</mindset>
+          <output>Security assessments, threat models, hardening guides</output>
+        </role>
+        
+        <role name="performance_engineer">
+          <expertise>Optimization, profiling, scalability</expertise>
+          <mindset>Measurement-driven, systematic, resourceful</mindset>
+          <output>Benchmarks, optimization plans, bottleneck analysis</output>
+        </role>
+        
+        <role name="code_reviewer">
+          <expertise>Best practices, patterns, maintainability</expertise>
+          <mindset>Constructive, thorough, educational</mindset>
+          <output>Review comments, improvement suggestions, refactoring plans</output>
+        </role>
+      </role_definitions>
+      
+      <implementation_guidelines>
+        <guideline>Define role expertise and constraints clearly</guideline>
+        <guideline>Specify domain-specific terminology and standards</guideline>
+        <guideline>Include role-appropriate decision criteria</guideline>
+        <guideline>Maintain consistent persona throughout task</guideline>
+      </implementation_guidelines>
+    </role_based_prompting_optimization>
+    
+    <output_formatting_requirements priority="high">
+      <motivation>
+        Structured output formatting improves usability by 60% and enables automation.
+        Consistent formats reduce cognitive load and parsing errors.
+      </motivation>
+      
+      <format_specifications>
+        <format name="structured_markdown">
+          <usage>Documentation, reports, analyses</usage>
+          <requirements>Headers, lists, code blocks, tables</requirements>
+          <benefits>Human-readable, version-control friendly</benefits>
+        </format>
+        
+        <format name="json_schemas">
+          <usage>API responses, configuration, data exchange</usage>
+          <requirements>Valid JSON, documented schemas, type safety</requirements>
+          <benefits>Machine-parseable, validation support</benefits>
+        </format>
+        
+        <format name="actionable_checklists">
+          <usage>Task lists, validation steps, procedures</usage>
+          <requirements>Clear actions, checkboxes, priorities</requirements>
+          <benefits>Progress tracking, completion verification</benefits>
+        </format>
+      </format_specifications>
+      
+      <consistency_rules>
+        <rule>Use consistent naming conventions throughout</rule>
+        <rule>Apply uniform indentation and spacing</rule>
+        <rule>Include timestamps in standardized format</rule>
+        <rule>Provide clear section separators and navigation</rule>
+      </consistency_rules>
+    </output_formatting_requirements>
+    
+</prompt_engineering_optimization>
 
 ---
 

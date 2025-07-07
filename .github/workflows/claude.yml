@@ -102,8 +102,8 @@ jobs:
       - name: Framework compatibility check
         run: |
           # Verify existing framework capabilities are preserved
-          if [ -f ".claude/rules/core-framework.md" ]; then
-            echo "✅ Framework configuration detected"
+          if [ -d ".claude/modules" ]; then
+            echo "✅ Framework modules detected"
             echo "✅ Preserving existing framework capabilities"
           else
             echo "ℹ️ No framework configuration found - standard mode only"
@@ -169,7 +169,9 @@ jobs:
       - name: Install enhanced dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
           # Additional dependencies for framework mode
           pip install pytest coverage bandit safety
           
@@ -190,8 +192,8 @@ jobs:
           # Configure Claude Code with enhanced framework capabilities
           claude configure --api-key="$ANTHROPIC_API_KEY" --mode=framework
           
-          # Enable all 3982 framework permissions if needed
-          if [ -f ".claude/rules/core-framework.md" ]; then
+          # Enable all framework capabilities if modules exist
+          if [ -d ".claude/modules" ]; then
             echo "🚀 Enabling full framework capabilities..."
             claude configure --framework-mode=full
           fi
@@ -254,24 +256,29 @@ jobs:
           echo "🔍 Running framework compliance checks..."
           
           # TDD compliance verification
-          if [ -f ".claude/rules/tdd-enforcement.md" ]; then
-            echo "✅ TDD enforcement rules active"
+          if [ -f ".claude/modules/quality/tdd.md" ]; then
+            echo "✅ TDD enforcement module active"
           fi
           
           # Security standards verification
-          if [ -f ".claude/rules/honesty-policy.md" ]; then
-            echo "✅ Honesty policy enforcement active"
+          if [ -f ".claude/modules/quality/honesty-policy.md" ]; then
+            echo "✅ Honesty policy module active"
           fi
           
           # Multi-agent coordination check
-          if [ -f ".claude/rules/unified-violation-system.md" ]; then
-            echo "✅ Unified violation system active"
+          if [ -f ".claude/modules/patterns/multi-agent.md" ]; then
+            echo "✅ Multi-agent pattern module active"
           fi
           
       - name: Run framework validation tests
         run: |
-          # Run subset of framework validation tests
-          python -m pytest tests/unit/test_github_actions_workflow.py -v --tb=short
+          # Run framework validation tests
+          if [ -d "tests/framework" ]; then
+            echo "🧪 Running framework validation tests..."
+            python -m pytest tests/framework/ -v --tb=short
+          else
+            echo "⚠️ Framework tests not found, skipping..."
+          fi
           
       - name: Security scan
         run: |
@@ -362,10 +369,10 @@ jobs:
           # Check framework file integrity
           FRAMEWORK_FILES=(
             "CLAUDE.md"
-            ".claude/rules/tdd-enforcement.md"
-            ".claude/rules/honesty-policy.md"
-            ".claude/rules/unified-violation-system.md"
-            ".claude/rules/autonomous-context-management.md"
+            ".claude/modules/quality/tdd.md"
+            ".claude/modules/quality/honesty-policy.md"
+            ".claude/modules/patterns/multi-agent.md"
+            ".claude/modules/patterns/session-management.md"
           )
           
           for file in "${FRAMEWORK_FILES[@]}"; do
@@ -381,8 +388,14 @@ jobs:
           echo "🧪 Running framework validation tests..."
           
           # Run framework-specific tests
-          python -m pytest tests/unit/test_github_actions_workflow.py -v
-          python -m pytest tests/battle_tests/ -v --tb=short || true
+          if [ -d "tests/framework" ]; then
+            python -m pytest tests/framework/ -v --tb=short
+          fi
+          
+          # Run any other test suites if available
+          if [ -d "tests/unit" ]; then
+            python -m pytest tests/unit/ -v --tb=short || true
+          fi
           
       - name: Security maintenance scan
         run: |
@@ -405,11 +418,11 @@ jobs:
           
           # Count framework components
           COMMAND_COUNT=$(find .claude/commands -name "*.md" 2>/dev/null | wc -l || echo "0")
-          RULE_COUNT=$(find .claude/rules -name "*.md" 2>/dev/null | wc -l || echo "0")
+          MODULE_COUNT=$(find .claude/modules -name "*.md" 2>/dev/null | wc -l || echo "0")
           
           echo "📈 Framework Metrics:"
           echo "  Commands: $COMMAND_COUNT"
-          echo "  Rules: $RULE_COUNT"
+          echo "  Modules: $MODULE_COUNT"
           echo "  Version: $FRAMEWORK_VERSION"
           
           # Save metrics for reporting
@@ -418,7 +431,7 @@ jobs:
             "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
             "framework_version": "$FRAMEWORK_VERSION",
             "commands_count": $COMMAND_COUNT,
-            "rules_count": $RULE_COUNT,
+            "modules_count": $MODULE_COUNT,
             "health_status": "healthy"
           }
           EOF

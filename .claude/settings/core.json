@@ -1,0 +1,44 @@
+{
+  "framework": {
+    "name": "Claude Code Modular Agents",
+    "version": "2.0.0",
+    "description": "Internal modular prompt system for Claude Code workflow automation",
+    "reality_check": "Sophisticated prompt engineering system with GitHub integration, NOT autonomous AI agents"
+  },
+  "configuration": {
+    "auto_session_creation": true,
+    "github_integration": true,
+    "quality_gates_enforced": true,
+    "tdd_mandatory": true,
+    "token_optimization": true,
+    "modular_prompts_preserved": true
+  },
+  "execution": {
+    "parallel_tool_calls": true,
+    "read_before_write": true,
+    "research_first": true,
+    "evidence_based": true,
+    "critical_thinking": true
+  },
+  "github": {
+    "issue_templates_enabled": true,
+    "epic_tracking": true,
+    "session_management": true,
+    "automated_issue_creation": true,
+    "cli_integration": true
+  },
+  "quality_standards": {
+    "tdd_cycle": "RED-GREEN-REFACTOR",
+    "test_coverage_minimum": 90,
+    "security_threat_modeling": true,
+    "performance_target_p95": "200ms",
+    "documentation_required": true
+  },
+  "module_system": {
+    "delegation_pattern": "commands_only_delegate",
+    "modules_only_implement": true,
+    "zero_redundancy": true,
+    "dynamic_composition": true,
+    "xml_interfaces": true
+  }
+}

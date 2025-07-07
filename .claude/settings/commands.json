@@ -1,0 +1,122 @@
+{
+  "auto": {
+    "description": "Intelligent routing with research-first approach",
+    "research_mandatory": true,
+    "complexity_analysis": true,
+    "route_to_best_command": true,
+    "legacy_command_support": true,
+    "examples": ["Add authentication", "Build microservices", "Understand caching"],
+    "supporting_modules": ["intelligent-routing", "research-analysis", "critical-thinking"]
+  },
+  "task": {
+    "description": "Single-component development with TDD enforcement", 
+    "tdd_mandatory": true,
+    "single_component_focus": true,
+    "quality_gates_enforced": true,
+    "session_creation": "for_complex_tasks",
+    "examples": ["Add login endpoint", "Fix authentication bug", "Refactor user service"],
+    "supporting_modules": ["task-management", "tdd", "critical-thinking"]
+  },
+  "swarm": {
+    "description": "Multi-agent coordination with mandatory session creation",
+    "session_creation": "always_mandatory",
+    "github_issue_required": true,
+    "coordination_patterns": ["task_specialized", "batch_distributed", "hybrid_complex"],
+    "minimum_agents": 2,
+    "examples": ["Build e-commerce platform", "Implement microservices architecture"],
+    "supporting_modules": ["multi-agent", "session-management", "intelligent-routing"]
+  },
+  "query": {
+    "description": "Research-only operations without code changes",
+    "read_only": true,
+    "no_modifications": true,
+    "research_focused": true,
+    "analysis_tools": ["WebSearch", "Glob", "Grep", "Read"],
+    "examples": ["How does caching work?", "Analyze current architecture", "Research best practices"],
+    "supporting_modules": ["research-analysis", "critical-thinking"]
+  },
+  "session": {
+    "description": "GitHub issue integration and tracking",
+    "github_integration": true,
+    "issue_creation": true,
+    "epic_support": true,
+    "progress_tracking": true,
+    "examples": ["Track feature development", "Coordinate team work", "Manage complex project"],
+    "supporting_modules": ["session-management", "git-operations"]
+  },
+  "protocol": {
+    "description": "Quality standards enforcement for internal tool",
+    "quality_gates": true,
+    "tdd_enforced": true,
+    "security_standards": true,
+    "performance_targets": true,
+    "internal_tool_focus": true,
+    "examples": ["Implement with quality gates", "Add security standards", "Performance optimization"],
+    "supporting_modules": ["protocol-enforcement", "tdd", "production-standards"]
+  },
+  "prompt": {
+    "description": "Comprehensive prompt engineering lifecycle",
+    "prompt_design": true,
+    "evaluation_framework": true,
+    "iteration_support": true,
+    "effectiveness_tracking": true,
+    "examples": ["Design code review prompt", "Optimize AI assistant", "Create documentation prompt"],
+    "supporting_modules": ["prompt-engineering", "evaluation-testing", "critical-thinking"]
+  },
+  "security": {
+    "description": "Security analysis and implementation",
+    "threat_modeling": true,
+    "security_standards": true,
+    "audit_capabilities": true,
+    "compliance_focus": "internal_tool_appropriate",
+    "examples": ["Security audit", "Add authentication", "Threat model analysis"],
+    "supporting_modules": ["audit", "threat-modeling", "production-standards"]
+  },
+  "fastapi": {
+    "description": "API development with FastAPI patterns",
+    "api_development": true,
+    "fastapi_specific": true,
+    "modern_patterns": true,
+    "performance_focused": true,
+    "examples": ["Build REST API", "Add authentication endpoints", "Optimize API performance"],
+    "supporting_modules": ["api-development", "production-standards", "tdd"]
+  },
+  "test": {
+    "description": "TDD enforcement and testing workflows",
+    "tdd_cycle": "RED-GREEN-REFACTOR",
+    "test_coverage": 90,
+    "quality_enforcement": true,
+    "testing_patterns": true,
+    "examples": ["Add test coverage", "TDD implementation", "Test refactoring"],
+    "supporting_modules": ["tdd", "test-management", "production-standards"]
+  },
+  "feature": {
+    "description": "Comprehensive feature development with PRD-first approach",
+    "prd_required": true,
+    "mvp_strategy": true,
+    "feature_validation": true,
+    "session_creation": true,
+    "examples": ["User authentication feature", "Payment processing", "API versioning"],
+    "supporting_modules": ["feature-workflow", "intelligent-prd", "mvp-strategy"]
+  },
+  "commit": {
+    "description": "Git operations and commit management",
+    "git_operations": true,
+    "commit_automation": true,
+    "branch_management": false,
+    "main_branch_only": true,
+    "examples": ["Commit changes", "Create release", "Git automation"],
+    "supporting_modules": ["git-operations", "session-management"]
+  },
+  "global_settings": {
+    "parallel_execution": "always_preferred",
+    "read_before_write": "mandatory",
+    "research_first": "for_complex_work", 
+    "github_integration": "enabled",
+    "session_management": "automatic_for_complex",
+    "quality_gates": "enforced",
+    "modular_prompts": "never_delete",
+    "token_optimization": true,
+    "internal_tool_focus": true
+  }
+}
