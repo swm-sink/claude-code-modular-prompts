@@ -69,7 +69,7 @@
     <rule>Compliance: Use $(date '+%Y-%m-%d') for current date, increment manually for sequencing when needed</rule>
     <rule>Update existing files before creating. Archive don't delete</rule>
   </standard_rules>
-  <limits patterns="6" quality="5" planning="5" development="4" security="3" testing="2" reports="5" docs_per_dir="20"/>
+  <limits patterns="8" quality="5" planning="5" development="4" security="3" testing="2" reports="5" docs_per_dir="20"/>
   <prohibited_actions>
     <action>Creating 'personal/', 'local/', or user-specific directories</action>
     <action>Duplicating existing project structures</action>

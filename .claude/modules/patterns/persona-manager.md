@@ -31,7 +31,7 @@
         ```xml
         <persona_context active="{persona_name}">
           <thinking_framework>{persona_approach}</thinking_framework>
-          <quality_gates>{persona_standards}</quality_gates>
+          <quality_standards>{persona_standards}</quality_standards>
           <tool_preferences>{persona_tools}</tool_preferences>
           <communication_style>{persona_communication}</communication_style>
           <error_handling>{persona_recovery}</error_handling>
@@ -156,7 +156,7 @@
     <modules>All modules become persona-aware through context injection</modules>
     <session_management>Persona tracking integrated with GitHub session system</session_management>
     <multi_agent>Swarm coordination enhanced with persona specialization</multi_agent>
-    <quality_gates>Persona-specific standards applied throughout development</quality_gates>
+    <quality_standards>Persona-specific standards applied throughout development</quality_standards>
   </integration_points>
   
 </module>
