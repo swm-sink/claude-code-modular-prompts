@@ -283,7 +283,12 @@ jobs:
       - name: Security scan
         run: |
           # Run security scans in framework mode
-          bandit -r src/ -f json -o bandit-report.json || true
+          if [ -d "src/" ]; then
+            bandit -r src/ -f json -o bandit-report.json || true
+          else
+            echo "⚠️ src/ directory not found, skipping bandit scan"
+            echo '{}' > bandit-report.json
+          fi
           safety check --json --output safety-report.json || true
           
       - name: Upload framework artifacts
@@ -360,6 +365,15 @@ jobs:
           curl -fsSL https://claude.ai/install.sh | sh
           echo "$HOME/.local/bin" >> $GITHUB_PATH
           
+      - name: Pre-maintenance health check
+        run: |
+          echo "🏥 Running pre-maintenance health monitoring..."
+          
+          # Run health monitoring script if available
+          if [ -f "scripts/monitor_framework_health.py" ]; then
+            python scripts/monitor_framework_health.py || echo "⚠️ Health check reported warnings"
+          fi
+          
       - name: Framework health check
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -405,7 +419,12 @@ jobs:
           safety check --json --output safety-maintenance-report.json || true
           
           # Code security scan
-          bandit -r src/ -f json -o bandit-maintenance-report.json || true
+          if [ -d "src/" ]; then
+            bandit -r src/ -f json -o bandit-maintenance-report.json || true
+          else
+            echo "⚠️ src/ directory not found, skipping bandit scan"
+            echo '{}' > bandit-maintenance-report.json
+          fi
           
           # Framework-specific security checks
           if [ -f "src/security/__init__.py" ]; then
