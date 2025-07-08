@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.4.1   | 2025-07-08   | stable |
+| 3.0.0   | 2025-07-08   | stable |
 
 # /protocol - Production-ready development with mandatory quality gates
 
@@ -14,89 +14,229 @@
   </delegation>
   
   <thinking_pattern enforcement="MANDATORY">
-    <checkpoint id="1" verify="true" enforcement="BLOCKING">
+    <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Create GitHub session for comprehensive compliance tracking</action>
-      <critical_thinking>
-        - What compliance frameworks apply to this production system?
-        - How complex is this system requiring production standards?
-        - Should I escalate to /swarm for multi-system integration?
-        - What audit trail requirements must be established?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What session creation approach optimizes compliance tracking?
+          - What framework identification strategy supports production standards?
+          - How does session creation connect to audit trail requirements and compliance success?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Compliance Question: What compliance frameworks apply to this production system?]
+          - [Complexity Question: How complex is this system requiring production standards?]
+          - [Escalation Question: Should I escalate to /swarm for multi-system integration?]
+          - [Audit Question: What audit trail requirements must be established?]
+          - [Tracking Question: What compliance tracking ensures maximum production quality?]
+          - [Framework Question: What framework identification optimizes compliance success?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this session creation optimal for compliance tracking?
+          - What evidence supports the framework identification approach?
+          - How will this session maximize compliance success and audit trail quality?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can session creation be combined with compliance analysis for efficiency?</tool_optimization>
+        <context_efficiency>How can session creation optimize context window usage for compliance tracking?</context_efficiency>
+        <dependency_analysis>What session creation is sequential vs parallel for compliance setup?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>COMPLIANCE_SESSION: #[number] tracking [frameworks] with [audit_requirements]</output_format>
-      <validation>Session created with appropriate compliance tracking framework</validation>
+      <validation>Session created with appropriate compliance tracking framework with enhanced reasoning</validation>
       <enforcement>BLOCK if compliance requirements unclear or session creation fails</enforcement>
+      <context_transfer>Session creation and compliance framework for requirements validation</context_transfer>
     </checkpoint>
-    <checkpoint id="2" verify="true" enforcement="BLOCKING">
+    <checkpoint id="2" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Validate ALL production requirements with TDD methodology</action>
-      <critical_thinking>
-        - Are requirements testable and measurable?
-        - What regulatory compliance must be verified through tests?
-        - How will TDD validate security and performance requirements?
-        - Are acceptance criteria sufficient for production validation?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What requirements validation approach optimizes production quality?
+          - What TDD methodology strategy supports regulatory compliance?
+          - How does validation connect to production standards and testability?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Testability Question: Are requirements testable and measurable?]
+          - [Compliance Question: What regulatory compliance must be verified through tests?]
+          - [TDD Question: How will TDD validate security and performance requirements?]
+          - [Criteria Question: Are acceptance criteria sufficient for production validation?]
+          - [Validation Question: What validation approach ensures maximum production quality?]
+          - [Methodology Question: What TDD methodology optimizes requirements validation?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this validation approach optimal for production requirements?
+          - What evidence supports the TDD methodology strategy?
+          - How will this validation maximize production quality and compliance?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can requirements validation be optimized for parallel analysis?</tool_optimization>
+        <context_efficiency>How can validation optimize context window usage for production standards?</context_efficiency>
+        <dependency_analysis>What validation is sequential vs parallel for TDD methodology?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>REQUIREMENTS_VALIDATION: [requirements] with TDD validation plan</output_format>
-      <validation>All requirements validated as testable with clear TDD approach</validation>
+      <validation>All requirements validated as testable with clear TDD approach with enhanced reasoning</validation>
       <enforcement>BLOCK if requirements not testable or TDD plan incomplete</enforcement>
+      <context_transfer>Requirements validation and TDD plan for enforcement</context_transfer>
     </checkpoint>
-    <checkpoint id="3" verify="true" enforcement="BLOCKING">
+    <checkpoint id="3" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>ENFORCE strict TDD: RED-GREEN-REFACTOR for production code</action>
-      <critical_thinking>
-        - Am I writing failing tests FIRST for all functionality?
-        - Do tests cover security requirements and edge cases?
-        - Are performance tests included in TDD cycle?
-        - Will TDD methodology ensure production quality?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What TDD enforcement approach optimizes production quality?
+          - What RED-GREEN-REFACTOR strategy supports compliance requirements?
+          - How does TDD enforcement connect to production standards and quality assurance?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Testing Question: Am I writing failing tests FIRST for all functionality?]
+          - [Coverage Question: Do tests cover security requirements and edge cases?]
+          - [Performance Question: Are performance tests included in TDD cycle?]
+          - [Quality Question: Will TDD methodology ensure production quality?]
+          - [Enforcement Question: What TDD enforcement ensures maximum production quality?]
+          - [Compliance Question: What testing approach optimizes compliance validation?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this TDD enforcement optimal for production code?
+          - What evidence supports the RED-GREEN-REFACTOR strategy?
+          - How will this enforcement maximize production quality and compliance?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can TDD enforcement be optimized for parallel test development?</tool_optimization>
+        <context_efficiency>How can enforcement optimize context window usage for production standards?</context_efficiency>
+        <dependency_analysis>What TDD enforcement is sequential vs parallel for production quality?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>TDD_ENFORCEMENT: RED tests written for [components] covering [compliance_areas]</output_format>
-      <validation>Comprehensive failing tests written BEFORE any implementation</validation>
+      <validation>Comprehensive failing tests written BEFORE any implementation with enhanced reasoning</validation>
       <enforcement>BLOCK any implementation before failing tests exist - use quality/tdd.md</enforcement>
+      <context_transfer>TDD enforcement and testing for security validation</context_transfer>
     </checkpoint>
-    <checkpoint id="4" verify="true" enforcement="BLOCKING">
+    <checkpoint id="4" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply comprehensive threat modeling and security testing</action>
-      <critical_thinking>
-        - What security threats apply to this production system?
-        - Are security controls testable through TDD?
-        - How do I validate compliance with security frameworks?
-        - Are security tests part of the TDD cycle?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What threat modeling approach optimizes security validation?
+          - What security testing strategy supports production compliance?
+          - How does security modeling connect to TDD methodology and threat mitigation?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Threats Question: What security threats apply to this production system?]
+          - [Controls Question: Are security controls testable through TDD?]
+          - [Compliance Question: How do I validate compliance with security frameworks?]
+          - [Integration Question: Are security tests part of the TDD cycle?]
+          - [Modeling Question: What threat modeling ensures maximum security validation?]
+          - [Testing Question: What security testing optimizes production compliance?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this threat modeling optimal for security validation?
+          - What evidence supports the security testing strategy?
+          - How will this modeling maximize security compliance and threat mitigation?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can threat modeling be optimized for parallel security analysis?</tool_optimization>
+        <context_efficiency>How can modeling optimize context window usage for security validation?</context_efficiency>
+        <dependency_analysis>What security modeling is sequential vs parallel for threat mitigation?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>SECURITY_VALIDATION: Threat model complete with security tests [implemented/verified]</output_format>
-      <validation>Security threats identified and addressed through testable controls</validation>
+      <validation>Security threats identified and addressed through testable controls with enhanced reasoning</validation>
       <enforcement>BLOCK if threat model incomplete or security tests missing</enforcement>
+      <context_transfer>Security validation and threat model for performance implementation</context_transfer>
     </checkpoint>
-    <checkpoint id="5" verify="true" enforcement="BLOCKING">
+    <checkpoint id="5" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Implement with performance benchmarks and TDD validation</action>
-      <critical_thinking>
-        - Are performance requirements testable and measurable?
-        - Do performance tests run as part of TDD cycle?
-        - Will implementation meet <200ms p95 performance target?
-        - Are performance regression tests in place?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What implementation approach optimizes performance validation?
+          - What TDD strategy supports performance benchmarking?
+          - How does implementation connect to performance targets and test validation?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Requirements Question: Are performance requirements testable and measurable?]
+          - [Testing Question: Do performance tests run as part of TDD cycle?]
+          - [Target Question: Will implementation meet <200ms p95 performance target?]
+          - [Regression Question: Are performance regression tests in place?]
+          - [Implementation Question: What implementation approach ensures maximum performance validation?]
+          - [Validation Question: What TDD validation optimizes performance benchmarking?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this implementation approach optimal for performance validation?
+          - What evidence supports the TDD strategy for performance?
+          - How will this implementation maximize performance targets and validation?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can implementation be optimized for parallel performance validation?</tool_optimization>
+        <context_efficiency>How can implementation optimize context window usage for performance testing?</context_efficiency>
+        <dependency_analysis>What implementation is sequential vs parallel for performance validation?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>PERFORMANCE_IMPLEMENTATION: Code with performance tests [passing/benchmarked]</output_format>
-      <validation>Implementation meets performance requirements with test validation</validation>
+      <validation>Implementation meets performance requirements with test validation with enhanced reasoning</validation>
       <enforcement>BLOCK if performance targets not met or tests failing</enforcement>
+      <context_transfer>Performance implementation and benchmarks for quality gate validation</context_transfer>
     </checkpoint>
-    <checkpoint id="6" verify="true" enforcement="BLOCKING">
+    <checkpoint id="6" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Validate ALL quality gates with comprehensive coverage</action>
-      <critical_thinking>
-        - Is test coverage ≥95% for production standards?
-        - Do all security scans pass with zero critical issues?
-        - Are performance benchmarks met and documented?
-        - Is compliance documentation complete and auditable?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What quality gate validation approach optimizes production standards?
+          - What comprehensive coverage strategy supports deployment readiness?
+          - How does validation connect to quality assurance and compliance requirements?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Coverage Question: Is test coverage ≥95% for production standards?]
+          - [Security Question: Do all security scans pass with zero critical issues?]
+          - [Performance Question: Are performance benchmarks met and documented?]
+          - [Documentation Question: Is compliance documentation complete and auditable?]
+          - [Validation Question: What quality gate validation ensures maximum production readiness?]
+          - [Standards Question: What comprehensive coverage optimizes quality assurance?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this quality gate validation optimal for production standards?
+          - What evidence supports the comprehensive coverage approach?
+          - How will this validation maximize production readiness and compliance?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can quality gate validation be optimized for parallel coverage analysis?</tool_optimization>
+        <context_efficiency>How can validation optimize context window usage for quality assurance?</context_efficiency>
+        <dependency_analysis>What validation is sequential vs parallel for quality gate compliance?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>QUALITY_GATES: Coverage [%], Security [clean], Performance [met], Docs [complete]</output_format>
-      <validation>All quality gates pass with documented evidence</validation>
+      <validation>All quality gates pass with documented evidence with enhanced reasoning</validation>
       <enforcement>BLOCK deployment if ANY quality gate fails - must resolve</enforcement>
+      <context_transfer>Quality gate validation for compliance documentation</context_transfer>
     </checkpoint>
-    <checkpoint id="7" verify="true" enforcement="BLOCKING">
+    <checkpoint id="7" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Generate compliance documentation with audit trail</action>
-      <critical_thinking>
-        - Is all compliance documentation automatically generated?
-        - Are audit trails complete and tamper-evident?
-        - Will documentation satisfy regulatory requirements?
-        - Are deployment artifacts properly signed and tracked?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What documentation generation approach optimizes compliance validation?
+          - What audit trail strategy supports regulatory requirements?
+          - How does documentation connect to compliance frameworks and deployment readiness?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Generation Question: Is all compliance documentation automatically generated?]
+          - [Audit Question: Are audit trails complete and tamper-evident?]
+          - [Requirements Question: Will documentation satisfy regulatory requirements?]
+          - [Artifacts Question: Are deployment artifacts properly signed and tracked?]
+          - [Documentation Question: What documentation generation ensures maximum compliance validation?]
+          - [Trail Question: What audit trail optimizes regulatory compliance?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this documentation generation optimal for compliance validation?
+          - What evidence supports the audit trail strategy?
+          - How will this documentation maximize regulatory compliance and deployment readiness?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can documentation generation be optimized for parallel compliance validation?</tool_optimization>
+        <context_efficiency>How can generation optimize context window usage for audit trails?</context_efficiency>
+        <dependency_analysis>What documentation is sequential vs parallel for compliance validation?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>COMPLIANCE_DOCS: Generated with [frameworks] compliance and audit trail</output_format>
-      <validation>Complete compliance documentation with proper audit trails</validation>
+      <validation>Complete compliance documentation with proper audit trails with enhanced reasoning</validation>
       <enforcement>BLOCK if documentation incomplete or audit trail insufficient</enforcement>
+      <context_transfer>Complete compliance documentation with audit trail validation</context_transfer>
     </checkpoint>
   </thinking_pattern>
   

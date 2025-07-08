@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 3.0.0   | 2025-07-07   | stable |
+| 3.0.0   | 2025-07-08   | stable |
 
 # Claude Code Framework Documentation
 
@@ -19,9 +19,8 @@ This directory contains documentation for the Claude Code Modular Agents framewo
 - **[honesty-policy.md](honesty-policy.md)** - Honest assessment of framework capabilities
 
 ### Development Standards
-- **[tdd-standards.md](tdd-standards.md)** - Test-driven development requirements
-- **[production-standards.md](production-standards.md)** - Quality and performance standards
-- **[critical-thinking-enforcement.md](critical-thinking-enforcement.md)** - Analytical thinking requirements
+- **[quality-and-production-standards.md](quality-and-production-standards.md)** - Comprehensive quality and performance standards
+- **[development-standards.md](development-standards.md)** - TDD requirements and critical thinking enforcement
 - **[NAMING_CONVENTIONS.md](NAMING_CONVENTIONS.md)** - Consistent naming patterns
 
 ### Workflow Guides
@@ -52,7 +51,7 @@ This directory contains documentation for the Claude Code Modular Agents framewo
 → [NAMING_CONVENTIONS.md](NAMING_CONVENTIONS.md), [TEMPLATE_FORMAT.md](TEMPLATE_FORMAT.md)
 
 **"I want to write better code"**
-→ [tdd-standards.md](tdd-standards.md), [critical-thinking-enforcement.md](critical-thinking-enforcement.md)
+→ [quality-and-production-standards.md](quality-and-production-standards.md), [development-standards.md](development-standards.md)
 
 ### By Topic
 
@@ -62,9 +61,9 @@ This directory contains documentation for the Claude Code Modular Agents framewo
 - Module system
 
 **Development Practices**
-- TDD and quality standards
-- Critical thinking requirements
-- Production readiness
+- Comprehensive quality and production standards
+- TDD requirements with critical thinking enforcement
+- Production readiness and performance benchmarks
 
 **Troubleshooting**
 - Permission management

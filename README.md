@@ -2,21 +2,24 @@
 
 > 🚀 **A prompt engineering framework that improves Claude Code workflow efficiency through organized prompts and GitHub integration**
 
-[![Version](https://img.shields.io/badge/version-2.4.0-blue.svg)](https://github.com/swm-sink/claude-code-modular-agents)
+[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://github.com/swm-sink/claude-code-modular-agents)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Claude 4](https://img.shields.io/badge/Claude-4%20Optimized-purple.svg)](CLAUDE.md)
+[![Framework](https://img.shields.io/badge/Framework-3.0%20Meta--Prompting-purple.svg)](CLAUDE.md)
 
 ## What is This?
 
-Claude Code Modular Agents is a personal development tool that enhances your Claude Code workflow through:
+Claude Code Modular Agents is a revolutionary Framework 3.0 development tool that enhances your Claude Code workflow through:
 
-- **🎯 Smart Commands**: Intelligent routing that understands context
-- **🧩 Modular Prompts**: Reusable components that reduce repetition  
-- **✅ Quality Reminders**: Built-in TDD and best practice prompts
-- **📊 GitHub Integration**: Issue-based tracking for complex work
-- **🔧 Organized Structure**: 29 specialized prompt modules across 7 categories
+- **🎯 Smart Commands**: Intelligent routing with TDD-aware decision making
+- **🧩 Modular Prompts**: 100+ reusable components with dependency management
+- **✅ Quality Gates**: Automated TDD enforcement and quality validation
+- **📊 GitHub Integration**: Issue-based tracking with session management
+- **🔧 Organized Structure**: Module runtime engine with deterministic execution
+- **🧠 Meta-Prompting**: Self-improving framework with adaptive capabilities
+- **⚡ Claude 4 Optimized**: Advanced thinking patterns and parallel execution
 
-**Reality Check**: This is a sophisticated prompt engineering system, NOT autonomous AI agents or enterprise software. It's a personal productivity tool.
+**Framework 3.0**: This is a sophisticated meta-prompting system with self-improvement capabilities, NOT autonomous AI agents. It's a personal productivity tool that evolves with your needs.
 
 ## Quick Start (30 seconds!)
 
@@ -50,13 +53,16 @@ cp claude-code-modular-agents/CLAUDE.md your-project/
 
 ### The 5 Essential Commands
 
-| Command | Purpose | Example |
-|---------|---------|---------|
-| `/auto` | Smart routing - decides what you need | `/auto "add user login"` |
-| `/task` | Single component work with TDD | `/task "fix password reset"` |
-| `/feature` | Complete feature with PRD | `/feature "shopping cart"` |
-| `/swarm` | Complex multi-component work | `/swarm "migrate to GraphQL"` |
-| `/query` | Research without changes | `/query "explain auth flow"` |
+| Command | Purpose | Framework 3.0 Enhancement | Example |
+|---------|---------|-------------------------|---------|
+| `/auto` | Smart routing with TDD awareness | Meta-prompting intelligence | `/auto "add user login"` |
+| `/task` | Single component work | Strict TDD enforcement | `/task "fix password reset"` |
+| `/feature` | Complete feature with PRD | PRD-driven with quality gates | `/feature "shopping cart"` |
+| `/swarm` | Complex multi-component work | Multi-agent coordination | `/swarm "migrate to GraphQL"` |
+| `/query` | Research without changes | Test-aware analysis | `/query "explain auth flow"` |
+| `/docs` | Documentation gateway | FOCUS framework integration | `/docs generate "API Guide"` |
+| `/session` | Session management | GitHub issue tracking | `/session create "feature work"` |
+| `/protocol` | Production standards | Maximum quality enforcement | `/protocol "deploy feature"` |
 
 ### Visual Command Flow
 
@@ -114,17 +120,21 @@ Your Request → /auto → Intelligent Routing → Right Command → Quality Out
 
 ```
 .claude/
-├── commands/        # Smart command routers (delegation only)
-├── modules/         # Actual implementation prompts
-│   ├── security/    # Security reminder prompts
-│   ├── quality/     # TDD and quality prompts
-│   ├── development/ # Development workflow prompts
-│   └── patterns/    # Reusable pattern prompts
-├── templates/       # Format templates for new files
-└── settings/        # Your preferences
+├── commands/        # 8 core commands with module runtime engine
+├── modules/         # 100+ implementation modules organized by category
+│   ├── security/    # Threat modeling, audit, compliance
+│   ├── quality/     # TDD, critical thinking, universal quality gates
+│   ├── development/ # Research, documentation, task management
+│   ├── patterns/    # Multi-agent, session management, intelligent routing
+│   ├── planning/    # PRD generation, MVP strategy, feature workflow
+│   ├── testing/     # Auto-testing, iterative testing patterns
+│   └── frameworks/  # FOCUS, AWARE, RISE, TRACE framework implementations
+├── templates/       # Framework 3.0 format templates
+├── context/         # Session management and artifact preservation
+└── analytics/       # Framework health monitoring and metrics
 ```
 
-**Philosophy**: *"Commands delegate, modules implement"*
+**Framework 3.0 Philosophy**: *"Commands delegate, modules implement, meta-prompting evolves"*
 
 ## File Format Standard (Framework 3.0)
 
@@ -134,7 +144,7 @@ All framework files follow a standardized table-based format:
 ```markdown
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.0.0   | 2025-07-07   | stable |
+| 3.0.0   | 2025-07-08   | stable |
 ```
 
 ### Document Structure
@@ -152,45 +162,54 @@ All framework files follow a standardized table-based format:
 ────────────────────────────────────────────────────────────────────────────────
 ```
 
-### Key Format Elements
-- **Version table**: Tracks versions, updates, and status
+### Framework 3.0 Format Elements
+- **Version table**: Tracks versions, updates, and status with temporal standards
 - **Horizontal separators**: 80-character lines using `────`
-- **XML configuration blocks**: Structured, semantic content
-- **Clear section organization**: Logical flow with proper spacing
+- **XML configuration blocks**: Structured, semantic content with Claude 4 optimization
+- **Thinking patterns**: Interleaved thinking blocks with critical analysis
+- **Module runtime**: Deterministic execution with quality gates
+- **Meta-prompting**: Self-improvement capabilities with safety boundaries
 
 ### Templates Available
-- **Command template**: `.claude/templates/command-template.md`
-- **Module template**: `.claude/templates/module-template.md`
+- **Command template**: `.claude/templates/command-template.md` (Framework 3.0)
+- **Module template**: `.claude/templates/module-template.md` (Framework 3.0)
+- **Quality gates**: Universal validation framework
+- **TDD integration**: Mandatory test-driven development patterns
 
-## Documentation
+## Documentation (Framework 3.0)
 
-- **[Getting Started](docs/GETTING_STARTED.md)** - 3-minute quickstart
-- **[Documentation Index](docs/DOCUMENTATION_INDEX.md)** - Find anything quickly
-- **[CLAUDE.md](CLAUDE.md)** - Core framework rules (reference)
-- **[Templates](.claude/templates/)** - Format templates for new files
-- **[Framework Guides](docs/framework/)** - Deep dives on specific topics
-- **[Examples](projects-test/)** - See it in action
+- **[Getting Started](docs/GETTING_STARTED.md)** - 3-minute quickstart with Framework 3.0
+- **[Documentation Index](docs/DOCUMENTATION_INDEX.md)** - Navigate the streamlined docs
+- **[CLAUDE.md](CLAUDE.md)** - Framework 3.0 control document (reference)
+- **[Quality & Production Standards](docs/framework/quality-and-production-standards.md)** - Comprehensive quality guide
+- **[Development Standards](docs/framework/development-standards.md)** - TDD and critical thinking
+- **[Claude 4 Integration](docs/CLAUDE_4_PROMPT_GUIDE.md)** - Advanced Claude 4 optimization
+- **[Command Selection Guide](docs/COMMAND_SELECTION_GUIDE.md)** - Choose the right command
+- **[Templates](.claude/templates/)** - Framework 3.0 format templates
 
 ## Requirements
 
-- Claude Code (Claude Desktop App)
-- Git for version control
-- GitHub CLI (`gh`) for issue tracking
-- Basic terminal knowledge
+- **Claude Code** (Claude Desktop App) - Framework 3.0 optimized
+- **Git** for version control and session tracking
+- **GitHub CLI** (`gh`) for issue tracking and session management
+- **Python 3.8+** for framework health monitoring and analytics
+- **Basic terminal knowledge** for command execution
 
 ## Contributing
 
-We welcome contributions! The framework is designed to be extended:
-1. Commands go in `.claude/commands/`
-2. Implementation modules go in `.claude/modules/`
-3. Follow the delegation pattern
-4. Keep modules under 2k tokens
+We welcome contributions! Framework 3.0 is designed for extensibility:
+1. **Commands** go in `.claude/commands/` with module runtime integration
+2. **Implementation modules** go in `.claude/modules/` by category
+3. **Follow Framework 3.0** standards with quality gates and TDD
+4. **Keep modules focused** - single responsibility with clear interfaces
+5. **Use templates** for consistent formatting and structure
+6. **Test your contributions** with the validation framework
 
 ## Support
 
 - **Issues**: [GitHub Issues](https://github.com/swm-sink/claude-code-modular-agents/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/swm-sink/claude-code-modular-agents/discussions)
-- **Quick Help**: Use `/docs "your question"`
+- **Quick Help**: Use `/query "your question"` for research or `/docs generate` for documentation
 
 ## License
 
@@ -199,9 +218,15 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ---
 
 <p align="center">
-  <strong>🚀 Start with <code>/auto</code> and let the framework handle the complexity!</strong>
+  <strong>🚀 Framework 3.0: Start with <code>/auto</code> and let meta-prompting handle the complexity!</strong>
 </p>
 
 <p align="center">
-  <em>"Let the framework think, so you can create."</em>
+  <em>"Commands delegate, modules implement, meta-prompting evolves."</em>
+</p>
+
+<p align="center">
+  <strong>Framework 3.0 Features:</strong><br>
+  📊 Module Runtime Engine | 🧠 Meta-Prompting | ✅ Universal Quality Gates<br>
+  🔍 Claude 4 Optimization | 🎯 TDD Enforcement | 📈 Self-Improvement
 </p>

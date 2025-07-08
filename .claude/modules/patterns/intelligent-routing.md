@@ -265,6 +265,7 @@
           </complexity_scoring>
           
           <routing_thresholds verified="anthropic_docs">
+            <context_prime_threshold max="0">Context establishment and project priming</context_prime_threshold>
             <query_threshold max="2">Research and analysis only</query_threshold>
             <task_threshold range="3-9">Single-agent development work</task_threshold>
             <feature_threshold range="5-8">PRD-driven autonomous development</feature_threshold>
@@ -466,17 +467,36 @@
     </optional_creation>
   </session_decision_logic>
   
+  <context_prime_integration>
+    <routing_enhancement>
+      <context_aware_routing>Enhanced routing decisions based on project context understanding</context_aware_routing>
+      <priming_triggers>Automatic routing to /context-prime for context establishment needs</priming_triggers>
+      <performance_optimization>Routing optimization using context-prime performance insights</performance_optimization>
+      <workflow_intelligence>Smart routing based on project workflow patterns and requirements</workflow_intelligence>
+    </routing_enhancement>
+    
+    <integration_patterns>
+      <pre_development>Route to context-prime before development workflow initiation</pre_development>
+      <session_enhancement>Context-prime routing for enhanced session management</session_enhancement>
+      <performance_coordination>Coordinate routing performance with context-prime optimization</performance_coordination>
+      <security_alignment>Align routing security with context-prime security controls</security_alignment>
+    </integration_patterns>
+  </context_prime_integration>
+  
   <integration_points>
     <depends_on>
       All other modules for dynamic composition based on requirements
       patterns/pattern-library.md for proven execution patterns
       quality/critical-thinking.md for rigorous analysis methodology
       quality/error-recovery.md for error-aware routing and recovery integration
+      context/project-priming.md for context establishment and project understanding
     </depends_on>
     <provides_to>
       All commands for intelligent routing and module composition decisions
+      commands/context-prime.md for context-aware routing optimization
       patterns/session-management.md for automatic session creation logic
       quality/error-recovery.md for error escalation and recovery routing
+      context/project-priming.md for enhanced routing intelligence
     </provides_to>
   </integration_points>
   

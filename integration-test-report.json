@@ -1,0 +1,141 @@
+{
+  "report_id": "integration-report-1752003054",
+  "timestamp": 1752003054.721453,
+  "orchestrator_id": "integration-1752003053",
+  "test_result": {
+    "test_id": "integration-1752003053-production_deployment",
+    "passed": false,
+    "agents_tested": [
+      "deployment",
+      "rollback",
+      "monitoring",
+      "validation"
+    ],
+    "test_duration": 0.7468981742858887,
+    "context_compliance": false,
+    "expectation_fulfillment": false,
+    "integration_success": false,
+    "performance_metrics": {},
+    "error_message": "Deployment flow failed"
+  },
+  "agent_status": {
+    "deployment": {
+      "loaded": true,
+      "type": "ProductionDeploymentAgent"
+    },
+    "rollback": {
+      "loaded": true,
+      "type": "RollbackAgent"
+    },
+    "monitoring": {
+      "loaded": true,
+      "type": "MonitoringAgent"
+    },
+    "validation": {
+      "loaded": true,
+      "type": "ValidationAgent"
+    }
+  },
+  "integration_log": [
+    {
+      "timestamp": 1752003053.97453,
+      "event": "agents_loaded",
+      "orchestrator_id": "integration-1752003053",
+      "details": {
+        "count": 4
+      }
+    },
+    {
+      "timestamp": 1752003053.974535,
+      "event": "integration_test_start",
+      "orchestrator_id": "integration-1752003053",
+      "details": {
+        "test_name": "production_deployment"
+      }
+    },
+    {
+      "timestamp": 1752003053.974536,
+      "event": "testing_agent_initialization",
+      "orchestrator_id": "integration-1752003053",
+      "details": {}
+    },
+    {
+      "timestamp": 1752003053.974614,
+      "event": "agent_initialized",
+      "orchestrator_id": "integration-1752003053",
+      "details": {
+        "agent": "deployment"
+      }
+    },
+    {
+      "timestamp": 1752003053.974638,
+      "event": "agent_initialized",
+      "orchestrator_id": "integration-1752003053",
+      "details": {
+        "agent": "rollback"
+      }
+    },
+    {
+      "timestamp": 1752003053.974656,
+      "event": "agent_initialized",
+      "orchestrator_id": "integration-1752003053",
+      "details": {
+        "agent": "monitoring"
+      }
+    },
+    {
+      "timestamp": 1752003053.9746718,
+      "event": "agent_initialized",
+      "orchestrator_id": "integration-1752003053",
+      "details": {
+        "agent": "validation"
+      }
+    },
+    {
+      "timestamp": 1752003053.974674,
+      "event": "testing_inter_agent_communication",
+      "orchestrator_id": "integration-1752003053",
+      "details": {}
+    },
+    {
+      "timestamp": 1752003054.417237,
+      "event": "inter_agent_communication_success",
+      "orchestrator_id": "integration-1752003053",
+      "details": {}
+    },
+    {
+      "timestamp": 1752003054.4172428,
+      "event": "testing_deployment_flow",
+      "orchestrator_id": "integration-1752003053",
+      "details": {}
+    },
+    {
+      "timestamp": 1752003054.721419,
+      "event": "deployment_flow_failed",
+      "orchestrator_id": "integration-1752003053",
+      "details": {
+        "error": "'bool' object is not callable"
+      }
+    },
+    {
+      "timestamp": 1752003054.721434,
+      "event": "integration_test_failed",
+      "orchestrator_id": "integration-1752003053",
+      "details": {
+        "duration": 0.7468981742858887,
+        "error": "Deployment flow failed"
+      }
+    }
+  ],
+  "trace_validation": {
+    "context_compliance": false,
+    "expectation_fulfillment": false,
+    "framework_standards": false
+  },
+  "recommendations": [
+    "Address integration test failures before deployment",
+    "Improve TRACE framework context compliance",
+    "Ensure all TRACE expectations are met",
+    "Improve overall system performance to meet 19.2% target"
+  ]
+}

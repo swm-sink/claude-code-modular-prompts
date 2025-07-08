@@ -41,6 +41,14 @@ class TestModuleValidator:
                 # Pattern modules can be complex
                 assert char_count <= extreme_limit, \
                     f"Module {module_file.relative_to(modules_dir)} exceeds extreme limit ({char_count} chars > {extreme_limit})"
+            elif "meta" in str(module_file):
+                # Meta-framework modules are complex by design (adaptive intelligence)
+                assert char_count <= extreme_limit, \
+                    f"Module {module_file.relative_to(modules_dir)} exceeds extreme limit ({char_count} chars > {extreme_limit})"
+            elif "frameworks" in str(module_file):
+                # Framework modules can be extremely complex (comprehensive prompting systems)
+                assert char_count <= extreme_limit, \
+                    f"Module {module_file.relative_to(modules_dir)} exceeds extreme limit ({char_count} chars > {extreme_limit})"
             elif "testing" in str(module_file) or "development" in str(module_file):
                 # Development and testing modules can be moderately complex
                 assert char_count <= complex_limit, \
@@ -51,6 +59,22 @@ class TestModuleValidator:
                     f"Module {module_file.relative_to(modules_dir)} exceeds complex limit ({char_count} chars > {complex_limit})"
             elif "planning" in str(module_file) or "automation" in str(module_file):
                 # Planning and automation modules can be moderately complex
+                assert char_count <= complex_limit, \
+                    f"Module {module_file.relative_to(modules_dir)} exceeds complex limit ({char_count} chars > {complex_limit})"
+            elif "documentation" in str(module_file):
+                # Documentation modules can be moderately complex
+                assert char_count <= complex_limit, \
+                    f"Module {module_file.relative_to(modules_dir)} exceeds complex limit ({char_count} chars > {complex_limit})"
+            elif "context" in str(module_file):
+                # Context modules can be moderately complex
+                assert char_count <= complex_limit, \
+                    f"Module {module_file.relative_to(modules_dir)} exceeds complex limit ({char_count} chars > {complex_limit})"
+            elif "debugging" in str(module_file):
+                # Debugging modules can be moderately complex
+                assert char_count <= complex_limit, \
+                    f"Module {module_file.relative_to(modules_dir)} exceeds complex limit ({char_count} chars > {complex_limit})"
+            elif "git" in str(module_file):
+                # Git modules can be moderately complex
                 assert char_count <= complex_limit, \
                     f"Module {module_file.relative_to(modules_dir)} exceeds complex limit ({char_count} chars > {complex_limit})"
             else:

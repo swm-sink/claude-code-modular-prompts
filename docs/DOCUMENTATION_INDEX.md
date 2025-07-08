@@ -1,8 +1,8 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.4.0   | 2025-07-08   | stable |
+| 3.0.0   | 2025-07-08   | stable |
 
-# Documentation Index
+# Documentation Index - Framework 3.0 (Streamlined)
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -12,18 +12,19 @@
 
 ## 🚀 Start Here
 
-### Essential Docs
-- **[Getting Started](GETTING_STARTED.md)** - 3-minute quickstart guide
-- **[CLAUDE.md](../CLAUDE.md)** - Core framework rules (reference only)
-- **[README](../README.md)** - Project overview
-- **[Templates](../.claude/templates/)** - Format templates for new files
+### Essential Docs (Framework 3.0)
+- **[Getting Started](GETTING_STARTED.md)** - 3-minute quickstart with Framework 3.0
+- **[CLAUDE.md](../CLAUDE.md)** - Framework 3.0 control document with meta-prompting
+- **[README](../README.md)** - Project overview updated for Framework 3.0
+- **[Command Selection Guide](COMMAND_SELECTION_GUIDE.md)** - Choose the right command for your task
+- **[Templates](../.claude/templates/)** - Framework 3.0 format templates
 
 ### Quick References
-- **[Command Overview](commands/overview.md)** - Complete command reference with 2.4.0 runtime engine features
-- **[Command Selection Guide](COMMAND_SELECTION_GUIDE.md)** - Stop confusion between `/docs` and `/query`!
-- **[All Commands](#-commands)** - What each command does
+- **[Command Overview](commands/overview.md)** - Complete command reference with Framework 3.0 runtime engine
+- **[Command Selection Guide](COMMAND_SELECTION_GUIDE.md)** - Never confused about which command to use!
+- **[All Commands](#-commands)** - Framework 3.0 command capabilities
+- **[Quality Standards](#-quality--development)** - TDD, quality gates, and production standards
 - **[Common Tasks](#-common-tasks)** - Solutions to everyday needs
-- **[Troubleshooting](#-troubleshooting)** - Fix common issues
 
 ---
 
@@ -31,21 +32,21 @@
 
 > **📖 Complete Reference**: See **[Command Overview](commands/overview.md)** for detailed command documentation with 2.4.0 runtime engine features!
 
-### Core Commands (Use These 90% of the Time)
-| Command | Purpose | 2.4.0 Enhancement | Example |
-|---------|---------|-------------------|---------|
-| `/auto` | Smart routing - decides what you need | TDD-aware intelligent routing | `/auto "add user login"` |
-| `/task` | Single component work with TDD | Standard TDD enforcement | `/task "fix login bug"` |
-| `/feature` | Complete feature with PRD & MVP | Feature-level TDD integration | `/feature "shopping cart"` |
-| `/swarm` | Complex multi-component work | Multi-agent TDD coordination | `/swarm "migrate to GraphQL"` |
-| `/query` | **Research ONLY** - understand code, no file changes | Test-aware research patterns | `/query "how does auth work?"` |
-| `/docs` | **Documentation ONLY** - create/update docs | TDD methodology integration | `/docs generate "API Guide"` |
+### Core Commands (Framework 3.0)
+| Command | Purpose | Framework 3.0 Enhancement | Example |
+|---------|---------|---------------------------|---------|
+| `/auto` | Smart routing with meta-prompting | TDD-aware intelligent routing with self-improvement | `/auto "add user login"` |
+| `/task` | Single component work | Strict TDD enforcement with quality gates | `/task "fix login bug"` |
+| `/feature` | Complete feature with PRD & MVP | PRD-driven with universal quality gates | `/feature "shopping cart"` |
+| `/swarm` | Complex multi-component work | Multi-agent coordination with runtime engine | `/swarm "migrate to GraphQL"` |
+| `/query` | **Research ONLY** - understand code | Test-aware analysis with no modifications | `/query "how does auth work?"` |
+| `/docs` | **Documentation ONLY** - create/update docs | FOCUS framework integration with gateway enforcement | `/docs generate "API Guide"` |
 
-### Specialized Commands
-| Command | Purpose | 2.4.0 Enhancement | When to Use |
-|---------|---------|-------------------|-------------|
-| `/session` | Manage GitHub issues | TDD progress tracking | Complex project tracking |
-| `/protocol` | Production standards enforcement | Strictest TDD + all quality gates | Production-critical development |
+### Specialized Commands (Framework 3.0)
+| Command | Purpose | Framework 3.0 Enhancement | When to Use |
+|---------|---------|---------------------------|-------------|
+| `/session` | Session management | GitHub issue tracking with context preservation | Complex project tracking |
+| `/protocol` | Production standards | Maximum quality enforcement with all gates | Production-critical development |
 
 ---
 
@@ -94,82 +95,59 @@
 
 ---
 
-## 📖 Documentation by Category
+## 📖 Streamlined Documentation (Framework 3.0)
 
-### 🏗️ Architecture & Design
-- **[Framework Overview](framework/README.md)** - How it all fits together
-- **[Project Structure](framework/PROJECT_STRUCTURE_ANALYSIS.md)** - Directory layout
-- **[Module System](.claude/README.md)** - Modular architecture
+### 🏗️ Core Framework
+- **[Framework Overview](framework/README.md)** - Framework 3.0 architecture
+- **[Module System](.claude/README.md)** - 100+ modular components
+- **[Module Runtime Engine](framework/module-runtime-engine.md)** - Deterministic execution engine
 
-### ⚙️ Module Runtime Engine (Framework 2.4.0)
-- **[Command Overview](commands/overview.md)** - Complete command reference with runtime engine integration
-- **[Module Runtime Engine User Guide](framework/module-runtime-engine.md)** - Comprehensive guide for practical usage and troubleshooting
-- **[Runtime Engine Overview](.claude/modules/patterns/module-composition-framework.md)** - Deterministic module composition and execution
-- **[Universal Quality Gates](.claude/modules/quality/universal-quality-gates.md)** - Comprehensive validation framework
-- **[TDD Enforcement](.claude/modules/quality/tdd.md)** - Strict test-driven development
-- **[Thinking Pattern Template](.claude/modules/patterns/thinking-pattern-template.md)** - Standardized command checkpoints
-- **[Command Runtime Specifications](../CLAUDE.md#module_runtime_engine)** - Command-specific runtime behaviors
-- **[Error Handling & Recovery](.claude/modules/patterns/module-composition-framework.md#error_handling)** - Recovery protocols and escalation
-- **[Performance Optimization](.claude/modules/patterns/module-composition-framework.md#execution_optimization)** - Parallel execution and batching
-- **[Module Integration Points](.claude/modules/patterns/module-composition-framework.md#integration_points)** - Framework integration specifications
+### 📊 Quality & Development
+- **[Quality & Production Standards](framework/quality-and-production-standards.md)** - Comprehensive quality guide
+- **[Development Standards](framework/development-standards.md)** - TDD and critical thinking
+- **[AWARE Framework](framework/aware-framework.md)** - Systematic thinking patterns
 
-#### Command Runtime Behaviors
-| Command | Runtime Pattern | Quality Gates | TDD Enforcement |
-|---------|----------------|---------------|-----------------|
-| `/task` | Single-component TDD | Foundational + Development | Standard cycle |
-| `/swarm` | Multi-agent coordination | All gates + Coordination | Isolated worktrees |
-| `/auto` | TDD-aware routing | Analysis + Routing | Routes to TDD commands |
-| `/query` | Read-only analysis | Analysis only | Test-aware research |
-| `/session` | Session with TDD tracking | Foundational + Progress | Progress tracking |
-| `/protocol` | Strictest enforcement | ALL gates | Production compliance |
-| `/docs` | Documentation gateway | Foundational + Standards | Methodology docs |
+### ⚡ Advanced Framework 3.0
+- **[Claude 4 Integration](CLAUDE_4_PROMPT_GUIDE.md)** - Advanced Claude 4 optimization
+- **[Claude Code Integration](framework/claude-code-integration.md)** - Terminal optimization
+- **[Feature Examples](framework/feature-development-examples.md)** - Real-world scenarios
 
-#### Quality Gate Categories
-- **Foundational Gates**: Critical thinking, requirement clarity, module integration, error handling
-- **Development Gates**: TDD compliance, code quality, security requirements, performance validation
-- **Coordination Gates**: Multi-agent synchronization, session tracking, integration validation
-- **Documentation Gates**: Standards compliance, TDD methodology documentation
-- **Analysis Gates**: Research comprehensiveness, routing decision quality
-
-### 🛠️ Development Guides
-- **[TDD Standards](framework/tdd-standards.md)** - Test-driven development
-- **[Production Standards](framework/production-standards.md)** - Quality requirements
-- **[AWARE Framework](framework/aware-framework.md)** - Systematic thinking
-- **[Feature Examples](framework/feature-development-examples.md)** - Real scenarios
-
-### 🔧 Configuration
-- **[Settings Configuration](.claude/settings.json)** - Main settings file
+### 🔧 Configuration & Troubleshooting
 - **[Permission Guide](framework/PERMISSION_GUIDE.md)** - Fix permission issues
 - **[Naming Conventions](framework/NAMING_CONVENTIONS.md)** - Consistent naming
+- **[Template Format](framework/TEMPLATE_FORMAT.md)** - Framework 3.0 format standards
 
-### 🎓 Best Practices
-- **[Critical Thinking](framework/critical-thinking-enforcement.md)** - Analysis patterns
+### 🎓 Advanced Topics
 - **[Native Patterns](framework/native-patterns.md)** - Claude Code patterns
-- **[Pattern Integration Map](PATTERN_INTEGRATION_MAP.md)** - Pattern usage across framework
 - **[Honesty Policy](framework/honesty-policy.md)** - Framework limitations
+- **[Multi-Agent Coordination](advanced/multi-agent-coordination.md)** - Complex workflows
+- **[Archive Management](advanced/archive-management.md)** - Data lifecycle management
 
-### 📊 Advanced Topics
-- **[Claude 4 Guide](CLAUDE_4_PROMPT_GUIDE.md)** - Claude 4 optimizations
-- **[Integration Guide](framework/claude-code-integration.md)** - Claude integration
-- **[Template Format](framework/TEMPLATE_FORMAT.md)** - Doc templates
+### 📋 Essential Reports
+- **[Production Readiness](reports/PRODUCTION_READINESS_VALIDATION_REPORT_2025-07-08.md)** - Framework validation
+- **[GitHub Issues Cleanup](reports/GITHUB_ISSUES_CLEANUP_2025-07-08.md)** - Maintenance record
 
 ---
 
-## 🔍 Finding Documentation
+## 🔍 Finding Documentation (Framework 3.0)
 
-### Search by Topic
+### Smart Search
 ```bash
-# Find specific topics
+# Research existing code and docs
 /query "permission errors"
-/query "TDD examples"
-/query "swarm command"
+/query "TDD examples" 
+/query "swarm command usage"
+
+# Generate new documentation
+/docs generate "Setup Guide"
+/docs search "quality standards"
 ```
 
 ### Browse by Location
-- **Commands**: `.claude/commands/`
-- **Modules**: `.claude/modules/`
-- **Guides**: `docs/framework/`
-- **Settings**: `.claude/settings/`
+- **Commands**: `.claude/commands/` (8 core commands)
+- **Modules**: `.claude/modules/` (100+ implementation modules)
+- **Core Guides**: `docs/framework/` (streamlined essentials)
+- **Advanced**: `docs/advanced/` (complex workflows)
 
 ---
 
@@ -204,25 +182,25 @@ rm -f .claude/settings.local.json && ln -sf ~/.claude/settings.json .claude/sett
 
 ## 📝 Quick Reference Card
 
-### The 80/20 Commands (Framework 2.4.0)
+### Essential Commands (Framework 3.0)
 ```bash
-/auto "..."     # TDD-aware intelligent routing (70% faster)
-/task "..."     # Single component with TDD enforcement
-/feature "..."  # Complete features with PRD + TDD integration
-/query "..."    # Test-aware research only
-/docs "..."     # Documentation with TDD methodology
-/protocol "..." # Maximum quality gates for production
+/auto "..."     # Meta-prompting intelligent routing with self-improvement
+/task "..."     # Single component with strict TDD enforcement
+/feature "..."  # Complete features with PRD + universal quality gates
+/query "..."    # Test-aware research with no modifications
+/docs "..."     # Documentation with FOCUS framework integration
+/protocol "..." # Maximum quality enforcement for production
 ```
 
-### Key Principles (Enhanced in 2.4.0)
-- **TDD First** - All development enforces RED-GREEN-REFACTOR
-- **Quality Gates** - Universal validation prevents errors  
-- **Critical Thinking** - 30-second analysis before action
-- **Parallel Execution** - 70% performance improvement
-- **Start with `/auto`** - It figures out what you need
-- **Trust the framework** - It enforces best practices
-- **Use GitHub tracking** - For complex work
-- **Read before writing** - Framework handles research
+### Framework 3.0 Principles
+- **TDD First** - Mandatory RED-GREEN-REFACTOR with blocking enforcement
+- **Quality Gates** - Universal validation with comprehensive coverage
+- **Critical Thinking** - 30-second minimum analysis before any action
+- **Meta-Prompting** - Self-improving framework with adaptive capabilities
+- **Module Runtime** - Deterministic execution with parallel optimization
+- **Start with `/auto`** - Let meta-prompting handle complexity
+- **Trust the framework** - It evolves and improves automatically
+- **Session tracking** - GitHub integration for complex workflows
 
 ### Workflow Pattern
 ```

@@ -255,12 +255,16 @@ class TestFrameworkVersionAdvancement:
         """Get CLAUDE.md file path."""
         return Path(__file__).parent.parent.parent / "CLAUDE.md"
     
-    def test_framework_version_advanced_to_2_4_1(self, claude_md_path):
-        """Test that framework version is advanced to 2.4.1."""
+    def test_framework_version_advanced_to_3_0_0(self, claude_md_path):
+        """Test that framework version is advanced to 3.0.0."""
         content = claude_md_path.read_text()
-        # Should contain version 2.4.1 somewhere in version tables
-        assert "2.4.1" in content, \
-            "Framework version not advanced to 2.4.1"
+        # Should contain version 3.0.0 somewhere in version tables
+        assert "3.0.0" in content, \
+            "Framework version not advanced to 3.0.0"
+        
+        # Should contain meta-framework control system
+        assert "meta_framework_control" in content, \
+            "Meta-framework control system not found in CLAUDE.md"
     
     def test_version_table_updated_with_current_date(self, claude_md_path):
         """Test that version table contains current date."""

@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.6.0   | 2025-07-08   | stable |
+| 3.0.0   | 2025-07-08   | stable |
 
 # /docs - FOCUS framework documentation creation with intelligent routing and gateway enforcement
 
@@ -18,90 +18,185 @@
   </delegation>
   
   <thinking_pattern enforcement="CRITICAL">
-    <checkpoint id="1" verify="true" enforcement="BLOCKING">
+    <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply FOCUS framework - Analyze Function and gateway enforcement</action>
-      <critical_thinking>
-        - What is the specific function of this documentation request?
-        - Should this be documentation creation (FOCUS) or research analysis (route to /query)?
-        - How does FOCUS framework function analysis guide proper routing decisions?
-        - What documentation function best serves the user's actual needs?
-        - Is this request aligned with FOCUS framework documentation creation function?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What function analysis approach optimizes documentation gateway enforcement?
+          - What routing strategy supports proper documentation vs research distinction?
+          - How does function analysis connect to FOCUS framework and user needs?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Function Question: What is the specific function of this documentation request?]
+          - [Purpose Question: Should this be documentation creation (FOCUS) or research analysis (route to /query)?]
+          - [Framework Question: How does FOCUS framework function analysis guide proper routing decisions?]
+          - [Needs Question: What documentation function best serves the user's actual needs?]
+          - [Alignment Question: Is this request aligned with FOCUS framework documentation creation function?]
+          - [Optimization Question: What function analysis ensures maximum documentation effectiveness?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this function analysis optimal for documentation gateway enforcement?
+          - What evidence supports the routing strategy?
+          - How will this analysis maximize documentation effectiveness and user satisfaction?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can function analysis be combined with initial documentation assessment?</tool_optimization>
+        <context_efficiency>How can analysis optimize context window usage for documentation?</context_efficiency>
+        <dependency_analysis>What function analysis is sequential vs parallel for gateway enforcement?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>FOCUS_FUNCTION_ANALYSIS:
         - Request function: [documentation_creation/research_analysis]
         - Gateway decision: [confirmed_docs/redirected_to_query]
         - Function alignment: [focus_framework_appropriate]
         - Routing rationale: [decision_reasoning]</output_format>
-      <validation>Documentation function properly analyzed with FOCUS framework and gateway enforcement</validation>
+      <validation>Documentation function properly analyzed with FOCUS framework and gateway enforcement with enhanced reasoning</validation>
       <enforcement>CRITICAL: Block all documentation creation outside this command and route research to /query</enforcement>
+      <context_transfer>Function analysis and gateway decision for objective definition</context_transfer>
     </checkpoint>
-    <checkpoint id="2" verify="true" enforcement="BLOCKING">
+    <checkpoint id="2" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply FOCUS framework - Define Objective and documentation goals</action>
-      <critical_thinking>
-        - What is the specific objective this documentation should achieve?
-        - How does FOCUS framework objective definition guide documentation strategy?
-        - What measurable outcomes define successful documentation completion?
-        - How do documentation objectives align with user needs and framework requirements?
-        - What objective clarity ensures optimal documentation effectiveness?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What objective definition approach optimizes documentation effectiveness?
+          - What goal setting strategy supports FOCUS framework alignment?
+          - How does objective definition connect to user needs and documentation success?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Objective Question: What is the specific objective this documentation should achieve?]
+          - [Strategy Question: How does FOCUS framework objective definition guide documentation strategy?]
+          - [Outcomes Question: What measurable outcomes define successful documentation completion?]
+          - [Alignment Question: How do documentation objectives align with user needs and framework requirements?]
+          - [Clarity Question: What objective clarity ensures optimal documentation effectiveness?]
+          - [Optimization Question: What objective definition ensures maximum documentation success?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this objective definition optimal for documentation effectiveness?
+          - What evidence supports the FOCUS framework strategy?
+          - How will this definition maximize documentation success and user satisfaction?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can objective definition be combined with context evaluation for efficiency?</tool_optimization>
+        <context_efficiency>How can definition optimize context window usage for documentation?</context_efficiency>
+        <dependency_analysis>What objective definition is sequential vs parallel for documentation planning?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>FOCUS_OBJECTIVE_DEFINITION:
         - Documentation objective: [specific_goal_with_outcomes]
         - Success criteria: [measurable_completion_metrics]
         - Framework alignment: [focus_framework_integration]
         - TDD integration: [testing_methodology_inclusion]</output_format>
-      <validation>Documentation objectives clearly defined with FOCUS framework guidance and success metrics</validation>
+      <validation>Documentation objectives clearly defined with FOCUS framework guidance and success metrics with enhanced reasoning</validation>
       <enforcement>BLOCK if objectives unclear or misaligned with FOCUS framework documentation principles</enforcement>
+      <context_transfer>Objective definition and success criteria for context evaluation</context_transfer>
     </checkpoint>
-    <checkpoint id="3" verify="true" enforcement="BLOCKING">
+    <checkpoint id="3" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply FOCUS framework - Evaluate Context and documentation environment</action>
-      <critical_thinking>
-        - What comprehensive context affects documentation creation and effectiveness?
-        - How does FOCUS framework context evaluation guide content strategy?
-        - What existing documentation context should inform new content creation?
-        - What technical and business context influences documentation approach?
-        - How does context analysis optimize documentation relevance and utility?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What context evaluation approach optimizes documentation effectiveness?
+          - What environment assessment strategy supports content strategy?
+          - How does context evaluation connect to documentation relevance and utility?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Context Question: What comprehensive context affects documentation creation and effectiveness?]
+          - [Strategy Question: How does FOCUS framework context evaluation guide content strategy?]
+          - [Existing Question: What existing documentation context should inform new content creation?]
+          - [Influence Question: What technical and business context influences documentation approach?]
+          - [Optimization Question: How does context analysis optimize documentation relevance and utility?]
+          - [Evaluation Question: What context evaluation ensures maximum documentation effectiveness?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this context evaluation optimal for documentation effectiveness?
+          - What evidence supports the FOCUS framework strategy?
+          - How will this evaluation maximize documentation relevance and utility?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can context evaluation be optimized for parallel analysis?</tool_optimization>
+        <context_efficiency>How can evaluation optimize context window usage for documentation?</context_efficiency>
+        <dependency_analysis>What context evaluation is sequential vs parallel for content strategy?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>FOCUS_CONTEXT_EVALUATION:
         - Documentation context: [existing_content_and_gaps]
         - Technical context: [system_architecture_and_patterns]
         - Business context: [user_needs_and_organizational_requirements]
         - Content strategy: [context_informed_approach]</output_format>
-      <validation>Documentation context comprehensively evaluated with FOCUS framework guidance</validation>
+      <validation>Documentation context comprehensively evaluated with FOCUS framework guidance with enhanced reasoning</validation>
       <enforcement>ENSURE context analysis includes existing documentation, TDD practices, and framework requirements</enforcement>
+      <context_transfer>Context evaluation and content strategy for user assessment</context_transfer>
     </checkpoint>
-    <checkpoint id="4" verify="true" enforcement="BLOCKING">
+    <checkpoint id="4" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply FOCUS framework - Assess User needs and documentation requirements</action>
-      <critical_thinking>
-        - Who are the specific users of this documentation and what are their needs?
-        - How does FOCUS framework user assessment guide content creation?
-        - What user experience considerations optimize documentation effectiveness?
-        - How do different user types (developers, stakeholders, etc.) influence approach?
-        - What user-centered design principles improve documentation utility?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What user assessment approach optimizes documentation effectiveness?
+          - What needs analysis strategy supports user-centered design?
+          - How does user assessment connect to documentation utility and experience?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Users Question: Who are the specific users of this documentation and what are their needs?]
+          - [Guidance Question: How does FOCUS framework user assessment guide content creation?]
+          - [Experience Question: What user experience considerations optimize documentation effectiveness?]
+          - [Types Question: How do different user types (developers, stakeholders, etc.) influence approach?]
+          - [Principles Question: What user-centered design principles improve documentation utility?]
+          - [Assessment Question: What user assessment ensures maximum documentation effectiveness?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this user assessment optimal for documentation effectiveness?
+          - What evidence supports the user-centered approach?
+          - How will this assessment maximize documentation utility and user satisfaction?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can user assessment be optimized for parallel analysis?</tool_optimization>
+        <context_efficiency>How can assessment optimize context window usage for documentation?</context_efficiency>
+        <dependency_analysis>What user assessment is sequential vs parallel for content creation?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>FOCUS_USER_ASSESSMENT:
         - Primary users: [target_audience_identification]
         - User needs: [specific_requirements_and_expectations]
         - Experience design: [user_centered_content_strategy]
         - Accessibility considerations: [inclusive_documentation_approach]</output_format>
-      <validation>User needs comprehensively assessed with FOCUS framework user-centered approach</validation>
+      <validation>User needs comprehensively assessed with FOCUS framework user-centered approach with enhanced reasoning</validation>
       <enforcement>BLOCK if user assessment incomplete or documentation approach not user-optimized</enforcement>
+      <context_transfer>User assessment and experience design for scope definition</context_transfer>
     </checkpoint>
-    <checkpoint id="5" verify="true" enforcement="BLOCKING">
+    <checkpoint id="5" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply FOCUS framework - Define Scope and documentation boundaries</action>
-      <critical_thinking>
-        - What is the appropriate scope for this documentation to maximize value?
-        - How does FOCUS framework scope definition prevent scope creep and ensure focus?
-        - What boundaries optimize documentation effectiveness without overwhelming users?
-        - How does scope definition align with Framework 3.0 standards and TDD requirements?
-        - What scope management ensures documentation remains maintainable and current?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What scope definition approach optimizes documentation effectiveness?
+          - What boundary setting strategy supports focus and prevents scope creep?
+          - How does scope definition connect to Framework 3.0 standards and maintainability?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Scope Question: What is the appropriate scope for this documentation to maximize value?]
+          - [Prevention Question: How does FOCUS framework scope definition prevent scope creep and ensure focus?]
+          - [Boundaries Question: What boundaries optimize documentation effectiveness without overwhelming users?]
+          - [Standards Question: How does scope definition align with Framework 3.0 standards and TDD requirements?]
+          - [Management Question: What scope management ensures documentation remains maintainable and current?]
+          - [Definition Question: What scope definition ensures maximum documentation effectiveness?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this scope definition optimal for documentation effectiveness?
+          - What evidence supports the FOCUS framework boundaries?
+          - How will this definition maximize documentation value and maintainability?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can scope definition be optimized for parallel boundary analysis?</tool_optimization>
+        <context_efficiency>How can definition optimize context window usage for documentation?</context_efficiency>
+        <dependency_analysis>What scope definition is sequential vs parallel for documentation creation?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>FOCUS_SCOPE_DEFINITION:
         - Documentation scope: [clear_boundaries_and_coverage]
         - Framework standards: [framework_3_0_compliance]
         - TDD integration: [testing_methodology_inclusion]
         - Maintenance strategy: [scope_sustainability_approach]</output_format>
-      <validation>Documentation scope clearly defined with FOCUS framework boundaries and standards compliance</validation>
+      <validation>Documentation scope clearly defined with FOCUS framework boundaries and standards compliance with enhanced reasoning</validation>
       <enforcement>CRITICAL: Scope must align with /docs directory placement and Framework 3.0 standards</enforcement>
+      <context_transfer>Complete scope definition with Framework 3.0 compliance and documentation creation readiness</context_transfer>
     </checkpoint>
   </thinking_pattern>
   

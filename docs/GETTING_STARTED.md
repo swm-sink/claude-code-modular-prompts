@@ -1,8 +1,8 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 3.0.0   | 2025-07-07   | stable |
+| 3.0.0   | 2025-07-08   | stable |
 
-# Getting Started with Claude Code Framework
+# Getting Started with Claude Code Framework 3.0
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -28,13 +28,15 @@
 
 ## What is This? (30 seconds)
 
-A **prompt engineering framework** that makes Claude Code smarter through:
-- 🎯 **Smart Commands** - Type less, do more
-- 🧩 **Modular Prompts** - Reusable components that just work
-- 📊 **GitHub Tracking** - Never lose complex work
-- ✅ **Quality Built-in** - TDD and best practices automatic
+A **revolutionary Framework 3.0 meta-prompting system** that makes Claude Code smarter through:
+- 🎯 **Smart Commands** - TDD-aware intelligent routing
+- 🧩 **Modular Prompts** - 100+ reusable components with runtime engine
+- 📊 **GitHub Tracking** - Session management with issue integration
+- ✅ **Quality Gates** - Universal validation with TDD enforcement
+- 🧠 **Meta-Prompting** - Self-improving framework capabilities
+- ⚡ **Claude 4 Optimized** - Advanced thinking patterns and parallel execution
 
-**Philosophy**: *"Let the framework think, so you can create."*
+**Framework 3.0 Philosophy**: *"Commands delegate, modules implement, meta-prompting evolves."*
 
 ---
 

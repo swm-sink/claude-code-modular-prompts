@@ -1,0 +1,99 @@
+{
+  "report_id": "trace-compliance-1752002961",
+  "timestamp": 1752002961.4361138,
+  "validator_id": "trace-validator-1752002961",
+  "summary": {
+    "total_agents": 4,
+    "compliant_agents": 1,
+    "partial_agents": 3,
+    "non_compliant_agents": 0,
+    "overall_compliance": 0.8725,
+    "avg_trace_compliance": 1.0,
+    "avg_tdd_compliance": 0.625,
+    "avg_coverage": 0.95
+  },
+  "agent_results": {
+    "DeploymentAgent": {
+      "status": "partial",
+      "trace_compliance": 1.0,
+      "tdd_compliance": 0.5,
+      "coverage_actual": 0.9999999999999999,
+      "expectations_met": [],
+      "expectations_failed": [
+        "automated_deployment_pipeline",
+        "validation_gates",
+        "health_checks",
+        "staging_protocols",
+        "zero_downtime_deployment"
+      ],
+      "details": {
+        "overall_score": 0.8333333333333334,
+        "module_loaded": true,
+        "script_path": "scripts/production-deployment.py"
+      }
+    },
+    "RollbackAgent": {
+      "status": "compliant",
+      "trace_compliance": 1.0,
+      "tdd_compliance": 1.0,
+      "coverage_actual": 0.9999999999999999,
+      "expectations_met": [],
+      "expectations_failed": [
+        "rollback_procedures",
+        "recovery_capability",
+        "state_restoration",
+        "failure_detection",
+        "instant_rollback_system"
+      ],
+      "details": {
+        "overall_score": 1.0,
+        "module_loaded": true,
+        "script_path": "scripts/rollback-agent.py"
+      }
+    },
+    "MonitoringAgent": {
+      "status": "partial",
+      "trace_compliance": 1.0,
+      "tdd_compliance": 0.5,
+      "coverage_actual": 0.7999999999999999,
+      "expectations_met": [],
+      "expectations_failed": [
+        "metrics_collection",
+        "alerting_system",
+        "performance_tracking",
+        "dashboard",
+        "real_time_monitoring"
+      ],
+      "details": {
+        "overall_score": 0.7666666666666666,
+        "module_loaded": true,
+        "script_path": "scripts/monitoring-agent.py"
+      }
+    },
+    "ValidationAgent": {
+      "status": "partial",
+      "trace_compliance": 1.0,
+      "tdd_compliance": 0.5,
+      "coverage_actual": 0.9999999999999999,
+      "expectations_met": [],
+      "expectations_failed": [
+        "integration_testing",
+        "performance_validation",
+        "acceptance_criteria",
+        "test_coverage",
+        "validation_framework"
+      ],
+      "details": {
+        "overall_score": 0.8333333333333334,
+        "module_loaded": true,
+        "script_path": "scripts/validation-agent.py"
+      }
+    }
+  },
+  "recommendations": [
+    "DeploymentAgent: Implement comprehensive TDD test suite",
+    "MonitoringAgent: Implement comprehensive TDD test suite",
+    "MonitoringAgent: Increase test coverage",
+    "ValidationAgent: Implement comprehensive TDD test suite"
+  ]
+}

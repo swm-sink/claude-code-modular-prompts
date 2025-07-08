@@ -1,8 +1,8 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.4.0   | 2025-07-08   | stable |
+| 3.0.0   | 2025-07-08   | stable |
 
-# Command Overview - Claude Code Framework 2.4.0
+# Command Overview - Claude Code Framework 3.0.0
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -10,31 +10,33 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
-## What's New in 2.4.0
+## What's New in 3.0.0
 
-### Module Runtime Engine Integration
+### Revolutionary Meta-Prompting Capabilities
 
-All commands now benefit from the deterministic orchestration system that provides:
+All commands now benefit from the revolutionary meta-prompting system that provides:
 
 ```xml
-<runtime_enhancements>
-  <tdd_enforcement>Mandatory RED-GREEN-REFACTOR cycles across all development commands</tdd_enforcement>
-  <quality_gates>Universal quality gates with blocking enforcement</quality_gates>
-  <critical_thinking>30-second minimum analysis before any action</critical_thinking>
-  <parallel_optimization>70% performance improvement through batched operations</parallel_optimization>
-  <standardized_patterns>Checkpoint-based thinking patterns for consistent execution</standardized_patterns>
-</runtime_enhancements>
+<meta_prompting_enhancements>
+  <self_improvement>Framework learns and adapts from usage patterns</self_improvement>
+  <intelligent_evolution>Context-aware module and workflow generation</intelligent_evolution>
+  <adaptive_routing>Command routing improves based on success patterns</adaptive_routing>
+  <predictive_optimization>Anticipates needs and pre-optimizes workflows</predictive_optimization>
+  <performance_learning>Real-time efficiency improvements based on usage data</performance_learning>
+  <safety_boundaries>Human oversight with rollback capabilities</safety_boundaries>
+</meta_prompting_enhancements>
 ```
 
-### Enhanced Command Capabilities
+### Framework 3.0 Meta-Prompting Capabilities
 
 | Enhancement | Description | Impact |
 |-------------|-------------|--------|
-| **TDD Enforcement** | All development commands enforce strict test-driven development | Higher code quality, comprehensive testing |
-| **Quality Gates** | Universal validation framework applied to all commands | Consistent quality standards, error prevention |
-| **Parallel Execution** | Tool calls batched for 70% performance improvement | Faster command execution, better user experience |
-| **Critical Thinking** | Mandatory analysis and consequence mapping | Better decision making, reduced errors |
-| **Session Tracking** | Enhanced GitHub integration for complex work | Better project management, progress visibility |
+| **Self-Improvement** | Framework learns from usage patterns and evolves | Continuously improving performance and accuracy |
+| **Intelligent Evolution** | Context-aware generation of modules and workflows | Adaptive responses to changing requirements |
+| **Predictive Optimization** | Anticipates needs and pre-optimizes workflows | Proactive efficiency improvements |
+| **Adaptive Routing** | Command routing improves based on success patterns | Smarter decision making over time |
+| **Human Oversight** | Safety boundaries with rollback capabilities | Maintains control while enabling evolution |
+| **Performance Learning** | Real-time efficiency improvements | Faster execution through adaptive optimization |
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -359,13 +361,13 @@ The Module Runtime Engine provides **70% performance improvement** through:
 
 ### Performance Targets
 
-| Operation | Target Time | 2.4.0 Improvement |
+| Operation | Target Time | 3.0.0 Improvement |
 |-----------|-------------|------------------|
-| Command execution | < 2 minutes typical | 70% faster through batching |
-| Module loading | < 10 seconds | Dependency caching |
-| Quality gate validation | < 30 seconds | Parallel validation |
-| TDD cycle completion | < 5 minutes | Streamlined workflow |
-| Tool call batching | 70% reduction | Parallel execution |
+| Command execution | < 2 minutes typical | Predictive optimization |
+| Module loading | < 10 seconds | Intelligent caching |
+| Quality gate validation | < 30 seconds | Adaptive validation |
+| TDD cycle completion | < 5 minutes | Learning-optimized workflow |
+| Workflow adaptation | Real-time | Continuous improvement |
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -426,69 +428,70 @@ The runtime engine provides comprehensive error handling:
 
 ## Migration from Previous Versions
 
-### Upgrading from 2.3.x
+### Upgrading from 2.6.x
 
 **Backward Compatibility:**
 - All existing commands continue to work
-- Enhanced with runtime engine benefits automatically
+- Enhanced with meta-prompting capabilities automatically
 - No syntax changes required
 
 **New Capabilities:**
-- TDD enforcement on all development commands
-- Universal quality gates with blocking enforcement
-- 70% performance improvement through parallel execution
-- Enhanced error recovery and rollback capabilities
+- Self-improving framework with learning capabilities
+- Intelligent evolution and context-aware generation
+- Predictive optimization and adaptive routing
+- Human oversight with safety boundaries
 
 **Breaking Changes:**
 - None - fully backward compatible
 
 **Recommended Actions:**
-1. Update command usage to leverage new TDD enforcement
-2. Adopt quality gate validation for higher reliability
-3. Use parallel execution for faster development cycles
-4. Leverage enhanced error recovery for robust workflows
+1. Experience the self-improving framework capabilities
+2. Leverage predictive optimization for faster workflows
+3. Use adaptive routing for smarter command selection
+4. Benefit from continuous learning and evolution
 
 ### Framework Evolution
 
 | Version | Key Enhancement | Impact |
 |---------|----------------|--------|
-| **2.4.0** | Module Runtime Engine | TDD enforcement, quality gates, 70% performance improvement |
+| **3.0.0** | Meta-Prompting Capabilities | Self-improvement, intelligent evolution, predictive optimization |
+| **2.6.x** | Module Runtime Engine | TDD enforcement, quality gates, comprehensive orchestration |
 | **2.3.x** | Command standardization | Consistent command behavior |
 | **2.2.x** | Module architecture | Modular composition framework |
 | **2.1.x** | Quality foundation | Basic quality standards |
 
 ────────────────────────────────────────────────────────────────────────────────
 
-## Best Practices for 2.4.0
+## Best Practices for 3.0.0
 
-### Leveraging Runtime Engine Features
+### Leveraging Meta-Prompting Features
 
-1. **Embrace TDD Enforcement**
+1. **Experience Self-Improvement**
    ```bash
-   # Always start with failing tests
+   # Framework learns from your usage patterns
    /task "Add email validation" 
-   # Runtime engine ensures RED-GREEN-REFACTOR cycle
+   # System adapts to your coding style and preferences
    ```
 
-2. **Use Quality Gates Proactively**
+2. **Use Predictive Optimization**
    ```bash
-   # For production code
-   /protocol "Payment processing integration"
-   # Maximum quality gate enforcement
-   ```
-
-3. **Optimize with Parallel Execution**
-   ```bash
-   # Let the runtime engine batch operations
+   # Framework anticipates your needs
    /auto "Complex feature analysis"
-   # 70% faster through intelligent batching
+   # Pre-optimized workflows based on learning
    ```
 
-4. **Leverage Critical Thinking Integration**
+3. **Leverage Adaptive Routing**
    ```bash
-   # All commands now include 30-second analysis
-   # Trust the framework's consequence mapping
+   # Command routing improves over time
+   /auto "Not sure what approach to take"
+   # Intelligent decisions based on success patterns
+   ```
+
+4. **Trust the Evolution**
+   ```bash
+   # Framework evolves with safety boundaries
    /swarm "Architecture migration"
+   # Human oversight ensures safe evolution
    ```
 
 ### Command Selection Strategies
@@ -515,26 +518,26 @@ The runtime engine provides comprehensive error handling:
 ## Related Documentation
 
 ### Core Framework
-- **[CLAUDE.md](../../CLAUDE.md)** - Complete framework specification with 2.4.0 enhancements
+- **[CLAUDE.md](../../CLAUDE.md)** - Complete framework specification with 3.0.0 meta-prompting capabilities
 - **[Module Runtime Engine User Guide](../framework/module-runtime-engine.md)** - Comprehensive practical guide
 - **[Command Selection Guide](../COMMAND_SELECTION_GUIDE.md)** - Stop confusion between commands
 
 ### Runtime Engine Details
 - **[Module Composition Framework](../../.claude/modules/patterns/module-composition-framework.md)** - Technical architecture
 - **[Universal Quality Gates](../../.claude/modules/quality/universal-quality-gates.md)** - Gate specifications
-- **[TDD Standards](../framework/tdd-standards.md)** - Detailed TDD methodology
+- **[Development Standards](../framework/development-standards.md)** - TDD methodology and critical thinking
 - **[Thinking Pattern Template](../../.claude/modules/patterns/thinking-pattern-template.md)** - Standardized patterns
 
 ### Development Guides
 - **[Getting Started](../GETTING_STARTED.md)** - Framework introduction
-- **[Production Standards](../framework/production-standards.md)** - Quality requirements
-- **[Critical Thinking Enforcement](../framework/critical-thinking-enforcement.md)** - Analysis requirements
+- **[Quality and Production Standards](../framework/quality-and-production-standards.md)** - Quality requirements
+- **[Development Standards](../framework/development-standards.md)** - TDD and critical thinking requirements
 - **[Feature Development Examples](../framework/feature-development-examples.md)** - Real-world scenarios
 
 ### Migration and Integration
-- **[Migration Guide 2.3 to 2.4](../releases/migration-2.3-to-2.4.md)** - Upgrade instructions
 - **[Documentation Index](../DOCUMENTATION_INDEX.md)** - Complete documentation map
 - **[GitHub Integration Guide](../framework/claude-code-integration.md)** - Issue tracking setup
+- **[CLAUDE 4 Optimization Guide](../CLAUDE_4_PROMPT_GUIDE.md)** - Advanced optimization patterns
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -570,11 +573,11 @@ The runtime engine provides comprehensive error handling:
 
 ## See Also
 
-- **[Documentation Index](../DOCUMENTATION_INDEX.md)** - Complete documentation map with 2.4.0 enhancements
+- **[Documentation Index](../DOCUMENTATION_INDEX.md)** - Complete documentation map with 3.0.0 enhancements
 - **[Command Selection Guide](../COMMAND_SELECTION_GUIDE.md)** - Quick decision matrix for choosing commands
 - **[Getting Started](../GETTING_STARTED.md)** - Framework introduction and basic usage
 - **[Module Runtime Engine User Guide](../framework/module-runtime-engine.md)** - Detailed technical guide
 
 ────────────────────────────────────────────────────────────────────────────────
 
-**Framework Version 2.4.0**: *Deterministic orchestration with comprehensive TDD enforcement and universal quality gates for reliable, high-performance development workflows.*
+**Framework Version 3.0.0**: *Revolutionary meta-prompting capabilities with self-improving adaptive intelligence, predictive optimization, and human-supervised evolution for autonomous development workflows.*

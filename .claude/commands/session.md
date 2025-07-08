@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.6.0   | 2025-07-08   | stable |
+| 3.0.0   | 2025-07-08   | stable |
 
 # /session - CARE framework session management with context preservation and framework integration
 
@@ -14,90 +14,185 @@
   </delegation>
   
   <thinking_pattern enforcement="MANDATORY">
-    <checkpoint id="1" verify="true" enforcement="BLOCKING">
+    <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply CARE framework - Analyze Context for session management</action>
-      <critical_thinking>
-        - What is the comprehensive context for this session management request?
-        - What type of session operation is needed (start/update/complete/view)?
-        - What framework context should be preserved across the session?
-        - How does session context integrate with active frameworks and TDD requirements?
-        - What context preservation strategies optimize session continuity?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What context analysis approach optimizes session management?
+          - What framework integration strategy supports session continuity?
+          - How does context analysis connect to session effectiveness and TDD requirements?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Context Question: What is the comprehensive context for this session management request?]
+          - [Operation Question: What type of session operation is needed (start/update/complete/view)?]
+          - [Framework Question: What framework context should be preserved across the session?]
+          - [Integration Question: How does session context integrate with active frameworks and TDD requirements?]
+          - [Preservation Question: What context preservation strategies optimize session continuity?]
+          - [Optimization Question: What context analysis ensures maximum session effectiveness?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this context analysis optimal for session management?
+          - What evidence supports the framework integration approach?
+          - How will this analysis maximize session continuity and effectiveness?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can context analysis be combined with session setup for efficiency?</tool_optimization>
+        <context_efficiency>How can context analysis optimize context window usage for session management?</context_efficiency>
+        <dependency_analysis>What context analysis is sequential vs parallel for session setup?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>CARE_CONTEXT_ANALYSIS:
         - Session type: [start/update/complete/view]
         - Framework context: [frameworks_in_use]
         - TDD requirements: [required/optional/none]
         - Context preservation: [strategy_selected]</output_format>
-      <validation>Session context comprehensively analyzed with framework and TDD integration</validation>
+      <validation>Session context comprehensively analyzed with framework and TDD integration with enhanced reasoning</validation>
       <enforcement>BLOCK if session context incomplete or framework integration unclear</enforcement>
+      <context_transfer>Context analysis and framework integration for action definition</context_transfer>
     </checkpoint>
-    <checkpoint id="2" verify="true" enforcement="BLOCKING">
+    <checkpoint id="2" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply CARE framework - Define Actions for session operations</action>
-      <critical_thinking>
-        - What specific actions are required for effective session management?
-        - How should framework-aware session operations be structured?
-        - What GitHub issue management actions support framework tracking?
-        - How do actions integrate TDD compliance with framework context?
-        - What action sequence optimizes session effectiveness and framework coordination?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What action definition approach optimizes session management?
+          - What framework-aware strategy supports session operations?
+          - How does action definition connect to session effectiveness and TDD coordination?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Actions Question: What specific actions are required for effective session management?]
+          - [Structure Question: How should framework-aware session operations be structured?]
+          - [GitHub Question: What GitHub issue management actions support framework tracking?]
+          - [Integration Question: How do actions integrate TDD compliance with framework context?]
+          - [Sequence Question: What action sequence optimizes session effectiveness and framework coordination?]
+          - [Optimization Question: What action definition ensures maximum session effectiveness?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this action definition optimal for session management?
+          - What evidence supports the framework-aware approach?
+          - How will this definition maximize session effectiveness and coordination?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can action definition be combined with GitHub operations for efficiency?</tool_optimization>
+        <context_efficiency>How can action definition optimize context window usage for session operations?</context_efficiency>
+        <dependency_analysis>What action definition is sequential vs parallel for session management?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>CARE_ACTIONS_DEFINITION:
         - Session actions: [specific_operations_list]
         - Framework integration: [framework_tracking_actions]
         - GitHub operations: #[number] with framework context
         - TDD coordination: [compliance_tracking_actions]</output_format>
-      <validation>Actions clearly defined with framework integration and TDD coordination</validation>
+      <validation>Actions clearly defined with framework integration and TDD coordination with enhanced reasoning</validation>
       <enforcement>VERIFY actions support framework context preservation and TDD tracking</enforcement>
+      <context_transfer>Action definition and framework integration for results tracking</context_transfer>
     </checkpoint>
-    <checkpoint id="3" verify="true" enforcement="BLOCKING">
+    <checkpoint id="3" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply CARE framework - Execute Results tracking and validation</action>
-      <critical_thinking>
-        - What specific results have been achieved in this session?
-        - How do session results align with framework objectives and TDD compliance?
-        - What measurable outcomes demonstrate session progress?
-        - How should results be documented for framework continuity?
-        - What result validation ensures session quality and effectiveness?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What results tracking approach optimizes session validation?
+          - What framework alignment strategy supports progress demonstration?
+          - How does results tracking connect to session quality and TDD compliance?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Results Question: What specific results have been achieved in this session?]
+          - [Alignment Question: How do session results align with framework objectives and TDD compliance?]
+          - [Outcomes Question: What measurable outcomes demonstrate session progress?]
+          - [Documentation Question: How should results be documented for framework continuity?]
+          - [Validation Question: What result validation ensures session quality and effectiveness?]
+          - [Quality Question: What results tracking ensures maximum session quality?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this results tracking optimal for session validation?
+          - What evidence supports the framework alignment approach?
+          - How will this tracking maximize session quality and effectiveness?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can results tracking be optimized for parallel validation?</tool_optimization>
+        <context_efficiency>How can tracking optimize context window usage for session validation?</context_efficiency>
+        <dependency_analysis>What results tracking is sequential vs parallel for session quality?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>CARE_RESULTS_TRACKING:
         - Session achievements: [measurable_outcomes]
         - Framework progress: [framework_advancement]
         - TDD compliance: [status_with_metrics]
         - Quality validation: [results_verification]</output_format>
-      <validation>Results comprehensively tracked with framework alignment and TDD validation</validation>
+      <validation>Results comprehensively tracked with framework alignment and TDD validation with enhanced reasoning</validation>
       <enforcement>ENSURE results demonstrate framework progress and TDD compliance verification</enforcement>
+      <context_transfer>Results tracking and validation for session evaluation</context_transfer>
     </checkpoint>
-    <checkpoint id="4" verify="true" enforcement="BLOCKING">
+    <checkpoint id="4" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply CARE framework - Perform Evaluation and session assessment</action>
-      <critical_thinking>
-        - How effectively did the session achieve its framework-aligned objectives?
-        - What evaluation criteria best assess session quality and framework integration?
-        - What lessons learned improve future framework-aware session management?
-        - How does session evaluation inform framework optimization and TDD improvement?
-        - What evaluation feedback enhances session management methodology?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What evaluation approach optimizes session assessment?
+          - What framework integration strategy supports quality evaluation?
+          - How does evaluation connect to session effectiveness and methodology improvement?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Effectiveness Question: How effectively did the session achieve its framework-aligned objectives?]
+          - [Criteria Question: What evaluation criteria best assess session quality and framework integration?]
+          - [Learning Question: What lessons learned improve future framework-aware session management?]
+          - [Optimization Question: How does session evaluation inform framework optimization and TDD improvement?]
+          - [Feedback Question: What evaluation feedback enhances session management methodology?]
+          - [Assessment Question: What evaluation approach ensures maximum session assessment quality?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this evaluation approach optimal for session assessment?
+          - What evidence supports the framework integration strategy?
+          - How will this evaluation maximize methodology improvement and optimization?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can evaluation be optimized for parallel assessment?</tool_optimization>
+        <context_efficiency>How can evaluation optimize context window usage for session assessment?</context_efficiency>
+        <dependency_analysis>What evaluation is sequential vs parallel for session quality?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>CARE_EVALUATION_ASSESSMENT:
         - Objective achievement: [framework_alignment_success]
         - Quality assessment: [session_effectiveness_metrics]
         - Lessons learned: [framework_optimization_insights]
         - Improvement opportunities: [methodology_enhancements]</output_format>
-      <validation>Session comprehensively evaluated with framework integration and methodology improvement</validation>
+      <validation>Session comprehensively evaluated with framework integration and methodology improvement with enhanced reasoning</validation>
       <enforcement>BLOCK completion if evaluation insufficient for framework optimization learning</enforcement>
+      <context_transfer>Evaluation assessment for session finalization</context_transfer>
     </checkpoint>
-    <checkpoint id="5" verify="true" enforcement="BLOCKING">
+    <checkpoint id="5" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Finalize CARE framework session with artifact linking and preservation</action>
-      <critical_thinking>
-        - How should framework context and decisions be preserved for future sessions?
-        - What artifacts best demonstrate framework integration and TDD compliance?
-        - How can session preservation optimize future framework-aware work?
-        - What linking strategies ensure framework continuity across sessions?
-        - How does artifact preservation support framework learning and optimization?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What finalization approach optimizes session preservation?
+          - What artifact linking strategy supports framework continuity?
+          - How does finalization connect to session continuity and framework learning?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Preservation Question: How should framework context and decisions be preserved for future sessions?]
+          - [Artifact Question: What artifacts best demonstrate framework integration and TDD compliance?]
+          - [Optimization Question: How can session preservation optimize future framework-aware work?]
+          - [Linking Question: What linking strategies ensure framework continuity across sessions?]
+          - [Learning Question: How does artifact preservation support framework learning and optimization?]
+          - [Continuity Question: What finalization approach ensures maximum session continuity?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this finalization approach optimal for session preservation?
+          - What evidence supports the artifact linking strategy?
+          - How will this finalization maximize framework continuity and learning?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can finalization be optimized for parallel preservation?</tool_optimization>
+        <context_efficiency>How can finalization optimize context window usage for session preservation?</context_efficiency>
+        <dependency_analysis>What finalization is sequential vs parallel for session continuity?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>CARE_SESSION_FINALIZATION:
         - Framework preservation: [context_and_decisions_preserved]
         - Artifact linking: [commits_prs_tests_with_framework_evidence]
         - Continuity optimization: [future_session_enhancement]
         - Learning capture: [framework_methodology_insights]</output_format>
-      <validation>Session finalized with comprehensive framework preservation and artifact integration</validation>
+      <validation>Session finalized with comprehensive framework preservation and artifact integration with enhanced reasoning</validation>
       <enforcement>VERIFY framework context and TDD evidence preserved for optimal session continuity</enforcement>
+      <context_transfer>Complete session finalization with framework preservation and continuity optimization</context_transfer>
     </checkpoint>
   </thinking_pattern>
   

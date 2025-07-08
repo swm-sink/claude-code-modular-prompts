@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.6.0   | 2025-07-08   | stable |
+| 3.0.0   | 2025-07-08   | stable |
 
 # /query - LEAP/CLEAR advanced research & analysis (Zero Modifications)
 
@@ -18,158 +18,329 @@
   </delegation>
   
   <thinking_pattern enforcement="MANDATORY">
-    <checkpoint id="1" verify="true" enforcement="BLOCKING">
+    <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply LEAP framework - Learn query requirements and research objectives</action>
-      <critical_thinking>
-        - What specific knowledge or understanding is being sought through this query?
-        - What learning objectives will drive the research approach and methodology?
-        - What existing knowledge gaps need to be filled through systematic investigation?
-        - How does the learning requirement guide research scope and depth priorities?
-        - Is this request for learning analysis (query) vs creating artifacts (docs command)?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What learning objective analysis is needed for optimal research approach?
+          - What context and constraints apply to this knowledge acquisition?
+          - How does learning requirement connect to research methodology and delivery?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Knowledge Question: What specific knowledge or understanding is being sought through this query?]
+          - [Learning Question: What learning objectives will drive the research approach and methodology?]
+          - [Gap Question: What existing knowledge gaps need to be filled through systematic investigation?]
+          - [Scope Question: How does the learning requirement guide research scope and depth priorities?]
+          - [Purpose Question: Is this request for learning analysis (query) vs creating artifacts (docs command)?]
+          - [Framework Question: How does LEAP framework optimize this learning approach?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this learning approach optimal for the query characteristics?
+          - What evidence supports the research methodology selection?
+          - How will this approach maximize knowledge acquisition success?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can learning analysis be combined with initial research preparation?</tool_optimization>
+        <context_efficiency>How can learning objectives optimize context window usage?</context_efficiency>
+        <dependency_analysis>What objective analysis is sequential vs parallel for research setup?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>LEAP_LEARNING_OBJECTIVES:
         - Knowledge target: [specific_information_sought]
         - Learning scope: [breadth_and_depth_requirements]
         - Research methodology: [investigation_approach]
         - Expected outcomes: [knowledge_deliverables]</output_format>
-      <validation>Learning objectives clearly defined to guide systematic research approach</validation>
+      <validation>Learning objectives clearly defined to guide systematic research approach with enhanced reasoning</validation>
       <enforcement>BLOCK if query requests modifications - must be pure research and learning</enforcement>
+      <context_transfer>Learning objectives and methodology for exploration strategy</context_transfer>
     </checkpoint>
-    <checkpoint id="2" verify="true" enforcement="BLOCKING">
+    <checkpoint id="2" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply LEAP framework - Explore codebase systematically for comprehensive knowledge</action>
-      <critical_thinking>
-        - What exploration strategy will discover the most relevant knowledge efficiently?
-        - Which parallel search operations maximize learning while minimizing exploration time?
-        - How should exploration prioritize different types of sources (implementation, tests, docs)?
-        - What systematic approach ensures comprehensive coverage without redundant exploration?
-        - How does exploration align with learning objectives and knowledge targets?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What exploration strategy will optimize knowledge discovery?
+          - What parallel search approach maximizes learning efficiency?
+          - How does exploration connect to learning objectives and knowledge targets?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Strategy Question: What exploration strategy will discover the most relevant knowledge efficiently?]
+          - [Parallel Question: Which parallel search operations maximize learning while minimizing exploration time?]
+          - [Prioritization Question: How should exploration prioritize different types of sources (implementation, tests, docs)?]
+          - [Coverage Question: What systematic approach ensures comprehensive coverage without redundant exploration?]
+          - [Alignment Question: How does exploration align with learning objectives and knowledge targets?]
+          - [Efficiency Question: How can exploration be optimized for 70% performance improvement?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this exploration strategy optimal for the learning objectives?
+          - What evidence supports the parallel search approach?
+          - How will this exploration maximize knowledge discovery success?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can exploration operations be batched for 70% improvement (Read, Grep, analysis)?</tool_optimization>
+        <context_efficiency>How can exploration optimize context window usage for learning?</context_efficiency>
+        <dependency_analysis>What exploration can be done in parallel vs sequential for knowledge discovery?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>LEAP_EXPLORATION_STRATEGY:
         - Search approach: [parallel_operations_for_70%_improvement]
         - Source prioritization: [implementation_tests_docs_architecture]
         - Coverage methodology: [systematic_exploration_patterns]
         - Knowledge discovery: [learning_focused_investigation]</output_format>
-      <validation>Exploration systematically structured for optimal knowledge discovery and learning</validation>
+      <validation>Exploration systematically structured for optimal knowledge discovery and learning with enhanced reasoning</validation>
       <enforcement>VERIFY parallel execution used for 70% performance improvement in exploration</enforcement>
+      <context_transfer>Exploration strategy and findings for knowledge synthesis</context_transfer>
     </checkpoint>
-    <checkpoint id="3" verify="true" enforcement="BLOCKING">
+    <checkpoint id="3" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply LEAP framework - Apply knowledge synthesis and pattern recognition</action>
-      <critical_thinking>
-        - How should discovered information be synthesized into coherent knowledge?
-        - What patterns emerge from the exploration that advance learning objectives?
-        - How do different sources of information integrate to form comprehensive understanding?
-        - What connections and relationships reveal deeper architectural or design insights?
-        - How does knowledge application guide further exploration or analysis focus?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What knowledge synthesis approach will optimize understanding?
+          - What pattern recognition strategy reveals architectural insights?
+          - How does knowledge application connect to learning objectives and analysis depth?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Synthesis Question: How should discovered information be synthesized into coherent knowledge?]
+          - [Pattern Question: What patterns emerge from the exploration that advance learning objectives?]
+          - [Integration Question: How do different sources of information integrate to form comprehensive understanding?]
+          - [Insight Question: What connections and relationships reveal deeper architectural or design insights?]
+          - [Application Question: How does knowledge application guide further exploration or analysis focus?]
+          - [Depth Question: What synthesis approach ensures maximum learning value?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this knowledge synthesis optimal for the learning objectives?
+          - What evidence supports the pattern recognition approach?
+          - How will this synthesis maximize understanding and insight development?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can knowledge synthesis be optimized for parallel pattern analysis?</tool_optimization>
+        <context_efficiency>How can synthesis optimize context window usage for understanding?</context_efficiency>
+        <dependency_analysis>What synthesis tasks can be done in parallel vs sequential?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>LEAP_KNOWLEDGE_APPLICATION:
         - Information synthesis: [coherent_knowledge_integration]
         - Pattern recognition: [architectural_and_design_patterns]
         - Relationship mapping: [component_and_dependency_connections]
         - Insight development: [deeper_understanding_achievements]</output_format>
-      <validation>Knowledge systematically applied and synthesized for comprehensive understanding</validation>
+      <validation>Knowledge systematically applied and synthesized for comprehensive understanding with enhanced reasoning</validation>
       <enforcement>ENSURE application depth matches learning objectives and query complexity</enforcement>
+      <context_transfer>Knowledge synthesis and patterns for production deliverables</context_transfer>
     </checkpoint>
-    <checkpoint id="4" verify="true" enforcement="BLOCKING">
+    <checkpoint id="4" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply LEAP framework - Produce comprehensive knowledge deliverables</action>
-      <critical_thinking>
-        - What knowledge production format best serves the learning objectives?
-        - How should findings be structured to maximize learning value and usability?
-        - What concrete examples and evidence support the knowledge deliverables?
-        - How does knowledge production align with original learning requirements?
-        - What level of detail and explanation optimizes knowledge transfer?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What knowledge production approach will optimize learning value?
+          - What deliverable format maximizes learning usability?
+          - How does knowledge production connect to learning objectives and user needs?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Format Question: What knowledge production format best serves the learning objectives?]
+          - [Structure Question: How should findings be structured to maximize learning value and usability?]
+          - [Evidence Question: What concrete examples and evidence support the knowledge deliverables?]
+          - [Alignment Question: How does knowledge production align with original learning requirements?]
+          - [Transfer Question: What level of detail and explanation optimizes knowledge transfer?]
+          - [Value Question: What production approach ensures maximum learning impact?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this knowledge production optimal for the learning objectives?
+          - What evidence supports the deliverable format selection?
+          - How will this production approach maximize knowledge transfer success?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can knowledge production be optimized for parallel deliverable creation?</tool_optimization>
+        <context_efficiency>How can production optimize context window usage for learning delivery?</context_efficiency>
+        <dependency_analysis>What production tasks can be done in parallel vs sequential?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>LEAP_KNOWLEDGE_PRODUCTION:
         - Deliverable format: [optimal_knowledge_presentation]
         - Structure approach: [learning_optimized_organization]
         - Evidence integration: [concrete_examples_and_code_references]
         - Knowledge validation: [learning_objective_fulfillment]</output_format>
-      <validation>Knowledge production optimized for learning value and objective fulfillment</validation>
+      <validation>Knowledge production optimized for learning value and objective fulfillment with enhanced reasoning</validation>
       <enforcement>CRITICAL: ZERO modifications - pure knowledge production and learning delivery</enforcement>
+      <context_transfer>Knowledge deliverables for CLEAR framework context analysis</context_transfer>
     </checkpoint>
-    <checkpoint id="5" verify="true" enforcement="BLOCKING">
+    <checkpoint id="5" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply CLEAR framework - Comprehensive Context analysis for research</action>
-      <critical_thinking>
-        - What comprehensive context affects the accuracy and completeness of research findings?
-        - What technical, architectural, and business context influences knowledge interpretation?
-        - What historical context (git history, evolution) provides deeper understanding?
-        - What ecosystem context (dependencies, integrations) affects knowledge relevance?
-        - How does context analysis enhance learning objective achievement?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What context analysis approach will enhance research accuracy?
+          - What comprehensive context dimensions affect knowledge interpretation?
+          - How does context analysis connect to learning objectives and research reliability?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Comprehensiveness Question: What comprehensive context affects the accuracy and completeness of research findings?]
+          - [Technical Question: What technical, architectural, and business context influences knowledge interpretation?]
+          - [Historical Question: What historical context (git history, evolution) provides deeper understanding?]
+          - [Ecosystem Question: What ecosystem context (dependencies, integrations) affects knowledge relevance?]
+          - [Enhancement Question: How does context analysis enhance learning objective achievement?]
+          - [Reliability Question: What context analysis ensures maximum research reliability?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this context analysis optimal for research accuracy?
+          - What evidence supports the comprehensive context approach?
+          - How will this analysis maximize learning objective achievement?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can context analysis be parallelized for efficiency improvement?</tool_optimization>
+        <context_efficiency>How can analysis optimize context window usage for research?</context_efficiency>
+        <dependency_analysis>What context analysis can be done in parallel vs sequential?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>CLEAR_RESEARCH_CONTEXT:
         - Technical context: [architecture_patterns_and_implementation_context]
         - Business context: [domain_requirements_and_business_logic_context]
         - Historical context: [evolution_and_development_history_insights]
         - Ecosystem context: [dependencies_integrations_and_external_factors]</output_format>
-      <validation>Context comprehensively analyzed to enhance research accuracy and learning value</validation>
+      <validation>Context comprehensively analyzed to enhance research accuracy and learning value with enhanced reasoning</validation>
       <enforcement>BLOCK if context analysis incomplete for reliable knowledge production</enforcement>
+      <context_transfer>Context analysis for limitation identification</context_transfer>
     </checkpoint>
-    <checkpoint id="6" verify="true" enforcement="BLOCKING">
+    <checkpoint id="6" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply CLEAR framework - Identify Limitations and research constraints</action>
-      <critical_thinking>
-        - What limitations in available information affect research conclusions accuracy?
-        - What constraints in codebase access or analysis scope impact knowledge completeness?
-        - What limitations in current understanding require acknowledgment or further investigation?
-        - How do research methodology limitations affect knowledge reliability and validity?
-        - What boundaries exist around knowledge claims and research confidence levels?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What limitation identification approach ensures research integrity?
+          - What constraint analysis supports knowledge reliability?
+          - How does limitation identification connect to research honesty and accuracy?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Information Question: What limitations in available information affect research conclusions accuracy?]
+          - [Scope Question: What constraints in codebase access or analysis scope impact knowledge completeness?]
+          - [Understanding Question: What limitations in current understanding require acknowledgment or further investigation?]
+          - [Methodology Question: How do research methodology limitations affect knowledge reliability and validity?]
+          - [Confidence Question: What boundaries exist around knowledge claims and research confidence levels?]
+          - [Integrity Question: What limitation identification ensures maximum research integrity?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this limitation identification optimal for research integrity?
+          - What evidence supports the constraint analysis approach?
+          - How will this identification maximize knowledge reliability?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can limitation identification be optimized for comprehensive analysis?</tool_optimization>
+        <context_efficiency>How can identification optimize context window usage for integrity?</context_efficiency>
+        <dependency_analysis>What limitation analysis can be done in parallel vs sequential?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>CLEAR_RESEARCH_LIMITATIONS:
         - Information limitations: [gaps_and_unavailable_data]
         - Scope constraints: [analysis_boundaries_and_restrictions]
         - Methodology limitations: [research_approach_constraints]
         - Confidence boundaries: [knowledge_reliability_levels]</output_format>
-      <validation>Limitations transparently identified to ensure research integrity and knowledge accuracy</validation>
+      <validation>Limitations transparently identified to ensure research integrity and knowledge accuracy with enhanced reasoning</validation>
       <enforcement>BLOCK if limitations not acknowledged - research must be honest about constraints</enforcement>
+      <context_transfer>Limitation identification for example provision</context_transfer>
     </checkpoint>
-    <checkpoint id="7" verify="true" enforcement="BLOCKING">
+    <checkpoint id="7" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply CLEAR framework - Provide Examples and concrete evidence</action>
-      <critical_thinking>
-        - What specific examples best illustrate the research findings and knowledge discoveries?
-        - What concrete code examples provide evidence for patterns and insights identified?
-        - What real implementation examples demonstrate the knowledge in practical context?
-        - How do examples enhance learning value and knowledge comprehension?
-        - What variety of examples ensures comprehensive knowledge illustration?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What example provision approach best supports research findings?
+          - What concrete evidence strategy enhances learning comprehension?
+          - How does example provision connect to knowledge claims and learning value?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Illustration Question: What specific examples best illustrate the research findings and knowledge discoveries?]
+          - [Evidence Question: What concrete code examples provide evidence for patterns and insights identified?]
+          - [Implementation Question: What real implementation examples demonstrate the knowledge in practical context?]
+          - [Learning Question: How do examples enhance learning value and knowledge comprehension?]
+          - [Variety Question: What variety of examples ensures comprehensive knowledge illustration?]
+          - [Support Question: What example provision ensures maximum knowledge support?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this example provision optimal for research findings support?
+          - What evidence supports the concrete evidence approach?
+          - How will this provision maximize learning comprehension?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can example provision be optimized for parallel evidence gathering?</tool_optimization>
+        <context_efficiency>How can provision optimize context window usage for learning?</context_efficiency>
+        <dependency_analysis>What example provision can be done in parallel vs sequential?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>CLEAR_RESEARCH_EXAMPLES:
         - Code examples: [specific_implementation_demonstrations]
         - Pattern examples: [architectural_and_design_pattern_illustrations]
         - Usage examples: [practical_application_demonstrations]
         - Evidence integration: [concrete_support_for_research_findings]</output_format>
-      <validation>Examples comprehensively selected to support research findings and enhance learning</validation>
+      <validation>Examples comprehensively selected to support research findings and enhance learning with enhanced reasoning</validation>
       <enforcement>ENSURE examples directly support knowledge claims with concrete evidence</enforcement>
+      <context_transfer>Example provision for actionable insights</context_transfer>
     </checkpoint>
-    <checkpoint id="8" verify="true" enforcement="BLOCKING">
+    <checkpoint id="8" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply CLEAR framework - Define Actions for knowledge application</action>
-      <critical_thinking>
-        - What actions does this research knowledge enable or inform for the user?
-        - How can research findings be applied practically in development or understanding contexts?
-        - What next steps or follow-up investigations does this knowledge suggest?
-        - How do research insights guide decision-making or further exploration?
-        - What actionable value emerges from the comprehensive research and analysis?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What action definition approach maximizes research knowledge value?
+          - What actionable insight strategy supports practical application?
+          - How does action definition connect to learning objectives and research utility?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Enablement Question: What actions does this research knowledge enable or inform for the user?]
+          - [Application Question: How can research findings be applied practically in development or understanding contexts?]
+          - [Steps Question: What next steps or follow-up investigations does this knowledge suggest?]
+          - [Guidance Question: How do research insights guide decision-making or further exploration?]
+          - [Value Question: What actionable value emerges from the comprehensive research and analysis?]
+          - [Utility Question: What action definition ensures maximum research utility?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this action definition optimal for research knowledge application?
+          - What evidence supports the actionable insight approach?
+          - How will this definition maximize practical research value?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can action definition be optimized for parallel insight development?</tool_optimization>
+        <context_efficiency>How can definition optimize context window usage for application?</context_efficiency>
+        <dependency_analysis>What action definition can be done in parallel vs sequential?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>CLEAR_ACTIONABLE_INSIGHTS:
         - Practical applications: [how_knowledge_can_be_applied]
         - Decision support: [insights_that_inform_development_choices]
         - Further research: [additional_investigation_opportunities]
         - Immediate value: [actionable_knowledge_for_current_work]</output_format>
-      <validation>Actions clearly defined to maximize practical value of research knowledge</validation>
+      <validation>Actions clearly defined to maximize practical value of research knowledge with enhanced reasoning</validation>
       <enforcement>ENSURE actionable insights align with learning objectives and research findings</enforcement>
+      <context_transfer>Actionable insights for research delivery</context_transfer>
     </checkpoint>
-    <checkpoint id="9" verify="true" enforcement="BLOCKING">
+    <checkpoint id="9" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply CLEAR framework - Role-appropriate research delivery and knowledge transfer</action>
-      <critical_thinking>
-        - What expert role and perspective optimizes knowledge transfer and learning value?
-        - How should research findings be presented for maximum comprehension and utility?
-        - What level of technical depth and explanation serves the user's learning needs best?
-        - How does role-appropriate delivery enhance knowledge accessibility and application?
-        - What communication approach maximizes research value and learning outcome achievement?
-      </critical_thinking>
+      <interleaved_thinking enforcement="MANDATORY">
+        <pre_analysis>
+          - What delivery approach optimizes knowledge transfer and learning value?
+          - What role-appropriate strategy enhances knowledge accessibility?
+          - How does delivery optimization connect to learning outcomes and user needs?
+        </pre_analysis>
+        <critical_thinking minimum_time="30_seconds">
+          - [Role Question: What expert role and perspective optimizes knowledge transfer and learning value?]
+          - [Presentation Question: How should research findings be presented for maximum comprehension and utility?]
+          - [Depth Question: What level of technical depth and explanation serves the user's learning needs best?]
+          - [Enhancement Question: How does role-appropriate delivery enhance knowledge accessibility and application?]
+          - [Communication Question: What communication approach maximizes research value and learning outcome achievement?]
+          - [Optimization Question: What delivery approach ensures maximum knowledge transfer success?]
+        </critical_thinking>
+        <decision_reasoning>
+          - Why is this delivery approach optimal for knowledge transfer?
+          - What evidence supports the role-appropriate strategy?
+          - How will this delivery maximize learning outcome achievement?
+        </decision_reasoning>
+      </interleaved_thinking>
+      <parallel_execution_considerations>
+        <tool_optimization>Can delivery optimization be enhanced for parallel knowledge transfer?</tool_optimization>
+        <context_efficiency>How can delivery optimize context window usage for learning?</context_efficiency>
+        <dependency_analysis>What delivery tasks can be done in parallel vs sequential?</dependency_analysis>
+      </parallel_execution_considerations>
       <output_format>CLEAR_RESEARCH_DELIVERY:
         - Expert perspective: [domain_expertise_and_knowledge_depth]
         - Communication approach: [optimal_knowledge_transfer_method]
         - Technical level: [appropriate_depth_and_complexity]
         - Learning optimization: [maximum_value_knowledge_delivery]</output_format>
-      <validation>Research delivery optimized for user learning and knowledge application success</validation>
+      <validation>Research delivery optimized for user learning and knowledge application success with enhanced reasoning</validation>
       <enforcement>BLOCK if delivery approach doesn't optimize learning value and knowledge transfer</enforcement>
+      <context_transfer>Complete research delivery with knowledge transfer optimization</context_transfer>
     </checkpoint>
   </thinking_pattern>
   

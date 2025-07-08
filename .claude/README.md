@@ -1,31 +1,32 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-07-07   | stable |
+| 3.0.0   | 2025-07-08   | stable |
 
-# .claude Directory - Framework Core
+# .claude Directory - Framework 3.0 Core
 
 ────────────────────────────────────────────────────────────────────────────────
 
 ## Purpose
 
-The `.claude` directory contains the **core implementation** of the Claude Code Modular Agents framework. This is where commands delegate to modules, creating a powerful composition system for automated development workflows.
+The `.claude` directory contains the **Framework 3.0 implementation** of the Claude Code Modular Agents system with revolutionary meta-prompting capabilities. This is where commands delegate to modules through the Module Runtime Engine, creating a powerful composition system with self-improvement capabilities for automated development workflows.
 
 ## Directory Structure
 
 ```
 .claude/
-├── commands/              # Command implementations (8 files)
-├── modules/               # Modular components (24+ files)
-│   ├── patterns/         # Multi-agent patterns
-│   ├── quality/          # Quality assurance
-│   ├── security/         # Security validation
-│   ├── development/      # Development workflows
-│   ├── planning/         # Project planning
-│   └── testing/          # Testing frameworks
-├── templates/            # Document templates
-├── security/             # Security configurations
-├── analytics/            # Usage analytics
-└── settings.local.json   # Local configuration
+├── commands/              # 8 core commands with Module Runtime Engine integration
+├── modules/               # 100+ modular components organized by domain
+│   ├── patterns/         # Multi-agent patterns, intelligent routing, session management
+│   ├── quality/          # Universal quality gates, TDD enforcement, critical thinking
+│   ├── security/         # Threat modeling, audit, financial compliance
+│   ├── development/      # Development workflows, documentation, research analysis
+│   ├── planning/         # PRD generation, MVP strategy, feature workflow
+│   ├── testing/          # Auto-testing, iterative testing patterns
+│   └── frameworks/       # FOCUS, AWARE, RISE, TRACE framework implementations
+├── templates/            # Framework 3.0 format templates
+├── context/              # Session management and artifact preservation
+├── analytics/            # Framework health monitoring and metrics
+└── settings.local.json   # Local configuration with meta-prompting settings
 ```
 
 ## Core Components
@@ -33,7 +34,7 @@ The `.claude` directory contains the **core implementation** of the Claude Code 
 ### Commands Directory
 
 **Location**: `commands/`
-**Purpose**: Command implementations that delegate to modules
+**Purpose**: Framework 3.0 command implementations with Module Runtime Engine integration that delegate to modules with universal quality gates and meta-prompting capabilities
 
 #### Available Commands
 
@@ -60,36 +61,46 @@ All commands follow the **delegation pattern**:
 ### Modules Directory
 
 **Location**: `modules/`
-**Purpose**: Domain-specific implementations
+**Purpose**: 100+ modular components organized by domain with Framework 3.0 capabilities
 
 #### Module Categories
 
-**patterns/** - Multi-agent coordination
-- `intelligent-routing.md` - Smart decision making
+**patterns/** - Multi-agent coordination and intelligent routing
+- `intelligent-routing.md` - Smart decision making with meta-prompting
 - `multi-agent.md` - Agent coordination patterns
-- `session-management.md` - Context preservation
+- `session-management.md` - Context preservation and GitHub integration
+- `module-composition-framework.md` - Module Runtime Engine architecture
+- `thinking-pattern-template.md` - Standardized thinking patterns
 
-**quality/** - Quality assurance
-- `tdd.md` - Test-driven development
-- `validation-framework.md` - Quality validation
-- `error-recovery.md` - Error handling patterns
+**quality/** - Universal quality gates and TDD enforcement
+- `tdd.md` - Test-driven development with RED-GREEN-REFACTOR enforcement
+- `universal-quality-gates.md` - Comprehensive quality validation
+- `critical-thinking.md` - 30-second minimum analysis enforcement
+- `error-recovery.md` - Intelligent failure recovery patterns
 
-**security/** - Security validation
-- `threat-modeling.md` - Security analysis
-- `security-checklist.md` - Security requirements
+**security/** - Security validation and threat modeling
+- `threat-modeling.md` - Security analysis and vulnerability assessment
+- `security-checklist.md` - Security requirements and compliance
+- `audit-framework.md` - Security audit and monitoring
 
-**development/** - Development workflows
-- `task-management.md` - Development task coordination
-- `documentation.md` - Documentation generation
-- `research-analysis.md` - Code analysis patterns
+**development/** - Development workflows and task management
+- `task-management.md` - Development task coordination with TDD
+- `documentation.md` - Documentation generation and standards
+- `research-analysis.md` - Code analysis patterns and research methodology
 
-**planning/** - Project planning
-- `feature-workflow.md` - Feature development planning
-- `project-planning.md` - Project coordination
+**planning/** - Project planning and feature development
+- `feature-workflow.md` - Feature development planning with PRD generation
+- `project-planning.md` - Project coordination and MVP strategy
 
-**testing/** - Testing frameworks
-- `testing-framework.md` - Testing coordination
-- `performance-testing.md` - Performance validation
+**testing/** - Testing frameworks and performance validation
+- `testing-framework.md` - Testing coordination and automation
+- `performance-testing.md` - Performance validation and benchmarking
+
+**frameworks/** - Framework implementations
+- `focus-framework.md` - FOCUS framework implementation
+- `aware-framework.md` - AWARE cognitive process
+- `rise-framework.md` - RISE framework (Role, Input, Steps, Expectation)
+- `trace-framework.md` - TRACE framework (Task, Request, Action, Context, Expectation)
 
 #### Module Interface
 
@@ -304,15 +315,15 @@ Components integrate through:
 - `/query "request"` - Research without modifications
 
 ### Key Directories
-- `commands/` - 8 command implementations
-- `modules/` - 24+ domain-specific modules
+- `commands/` - 8 command implementations with Framework 3.0 capabilities
+- `modules/` - 100+ modular components organized by domain
 - `templates/` - Document templates
 - `security/` - Security configurations
 
-### Development Pattern
-1. **Commands delegate** to modules
-2. **Modules implement** domain logic
-3. **Framework coordinates** interactions
-4. **Users focus** on requirements
+### Framework 3.0 Development Pattern
+1. **Commands delegate** to modules via Module Runtime Engine
+2. **Modules implement** domain logic with universal quality gates
+3. **Framework coordinates** interactions with meta-prompting intelligence
+4. **Users focus** on requirements while system handles TDD enforcement
 
-**Remember**: This directory contains the **framework engine** - the commands and modules that make Claude Code powerful and autonomous.
+**Remember**: This directory contains the **Framework 3.0 engine** - the commands and modules that make Claude Code intelligent, autonomous, and self-improving.

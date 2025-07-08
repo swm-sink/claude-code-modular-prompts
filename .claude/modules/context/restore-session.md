@@ -321,16 +321,34 @@
     </decision_restore>
   </usage_examples>
   
+  <context_prime_integration>
+    <priming_hooks>
+      <pre_restoration>Integrate with project-priming module for enhanced context loading</pre_restoration>
+      <intelligent_analysis>Leverage project structure analysis for better context restoration</intelligent_analysis>
+      <performance_optimization>Share caching strategies and parallel execution techniques</performance_optimization>
+      <security_coordination>Coordinate timeout mechanisms and approval workflows</security_coordination>
+    </priming_hooks>
+    
+    <enhanced_capabilities>
+      <project_awareness>Context restoration enhanced with project structure understanding</project_awareness>
+      <workflow_integration>Restoration coordinated with active development workflows</workflow_integration>
+      <performance_sharing>Shared performance optimizations for <3s loading targets</performance_sharing>
+      <security_alignment>Aligned security controls with context-prime mechanisms</security_alignment>
+    </enhanced_capabilities>
+  </context_prime_integration>
+  
   <integration_points>
     <depends_on>
       patterns/context-preservation.md for artifact management and storage
       patterns/session-management.md for session tracking and coordination
       patterns/intelligent-routing.md for context-aware routing decisions
+      context/project-priming.md for enhanced context loading capabilities
     </depends_on>
     <provides_to>
       All commands for intelligent context restoration
       patterns/session-management.md for enhanced session continuity
       development/task-management.md for task state preservation
+      context/project-priming.md for restoration integration and optimization
     </provides_to>
   </integration_points>
   
