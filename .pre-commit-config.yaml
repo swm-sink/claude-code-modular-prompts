@@ -1,0 +1,61 @@
+# Pre-commit hooks for Claude Code Modular Framework
+# Install with: pip install pre-commit && pre-commit install
+
+repos:
+  # Framework validation
+  - repo: local
+    hooks:
+      - id: framework-validation
+        name: Framework Validation
+        entry: python scripts/validate.py
+        language: system
+        pass_filenames: false
+        always_run: true
+        verbose: true
+        stages: [commit]
+        
+  # Framework tests - only run when framework files change
+  - repo: local
+    hooks:
+      - id: framework-tests
+        name: Framework Tests
+        entry: pytest tests/framework/ -v
+        language: system
+        pass_filenames: false
+        files: '\.(py|md)$'
+        stages: [commit]
+        
+  # Quick test suite for validation script changes
+  - repo: local
+    hooks:
+      - id: validation-tests
+        name: Validation Tests
+        entry: pytest tests/test_validate.py -v
+        language: system
+        pass_filenames: false
+        files: '(scripts/validate\.py|tests/test_validate\.py)$'
+        stages: [commit]
+
+  # Python code quality
+  - repo: https://github.com/psf/black
+    rev: 23.12.1
+    hooks:
+      - id: black
+        language_version: python3.11
+        
+  # Python linting
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: 'v0.1.11'
+    hooks:
+      - id: ruff
+        args: [--fix]
+        
+  # YAML validation
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-added-large-files
+        args: ['--maxkb=100']
