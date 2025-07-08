@@ -70,31 +70,36 @@
     
     <phase name="quality_verification" order="3">
       <requirements>
-        All quality gates passed before completion
-        Integration testing completed successfully
-        Security implications reviewed and addressed
+        TDD enforcement evidence collected per quality/tdd-enforcement.md
+        Security verification completed per quality/security-gate-verification.md
+        Performance benchmarks validated per quality/performance-gates.md
+        Comprehensive quality gates passed per quality/gate-verification.md
       </requirements>
       <actions>
-        Execute comprehensive quality gate validation
-        Run integration tests with system components
-        Perform security review for sensitive changes
-        Update documentation reflecting implementation
+        Execute TDD enforcement verification with evidence collection
+        Run security gate verification including threat modeling
+        Perform performance benchmark testing with automated thresholds
+        Execute comprehensive quality gate verification suite
+        Generate quality compliance certificate with evidence archive
       </actions>
       <validation>
-        Zero linting errors and clean security scan
-        Integration tests pass without system regressions
-        Documentation updated with implementation details
+        TDD evidence trail complete with RED-GREEN-REFACTOR proof
+        Security threats identified and mitigated with evidence
+        Performance benchmarks meet p95 <200ms and other thresholds
+        All quality gates passed with automated compliance verification
+        Quality evidence archived for audit trail
       </validation>
     </phase>
     
   </implementation>
   
   <quality_gates enforcement="strict">
-    <gate name="tdd_compliance" requirement="RED-GREEN-REFACTOR cycle documented and followed"/>
-    <gate name="test_coverage" requirement="Coverage standards per quality/tdd.md"/>
-    <gate name="code_quality" requirement="Zero linting errors, clean type checking"/>
-    <gate name="integration_testing" requirement="All integration scenarios tested successfully"/>
-    <gate name="security_review" requirement="Security implications identified and addressed"/>
+    <gate name="tdd_enforcement" requirement="Mandatory TDD enforcement per quality/tdd-enforcement.md" blocking="true"/>
+    <gate name="security_verification" requirement="Security gate verification per quality/security-gate-verification.md" blocking="true"/>
+    <gate name="performance_benchmarks" requirement="Performance gates per quality/performance-gates.md" blocking="true"/>
+    <gate name="gate_verification" requirement="Comprehensive quality gate verification per quality/gate-verification.md" blocking="true"/>
+    <gate name="code_quality" requirement="Zero linting errors, clean type checking" blocking="true"/>
+    <gate name="integration_testing" requirement="All integration scenarios tested successfully" blocking="false"/>
   </quality_gates>
   
   <escalation_logic>
@@ -127,12 +132,16 @@
   
   <integration_points>
     <depends_on>
-      quality/tdd.md for TDD cycle enforcement
+      quality/tdd-enforcement.md for non-bypassable TDD enforcement
+      quality/security-gate-verification.md for security verification
+      quality/performance-gates.md for performance benchmarking
+      quality/gate-verification.md for comprehensive quality gate orchestration
       quality/critical-thinking.md for requirement analysis
       patterns/session-management.md for session decisions
     </depends_on>
     <provides_to>
-      quality/production-standards.md for production standards
+      quality/gate-verification.md for task-level quality gate results
+      quality/production-standards.md for production standards integration
       patterns/multi-agent.md for escalation triggers
     </provides_to>
   </integration_points>

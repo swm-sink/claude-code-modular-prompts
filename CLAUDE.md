@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.3.1   | 2025-07-08   | stable |
+| 2.4.0   | 2025-07-08   | stable |
 
 # CLAUDE.md - Framework Control Document
 
@@ -11,9 +11,9 @@
 ## Core Framework
 
 ```xml
-<framework version="2.3.0">
+<framework version="2.4.0">
   <purpose>Personal Claude Code workflow efficiency tool - NOT enterprise software</purpose>
-  <principles>Single source truth | Zero redundancy | Modular composition | Token optimized</principles>
+  <principles>Single source truth | Zero redundancy | Modular composition | Token optimized | Module runtime engine</principles>
 </framework>
 ```
 
@@ -54,12 +54,21 @@
     <rule priority="HIGHEST">NO test files, personal dirs, or redundant structures EVER</rule>
     <rule priority="HIGHEST">Scripts go in /scripts, tests in /tests, docs in /docs - NO EXCEPTIONS</rule>
   </critical_rules>
+  <duplication_prevention enforcement="MANDATORY">
+    <rule priority="CRITICAL">Run duplication scan BEFORE any file creation</rule>
+    <rule priority="CRITICAL">Display scan results showing similar existing files</rule>
+    <rule priority="CRITICAL">Prefer enhancing existing files over creating new ones</rule>
+    <rule priority="CRITICAL">Document duplication decision in registry</rule>
+    <module>patterns/duplication-prevention.md</module>
+  </duplication_prevention>
   <verification_checklist mandatory="true">
     <before_create>Does this file/directory already exist somewhere?</before_create>
     <before_create>Is there an existing location where this belongs?</before_create>
     <before_create>Have I checked with LS/Glob to verify the path?</before_create>
     <before_create>Is this ABSOLUTELY necessary for the user's request?</before_create>
     <before_create>Am I creating clutter or organizing properly?</before_create>
+    <before_create>Have I run the duplication prevention scan?</before_create>
+    <before_create>Can I enhance existing code instead of creating new?</before_create>
   </verification_checklist>
   <standard_rules>
     <rule>Docs in /docs only. One location per file. Clear naming</rule>
@@ -76,6 +85,7 @@
     <action>Creating test files outside /tests directory</action>
     <action>Making directories without checking if they exist first</action>
     <action>Creating analytics or temporary files in tracked locations</action>
+    <action>Creating files without duplication scan completion</action>
   </prohibited_actions>
 </file_discipline>
 ```
@@ -667,6 +677,195 @@
     <rule>Module integration reduces cognitive overhead</rule>
   </performance_requirements>
 </module_execution>
+```
+
+────────────────────────────────────────────────────────────────────────────────
+
+## Module Runtime Engine
+
+```xml
+<module_runtime_engine version="2.4.0" enforcement="CRITICAL">
+  <purpose>Deterministic module composition and execution engine for Claude 4 with standardized patterns, universal quality gates, and comprehensive TDD enforcement</purpose>
+  
+  <runtime_architecture>
+    <thinking_pattern_engine>
+      <standardized_checkpoints>Every command uses checkpoint-based thinking patterns from patterns/thinking-pattern-template.md</standardized_checkpoints>
+      <tdd_integration>TDD enforcement mandatory across all development commands with strict RED-GREEN-REFACTOR cycles</tdd_integration>
+      <critical_thinking>30-second minimum analysis before any action with consequence mapping</critical_thinking>
+      <validation_gates>Each checkpoint has verifiable validation criteria and blocking enforcement</validation_gates>
+    </thinking_pattern_engine>
+    
+    <module_composition_framework>
+      <lifecycle_management>Discovery → Loading → Orchestration → Integration with state management</lifecycle_management>
+      <dependency_resolution>Topological sorting with hard/soft/conditional dependency types</dependency_resolution>
+      <execution_patterns>Sequential for core stack, parallel for support modules, conditional for context-specific</execution_patterns>
+      <state_isolation>Modules communicate through contracts, no direct state modification</state_isolation>
+      <canonical_source>patterns/module-composition-framework.md</canonical_source>
+    </module_composition_framework>
+    
+    <universal_quality_gates>
+      <foundational_gates>Critical thinking, requirement clarity, module integration, error handling</foundational_gates>
+      <development_gates>TDD compliance, code quality, security requirements, performance validation</development_gates>
+      <coordination_gates>Multi-agent synchronization, session tracking, integration validation</coordination_gates>
+      <documentation_gates>Standards compliance, TDD methodology documentation</documentation_gates>
+      <analysis_gates>Research comprehensiveness, routing decision quality</analysis_gates>
+      <canonical_source>quality/universal-quality-gates.md</canonical_source>
+    </universal_quality_gates>
+  </runtime_architecture>
+  
+  <command_runtime_specification>
+    <standard_command_structure>
+      <thinking_pattern enforcement="MANDATORY">Checkpoint-based with critical thinking and TDD integration</thinking_pattern>
+      <tdd_integration enforcement="MANDATORY">Command-specific TDD requirements with blocking conditions</tdd_integration>
+      <module_execution enforcement="MANDATORY">Core stack + contextual + support modules</module_execution>
+      <universal_quality_gates enforcement="MANDATORY">Command-appropriate gate sets with validation</universal_quality_gates>
+    </standard_command_structure>
+    
+    <command_implementations>
+      <task_command>
+        <runtime>Single-component TDD with foundational + development gates</runtime>
+        <modules>critical-thinking → tdd → task-management → production-standards</modules>
+        <gates>BLOCKING on TDD violations, quality failures</gates>
+      </task_command>
+      
+      <swarm_command>
+        <runtime>Multi-agent coordination with full gate enforcement</runtime>
+        <modules>critical-thinking → session-management → multi-agent → tdd → git-operations → production-standards</modules>
+        <gates>BLOCKING on coordination failures, TDD violations, integration issues</gates>
+      </swarm_command>
+      
+      <auto_command>
+        <runtime>TDD-aware intelligent routing with analysis gates</runtime>
+        <modules>critical-thinking → intelligent-routing → tdd → pattern-library</modules>
+        <gates>BLOCKING on routing to non-TDD commands for code changes</gates>
+      </auto_command>
+      
+      <query_command>
+        <runtime>Read-only analysis with test-aware research</runtime>
+        <modules>critical-thinking → research-analysis → pattern-library → tdd</modules>
+        <gates>BLOCKING on modification attempts, CONDITIONAL on analysis depth</gates>
+      </query_command>
+      
+      <session_command>
+        <runtime>Session management with TDD progress tracking</runtime>
+        <modules>critical-thinking → session-management → tdd → git-operations</modules>
+        <gates>BLOCKING on incomplete TDD tracking, missing artifacts</gates>
+      </session_command>
+      
+      <protocol_command>
+        <runtime>Production standards with strictest TDD enforcement</runtime>
+        <modules>critical-thinking → session-management → production-standards → tdd → threat-modeling → pre-commit</modules>
+        <gates>BLOCKING on ANY quality gate failure - strictest enforcement</gates>
+      </protocol_command>
+      
+      <docs_command>
+        <runtime>Documentation gateway with TDD methodology integration</runtime>
+        <modules>critical-thinking → documentation → intelligent-routing → tdd</modules>
+        <gates>BLOCKING on gateway violations, missing TDD references</gates>
+      </docs_command>
+    </command_implementations>
+  </command_runtime_specification>
+  
+  <tdd_enforcement_matrix>
+    <universal_tdd_principles>
+      <red_phase>ALWAYS write failing tests FIRST before any implementation</red_phase>
+      <green_phase>Implement minimal code to make tests pass</green_phase>
+      <refactor_phase>Improve design while maintaining green tests</refactor_phase>
+      <coverage_requirements>≥90% test coverage for all new code</coverage_requirements>
+      <quality_integration>TDD integrated with security, performance, and compliance testing</quality_integration>
+    </universal_tdd_principles>
+    
+    <command_specific_tdd>
+      <task>Standard TDD cycle with single-component focus</task>
+      <swarm>Multi-agent TDD coordination with isolated worktrees</swarm>
+      <protocol>Strictest TDD with production compliance testing</protocol>
+      <session>TDD progress tracking and methodology documentation</session>
+      <auto>TDD-aware routing to appropriate enforcement commands</auto>
+      <query>TDD pattern analysis and test-aware research</query>
+      <docs>TDD methodology documentation and cross-references</docs>
+    </command_specific_tdd>
+    
+    <blocking_conditions>
+      <universal>Implementation before tests, broken TDD cycles, coverage <90%</universal>
+      <development>Missing tests, implementation without failing tests first</development>
+      <coordination>TDD conflicts between agents, integration without comprehensive tests</coordination>
+      <documentation>Missing TDD references, outdated testing workflow docs</documentation>
+    </blocking_conditions>
+  </tdd_enforcement_matrix>
+  
+  <execution_optimization>
+    <parallel_execution>
+      <tool_batching>70% performance improvement through parallel tool calls</tool_batching>
+      <module_parallelization>Independent modules execute simultaneously</module_parallelization>
+      <dependency_optimization>Topological sorting minimizes execution time</dependency_optimization>
+    </parallel_execution>
+    
+    <context_preservation>
+      <state_management>Execution context maintained across module boundaries</state_management>
+      <result_accumulation>Module outputs accumulated for integration</result_accumulation>
+      <error_isolation>Module failures contained without cascade effects</error_isolation>
+    </context_preservation>
+    
+    <performance_targets>
+      <command_execution>Commands complete within 2-minute typical case</command_execution>
+      <module_loading>Module dependency resolution within 10 seconds</module_loading>
+      <quality_gates>Quality gate validation within 30 seconds</quality_gates>
+      <parallel_speedup>70% improvement through batched operations</parallel_speedup>
+    </performance_targets>
+  </execution_optimization>
+  
+  <error_handling_and_recovery>
+    <error_classification>
+      <module_errors>Loading failures, execution errors, integration failures</module_errors>
+      <tdd_violations>Implementation before tests, coverage failures, cycle violations</tdd_violations>
+      <quality_gate_failures>Security issues, performance problems, compliance violations</quality_gate_failures>
+      <coordination_failures>Agent conflicts, session issues, communication breakdowns</coordination_failures>
+    </error_classification>
+    
+    <recovery_protocols>
+      <graceful_degradation>Continue with reduced functionality for non-critical failures</graceful_degradation>
+      <retry_mechanisms>Exponential backoff for transient failures</retry_mechanisms>
+      <escalation_paths>Route to appropriate recovery modules or user intervention</escalation_paths>
+      <rollback_capabilities>State rollback for critical failures</rollback_capabilities>
+    </recovery_protocols>
+    
+    <enforcement_levels>
+      <blocking>HALT execution until issue resolved</blocking>
+      <conditional>Alternative paths or degraded functionality</conditional>
+      <warning>Log issue but continue execution</warning>
+    </enforcement_levels>
+  </error_handling_and_recovery>
+  
+  <integration_points>
+    <core_framework_integration>
+      <claude_4_control>Thinking patterns optimized for Claude 4 interpretation</claude_4_control>
+      <file_discipline>Module composition respects file organization rules</file_discipline>
+      <quality_gates>Universal quality gates integrated with existing framework standards</quality_gates>
+      <github_workflow>Session management and issue tracking integration</github_workflow>
+    </core_framework_integration>
+    
+    <module_dependencies>
+      <thinking_patterns>patterns/thinking-pattern-template.md for standardized checkpoints</thinking_patterns>
+      <composition_framework>patterns/module-composition-framework.md for runtime orchestration</composition_framework>
+      <quality_gates>quality/universal-quality-gates.md for comprehensive validation</quality_gates>
+      <tdd_enforcement>quality/tdd.md for strict test-driven development</tdd_enforcement>
+    </module_dependencies>
+  </integration_points>
+  
+  <version_integration>
+    <framework_version>Advances framework to 2.4.0 with runtime engine integration</framework_version>
+    <backward_compatibility>Full compatibility with existing 2.3.x commands and modules</backward_compatibility>
+    <migration_path>Existing commands automatically benefit from enhanced runtime</migration_path>
+    <future_evolution>Foundation for deterministic AI agent coordination</future_evolution>
+  </version_integration>
+  
+  <monitoring_and_metrics>
+    <execution_metrics>Module load time, execution time, success rates, parallel efficiency</execution_metrics>
+    <quality_metrics>TDD compliance rate, quality gate pass rate, error recovery effectiveness</quality_metrics>
+    <performance_metrics>Command completion time, resource usage, throughput improvement</performance_metrics>
+    <continuous_improvement>Feedback collection, optimization opportunities, pattern refinement</continuous_improvement>
+  </monitoring_and_metrics>
+</module_runtime_engine>
 ```
 
 **Remember**: Critical thinking partner. Research deeply. Challenge assumptions. Map consequences.

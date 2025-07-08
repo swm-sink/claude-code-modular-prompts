@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-07-07   | stable |
+| 1.1.0   | 2025-01-08   | stable |
 
 # TDD Module
 
@@ -26,18 +26,29 @@
         Tests fail for correct reasons demonstrating missing functionality
         Edge cases and error conditions covered in test scenarios
         All acceptance criteria translated into verifiable test cases
+        BLOCKING GATE: Implementation CANNOT begin until RED tests exist
       </requirements>
       <actions>
         Write failing tests that specify exact behavior requirements
         Verify tests fail for expected reasons (not due to test errors)
         Cover edge cases and boundary conditions with dedicated tests
         Ensure test names clearly describe behavior being tested
+        MANDATORY: Execute tests to confirm they fail with expected messages
+        MANDATORY: Document test failure reasons for validation
       </actions>
       <validation>
         All tests fail with clear failure messages indicating missing functionality
         Test coverage includes normal cases, edge cases, and error conditions
         Test names provide clear documentation of expected behaviors
+        ENFORCEMENT: No implementation code written until this phase complete
+        VERIFICATION: Test execution results showing expected failures documented
       </validation>
+      <blocking_conditions>
+        <condition>Tests pass when they should fail (indicates test errors)</condition>
+        <condition>Tests fail for wrong reasons (syntax errors, import issues)</condition>
+        <condition>Missing tests for any acceptance criteria</condition>
+        <condition>Test names are generic or unclear</condition>
+      </blocking_conditions>
     </phase>
     
     <phase name="green_phase" order="2">
@@ -46,18 +57,29 @@
         No premature optimization or additional features added
         Focus maintained on current test requirements only
         All tests pass with implemented functionality
+        BLOCKING GATE: Refactoring CANNOT begin until GREEN achieved
       </requirements>
       <actions>
         Write simplest possible code to make failing tests pass
         Resist adding features not required by current tests
         Ensure implementation directly addresses test requirements
-        Verify all tests pass before proceeding to refactor phase
+        MANDATORY: Execute full test suite to verify all tests pass
+        MANDATORY: Verify no new functionality beyond test requirements
+        ENFORCEMENT: Reject implementations that exceed test scope
       </actions>
       <validation>
         All tests pass with minimal implementation
         No unnecessary complexity or premature optimization present
         Implementation directly corresponds to test specifications
+        VERIFICATION: Test execution results showing all tests green
+        ENFORCEMENT: Code review confirms minimal implementation principle
       </validation>
+      <blocking_conditions>
+        <condition>Any tests still failing after implementation</condition>
+        <condition>Implementation includes features not tested</condition>
+        <condition>Premature optimization present (complex algorithms, caching, etc.)</condition>
+        <condition>Dependencies added that aren't strictly necessary</condition>
+      </blocking_conditions>
     </phase>
     
     <phase name="refactor_phase" order="3">
@@ -66,21 +88,83 @@
         Design patterns applied for better maintainability
         Code duplication eliminated through extraction and abstraction
         Tests remain green throughout refactoring process
+        BLOCKING GATE: ANY test failure aborts refactoring immediately
       </requirements>
       <actions>
         Improve code structure and readability without changing behavior
         Apply SOLID principles and appropriate design patterns
         Extract common functionality and eliminate code duplication
-        Run tests continuously to ensure behavior preservation
+        MANDATORY: Run tests after EVERY refactoring step
+        MANDATORY: Commit after each successful refactoring iteration
+        ENFORCEMENT: Stop immediately if any test starts failing
       </actions>
       <validation>
         All tests continue to pass throughout refactoring
         Code quality improved with better structure and maintainability
         No behavior changes introduced during refactoring process
+        VERIFICATION: Continuous test execution confirms behavior preservation
+        ENFORCEMENT: Git history shows incremental refactoring commits
       </validation>
+      <blocking_conditions>
+        <condition>Any test failure during refactoring (immediate rollback required)</condition>
+        <condition>Behavior changes detected (test assertions modified)</condition>
+        <condition>New functionality added during refactoring</condition>
+        <condition>Refactoring steps too large (not incrementally verifiable)</condition>
+      </blocking_conditions>
     </phase>
     
   </implementation>
+  
+  <strict_enforcement>
+    <red_green_refactor_cycle enforcement="MANDATORY">
+      <rule priority="CRITICAL">Tests MUST be written before ANY implementation code</rule>
+      <rule priority="CRITICAL">Tests MUST fail for the RIGHT reasons before implementation</rule>
+      <rule priority="CRITICAL">Implementation MUST be minimal to make tests pass</rule>
+      <rule priority="CRITICAL">Refactoring MUST preserve ALL test behavior</rule>
+      <verification>
+        Each phase completion verified with test execution output
+        Git history shows proper RED→GREEN→REFACTOR commit sequence
+        No implementation commits without preceding test commits
+      </verification>
+    </red_green_refactor_cycle>
+    
+    <blocking_enforcement>
+      <gate name="red_phase_complete">
+        <requirement>All tests written and failing with expected messages</requirement>
+        <verification>Execute test suite and capture failure output</verification>
+        <blocking_action>PREVENT implementation until tests properly fail</blocking_action>
+      </gate>
+      <gate name="green_phase_complete">
+        <requirement>All tests passing with minimal implementation</requirement>
+        <verification>Execute test suite and confirm all green</verification>
+        <blocking_action>PREVENT refactoring until all tests pass</blocking_action>
+      </gate>
+      <gate name="refactor_continuous">
+        <requirement>Tests remain green throughout refactoring</requirement>
+        <verification>Continuous test execution after each refactor step</verification>
+        <blocking_action>ROLLBACK immediately on any test failure</blocking_action>
+      </gate>
+    </blocking_enforcement>
+    
+    <violation_responses>
+      <violation type="implementation_before_tests">
+        <action>DELETE implementation code and restart with tests</action>
+        <message>TDD violation: Implementation written before tests. Restarting with RED phase.</message>
+      </violation>
+      <violation type="tests_pass_when_should_fail">
+        <action>FIX test to properly fail before implementation</action>
+        <message>TDD violation: Tests pass without implementation. Tests must fail first.</message>
+      </violation>
+      <violation type="premature_optimization">
+        <action>SIMPLIFY implementation to minimal working code</action>
+        <message>TDD violation: Implementation exceeds test requirements. Simplifying to minimal.</message>
+      </violation>
+      <violation type="refactor_breaks_tests">
+        <action>ROLLBACK refactor and proceed incrementally</action>
+        <message>TDD violation: Refactoring broke tests. Rolling back to last green state.</message>
+      </violation>
+    </violation_responses>
+  </strict_enforcement>
   
   <coverage_requirements>
     <minimum_standards>
@@ -186,12 +270,14 @@
     <depends_on>
       patterns/tool-usage.md for parallel test execution optimization
       quality/critical-thinking.md for rigorous test case analysis
+      git/conventional-commits.md for TDD-aware commit message generation
     </depends_on>
     <provides_to>
       development/task-management.md for TDD workflow integration
       quality/production-standards.md for enhanced coverage requirements
       development/prompt-engineering.md for prompt testing methodology
-      quality/production-standards.md for enterprise testing standards
+      git/conventional-commits.md for test-driven commit messaging
+      All commands for strict TDD enforcement
     </provides_to>
   </integration_points>
   

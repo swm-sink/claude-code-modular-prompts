@@ -1,0 +1,485 @@
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-08   | stable |
+
+# Universal Quality Gates Module
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
+<module name="universal_quality_gates" category="quality">
+  
+  <purpose>
+    Provide standardized quality gates for all commands with consistent enforcement mechanisms, measurable criteria, and comprehensive validation across the entire Claude Code framework.
+  </purpose>
+  
+  <quality_gate_framework>
+    <gate_categories>
+      <foundational_gates>
+        <description>Basic quality requirements that apply to all commands</description>
+        <enforcement_level>BLOCKING</enforcement_level>
+        <applicability>Universal - all commands must pass these gates</applicability>
+      </foundational_gates>
+      
+      <development_gates>
+        <description>Quality gates specific to code development and modification</description>
+        <enforcement_level>BLOCKING</enforcement_level>
+        <applicability>Commands that modify code: /task, /swarm, /feature, /protocol</applicability>
+      </development_gates>
+      
+      <coordination_gates>
+        <description>Quality gates for multi-agent and complex system coordination</description>
+        <enforcement_level>BLOCKING</enforcement_level>
+        <applicability>Multi-component commands: /swarm, /feature, /protocol</applicability>
+      </coordination_gates>
+      
+      <documentation_gates>
+        <description>Quality gates for documentation creation and management</description>
+        <enforcement_level>BLOCKING</enforcement_level>
+        <applicability>Documentation commands: /docs, and development commands with docs</applicability>
+      </documentation_gates>
+      
+      <analysis_gates>
+        <description>Quality gates for research and analysis operations</description>
+        <enforcement_level>CONDITIONAL</enforcement_level>
+        <applicability>Analysis commands: /query, /auto routing decisions</applicability>
+      </analysis_gates>
+    </gate_categories>
+  </quality_gate_framework>
+  
+  <foundational_quality_gates>
+    <gate name="critical_thinking_validation" enforcement="BLOCKING">
+      <description>Verify comprehensive critical thinking analysis completed</description>
+      <criteria>
+        <requirement>Minimum 30-second critical thinking analysis documented</requirement>
+        <requirement>At least 3 critical questions asked and answered per major decision</requirement>
+        <requirement>Alternative approaches considered and documented</requirement>
+        <requirement>Risk assessment and mitigation strategies identified</requirement>
+      </criteria>
+      <validation_method>
+        <check>Critical thinking blocks contain substantive analysis</check>
+        <check>Questions address real concerns and alternatives</check>
+        <check>Risk analysis includes concrete mitigation strategies</check>
+      </validation_method>
+      <failure_response>BLOCK execution until critical thinking requirements met</failure_response>
+    </gate>
+    
+    <gate name="requirement_clarity" enforcement="BLOCKING">
+      <description>Ensure requirements are clear, testable, and achievable</description>
+      <criteria>
+        <requirement>Requirements clearly defined with success criteria</requirement>
+        <requirement>Acceptance criteria are measurable and verifiable</requirement>
+        <requirement>Dependencies and constraints identified</requirement>
+        <requirement>Scope appropriately bounded for command capabilities</requirement>
+      </criteria>
+      <validation_method>
+        <check>Requirements can be objectively evaluated as complete</check>
+        <check>Success criteria include specific metrics or outcomes</check>
+        <check>Dependencies mapped to existing capabilities</check>
+      </validation_method>
+      <failure_response>BLOCK until requirements clarified and validated</failure_response>
+    </gate>
+    
+    <gate name="module_integration_compliance" enforcement="BLOCKING">
+      <description>Verify proper module usage and integration patterns</description>
+      <criteria>
+        <requirement>Required modules explicitly loaded and executed</requirement>
+        <requirement>Module dependencies satisfied in correct order</requirement>
+        <requirement>Module interfaces used correctly</requirement>
+        <requirement>Module execution patterns followed</requirement>
+      </criteria>
+      <validation_method>
+        <check>All required modules referenced in execution plan</check>
+        <check>Module execution order respects dependencies</check>
+        <check>Module outputs properly consumed by subsequent steps</check>
+      </validation_method>
+      <failure_response>BLOCK until module integration corrected</failure_response>
+    </gate>
+    
+    <gate name="error_handling_completeness" enforcement="BLOCKING">
+      <description>Ensure comprehensive error handling and recovery mechanisms</description>
+      <criteria>
+        <requirement>Error conditions identified and handled</requirement>
+        <requirement>Recovery mechanisms defined for failure scenarios</requirement>
+        <requirement>Escalation paths available for complex failures</requirement>
+        <requirement>User feedback provided for error conditions</requirement>
+      </criteria>
+      <validation_method>
+        <check>Error scenarios documented with specific recovery actions</check>
+        <check>Escalation triggers clearly defined</check>
+        <check>User communication plan for error conditions</check>
+      </validation_method>
+      <failure_response>BLOCK until error handling requirements satisfied</failure_response>
+    </gate>
+  </foundational_quality_gates>
+  
+  <development_quality_gates>
+    <gate name="tdd_cycle_compliance" enforcement="BLOCKING">
+      <description>Strict Test-Driven Development methodology enforcement</description>
+      <criteria>
+        <requirement>Failing tests written BEFORE any implementation</requirement>
+        <requirement>Implementation makes tests pass with minimal code</requirement>
+        <requirement>Refactoring improves design while maintaining green tests</requirement>
+        <requirement>Test coverage meets or exceeds 90% for new code</requirement>
+        <requirement>Tests include unit, integration, and edge case coverage</requirement>
+      </criteria>
+      <validation_method>
+        <check>Test files created before implementation files</check>
+        <check>Tests initially fail with expected error messages</check>
+        <check>Implementation focused on making tests pass</check>
+        <check>Coverage reports meet minimum thresholds</check>
+        <check>Refactoring preserves all test passing states</check>
+      </validation_method>
+      <failure_response>BLOCK implementation until TDD compliance verified</failure_response>
+    </gate>
+    
+    <gate name="code_quality_standards" enforcement="BLOCKING">
+      <description>Code quality, conventions, and maintainability requirements</description>
+      <criteria>
+        <requirement>Code follows established project conventions</requirement>
+        <requirement>Functions are focused, well-named, and properly sized</requirement>
+        <requirement>Complexity metrics within acceptable limits</requirement>
+        <requirement>Code is readable and self-documenting</requirement>
+        <requirement>Dependencies are minimized and properly managed</requirement>
+      </criteria>
+      <validation_method>
+        <check>Linting rules pass without errors</check>
+        <check>Cyclomatic complexity below threshold (typically 10)</check>
+        <check>Function length appropriate (typically <50 lines)</check>
+        <check>Naming conventions followed consistently</check>
+      </validation_method>
+      <failure_response>BLOCK until code quality standards met</failure_response>
+    </gate>
+    
+    <gate name="security_requirements" enforcement="BLOCKING">
+      <description>Security considerations and vulnerability prevention</description>
+      <criteria>
+        <requirement>Security threat model completed for changes</requirement>
+        <requirement>Input validation and sanitization implemented</requirement>
+        <requirement>Authentication and authorization properly handled</requirement>
+        <requirement>Sensitive data protected and not exposed</requirement>
+        <requirement>Dependencies scanned for known vulnerabilities</requirement>
+      </criteria>
+      <validation_method>
+        <check>Threat model documents security considerations</check>
+        <check>Security scanning tools report no critical issues</check>
+        <check>Code review confirms security best practices</check>
+        <check>Sensitive data handling follows security protocols</check>
+      </validation_method>
+      <failure_response>BLOCK until security requirements satisfied</failure_response>
+    </gate>
+    
+    <gate name="performance_validation" enforcement="BLOCKING">
+      <description>Performance requirements and optimization validation</description>
+      <criteria>
+        <requirement>Performance requirements defined and measurable</requirement>
+        <requirement>Performance tests validate against requirements</requirement>
+        <requirement>Resource usage within acceptable limits</requirement>
+        <requirement>Scalability considerations addressed</requirement>
+        <requirement>Performance regression testing in place</requirement>
+      </criteria>
+      <validation_method>
+        <check>Performance benchmarks meet specified targets</check>
+        <check>Memory usage and CPU utilization acceptable</check>
+        <check>Response times within required thresholds</check>
+        <check>Load testing validates scalability assumptions</check>
+      </validation_method>
+      <failure_response>BLOCK until performance requirements verified</failure_response>
+    </gate>
+  </development_quality_gates>
+  
+  <coordination_quality_gates>
+    <gate name="multi_agent_synchronization" enforcement="BLOCKING">
+      <description>Multi-agent coordination and synchronization validation</description>
+      <criteria>
+        <requirement>Agent responsibilities clearly defined and non-overlapping</requirement>
+        <requirement>Coordination mechanisms prevent conflicts</requirement>
+        <requirement>Shared interfaces properly specified and tested</requirement>
+        <requirement>Integration testing validates agent coordination</requirement>
+        <requirement>Error handling covers coordination failures</requirement>
+      </criteria>
+      <validation_method>
+        <check>Agent assignment matrix shows clear boundaries</check>
+        <check>Coordination protocols tested and verified</check>
+        <check>Integration tests pass for all agent combinations</check>
+        <check>Conflict resolution mechanisms proven effective</check>
+      </validation_method>
+      <failure_response>BLOCK until coordination requirements satisfied</failure_response>
+    </gate>
+    
+    <gate name="session_tracking_completeness" enforcement="BLOCKING">
+      <description>Comprehensive session and progress tracking validation</description>
+      <criteria>
+        <requirement>Session tracking properly initialized for complex work</requirement>
+        <requirement>Progress milestones clearly defined and tracked</requirement>
+        <requirement>Artifact linking maintains traceability</requirement>
+        <requirement>Context preservation enables resumption</requirement>
+        <requirement>Completion documentation provides closure</requirement>
+      </criteria>
+      <validation_method>
+        <check>GitHub session created with proper template</check>
+        <check>Progress updates include concrete milestones</check>
+        <check>All artifacts properly linked and accessible</check>
+        <check>Context sufficient for session resumption</check>
+      </validation_method>
+      <failure_response>BLOCK until session tracking requirements met</failure_response>
+    </gate>
+    
+    <gate name="integration_validation" enforcement="BLOCKING">
+      <description>System integration and end-to-end validation</description>
+      <criteria>
+        <requirement>Component integration tested and verified</requirement>
+        <requirement>End-to-end workflows function correctly</requirement>
+        <requirement>Data flow validated across component boundaries</requirement>
+        <requirement>Error propagation handled appropriately</requirement>
+        <requirement>System behavior meets overall requirements</requirement>
+      </criteria>
+      <validation_method>
+        <check>Integration tests cover all component interfaces</check>
+        <check>End-to-end test scenarios validate user workflows</check>
+        <check>Data consistency maintained across integrations</check>
+        <check>Error scenarios tested and handled correctly</check>
+      </validation_method>
+      <failure_response>BLOCK until integration validation complete</failure_response>
+    </gate>
+  </coordination_quality_gates>
+  
+  <documentation_quality_gates>
+    <gate name="documentation_standards_compliance" enforcement="BLOCKING">
+      <description>Documentation quality, consistency, and completeness validation</description>
+      <criteria>
+        <requirement>Documentation follows Framework 3.0 standards</requirement>
+        <requirement>Content is accurate, current, and complete</requirement>
+        <requirement>Cross-references and links are valid</requirement>
+        <requirement>Documentation structure is logical and navigable</requirement>
+        <requirement>Examples and code snippets are tested and working</requirement>
+      </criteria>
+      <validation_method>
+        <check>Format validation against Framework 3.0 template</check>
+        <check>Content review for accuracy and completeness</check>
+        <check>Link validation ensures all references work</check>
+        <check>Structure review for logical organization</check>
+      </validation_method>
+      <failure_response>BLOCK until documentation standards satisfied</failure_response>
+    </gate>
+    
+    <gate name="tdd_methodology_documentation" enforcement="BLOCKING">
+      <description>TDD methodology properly documented in development guides</description>
+      <criteria>
+        <requirement>TDD principles clearly explained and referenced</requirement>
+        <requirement>Testing workflows documented with examples</requirement>
+        <requirement>Quality standards linked to TDD modules</requirement>
+        <requirement>Best practices and patterns included</requirement>
+        <requirement>Common pitfalls and solutions documented</requirement>
+      </criteria>
+      <validation_method>
+        <check>TDD references accurate and comprehensive</check>
+        <check>Workflow documentation includes practical examples</check>
+        <check>Links to TDD modules functional and current</check>
+        <check>Best practices align with established patterns</check>
+      </validation_method>
+      <failure_response>BLOCK until TDD documentation requirements met</failure_response>
+    </gate>
+  </documentation_quality_gates>
+  
+  <analysis_quality_gates>
+    <gate name="research_comprehensiveness" enforcement="CONDITIONAL">
+      <description>Research and analysis depth and accuracy validation</description>
+      <criteria>
+        <requirement>Analysis covers all relevant aspects of the query</requirement>
+        <requirement>Sources are comprehensive and current</requirement>
+        <requirement>Findings are accurate and well-supported</requirement>
+        <requirement>Patterns and relationships clearly identified</requirement>
+        <requirement>Conclusions are logical and evidence-based</requirement>
+      </criteria>
+      <validation_method>
+        <check>Analysis scope matches query requirements</check>
+        <check>Source coverage includes all relevant files/systems</check>
+        <check>Findings verified against actual code/documentation</check>
+        <check>Pattern identification supported by evidence</check>
+      </validation_method>
+      <failure_response>WARN if analysis incomplete, recommend deeper investigation</failure_response>
+    </gate>
+    
+    <gate name="routing_decision_quality" enforcement="BLOCKING">
+      <description>Intelligent routing decisions based on sound analysis</description>
+      <criteria>
+        <requirement>Complexity scoring methodology correctly applied</requirement>
+        <requirement>Routing decision aligns with complexity assessment</requirement>
+        <requirement>Target command capabilities match requirements</requirement>
+        <requirement>TDD enforcement needs properly considered</requirement>
+        <requirement>Alternative routing options evaluated</requirement>
+      </criteria>
+      <validation_method>
+        <check>Complexity score calculation verified</check>
+        <check>Routing thresholds applied correctly</check>
+        <check>Target command capabilities sufficient</check>
+        <check>TDD requirements matched to command capabilities</check>
+      </validation_method>
+      <failure_response>BLOCK until routing decision justified and optimal</failure_response>
+    </gate>
+  </analysis_quality_gates>
+  
+  <quality_gate_enforcement>
+    <enforcement_mechanisms>
+      <blocking_enforcement>
+        <description>Completely prevent progression until gate requirements satisfied</description>
+        <implementation>BLOCK keyword triggers immediate halt of execution</implementation>
+        <recovery>Must address gate failure before continuing</recovery>
+        <escalation>Persistent failures escalate to error recovery protocols</escalation>
+      </blocking_enforcement>
+      
+      <conditional_enforcement>
+        <description>Allow alternative paths or degraded functionality</description>
+        <implementation>CONDITIONAL triggers alternative workflow evaluation</implementation>
+        <recovery>Alternative path available, may continue with limitations</recovery>
+        <escalation>Document limitation for future improvement</escalation>
+      </conditional_enforcement>
+      
+      <warning_enforcement>
+        <description>Log concerns but allow progression</description>
+        <implementation>WARN keyword logs issue without blocking</implementation>
+        <recovery>Continue execution, address warning in future iteration</recovery>
+        <escalation>Accumulating warnings trigger review process</escalation>
+      </warning_enforcement>
+    </enforcement_mechanisms>
+    
+    <gate_sequencing>
+      <pre_execution_gates>
+        <gate>critical_thinking_validation</gate>
+        <gate>requirement_clarity</gate>
+        <gate>module_integration_compliance</gate>
+      </pre_execution_gates>
+      
+      <during_execution_gates>
+        <gate>tdd_cycle_compliance</gate>
+        <gate>code_quality_standards</gate>
+        <gate>multi_agent_synchronization</gate>
+        <gate>session_tracking_completeness</gate>
+      </during_execution_gates>
+      
+      <post_execution_gates>
+        <gate>security_requirements</gate>
+        <gate>performance_validation</gate>
+        <gate>integration_validation</gate>
+        <gate>documentation_standards_compliance</gate>
+      </post_execution_gates>
+    </gate_sequencing>
+    
+    <command_specific_gate_sets>
+      <task_command_gates>
+        <required>foundational_gates + development_gates</required>
+        <optional>documentation_gates (if docs modified)</optional>
+        <enforcement_level>BLOCKING for all required gates</enforcement_level>
+      </task_command_gates>
+      
+      <swarm_command_gates>
+        <required>foundational_gates + development_gates + coordination_gates</required>
+        <optional>documentation_gates (if docs involved)</optional>
+        <enforcement_level>BLOCKING for all required gates</enforcement_level>
+      </swarm_command_gates>
+      
+      <auto_command_gates>
+        <required>foundational_gates + analysis_gates</required>
+        <optional>development_gates (if routing to development command)</optional>
+        <enforcement_level>BLOCKING for foundational, CONDITIONAL for analysis</enforcement_level>
+      </auto_command_gates>
+      
+      <query_command_gates>
+        <required>foundational_gates + analysis_gates</required>
+        <optional>none</optional>
+        <enforcement_level>BLOCKING for foundational, CONDITIONAL for analysis</enforcement_level>
+      </query_command_gates>
+      
+      <session_command_gates>
+        <required>foundational_gates + coordination_gates</required>
+        <optional>development_gates (for development sessions)</optional>
+        <enforcement_level>BLOCKING for all required gates</enforcement_level>
+      </session_command_gates>
+      
+      <protocol_command_gates>
+        <required>ALL gate categories</required>
+        <optional>none (strictest enforcement)</optional>
+        <enforcement_level>BLOCKING for all gates</enforcement_level>
+      </protocol_command_gates>
+      
+      <docs_command_gates>
+        <required>foundational_gates + documentation_gates</required>
+        <optional>analysis_gates (if research involved)</optional>
+        <enforcement_level>BLOCKING for all required gates</enforcement_level>
+      </docs_command_gates>
+    </command_specific_gate_sets>
+  </quality_gate_enforcement>
+  
+  <integration_template>
+    <universal_quality_gates_block>
+      <structure>
+        &lt;universal_quality_gates enforcement="MANDATORY"&gt;
+          &lt;gate_set&gt;[command_specific_gate_set]&lt;/gate_set&gt;
+          &lt;validation&gt;Reference quality/universal-quality-gates.md#[command]_gates&lt;/validation&gt;
+          &lt;blocking_conditions&gt;
+            &lt;condition&gt;[gate_1] requirements not satisfied&lt;/condition&gt;
+            &lt;condition&gt;[gate_2] validation fails&lt;/condition&gt;
+            &lt;condition&gt;[gate_n] enforcement triggered&lt;/condition&gt;
+          &lt;/blocking_conditions&gt;
+          &lt;enforcement_sequence&gt;
+            &lt;pre_execution&gt;[foundational_gates]&lt;/pre_execution&gt;
+            &lt;during_execution&gt;[development/coordination_gates]&lt;/during_execution&gt;
+            &lt;post_execution&gt;[validation/documentation_gates]&lt;/post_execution&gt;
+          &lt;/enforcement_sequence&gt;
+        &lt;/universal_quality_gates&gt;
+      </structure>
+      
+      <implementation_guidelines>
+        <gate_selection>Select appropriate gate set based on command type and requirements</gate_selection>
+        <customization>Add command-specific gates as needed for unique requirements</customization>
+        <enforcement_tuning>Adjust enforcement levels based on command risk profile</enforcement_tuning>
+        <integration_order>Place quality gates block after TDD integration, before examples</integration_order>
+      </implementation_guidelines>
+    </universal_quality_gates_block>
+  </integration_template>
+  
+  <metrics_and_monitoring>
+    <gate_effectiveness_metrics>
+      <metric name="gate_pass_rate">Percentage of executions passing each gate</metric>
+      <metric name="gate_failure_frequency">Most common gate failures by command</metric>
+      <metric name="resolution_time">Average time to resolve gate failures</metric>
+      <metric name="quality_improvement">Quality trends over time with gate enforcement</metric>
+    </gate_effectiveness_metrics>
+    
+    <continuous_improvement>
+      <feedback_collection>Gather data on gate effectiveness and user experience</feedback_collection>
+      <threshold_tuning>Adjust gate criteria based on effectiveness data</threshold_tuning>
+      <gate_evolution>Add new gates based on emerging quality requirements</gate_evolution>
+      <automation_enhancement">Improve automated validation mechanisms</automation_enhancement>
+    </continuous_improvement>
+  </metrics_and_monitoring>
+  
+  <integration_points>
+    <depends_on>
+      quality/tdd.md for TDD-specific quality requirements
+      quality/production-standards.md for production-level quality standards
+      quality/critical-thinking.md for critical thinking validation standards
+      security/threat-modeling.md for security gate requirements
+    </depends_on>
+    <provides_to>
+      All commands for standardized quality gate enforcement
+      quality/framework-metrics.md for quality measurement and tracking
+      patterns/pattern-library.md for quality gate implementation patterns
+    </provides_to>
+  </integration_points>
+  
+  <pattern_usage>
+    <uses_pattern from="patterns/pattern-library.md">quality_gates</uses_pattern>
+    <uses_pattern from="patterns/pattern-library.md">enforcement_mechanisms</uses_pattern>
+    <uses_pattern from="patterns/pattern-library.md">checkpoint_validation</uses_pattern>
+    <implementation_notes>
+      Quality gates implement quality_gates pattern for consistent enforcement
+      Enforcement mechanisms use enforcement_mechanisms pattern for predictable behavior
+      Gate validation follows checkpoint_validation pattern for reliable assessment
+      Universal application ensures consistent quality standards across all commands
+    </implementation_notes>
+  </pattern_usage>
+  
+</module>
+```

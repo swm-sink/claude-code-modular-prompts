@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.3.1   | 2025-07-08   | stable |
+| 2.4.0   | 2025-01-08   | stable |
 
 # Autonomous Feature Development
 
@@ -18,22 +18,133 @@
   </delegation>
   
   <thinking_pattern enforcement="MANDATORY">
-    <step>0. PERSONA: Load persona context from patterns/persona-manager.md (auto-detect or --persona flag)</step>
-    <step>1. Generate comprehensive PRD using feature-workflow.md patterns enhanced with persona perspective</step>
-    <step>2. Auto-detect tech stack and existing patterns in codebase through persona lens</step>
-    <step>3. Create GitHub session for tracking (ALWAYS) with persona assignments logged</step>
-    <step>4. Define MVP with clear phases and acceptance criteria using persona-specific quality gates</step>
-    <step>5. Calculate complexity: >15 score triggers /swarm delegation with specialized personas</step>
-    <step>6. Execute with TDD: Write ALL tests FIRST using persona-enhanced testing approach</step>
-    <step>7. Apply quality gates from production-standards.md augmented with persona standards</step>
-    <step>8. Auto-generate documentation via /docs patterns with persona-specific documentation style</step>
+    <step>0. CONTEXT PRIMING: Load comprehensive project context BEFORE any planning begins
+      - Repository structure analysis via Glob(**/*.{js,ts,py,java,go,rs})
+      - Key file identification (README, package.json, requirements.txt, go.mod, Cargo.toml)
+      - Technology stack detection from dependencies and file extensions
+      - Coding standards extraction from .eslintrc, .prettierrc, pyproject.toml, etc.
+      - Recent commit history review via git log --oneline -20
+      - Architecture patterns from existing code structure
+      - Test framework detection from test files and config</step>
+    <step>1. PERSONA: Load persona context from patterns/persona-manager.md (auto-detect or --persona flag)</step>
+    <step>2. Generate comprehensive PRD using feature-workflow.md patterns enhanced with persona perspective and context insights</step>
+    <step>3. Auto-detect tech stack and existing patterns in codebase through persona lens AND context analysis</step>
+    <step>4. Create GitHub session for tracking (ALWAYS) with persona assignments and context summary logged</step>
+    <step>5. Define MVP with clear phases and acceptance criteria using persona-specific quality gates</step>
+    <step>6. Calculate complexity: >15 score triggers /swarm delegation with specialized personas</step>
+    <step>7. Execute with TDD: Write ALL tests FIRST using persona-enhanced testing approach and detected test framework</step>
+    <step>8. Apply quality gates from production-standards.md augmented with persona standards</step>
+    <step>9. Auto-generate documentation via /docs patterns with persona-specific documentation style</step>
   </thinking_pattern>
+  
+  <enforcement_verification enforcement="REQUIRED">
+    <checkpoint name="CONTEXT_PRIMING">
+      <verify>Project context fully loaded and analyzed</verify>
+      <output>Display detected: tech stack, test framework, coding standards, architecture patterns</output>
+      <validate>Repository structure understood, key files identified, patterns detected</validate>
+    </checkpoint>
+    
+    <checkpoint name="PRD_GENERATION">
+      <verify>PRD document created with all sections populated AND context insights integrated</verify>
+      <output>Display PRD summary with key decisions informed by context analysis</output>
+      <validate>User story, acceptance criteria, technical approach defined using existing patterns</validate>
+    </checkpoint>
+    
+    <checkpoint name="TECH_ANALYSIS">
+      <verify>Codebase patterns detected and documented</verify>
+      <output>List detected frameworks, patterns, and conventions</output>
+      <validate>Technology stack compatibility confirmed</validate>
+    </checkpoint>
+    
+    <checkpoint name="SESSION_CREATION">
+      <verify>GitHub issue created with proper structure</verify>
+      <output>Show issue URL and initial task breakdown</output>
+      <validate>All phases mapped with checkboxes</validate>
+    </checkpoint>
+    
+    <checkpoint name="COMPLEXITY_ASSESSMENT">
+      <verify>Complexity score calculated using deterministic rules</verify>
+      <output>Display score breakdown: files={n}, patterns={n}, integrations={n}</output>
+      <validate>Routing decision made: /task or /swarm</validate>
+    </checkpoint>
+    
+    <checkpoint name="TDD_COMPLIANCE">
+      <verify>All tests written BEFORE implementation</verify>
+      <output>Show test file paths and RED test results</output>
+      <validate>Tests fail for the right reasons</validate>
+    </checkpoint>
+    
+    <checkpoint name="QUALITY_GATES">
+      <verify>All gates from production-standards.md passed</verify>
+      <output>Display gate results: security=✓, performance=✓, coverage=✓</output>
+      <validate>No gate bypassed without explicit justification</validate>
+    </checkpoint>
+    
+    <checkpoint name="DOCUMENTATION">
+      <verify>Documentation generated via /docs command</verify>
+      <output>List created/updated documentation files</output>
+      <validate>All code changes have corresponding docs</validate>
+    </checkpoint>
+  </enforcement_verification>
+  
+  <decision_registry enforcement="REQUIRED">
+    <decision_format>
+      <id>FEATURE-{timestamp}-{decision_type}</id>
+      <type>ARCHITECTURE | TECHNOLOGY | SECURITY | PERFORMANCE | DESIGN</type>
+      <context>What prompted this decision</context>
+      <options_considered>List of alternatives evaluated</options_considered>
+      <decision>The chosen approach with rationale</decision>
+      <consequences>Downstream impacts and tradeoffs</consequences>
+      <reversibility>HIGH | MEDIUM | LOW</reversibility>
+    </decision_format>
+    
+    <mandatory_decisions>
+      <decision type="ARCHITECTURE">Framework and pattern selection</decision>
+      <decision type="TECHNOLOGY">Language, libraries, and tools</decision>
+      <decision type="SECURITY">Authentication and authorization approach</decision>
+      <decision type="PERFORMANCE">Caching and optimization strategy</decision>
+      <decision type="DESIGN">API structure and data models</decision>
+    </mandatory_decisions>
+    
+    <propagation_rules>
+      <rule>All decisions MUST be recorded in GitHub session</rule>
+      <rule>Child agents inherit parent decision context</rule>
+      <rule>Conflicting decisions require explicit resolution</rule>
+      <rule>Decision changes require impact analysis</rule>
+    </propagation_rules>
+  </decision_registry>
+  
+  <critical_thinking_validation enforcement="REQUIRED">
+    <pre_action_analysis duration="30_seconds_minimum">
+      <step>1. PAUSE: Take 30 seconds to analyze the full request</step>
+      <step>2. CHALLENGE: Question assumptions in the feature request</step>
+      <step>3. RESEARCH: Check for existing similar implementations</step>
+      <step>4. CONSEQUENCES: Map out If X → Y → Z implications</step>
+      <step>5. ALTERNATIVES: Consider at least 3 different approaches</step>
+    </pre_action_analysis>
+    
+    <duplication_prevention>
+      <scan>Search entire codebase for similar functionality</scan>
+      <analyze>Identify reusable components and patterns</analyze>
+      <decide>Justify new implementation vs extending existing</decide>
+      <document>Record duplication analysis in decision registry</document>
+    </duplication_prevention>
+    
+    <validation_outputs enforcement="MANDATORY">
+      <output>Display: "⏸️ CRITICAL THINKING: Analyzing for 30 seconds..."</output>
+      <output>Show discovered assumptions and challenges</output>
+      <output>List existing similar implementations found</output>
+      <output>Present consequence map with downstream effects</output>
+      <output>Compare 3+ alternative approaches with tradeoffs</output>
+    </validation_outputs>
+  </critical_thinking_validation>
   
   <module_integration>
     <primary_module>modules/planning/feature-workflow.md</primary_module>
     <execution_flow>
-      <phase name="PRD">planning/feature-workflow.md → Generate requirements</phase>
-      <phase name="Session">patterns/session-management.md → Create GitHub tracking</phase>
+      <phase name="Context">patterns/context-preservation.md → Load comprehensive project context</phase>
+      <phase name="PRD">planning/feature-workflow.md → Generate requirements with context insights</phase>
+      <phase name="Session">patterns/session-management.md → Create GitHub tracking with context summary</phase>
       <phase name="Analysis">patterns/intelligent-routing.md → Complexity scoring</phase>
       <phase name="Delegation">IF score>15: patterns/multi-agent.md → Swarm execution</phase>
       <phase name="Development">development/task-management.md → TDD implementation</phase>

@@ -14,15 +14,123 @@
   </delegation>
   
   <thinking_pattern enforcement="MANDATORY">
-    <step>1. Create GitHub session for compliance tracking</step>
-    <step>2. Validate ALL production requirements upfront</step>
-    <step>3. ENFORCE TDD: No code without failing tests first</step>
-    <step>4. Apply threat modeling from security modules</step>
-    <step>5. Implement with performance benchmarks in mind</step>
-    <step>6. Run ALL quality gates (coverage, security, performance)</step>
-    <step>7. Generate compliance documentation automatically</step>
-    <step>8. Block deployment if ANY gate fails</step>
+    <checkpoint id="1" verify="true" enforcement="BLOCKING">
+      <action>Create GitHub session for comprehensive compliance tracking</action>
+      <critical_thinking>
+        - What compliance frameworks apply to this production system?
+        - How complex is this system requiring production standards?
+        - Should I escalate to /swarm for multi-system integration?
+        - What audit trail requirements must be established?
+      </critical_thinking>
+      <output_format>COMPLIANCE_SESSION: #[number] tracking [frameworks] with [audit_requirements]</output_format>
+      <validation>Session created with appropriate compliance tracking framework</validation>
+      <enforcement>BLOCK if compliance requirements unclear or session creation fails</enforcement>
+    </checkpoint>
+    <checkpoint id="2" verify="true" enforcement="BLOCKING">
+      <action>Validate ALL production requirements with TDD methodology</action>
+      <critical_thinking>
+        - Are requirements testable and measurable?
+        - What regulatory compliance must be verified through tests?
+        - How will TDD validate security and performance requirements?
+        - Are acceptance criteria sufficient for production validation?
+      </critical_thinking>
+      <output_format>REQUIREMENTS_VALIDATION: [requirements] with TDD validation plan</output_format>
+      <validation>All requirements validated as testable with clear TDD approach</validation>
+      <enforcement>BLOCK if requirements not testable or TDD plan incomplete</enforcement>
+    </checkpoint>
+    <checkpoint id="3" verify="true" enforcement="BLOCKING">
+      <action>ENFORCE strict TDD: RED-GREEN-REFACTOR for production code</action>
+      <critical_thinking>
+        - Am I writing failing tests FIRST for all functionality?
+        - Do tests cover security requirements and edge cases?
+        - Are performance tests included in TDD cycle?
+        - Will TDD methodology ensure production quality?
+      </critical_thinking>
+      <output_format>TDD_ENFORCEMENT: RED tests written for [components] covering [compliance_areas]</output_format>
+      <validation>Comprehensive failing tests written BEFORE any implementation</validation>
+      <enforcement>BLOCK any implementation before failing tests exist - use quality/tdd.md</enforcement>
+    </checkpoint>
+    <checkpoint id="4" verify="true" enforcement="BLOCKING">
+      <action>Apply comprehensive threat modeling and security testing</action>
+      <critical_thinking>
+        - What security threats apply to this production system?
+        - Are security controls testable through TDD?
+        - How do I validate compliance with security frameworks?
+        - Are security tests part of the TDD cycle?
+      </critical_thinking>
+      <output_format>SECURITY_VALIDATION: Threat model complete with security tests [implemented/verified]</output_format>
+      <validation>Security threats identified and addressed through testable controls</validation>
+      <enforcement>BLOCK if threat model incomplete or security tests missing</enforcement>
+    </checkpoint>
+    <checkpoint id="5" verify="true" enforcement="BLOCKING">
+      <action>Implement with performance benchmarks and TDD validation</action>
+      <critical_thinking>
+        - Are performance requirements testable and measurable?
+        - Do performance tests run as part of TDD cycle?
+        - Will implementation meet <200ms p95 performance target?
+        - Are performance regression tests in place?
+      </critical_thinking>
+      <output_format>PERFORMANCE_IMPLEMENTATION: Code with performance tests [passing/benchmarked]</output_format>
+      <validation>Implementation meets performance requirements with test validation</validation>
+      <enforcement>BLOCK if performance targets not met or tests failing</enforcement>
+    </checkpoint>
+    <checkpoint id="6" verify="true" enforcement="BLOCKING">
+      <action>Validate ALL quality gates with comprehensive coverage</action>
+      <critical_thinking>
+        - Is test coverage ≥95% for production standards?
+        - Do all security scans pass with zero critical issues?
+        - Are performance benchmarks met and documented?
+        - Is compliance documentation complete and auditable?
+      </critical_thinking>
+      <output_format>QUALITY_GATES: Coverage [%], Security [clean], Performance [met], Docs [complete]</output_format>
+      <validation>All quality gates pass with documented evidence</validation>
+      <enforcement>BLOCK deployment if ANY quality gate fails - must resolve</enforcement>
+    </checkpoint>
+    <checkpoint id="7" verify="true" enforcement="BLOCKING">
+      <action>Generate compliance documentation with audit trail</action>
+      <critical_thinking>
+        - Is all compliance documentation automatically generated?
+        - Are audit trails complete and tamper-evident?
+        - Will documentation satisfy regulatory requirements?
+        - Are deployment artifacts properly signed and tracked?
+      </critical_thinking>
+      <output_format>COMPLIANCE_DOCS: Generated with [frameworks] compliance and audit trail</output_format>
+      <validation>Complete compliance documentation with proper audit trails</validation>
+      <enforcement>BLOCK if documentation incomplete or audit trail insufficient</enforcement>
+    </checkpoint>
   </thinking_pattern>
+  
+  <tdd_integration enforcement="MANDATORY">
+    <production_tdd>Strictest TDD enforcement for production systems with ≥95% coverage</production_tdd>
+    <compliance_testing>All regulatory requirements must be validated through automated tests</compliance_testing>
+    <security_tdd>Security controls implemented through test-driven security methodology</security_tdd>
+    <performance_tdd>Performance requirements validated through TDD with benchmark tests</performance_tdd>
+    <validation>Reference quality/tdd.md#production_standards for strictest TDD enforcement</validation>
+    <blocking_conditions>
+      <condition>Any production code without comprehensive test coverage</condition>
+      <condition>Implementation before failing tests exist</condition>
+      <condition>Security controls not validated through tests</condition>
+      <condition>Performance requirements not verified through automated tests</condition>
+      <condition>Compliance requirements not testable or not tested</condition>
+    </blocking_conditions>
+  </tdd_integration>
+  
+  <module_execution enforcement="MANDATORY">
+    <core_stack order="sequential">
+      <module>quality/critical-thinking.md - 30-second analysis before production development</module>
+      <module>patterns/session-management.md - GitHub compliance tracking session</module>
+      <module>quality/production-standards.md - Comprehensive production quality gates</module>
+      <module>quality/tdd.md - Strictest TDD enforcement for production code</module>
+      <module>security/threat-modeling.md - Security analysis and testing</module>
+      <module>quality/pre-commit.md - Production-grade pre-commit validation</module>
+    </core_stack>
+    <contextual_modules>
+      <conditional module="security/financial-compliance.md" condition="financial_system"/>
+      <conditional module="patterns/multi-agent.md" condition="complex_system OR escalation_needed"/>
+      <conditional module="development/code-review.md" condition="production_deployment"/>
+      <conditional module="quality/error-recovery.md" condition="critical_system_failure"/>
+    </contextual_modules>
+  </module_execution>
   
   <depends_on>
     quality/production-standards.md for complete protocol implementation

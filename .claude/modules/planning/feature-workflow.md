@@ -175,13 +175,14 @@
   </methodology>
   
   <quality_gates enforcement="strict">
-    <gate name="prd_approval" requirement="Complete PRD with stakeholder sign-off"/>
-    <gate name="mvp_definition" requirement="Clear MVP scope with technical feasibility"/>
-    <gate name="tdd_compliance" requirement="Full TDD cycle with 90% test coverage"/>
-    <gate name="security_review" requirement="Security implications assessed and resolved"/>
-    <gate name="performance_validation" requirement="Performance requirements met and verified"/>
-    <gate name="user_acceptance" requirement="All acceptance criteria validated"/>
-    <gate name="deployment_readiness" requirement="Production deployment approved"/>
+    <gate name="prd_approval" requirement="Complete PRD with stakeholder sign-off" blocking="true"/>
+    <gate name="mvp_definition" requirement="Clear MVP scope with technical feasibility" blocking="true"/>
+    <gate name="tdd_enforcement" requirement="Mandatory TDD enforcement per quality/tdd-enforcement.md" blocking="true"/>
+    <gate name="security_verification" requirement="Security gate verification per quality/security-gate-verification.md" blocking="true"/>
+    <gate name="performance_benchmarks" requirement="Performance gates per quality/performance-gates.md" blocking="true"/>
+    <gate name="gate_verification" requirement="Comprehensive quality gate verification per quality/gate-verification.md" blocking="true"/>
+    <gate name="user_acceptance" requirement="All acceptance criteria validated" blocking="true"/>
+    <gate name="deployment_readiness" requirement="Production deployment approved" blocking="true"/>
   </quality_gates>
   
   <session_integration enforcement="automatic">
@@ -211,7 +212,10 @@
       planning/prd-core.md for shared PRD standards and templates
       planning/prd-generation.md OR planning/intelligent-prd.md for PRD creation process
       planning/mvp-strategy.md for MVP definition methodology
-      testing/iterative-testing.md for TDD implementation
+      quality/tdd-enforcement.md for non-bypassable TDD enforcement
+      quality/security-gate-verification.md for security verification
+      quality/performance-gates.md for performance benchmarking
+      quality/gate-verification.md for comprehensive quality gate orchestration
       quality/production-standards.md for validation procedures
       patterns/session-management.md for GitHub issue integration
     </depends_on>

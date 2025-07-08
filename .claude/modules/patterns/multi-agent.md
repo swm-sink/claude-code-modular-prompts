@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 1.2.0   | 2025-07-07   | stable |
+| 1.4.0   | 2025-01-08   | stable |
 
 # Multi-Agent Module
 
@@ -13,14 +13,125 @@
     Define and implement native Claude Code multi-agent patterns using Task() and Batch() for parallel execution with git worktree isolation for maximum effectiveness.
   </purpose>
   
-  <thinking_pattern enforcement="MANDATORY">
-    <step>1. Create GitHub session for coordination tracking FIRST</step>
-    <step>2. Analyze components and assign specialized agents</step>
-    <step>3. Create git worktrees BEFORE Task() execution: ../worktrees/swarm-{session}-{agent}</step>
-    <step>4. Execute ALL Task() calls in ONE message for true parallelism</step>
-    <step>5. Ensure each agent has isolated environment with TDD enforcement</step>
-    <step>6. Apply 4-tier error recovery if any agent fails</step>
-    <step>7. Merge all agent work and clean up worktrees after completion</step>
+  <thinking_pattern>
+    <checkpoint id="1" verify="true" enforcement="MANDATORY">
+      <action>Create GitHub session for coordination tracking FIRST</action>
+      <critical_thinking>
+        - Why: Central coordination hub enables deterministic agent behavior
+        - Challenge: Single session sufficient for complex multi-component work?
+        - Alternative: Multiple linked sessions for component isolation
+        - Decision: Single session with clear agent sections for traceability
+      </critical_thinking>
+      <output_format>SESSION_CREATED: #[number] - [title]</output_format>
+      <validation>Must output session ID before proceeding</validation>
+      <enforcement>BLOCK if session creation fails - no coordination without tracking</enforcement>
+    </checkpoint>
+    <checkpoint id="2" verify="true" enforcement="MANDATORY">
+      <action>Analyze components and assign specialized agents with decision precedence</action>
+      <critical_thinking>
+        - Why: Decision precedence prevents architectural conflicts
+        - Challenge: Determining optimal agent ordering for dependencies
+        - Alternative: Parallel decisions with conflict resolution
+        - Decision: Strict precedence (Security→Backend→Frontend→DevOps) for determinism
+      </critical_thinking>
+      <output_format>AGENT_ASSIGNMENTS:
+        - Security Expert (FIRST): [responsibility] - decisions: auth_method, security_model
+        - Backend Developer (SECOND): [responsibility] - acknowledges: security decisions
+        - Frontend Developer (THIRD): [responsibility] - acknowledges: security + backend decisions
+        - DevOps Engineer (FOURTH): [responsibility] - acknowledges: all previous decisions</output_format>
+      <validation>Must establish decision precedence order and acknowledgment chain</validation>
+      <enforcement>VERIFY each agent has clear decision dependencies mapped</enforcement>
+    </checkpoint>
+    <checkpoint id="3" verify="true" enforcement="MANDATORY">
+      <action>Create git worktrees BEFORE Task() execution</action>
+      <critical_thinking>
+        - Why: Isolated worktrees prevent merge conflicts and enable true parallelism
+        - Challenge: Worktree overhead vs benefit for small changes
+        - Alternative: Shared workspace with file locking
+        - Decision: Always use worktrees for conflict-free parallel execution
+      </critical_thinking>
+      <output_format>WORKTREES_CREATED:
+        - ../worktrees/swarm-[session]-security (PRIORITY: 1)
+        - ../worktrees/swarm-[session]-backend (PRIORITY: 2)
+        - ../worktrees/swarm-[session]-frontend (PRIORITY: 3)
+        - ../worktrees/swarm-[session]-devops (PRIORITY: 4)</output_format>
+      <validation>Must show worktree paths with decision precedence order</validation>
+      <enforcement>VERIFY worktree creation success before proceeding to Task()</enforcement>
+    </checkpoint>
+    <checkpoint id="4" verify="true" enforcement="MANDATORY">
+      <action>Execute Task() calls with decision coordination protocol</action>
+      <critical_thinking>
+        - Why: Explicit decision acknowledgment prevents implementation conflicts
+        - Challenge: Balancing agent autonomy with coordination requirements
+        - Alternative: Post-hoc conflict resolution
+        - Decision: Upfront acknowledgment for deterministic outcomes
+      </critical_thinking>
+      <output_format>TASK_EXECUTION_WITH_DECISIONS:
+        Task("Security Expert", "Document critical decisions FIRST")
+        Task("Backend Developer", "Implement acknowledging security decisions")
+        Task("Frontend Developer", "Build components acknowledging backend + security")
+        Task("DevOps Engineer", "Deploy acknowledging all architectural decisions")</output_format>
+      <validation>All Task() calls must include decision acknowledgment requirements</validation>
+      <enforcement>VERIFY each Task() includes explicit decision dependencies</enforcement>
+      <context_transfer>
+        - Decision registry file path: .claude/swarm-decisions/session-[id].json
+        - Each agent MUST read previous decisions before implementation
+        - Context includes: decisions, rationales, technical constraints
+      </context_transfer>
+    </checkpoint>
+    <checkpoint id="5" verify="true" enforcement="MANDATORY">
+      <action>Verify decision registry populated and acknowledged</action>
+      <critical_thinking>
+        - Why: Registry verification ensures no orphaned decisions
+        - Challenge: Detecting implicit vs explicit acknowledgments
+        - Alternative: Automated decision propagation
+        - Decision: Explicit acknowledgment for audit trail
+      </critical_thinking>
+      <output_format>DECISION_REGISTRY_STATUS:
+        - Security decisions: [count] documented, [count] acknowledged
+        - Backend decisions: [count] documented, [count] acknowledged
+        - Frontend decisions: [count] documented, [count] acknowledged
+        - Integration verified: [YES/NO]</output_format>
+      <validation>Must confirm all critical decisions documented and acknowledged</validation>
+      <enforcement>BLOCK merge if any critical decision lacks acknowledgment</enforcement>
+      <decision_verification>
+        - All IMMUTABLE decisions must be fully acknowledged
+        - Decision conflicts must be resolved before proceeding
+        - Orphaned decisions indicate coordination failure
+      </decision_verification>
+    </checkpoint>
+    <checkpoint id="6" verify="optional" enforcement="CONDITIONAL">
+      <action>Apply 4-tier error recovery if failures occur</action>
+      <critical_thinking>
+        - Why: Graceful degradation maintains system resilience
+        - Challenge: Determining recovery trigger thresholds
+        - Alternative: Fail-fast with manual intervention
+        - Decision: Automatic recovery for predictable failure modes
+      </critical_thinking>
+      <output_format>RECOVERY_STATUS: [NONE|TIER_1|TIER_2|TIER_3|TIER_4]</output_format>
+      <validation>Only required if errors detected</validation>
+      <enforcement>ESCALATE to next tier if current tier fails</enforcement>
+    </checkpoint>
+    <checkpoint id="7" verify="true" enforcement="MANDATORY">
+      <action>Merge agent work with decision consistency verification</action>
+      <critical_thinking>
+        - Why: Final verification prevents inconsistent system state
+        - Challenge: Detecting subtle decision violations
+        - Alternative: Runtime decision validation
+        - Decision: Compile-time verification for early detection
+      </critical_thinking>
+      <output_format>MERGE_WITH_DECISION_VERIFICATION:
+        - Decision consistency: [VERIFIED/CONFLICTS]
+        - Integration success: [YES/NO]
+        - Worktrees cleaned: [count]</output_format>
+      <validation>Must verify decision consistency before merge completion</validation>
+      <enforcement>ROLLBACK if decision conflicts detected during merge</enforcement>
+      <final_verification>
+        - Cross-agent decision compatibility matrix
+        - Implementation matches documented decisions
+        - No orphaned or conflicting decisions remain
+      </final_verification>
+    </checkpoint>
   </thinking_pattern>
   
   <trigger_conditions>
@@ -30,92 +141,500 @@
   
   <implementation>
     
-    <phase name="pattern_selection" order="1">
+    <phase name="enhanced_task_breakdown" order="1">
+      <requirements>
+        Complete task analysis with component identification and dependency mapping
+        Complexity estimation with effort sizing (S/M/L/XL scale)
+        Success criteria definition for each component and integration point
+        Risk assessment with mitigation strategies for high-risk components
+      </requirements>
+      <actions>
+        Identify all components affected by the task (frontend, backend, database, infrastructure)
+        Map dependencies between components and identify blocking relationships
+        Estimate complexity using story point scale: S(1-3), M(5-8), L(13-21), XL(34+)
+        Order tasks by dependency priority and risk level (high-risk tasks first)
+        Create detailed subtask checklist with specific deliverables and acceptance criteria
+        Define success criteria for each component and overall integration
+        Generate GitHub parent issue with subtask issues linked by dependencies
+      </actions>
+      <validation>
+        All affected components identified with clear scope boundaries
+        Dependencies mapped with critical path analysis completed
+        Complexity estimates align with historical data and team capacity
+        Success criteria are measurable and testable
+        GitHub issue structure created with proper linking and milestones
+      </validation>
+    </phase>
+    
+    <phase name="pattern_selection" order="2">
       <requirements>
         Task complexity assessed for heterogeneous vs homogeneous work
         Component count and expertise diversity evaluated
         GitHub session automatically created for coordination tracking
+        Agent assignments optimized based on breakdown analysis
       </requirements>
       <actions>
-        Analyze task requirements for specialized expertise diversity
-        Count affected system components and integration complexity
+        Analyze task requirements for specialized expertise diversity using breakdown data
+        Count affected system components and integration complexity from analysis
         Select Task() pattern for heterogeneous work or Batch() for homogeneous work
-        Create mandatory GitHub session for multi-agent coordination
+        Create mandatory GitHub session for multi-agent coordination with breakdown summary
+        Assign agents based on component ownership and expertise requirements
       </actions>
       <validation>
         Pattern selection justified by task analysis (Task() vs Batch())
-        Session created with proper multi-agent tracking labels
-        Agent assignments align with required specialized expertise
+        Session created with proper multi-agent tracking labels and breakdown reference
+        Agent assignments align with required specialized expertise and component ownership
       </validation>
     </phase>
     
-    <phase name="worktree_isolation" order="2">
+    <phase name="worktree_isolation" order="3">
       <requirements>
         Each agent requires isolated git worktree for parallel development
         Worktrees created before Task() execution for clean environments
         Agent-specific dependencies and build environments maintained
+        Worktree assignment matches component breakdown and agent expertise
       </requirements>
       <actions>
         Create dedicated worktree for each agent using git worktree patterns
         Initialize agent-specific environments (venv, node_modules, etc.)
         Configure agent workspace with required tools and dependencies
         Establish worktree naming convention: ../worktrees/swarm-{session}-{agent}
+        Map worktrees to component ownership from breakdown analysis
       </actions>
       <validation>
         Each agent has isolated worktree at ../worktrees/swarm-*
         No workspace conflicts between parallel agents
         All agent environments properly initialized
+        Worktree assignments align with component breakdown
       </validation>
     </phase>
     
-    <phase name="agent_coordination" order="3">
+    <phase name="agent_coordination" order="4">
       <requirements>
         All Task() or Batch() calls executed in single message for true parallelism
-        Agents have independent, non-dependent work assignments
-        Session serves as communication and progress tracking hub
+        Agents have independent, non-dependent work assignments based on breakdown
+        Session serves as communication and progress tracking hub with breakdown reference
+        Agent assignments respect dependency order from breakdown analysis
       </requirements>
       <actions>
         Execute all agent assignments in parallel using single message
-        Ensure agent independence with no sequential dependencies
-        Document agent roles and responsibilities in session
-        Establish progress tracking and milestone reporting structure
+        Ensure agent independence with no sequential dependencies (per breakdown)
+        Document agent roles and responsibilities in session with component mapping
+        Establish progress tracking and milestone reporting structure using breakdown metrics
+        Reference breakdown analysis for agent coordination and progress measurement
       </actions>
       <validation>
         All agents active and working in parallel coordination
-        No blocking dependencies between agent assignments
-        Session actively tracking progress from all agents
+        No blocking dependencies between agent assignments (validated against breakdown)
+        Session actively tracking progress from all agents with breakdown milestones
+        Agent work aligns with original breakdown analysis and success criteria
       </validation>
     </phase>
     
-    <phase name="completion_coordination" order="4">
+    <phase name="completion_coordination" order="5">
       <requirements>
         All agent work completed successfully with quality verification
         Integration testing completed across all agent deliverables
-        Session documentation complete with lessons learned
+        Session documentation complete with lessons learned and breakdown retrospective
+        Success criteria from breakdown analysis verified and met
       </requirements>
       <actions>
-        Verify all agent deliverables meet quality standards
-        Execute integration testing across all agent outputs
-        Document architectural decisions and coordination patterns
-        Complete session with comprehensive outcome documentation
+        Verify all agent deliverables meet quality standards and breakdown success criteria
+        Execute integration testing across all agent outputs using breakdown integration points
+        Document architectural decisions and coordination patterns with breakdown insights
+        Complete session with comprehensive outcome documentation and breakdown retrospective
+        Analyze breakdown accuracy vs actual implementation for future improvements
       </actions>
       <validation>
         All agent work integrated successfully without conflicts
-        Quality standards met across all deliverables
-        Session documentation complete with reusable patterns
+        Quality standards met across all deliverables per breakdown criteria
+        Session documentation complete with reusable patterns and breakdown learnings
+        Breakdown analysis accuracy assessed for continuous improvement
       </validation>
     </phase>
     
   </implementation>
   
+  <enhanced_task_breakdown>
+    <component_identification>
+      <frontend_components>
+        <scope>User interface, client-side logic, user experience flows</scope>
+        <indicators>UI mockups, user stories, interaction design, responsive requirements</indicators>
+        <estimation_factors>Component complexity, API integrations, state management, testing scope</estimation_factors>
+        <success_criteria>Functional UI components, responsive design, accessibility compliance, user acceptance</success_criteria>
+      </frontend_components>
+      
+      <backend_components>
+        <scope>Server-side logic, APIs, business rules, data processing</scope>
+        <indicators>API endpoints, business logic, data validation, integration requirements</indicators>
+        <estimation_factors>Algorithm complexity, database operations, external integrations, performance requirements</estimation_factors>
+        <success_criteria>Functional APIs, performance benchmarks, security compliance, data integrity</success_criteria>
+      </backend_components>
+      
+      <database_components>
+        <scope>Data models, migrations, query optimization, data integrity</scope>
+        <indicators>Schema changes, new tables, data relationships, migration requirements</indicators>
+        <estimation_factors>Schema complexity, migration risk, query performance, data volume</estimation_factors>
+        <success_criteria>Schema deployed, data migrated, performance targets met, integrity maintained</success_criteria>
+      </database_components>
+      
+      <infrastructure_components>
+        <scope>Deployment, scaling, monitoring, security infrastructure</scope>
+        <indicators>Environment changes, scaling requirements, monitoring needs, security updates</indicators>
+        <estimation_factors>Configuration complexity, scaling requirements, monitoring scope, security impact</estimation_factors>
+        <success_criteria>Environment stability, scaling capability, monitoring coverage, security compliance</success_criteria>
+      </infrastructure_components>
+    </component_identification>
+    
+    <dependency_mapping>
+      <critical_path_analysis>
+        <blocking_dependencies>Tasks that prevent other tasks from starting</blocking_dependencies>
+        <parallel_opportunities>Tasks that can be executed simultaneously</parallel_opportunities>
+        <integration_points>Points where component work must be coordinated</integration_points>
+        <risk_dependencies>Dependencies with high failure risk that need mitigation</risk_dependencies>
+      </critical_path_analysis>
+      
+      <dependency_types>
+        <technical_dependencies>Code that must exist before other code can be written</technical_dependencies>
+        <data_dependencies>Data structures or migrations required by other components</data_dependencies>
+        <interface_dependencies>APIs or contracts that must be defined before implementation</interface_dependencies>
+        <infrastructure_dependencies>Environment or deployment requirements</infrastructure_dependencies>
+      </dependency_types>
+      
+      <resolution_strategies>
+        <stub_interfaces>Create interface stubs to unblock dependent work</stub_interfaces>
+        <mock_services>Use mocked services for early integration testing</mock_services>
+        <feature_flags>Use feature flags to deploy incomplete features safely</feature_flags>
+        <incremental_delivery>Break large dependencies into smaller, deliverable pieces</incremental_delivery>
+      </resolution_strategies>
+    </dependency_mapping>
+    
+    <complexity_estimation>
+      <story_point_scale>
+        <small_1_3>Simple tasks with clear requirements and low risk</small_1_3>
+        <medium_5_8>Moderate complexity with some unknowns or integration points</medium_5_8>
+        <large_13_21>Complex tasks with significant unknowns or high integration complexity</large_13_21>
+        <extra_large_34_plus>Very complex tasks requiring research or major architectural changes</extra_large_34_plus>
+      </story_point_scale>
+      
+      <estimation_factors>
+        <technical_complexity>Algorithm complexity, integration points, performance requirements</technical_complexity>
+        <domain_complexity>Business logic complexity, edge cases, validation rules</domain_complexity>
+        <risk_factors>Unknown requirements, external dependencies, timeline constraints</risk_factors>
+        <team_familiarity>Experience with technologies, domain knowledge, previous similar work</team_familiarity>
+      </estimation_factors>
+      
+      <calibration_data>
+        <historical_reference>Use completed similar tasks as estimation baseline</historical_reference>
+        <team_velocity>Consider team capacity and historical delivery rates</team_velocity>
+        <uncertainty_buffer>Add buffer for unknown requirements and integration challenges</uncertainty_buffer>
+        <learning_curve>Account for time needed to learn new technologies or domains</learning_curve>
+      </calibration_data>
+    </complexity_estimation>
+    
+    <github_integration>
+      <issue_structure>
+        <epic_issue>
+          <title>Epic: [Feature Name] - Complete Implementation</title>
+          <content>
+            ## Overview
+            [High-level description and business value]
+            
+            ## Components
+            - [ ] Frontend: [Component description] - Assigned to @frontend-agent
+            - [ ] Backend: [Component description] - Assigned to @backend-agent
+            - [ ] Database: [Component description] - Assigned to @database-agent
+            - [ ] Infrastructure: [Component description] - Assigned to @devops-agent
+            
+            ## Dependencies
+            [Critical path and blocking relationships]
+            
+            ## Success Criteria
+            [Measurable outcomes and acceptance criteria]
+            
+            ## Estimated Effort
+            Total: [X] story points across [Y] components
+          </content>
+        </epic_issue>
+        
+        <component_issues>
+          <title>[Component]: [Specific functionality] - [Story Points]</title>
+          <content>
+            ## Description
+            [Detailed component requirements]
+            
+            ## Acceptance Criteria
+            - [ ] [Specific, testable criterion 1]
+            - [ ] [Specific, testable criterion 2]
+            - [ ] [Specific, testable criterion 3]
+            
+            ## Dependencies
+            - Blocks: [List of issues that depend on this]
+            - Blocked by: [List of issues this depends on]
+            
+            ## Technical Notes
+            [Implementation guidance and constraints]
+            
+            ## Definition of Done
+            - [ ] Implementation complete
+            - [ ] Tests written and passing
+            - [ ] Code reviewed and approved
+            - [ ] Documentation updated
+            - [ ] Integrated and deployed
+          </content>
+        </component_issues>
+      </issue_structure>
+      
+      <linking_strategy>
+        <parent_child_links>Epic issue contains child component issues</parent_child_links>
+        <dependency_references>Issues reference their dependencies explicitly</dependency_references>
+        <milestone_tracking>Component issues linked to delivery milestones</milestone_tracking>
+        <label_taxonomy>Consistent labeling for component types and priorities</label_taxonomy>
+      </linking_strategy>
+    </github_integration>
+    
+    <success_metrics>
+      <breakdown_accuracy>
+        <estimation_variance>Actual vs estimated effort within 25% variance</estimation_variance>
+        <dependency_prediction>Predicted dependencies match actual blocking relationships</dependency_prediction>
+        <scope_stability>Minimal scope changes after breakdown completion</scope_stability>
+        <timeline_accuracy>Delivery timelines met within planned buffers</timeline_accuracy>
+      </breakdown_accuracy>
+      
+      <quality_metrics>
+        <integration_success>Components integrate without major rework</integration_success>
+        <rework_percentage>Less than 15% rework due to breakdown inadequacy</rework_percentage>
+        <defect_rate>Lower defect rates due to better upfront analysis</defect_rate>
+        <stakeholder_satisfaction>Delivered features meet stakeholder expectations</stakeholder_satisfaction>
+      </quality_metrics>
+      
+      <process_metrics>
+        <breakdown_speed>Complete breakdown within 30 minutes for typical features</breakdown_speed>
+        <team_understanding>Team clarity on deliverables and dependencies</team_understanding>
+        <coordination_efficiency>Reduced coordination overhead during implementation</coordination_efficiency>
+        <knowledge_retention>Breakdown artifacts useful for future similar work</knowledge_retention>
+      </process_metrics>
+    </success_metrics>
+  </enhanced_task_breakdown>
+  
+  <enforcement_verification>
+    <purpose>Ensure deterministic multi-agent coordination through verifiable checkpoints</purpose>
+    
+    <verification_protocol>
+      <pre_execution_verification>
+        <verify_session>GitHub session exists and is accessible by all agents</verify_session>
+        <verify_worktrees>All agent worktrees created successfully</verify_worktrees>
+        <verify_registry>Decision registry initialized at .claude/swarm-decisions/</verify_registry>
+        <verify_dependencies>Agent dependency order clearly established</verify_dependencies>
+      </pre_execution_verification>
+      
+      <during_execution_verification>
+        <agent_critical_thinking>
+          Each agent MUST document critical thinking for key decisions:
+          - Why this approach over alternatives?
+          - What are the downstream consequences?
+          - How does this align with previous agent decisions?
+          - What constraints am I imposing on subsequent agents?
+        </agent_critical_thinking>
+        <decision_propagation>
+          Agents MUST check decision registry before implementation
+          New decisions MUST be written to registry immediately
+          Conflicts MUST trigger coordination protocol
+        </decision_propagation>
+      </during_execution_verification>
+      
+      <post_execution_verification>
+        <decision_completeness>All agents have documented required decisions</decision_completeness>
+        <acknowledgment_completeness>All decisions have required acknowledgments</acknowledgment_completeness>
+        <implementation_consistency>Code matches documented decisions</implementation_consistency>
+        <no_orphaned_decisions>Every decision is either implemented or explicitly deferred</no_orphaned_decisions>
+      </post_execution_verification>
+    </verification_protocol>
+    
+    <enforcement_gates>
+      <gate name="session_creation" blocking="true">
+        <condition>GitHub session must exist before any agent work</condition>
+        <failure_action>ABORT - Cannot coordinate without session</failure_action>
+      </gate>
+      <gate name="worktree_isolation" blocking="true">
+        <condition>Each agent has dedicated worktree</condition>
+        <failure_action>ABORT - Cannot ensure parallel execution safety</failure_action>
+      </gate>
+      <gate name="decision_registry" blocking="true">
+        <condition>Registry accessible and initialized</condition>
+        <failure_action>ABORT - Cannot coordinate decisions</failure_action>
+      </gate>
+      <gate name="agent_tdd_enforcement" blocking="true">
+        <condition>All agents follow TDD enforcement per quality/tdd-enforcement.md</condition>
+        <failure_action>BLOCK - TDD violations prevent agent progression</failure_action>
+      </gate>
+      <gate name="cross_agent_security" blocking="true">
+        <condition>Security verification across all agent boundaries</condition>
+        <failure_action>BLOCK - Security violations prevent integration</failure_action>
+      </gate>
+      <gate name="swarm_performance" blocking="true">
+        <condition>Integrated system meets performance benchmarks</condition>
+        <failure_action>BLOCK - Performance violations prevent deployment</failure_action>
+      </gate>
+      <gate name="swarm_quality_verification" blocking="true">
+        <condition>All agents pass comprehensive quality gates</condition>
+        <failure_action>BLOCK - Quality violations prevent completion</failure_action>
+      </gate>
+      <gate name="critical_thinking" blocking="false">
+        <condition>Each agent documents thinking process</condition>
+        <failure_action>WARN - Proceed but flag for review</failure_action>
+      </gate>
+      <gate name="decision_consistency" blocking="true">
+        <condition>No conflicting decisions in final merge</condition>
+        <failure_action>ROLLBACK - Must resolve conflicts first</failure_action>
+      </gate>
+    </enforcement_gates>
+  </enforcement_verification>
+  
+  <context_transfer_validation>
+    <purpose>Ensure complete and accurate context transfer between agents</purpose>
+    
+    <context_components>
+      <decision_context>
+        <format>JSON registry at .claude/swarm-decisions/session-[id].json</format>
+        <required_fields>
+          - decision_id: Unique identifier (e.g., AUTH_001)
+          - decision: One-line summary
+          - owner: Agent who made decision
+          - rationale: Why this decision
+          - impacts: Which agents affected
+          - constraints: Technical limitations imposed
+          - immutable: Can this be changed?
+          - timestamp: When decided
+          - acknowledgments: List of agents who acknowledged
+        </required_fields>
+      </decision_context>
+      
+      <technical_context>
+        <shared_constants>API endpoints, data models, security policies</shared_constants>
+        <shared_interfaces>Contract definitions between components</shared_interfaces>
+        <shared_dependencies>Common libraries, frameworks, tools</shared_dependencies>
+      </technical_context>
+      
+      <progress_context>
+        <session_updates>Regular progress posts to GitHub session</session_updates>
+        <milestone_tracking>Completion status of major deliverables</milestone_tracking>
+        <blocker_communication>Immediate escalation of blocking issues</blocker_communication>
+      </progress_context>
+    </context_components>
+    
+    <transfer_mechanisms>
+      <decision_registry_file>
+        <location>.claude/swarm-decisions/session-[id].json</location>
+        <format>JSON with schema validation</format>
+        <access>Read by all agents, write by decision owner</access>
+        <versioning>Append-only with timestamp tracking</versioning>
+      </decision_registry_file>
+      
+      <session_artifacts>
+        <location>GitHub session comments and artifacts</location>
+        <format>Structured markdown with decision tables</format>
+        <access>All agents can read and comment</access>
+        <notification>Agents tagged when decisions affect them</notification>
+      </session_artifacts>
+      
+      <worktree_handoff>
+        <mechanism>Shared branches with clear ownership</mechanism>
+        <validation>No direct commits to other agent branches</validation>
+        <integration>Pull requests for cross-agent changes</integration>
+      </worktree_handoff>
+    </transfer_mechanisms>
+    
+    <validation_rules>
+      <rule name="decision_before_implementation">
+        No implementation without documented decision
+      </rule>
+      <rule name="acknowledgment_before_proceeding">
+        Agents must acknowledge decisions that impact them
+      </rule>
+      <rule name="conflict_escalation">
+        Decision conflicts must be resolved through session
+      </rule>
+      <rule name="immutable_enforcement">
+        IMMUTABLE decisions cannot be changed without full team consensus
+      </rule>
+      <rule name="audit_trail">
+        All decisions and acknowledgments must be timestamped
+      </rule>
+    </validation_rules>
+  </context_transfer_validation>
+  
+  <shared_decision_registry>
+    <purpose>Coordinate architectural decisions between agents to prevent conflicts and ensure consistent implementation</purpose>
+    
+    <decision_precedence_order>
+      <agent_order>
+        <priority_1>Security Expert - defines authentication, authorization, security models</priority_1>
+        <priority_2>Backend Developer - acknowledges security, defines data models and APIs</priority_2>
+        <priority_3>Frontend Developer - acknowledges security + backend, defines UI contracts</priority_3>
+        <priority_4>DevOps Engineer - acknowledges all decisions, implements deployment</priority_4>
+      </agent_order>
+    </decision_precedence_order>
+    
+    <decision_artifact_format>
+      <template>
+        DECISION_ID: [domain]_[number] (e.g., AUTH_001, DB_003, API_007)
+        DECISION: [one line summary]
+        OWNER: [agent responsible]
+        RATIONALE: [why this choice was made]
+        IMPACTS: [which agents must follow this]
+        ACKNOWLEDGMENTS: [agents that have confirmed understanding]
+        IMMUTABLE: [true/false - can this be changed]
+      </template>
+    </decision_artifact_format>
+    
+    <coordination_protocol>
+      <security_first_rule>
+        <requirement>Security Expert documents ALL authentication and authorization decisions FIRST</requirement>
+        <output_format>SECURITY_DECISIONS_DOCUMENTED:
+          - AUTH_001: JWT with RSA-256 asymmetric signing
+          - AUTH_002: OAuth2 + OpenID Connect for SSO
+          - SEC_001: RBAC with hierarchical permissions</output_format>
+      </security_first_rule>
+      
+      <acknowledgment_protocol>
+        <requirement>Each subsequent agent MUST acknowledge previous decisions before implementing</requirement>
+        <output_format>DECISION_ACKNOWLEDGMENTS:
+          - Backend: ACKNOWLEDGED AUTH_001, AUTH_002, SEC_001
+          - Frontend: ACKNOWLEDGED ALL BACKEND + SECURITY decisions
+          - DevOps: ACKNOWLEDGED ALL PREVIOUS decisions</output_format>
+      </acknowledgment_protocol>
+      
+      <conflict_resolution>
+        <trigger>When agent cannot implement previous decision</trigger>
+        <protocol>
+          1. Document specific conflict with previous decision
+          2. Propose alternative with technical justification
+          3. Escalate to session for resolution
+          4. Update decision registry with resolution
+        </protocol>
+      </conflict_resolution>
+    </coordination_protocol>
+    
+    <decision_categories>
+      <authentication>AUTH_* - login methods, session management, token handling</authentication>
+      <authorization>AUTHZ_* - permissions, RBAC, access control</authorization>
+      <data_models>DB_* - database schema, data relationships, migrations</data_models>
+      <api_contracts>API_* - endpoint design, request/response formats</api_contracts>
+      <security_policies>SEC_* - security requirements, threat mitigations</security_policies>
+      <performance_specs>PERF_* - response times, scalability requirements</performance_specs>
+      <deployment>DEPLOY_* - infrastructure, CI/CD, monitoring</deployment>
+    </decision_categories>
+  </shared_decision_registry>
+
   <agent_patterns>
     <task_pattern>
-      <description>Heterogeneous work requiring different specialized skills</description>
-      <usage>Task("Frontend Architect", "React component architecture with TypeScript and Redux")</usage>
-      <usage>Task("Backend Architect", "FastAPI microservices with PostgreSQL and async operations")</usage>
-      <usage>Task("Security Specialist", "OAuth2 JWT authentication with RBAC")</usage>
-      <usage>Task("DevOps Engineer", "Kubernetes deployment with auto-scaling and monitoring")</usage>
-      <coordination>All Task() calls in ONE message for true parallelism</coordination>
+      <description>Heterogeneous work requiring different specialized skills WITH decision coordination</description>
+      <usage>Task("Security Expert", "Document security architecture decisions FIRST: auth_method, security_model, threat_mitigations")</usage>
+      <usage>Task("Backend Developer", "Implement API acknowledging SECURITY decisions: AUTH_001, SEC_001")</usage>
+      <usage>Task("Frontend Developer", "Build components acknowledging SECURITY + BACKEND decisions")</usage>
+      <usage>Task("DevOps Engineer", "Deploy infrastructure acknowledging ALL architectural decisions")</usage>
+      <coordination>All Task() calls in ONE message with explicit decision acknowledgment requirements</coordination>
     </task_pattern>
     <batch_pattern>
       <description>Homogeneous work distributed in parallel</description>
@@ -332,58 +851,117 @@
     <system_architect>
       Expertise: Overall system design, technology decisions, integration patterns
       Deliverables: Architecture documentation, technology recommendations, integration specs
+      <critical_thinking_requirements>
+        - Evaluate 3+ architectural patterns before deciding
+        - Map downstream impacts of technology choices
+        - Challenge assumptions about scalability needs
+        - Document trade-offs explicitly
+      </critical_thinking_requirements>
     </system_architect>
     <security_specialist>
       Expertise: Threat modeling, vulnerability assessment, compliance implementation
       Deliverables: Security documentation, threat models, compliance reports
+      <critical_thinking_requirements>
+        - Assume breach and design accordingly
+        - Challenge trust boundaries systematically
+        - Evaluate attack vectors beyond OWASP Top 10
+        - Document security decisions as IMMUTABLE by default
+      </critical_thinking_requirements>
     </security_specialist>
     <performance_engineer>
       Expertise: Optimization, scalability analysis, benchmarking
       Deliverables: Performance reports, optimization recommendations, scalability plans
+      <critical_thinking_requirements>
+        - Measure before optimizing - no assumptions
+        - Challenge perceived vs actual bottlenecks
+        - Consider optimization trade-offs (time/space/complexity)
+        - Document performance constraints for other agents
+      </critical_thinking_requirements>
     </performance_engineer>
     <frontend_architect>
       Expertise: UI/UX implementation, client-side optimization, responsive design
       Deliverables: UI components, frontend architecture, user experience flows
+      <critical_thinking_requirements>
+        - Challenge UI patterns for accessibility
+        - Question component boundaries and reusability
+        - Evaluate state management complexity
+        - Document UI decisions impacting backend APIs
+      </critical_thinking_requirements>
     </frontend_architect>
     <backend_engineer>
       Expertise: Server-side logic, API design, database integration
       Deliverables: Backend services, API documentation, database schemas
+      <critical_thinking_requirements>
+        - Challenge data model assumptions
+        - Evaluate consistency vs availability trade-offs
+        - Question API design for future extensibility
+        - Document decisions affecting frontend and DevOps
+      </critical_thinking_requirements>
     </backend_engineer>
     <devops_engineer>
       Expertise: Infrastructure, deployment, monitoring, CI/CD
       Deliverables: Infrastructure code, deployment pipelines, monitoring systems
+      <critical_thinking_requirements>
+        - Challenge deployment complexity vs benefits
+        - Evaluate failure modes and recovery paths
+        - Question monitoring coverage and alert fatigue
+        - Document infrastructure constraints for development
+      </critical_thinking_requirements>
     </devops_engineer>
     <prompt_engineer>
       Expertise: AI prompt design, evaluation frameworks, testing methodologies
       Deliverables: Optimized prompts, evaluation reports, testing frameworks
+      <critical_thinking_requirements>
+        - Challenge prompt assumptions with edge cases
+        - Evaluate robustness across model variations
+        - Question evaluation metrics validity
+        - Document prompt constraints and limitations
+      </critical_thinking_requirements>
     </prompt_engineer>
   </specialized_roles>
   
   <coordination_rules>
-    <independence_requirement>
-      No dependencies between agents - all work must be parallelizable
-      Agents cannot wait for other agent outputs to begin their work
-      Shared context provided through session documentation only
-    </independence_requirement>
+    <decision_based_coordination>
+      Agent independence maintained through shared decision registry
+      Security decisions established FIRST before any implementation
+      Subsequent agents acknowledge previous decisions before proceeding  
+      Conflicts resolved through explicit escalation protocol
+    </decision_based_coordination>
     <session_communication>
       All agents access same session for shared context and decisions
-      Progress updates documented in session comments with agent attribution
+      Decision registry maintained in session with artifact format
+      Progress updates include decision acknowledgment status
       Blocking issues escalated through session for team coordination
-      Architectural decisions recorded in session for future reference
+      Architectural decisions recorded as immutable artifacts
     </session_communication>
+    <parallel_execution_with_decisions>
+      All Task() calls execute in parallel after decision documentation
+      Security Expert runs first to establish decision foundation
+      Other agents proceed in parallel acknowledging security decisions
+      Decision consistency verified before final merge
+    </parallel_execution_with_decisions>
   </coordination_rules>
   
   <quality_assurance>
     <individual_responsibility>
-      Each agent responsible for testing their specific components
-      Code quality standards enforced for all agent deliverables
-      Documentation requirements met by each specialized agent
+      Each agent responsible for TDD enforcement per quality/tdd-enforcement.md
+      Security verification required per quality/security-gate-verification.md
+      Performance benchmarks validated per quality/performance-gates.md
+      Comprehensive quality gates per quality/gate-verification.md for all deliverables
     </individual_responsibility>
     <integration_coordination>
       Integration testing validates compatibility between agent outputs
-      End-to-end testing confirms complete system functionality
-      Performance testing verifies system meets SLA requirements
+      Cross-agent quality gate verification ensures consistent standards
+      End-to-end performance testing confirms system meets p95 <200ms
+      Security validation across all agent boundaries and interfaces
+      Comprehensive quality evidence collection for audit trail
     </integration_coordination>
+    <swarm_level_gates>
+      <gate name="agent_tdd_compliance" requirement="All agents complete TDD cycles with evidence" blocking="true"/>
+      <gate name="cross_agent_security" requirement="Security verification across agent boundaries" blocking="true"/>
+      <gate name="integrated_performance" requirement="System performance meets benchmarks" blocking="true"/>
+      <gate name="swarm_quality_verification" requirement="All agents pass comprehensive quality gates" blocking="true"/>
+    </swarm_level_gates>
   </quality_assurance>
   
   <session_integration>
@@ -404,13 +982,19 @@
     <depends_on>
       patterns/session-management.md for automatic session creation
       patterns/pattern-library.md for proven execution patterns
-      quality/tdd.md for individual agent testing requirements
+      quality/tdd-enforcement.md for non-bypassable TDD enforcement across agents
+      quality/security-gate-verification.md for cross-agent security verification
+      quality/performance-gates.md for swarm-level performance benchmarking
+      quality/gate-verification.md for comprehensive quality orchestration
       development/task-management.md for quality standards enforcement
       development/prompt-engineering.md for prompt evaluation workflows
+      debugging/reproduce-issue.md for systematic debugging coordination
     </depends_on>
     <provides_to>
       patterns/intelligent-routing.md for multi-agent escalation triggers
       development/prompt-engineering.md for parallel evaluation execution
+      planning/feature-workflow.md for enhanced task breakdown capabilities
+      patterns/session-management.md for complex project coordination
       All commands for parallel execution coordination patterns
     </provides_to>
   </integration_points>
@@ -429,6 +1013,102 @@
       Pattern selection follows three_x_rule for thorough analysis before execution
     </implementation_notes>
   </pattern_usage>
+  
+  <deterministic_execution_flow>
+    <purpose>Ensure predictable and verifiable multi-agent coordination</purpose>
+    
+    <execution_sequence enforcement="MANDATORY">
+      <step order="1" gate="session_creation">
+        <action>Create GitHub session with multi-agent labels</action>
+        <verification>Session ID returned and accessible</verification>
+        <critical_thinking>Is single session sufficient or do we need component sub-sessions?</critical_thinking>
+      </step>
+      
+      <step order="2" gate="agent_assignment">
+        <action>Assign agents with explicit precedence order</action>
+        <verification>Each agent has clear responsibilities and decision scope</verification>
+        <critical_thinking>Have we identified all necessary expertise areas?</critical_thinking>
+      </step>
+      
+      <step order="3" gate="registry_initialization">
+        <action>Initialize decision registry at .claude/swarm-decisions/session-[id].json</action>
+        <verification>Registry file created with proper schema</verification>
+        <critical_thinking>Are all decision categories represented in schema?</critical_thinking>
+      </step>
+      
+      <step order="4" gate="worktree_creation">
+        <action>Create isolated worktrees for each agent</action>
+        <verification>All worktrees accessible at ../worktrees/swarm-*</verification>
+        <critical_thinking>Is worktree isolation necessary for this task complexity?</critical_thinking>
+      </step>
+      
+      <step order="5" gate="security_decisions">
+        <action>Security Expert documents all security decisions FIRST</action>
+        <verification>AUTH_*, SEC_*, AUTHZ_* decisions in registry</verification>
+        <critical_thinking>Have we covered all security attack vectors?</critical_thinking>
+      </step>
+      
+      <step order="6" gate="parallel_execution">
+        <action>Execute all other agents in parallel with decision acknowledgment</action>
+        <verification>All Task() calls include decision dependencies</verification>
+        <critical_thinking>Are agents truly independent or do we need sequencing?</critical_thinking>
+      </step>
+      
+      <step order="7" gate="decision_verification">
+        <action>Verify all decisions documented and acknowledged</action>
+        <verification>No orphaned or conflicting decisions</verification>
+        <critical_thinking>Do implementations match documented decisions?</critical_thinking>
+      </step>
+      
+      <step order="8" gate="integration_merge">
+        <action>Merge all agent work with consistency checks</action>
+        <verification>No conflicts, all tests pass, decisions honored</verification>
+        <critical_thinking>Is the integrated system coherent and maintainable?</critical_thinking>
+      </step>
+      
+      <step order="9" gate="cleanup">
+        <action>Clean up worktrees and finalize session</action>
+        <verification>Worktrees removed, session marked complete</verification>
+        <critical_thinking>Have we captured reusable patterns for future work?</critical_thinking>
+      </step>
+    </execution_sequence>
+    
+    <determinism_guarantees>
+      <guarantee name="decision_ordering">
+        Security decisions always precede implementation decisions
+      </guarantee>
+      <guarantee name="conflict_prevention">
+        Decision precedence prevents architectural conflicts
+      </guarantee>
+      <guarantee name="audit_trail">
+        Every decision and acknowledgment is timestamped
+      </guarantee>
+      <guarantee name="rollback_capability">
+        Failed merges can be rolled back to last consistent state
+      </guarantee>
+      <guarantee name="verification_gates">
+        Each step has explicit verification before proceeding
+      </guarantee>
+    </determinism_guarantees>
+    
+    <failure_modes>
+      <mode name="session_failure">
+        Recovery: Retry session creation or abort
+      </mode>
+      <mode name="worktree_conflict">
+        Recovery: Clean and recreate worktrees
+      </mode>
+      <mode name="decision_conflict">
+        Recovery: Escalate through session for resolution
+      </mode>
+      <mode name="merge_failure">
+        Recovery: Rollback and re-execute affected agents
+      </mode>
+      <mode name="timeout">
+        Recovery: Apply 4-tier degradation strategy
+      </mode>
+    </failure_modes>
+  </deterministic_execution_flow>
   
 </module>
 ```
