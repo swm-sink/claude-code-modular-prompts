@@ -847,10 +847,69 @@
     </integration_with_error_recovery>
   </error_recovery_integration>
   
+  <phase_4_realistic_session_management>
+    <github_api_limitations>
+      <verified_limits>
+        <issue_body_size>65KB actual limit (not 1MB as documented)</issue_body_size>
+        <comment_size>65KB actual limit per comment</comment_size>
+        <practical_limit>~45KB safe limit with formatting overhead</practical_limit>
+      </verified_limits>
+      
+      <hybrid_storage_strategy>
+        <github_storage>Compressed summaries and critical decisions</github_storage>
+        <local_storage>Full context and all artifacts</local_storage>
+        <synchronization>Bidirectional sync with conflict resolution</synchronization>
+      </hybrid_storage_strategy>
+    </github_api_limitations>
+    
+    <intelligent_compression>
+      <artifact_preservation>100% code and configuration retention</artifact_preservation>
+      <decision_preservation>100% architectural decision retention</decision_preservation>
+      <context_compression>60-80% size reduction for verbose content</context_compression>
+      <information_retention>95%+ value retention requirement</information_retention>
+    </intelligent_compression>
+    
+    <reliability_monitoring>
+      <health_indicators>API latency, sync status, context integrity</health_indicators>
+      <early_warning>Proactive detection before failures</early_warning>
+      <automatic_recovery>Self-healing for common issues</automatic_recovery>
+      <metrics_tracking>MTTR < 5min, 99.9% availability target</metrics_tracking>
+    </reliability_monitoring>
+  </phase_4_realistic_session_management>
+  
+  <phase_5_file_ownership_mapping>
+    <ownership_domains>
+      <backend_agent>API, services, database, migrations</backend_agent>
+      <frontend_agent>UI components, styles, client logic</frontend_agent>
+      <devops_agent>CI/CD, infrastructure, deployment</devops_agent>
+      <test_agent>All test files, test configuration</test_agent>
+      <docs_agent>Documentation, examples, guides</docs_agent>
+    </ownership_domains>
+    
+    <conflict_prevention>
+      <worktree_isolation>Each agent in separate git worktree</worktree_isolation>
+      <ownership_enforcement>Block cross-domain modifications</ownership_enforcement>
+      <coordination_protocols>Structured handoffs and locks</coordination_protocols>
+    </conflict_prevention>
+    
+    <conflict_resolution>
+      <detection>Proactive monitoring and static analysis</detection>
+      <classification>Type, severity, and impact assessment</classification>
+      <resolution>Automated, guided, or escalated strategies</resolution>
+      <learning>Pattern analysis for prevention</learning>
+    </conflict_resolution>
+  </phase_5_file_ownership_mapping>
+  
   <integration_points>
     <depends_on>
       quality/error-recovery.md for comprehensive recovery pattern integration
       quality/error-recovery.md for session health monitoring and early warning
+      patterns/session-storage.md for hybrid storage implementation
+      patterns/session-compression.md for intelligent compression
+      patterns/session-reliability.md for monitoring and recovery
+      patterns/file-ownership.md for ownership rules
+      patterns/worktree-isolation.md for agent isolation
+      patterns/conflict-resolution.md for conflict handling
     </depends_on>
     <provides_to>
       patterns/multi-agent.md for automatic session creation in multi-agent work
