@@ -18,14 +18,15 @@
   </delegation>
   
   <thinking_pattern enforcement="MANDATORY">
-    <step>1. Generate comprehensive PRD using feature-workflow.md patterns</step>
-    <step>2. Auto-detect tech stack and existing patterns in codebase</step>
-    <step>3. Create GitHub session for tracking (ALWAYS)</step>
-    <step>4. Define MVP with clear phases and acceptance criteria</step>
-    <step>5. Calculate complexity: >15 score triggers /swarm delegation</step>
-    <step>6. Execute with TDD: Write ALL tests FIRST</step>
-    <step>7. Apply quality gates from production-standards.md</step>
-    <step>8. Auto-generate documentation via /docs patterns</step>
+    <step>0. PERSONA: Load persona context from patterns/persona-manager.md (auto-detect or --persona flag)</step>
+    <step>1. Generate comprehensive PRD using feature-workflow.md patterns enhanced with persona perspective</step>
+    <step>2. Auto-detect tech stack and existing patterns in codebase through persona lens</step>
+    <step>3. Create GitHub session for tracking (ALWAYS) with persona assignments logged</step>
+    <step>4. Define MVP with clear phases and acceptance criteria using persona-specific quality gates</step>
+    <step>5. Calculate complexity: >15 score triggers /swarm delegation with specialized personas</step>
+    <step>6. Execute with TDD: Write ALL tests FIRST using persona-enhanced testing approach</step>
+    <step>7. Apply quality gates from production-standards.md augmented with persona standards</step>
+    <step>8. Auto-generate documentation via /docs patterns with persona-specific documentation style</step>
   </thinking_pattern>
   
   <module_integration>
@@ -43,10 +44,40 @@
   </module_integration>
   
   <usage_examples>
-    <example>/feature "User authentication system with JWT" # Creates PRD, session, TDD tests</example>
-    <example>/feature "Real-time chat with WebSockets"     # Complex→delegates to /swarm</example>
-    <example>/feature "Payment processing with Stripe"     # Security-first, threat model</example>
+    <example>/feature "User authentication system with JWT" # Auto-detects security-specialist persona</example>
+    <example>/feature "Real-time chat with WebSockets"     # Complex→delegates to /swarm with specialized personas</example>
+    <example>/feature "Payment processing with Stripe" --persona security-specialist # Explicit security-first approach</example>
+    <example>/feature "High-performance API" --persona performance-engineer # Optimization-focused development</example>
+    <example>/feature "User dashboard redesign" --persona product-engineer # User-value focused approach</example>
   </usage_examples>
+  
+  <persona_integration>
+    <auto_detection>
+      <rule>Security keywords (auth, payment, encryption) → security-specialist</rule>
+      <rule>Performance keywords (optimize, scale, fast) → performance-engineer</rule>
+      <rule>Architecture keywords (system, design, pattern) → senior-architect</rule>
+      <rule>User keywords (dashboard, UX, experience) → product-engineer</rule>
+      <rule>Quality keywords (test, coverage, standards) → quality-advocate</rule>
+    </auto_detection>
+    
+    <explicit_selection>
+      <flag>--persona {persona_name} # Override auto-detection</flag>
+      <flag>--auto-persona # Enable intelligent auto-selection</flag>
+      <validation>Persona must exist in .claude/personas/ directory</validation>
+    </explicit_selection>
+    
+    <swarm_enhancement>
+      <lead_persona>Primary persona guides overall feature direction</lead_persona>
+      <specialist_agents>Each agent gets domain-appropriate persona assignment</specialist_agents>
+      <cross_validation>Personas review each other's work through their expertise lens</cross_validation>
+    </swarm_enhancement>
+    
+    <context_propagation>
+      <inheritance>All child agents automatically inherit persona context</inheritance>
+      <consistency>Persona decisions remain consistent throughout development</consistency>
+      <tracking>GitHub sessions track persona assignments and decisions</tracking>
+    </context_propagation>
+  </persona_integration>
   
   <rules enforcement="STRICT">
     <rule priority="CRITICAL">ALWAYS generate PRD first using patterns</rule>
