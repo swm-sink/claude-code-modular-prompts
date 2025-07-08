@@ -2,7 +2,7 @@
 
 > 🚀 **A prompt engineering framework that improves Claude Code workflow efficiency through organized prompts and GitHub integration**
 
-[![Version](https://img.shields.io/badge/version-2.2.0-blue.svg)](https://github.com/swm-sink/claude-code-modular-agents)
+[![Version](https://img.shields.io/badge/version-2.4.0-blue.svg)](https://github.com/swm-sink/claude-code-modular-agents)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Claude 4](https://img.shields.io/badge/Claude-4%20Optimized-purple.svg)](CLAUDE.md)
 

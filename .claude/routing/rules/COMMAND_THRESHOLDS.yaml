@@ -1,0 +1,185 @@
+# Command Selection Thresholds v1.0.0
+# Deterministic rules for command routing
+
+thresholds:
+  version: "1.0.0"
+  last_updated: "2025-07-08"
+  
+  # /task - Simple, focused development
+  task_command:
+    description: "Single file or simple multi-file changes"
+    hard_limits:
+      max_files_total: 3
+      max_files_to_modify: 3
+      max_files_to_create: 1
+      max_cross_module_deps: 0
+      max_breaking_changes: 0
+      max_architecture_decisions: 0
+    
+    required_conditions:
+      - "total_files_affected <= 3"
+      - "cross_module_deps == 0"
+      - "breaking_changes == 0"
+      - "clear_requirements == true"
+      
+    typical_examples:
+      - "Fix a bug in a single function"
+      - "Add a utility function"
+      - "Update a test case"
+      - "Modify a configuration file"
+    
+  # /feature - PRD-driven development
+  feature_command:
+    description: "Feature implementation with design requirements"
+    thresholds:
+      min_files_total: 2
+      max_files_total: 10
+      max_cross_module_deps: 2
+      max_breaking_changes: 1
+      max_architecture_decisions: 2
+      
+    required_conditions:
+      - "total_files_affected >= 2 AND <= 10"
+      - "design_decisions_needed >= 1"
+      - "clear_feature_specification == true"
+      - "test_files_required >= 1"
+      
+    typical_examples:
+      - "Add new authentication method"
+      - "Implement data export feature"
+      - "Create new API endpoint"
+      - "Add caching layer"
+    
+  # /swarm - Multi-agent complex tasks
+  swarm_command:
+    description: "Complex multi-component changes requiring parallel work"
+    triggers_when_any:
+      - "total_files_affected > 10"
+      - "cross_module_deps > 2"
+      - "systems_involved > 1"
+      - "breaking_changes > 1"
+      - "parallel_tasks_possible == true"
+      
+    required_conditions:
+      - "complexity_requires_isolation == true"
+      - "can_parallelize_work == true"
+      
+    automatic_triggers:
+      - "database_schema_changes == true"
+      - "api_version_bump == true"
+      - "multi_service_coordination == true"
+      
+    typical_examples:
+      - "Refactor entire authentication system"
+      - "Migrate database schema"
+      - "Implement microservice"
+      - "Major architectural change"
+    
+  # /query - Research and analysis only
+  query_command:
+    description: "Read-only research and understanding"
+    required_conditions:
+      - "files_to_modify == 0"
+      - "files_to_create == 0"
+      - "research_needed == true"
+      
+    triggers_when:
+      - "understanding_required == true"
+      - "pattern_analysis_needed == true"
+      - "codebase_exploration == true"
+      
+    prohibited_actions:
+      - "file_modifications"
+      - "file_creation"
+      - "code_generation"
+      
+    typical_examples:
+      - "How does authentication work?"
+      - "Find all uses of pattern X"
+      - "Analyze performance bottlenecks"
+      - "Understand module dependencies"
+    
+  # /auto - Intelligent routing when unclear
+  auto_command:
+    description: "Use when requirements are unclear or need analysis"
+    triggers_when:
+      - "unclear_requirements == true"
+      - "cannot_determine_file_count == true"
+      - "multiple_valid_approaches == true"
+      - "needs_requirement_clarification == true"
+      
+    workflow:
+      - "Analyze request"
+      - "Clarify requirements"
+      - "Count components"
+      - "Route to appropriate command"
+      
+    typical_examples:
+      - "Make the app faster"
+      - "Fix the bug users reported"
+      - "Improve the codebase"
+      - "Add that feature we discussed"
+    
+  # /docs - Documentation generation
+  docs_command:
+    description: "All documentation creation and updates"
+    required_for:
+      - "README.md creation or updates"
+      - "API documentation"
+      - "Architecture documents"
+      - "User guides"
+      
+    triggers_when:
+      - "documentation_requested == true"
+      - "docs_files_to_modify > 0"
+      - "new_docs_needed == true"
+      
+    typical_examples:
+      - "Create README"
+      - "Document the API"
+      - "Write user guide"
+      - "Update architecture docs"
+    
+  # /session - Long-running work
+  session_command:
+    description: "Work requiring context preservation"
+    triggers_when:
+      - "estimated_duration > 30_minutes"
+      - "requires_multiple_sessions == true"
+      - "context_preservation_critical == true"
+      
+    automatic_for:
+      - "tasks_with_interruption_risk"
+      - "multi_day_projects"
+      - "complex_debugging_sessions"
+      
+    typical_examples:
+      - "Debug production issue"
+      - "Implement large feature"
+      - "Performance optimization project"
+      - "Codebase migration"
+
+# Threshold Evaluation Order
+evaluation_order:
+  1: "Check for /query first (read-only)"
+  2: "Check for /docs (documentation)"  
+  3: "Count components explicitly"
+  4: "Apply thresholds in order:"
+     - "/task (simplest)"
+     - "/feature (design-driven)"
+     - "/swarm (complex)"
+  5: "Default to /auto if unclear"
+
+# Override Rules
+overrides:
+  user_specified_command:
+    description: "User explicitly requests a command"
+    action: "Use requested command unless dangerous"
+    
+  safety_override:
+    description: "Command would be unsafe"
+    action: "Route to safer alternative"
+    
+  capability_override:
+    description: "Command cannot handle request"
+    action: "Route to capable command"
