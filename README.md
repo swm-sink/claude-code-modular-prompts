@@ -62,7 +62,7 @@ cp claude-code-modular-agents/CLAUDE.md your-project/
 # Key Commands
 
 
-# The 5 Essential Commands
+# The Essential Commands
 
 | Command | Purpose | Framework 3.0 Enhancement | Example |
 |---------|---------|-------------------------|---------|
