@@ -8,7 +8,7 @@ from pathlib import Path
 
 # Add parent directory to path to import validate
 sys.path.insert(0, str(Path(__file__).parent.parent))
-import validate
+from scripts import validate
 
 
 class TestVersionTable:
@@ -30,7 +30,7 @@ class TestVersionTable:
         test_file = modules_dir / "test.md"
         test_file.write_text("""| version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-01-08   | stable |
+| 1.0.0   | 2025-07-08   | stable |
 
 # Test Module
 
@@ -120,7 +120,7 @@ class TestHorizontalSeparators:
         separator = '─' * 80
         test_file.write_text(f"""| version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-01-08   | stable |
+| 1.0.0   | 2025-07-08   | stable |
 
 # Test Module
 
@@ -139,7 +139,7 @@ Content here.
         test_file.parent.mkdir(parents=True, exist_ok=True)
         test_file.write_text("""| version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-01-08   | stable |
+| 1.0.0   | 2025-07-08   | stable |
 
 # Test Module
 
@@ -156,7 +156,7 @@ Content without separator.
         test_file.parent.mkdir(parents=True, exist_ok=True)
         test_file.write_text("""| version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-01-08   | stable |
+| 1.0.0   | 2025-07-08   | stable |
 
 # Test Module
 
@@ -187,7 +187,7 @@ class TestXMLBlocks:
         test_file.parent.mkdir(parents=True, exist_ok=True)
         test_file.write_text("""| version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-01-08   | stable |
+| 1.0.0   | 2025-07-08   | stable |
 
 # Test Module
 
@@ -208,7 +208,7 @@ class TestXMLBlocks:
         test_file.parent.mkdir(parents=True, exist_ok=True)
         test_file.write_text("""| version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-01-08   | stable |
+| 1.0.0   | 2025-07-08   | stable |
 
 # Test Module
 
@@ -227,7 +227,7 @@ class TestXMLBlocks:
         test_file.parent.mkdir(parents=True, exist_ok=True)
         test_file.write_text("""| version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-01-08   | stable |
+| 1.0.0   | 2025-07-08   | stable |
 
 # Test Module
 
@@ -259,7 +259,7 @@ class TestFormatConsistency:
         test_file.parent.mkdir(parents=True, exist_ok=True)
         test_file.write_text("""| version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-01-08   | stable |
+| 1.0.0   | 2025-07-08   | stable |
 # Test Module
 
 Content here.
@@ -276,7 +276,7 @@ Content here.
         separator = '─' * 80
         test_file.write_text(f"""| version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-01-08   | stable |
+| 1.0.0   | 2025-07-08   | stable |
 
 # Test Module
 
@@ -294,7 +294,7 @@ Content without empty line after separator.
         test_file.parent.mkdir(parents=True, exist_ok=True)
         test_file.write_text("""| version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-01-08   | stable |
+| 1.0.0   | 2025-07-08   | stable |
 """)
         
         os.chdir(tmp_path)
@@ -319,7 +319,7 @@ class TestCommandDelegation:
         test_file.parent.mkdir(parents=True, exist_ok=True)
         test_file.write_text("""| version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-01-08   | stable |
+| 1.0.0   | 2025-07-08   | stable |
 
 # Auto Command
 
@@ -335,7 +335,7 @@ Content without delegation block.
         test_file.parent.mkdir(parents=True, exist_ok=True)
         test_file.write_text("""| version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-01-08   | stable |
+| 1.0.0   | 2025-07-08   | stable |
 
 # Test Command
 
@@ -673,7 +673,7 @@ class TestEdgeCases:
         separator = '─' * 80
         test_file.write_text(f"""| version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-01-08   | stable |
+| 1.0.0   | 2025-07-08   | stable |
 
 # Test Module 🚀
 

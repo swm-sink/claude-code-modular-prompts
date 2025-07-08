@@ -13,6 +13,55 @@
     Standardized patterns for Claude Code tool usage including batching, parallel execution, error handling, and optimization strategies.
   </purpose>
   
+  <implementation>
+    
+    <phase name="tool_selection" order="1">
+      <description>Select appropriate tools based on task requirements</description>
+      <actions>
+        Analyze task requirements to determine tool needs
+        Choose between Read/Write vs Edit/MultiEdit based on scope
+        Select Glob/Grep for search operations vs direct file access
+        Determine if batch operations are possible for parallelism
+      </actions>
+      <validation>
+        Verify tool selection aligns with task objectives
+        Ensure selected tools have required permissions
+        Confirm parallel execution opportunities identified
+      </validation>
+    </phase>
+    
+    <phase name="tool_execution" order="2">
+      <description>Execute tools with proper error handling and optimization</description>
+      <actions>
+        Batch independent operations for 70% performance gain
+        Apply read-before-write pattern for all modifications
+        Implement graceful error handling with fallback options
+        Track tool execution metrics for optimization
+      </actions>
+      <validation>
+        All operations complete successfully or gracefully degrade
+        Performance metrics meet or exceed targets
+        Error handling prevents cascade failures
+      </validation>
+    </phase>
+    
+    <phase name="result_validation" order="3">
+      <description>Validate tool execution results and apply learnings</description>
+      <actions>
+        Verify expected outcomes achieved
+        Document any errors or unexpected behaviors
+        Update tool usage patterns based on results
+        Cache successful patterns for future use
+      </actions>
+      <validation>
+        Results match expected outcomes
+        Error patterns documented for prevention
+        Performance optimizations identified and applied
+      </validation>
+    </phase>
+    
+  </implementation>
+  
   <tool_patterns>
     
     <pattern_delegation>

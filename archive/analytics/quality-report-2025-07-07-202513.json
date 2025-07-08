@@ -1,19 +1,19 @@
 {
-  "timestamp": "2025-07-07T13:39:43.293197",
+  "timestamp": "2025-07-07T20:25:13.121893",
   "complexity_metrics": {
-    "file_count": 56,
-    "total_lines": 13829,
-    "xml_blocks": 132,
+    "file_count": 65,
+    "total_lines": 16479,
+    "xml_blocks": 166,
     "module_dependencies": 22,
     "pattern_usage": 21,
     "quality_gates": 47
   },
   "quality_analysis": {
-    "quality_score": 95.0,
+    "quality_score": 93.0,
     "risk_level": "LOW",
-    "estimated_effort_hours": 0.0,
+    "estimated_effort_hours": 0.2,
     "critical_issues_count": 0,
-    "total_issues_count": 0,
+    "total_issues_count": 2,
     "complexity_score": 100,
     "recommendations": [
       "\u26a0\ufe0f  High complexity detected - consider module refactoring",

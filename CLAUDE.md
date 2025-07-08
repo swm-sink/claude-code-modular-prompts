@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.3.1   | 2025-07-07   | stable |
+| 2.3.1   | 2025-07-08   | stable |
 
 # CLAUDE.md - Framework Control Document
 

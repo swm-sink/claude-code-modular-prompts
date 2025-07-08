@@ -741,6 +741,23 @@
         - 70% faster execution through true parallelism
         - Built-in result synthesis and conflict resolution
       </native_benefits>
+      <batch_tool_integration>
+        <description>Integration with BatchTool() for efficient task batching</description>
+        <pattern>
+          ```python
+          # BatchTool() for parallel independent operations
+          BatchTool(
+            Read("config.json"),
+            Read("schema.sql"),
+            Read("api_spec.yaml"),
+            Grep("TODO", pattern="*.py")
+          )
+          # Then use Task() for agent-specific work
+          Task("Implementation Expert", "Address all TODOs found")
+          ```
+        </pattern>
+        <benefits>Combines tool batching with agent coordination for maximum efficiency</benefits>
+      </batch_tool_integration>
       <proven_results>95% success rate for multi-component features</proven_results>
     </task_pattern_optimization>
     

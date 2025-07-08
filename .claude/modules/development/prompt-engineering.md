@@ -177,10 +177,10 @@
     <implementation>patterns/intelligent-routing.md</implementation>
   </dynamic_routing>
   
-  <quality_gates>
+  <quality_enforcement>
     <description>Mandatory quality enforcement through specialized modules</description>
     <implementation>quality/production-standards.md</implementation>
-  </quality_gates>
+  </quality_enforcement>
   
 </advanced_patterns>
 ```

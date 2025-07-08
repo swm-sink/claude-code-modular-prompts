@@ -154,10 +154,10 @@
   </real_time_feedback>
   
   <quality_gates>
-    <coverage_enforcement>Enforce minimum test coverage requirements</coverage_enforcement>
-    <quality_thresholds>Enforce code quality and complexity thresholds</quality_thresholds>
-    <security_gates>Block deployment on security vulnerability detection</security_gates>
-    <performance_gates>Enforce performance requirements at all stages</performance_gates>
+    <gate name="coverage_enforcement">Enforce minimum test coverage requirements (90%+ unit, 80%+ integration)</gate>
+    <gate name="quality_thresholds">Enforce code quality and complexity thresholds (cyclomatic complexity < 10)</gate>
+    <gate name="security_gates">Block deployment on security vulnerability detection (zero critical/high issues)</gate>
+    <gate name="performance_gates">Enforce performance requirements at all stages (p95 < 200ms)</gate>
   </quality_gates>
 </quality_monitoring>
 ```
