@@ -20,7 +20,7 @@
       <structure>
         ```xml
         <command purpose="...">
-          <delegation target="modules/category/module-name.md">
+          <delegation target="modules/[category]/[module-name].md">
             Brief description of what module provides
           </delegation>
         </command>
@@ -34,9 +34,9 @@
       <structure>
         ```xml
         <module_integration>
-          <primary_module>modules/category/main-module.md</primary_module>
+          <primary_module>modules/[category]/[main-module].md</primary_module>
           <supporting_modules>
-            <module>modules/category/support-module.md</module>
+            <module>modules/[category]/[support-module].md</module>
           </supporting_modules>
         </module_integration>
         ```

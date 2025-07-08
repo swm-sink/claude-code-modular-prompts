@@ -129,6 +129,9 @@ class HealthCheck:
                     end = line.find('.md', start) + 3
                     if start != -1 and end > start:
                         ref_path = line[start:end]
+                        # Skip template references with brackets
+                        if '[' in ref_path and ']' in ref_path:
+                            continue
                         full_path = self.root / '.claude' / ref_path
                         if not full_path.exists():
                             issues.append(f"{module_file.name} → {ref_path}")

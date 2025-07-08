@@ -187,6 +187,9 @@ def check_file_locations():
     allowed_files = ['.DS_Store', 'settings.local.json']
     for file in Path('.claude').rglob('*'):
         if file.is_file() and not file.suffix == '.md' and file.name not in allowed_files:
+            # Allow JSON files in analytics directory
+            if file.parent.name == 'analytics' and file.suffix == '.json':
+                continue
             issues.append(f"Non-markdown file in .claude: {file}")
     
     # Check for orphaned test files
