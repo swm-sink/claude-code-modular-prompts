@@ -144,7 +144,9 @@ class FrameworkHealthMonitor:
                 print(f"  - {rec}")
                 
         # Save report
-        report_path = self.root_path / f"framework-health-{datetime.utcnow().strftime('%Y%m%d-%H%M%S')}.json"
+        reports_dir = self.root_path / "reports" / "daily" / datetime.utcnow().strftime('%Y-%m-%d')
+        reports_dir.mkdir(parents=True, exist_ok=True)
+        report_path = reports_dir / f"framework-health-{datetime.utcnow().strftime('%H%M%S')}.json"
         with open(report_path, 'w') as f:
             json.dump(report, f, indent=2)
             

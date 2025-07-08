@@ -348,10 +348,16 @@ def main():
         print(f"- {rec}")
         
     # Save report
-    with open("trace-compliance-report.json", "w") as f:
+    # Ensure reports directory exists
+    from pathlib import Path
+    reports_dir = Path("reports/daily") / datetime.now().strftime("%Y-%m-%d")
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    
+    report_path = reports_dir / f"trace-compliance-{datetime.now().strftime('%H%M%S')}.json"
+    with open(report_path, "w") as f:
         json.dump(report, f, indent=2)
         
-    print(f"\nDetailed report saved to: trace-compliance-report.json")
+    print(f"\nDetailed report saved to: {report_path}")
     
     # Return success if all agents are compliant
     return 0 if report['summary']['non_compliant_agents'] == 0 else 1

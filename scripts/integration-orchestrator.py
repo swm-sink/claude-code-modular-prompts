@@ -478,10 +478,16 @@ def main():
         print(f"- {rec}")
         
     # Save report
-    with open("integration-test-report.json", "w") as f:
+    from pathlib import Path
+    from datetime import datetime
+    reports_dir = Path("reports/daily") / datetime.now().strftime("%Y-%m-%d")
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    
+    report_path = reports_dir / f"integration-test-{datetime.now().strftime('%H%M%S')}.json"
+    with open(report_path, "w") as f:
         json.dump(report, f, indent=2)
         
-    print(f"\nDetailed report saved to: integration-test-report.json")
+    print(f"\nDetailed report saved to: {report_path}")
     
     return 0 if result.passed else 1
 

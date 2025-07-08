@@ -14,13 +14,8 @@
 <framework version="3.0.0">
   <purpose>Personal Claude Code workflow efficiency tool - NOT enterprise software</purpose>
   <principles>Single source truth | Zero redundancy | Modular composition | Token optimized | Module runtime engine | Prompt construction visualization | Claude 4 optimization | Meta-prompting evolution</principles>
-  <claude_4_features>Interleaved thinking | Parallel execution | 200K context window (Claude 4 Opus/Sonnet verified) | Advanced reasoning | Extended thinking capabilities</claude_4_features>
-  <official_sources>
-    <anthropic_models>https://docs.anthropic.com/en/docs/about-claude/models/overview</anthropic_models>
-    <claude_code_best_practices>https://www.anthropic.com/engineering/claude-code-best-practices</claude_code_best_practices>
-    <hallucination_reduction>https://docs.anthropic.com/en/docs/test-and-evaluate/strengthen-guardrails/reduce-hallucinations</hallucination_reduction>
-    <swe_bench_results>Claude 4 Opus: 72.5% → 79.4% parallel | Claude 4 Sonnet: 72.7% → 80.2% parallel</swe_bench_results>
-  </official_sources>
+  <claude_4_features>Interleaved thinking | Parallel execution | 200K context | Advanced reasoning</claude_4_features>
+  <swe_bench_verified>Claude 4 Opus: 72.5% → 79.4% | Claude 4 Sonnet: 72.7% → 80.2%</swe_bench_verified>
 </framework>
 ```
 
@@ -30,8 +25,8 @@
 
 ```xml
 <critical_thinking>
-  <rule>Challenge assumptions, surface complexities, disagree constructively</rule>
-  <rule>Research first, evidence-based, cross-reference, think 3x before acting - use 2025 sources only</rule>
+  <rule>Challenge assumptions, surface complexities, research first</rule>
+  <rule>Evidence-based decisions, think 3x before acting, 2025 sources only</rule>
   <rule>Map consequences: If X → Y → Z</rule>
 </critical_thinking>
 ```
@@ -42,9 +37,8 @@
 
 ```xml
 <code_minimalism>
-  <rule>Minimum code that works correctly. Every line must justify existence</rule>
-  <rule>No premature abstraction. Delete before adding. Inline simple logic</rule>
-  <avoid>Verbose implementations | Unnecessary wrappers | Hypothetical edge cases</avoid>
+  <rule>Minimum viable code. Every line justified. Delete before adding</rule>
+  <avoid>Verbose implementations | Unnecessary wrappers | Premature abstraction</avoid>
 </code_minimalism>
 ```
 
@@ -62,29 +56,17 @@
     <rule priority="HIGHEST">Scripts go in /scripts, tests in /tests, docs in /docs - NO EXCEPTIONS</rule>
   </critical_rules>
   <duplication_prevention enforcement="MANDATORY">
-    <rule priority="CRITICAL">Run duplication scan BEFORE any file creation</rule>
-    <rule priority="CRITICAL">Display scan results showing similar existing files</rule>
-    <rule priority="CRITICAL">Prefer enhancing existing files over creating new ones</rule>
-    <rule priority="CRITICAL">Document duplication decision in registry</rule>
+    <rule>Scan before create | Prefer enhance over new | Document decisions</rule>
     <module>patterns/duplication-prevention.md</module>
   </duplication_prevention>
-  <verification_checklist mandatory="true">
-    <before_create>Does this file/directory already exist somewhere?</before_create>
-    <before_create>Is there an existing location where this belongs?</before_create>
-    <before_create>Have I checked with LS/Glob to verify the path?</before_create>
-    <before_create>Is this ABSOLUTELY necessary for the user's request?</before_create>
-    <before_create>Am I creating clutter or organizing properly?</before_create>
-    <before_create>Have I run the duplication prevention scan?</before_create>
-    <before_create>Can I enhance existing code instead of creating new?</before_create>
+  <verification_checklist>
+    <check>File exists? Location correct? LS/Glob verified?</check>
+    <check>Absolutely necessary? Enhance existing instead?</check>
   </verification_checklist>
   <standard_rules>
-    <rule>Docs in /docs only. One location per file. Clear naming</rule>
-    <rule>Timestamps: filename-YYYY-MM-DD-HHMMSS-UTC</rule>
-    <rule>Temporal Standards: All dates MUST use system-generated current dates $(date '+%Y-%m-%d') in UTC format</rule>
-    <rule>Version Table Format: | version | last_updated | status | with YYYY-MM-DD format</rule>
-    <rule>Compliance: Use $(date '+%Y-%m-%d') for current date, increment manually for sequencing when needed</rule>
-    <rule>CRITICAL: Current date is July 2025 - ALL research MUST use 2025 sources and context</rule>
-    <rule>Update existing files before creating. Archive don't delete</rule>
+    <rule>Docs in /docs only. Timestamps: YYYY-MM-DD-HHMMSS-UTC</rule>
+    <rule>Dates: $(date '+%Y-%m-%d') format. 2025 sources only</rule>
+    <rule>Update before create. Archive don't delete</rule>
   </standard_rules>
   <limits patterns="8" quality="5" planning="5" development="4" security="3" testing="2" reports="5" docs_per_dir="20"/>
   <prohibited_actions>
@@ -105,50 +87,20 @@
 ```xml
 <claude_4_advanced_control version="2.6.0" enforcement="CRITICAL">
   <interleaved_thinking enforcement="MANDATORY">
-    <purpose>Leverage Claude 4's revolutionary thinking capabilities for complex reasoning</purpose>
-    <configuration>
-      <thinking_mode>interleaved</thinking_mode>
-      <max_thinking_length>16000</max_thinking_length>
-      <trigger_conditions>After tool calls, when uncertain, for complex multi-step tasks</trigger_conditions>
-    </configuration>
-    <mandatory_usage>
-      <rule priority="CRITICAL">ALWAYS use &lt;antml:thinking&gt; blocks before EVERY action</rule>
-      <rule priority="CRITICAL">Think 5X longer than acting - NO EXCEPTIONS</rule>
-      <rule priority="CRITICAL">Use thinking blocks at every major decision point</rule>
-      <rule priority="CRITICAL">Activate extended reasoning for "ultrathink" requests</rule>
-    </mandatory_usage>
+    <config>16K thinking length | Trigger: tool calls, uncertainty, complexity</config>
+    <rules>ALWAYS think before act | 5X think:act ratio | "ultrathink" = extended</rules>
   </interleaved_thinking>
   
-  <parallel_execution_mastery enforcement="MANDATORY">
-    <purpose>Significant performance improvement through optimized tool orchestration based on SWE-bench verified results</purpose>
-    <core_principle>All independent operations MUST execute simultaneously</core_principle>
-    <mandatory_patterns>
-      <pattern>Batch tool calls: Read("f1"), Read("f2"), Read("f3") in single message</pattern>
-      <pattern>Parallel analysis: Multiple code sections analyzed concurrently</pattern>
-      <pattern>Concurrent validation: Run multiple quality checks simultaneously</pattern>
-    </mandatory_patterns>
-    <performance_targets>
-      <target>SWE-bench verified: Claude 4 Opus 72.5% → 79.4% with parallel compute (6.9% improvement)</target>
-      <target>SWE-bench verified: Claude 4 Sonnet 72.7% → 80.2% with parallel compute (7.5% improvement)</target>
-      <target>Intelligent batching for independent operations reduces latency</target>
-      <target>Context optimization through parallel loading</target>
-    </performance_targets>
-    <official_source>Anthropic SWE-bench performance data, July 2025</official_source>
-  </parallel_execution_mastery>
+  <parallel_execution enforcement="MANDATORY">
+    <principle>All independent operations execute simultaneously</principle>
+    <patterns>Batch tool calls | Parallel analysis | Concurrent validation</patterns>
+    <performance>Opus 6.9% improvement | Sonnet 7.5% improvement (SWE-bench verified)</performance>
+  </parallel_execution>
   
-  <context_window_optimization enforcement="MANDATORY">
-    <purpose>Maximize efficiency within 200K token capacity</purpose>
-    <token_management>
-      <hierarchical_context>Critical instructions → Context → Examples → References</hierarchical_context>
-      <xml_efficiency>XML tags provide structured reasoning and improved accuracy (Anthropic 2025)</xml_efficiency>
-      <dynamic_loading>Load context as needed rather than upfront</dynamic_loading>
-    </token_management>
-    <performance_targets>
-      <framework_limit>Stay within 4000 token limits per file</framework_limit>
-      <total_framework>Maintain under 120K tokens for headroom</total_framework>
-      <session_efficiency>Reserve 50K+ tokens for active work</session_efficiency>
-    </performance_targets>
-  </context_window_optimization>
+  <context_optimization enforcement="MANDATORY">
+    <management>Hierarchical loading | XML structured | Dynamic context</management>
+    <limits>4K tokens/file | 120K total | 50K+ reserved for work</limits>
+  </context_optimization>
   
   <extended_reasoning_capabilities enforcement="MANDATORY">
     <purpose>Leverage Claude 4's enhanced reasoning for complex problem solving</purpose>
@@ -173,49 +125,10 @@
   </behavioral_control>
   
   <hallucination_prevention enforcement="CRITICAL">
-    <purpose>Prevent fabricated claims and ensure factual accuracy through systematic validation</purpose>
-    <temperature_optimization>
-      <factual_content>Use temperature 0.2 for business-critical and factual applications (PerfectApps 2025 recommendation)</factual_content>
-      <analytical_tasks>Use temperature 0.0-0.3 for analytical, multiple choice, and verification tasks (Anthropic 2025)</analytical_tasks>
-      <general_work>Use temperature 0.4-0.5 for balanced general-purpose tasks (community best practice 2025)</general_work>
-      <creative_work>Use temperature 0.7-1.0 only for creative and generative tasks (Anthropic official range)</creative_work>
-      <parameter_isolation>NEVER adjust both temperature and top_p simultaneously - focus on temperature only (Anthropic API docs)</parameter_isolation>
-    </temperature_optimization>
-    <detection_protocols>
-      <validation_checkpoints>Validate ALL claims against reliable sources before inclusion</validation_checkpoints>
-      <source_verification>Cross-reference multiple authoritative sources for technical claims</source_verification>
-      <percentage_claim_blocking>Block ANY percentage improvement claims without verified sources</percentage_claim_blocking>
-      <extraordinary_claim_validation>Require extraordinary evidence for extraordinary claims</extraordinary_claim_validation>
-      <uncertainty_acknowledgment>Explicitly state "I don't know" when information is uncertain (drastically reduces false information - Anthropic 2025)</uncertainty_acknowledgment>
-      <current_source_mandate>ALL sources MUST be from 2025 - July 2025 context is MANDATORY</current_source_mandate>
-      <outdated_source_blocking>BLOCK references to 2024 or earlier without current verification</outdated_source_blocking>
-    </detection_protocols>
-    <accuracy_enforcement>
-      <grounding_requirement>All technical claims MUST be grounded in documented evidence</grounding_requirement>
-      <direct_quotes>Extract word-for-word quotes from sources for grounding (Anthropic hallucination reduction guide)</direct_quotes>
-      <citation_verification>Require citations and supporting evidence for all statements</citation_verification>
-      <conservative_language>Use conservative language avoiding absolute statements without proof</conservative_language>
-      <chain_of_thought>Explain reasoning step-by-step to reveal potential faulty logic (chain-of-thought verification, Anthropic 2025)</chain_of_thought>
-    </accuracy_enforcement>
-    <systematic_validation>
-      <pre_publication_review>All content MUST undergo systematic fact-checking before finalization</pre_publication_review>
-      <source_reliability_assessment>Evaluate source credibility using established criteria</source_reliability_assessment>
-      <claim_substantiation>Document evidence trail for all technical assertions</claim_substantiation>
-      <peer_review_simulation>Challenge own assumptions through adversarial thinking</peer_review_simulation>
-      <iterative_refinement>Use previous outputs as follow-up prompts to catch inconsistencies (Anthropic iterative refinement method)</iterative_refinement>
-    </systematic_validation>
-    <error_correction_protocols>
-      <immediate_correction>Correct identified errors immediately upon detection</immediate_correction>
-      <systematic_review>Conduct comprehensive review when patterns of error detected</systematic_review>
-      <transparency_requirement>Document corrections and methodology for future reference</transparency_requirement>
-      <learning_integration>Update validation protocols based on error patterns</learning_integration>
-    </error_correction_protocols>
-    <trustworthiness_scoring>
-      <self_evaluation>Rate own output trustworthiness in additional requests</self_evaluation>
-      <uncertainty_quantification>Provide confidence levels for factual claims</uncertainty_quantification>
-      <external_validation>Use external knowledge restrictions when appropriate (restrict to provided documents only - Anthropic technique)</external_validation>
-      <best_of_n_verification>Run same prompts multiple times to compare outputs for inconsistencies (best-of-N verification, Anthropic 2025)</best_of_n_verification>
-    </trustworthiness_scoring>
+    <temperature>Factual: 0.2 | Analysis: 0.0-0.3 | General: 0.4-0.5 | Creative: 0.7-1.0</temperature>
+    <validation>Sources: 2025 only | Evidence required | "I don't know" when uncertain</validation>
+    <accuracy>Ground in evidence | Conservative language | Step-by-step reasoning</accuracy>
+    <protocols>Pre-publication review | Immediate correction | Iterative refinement</protocols>
   </hallucination_prevention>
 </claude_4_advanced_control>
 ```
@@ -387,64 +300,12 @@
 
 ```xml
 <command_selection>
-  <decision_tree>
-    <node name="Task Complexity">
-      <condition>Simple single-step task</condition>
-      <action>/task - Direct execution</action>
-    </node>
-    <node name="Task Complexity">
-      <condition>Multi-step development task</condition>
-      <branch>
-        <condition>Requires research/understanding</condition>
-        <action>/query - Research first, then /task</action>
-      </branch>
-      <branch>
-        <condition>Clear requirements</condition>
-        <action>/task - Direct implementation</action>
-      </branch>
-    </node>
-    <node name="Feature Development">
-      <condition>New feature with specifications</condition>
-      <action>/feature - Autonomous development cycle</action>
-    </node>
-    <node name="Complex Integration">
-      <condition>Multi-component system changes</condition>
-      <action>/swarm - Multi-agent coordination</action>
-    </node>
-    <node name="Uncertainty">
-      <condition>Unclear requirements or approach</condition>
-      <action>/auto - Intelligent routing and planning</action>
-    </node>
-    <node name="Documentation vs Research">
-      <condition>Need to understand how code works</condition>
-      <action>/query - Research and analysis without modifications</action>
-    </node>
-    <node name="Documentation vs Research">
-      <condition>Need to create or update documentation</condition>
-      <action>/docs - Generate or modify documentation files</action>
-    </node>
-    <node name="Session Management">
-      <condition>Long-running or multi-session work</condition>
-      <action>/session - Context preservation</action>
-    </node>
-  </decision_tree>
-  <selection_criteria>
-    <criterion name="Scope">Lines of code affected, files modified</criterion>
-    <criterion name="Complexity">Algorithmic complexity, integration points</criterion>
-    <criterion name="Risk">Production impact, reversibility</criterion>
-    <criterion name="Knowledge">Domain expertise required, research needed</criterion>
-    <criterion name="Time">Estimated duration, session boundaries</criterion>
-  </selection_criteria>
-  <routing_logic>
-    <rule>Single file + &lt;50 lines → /task</rule>
-    <rule>Multiple files + clear spec → /feature</rule>
-    <rule>Research required → /query then reassess</rule>
-    <rule>Understanding code → /query (read-only analysis)</rule>
-    <rule>Creating documentation → /docs (file generation)</rule>
-    <rule>System-wide changes → /swarm</rule>
-    <rule>Ambiguous requirements → /auto</rule>
-    <rule>Session continuity needed → /session</rule>
-  </routing_logic>
+  <routing>
+    <simple>Single task → /task | Multi-step + research → /query→/task | Clear requirements → /task</simple>
+    <features>New feature specs → /feature | Multi-component → /swarm | Unclear → /auto</features>
+    <analysis>Understand code → /query | Create docs → /docs | Long sessions → /session</analysis>
+  </routing>
+  <rules>Single file<50 lines → /task | Multiple files → /feature | Research → /query | System-wide → /swarm</rules>
 </command_selection>
 ```
 
@@ -575,38 +436,12 @@
 ## Advanced Prompt Optimization
 
 ```xml
-<advanced_prompt_optimization version="2.6.0" enforcement="CRITICAL">
-  <claude_4_optimization>
-    <xml_structure>Structured reasoning, max 4 levels, semantic tags for improved accuracy and clarity</xml_structure>
-    <parallel_execution>Batch all tool calls - concurrent operations improve development workflow efficiency</parallel_execution>
-    <thinking_integration>Interleaved thinking blocks with 16K token capacity for complex reasoning</thinking_integration>
-    <context_management>200K token window optimization with hierarchical loading (Claude 4 verified)</context_management>
-  </claude_4_optimization>
-  
-  <advanced_frameworks_2025>
-    <foundational>RISE (Role, Input, Steps, Expectation) | TRACE (Task, Request, Action, Context, Expectation) | CARE (Context, Action, Result, Evaluation)</foundational>
-    <specialized>APE (quick) | CLEAR (comprehensive) | SOAR (strategic) | CRISP (detailed) | SPARK (problem-solving)</specialized>
-    <framework_selection>
-      <simple_tasks>APE, CARE for rapid execution</simple_tasks>
-      <moderate_tasks>RISE, TRACE, SOAR for structured workflows</moderate_tasks>
-      <complex_tasks>CLEAR, CRISP, BRIDGE for comprehensive analysis</complex_tasks>
-    </framework_selection>
-  </advanced_frameworks_2025>
-  
-  <performance_patterns>
-    <tool_orchestration>Intelligent batching for improved development workflow performance</tool_orchestration>
-    <memory_optimization>Cascaded memory system with recursive imports up to 5 hops</memory_optimization>
-    <session_management>40-minute session limits for optimal Claude Sonnet performance</session_management>
-    <cost_optimization>Token-efficient prompts with structured XML for maximum value</cost_optimization>
-  </performance_patterns>
-  
-  <quality_enforcement>
-    <thinking_validation>Minimum 30-second critical thinking analysis before action</thinking_validation>
-    <consequence_mapping>Map decision consequences: If X → Y → Z</consequence_mapping>
-    <evidence_validation>Research-first methodology with cross-referencing using verified 2025 sources only</evidence_validation>
-    <testing_standards>Unit 90% | Integration all | System e2e | TDD mandatory</testing_standards>
-  </quality_enforcement>
-</advanced_prompt_optimization>
+<prompt_optimization enforcement="CRITICAL">
+  <claude_4>XML structure 4 levels | Parallel execution | 16K thinking | 200K context</claude_4>
+  <frameworks>RISE/TRACE/CARE (foundational) | APE/CLEAR/SOAR/CRISP/SPARK (specialized)</frameworks>
+  <performance>Intelligent batching | Cascaded memory 5 hops | 40min sessions | Token efficiency</performance>
+  <quality>30s thinking | Consequence mapping | Evidence validation | TDD mandatory</quality>
+</prompt_optimization>
 ```
 
 ────────────────────────────────────────────────────────────────────────────────
@@ -648,82 +483,23 @@
   <purpose>Deterministic module composition and execution engine for Claude 4 with standardized patterns, universal quality gates, and comprehensive TDD enforcement</purpose>
   
   <runtime_architecture>
-    <thinking_pattern_engine>
-      <standardized_checkpoints>Every command uses checkpoint-based thinking patterns from patterns/thinking-pattern-template.md</standardized_checkpoints>
-      <tdd_integration>TDD enforcement mandatory across all development commands with strict RED-GREEN-REFACTOR cycles</tdd_integration>
-      <critical_thinking>30-second minimum analysis before any action with consequence mapping</critical_thinking>
-      <validation_gates>Each checkpoint has verifiable validation criteria and blocking enforcement</validation_gates>
-    </thinking_pattern_engine>
-    
-    <module_composition_framework>
-      <lifecycle_management>Discovery → Loading → Orchestration → Integration with state management</lifecycle_management>
-      <dependency_resolution>Topological sorting with hard/soft/conditional dependency types</dependency_resolution>
-      <execution_patterns>Sequential for core stack, parallel for support modules, conditional for context-specific</execution_patterns>
-      <state_isolation>Modules communicate through contracts, no direct state modification</state_isolation>
-      <canonical_source>patterns/module-composition-framework.md</canonical_source>
-    </module_composition_framework>
-    
-    <universal_quality_gates>
-      <foundational_gates>Critical thinking, requirement clarity, module integration, error handling</foundational_gates>
-      <development_gates>TDD compliance, code quality, security requirements, performance validation</development_gates>
-      <coordination_gates>Multi-agent synchronization, session tracking, integration validation</coordination_gates>
-      <documentation_gates>Standards compliance, TDD methodology documentation</documentation_gates>
-      <analysis_gates>Research comprehensiveness, routing decision quality</analysis_gates>
-      <canonical_source>quality/universal-quality-gates.md</canonical_source>
-    </universal_quality_gates>
+    <thinking_engine>Checkpoint patterns | TDD mandatory | 30s critical thinking | Validation gates</thinking_engine>
+    <composition>Discovery→Loading→Orchestration→Integration | Topological sorting | State isolation</composition>
+    <quality_gates>Foundational | Development | Coordination | Documentation | Analysis</quality_gates>
+    <sources>patterns/thinking-pattern-template.md | patterns/module-composition-framework.md | quality/universal-quality-gates.md</sources>
   </runtime_architecture>
   
   <command_runtime_specification>
-    <standard_command_structure>
-      <thinking_pattern enforcement="MANDATORY">Checkpoint-based with critical thinking and TDD integration</thinking_pattern>
-      <tdd_integration enforcement="MANDATORY">Command-specific TDD requirements with blocking conditions</tdd_integration>
-      <module_execution enforcement="MANDATORY">Core stack + contextual + support modules</module_execution>
-      <universal_quality_gates enforcement="MANDATORY">Command-appropriate gate sets with validation</universal_quality_gates>
-    </standard_command_structure>
-    
-    <command_implementations>
-      <task_command>
-        <runtime>Single-component TDD with foundational + development gates</runtime>
-        <modules>critical-thinking → tdd → task-management → production-standards</modules>
-        <gates>BLOCKING on TDD violations, quality failures</gates>
-      </task_command>
-      
-      <swarm_command>
-        <runtime>Multi-agent coordination with full gate enforcement</runtime>
-        <modules>critical-thinking → session-management → multi-agent → tdd → git-operations → production-standards</modules>
-        <gates>BLOCKING on coordination failures, TDD violations, integration issues</gates>
-      </swarm_command>
-      
-      <auto_command>
-        <runtime>TDD-aware intelligent routing with analysis gates</runtime>
-        <modules>critical-thinking → intelligent-routing → tdd → pattern-library</modules>
-        <gates>BLOCKING on routing to non-TDD commands for code changes</gates>
-      </auto_command>
-      
-      <query_command>
-        <runtime>Read-only analysis with test-aware research</runtime>
-        <modules>critical-thinking → research-analysis → pattern-library → tdd</modules>
-        <gates>BLOCKING on modification attempts, CONDITIONAL on analysis depth</gates>
-      </query_command>
-      
-      <session_command>
-        <runtime>Session management with TDD progress tracking</runtime>
-        <modules>critical-thinking → session-management → tdd → git-operations</modules>
-        <gates>BLOCKING on incomplete TDD tracking, missing artifacts</gates>
-      </session_command>
-      
-      <protocol_command>
-        <runtime>Production standards with strictest TDD enforcement</runtime>
-        <modules>critical-thinking → session-management → production-standards → tdd → threat-modeling → pre-commit</modules>
-        <gates>BLOCKING on ANY quality gate failure - strictest enforcement</gates>
-      </protocol_command>
-      
-      <docs_command>
-        <runtime>Documentation gateway with TDD methodology integration</runtime>
-        <modules>critical-thinking → documentation → intelligent-routing → tdd</modules>
-        <gates>BLOCKING on gateway violations, missing TDD references</gates>
-      </docs_command>
-    </command_implementations>
+    <structure>Checkpoint thinking | TDD enforcement | Core+contextual+support modules | Quality gates</structure>
+    <implementations>
+      <task>Single TDD | critical-thinking→tdd→task-management→production | BLOCK: TDD violations</task>
+      <swarm>Multi-agent | critical-thinking→session→multi-agent→tdd→git→production | BLOCK: coordination failures</swarm>
+      <auto>Intelligent routing | critical-thinking→routing→tdd→patterns | BLOCK: non-TDD routes</auto>
+      <query>Read-only analysis | critical-thinking→research→patterns→tdd | BLOCK: modifications</query>
+      <session>Session tracking | critical-thinking→session→tdd→git | BLOCK: incomplete tracking</session>
+      <protocol>Production strict | critical-thinking→session→production→tdd→threat→precommit | BLOCK: ANY failure</protocol>
+      <docs>Documentation gateway | critical-thinking→docs→routing→tdd | BLOCK: gateway violations</docs>
+    </implementations>
   </command_runtime_specification>
   
   <tdd_enforcement>
@@ -735,47 +511,16 @@
   </tdd_enforcement>
   
   <execution_optimization>
-    <parallel_execution>
-      <tool_batching>Significant performance improvement through parallel tool calls (SWE-bench verified gains)</tool_batching>
-      <module_parallelization>Independent modules execute simultaneously</module_parallelization>
-      <dependency_optimization>Topological sorting minimizes execution time</dependency_optimization>
-    </parallel_execution>
-    
-    <context_preservation>
-      <state_management>Execution context maintained across module boundaries</state_management>
-      <result_accumulation>Module outputs accumulated for integration</result_accumulation>
-      <error_isolation>Module failures contained without cascade effects</error_isolation>
-    </context_preservation>
-    
-    <performance_targets>
-      <command_execution>Commands complete within 2-minute typical case</command_execution>
-      <module_loading>Module dependency resolution within 10 seconds</module_loading>
-      <quality_gates>Quality gate validation within 30 seconds</quality_gates>
-      <parallel_speedup>Performance improvement through batched operations (verified by SWE-bench results)</parallel_speedup>
-    </performance_targets>
+    <parallel>Tool batching | Independent modules | Dependency optimization</parallel>
+    <context>State maintenance | Result accumulation | Error isolation</context>
+    <targets>Commands: <2min | Loading: <10s | Gates: <30s | SWE-bench verified gains</targets>
   </execution_optimization>
   
-  <error_handling_and_recovery>
-    <error_classification>
-      <module_errors>Loading failures, execution errors, integration failures</module_errors>
-      <tdd_violations>Implementation before tests, coverage failures, cycle violations</tdd_violations>
-      <quality_gate_failures>Security issues, performance problems, compliance violations</quality_gate_failures>
-      <coordination_failures>Agent conflicts, session issues, communication breakdowns</coordination_failures>
-    </error_classification>
-    
-    <recovery_protocols>
-      <graceful_degradation>Continue with reduced functionality for non-critical failures</graceful_degradation>
-      <retry_mechanisms>Exponential backoff for transient failures</retry_mechanisms>
-      <escalation_paths>Route to appropriate recovery modules or user intervention</escalation_paths>
-      <rollback_capabilities>State rollback for critical failures</rollback_capabilities>
-    </recovery_protocols>
-    
-    <enforcement_levels>
-      <blocking>HALT execution until issue resolved</blocking>
-      <conditional>Alternative paths or degraded functionality</conditional>
-      <warning>Log issue but continue execution</warning>
-    </enforcement_levels>
-  </error_handling_and_recovery>
+  <error_handling>
+    <types>Module | TDD | Quality | Coordination failures</types>
+    <recovery>Graceful degradation | Exponential backoff | Escalation | Rollback</recovery>
+    <levels>BLOCKING | CONDITIONAL | WARNING</levels>
+  </error_handling>
   
   <integration_points>
     <core_framework_integration>
@@ -883,95 +628,11 @@
 ## Claude Code Integration
 
 ```xml
-<claude_code_integration version="2.6.0" enforcement="MANDATORY">
-  <purpose>Advanced Claude Code terminal optimization for maximum productivity and efficiency</purpose>
-  
-  <memory_management_mastery>
-    <cascaded_memory_system>
-      <purpose>Hierarchical context loading for optimal token usage</purpose>
-      <memory_hierarchy>
-        <level name="project_memory">./CLAUDE.md - Project-specific guidelines and conventions</level>
-        <level name="user_memory">~/.claude/CLAUDE.md - Personal preferences across all projects</level>
-        <level name="imported_memory">@path/to/import - Conditional context via import syntax</level>
-      </memory_hierarchy>
-      <optimization_strategies>
-        <lean_memory>Keep memory files under 2000 tokens each with bullet points</lean_memory>
-        <conditional_loading>Use @import for context that's only sometimes needed</conditional_loading>
-        <recursive_imports>Up to 5 hops for complex project structures</recursive_imports>
-      </optimization_strategies>
-    </cascaded_memory_system>
-    
-    <claude_md_best_practices>
-      <essential_sections>
-        <project_overview>Architecture, main technologies, key dependencies</project_overview>
-        <development_conventions>Code style, naming conventions, file organization</development_conventions>
-        <workflow_patterns>Testing strategy, deployment process, common tasks</workflow_patterns>
-        <environment_setup>Local development setup, tool configuration, dependencies</environment_setup>
-      </essential_sections>
-    </claude_md_best_practices>
-  </memory_management_mastery>
-  
-  <workflow_optimization_patterns>
-    <research_first_methodology>
-      <purpose>Significantly improve Claude Code performance through structured analysis</purpose>
-      <core_principle>Research and planning BEFORE coding prevents costly iterations</core_principle>
-      <implementation_steps>
-        <context_gathering>Analyze project structure and understand requirements</context_gathering>
-        <planning_phase>Detailed implementation plan with trade-off analysis</planning_phase>
-        <validation_phase>Review plan against project conventions and constraints</validation_phase>
-        <execution_phase>Implement solution with continuous validation</execution_phase>
-      </implementation_steps>
-    </research_first_methodology>
-    
-    <tdd_enhanced_workflows>
-      <purpose>Leverage agentic coding for powerful test-driven development</purpose>
-      <patterns>
-        <test_specification>Define behavior → Write comprehensive tests → Verify failures → Block implementation</test_specification>
-        <iterative_implementation>Minimal code for single test → Confirm pass → Refactor → Repeat</iterative_implementation>
-        <quality_enforcement>No implementation until tests written and failing</quality_enforcement>
-      </patterns>
-    </tdd_enhanced_workflows>
-    
-    <extended_thinking_triggers>
-      <thinking_levels>
-        <standard>Normal reasoning and problem solving</standard>
-        <enhanced>"think more", "think harder", "think longer"</enhanced>
-        <maximum>"ultrathink" - Activates deepest analysis capabilities</maximum>
-      </thinking_levels>
-    </extended_thinking_triggers>
-  </workflow_optimization_patterns>
-  
-  <session_management_strategies>
-    <context_preservation>
-      <session_optimization>
-        <compact_sessions>40-minute session limits for optimal Claude Sonnet performance</compact_sessions>
-        <state_reconstruction>Fresh context loading often more efficient than continuation</state_reconstruction>
-        <strategic_compaction>Use /compact only when approaching message limits</strategic_compaction>
-      </session_optimization>
-    </context_preservation>
-    
-    <cost_optimization>
-      <monitoring_strategies>
-        <token_awareness>Monitor consumption and estimate costs in real-time</token_awareness>
-        <session_efficiency>Optimize prompts to reduce back-and-forth iterations</session_efficiency>
-        <clear_instructions>Use specific instructions to minimize clarification requests</clear_instructions>
-      </monitoring_strategies>
-    </cost_optimization>
-  </session_management_strategies>
-  
-  <advanced_claude_code_techniques>
-    <autonomous_workflow_patterns>
-      <multi_step_delegation>Complete workflows from requirements to testing</multi_step_delegation>
-      <context_awareness>Intelligent decisions across file system, Git history, runtime logs</context_awareness>
-      <intelligent_error_recovery>Self-healing workflows with minimal intervention</intelligent_error_recovery>
-    </autonomous_workflow_patterns>
-    
-    <performance_enhancement>
-      <parallel_file_operations>Significant improvement through concurrent Read() operations</parallel_file_operations>
-      <context_budget_management>Reserve 50K+ tokens for active development work</context_budget_management>
-      <tool_selection_optimization>Choose optimal tools for each task type</tool_selection_optimization>
-    </performance_enhancement>
-  </advanced_claude_code_techniques>
+<claude_code_integration enforcement="MANDATORY">
+  <memory>Hierarchical: project/user/imported | <2K tokens each | @import syntax | 5 hops max</memory>
+  <workflow>Research→Plan→Validate→Execute | TDD: Define→Test→Fail→Implement | "ultrathink" triggers</workflow>
+  <sessions>40min limits | Fresh context often better | Strategic /compact | Cost monitoring</sessions>
+  <performance>Multi-step delegation | Context awareness | Parallel operations | 50K+ token budget</performance>
 </claude_code_integration>
 ```
 
@@ -980,63 +641,11 @@
 ## Security and Performance Optimization
 
 ```xml
-<security_performance_optimization version="2.6.0" enforcement="CRITICAL">
-  <purpose>Advanced security and performance patterns for Claude 4 and Claude Code</purpose>
-  
-  <security_optimization_patterns>
-    <data_protection_strategies>
-      <privacy_enforcement>
-        <data_minimization>Only include necessary data in prompts and context</data_minimization>
-        <secure_context_handling>Use ephemeral contexts for sensitive operations</secure_context_handling>
-        <access_control>Role-based access to sensitive Claude Code operations</access_control>
-      </privacy_enforcement>
-      
-      <audit_and_monitoring>
-        <operation_logging>Log all Claude Code operations for security auditing</operation_logging>
-        <anomaly_detection>Monitor unusual usage patterns and policy violations</anomaly_detection>
-        <compliance_validation>Regular validation against security policies and regulations</compliance_validation>
-      </audit_and_monitoring>
-    </data_protection_strategies>
-    
-    <secure_coding_patterns>
-      <threat_modeling_integration>
-        <security_first_design>Include threat modeling in architectural planning</security_first_design>
-        <vulnerability_scanning>Integrate security scanning into workflows</vulnerability_scanning>
-        <secure_defaults>Apply security best practices by default</secure_defaults>
-      </threat_modeling_integration>
-    </secure_coding_patterns>
-  </security_optimization_patterns>
-  
-  <performance_optimization_mastery>
-    <context_window_efficiency>
-      <token_management_strategies>
-        <hierarchical_prioritization>Critical first, supporting details last</hierarchical_prioritization>
-        <compression_techniques>XML structure for improved token efficiency and accuracy</compression_techniques>
-        <lazy_loading_patterns>Load context incrementally as needed</lazy_loading_patterns>
-      </token_management_strategies>
-      
-      <session_optimization>
-        <context_budget_monitoring>Track usage, reserve 50K+ for active work</context_budget_monitoring>
-        <strategic_session_management>40 minutes intensive = new session</strategic_session_management>
-        <context_inheritance>Efficient transfer through memory files</context_inheritance>
-      </session_optimization>
-    </context_window_efficiency>
-    
-    <execution_performance_patterns>
-      <parallel_processing_optimization>
-        <concurrent_operation_batching>Latency reduction through parallel execution based on SWE-bench results</concurrent_operation_batching>
-        <pipeline_optimization>Parallel gathering → Sequential analysis → Parallel implementation</pipeline_optimization>
-        <resource_utilization>Complex reasoning during parallel tool execution</resource_utilization>
-      </parallel_processing_optimization>
-      
-      <accuracy_optimization>
-        <validation_checkpoints>Intermediate result verification and error correction</validation_checkpoints>
-        <iterative_refinement>Initial solution → Reflection → Refinement → Validation</iterative_refinement>
-        <multi_perspective_analysis>Technical, business, and user perspectives</multi_perspective_analysis>
-      </accuracy_optimization>
-    </execution_performance_patterns>
-  </performance_optimization_mastery>
-</security_performance_optimization>
+<security_performance enforcement="CRITICAL">
+  <security>Data minimization | Ephemeral contexts | Role-based access | Operation logging | Threat modeling | Secure defaults</security>
+  <performance>Hierarchical prioritization | XML compression | Lazy loading | 50K+ budget | 40min sessions | Parallel execution</performance>
+  <optimization>Concurrent batching | Pipeline optimization | Validation checkpoints | Multi-perspective analysis</optimization>
+</security_performance>
 ```
 
 ────────────────────────────────────────────────────────────────────────────────
@@ -1052,137 +661,39 @@
   <purpose>Self-improving, adaptive framework evolution with safety boundaries and human oversight</purpose>
   
   <meta_architecture>
-    <layer_1 name="stable_core" immutable="true">
-      <commands>All 8 existing commands preserved and protected</commands>
-      <modules>All 60+ existing modules maintained as stable foundation</modules>
-      <quality_gates>Universal quality gates cannot be weakened or bypassed</quality_gates>
-      <thinking_patterns>Core thinking patterns remain unchanged</thinking_patterns>
-    </layer_1>
-    
-    <layer_2 name="meta_enhancement" mutable="true">
-      <learning_engine>Pattern recognition and performance optimization</learning_engine>
-      <adaptation_engine>Safe framework enhancement and evolution</adaptation_engine>
-      <optimization_engine>Real-time efficiency and effectiveness improvements</optimization_engine>
-      <generation_engine>Context-aware module and workflow generation</generation_engine>
-    </layer_2>
-    
-    <layer_3 name="meta_safety" enforcement="MANDATORY">
-      <boundary_enforcement>Immutable core protection and change limits</boundary_enforcement>
-      <human_oversight>Approval gates and override capabilities</human_oversight>
-      <rollback_system>Rapid recovery and stability restoration</rollback_system>
-      <monitoring_system>Continuous health and performance tracking</monitoring_system>
-    </layer_3>
+    <stable_core immutable="true">8 commands | 60+ modules | Quality gates | Thinking patterns</stable_core>
+    <enhancement mutable="true">Learning | Adaptation | Optimization | Generation engines</enhancement>
+    <safety enforcement="MANDATORY">Boundary protection | Human oversight | Rollback | Monitoring</safety>
   </meta_architecture>
   
-  <self_improvement_engine enforcement="MANDATORY">
-    <learning_cycle>
-      <phase name="analysis">Usage pattern analysis and performance monitoring</phase>
-      <phase name="recognition">Pattern recognition and optimization opportunity identification</phase>
-      <phase name="generation">Enhancement proposal generation with impact analysis</phase>
-      <phase name="validation">Safety validation and human approval where required</phase>
-      <phase name="implementation">Controlled implementation with monitoring</phase>
-      <phase name="evaluation">Results evaluation and learning integration</phase>
-    </learning_cycle>
-    
-    <safety_boundaries enforcement="BLOCKING">
-      <immutable_core>Core framework components cannot be modified</immutable_core>
-      <additive_only>Meta-layer can only add functionality, not modify existing</additive_only>
-      <change_rate_limit>Maximum 5% framework change per week</change_rate_limit>
-      <approval_threshold>Major changes require human approval</approval_threshold>
-      <rollback_mandatory>All changes must be reversible within 60 seconds</rollback_mandatory>
-    </safety_boundaries>
-    
-    <evolution_control>
-      <gradual_change>Changes must be incremental and validated</gradual_change>
-      <stability_maintenance>Framework stability must remain above 99.9%</stability_maintenance>
-      <performance_monitoring>Continuous performance tracking and optimization</performance_monitoring>
-      <human_override>Human can disable or modify any meta-functionality</human_override>
-    </evolution_control>
-  </self_improvement_engine>
+  <self_improvement enforcement="MANDATORY">
+    <cycle>Analysis→Recognition→Generation→Validation→Implementation→Evaluation</cycle>
+    <boundaries>Immutable core | Additive only | 5%/week limit | Human approval | 60s rollback</boundaries>
+    <control>Incremental changes | 99.9% stability | Performance monitoring | Human override</control>
+  </self_improvement>
   
   <meta_commands enforcement="MANDATORY">
-    <command name="/meta-analyze" purpose="Analyze usage patterns and identify optimization opportunities">
-      <trigger>Manual invocation or scheduled analysis</trigger>
-      <process>Data analysis → Pattern recognition → Opportunity identification → Report generation</process>
-      <output>Analysis report with optimization recommendations</output>
-    </command>
-    
-    <command name="/meta-optimize" purpose="Implement approved optimizations and enhancements">
-      <trigger>Post-analysis or manual optimization request</trigger>
-      <process>Validation → Safety check → Implementation → Monitoring</process>
-      <output>Optimization implementation with performance tracking</output>
-    </command>
-    
-    <command name="/meta-evolve" purpose="Evolve framework capabilities based on learnings">
-      <trigger>Accumulated learnings or significant pattern changes</trigger>
-      <process>Evolution proposal → Safety validation → Human approval → Implementation</process>
-      <output>Framework evolution with comprehensive monitoring</output>
-    </command>
-    
-    <command name="/meta-rollback" purpose="Rollback problematic changes and restore stability">
-      <trigger>Stability issues or human intervention</trigger>
-      <process>Issue detection → Rollback execution → Validation → Analysis</process>
-      <output>System restoration with failure analysis</output>
-    </command>
+    <analyze>Pattern analysis and optimization opportunities</analyze>
+    <optimize>Implement approved enhancements with monitoring</optimize>
+    <evolve>Framework evolution with human approval</evolve>
+    <rollback>Stability restoration and failure analysis</rollback>
   </meta_commands>
   
   <meta_modules enforcement="MANDATORY">
-    <safety_layer>
-      <module>meta/safety-validator.md - Boundary enforcement and rollback</module>
-      <module>meta/human-oversight.md - Human control and intervention</module>
-      <module>meta/stability-monitor.md - Continuous stability tracking</module>
-    </safety_layer>
-    
-    <intelligence_layer>
-      <module>meta/pattern-recognizer.md - Usage pattern analysis</module>
-      <module>meta/performance-optimizer.md - Efficiency improvements</module>
-      <module>meta/module-generator.md - Context-aware module creation</module>
-    </intelligence_layer>
-    
-    <evolution_layer>
-      <module>meta/framework-evolver.md - Safe framework evolution</module>
-      <module>meta/learning-integrator.md - Learning consolidation</module>
-      <module>meta/adaptation-engine.md - Behavioral adaptation</module>
-    </evolution_layer>
+    <safety>safety-validator | human-oversight | stability-monitor</safety>
+    <intelligence>pattern-recognizer | performance-optimizer | module-generator</intelligence>
+    <evolution>framework-evolver | learning-integrator | adaptation-engine</evolution>
   </meta_modules>
   
   <human_ai_collaboration enforcement="CRITICAL">
-    <human_authority>
-      <ultimate_control>Human has absolute authority over all meta-operations</ultimate_control>
-      <override_capability>Can disable, modify, or reverse any meta-functionality</override_capability>
-      <approval_gates>Major changes require explicit human approval</approval_gates>
-      <transparency_access>Full visibility into all meta-operations and decisions</transparency_access>
-    </human_authority>
-    
-    <oversight_triggers>
-      <automatic_alerts>Stability degradation, performance regression, safety violations</automatic_alerts>
-      <approval_required>New modules, command modifications, routing changes</approval_required>
-      <human_intervention>Emergency stop, selective disable, manual rollback</human_intervention>
-      <preference_management>User preferences override system optimizations</preference_management>
-    </oversight_triggers>
-    
-    <collaboration_enhancement>
-      <intelligent_assistance>Meta-system provides insights and recommendations</intelligent_assistance>
-      <adaptive_behavior>System learns user preferences and working styles</adaptive_behavior>
-      <predictive_optimization>Anticipates needs and pre-optimizes workflows</predictive_optimization>
-      <transparent_reasoning>All decisions explainable and verifiable</transparent_reasoning>
-    </collaboration_enhancement>
+    <authority>Ultimate control | Override capability | Approval gates | Full transparency</authority>
+    <triggers>Auto alerts | Approval required | Emergency stop | User preferences</triggers>
+    <enhancement>Intelligent assistance | Adaptive behavior | Predictive optimization | Transparent reasoning</enhancement>
   </human_ai_collaboration>
   
   <performance_targets enforcement="MANDATORY">
-    <efficiency_improvements>
-      <token_usage_reduction>Target: 20% reduction through optimization</token_usage_reduction>
-      <response_time_improvement>Target: 30% faster response for common workflows</response_time_improvement>
-      <pattern_recognition_accuracy>Target: 85% accuracy in pattern identification</pattern_recognition_accuracy>
-      <user_satisfaction_increase>Target: 10% increase in user satisfaction</user_satisfaction_increase>
-    </efficiency_improvements>
-    
-    <stability_requirements>
-      <framework_stability>Maintain 99.9% stability during evolution</framework_stability>
-      <zero_regression>No degradation of existing functionality</zero_regression>
-      <rollback_capability>60-second rollback for any change</rollback_capability>
-      <human_override>Instant human override of any meta-operation</human_override>
-    </stability_requirements>
+    <efficiency>20% token reduction | 30% faster response | 85% pattern accuracy | 10% satisfaction increase</efficiency>
+    <stability>99.9% uptime | Zero regression | 60s rollback | Instant human override</stability>
   </performance_targets>
   
   <integration_points>

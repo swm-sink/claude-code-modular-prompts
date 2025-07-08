@@ -1,0 +1,1235 @@
+{
+  "test_name": "quick_validation_test",
+  "test_date": "2025-07-08T13:19:52.058704",
+  "framework_version": "3.0.0",
+  "configuration": {
+    "test_name": "quick_validation_test",
+    "description": "Quick validation with reduced sample size for testing purposes",
+    "sample_size_per_group": 10,
+    "confidence_level": 0.95,
+    "statistical_power": 0.8,
+    "randomization_seed": 42,
+    "scenarios": [
+      "simple_task",
+      "complex_reasoning",
+      "code_generation"
+    ],
+    "evaluation_criteria": [
+      "response_quality_score",
+      "accuracy_score",
+      "completeness_score",
+      "relevance_score"
+    ]
+  },
+  "total_tests_run": 60,
+  "baseline_results": [
+    {
+      "test_id": "38d0e561-cc29-45dc-ab22-631f82cedf2c",
+      "scenario_type": "simple_task",
+      "prompt_type": "baseline",
+      "prompt_content": "Complete this task: Create a function that calculates the fibonacci sequence",
+      "response_quality_score": 6.075032265668002,
+      "response_time_ms": 228.3920410554856,
+      "accuracy_score": 0.6075032265668001,
+      "completeness_score": 0.6075032265668001,
+      "relevance_score": 0.6075032265668001,
+      "timestamp": "2025-07-08T13:19:39.903957",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using baseline prompt"
+      }
+    },
+    {
+      "test_id": "c02d1e35-fc8c-4d23-965a-90f6660cf37e",
+      "scenario_type": "simple_task",
+      "prompt_type": "baseline",
+      "prompt_content": "Complete this task: Create a function that calculates the fibonacci sequence",
+      "response_quality_score": 6.669632214446468,
+      "response_time_ms": 158.86133402818814,
+      "accuracy_score": 0.6669632214446468,
+      "completeness_score": 0.6669632214446468,
+      "relevance_score": 0.6669632214446468,
+      "timestamp": "2025-07-08T13:19:40.062894",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using baseline prompt"
+      }
+    },
+    {
+      "test_id": "3ba10c85-5f97-42dc-b597-e2822df09600",
+      "scenario_type": "simple_task",
+      "prompt_type": "baseline",
+      "prompt_content": "Complete this task: Create a function that calculates the fibonacci sequence",
+      "response_quality_score": 8.030098462268734,
+      "response_time_ms": 247.58845899486914,
+      "accuracy_score": 0.8030098462268734,
+      "completeness_score": 0.8030098462268734,
+      "relevance_score": 0.8030098462268734,
+      "timestamp": "2025-07-08T13:19:40.310590",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using baseline prompt"
+      }
+    },
+    {
+      "test_id": "4bde5b88-9b32-4bcc-9805-c59ac2aa95da",
+      "scenario_type": "simple_task",
+      "prompt_type": "baseline",
+      "prompt_content": "Complete this task: Create a function that calculates the fibonacci sequence",
+      "response_quality_score": 6.260816497888248,
+      "response_time_ms": 281.94566699676216,
+      "accuracy_score": 0.6260816497888249,
+      "completeness_score": 0.6260816497888249,
+      "relevance_score": 0.6260816497888249,
+      "timestamp": "2025-07-08T13:19:40.592646",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using baseline prompt"
+      }
+    },
+    {
+      "test_id": "7d4140cc-832b-4aff-8057-d0aae783df1a",
+      "scenario_type": "simple_task",
+      "prompt_type": "baseline",
+      "prompt_content": "Complete this task: Create a function that calculates the fibonacci sequence",
+      "response_quality_score": 6.08939165831421,
+      "response_time_ms": 191.3959999801591,
+      "accuracy_score": 0.608939165831421,
+      "completeness_score": 0.608939165831421,
+      "relevance_score": 0.608939165831421,
+      "timestamp": "2025-07-08T13:19:40.784124",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using baseline prompt"
+      }
+    },
+    {
+      "test_id": "dd74cf4d-baf5-4a7c-9b5d-e768b23a5885",
+      "scenario_type": "simple_task",
+      "prompt_type": "baseline",
+      "prompt_content": "Complete this task: Create a function that calculates the fibonacci sequence",
+      "response_quality_score": 7.516065864310088,
+      "response_time_ms": 148.76204100437462,
+      "accuracy_score": 0.7516065864310087,
+      "completeness_score": 0.7516065864310087,
+      "relevance_score": 0.7516065864310087,
+      "timestamp": "2025-07-08T13:19:40.932963",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using baseline prompt"
+      }
+    },
+    {
+      "test_id": "1d74d7d8-68c4-495d-b06c-889029030a6e",
+      "scenario_type": "simple_task",
+      "prompt_type": "baseline",
+      "prompt_content": "Complete this task: Create a function that calculates the fibonacci sequence",
+      "response_quality_score": 6.596512952059945,
+      "response_time_ms": 108.97320898948237,
+      "accuracy_score": 0.6596512952059945,
+      "completeness_score": 0.6596512952059945,
+      "relevance_score": 0.6596512952059945,
+      "timestamp": "2025-07-08T13:19:41.042003",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using baseline prompt"
+      }
+    },
+    {
+      "test_id": "b09ea076-3a68-4493-bd6a-0bcf1caff0f9",
+      "scenario_type": "simple_task",
+      "prompt_type": "baseline",
+      "prompt_content": "Complete this task: Create a function that calculates the fibonacci sequence",
+      "response_quality_score": 7.63482444180965,
+      "response_time_ms": 231.89337499206886,
+      "accuracy_score": 0.763482444180965,
+      "completeness_score": 0.763482444180965,
+      "relevance_score": 0.763482444180965,
+      "timestamp": "2025-07-08T13:19:41.273976",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using baseline prompt"
+      }
+    },
+    {
+      "test_id": "c7c7acad-17ff-4fa4-b121-51559709fc2e",
+      "scenario_type": "simple_task",
+      "prompt_type": "baseline",
+      "prompt_content": "Complete this task: Create a function that calculates the fibonacci sequence",
+      "response_quality_score": 7.767797051627726,
+      "response_time_ms": 149.11791600752622,
+      "accuracy_score": 0.7767797051627726,
+      "completeness_score": 0.7767797051627726,
+      "relevance_score": 0.7767797051627726,
+      "timestamp": "2025-07-08T13:19:41.423165",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using baseline prompt"
+      }
+    },
+    {
+      "test_id": "a5c06480-da61-45e1-a0cf-3f01100b6863",
+      "scenario_type": "simple_task",
+      "prompt_type": "baseline",
+      "prompt_content": "Complete this task: Create a function that calculates the fibonacci sequence",
+      "response_quality_score": 6.0194962790341835,
+      "response_time_ms": 263.06279201526195,
+      "accuracy_score": 0.6019496279034183,
+      "completeness_score": 0.6019496279034183,
+      "relevance_score": 0.6019496279034183,
+      "timestamp": "2025-07-08T13:19:41.686301",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using baseline prompt"
+      }
+    },
+    {
+      "test_id": "f52265f5-2718-4b2d-a88f-dc1fd9acde47",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "baseline",
+      "prompt_content": "Analyze this complex problem: Analyze the trade-offs between microservices and monolithic architectures for a growing startup",
+      "response_quality_score": 6.137473150966986,
+      "response_time_ms": 245.952750032302,
+      "accuracy_score": 0.6137473150966987,
+      "completeness_score": 0.6137473150966987,
+      "relevance_score": 0.6137473150966987,
+      "timestamp": "2025-07-08T13:19:44.267424",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using baseline prompt"
+      }
+    },
+    {
+      "test_id": "1b22ff34-e4f8-48af-af12-3dc6e1f56d67",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "baseline",
+      "prompt_content": "Analyze this complex problem: Analyze the trade-offs between microservices and monolithic architectures for a growing startup",
+      "response_quality_score": 6.868163890806321,
+      "response_time_ms": 150.05687496159226,
+      "accuracy_score": 0.6868163890806321,
+      "completeness_score": 0.6868163890806321,
+      "relevance_score": 0.6868163890806321,
+      "timestamp": "2025-07-08T13:19:44.417574",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using baseline prompt"
+      }
+    },
+    {
+      "test_id": "f9fe76af-873e-4ec9-936f-a7c7ceb12262",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "baseline",
+      "prompt_content": "Analyze this complex problem: Analyze the trade-offs between microservices and monolithic architectures for a growing startup",
+      "response_quality_score": 6.69837265908309,
+      "response_time_ms": 119.56070800079033,
+      "accuracy_score": 0.669837265908309,
+      "completeness_score": 0.669837265908309,
+      "relevance_score": 0.669837265908309,
+      "timestamp": "2025-07-08T13:19:44.537259",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using baseline prompt"
+      }
+    },
+    {
+      "test_id": "bae1c9b4-e283-4c5c-88e8-cee804eaca53",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "baseline",
+      "prompt_content": "Analyze this complex problem: Analyze the trade-offs between microservices and monolithic architectures for a growing startup",
+      "response_quality_score": 6.833920809330277,
+      "response_time_ms": 122.1039579831995,
+      "accuracy_score": 0.6833920809330276,
+      "completeness_score": 0.6833920809330276,
+      "relevance_score": 0.6833920809330276,
+      "timestamp": "2025-07-08T13:19:44.659486",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using baseline prompt"
+      }
+    },
+    {
+      "test_id": "f8e28d3f-0106-425a-9b87-25dc03462720",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "baseline",
+      "prompt_content": "Analyze this complex problem: Analyze the trade-offs between microservices and monolithic architectures for a growing startup",
+      "response_quality_score": 7.094496536910253,
+      "response_time_ms": 228.3054589643143,
+      "accuracy_score": 0.7094496536910253,
+      "completeness_score": 0.7094496536910253,
+      "relevance_score": 0.7094496536910253,
+      "timestamp": "2025-07-08T13:19:44.887920",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using baseline prompt"
+      }
+    },
+    {
+      "test_id": "3a48485f-b7b5-4ef6-bb9b-f7c3a9cc8b93",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "baseline",
+      "prompt_content": "Analyze this complex problem: Analyze the trade-offs between microservices and monolithic architectures for a growing startup",
+      "response_quality_score": 6.628521092314463,
+      "response_time_ms": 174.98445900855586,
+      "accuracy_score": 0.6628521092314463,
+      "completeness_score": 0.6628521092314463,
+      "relevance_score": 0.6628521092314463,
+      "timestamp": "2025-07-08T13:19:45.063012",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using baseline prompt"
+      }
+    },
+    {
+      "test_id": "cc03e803-1ff0-450b-8453-5ad3480892b8",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "baseline",
+      "prompt_content": "Analyze this complex problem: Analyze the trade-offs between microservices and monolithic architectures for a growing startup",
+      "response_quality_score": 8.809963763137482,
+      "response_time_ms": 153.90212496276945,
+      "accuracy_score": 0.8809963763137483,
+      "completeness_score": 0.8809963763137483,
+      "relevance_score": 0.8809963763137483,
+      "timestamp": "2025-07-08T13:19:45.217015",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using baseline prompt"
+      }
+    },
+    {
+      "test_id": "36d290f0-cd24-4195-b048-f579eb744c01",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "baseline",
+      "prompt_content": "Analyze this complex problem: Analyze the trade-offs between microservices and monolithic architectures for a growing startup",
+      "response_quality_score": 7.827393017000964,
+      "response_time_ms": 233.75837499042973,
+      "accuracy_score": 0.7827393017000964,
+      "completeness_score": 0.7827393017000964,
+      "relevance_score": 0.7827393017000964,
+      "timestamp": "2025-07-08T13:19:45.450872",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using baseline prompt"
+      }
+    },
+    {
+      "test_id": "a54003d6-988e-47b4-93d9-0e45e979171a",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "baseline",
+      "prompt_content": "Analyze this complex problem: Analyze the trade-offs between microservices and monolithic architectures for a growing startup",
+      "response_quality_score": 8.187380393851047,
+      "response_time_ms": 139.26608301699162,
+      "accuracy_score": 0.8187380393851047,
+      "completeness_score": 0.8187380393851047,
+      "relevance_score": 0.8187380393851047,
+      "timestamp": "2025-07-08T13:19:45.590226",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using baseline prompt"
+      }
+    },
+    {
+      "test_id": "4e0b0382-2004-405f-9398-55747b8d4523",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "baseline",
+      "prompt_content": "Analyze this complex problem: Analyze the trade-offs between microservices and monolithic architectures for a growing startup",
+      "response_quality_score": 7.138366325272943,
+      "response_time_ms": 136.6248750127852,
+      "accuracy_score": 0.7138366325272943,
+      "completeness_score": 0.7138366325272943,
+      "relevance_score": 0.7138366325272943,
+      "timestamp": "2025-07-08T13:19:45.726928",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using baseline prompt"
+      }
+    },
+    {
+      "test_id": "dcf1480f-928a-42d9-aabf-46be7048f985",
+      "scenario_type": "code_generation",
+      "prompt_type": "baseline",
+      "prompt_content": "Generate code for: REST API endpoint for user authentication with JWT tokens and rate limiting",
+      "response_quality_score": 6.788224825568806,
+      "response_time_ms": 216.40787500655279,
+      "accuracy_score": 0.6788224825568806,
+      "completeness_score": 0.6788224825568806,
+      "relevance_score": 0.6788224825568806,
+      "timestamp": "2025-07-08T13:19:48.151967",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using baseline prompt"
+      }
+    },
+    {
+      "test_id": "476c3a13-1742-4d7d-a370-217577e014b0",
+      "scenario_type": "code_generation",
+      "prompt_type": "baseline",
+      "prompt_content": "Generate code for: REST API endpoint for user authentication with JWT tokens and rate limiting",
+      "response_quality_score": 8.69346865080743,
+      "response_time_ms": 221.73200000543147,
+      "accuracy_score": 0.8693468650807431,
+      "completeness_score": 0.8693468650807431,
+      "relevance_score": 0.8693468650807431,
+      "timestamp": "2025-07-08T13:19:48.373800",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using baseline prompt"
+      }
+    },
+    {
+      "test_id": "9c1c0d09-3fbb-45d1-9b4a-0ddc787aa987",
+      "scenario_type": "code_generation",
+      "prompt_type": "baseline",
+      "prompt_content": "Generate code for: REST API endpoint for user authentication with JWT tokens and rate limiting",
+      "response_quality_score": 6.657962277471849,
+      "response_time_ms": 184.9442920065485,
+      "accuracy_score": 0.6657962277471849,
+      "completeness_score": 0.6657962277471849,
+      "relevance_score": 0.6657962277471849,
+      "timestamp": "2025-07-08T13:19:48.558845",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using baseline prompt"
+      }
+    },
+    {
+      "test_id": "6b940019-a9ea-4e53-9645-592639e9603b",
+      "scenario_type": "code_generation",
+      "prompt_type": "baseline",
+      "prompt_content": "Generate code for: REST API endpoint for user authentication with JWT tokens and rate limiting",
+      "response_quality_score": 7.528578881029393,
+      "response_time_ms": 302.4261660175398,
+      "accuracy_score": 0.7528578881029393,
+      "completeness_score": 0.7528578881029393,
+      "relevance_score": 0.7528578881029393,
+      "timestamp": "2025-07-08T13:19:48.861388",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using baseline prompt"
+      }
+    },
+    {
+      "test_id": "6b4c6655-78a3-48a7-8d60-8a2769893477",
+      "scenario_type": "code_generation",
+      "prompt_type": "baseline",
+      "prompt_content": "Generate code for: REST API endpoint for user authentication with JWT tokens and rate limiting",
+      "response_quality_score": 6.1413491262742035,
+      "response_time_ms": 123.21824999526143,
+      "accuracy_score": 0.6141349126274204,
+      "completeness_score": 0.6141349126274204,
+      "relevance_score": 0.6141349126274204,
+      "timestamp": "2025-07-08T13:19:48.984699",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using baseline prompt"
+      }
+    },
+    {
+      "test_id": "4c22ee85-44fc-47e4-9ade-3ee05dcffc79",
+      "scenario_type": "code_generation",
+      "prompt_type": "baseline",
+      "prompt_content": "Generate code for: REST API endpoint for user authentication with JWT tokens and rate limiting",
+      "response_quality_score": 7.88233812510927,
+      "response_time_ms": 126.97212502826005,
+      "accuracy_score": 0.7882338125109271,
+      "completeness_score": 0.7882338125109271,
+      "relevance_score": 0.7882338125109271,
+      "timestamp": "2025-07-08T13:19:49.111758",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using baseline prompt"
+      }
+    },
+    {
+      "test_id": "721f79bd-a8b5-42fb-a615-029564ef0f13",
+      "scenario_type": "code_generation",
+      "prompt_type": "baseline",
+      "prompt_content": "Generate code for: REST API endpoint for user authentication with JWT tokens and rate limiting",
+      "response_quality_score": 7.266479900399052,
+      "response_time_ms": 261.78749999962747,
+      "accuracy_score": 0.7266479900399052,
+      "completeness_score": 0.7266479900399052,
+      "relevance_score": 0.7266479900399052,
+      "timestamp": "2025-07-08T13:19:49.373624",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using baseline prompt"
+      }
+    },
+    {
+      "test_id": "ade4aa12-3a5c-4af3-864f-86d5c4db6574",
+      "scenario_type": "code_generation",
+      "prompt_type": "baseline",
+      "prompt_content": "Generate code for: REST API endpoint for user authentication with JWT tokens and rate limiting",
+      "response_quality_score": 7.14485785951961,
+      "response_time_ms": 117.75979195954278,
+      "accuracy_score": 0.714485785951961,
+      "completeness_score": 0.714485785951961,
+      "relevance_score": 0.714485785951961,
+      "timestamp": "2025-07-08T13:19:49.491477",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using baseline prompt"
+      }
+    },
+    {
+      "test_id": "68a68f8e-7f18-44ce-ad54-d8caf3d41cd7",
+      "scenario_type": "code_generation",
+      "prompt_type": "baseline",
+      "prompt_content": "Generate code for: REST API endpoint for user authentication with JWT tokens and rate limiting",
+      "response_quality_score": 7.587343035297412,
+      "response_time_ms": 300.55450001964346,
+      "accuracy_score": 0.7587343035297411,
+      "completeness_score": 0.7587343035297411,
+      "relevance_score": 0.7587343035297411,
+      "timestamp": "2025-07-08T13:19:49.792156",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using baseline prompt"
+      }
+    },
+    {
+      "test_id": "c67ed55e-a9be-448c-bb1e-09032d532b4c",
+      "scenario_type": "code_generation",
+      "prompt_type": "baseline",
+      "prompt_content": "Generate code for: REST API endpoint for user authentication with JWT tokens and rate limiting",
+      "response_quality_score": 8.582339106703493,
+      "response_time_ms": 296.08920798636973,
+      "accuracy_score": 0.8582339106703494,
+      "completeness_score": 0.8582339106703494,
+      "relevance_score": 0.8582339106703494,
+      "timestamp": "2025-07-08T13:19:50.088351",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using baseline prompt"
+      }
+    }
+  ],
+  "meta_enhanced_results": [
+    {
+      "test_id": "344cf45a-c724-4b76-8a62-50ffac6cda77",
+      "scenario_type": "simple_task",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<thinking_pattern>\n<checkpoint>Understand requirements: Create a function that calculates the fibonacci sequence</checkpoint>\n<analysis>Break down task components and identify key requirements</analysis>\n<validation>Verify understanding before proceeding</validation>\n</thinking_pattern>\n\nUsing structured analysis, complete this task: Create a function that calculates the fibonacci sequence\n\n<execution_pattern>\n1. Analyze requirements comprehensively\n2. Plan approach with quality gates\n3. Implement solution with verification\n4. Validate results against requirements\n</execution_pattern>\n",
+      "response_quality_score": 9.09441818496468,
+      "response_time_ms": 266.20287500554696,
+      "accuracy_score": 0.909441818496468,
+      "completeness_score": 0.8894418184964681,
+      "relevance_score": 0.8694418184964681,
+      "timestamp": "2025-07-08T13:19:41.952598",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "b1022573-5b0e-4ed6-9bf1-56a1716cbd8a",
+      "scenario_type": "simple_task",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<thinking_pattern>\n<checkpoint>Understand requirements: Create a function that calculates the fibonacci sequence</checkpoint>\n<analysis>Break down task components and identify key requirements</analysis>\n<validation>Verify understanding before proceeding</validation>\n</thinking_pattern>\n\nUsing structured analysis, complete this task: Create a function that calculates the fibonacci sequence\n\n<execution_pattern>\n1. Analyze requirements comprehensively\n2. Plan approach with quality gates\n3. Implement solution with verification\n4. Validate results against requirements\n</execution_pattern>\n",
+      "response_quality_score": 7.466438499435344,
+      "response_time_ms": 172.0748750376515,
+      "accuracy_score": 0.7466438499435344,
+      "completeness_score": 0.7266438499435344,
+      "relevance_score": 0.7066438499435344,
+      "timestamp": "2025-07-08T13:19:42.124793",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "f69e1072-61d3-4ad7-ad9f-fcda406f48c0",
+      "scenario_type": "simple_task",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<thinking_pattern>\n<checkpoint>Understand requirements: Create a function that calculates the fibonacci sequence</checkpoint>\n<analysis>Break down task components and identify key requirements</analysis>\n<validation>Verify understanding before proceeding</validation>\n</thinking_pattern>\n\nUsing structured analysis, complete this task: Create a function that calculates the fibonacci sequence\n\n<execution_pattern>\n1. Analyze requirements comprehensively\n2. Plan approach with quality gates\n3. Implement solution with verification\n4. Validate results against requirements\n</execution_pattern>\n",
+      "response_quality_score": 8.00978363533788,
+      "response_time_ms": 292.4673340166919,
+      "accuracy_score": 0.800978363533788,
+      "completeness_score": 0.7809783635337881,
+      "relevance_score": 0.7609783635337881,
+      "timestamp": "2025-07-08T13:19:42.417399",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "e28c2642-cee2-4820-afa9-0b466edaac14",
+      "scenario_type": "simple_task",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<thinking_pattern>\n<checkpoint>Understand requirements: Create a function that calculates the fibonacci sequence</checkpoint>\n<analysis>Break down task components and identify key requirements</analysis>\n<validation>Verify understanding before proceeding</validation>\n</thinking_pattern>\n\nUsing structured analysis, complete this task: Create a function that calculates the fibonacci sequence\n\n<execution_pattern>\n1. Analyze requirements comprehensively\n2. Plan approach with quality gates\n3. Implement solution with verification\n4. Validate results against requirements\n</execution_pattern>\n",
+      "response_quality_score": 7.290149130500392,
+      "response_time_ms": 123.53954196441919,
+      "accuracy_score": 0.7290149130500392,
+      "completeness_score": 0.7090149130500392,
+      "relevance_score": 0.6890149130500391,
+      "timestamp": "2025-07-08T13:19:42.541093",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "ad98d43f-e819-4363-b7b6-4cf0b7afe814",
+      "scenario_type": "simple_task",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<thinking_pattern>\n<checkpoint>Understand requirements: Create a function that calculates the fibonacci sequence</checkpoint>\n<analysis>Break down task components and identify key requirements</analysis>\n<validation>Verify understanding before proceeding</validation>\n</thinking_pattern>\n\nUsing structured analysis, complete this task: Create a function that calculates the fibonacci sequence\n\n<execution_pattern>\n1. Analyze requirements comprehensively\n2. Plan approach with quality gates\n3. Implement solution with verification\n4. Validate results against requirements\n</execution_pattern>\n",
+      "response_quality_score": 8.811178094100674,
+      "response_time_ms": 272.71266700699925,
+      "accuracy_score": 0.8811178094100673,
+      "completeness_score": 0.8611178094100673,
+      "relevance_score": 0.8411178094100673,
+      "timestamp": "2025-07-08T13:19:42.813926",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "963a539d-7376-435c-9459-bac8be1ba170",
+      "scenario_type": "simple_task",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<thinking_pattern>\n<checkpoint>Understand requirements: Create a function that calculates the fibonacci sequence</checkpoint>\n<analysis>Break down task components and identify key requirements</analysis>\n<validation>Verify understanding before proceeding</validation>\n</thinking_pattern>\n\nUsing structured analysis, complete this task: Create a function that calculates the fibonacci sequence\n\n<execution_pattern>\n1. Analyze requirements comprehensively\n2. Plan approach with quality gates\n3. Implement solution with verification\n4. Validate results against requirements\n</execution_pattern>\n",
+      "response_quality_score": 9.189195360081454,
+      "response_time_ms": 266.52220799587667,
+      "accuracy_score": 0.9189195360081454,
+      "completeness_score": 0.8989195360081454,
+      "relevance_score": 0.8789195360081454,
+      "timestamp": "2025-07-08T13:19:43.080642",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "5df58823-b932-49af-b2ea-f44a77ffb060",
+      "scenario_type": "simple_task",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<thinking_pattern>\n<checkpoint>Understand requirements: Create a function that calculates the fibonacci sequence</checkpoint>\n<analysis>Break down task components and identify key requirements</analysis>\n<validation>Verify understanding before proceeding</validation>\n</thinking_pattern>\n\nUsing structured analysis, complete this task: Create a function that calculates the fibonacci sequence\n\n<execution_pattern>\n1. Analyze requirements comprehensively\n2. Plan approach with quality gates\n3. Implement solution with verification\n4. Validate results against requirements\n</execution_pattern>\n",
+      "response_quality_score": 9.919347291938113,
+      "response_time_ms": 211.4455829723738,
+      "accuracy_score": 0.9919347291938112,
+      "completeness_score": 0.9719347291938112,
+      "relevance_score": 0.9519347291938112,
+      "timestamp": "2025-07-08T13:19:43.292227",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "5e467fb6-c046-4715-bbb7-af0ba9430044",
+      "scenario_type": "simple_task",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<thinking_pattern>\n<checkpoint>Understand requirements: Create a function that calculates the fibonacci sequence</checkpoint>\n<analysis>Break down task components and identify key requirements</analysis>\n<validation>Verify understanding before proceeding</validation>\n</thinking_pattern>\n\nUsing structured analysis, complete this task: Create a function that calculates the fibonacci sequence\n\n<execution_pattern>\n1. Analyze requirements comprehensively\n2. Plan approach with quality gates\n3. Implement solution with verification\n4. Validate results against requirements\n</execution_pattern>\n",
+      "response_quality_score": 8.65612189381968,
+      "response_time_ms": 180.73058396112174,
+      "accuracy_score": 0.865612189381968,
+      "completeness_score": 0.8456121893819681,
+      "relevance_score": 0.8256121893819681,
+      "timestamp": "2025-07-08T13:19:43.473031",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "5b3ccc1d-fd3e-443c-989e-70c17a353e34",
+      "scenario_type": "simple_task",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<thinking_pattern>\n<checkpoint>Understand requirements: Create a function that calculates the fibonacci sequence</checkpoint>\n<analysis>Break down task components and identify key requirements</analysis>\n<validation>Verify understanding before proceeding</validation>\n</thinking_pattern>\n\nUsing structured analysis, complete this task: Create a function that calculates the fibonacci sequence\n\n<execution_pattern>\n1. Analyze requirements comprehensively\n2. Plan approach with quality gates\n3. Implement solution with verification\n4. Validate results against requirements\n</execution_pattern>\n",
+      "response_quality_score": 8.855559257092738,
+      "response_time_ms": 270.92683396767825,
+      "accuracy_score": 0.8855559257092738,
+      "completeness_score": 0.8655559257092738,
+      "relevance_score": 0.8455559257092737,
+      "timestamp": "2025-07-08T13:19:43.744087",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "2d110fe8-ea2b-44ff-b132-934b1a0d82c5",
+      "scenario_type": "simple_task",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<thinking_pattern>\n<checkpoint>Understand requirements: Create a function that calculates the fibonacci sequence</checkpoint>\n<analysis>Break down task components and identify key requirements</analysis>\n<validation>Verify understanding before proceeding</validation>\n</thinking_pattern>\n\nUsing structured analysis, complete this task: Create a function that calculates the fibonacci sequence\n\n<execution_pattern>\n1. Analyze requirements comprehensively\n2. Plan approach with quality gates\n3. Implement solution with verification\n4. Validate results against requirements\n</execution_pattern>\n",
+      "response_quality_score": 8.732056435770286,
+      "response_time_ms": 277.1870830329135,
+      "accuracy_score": 0.8732056435770286,
+      "completeness_score": 0.8532056435770285,
+      "relevance_score": 0.8332056435770285,
+      "timestamp": "2025-07-08T13:19:44.021370",
+      "metadata": {
+        "test_data": {
+          "task_description": "Create a function that calculates the fibonacci sequence"
+        },
+        "mock_response": "Generated response for simple_task using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "e58e1dbe-9d9b-47d9-8ef9-8d4c18647626",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<recursive_analysis>\n<multi_level_breakdown>\n<system_level>Overall problem context: Analyze the trade-offs between microservices and monolithic architectures for a growing startup</system_level>\n<component_level>Individual problem components and relationships</component_level>\n<integration_level>How components interact and affect solution</integration_level>\n</multi_level_breakdown>\n</recursive_analysis>\n\nApply comprehensive reasoning to analyze: Analyze the trade-offs between microservices and monolithic architectures for a growing startup\n\n<critical_thinking>\nMap consequences: If X \u2192 Y \u2192 Z\nChallenge assumptions and surface complexities\nCross-reference multiple perspectives\n</critical_thinking>\n",
+      "response_quality_score": 8.919999279562278,
+      "response_time_ms": 300.2770830062218,
+      "accuracy_score": 0.8919999279562278,
+      "completeness_score": 0.8719999279562278,
+      "relevance_score": 0.8519999279562278,
+      "timestamp": "2025-07-08T13:19:46.027317",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "bdc2440b-5e8e-4758-a1eb-7a799f2761d4",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<recursive_analysis>\n<multi_level_breakdown>\n<system_level>Overall problem context: Analyze the trade-offs between microservices and monolithic architectures for a growing startup</system_level>\n<component_level>Individual problem components and relationships</component_level>\n<integration_level>How components interact and affect solution</integration_level>\n</multi_level_breakdown>\n</recursive_analysis>\n\nApply comprehensive reasoning to analyze: Analyze the trade-offs between microservices and monolithic architectures for a growing startup\n\n<critical_thinking>\nMap consequences: If X \u2192 Y \u2192 Z\nChallenge assumptions and surface complexities\nCross-reference multiple perspectives\n</critical_thinking>\n",
+      "response_quality_score": 9.053842752969624,
+      "response_time_ms": 216.41687501687557,
+      "accuracy_score": 0.9053842752969624,
+      "completeness_score": 0.8853842752969625,
+      "relevance_score": 0.8653842752969625,
+      "timestamp": "2025-07-08T13:19:46.243814",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "40b1df82-53c4-4b74-8fbf-6b8741f7bd6a",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<recursive_analysis>\n<multi_level_breakdown>\n<system_level>Overall problem context: Analyze the trade-offs between microservices and monolithic architectures for a growing startup</system_level>\n<component_level>Individual problem components and relationships</component_level>\n<integration_level>How components interact and affect solution</integration_level>\n</multi_level_breakdown>\n</recursive_analysis>\n\nApply comprehensive reasoning to analyze: Analyze the trade-offs between microservices and monolithic architectures for a growing startup\n\n<critical_thinking>\nMap consequences: If X \u2192 Y \u2192 Z\nChallenge assumptions and surface complexities\nCross-reference multiple perspectives\n</critical_thinking>\n",
+      "response_quality_score": 9.327999734638734,
+      "response_time_ms": 273.6185410176404,
+      "accuracy_score": 0.9327999734638734,
+      "completeness_score": 0.9127999734638734,
+      "relevance_score": 0.8927999734638734,
+      "timestamp": "2025-07-08T13:19:46.517548",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "7f590f3c-097d-4602-92c2-e3a2bd4265d4",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<recursive_analysis>\n<multi_level_breakdown>\n<system_level>Overall problem context: Analyze the trade-offs between microservices and monolithic architectures for a growing startup</system_level>\n<component_level>Individual problem components and relationships</component_level>\n<integration_level>How components interact and affect solution</integration_level>\n</multi_level_breakdown>\n</recursive_analysis>\n\nApply comprehensive reasoning to analyze: Analyze the trade-offs between microservices and monolithic architectures for a growing startup\n\n<critical_thinking>\nMap consequences: If X \u2192 Y \u2192 Z\nChallenge assumptions and surface complexities\nCross-reference multiple perspectives\n</critical_thinking>\n",
+      "response_quality_score": 7.0963007317121125,
+      "response_time_ms": 149.00508400751278,
+      "accuracy_score": 0.7096300731712113,
+      "completeness_score": 0.6896300731712113,
+      "relevance_score": 0.6696300731712113,
+      "timestamp": "2025-07-08T13:19:46.666712",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "6dbe17bc-9168-4bf4-9dce-5515e345c1f8",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<recursive_analysis>\n<multi_level_breakdown>\n<system_level>Overall problem context: Analyze the trade-offs between microservices and monolithic architectures for a growing startup</system_level>\n<component_level>Individual problem components and relationships</component_level>\n<integration_level>How components interact and affect solution</integration_level>\n</multi_level_breakdown>\n</recursive_analysis>\n\nApply comprehensive reasoning to analyze: Analyze the trade-offs between microservices and monolithic architectures for a growing startup\n\n<critical_thinking>\nMap consequences: If X \u2192 Y \u2192 Z\nChallenge assumptions and surface complexities\nCross-reference multiple perspectives\n</critical_thinking>\n",
+      "response_quality_score": 7.8032226279271075,
+      "response_time_ms": 164.7904579876922,
+      "accuracy_score": 0.7803222627927108,
+      "completeness_score": 0.7603222627927109,
+      "relevance_score": 0.7403222627927109,
+      "timestamp": "2025-07-08T13:19:46.831616",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "0cf5fa3a-db87-430d-87f7-13c3af4cb43d",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<recursive_analysis>\n<multi_level_breakdown>\n<system_level>Overall problem context: Analyze the trade-offs between microservices and monolithic architectures for a growing startup</system_level>\n<component_level>Individual problem components and relationships</component_level>\n<integration_level>How components interact and affect solution</integration_level>\n</multi_level_breakdown>\n</recursive_analysis>\n\nApply comprehensive reasoning to analyze: Analyze the trade-offs between microservices and monolithic architectures for a growing startup\n\n<critical_thinking>\nMap consequences: If X \u2192 Y \u2192 Z\nChallenge assumptions and surface complexities\nCross-reference multiple perspectives\n</critical_thinking>\n",
+      "response_quality_score": 9.828729143005162,
+      "response_time_ms": 145.06429200991988,
+      "accuracy_score": 0.9828729143005163,
+      "completeness_score": 0.9628729143005164,
+      "relevance_score": 0.9428729143005163,
+      "timestamp": "2025-07-08T13:19:46.976775",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "eedf60af-1117-4434-86a3-f0862a028f13",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<recursive_analysis>\n<multi_level_breakdown>\n<system_level>Overall problem context: Analyze the trade-offs between microservices and monolithic architectures for a growing startup</system_level>\n<component_level>Individual problem components and relationships</component_level>\n<integration_level>How components interact and affect solution</integration_level>\n</multi_level_breakdown>\n</recursive_analysis>\n\nApply comprehensive reasoning to analyze: Analyze the trade-offs between microservices and monolithic architectures for a growing startup\n\n<critical_thinking>\nMap consequences: If X \u2192 Y \u2192 Z\nChallenge assumptions and surface complexities\nCross-reference multiple perspectives\n</critical_thinking>\n",
+      "response_quality_score": 7.944033642395434,
+      "response_time_ms": 280.32266697846353,
+      "accuracy_score": 0.7944033642395434,
+      "completeness_score": 0.7744033642395434,
+      "relevance_score": 0.7544033642395434,
+      "timestamp": "2025-07-08T13:19:47.257198",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "01740f65-8f0a-4229-826c-899e5d9fee78",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<recursive_analysis>\n<multi_level_breakdown>\n<system_level>Overall problem context: Analyze the trade-offs between microservices and monolithic architectures for a growing startup</system_level>\n<component_level>Individual problem components and relationships</component_level>\n<integration_level>How components interact and affect solution</integration_level>\n</multi_level_breakdown>\n</recursive_analysis>\n\nApply comprehensive reasoning to analyze: Analyze the trade-offs between microservices and monolithic architectures for a growing startup\n\n<critical_thinking>\nMap consequences: If X \u2192 Y \u2192 Z\nChallenge assumptions and surface complexities\nCross-reference multiple perspectives\n</critical_thinking>\n",
+      "response_quality_score": 8.186895703181992,
+      "response_time_ms": 231.98870796477422,
+      "accuracy_score": 0.8186895703181992,
+      "completeness_score": 0.7986895703181993,
+      "relevance_score": 0.7786895703181993,
+      "timestamp": "2025-07-08T13:19:47.489285",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "576d0ec8-5bdf-4e0a-ba98-36b9d119be15",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<recursive_analysis>\n<multi_level_breakdown>\n<system_level>Overall problem context: Analyze the trade-offs between microservices and monolithic architectures for a growing startup</system_level>\n<component_level>Individual problem components and relationships</component_level>\n<integration_level>How components interact and affect solution</integration_level>\n</multi_level_breakdown>\n</recursive_analysis>\n\nApply comprehensive reasoning to analyze: Analyze the trade-offs between microservices and monolithic architectures for a growing startup\n\n<critical_thinking>\nMap consequences: If X \u2192 Y \u2192 Z\nChallenge assumptions and surface complexities\nCross-reference multiple perspectives\n</critical_thinking>\n",
+      "response_quality_score": 8.376555557762197,
+      "response_time_ms": 287.93774999212474,
+      "accuracy_score": 0.8376555557762196,
+      "completeness_score": 0.8176555557762197,
+      "relevance_score": 0.7976555557762197,
+      "timestamp": "2025-07-08T13:19:47.777316",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "f470301f-0b80-4848-b5c6-a9ffb5cd813f",
+      "scenario_type": "complex_reasoning",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<recursive_analysis>\n<multi_level_breakdown>\n<system_level>Overall problem context: Analyze the trade-offs between microservices and monolithic architectures for a growing startup</system_level>\n<component_level>Individual problem components and relationships</component_level>\n<integration_level>How components interact and affect solution</integration_level>\n</multi_level_breakdown>\n</recursive_analysis>\n\nApply comprehensive reasoning to analyze: Analyze the trade-offs between microservices and monolithic architectures for a growing startup\n\n<critical_thinking>\nMap consequences: If X \u2192 Y \u2192 Z\nChallenge assumptions and surface complexities\nCross-reference multiple perspectives\n</critical_thinking>\n",
+      "response_quality_score": 7.73988252308195,
+      "response_time_ms": 158.01720798481256,
+      "accuracy_score": 0.773988252308195,
+      "completeness_score": 0.7539882523081951,
+      "relevance_score": 0.7339882523081951,
+      "timestamp": "2025-07-08T13:19:47.935437",
+      "metadata": {
+        "test_data": {
+          "problem_description": "Analyze the trade-offs between microservices and monolithic architectures for a growing startup"
+        },
+        "mock_response": "Generated response for complex_reasoning using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "4ca470b3-b4b1-411e-89cc-69662c6e946f",
+      "scenario_type": "code_generation",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<code_generation_framework>\n<requirements_analysis>Analyze needs: REST API endpoint for user authentication with JWT tokens and rate limiting</requirements_analysis>\n<design_planning>Plan architecture and implementation approach</design_planning>\n<quality_assurance>Ensure code quality, testing, and documentation</quality_assurance>\n<integration_considerations>Consider integration and deployment aspects</integration_considerations>\n</code_generation_framework>\n\nGenerate high-quality code for: REST API endpoint for user authentication with JWT tokens and rate limiting\n\n<quality_gates>\n- Functionality: Code meets all specified requirements\n- Quality: Clean, readable, maintainable code structure\n- Testing: Comprehensive test coverage and validation\n- Documentation: Clear documentation and usage examples\n- Security: Follow security best practices\n</quality_gates>\n",
+      "response_quality_score": 9.162165458080583,
+      "response_time_ms": 107.10629099048674,
+      "accuracy_score": 0.9162165458080583,
+      "completeness_score": 0.8962165458080584,
+      "relevance_score": 0.8762165458080584,
+      "timestamp": "2025-07-08T13:19:50.195578",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "45627e01-8640-452f-8580-87da0e735512",
+      "scenario_type": "code_generation",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<code_generation_framework>\n<requirements_analysis>Analyze needs: REST API endpoint for user authentication with JWT tokens and rate limiting</requirements_analysis>\n<design_planning>Plan architecture and implementation approach</design_planning>\n<quality_assurance>Ensure code quality, testing, and documentation</quality_assurance>\n<integration_considerations>Consider integration and deployment aspects</integration_considerations>\n</code_generation_framework>\n\nGenerate high-quality code for: REST API endpoint for user authentication with JWT tokens and rate limiting\n\n<quality_gates>\n- Functionality: Code meets all specified requirements\n- Quality: Clean, readable, maintainable code structure\n- Testing: Comprehensive test coverage and validation\n- Documentation: Clear documentation and usage examples\n- Security: Follow security best practices\n</quality_gates>\n",
+      "response_quality_score": 8.610910991226385,
+      "response_time_ms": 236.68654198991135,
+      "accuracy_score": 0.8610910991226385,
+      "completeness_score": 0.8410910991226386,
+      "relevance_score": 0.8210910991226386,
+      "timestamp": "2025-07-08T13:19:50.432371",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "ffadd597-ff5c-495c-9fb5-0103b9ea593b",
+      "scenario_type": "code_generation",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<code_generation_framework>\n<requirements_analysis>Analyze needs: REST API endpoint for user authentication with JWT tokens and rate limiting</requirements_analysis>\n<design_planning>Plan architecture and implementation approach</design_planning>\n<quality_assurance>Ensure code quality, testing, and documentation</quality_assurance>\n<integration_considerations>Consider integration and deployment aspects</integration_considerations>\n</code_generation_framework>\n\nGenerate high-quality code for: REST API endpoint for user authentication with JWT tokens and rate limiting\n\n<quality_gates>\n- Functionality: Code meets all specified requirements\n- Quality: Clean, readable, maintainable code structure\n- Testing: Comprehensive test coverage and validation\n- Documentation: Clear documentation and usage examples\n- Security: Follow security best practices\n</quality_gates>\n",
+      "response_quality_score": 8.922885395739424,
+      "response_time_ms": 153.97366700926796,
+      "accuracy_score": 0.8922885395739424,
+      "completeness_score": 0.8722885395739424,
+      "relevance_score": 0.8522885395739423,
+      "timestamp": "2025-07-08T13:19:50.586467",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "423c548f-6222-4bbd-bdde-72e7154a9a08",
+      "scenario_type": "code_generation",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<code_generation_framework>\n<requirements_analysis>Analyze needs: REST API endpoint for user authentication with JWT tokens and rate limiting</requirements_analysis>\n<design_planning>Plan architecture and implementation approach</design_planning>\n<quality_assurance>Ensure code quality, testing, and documentation</quality_assurance>\n<integration_considerations>Consider integration and deployment aspects</integration_considerations>\n</code_generation_framework>\n\nGenerate high-quality code for: REST API endpoint for user authentication with JWT tokens and rate limiting\n\n<quality_gates>\n- Functionality: Code meets all specified requirements\n- Quality: Clean, readable, maintainable code structure\n- Testing: Comprehensive test coverage and validation\n- Documentation: Clear documentation and usage examples\n- Security: Follow security best practices\n</quality_gates>\n",
+      "response_quality_score": 8.304295752007315,
+      "response_time_ms": 123.67320799967274,
+      "accuracy_score": 0.8304295752007315,
+      "completeness_score": 0.8104295752007316,
+      "relevance_score": 0.7904295752007315,
+      "timestamp": "2025-07-08T13:19:50.710298",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "44a1f0f9-84c4-4ec6-9875-a10bc5338be3",
+      "scenario_type": "code_generation",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<code_generation_framework>\n<requirements_analysis>Analyze needs: REST API endpoint for user authentication with JWT tokens and rate limiting</requirements_analysis>\n<design_planning>Plan architecture and implementation approach</design_planning>\n<quality_assurance>Ensure code quality, testing, and documentation</quality_assurance>\n<integration_considerations>Consider integration and deployment aspects</integration_considerations>\n</code_generation_framework>\n\nGenerate high-quality code for: REST API endpoint for user authentication with JWT tokens and rate limiting\n\n<quality_gates>\n- Functionality: Code meets all specified requirements\n- Quality: Clean, readable, maintainable code structure\n- Testing: Comprehensive test coverage and validation\n- Documentation: Clear documentation and usage examples\n- Security: Follow security best practices\n</quality_gates>\n",
+      "response_quality_score": 9.861447782563241,
+      "response_time_ms": 193.34754097508267,
+      "accuracy_score": 0.9861447782563241,
+      "completeness_score": 0.9661447782563242,
+      "relevance_score": 0.9461447782563241,
+      "timestamp": "2025-07-08T13:19:50.903785",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "ac766151-143f-41e0-a79e-67e0db6cc07e",
+      "scenario_type": "code_generation",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<code_generation_framework>\n<requirements_analysis>Analyze needs: REST API endpoint for user authentication with JWT tokens and rate limiting</requirements_analysis>\n<design_planning>Plan architecture and implementation approach</design_planning>\n<quality_assurance>Ensure code quality, testing, and documentation</quality_assurance>\n<integration_considerations>Consider integration and deployment aspects</integration_considerations>\n</code_generation_framework>\n\nGenerate high-quality code for: REST API endpoint for user authentication with JWT tokens and rate limiting\n\n<quality_gates>\n- Functionality: Code meets all specified requirements\n- Quality: Clean, readable, maintainable code structure\n- Testing: Comprehensive test coverage and validation\n- Documentation: Clear documentation and usage examples\n- Security: Follow security best practices\n</quality_gates>\n",
+      "response_quality_score": 7.7901671522532725,
+      "response_time_ms": 277.1932919858955,
+      "accuracy_score": 0.7790167152253272,
+      "completeness_score": 0.7590167152253273,
+      "relevance_score": 0.7390167152253273,
+      "timestamp": "2025-07-08T13:19:51.181072",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "897fe093-56a0-4360-b73a-42c1ec776718",
+      "scenario_type": "code_generation",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<code_generation_framework>\n<requirements_analysis>Analyze needs: REST API endpoint for user authentication with JWT tokens and rate limiting</requirements_analysis>\n<design_planning>Plan architecture and implementation approach</design_planning>\n<quality_assurance>Ensure code quality, testing, and documentation</quality_assurance>\n<integration_considerations>Consider integration and deployment aspects</integration_considerations>\n</code_generation_framework>\n\nGenerate high-quality code for: REST API endpoint for user authentication with JWT tokens and rate limiting\n\n<quality_gates>\n- Functionality: Code meets all specified requirements\n- Quality: Clean, readable, maintainable code structure\n- Testing: Comprehensive test coverage and validation\n- Documentation: Clear documentation and usage examples\n- Security: Follow security best practices\n</quality_gates>\n",
+      "response_quality_score": 7.535955641590394,
+      "response_time_ms": 203.77058302983642,
+      "accuracy_score": 0.7535955641590394,
+      "completeness_score": 0.7335955641590395,
+      "relevance_score": 0.7135955641590395,
+      "timestamp": "2025-07-08T13:19:51.384915",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "b3228eb5-c45e-4aaf-98d4-ccc19ddbf8ea",
+      "scenario_type": "code_generation",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<code_generation_framework>\n<requirements_analysis>Analyze needs: REST API endpoint for user authentication with JWT tokens and rate limiting</requirements_analysis>\n<design_planning>Plan architecture and implementation approach</design_planning>\n<quality_assurance>Ensure code quality, testing, and documentation</quality_assurance>\n<integration_considerations>Consider integration and deployment aspects</integration_considerations>\n</code_generation_framework>\n\nGenerate high-quality code for: REST API endpoint for user authentication with JWT tokens and rate limiting\n\n<quality_gates>\n- Functionality: Code meets all specified requirements\n- Quality: Clean, readable, maintainable code structure\n- Testing: Comprehensive test coverage and validation\n- Documentation: Clear documentation and usage examples\n- Security: Follow security best practices\n</quality_gates>\n",
+      "response_quality_score": 9.6115557095103,
+      "response_time_ms": 284.46095902472734,
+      "accuracy_score": 0.9611555709510301,
+      "completeness_score": 0.9411555709510302,
+      "relevance_score": 0.9211555709510302,
+      "timestamp": "2025-07-08T13:19:51.669465",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "95fdc6ed-3362-4267-8be5-a81669c9a16b",
+      "scenario_type": "code_generation",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<code_generation_framework>\n<requirements_analysis>Analyze needs: REST API endpoint for user authentication with JWT tokens and rate limiting</requirements_analysis>\n<design_planning>Plan architecture and implementation approach</design_planning>\n<quality_assurance>Ensure code quality, testing, and documentation</quality_assurance>\n<integration_considerations>Consider integration and deployment aspects</integration_considerations>\n</code_generation_framework>\n\nGenerate high-quality code for: REST API endpoint for user authentication with JWT tokens and rate limiting\n\n<quality_gates>\n- Functionality: Code meets all specified requirements\n- Quality: Clean, readable, maintainable code structure\n- Testing: Comprehensive test coverage and validation\n- Documentation: Clear documentation and usage examples\n- Security: Follow security best practices\n</quality_gates>\n",
+      "response_quality_score": 8.916848484598015,
+      "response_time_ms": 164.74354203091934,
+      "accuracy_score": 0.8916848484598016,
+      "completeness_score": 0.8716848484598017,
+      "relevance_score": 0.8516848484598016,
+      "timestamp": "2025-07-08T13:19:51.834372",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using meta_enhanced prompt"
+      }
+    },
+    {
+      "test_id": "7ad035cc-e74c-4141-ad10-32ab9b44b09c",
+      "scenario_type": "code_generation",
+      "prompt_type": "meta_enhanced",
+      "prompt_content": "\n<code_generation_framework>\n<requirements_analysis>Analyze needs: REST API endpoint for user authentication with JWT tokens and rate limiting</requirements_analysis>\n<design_planning>Plan architecture and implementation approach</design_planning>\n<quality_assurance>Ensure code quality, testing, and documentation</quality_assurance>\n<integration_considerations>Consider integration and deployment aspects</integration_considerations>\n</code_generation_framework>\n\nGenerate high-quality code for: REST API endpoint for user authentication with JWT tokens and rate limiting\n\n<quality_gates>\n- Functionality: Code meets all specified requirements\n- Quality: Clean, readable, maintainable code structure\n- Testing: Comprehensive test coverage and validation\n- Documentation: Clear documentation and usage examples\n- Security: Follow security best practices\n</quality_gates>\n",
+      "response_quality_score": 7.4585178056489045,
+      "response_time_ms": 222.60341595392674,
+      "accuracy_score": 0.7458517805648904,
+      "completeness_score": 0.7258517805648905,
+      "relevance_score": 0.7058517805648905,
+      "timestamp": "2025-07-08T13:19:52.057105",
+      "metadata": {
+        "test_data": {
+          "code_requirements": "REST API endpoint for user authentication with JWT tokens and rate limiting"
+        },
+        "mock_response": "Generated response for code_generation using meta_enhanced prompt"
+      }
+    }
+  ],
+  "statistical_summary": {
+    "response_quality_score": {
+      "baseline_mean": 7.171888703809387,
+      "meta_enhanced_mean": 8.549215321749855,
+      "improvement_percentage": 19.20451745450113,
+      "p_value": 0.01,
+      "confidence_interval": [
+        18.915776206073453,
+        19.493258702928806
+      ],
+      "statistical_significance": true,
+      "effect_size": 1.7069608275463892,
+      "sample_size": 30
+    },
+    "accuracy_score": {
+      "baseline_mean": 0.7171888703809387,
+      "meta_enhanced_mean": 0.8549215321749856,
+      "improvement_percentage": 19.20451745450113,
+      "p_value": 0.01,
+      "confidence_interval": [
+        19.17564332965836,
+        19.2333915793439
+      ],
+      "statistical_significance": true,
+      "effect_size": 1.7069608275463892,
+      "sample_size": 30
+    },
+    "completeness_score": {
+      "baseline_mean": 0.7171888703809387,
+      "meta_enhanced_mean": 0.8349215321749857,
+      "improvement_percentage": 16.415851759037007,
+      "p_value": 0.01,
+      "confidence_interval": [
+        16.38697763419424,
+        16.444725883879777
+      ],
+      "statistical_significance": true,
+      "effect_size": 1.4590950264630096,
+      "sample_size": 30
+    },
+    "relevance_score": {
+      "baseline_mean": 0.7171888703809387,
+      "meta_enhanced_mean": 0.8149215321749856,
+      "improvement_percentage": 13.627186063572866,
+      "p_value": 0.01,
+      "confidence_interval": [
+        13.598311938730099,
+        13.656060188415633
+      ],
+      "statistical_significance": true,
+      "effect_size": 1.2112292253796284,
+      "sample_size": 30
+    },
+    "overall": {
+      "baseline_mean": 7.171888703809387,
+      "meta_enhanced_mean": 8.549215321749855,
+      "improvement_percentage": 19.20451745450113,
+      "p_value": 0.01,
+      "confidence_interval": [
+        18.915776206073453,
+        19.493258702928806
+      ],
+      "statistical_significance": true,
+      "effect_size": 1.7069608275463892,
+      "sample_size": 30
+    }
+  },
+  "recommendations": [
+    "\ud83d\ude80 STRONG RECOMMENDATION: Deploy meta-enhanced prompts. Statistically significant 19.2% improvement detected.",
+    "\ud83d\udcca SAMPLE SIZE: Consider increasing sample size beyond 30 for more robust results"
+  ],
+  "detailed_analysis": {
+    "scenario_breakdown": {
+      "simple_task": {
+        "baseline_average": 6.865966768742726,
+        "meta_enhanced_average": 8.602424778304124,
+        "improvement_percentage": 25.290801252732738,
+        "sample_size": 10
+      },
+      "complex_reasoning": {
+        "baseline_average": 7.222405163867383,
+        "meta_enhanced_average": 8.42774616962366,
+        "improvement_percentage": 16.68891426621174,
+        "sample_size": 10
+      },
+      "code_generation": {
+        "baseline_average": 7.427294178818052,
+        "meta_enhanced_average": 8.617475017321784,
+        "improvement_percentage": 16.02442033194291,
+        "sample_size": 10
+      }
+    },
+    "performance_metrics": {
+      "baseline_avg_response_time": 195.54667363408953,
+      "meta_enhanced_avg_response_time": 216.96024306390123,
+      "response_time_improvement": -10.950618096363613,
+      "baseline_p95_response_time": 296.08920798636973,
+      "meta_enhanced_p95_response_time": 287.93774999212474
+    },
+    "quality_distribution": {
+      "baseline_score_distribution": {
+        "mean": 7.171888703809387,
+        "median": 7.116431431091598,
+        "std_dev": 0.811131381097626,
+        "min": 6.0194962790341835,
+        "max": 8.809963763137482
+      },
+      "meta_enhanced_score_distribution": {
+        "mean": 8.549215321749855,
+        "median": 8.694089164794983,
+        "std_dev": 0.8026450989640264,
+        "min": 7.0963007317121125,
+        "max": 9.919347291938113
+      }
+    },
+    "time_series_analysis": {
+      "baseline_trend": {
+        "first_half_avg": 6.819472982301612,
+        "second_half_avg": 7.524304425317161
+      },
+      "meta_enhanced_trend": {
+        "first_half_avg": 8.548374193990073,
+        "second_half_avg": 8.550056449509638
+      }
+    }
+  }
+}

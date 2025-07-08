@@ -119,6 +119,9 @@ secrets/
 worktrees/
 ../worktrees/
 
+# Test projects with build artifacts
+test-projects/
+
 # Test outputs
 tests/integration/test_report.json
 tests/**/*.log
