@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.3.1   | 2025-07-08   | stable |
+| 2.4.1   | 2025-07-08   | stable |
 
 # /protocol - Production-ready development with mandatory quality gates
 
@@ -180,9 +180,114 @@
     <requirement name="documentation">Complete API and deployment documentation</requirement>
   </quality_requirements>
   
+
+  <prompt_construction>
+    <assembly_preview>
+      WORKFLOW ASSEMBLY:
+      ┌─────────────────┐
+      │ 1. Session     │ → Compliance tracking
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │    Creation    │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 2. Requirements│ → TDD validation
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │    Validation  │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 3. TDD         │ → Strictest enforcement
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │    Enforcement │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 4. Security    │ → Threat modeling
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │    Analysis    │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 5. Performance │ → Benchmark validation
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │    Validation  │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 6. Quality     │ → Production gates
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │    Gates       │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 7. Compliance  │ → Audit documentation
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │    Docs        │
+      └─────────────────┘
+    </assembly_preview>
+
+    <context_budget>
+      Estimated tokens: ~20,000
+      - Session & compliance: 2,000
+      - Requirements validation: 2,500
+      - TDD enforcement: 6,000
+      - Security analysis: 3,000
+      - Performance validation: 2,500
+      - Quality gates: 2,000
+      - Compliance docs: 2,000
+    </context_budget>
+  </prompt_construction>
+
+  <runtime_visualization>
+    <execution_trace>
+      [00:00] ▶️ START: /protocol "Payment processing"
+      [00:30] 🎯 SESSION: Compliance tracking #159 created
+      [00:45] ✅ REQUIREMENTS: All validated as testable
+      [01:00] 🔴 TDD: Writing comprehensive failing tests...
+      [01:30] ✅ TDD: Implementation with 98% coverage
+      [01:45] 🔒 SECURITY: Threat model completed, all clear
+      [02:00] ⚡ PERFORMANCE: <150ms p95 achieved
+      [02:15] 🎯 QUALITY: All production gates passed
+      [02:30] 📋 COMPLIANCE: Audit trail documented
+      [02:45] ✅ COMPLETE: Production-ready with compliance
+    </execution_trace>
+  </runtime_visualization>
+
+  <claude_4_interpretation>
+    <parsing_behavior>
+      1. Reads checkpoint structure sequentially
+      2. Executes critical_thinking questions internally
+      3. Formats output according to output_format specifications
+      4. Validates against enforcement rules before proceeding
+      5. Applies parallel execution optimization where possible
+    </parsing_behavior>
+
+    <decision_points>
+      - Checkpoint failures trigger enforcement actions
+      - Module selection based on contextual conditions
+      - Parallel execution for independent operations
+      - Quality gate validation at completion boundaries
+      - Error recovery through graceful degradation paths
+    </decision_points>
+  </claude_4_interpretation>
+
 </command>
 ```
-
 ────────────────────────────────────────────────────────────────────────────────
 
 ## Production Standards Enforcement

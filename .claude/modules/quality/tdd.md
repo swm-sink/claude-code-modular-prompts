@@ -13,6 +13,28 @@
     Enforce disciplined TDD with RED-GREEN-REFACTOR cycle and comprehensive coverage standards.
   </purpose>
   
+  <interface_contract>
+    <inputs>
+      <required>implementation_requirements, acceptance_criteria, test_framework</required>
+      <optional>existing_tests, coverage_targets, quality_standards</optional>
+    </inputs>
+    <outputs>
+      <success>tdd_compliant_code, passing_tests, coverage_metrics, quality_validation</success>
+      <failure>tdd_violations, test_failures, coverage_deficits, implementation_bypasses</failure>
+    </outputs>
+  </interface_contract>
+  
+  <execution_pattern>
+    <claude_4_behavior>
+      WHEN invoked:
+      1. Validate TDD requirements and establish testing framework
+      2. Enforce RED phase: failing tests written before implementation
+      3. Enforce GREEN phase: minimal implementation to pass tests
+      4. Enforce REFACTOR phase: improve design while maintaining tests
+      5. Validate comprehensive coverage and quality standards
+    </claude_4_behavior>
+  </execution_pattern>
+  
   <trigger_conditions>
     <condition type="automatic">Any development task requiring new functionality implementation</condition>
     <condition type="explicit">User requests TDD enforcement or test-driven development</condition>

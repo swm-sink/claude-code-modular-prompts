@@ -1,8 +1,8 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-07-08   | stable |
+| 2.0.0   | 2025-07-08   | stable |
 
-# Module Composition Framework
+# Module Composition Framework - Claude 4 Enhanced
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -10,7 +10,7 @@
 <module name="module_composition_framework" category="patterns">
   
   <purpose>
-    Define standardized module composition, loading, and execution patterns for deterministic Claude 4 interpretation with explicit dependency management and runtime orchestration.
+    Define standardized module composition, loading, and execution patterns optimized for Claude 4's advanced capabilities including parallel execution (70% improvement), interleaved thinking integration, context window optimization, and deterministic runtime orchestration with explicit dependency management.
   </purpose>
   
   <composition_architecture>
@@ -163,83 +163,154 @@
     </interface_contracts>
   </dependency_management>
   
-  <execution_patterns>
-    <sequential_execution>
-      <description>Execute modules one after another with state propagation</description>
+  <claude_4_execution_patterns>
+    <advanced_sequential_execution>
+      <description>Execute core modules sequentially with Claude 4 interleaved thinking integration</description>
       <use_cases>
-        <use_case>Core module stack with inter-dependencies</use_case>
-        <use_case>Quality gates requiring previous module results</use_case>
-        <use_case>State-dependent workflow progression</use_case>
+        <use_case>Core module stack with inter-dependencies and critical thinking requirements</use_case>
+        <use_case>Quality gates requiring previous module results and sophisticated validation</use_case>
+        <use_case>State-dependent workflow progression with context optimization</use_case>
       </use_cases>
+      <claude_4_enhancements>
+        <interleaved_thinking>Activate thinking mode for complex dependency resolution and validation</interleaved_thinking>
+        <context_optimization>Hierarchical loading of module contexts with token budget management</context_optimization>
+        <state_validation>Enhanced state consistency checking with predictive analysis</state_validation>
+        <performance_monitoring>Real-time execution tracking with optimization triggers</performance_monitoring>
+      </claude_4_enhancements>
       <implementation>
-        <step>Execute module N</step>
-        <step>Validate module N output contract</step>
-        <step>Propagate state to module N+1</step>
-        <step>Continue until stack completion</step>
+        <step>Analyze module dependencies with Claude 4 thinking integration</step>
+        <step>Execute module N with context-optimized loading</step>
+        <step>Validate module N output contract with enhanced verification</step>
+        <step>Propagate state to module N+1 with efficiency optimization</step>
+        <step>Continue until stack completion with performance monitoring</step>
       </implementation>
-      <error_handling>HALT execution on any module failure in sequence</error_handling>
-    </sequential_execution>
+      <error_handling>ENHANCED halt with interleaved thinking for failure analysis and recovery planning</error_handling>
+    </advanced_sequential_execution>
     
-    <parallel_execution>
-      <description>Execute independent modules simultaneously for performance</description>
+    <optimized_parallel_execution>
+      <description>Execute independent modules simultaneously with 70% performance improvement through Claude 4 optimization</description>
       <use_cases>
-        <use_case>Support modules without inter-dependencies</use_case>
-        <use_case>Analysis modules operating on same input</use_case>
-        <use_case>Validation modules checking different aspects</use_case>
+        <use_case>Support modules without inter-dependencies optimized for tool batching</use_case>
+        <use_case>Analysis modules operating on same input with parallel processing</use_case>
+        <use_case>Validation modules checking different aspects with concurrent execution</use_case>
       </use_cases>
+      <claude_4_enhancements>
+        <tool_batching>Mandatory batching of Read(), Grep(), and analysis operations for 70% speedup</tool_batching>
+        <context_parallelization>Simultaneous loading of multiple module contexts within token budget</context_parallelization>
+        <dependency_optimization>Advanced topological sorting with parallel execution opportunities</dependency_optimization>
+        <result_aggregation>Intelligent consolidation of parallel results with conflict resolution</result_aggregation>
+      </claude_4_enhancements>
       <implementation>
-        <step>Identify modules without dependencies</step>
-        <step>Execute modules in parallel using batch operations</step>
-        <step>Collect and validate all outputs</step>
-        <step>Consolidate results for next sequential step</step>
+        <step>Identify modules without dependencies using advanced dependency analysis</step>
+        <step>Execute modules in parallel using Claude 4 optimized batch operations</step>
+        <step>Collect and validate all outputs with concurrent processing</step>
+        <step>Consolidate results for next sequential step with efficiency optimization</step>
+        <step>Monitor parallel execution performance and adjust batching strategies</step>
       </implementation>
-      <error_handling>COLLECT all errors, continue if non-critical modules fail</error_handling>
-    </parallel_execution>
+      <performance_targets>
+        <target>70% execution time reduction through tool batching</target>
+        <target>Sub-second module loading through predictive caching</target>
+        <target>Real-time context optimization with automatic adjustments</target>
+      </performance_targets>
+      <error_handling>ADVANCED error collection with parallel failure isolation and recovery orchestration</error_handling>
+    </optimized_parallel_execution>
     
-    <conditional_execution>
-      <description>Execute modules based on runtime condition evaluation</description>
+    <intelligent_conditional_execution>
+      <description>Execute modules based on Claude 4 enhanced context analysis and predictive evaluation</description>
       <use_cases>
-        <use_case>Context-specific modules (security, performance, etc.)</use_case>
-        <use_case>Error recovery and escalation modules</use_case>
-        <use_case>Optional enhancement and optimization modules</use_case>
+        <use_case>Context-specific modules with AI-driven condition evaluation</use_case>
+        <use_case>Error recovery and escalation with sophisticated failure prediction</use_case>
+        <use_case>Optional enhancement modules with performance impact analysis</use_case>
       </use_cases>
+      <claude_4_enhancements>
+        <condition_analysis>Enhanced condition evaluation with interleaved thinking for complex scenarios</condition_analysis>
+        <predictive_loading>Preload likely-needed modules based on context pattern recognition</predictive_loading>
+        <adaptive_execution>Dynamic execution strategy adjustment based on runtime performance</adaptive_execution>
+        <smart_fallbacks>Intelligent fallback module selection with quality maintenance</smart_fallbacks>
+      </claude_4_enhancements>
       <implementation>
-        <step>Evaluate condition triggers for each conditional module</step>
-        <step>Load and execute modules where conditions are met</step>
-        <step>Skip modules where conditions are not satisfied</step>
-        <step>Document conditional execution decisions</step>
+        <step>Evaluate condition triggers using Claude 4 enhanced analysis with thinking integration</step>
+        <step>Load and execute modules where conditions are met with predictive optimization</step>
+        <step>Skip modules where conditions are not satisfied with adaptive reasoning</step>
+        <step>Document conditional execution decisions with enhanced rationale</step>
+        <step>Learn from execution patterns for future condition optimization</step>
       </implementation>
-      <error_handling>EVALUATE criticality of failed conditional modules</error_handling>
-    </conditional_execution>
-  </execution_patterns>
+      <learning_integration>
+        <pattern_recognition>Learn from successful condition evaluations for future optimization</pattern_recognition>
+        <performance_adaptation>Adjust condition thresholds based on execution performance</performance_adaptation>
+        <context_optimization>Optimize condition evaluation based on context window efficiency</context_optimization>
+      </learning_integration>
+      <error_handling>SOPHISTICATED criticality evaluation with Claude 4 thinking for recovery strategy selection</error_handling>
+    </intelligent_conditional_execution>
+    
+    <hybrid_execution_patterns>
+      <description>Combine execution patterns for optimal Claude 4 performance with dynamic adaptation</description>
+      <sequential_then_parallel>Execute critical core modules sequentially, then parallelize support modules</sequential_then_parallel>
+      <conditional_parallel>Evaluate conditions in parallel, then execute qualifying modules with optimization</conditional_parallel>
+      <adaptive_hybrid>Dynamically select execution pattern based on context analysis and performance targets</adaptive_hybrid>
+      <thinking_integrated>Leverage interleaved thinking at pattern transition points for optimal decisions</thinking_integrated>
+      <performance_optimization>Continuous monitoring and adjustment of execution patterns for 70% improvement targets</performance_optimization>
+    </hybrid_execution_patterns>
+  </claude_4_execution_patterns>
   
-  <module_execution_framework>
-    <standard_module_block>
+  <claude_4_module_execution_framework>
+    <enhanced_module_block>
       <structure>
-        &lt;module_execution enforcement="MANDATORY"&gt;
-          &lt;core_stack order="sequential"&gt;
-            &lt;module&gt;[category/module.md] - [description]&lt;/module&gt;
-            &lt;module&gt;[category/module.md] - [description]&lt;/module&gt;
-            &lt;module&gt;[category/module.md] - [description]&lt;/module&gt;
+        &lt;claude_4_module_execution enforcement="MANDATORY" thinking_mode="interleaved"&gt;
+          &lt;core_stack order="advanced_sequential" optimization="context_hierarchical"&gt;
+            &lt;module thinking="enabled" cache="predictive"&gt;[category/module.md] - [description]&lt;/module&gt;
+            &lt;module thinking="enabled" cache="predictive"&gt;[category/module.md] - [description]&lt;/module&gt;
+            &lt;module thinking="enabled" cache="predictive"&gt;[category/module.md] - [description]&lt;/module&gt;
           &lt;/core_stack&gt;
-          &lt;contextual_modules&gt;
-            &lt;conditional module="[path]" condition="[trigger_condition]"/&gt;
-            &lt;conditional module="[path]" condition="[trigger_condition]"/&gt;
+          &lt;contextual_modules evaluation="intelligent_conditional" analysis="claude_4_enhanced"&gt;
+            &lt;conditional module="[path]" condition="[enhanced_trigger]" thinking="adaptive" fallback="[alternative]"/&gt;
+            &lt;conditional module="[path]" condition="[enhanced_trigger]" thinking="adaptive" fallback="[alternative]"/&gt;
           &lt;/contextual_modules&gt;
-          &lt;support_modules order="parallel"&gt;
-            &lt;module&gt;[category/module.md] - [description]&lt;/module&gt;
-            &lt;module&gt;[category/module.md] - [description]&lt;/module&gt;
+          &lt;support_modules order="optimized_parallel" batching="mandatory" speedup="70_percent"&gt;
+            &lt;module batch_group="analysis" tools="Read,Grep"&gt;[category/module.md] - [description]&lt;/module&gt;
+            &lt;module batch_group="validation" tools="quality_gates"&gt;[category/module.md] - [description]&lt;/module&gt;
           &lt;/support_modules&gt;
-        &lt;/module_execution&gt;
+          &lt;performance_monitoring&gt;
+            &lt;metric name="execution_time" target="70_percent_improvement"/&gt;
+            &lt;metric name="context_efficiency" target="token_optimization"/&gt;
+            &lt;metric name="thinking_quality" target="enhanced_reasoning"/&gt;
+          &lt;/performance_monitoring&gt;
+        &lt;/claude_4_module_execution&gt;
       </structure>
       
-      <implementation_requirements>
-        <requirement>Core stack MUST execute sequentially in defined order</requirement>
-        <requirement>Contextual modules evaluated and loaded conditionally</requirement>
-        <requirement>Support modules execute in parallel where possible</requirement>
-        <requirement>Module failures handled according to enforcement level</requirement>
-      </implementation_requirements>
-    </standard_module_block>
+      <claude_4_implementation_requirements>
+        <requirement priority="CRITICAL">Core stack MUST execute with Claude 4 interleaved thinking integration</requirement>
+        <requirement priority="CRITICAL">Contextual modules evaluated using enhanced AI-driven condition analysis</requirement>
+        <requirement priority="CRITICAL">Support modules execute with mandatory tool batching for 70% speedup</requirement>
+        <requirement priority="CRITICAL">Module failures handled with sophisticated thinking-based recovery</requirement>
+        <requirement priority="HIGH">Context window optimization throughout execution lifecycle</requirement>
+        <requirement priority="HIGH">Performance monitoring with real-time adjustment capabilities</requirement>
+        <requirement priority="MEDIUM">Predictive module loading based on pattern recognition</requirement>
+      </claude_4_implementation_requirements>
+      
+      <advanced_execution_controls>
+        <thinking_integration>
+          <mode>interleaved</mode>
+          <triggers>complex_dependencies, error_conditions, optimization_opportunities</triggers>
+          <depth>adaptive_based_on_complexity</depth>
+          <token_budget>managed_hierarchical_allocation</token_budget>
+        </thinking_integration>
+        
+        <parallel_optimization>
+          <tool_batching>Read(), Grep(), analysis operations combined for 70% improvement</tool_batching>
+          <dependency_resolution>Advanced topological sorting with parallel opportunities</dependency_resolution>
+          <context_loading>Simultaneous module context loading within token budget</context_loading>
+          <result_aggregation>Intelligent consolidation with conflict resolution</result_aggregation>
+        </parallel_optimization>
+        
+        <adaptive_execution>
+          <pattern_selection>Dynamic execution pattern based on context analysis</pattern_selection>
+          <performance_adjustment>Real-time optimization based on execution metrics</performance_adjustment>
+          <fallback_strategies>Intelligent degradation with quality maintenance</fallback_strategies>
+          <learning_integration>Pattern refinement based on execution effectiveness</learning_integration>
+        </adaptive_execution>
+      </advanced_execution_controls>
+    </enhanced_module_block>
     
     <command_specific_patterns>
       <task_command_pattern>
@@ -368,41 +439,99 @@
     </recovery_strategies>
   </error_handling_and_recovery>
   
-  <performance_optimization>
-    <execution_optimization>
-      <parallel_module_execution>
-        <description>Execute independent modules simultaneously</description>
-        <benefits>70% faster execution for parallel-eligible modules</benefits>
-        <implementation>Identify dependency-free modules, batch execution</implementation>
-      </parallel_module_execution>
+  <claude_4_performance_optimization>
+    <parallel_execution_mastery>
+      <advanced_parallel_module_execution>
+        <description>Execute independent modules simultaneously with Claude 4 optimization</description>
+        <benefits>70% faster execution through intelligent tool batching and parallel operations</benefits>
+        <implementation>
+          <step>Analyze module dependency graph for parallel opportunities</step>
+          <step>Batch independent tool calls within modules (Read(), Grep(), etc.)</step>
+          <step>Execute support modules in parallel while core stack runs sequentially</step>
+          <step>Optimize context window usage through parallel content loading</step>
+        </implementation>
+        <claude_4_enhancements>
+          <tool_batching>Combine multiple tool calls into single messages for 70% improvement</tool_batching>
+          <context_parallelization>Load multiple module contexts simultaneously</context_parallelization>
+          <thinking_optimization>Parallel analysis during module initialization</thinking_optimization>
+        </claude_4_enhancements>
+      </advanced_parallel_module_execution>
       
-      <module_caching>
-        <description>Cache module results for repeated executions</description>
-        <benefits>Avoid redundant computation for identical inputs</benefits>
-        <implementation>Content-based caching, cache invalidation strategies</implementation>
-      </module_caching>
+      <context_window_optimization>
+        <description>Optimize 200K token window usage across module composition</description>
+        <benefits>Efficient token usage with hierarchical loading and memory management</benefits>
+        <implementation>
+          <hierarchical_loading>Critical modules first, supporting details loaded as needed</hierarchical_loading>
+          <token_budgeting>Reserve context space for active module execution</token_budgeting>
+          <lazy_content_loading>Load module content only when execution is certain</lazy_content_loading>
+          <compression_techniques>Use XML structure for 60-70% token efficiency</compression_techniques>
+        </implementation>
+        <monitoring>
+          <token_tracking>Real-time monitoring of context usage per module</token_tracking>
+          <optimization_alerts>Warnings when approaching token limits</optimization_alerts>
+          <efficiency_metrics>Track token usage efficiency across modules</efficiency_metrics>
+        </monitoring>
+      </context_window_optimization>
       
-      <lazy_loading>
-        <description>Load modules only when needed</description>
-        <benefits>Reduced memory usage, faster startup times</benefits>
-        <implementation>Conditional module loading, just-in-time resolution</implementation>
-      </lazy_loading>
-    </execution_optimization>
+      <interleaved_thinking_integration>
+        <description>Integrate Claude 4's 16K thinking capability into module execution</description>
+        <benefits>Enhanced decision-making and error prevention through sophisticated reasoning</benefits>
+        <implementation>
+          <pre_module_thinking>Analyze module requirements and dependencies before execution</pre_module_thinking>
+          <execution_reasoning>Continuous validation and adjustment during module execution</execution_reasoning>
+          <post_module_reflection>Evaluate results and plan subsequent module integration</post_module_reflection>
+        </implementation>
+        <thinking_triggers>
+          <complexity_based>Activate thinking for modules with high complexity scores</complexity_based>
+          <error_recovery>Enhanced thinking during error handling and recovery</error_recovery>
+          <integration_points>Deep analysis at module integration boundaries</integration_points>
+        </thinking_triggers>
+      </interleaved_thinking_integration>
+      
+      <enhanced_module_caching>
+        <description>Advanced caching with Claude 4 pattern recognition</description>
+        <benefits>Intelligent cache utilization based on context similarity and pattern matching</benefits>
+        <implementation>
+          <pattern_recognition>Identify similar execution contexts for cache hits</pattern_recognition>
+          <context_aware_caching>Cache decisions based on full execution context</context_aware_caching>
+          <invalidation_strategies>Smart cache invalidation using dependency analysis</invalidation_strategies>
+        </implementation>
+      </enhanced_module_caching>
+      
+      <adaptive_lazy_loading>
+        <description>Context-aware module loading with predictive optimization</description>
+        <benefits>Optimal resource usage with proactive loading for likely-needed modules</benefits>
+        <implementation>
+          <predictive_loading>Load modules likely to be needed based on context analysis</predictive_loading>
+          <conditional_optimization>Optimize loading order based on execution probability</conditional_optimization>
+          <memory_management>Release unused modules proactively to preserve context space</memory_management>
+        </implementation>
+      </adaptive_lazy_loading>
+    </parallel_execution_mastery>
     
-    <resource_management>
-      <memory_efficiency>
-        <strategy>Release module resources after execution</strategy>
-        <strategy>Share common resources between compatible modules</strategy>
-        <strategy>Use streaming for large data processing</strategy>
-      </memory_efficiency>
+    <claude_4_resource_management>
+      <context_memory_efficiency>
+        <strategy>Hierarchical context loading with priority-based inclusion</strategy>
+        <strategy>Dynamic module content loading based on execution certainty</strategy>
+        <strategy>Token-efficient XML representations for module interfaces</strategy>
+        <strategy>Proactive cleanup of completed module contexts</strategy>
+      </context_memory_efficiency>
       
-      <cpu_optimization>
-        <strategy>Optimize module execution order for CPU cache efficiency</strategy>
-        <strategy>Use CPU-bound vs I/O-bound module classification</strategy>
-        <strategy>Implement module execution time limits</strategy>
-      </cpu_optimization>
-    </resource_management>
-  </performance_optimization>
+      <execution_optimization>
+        <strategy>Parallel tool call orchestration for maximum Claude 4 efficiency</strategy>
+        <strategy>Interleaved thinking integration for complex decision points</strategy>
+        <strategy>Context window monitoring with automatic optimization triggers</strategy>
+        <strategy>Session boundary optimization for 40-minute performance windows</strategy>
+      </execution_optimization>
+      
+      <advanced_performance_targets>
+        <target>70% execution time reduction through parallel tool orchestration</target>
+        <target>60-70% token efficiency improvement through XML optimization</target>
+        <target>Sub-second module loading through predictive caching</target>
+        <target>Real-time context optimization with automated adjustments</target>
+      </advanced_performance_targets>
+    </claude_4_resource_management>
+  </claude_4_performance_optimization>
   
   <monitoring_and_metrics>
     <execution_metrics>

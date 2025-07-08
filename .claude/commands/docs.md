@@ -1,8 +1,8 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.3.1   | 2025-07-08   | stable |
+| 2.6.0   | 2025-07-08   | stable |
 
-# /docs - Documentation Creation & Management ONLY
+# /docs - FOCUS framework documentation creation with intelligent routing and gateway enforcement
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -11,72 +11,97 @@
 ────────────────────────────────────────────────────────────────────────────────
 
 ```xml
-<command purpose="MANDATORY gateway for ALL documentation operations">
+<command purpose="FOCUS framework documentation gateway with intelligent routing and mandatory enforcement">
   
   <delegation target="modules/development/documentation.md">
-    Validate request → Search/Generate → Apply standards → Ensure consistency
+    FOCUS framework → Function analysis → Objective definition → Context evaluation → User needs → Scope management → Documentation creation
   </delegation>
   
   <thinking_pattern enforcement="CRITICAL">
     <checkpoint id="1" verify="true" enforcement="BLOCKING">
-      <action>BLOCK any documentation creation outside this command</action>
+      <action>Apply FOCUS framework - Analyze Function and gateway enforcement</action>
       <critical_thinking>
-        - Is this request for documentation creation vs research/analysis?
-        - Should this be routed to /query for understanding existing code?
-        - Am I being asked to document TDD practices or testing strategies?
-        - Is this documentation request or code analysis?
+        - What is the specific function of this documentation request?
+        - Should this be documentation creation (FOCUS) or research analysis (route to /query)?
+        - How does FOCUS framework function analysis guide proper routing decisions?
+        - What documentation function best serves the user's actual needs?
+        - Is this request aligned with FOCUS framework documentation creation function?
       </critical_thinking>
-      <output_format>GATEWAY_ENFORCEMENT: Documentation request [confirmed/redirected to /query]</output_format>
-      <validation>Documentation creation properly routed through /docs gateway</validation>
-      <enforcement>CRITICAL: Block all documentation creation outside this command</enforcement>
+      <output_format>FOCUS_FUNCTION_ANALYSIS:
+        - Request function: [documentation_creation/research_analysis]
+        - Gateway decision: [confirmed_docs/redirected_to_query]
+        - Function alignment: [focus_framework_appropriate]
+        - Routing rationale: [decision_reasoning]</output_format>
+      <validation>Documentation function properly analyzed with FOCUS framework and gateway enforcement</validation>
+      <enforcement>CRITICAL: Block all documentation creation outside this command and route research to /query</enforcement>
     </checkpoint>
     <checkpoint id="2" verify="true" enforcement="BLOCKING">
-      <action>Parse request type with TDD documentation awareness</action>
+      <action>Apply FOCUS framework - Define Objective and documentation goals</action>
       <critical_thinking>
-        - What type of documentation is needed (search/generate/validate/index)?
-        - Does this involve documenting TDD practices or testing workflows?
-        - Should I include TDD methodology in the documentation?
-        - Are there existing TDD docs that need updating?
+        - What is the specific objective this documentation should achieve?
+        - How does FOCUS framework objective definition guide documentation strategy?
+        - What measurable outcomes define successful documentation completion?
+        - How do documentation objectives align with user needs and framework requirements?
+        - What objective clarity ensures optimal documentation effectiveness?
       </critical_thinking>
-      <output_format>REQUEST_TYPE: [search/generate/validate/index] (TDD content: [yes/no/update])</output_format>
-      <validation>Request type identified with TDD documentation requirements</validation>
-      <enforcement>VERIFY request type clear and TDD needs identified</enforcement>
+      <output_format>FOCUS_OBJECTIVE_DEFINITION:
+        - Documentation objective: [specific_goal_with_outcomes]
+        - Success criteria: [measurable_completion_metrics]
+        - Framework alignment: [focus_framework_integration]
+        - TDD integration: [testing_methodology_inclusion]</output_format>
+      <validation>Documentation objectives clearly defined with FOCUS framework guidance and success metrics</validation>
+      <enforcement>BLOCK if objectives unclear or misaligned with FOCUS framework documentation principles</enforcement>
     </checkpoint>
     <checkpoint id="3" verify="true" enforcement="BLOCKING">
-      <action>Execute search operations with TDD-aware content discovery</action>
+      <action>Apply FOCUS framework - Evaluate Context and documentation environment</action>
       <critical_thinking>
-        - Should I search existing TDD documentation and testing guides?
-        - Are there test files or TDD patterns I should reference?
-        - Do parallel Grep/Glob operations include test-related content?
-        - What TDD documentation already exists that I should build upon?
+        - What comprehensive context affects documentation creation and effectiveness?
+        - How does FOCUS framework context evaluation guide content strategy?
+        - What existing documentation context should inform new content creation?
+        - What technical and business context influences documentation approach?
+        - How does context analysis optimize documentation relevance and utility?
       </critical_thinking>
-      <output_format>SEARCH_EXECUTION: Parallel operations including TDD content [discovered/referenced]</output_format>
-      <validation>Comprehensive search including TDD and testing documentation</validation>
-      <enforcement>ENSURE search covers TDD practices when generating development docs</enforcement>
+      <output_format>FOCUS_CONTEXT_EVALUATION:
+        - Documentation context: [existing_content_and_gaps]
+        - Technical context: [system_architecture_and_patterns]
+        - Business context: [user_needs_and_organizational_requirements]
+        - Content strategy: [context_informed_approach]</output_format>
+      <validation>Documentation context comprehensively evaluated with FOCUS framework guidance</validation>
+      <enforcement>ENSURE context analysis includes existing documentation, TDD practices, and framework requirements</enforcement>
     </checkpoint>
     <checkpoint id="4" verify="true" enforcement="BLOCKING">
-      <action>Apply Framework 3.0 standards with TDD methodology integration</action>
+      <action>Apply FOCUS framework - Assess User needs and documentation requirements</action>
       <critical_thinking>
-        - Are Framework 3.0 standards being applied correctly?
-        - Should I include TDD principles in development documentation?
-        - Does this documentation need testing workflow information?
-        - Are TDD examples and best practices included where relevant?
+        - Who are the specific users of this documentation and what are their needs?
+        - How does FOCUS framework user assessment guide content creation?
+        - What user experience considerations optimize documentation effectiveness?
+        - How do different user types (developers, stakeholders, etc.) influence approach?
+        - What user-centered design principles improve documentation utility?
       </critical_thinking>
-      <output_format>STANDARDS_APPLICATION: Framework 3.0 applied with TDD methodology [integrated/referenced]</output_format>
-      <validation>Standards applied with appropriate TDD methodology inclusion</validation>
-      <enforcement>MANDATORY: Framework 3.0 format with TDD awareness where applicable</enforcement>
+      <output_format>FOCUS_USER_ASSESSMENT:
+        - Primary users: [target_audience_identification]
+        - User needs: [specific_requirements_and_expectations]
+        - Experience design: [user_centered_content_strategy]
+        - Accessibility considerations: [inclusive_documentation_approach]</output_format>
+      <validation>User needs comprehensively assessed with FOCUS framework user-centered approach</validation>
+      <enforcement>BLOCK if user assessment incomplete or documentation approach not user-optimized</enforcement>
     </checkpoint>
     <checkpoint id="5" verify="true" enforcement="BLOCKING">
-      <action>Validate location and cross-references including TDD resources</action>
+      <action>Apply FOCUS framework - Define Scope and documentation boundaries</action>
       <critical_thinking>
-        - Is documentation going in proper /docs directory?
-        - Do cross-references include relevant TDD modules and guides?
-        - Are links to testing documentation and examples working?
-        - Is documentation structure consistent with TDD workflow docs?
+        - What is the appropriate scope for this documentation to maximize value?
+        - How does FOCUS framework scope definition prevent scope creep and ensure focus?
+        - What boundaries optimize documentation effectiveness without overwhelming users?
+        - How does scope definition align with Framework 3.0 standards and TDD requirements?
+        - What scope management ensures documentation remains maintainable and current?
       </critical_thinking>
-      <output_format>VALIDATION_COMPLETE: Location verified, TDD cross-references [validated/updated]</output_format>
-      <validation>Proper location with comprehensive TDD resource linking</validation>
-      <enforcement>CRITICAL: /docs directory ONLY with valid TDD cross-references</enforcement>
+      <output_format>FOCUS_SCOPE_DEFINITION:
+        - Documentation scope: [clear_boundaries_and_coverage]
+        - Framework standards: [framework_3_0_compliance]
+        - TDD integration: [testing_methodology_inclusion]
+        - Maintenance strategy: [scope_sustainability_approach]</output_format>
+      <validation>Documentation scope clearly defined with FOCUS framework boundaries and standards compliance</validation>
+      <enforcement>CRITICAL: Scope must align with /docs directory placement and Framework 3.0 standards</enforcement>
     </checkpoint>
   </thinking_pattern>
   
@@ -101,14 +126,27 @@
     </blocking_conditions>
   </tdd_integration>
   
+  <focus_framework_integration enforcement="MANDATORY">
+    <function_analysis>Clear function identification and documentation vs research routing decisions</function_analysis>
+    <objective_definition>Specific documentation goals with measurable success criteria and framework alignment</objective_definition>
+    <context_evaluation>Comprehensive documentation environment assessment and content strategy optimization</context_evaluation>
+    <user_assessment>User-centered documentation design with accessibility and experience optimization</user_assessment>
+    <scope_definition>Clear documentation boundaries with Framework 3.0 compliance and maintenance strategy</scope_definition>
+    <documentation_optimization>User-focused documentation creation with systematic function and scope management</documentation_optimization>
+    <validation>Reference frameworks/focus.md for complete FOCUS framework implementation in documentation</validation>
+  </focus_framework_integration>
+  
   <module_execution enforcement="MANDATORY">
     <core_stack order="sequential">
-      <module>quality/critical-thinking.md - 30-second analysis before documentation operations</module>
-      <module>development/documentation.md - Core documentation workflows and standards</module>
-      <module>patterns/intelligent-routing.md - Smart search and discovery capabilities</module>
-      <module>quality/tdd.md - TDD documentation standards and practices</module>
+      <module>quality/critical-thinking.md - 30-second analysis before FOCUS framework documentation operations</module>
+      <module>frameworks/focus.md - FOCUS framework function, objective, context, user, scope for documentation</module>
+      <module>development/documentation.md - Framework-integrated core documentation workflows and standards</module>
+      <module>patterns/intelligent-routing.md - Framework-aware smart search and discovery capabilities</module>
+      <module>quality/tdd.md - TDD documentation standards with FOCUS framework integration</module>
     </core_stack>
     <contextual_modules>
+      <conditional module="frameworks/framework-selector.md" condition="complex_documentation_requirements"/>
+      <conditional module="frameworks/advanced-frameworks.md" condition="specialized_framework_needs"/>
       <conditional module="patterns/pattern-library.md" condition="pattern_documentation"/>
       <conditional module="quality/production-standards.md" condition="quality_documentation"/>
       <conditional module="security/threat-modeling.md" condition="security_documentation"/>
@@ -122,15 +160,18 @@
   </depends_on>
   
   <pattern_usage>
-    • Uses parallel_execution for batch document analysis
-    • Applies smart_memoization for cached search results
-    • Implements explicit_validation for consistency checks
-    • Leverages consequence_mapping for documentation impact
-    • Uses single_responsibility for focused documentation
-    • ENFORCES documentation gateway pattern
+    • Uses focus_framework_integration pattern for user-centered documentation creation
+    • Implements parallel_execution for batch document analysis with framework optimization
+    • Applies smart_memoization for cached search results with context awareness
+    • Uses explicit_validation for consistency checks with framework standards
+    • Leverages consequence_mapping for documentation impact with user experience focus
+    • Implements single_responsibility for focused documentation with scope management
+    • ENFORCES documentation gateway pattern with intelligent routing to /query for research
+    • Integrates framework_selection_intelligence for documentation optimization
     
+    See modules/frameworks/focus.md for FOCUS framework implementation
     See modules/patterns/pattern-library.md for pattern details
-    See modules/development/documentation.md for full implementation
+    See modules/development/documentation.md for framework-integrated implementation
   </pattern_usage>
   
   <usage_examples>
@@ -184,9 +225,93 @@
     <requirement name="accessibility">Easy to find and navigate</requirement>
   </quality_requirements>
   
+
+  <prompt_construction>
+    <assembly_preview>
+      WORKFLOW ASSEMBLY:
+      ┌─────────────────┐
+      │ 1. Gateway     │ → Block external docs
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │    Enforcement │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 2. Type        │ → Documentation category
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │    Analysis    │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 3. Content     │ → Generate or search
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │    Generation  │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 4. Standards   │ → Apply formatting rules
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │    Application │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 5. Index       │ → Update documentation index
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │    Update      │
+      └─────────────────┘
+    </assembly_preview>
+
+    <context_budget>
+      Estimated tokens: ~12,000
+      - Gateway enforcement: 1,000
+      - Type analysis: 1,500
+      - Content generation: 6,000
+      - Standards application: 2,000
+      - Index updates: 1,500
+    </context_budget>
+  </prompt_construction>
+
+  <runtime_visualization>
+    <execution_trace>
+      [00:00] ▶️ START: /docs "API documentation"
+      [00:15] 🚫 GATEWAY: External doc creation blocked
+      [00:30] 🔍 ANALYSIS: API documentation type identified
+      [00:45] 📝 GENERATION: Creating comprehensive API docs
+      [01:30] 📏 STANDARDS: Applying framework formatting
+      [01:45] 📚 INDEX: Updating documentation index
+      [02:00] ✅ COMPLETE: API documentation published
+    </execution_trace>
+  </runtime_visualization>
+
+  <claude_4_interpretation>
+    <parsing_behavior>
+      1. Reads checkpoint structure sequentially
+      2. Executes critical_thinking questions internally
+      3. Formats output according to output_format specifications
+      4. Validates against enforcement rules before proceeding
+      5. Applies parallel execution optimization where possible
+    </parsing_behavior>
+
+    <decision_points>
+      - Checkpoint failures trigger enforcement actions
+      - Module selection based on contextual conditions
+      - Parallel execution for independent operations
+      - Quality gate validation at completion boundaries
+      - Error recovery through graceful degradation paths
+    </decision_points>
+  </claude_4_interpretation>
+
 </command>
 ```
-
 ────────────────────────────────────────────────────────────────────────────────
 
 ## Documentation Standards

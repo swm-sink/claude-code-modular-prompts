@@ -1,0 +1,90 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2025-07-08",
+  "rollback_configuration": {
+    "enabled": true,
+    "automatic_rollback": true,
+    "manual_rollback": true,
+    "rollback_timeout": 60,
+    "validation_timeout": 30,
+    "max_rollback_attempts": 3
+  },
+  "trigger_conditions": {
+    "stability_threshold": 0.99,
+    "performance_degradation_threshold": 0.20,
+    "error_rate_threshold": 0.05,
+    "user_satisfaction_threshold": 3.0,
+    "response_time_threshold": 5000,
+    "token_usage_threshold": 100000
+  },
+  "rollback_strategies": {
+    "granular_rollback": {
+      "enabled": true,
+      "single_change": true,
+      "module_rollback": true,
+      "time_based_rollback": true,
+      "feature_rollback": true
+    },
+    "emergency_rollback": {
+      "enabled": true,
+      "safe_mode": true,
+      "core_framework_only": true,
+      "disable_all_meta": true
+    }
+  },
+  "snapshot_management": {
+    "snapshot_frequency": 3600,
+    "max_snapshots": 168,
+    "snapshot_retention": 604800,
+    "compression_enabled": true,
+    "snapshot_location": ".claude/meta/safety/snapshots/"
+  },
+  "validation_checks": {
+    "pre_rollback": [
+      "verify_snapshot_integrity",
+      "check_dependency_consistency",
+      "validate_rollback_script",
+      "estimate_rollback_impact"
+    ],
+    "post_rollback": [
+      "verify_framework_stability",
+      "check_module_functionality",
+      "validate_performance_metrics",
+      "confirm_user_experience"
+    ]
+  },
+  "notification_settings": {
+    "human_notification": true,
+    "immediate_alerts": true,
+    "detailed_reports": true,
+    "success_confirmation": true,
+    "failure_escalation": true
+  },
+  "recovery_procedures": {
+    "rollback_sequence": [
+      "detect_trigger_condition",
+      "identify_problematic_change",
+      "validate_rollback_feasibility",
+      "execute_rollback_script",
+      "verify_rollback_success",
+      "notify_human_operator",
+      "analyze_failure_cause",
+      "update_prevention_measures"
+    ],
+    "failure_recovery": [
+      "attempt_alternative_rollback",
+      "escalate_to_safe_mode",
+      "disable_problematic_features",
+      "restore_core_functionality",
+      "request_human_intervention"
+    ]
+  },
+  "monitoring_configuration": {
+    "continuous_monitoring": true,
+    "health_check_interval": 60,
+    "performance_monitoring": true,
+    "stability_tracking": true,
+    "error_rate_monitoring": true,
+    "user_satisfaction_tracking": true
+  }
+}

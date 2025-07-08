@@ -13,6 +13,28 @@
     High-performance intelligent routing engine that analyzes requests, learns from patterns, and dynamically composes optimal command and module combinations with minimal latency.
   </purpose>
   
+  <interface_contract>
+    <inputs>
+      <required>user_request, complexity_factors, routing_context</required>
+      <optional>historical_patterns, performance_constraints, confidence_thresholds</optional>
+    </inputs>
+    <outputs>
+      <success>routing_decision, complexity_score, confidence_rating, execution_context</success>
+      <failure>routing_ambiguity, insufficient_context, pattern_matching_failures</failure>
+    </outputs>
+  </interface_contract>
+  
+  <execution_pattern>
+    <claude_4_behavior>
+      WHEN invoked:
+      1. Parse and analyze user request for components and complexity
+      2. Calculate routing score using complexity algorithm
+      3. Apply routing thresholds and confidence validation
+      4. Select optimal command with supporting context
+      5. Cache decision for pattern learning and optimization
+    </claude_4_behavior>
+  </execution_pattern>
+  
   <thinking_pattern enforcement="MANDATORY">
     <step>1. Parse user request and extract key components (services, integrations, security)</step>
     <step>2. Calculate complexity score: components×5 + integrations×4 + security×3</step>
@@ -459,6 +481,7 @@
   </integration_points>
   
   <pattern_usage>
+    <uses_pattern from="frameworks/framework-selector.md">framework_selection_intelligence</uses_pattern>
     <uses_pattern from="patterns/pattern-library.md">parallel_execution</uses_pattern>
     <uses_pattern from="patterns/pattern-library.md">smart_memoization</uses_pattern>
     <uses_pattern from="patterns/pattern-library.md">lazy_loading</uses_pattern>
@@ -467,12 +490,14 @@
     <uses_pattern from="patterns/pattern-library.md">issue_tracking</uses_pattern>
     <uses_pattern from="patterns/pattern-library.md">explicit_validation</uses_pattern>
     <implementation_notes>
+      Framework selection uses framework_selection_intelligence for optimal prompting framework choice
       Research and analysis phases use parallel_execution for 70% faster routing decisions
-      Pattern matching leverages smart_memoization for &lt;10ms cached lookups
-      Command handlers use lazy_loading for 50% faster startup
-      Routing decisions follow three_x_rule and consequence_mapping for accuracy
-      Complex tasks trigger issue_tracking pattern through session creation
-      Request validation uses explicit_validation for clear error messaging
+      Pattern matching leverages smart_memoization for &lt;10ms cached lookups with framework context
+      Command handlers use lazy_loading for 50% faster startup with framework optimization
+      Routing decisions follow three_x_rule and consequence_mapping for accuracy with framework awareness
+      Complex tasks trigger issue_tracking pattern through session creation with framework integration
+      Request validation uses explicit_validation for clear error messaging with framework compatibility
+      Framework effectiveness tracking optimizes routing decisions through continuous learning
     </implementation_notes>
   </pattern_usage>
   

@@ -1,89 +1,250 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 2.4.0   | 2025-01-08   | stable |
+| 2.6.0   | 2025-07-08   | stable |
 
-# Autonomous Feature Development
+# /feature - SOAR/CLEAR autonomous feature development with strategic planning
 
 ────────────────────────────────────────────────────────────────────────────────
 
-**PURPOSE**: Autonomous feature development with 95% self-sufficiency and intelligent orchestration
+**PURPOSE**: Autonomous feature development with SOAR/CLEAR framework integration for strategic planning and comprehensive execution
 
 ────────────────────────────────────────────────────────────────────────────────
 
 ```xml
-<command purpose="Autonomous PRD-driven feature development with intelligent orchestration">
+<command purpose="Autonomous PRD-driven feature development with SOAR/CLEAR framework orchestration">
   
   <delegation target="modules/planning/feature-workflow.md">
-    Generate PRD → Analyze complexity → Plan MVP → Execute autonomously → Validate
+    SOAR strategic planning → CLEAR comprehensive requirements → Generate PRD → Analyze complexity → Plan MVP → Execute autonomously → Validate
   </delegation>
   
   <thinking_pattern enforcement="MANDATORY">
-    <step>0. CONTEXT PRIMING: Load comprehensive project context BEFORE any planning begins
-      - Repository structure analysis via Glob(**/*.{js,ts,py,java,go,rs})
-      - Key file identification (README, package.json, requirements.txt, go.mod, Cargo.toml)
-      - Technology stack detection from dependencies and file extensions
-      - Coding standards extraction from .eslintrc, .prettierrc, pyproject.toml, etc.
-      - Recent commit history review via git log --oneline -20
-      - Architecture patterns from existing code structure
-      - Test framework detection from test files and config</step>
-    <step>1. PERSONA: Load persona context from patterns/persona-manager.md (auto-detect or --persona flag)</step>
-    <step>2. Generate comprehensive PRD using feature-workflow.md patterns enhanced with persona perspective and context insights</step>
-    <step>3. Auto-detect tech stack and existing patterns in codebase through persona lens AND context analysis</step>
-    <step>4. Create GitHub session for tracking (ALWAYS) with persona assignments and context summary logged</step>
-    <step>5. Define MVP with clear phases and acceptance criteria using persona-specific quality gates</step>
-    <step>6. Calculate complexity: >15 score triggers /swarm delegation with specialized personas</step>
-    <step>7. Execute with TDD: Write ALL tests FIRST using persona-enhanced testing approach and detected test framework</step>
-    <step>8. Apply quality gates from production-standards.md augmented with persona standards</step>
-    <step>9. Auto-generate documentation via /docs patterns with persona-specific documentation style</step>
+    <checkpoint id="1" verify="true" enforcement="BLOCKING">
+      <action>Apply SOAR framework - Analyze Situation and context</action>
+      <critical_thinking>
+        - What is the current situation requiring this feature development?
+        - What business context and user needs drive this feature request?
+        - What technical constraints and opportunities exist in the current system?
+        - How does this feature align with overall product strategy and vision?
+        - What contextual factors influence the strategic approach to this feature?
+      </critical_thinking>
+      <output_format>SOAR_SITUATION_ANALYSIS: 
+        - Business context: [business_driver]
+        - User needs: [user_requirements]
+        - Technical landscape: [system_constraints_and_opportunities]
+        - Strategic alignment: [product_vision_alignment]</output_format>
+      <validation>Situation comprehensively analyzed with strategic context understanding</validation>
+      <enforcement>BLOCK if situation analysis insufficient for strategic feature planning</enforcement>
+    </checkpoint>
+    <checkpoint id="2" verify="true" enforcement="BLOCKING">
+      <action>Apply SOAR framework - Define Objectives with strategic goals</action>
+      <critical_thinking>
+        - What are the specific strategic objectives this feature should achieve?
+        - How do these objectives align with broader business goals and OKRs?
+        - What success metrics and KPIs will validate feature achievement?
+        - What are the primary, secondary, and stretch objectives for this feature?
+        - How do objectives guide technical and design decision-making?
+      </critical_thinking>
+      <output_format>SOAR_OBJECTIVES_DEFINITION:
+        - Primary objective: [core_goal_with_metrics]
+        - Secondary objectives: [supporting_goals]
+        - Success criteria: [measurable_outcomes]
+        - Business alignment: [okr_and_strategic_connection]</output_format>
+      <validation>Objectives clearly defined with measurable success criteria and strategic alignment</validation>
+      <enforcement>BLOCK if objectives lack clarity, metrics, or strategic connection</enforcement>
+    </checkpoint>
+    <checkpoint id="3" verify="true" enforcement="BLOCKING">
+      <action>Apply SOAR framework - Plan Actions and strategic execution</action>
+      <critical_thinking>
+        - What strategic actions are required to achieve the defined objectives?
+        - How should development phases be structured for optimal strategic value delivery?
+        - What resource allocation and timeline support objective achievement?
+        - What action priorities maximize strategic impact and minimize risk?
+        - How do actions connect situation analysis to desired results?
+      </critical_thinking>
+      <output_format>SOAR_ACTION_PLAN:
+        - Strategic phases: [development_phases_with_strategic_value]
+        - Resource requirements: [timeline_and_allocation]
+        - Priority actions: [critical_path_activities]
+        - Risk mitigation: [strategic_risk_actions]</output_format>
+      <validation>Action plan strategically sound with clear phase structure and resource planning</validation>
+      <enforcement>BLOCK if action plan lacks strategic coherence or feasibility assessment</enforcement>
+    </checkpoint>
+    <checkpoint id="4" verify="true" enforcement="BLOCKING">
+      <action>Apply SOAR framework - Define Results and strategic outcomes</action>
+      <critical_thinking>
+        - What strategic results will validate successful feature delivery?
+        - How will results be measured and validated against objectives?
+        - What downstream impacts and benefits are expected from the feature?
+        - How do results connect back to situation analysis and business context?
+        - What learning and improvement opportunities emerge from expected results?
+      </critical_thinking>
+      <output_format>SOAR_RESULTS_FRAMEWORK:
+        - Expected outcomes: [strategic_benefits_and_impact]
+        - Measurement plan: [validation_approach_and_metrics]
+        - Success validation: [objective_fulfillment_criteria]
+        - Learning opportunities: [improvement_and_iteration_potential]</output_format>
+      <validation>Results framework aligned with objectives and provides clear success validation</validation>
+      <enforcement>BLOCK if results definition doesn't align with objectives or lacks measurement clarity</enforcement>
+    </checkpoint>
+    <checkpoint id="5" verify="true" enforcement="BLOCKING">
+      <action>Apply CLEAR framework - Comprehensive Context analysis</action>
+      <critical_thinking>
+        - What comprehensive technical context affects feature implementation?
+        - What codebase patterns, architecture, and existing systems constrain design?
+        - What development environment, tooling, and process context applies?
+        - How does organizational context and team capability influence approach?
+        - What external context (regulations, compliance, integrations) applies?
+      </critical_thinking>
+      <output_format>CLEAR_CONTEXT_ANALYSIS:
+        - Technical context: [architecture_patterns_constraints_and_opportunities]
+        - Development context: [tools_processes_and_team_capabilities]
+        - Business context: [organizational_requirements_and_constraints]
+        - External context: [compliance_integrations_and_dependencies]</output_format>
+      <validation>Context comprehensively analyzed across all relevant dimensions</validation>
+      <enforcement>BLOCK if context analysis misses critical technical or business factors</enforcement>
+    </checkpoint>
+    <checkpoint id="6" verify="true" enforcement="BLOCKING">
+      <action>Apply CLEAR framework - Identify Limitations and constraints</action>
+      <critical_thinking>
+        - What technical limitations constrain feature implementation approaches?
+        - What resource limitations (time, budget, expertise) affect scope?
+        - What business limitations (policies, compliance, priorities) apply?
+        - What system limitations (performance, scalability, security) must be addressed?
+        - How do limitations influence strategic decisions and trade-offs?
+      </critical_thinking>
+      <output_format>CLEAR_LIMITATIONS_ASSESSMENT:
+        - Technical limitations: [system_and_architecture_constraints]
+        - Resource limitations: [time_budget_and_expertise_constraints]
+        - Business limitations: [policy_compliance_and_priority_constraints]
+        - Risk limitations: [security_performance_and_scalability_bounds]</output_format>
+      <validation>Limitations comprehensively identified with impact assessment on strategic approach</validation>
+      <enforcement>BLOCK if limitation analysis incomplete or lacks strategic impact consideration</enforcement>
+    </checkpoint>
+    <checkpoint id="7" verify="true" enforcement="BLOCKING">
+      <action>Apply CLEAR framework - Provide Examples and patterns</action>
+      <critical_thinking>
+        - What existing patterns and examples guide optimal implementation approach?
+        - What similar features or systems provide implementation guidance?
+        - What industry best practices and proven patterns apply to this feature?
+        - What anti-patterns and failure examples should be avoided?
+        - How do examples inform strategic technical decisions and architecture?
+      </critical_thinking>
+      <output_format>CLEAR_EXAMPLES_AND_PATTERNS:
+        - Implementation patterns: [proven_approaches_and_architectures]
+        - Industry examples: [best_practices_and_reference_implementations]
+        - Codebase examples: [existing_similar_implementations]
+        - Anti-patterns to avoid: [known_failure_modes_and_risks]</output_format>
+      <validation>Examples and patterns provide clear implementation guidance aligned with strategic objectives</validation>
+      <enforcement>BLOCK if examples insufficient to guide strategic technical decision-making</enforcement>
+    </checkpoint>
+    <checkpoint id="8" verify="true" enforcement="BLOCKING">
+      <action>Apply CLEAR framework - Define Actions with comprehensive planning</action>
+      <critical_thinking>
+        - What comprehensive actions bridge analysis to implementation?
+        - How do actions integrate SOAR strategic planning with CLEAR technical requirements?
+        - What GitHub session structure supports comprehensive tracking and coordination?
+        - How do actions address both strategic objectives and technical limitations?
+        - What TDD approach aligns with comprehensive strategic and technical requirements?
+      </critical_thinking>
+      <output_format>CLEAR_COMPREHENSIVE_ACTIONS:
+        - Implementation actions: [detailed_technical_implementation_steps]
+        - Coordination actions: [github_session_and_tracking_setup]
+        - Quality actions: [tdd_approach_and_validation_strategy]
+        - Strategic actions: [objective_fulfillment_and_results_validation]</output_format>
+      <validation>Actions comprehensively planned with strategic and technical integration</validation>
+      <enforcement>BLOCK if actions don't integrate SOAR strategy with CLEAR technical requirements</enforcement>
+    </checkpoint>
+    <checkpoint id="9" verify="true" enforcement="BLOCKING">
+      <action>Apply CLEAR framework - Role definition and execution approach</action>
+      <critical_thinking>
+        - What expert role and perspective optimizes feature development quality?
+        - How does role definition align with strategic objectives and technical complexity?
+        - What expertise level and domain knowledge supports optimal execution?
+        - How does role influence decision-making, quality standards, and approaches?
+        - What delegation decisions (task vs swarm) align with role capabilities and scope?
+      </critical_thinking>
+      <output_format>CLEAR_ROLE_AND_EXECUTION:
+        - Expert role: [domain_expertise_and_perspective]
+        - Quality standards: [role_appropriate_excellence_criteria]
+        - Execution approach: [methodology_and_framework_integration]
+        - Delegation decision: [task_vs_swarm_with_complexity_assessment]</output_format>
+      <validation>Role clearly defined with execution approach optimized for strategic and technical success</validation>
+      <enforcement>BLOCK if role definition insufficient for complexity or lacks strategic alignment</enforcement>
+    </checkpoint>
   </thinking_pattern>
   
+  <soar_framework_integration enforcement="MANDATORY">
+    <situation_analysis>Comprehensive business and technical context analysis for strategic feature positioning</situation_analysis>
+    <objective_definition>Clear strategic objectives with measurable success criteria and business alignment</objective_definition>
+    <action_planning>Strategic development phases with resource allocation and timeline optimization</action_planning>
+    <results_framework>Expected outcomes with measurement plans and success validation approaches</results_framework>
+    <strategic_alignment>Feature development aligned with business objectives and product strategy</strategic_alignment>
+    <validation>Reference frameworks/soar.md for complete SOAR framework implementation in feature development</validation>
+  </soar_framework_integration>
+  
+  <clear_framework_integration enforcement="MANDATORY">
+    <context_comprehension>Technical, business, and organizational context analysis for informed decision-making</context_comprehension>
+    <limitation_identification>Comprehensive constraint analysis across technical, resource, and business dimensions</limitation_identification>
+    <example_guidance>Industry patterns, best practices, and anti-patterns for optimal implementation approaches</example_guidance>
+    <action_specification>Detailed technical actions integrating strategic objectives with implementation requirements</action_specification>
+    <role_optimization>Expert role definition aligned with feature complexity and strategic objectives</role_optimization>
+    <comprehensive_planning>Integration of strategic SOAR planning with detailed CLEAR technical requirements</comprehensive_planning>
+    <validation>Reference frameworks/clear.md for complete CLEAR framework implementation in comprehensive feature development</validation>
+  </clear_framework_integration>
+  
   <enforcement_verification enforcement="REQUIRED">
-    <checkpoint name="CONTEXT_PRIMING">
-      <verify>Project context fully loaded and analyzed</verify>
-      <output>Display detected: tech stack, test framework, coding standards, architecture patterns</output>
-      <validate>Repository structure understood, key files identified, patterns detected</validate>
+    <checkpoint name="SOAR_SITUATION_ANALYSIS">
+      <verify>SOAR situation analysis completed with comprehensive business and technical context</verify>
+      <output>Display business context, user needs, technical landscape, and strategic alignment</output>
+      <validate>Situation analysis provides strategic foundation for feature development</validate>
     </checkpoint>
     
-    <checkpoint name="PRD_GENERATION">
-      <verify>PRD document created with all sections populated AND context insights integrated</verify>
-      <output>Display PRD summary with key decisions informed by context analysis</output>
-      <validate>User story, acceptance criteria, technical approach defined using existing patterns</validate>
+    <checkpoint name="SOAR_OBJECTIVES_DEFINITION">
+      <verify>SOAR objectives clearly defined with measurable success criteria and business alignment</verify>
+      <output>Display primary objectives, success criteria, and strategic connection to business goals</output>
+      <validate>Objectives provide clear direction for strategic feature development</validate>
     </checkpoint>
     
-    <checkpoint name="TECH_ANALYSIS">
-      <verify>Codebase patterns detected and documented</verify>
-      <output>List detected frameworks, patterns, and conventions</output>
-      <validate>Technology stack compatibility confirmed</validate>
+    <checkpoint name="SOAR_ACTION_PLANNING">
+      <verify>SOAR action plan strategically structured with phases and resource allocation</verify>
+      <output>Display strategic phases, timeline, priorities, and risk mitigation approaches</output>
+      <validate>Action plan provides feasible path from situation to desired results</validate>
     </checkpoint>
     
-    <checkpoint name="SESSION_CREATION">
-      <verify>GitHub issue created with proper structure</verify>
-      <output>Show issue URL and initial task breakdown</output>
-      <validate>All phases mapped with checkboxes</validate>
+    <checkpoint name="SOAR_RESULTS_FRAMEWORK">
+      <verify>SOAR results framework defined with measurement and validation approaches</verify>
+      <output>Display expected outcomes, measurement plan, and learning opportunities</output>
+      <validate>Results framework enables objective validation and continuous improvement</validate>
     </checkpoint>
     
-    <checkpoint name="COMPLEXITY_ASSESSMENT">
-      <verify>Complexity score calculated using deterministic rules</verify>
-      <output>Display score breakdown: files={n}, patterns={n}, integrations={n}</output>
-      <validate>Routing decision made: /task or /swarm</validate>
+    <checkpoint name="CLEAR_CONTEXT_ANALYSIS">
+      <verify>CLEAR context analysis comprehensive across technical, business, and external dimensions</verify>
+      <output>Display technical context, development environment, organizational factors, and external constraints</output>
+      <validate>Context analysis enables informed decision-making and optimal approach selection</validate>
     </checkpoint>
     
-    <checkpoint name="TDD_COMPLIANCE">
-      <verify>All tests written BEFORE implementation</verify>
-      <output>Show test file paths and RED test results</output>
-      <validate>Tests fail for the right reasons</validate>
+    <checkpoint name="CLEAR_LIMITATIONS_ASSESSMENT">
+      <verify>CLEAR limitations identified across technical, resource, business, and risk dimensions</verify>
+      <output>Display constraint analysis with strategic impact assessment</output>
+      <validate>Limitations analysis guides realistic scope and approach selection</validate>
     </checkpoint>
     
-    <checkpoint name="QUALITY_GATES">
-      <verify>All gates from production-standards.md passed</verify>
-      <output>Display gate results: security=✓, performance=✓, coverage=✓</output>
-      <validate>No gate bypassed without explicit justification</validate>
+    <checkpoint name="CLEAR_EXAMPLES_AND_PATTERNS">
+      <verify>CLEAR examples and patterns provide implementation guidance aligned with strategic objectives</verify>
+      <output>Display implementation patterns, best practices, existing examples, and anti-patterns to avoid</output>
+      <validate>Examples enable optimal technical decisions and architecture selection</validate>
     </checkpoint>
     
-    <checkpoint name="DOCUMENTATION">
-      <verify>Documentation generated via /docs command</verify>
-      <output>List created/updated documentation files</output>
-      <validate>All code changes have corresponding docs</validate>
+    <checkpoint name="CLEAR_COMPREHENSIVE_ACTIONS">
+      <verify>CLEAR actions integrate SOAR strategy with comprehensive technical planning</verify>
+      <output>Display implementation actions, coordination setup, quality strategy, and strategic validation</output>
+      <validate>Actions bridge strategic objectives to practical implementation with quality assurance</validate>
+    </checkpoint>
+    
+    <checkpoint name="CLEAR_ROLE_AND_EXECUTION">
+      <verify>CLEAR role definition optimized for strategic and technical success</verify>
+      <output>Display expert role, quality standards, execution approach, and delegation decision</output>
+      <validate>Role and execution approach align with feature complexity and strategic objectives</validate>
     </checkpoint>
   </enforcement_verification>
   
@@ -142,24 +303,28 @@
   <module_integration>
     <primary_module>modules/planning/feature-workflow.md</primary_module>
     <execution_flow>
+      <phase name="SOAR Strategy">frameworks/soar.md → Strategic situation analysis and objective definition</phase>
+      <phase name="CLEAR Analysis">frameworks/clear.md → Comprehensive context and limitation analysis</phase>
+      <phase name="Framework Selection">frameworks/framework-selector.md → Intelligent framework optimization</phase>
       <phase name="Context">patterns/context-preservation.md → Load comprehensive project context</phase>
-      <phase name="PRD">planning/feature-workflow.md → Generate requirements with context insights</phase>
-      <phase name="Session">patterns/session-management.md → Create GitHub tracking with context summary</phase>
-      <phase name="Analysis">patterns/intelligent-routing.md → Complexity scoring</phase>
-      <phase name="Delegation">IF score>15: patterns/multi-agent.md → Swarm execution</phase>
-      <phase name="Development">development/task-management.md → TDD implementation</phase>
-      <phase name="Quality">quality/production-standards.md → Gate enforcement</phase>
-      <phase name="Security">security/threat-modeling.md → Threat analysis</phase>
-      <phase name="Docs">development/documentation.md → Auto-documentation</phase>
+      <phase name="PRD">planning/feature-workflow.md → Generate SOAR/CLEAR integrated requirements</phase>
+      <phase name="Session">patterns/session-management.md → Create GitHub tracking with strategic context</phase>
+      <phase name="Analysis">patterns/intelligent-routing.md → Framework-aware complexity scoring</phase>
+      <phase name="Delegation">IF score>15: patterns/multi-agent.md → SOAR/CLEAR coordinated swarm execution</phase>
+      <phase name="Development">development/task-management.md → Framework-integrated TDD implementation</phase>
+      <phase name="Quality">quality/production-standards.md → Strategic and technical gate enforcement</phase>
+      <phase name="Security">security/threat-modeling.md → Threat analysis with strategic context</phase>
+      <phase name="Docs">development/documentation.md → SOAR/CLEAR guided auto-documentation</phase>
     </execution_flow>
   </module_integration>
   
   <usage_examples>
-    <example>/feature "User authentication system with JWT" # Auto-detects security-specialist persona</example>
-    <example>/feature "Real-time chat with WebSockets"     # Complex→delegates to /swarm with specialized personas</example>
-    <example>/feature "Payment processing with Stripe" --persona security-specialist # Explicit security-first approach</example>
-    <example>/feature "High-performance API" --persona performance-engineer # Optimization-focused development</example>
-    <example>/feature "User dashboard redesign" --persona product-engineer # User-value focused approach</example>
+    <example>/feature "User authentication system with JWT" # SOAR strategic analysis → CLEAR comprehensive security implementation</example>
+    <example>/feature "Real-time chat with WebSockets"     # SOAR business objectives → CLEAR technical coordination → /swarm delegation</example>
+    <example>/feature "Payment processing with Stripe"     # SOAR compliance objectives → CLEAR security constraints → Strategic implementation</example>
+    <example>/feature "High-performance API"               # SOAR performance objectives → CLEAR optimization patterns → Technical excellence</example>
+    <example>/feature "User dashboard redesign"            # SOAR user experience objectives → CLEAR design patterns → Strategic UX implementation</example>
+    <example>/feature "AI-powered recommendation engine"   # SOAR business intelligence → CLEAR ML constraints → Complex strategic implementation</example>
   </usage_examples>
   
   <persona_integration>
@@ -191,29 +356,136 @@
   </persona_integration>
   
   <rules enforcement="STRICT">
-    <rule priority="CRITICAL">ALWAYS generate PRD first using patterns</rule>
-    <rule priority="CRITICAL">ALWAYS create GitHub session for tracking</rule>
-    <rule priority="HIGH">Calculate complexity - delegate to /swarm if >15</rule>
-    <rule priority="HIGH">TDD mandatory - tests before implementation</rule>
-    <rule priority="HIGH">Quality gates from production-standards.md</rule>
+    <rule priority="CRITICAL">ALWAYS apply SOAR framework for strategic analysis and objectives</rule>
+    <rule priority="CRITICAL">ALWAYS apply CLEAR framework for comprehensive context and requirements</rule>
+    <rule priority="CRITICAL">ALWAYS integrate frameworks before PRD generation and GitHub session creation</rule>
+    <rule priority="HIGH">Calculate complexity with framework overhead - delegate to /swarm if >15</rule>
+    <rule priority="HIGH">TDD mandatory with framework-aligned test strategies</rule>
+    <rule priority="HIGH">Quality gates from production-standards.md with strategic validation</rule>
+    <rule priority="MEDIUM">Framework selection intelligence for optimization opportunities</rule>
   </rules>
   
   <pattern_usage>
-    • Implements prd_first pattern EXPLICITLY with PRD generation
-    • Uses issue_tracking pattern for GitHub session creation
-    • Applies tdd_cycle with test-first enforcement
-    • Leverages parallel_execution when delegating to swarm
-    • Uses graceful_degradation from error-recovery.md
-    • Implements consequence_mapping for architecture decisions
-    • Integrates git-operations.md for branch strategies
+    • Uses soar_framework_integration pattern for strategic feature planning and objective definition
+    • Implements clear_framework_integration pattern for comprehensive context analysis and technical requirements
+    • Applies framework_selection_intelligence pattern for optimal coordination strategies
+    • Uses prd_first pattern with SOAR/CLEAR framework integration for enhanced requirements
+    • Implements issue_tracking pattern for GitHub session creation with strategic context
+    • Applies tdd_cycle with framework-aligned test-first enforcement and strategic validation
+    • Leverages parallel_execution when delegating to framework-coordinated swarm
+    • Uses graceful_degradation from error-recovery.md with framework awareness
+    • Implements consequence_mapping for strategic and technical architecture decisions
+    • Integrates git-operations.md for framework-optimized branch strategies
     
+    See modules/frameworks/soar.md for SOAR framework strategic planning implementation
+    See modules/frameworks/clear.md for CLEAR framework comprehensive analysis implementation
+    See modules/frameworks/framework-selector.md for intelligent framework optimization
     See modules/patterns/pattern-library.md for pattern details
-    See modules/planning/feature-workflow.md for full implementation
+    See modules/planning/feature-workflow.md for SOAR/CLEAR integrated full implementation
   </pattern_usage>
   
+
+  <prompt_construction>
+    <assembly_preview>
+      SOAR/CLEAR FRAMEWORK WORKFLOW ASSEMBLY:
+      ┌─────────────────┐
+      │ 1. SOAR        │ → Strategic situation analysis
+      │    Situation   │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 2. SOAR        │ → Strategic objectives definition
+      │    Objectives  │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 3. SOAR        │ → Strategic action planning
+      │    Actions     │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 4. SOAR        │ → Strategic results framework
+      │    Results     │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 5. CLEAR       │ → Comprehensive context analysis
+      │    Context     │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 6. CLEAR       │ → Limitation and constraint analysis
+      │    Limitations │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 7. CLEAR       │ → Examples and pattern guidance
+      │    Examples    │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 8. CLEAR       │ → Comprehensive action specification
+      │    Actions     │
+      └────────┬────────┘
+               ↓
+      ┌─────────────────┐
+      │ 9. CLEAR       │ → Role definition and execution
+      │    Role        │
+      └─────────────────┘
+    </assembly_preview>
+
+    <context_budget>
+      Estimated tokens: ~25,000
+      - SOAR strategic framework: 8,000
+      - CLEAR comprehensive framework: 10,000
+      - Framework integration: 3,000
+      - PRD generation with frameworks: 2,000
+      - Session setup and execution: 2,000
+    </context_budget>
+  </prompt_construction>
+
+  <runtime_visualization>
+    <execution_trace>
+      [00:00] ▶️ START: /feature "User notifications"
+      [00:15] 🎯 SOAR SITUATION: Business context and user needs analyzed
+      [00:30] 📊 SOAR OBJECTIVES: Strategic goals and success metrics defined
+      [00:45] 📋 SOAR ACTIONS: Strategic development phases planned
+      [01:00] 🎯 SOAR RESULTS: Expected outcomes and measurement framework set
+      [01:15] 🌐 CLEAR CONTEXT: Comprehensive technical and business context analyzed
+      [01:30] ⚠️ CLEAR LIMITATIONS: Constraints and technical boundaries identified
+      [01:45] 📚 CLEAR EXAMPLES: Implementation patterns and best practices selected
+      [02:00] 🚀 CLEAR ACTIONS: Strategic and technical integration completed
+      [02:15] 👤 CLEAR ROLE: Expert role and execution approach optimized
+      [02:30] 📋 PRD: SOAR/CLEAR integrated comprehensive requirements generated
+      [02:45] 🎯 SESSION: GitHub issue with strategic context tracking
+      [03:00] ✅ COMPLETE: Strategic feature development ready for execution
+    </execution_trace>
+  </runtime_visualization>
+
+  <claude_4_interpretation>
+    <parsing_behavior>
+      1. Reads SOAR/CLEAR framework integrated checkpoint structure sequentially
+      2. Executes critical_thinking questions with strategic and comprehensive analysis internally
+      3. Formats output according to framework-aligned output_format specifications
+      4. Validates against SOAR/CLEAR framework compliance and enforcement rules before proceeding
+      5. Applies parallel execution optimization with framework coordination where possible
+      6. Integrates framework selection intelligence for strategic and technical optimization
+    </parsing_behavior>
+
+    <decision_points>
+      - SOAR framework strategic analysis guides business and objective decision-making
+      - CLEAR framework comprehensive analysis guides technical and implementation decisions
+      - Checkpoint failures trigger framework-aware enforcement and strategic reassessment
+      - Module selection based on framework requirements and contextual conditions
+      - Parallel execution optimized for framework-coordinated independent operations
+      - Quality gate validation at completion boundaries with strategic and technical criteria
+      - Error recovery through framework-aware graceful degradation paths
+      - Framework selection intelligence guides strategic optimization decisions
+    </decision_points>
+  </claude_4_interpretation>
+
 </command>
 ```
-
 ────────────────────────────────────────────────────────────────────────────────
 
 ## Full Autonomy Directive

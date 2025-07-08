@@ -1,8 +1,8 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 1.4.0   | 2025-01-08   | stable |
+| 2.0.0   | 2025-07-08   | stable |
 
-# Multi-Agent Module
+# Framework-Coordinated Multi-Agent Module with TRACE Integration
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -10,129 +10,177 @@
 <module name="multi_agent" category="patterns">
   
   <purpose>
-    Define and implement native Claude Code multi-agent patterns using Task() and Batch() for parallel execution with git worktree isolation for maximum effectiveness.
+    Define and implement native Claude Code multi-agent patterns with TRACE framework coordination using Task() and Batch() for parallel execution with git worktree isolation and framework-aware agent coordination for maximum effectiveness.
   </purpose>
+  
+  <interface_contract>
+    <inputs>
+      <required>complex_system_requirements, component_breakdown, coordination_context</required>
+      <optional>worktree_preferences, agent_specializations, integration_requirements</optional>
+    </inputs>
+    <outputs>
+      <success>coordinated_agents, worktree_isolation, integrated_system, comprehensive_testing</success>
+      <failure>coordination_failures, worktree_conflicts, integration_issues, testing_gaps</failure>
+    </outputs>
+  </interface_contract>
+  
+  <execution_pattern>
+    <claude_4_behavior>
+      WHEN invoked:
+      1. Apply TRACE framework for precise multi-agent coordination
+      2. Create GitHub session for coordination tracking
+      3. Analyze and decompose system into specialized agent responsibilities
+      4. Setup isolated git worktrees for conflict-free parallel development
+      5. Execute coordinated Task() calls with TRACE specifications and TDD enforcement
+      6. Integrate results with comprehensive testing and framework-aware validation
+    </claude_4_behavior>
+  </execution_pattern>
   
   <thinking_pattern>
     <checkpoint id="1" verify="true" enforcement="MANDATORY">
-      <action>Create GitHub session for coordination tracking FIRST</action>
+      <action>Apply TRACE framework - Define Task complexity and multi-agent requirements</action>
       <critical_thinking>
-        - Why: Central coordination hub enables deterministic agent behavior
-        - Challenge: Single session sufficient for complex multi-component work?
-        - Alternative: Multiple linked sessions for component isolation
-        - Decision: Single session with clear agent sections for traceability
+        - What are the precise task boundaries and complexity levels for multi-agent coordination?
+        - How many agents will be needed and what are their specialized responsibilities?
+        - What are the integration points and dependencies between agents?
+        - How does task decomposition align with TRACE framework precision?
+        - What coordination overhead should be expected for this complexity level?
       </critical_thinking>
-      <output_format>SESSION_CREATED: #[number] - [title]</output_format>
-      <validation>Must output session ID before proceeding</validation>
-      <enforcement>BLOCK if session creation fails - no coordination without tracking</enforcement>
+      <output_format>TRACE_TASK_DEFINITION: [complexity_level] requiring [agent_count] agents with [integration_complexity] coordination</output_format>
+      <validation>Task complexity and agent requirements clearly defined with TRACE framework</validation>
+      <enforcement>BLOCK if task analysis insufficient for multi-agent coordination planning</enforcement>
     </checkpoint>
     <checkpoint id="2" verify="true" enforcement="MANDATORY">
-      <action>Analyze components and assign specialized agents with decision precedence</action>
+      <action>Apply TRACE framework - Specify precise Requests and agent assignments</action>
       <critical_thinking>
-        - Why: Decision precedence prevents architectural conflicts
-        - Challenge: Determining optimal agent ordering for dependencies
-        - Alternative: Parallel decisions with conflict resolution
-        - Decision: Strict precedence (Security→Backend→Frontend→DevOps) for determinism
+        - What are the exact technical specifications each agent must deliver?
+        - How do agent deliverables interface with each other?
+        - What are the precise quality requirements and acceptance criteria?
+        - How will agents coordinate shared contracts and dependencies?
+        - What TRACE framework specifications apply to each agent specialization?
       </critical_thinking>
-      <output_format>AGENT_ASSIGNMENTS:
-        - Security Expert (FIRST): [responsibility] - decisions: auth_method, security_model
-        - Backend Developer (SECOND): [responsibility] - acknowledges: security decisions
-        - Frontend Developer (THIRD): [responsibility] - acknowledges: security + backend decisions
-        - DevOps Engineer (FOURTH): [responsibility] - acknowledges: all previous decisions</output_format>
-      <validation>Must establish decision precedence order and acknowledgment chain</validation>
-      <enforcement>VERIFY each agent has clear decision dependencies mapped</enforcement>
+      <output_format>TRACE_REQUEST_SPECIFICATION:
+        - [Agent1]: [precise_technical_requirements] + TRACE specifications
+        - [Agent2]: [precise_technical_requirements] + TRACE specifications
+        - [Agent3]: [precise_technical_requirements] + TRACE specifications
+        - Decision precedence: [precedence_order_with_trace_alignment]</output_format>
+      <validation>Agent requests specified with TRACE framework precision and clear integration</validation>
+      <enforcement>BLOCK if any agent request lacks TRACE framework specification</enforcement>
     </checkpoint>
     <checkpoint id="3" verify="true" enforcement="MANDATORY">
-      <action>Create git worktrees BEFORE Task() execution</action>
+      <action>Apply TRACE framework - Define Actions and create coordination session</action>
       <critical_thinking>
-        - Why: Isolated worktrees prevent merge conflicts and enable true parallelism
-        - Challenge: Worktree overhead vs benefit for small changes
-        - Alternative: Shared workspace with file locking
-        - Decision: Always use worktrees for conflict-free parallel execution
+        - What specific actions enable coordinated multi-agent execution?
+        - Why is GitHub session creation critical for TRACE framework coordination?
+        - How will session structure support precision tracking and agent coordination?
+        - What session organization optimizes agent communication and progress tracking?
+        - How does session setup align with TRACE framework action specifications?
       </critical_thinking>
-      <output_format>WORKTREES_CREATED:
-        - ../worktrees/swarm-[session]-security (PRIORITY: 1)
-        - ../worktrees/swarm-[session]-backend (PRIORITY: 2)
-        - ../worktrees/swarm-[session]-frontend (PRIORITY: 3)
-        - ../worktrees/swarm-[session]-devops (PRIORITY: 4)</output_format>
-      <validation>Must show worktree paths with decision precedence order</validation>
-      <enforcement>VERIFY worktree creation success before proceeding to Task()</enforcement>
+      <output_format>TRACE_ACTIONS_WITH_SESSION: 
+        - SESSION_CREATED: #[number] - [title] for multi-agent coordination
+        - Action sequence: [ordered_actions_list]
+        - Coordination protocol: [communication_method]
+        - WORKTREES_CREATED: [paths_with_trace_context]</output_format>
+      <validation>Must output session ID and worktree paths before agent deployment</validation>
+      <enforcement>BLOCK if session creation fails - no coordination without TRACE framework tracking</enforcement>
     </checkpoint>
     <checkpoint id="4" verify="true" enforcement="MANDATORY">
-      <action>Execute Task() calls with decision coordination protocol</action>
+      <action>Apply TRACE framework - Define Context and integration requirements</action>
       <critical_thinking>
-        - Why: Explicit decision acknowledgment prevents implementation conflicts
-        - Challenge: Balancing agent autonomy with coordination requirements
-        - Alternative: Post-hoc conflict resolution
-        - Decision: Upfront acknowledgment for deterministic outcomes
+        - What is the technical context and environment for multi-agent coordination?
+        - What shared dependencies, constraints, and integration points must agents consider?
+        - How do agents maintain context awareness while working in isolation?
+        - What context synchronization is needed between agent worktrees?
+        - How does TRACE framework context specification improve coordination quality?
       </critical_thinking>
-      <output_format>TASK_EXECUTION_WITH_DECISIONS:
-        Task("Security Expert", "Document critical decisions FIRST")
-        Task("Backend Developer", "Implement acknowledging security decisions")
-        Task("Frontend Developer", "Build components acknowledging backend + security")
-        Task("DevOps Engineer", "Deploy acknowledging all architectural decisions")</output_format>
-      <validation>All Task() calls must include decision acknowledgment requirements</validation>
-      <enforcement>VERIFY each Task() includes explicit decision dependencies</enforcement>
-      <context_transfer>
-        - Decision registry file path: .claude/swarm-decisions/session-[id].json
-        - Each agent MUST read previous decisions before implementation
-        - Context includes: decisions, rationales, technical constraints
-      </context_transfer>
+      <output_format>TRACE_CONTEXT_DEFINITION:
+        - Technical environment: [stack_requirements]
+        - Shared constraints: [limitation_list]
+        - Integration context: [coordination_requirements]
+        - Worktree context: [isolation_specifications]</output_format>
+      <validation>Context comprehensively defined for optimal agent coordination</validation>
+      <enforcement>BLOCK if context specification insufficient for agent coordination planning</enforcement>
     </checkpoint>
     <checkpoint id="5" verify="true" enforcement="MANDATORY">
-      <action>Verify decision registry populated and acknowledged</action>
+      <action>Apply TRACE framework - Set Expectations and execute coordinated Task() calls</action>
       <critical_thinking>
-        - Why: Registry verification ensures no orphaned decisions
-        - Challenge: Detecting implicit vs explicit acknowledgments
-        - Alternative: Automated decision propagation
-        - Decision: Explicit acknowledgment for audit trail
+        - What are the precise quality expectations and deliverable specifications?
+        - How will TRACE framework expectations be validated across all agents?
+        - How do expectation definitions guide agent coordination and final validation?
+        - What Task() execution patterns align with TRACE framework specifications?
+        - How do expectations integrate with decision coordination protocols?
       </critical_thinking>
-      <output_format>DECISION_REGISTRY_STATUS:
-        - Security decisions: [count] documented, [count] acknowledged
-        - Backend decisions: [count] documented, [count] acknowledged
-        - Frontend decisions: [count] documented, [count] acknowledged
-        - Integration verified: [YES/NO]</output_format>
-      <validation>Must confirm all critical decisions documented and acknowledged</validation>
-      <enforcement>BLOCK merge if any critical decision lacks acknowledgment</enforcement>
-      <decision_verification>
-        - All IMMUTABLE decisions must be fully acknowledged
-        - Decision conflicts must be resolved before proceeding
-        - Orphaned decisions indicate coordination failure
-      </decision_verification>
+      <output_format>TRACE_EXPECTATIONS_WITH_EXECUTION:
+        - Quality expectations: [deliverable_standards]
+        - Validation criteria: [success_metrics]
+        - TASK_EXECUTION_WITH_TRACE:
+          Task("[Agent1]", "TRACE precision: [context] → [action] → [expectation]")
+          Task("[Agent2]", "TRACE precision: [context] → [action] → [expectation]")
+          Task("[Agent3]", "TRACE precision: [context] → [action] → [expectation]")</output_format>
+      <validation>Expectations defined and Task() calls include TRACE framework specifications</validation>
+      <enforcement>VERIFY each Task() includes TRACE-aligned specifications and coordination requirements</enforcement>
     </checkpoint>
-    <checkpoint id="6" verify="optional" enforcement="CONDITIONAL">
-      <action>Apply 4-tier error recovery if failures occur</action>
+    <checkpoint id="6" verify="true" enforcement="MANDATORY">
+      <action>Verify TRACE framework compliance and agent coordination success</action>
       <critical_thinking>
-        - Why: Graceful degradation maintains system resilience
-        - Challenge: Determining recovery trigger thresholds
-        - Alternative: Fail-fast with manual intervention
-        - Decision: Automatic recovery for predictable failure modes
+        - Did each agent fulfill TRACE framework expectations precisely?
+        - Are component-level deliverables meeting TRACE specification criteria?
+        - How do agent deliverables align with original TRACE context and expectations?
+        - Are integration points properly coordinated according to TRACE framework?
+        - Is quality validation meeting TRACE framework precision requirements?
       </critical_thinking>
-      <output_format>RECOVERY_STATUS: [NONE|TIER_1|TIER_2|TIER_3|TIER_4]</output_format>
-      <validation>Only required if errors detected</validation>
-      <enforcement>ESCALATE to next tier if current tier fails</enforcement>
+      <output_format>TRACE_COMPLIANCE_VALIDATION:
+        - [Agent1]: TRACE COMPLETE - Expectations met: [criteria] - Integration: [status]
+        - [Agent2]: TRACE COMPLETE - Expectations met: [criteria] - Integration: [status]
+        - [Agent3]: TRACE COMPLETE - Expectations met: [criteria] - Integration: [status]
+        - Decision registry: [populated_and_acknowledged]</output_format>
+      <validation>Must confirm TRACE framework compliance AND deliverable completion for all agents</validation>
+      <enforcement>BLOCK integration if any agent fails TRACE expectations or coordination requirements</enforcement>
     </checkpoint>
-    <checkpoint id="7" verify="true" enforcement="MANDATORY">
-      <action>Merge agent work with decision consistency verification</action>
+    <checkpoint id="7" verify="optional" enforcement="CONDITIONAL">
+      <action>Apply TRACE-aware error recovery if failures occur</action>
       <critical_thinking>
-        - Why: Final verification prevents inconsistent system state
-        - Challenge: Detecting subtle decision violations
-        - Alternative: Runtime decision validation
-        - Decision: Compile-time verification for early detection
+        - What type of failure occurred and how does it relate to TRACE framework compliance?
+        - Can we recover while maintaining TRACE precision and coordination integrity?
+        - Should we restart individual agents or reassess TRACE framework application?
+        - How to preserve TRACE-compliant work during recovery?
+        - Does failure indicate TRACE framework misapplication or execution issues?
       </critical_thinking>
-      <output_format>MERGE_WITH_DECISION_VERIFICATION:
+      <output_format>TRACE_RECOVERY_STATUS: [NONE|TIER_1|TIER_2|TIER_3|TIER_4] - TRACE Framework: [maintained|reassess]</output_format>
+      <validation>Only required if errors detected with TRACE framework assessment</validation>
+      <enforcement>ESCALATE to next tier if current tier fails, reassess TRACE if systematic failure</enforcement>
+    </checkpoint>
+  </thinking_pattern>
+  
+    <checkpoint id="8" verify="true" enforcement="MANDATORY">
+      <action>Merge agent work with TRACE validation and comprehensive integration</action>
+      <critical_thinking>
+        - Do components integrate according to TRACE framework context specifications?
+        - Are there interface mismatches or TRACE expectation violations?
+        - Do end-to-end scenarios meet original TRACE framework requirements?
+        - Are performance criteria from TRACE expectations satisfied?
+        - How does integration quality compare to TRACE framework standards?
+      </critical_thinking>
+      <output_format>TRACE_INTEGRATION_VALIDATION:
+        - TRACE Context Compliance: [PASS/FAIL] - [context_validation_details]
+        - TRACE Expectation Fulfillment: [PASS/FAIL] - [expectation_details]  
         - Decision consistency: [VERIFIED/CONFLICTS]
         - Integration success: [YES/NO]
         - Worktrees cleaned: [count]</output_format>
-      <validation>Must verify decision consistency before merge completion</validation>
-      <enforcement>ROLLBACK if decision conflicts detected during merge</enforcement>
-      <final_verification>
-        - Cross-agent decision compatibility matrix
-        - Implementation matches documented decisions
-        - No orphaned or conflicting decisions remain
-      </final_verification>
+      <validation>All TRACE-guided integration tests must pass before merge</validation>
+      <enforcement>BLOCK merge if integration fails TRACE framework validation - must resolve conflicts</enforcement>
     </checkpoint>
   </thinking_pattern>
+  
+  <trace_framework_integration enforcement="MANDATORY">
+    <task_definition>Define precise task complexity and multi-agent coordination requirements</task_definition>
+    <request_specification>Specify exact technical requirements and agent deliverables with precision</request_specification>
+    <action_coordination>Orchestrate agents through precise action sequences and coordination protocols</action_coordination>
+    <context_management>Maintain comprehensive context awareness across isolated agent worktrees</context_management>
+    <expectation_validation>Validate agent deliverables against TRACE framework precision standards</expectation_validation>
+    <framework_compliance>Ensure all coordination meets TRACE framework quality and precision criteria</framework_compliance>
+    <validation>Reference frameworks/trace.md for complete TRACE framework implementation in multi-agent scenarios</validation>
+  </trace_framework_integration>
   
   <trigger_conditions>
     <condition type="automatic">Complex tasks requiring 3+ components or specialized expertise</condition>
