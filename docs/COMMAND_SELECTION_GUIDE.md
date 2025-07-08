@@ -2,15 +2,13 @@
 |---------|--------------|--------|
 | 1.0.0   | 2025-07-07   | stable |
 
-# Command Selection Guide - Stop the Confusion!
 
-────────────────────────────────────────────────────────────────────────────────
+# Command Selection Guide - Stop the Confusion!
 
 > **TL;DR**: `/docs` = CREATE documentation | `/query` = RESEARCH without changes
 
-────────────────────────────────────────────────────────────────────────────────
 
-## 🎯 The Key Difference
+# 🎯 The Key Difference
 
 ```xml
 <critical_distinction>
@@ -28,11 +26,11 @@
 </critical_distinction>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## 🚨 When Users Get Confused
+# 🚨 When Users Get Confused
 
-### ❌ Common Confusion Scenarios
+
+# ❌ Common Confusion Scenarios
 
 **Scenario 1**: "I want to understand how authentication works"
 - **Wrong**: `/docs "explain authentication"` 
@@ -49,9 +47,8 @@
   - `/docs search "testing"` (if you might update docs)
   - `/query "testing documentation"` (if just researching)
 
-────────────────────────────────────────────────────────────────────────────────
 
-## 📊 Quick Decision Matrix
+# 📊 Quick Decision Matrix
 
 | I want to... | Use | Because |
 |---------------|-----|---------|
@@ -64,121 +61,123 @@
 | **Research best practices** | `/query` | Information gathering |
 | **Generate changelog** | `/docs` | Creates documentation file |
 
-────────────────────────────────────────────────────────────────────────────────
 
-## 🎯 Command Selection Flowchart
+# 🎯 Command Selection Flowchart
 
 ```
 Start: "I need information about..."
              │
              ▼
-    ┌─────────────────────────┐
+    ┌┐
     │   Do you want to        │
     │   CREATE/UPDATE         │
     │   documentation?        │
-    └─────────┬───────────────┘
+    └┬┘
               │
-        ┌─────▼─────┐  
+        ┌▼┐  
         │    YES    │ 
-        └─────┬─────┘  
+        └┬┘  
               │
               ▼
-        ┌─────────────┐
+        ┌┐
         │   /docs     │ ← Creates files
-        └─────────────┘
+        └┘
               
-        ┌─────▼─────┐  
+        ┌▼┐  
         │     NO    │ 
-        └─────┬─────┘  
+        └┬┘  
               │
               ▼
-        ┌─────────────┐
+        ┌┐
         │   /query    │ ← Research only
-        └─────────────┘
+        └┘
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## 🔍 Detailed Use Cases
+# 🔍 Detailed Use Cases
 
-### `/docs` - Documentation Operations
+
+# `/docs` - Documentation Operations
 
 ```xml
 <docs_use_cases>
-  <case name="Create New Docs">
+  <case name = "Create New Docs">
     <example>/docs generate "API Reference"</example>
     <result>Creates structured API documentation file</result>
   </case>
   
-  <case name="Update Existing Docs">
+  <case name = "Update Existing Docs">
     <example>/docs "update getting started guide"</example>
     <result>Modifies existing documentation</result>
   </case>
   
-  <case name="Validate Documentation">
+  <case name = "Validate Documentation">
     <example>/docs validate</example>
     <result>Checks all docs for consistency and completeness</result>
   </case>
   
-  <case name="Search for Doc Updates">
+  <case name = "Search for Doc Updates">
     <example>/docs search "authentication"</example>
     <result>Finds docs that may need updates</result>
   </case>
 </docs_use_cases>
 ```
 
-### `/query` - Research Operations
+
+# `/query` - Research Operations
 
 ```xml
 <query_use_cases>
-  <case name="Code Investigation">
+  <case name = "Code Investigation">
     <example>/query "how does user authentication work?"</example>
     <result>Analysis of auth implementation with code examples</result>
   </case>
   
-  <case name="Pattern Discovery">
+  <case name = "Pattern Discovery">
     <example>/query "find all repository pattern uses"</example>
     <result>Report of pattern usage across codebase</result>
   </case>
   
-  <case name="Security Analysis">
+  <case name = "Security Analysis">
     <example>/query "identify potential security issues"</example>
     <result>Security assessment without modifying code</result>
   </case>
   
-  <case name="Architecture Understanding">
+  <case name = "Architecture Understanding">
     <example>/query "explain the data flow"</example>
     <result>Comprehensive analysis of system architecture</result>
   </case>
 </query_use_cases>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## ⚡ Quick Reference
+# ⚡ Quick Reference
 
-### Need Documentation? → `/docs`
+
+# Need Documentation? → `/docs`
 - Creating guides, references, or specs
 - Updating existing documentation
 - Generating structured content
 - **Result**: New/modified files in `/docs`
 
-### Need Understanding? → `/query`  
+
+# Need Understanding? → `/query`  
 - Learning how code works
 - Finding implementation details
 - Investigating issues or patterns
 - **Result**: Analysis report, no file changes
 
-### Still Unsure? → `/auto`
+
+# Still Unsure? → `/auto`
 - Let the framework decide for you
 - Analyzes your request and routes correctly
 - **Example**: `/auto "I need to understand the auth system"`
 
-────────────────────────────────────────────────────────────────────────────────
 
-## 🛡️ Error Prevention
+# 🛡️ Error Prevention
 
-### Watch Out For These Mistakes
+
+# Watch Out For These Mistakes
 
 1. **Using `/docs` for research**
    - Creates unnecessary documentation files
@@ -194,32 +193,30 @@ Start: "I need information about..."
    - "Create docs about how auth works" → Use `/docs`
    - "How does auth work?" → Use `/query`
 
-────────────────────────────────────────────────────────────────────────────────
 
-## 📈 Success Indicators
+# 📈 Success Indicators
 
-### You're Using `/docs` Correctly When:
+
+# You're Using `/docs` Correctly When:
 - ✅ New documentation files appear in `/docs`
 - ✅ Existing docs get updated with new information
 - ✅ Documentation follows framework standards
 - ✅ Documentation index gets updated automatically
 
-### You're Using `/query` Correctly When:
+
+# You're Using `/query` Correctly When:
 - ✅ You get detailed analysis without file creation
 - ✅ Code examples are included in responses
 - ✅ No new files are created
 - ✅ You understand the codebase better
 
-────────────────────────────────────────────────────────────────────────────────
 
-## 🎓 Pro Tips
+# 🎓 Pro Tips
 
 1. **When in doubt**: Start with `/query` to understand, then use `/docs` if you need to document
 2. **Research first**: Use `/query` to gather information, then `/docs` to create comprehensive documentation
 3. **Use `/auto`**: When you're really unsure, let the intelligent routing decide
 4. **Documentation workflow**: `/query` → analyze → `/docs` → create
 5. **Read-only rule**: If you don't want ANY files modified, always use `/query`
-
-────────────────────────────────────────────────────────────────────────────────
 
 **Remember**: Commands have single, clear purposes. Following this guide eliminates confusion and ensures you get exactly what you need!

@@ -2,17 +2,16 @@
 |---------|--------------|--------|
 | 3.0.0   | 2025-07-08   | stable |
 
-# Command Overview - Claude Code Framework 3.0.0
 
-────────────────────────────────────────────────────────────────────────────────
+# Command Overview - Claude Code Framework 3.0.0
 
 > **Framework Enhancement**: Now powered by the **Module Runtime Engine** with universal quality gates and comprehensive TDD enforcement!
 
-────────────────────────────────────────────────────────────────────────────────
 
-## What's New in 3.0.0
+# What's New in 3.0.0
 
-### Revolutionary Meta-Prompting Capabilities
+
+# Revolutionary Meta-Prompting Capabilities
 
 All commands now benefit from the revolutionary meta-prompting system that provides:
 
@@ -27,7 +26,8 @@ All commands now benefit from the revolutionary meta-prompting system that provi
 </meta_prompting_enhancements>
 ```
 
-### Framework 3.0 Meta-Prompting Capabilities
+
+# Framework 3.0 Meta-Prompting Capabilities
 
 | Enhancement | Description | Impact |
 |-------------|-------------|--------|
@@ -38,13 +38,14 @@ All commands now benefit from the revolutionary meta-prompting system that provi
 | **Human Oversight** | Safety boundaries with rollback capabilities | Maintains control while enabling evolution |
 | **Performance Learning** | Real-time efficiency improvements | Faster execution through adaptive optimization |
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Core Commands
+# Core Commands
 
-### Primary Development Commands
 
-#### `/task` - Single Component Development
+# Primary Development Commands
+
+
+# `/task` - Single Component Development
 **Purpose**: Focused development work with strict TDD enforcement
 
 ```bash
@@ -65,7 +66,8 @@ All commands now benefit from the revolutionary meta-prompting system that provi
 
 ---
 
-#### `/feature` - Complete Feature Development  
+
+# `/feature` - Complete Feature Development  
 **Purpose**: Autonomous feature development with PRD generation and MVP planning
 
 ```bash
@@ -86,7 +88,8 @@ All commands now benefit from the revolutionary meta-prompting system that provi
 
 ---
 
-#### `/swarm` - Multi-Agent Coordination
+
+# `/swarm` - Multi-Agent Coordination
 **Purpose**: Complex multi-component system changes with parallel development
 
 ```bash
@@ -107,9 +110,11 @@ All commands now benefit from the revolutionary meta-prompting system that provi
 
 ---
 
-### Analysis and Research Commands
 
-#### `/query` - Research and Analysis
+# Analysis and Research Commands
+
+
+# `/query` - Research and Analysis
 **Purpose**: Read-only analysis and understanding with test-aware research
 
 ```bash
@@ -131,7 +136,8 @@ All commands now benefit from the revolutionary meta-prompting system that provi
 
 ---
 
-#### `/docs` - Documentation Gateway
+
+# `/docs` - Documentation Gateway
 **Purpose**: All documentation creation and management with strict gateway enforcement
 
 ```bash
@@ -152,9 +158,11 @@ All commands now benefit from the revolutionary meta-prompting system that provi
 
 ---
 
-### Intelligence and Management Commands
 
-#### `/auto` - Intelligent Routing
+# Intelligence and Management Commands
+
+
+# `/auto` - Intelligent Routing
 **Purpose**: TDD-aware intelligent routing with complexity analysis
 
 ```bash
@@ -175,7 +183,8 @@ All commands now benefit from the revolutionary meta-prompting system that provi
 
 ---
 
-#### `/session` - Session Management
+
+# `/session` - Session Management
 **Purpose**: GitHub issue tracking with TDD progress monitoring
 
 ```bash
@@ -196,7 +205,8 @@ All commands now benefit from the revolutionary meta-prompting system that provi
 
 ---
 
-#### `/protocol` - Production Standards
+
+# `/protocol` - Production Standards
 **Purpose**: Strictest enforcement with comprehensive compliance validation
 
 ```bash
@@ -215,11 +225,11 @@ All commands now benefit from the revolutionary meta-prompting system that provi
 - Compliance-required development
 - Maximum quality assurance
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Command Selection Decision Tree
+# Command Selection Decision Tree
 
-### Quick Decision Matrix
+
+# Quick Decision Matrix
 
 | Scenario | Command | Reasoning |
 |----------|---------|-----------|
@@ -232,53 +242,54 @@ All commands now benefit from the revolutionary meta-prompting system that provi
 | **"Track complex project"** | `/session` | GitHub issue management |
 | **"Payment processing"** | `/protocol` | Production-critical with compliance |
 
-### Decision Flow
+
+# Decision Flow
 
 ```
 Request Analysis
       │
       ▼
-┌─────────────────┐
-│ Single file +   │ YES  ┌─────────┐
+┌┐
+│ Single file +   │ YES  ┌┐
 │ <50 lines?      │ ──→  │ /task   │
-└─────────────────┘      └─────────┘
+└┘      └┘
       │ NO
       ▼
-┌─────────────────┐
-│ Multiple files + │ YES  ┌─────────┐
+┌┐
+│ Multiple files + │ YES  ┌┐
 │ clear spec?      │ ──→  │ /feature│
-└─────────────────┘      └─────────┘
+└┘      └┘
       │ NO
       ▼
-┌─────────────────┐
-│ System-wide     │ YES  ┌─────────┐
+┌┐
+│ System-wide     │ YES  ┌┐
 │ changes?        │ ──→  │ /swarm  │
-└─────────────────┘      └─────────┘
+└┘      └┘
       │ NO
       ▼
-┌─────────────────┐
-│ Research/       │ YES  ┌─────────┐
+┌┐
+│ Research/       │ YES  ┌┐
 │ understand?     │ ──→  │ /query  │
-└─────────────────┘      └─────────┘
+└┘      └┘
       │ NO
       ▼
-┌─────────────────┐
-│ Documentation?  │ YES  ┌─────────┐
+┌┐
+│ Documentation?  │ YES  ┌┐
 │                 │ ──→  │ /docs   │
-└─────────────────┘      └─────────┘
+└┘      └┘
       │ NO
       ▼
-┌─────────────────┐
-│ Uncertain?      │ YES  ┌─────────┐
+┌┐
+│ Uncertain?      │ YES  ┌┐
 │                 │ ──→  │ /auto   │
-└─────────────────┘      └─────────┘
+└┘      └┘
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Quality Gates and TDD Enforcement
+# Quality Gates and TDD Enforcement
 
-### Universal Quality Gates
+
+# Universal Quality Gates
 
 All commands now enforce these quality standards:
 
@@ -316,7 +327,8 @@ All commands now enforce these quality standards:
 </quality_gate_categories>
 ```
 
-### TDD Enforcement Matrix
+
+# TDD Enforcement Matrix
 
 | Command | TDD Level | Requirements | Blocking Conditions |
 |---------|-----------|--------------|-------------------|
@@ -329,7 +341,8 @@ All commands now enforce these quality standards:
 | `/session` | **Progress** | TDD progress tracking, methodology docs | Incomplete tracking |
 | `/auto` | **Routing** | Routes to appropriate TDD enforcement | Routes to non-TDD commands for code |
 
-### Blocking Enforcement
+
+# Blocking Enforcement
 
 The runtime engine will **HALT** execution for these violations:
 
@@ -341,11 +354,11 @@ The runtime engine will **HALT** execution for these violations:
 - ❌ **Integration failures**: Multi-component coordination problems
 - ❌ **Documentation violations**: Missing TDD methodology references
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Performance Optimizations
+# Performance Optimizations
 
-### Parallel Execution Benefits
+
+# Parallel Execution Benefits
 
 The Module Runtime Engine provides **70% performance improvement** through:
 
@@ -359,7 +372,8 @@ The Module Runtime Engine provides **70% performance improvement** through:
 </optimization_features>
 ```
 
-### Performance Targets
+
+# Performance Targets
 
 | Operation | Target Time | 3.0.0 Improvement |
 |-----------|-------------|------------------|
@@ -369,11 +383,11 @@ The Module Runtime Engine provides **70% performance improvement** through:
 | TDD cycle completion | < 5 minutes | Learning-optimized workflow |
 | Workflow adaptation | Real-time | Continuous improvement |
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Error Handling and Recovery
+# Error Handling and Recovery
 
-### Enhanced Error Recovery
+
+# Enhanced Error Recovery
 
 The runtime engine provides comprehensive error handling:
 
@@ -395,9 +409,11 @@ The runtime engine provides comprehensive error handling:
 </error_recovery_protocols>
 ```
 
-### Common Error Scenarios and Solutions
 
-#### TDD Violation: "Implementation before tests"
+# Common Error Scenarios and Solutions
+
+
+# TDD Violation: "Implementation before tests"
 **Solution:**
 ```bash
 1. Delete implementation code
@@ -406,7 +422,8 @@ The runtime engine provides comprehensive error handling:
 4. Restart with proper RED-GREEN-REFACTOR cycle
 ```
 
-#### Quality Gate Failure: "Coverage below 90%"
+
+# Quality Gate Failure: "Coverage below 90%"
 **Solution:**
 ```bash
 1. Identify uncovered code paths
@@ -415,7 +432,8 @@ The runtime engine provides comprehensive error handling:
 4. Re-run coverage analysis and proceed when threshold met
 ```
 
-#### Module Dependency Resolution Failed
+
+# Module Dependency Resolution Failed
 **Solution:**
 ```bash
 1. Check module exists in .claude/modules/
@@ -424,11 +442,11 @@ The runtime engine provides comprehensive error handling:
 4. Use /protocol for enhanced validation
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Migration from Previous Versions
+# Migration from Previous Versions
 
-### Upgrading from 2.6.x
+
+# Upgrading from 2.6.x
 
 **Backward Compatibility:**
 - All existing commands continue to work
@@ -450,7 +468,8 @@ The runtime engine provides comprehensive error handling:
 3. Use adaptive routing for smarter command selection
 4. Benefit from continuous learning and evolution
 
-### Framework Evolution
+
+# Framework Evolution
 
 | Version | Key Enhancement | Impact |
 |---------|----------------|--------|
@@ -460,11 +479,11 @@ The runtime engine provides comprehensive error handling:
 | **2.2.x** | Module architecture | Modular composition framework |
 | **2.1.x** | Quality foundation | Basic quality standards |
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Best Practices for 3.0.0
+# Best Practices for 3.0.0
 
-### Leveraging Meta-Prompting Features
+
+# Leveraging Meta-Prompting Features
 
 1. **Experience Self-Improvement**
    ```bash
@@ -494,7 +513,8 @@ The runtime engine provides comprehensive error handling:
    # Human oversight ensures safe evolution
    ```
 
-### Command Selection Strategies
+
+# Command Selection Strategies
 
 1. **Start with `/auto`** for intelligent routing
 2. **Use `/query`** for understanding before development
@@ -503,47 +523,55 @@ The runtime engine provides comprehensive error handling:
 5. **Apply `/swarm`** for complex, multi-component changes
 6. **Enforce with `/protocol`** for production-critical work
 
-### Session Management
+
+# Session Management
 
 ```bash
+
 # For complex work requiring tracking
 /session "E-commerce platform overhaul"
+
 # Creates GitHub issue with comprehensive tracking
+
 # Links all related artifacts and progress
+
 # Maintains TDD methodology documentation
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Related Documentation
+# Related Documentation
 
-### Core Framework
+
+# Core Framework
 - **[CLAUDE.md](../../CLAUDE.md)** - Complete framework specification with 3.0.0 meta-prompting capabilities
 - **[Module Runtime Engine User Guide](../framework/module-runtime-engine.md)** - Comprehensive practical guide
 - **[Command Selection Guide](../COMMAND_SELECTION_GUIDE.md)** - Stop confusion between commands
 
-### Runtime Engine Details
+
+# Runtime Engine Details
 - **[Module Composition Framework](../../.claude/modules/patterns/module-composition-framework.md)** - Technical architecture
 - **[Universal Quality Gates](../../.claude/modules/quality/universal-quality-gates.md)** - Gate specifications
 - **[Development Standards](../framework/development-standards.md)** - TDD methodology and critical thinking
 - **[Thinking Pattern Template](../../.claude/modules/patterns/thinking-pattern-template.md)** - Standardized patterns
 
-### Development Guides
+
+# Development Guides
 - **[Getting Started](../GETTING_STARTED.md)** - Framework introduction
 - **[Quality and Production Standards](../framework/quality-and-production-standards.md)** - Quality requirements
 - **[Development Standards](../framework/development-standards.md)** - TDD and critical thinking requirements
 - **[Feature Development Examples](../framework/feature-development-examples.md)** - Real-world scenarios
 
-### Migration and Integration
+
+# Migration and Integration
 - **[Documentation Index](../DOCUMENTATION_INDEX.md)** - Complete documentation map
 - **[GitHub Integration Guide](../framework/claude-code-integration.md)** - Issue tracking setup
 - **[CLAUDE 4 Optimization Guide](../CLAUDE_4_PROMPT_GUIDE.md)** - Advanced optimization patterns
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Quick Reference
+# Quick Reference
 
-### The Essential Commands
+
+# The Essential Commands
 ```bash
 /auto "..."     # Smart routing (use when unsure)
 /task "..."     # Single component with TDD
@@ -555,29 +583,28 @@ The runtime engine provides comprehensive error handling:
 /protocol "..." # Maximum quality enforcement
 ```
 
-### Key Principles
+
+# Key Principles
 - **TDD First**: All development enforces RED-GREEN-REFACTOR
 - **Quality Gates**: Universal validation prevents errors
 - **Critical Thinking**: 30-second analysis before action
 - **Parallel Execution**: 70% performance improvement
 - **Session Tracking**: GitHub integration for complex work
 
-### Success Indicators
+
+# Success Indicators
 - ✅ Tests written before implementation
 - ✅ Quality gates pass without manual intervention
 - ✅ Commands complete faster through parallel execution
 - ✅ GitHub issues track complex work automatically
 - ✅ Error recovery handles failures gracefully
 
-────────────────────────────────────────────────────────────────────────────────
 
-## See Also
+# See Also
 
 - **[Documentation Index](../DOCUMENTATION_INDEX.md)** - Complete documentation map with 3.0.0 enhancements
 - **[Command Selection Guide](../COMMAND_SELECTION_GUIDE.md)** - Quick decision matrix for choosing commands
 - **[Getting Started](../GETTING_STARTED.md)** - Framework introduction and basic usage
 - **[Module Runtime Engine User Guide](../framework/module-runtime-engine.md)** - Detailed technical guide
-
-────────────────────────────────────────────────────────────────────────────────
 
 **Framework Version 3.0.0**: *Revolutionary meta-prompting capabilities with self-improving adaptive intelligence, predictive optimization, and human-supervised evolution for autonomous development workflows.*

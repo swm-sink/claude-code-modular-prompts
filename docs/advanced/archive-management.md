@@ -2,21 +2,18 @@
 |---------|--------------|--------|
 | 1.0.0   | 2025-07-08   | stable |
 
-# Archive Management Procedures
 
-────────────────────────────────────────────────────────────────────────────────
+# Archive Management Procedures
 
 **PURPOSE**: Manage deprecated code and documentation with smart dependency analysis
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Overview
+# Overview
 
 The Claude Code framework's enhanced archive management system provides intelligent handling of deprecated modules, outdated documentation, and completed experiments while ensuring no active dependencies are broken.
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Archive Structure
+# Archive Structure
 
 ```
 /archive/
@@ -27,15 +24,16 @@ The Claude Code framework's enhanced archive management system provides intellig
 └── documentation/    # Superseded documentation
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Archival Process
+# Archival Process
 
-### Step 1: Smart Dependency Analysis
+
+# Step 1: Smart Dependency Analysis
 
 Before archiving any file, the system performs comprehensive analysis:
 
 ```bash
+
 # Automatic dependency scanning
 - Recursive dependency scanning across all file types
 - Cross-reference analysis including comments
@@ -43,26 +41,28 @@ Before archiving any file, the system performs comprehensive analysis:
 - Dynamic reference detection (eval, require, etc.)
 ```
 
-### Step 2: Graduated Archival
+
+# Step 2: Graduated Archival
 
 ```xml
 <archival_phases>
-  <phase name="deprecation">
+  <phase name = "deprecation">
     Mark with warning notices
     Update dependent files
   </phase>
-  <phase name="staging">
+  <phase name = "staging">
     Move to staging area
     Validation period (7 days)
   </phase>
-  <phase name="archival">
+  <phase name = "archival">
     Final move to /archive
     Complete audit trail
   </phase>
 </archival_phases>
 ```
 
-### Step 3: Validation
+
+# Step 3: Validation
 
 All archival operations undergo rigorous validation:
 - Full test suite execution
@@ -70,11 +70,11 @@ All archival operations undergo rigorous validation:
 - Documentation link verification
 - Performance regression testing
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Archival Triggers
+# Archival Triggers
 
-### Automatic Triggers
+
+# Automatic Triggers
 
 ```xml
 <triggers>
@@ -85,21 +85,23 @@ All archival operations undergo rigorous validation:
 </triggers>
 ```
 
-### Manual Archival
+
+# Manual Archival
 
 For immediate archival needs:
 
 ```bash
+
 # Archive a specific module
 /task archive .claude/modules/old-module.md
+
 
 # Archive with validation
 /task archive --validate .claude/commands/deprecated-command.md
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Retention Policies
+# Retention Policies
 
 ```xml
 <retention_periods>
@@ -110,27 +112,31 @@ For immediate archival needs:
 </retention_periods>
 ```
 
-### Exceptions
+
+# Exceptions
 
 - Security-related code: Permanent retention
 - Core framework versions: Permanent retention
 - User data: Follow data protection regulations
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Recovery Procedures
+# Recovery Procedures
 
-### Quick Restoration
+
+# Quick Restoration
 
 ```bash
+
 # Restore archived file
 /task restore /archive/modules/useful-module.md
+
 
 # Restore with dependencies
 /task restore --with-deps /archive/modules/feature-set.md
 ```
 
-### Selective Recovery
+
+# Selective Recovery
 
 ```xml
 <recovery_options>
@@ -141,18 +147,19 @@ For immediate archival needs:
 </recovery_options>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Best Practices
+# Best Practices
 
-### Before Archiving
+
+# Before Archiving
 
 1. **Run dependency check**: Ensure no active code depends on the file
 2. **Update references**: Modify any references to point to alternatives
 3. **Document reason**: Add archival reason to audit log
 4. **Test thoroughly**: Run full test suite after archival
 
-### Archive Organization
+
+# Archive Organization
 
 ```xml
 <organization_rules>
@@ -163,11 +170,11 @@ For immediate archival needs:
 </organization_rules>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Monitoring and Metrics
+# Monitoring and Metrics
 
-### Archive Health Metrics
+
+# Archive Health Metrics
 
 ```xml
 <metrics>
@@ -178,7 +185,8 @@ For immediate archival needs:
 </metrics>
 ```
 
-### Automated Monitoring
+
+# Automated Monitoring
 
 The system automatically tracks:
 - Archive growth patterns
@@ -186,13 +194,14 @@ The system automatically tracks:
 - Recovery request patterns
 - Broken reference incidents
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Common Scenarios
+# Common Scenarios
 
-### Scenario 1: Module Deprecation
+
+# Scenario 1: Module Deprecation
 
 ```bash
+
 # Old authentication module replaced by new one
 1. Mark old module as deprecated
 2. Update all imports to new module
@@ -200,9 +209,11 @@ The system automatically tracks:
 4. Move to archive after grace period
 ```
 
-### Scenario 2: Documentation Updates
+
+# Scenario 2: Documentation Updates
 
 ```bash
+
 # Framework 2.3 docs superseded by 2.4
 1. Create new documentation
 2. Add forwarding notes in old docs
@@ -210,9 +221,11 @@ The system automatically tracks:
 4. Maintain redirects for URLs
 ```
 
-### Scenario 3: Failed Experiments
+
+# Scenario 3: Failed Experiments
 
 ```bash
+
 # Experimental feature didn't work out
 1. Document lessons learned
 2. Archive code with explanations
@@ -220,13 +233,14 @@ The system automatically tracks:
 4. Set 6-month retention
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Troubleshooting
+# Troubleshooting
 
-### Broken Dependencies After Archival
+
+# Broken Dependencies After Archival
 
 ```bash
+
 # Error: Cannot find module 'archived-module'
 Solution:
 1. Check archive for the module
@@ -235,9 +249,11 @@ Solution:
 4. Create compatibility bridge if needed
 ```
 
-### Archive Access Issues
+
+# Archive Access Issues
 
 ```bash
+
 # Error: Permission denied accessing /archive
 Solution:
 1. Verify archive permissions
@@ -246,11 +262,11 @@ Solution:
 4. Run archive maintenance
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Integration with CI/CD
+# Integration with CI/CD
 
-### Pre-Archive Checks
+
+# Pre-Archive Checks
 
 ```yaml
 archive-check:
@@ -260,7 +276,8 @@ archive-check:
   - performance-baseline
 ```
 
-### Post-Archive Validation
+
+# Post-Archive Validation
 
 ```yaml
 post-archive:
@@ -270,16 +287,13 @@ post-archive:
   - update-archive-index
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Future Enhancements
+# Future Enhancements
 
 - **AI-powered dependency analysis**: Smarter detection of hidden dependencies
 - **Automatic refactoring**: Update code when archiving dependencies
 - **Archive search**: Full-text search across archived content
 - **Version bridging**: Automatic compatibility layers
-
-────────────────────────────────────────────────────────────────────────────────
 
 **Reference**: See `CLAUDE.md` Enhanced Archive Management section for implementation details
 

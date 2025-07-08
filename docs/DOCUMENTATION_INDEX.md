@@ -2,24 +2,26 @@
 |---------|--------------|--------|
 | 3.0.0   | 2025-07-08   | stable |
 
-# Documentation Index - Framework 3.0 (Streamlined)
 
-────────────────────────────────────────────────────────────────────────────────
+# Documentation Index - Framework 3.0 (Streamlined)
 
 > **Quick Navigation**: Find exactly what you need in seconds!
 
 ---
 
-## 🚀 Start Here
 
-### Essential Docs (Framework 3.0)
+# 🚀 Start Here
+
+
+# Essential Docs (Framework 3.0)
 - **[Getting Started](GETTING_STARTED.md)** - 3-minute quickstart with Framework 3.0
 - **[CLAUDE.md](../CLAUDE.md)** - Framework 3.0 control document with meta-prompting
 - **[README](../README.md)** - Project overview updated for Framework 3.0
 - **[Command Selection Guide](COMMAND_SELECTION_GUIDE.md)** - Choose the right command for your task
 - **[Templates](../.claude/templates/)** - Framework 3.0 format templates
 
-### Quick References
+
+# Quick References
 - **[Command Overview](commands/overview.md)** - Complete command reference with Framework 3.0 runtime engine
 - **[Command Selection Guide](COMMAND_SELECTION_GUIDE.md)** - Never confused about which command to use!
 - **[All Commands](#-commands)** - Framework 3.0 command capabilities
@@ -28,11 +30,13 @@
 
 ---
 
-## 📚 Commands
+
+# 📚 Commands
 
 > **📖 Complete Reference**: See **[Command Overview](commands/overview.md)** for detailed command documentation with 2.4.0 runtime engine features!
 
-### Core Commands (Framework 3.0)
+
+# Core Commands (Framework 3.0)
 | Command | Purpose | Framework 3.0 Enhancement | Example |
 |---------|---------|---------------------------|---------|
 | `/auto` | Smart routing with meta-prompting | TDD-aware intelligent routing with self-improvement | `/auto "add user login"` |
@@ -42,7 +46,8 @@
 | `/query` | **Research ONLY** - understand code | Test-aware analysis with no modifications | `/query "how does auth work?"` |
 | `/docs` | **Documentation ONLY** - create/update docs | FOCUS framework integration with gateway enforcement | `/docs generate "API Guide"` |
 
-### Specialized Commands (Framework 3.0)
+
+# Specialized Commands (Framework 3.0)
 | Command | Purpose | Framework 3.0 Enhancement | When to Use |
 |---------|---------|---------------------------|-------------|
 | `/session` | Session management | GitHub issue tracking with context preservation | Complex project tracking |
@@ -50,11 +55,14 @@
 
 ---
 
-## 🎯 Common Tasks
 
-### "I want to..."
+# 🎯 Common Tasks
 
-#### **Add a new feature**
+
+# "I want to..."
+
+
+# **Add a new feature**
 ```bash
 /feature "user profile with avatar upload"
 ```
@@ -62,7 +70,8 @@
 - Plans MVP approach
 - Implements with tests
 
-#### **Fix a bug**
+
+# **Fix a bug**
 ```bash
 /task "fix: users can't reset password"
 ```
@@ -70,7 +79,8 @@
 - Fixes the issue
 - Verifies solution
 
-#### **Understand existing code**
+
+# **Understand existing code**
 ```bash
 /query "explain the authentication flow"
 ```
@@ -78,7 +88,8 @@
 - Explains architecture
 - No modifications
 
-#### **Refactor complex system**
+
+# **Refactor complex system**
 ```bash
 /swarm "convert REST API to GraphQL"
 ```
@@ -86,7 +97,8 @@
 - Coordinates agents
 - Tracks progress
 
-#### **Find documentation**
+
+# **Find documentation**
 ```bash
 /query "show me TDD examples"
 ```
@@ -95,55 +107,67 @@
 
 ---
 
-## 📖 Streamlined Documentation (Framework 3.0)
 
-### 🏗️ Core Framework
+# 📖 Streamlined Documentation (Framework 3.0)
+
+
+# 🏗️ Core Framework
 - **[Framework Overview](framework/README.md)** - Framework 3.0 architecture
 - **[Module System](.claude/README.md)** - 100+ modular components
 - **[Module Runtime Engine](framework/module-runtime-engine.md)** - Deterministic execution engine
 
-### 📊 Quality & Development
+
+# 📊 Quality & Development
 - **[Quality & Production Standards](framework/quality-and-production-standards.md)** - Comprehensive quality guide
 - **[Development Standards](framework/development-standards.md)** - TDD and critical thinking
 - **[AWARE Framework](framework/aware-framework.md)** - Systematic thinking patterns
 
-### ⚡ Advanced Framework 3.0
+
+# ⚡ Advanced Framework 3.0
 - **[Claude 4 Integration](CLAUDE_4_PROMPT_GUIDE.md)** - Advanced Claude 4 optimization
 - **[Claude Code Integration](framework/claude-code-integration.md)** - Terminal optimization
 - **[Feature Examples](framework/feature-development-examples.md)** - Real-world scenarios
 
-### 🔧 Configuration & Troubleshooting
+
+# 🔧 Configuration & Troubleshooting
 - **[Permission Guide](framework/PERMISSION_GUIDE.md)** - Fix permission issues
 - **[Naming Conventions](framework/NAMING_CONVENTIONS.md)** - Consistent naming
 - **[Template Format](framework/TEMPLATE_FORMAT.md)** - Framework 3.0 format standards
 
-### 🎓 Advanced Topics
+
+# 🎓 Advanced Topics
 - **[Native Patterns](framework/native-patterns.md)** - Claude Code patterns
 - **[Honesty Policy](framework/honesty-policy.md)** - Framework limitations
 - **[Multi-Agent Coordination](advanced/multi-agent-coordination.md)** - Complex workflows
 - **[Archive Management](advanced/archive-management.md)** - Data lifecycle management
 
-### 📋 Essential Reports
+
+# 📋 Essential Reports
 - **[Production Readiness](reports/PRODUCTION_READINESS_VALIDATION_REPORT_2025-07-08.md)** - Framework validation
 - **[GitHub Issues Cleanup](reports/GITHUB_ISSUES_CLEANUP_2025-07-08.md)** - Maintenance record
 
 ---
 
-## 🔍 Finding Documentation (Framework 3.0)
 
-### Smart Search
+# 🔍 Finding Documentation (Framework 3.0)
+
+
+# Smart Search
 ```bash
+
 # Research existing code and docs
 /query "permission errors"
 /query "TDD examples" 
 /query "swarm command usage"
+
 
 # Generate new documentation
 /docs generate "Setup Guide"
 /docs search "quality standards"
 ```
 
-### Browse by Location
+
+# Browse by Location
 - **Commands**: `.claude/commands/` (8 core commands)
 - **Modules**: `.claude/modules/` (100+ implementation modules)
 - **Core Guides**: `docs/framework/` (streamlined essentials)
@@ -151,38 +175,48 @@
 
 ---
 
-## 🆘 Troubleshooting
 
-### Common Issues & Quick Fixes
+# 🆘 Troubleshooting
 
-#### Permission Errors
+
+# Common Issues & Quick Fixes
+
+
+# Permission Errors
 ```bash
+
 # One-line fix:
 rm -f .claude/settings.local.json && ln -sf ~/.claude/settings.json .claude/settings.local.json
 ```
 [Full Guide](framework/PERMISSION_GUIDE.md)
 
-#### Command Not Working
+
+# Command Not Working
 1. Check syntax: `/command "request"`
 2. Try `/auto` instead
 3. Check [command list](#-commands)
 
-#### Not Sure What to Use
+
+# Not Sure What to Use
 ```bash
+
 # Always works:
 /auto "what you want to do"
 ```
 
-#### Need Examples
+
+# Need Examples
 - Check [Common Tasks](#-common-tasks)
 - See [Feature Examples](framework/feature-development-examples.md)
 - Try `/query "show examples"`
 
 ---
 
-## 📝 Quick Reference Card
 
-### Essential Commands (Framework 3.0)
+# 📝 Quick Reference Card
+
+
+# Essential Commands (Framework 3.0)
 ```bash
 /auto "..."     # Meta-prompting intelligent routing with self-improvement
 /task "..."     # Single component with strict TDD enforcement
@@ -192,7 +226,8 @@ rm -f .claude/settings.local.json && ln -sf ~/.claude/settings.json .claude/sett
 /protocol "..." # Maximum quality enforcement for production
 ```
 
-### Framework 3.0 Principles
+
+# Framework 3.0 Principles
 - **TDD First** - Mandatory RED-GREEN-REFACTOR with blocking enforcement
 - **Quality Gates** - Universal validation with comprehensive coverage
 - **Critical Thinking** - 30-second minimum analysis before any action
@@ -202,7 +237,8 @@ rm -f .claude/settings.local.json && ln -sf ~/.claude/settings.json .claude/sett
 - **Trust the framework** - It evolves and improves automatically
 - **Session tracking** - GitHub integration for complex workflows
 
-### Workflow Pattern
+
+# Workflow Pattern
 ```
 1. Research:  /query "understand current state"
 2. Plan:      /auto "describe what you need"
@@ -212,7 +248,8 @@ rm -f .claude/settings.local.json && ln -sf ~/.claude/settings.json .claude/sett
 
 ---
 
-## 💡 Philosophy Snippets
+
+# 💡 Philosophy Snippets
 
 > *"Let the framework think, so you can create."*
 

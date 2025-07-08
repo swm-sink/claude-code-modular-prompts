@@ -2,19 +2,18 @@
 |---------|--------------|--------|
 | 3.0.0   | 2025-07-08   | stable |
 
-# Quality Gates & Production Standards
 
-────────────────────────────────────────────────────────────────────────────────
+# Quality Gates & Production Standards
 
 > **Comprehensive Guide**: Quality gates, production standards, TDD enforcement, security requirements, and performance standards all in one place.
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Overview
+# Overview
 
 The Claude Code Framework implements a comprehensive quality system with automated gates and production standards that ensure consistent, high-quality software delivery across all development activities.
 
-### What Are Quality Gates?
+
+# What Are Quality Gates?
 
 Quality gates are **non-bypassable validation checkpoints** that:
 - Automatically enforce quality standards during development
@@ -22,7 +21,8 @@ Quality gates are **non-bypassable validation checkpoints** that:
 - Provide clear feedback on what needs to be fixed
 - Generate audit trails for compliance and improvement
 
-### Key Benefits
+
+# Key Benefits
 
 - **Consistent Quality**: Every commit meets the same high standards
 - **Early Detection**: Issues caught immediately, not in production
@@ -30,9 +30,11 @@ Quality gates are **non-bypassable validation checkpoints** that:
 - **Compliance Ready**: Automated evidence collection and audit trails
 - **Developer Productivity**: Clear guidance on what's required
 
-## Quality Gate Categories
 
-### 1. Foundational Gates
+# Quality Gate Categories
+
+
+# 1. Foundational Gates
 Applied to **ALL commands** - basic quality requirements every operation must satisfy.
 
 - **Critical Thinking Validation**: 30-second minimum analysis with documented alternatives
@@ -40,7 +42,8 @@ Applied to **ALL commands** - basic quality requirements every operation must sa
 - **Module Integration Compliance**: Proper module usage and dependency management
 - **Error Handling Completeness**: Comprehensive error scenarios and recovery mechanisms
 
-### 2. Development Gates
+
+# 2. Development Gates
 Applied to code modification commands (`/task`, `/swarm`, `/feature`, `/protocol`).
 
 - **TDD Cycle Compliance**: Strict RED-GREEN-REFACTOR enforcement
@@ -48,28 +51,33 @@ Applied to code modification commands (`/task`, `/swarm`, `/feature`, `/protocol
 - **Security Requirements**: Threat modeling and vulnerability prevention
 - **Performance Validation**: Response time and resource usage requirements
 
-### 3. Coordination Gates
+
+# 3. Coordination Gates
 Applied to multi-component commands (`/swarm`, `/feature`, `/protocol`).
 
 - **Multi-Agent Synchronization**: Clear agent boundaries and coordination protocols
 - **Session Tracking Completeness**: Progress tracking and context preservation
 - **Integration Validation**: End-to-end system validation
 
-### 4. Documentation Gates
+
+# 4. Documentation Gates
 Applied to documentation commands (`/docs`) and development with documentation.
 
 - **Documentation Standards Compliance**: Framework 3.0 format and content standards
 - **TDD Methodology Documentation**: Proper TDD references and workflow examples
 
-### 5. Analysis Gates
+
+# 5. Analysis Gates
 Applied to research commands (`/query`, `/auto` routing decisions).
 
 - **Research Comprehensiveness**: Thorough analysis with evidence-based conclusions
 - **Routing Decision Quality**: Sound complexity assessment and command selection
 
-## Production Standards & Requirements
 
-### Before Code Complete
+# Production Standards & Requirements
+
+
+# Before Code Complete
 ```
 ✓ All tests passing
 ✓ Coverage ≥90%
@@ -79,7 +87,8 @@ Applied to research commands (`/query`, `/auto` routing decisions).
 ✓ Session shows TDD compliance
 ```
 
-### Before Deployment
+
+# Before Deployment
 ```
 ✓ Security scan passed
 ✓ Performance validated
@@ -89,15 +98,17 @@ Applied to research commands (`/query`, `/auto` routing decisions).
 ✓ Session completed with outcomes
 ```
 
-## Command-Specific Gate Configuration
 
-### `/task` Command Gates
+# Command-Specific Gate Configuration
+
+
+# `/task` Command Gates
 
 **Required Gates**: Foundational + Development  
 **Enforcement**: BLOCKING
 
 ```xml
-<universal_quality_gates enforcement="MANDATORY">
+<universal_quality_gates enforcement = "MANDATORY">
   <gate_set>task_command_gates</gate_set>
   <blocking_conditions>
     <condition>TDD cycle not completed (RED-GREEN-REFACTOR)</condition>
@@ -108,13 +119,14 @@ Applied to research commands (`/query`, `/auto` routing decisions).
 </universal_quality_gates>
 ```
 
-### `/swarm` Command Gates
+
+# `/swarm` Command Gates
 
 **Required Gates**: Foundational + Development + Coordination  
 **Enforcement**: BLOCKING
 
 ```xml
-<universal_quality_gates enforcement="MANDATORY">
+<universal_quality_gates enforcement = "MANDATORY">
   <gate_set>swarm_command_gates</gate_set>
   <blocking_conditions>
     <condition>Agent coordination conflicts detected</condition>
@@ -125,13 +137,14 @@ Applied to research commands (`/query`, `/auto` routing decisions).
 </universal_quality_gates>
 ```
 
-### `/protocol` Command Gates
+
+# `/protocol` Command Gates
 
 **Required Gates**: ALL categories (strictest enforcement)  
 **Enforcement**: BLOCKING
 
 ```xml
-<universal_quality_gates enforcement="MANDATORY">
+<universal_quality_gates enforcement = "MANDATORY">
   <gate_set>protocol_command_gates</gate_set>
   <blocking_conditions>
     <condition>ANY quality gate failure</condition>
@@ -142,9 +155,11 @@ Applied to research commands (`/query`, `/auto` routing decisions).
 </universal_quality_gates>
 ```
 
-## TDD Standards & Enforcement
 
-### Core TDD Requirements
+# TDD Standards & Enforcement
+
+
+# Core TDD Requirements
 
 ```xml
 <tdd_enforcement>
@@ -166,7 +181,8 @@ Applied to research commands (`/query`, `/auto` routing decisions).
 </tdd_enforcement>
 ```
 
-### Test Structure
+
+# Test Structure
 ```bash
 tests/
 ├── unit/           # Fast, isolated tests
@@ -177,9 +193,11 @@ tests/
 
 **Test Distribution**: 70% unit, 20% integration, 10% E2E
 
-## Security Requirements
 
-### Data Protection
+# Security Requirements
+
+
+# Data Protection
 ```yaml
 mandatory_for_sensitive_data:
   - Encryption at rest (AES-256)
@@ -188,7 +206,8 @@ mandatory_for_sensitive_data:
   - Secure key management
 ```
 
-### Authentication & Authorization
+
+# Authentication & Authorization
 ```yaml
 required_patterns:
   - Multi-factor authentication
@@ -198,7 +217,8 @@ required_patterns:
   - Audit logging
 ```
 
-### Security Gates Configuration
+
+# Security Gates Configuration
 ```xml
 <security_gates>
   <threat_modeling>
@@ -214,15 +234,18 @@ required_patterns:
 </security_gates>
 ```
 
-## Performance Standards
 
-### Response Time Requirements
+# Performance Standards
+
+
+# Response Time Requirements
 - **API Endpoints**: <200ms (p95)
 - **Web Pages**: <3s initial load
 - **Database Queries**: <100ms
 - **Background Jobs**: SLA defined
 
-### Resource Usage Limits
+
+# Resource Usage Limits
 ```yaml
 limits:
   memory: <512MB per instance
@@ -231,7 +254,8 @@ limits:
   disk: Monitored and alerted
 ```
 
-### Performance Gates Configuration
+
+# Performance Gates Configuration
 ```xml
 <performance_gates>
   <response_time_requirements>
@@ -247,9 +271,11 @@ limits:
 </performance_gates>
 ```
 
-## Error Handling Standards
 
-### Comprehensive Coverage
+# Error Handling Standards
+
+
+# Comprehensive Coverage
 ```python
 try:
     result = risky_operation()
@@ -266,7 +292,8 @@ finally:
     release_resources()
 ```
 
-### Error Response Format
+
+# Error Response Format
 ```json
 {
   "error": {
@@ -279,9 +306,11 @@ finally:
 }
 ```
 
-## Common Gate Failures and Solutions
 
-### TDD Violations
+# Common Gate Failures and Solutions
+
+
+# TDD Violations
 
 **Problem**: Implementation written before tests
 ```
@@ -294,7 +323,8 @@ finally:
 3. Verify tests fail for the right reasons
 4. Implement minimal code to make tests pass
 
-### Security Gate Failures
+
+# Security Gate Failures
 
 **Problem**: Missing threat model
 ```
@@ -307,7 +337,8 @@ finally:
 3. Document identified threats and mitigations
 4. Implement security controls for each threat
 
-### Performance Gate Failures
+
+# Performance Gate Failures
 
 **Problem**: Response time exceeds requirements
 ```
@@ -320,15 +351,19 @@ finally:
 3. Add performance tests to prevent regression
 4. Re-run benchmarks to verify improvements
 
-## Monitoring & Observability
 
-### Required Metrics
+# Monitoring & Observability
+
+
+# Required Metrics
 ```python
+
 # Business metrics
 - User actions
 - Transaction volumes
 - Error rates
 - Success rates
+
 
 # Technical metrics  
 - Response times
@@ -337,7 +372,8 @@ finally:
 - Cache hit rates
 ```
 
-### Logging Standards
+
+# Logging Standards
 ```python
 logger.info("action_completed", 
     user_id=user.id,
@@ -347,7 +383,8 @@ logger.info("action_completed",
 )
 ```
 
-### Alerting Rules
+
+# Alerting Rules
 ```yaml
 - metric: error_rate > 1%
   window: 5m
@@ -358,9 +395,11 @@ logger.info("action_completed",
   severity: critical
 ```
 
-## Deployment Standards
 
-### Pre-deployment Checklist
+# Deployment Standards
+
+
+# Pre-deployment Checklist
 ```
 □ Feature flags configured
 □ Database migrations tested
@@ -370,7 +409,8 @@ logger.info("action_completed",
 □ AI session linked to deployment
 ```
 
-### Deployment Process
+
+# Deployment Process
 ```
 □ Blue-green deployment
 □ Canary rollout (5% → 25% → 100%)
@@ -379,7 +419,8 @@ logger.info("action_completed",
 □ No error spike
 ```
 
-### Post-deployment
+
+# Post-deployment
 ```
 □ Monitor metrics for 30min
 □ Check error rates
@@ -389,12 +430,16 @@ logger.info("action_completed",
 □ Update session with deployment results
 ```
 
-## CI/CD Integration
 
-### Pre-Commit Hooks
+# CI/CD Integration
+
+
+# Pre-Commit Hooks
 ```bash
 #!/bin/bash
+
 # .git/hooks/pre-commit
+
 
 # TDD Validation
 echo "Validating TDD compliance..."
@@ -403,12 +448,14 @@ if ! ./scripts/validate-tdd.sh; then
   exit 1
 fi
 
+
 # Security Scanning
 echo "Running security scans..."
 if ! ./scripts/security-scan.sh; then
   echo "❌ Security scan failed"
   exit 1
 fi
+
 
 # Performance Tests
 echo "Running performance tests..."
@@ -420,7 +467,8 @@ fi
 echo "✅ All quality gates passed"
 ```
 
-### GitHub Actions Integration
+
+# GitHub Actions Integration
 ```yaml
 name: Quality Gates
 on: [push, pull_request]
@@ -444,9 +492,11 @@ jobs:
         run: ./scripts/generate-quality-report.sh
 ```
 
-## Best Practices
 
-### Core Principles
+# Best Practices
+
+
+# Core Principles
 1. **Fail Safe**: Default to secure state
 2. **Defense in Depth**: Multiple layers
 3. **Least Privilege**: Minimal access
@@ -455,46 +505,49 @@ jobs:
 6. **Track Development**: AI sessions for context
 7. **Link Everything**: Sessions to PRs to deployments
 
-### Quality Gate Customization
+
+# Quality Gate Customization
 ```xml
 <!-- For legacy systems -->
-<tdd_integration relaxed="true">
+<tdd_integration relaxed = "true">
   <coverage_requirement>70% minimum (gradually increase)</coverage_requirement>
   <legacy_code_exception>Wrapper tests acceptable for legacy integration</legacy_code_exception>
 </tdd_integration>
 
 <!-- For high-security systems -->
-<security_gates strict="true">
+<security_gates strict = "true">
   <vulnerability_threshold>Zero HIGH, zero MEDIUM</vulnerability_threshold>
   <penetration_testing>Required for all external interfaces</penetration_testing>
   <compliance_frameworks>SOX, PCI-DSS, HIPAA</compliance_frameworks>
 </security_gates>
 ```
 
-## Compliance Requirements
 
-### Data Privacy (GDPR)
+# Compliance Requirements
+
+
+# Data Privacy (GDPR)
 - Data minimization
 - Purpose limitation  
 - Consent management
 - Right to deletion
 - Audit trail
 
-### Financial (PCI DSS)
+
+# Financial (PCI DSS)
 - No card data storage
 - Tokenization required
 - Network segmentation
 - Access logging
 - Regular audits
 
-## Implementation Support
+
+# Implementation Support
 
 For detailed implementation support, refer to:
 - **TDD Module**: `.claude/modules/quality/tdd.md`
 - **Universal Quality Gates**: `.claude/modules/quality/universal-quality-gates.md`
 - **Security Module**: `.claude/modules/security/threat-modeling.md`
 - **Framework Documentation**: `docs/framework/`
-
-────────────────────────────────────────────────────────────────────────────────
 
 **Quality is not an act, but a habit.** - Build it into every step of your development process.

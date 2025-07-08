@@ -2,15 +2,16 @@
 |---------|--------------|--------|
 | 3.0.0   | 2025-07-07   | stable |
 
-# Honesty Policy - Evidence-Based Claims
 
-────────────────────────────────────────────────────────────────────────────────
+# Honesty Policy - Evidence-Based Claims
 
 **Purpose**: Ensure all claims are accurate, evidence-based, and free from exaggeration.
 
-## Core Principles
 
-### 1. No Unsubstantiated Claims
+# Core Principles
+
+
+# 1. No Unsubstantiated Claims
 ```
 ❌ "100% success rate"
 ❌ "Perfect solution"
@@ -20,7 +21,8 @@
 ✓ "Tested in development environment"
 ```
 
-### 2. Acknowledge Limitations
+
+# 2. Acknowledge Limitations
 ```
 ✓ "This approach works well for small datasets"
 ✓ "Performance not yet validated at scale"
@@ -28,7 +30,8 @@
 ✓ "Requires further testing in production"
 ```
 
-### 3. Evidence-Based Statements
+
+# 3. Evidence-Based Statements
 ```
 ❌ "This is fast"
 ✓ "Response time: 145ms (p95) in testing"
@@ -40,25 +43,31 @@
 ✓ "Supports horizontal scaling with documented limits"
 ```
 
-## Required Disclosures
 
-### When Implementing
+# Required Disclosures
+
+
+# When Implementing
 - Assumptions made
 - Untested edge cases
 - Known limitations
 - Required improvements
 
-### When Completing
+
+# When Completing
 - What was achieved
 - What wasn't achieved
 - Next steps needed
 - Risks identified
 
-## Compliance Reporting
 
-### Format
+# Compliance Reporting
+
+
+# Format
 ```markdown
-## Implementation Summary
+
+# Implementation Summary
 
 **Completed:**
 - ✓ User authentication with JWT
@@ -76,16 +85,19 @@
 - Security: Basic OWASP compliance
 ```
 
-### Multi-Agent Work
+
+# Multi-Agent Work
 When using Task() or Batch():
 - Each agent reports honestly
 - Synthesis acknowledges all limitations
 - No hiding individual agent issues
 - Clear about integration challenges
 
-## Prohibited Language
 
-### Avoid Hyperbole
+# Prohibited Language
+
+
+# Avoid Hyperbole
 ```
 ❌ "Revolutionary approach"
 ❌ "Game-changing solution"
@@ -93,7 +105,8 @@ When using Task() or Batch():
 ❌ "Best-in-class"
 ```
 
-### Avoid Vague Claims
+
+# Avoid Vague Claims
 ```
 ❌ "Highly performant"
 ❌ "Very secure"
@@ -101,7 +114,8 @@ When using Task() or Batch():
 ❌ "Rock-solid"
 ```
 
-### Avoid Absolutes
+
+# Avoid Absolutes
 ```
 ❌ "Never fails"
 ❌ "Always works"
@@ -109,61 +123,79 @@ When using Task() or Batch():
 ❌ "Perfectly scalable"
 ```
 
-## Required Specificity
 
-### Performance Claims
+# Required Specificity
+
+
+# Performance Claims
 ```python
+
 # Bad: "Fast response times"
+
 # Good: "Average response: 87ms, p95: 145ms, p99: 203ms"
 ```
 
-### Security Claims
+
+# Security Claims
 ```python
+
 # Bad: "Secure implementation"  
+
 # Good: "Implements: HTTPS, CSRF tokens, input validation, rate limiting"
 ```
 
-### Reliability Claims
+
+# Reliability Claims
 ```python
+
 # Bad: "Highly reliable"
+
 # Good: "99.5% uptime in dev, production metrics pending"
 ```
 
-## Honest Progress Updates
 
-### During Development
+# Honest Progress Updates
+
+
+# During Development
 ```
 "Completed authentication logic, starting on authorization.
 Challenge: Token refresh complexity higher than expected."
 ```
 
-### When Blocked
+
+# When Blocked
 ```
 "Blocked by rate limit on external API.
 Implemented exponential backoff, waiting for quota reset."
 ```
 
-### When Uncertain
+
+# When Uncertain
 ```
 "Unsure about optimal caching strategy.
 Implemented basic version, recommend expert review."
 ```
 
-## Quality Over Claims
 
-### Focus On
+# Quality Over Claims
+
+
+# Focus On
 1. **Actual capabilities** delivered
 2. **Specific metrics** achieved
 3. **Real limitations** acknowledged
 4. **Concrete evidence** provided
 
-### Never
+
+# Never
 1. **Exaggerate** capabilities
 2. **Hide** limitations
 3. **Assume** without testing
 4. **Claim** without evidence
 
-## Enforcement
+
+# Enforcement
 
 - Code review checks for honest claims
 - Metrics validate performance claims

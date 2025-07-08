@@ -2,26 +2,39 @@
 |---------|--------------|--------|
 | 3.0.0   | 2025-07-08   | stable |
 
+
 # CLAUDE.md - Framework Control Document
 
-────────────────────────────────────────────────────────────────────────────────
+
+# Overview
 
 <purpose>Personal Claude Code workflow efficiency tool - NOT enterprise software</purpose>
 
-## Core Framework
+
+# Core Framework
 
 ```xml
-<framework version="3.0.0">
+<framework version = "3.0.0">
   <purpose>Personal Claude Code workflow efficiency tool - NOT enterprise software</purpose>
-  <principles>Single source truth | Zero redundancy | Modular composition | Token optimized | Module runtime engine | Prompt construction visualization | Claude 4 optimization | Meta-prompting evolution</principles>
-  <claude_4_features>Interleaved thinking | Parallel execution | 200K context | Advanced reasoning</claude_4_features>
-  <swe_bench_verified>Claude 4 Opus: 72.5% → 79.4% | Claude 4 Sonnet: 72.7% → 80.2%</swe_bench_verified>
+  
+  <principles>
+    Single source truth | Zero redundancy | Modular composition | Token optimized | 
+    Module runtime engine | Prompt construction visualization | Claude 4 optimization | 
+    Meta-prompting evolution
+  </principles>
+  
+  <claude_4_features>
+    Interleaved thinking | Parallel execution | 200K context | Advanced reasoning
+  </claude_4_features>
+  
+  <swe_bench_verified>
+    Claude 4 Opus: 72.5% → 79.4% | Claude 4 Sonnet: 72.7% → 80.2%
+  </swe_bench_verified>
 </framework>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Critical Thinking Rules
+# Critical Thinking Rules
 
 ```xml
 <critical_thinking>
@@ -31,34 +44,47 @@
 </critical_thinking>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Code Minimalism
+# Code Minimalism
 
 ```xml
 <code_minimalism>
   <rule>Minimum viable code. Every line justified. Delete before adding</rule>
-  <avoid>Verbose implementations | Unnecessary wrappers | Premature abstraction</avoid>
+  <avoid>
+    Verbose implementations | Unnecessary wrappers | Premature abstraction
+  </avoid>
 </code_minimalism>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## File Discipline
+# File Discipline
 
 ```xml
 <file_discipline>
-  <critical_rules enforcement="MAXIMUM">
-    <rule priority="HIGHEST">NEVER create files/directories without explicit requirement</rule>
-    <rule priority="HIGHEST">ALWAYS use LS/Glob to verify location EXISTS before ANY file operation</rule>
-    <rule priority="HIGHEST">THINK 5X before creating ANY new file - check if it already exists</rule>
-    <rule priority="HIGHEST">NO test files, personal dirs, or redundant structures EVER</rule>
-    <rule priority="HIGHEST">Scripts go in /scripts, tests in /tests, docs in /docs - NO EXCEPTIONS</rule>
+  <critical_rules enforcement = "MAXIMUM">
+    <rule priority = "HIGHEST">
+      NEVER create files/directories without explicit requirement
+    </rule>
+    <rule priority = "HIGHEST">
+      ALWAYS use LS/Glob to verify location EXISTS before ANY file operation
+    </rule>
+    <rule priority = "HIGHEST">
+      THINK 5X before creating ANY new file - check if it already exists
+    </rule>
+    <rule priority = "HIGHEST">
+      NO test files, personal dirs, or redundant structures EVER
+    </rule>
+    <rule priority = "HIGHEST">
+      Scripts go in /scripts, tests in /tests, docs in /docs - NO EXCEPTIONS
+    </rule>
   </critical_rules>
-  <duplication_prevention enforcement="MANDATORY">
-    <rule>Scan before create | Prefer enhance over new | Document decisions</rule>
+  <duplication_prevention enforcement = "MANDATORY">
+    <rule>
+      Scan before create | Prefer enhance over new | Document decisions
+    </rule>
     <module>patterns/duplication-prevention.md</module>
   </duplication_prevention>
+  
   <verification_checklist>
     <check>File exists? Location correct? LS/Glob verified?</check>
     <check>Absolutely necessary? Enhance existing instead?</check>
@@ -68,7 +94,17 @@
     <rule>Dates: $(date '+%Y-%m-%d') format. 2025 sources only</rule>
     <rule>Update before create. Archive don't delete</rule>
   </standard_rules>
-  <limits patterns="8" quality="5" planning="5" development="4" security="3" testing="2" reports="5" docs_per_dir="20"/>
+  
+  <limits 
+    patterns="8" 
+    quality="5" 
+    planning="5" 
+    development="4" 
+    security="3" 
+    testing="2" 
+    reports="5" 
+    docs_per_dir="20"
+  />
   <prohibited_actions>
     <action>Creating 'personal/', 'local/', or user-specific directories</action>
     <action>Duplicating existing project structures</action>
@@ -80,29 +116,28 @@
 </file_discipline>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Claude 4 Advanced Control
+# Claude 4 Advanced Control
 
 ```xml
-<claude_4_advanced_control version="2.6.0" enforcement="CRITICAL">
-  <interleaved_thinking enforcement="MANDATORY">
+<claude_4_advanced_control version = "2.6.0" enforcement = "CRITICAL">
+  <interleaved_thinking enforcement = "MANDATORY">
     <config>16K thinking length | Trigger: tool calls, uncertainty, complexity</config>
     <rules>ALWAYS think before act | 5X think:act ratio | "ultrathink" = extended</rules>
   </interleaved_thinking>
   
-  <parallel_execution enforcement="MANDATORY">
+  <parallel_execution enforcement = "MANDATORY">
     <principle>All independent operations execute simultaneously</principle>
     <patterns>Batch tool calls | Parallel analysis | Concurrent validation</patterns>
     <performance>Opus 6.9% improvement | Sonnet 7.5% improvement (SWE-bench verified)</performance>
   </parallel_execution>
   
-  <context_optimization enforcement="MANDATORY">
+  <context_optimization enforcement = "MANDATORY">
     <management>Hierarchical loading | XML structured | Dynamic context</management>
     <limits>4K tokens/file | 120K total | 50K+ reserved for work</limits>
   </context_optimization>
   
-  <extended_reasoning_capabilities enforcement="MANDATORY">
+  <extended_reasoning_capabilities enforcement = "MANDATORY">
     <purpose>Leverage Claude 4's enhanced reasoning for complex problem solving</purpose>
     <activation_methods>
       <explicit_instruction>"Think through this problem step by step"</explicit_instruction>
@@ -124,7 +159,7 @@
     <orchestration>Delegate to appropriate commands and modules per framework architecture</orchestration>
   </behavioral_control>
   
-  <hallucination_prevention enforcement="CRITICAL">
+  <hallucination_prevention enforcement = "CRITICAL">
     <temperature>Factual: 0.2 | Analysis: 0.0-0.3 | General: 0.4-0.5 | Creative: 0.7-1.0</temperature>
     <validation>Sources: 2025 only | Evidence required | "I don't know" when uncertain</validation>
     <accuracy>Ground in evidence | Conservative language | Step-by-step reasoning</accuracy>
@@ -133,9 +168,8 @@
 </claude_4_advanced_control>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Tool Patterns
+# Tool Patterns
 
 ```xml
 <tool_patterns>
@@ -145,37 +179,35 @@
 </tool_patterns>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Architecture
+# Architecture
 
 ```xml
 <architecture>
-  <commands location=".claude/commands/" delegate_only="true" enforcement="MANDATORY">
-    <cmd name="/auto" module="patterns/intelligent-routing.md"/>
-    <cmd name="/task" module="development/task-management.md"/>
-    <cmd name="/feature" module="planning/feature-workflow.md"/>
-    <cmd name="/swarm" module="patterns/multi-agent.md"/>
-    <cmd name="/query" module="development/research-analysis.md"/>
-    <cmd name="/session" module="patterns/session-management.md"/>
-    <cmd name="/docs" module="development/documentation.md" critical="true"/>
-    <cmd name="/protocol" module="patterns/session-management.md"/>
+  <commands location = ".claude/commands/" delegate_only = "true" enforcement = "MANDATORY">
+    <cmd name = "/auto" module = "patterns/intelligent-routing.md"/>
+    <cmd name = "/task" module = "development/task-management.md"/>
+    <cmd name = "/feature" module = "planning/feature-workflow.md"/>
+    <cmd name = "/swarm" module = "patterns/multi-agent.md"/>
+    <cmd name = "/query" module = "development/research-analysis.md"/>
+    <cmd name = "/session" module = "patterns/session-management.md"/>
+    <cmd name = "/docs" module = "development/documentation.md" critical = "true"/>
+    <cmd name = "/protocol" module = "patterns/session-management.md"/>
   </commands>
   <documentation_enforcement>
-    <rule priority="CRITICAL">NEVER generate project documentation without /docs command</rule>
-    <rule priority="CRITICAL">All documentation MUST go through /docs for consistency</rule>
-    <rule priority="CRITICAL">README, guides, docs ONLY via /docs command</rule>
+    <rule priority = "CRITICAL">NEVER generate project documentation without /docs command</rule>
+    <rule priority = "CRITICAL">All documentation MUST go through /docs for consistency</rule>
+    <rule priority = "CRITICAL">README, guides, docs ONLY via /docs command</rule>
     <exception>CLAUDE.md updates and command documentation are allowed</exception>
   </documentation_enforcement>
-  <modules location=".claude/modules/" implement_only="true">
-    <category name="security|quality|development|patterns|planning|testing"/>
+  <modules location = ".claude/modules/" implement_only = "true">
+    <category name = "security|quality|development|patterns|planning|testing"/>
   </modules>
 </architecture>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## AWARE Process
+# AWARE Process
 
 ```xml
 <aware_process>
@@ -188,9 +220,8 @@
 </aware_process>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Quality Gates
+# Quality Gates
 
 ```xml
 <quality_gates>
@@ -206,12 +237,11 @@
 </quality_gates>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## GitHub Workflow
+# GitHub Workflow
 
 ```xml
-<github_workflow trigger=">10 steps">
+<github_workflow trigger = ">10 steps">
   <epic>Project overview, metrics, dependencies</epic>
   <phases>Atomic steps, checkboxes, acceptance criteria</phases>
   <rule>Create issues BEFORE starting. Close only when 100% complete</rule>
@@ -225,10 +255,8 @@
 </github_workflow>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-
-## Modular Composition Methodology
+# Modular Composition Methodology
 
 ```xml
 <composition_methodology>
@@ -239,10 +267,10 @@
     <rule>Composition over inheritance: Combine modules, don't extend them</rule>
   </principles>
   <patterns>
-    <pattern name="Command-Module">Commands delegate to modules via clear interfaces</pattern>
-    <pattern name="Module-Chain">Modules can chain through standardized outputs</pattern>
-    <pattern name="State-Isolation">Each module maintains its own state boundaries</pattern>
-    <pattern name="Error-Propagation">Errors flow up through composition hierarchy</pattern>
+    <pattern name = "Command-Module">Commands delegate to modules via clear interfaces</pattern>
+    <pattern name = "Module-Chain">Modules can chain through standardized outputs</pattern>
+    <pattern name = "State-Isolation">Each module maintains its own state boundaries</pattern>
+    <pattern name = "Error-Propagation">Errors flow up through composition hierarchy</pattern>
   </patterns>
   <validation>
     <rule>Every module must have single responsibility</rule>
@@ -253,32 +281,31 @@
 </composition_methodology>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Error Recovery Protocols
+# Error Recovery Protocols
 
 ```xml
 <error_recovery>
   <strategy>
-    <level name="Module">Graceful degradation with fallback behavior</level>
-    <level name="Command">Retry with exponential backoff, max 3 attempts</level>
-    <level name="System">Circuit breaker pattern, fail-fast after threshold</level>
-    <level name="User">Clear error messages with corrective actions</level>
+    <level name = "Module">Graceful degradation with fallback behavior</level>
+    <level name = "Command">Retry with exponential backoff, max 3 attempts</level>
+    <level name = "System">Circuit breaker pattern, fail-fast after threshold</level>
+    <level name = "User">Clear error messages with corrective actions</level>
   </strategy>
   <protocols>
-    <protocol name="File Operations">
+    <protocol name = "File Operations">
       <step>1. Verify file exists before read/write</step>
       <step>2. Check permissions and accessibility</step>
       <step>3. Backup before destructive operations</step>
       <step>4. Rollback on failure, restore from backup</step>
     </protocol>
-    <protocol name="Module Loading">
+    <protocol name = "Module Loading">
       <step>1. Validate module structure and dependencies</step>
       <step>2. Load in dependency order</step>
       <step>3. Gracefully handle missing modules</step>
       <step>4. Provide degraded functionality when possible</step>
     </protocol>
-    <protocol name="Command Execution">
+    <protocol name = "Command Execution">
       <step>1. Validate inputs and preconditions</step>
       <step>2. Execute with timeout and resource limits</step>
       <step>3. Monitor for hanging or infinite loops</step>
@@ -286,17 +313,16 @@
     </protocol>
   </protocols>
   <recovery_actions>
-    <action trigger="FileNotFound">Create from template or prompt user</action>
-    <action trigger="PermissionDenied">Suggest alternative paths or permissions</action>
-    <action trigger="ModuleError">Fall back to core functionality</action>
-    <action trigger="TimeoutError">Retry with increased timeout or simplify</action>
+    <action trigger = "FileNotFound">Create from template or prompt user</action>
+    <action trigger = "PermissionDenied">Suggest alternative paths or permissions</action>
+    <action trigger = "ModuleError">Fall back to core functionality</action>
+    <action trigger = "TimeoutError">Retry with increased timeout or simplify</action>
   </recovery_actions>
 </error_recovery>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Command Selection Decision Trees
+# Command Selection Decision Trees
 
 ```xml
 <command_selection>
@@ -309,9 +335,8 @@
 </command_selection>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Quality Gate Enforcement
+# Quality Gate Enforcement
 
 ```xml
 <quality_gate_enforcement>
@@ -327,9 +352,8 @@
 </quality_gate_enforcement>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Archive Management
+# Archive Management
 
 ```xml
 <archive_management>
@@ -341,12 +365,11 @@
 </archive_management>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Command Usage Enforcement
+# Command Usage Enforcement
 
 ```xml
-<command_enforcement priority="CRITICAL">
+<command_enforcement priority = "CRITICAL">
   <mandatory_usage>
     <documentation>/docs - ALL documentation generation MUST use this</documentation>
     <development>/task - Single file or focused development work</development>
@@ -367,7 +390,7 @@
 ```
 
 
-## Versioning Strategy
+# Versioning Strategy
 
 ```xml
 <versioning_strategy>
@@ -412,9 +435,8 @@
 </versioning_strategy>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Temporal Standards Enforcement
+# Temporal Standards Enforcement
 
 ```xml
 <temporal_standards>
@@ -431,12 +453,11 @@
 </temporal_standards>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Advanced Prompt Optimization
+# Advanced Prompt Optimization
 
 ```xml
-<prompt_optimization enforcement="CRITICAL">
+<prompt_optimization enforcement = "CRITICAL">
   <claude_4>XML structure 4 levels | Parallel execution | 16K thinking | 200K context</claude_4>
   <frameworks>RISE/TRACE/CARE (foundational) | APE/CLEAR/SOAR/CRISP/SPARK (specialized)</frameworks>
   <performance>Intelligent batching | Cascaded memory 5 hops | 40min sessions | Token efficiency</performance>
@@ -444,12 +465,11 @@
 </prompt_optimization>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Command-Module Integration
+# Command-Module Integration
 
 ```xml
-<command_module_integration enforcement="MANDATORY">
+<command_module_integration enforcement = "MANDATORY">
   <canonical_source>patterns/module-composition-framework.md</canonical_source>
   <critical_rules>
     <rule>EVERY command has explicit thinking_pattern section</rule>
@@ -474,12 +494,11 @@
 </command_module_integration>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Module Runtime Engine
+# Module Runtime Engine
 
 ```xml
-<module_runtime_engine version="2.6.0" enforcement="CRITICAL">
+<module_runtime_engine version = "2.6.0" enforcement = "CRITICAL">
   <purpose>Deterministic module composition and execution engine for Claude 4 with standardized patterns, universal quality gates, and comprehensive TDD enforcement</purpose>
   
   <runtime_architecture>
@@ -554,12 +573,11 @@
 </module_runtime_engine>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Prompt Construction Methodology
+# Prompt Construction Methodology
 
 ```xml
-<prompt_construction_methodology version="1.0.0" enforcement="CRITICAL">
+<prompt_construction_methodology version = "1.0.0" enforcement = "CRITICAL">
   <purpose>Make Claude 4 prompt construction and execution transparent through visualization, interface contracts, and runtime dashboards</purpose>
   
   <visualization_requirements>
@@ -578,11 +596,11 @@
   
   <claude_4_execution_model>
     <prompt_assembly>
-      <step order="1">Parse command structure and extract thinking pattern checkpoints</step>
-      <step order="2">Load required modules and validate interface contracts</step>
-      <step order="3">Construct execution workflow with dependency resolution</step>
-      <step order="4">Optimize context window usage through parallel execution</step>
-      <step order="5">Execute with real-time progress tracking and error handling</step>
+      <step order = "1">Parse command structure and extract thinking pattern checkpoints</step>
+      <step order = "2">Load required modules and validate interface contracts</step>
+      <step order = "3">Construct execution workflow with dependency resolution</step>
+      <step order = "4">Optimize context window usage through parallel execution</step>
+      <step order = "5">Execute with real-time progress tracking and error handling</step>
     </prompt_assembly>
     
     <thinking_integration>
@@ -623,12 +641,11 @@
 </prompt_construction_methodology>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Claude Code Integration
+# Claude Code Integration
 
 ```xml
-<claude_code_integration enforcement="MANDATORY">
+<claude_code_integration enforcement = "MANDATORY">
   <memory>Hierarchical: project/user/imported | <2K tokens each | @import syntax | 5 hops max</memory>
   <workflow>Research→Plan→Validate→Execute | TDD: Define→Test→Fail→Implement | "ultrathink" triggers</workflow>
   <sessions>40min limits | Fresh context often better | Strategic /compact | Cost monitoring</sessions>
@@ -636,62 +653,58 @@
 </claude_code_integration>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Security and Performance Optimization
+# Security and Performance Optimization
 
 ```xml
-<security_performance enforcement="CRITICAL">
+<security_performance enforcement = "CRITICAL">
   <security>Data minimization | Ephemeral contexts | Role-based access | Operation logging | Threat modeling | Secure defaults</security>
   <performance>Hierarchical prioritization | XML compression | Lazy loading | 50K+ budget | 40min sessions | Parallel execution</performance>
   <optimization>Concurrent batching | Pipeline optimization | Validation checkpoints | Multi-perspective analysis</optimization>
 </security_performance>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
-
 **Remember**: Critical thinking partner. Research deeply. Challenge assumptions. Map consequences.
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Meta Framework Control
+# Meta Framework Control
 
 ```xml
-<meta_framework_control version="3.0.0" enforcement="CRITICAL">
+<meta_framework_control version = "3.0.0" enforcement = "CRITICAL">
   <purpose>Self-improving, adaptive framework evolution with safety boundaries and human oversight</purpose>
   
   <meta_architecture>
-    <stable_core immutable="true">8 commands | 60+ modules | Quality gates | Thinking patterns</stable_core>
-    <enhancement mutable="true">Learning | Adaptation | Optimization | Generation engines</enhancement>
-    <safety enforcement="MANDATORY">Boundary protection | Human oversight | Rollback | Monitoring</safety>
+    <stable_core immutable = "true">8 commands | 60+ modules | Quality gates | Thinking patterns</stable_core>
+    <enhancement mutable = "true">Learning | Adaptation | Optimization | Generation engines</enhancement>
+    <safety enforcement = "MANDATORY">Boundary protection | Human oversight | Rollback | Monitoring</safety>
   </meta_architecture>
   
-  <self_improvement enforcement="MANDATORY">
+  <self_improvement enforcement = "MANDATORY">
     <cycle>Analysis→Recognition→Generation→Validation→Implementation→Evaluation</cycle>
     <boundaries>Immutable core | Additive only | 5%/week limit | Human approval | 60s rollback</boundaries>
     <control>Incremental changes | 99.9% stability | Performance monitoring | Human override</control>
   </self_improvement>
   
-  <meta_commands enforcement="MANDATORY">
+  <meta_commands enforcement = "MANDATORY">
     <analyze>Pattern analysis and optimization opportunities</analyze>
     <optimize>Implement approved enhancements with monitoring</optimize>
     <evolve>Framework evolution with human approval</evolve>
     <rollback>Stability restoration and failure analysis</rollback>
   </meta_commands>
   
-  <meta_modules enforcement="MANDATORY">
+  <meta_modules enforcement = "MANDATORY">
     <safety>safety-validator | human-oversight | stability-monitor</safety>
     <intelligence>pattern-recognizer | performance-optimizer | module-generator</intelligence>
     <evolution>framework-evolver | learning-integrator | adaptation-engine</evolution>
   </meta_modules>
   
-  <human_ai_collaboration enforcement="CRITICAL">
+  <human_ai_collaboration enforcement = "CRITICAL">
     <authority>Ultimate control | Override capability | Approval gates | Full transparency</authority>
     <triggers>Auto alerts | Approval required | Emergency stop | User preferences</triggers>
     <enhancement>Intelligent assistance | Adaptive behavior | Predictive optimization | Transparent reasoning</enhancement>
   </human_ai_collaboration>
   
-  <performance_targets enforcement="MANDATORY">
+  <performance_targets enforcement = "MANDATORY">
     <efficiency>20% token reduction | 30% faster response | 85% pattern accuracy | 10% satisfaction increase</efficiency>
     <stability>99.9% uptime | Zero regression | 60s rollback | Instant human override</stability>
   </performance_targets>
@@ -720,9 +733,8 @@
 </meta_framework_control>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Meta-Enhanced Framework Capabilities
+# Meta-Enhanced Framework Capabilities
 
 ```xml
 <meta_capabilities>

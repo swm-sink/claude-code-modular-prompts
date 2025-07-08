@@ -2,15 +2,16 @@
 |---------|--------------|--------|
 | 3.0.0   | 2025-07-07   | stable |
 
-# AWARE Framework - Unified Cognitive Process
 
-────────────────────────────────────────────────────────────────────────────────
+# AWARE Framework - Unified Cognitive Process
 
 **Purpose**: Single authoritative cognitive process for all AI operations, ensuring quality and preventing errors.
 
-## The Five Phases
 
-### 1. **A**ssess & Analyze
+# The Five Phases
+
+
+# 1. **A**ssess & Analyze
 ```
 ✓ What exactly is being requested?
 ✓ What context do I need?
@@ -26,7 +27,8 @@
 - Enterprise features → Create session
 - Simple fixes → Optional session
 
-### 2. **W**atch for Assumptions
+
+# 2. **W**atch for Assumptions
 ```
 ✓ What am I assuming?
 ✓ What evidence exists?
@@ -34,7 +36,8 @@
 ✓ How can I verify?
 ```
 
-### 3. **A**rchitect the Approach  
+
+# 3. **A**rchitect the Approach  
 ```
 ✓ Single vs Multi-agent?
 ✓ TDD test plan?
@@ -48,7 +51,8 @@
 - Document approach in session
 - Link related issues/PRs
 
-### 4. **R**un with Verification
+
+# 4. **R**un with Verification
 ```
 ✓ Execute systematically
 ✓ Verify each outcome
@@ -63,7 +67,8 @@
 - Decisions made → Record
 - Phase transitions → Note
 
-### 5. **E**valuate & Evolve
+
+# 5. **E**valuate & Evolve
 ```
 ✓ What worked well?
 ✓ What could improve?
@@ -78,34 +83,42 @@
 - Link follow-up tasks
 - Close with proper status
 
-## Decision Criteria
 
-### Agent Selection
+# Decision Criteria
+
+
+# Agent Selection
 - **Single Agent**: <3 components, sequential work
 - **Multi-Agent**: ≥3 components, parallel work needed
 
-### Quality Gates  
+
+# Quality Gates  
 - Tests: 90%+ coverage
 - Security: Threat model complete
 - Performance: <200ms p95
 - Documentation: Current
 
-## Integration
 
-### With Commands
+# Integration
+
+
+# With Commands
 - `/auto` uses AWARE for routing decisions + auto-creates sessions
 - `/task` follows AWARE for implementation + prompts for sessions
 - `/swarm` uses AWARE for decomposition + mandatory sessions
 - `/session` manages GitHub issue tracking throughout AWARE
 
-### With Standards
+
+# With Standards
 - TDD: Architected in phase 3
 - Security: Assessed in phase 1
 - Performance: Verified in phase 4
 
-## Examples
 
-### Simple Task
+# Examples
+
+
+# Simple Task
 ```
 1. Assess: "Add email validation" → No session needed
 2. Watch: Don't assume email format
@@ -114,7 +127,8 @@
 5. Evaluate: Patterns for reuse
 ```
 
-### Complex System
+
+# Complex System
 ```
 1. Assess: "Build chat system" → Create session #123
 2. Watch: Scale assumptions → Document in session
@@ -123,7 +137,8 @@
 5. Evaluate: Architecture decisions → Complete #123
 ```
 
-## Key Principles
+
+# Key Principles
 
 1. **Think First**: Never skip assessment
 2. **Evidence-Based**: Challenge assumptions

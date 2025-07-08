@@ -2,20 +2,19 @@
 |---------|--------------|--------|
 | 1.0.0   | 2025-07-08   | stable |
 
+
 # Module Runtime Engine User Guide
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Overview
+# Overview
 
 The Module Runtime Engine is the deterministic orchestration system that powers Claude Code's modular framework. It ensures consistent command execution through standardized thinking patterns, universal quality gates, and comprehensive TDD enforcement across all development operations.
 
-────────────────────────────────────────────────────────────────────────────────
 
-## What is the Module Runtime Engine?
+# What is the Module Runtime Engine?
 
 ```xml
-<runtime_engine purpose="Deterministic module composition and execution for Claude 4">
+<runtime_engine purpose = "Deterministic module composition and execution for Claude 4">
   <core_capabilities>
     <thinking_pattern_standardization>Checkpoint-based patterns with critical thinking integration</thinking_pattern_standardization>
     <tdd_enforcement>Mandatory RED-GREEN-REFACTOR cycles across all development commands</tdd_enforcement>
@@ -33,56 +32,57 @@ The engine transforms commands from simple delegates into sophisticated orchestr
 - **Optimize execution** through parallel operations
 - **Maintain consistency** across command implementations
 
-────────────────────────────────────────────────────────────────────────────────
 
-## How Commands Work With the Runtime Engine
+# How Commands Work With the Runtime Engine
 
-### Command-Module Integration
+
+# Command-Module Integration
 
 Each command in the framework operates through a three-layer architecture:
 
 ```
-┌─────────────────┐
+┌┐
 │   Command       │ ← User Interface Layer
 │   (delegate)    │
-└─────────────────┘
+└┘
          │
          ▼
-┌─────────────────┐
+┌┐
 │ Runtime Engine  │ ← Orchestration Layer
 │ (orchestrate)   │
-└─────────────────┘
+└┘
          │
          ▼
-┌─────────────────┐
+┌┐
 │    Modules      │ ← Implementation Layer
 │ (implement)     │
-└─────────────────┘
+└┘
 ```
 
-### Command Runtime Specification
+
+# Command Runtime Specification
 
 Every command follows this standardized structure:
 
 ```xml
 <command_runtime>
-  <thinking_pattern enforcement="MANDATORY">Checkpoint-based with critical thinking</thinking_pattern>
-  <tdd_integration enforcement="MANDATORY">Command-specific TDD requirements</tdd_integration>
-  <module_execution enforcement="MANDATORY">Core + contextual + support modules</module_execution>
-  <quality_gates enforcement="MANDATORY">Blocking validation at checkpoints</quality_gates>
+  <thinking_pattern enforcement = "MANDATORY">Checkpoint-based with critical thinking</thinking_pattern>
+  <tdd_integration enforcement = "MANDATORY">Command-specific TDD requirements</tdd_integration>
+  <module_execution enforcement = "MANDATORY">Core + contextual + support modules</module_execution>
+  <quality_gates enforcement = "MANDATORY">Blocking validation at checkpoints</quality_gates>
 </command_runtime>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## TDD Enforcement Matrix
+# TDD Enforcement Matrix
 
 The runtime engine enforces Test-Driven Development through a comprehensive matrix that adapts to each command's purpose:
 
-### Universal TDD Principles
+
+# Universal TDD Principles
 
 ```xml
-<tdd_principles enforcement="BLOCKING">
+<tdd_principles enforcement = "BLOCKING">
   <red_phase>ALWAYS write failing tests FIRST before implementation</red_phase>
   <green_phase>Implement minimal code to make tests pass</green_phase>
   <refactor_phase>Improve design while maintaining green tests</refactor_phase>
@@ -90,7 +90,8 @@ The runtime engine enforces Test-Driven Development through a comprehensive matr
 </tdd_principles>
 ```
 
-### Command-Specific TDD Integration
+
+# Command-Specific TDD Integration
 
 | Command | TDD Enforcement Level | Key Requirements |
 |---------|----------------------|------------------|
@@ -102,7 +103,8 @@ The runtime engine enforces Test-Driven Development through a comprehensive matr
 | `/query` | **TDD Pattern Analysis** | Test-aware research and pattern identification |
 | `/docs` | **TDD Documentation** | Methodology documentation and cross-references |
 
-### Blocking Conditions
+
+# Blocking Conditions
 
 The runtime engine will **HALT** execution for these TDD violations:
 
@@ -112,11 +114,11 @@ The runtime engine will **HALT** execution for these TDD violations:
 - ❌ Broken TDD cycle sequence
 - ❌ Integration without comprehensive tests
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Quality Gates System
+# Quality Gates System
 
-### Universal Quality Gates
+
+# Universal Quality Gates
 
 The runtime engine applies these gates across all commands:
 
@@ -130,7 +132,8 @@ The runtime engine applies these gates across all commands:
 </universal_gates>
 ```
 
-### Gate Enforcement Levels
+
+# Gate Enforcement Levels
 
 | Level | Behavior | Usage |
 |-------|----------|-------|
@@ -138,15 +141,17 @@ The runtime engine applies these gates across all commands:
 | **CONDITIONAL** | Alternative paths or degraded functionality | Non-critical issues |
 | **WARNING** | Log issue but continue | Advisory feedback |
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Practical Usage Examples
+# Practical Usage Examples
 
-### Example 1: Simple Development Task
+
+# Example 1: Simple Development Task
 
 ```bash
+
 # User request
 /task "Add user authentication validation"
+
 
 # Runtime engine orchestration:
 1. ✅ Critical thinking (30-second analysis)
@@ -157,11 +162,14 @@ The runtime engine applies these gates across all commands:
 6. ✅ TDD REFACTOR phase (design improvement)
 ```
 
-### Example 2: Complex Multi-Component Feature
+
+# Example 2: Complex Multi-Component Feature
 
 ```bash
+
 # User request  
 /swarm "Implement shopping cart with payment processing"
+
 
 # Runtime engine orchestration:
 1. ✅ Session creation with GitHub issue tracking
@@ -173,11 +181,14 @@ The runtime engine applies these gates across all commands:
 7. ✅ Merge with comprehensive testing
 ```
 
-### Example 3: Documentation Generation
+
+# Example 3: Documentation Generation
 
 ```bash
+
 # User request
 /docs "Create API reference guide"
+
 
 # Runtime engine orchestration:
 1. ✅ Gateway enforcement (block external docs)
@@ -188,11 +199,11 @@ The runtime engine applies these gates across all commands:
 6. ✅ Location verification (/docs only)
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Troubleshooting Common Issues
+# Troubleshooting Common Issues
 
-### Issue: "TDD violation: Implementation before tests"
+
+# Issue: "TDD violation: Implementation before tests"
 
 **Symptoms:**
 - Code written without failing tests first
@@ -211,7 +222,8 @@ The runtime engine applies these gates across all commands:
 - Use `/query` for research before coding
 - Follow checkpoint validation prompts
 
-### Issue: "Quality gate failure: Coverage below 90%"
+
+# Issue: "Quality gate failure: Coverage below 90%"
 
 **Symptoms:**
 - Test coverage metrics insufficient
@@ -231,7 +243,8 @@ The runtime engine applies these gates across all commands:
 - Include boundary conditions and error cases
 - Use TDD to drive coverage naturally
 
-### Issue: "Module dependency resolution failed"
+
+# Issue: "Module dependency resolution failed"
 
 **Symptoms:**
 - Command execution hangs or fails
@@ -250,7 +263,8 @@ The runtime engine applies these gates across all commands:
 - Follow module composition patterns
 - Test module integration regularly
 
-### Issue: "Parallel execution timeout"
+
+# Issue: "Parallel execution timeout"
 
 **Symptoms:**
 - Commands taking longer than expected
@@ -269,11 +283,11 @@ The runtime engine applies these gates across all commands:
 - Use appropriate timeouts for operations
 - Monitor system performance during execution
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Performance Optimization
+# Performance Optimization
 
-### Parallel Execution Benefits
+
+# Parallel Execution Benefits
 
 The runtime engine provides **70% performance improvement** through:
 
@@ -286,7 +300,8 @@ The runtime engine provides **70% performance improvement** through:
 </optimization_patterns>
 ```
 
-### Performance Targets
+
+# Performance Targets
 
 | Operation | Target Time | Optimization |
 |-----------|-------------|--------------|
@@ -295,7 +310,8 @@ The runtime engine provides **70% performance improvement** through:
 | Quality gate validation | < 30 seconds | Batched checks |
 | TDD cycle completion | < 5 minutes | Streamlined workflow |
 
-### Best Practices for Performance
+
+# Best Practices for Performance
 
 1. **Use parallel-friendly commands**: `/task`, `/swarm`, `/query`
 2. **Batch related operations**: Group file reads, searches together  
@@ -303,58 +319,77 @@ The runtime engine provides **70% performance improvement** through:
 4. **Monitor execution**: Watch for bottlenecks and timeouts
 5. **Keep modules focused**: Single responsibility for better parallelization
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Advanced Usage Patterns
+# Advanced Usage Patterns
 
-### Session-Based Development
+
+# Session-Based Development
 
 For complex features requiring multiple TDD cycles:
 
 ```bash
 /session "Multi-component authentication system"
+
 # Creates GitHub issue, tracks progress
+
 # Coordinates multiple /task operations  
+
 # Maintains TDD compliance across sessions
+
 # Links artifacts and documentation
 ```
 
-### Protocol-Driven Development
+
+# Protocol-Driven Development
 
 For production-critical implementations:
 
 ```bash
 /protocol "Payment processing with PCI compliance"
+
 # Strictest TDD enforcement
+
 # Security threat modeling
+
 # Performance benchmarking
+
 # Compliance validation
+
 # Complete audit trail
 ```
 
-### Research-First Development
+
+# Research-First Development
 
 For unknown or complex domains:
 
 ```bash
 /query "How does OAuth2 work in this codebase?"
+
 # Read-only analysis and understanding
+
 # Pattern identification and documentation
+
 # No modifications or implementation
+
 # Prepares for informed development
+
 
 # Follow with:
 /task "Implement OAuth2 refresh token handling"
+
 # Armed with research insights
+
 # TDD-driven implementation
+
 # Quality gate validation
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Framework Integration
+# Framework Integration
 
-### Module Dependencies
+
+# Module Dependencies
 
 The runtime engine integrates with key framework modules:
 
@@ -368,7 +403,8 @@ The runtime engine integrates with key framework modules:
 </framework_integration>
 ```
 
-### Command Selection Decision Tree
+
+# Command Selection Decision Tree
 
 When uncertain about which command to use:
 
@@ -384,7 +420,8 @@ Documentation? → /docs (gateway enforcement)
 Uncertain? → /auto (intelligent routing)
 ```
 
-### Version Compatibility
+
+# Version Compatibility
 
 | Framework Version | Runtime Engine | Compatibility |
 |------------------|----------------|---------------|
@@ -392,11 +429,11 @@ Uncertain? → /auto (intelligent routing)
 | 2.3.x | Backward compatible | Limited features |
 | 2.2.x | Manual orchestration | Basic support |
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Monitoring and Metrics
+# Monitoring and Metrics
 
-### Runtime Metrics
+
+# Runtime Metrics
 
 The engine tracks key performance indicators:
 
@@ -409,7 +446,8 @@ The engine tracks key performance indicators:
 </runtime_metrics>
 ```
 
-### Continuous Improvement
+
+# Continuous Improvement
 
 The runtime engine evolves through:
 
@@ -418,25 +456,25 @@ The runtime engine evolves through:
 - **Quality enhancement** through gate effectiveness
 - **User feedback** integration for workflow improvement
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Related Documentation
+# Related Documentation
 
-### Core Framework
+
+# Core Framework
 - [CLAUDE.md](../../CLAUDE.md) - Complete framework specification
 - [TDD Standards](./tdd-standards.md) - Detailed TDD methodology
 - [Critical Thinking Enforcement](./critical-thinking-enforcement.md) - Analysis requirements
 
-### Command References  
+
+# Command References  
 - [Command Selection Guide](../COMMAND_SELECTION_GUIDE.md) - Choosing the right command
 - [Getting Started](../GETTING_STARTED.md) - Framework introduction
 - [Documentation Index](../DOCUMENTATION_INDEX.md) - Complete documentation map
 
-### Implementation Details
+
+# Implementation Details
 - [Module Composition Framework](.claude/modules/patterns/module-composition-framework.md) - Technical architecture
 - [Universal Quality Gates](.claude/modules/quality/universal-quality-gates.md) - Gate specifications
 - [Thinking Pattern Template](.claude/modules/patterns/thinking-pattern-template.md) - Standardized patterns
-
-────────────────────────────────────────────────────────────────────────────────
 
 *This guide provides comprehensive coverage of the Module Runtime Engine for practical development usage. For technical implementation details, see the module documentation referenced above.*

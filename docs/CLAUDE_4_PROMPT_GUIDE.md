@@ -2,42 +2,52 @@
 |---------|--------------|--------|
 | 4.0.1   | 2025-07-08   | stable |
 
-# Claude 4 Optimization Guide
 
-────────────────────────────────────────────────────────────────────────────────
+# Claude 4 Optimization Guide
 
 ```xml
 <guide_metadata>
   <purpose>Claude 4 optimization patterns for framework files</purpose>
   <enforcement>MANDATORY consultation before editing .claude files</enforcement>
   <version>4.0.1</version>
-  <disclaimer>This guide combines official Anthropic documentation with community-validated techniques. Performance claims are based on general patterns and may vary by use case. Users should validate techniques in their specific environments.</disclaimer>
+  <disclaimer>
+    This guide combines official Anthropic documentation with community-validated techniques. 
+    Performance claims are based on general patterns and may vary by use case. 
+    Users should validate techniques in their specific environments.
+  </disclaimer>
 </guide_metadata>
 ```
 
+
+# Optimization Principles
+
+```xml
 <optimization_principles>
-  
-  <xml_structure enforcement="mandatory">
+  <xml_structure enforcement = "mandatory">
     <rule>ALL framework files MUST use XML structure for critical components</rule>
     <purpose>Leverage Claude 4's enhanced XML parsing accuracy</purpose>
   </xml_structure>
   
   <token_targets>
-    <foundation_files max="3000"/>
-    <core_commands max="4000"/>
-    <modules max="2000"/>
-    <total_framework max="120000"/>
+    <foundation_files max = "3000"/>
+    <core_commands max = "4000"/>
+    <modules max = "2000"/>
+    <total_framework max = "120000"/>
   </token_targets>
-  
 </optimization_principles>
+```
 
+
+# Claude 4 Techniques
+
+```xml
 <claude_4_techniques>
   
   <explicit_instructions>
     <principle>Claude 4 requires MORE explicit instructions than previous versions</principle>
     <pattern>
       <correct_format>
-        <instruction enforcement="strict">
+        <instruction enforcement = "strict">
           <requirement>MUST create GitHub session for all multi-agent work</requirement>
           <validation>Verify session creation before proceeding</validation>
         </instruction>
@@ -48,12 +58,12 @@
   <deterministic_execution>
     <purpose>Ensure consistent behavior through strict enforcement</purpose>
     <pattern>
-      <execution_control type="deterministic">
-        <pre_conditions mandatory="true">
+      <execution_control type = "deterministic">
+        <pre_conditions mandatory = "true">
           <condition>All required files must exist</condition>
         </pre_conditions>
-        <quality_gates mandatory="true">
-          <gate name="tests_pass" command="pytest"/>
+        <quality_gates mandatory = "true">
+          <gate name = "tests_pass" command = "pytest"/>
         </quality_gates>
       </execution_control>
     </pattern>
@@ -62,8 +72,8 @@
   <multiple_emphasis>
     <purpose>Layer emphasis for critical rules</purpose>
     <pattern>
-      <critical_requirement enforcement="MANDATORY">
-        <rule priority="HIGHEST">ALL commands MUST delegate to modules</rule>
+      <critical_requirement enforcement = "MANDATORY">
+        <rule priority = "HIGHEST">ALL commands MUST delegate to modules</rule>
         <validation>Commands contain ONLY delegation instructions</validation>
         <failure_consequence>Violating delegation breaks modularity</failure_consequence>
       </critical_requirement>
@@ -73,16 +83,22 @@
   <context_motivation>
     <purpose>Explain WHY for better Claude 4 performance</purpose>
     <pattern>
-      <instruction context="performance_optimization">
-        <motivation>Parallel execution may significantly reduce latency for independent operations</motivation>
+      <instruction context = "performance_optimization">
+        <motivation>
+          Parallel execution may significantly reduce latency for independent operations
+        </motivation>
         <requirement>Use ALL tool calls in single message</requirement>
       </instruction>
     </pattern>
   </context_motivation>
-  
 </claude_4_techniques>
+```
 
-<claude_4_advanced_features version="4.0.1" enforcement="critical">
+
+# Claude 4 Advanced Features
+
+```xml
+<claude_4_advanced_features version = "4.0.1" enforcement = "critical">
   
   <compatibility_notice>These features are specifically designed for Claude 4 (Sonnet 4) models. Compatibility with earlier Claude versions is not guaranteed. Some features may degrade gracefully on older models, while others may not be available.</compatibility_notice>
   
@@ -108,19 +124,19 @@
       <trigger_conditions>After tool calls, when uncertain, for complex multi-step tasks</trigger_conditions>
     </configuration>
     <implementation_patterns>
-      <pattern name="tool_reflection">
+      <pattern name = "tool_reflection">
         <structure>
           Tool execution → &lt;antml:thinking&gt; Analysis → Decision → Next action
         </structure>
         <benefit>Sophisticated reasoning after receiving tool results</benefit>
       </pattern>
-      <pattern name="extended_reasoning">
+      <pattern name = "extended_reasoning">
         <triggers>
           <trigger>"think more" | "think harder" | "think longer" | "ultrathink"</trigger>
         </triggers>
         <result>Activates deepest analytical capabilities</result>
       </pattern>
-      <pattern name="checkpoint_thinking">
+      <pattern name = "checkpoint_thinking">
         <rule>Use thinking blocks at every major decision point</rule>
         <validation>Verify assumptions before proceeding</validation>
       </pattern>
@@ -136,14 +152,14 @@
     <purpose>Significant performance improvement through optimized tool orchestration</purpose>
     <core_principle>All independent operations MUST execute simultaneously [Source #3: Tool Use Documentation]</core_principle>
     <implementation_strategies>
-      <strategy name="batch_tool_calls">
+      <strategy name = "batch_tool_calls">
         <pattern>
           Single message with multiple tool invocations:
           Tool1(), Tool2(), Tool3() executed concurrently
         </pattern>
         <performance_gain>Substantial latency reduction vs sequential execution [Source #3: Tool Use Documentation]</performance_gain>
       </strategy>
-      <strategy name="intelligent_batching">
+      <strategy name = "intelligent_batching">
         <rule>Group by dependency - independent tools in parallel</rule>
         <rule>Chain dependent operations after batch completion</rule>
         <example>
@@ -151,7 +167,7 @@
           Then: Process(combined_content)
         </example>
       </strategy>
-      <strategy name="context_optimization">
+      <strategy name = "context_optimization">
         <parallel_reads>Load multiple context files simultaneously</parallel_reads>
         <parallel_analysis>Analyze different code sections concurrently</parallel_analysis>
         <parallel_validation>Run multiple validation checks at once</parallel_validation>
@@ -164,8 +180,8 @@
         <condition>Concurrent validation checks</condition>
       </mandatory_parallel_usage>
       <success_metrics>
-        <metric name="parallel_adoption_rate">Target: ~100% for eligible operations</metric>
-        <metric name="latency_improvement">Target: Substantial reduction for eligible operations</metric>
+        <metric name = "parallel_adoption_rate">Target: ~100% for eligible operations</metric>
+        <metric name = "latency_improvement">Target: Substantial reduction for eligible operations</metric>
       </success_metrics>
     </enforcement_patterns>
   </parallel_execution_mastery>
@@ -173,28 +189,28 @@
   <extended_thinking_capabilities>
     <purpose>Leverage Claude 4's enhanced reasoning for complex problem solving</purpose>
     <activation_methods>
-      <method name="explicit_instruction">
+      <method name = "explicit_instruction">
         <trigger>Direct request for step-by-step analysis</trigger>
         <pattern>"Think through this problem step by step"</pattern>
       </method>
-      <method name="uncertainty_detection">
+      <method name = "uncertainty_detection">
         <trigger>When Claude shows hesitation or multiple options</trigger>
         <pattern>Automatic thinking block activation</pattern>
       </method>
-      <method name="complexity_threshold">
+      <method name = "complexity_threshold">
         <trigger>Tasks requiring >3 logical steps</trigger>
         <pattern>Chain of thought with intermediate validation</pattern>
       </method>
     </activation_methods>
     <optimization_techniques>
-      <technique name="progressive_reasoning">
+      <technique name = "progressive_reasoning">
         <step>Initial assessment and goal clarification</step>
         <step>Information gathering and context analysis</step>
         <step>Solution exploration with trade-off analysis</step>
         <step>Implementation planning with risk assessment</step>
         <step>Execution with continuous validation</step>
       </technique>
-      <technique name="reflection_cycles">
+      <technique name = "reflection_cycles">
         <pattern>Action → Reflection → Adjustment → Validation</pattern>
         <benefit>Self-correcting behavior with improved accuracy</benefit>
       </technique>
@@ -209,49 +225,49 @@
   <context_window_optimization>
     <purpose>Maximize efficiency within 200K token capacity [Source #4: Models Documentation]</purpose>
     <token_management_strategies>
-      <strategy name="hierarchical_context">
+      <strategy name = "hierarchical_context">
         <principle>Most important information first</principle>
         <implementation>Critical instructions → Context → Examples → References</implementation>
       </strategy>
-      <strategy name="dynamic_loading">
+      <strategy name = "dynamic_loading">
         <principle>Load context as needed rather than upfront</principle>
         <implementation>Use @import patterns for conditional content</implementation>
       </strategy>
-      <strategy name="context_compression">
+      <strategy name = "context_compression">
         <principle>XML structure reduces token overhead vs prose</principle>
         <ratio>XML: Enhanced token efficiency vs equivalent prose</ratio>
       </strategy>
     </token_management_strategies>
     <performance_targets>
-      <target name="framework_files">Stay within 3000-4000 token limits</target>
-      <target name="total_framework">Maintain under 120K tokens for headroom</target>
-      <target name="session_efficiency">Reserve 50K+ tokens for active work</target>
+      <target name = "framework_files">Stay within 3000-4000 token limits</target>
+      <target name = "total_framework">Maintain under 120K tokens for headroom</target>
+      <target name = "session_efficiency">Reserve 50K+ tokens for active work</target>
     </performance_targets>
   </context_window_optimization>
   
   <system_prompt_insights>
     <purpose>Leverage Claude 4 system prompt patterns for optimal behavior</purpose>
     <key_discoveries>
-      <discovery name="explicit_instruction_preference">
+      <discovery name = "explicit_instruction_preference">
         <finding>Claude 4 requires MORE explicit instructions than previous versions [Source #6: Community Analysis - Simon Willison]</finding>
         <implementation>Be specific about desired behaviors and validation criteria</implementation>
       </discovery>
-      <discovery name="thinking_guidance">
+      <discovery name = "thinking_guidance">
         <finding>System prompt encourages thinking blocks after tool results [Source #6: Community Analysis - Simon Willison]</finding>
         <implementation>Design workflows that naturally trigger reflection</implementation>
       </discovery>
-      <discovery name="context_motivation">
+      <discovery name = "context_motivation">
         <finding>Explaining WHY significantly improves adherence [Source #6: Community Analysis - Simon Willison]</finding>
         <implementation>Include motivation tags for critical requirements</implementation>
       </discovery>
     </key_discoveries>
     <behavioral_optimization>
-      <pattern name="clear_expectations">
+      <pattern name = "clear_expectations">
         <rule>State exactly what you want Claude to do</rule>
         <rule>Specify validation criteria and success metrics</rule>
         <rule>Include consequences of non-compliance</rule>
       </pattern>
-      <pattern name="progressive_disclosure">
+      <pattern name = "progressive_disclosure">
         <rule>Start with high-level requirements</rule>
         <rule>Provide detailed specifications when needed</rule>
         <rule>Use examples to clarify ambiguous points</rule>
@@ -261,7 +277,7 @@
   
 </claude_4_advanced_features>
 
-<advanced_prompting_frameworks_2025 version="4.0.1" enforcement="mandatory">
+<advanced_prompting_frameworks_2025 version = "4.0.1" enforcement = "mandatory">
   
   <purpose>Latest prompting frameworks from 2025 research for optimal Claude 4 interaction [Source #7: Community Framework Analysis]</purpose>
   <disclaimer>These frameworks are primarily community-developed and validated through practical usage. Effectiveness may vary by task type and implementation. Users should test frameworks in their specific contexts before relying on them for critical applications.</disclaimer>
@@ -341,47 +357,47 @@
   
   <advanced_framework_collection>
     
-    <framework name="APE" purpose="Action, Purpose, Expectation - Quick task execution">
+    <framework name = "APE" purpose = "Action, Purpose, Expectation - Quick task execution">
       <use_case>Rapid prototyping and simple automation</use_case>
       <pattern>&lt;action&gt;Generate&lt;/action&gt; &lt;purpose&gt;API endpoints&lt;/purpose&gt; &lt;expectation&gt;RESTful with OpenAPI docs&lt;/expectation&gt;</pattern>
     </framework>
     
-    <framework name="CLEAR" purpose="Context, Limitation, Example, Action, Role - Comprehensive guidance">
+    <framework name = "CLEAR" purpose = "Context, Limitation, Example, Action, Role - Comprehensive guidance">
       <use_case>Complex system design and architecture decisions</use_case>
       <pattern>Full context → Known constraints → Concrete examples → Required actions → Expert role</pattern>
     </framework>
     
-    <framework name="SOAR" purpose="Situation, Objective, Action, Result - Strategic planning">
+    <framework name = "SOAR" purpose = "Situation, Objective, Action, Result - Strategic planning">
       <use_case>High-level planning and goal-oriented tasks</use_case>
       <pattern>Current state → Desired outcome → Implementation steps → Success metrics</pattern>
     </framework>
     
-    <framework name="CRISP" purpose="Context, Role, Instructions, Specifics, Parameters - Detailed execution">
+    <framework name = "CRISP" purpose = "Context, Role, Instructions, Specifics, Parameters - Detailed execution">
       <use_case>Precise technical implementations requiring exact specifications</use_case>
       <pattern>Background → Expertise level → Step-by-step guide → Edge cases → Configuration</pattern>
     </framework>
     
-    <framework name="SPARK" purpose="Scenario, Problem, Action, Result, Knowledge - Problem solving">
+    <framework name = "SPARK" purpose = "Scenario, Problem, Action, Result, Knowledge - Problem solving">
       <use_case>Debugging, troubleshooting, and root cause analysis</use_case>
       <pattern>Current situation → Core issue → Solution approach → Expected outcome → Domain expertise</pattern>
     </framework>
     
-    <framework name="FOCUS" purpose="Function, Objective, Context, User, Scope - User-centered design">
+    <framework name = "FOCUS" purpose = "Function, Objective, Context, User, Scope - User-centered design">
       <use_case>User experience design and interface development</use_case>
       <pattern>Core capability → User goal → Usage environment → Target audience → Feature boundaries</pattern>
     </framework>
     
-    <framework name="SMART-AI" purpose="Specific, Measurable, Achievable, Relevant, Time-bound + AI considerations">
+    <framework name = "SMART-AI" purpose = "Specific, Measurable, Achievable, Relevant, Time-bound + AI considerations">
       <use_case>Project planning and milestone definition with AI assistance</use_case>
       <pattern>Precise goals → Quantifiable metrics → Realistic scope → Business value → Deadlines + AI capabilities</pattern>
     </framework>
     
-    <framework name="LEAP" purpose="Learn, Explore, Apply, Produce - Knowledge acquisition">
+    <framework name = "LEAP" purpose = "Learn, Explore, Apply, Produce - Knowledge acquisition">
       <use_case>Research tasks, learning new technologies, and knowledge synthesis</use_case>
       <pattern>Information gathering → Option exploration → Practical application → Concrete deliverables</pattern>
     </framework>
     
-    <framework name="BRIDGE" purpose="Background, Requirements, Implementation, Deliverables, Goals, Evaluation">
+    <framework name = "BRIDGE" purpose = "Background, Requirements, Implementation, Deliverables, Goals, Evaluation">
       <use_case>Complex integration projects and cross-system implementations</use_case>
       <pattern>Current state → Functional needs → Technical approach → Output artifacts → Success criteria → Validation</pattern>
     </framework>
@@ -391,17 +407,17 @@
   <framework_selection_guide>
     
     <selection_criteria>
-      <criterion name="task_complexity">
+      <criterion name = "task_complexity">
         <simple>APE, CARE</simple>
         <moderate>RISE, TRACE, SOAR</moderate>
         <complex>CLEAR, CRISP, BRIDGE</complex>
       </criterion>
-      <criterion name="domain_specificity">
+      <criterion name = "domain_specificity">
         <technical>TRACE, CRISP, SPARK</technical>
         <business>SOAR, SMART-AI, FOCUS</business>
         <research>LEAP, CLEAR</research>
       </criterion>
-      <criterion name="interaction_style">
+      <criterion name = "interaction_style">
         <directive>RISE, TRACE</directive>
         <collaborative>CARE, FOCUS</collaborative>
         <iterative>SPARK, LEAP, BRIDGE</iterative>
@@ -409,15 +425,15 @@
     </selection_criteria>
     
     <combination_strategies>
-      <strategy name="framework_chaining">
+      <strategy name = "framework_chaining">
         <purpose>Use multiple frameworks in sequence for complex workflows [theoretical approach - effectiveness not validated]</purpose>
         <pattern>LEAP (research) → CLEAR (design) → CRISP (implementation) → CARE (evaluation)</pattern>
       </strategy>
-      <strategy name="framework_hybridization">
+      <strategy name = "framework_hybridization">
         <purpose>Combine elements from different frameworks for custom approaches [experimental technique - results may vary]</purpose>
         <pattern>RISE role + TRACE specificity + CARE evaluation</pattern>
       </strategy>
-      <strategy name="contextual_adaptation">
+      <strategy name = "contextual_adaptation">
         <purpose>Modify frameworks based on specific project needs [adaptive approach - requires testing]</purpose>
         <pattern>Add security considerations to CRISP, or user feedback loops to SOAR</pattern>
       </strategy>
@@ -446,9 +462,9 @@
     </parallel_framework_execution>
     
     <framework_validation>
-      <checkpoint name="completeness">Verify all framework components are addressed</checkpoint>
-      <checkpoint name="consistency">Ensure framework outputs align with expectations</checkpoint>
-      <checkpoint name="quality">Validate against success criteria and metrics</checkpoint>
+      <checkpoint name = "completeness">Verify all framework components are addressed</checkpoint>
+      <checkpoint name = "consistency">Ensure framework outputs align with expectations</checkpoint>
+      <checkpoint name = "quality">Validate against success criteria and metrics</checkpoint>
     </framework_validation>
     
   </framework_optimization_patterns>
@@ -462,10 +478,10 @@
     </quick_start_recommendations>
     
     <common_patterns>
-      <pattern name="research_to_implementation">LEAP → CLEAR → CRISP → CARE</pattern>
-      <pattern name="problem_solving">SPARK → SOAR → TRACE → CARE</pattern>
-      <pattern name="user_focused_development">FOCUS → RISE → CRISP → CARE</pattern>
-      <pattern name="strategic_planning">SOAR → SMART-AI → BRIDGE → CARE</pattern>
+      <pattern name = "research_to_implementation">LEAP → CLEAR → CRISP → CARE</pattern>
+      <pattern name = "problem_solving">SPARK → SOAR → TRACE → CARE</pattern>
+      <pattern name = "user_focused_development">FOCUS → RISE → CRISP → CARE</pattern>
+      <pattern name = "strategic_planning">SOAR → SMART-AI → BRIDGE → CARE</pattern>
     </common_patterns>
     
     <performance_optimization>
@@ -480,7 +496,7 @@
   
 </advanced_prompting_frameworks_2025>
 
-<claude_code_optimization version="4.0.1" enforcement="critical">
+<claude_code_optimization version = "4.0.1" enforcement = "critical">
   
   <purpose>Advanced Claude Code terminal optimization for maximum productivity and efficiency [Source #1: Claude Code Documentation]</purpose>
   
@@ -489,22 +505,22 @@
     <cascaded_memory_system>
       <purpose>Hierarchical context loading for optimal token usage [Source #1: Claude Code Documentation]</purpose>
       <memory_hierarchy>
-        <level name="project_memory">./CLAUDE.md - Project-specific guidelines and conventions [Source #1: Claude Code Documentation]</level>
-        <level name="user_memory">~/.claude/CLAUDE.md - Personal preferences across all projects [Source #1: Claude Code Documentation]</level>
-        <level name="imported_memory">@path/to/import - Conditional context via import syntax</level>
+        <level name = "project_memory">./CLAUDE.md - Project-specific guidelines and conventions [Source #1: Claude Code Documentation]</level>
+        <level name = "user_memory">~/.claude/CLAUDE.md - Personal preferences across all projects [Source #1: Claude Code Documentation]</level>
+        <level name = "imported_memory">@path/to/import - Conditional context via import syntax</level>
       </memory_hierarchy>
       <optimization_strategies>
-        <strategy name="lean_memory_files">
+        <strategy name = "lean_memory_files">
           <rule>Keep memory files under 2000 tokens each</rule>
           <rule>Use bullet points under descriptive headings for structure</rule>
           <rule>Be specific rather than generic ("Use 2-space indentation" vs "Format code properly")</rule>
         </strategy>
-        <strategy name="conditional_loading">
+        <strategy name = "conditional_loading">
           <rule>Use @import for context that's only sometimes needed</rule>
           <rule>Place detailed documentation in docs/ folder, reference with @docs/filename.md</rule>
           <rule>Create MD files with checkboxes for task-specific context</rule>
         </strategy>
-        <strategy name="memory_optimization">
+        <strategy name = "memory_optimization">
           <rule>Save tokens by not loading unnecessary content in every session</rule>
           <rule>Use recursive imports up to 5 hops for complex project structures [Source #1: Claude Code Documentation]</rule>
           <rule>Monitor context usage and prune outdated memory content regularly</rule>
@@ -515,30 +531,30 @@
     <claude_md_best_practices>
       <purpose>Optimal CLAUDE.md structure for consistent AI assistance</purpose>
       <essential_sections>
-        <section name="project_overview">
+        <section name = "project_overview">
           <content>Architecture, main technologies, key dependencies</content>
           <purpose>Provide Claude with project context for better decisions</purpose>
         </section>
-        <section name="development_conventions">
+        <section name = "development_conventions">
           <content>Code style, naming conventions, file organization</content>
           <purpose>Ensure consistent code generation and modifications</purpose>
         </section>
-        <section name="workflow_patterns">
+        <section name = "workflow_patterns">
           <content>Testing strategy, deployment process, common tasks</content>
           <purpose>Enable Claude to follow project-specific workflows</purpose>
         </section>
-        <section name="environment_setup">
+        <section name = "environment_setup">
           <content>Local development setup, tool configuration, dependencies</content>
           <purpose>Help Claude understand available tools and constraints</purpose>
         </section>
       </essential_sections>
       <advanced_patterns>
-        <pattern name="conditional_imports">
+        <pattern name = "conditional_imports">
           <syntax>@docs/api-guidelines.md - Import detailed API documentation when needed</syntax>
           <syntax>@scripts/deployment.md - Import deployment procedures for production tasks</syntax>
           <benefit>Loads context only when relevant, saving tokens</benefit>
         </pattern>
-        <pattern name="structured_organization">
+        <pattern name = "structured_organization">
           <structure>
             # Project Overview
             - Architecture: Microservices with Node.js/TypeScript
@@ -567,19 +583,19 @@
       <purpose>Significantly improve Claude Code performance through structured analysis [Source #9: Official Models Documentation]</purpose>
       <core_principle>Research and planning BEFORE coding prevents costly iterations [Source #9: Official Models Documentation]</core_principle>
       <implementation_steps>
-        <step name="context_gathering">
+        <step name = "context_gathering">
           <action>Ask Claude to analyze project structure and understand requirements</action>
           <benefit>Builds comprehensive understanding before making changes</benefit>
         </step>
-        <step name="planning_phase">
+        <step name = "planning_phase">
           <action>Request detailed implementation plan with trade-off analysis</action>
           <benefit>Identifies potential issues and optimization opportunities</benefit>
         </step>
-        <step name="validation_phase">
+        <step name = "validation_phase">
           <action>Review plan against project conventions and constraints</action>
           <benefit>Ensures alignment with existing architecture and standards</benefit>
         </step>
-        <step name="execution_phase">
+        <step name = "execution_phase">
           <action>Implement solution with continuous validation against plan</action>
           <benefit>Systematic implementation with built-in quality checks</benefit>
         </step>
@@ -594,19 +610,19 @@
     <tdd_enhanced_workflows>
       <purpose>Leverage agentic coding for powerful test-driven development</purpose>
       <tdd_optimization_patterns>
-        <pattern name="test_specification">
+        <pattern name = "test_specification">
           <step>Define expected behavior with input/output examples</step>
           <step>Ask Claude to write comprehensive tests based on specifications</step>
           <step>Verify tests fail before any implementation</step>
           <step>Explicitly prevent Claude from writing implementation until tests pass</step>
         </pattern>
-        <pattern name="iterative_implementation">
+        <pattern name = "iterative_implementation">
           <step>Write minimal code to pass one test</step>
           <step>Run tests and confirm single test passes</step>
           <step>Refactor while keeping all tests green</step>
           <step>Repeat for next test case</step>
         </pattern>
-        <pattern name="quality_enforcement">
+        <pattern name = "quality_enforcement">
           <rule>No implementation code until tests are written and failing</rule>
           <rule>All tests must pass before considering feature complete</rule>
           <rule>Refactoring must maintain test coverage and pass rates</rule>
@@ -617,9 +633,9 @@
     <extended_thinking_triggers>
       <purpose>Activate Claude's deepest analytical capabilities for complex problems</purpose>
       <thinking_levels>
-        <level name="standard">Normal reasoning and problem solving</level>
-        <level name="enhanced">"think more", "think harder", "think longer"</level>
-        <level name="maximum">"ultrathink" - Activates deepest analysis capabilities</level>
+        <level name = "standard">Normal reasoning and problem solving</level>
+        <level name = "enhanced">"think more", "think harder", "think longer"</level>
+        <level name = "maximum">"ultrathink" - Activates deepest analysis capabilities</level>
       </thinking_levels>
       <optimal_usage>
         <use_case>Complex architectural decisions requiring deep analysis</use_case>
@@ -641,17 +657,17 @@
     <context_preservation>
       <purpose>Maintain efficiency across coding sessions and avoid context loss</purpose>
       <session_optimization>
-        <strategy name="compact_sessions">
+        <strategy name = "compact_sessions">
           <rule>Keep conversations small and start new chats frequently</rule>
           <benefit>Prevents hitting message limits and maintains session performance</benefit>
           <implementation>~40 minutes intensive use = new session for optimal performance</implementation>
         </strategy>
-        <strategy name="state_reconstruction">
+        <strategy name = "state_reconstruction">
           <rule>Let Claude re-read project state rather than continuing massive threads</rule>
           <benefit>Fresh context loading often more efficient than context continuation</benefit>
           <timing>2-3 hours of solid work within 5-hour session blocks</timing>
         </strategy>
-        <strategy name="strategic_compaction">
+        <strategy name = "strategic_compaction">
           <rule>Use /compact command strategically, not frequently</rule>
           <concern>Compaction is slow (1+ minute) and can waste time if overused</concern>
           <timing>Only when session approaches message limits</timing>
@@ -662,17 +678,17 @@
     <cost_optimization>
       <purpose>Maximize coding productivity while managing API costs</purpose>
       <monitoring_strategies>
-        <strategy name="token_awareness">
+        <strategy name = "token_awareness">
           <tool>Monitor token consumption and estimate costs in real-time</tool>
           <practice>Track context gathering vs active coding token ratios</practice>
           <optimization>Tune environment to minimize unnecessary context loading</optimization>
         </strategy>
-        <strategy name="session_efficiency">
+        <strategy name = "session_efficiency">
           <rule>Optimize prompts to reduce back-and-forth iterations</rule>
           <rule>Use clear, specific instructions to minimize clarification requests</rule>
           <rule>Leverage memory files to reduce repetitive context provision</rule>
         </strategy>
-        <strategy name="backoff_implementation">
+        <strategy name = "backoff_implementation">
           <rule>Implement rate limit handling and backoff strategies</rule>
           <rule>Configure appropriate timeout settings for large tasks</rule>
           <rule>Use async patterns for non-critical operations</rule>
@@ -708,17 +724,17 @@
     <autonomous_workflow_patterns>
       <purpose>Maximize Claude Code's autonomous decision-making capabilities</purpose>
       <autonomy_optimization>
-        <pattern name="multi_step_delegation">
+        <pattern name = "multi_step_delegation">
           <rule>Design prompts that enable Claude to handle complete workflows independently</rule>
           <example>Complete feature implementation from requirements to testing</example>
           <benefit>Reduces manual intervention and maintains consistent execution</benefit>
         </pattern>
-        <pattern name="context_awareness">
+        <pattern name = "context_awareness">
           <rule>Claude maintains awareness of project structure, dependencies, and patterns</rule>
           <optimization>Provide architectural context in CLAUDE.md for better autonomous decisions</optimization>
           <result>Intelligent decision-making across file system, Git history, and runtime logs</result>
         </pattern>
-        <pattern name="intelligent_error_recovery">
+        <pattern name = "intelligent_error_recovery">
           <rule>Claude can diagnose and recover from errors autonomously</rule>
           <implementation>Provide error handling patterns and recovery strategies in memory</implementation>
           <benefit>Self-healing workflows with minimal human intervention</benefit>
@@ -729,17 +745,17 @@
     <performance_enhancement_patterns>
       <purpose>Optimize Claude Code execution for maximum efficiency</purpose>
       <execution_optimization>
-        <pattern name="parallel_file_operations">
+        <pattern name = "parallel_file_operations">
           <rule>Batch all independent file operations for substantial performance improvement</rule>
           <implementation>Read("file1"), Read("file2"), Read("file3") in single message</implementation>
           <benefit>Significant latency reduction through concurrent execution</benefit>
         </pattern>
-        <pattern name="context_budget_management">
+        <pattern name = "context_budget_management">
           <rule>Optimize context window usage for sustained productivity</rule>
           <strategy>Hierarchical context loading with priority-based inclusion</strategy>
           <target>Reserve 50K+ tokens for active development work</target>
         </pattern>
-        <pattern name="tool_selection_optimization">
+        <pattern name = "tool_selection_optimization">
           <rule>Choose optimal tools for each task type</rule>
           <implementation>Use Task tool for searches, direct tools for specific operations</implementation>
           <benefit>Faster execution through appropriate tool selection</benefit>
@@ -751,7 +767,7 @@
   
 </claude_code_optimization>
 
-<performance_security_optimization version="4.0.1" enforcement="critical">
+<performance_security_optimization version = "4.0.1" enforcement = "critical">
   
   <purpose>Advanced performance and security patterns for Claude 4 and Claude Code</purpose>
   
@@ -760,7 +776,7 @@
     <advanced_tool_orchestration>
       <purpose>Optimize tool use for maximum efficiency and reliability</purpose>
       <parallel_execution_patterns>
-        <pattern name="intelligent_batching">
+        <pattern name = "intelligent_batching">
           <rule>Group independent operations for concurrent execution</rule>
           <implementation>
             Batch: Read("config.js"), Read("package.json"), Read("tsconfig.json")
@@ -768,7 +784,7 @@
           </implementation>
           <performance_gain>Substantial latency reduction through parallel tool calls</performance_gain>
         </pattern>
-        <pattern name="dependency_aware_chaining">
+        <pattern name = "dependency_aware_chaining">
           <rule>Chain dependent operations while parallelizing independent ones</rule>
           <example>
             Parallel: Glob("**/*.test.js"), Grep("TODO", "src/")
@@ -776,7 +792,7 @@
           </example>
           <optimization>Minimize wait time through optimal dependency resolution</optimization>
         </pattern>
-        <pattern name="conditional_tool_selection">
+        <pattern name = "conditional_tool_selection">
           <rule>Choose optimal tools based on task characteristics</rule>
           <selection_criteria>
             <criterion>File count: Glob for patterns, Read for specific files</criterion>
@@ -787,17 +803,17 @@
       </parallel_execution_patterns>
       
       <tool_performance_optimization>
-        <strategy name="context_efficient_operations">
+        <strategy name = "context_efficient_operations">
           <rule>Minimize context loading through strategic tool selection</rule>
           <implementation>Use Task tool for searches to avoid loading excessive context</implementation>
           <benefit>Preserves context window for active development work</benefit>
         </strategy>
-        <strategy name="result_caching_patterns">
+        <strategy name = "result_caching_patterns">
           <rule>Cache tool results for repeated operations within sessions</rule>
           <implementation>Store frequently accessed file contents in session variables</implementation>
           <optimization>Reduce redundant file system operations</optimization>
         </strategy>
-        <strategy name="progressive_disclosure">
+        <strategy name = "progressive_disclosure">
           <rule>Load information incrementally as needed</rule>
           <pattern>High-level analysis → Detailed investigation → Specific implementation</pattern>
           <benefit>Optimal context utilization without premature loading</benefit>
@@ -809,27 +825,27 @@
     <chain_of_thought_integration>
       <purpose>Enhance tool use with Claude 4's reasoning capabilities</purpose>
       <integration_patterns>
-        <pattern name="pre_tool_analysis">
+        <pattern name = "pre_tool_analysis">
           <structure>&lt;antml:thinking&gt;Tool selection rationale&lt;/antml:thinking&gt; → Tool execution</structure>
           <benefit>Optimal tool selection through analytical reasoning</benefit>
         </pattern>
-        <pattern name="post_tool_reflection">
+        <pattern name = "post_tool_reflection">
           <structure>Tool execution → &lt;antml:thinking&gt;Result analysis&lt;/antml:thinking&gt; → Next action</structure>
           <benefit>Sophisticated reasoning after receiving tool results</benefit>
         </pattern>
-        <pattern name="error_recovery_thinking">
+        <pattern name = "error_recovery_thinking">
           <structure>Tool failure → &lt;antml:thinking&gt;Diagnosis&lt;/antml:thinking&gt; → Recovery strategy</structure>
           <benefit>Intelligent error handling and autonomous recovery</benefit>
         </pattern>
       </integration_patterns>
       
       <optimization_techniques>
-        <technique name="tool_parameter_inference">
+        <technique name = "tool_parameter_inference">
           <rule>Use chain of thought to improve parameter selection accuracy</rule>
           <implementation>Analyze context before making tool calls to ensure optimal parameters</implementation>
           <result>Higher success rates and more precise tool usage</result>
         </technique>
-        <technique name="multi_tool_coordination">
+        <technique name = "multi_tool_coordination">
           <rule>Plan multi-tool workflows through structured reasoning</rule>
           <pattern>Goal analysis → Tool sequence planning → Execution with validation</pattern>
           <benefit>Coherent multi-step tool orchestration</benefit>
@@ -845,17 +861,17 @@
     <data_protection_strategies>
       <purpose>Secure handling of sensitive information in AI workflows [Source #10: Engineering Best Practices]</purpose>
       <privacy_enforcement>
-        <pattern name="data_minimization">
+        <pattern name = "data_minimization">
           <rule>Only include necessary data in prompts and context [Source #10: Engineering Best Practices]</rule>
           <implementation>Filter sensitive information before Claude processing</implementation>
           <validation>Regular audits of data inclusion patterns</validation>
         </pattern>
-        <pattern name="secure_context_handling">
+        <pattern name = "secure_context_handling">
           <rule>Avoid logging or persisting sensitive context information [Source #10: Engineering Best Practices]</rule>
           <implementation>Use ephemeral contexts for sensitive operations</implementation>
           <benefit>Compliance with data protection regulations</benefit>
         </pattern>
-        <pattern name="access_control_integration">
+        <pattern name = "access_control_integration">
           <rule>Implement role-based access to sensitive Claude Code operations [Source #10: Engineering Best Practices]</rule>
           <implementation>Environment-based restrictions on file access and operations</implementation>
           <security>Prevent unauthorized access to critical system components</security>
@@ -863,17 +879,17 @@
       </privacy_enforcement>
       
       <audit_and_monitoring>
-        <capability name="operation_logging">
+        <capability name = "operation_logging">
           <rule>Log all Claude Code operations for security auditing</rule>
           <configuration>Configure audit-only logging with privacy mode</configuration>
           <retention>Anonymized logs with auto-deletion within 30 days</retention>
         </capability>
-        <capability name="anomaly_detection">
+        <capability name = "anomaly_detection">
           <rule>Monitor for unusual Claude Code usage patterns</rule>
           <implementation>Track token usage, operation frequency, file access patterns</implementation>
           <alerting>Automated alerts for suspicious activity or policy violations</alerting>
         </capability>
-        <capability name="compliance_validation">
+        <capability name = "compliance_validation">
           <rule>Regular validation against security policies and regulations</rule>
           <frameworks>GDPR, SOC 2, ISO 27001 compliance considerations</frameworks>
           <reporting>Automated compliance reporting and policy adherence metrics</reporting>
@@ -885,17 +901,17 @@
     <secure_coding_patterns>
       <purpose>Security-focused coding practices with Claude assistance [Source #10: Engineering Best Practices]</purpose>
       <threat_modeling_integration>
-        <pattern name="security_first_design">
+        <pattern name = "security_first_design">
           <rule>Include threat modeling in architectural planning prompts [Source #10: Engineering Best Practices]</rule>
           <implementation>STRIDE analysis for new features and system changes</implementation>
           <validation>Security review checkpoints in development workflows</validation>
         </pattern>
-        <pattern name="vulnerability_scanning">
+        <pattern name = "vulnerability_scanning">
           <rule>Integrate security scanning into Claude Code workflows</rule>
           <tools>SAST, DAST, dependency scanning as part of development process</tools>
           <automation>Automated security validation in CI/CD pipelines</automation>
         </pattern>
-        <pattern name="secure_defaults">
+        <pattern name = "secure_defaults">
           <rule>Configure Claude to apply security best practices by default [Source #10: Engineering Best Practices]</rule>
           <implementation>Security-focused code generation patterns in CLAUDE.md</implementation>
           <examples>Input validation, output encoding, secure authentication patterns</examples>
@@ -903,13 +919,13 @@
       </threat_modeling_integration>
       
       <security_validation_workflows>
-        <workflow name="secure_code_review">
+        <workflow name = "secure_code_review">
           <step>Automated security scanning during development</step>
           <step>Claude-assisted manual security review</step>
           <step>Threat model validation against implementation</step>
           <step>Security test case generation and execution</step>
         </workflow>
-        <workflow name="dependency_security">
+        <workflow name = "dependency_security">
           <step>Automated dependency vulnerability scanning</step>
           <step>Claude-assisted security advisory analysis</step>
           <step>Risk assessment and mitigation planning</step>
@@ -926,7 +942,7 @@
     <context_window_efficiency>
       <purpose>Maximize 200K context window utilization for optimal performance [Source #4: Models Documentation]</purpose>
       <token_management_strategies>
-        <strategy name="hierarchical_prioritization">
+        <strategy name = "hierarchical_prioritization">
           <principle>Critical information first, supporting details last</principle>
           <implementation>
             Priority 1: Current task requirements and constraints
@@ -936,12 +952,12 @@
           </implementation>
           <optimization>Dynamic context loading based on task requirements</optimization>
         </strategy>
-        <strategy name="compression_techniques">
+        <strategy name = "compression_techniques">
           <principle>XML structure provides enhanced token efficiency vs prose [Source #2: Prompt Engineering Guide]</principle>
           <implementation>Structured data representation using semantic XML tags</implementation>
           <benefit>Significant token savings while maintaining information density</benefit>
         </strategy>
-        <strategy name="lazy_loading_patterns">
+        <strategy name = "lazy_loading_patterns">
           <principle>Load context incrementally as needed</principle>
           <implementation>@import syntax for conditional context inclusion</implementation>
           <result>Optimal context utilization without premature loading</result>
@@ -949,17 +965,17 @@
       </token_management_strategies>
       
       <session_optimization>
-        <pattern name="context_budget_monitoring">
+        <pattern name = "context_budget_monitoring">
           <rule>Track context usage throughout session for optimal allocation</rule>
           <implementation>Reserve 50K+ tokens for active development work</implementation>
           <alerting>Warnings when approaching context limits</alerting>
         </pattern>
-        <pattern name="strategic_session_management">
+        <pattern name = "strategic_session_management">
           <rule>Optimize session boundaries for maximum productivity</rule>
           <timing>40 minutes intensive use = new session for Claude Sonnet [Source #8: Community Optimization Guide]</timing>
           <strategy>2-3 hours solid work within 5-hour session blocks</strategy>
         </pattern>
-        <pattern name="context_inheritance">
+        <pattern name = "context_inheritance">
           <rule>Efficient context transfer between sessions</rule>
           <implementation>State reconstruction through memory files rather than context continuation</implementation>
           <benefit>Fresh context loading often more efficient than massive thread continuation</benefit>
@@ -971,17 +987,17 @@
     <execution_performance_patterns>
       <purpose>Optimize Claude 4 execution speed and accuracy</purpose>
       <parallel_processing_optimization>
-        <pattern name="concurrent_operation_batching">
+        <pattern name = "concurrent_operation_batching">
           <rule>Execute all independent operations simultaneously</rule>
           <performance_target>Substantial latency reduction through parallel execution [Source #3: Tool Use Documentation]</performance_target>
           <implementation>Single message with multiple tool invocations</implementation>
         </pattern>
-        <pattern name="pipeline_optimization">
+        <pattern name = "pipeline_optimization">
           <rule>Structure workflows for optimal parallel and sequential execution</rule>
           <design>Parallel information gathering → Sequential analysis → Parallel implementation</design>
           <optimization>Minimize bottlenecks through intelligent workflow design</optimization>
         </pattern>
-        <pattern name="resource_utilization">
+        <pattern name = "resource_utilization">
           <rule>Maximize Claude 4's processing capabilities</rule>
           <implementation>Complex reasoning tasks during parallel tool execution</implementation>
           <benefit>Optimal utilization of thinking capabilities and tool processing</benefit>
@@ -989,17 +1005,17 @@
       </parallel_processing_optimization>
       
       <accuracy_optimization>
-        <technique name="validation_checkpoints">
+        <technique name = "validation_checkpoints">
           <rule>Include validation steps throughout complex workflows</rule>
           <implementation>Intermediate result verification and error correction</implementation>
           <benefit>Higher accuracy through continuous validation</benefit>
         </technique>
-        <technique name="iterative_refinement">
+        <technique name = "iterative_refinement">
           <rule>Use thinking blocks for continuous improvement</rule>
           <pattern>Initial solution → Reflection → Refinement → Validation</pattern>
           <result>Self-correcting behavior with improved outcomes</result>
         </technique>
-        <technique name="multi_perspective_analysis">
+        <technique name = "multi_perspective_analysis">
           <rule>Approach complex problems from multiple angles</rule>
           <implementation>Technical, business, and user perspectives in analysis</implementation>
           <benefit>Comprehensive understanding and robust solutions</benefit>
@@ -1015,17 +1031,17 @@
     <token_efficiency_patterns>
       <purpose>Maximize value while minimizing token consumption [Source #8: Community Guide - MarkAI Code]</purpose>
       <consumption_optimization>
-        <strategy name="prompt_engineering_efficiency">
+        <strategy name = "prompt_engineering_efficiency">
           <rule>Design prompts for optimal token utilization [Source #2: Prompt Engineering Guide]</rule>
           <techniques>Clear, specific instructions to minimize clarification rounds</techniques>
           <implementation>Structured prompts with explicit success criteria</implementation>
         </strategy>
-        <strategy name="context_reuse_patterns">
+        <strategy name = "context_reuse_patterns">
           <rule>Leverage memory files to reduce repetitive context provision</rule>
           <implementation>Store frequently used patterns and conventions in CLAUDE.md</implementation>
           <benefit>Reduced token overhead for repeated information</benefit>
         </strategy>
-        <strategy name="session_boundary_optimization">
+        <strategy name = "session_boundary_optimization">
           <rule>Optimize session timing for cost efficiency</rule>
           <implementation>New sessions when approaching message limits rather than compaction</implementation>
           <rationale>Fresh context loading often more cost-effective than context continuation</rationale>
@@ -1033,17 +1049,17 @@
       </consumption_optimization>
       
       <cost_monitoring_automation>
-        <capability name="real_time_tracking">
+        <capability name = "real_time_tracking">
           <rule>Monitor token consumption and cost estimates in real-time</rule>
           <implementation>Dashboard with usage metrics and cost projections</implementation>
           <alerting>Budget warnings and usage optimization recommendations</alerting>
         </capability>
-        <capability name="usage_analytics">
+        <capability name = "usage_analytics">
           <rule>Analyze usage patterns for optimization opportunities</rule>
           <metrics>Context vs execution token ratios, session efficiency, tool usage patterns</metrics>
           <optimization>Data-driven improvements to prompting and workflow strategies</optimization>
         </capability>
-        <capability name="budget_management">
+        <capability name = "budget_management">
           <rule>Implement cost controls and budget enforcement</rule>
           <implementation>Rate limiting, usage caps, and approval workflows for high-cost operations</implementation>
           <governance>Cost allocation and chargeback for team usage</governance>
@@ -1056,7 +1072,7 @@
   
 </performance_security_optimization>
 
-<enhanced_framework_integration version="4.0.1" enforcement="mandatory">
+<enhanced_framework_integration version = "4.0.1" enforcement = "mandatory">
   
   <purpose>Integration patterns for advanced Claude 4 techniques with existing framework architecture</purpose>
   
@@ -1065,17 +1081,17 @@
     <advanced_feature_integration>
       <purpose>Seamless integration of Claude 4 features with modular framework</purpose>
       <integration_patterns>
-        <pattern name="thinking_pattern_enhancement">
+        <pattern name = "thinking_pattern_enhancement">
           <rule>Integrate interleaved thinking with existing thinking pattern checkpoints</rule>
           <implementation>Enhance patterns/thinking-pattern-template.md with Claude 4 capabilities</implementation>
           <benefit>Maintain framework consistency while leveraging advanced reasoning</benefit>
         </pattern>
-        <pattern name="parallel_execution_orchestration">
+        <pattern name = "parallel_execution_orchestration">
           <rule>Integrate significant performance improvement with module composition framework</rule>
           <implementation>Update patterns/module-composition-framework.md with parallel patterns</implementation>
           <optimization>Batch module loading and execution for maximum efficiency</optimization>
         </pattern>
-        <pattern name="framework_memory_integration">
+        <pattern name = "framework_memory_integration">
           <rule>Align Claude Code memory management with framework memory patterns</rule>
           <implementation>Enhance CLAUDE.md to support both framework and Claude Code optimization</implementation>
           <result>Unified memory management across all interaction modalities</result>
@@ -1086,17 +1102,17 @@
     <quality_gate_enhancement>
       <purpose>Integrate advanced techniques with universal quality gates</purpose>
       <enhancement_strategies>
-        <strategy name="tdd_framework_alignment">
+        <strategy name = "tdd_framework_alignment">
           <rule>Align 2025 TDD patterns with existing quality/tdd.md</rule>
           <implementation>Enhanced TDD workflows with Claude Code agentic capabilities</implementation>
           <validation>Maintain strict RED-GREEN-REFACTOR while leveraging automation</validation>
         </strategy>
-        <strategy name="security_gate_integration">
+        <strategy name = "security_gate_integration">
           <rule>Integrate security optimization patterns with quality/security-gate-verification.md</rule>
           <implementation>Automated security validation using Claude 4 reasoning capabilities</implementation>
           <benefit>Enhanced threat detection through advanced analytical capabilities</benefit>
         </strategy>
-        <strategy name="performance_validation_enhancement">
+        <strategy name = "performance_validation_enhancement">
           <rule>Integrate performance optimization with quality/framework-metrics.md</rule>
           <implementation>Real-time performance monitoring with Claude 4 analysis</implementation>
           <metrics>Context efficiency, execution speed, accuracy improvements</metrics>
@@ -1111,22 +1127,22 @@
     <command_enhancement_patterns>
       <purpose>Optimize existing commands with advanced Claude 4 capabilities</purpose>
       <command_integrations>
-        <integration name="task_command_enhancement">
+        <integration name = "task_command_enhancement">
           <enhancement>Integrate research-first methodology with /task workflow</enhancement>
           <implementation>Add Claude Code optimization patterns to development/task-management.md</implementation>
           <benefit>Significantly improved single-task execution through structured analysis</benefit>
         </integration>
-        <integration name="swarm_coordination_optimization">
+        <integration name = "swarm_coordination_optimization">
           <enhancement>Integrate advanced frameworks with /swarm multi-agent coordination</enhancement>
           <implementation>Add RISE, TRACE, CARE frameworks to patterns/multi-agent.md</implementation>
           <result>More sophisticated multi-agent coordination and communication</result>
         </integration>
-        <integration name="auto_routing_intelligence">
+        <integration name = "auto_routing_intelligence">
           <enhancement>Integrate 2025 decision frameworks with /auto intelligent routing</enhancement>
           <implementation>Enhanced patterns/intelligent-routing.md with advanced selection criteria</implementation>
           <optimization>Smarter command selection through structured framework analysis</optimization>
         </integration>
-        <integration name="session_management_enhancement">
+        <integration name = "session_management_enhancement">
           <enhancement>Integrate context optimization with /session management</enhancement>
           <implementation>Add 200K context window optimization to patterns/session-management.md</implementation>
           <performance>Optimal session boundaries and context preservation strategies</performance>
@@ -1137,17 +1153,17 @@
     <backwards_compatibility>
       <purpose>Ensure seamless transition while maintaining existing functionality</purpose>
       <compatibility_guarantees>
-        <guarantee name="existing_workflow_preservation">
+        <guarantee name = "existing_workflow_preservation">
           <rule>All existing commands and modules function without modification</rule>
           <implementation>Additive enhancements that don't break existing patterns</implementation>
           <validation>Comprehensive testing of existing workflows with new capabilities</validation>
         </guarantee>
-        <guarantee name="gradual_adoption_support">
+        <guarantee name = "gradual_adoption_support">
           <rule>Teams can adopt advanced features incrementally</rule>
           <implementation>Feature flags and optional enhancement patterns</implementation>
           <benefit>Non-disruptive enhancement adoption at team pace</benefit>
         </guarantee>
-        <guarantee name="fallback_mechanisms">
+        <guarantee name = "fallback_mechanisms">
           <rule>Graceful degradation when advanced features unavailable</rule>
           <implementation>Robust fallback to standard patterns when Claude 4 features fail</implementation>
           <reliability>Consistent framework operation across different Claude versions</reliability>
@@ -1162,22 +1178,22 @@
     <framework_evolution_path>
       <purpose>Structured approach to framework enhancement deployment</purpose>
       <evolution_phases>
-        <phase name="foundation_enhancement" order="1">
+        <phase name = "foundation_enhancement" order = "1">
           <focus>Core Claude 4 feature integration</focus>
           <deliverables>Enhanced thinking patterns, parallel execution, advanced reasoning</deliverables>
           <timeline>Immediate deployment with existing framework</timeline>
         </phase>
-        <phase name="workflow_optimization" order="2">
+        <phase name = "workflow_optimization" order = "2">
           <focus>Advanced prompting frameworks and Claude Code integration</focus>
           <deliverables>RISE/TRACE/CARE frameworks, memory optimization, workflow patterns</deliverables>
           <timeline>Incremental rollout with team training</timeline>
         </phase>
-        <phase name="performance_mastery" order="3">
+        <phase name = "performance_mastery" order = "3">
           <focus>Performance and security optimization patterns</focus>
           <deliverables>Tool mastery, security patterns, cost optimization</deliverables>
           <timeline>Advanced user adoption with metrics monitoring</timeline>
         </phase>
-        <phase name="ecosystem_maturity" order="4">
+        <phase name = "ecosystem_maturity" order = "4">
           <focus>Complete framework integration and community adoption</focus>
           <deliverables>Full integration testing, documentation, community resources</deliverables>
           <timeline>Stable production deployment with community feedback</timeline>
@@ -1188,22 +1204,22 @@
     <adoption_metrics_and_validation>
       <purpose>Measure and validate framework enhancement effectiveness</purpose>
       <success_metrics>
-        <metric name="performance_improvement">
+        <metric name = "performance_improvement">
           <measurement>Substantial reduction in execution time through parallel operations</measurement>
           <validation>Before/after timing analysis of common workflows</validation>
           <target>Consistent improvement across all major use cases</target>
         </metric>
-        <metric name="accuracy_enhancement">
+        <metric name = "accuracy_enhancement">
           <measurement>Improved output quality through advanced reasoning</measurement>
           <validation>Quality assessment of generated code and analysis</validation>
           <target>Measurable improvement in first-attempt success rates</target>
         </metric>
-        <metric name="cost_efficiency">
+        <metric name = "cost_efficiency">
           <measurement>Optimized token usage and session management</measurement>
           <validation>Cost per task analysis with optimization patterns</validation>
           <target>Reduced overall cost while maintaining or improving quality</target>
         </metric>
-        <metric name="developer_productivity">
+        <metric name = "developer_productivity">
           <measurement>Time to completion for common development tasks</measurement>
           <validation>Developer workflow analysis and feedback</validation>
           <target>Significant productivity gains across development lifecycle</target>
@@ -1215,19 +1231,19 @@
   
 </enhanced_framework_integration>
 
-<framework_standards enforcement="mandatory">
+<framework_standards enforcement = "mandatory">
   
   <command_structure>
     <template>
-      <command name="[command_name]" purpose="[brief_description]">
-        <delegation target="modules/[category]/[module_name].md">
+      <command name = "[command_name]" purpose = "[brief_description]">
+        <delegation target = "modules/[category]/[module_name].md">
           This command delegates ALL implementation to the specified module
         </delegation>
         <module_integration>
           <primary_module>modules/[category]/[module_name].md</primary_module>
         </module_integration>
         <usage_examples>
-          <example type="basic">[simple usage]</example>
+          <example type = "basic">[simple usage]</example>
         </usage_examples>
         <reference>See modules/[category]/[module_name].md for implementation</reference>
       </command>
@@ -1236,20 +1252,20 @@
   
   <module_structure>
     <template>
-      <module name="[module_name]" category="[development|patterns|quality|security]">
+      <module name = "[module_name]" category = "[development|patterns|quality|security]">
         <purpose>[Concise 1-2 sentence description]</purpose>
         <trigger_conditions>
-          <condition type="automatic">[When auto-activates]</condition>
+          <condition type = "automatic">[When auto-activates]</condition>
         </trigger_conditions>
         <implementation>
-          <phase name="[phase_1]" order="1">
+          <phase name = "[phase_1]" order = "1">
             <requirements>[What must be true]</requirements>
             <actions>[Specific steps]</actions>
             <validation>[Verify success]</validation>
           </phase>
         </implementation>
-        <quality_gates enforcement="strict">
-          <gate name="[gate_name]" requirement="[requirement]"/>
+        <quality_gates enforcement = "strict">
+          <gate name = "[gate_name]" requirement = "[requirement]"/>
         </quality_gates>
       </module>
     </template>
@@ -1258,7 +1274,7 @@
 </framework_standards>
 
 <strict_enforcement_patterns>
-  <pattern name="zero_redundancy">
+  <pattern name = "zero_redundancy">
     <primary_rule>Every concept exists in exactly ONE place [Source #5: Framework Architecture]</primary_rule>
     <verification>Commands delegate - modules implement [Source #5: Framework Architecture]</verification>
     <consequence>Violation breaks single source of truth</consequence>
@@ -1280,20 +1296,20 @@
   
   <framework_vocabulary>
     <core_tags>
-      <tag name="command">Root tag for command files</tag>
-      <tag name="module">Root tag for module files</tag>
-      <tag name="delegation">Command→Module relationship</tag>
+      <tag name = "command">Root tag for command files</tag>
+      <tag name = "module">Root tag for module files</tag>
+      <tag name = "delegation">Command→Module relationship</tag>
     </core_tags>
     <control_tags>
-      <tag name="strict_enforcement">Non-negotiable requirements [Source #5: Framework Architecture]</tag>
-      <tag name="quality_gates">Mandatory checkpoints</tag>
-      <tag name="execution_requirements">Pre-conditions</tag>
+      <tag name = "strict_enforcement">Non-negotiable requirements [Source #5: Framework Architecture]</tag>
+      <tag name = "quality_gates">Mandatory checkpoints</tag>
+      <tag name = "execution_requirements">Pre-conditions</tag>
     </control_tags>
   </framework_vocabulary>
   
 </xml_best_practices>
 
-<quality_validation mandatory="true">
+<quality_validation mandatory = "true">
   
   <structural_checks>
     <check>XML tags properly opened/closed</check>
@@ -1317,15 +1333,15 @@
 </quality_validation>
 
 <common_pitfalls>
-  <pitfall name="verbose_explanations">
+  <pitfall name = "verbose_explanations">
     <problem>Claude 4 prefers concise, structured instructions</problem>
     <solution>Use XML structure instead of long prose</solution>
   </pitfall>
-  <pitfall name="ambiguous_instructions">
+  <pitfall name = "ambiguous_instructions">
     <problem>Claude 4 needs MORE explicit instructions</problem>
     <solution>Specify exact behaviors and validation</solution>
   </pitfall>
-  <pitfall name="missing_context">
+  <pitfall name = "missing_context">
     <problem>Not explaining WHY behaviors matter</problem>
     <solution>Add motivation tags</solution>
   </pitfall>
@@ -1354,42 +1370,42 @@
   
 </performance_optimization>
 
-<sources_and_references version="4.0.1" enforcement="mandatory">
+<sources_and_references version = "4.0.1" enforcement = "mandatory">
   
   <purpose>Comprehensive documentation of research sources validating all techniques and claims</purpose>
   
   <primary_research_sources>
     
     <anthropic_official_documentation>
-      <source id="1" type="official">
+      <source id = "1" type = "official">
         <title>Claude Code Documentation - Anthropic</title>
         <url>https://docs.anthropic.com/en/docs/claude-code</url>
         <accessed>2025-07-08</accessed>
         <relevance>Claude Code memory management, workflow optimization, CLAUDE.md best practices</relevance>
         <key_insights>Cascaded memory system, context optimization, terminal integration patterns</key_insights>
       </source>
-      <source id="2" type="official">
+      <source id = "2" type = "official">
         <title>Build with Claude: Prompt Engineering - Anthropic</title>
         <url>https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering</url>
         <accessed>2025-07-08</accessed>
         <relevance>Advanced prompt engineering techniques, XML structured prompts, chain of thought</relevance>
         <key_insights>Framework approaches, multishot prompting, systematic prompt optimization</key_insights>
       </source>
-      <source id="3" type="official">
+      <source id = "3" type = "official">
         <title>Build with Claude: Tool Use - Anthropic</title>
         <url>https://docs.anthropic.com/en/docs/build-with-claude/tool-use</url>
         <accessed>2025-07-08</accessed>
         <relevance>Tool orchestration best practices, parallel execution, function calling optimization</relevance>
         <key_insights>Performance improvement through parallel tool calls, structured tool workflows</key_insights>
       </source>
-      <source id="4" type="official">
+      <source id = "4" type = "official">
         <title>Claude Models Documentation - Anthropic</title>
         <url>https://docs.anthropic.com/en/docs/about-claude/models</url>
         <accessed>2025-07-08</accessed>
         <relevance>Claude 4 Sonnet capabilities, 200K context window, performance characteristics</relevance>
         <key_insights>Model specifications, context window optimization, pricing considerations</key_insights>
       </source>
-      <source id="5" type="official">
+      <source id = "5" type = "official">
         <title>Anthropic Cookbook - GitHub Repository</title>
         <url>https://github.com/anthropics/anthropic-cookbook</url>
         <accessed>2025-07-08</accessed>
@@ -1399,35 +1415,35 @@
     </anthropic_official_documentation>
     
     <advanced_research_sources>
-      <source id="6" type="analysis">
+      <source id = "6" type = "analysis">
         <title>Claude 4 System Prompt Analysis - Simon Willison</title>
         <url>https://simonwillison.net/2025/May/25/claude-4-system-prompt/</url>
         <accessed>2025-07-08</accessed>
         <relevance>Claude 4 system prompt insights, thinking mode configuration, behavioral patterns</relevance>
         <key_insights>Interleaved thinking implementation, explicit instruction preferences, thinking block guidance</key_insights>
       </source>
-      <source id="7" type="official">
+      <source id = "7" type = "official">
         <title>Tool Use Guide - Anthropic Documentation</title>
         <url>https://docs.anthropic.com/en/docs/build-with-claude/tool-use</url>
         <accessed>2025-07-08</accessed>
         <relevance>Official guidance on parallel tool execution and workflow optimization</relevance>
         <key_insights>Parallel tool execution patterns, client vs server tools, performance considerations</key_insights>
       </source>
-      <source id="8" type="technical">
+      <source id = "8" type = "technical">
         <title>Claude Code Terminal AI: Setup and Optimization Guide - MarkAI Code</title>
         <url>https://markaicode.com/claude-code-terminal-ai-setup-guide/</url>
         <accessed>2025-07-08</accessed>
         <relevance>Claude Code performance optimization, cost management, session strategies</relevance>
         <key_insights>Session optimization, token management, environment integration</key_insights>
       </source>
-      <source id="9" type="official">
+      <source id = "9" type = "official">
         <title>Models Overview - Anthropic Documentation</title>
         <url>https://docs.anthropic.com/en/docs/about-claude/models</url>
         <accessed>2025-07-08</accessed>
         <relevance>Official Claude model specifications and capabilities overview</relevance>
         <key_insights>Model capabilities, context windows, performance characteristics, version differences</key_insights>
       </source>
-      <source id="10" type="technical">
+      <source id = "10" type = "technical">
         <title>Claude Code Best Practices - Anthropic Engineering</title>
         <url>https://www.anthropic.com/engineering/claude-code-best-practices</url>
         <accessed>2025-07-08</accessed>
@@ -1553,7 +1569,7 @@
     <step>Ensure zero redundancy principle</step>
   </pre_edit_checklist>
   
-  <emergency_rules enforcement="ABSOLUTE">
+  <emergency_rules enforcement = "ABSOLUTE">
     <rule>Commands ONLY delegate - modules ONLY implement</rule>
     <rule>Every concept exists in exactly ONE place</rule>
     <rule>Use XML structure for ALL framework components</rule>
@@ -1563,7 +1579,7 @@
   
 </quick_reference>
 
-<guide_conclusion version="4.0.1">
+<guide_conclusion version = "4.0.1">
   
   <summary>
     This comprehensive guide represents the cutting-edge of Claude 4 optimization, integrating the latest 2025 research with practical implementation strategies for maximum productivity and efficiency.
@@ -1580,9 +1596,9 @@
   </key_achievements>
   
   <implementation_readiness>
-    <level name="immediate">Core Claude 4 features and basic optimization patterns</level>
-    <level name="progressive">Advanced frameworks and Claude Code integration over 2-4 weeks</level>
-    <level name="mastery">Complete ecosystem adoption with metrics and continuous optimization</level>
+    <level name = "immediate">Core Claude 4 features and basic optimization patterns</level>
+    <level name = "progressive">Advanced frameworks and Claude Code integration over 2-4 weeks</level>
+    <level name = "mastery">Complete ecosystem adoption with metrics and continuous optimization</level>
   </implementation_readiness>
   
   <success_metrics>

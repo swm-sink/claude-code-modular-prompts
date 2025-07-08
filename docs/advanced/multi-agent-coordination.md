@@ -2,23 +2,21 @@
 |---------|--------------|--------|
 | 1.0.0   | 2025-07-08   | stable |
 
-# Multi-Agent Coordination Guide
 
-────────────────────────────────────────────────────────────────────────────────
+# Multi-Agent Coordination Guide
 
 **PURPOSE**: Master parallel development with multiple AI agents working simultaneously
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Overview
+# Overview
 
 The Claude Code framework's multi-agent coordination enables multiple AI agents to work on different parts of your codebase simultaneously, dramatically reducing development time while maintaining code quality and preventing conflicts.
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Core Concepts
+# Core Concepts
 
-### Worktree Isolation
+
+# Worktree Isolation
 
 Each agent operates in its own git worktree, providing complete file system isolation:
 
@@ -35,7 +33,8 @@ Each agent operates in its own git worktree, providing complete file system isol
 </worktree_structure>
 ```
 
-### File Ownership Domains
+
+# File Ownership Domains
 
 Agents are assigned ownership domains to prevent conflicts:
 
@@ -44,11 +43,11 @@ Agents are assigned ownership domains to prevent conflicts:
 - **Testing Agent**: `/tests/**`, `/e2e/**` (read-only access to all)
 - **DevOps Agent**: `/infrastructure/**`, `/.github/**`, `Dockerfile*`
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Using the /swarm Command
+# Using the /swarm Command
 
-### Basic Multi-Agent Task
+
+# Basic Multi-Agent Task
 
 ```bash
 /swarm "Add user authentication with login page and tests"
@@ -62,7 +61,8 @@ This automatically:
 5. Coordinates parallel execution
 6. Merges results seamlessly
 
-### Complex Feature Development
+
+# Complex Feature Development
 
 ```bash
 /swarm "Implement real-time chat feature with WebSocket support"
@@ -74,11 +74,11 @@ Results in:
 - **Database Agent**: Schema updates, message persistence
 - **Testing Agent**: Integration tests, E2E scenarios
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Practical Examples
+# Practical Examples
 
-### Example 1: API with Frontend Integration
+
+# Example 1: API with Frontend Integration
 
 ```bash
 /swarm "Create REST API for product catalog with React frontend"
@@ -87,23 +87,24 @@ Results in:
 **Agent Coordination:**
 ```xml
 <execution_timeline>
-  <phase time="0-5min">
+  <phase time = "0-5min">
     Backend: Design API schema
     Frontend: Setup component structure
   </phase>
-  <phase time="5-15min">
+  <phase time = "5-15min">
     Backend: Implement endpoints
     Frontend: Create UI components
     Testing: Write API tests
   </phase>
-  <phase time="15-20min">
+  <phase time = "15-20min">
     Integration: Connect frontend to API
     Testing: E2E validation
   </phase>
 </execution_timeline>
 ```
 
-### Example 2: Database Migration with Full Stack Updates
+
+# Example 2: Database Migration with Full Stack Updates
 
 ```bash
 /swarm "Migrate user schema to support multi-tenancy"
@@ -115,11 +116,11 @@ Results in:
 - **Frontend Agent**: UI adjustments for tenant selection
 - **Testing Agent**: Migration validation tests
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Conflict Resolution Strategies
+# Conflict Resolution Strategies
 
-### Automatic Resolution
+
+# Automatic Resolution
 
 Most conflicts are prevented through domain ownership:
 
@@ -137,7 +138,8 @@ Most conflicts are prevented through domain ownership:
 </conflict_prevention>
 ```
 
-### Manual Resolution
+
+# Manual Resolution
 
 When conflicts occur:
 
@@ -146,17 +148,18 @@ When conflicts occur:
 3. **Guided Resolution**: Provides resolution options
 4. **Validation**: Ensures resolution maintains functionality
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Performance Optimization
+# Performance Optimization
 
-### Parallel Execution Benefits
+
+# Parallel Execution Benefits
 
 - **70% faster** than sequential development
 - **Resource efficient** through shared git objects
 - **Scalable** to 5+ agents simultaneously
 
-### Best Practices
+
+# Best Practices
 
 ```xml
 <optimization_tips>
@@ -167,56 +170,66 @@ When conflicts occur:
 </optimization_tips>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Troubleshooting
+# Troubleshooting
 
-### Common Issues
 
-#### Worktree Creation Fails
+# Common Issues
+
+
+# Worktree Creation Fails
 ```bash
+
 # Error: fatal: could not create work tree dir
+
 # Solution: Check disk space and permissions
 df -h
 git worktree prune  # Clean stale worktrees
 ```
 
-#### Agent Domain Violations
+
+# Agent Domain Violations
 ```
+
 # Error: Agent-Frontend attempting to modify /api/users.js
+
 # Solution: Reassign task or adjust domain boundaries
 ```
 
-#### Merge Conflicts
+
+# Merge Conflicts
 ```bash
+
 # Use pre-merge detection
 git merge-tree $(git merge-base HEAD agent-branch) HEAD agent-branch
+
 
 # If conflicts exist, use guided resolution
 /swarm resolve-conflicts
 ```
 
-### Performance Issues
+
+# Performance Issues
 
 ```xml
 <performance_solutions>
-  <issue name="Slow worktree creation">
+  <issue name = "Slow worktree creation">
     Use --depth=1 for shallow clones
   </issue>
-  <issue name="High memory usage">
+  <issue name = "High memory usage">
     Reduce concurrent agent count
   </issue>
-  <issue name="Network bottlenecks">
+  <issue name = "Network bottlenecks">
     Use local references: --reference main-repo
   </issue>
 </performance_solutions>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Advanced Patterns
+# Advanced Patterns
 
-### Microservices Development
+
+# Microservices Development
 
 ```bash
 /swarm "Split monolith into user-service, product-service, order-service"
@@ -228,7 +241,8 @@ Each service gets dedicated agents for:
 - Inter-service communication
 - Deployment configuration
 
-### Cross-Platform Features
+
+# Cross-Platform Features
 
 ```bash
 /swarm "Implement offline sync for web, iOS, and Android"
@@ -240,9 +254,8 @@ Coordinates:
 - Cross-platform testing
 - Documentation updates
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Integration with Quality Gates
+# Integration with Quality Gates
 
 All multi-agent work enforces:
 
@@ -251,9 +264,8 @@ All multi-agent work enforces:
 - **Performance**: Integrated performance testing
 - **Documentation**: Automatic cross-references
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Monitoring and Metrics
+# Monitoring and Metrics
 
 Track multi-agent efficiency:
 
@@ -266,17 +278,14 @@ Track multi-agent efficiency:
 </metrics>
 ```
 
-────────────────────────────────────────────────────────────────────────────────
 
-## Best Practices Summary
+# Best Practices Summary
 
 1. **Clear Task Definition**: Well-defined tasks enable better agent coordination
 2. **Appropriate Scope**: Tasks should be complex enough to benefit from parallelization
 3. **Domain Boundaries**: Respect file ownership to prevent conflicts
 4. **Integration Points**: Plan where agents' work will integrate
 5. **Quality First**: Every agent maintains quality standards
-
-────────────────────────────────────────────────────────────────────────────────
 
 **Reference**: See `.claude/modules/patterns/multi-agent.md` for implementation details
 
