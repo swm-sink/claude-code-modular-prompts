@@ -13,6 +13,16 @@
     TRACE framework → Create session → Setup worktrees → Decompose work → Execute Task() calls → Merge results → Quality validation
   </delegation>
   
+  <pattern_integration>
+    <uses_pattern from="patterns/critical-thinking-pattern.md">TRACE framework coordination decisions</uses_pattern>
+    <uses_pattern from="patterns/session-management-pattern.md">Multi-agent session coordination</uses_pattern>
+    <uses_pattern from="patterns/integration-pattern.md">Agent coordination and merging</uses_pattern>
+    <uses_pattern from="patterns/tdd-cycle-pattern.md">Distributed TDD enforcement</uses_pattern>
+    <uses_pattern from="patterns/quality-validation-pattern.md">Multi-agent quality assurance</uses_pattern>
+    <uses_pattern from="patterns/error-recovery-pattern.md">Coordination failure handling</uses_pattern>
+    <uses_pattern from="patterns/performance-optimization-pattern.md">Parallel execution coordination</uses_pattern>
+  </pattern_integration>
+  
   <thinking_pattern enforcement="MANDATORY">
     <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply TRACE framework - Define Task complexity and coordination requirements</action>
@@ -448,6 +458,51 @@
     /swarm "Implement payment system"      # TRACE specification → Complex integration with compliance requirements
     /swarm "Build AI-powered analytics"    # TRACE precision → Multi-component ML system with coordination
   </examples>
+  
+  <tdd_integration enforcement="MANDATORY">
+    <multi_agent_testing>TDD approach coordinated across all agents using TRACE framework precision</multi_agent_testing>
+    <red_phase>Each agent writes failing tests for their component using quality/tdd.md#red_phase_compliance</red_phase>
+    <green_phase>Agents implement minimal solutions to pass tests using quality/tdd.md#green_phase_compliance</green_phase>
+    <refactor_phase>Coordinated refactoring while maintaining green tests using quality/tdd.md#refactor_phase_compliance</refactor_phase>
+    <integration_testing>Cross-agent integration tests with TRACE framework alignment</integration_testing>
+    <validation>Reference quality/tdd.md#quality_gates for strict enforcement across all agents</validation>
+    
+    <swarm_checkpoint_enforcement>
+      <agent_coordination_testing>
+        <tdd_validation>BLOCK unless each agent has failing tests for their component responsibilities</tdd_validation>
+        <coordination_coverage>ENSURE tests validate agent coordination and interface contracts</coordination_coverage>
+        <quality_gate>Reference quality/tdd.md#multi_agent_test_validation</quality_gate>
+      </agent_coordination_testing>
+      
+      <component_integration_testing>
+        <tdd_validation>BLOCK unless integration tests validate cross-component interactions</tdd_validation>
+        <system_coverage>ENSURE tests validate system-wide behavior and data flow</system_coverage>
+        <quality_gate>Reference quality/tdd.md#integration_test_validation</quality_gate>
+      </component_integration_testing>
+      
+      <parallel_execution_testing>
+        <tdd_validation>BLOCK unless tests validate parallel execution safety and coordination</tdd_validation>
+        <concurrency_coverage>ENSURE tests validate concurrent operations and race conditions</concurrency_coverage>
+        <quality_gate>Reference quality/tdd.md#parallel_execution_validation</quality_gate>
+      </parallel_execution_testing>
+      
+      <merge_validation_testing>
+        <tdd_validation>BLOCK unless tests validate successful component merging</tdd_validation>
+        <system_integrity>ENSURE tests validate system integrity after component integration</system_integrity>
+        <quality_gate>Reference quality/tdd.md#merge_validation</quality_gate>
+      </merge_validation_testing>
+    </swarm_checkpoint_enforcement>
+    
+    <blocking_conditions>
+      <condition>Agent implementation attempted before TRACE framework task definition</condition>
+      <condition>Component development bypassed multi-agent coordination requirements</condition>
+      <condition>Tests written without agent coordination and interface validation</condition>
+      <condition>Implementation exceeds agent component boundaries defined in TRACE planning</condition>
+      <condition>Integration testing skipped for multi-component system</condition>
+      <condition>Test coverage below 90% for new multi-component code</condition>
+      <condition>Agent quality below TRACE framework standards and precision requirements</condition>
+    </blocking_conditions>
+  </tdd_integration>
   
   <rules>
     • ALWAYS applies TRACE framework for precision coordination

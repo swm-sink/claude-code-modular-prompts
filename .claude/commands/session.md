@@ -13,6 +13,15 @@
     CARE framework → Create context → Execute actions → Track results → Evaluate session → Framework-integrated management
   </delegation>
   
+  <pattern_integration>
+    <uses_pattern from="patterns/session-management-pattern.md">Long-running task coordination</uses_pattern>
+    <uses_pattern from="patterns/critical-thinking-pattern.md">CARE framework context decisions</uses_pattern>
+    <uses_pattern from="patterns/context-management-pattern.md">Context preservation and optimization</uses_pattern>
+    <uses_pattern from="patterns/user-interaction-pattern.md">Session communication and tracking</uses_pattern>
+    <uses_pattern from="patterns/performance-optimization-pattern.md">Session efficiency optimization</uses_pattern>
+    <uses_pattern from="patterns/error-recovery-pattern.md">Session failure recovery</uses_pattern>
+  </pattern_integration>
+  
   <thinking_pattern enforcement="MANDATORY">
     <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply CARE framework - Analyze Context for session management</action>

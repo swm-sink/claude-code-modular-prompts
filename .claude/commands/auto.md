@@ -13,6 +13,15 @@
     Analyze request → Select optimal framework → Calculate complexity → Research deeply → Route to optimal command with framework integration
   </delegation>
   
+  <pattern_integration>
+    <uses_pattern from="patterns/critical-thinking-pattern.md">Request analysis and framework selection</uses_pattern>
+    <uses_pattern from="patterns/research-analysis-pattern.md">Research-first routing validation</uses_pattern>
+    <uses_pattern from="patterns/performance-optimization-pattern.md">Parallel execution optimization</uses_pattern>
+    <uses_pattern from="patterns/error-recovery-pattern.md">Routing failure handling</uses_pattern>
+    <uses_pattern from="patterns/context-management-pattern.md">Token optimization for routing</uses_pattern>
+    <uses_pattern from="patterns/session-management-pattern.md">Complex routing coordination</uses_pattern>
+  </pattern_integration>
+  
   <thinking_pattern enforcement="MANDATORY">
     <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Parse request and identify task characteristics for framework selection</action>
@@ -24,9 +33,11 @@
         </pre_analysis>
         <critical_thinking minimum_time="30_seconds">
           - [Primary Question: What exactly is being requested and what type of work is this?]
-          - [Context Question: What domain does this fall into (technical/business/UX/research)?]
-          - [Complexity Question: What's the complexity level (simple/moderate/complex)?]
-          - [Interaction Question: What interaction style would be most effective (directive/collaborative/exploratory)?]
+          - [Intent Question: What action verbs indicate user intent (create/research/fix/optimize/coordinate)?]
+          - [Scope Question: What scope indicators suggest work complexity (simple/complex/multi-part/system-wide)?]
+          - [Domain Question: What domain does this fall into (technical/business/UX/research/security)?]
+          - [Urgency Question: What urgency indicators suggest routing priority (urgent/production/experimental)?]
+          - [Context Question: What conversation context influences optimal routing decisions?]
           - [TDD Question: Does this require code changes that need TDD enforcement?]
           - [Framework Question: Which framework characteristics are suggested by this request?]
         </critical_thinking>
@@ -41,7 +52,13 @@
         <context_efficiency>How can this checkpoint optimize token usage for routing?</context_efficiency>
         <dependency_analysis>What analysis is sequential vs parallel for framework selection?</dependency_analysis>
       </parallel_execution_considerations>
-      <output_format>REQUEST_ANALYSIS: [type] in [domain] with [complexity] requiring [interaction_style] and [tdd_requirement]</output_format>
+      <output_format>REQUEST_ANALYSIS: 
+        - Intent: [action_verbs] indicating [work_type]
+        - Scope: [complexity_indicators] suggesting [routing_preference]
+        - Domain: [domain_keywords] requiring [module_inclusions]
+        - Urgency: [urgency_level] suggesting [command_priority]
+        - Context: [conversation_context] influencing [routing_decision]
+        - TDD: [requirement_level] for [code_changes]</output_format>
       <validation>Request analyzed across all framework selection dimensions with enhanced reasoning</validation>
       <enforcement>BLOCK if insufficient analysis for framework selection</enforcement>
       <context_transfer>Request characteristics for framework selection evaluation</context_transfer>
@@ -297,12 +314,16 @@
   </depends_on>
   
   <examples>
-    /auto "Add user authentication"     → CRISP framework → Score ~12 → Routes to /task with technical precision
-    /auto "Build e-commerce platform"   → BRIDGE framework → Score 40+ → Routes to /swarm with integration focus
-    /auto "How does caching work?"      → LEAP framework → Score 1 → Routes to /query with learning approach
-    /auto "Create API endpoints"        → RISE framework → Score ~10 → Routes to /feature with structured development
-    /auto "Debug payment failures"     → SPARK framework → Score ~8 → Routes to /task with problem-solving focus
-    /auto "Plan user experience redesign" → FOCUS framework → Score ~15 → Routes to /swarm with user-centered approach
+    /auto "Add user authentication"     → Intent: "add" → Security domain → /task with TDD
+    /auto "Build e-commerce platform"   → Intent: "build" → Complex scope → /swarm coordination
+    /auto "How does caching work?"      → Intent: "understand" → Research → /query analysis
+    /auto "Create API endpoints"        → Intent: "create" → Moderate scope → /feature development
+    /auto "Debug payment failures"     → Intent: "debug" → Urgent → /task with debugging focus
+    /auto "Plan user experience redesign" → Intent: "plan" → Complex → /swarm with UX focus
+    /auto "Fix this quick bug"          → Intent: "fix" + "quick" → Simple scope → /task
+    /auto "Research security patterns"  → Intent: "research" → Analysis → /query with security focus
+    /auto "Optimize database performance" → Intent: "optimize" → Performance domain → /task with optimization
+    /auto "Coordinate team deployment"  → Intent: "coordinate" → Management → /swarm coordination
   </examples>
   
   <rules>

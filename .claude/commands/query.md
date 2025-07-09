@@ -17,6 +17,15 @@
     LEAP learning framework → CLEAR comprehensive analysis → Parallel search → Deep investigation → Pattern mapping → Research report
   </delegation>
   
+  <pattern_integration>
+    <uses_pattern from="patterns/research-analysis-pattern.md">Systematic knowledge discovery</uses_pattern>
+    <uses_pattern from="patterns/critical-thinking-pattern.md">Framework-guided analysis approach</uses_pattern>
+    <uses_pattern from="patterns/context-management-pattern.md">Research context optimization</uses_pattern>
+    <uses_pattern from="patterns/performance-optimization-pattern.md">Parallel search operations</uses_pattern>
+    <uses_pattern from="patterns/user-interaction-pattern.md">Knowledge transfer optimization</uses_pattern>
+    <uses_pattern from="patterns/documentation-pattern.md">Research methodology and presentation</uses_pattern>
+  </pattern_integration>
+  
   <thinking_pattern enforcement="MANDATORY">
     <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply LEAP framework - Learn query requirements and research objectives</action>

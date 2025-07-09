@@ -17,6 +17,15 @@
     FOCUS framework → Function analysis → Objective definition → Context evaluation → User needs → Scope management → Documentation creation
   </delegation>
   
+  <pattern_integration>
+    <uses_pattern from="patterns/critical-thinking-pattern.md">FOCUS framework gateway decisions</uses_pattern>
+    <uses_pattern from="patterns/documentation-pattern.md">Knowledge capture and sharing</uses_pattern>
+    <uses_pattern from="patterns/user-interaction-pattern.md">Documentation usability optimization</uses_pattern>
+    <uses_pattern from="patterns/research-analysis-pattern.md">Context gathering for documentation</uses_pattern>
+    <uses_pattern from="patterns/quality-validation-pattern.md">Documentation quality assurance</uses_pattern>
+    <uses_pattern from="patterns/context-management-pattern.md">Information organization and structure</uses_pattern>
+  </pattern_integration>
+  
   <thinking_pattern enforcement="CRITICAL">
     <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply FOCUS framework - Analyze Function and gateway enforcement</action>

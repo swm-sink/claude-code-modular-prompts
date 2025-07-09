@@ -13,6 +13,16 @@
     Validate requirements → Enforce TDD → Apply security → Verify performance → Ensure compliance
   </delegation>
   
+  <pattern_integration>
+    <uses_pattern from="patterns/critical-thinking-pattern.md">Production compliance decisions</uses_pattern>
+    <uses_pattern from="patterns/tdd-cycle-pattern.md">Mandatory TDD enforcement</uses_pattern>
+    <uses_pattern from="patterns/quality-validation-pattern.md">Production quality assurance</uses_pattern>
+    <uses_pattern from="patterns/session-management-pattern.md">Compliance tracking and audit trail</uses_pattern>
+    <uses_pattern from="patterns/integration-pattern.md">Production system integration</uses_pattern>
+    <uses_pattern from="patterns/error-recovery-pattern.md">Production-grade error handling</uses_pattern>
+    <uses_pattern from="patterns/performance-optimization-pattern.md">Production performance standards</uses_pattern>
+  </pattern_integration>
+  
   <thinking_pattern enforcement="MANDATORY">
     <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Create GitHub session for comprehensive compliance tracking</action>

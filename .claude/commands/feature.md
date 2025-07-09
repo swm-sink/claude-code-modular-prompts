@@ -17,6 +17,16 @@
     SOAR strategic planning → CLEAR comprehensive requirements → Generate PRD → Analyze complexity → Plan MVP → Execute autonomously → Validate
   </delegation>
   
+  <pattern_integration>
+    <uses_pattern from="patterns/critical-thinking-pattern.md">Strategic analysis and decision-making</uses_pattern>
+    <uses_pattern from="patterns/research-analysis-pattern.md">Context analysis before development</uses_pattern>
+    <uses_pattern from="patterns/tdd-cycle-pattern.md">Test-driven feature development</uses_pattern>
+    <uses_pattern from="patterns/implementation-pattern.md">Autonomous feature implementation</uses_pattern>
+    <uses_pattern from="patterns/quality-validation-pattern.md">Feature validation and testing</uses_pattern>
+    <uses_pattern from="patterns/integration-pattern.md">System integration coordination</uses_pattern>
+    <uses_pattern from="patterns/documentation-pattern.md">PRD generation and documentation</uses_pattern>
+  </pattern_integration>
+  
   <thinking_pattern enforcement="MANDATORY">
     <checkpoint id="1" verify="true" enforcement="BLOCKING">
       <action>Apply SOAR framework - Analyze Situation and context</action>
@@ -354,6 +364,51 @@
       <tracking>GitHub sessions track persona assignments and decisions</tracking>
     </context_propagation>
   </persona_integration>
+  
+  <tdd_integration enforcement="MANDATORY">
+    <strategic_testing>TDD approach aligned with SOAR strategic objectives and CLEAR comprehensive requirements</strategic_testing>
+    <red_phase>Write failing tests for all feature acceptance criteria using quality/tdd.md#red_phase_compliance</red_phase>
+    <green_phase>Implement minimal viable feature to make tests pass using quality/tdd.md#green_phase_compliance</green_phase>
+    <refactor_phase>Improve feature design while maintaining green tests using quality/tdd.md#refactor_phase_compliance</refactor_phase>
+    <framework_alignment>TDD cycle must align with SOAR/CLEAR framework expectations and strategic objectives</framework_alignment>
+    <validation>Reference quality/tdd.md#quality_gates for strict enforcement</validation>
+    
+    <feature_checkpoint_enforcement>
+      <soar_requirements_testing>
+        <tdd_validation>BLOCK unless tests exist for ALL strategic objectives and success criteria</tdd_validation>
+        <strategic_coverage>ENSURE tests validate feature alignment with business objectives</strategic_coverage>
+        <quality_gate>Reference quality/tdd.md#strategic_test_validation</quality_gate>
+      </soar_requirements_testing>
+      
+      <clear_comprehensive_testing>
+        <tdd_validation>BLOCK unless comprehensive tests cover all CLEAR framework requirements</tdd_validation>
+        <context_coverage>ENSURE tests validate feature behavior across all contexts and limitations</context_coverage>
+        <quality_gate>Reference quality/tdd.md#comprehensive_test_validation</quality_gate>
+      </clear_comprehensive_testing>
+      
+      <mvp_implementation_testing>
+        <tdd_validation>BLOCK unless MVP implementation passes all strategic and comprehensive tests</tdd_validation>
+        <scope_validation>VERIFY implementation stays within defined MVP boundaries</scope_validation>
+        <quality_gate>Reference quality/tdd.md#mvp_validation</quality_gate>
+      </mvp_implementation_testing>
+      
+      <feature_integration_testing>
+        <tdd_validation>BLOCK unless integration tests validate feature system interaction</tdd_validation>
+        <system_impact>VERIFY feature integration doesn't break existing functionality</system_impact>
+        <quality_gate>Reference quality/tdd.md#integration_validation</quality_gate>
+      </feature_integration_testing>
+    </feature_checkpoint_enforcement>
+    
+    <blocking_conditions>
+      <condition>Implementation attempted before SOAR strategic analysis</condition>
+      <condition>Feature development bypassed CLEAR comprehensive requirements</condition>
+      <condition>Tests written without strategic objective alignment</condition>
+      <condition>Implementation exceeds MVP scope defined in strategic planning</condition>
+      <condition>Integration testing skipped for system-level feature</condition>
+      <condition>Test coverage below 90% for new feature code</condition>
+      <condition>Feature quality below strategic standards defined in objectives</condition>
+    </blocking_conditions>
+  </tdd_integration>
   
   <rules enforcement="STRICT">
     <rule priority="CRITICAL">ALWAYS apply SOAR framework for strategic analysis and objectives</rule>

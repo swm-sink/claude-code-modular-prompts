@@ -188,6 +188,72 @@
       Cache personalized routing preferences per project context
     </adaptation_rules>
   </smart_request_analysis>
+
+  <natural_language_routing enhancement="2025">
+    <intent_recognition>
+      <action_detection>
+        create, build, make, add, implement → /task or /feature routing
+        research, analyze, understand, investigate → /query routing
+        fix, debug, resolve, repair → /task routing with debugging focus
+        optimize, improve, enhance, refactor → /task routing with performance focus
+        document, write, generate docs → /docs routing
+        coordinate, manage, oversee → /swarm routing for complex coordination
+      </action_detection>
+      <scope_detection>
+        "simple", "quick", "small" → /task routing preference
+        "complex", "large", "comprehensive" → /swarm routing preference
+        "multi-part", "system-wide", "architecture" → /swarm routing preference
+        "single file", "one component" → /task routing preference
+      </scope_detection>
+      <urgency_detection>
+        "urgent", "critical", "emergency" → /protocol routing with production standards
+        "production", "live", "deployment" → /protocol routing
+        "experiment", "prototype", "test" → /task routing
+      </urgency_detection>
+    </intent_recognition>
+    
+    <context_aware_interpretation>
+      <semantic_analysis>
+        Process natural language requests using semantic understanding
+        Extract implicit requirements from conversational context
+        Identify unstated constraints and assumptions
+        Map user intent to optimal command routing
+      </semantic_analysis>
+      <domain_recognition>
+        "authentication", "security", "permissions" → security module inclusion
+        "testing", "coverage", "TDD" → quality module inclusion
+        "API", "service", "integration" → integration pattern inclusion
+        "performance", "speed", "optimization" → performance module inclusion
+      </domain_recognition>
+      <conversation_context>
+        Track conversation history for context-aware routing
+        Maintain session context across multiple related requests
+        Learn user communication patterns and preferences
+        Adapt routing based on project context and user behavior
+      </conversation_context>
+    </context_aware_interpretation>
+    
+    <intelligent_query_enhancement>
+      <request_clarification>
+        Auto-generate clarifying questions for ambiguous requests
+        Suggest alternative interpretations for complex requests
+        Provide routing options with explanations for user choice
+        Offer to break down complex requests into manageable parts
+      </request_clarification>
+      <context_enrichment>
+        Automatically gather relevant project context for routing decisions
+        Include recent git activity in routing considerations
+        Factor in existing architecture patterns for optimal routing
+        Consider team preferences and established workflows
+      </context_enrichment>
+      <proactive_suggestions>
+        Suggest optimal frameworks based on request characteristics
+        Recommend additional considerations based on project context
+        Propose session creation for complex multi-step work
+        Offer alternative approaches for better outcomes
+      </proactive_suggestions>
+    </intelligent_query_enhancement>
+  </natural_language_routing>
   
   <implementation>
     

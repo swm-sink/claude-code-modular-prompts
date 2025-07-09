@@ -13,6 +13,15 @@
     RISE framework → Research deeply → Write FAILING test → Implement → Make test PASS → Refactor → Quality gates
   </delegation>
   
+  <pattern_integration>
+    <uses_pattern from="patterns/research-analysis-pattern.md">Research-first methodology</uses_pattern>
+    <uses_pattern from="patterns/critical-thinking-pattern.md">Role definition and decision-making</uses_pattern>
+    <uses_pattern from="patterns/tdd-cycle-pattern.md">Test-driven development cycle</uses_pattern>
+    <uses_pattern from="patterns/implementation-pattern.md">Code development and creation</uses_pattern>
+    <uses_pattern from="patterns/quality-validation-pattern.md">Comprehensive quality gates</uses_pattern>
+    <uses_pattern from="patterns/error-recovery-pattern.md">Failure handling and recovery</uses_pattern>
+  </pattern_integration>
+  
   <thinking_pattern enforcement="MANDATORY">
     <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Apply RISE framework - Define Role and expertise level</action>
@@ -223,6 +232,37 @@
     <refactor_phase>Improve design while maintaining green tests using quality/tdd.md#refactor_phase_compliance</refactor_phase>
     <rise_alignment>TDD cycle must align with RISE framework role expectations and standards</rise_alignment>
     <validation>Reference quality/tdd.md#quality_gates for strict enforcement</validation>
+    
+    <checkpoint_enforcement>
+      <checkpoint_3_red_phase>
+        <tdd_validation>BLOCK unless failing tests exist for ALL acceptance criteria</tdd_validation>
+        <test_execution>VERIFY tests fail with expected error messages</test_execution>
+        <coverage_requirement>ENSURE edge cases and error conditions included</coverage_requirement>
+        <quality_gate>Reference quality/tdd.md#red_phase_validation</quality_gate>
+      </checkpoint_3_red_phase>
+      
+      <checkpoint_4_green_phase>
+        <tdd_validation>BLOCK unless ALL tests pass with minimal implementation</tdd_validation>
+        <implementation_scope>VERIFY no features beyond test requirements</implementation_scope>
+        <test_execution>CONFIRM all tests green with current implementation</test_execution>
+        <quality_gate>Reference quality/tdd.md#green_phase_validation</quality_gate>
+      </checkpoint_4_green_phase>
+      
+      <checkpoint_5_refactor_phase>
+        <tdd_validation>BLOCK unless tests remain green during refactoring</tdd_validation>
+        <design_improvement>VERIFY code quality enhanced while maintaining functionality</design_improvement>
+        <test_integrity>ENSURE no test modifications during refactoring</test_integrity>
+        <quality_gate>Reference quality/tdd.md#refactor_phase_validation</quality_gate>
+      </checkpoint_5_refactor_phase>
+      
+      <checkpoint_6_final_validation>
+        <tdd_validation>BLOCK unless 90%+ test coverage achieved</tdd_validation>
+        <quality_standards>VERIFY production-ready quality with comprehensive testing</quality_standards>
+        <integration_testing>CONFIRM integration tests pass for external dependencies</integration_testing>
+        <quality_gate>Reference quality/tdd.md#final_validation</quality_gate>
+      </checkpoint_6_final_validation>
+    </checkpoint_enforcement>
+    
     <blocking_conditions>
       <condition>Implementation attempted before RISE framework application</condition>
       <condition>Research skipped before requirement analysis</condition>
@@ -231,6 +271,8 @@
       <condition>Implementation exceeds test requirements (over-engineering)</condition>
       <condition>Refactoring breaks any existing tests</condition>
       <condition>Final deliverable below role-appropriate quality standards</condition>
+      <condition>TDD cycle skipped or bypassed for expedited delivery</condition>
+      <condition>Test coverage below 90% for new code</condition>
     </blocking_conditions>
   </tdd_integration>
   
