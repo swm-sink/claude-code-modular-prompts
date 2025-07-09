@@ -395,7 +395,7 @@
 ```xml
 <versioning_strategy>
   <framework_versioning>
-    <current_version>2.6.0</current_version>
+    <current_version>3.0.0</current_version>
     <scheme>MAJOR.MINOR.PATCH (semantic versioning)</scheme>
     <policy>
       <major>Breaking changes to core framework architecture</major>
@@ -405,7 +405,7 @@
   </framework_versioning>
   <component_versioning>
     <commands>
-      <version_alignment>All commands follow framework version (2.6.0)</version_alignment>
+      <version_alignment>All commands follow framework version (3.0.0)</version_alignment>
       <rationale>Commands are tightly coupled to framework capabilities</rationale>
       <update_policy>Increment with framework version on any changes</update_policy>
     </commands>
@@ -420,11 +420,11 @@
     </modules>
   </component_versioning>
   <compatibility_matrix>
-    <framework_2_6_0>
-      <commands>All commands at 2.6.0</commands>
+    <framework_3_0_0>
+      <commands>All commands at 3.0.0</commands>
       <modules>Support any 1.x.x version</modules>
-      <backward_compatibility>Full compatibility with 2.5.x commands</backward_compatibility>
-    </framework_2_6_0>
+      <backward_compatibility>Full compatibility with 2.6.x commands</backward_compatibility>
+    </framework_3_0_0>
   </compatibility_matrix>
   <version_update_procedures>
     <rule>Update version tables immediately when making changes</rule>

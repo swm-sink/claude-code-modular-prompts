@@ -18,6 +18,7 @@
 - **[CLAUDE.md](../CLAUDE.md)** - Framework 3.0 control document with meta-prompting
 - **[README](../README.md)** - Project overview updated for Framework 3.0
 - **[Command Selection Guide](COMMAND_SELECTION_GUIDE.md)** - Choose the right command for your task
+- **[Command System Guide](COMMAND_SYSTEM_GUIDE.md)** - Two-tier architecture documentation
 - **[Templates](../.claude/templates/)** - Framework 3.0 format templates
 
 
@@ -145,6 +146,8 @@
 # 📋 Essential Reports
 - **[Production Readiness](reports/PRODUCTION_READINESS_VALIDATION_REPORT_2025-07-08.md)** - Framework validation
 - **[GitHub Issues Cleanup](reports/GITHUB_ISSUES_CLEANUP_2025-07-08.md)** - Maintenance record
+- **[Meta-Framework Safety Analysis](META_FRAMEWORK_SAFETY_ANALYSIS.md)** - Safety implementation audit
+- **[Module Dependency Audit](MODULE_DEPENDENCY_AUDIT.md)** - Module system analysis
 
 ---
 
