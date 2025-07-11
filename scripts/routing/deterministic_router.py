@@ -234,7 +234,7 @@ class DeterministicRouter:
             },
             'context': {
                 'user_request': request,
-                'framework_version': '2.3.0'
+                'framework_version': '3.0.0'
             },
             'decision': {
                 'type': 'command_selection',

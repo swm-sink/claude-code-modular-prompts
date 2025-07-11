@@ -509,7 +509,7 @@ def save_analytics_report(complexity_metrics: Dict, quality_analysis: Dict):
         'timestamp': datetime.now().isoformat(),
         'complexity_metrics': complexity_metrics,
         'quality_analysis': quality_analysis,
-        'framework_version': '2.3.0'
+        'framework_version': '3.0.0'
     }
     
     # Ensure analytics directory exists

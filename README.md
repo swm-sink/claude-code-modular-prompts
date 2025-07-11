@@ -13,14 +13,14 @@
 Claude Code Modular Prompts is a revolutionary Framework 3.0 development tool that enhances your Claude Code workflow through:
 
 - **🎯 Smart Commands**: Intelligent routing with TDD-aware decision making
-- **🧩 Modular Prompts**: 100+ reusable components with dependency management
+- **🧩 Modular Framework**: 100+ specialized modules with dependency management
 - **✅ Quality Gates**: Automated TDD enforcement and quality validation
 - **📊 GitHub Integration**: Issue-based tracking with session management
-- **🔧 Organized Structure**: Module runtime engine with deterministic execution
-- **🧠 Meta-Prompting**: Self-improving framework with adaptive capabilities
+- **🔧 Meta-Architecture**: Self-improving framework with adaptive capabilities
+- **🧠 Meta-Prompting**: Advanced meta-prompting with continuous optimization
 - **⚡ Claude 4 Optimized**: Advanced thinking patterns and parallel execution
 
-**Framework 3.0**: This is a sophisticated meta-prompting system with self-improvement capabilities, NOT autonomous AI systems. It's a personal productivity tool that evolves with your needs.
+**Framework 3.0**: This is a fully implemented modular prompt engineering system with meta-prompting capabilities and self-improvement frameworks, NOT autonomous AI systems. It's a sophisticated productivity tool that evolves with your needs.
 
 
 # Quick Start (30 seconds!)
@@ -29,28 +29,27 @@ Claude Code Modular Prompts is a revolutionary Framework 3.0 development tool th
 # Installation
 
 ```bash
-
 # Clone the framework
 git clone https://github.com/swm-sink/claude-code-modular-prompts.git
-
 
 # Copy framework to your project
 cp -r claude-code-modular-prompts/.claude your-project/
 cp claude-code-modular-prompts/CLAUDE.md your-project/
-```
+cp claude-code-modular-prompts/PROJECT_CONFIG.xml your-project/
 
+# Optional: Copy additional resources
+cp -r claude-code-modular-prompts/docs your-project/
+cp -r claude-code-modular-prompts/scripts your-project/
+```
 
 # Start Using Immediately
 
 ```bash
-
 # Not sure what command to use? Start here:
 /auto "Add user authentication to my app"
 
-
 # Quick focused task:
 /task "Fix the login bug"
-
 
 # Just researching:
 /query "How does our caching work?"
@@ -178,7 +177,7 @@ All framework files follow a standardized table-based format:
 ```markdown
 | version | last_updated | status |
 |---------|--------------|--------|
-| 3.0.0   | 2025-07-08   | stable |
+| 3.0.0   | 2025-07-11   | stable |
 ```
 
 

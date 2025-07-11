@@ -14,7 +14,7 @@ BASE_PATH = Path(__file__).parent.parent / ".claude" / "commands"
 # Command-specific enhancements
 COMMAND_ENHANCEMENTS = {
     "auto.md": {
-        "version": "2.4.1",
+        "version": "3.0.0",
         "workflow_steps": [
             "│ 1. Request     │ → Parse & categorize request",
             "│    Analysis    │",
@@ -42,7 +42,7 @@ COMMAND_ENHANCEMENTS = {
         ]
     },
     "swarm.md": {
-        "version": "2.4.1", 
+        "version": "3.0.0", 
         "workflow_steps": [
             "│ 1. Session     │ → GitHub coordination hub",
             "│    Creation    │",
@@ -75,7 +75,7 @@ COMMAND_ENHANCEMENTS = {
         ]
     },
     "query.md": {
-        "version": "2.4.1",
+        "version": "3.0.0",
         "workflow_steps": [
             "│ 1. Query       │ → Parse research intent",
             "│    Analysis    │",
@@ -103,7 +103,7 @@ COMMAND_ENHANCEMENTS = {
         ]
     },
     "session.md": {
-        "version": "2.4.1",
+        "version": "3.0.0",
         "workflow_steps": [
             "│ 1. Session     │ → GitHub issue management",
             "│    Type        │",
@@ -130,7 +130,7 @@ COMMAND_ENHANCEMENTS = {
         ]
     },
     "feature.md": {
-        "version": "2.4.1",
+        "version": "3.0.0",
         "workflow_steps": [
             "│ 1. PRD         │ → Requirements generation",
             "│    Generation  │",
@@ -163,7 +163,7 @@ COMMAND_ENHANCEMENTS = {
         ]
     },
     "docs.md": {
-        "version": "2.4.1", 
+        "version": "3.0.0", 
         "workflow_steps": [
             "│ 1. Gateway     │ → Block external docs",
             "│    Enforcement │",
@@ -195,7 +195,7 @@ COMMAND_ENHANCEMENTS = {
         ]
     },
     "protocol.md": {
-        "version": "2.4.1",
+        "version": "3.0.0",
         "workflow_steps": [
             "│ 1. Session     │ → Compliance tracking",
             "│    Creation    │", 

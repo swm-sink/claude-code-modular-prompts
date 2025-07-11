@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 3.0.0   | 2025-07-08   | stable |
+| 3.0.0   | 2025-07-11   | stable |
 
 
 # Documentation Index - Framework 3.0 (Streamlined)
@@ -34,7 +34,7 @@
 
 # 📚 Commands
 
-> **📖 Complete Reference**: See **[Command Overview](commands/overview.md)** for detailed command documentation with 2.4.0 runtime engine features!
+> **📖 Complete Reference**: See **[Command Overview](commands/overview.md)** for detailed command documentation with 3.0.0 runtime engine features!
 
 
 # Core Commands (Framework 3.0)

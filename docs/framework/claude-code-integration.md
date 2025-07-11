@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 3.0.0   | 2025-07-08   | stable |
+| 3.0.0   | 2025-07-11   | stable |
 
 
 # Claude Code Integration - Native Tool Usage

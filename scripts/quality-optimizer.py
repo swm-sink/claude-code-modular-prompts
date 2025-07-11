@@ -367,7 +367,7 @@ class QualityOptimizer:
         report = {
             'report_id': f'quality-optimization-{datetime.now().strftime("%Y-%m-%d-%H%M%S")}',
             'timestamp': datetime.now().isoformat(),
-            'framework_version': '2.3.0',
+            'framework_version': '3.0.0',
             'quality_analysis': quality_analysis,
             'recommendations': recommendations,
             'applied_optimizations': applied_optimizations,

@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 4.0.1   | 2025-07-08   | stable |
+| 4.0.1   | 2025-07-11   | stable |
 
 
 # Claude 4 Optimization Guide

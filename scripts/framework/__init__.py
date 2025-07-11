@@ -4,7 +4,7 @@ This module provides the core framework functionality for the Claude Code
 modular agent system.
 """
 
-__version__ = "2.3.1"
+__version__ = "3.0.0"
 
 # Core framework components
 from .validator import FrameworkValidator

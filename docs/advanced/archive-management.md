@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-07-08   | stable |
+| 3.0.0   | 2025-07-11   | stable |
 
 
 # Archive Management Procedures
