@@ -11,7 +11,7 @@ class TestCommandLoader:
     @pytest.fixture
     def commands_dir(self):
         """Get the commands directory path."""
-        return Path(__file__).parent.parent.parent / ".claude" / "commands"
+        return Path(__file__).parent.parent.parent / ".claude" / "prompt_eng" / "commands" / "core"
     
     def test_commands_directory_exists(self, commands_dir):
         """Test that commands directory exists."""
@@ -80,7 +80,7 @@ class TestCommandMetadata:
     @pytest.fixture
     def commands_dir(self):
         """Get the commands directory path."""
-        return Path(__file__).parent.parent.parent / ".claude" / "commands"
+        return Path(__file__).parent.parent.parent / ".claude" / "prompt_eng" / "commands" / "core"
     
     def test_command_has_purpose(self, commands_dir):
         """Test that each command has a clear purpose statement."""

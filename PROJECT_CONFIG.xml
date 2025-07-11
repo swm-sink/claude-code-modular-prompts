@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-  Clean Project Configuration Template
+  Project Configuration Template
   
-  This is a generic configuration that works for most projects.
   Customize the values below to match your specific project needs.
-  
-  For more specific examples, see examples/project-configs/
+  This template adapts the framework to work perfectly with your project.
 -->
 <project_configuration version="1.0.0">
   <!-- Basic Project Information -->
