@@ -2,14 +2,67 @@
 |---------|--------------|--------|
 | 3.0.0   | 2025-07-11   | stable |
 
-
 # CLAUDE.md - Framework Control Document
-
 
 # Overview
 
 <purpose>Personal Claude Code workflow efficiency tool - NOT enterprise software</purpose>
 
+# Project Customization Layer
+
+```xml
+<project_customization enforcement = "MANDATORY" version = "1.0.0">
+  <purpose>Framework adapts to YOUR project through configuration, not hardcoded rules</purpose>
+  
+  <configuration_source>
+    <primary>PROJECT_CONFIG.xml in project root (if exists)</primary>
+    <template>PROJECT_CONFIG_TEMPLATE.md for new projects</template>
+    <fallback>Default values when no configuration provided</fallback>
+  </configuration_source>
+  
+  <adaptable_elements>
+    <project_structure>
+      <source_dir>[PROJECT_CONFIG: source_directory | DEFAULT: src]</source_dir>
+      <test_dir>[PROJECT_CONFIG: test_directory | DEFAULT: tests]</test_dir>
+      <docs_dir>[PROJECT_CONFIG: docs_directory | DEFAULT: docs]</docs_dir>
+      <scripts_dir>[PROJECT_CONFIG: scripts_directory | DEFAULT: scripts]</scripts_dir>
+    </project_structure>
+    
+    <quality_thresholds>
+      <coverage>[PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]%</coverage>
+      <performance_p95>[PROJECT_CONFIG: performance.response_time_p95 | DEFAULT: 200ms]</performance_p95>
+      <enforcement>[PROJECT_CONFIG: quality_standards.enforcement | DEFAULT: BLOCKING]</enforcement>
+    </quality_thresholds>
+    
+    <development_commands>
+      <test_command>[PROJECT_CONFIG: commands.test | DEFAULT: language-specific]</test_command>
+      <lint_command>[PROJECT_CONFIG: commands.lint | DEFAULT: language-specific]</lint_command>
+      <build_command>[PROJECT_CONFIG: commands.build | DEFAULT: language-specific]</build_command>
+    </development_commands>
+    
+    <framework_behavior>
+      <file_creation>[PROJECT_CONFIG: file_creation_policy | DEFAULT: conservative]</file_creation>
+      <tdd_enforcement>[PROJECT_CONFIG: test_first_enforcement | DEFAULT: strict]</tdd_enforcement>
+      <ai_temperature>[PROJECT_CONFIG: ai_temperature.* | DEFAULT: see below]</ai_temperature>
+    </framework_behavior>
+  </adaptable_elements>
+  
+  <initialization_workflow>
+    <step>1. Check for PROJECT_CONFIG.xml in project root</step>
+    <step>2. If not found, prompt user to create from template</step>
+    <step>3. Load configuration and adapt all framework components</step>
+    <step>4. Override defaults with project-specific values</step>
+    <step>5. Validate configuration completeness</step>
+  </initialization_workflow>
+  
+  <dynamic_resolution>
+    <rule>All [PROJECT_CONFIG: path] placeholders resolve at runtime</rule>
+    <rule>Missing values fall back to framework defaults</rule>
+    <rule>User can override any value through configuration</rule>
+    <rule>Framework behavior adapts to loaded configuration</rule>
+  </dynamic_resolution>
+</project_customization>
+```
 
 # Core Framework
 
@@ -75,7 +128,7 @@
       NO test files, personal dirs, or redundant structures EVER
     </rule>
     <rule priority = "HIGHEST">
-      Scripts go in /scripts, tests in /tests, docs in /docs - NO EXCEPTIONS
+      Scripts go in [PROJECT_CONFIG: scripts_directory | DEFAULT: /scripts], tests in [PROJECT_CONFIG: test_directory | DEFAULT: /tests], docs in [PROJECT_CONFIG: docs_directory | DEFAULT: /docs] - NO EXCEPTIONS
     </rule>
   </critical_rules>
   <duplication_prevention enforcement = "MANDATORY">
@@ -90,7 +143,7 @@
     <check>Absolutely necessary? Enhance existing instead?</check>
   </verification_checklist>
   <standard_rules>
-    <rule>Docs in /docs only. Timestamps: YYYY-MM-DD-HHMMSS-UTC</rule>
+    <rule>Docs in [PROJECT_CONFIG: docs_directory | DEFAULT: /docs] only. Timestamps: YYYY-MM-DD-HHMMSS-UTC</rule>
     <rule>Dates: $(date '+%Y-%m-%d') format. 2025 sources only</rule>
     <rule>Update before create. Archive don't delete</rule>
   </standard_rules>
@@ -110,7 +163,7 @@
 # Claude 4 Advanced Control
 
 ```xml
-<claude_4_advanced_control version = "2.6.0" enforcement = "CRITICAL">
+<claude_4_advanced_control version = "3.0.0" enforcement = "CRITICAL">
   <interleaved_thinking enforcement = "MANDATORY">
     <config>16K thinking length | Trigger: tool calls, uncertainty, complexity</config>
     <rules>ALWAYS think before act | 5X think:act ratio | "ultrathink" = extended</rules>
@@ -124,7 +177,7 @@
   
   <context_optimization enforcement = "MANDATORY">
     <management>Hierarchical loading | XML structured | Dynamic context</management>
-    <limits>4K tokens/file | 120K total | 50K+ reserved for work</limits>
+    <limits>[PROJECT_CONFIG: max_file_tokens | DEFAULT: 4K] tokens/file | [PROJECT_CONFIG: max_context_tokens | DEFAULT: 120K] total | [PROJECT_CONFIG: reserved_work_tokens | DEFAULT: 50K+] reserved for work</limits>
   </context_optimization>
   
   <extended_reasoning_capabilities enforcement = "MANDATORY">
@@ -150,7 +203,7 @@
   </behavioral_control>
   
   <hallucination_prevention enforcement = "CRITICAL">
-    <temperature>Factual: 0.2 | Analysis: 0.0-0.3 | General: 0.4-0.5 | Creative: 0.7-1.0</temperature>
+    <temperature>Factual: [PROJECT_CONFIG: ai_temperature.factual | DEFAULT: 0.2] | Analysis: [PROJECT_CONFIG: ai_temperature.analysis | DEFAULT: 0.0-0.3] | General: 0.4-0.5 | Creative: [PROJECT_CONFIG: ai_temperature.creative | DEFAULT: 0.7-1.0]</temperature>
     <validation>Sources: 2025 only | Evidence required | "I don't know" when uncertain</validation>
     <accuracy>Ground in evidence | Conservative language | Step-by-step reasoning</accuracy>
     <protocols>Pre-publication review | Immediate correction | Iterative refinement</protocols>
@@ -170,23 +223,97 @@
 ```
 
 
+# Directory Structure Enforcement
+
+```xml
+<directory_structure enforcement = "MANDATORY" version = "3.0.0">
+  <purpose>Organized framework structure with clear separation of concerns</purpose>
+  
+  <prompt_engineering location = ".claude/prompt_eng/">
+    <commands location = "commands/">
+      <core>Main commands (auto, task, feature, swarm, query, session, docs, protocol)</core>
+      <meta>Meta-framework commands (meta-review, meta-evolve, meta-optimize, meta-govern, meta-fix)</meta>
+      <setup>Setup and initialization commands (init, context-prime, adapt, validate)</setup>
+    </commands>
+    <frameworks location = "frameworks/">All prompt engineering frameworks (RISE, TRACE, CARE, CLEAR, SOAR, etc.)</frameworks>
+    <personas location = "personas/">
+      <core>Core engineering personas</core>
+      <rd_engineering>R&D engineering personas (25 specialized roles)</rd_engineering>
+    </personas>
+    <patterns location = "patterns/">
+      <thinking>Thinking patterns, critical thinking templates</thinking>
+      <composition>Module composition, prompt construction patterns</composition>
+      <visualization>Runtime dashboards, execution visualization</visualization>
+    </patterns>
+    <modules location = "modules/">
+      <routing>Intelligent routing, persona management</routing>
+      <orchestration>Multi-agent coordination, swarm patterns</orchestration>
+    </modules>
+  </prompt_engineering>
+  
+  <system_components location = ".claude/system/">
+    <quality>Quality gates, TDD enforcement, testing frameworks</quality>
+    <security>Security modules, threat modeling, compliance</security>
+    <context>Context management, preservation, artifacts</context>
+    <session>Session management, compression, reliability</session>
+    <git>Git operations, conventional commits, worktree isolation</git>
+  </system_components>
+  
+  <domain_content location = ".claude/domain/">
+    <templates>Domain-specific templates (12 R&D domains)</templates>
+    <adaptation>Domain adaptation, validation, orchestration</adaptation>
+    <wizard>Domain wizard, guides, initialization</wizard>
+  </domain_content>
+  
+  <development_support location = ".claude/development/">
+    <documentation>Documentation generation, auto-docs</documentation>
+    <debugging>Debugging tools, issue reproduction</debugging>
+    <testing>Testing frameworks, iterative testing</testing>
+  </development_support>
+  
+  <meta_framework location = ".claude/meta/">
+    <evolution>Framework evolution tracking and management</evolution>
+    <optimization>Performance and workflow optimization</optimization>
+    <governance>Safety, human oversight, compliance</governance>
+    <validation>Framework validation and testing</validation>
+  </meta_framework>
+  
+  <enforcement_rules priority = "CRITICAL">
+    <rule>ALL prompt engineering components MUST be in prompt_eng/</rule>
+    <rule>NO prompt patterns or commands outside prompt_eng/</rule>
+    <rule>System modules MUST be in system/ directory</rule>
+    <rule>Domain templates MUST be in domain/ directory</rule>
+    <rule>Strict separation between prompt engineering and system components</rule>
+    <rule>New components MUST follow this structure or be rejected</rule>
+  </enforcement_rules>
+  
+  <file_organization>
+    <rule>Each directory MUST have a README.md explaining its purpose</rule>
+    <rule>Related files MUST be grouped in appropriate subdirectories</rule>
+    <rule>Cross-references MUST use relative paths from .claude/</rule>
+    <rule>Archive old versions rather than delete</rule>
+  </file_organization>
+</directory_structure>
+```
+
+
 # Architecture
 
 ```xml
 <architecture>
-  <commands location = ".claude/commands/" delegate_only = "true" enforcement = "MANDATORY">
-    <cmd name = "/auto" module = "patterns/intelligent-routing.md"/>
+  <commands location = ".claude/prompt_eng/commands/" delegate_only = "true" enforcement = "MANDATORY">
+    <cmd name = "/auto" module = "prompt_eng/modules/routing/intelligent-routing.md"/>
     <cmd name = "/task" module = "development/task-management.md"/>
-    <cmd name = "/feature" module = "planning/feature-workflow.md"/>
-    <cmd name = "/swarm" module = "patterns/multi-agent.md"/>
+    <cmd name = "/feature" module = "development/planning/feature-workflow.md"/>
+    <cmd name = "/swarm" module = "prompt_eng/modules/orchestration/multi-agent.md"/>
     <cmd name = "/query" module = "development/research-analysis.md"/>
-    <cmd name = "/session" module = "patterns/session-management.md"/>
-    <cmd name = "/docs" module = "development/documentation.md" critical = "true"/>
-    <cmd name = "/protocol" module = "patterns/session-management.md"/>
-    <cmd name = "/init" module = "getting-started/README.md"/>
-    <cmd name = "/context-prime" module = "context/project-priming.md"/>
-    <cmd name = "/adapt" module = "getting-started/template-orchestration.md"/>
-    <cmd name = "/validate" module = "getting-started/adaptation-validation.md"/>
+    <cmd name = "/session" module = "system/session/session-management.md"/>
+    <cmd name = "/docs" module = "development/documentation/documentation.md" critical = "true"/>
+    <cmd name = "/protocol" module = "system/session/session-management.md"/>
+    <cmd name = "/init" module = "domain/wizard/README.md"/>
+    <cmd name = "/context-prime" module = "system/context/project-priming.md"/>
+    <cmd name = "/adapt" module = "domain/adaptation/template-orchestration.md"/>
+    <cmd name = "/validate" module = "domain/adaptation/adaptation-validation.md"/>
     <cmd name = "/meta-review" module = "meta/framework-auditor.md" critical = "true"/>
     <cmd name = "/meta-evolve" module = "meta/update-cycle-manager.md" critical = "true"/>
     <cmd name = "/meta-optimize" module = "meta/continuous-optimizer.md" critical = "true"/>
@@ -226,8 +353,8 @@
 <quality_gates>
   <rule>TDD: RED→GREEN→REFACTOR mandatory</rule>
   <rule>Security: Threat model first</rule>
-  <rule>Performance: 200ms p95</rule>
-  <rule>Coverage: 90%+ with assertions</rule>
+  <rule>Performance: [PROJECT_CONFIG: performance.response_time_p95 | DEFAULT: 200ms] p95</rule>
+  <rule>Coverage: [PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]%+ with assertions</rule>
   <rule>Features: PRD-first approach</rule>
   <canonical_sources>
     <tdd>.claude/modules/quality/tdd.md</tdd>
@@ -243,15 +370,15 @@
 ```xml
 <test_coverage_enforcement priority = "CRITICAL" enforcement = "BLOCKING">
   <mandatory_tooling>
-    <python>pytest-cov REQUIRED - Execute: pytest --cov=. --cov-report=term-missing --cov-fail-under=90</python>
-    <javascript>jest --coverage REQUIRED - Threshold: 90% in jest.config.js</javascript>
-    <typescript>nyc/c8 REQUIRED - Execute: nyc --check-coverage --lines 90</typescript>
-    <other>Language-appropriate coverage tool MANDATORY with 90% threshold</other>
+    <python>pytest-cov REQUIRED - Execute: pytest --cov=. --cov-report=term-missing --cov-fail-under=[PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]</python>
+    <javascript>jest --coverage REQUIRED - Threshold: [PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]% in jest.config.js</javascript>
+    <typescript>nyc/c8 REQUIRED - Execute: nyc --check-coverage --lines [PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]</typescript>
+    <other>Language-appropriate coverage tool MANDATORY with [PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]% threshold</other>
   </mandatory_tooling>
   
   <enforcement_rules priority = "HIGHEST">
     <rule>NEVER skip coverage measurement - ALWAYS run coverage tools</rule>
-    <rule>BLOCK commits if coverage < 90% - NO EXCEPTIONS</rule>
+    <rule>BLOCK commits if coverage < [PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]% - NO EXCEPTIONS</rule>
     <rule>Coverage reports MUST be generated and reviewed</rule>
     <rule>Missing coverage = failed quality gate = blocked deployment</rule>
     <rule>Manual TDD claims REJECTED without coverage evidence</rule>
@@ -259,22 +386,22 @@
   
   <coverage_workflow enforcement = "MANDATORY">
     <red_phase>Write tests → Run coverage → Verify 0% (tests fail)</red_phase>
-    <green_phase>Implement → Run coverage → Verify approaching 90%</green_phase>
+    <green_phase>Implement → Run coverage → Verify approaching [PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]%</green_phase>
     <refactor_phase>Refactor → Run coverage → Maintain/improve coverage</refactor_phase>
-    <validation>Final coverage check → MUST be ≥ 90% or BLOCK</validation>
+    <validation>Final coverage check → MUST be ≥ [PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]% or BLOCK</validation>
   </coverage_workflow>
   
   <coverage_commands>
     <python>pytest --cov=module_name --cov-report=html --cov-report=term-missing</python>
-    <javascript>npm test -- --coverage --coverageThreshold='{"global":{"lines":90}}'</javascript>
-    <check_coverage>python scripts/verify-coverage.py --min-coverage=90</check_coverage>
+    <javascript>npm test -- --coverage --coverageThreshold='{"global":{"lines":[PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]}}'</javascript>
+    <check_coverage>python scripts/verify-coverage.py --min-coverage=[PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]</check_coverage>
   </coverage_commands>
   
   <blocking_conditions>
     <condition>Coverage tool not installed or configured</condition>
     <condition>Coverage command not executed during development</condition>
     <condition>Coverage report not generated or reviewed</condition>
-    <condition>Coverage below 90% threshold</condition>
+    <condition>Coverage below [PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]% threshold</condition>
     <condition>Attempting to bypass coverage requirements</condition>
   </blocking_conditions>
   
@@ -390,8 +517,8 @@
   <critical_gates>
     <gate>TDD Compliance: RED→GREEN→REFACTOR mandatory</gate>
     <gate>Security Standards: Zero high-severity issues</gate>
-    <gate>Performance Benchmarks: 200ms p95 required</gate>
-    <gate>Code Quality: 90%+ coverage required</gate>
+    <gate>Performance Benchmarks: [PROJECT_CONFIG: performance.response_time_p95 | DEFAULT: 200ms] p95 required</gate>
+    <gate>Code Quality: [PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]%+ coverage required</gate>
   </critical_gates>
   <orchestration>Commands delegate to quality modules for detailed validation and enforcement procedures</orchestration>
 </quality_gate_enforcement>
@@ -472,7 +599,7 @@
     <framework_3_0_0>
       <commands>All commands at 3.0.0</commands>
       <modules>Support any 1.x.x version</modules>
-      <backward_compatibility>Full compatibility with 2.6.x commands</backward_compatibility>
+      <backward_compatibility>Full compatibility with 2.6.x commands and modules</backward_compatibility>
     </framework_3_0_0>
   </compatibility_matrix>
   <version_update_procedures>
@@ -547,7 +674,7 @@
 # Module Runtime Engine
 
 ```xml
-<module_runtime_engine version = "2.6.0" enforcement = "CRITICAL">
+<module_runtime_engine version = "3.0.0" enforcement = "CRITICAL">
   <purpose>Deterministic module composition and execution engine for Claude 4 with standardized patterns, universal quality gates, and comprehensive TDD enforcement</purpose>
   
   <runtime_architecture>
@@ -607,8 +734,8 @@
   </integration_points>
   
   <version_integration>
-    <framework_version>Advances framework to 2.6.0 with Claude 4 optimization and hallucination prevention</framework_version>
-    <backward_compatibility>Full compatibility with existing 2.3.x commands and modules</backward_compatibility>
+    <framework_version>Advances framework to 3.0.0 with Claude 4 optimization and hallucination prevention</framework_version>
+    <backward_compatibility>Full compatibility with existing 2.6.x commands and modules</backward_compatibility>
     <migration_path>Existing commands automatically benefit from enhanced runtime</migration_path>
     <future_evolution>Foundation for deterministic AI agent coordination</future_evolution>
   </version_integration>
@@ -626,7 +753,7 @@
 # Prompt Construction Methodology
 
 ```xml
-<prompt_construction_methodology version = "1.0.0" enforcement = "CRITICAL">
+<prompt_construction_methodology version = "3.0.0" enforcement = "CRITICAL">
   <purpose>Make Claude 4 prompt construction and execution transparent through visualization, interface contracts, and runtime dashboards</purpose>
   
   <visualization_requirements>
@@ -842,7 +969,7 @@
   
   <versioning_integration>
     <framework_version>Advances framework to 3.0.0 with meta-prompting capabilities</framework_version>
-    <backward_compatibility>Full compatibility with existing 2.6.0 commands and modules</backward_compatibility>
+    <backward_compatibility>Full compatibility with existing 2.6.x commands and modules</backward_compatibility>
     <evolution_tracking>Comprehensive tracking of all framework changes</evolution_tracking>
     <safety_validation>All meta-changes validated against safety boundaries</safety_validation>
   </versioning_integration>

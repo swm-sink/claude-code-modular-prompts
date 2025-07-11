@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example configuration for a React Native mobile application -->
+<project_configuration version="1.0.0">
+  <project_info>
+    <name>Cross-Platform Mobile App</name>
+    <domain>mobile-engineering</domain>
+    <description>React Native app for iOS and Android</description>
+    <primary_language>typescript</primary_language>
+    <framework_stack>react-native+typescript+expo</framework_stack>
+  </project_info>
+
+  <project_structure>
+    <root_directory>.</root_directory>
+    <source_directory>src</source_directory>
+    <test_directory>__tests__</test_directory>
+    <docs_directory>docs</docs_directory>
+    <scripts_directory>scripts</scripts_directory>
+    <config_directory>config</config_directory>
+    <build_directory>build</build_directory>
+  </project_structure>
+
+  <quality_standards>
+    <test_coverage>
+      <threshold>75</threshold>
+      <enforcement>BLOCKING</enforcement>
+      <tool>jest</tool>
+    </test_coverage>
+    <performance>
+      <response_time_p95>100ms</response_time_p95>
+      <response_time_p99>300ms</response_time_p99>
+      <memory_limit>200MB</memory_limit>
+    </performance>
+    <code_quality>
+      <linter>eslint</linter>
+      <formatter>prettier</formatter>
+      <type_checker>typescript</type_checker>
+    </code_quality>
+  </quality_standards>
+
+  <development_workflow>
+    <commands>
+      <install>yarn install</install>
+      <test>yarn test</test>
+      <lint>yarn lint</lint>
+      <build>expo build</build>
+      <run>expo start</run>
+      <format>yarn format</format>
+    </commands>
+    <git_workflow>
+      <branch_pattern>feature/*</branch_pattern>
+      <commit_style>conventional</commit_style>
+      <pr_template>enabled</pr_template>
+    </git_workflow>
+  </development_workflow>
+
+  <domain_specific_rules>
+    <rule>Support iOS 13+ and Android 8+</rule>
+    <rule>Implement proper navigation with React Navigation</rule>
+    <rule>Handle offline scenarios gracefully</rule>
+    <rule>App size must be under 50MB</rule>
+    <rule>Cold start time must be under 3 seconds</rule>
+    <rule>Implement proper deep linking</rule>
+    <rule>Follow platform-specific design guidelines</rule>
+  </domain_specific_rules>
+
+  <custom_personas>
+    <persona>
+      <name>mobile-ui-specialist</name>
+      <expertise>Mobile UI/UX and platform-specific patterns</expertise>
+      <tools>React Native, Platform APIs, Design systems</tools>
+    </persona>
+  </custom_personas>
+
+  <security_requirements>
+    <authentication>biometric</authentication>
+    <data_encryption>at-rest</data_encryption>
+    <compliance>none</compliance>
+    <vulnerability_scanning>enabled</vulnerability_scanning>
+  </security_requirements>
+
+  <framework_behavior>
+    <file_creation_policy>conservative</file_creation_policy>
+    <documentation_generation>on-request</documentation_generation>
+    <test_first_enforcement>strict</test_first_enforcement>
+    <ai_temperature>
+      <factual>0.2</factual>
+      <analysis>0.3</analysis>
+      <creative>0.6</creative>
+    </ai_temperature>
+  </framework_behavior>
+</project_configuration>

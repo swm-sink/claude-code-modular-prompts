@@ -418,4 +418,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-For detailed commit history, see the [GitHub repository](https://github.com/swm-sink/claude-code-modular-agents).
+For detailed commit history, see the [GitHub repository](https://github.com/swm-sink/claude-code-modular-prompts).

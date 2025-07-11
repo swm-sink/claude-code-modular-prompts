@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example configuration for a microservices API project -->
+<project_configuration version="1.0.0">
+  <project_info>
+    <name>Microservices Platform</name>
+    <domain>platform-engineering</domain>
+    <description>Distributed microservices architecture with REST and GraphQL APIs</description>
+    <primary_language>go</primary_language>
+    <framework_stack>go+gin+graphql+kubernetes</framework_stack>
+  </project_info>
+
+  <project_structure>
+    <root_directory>.</root_directory>
+    <source_directory>pkg</source_directory>
+    <test_directory>tests</test_directory>
+    <docs_directory>docs</docs_directory>
+    <scripts_directory>scripts</scripts_directory>
+    <config_directory>configs</config_directory>
+    <build_directory>bin</build_directory>
+  </project_structure>
+
+  <quality_standards>
+    <test_coverage>
+      <threshold>90</threshold>
+      <enforcement>BLOCKING</enforcement>
+      <tool>go-cover</tool>
+    </test_coverage>
+    <performance>
+      <response_time_p95>50ms</response_time_p95>
+      <response_time_p99>100ms</response_time_p99>
+      <memory_limit>256MB</memory_limit>
+    </performance>
+    <code_quality>
+      <linter>golangci-lint</linter>
+      <formatter>gofmt</formatter>
+      <type_checker>go</type_checker>
+    </code_quality>
+  </quality_standards>
+
+  <development_workflow>
+    <commands>
+      <install>go mod download</install>
+      <test>go test ./...</test>
+      <lint>golangci-lint run</lint>
+      <build>go build -o bin/</build>
+      <run>go run ./cmd/server</run>
+      <format>gofmt -w .</format>
+    </commands>
+    <git_workflow>
+      <branch_pattern>feature/*</branch_pattern>
+      <commit_style>conventional</commit_style>
+      <pr_template>enabled</pr_template>
+    </git_workflow>
+  </development_workflow>
+
+  <domain_specific_rules>
+    <rule>All APIs must be versioned (v1, v2, etc.)</rule>
+    <rule>OpenAPI/Swagger documentation required</rule>
+    <rule>Implement circuit breakers for external calls</rule>
+    <rule>Distributed tracing with OpenTelemetry</rule>
+    <rule>Rate limiting on all public endpoints</rule>
+    <rule>Health checks and readiness probes required</rule>
+    <rule>Structured logging in JSON format</rule>
+    <rule>Graceful shutdown handling</rule>
+  </domain_specific_rules>
+
+  <custom_personas>
+    <persona>
+      <name>platform-engineer</name>
+      <expertise>Kubernetes, service mesh, and distributed systems</expertise>
+      <tools>Kubernetes, Istio, Prometheus, Grafana</tools>
+    </persona>
+    <persona>
+      <name>api-architect</name>
+      <expertise>API design, GraphQL, and REST best practices</expertise>
+      <tools>OpenAPI, GraphQL, gRPC, API gateways</tools>
+    </persona>
+  </custom_personas>
+
+  <security_requirements>
+    <authentication>jwt</authentication>
+    <data_encryption>in-transit</data_encryption>
+    <compliance>SOC2</compliance>
+    <vulnerability_scanning>enabled</vulnerability_scanning>
+  </security_requirements>
+
+  <deployment>
+    <environment>kubernetes</environment>
+    <ci_cd_tool>github-actions</ci_cd_tool>
+    <cloud_provider>aws</cloud_provider>
+    <monitoring>prometheus</monitoring>
+  </deployment>
+
+  <framework_behavior>
+    <file_creation_policy>conservative</file_creation_policy>
+    <documentation_generation>automatic</documentation_generation>
+    <test_first_enforcement>strict</test_first_enforcement>
+    <ai_temperature>
+      <factual>0.1</factual>
+      <analysis>0.2</analysis>
+      <creative>0.5</creative>
+    </ai_temperature>
+  </framework_behavior>
+</project_configuration>

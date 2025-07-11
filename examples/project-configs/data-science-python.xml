@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example configuration for a Python data science / ML project -->
+<project_configuration version="1.0.0">
+  <project_info>
+    <name>ML Analytics Pipeline</name>
+    <domain>data-analytics</domain>
+    <description>Machine learning pipeline for predictive analytics</description>
+    <primary_language>python</primary_language>
+    <framework_stack>pandas+scikit-learn+tensorflow+jupyter</framework_stack>
+  </project_info>
+
+  <project_structure>
+    <root_directory>.</root_directory>
+    <source_directory>src</source_directory>
+    <test_directory>tests</test_directory>
+    <docs_directory>docs</docs_directory>
+    <scripts_directory>scripts</scripts_directory>
+    <config_directory>config</config_directory>
+    <build_directory>build</build_directory>
+  </project_structure>
+
+  <quality_standards>
+    <test_coverage>
+      <threshold>80</threshold>
+      <enforcement>CONDITIONAL</enforcement>
+      <tool>pytest-cov</tool>
+    </test_coverage>
+    <performance>
+      <response_time_p95>5000ms</response_time_p95>
+      <response_time_p99>10000ms</response_time_p99>
+      <memory_limit>8GB</memory_limit>
+    </performance>
+    <code_quality>
+      <linter>pylint</linter>
+      <formatter>black</formatter>
+      <type_checker>mypy</type_checker>
+    </code_quality>
+  </quality_standards>
+
+  <development_workflow>
+    <commands>
+      <install>pip install -r requirements.txt</install>
+      <test>pytest</test>
+      <lint>pylint src/</lint>
+      <build>python setup.py build</build>
+      <run>python -m src.main</run>
+      <format>black .</format>
+    </commands>
+    <git_workflow>
+      <branch_pattern>experiment/*</branch_pattern>
+      <commit_style>descriptive</commit_style>
+      <pr_template>enabled</pr_template>
+    </git_workflow>
+  </development_workflow>
+
+  <domain_specific_rules>
+    <rule>All data transformations must be reproducible</rule>
+    <rule>Model experiments must be tracked with MLflow</rule>
+    <rule>Data validation required for all pipeline inputs</rule>
+    <rule>Feature engineering must be documented</rule>
+    <rule>Model performance metrics must include fairness measures</rule>
+  </domain_specific_rules>
+
+  <custom_personas>
+    <persona>
+      <name>data-scientist</name>
+      <expertise>Statistical modeling and machine learning</expertise>
+      <tools>Jupyter, pandas, scikit-learn, TensorFlow</tools>
+    </persona>
+    <persona>
+      <name>ml-engineer</name>
+      <expertise>ML pipeline development and deployment</expertise>
+      <tools>MLflow, Kubeflow, Docker, Kubernetes</tools>
+    </persona>
+  </custom_personas>
+
+  <framework_behavior>
+    <file_creation_policy>moderate</file_creation_policy>
+    <documentation_generation>automatic</documentation_generation>
+    <test_first_enforcement>flexible</test_first_enforcement>
+    <ai_temperature>
+      <factual>0.1</factual>
+      <analysis>0.2</analysis>
+      <creative>0.5</creative>
+    </ai_temperature>
+  </framework_behavior>
+</project_configuration>

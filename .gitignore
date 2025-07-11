@@ -172,3 +172,12 @@ benchmark-results/
 /validation-report-*.md
 /cleanup-report-*.md
 /*-report-*.json
+/script_validation_report.md
+
+# Personal path references
+**/personal*/**
+**/smenssink/**
+**/Users/smenssink/**
+
+# Integration test reports with sensitive paths
+reports/testing/integration/*.json

@@ -98,7 +98,7 @@ def process_file(file_path: Path) -> Tuple[bool, str]:
 
 def main():
     """Main execution function."""
-    project_root = Path("/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents")
+    project_root = Path.cwd()
     docs_dir = project_root / "docs"
     
     # Find all markdown files
