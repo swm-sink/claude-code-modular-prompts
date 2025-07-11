@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  Framework Development Configuration
+  
+  This configuration is specific to the Claude Code Modular Prompts Framework development.
+  DO NOT copy this to user projects - use PROJECT_CONFIG.xml instead.
+-->
+<project_configuration version="1.0.0">
+  <!-- Basic Project Information -->
+  <project_info>
+    <name>Claude Code Modular Prompts Framework</name>
+    <domain>prompt-engineering</domain>
+    <description>A revolutionary Framework 3.0 meta-prompting system that enhances Claude Code workflow efficiency through organized prompts and meta-framework capabilities</description>
+    <primary_language>python</primary_language>
+    <framework_stack>claude-code+prompt-engineering+meta-framework</framework_stack>
+  </project_info>
+
+  <!-- Project Structure -->
+  <project_structure>
+    <root_directory>.</root_directory>
+    <source_directory>.claude</source_directory>
+    <test_directory>tests</test_directory>
+    <docs_directory>docs</docs_directory>
+    <scripts_directory>scripts</scripts_directory>
+    <config_directory>config</config_directory>
+    <build_directory>build</build_directory>
+  </project_structure>
+
+  <!-- Quality Standards -->
+  <quality_standards>
+    <test_coverage>
+      <threshold>90</threshold>
+      <enforcement>BLOCKING</enforcement>
+      <tool>pytest-cov</tool>
+    </test_coverage>
+    <performance>
+      <response_time_p95>200ms</response_time_p95>
+      <response_time_p99>500ms</response_time_p99>
+      <memory_limit>512MB</memory_limit>
+    </performance>
+    <code_quality>
+      <linter>pylint</linter>
+      <formatter>black</formatter>
+      <type_checker>mypy</type_checker>
+    </code_quality>
+  </quality_standards>
+
+  <!-- Development Workflow -->
+  <development_workflow>
+    <commands>
+      <install>pip install -r requirements.txt</install>
+      <test>pytest --cov=. --cov-report=term-missing --cov-fail-under=90</test>
+      <lint>pylint scripts tests</lint>
+      <build>python scripts/framework/validate.py</build>
+      <run>python scripts/health_check.py</run>
+      <format>black scripts tests</format>
+    </commands>
+    <git_workflow>
+      <branch_pattern>feature/*</branch_pattern>
+      <commit_style>conventional</commit_style>
+      <pr_template>enabled</pr_template>
+    </git_workflow>
+  </development_workflow>
+
+  <!-- Token and Context Management -->
+  <context_management>
+    <max_file_tokens>4000</max_file_tokens>
+    <max_context_tokens>120000</max_context_tokens>
+    <reserved_work_tokens>50000</reserved_work_tokens>
+  </context_management>
+
+  <!-- Domain-Specific Rules for Prompt Engineering -->
+  <domain_specific_rules>
+    <rule>Use XML structure for prompt templates</rule>
+    <rule>Implement thinking patterns with Claude 4 optimization</rule>
+    <rule>Follow Framework 3.0 format standards with version tables</rule>
+    <rule>Enforce modular composition with clear delegation</rule>
+    <rule>Maintain meta-framework safety boundaries</rule>
+    <rule>Use PROJECT_CONFIG placeholders for customization points</rule>
+  </domain_specific_rules>
+
+  <!-- Custom Personas for Framework Development -->
+  <custom_personas>
+    <persona>
+      <name>prompt-engineer</name>
+      <expertise>Advanced prompt engineering with Claude 4 optimization</expertise>
+      <tools>XML structuring, thinking patterns, meta-framework design</tools>
+    </persona>
+    <persona>
+      <name>framework-architect</name>
+      <expertise>Modular system design with delegation patterns</expertise>
+      <tools>Module composition, interface contracts, dependency management</tools>
+    </persona>
+  </custom_personas>
+
+  <!-- Security Requirements -->
+  <security_requirements>
+    <authentication>none</authentication>
+    <data_encryption>none</data_encryption>
+    <compliance>none</compliance>
+    <vulnerability_scanning>disabled</vulnerability_scanning>
+  </security_requirements>
+
+  <!-- Deployment Configuration -->
+  <deployment>
+    <environment>local</environment>
+    <ci_cd_tool>github-actions</ci_cd_tool>
+    <cloud_provider>github</cloud_provider>
+    <monitoring>framework-health-monitoring</monitoring>
+  </deployment>
+
+  <!-- Framework Behavior Customization -->
+  <framework_behavior>
+    <file_creation_policy>conservative</file_creation_policy>
+    <documentation_generation>on-request</documentation_generation>
+    <test_first_enforcement>strict</test_first_enforcement>
+    <ai_temperature>
+      <factual>0.2</factual>
+      <analysis>0.3</analysis>
+      <creative>0.7</creative>
+    </ai_temperature>
+  </framework_behavior>
+
+  <!-- Integration Points -->
+  <integrations>
+    <external_apis>
+      <api>
+        <name>GitHub API</name>
+        <type>REST</type>
+        <authentication>GitHub Token</authentication>
+      </api>
+    </external_apis>
+    <databases>
+      <database>
+        <type>File System</type>
+        <orm>Direct File Operations</orm>
+      </database>
+    </databases>
+  </integrations>
+</project_configuration>

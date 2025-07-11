@@ -15,6 +15,11 @@ from pathlib import Path
 from typing import Dict, List, Any, Tuple, Optional
 import logging
 import re
+import sys
+import os
+
+# Add current directory to path for local imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from xml_utils import xml_to_dict, parse_xml_file, navigate_xml_path
 
 

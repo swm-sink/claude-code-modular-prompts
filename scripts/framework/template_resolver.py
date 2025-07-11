@@ -18,6 +18,10 @@ import time
 from typing import Dict, Any, Optional, Union
 from pathlib import Path
 import logging
+import sys
+
+# Add current directory to path for local imports
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from xml_utils import xml_to_dict, parse_xml_file, navigate_xml_path
 
 
