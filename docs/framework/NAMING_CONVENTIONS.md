@@ -7,7 +7,7 @@
 
 
 # Overview
-This document defines the naming conventions for prompts in the Claude Code Modular Agents framework to ensure consistency, discoverability, and maintainability.
+This document defines the naming conventions for prompts in the Claude Code Modular Prompts framework to ensure consistency, discoverability, and maintainability.
 
 
 # File Naming Convention

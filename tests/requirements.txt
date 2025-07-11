@@ -1,4 +1,4 @@
-# Test Requirements for Claude Code Modular Agents Framework
+# Test Requirements for Claude Code Modular Prompts Framework
 
 # Testing Framework
 pytest==7.4.3

@@ -8,7 +8,7 @@
 
 # Overview
 
-This directory contains documentation for the Claude Code Modular Agents framework - a personal development tool that enhances Claude Code workflows through organized prompts and GitHub integration.
+This directory contains documentation for the Claude Code Modular Prompts framework - a personal development tool that enhances Claude Code workflows through organized prompts and GitHub integration.
 
 
 # What's Here

@@ -95,7 +95,7 @@
 /swarm "convert REST API to GraphQL"
 ```
 - Creates GitHub epic
-- Coordinates agents
+- Coordinates modules
 - Tracks progress
 
 

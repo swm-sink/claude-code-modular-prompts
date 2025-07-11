@@ -1,7 +1,0 @@
-version: "Apple Swift version 6.1 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)"
-options: "95592a7ccc93cb450e640483393e7e7ae479e1a8bf62c0ed4ee132e008f00a94"
-build_start_time: [1751923890, 210124000]
-build_end_time: [1751923890, 480769000]
-inputs:
-  ? "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/codegen-module/Sources/CodegenDemo/main.swift"
-  : [1751923496, 157805044]

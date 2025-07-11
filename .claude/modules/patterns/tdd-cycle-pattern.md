@@ -6,6 +6,9 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+
+────────────────────────────────────────────────────────────────────────────────
+
 ```xml
 <module name="tdd_cycle_pattern" category="patterns">
   
@@ -145,8 +148,8 @@
   </integration_points>
   
   <pattern_usage>
-    <uses_pattern from="pattern-library.md">systematic_development</uses_pattern>
-    <uses_pattern from="pattern-library.md">quality_enforcement</uses_pattern>
+    <uses_pattern from="patterns/pattern-library.md">tdd_cycle</uses_pattern>
+    <uses_pattern from="patterns/pattern-library.md">quality_assurance</uses_pattern>
     <implementation_notes>
       Enforces test-first development through blocking quality gates
       Integrates with critical thinking for test design decisions

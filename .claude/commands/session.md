@@ -6,6 +6,9 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+
+────────────────────────────────────────────────────────────────────────────────
+
 ```xml
 <command purpose="CARE framework session management with context preservation and framework integration">
   

@@ -121,7 +121,7 @@ A **revolutionary Framework 3.0 meta-prompting system** that makes Claude Code s
 
 # → Creates GitHub tracking issue
 
-# → Coordinates specialized agents
+# → Coordinates specialized modules
 
 # → Handles dependencies
 
@@ -186,7 +186,7 @@ A **revolutionary Framework 3.0 meta-prompting system** that makes Claude Code s
 **What happens**:
 1. Creates GitHub epic issue
 2. Breaks into sub-tasks
-3. Assigns specialized agents
+3. Assigns specialized modules
 4. Coordinates everything
 
 ---

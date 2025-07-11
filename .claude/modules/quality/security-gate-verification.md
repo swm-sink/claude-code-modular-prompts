@@ -6,6 +6,9 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+
+────────────────────────────────────────────────────────────────────────────────
+
 <thinking_pattern>
 Identify security requirements → Run threat modeling → Scan for vulnerabilities → Verify mitigations → Generate evidence → Block if failed
 </thinking_pattern>

@@ -6,6 +6,9 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+
+────────────────────────────────────────────────────────────────────────────────
+
 **PURPOSE**: Advanced prompt engineering patterns with Claude 4 optimization, failure recovery, and measurable effectiveness
 
 ```xml
@@ -1462,6 +1465,481 @@ Reference patterns directly:
 - Performance pattern: Caching across module boundaries
 - Primary in: patterns/intelligent-routing.md for decision caching
 - Integration: Shared cache strategies across modules
+
+**automated_generation**
+- Development pattern: Automated code and documentation generation
+- Primary in: documentation/auto-docs.md for intelligent documentation
+- Integration: Template systems and incremental processing
+
+**template_systems**
+- Architecture pattern: Template-based content generation and customization
+- Primary in: documentation/auto-docs.md for document templates
+- Integration: Modular template composition and inheritance
+
+**incremental_processing**
+- Performance pattern: Process content incrementally to optimize resources
+- Primary in: documentation/auto-docs.md for large document processing
+- Integration: Batch processing and progressive enhancement
+
+**intelligent_summarization**
+- Analysis pattern: AI-powered content summarization and key point extraction
+- Primary in: context/restore-session.md for session context compression
+- Integration: Progressive disclosure and context management
+
+**progressive_disclosure**
+- UX pattern: Gradually reveal information based on user needs and context
+- Primary in: context/restore-session.md for context restoration
+- Integration: Intelligent summarization and context hierarchies
+
+**intelligent_analysis**
+- Analysis pattern: AI-powered analysis with pattern recognition and insights
+- Primary in: context/project-priming.md for codebase analysis
+- Integration: Security controls and workflow integration
+
+**security_controls**
+- Security pattern: Comprehensive security validation and threat mitigation
+- Primary in: context/project-priming.md for security analysis
+- Integration: Threat modeling and security gate enforcement
+
+**workflow_integration**
+- Integration pattern: Seamless integration with existing development workflows
+- Primary in: context/project-priming.md for workflow analysis
+- Integration: Tool integration and process automation
+
+**standardized_interfaces**
+- Architecture pattern: Consistent interfaces across all framework components
+- Primary in: patterns/thinking-pattern-template.md for pattern consistency
+- Integration: Modular composition and dependency injection
+
+**checkpoint_validation**
+- Quality pattern: Systematic validation at defined checkpoints
+- Primary in: patterns/thinking-pattern-template.md for validation enforcement
+- Integration: Quality gates and enforcement mechanisms
+
+**enforcement_mechanisms**
+- Framework pattern: Systematic enforcement of rules and quality standards
+- Primary in: patterns/thinking-pattern-template.md for rule enforcement
+- Integration: Quality gates and validation frameworks
+
+**modular_composition**
+- Architecture pattern: Composable modules with clear boundaries
+- Primary in: patterns/module-composition-framework.md for system architecture
+- Integration: Dependency injection and execution orchestration
+
+**dependency_injection**
+- Architecture pattern: Inject dependencies rather than create them
+- Primary in: patterns/module-composition-framework.md for loose coupling
+- Integration: Modular composition and interface contracts
+
+**execution_orchestration**
+- Coordination pattern: Orchestrate complex multi-step execution flows
+- Primary in: patterns/module-composition-framework.md for workflow management
+- Integration: Parallel execution and batch operations
+
+**framework_selection_intelligence**
+- Analysis pattern: Intelligent selection of appropriate frameworks
+- Primary in: frameworks/framework-selector.md for framework routing
+- Integration: Intelligent routing and decision optimization
+
+**quality_gates**
+- Quality pattern: Systematic quality validation and enforcement
+- Primary in: quality/universal-quality-gates.md for quality control
+- Integration: Enforcement mechanisms and checkpoint validation
+
+**tool_execution**
+- Performance pattern: Optimized tool execution and resource management
+- Primary in: quality/test-coverage.md for coverage tool execution
+- Integration: Parallel execution and batch operations
+
+**domain_adaptation**
+- Customization pattern: Adapt framework to specific domain requirements
+- Primary in: getting-started/domain-adaptation.md for domain customization
+- Integration: Template systems and configuration management
+
+**configuration_management**
+- Architecture pattern: Centralized configuration with validation
+- Primary in: getting-started/framework-configurator.md for setup management
+- Integration: Template systems and validation frameworks
+
+**initialization_workflow**
+- Process pattern: Systematic initialization and setup procedures
+- Primary in: getting-started/project-initialization.md for project setup
+- Integration: Configuration management and validation workflows
+
+**domain_detection**
+- Analysis pattern: Automatic detection of project domain and characteristics
+- Primary in: getting-started/domain-classification.md for domain analysis
+- Integration: Intelligent analysis and pattern recognition
+
+**template_customization**
+- Customization pattern: Intelligent template customization and adaptation
+- Primary in: getting-started/template-orchestration.md for template management
+- Integration: Domain adaptation and configuration management
+
+**optimization_strategies**
+- Performance pattern: Systematic optimization approaches and techniques
+- Primary in: meta/performance-optimizer.md for performance enhancement
+- Integration: Parallel execution and resource optimization
+
+**framework_customization**
+- Architecture pattern: Comprehensive framework customization capabilities
+- Primary in: getting-started/domain-adaptation.md for framework adaptation
+- Integration: Template systems and configuration management
+
+**domain_validation**
+- Validation pattern: Domain-specific validation rules and compliance checking
+- Primary in: getting-started/domain-specific-validation.md for domain compliance
+- Integration: Quality gates and validation frameworks
+
+**specialized_testing**
+- Testing pattern: Domain-specific and specialized testing approaches
+- Primary in: getting-started/domain-specific-validation.md for testing validation
+- Integration: Test coverage and quality assurance
+
+**compliance_verification**
+- Verification pattern: Systematic compliance verification and audit
+- Primary in: getting-started/domain-specific-validation.md for compliance checks
+- Integration: Quality gates and enforcement mechanisms
+
+**template_architecture**
+- Architecture pattern: Template-based architecture and design patterns
+- Primary in: getting-started/template-systems.md for template design
+- Integration: Modular composition and dependency injection
+
+**template_composition**
+- Composition pattern: Template composition and inheritance strategies
+- Primary in: getting-started/template-systems.md for template assembly
+- Integration: Configuration management and customization
+
+**template_validation**
+- Validation pattern: Template validation and quality assurance
+- Primary in: getting-started/template-systems.md for template quality
+- Integration: Quality gates and validation frameworks
+
+**systematic_validation**
+- Validation pattern: Systematic validation approaches and methodologies
+- Primary in: development/configuration-analysis.md for system validation
+- Integration: Quality gates and checkpoint validation
+
+**security_validation**
+- Security pattern: Security validation and threat assessment
+- Primary in: development/configuration-analysis.md for security analysis
+- Integration: Security controls and threat modeling
+
+**concurrent_execution**
+- Performance pattern: Concurrent execution and resource management
+- Primary in: patterns/parallel-execution.md for concurrent operations
+- Integration: Parallel execution and batch operations
+
+**resource_management**
+- Performance pattern: Resource management and optimization
+- Primary in: patterns/parallel-execution.md for resource optimization
+- Integration: Performance monitoring and optimization strategies
+
+**performance_monitoring**
+- Monitoring pattern: Performance monitoring and metrics collection
+- Primary in: patterns/parallel-execution.md for performance tracking
+- Integration: Optimization strategies and quality assurance
+
+**lifecycle_management**
+- Management pattern: Lifecycle management and process control
+- Primary in: patterns/configuration-management.md for lifecycle control
+- Integration: Configuration management and workflow integration
+
+**deployment_management**
+- Deployment pattern: Deployment management and automation
+- Primary in: patterns/configuration-management.md for deployment control
+- Integration: Workflow integration and process automation
+
+**optimization_algorithms**
+- Algorithm pattern: Optimization algorithms and techniques
+- Primary in: patterns/performance-optimization.md for performance enhancement
+- Integration: Resource optimization and performance monitoring
+
+**resource_optimization**
+- Optimization pattern: Resource optimization and efficiency enhancement
+- Primary in: patterns/performance-optimization.md for resource efficiency
+- Integration: Performance monitoring and optimization strategies
+
+**automated_detection**
+- Detection pattern: Automated detection and pattern recognition
+- Primary in: patterns/technology-detection.md for tech detection
+- Integration: Pattern recognition and intelligent analysis
+
+**pattern_recognition**
+- Recognition pattern: Pattern recognition and analysis
+- Primary in: patterns/technology-detection.md for pattern identification
+- Integration: Intelligent analysis and automated detection
+
+**hierarchical_configuration**
+- Configuration pattern: Hierarchical configuration and management
+- Primary in: patterns/configuration-pattern.md for config hierarchy
+- Integration: Configuration management and template systems
+
+**configuration_validation**
+- Validation pattern: Configuration validation and verification
+- Primary in: patterns/configuration-pattern.md for config validation
+- Integration: Quality gates and validation frameworks
+
+**comprehensive_reporting**
+- Reporting pattern: Comprehensive reporting and documentation
+- Primary in: patterns/validation-reporting.md for report generation
+- Integration: Data visualization and actionable insights
+
+**data_visualization**
+- Visualization pattern: Data visualization and presentation
+- Primary in: patterns/validation-reporting.md for visual reporting
+- Integration: Comprehensive reporting and actionable insights
+
+**actionable_insights**
+- Insight pattern: Actionable insights and recommendations
+- Primary in: patterns/validation-reporting.md for insight generation
+- Integration: Comprehensive reporting and data visualization
+
+**retry_mechanisms**
+- Resilience pattern: Retry mechanisms and fault tolerance
+- Primary in: patterns/error-recovery.md for error handling
+- Integration: Circuit breaker and graceful degradation
+
+**circuit_breaker**
+- Resilience pattern: Circuit breaker and fault isolation
+- Primary in: patterns/error-recovery.md for fault tolerance
+- Integration: Retry mechanisms and error recovery
+
+**systematic_debugging**
+- Debugging pattern: Systematic debugging and problem solving
+- Primary in: development/reproduce-issue.md for issue resolution
+- Integration: Test driven development and intelligent analysis
+
+**test_driven_development**
+- Development pattern: Test-driven development methodology
+- Primary in: development/reproduce-issue.md for test-first development
+- Integration: Quality gates and systematic validation
+
+**documentation_templates**
+- Documentation pattern: Documentation templates and standards
+- Primary in: development/reproduce-issue.md for documentation consistency
+- Integration: Template systems and automated generation
+
+**adaptive_learning**
+- Learning pattern: Adaptive learning and intelligence
+- Primary in: meta/adaptive-customization.md for adaptive behavior
+- Integration: Intelligent customization and safety validation
+
+**intelligent_customization**
+- Customization pattern: Intelligent customization and adaptation
+- Primary in: meta/adaptive-customization.md for smart customization
+- Integration: Adaptive learning and safety validation
+
+**safety_validation**
+- Safety pattern: Safety validation and risk assessment
+- Primary in: meta/adaptive-customization.md for safety checks
+- Integration: Security validation and quality gates
+
+**comprehensive_testing**
+- Testing pattern: Comprehensive testing strategies and approaches
+- Primary in: meta/adaptation-validation.md for validation testing
+- Integration: Specialized testing and quality assurance
+
+**dependency_resolution**
+- Resolution pattern: Dependency resolution and management
+- Primary in: getting-started/template-orchestration.md for dependency handling
+- Integration: Configuration management and modular composition
+
+**efficient_execution**
+- Execution pattern: Efficient execution and performance optimization
+- Primary in: frameworks/care.md for execution efficiency
+- Integration: Parallel execution and resource optimization
+
+**outcome_validation**
+- Validation pattern: Outcome validation and verification
+- Primary in: frameworks/care.md for result validation
+- Integration: Quality gates and systematic validation
+
+**systematic_evaluation**
+- Evaluation pattern: Systematic evaluation and assessment
+- Primary in: frameworks/care.md for evaluation methodologies
+- Integration: Quality assurance and outcome validation
+
+**quality_assurance**
+- Quality pattern: Quality assurance and control
+- Primary in: frameworks/care.md for quality control
+- Integration: Quality gates and systematic validation
+
+**structured_execution**
+- Execution pattern: Structured execution and process control
+- Primary in: frameworks/rise.md for execution structure
+- Integration: Systematic validation and quality assurance
+
+**role_based_processing**
+- Processing pattern: Role-based processing and responsibility assignment
+- Primary in: frameworks/rise.md for role-based execution
+- Integration: Structured execution and systematic validation
+
+**intelligent_selection**
+- Selection pattern: Intelligent selection and decision making
+- Primary in: frameworks/framework-selector.md for framework selection
+- Integration: Decision optimization and adaptive routing
+
+**decision_optimization**
+- Optimization pattern: Decision optimization and selection enhancement
+- Primary in: frameworks/framework-selector.md for decision improvement
+- Integration: Intelligent selection and adaptive routing
+
+**adaptive_routing**
+- Routing pattern: Adaptive routing and intelligent direction
+- Primary in: frameworks/framework-selector.md for routing optimization
+- Integration: Intelligent selection and decision optimization
+
+**strategic_planning**
+- Planning pattern: Strategic planning and long-term thinking
+- Primary in: frameworks/leap.md for strategic approaches
+- Integration: Systematic validation and comprehensive execution
+
+**comprehensive_execution**
+- Execution pattern: Comprehensive execution and complete implementation
+- Primary in: frameworks/trace.md for thorough execution
+- Integration: Dependency optimization and systematic validation
+
+**dependency_optimization**
+- Optimization pattern: Dependency optimization and efficiency
+- Primary in: frameworks/trace.md for dependency management
+- Integration: Comprehensive execution and resource optimization
+
+**comprehensive_framework_ecosystem**
+- Ecosystem pattern: Comprehensive framework ecosystem and integration
+- Primary in: frameworks/advanced-frameworks.md for ecosystem management
+- Integration: Intelligent selection and framework combination
+
+**framework_combination**
+- Combination pattern: Framework combination and integration
+- Primary in: frameworks/advanced-frameworks.md for framework mixing
+- Integration: Intelligent selection and quality optimization
+
+**claude_4_optimization**
+- Optimization pattern: Claude 4 specific optimization techniques
+- Primary in: frameworks/advanced-frameworks.md for Claude 4 enhancement
+- Integration: Framework ecosystem and intelligent selection
+
+**automated_workflows**
+- Workflow pattern: Automated workflows and process automation
+- Primary in: development/conventional-commits.md for automated processes
+- Integration: Workflow integration and process automation
+
+**framework_selection_intelligence**
+- Intelligence pattern: Framework selection intelligence and decision making
+- Primary in: frameworks/framework-selector.md for intelligent framework selection
+- Integration: Decision optimization and adaptive routing
+
+**adaptation_validation**
+- Validation pattern: Adaptation validation and verification
+- Primary in: meta/adaptation-validation.md for adaptation verification
+- Integration: Systematic validation and quality assurance
+
+**regression_testing**
+- Testing pattern: Regression testing and validation
+- Primary in: meta/adaptation-validation.md for regression validation
+- Integration: Comprehensive testing and quality assurance
+
+**vulnerability_assessment**
+- Security pattern: Vulnerability assessment and security analysis
+- Primary in: quality/security-validation.md for security assessment
+- Integration: Security validation and threat modeling
+
+**risk_analysis**
+- Analysis pattern: Risk analysis and assessment
+- Primary in: quality/security-validation.md for risk evaluation
+- Integration: Security validation and quality assurance
+
+**benchmark_validation**
+- Validation pattern: Benchmark validation and performance testing
+- Primary in: quality/performance-validation.md for performance benchmarking
+- Integration: Performance monitoring and optimization strategies
+
+**optimization_analysis**
+- Analysis pattern: Optimization analysis and performance evaluation
+- Primary in: quality/performance-validation.md for optimization assessment
+- Integration: Performance monitoring and resource optimization
+
+**blocking_enforcement**
+- Enforcement pattern: Blocking enforcement and quality gates
+- Primary in: quality/test-coverage.md for coverage enforcement
+- Integration: Quality gates and validation frameworks
+
+**setup_validation**
+- Validation pattern: Setup validation and configuration verification
+- Primary in: quality/setup-validation.md for setup verification
+- Integration: Configuration validation and quality assurance
+
+**dependency_validation**
+- Validation pattern: Dependency validation and verification
+- Primary in: quality/setup-validation.md for dependency verification
+- Integration: Configuration validation and quality gates
+
+**comprehensive_validation**
+- Validation pattern: Comprehensive validation and testing
+- Primary in: testing/comprehensive-testing.md for complete validation
+- Integration: Quality assurance and systematic validation
+
+**test_automation**
+- Automation pattern: Test automation and execution
+- Primary in: testing/comprehensive-testing.md for automated testing
+- Integration: Quality assurance and comprehensive validation
+
+**customization_validation**
+- Validation pattern: Customization validation and verification
+- Primary in: quality/domain-validation.md for domain customization validation
+- Integration: Domain validation and quality assurance
+
+**compliance_validation**
+- Validation pattern: Compliance validation and audit
+- Primary in: quality/compliance-validation.md for compliance verification
+- Integration: Audit execution and quality gates
+
+**audit_execution**
+- Execution pattern: Audit execution and compliance verification
+- Primary in: quality/compliance-validation.md for audit processes
+- Integration: Compliance validation and quality assurance
+
+**gap_analysis**
+- Analysis pattern: Gap analysis and assessment
+- Primary in: quality/compliance-validation.md for gap identification
+- Integration: Compliance validation and systematic analysis
+
+**systematic_analysis**
+- Analysis pattern: Systematic analysis and evaluation
+- Primary in: patterns/optimization.md for systematic evaluation
+- Integration: Quality assurance and comprehensive validation
+
+**measurement_driven_optimization**
+- Optimization pattern: Measurement-driven optimization and improvement
+- Primary in: patterns/optimization.md for data-driven optimization
+- Integration: Performance monitoring and continuous improvement
+
+**continuous_monitoring**
+- Monitoring pattern: Continuous monitoring and tracking
+- Primary in: patterns/optimization.md for ongoing monitoring
+- Integration: Performance monitoring and quality assurance
+
+**general_validation**
+- Validation pattern: General validation and verification
+- Primary in: quality/general-validation.md for general validation
+- Integration: Quality assurance and validation frameworks
+
+**validation_reporting**
+- Reporting pattern: Validation reporting and documentation
+- Primary in: quality/general-validation.md for validation reports
+- Integration: Comprehensive reporting and quality assurance
+
+**documentation_generation**
+- Generation pattern: Documentation generation and automation
+- Primary in: quality/domain-documentation.md for documentation automation
+- Integration: Template generation and automated workflows
+
+**template_generation**
+- Generation pattern: Template generation and customization
+- Primary in: development/code-review.md for template creation
+- Integration: Documentation generation and automated workflows
 
 </module>
 ```

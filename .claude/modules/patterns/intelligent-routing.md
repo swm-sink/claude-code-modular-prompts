@@ -6,6 +6,9 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+
+────────────────────────────────────────────────────────────────────────────────
+
 ```xml
 <module name="intelligent_routing" category="patterns">
   
@@ -567,7 +570,7 @@
   </integration_points>
   
   <pattern_usage>
-    <uses_pattern from="frameworks/framework-selector.md">framework_selection_intelligence</uses_pattern>
+    <uses_pattern from="patterns/pattern-library.md">framework_selection_intelligence</uses_pattern>
     <uses_pattern from="patterns/pattern-library.md">parallel_execution</uses_pattern>
     <uses_pattern from="patterns/pattern-library.md">smart_memoization</uses_pattern>
     <uses_pattern from="patterns/pattern-library.md">lazy_loading</uses_pattern>

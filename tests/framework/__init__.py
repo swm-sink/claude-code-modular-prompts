@@ -1,1 +1,1 @@
-"""Framework validation tests for Claude Code Modular Agents."""
+"""Framework validation tests for Claude Code Modular Prompts."""

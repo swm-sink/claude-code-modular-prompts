@@ -6,6 +6,9 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+
+────────────────────────────────────────────────────────────────────────────────
+
 ```xml
 <module name="critical_thinking_pattern" category="patterns">
   
@@ -164,8 +167,8 @@
   </integration_points>
   
   <pattern_usage>
-    <uses_pattern from="pattern-library.md">systematic_analysis</uses_pattern>
-    <uses_pattern from="pattern-library.md">evidence_evaluation</uses_pattern>
+    <uses_pattern from="patterns/pattern-library.md">systematic_analysis</uses_pattern>
+    <uses_pattern from="patterns/pattern-library.md">three_x_rule</uses_pattern>
     <implementation_notes>
       Provides structured thinking framework for complex decisions
       Integrates with TDD cycle for test-driven development

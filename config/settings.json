@@ -1,6 +1,6 @@
 {
   "framework": {
-    "name": "Claude Code Modular Agents",
+    "name": "Claude Code Modular Prompts",
     "version": "2.0.0",
     "description": "Internal modular prompt system for Claude Code workflow automation",
     "reality_check": "Sophisticated prompt engineering system with GitHub integration, NOT autonomous AI agents"

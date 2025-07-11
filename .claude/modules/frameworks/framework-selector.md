@@ -1,8 +1,11 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | 2025-07-08   | stable |
+| 2.0.0   | 2025-07-11   | stable |
 
 # Framework Selector Engine Module
+
+────────────────────────────────────────────────────────────────────────────────
+
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -32,7 +35,7 @@
           
           <complex_tasks>
             <characteristics>13+ steps, extensive context, multiple stakeholders, high precision required</characteristics>
-            <framework_recommendations>CLEAR (primary), CRISP (secondary), BRIDGE (tertiary)</framework_recommendations>
+            <framework_recommendations>CLEAR (primary), CRISP (secondary), SOAR (tertiary), BRIDGE (quaternary)</framework_recommendations>
             <decision_criteria>Comprehensiveness, precision, stakeholder coordination, extensive documentation</decision_criteria>
           </complex_tasks>
         </complexity_assessment>
@@ -47,8 +50,8 @@
             
             <problem_solving>
               <characteristics>Debugging, root cause analysis, troubleshooting</characteristics>
-              <optimal_framework>SPARK - Scenario, Problem, Action, Result, Knowledge</optimal_framework>
-              <reasoning>Systematic problem diagnosis and solution methodology</reasoning>
+              <optimal_framework>SPARK - Situation, Problem, Action, Result, Knowledge</optimal_framework>
+              <reasoning>Systematic problem diagnosis and solution methodology with learning capture</reasoning>
             </problem_solving>
             
             <integration_work>
@@ -67,8 +70,8 @@
           <business_planning>
             <strategic_planning>
               <characteristics>High-level goals, outcome focus, strategic alignment</characteristics>
-              <optimal_framework>SOAR - Situation, Objective, Action, Result</optimal_framework>
-              <reasoning>Strategic thinking and goal achievement</reasoning>
+              <optimal_framework>SOAR - Situation, Objectives, Actions, Results</optimal_framework>
+              <reasoning>Strategic thinking and systematic goal achievement</reasoning>
             </strategic_planning>
             
             <project_planning>
@@ -79,8 +82,8 @@
             
             <comprehensive_analysis>
               <characteristics>Complex decisions, multiple constraints, expert analysis</characteristics>
-              <optimal_framework>CLEAR - Context, Limitation, Example, Action, Role</optimal_framework>
-              <reasoning>Comprehensive analysis with expert-level insight</reasoning>
+              <optimal_framework>CLEAR - Context, Logic, Expectation, Action, Result</optimal_framework>
+              <reasoning>Comprehensive analysis with precise clarity and logic</reasoning>
             </comprehensive_analysis>
           </business_planning>
           
@@ -113,8 +116,8 @@
             
             <comprehensive_research>
               <characteristics>Deep analysis, multiple perspectives, expert insight</characteristics>
-              <optimal_framework>CLEAR - Context, Limitation, Example, Action, Role</optimal_framework>
-              <reasoning>Thorough analysis with comprehensive context</reasoning>
+              <optimal_framework>CLEAR - Context, Logic, Expectation, Action, Result</optimal_framework>
+              <reasoning>Thorough analysis with comprehensive context and precise logic</reasoning>
             </comprehensive_research>
             
             <comparative_analysis>
@@ -149,11 +152,11 @@
           <exploratory_approach>
             <characteristics>Investigation needed, discovery focus, open-ended analysis</characteristics>
             <optimal_frameworks>
-              <primary>SPARK - Scenario, Problem, Action, Result, Knowledge</primary>
+              <primary>SPARK - Situation, Problem, Action, Result, Knowledge</primary>
               <secondary>LEAP - Learn, Explore, Apply, Produce</secondary>
               <tertiary>BRIDGE - Background, Requirements, Implementation, Deliverables, Goals, Evaluation</tertiary>
             </optimal_frameworks>
-            <reasoning>Investigation and discovery-oriented frameworks for exploration</reasoning>
+            <reasoning>Investigation and discovery-oriented frameworks for exploration with learning capture</reasoning>
           </exploratory_approach>
         </interaction_style_classification>
       </task_classification>
@@ -536,6 +539,10 @@
       frameworks/rise.md for foundational framework patterns and implementation guidance
       frameworks/trace.md for precision framework approaches and technical specifications  
       frameworks/care.md for evaluation patterns and outcome validation methods
+      frameworks/clear.md for precision and clarity-focused framework approaches
+      frameworks/soar.md for strategic planning and goal-oriented framework patterns
+      frameworks/spark.md for innovation and problem-solving framework methodologies
+      frameworks/crisp.md for creative and personalized framework approaches
       frameworks/advanced-frameworks.md for comprehensive framework ecosystem and selection criteria
       patterns/intelligent-routing.md for routing intelligence and decision patterns
       quality/universal-quality-gates.md for framework validation and quality standards

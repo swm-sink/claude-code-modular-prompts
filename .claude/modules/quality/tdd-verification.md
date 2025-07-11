@@ -6,6 +6,9 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+
+────────────────────────────────────────────────────────────────────────────────
+
 <thinking_pattern>
 Parse TDD requirements → Verify RED test exists → Check GREEN implementation → Validate REFACTOR → Generate evidence → Report compliance
 </thinking_pattern>

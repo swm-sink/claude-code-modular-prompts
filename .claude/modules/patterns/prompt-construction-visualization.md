@@ -6,6 +6,9 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+
+────────────────────────────────────────────────────────────────────────────────
+
 ## Purpose
 Provides transparent visualization of how Claude 4 assembles and executes modular prompts, making the "lego block" composition process visible and predictable.
 

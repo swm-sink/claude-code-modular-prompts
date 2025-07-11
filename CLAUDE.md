@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 3.0.0   | 2025-07-08   | stable |
+| 3.0.0   | 2025-07-11   | stable |
 
 
 # CLAUDE.md - Framework Control Document
@@ -95,16 +95,6 @@
     <rule>Update before create. Archive don't delete</rule>
   </standard_rules>
   
-  <limits 
-    patterns="8" 
-    quality="5" 
-    planning="5" 
-    development="4" 
-    security="3" 
-    testing="2" 
-    reports="5" 
-    docs_per_dir="20"
-  />
   <prohibited_actions>
     <action>Creating 'personal/', 'local/', or user-specific directories</action>
     <action>Duplicating existing project structures</action>
@@ -193,6 +183,15 @@
     <cmd name = "/session" module = "patterns/session-management.md"/>
     <cmd name = "/docs" module = "development/documentation.md" critical = "true"/>
     <cmd name = "/protocol" module = "patterns/session-management.md"/>
+    <cmd name = "/init" module = "getting-started/README.md"/>
+    <cmd name = "/context-prime" module = "context/project-priming.md"/>
+    <cmd name = "/adapt" module = "getting-started/template-orchestration.md"/>
+    <cmd name = "/validate" module = "getting-started/adaptation-validation.md"/>
+    <cmd name = "/meta-review" module = "meta/framework-auditor.md" critical = "true"/>
+    <cmd name = "/meta-evolve" module = "meta/update-cycle-manager.md" critical = "true"/>
+    <cmd name = "/meta-optimize" module = "meta/continuous-optimizer.md" critical = "true"/>
+    <cmd name = "/meta-govern" module = "meta/governance-enforcer.md" critical = "true"/>
+    <cmd name = "/meta-fix" module = "meta/compliance-diagnostics.md" critical = "true"/>
   </commands>
   <documentation_enforcement>
     <rule priority = "CRITICAL">NEVER generate project documentation without /docs command</rule>
@@ -233,8 +232,54 @@
   <canonical_sources>
     <tdd>.claude/modules/quality/tdd.md</tdd>
     <security>.claude/modules/security/threat-modeling.md</security>
+    <test_coverage>.claude/modules/quality/test-coverage.md</test_coverage>
   </canonical_sources>
 </quality_gates>
+```
+
+
+# Test Coverage Enforcement
+
+```xml
+<test_coverage_enforcement priority = "CRITICAL" enforcement = "BLOCKING">
+  <mandatory_tooling>
+    <python>pytest-cov REQUIRED - Execute: pytest --cov=. --cov-report=term-missing --cov-fail-under=90</python>
+    <javascript>jest --coverage REQUIRED - Threshold: 90% in jest.config.js</javascript>
+    <typescript>nyc/c8 REQUIRED - Execute: nyc --check-coverage --lines 90</typescript>
+    <other>Language-appropriate coverage tool MANDATORY with 90% threshold</other>
+  </mandatory_tooling>
+  
+  <enforcement_rules priority = "HIGHEST">
+    <rule>NEVER skip coverage measurement - ALWAYS run coverage tools</rule>
+    <rule>BLOCK commits if coverage < 90% - NO EXCEPTIONS</rule>
+    <rule>Coverage reports MUST be generated and reviewed</rule>
+    <rule>Missing coverage = failed quality gate = blocked deployment</rule>
+    <rule>Manual TDD claims REJECTED without coverage evidence</rule>
+  </enforcement_rules>
+  
+  <coverage_workflow enforcement = "MANDATORY">
+    <red_phase>Write tests → Run coverage → Verify 0% (tests fail)</red_phase>
+    <green_phase>Implement → Run coverage → Verify approaching 90%</green_phase>
+    <refactor_phase>Refactor → Run coverage → Maintain/improve coverage</refactor_phase>
+    <validation>Final coverage check → MUST be ≥ 90% or BLOCK</validation>
+  </coverage_workflow>
+  
+  <coverage_commands>
+    <python>pytest --cov=module_name --cov-report=html --cov-report=term-missing</python>
+    <javascript>npm test -- --coverage --coverageThreshold='{"global":{"lines":90}}'</javascript>
+    <check_coverage>python scripts/verify-coverage.py --min-coverage=90</check_coverage>
+  </coverage_commands>
+  
+  <blocking_conditions>
+    <condition>Coverage tool not installed or configured</condition>
+    <condition>Coverage command not executed during development</condition>
+    <condition>Coverage report not generated or reviewed</condition>
+    <condition>Coverage below 90% threshold</condition>
+    <condition>Attempting to bypass coverage requirements</condition>
+  </blocking_conditions>
+  
+  <canonical_source>.claude/modules/quality/test-coverage.md</canonical_source>
+</test_coverage_enforcement>
 ```
 
 
@@ -379,6 +424,10 @@
     <routing>/auto - When uncertain about approach</routing>
     <sessions>/session - Long-running work requiring context</sessions>
     <protocols>/protocol - Resuming interrupted work</protocols>
+    <setup>/init - Initial framework setup and configuration</setup>
+    <analysis>/context-prime - Comprehensive codebase analysis</analysis>
+    <adaptation>/adapt - Domain-specific framework customization</adaptation>
+    <validation>/validate - Adaptation verification and testing</validation>
   </mandatory_usage>
   <prohibitions>
     <rule>NEVER create documentation without /docs command</rule>
@@ -651,6 +700,73 @@
   <sessions>40min limits | Fresh context often better | Strategic /compact | Cost monitoring</sessions>
   <performance>Multi-step delegation | Context awareness | Parallel operations | 50K+ token budget</performance>
 </claude_code_integration>
+```
+
+
+# Meta-Prompting Framework
+
+```xml
+<meta_prompting_framework version = "3.0.0" enforcement = "CRITICAL">
+  <purpose>Comprehensive framework management through intelligent meta-prompting with self-improvement capabilities</purpose>
+  
+  <meta_commands enforcement = "MANDATORY">
+    <meta_review>
+      <purpose>Comprehensive framework audit and validation with compliance reporting</purpose>
+      <triggers>Periodic audits | Compliance issues | Quality concerns | Framework evolution</triggers>
+      <capabilities>100% component coverage | Evidence-based findings | Remediation guidance | Safety validation</capabilities>
+      <outputs>Executive summary | Detailed findings | Prioritized recommendations | Actionable reports</outputs>
+    </meta_review>
+    
+    <meta_evolve>
+      <purpose>Intelligent framework evolution with safety-bounded update cycles</purpose>
+      <triggers>Non-compliance patterns | User friction | Performance issues | Improvement opportunities</triggers>
+      <capabilities>Pattern recognition | Impact assessment | Incremental implementation | Rollback guarantee</capabilities>
+      <safety_boundaries>5% weekly limit | Human approval | 60-second rollback | 99.9% stability</safety_boundaries>
+    </meta_evolve>
+    
+    <meta_optimize>
+      <purpose>Continuous performance enhancement through pattern recognition and automation</purpose>
+      <triggers>Performance bottlenecks | Resource inefficiency | Workflow friction | Optimization opportunities</triggers>
+      <capabilities>Real-time monitoring | Pattern analysis | Automated enhancement | Predictive optimization</capabilities>
+      <performance_targets>20% token reduction | 30% context improvement | 50% parallel efficiency | 10% satisfaction increase</performance_targets>
+    </meta_optimize>
+    
+    <meta_govern>
+      <purpose>Governance and compliance framework with human oversight integration</purpose>
+      <triggers>Policy violations | Compliance monitoring | Safety boundaries | Emergency situations</triggers>
+      <capabilities>Policy enforcement | Real-time monitoring | Emergency controls | Audit trail management</capabilities>
+      <human_oversight>Ultimate authority | Emergency override | Policy modification | Transparency requirements</human_oversight>
+    </meta_govern>
+    
+    <meta_fix>
+      <purpose>Compliance issue diagnosis and self-correction with root cause analysis</purpose>
+      <triggers>"TDD not followed" | "Wrong date used" | "XYZ error occurred" | Compliance violations</triggers>
+      <capabilities>Root cause analysis | Automated corrections | Guided remediation | Prevention strategies</capabilities>
+      <common_fixes>TDD cycle restoration | Date standardization | Quality gate integration | Pattern compliance</common_fixes>
+    </meta_fix>
+  </meta_commands>
+  
+  <meta_architecture>
+    <intelligent_routing>Meta commands route to specialized modules for implementation</intelligent_routing>
+    <safety_integration>All meta operations respect framework safety boundaries</safety_integration>
+    <human_oversight>Human authority maintained over all meta-operations</human_oversight>
+    <continuous_learning>Meta-operations learn and improve from experience</continuous_learning>
+  </meta_architecture>
+  
+  <meta_capabilities>
+    <framework_evolution>Self-improving framework with controlled evolution cycles</framework_evolution>
+    <compliance_enforcement>Automated compliance monitoring and correction</compliance_enforcement>
+    <performance_optimization>Continuous optimization based on usage patterns</performance_optimization>
+    <governance_integration>Comprehensive governance with human oversight</governance_integration>
+  </meta_capabilities>
+  
+  <integration_points>
+    <existing_commands>Meta commands complement existing command set</existing_commands>
+    <module_runtime>Integration with Module Runtime Engine for execution</module_runtime>
+    <quality_gates>Meta operations enforce universal quality gates</quality_gates>
+    <safety_boundaries>Meta operations respect all safety boundaries</safety_boundaries>
+  </integration_points>
+</meta_prompting_framework>
 ```
 
 

@@ -6,6 +6,9 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+
+────────────────────────────────────────────────────────────────────────────────
+
 <purpose>Ensure financial software meets regulatory and security requirements</purpose>
 
 ## Core Components

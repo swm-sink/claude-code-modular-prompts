@@ -6,6 +6,9 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+
+────────────────────────────────────────────────────────────────────────────────
+
 ```xml
 <module name="universal_quality_gates" category="quality">
   
@@ -205,6 +208,32 @@
         <check>TDD cycle demonstrates Claude 4 enhanced methodology</check>
       </validation_method>
       <failure_response>BLOCK implementation until Claude 4 enhanced TDD compliance verified</failure_response>
+    </gate>
+    
+    <gate name="test_coverage_tool_enforcement" enforcement="BLOCKING">
+      <description>Mandatory test coverage tool usage and measurement validation</description>
+      <criteria>
+        <requirement>Coverage tools installed and configured (pytest-cov, nyc, c8, etc.)</requirement>
+        <requirement>Coverage measurement executed and reported for all code changes</requirement>
+        <requirement>Coverage threshold enforcement at 90% minimum for new code</requirement>
+        <requirement>Coverage reports generated and reviewed for completeness</requirement>
+        <requirement>Missing coverage identified and addressed</requirement>
+        <requirement>Coverage validation integrated into quality gates</requirement>
+      </criteria>
+      <claude_4_enhancements>
+        <intelligent_coverage_analysis>Claude 4 enhanced coverage gap identification and priority assessment</intelligent_coverage_analysis>
+        <adaptive_threshold>Context-aware coverage threshold adjustment based on code complexity</adaptive_threshold>
+        <predictive_coverage>Predictive analysis of coverage impact on code quality</predictive_coverage>
+        <optimization_guidance>Intelligent guidance for coverage optimization strategies</optimization_guidance>
+      </claude_4_enhancements>
+      <validation_method>
+        <check>Coverage tools properly configured and executable</check>
+        <check>Coverage reports generated with detailed metrics</check>
+        <check>Coverage percentage meets or exceeds 90% threshold</check>
+        <check>Missing coverage lines identified and documented</check>
+        <check>Coverage validation commands successfully execute</check>
+      </validation_method>
+      <failure_response>BLOCK until coverage tool requirements satisfied and 90% threshold achieved</failure_response>
     </gate>
     
     <gate name="code_quality_standards" enforcement="BLOCKING">

@@ -6,6 +6,9 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+
+────────────────────────────────────────────────────────────────────────────────
+
 ## Purpose
 Provides real-time monitoring and visualization of command execution, module state transitions, and performance metrics during Claude 4 workflow execution.
 

@@ -6,6 +6,9 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+
+────────────────────────────────────────────────────────────────────────────────
+
 ```xml
 <command purpose="Execute research-first focused development tasks with RISE framework and MANDATORY TDD cycle">
   
@@ -120,7 +123,7 @@
       <context_transfer>Test design and step sequence for GREEN phase implementation</context_transfer>
     </checkpoint>
     <checkpoint id="4" verify="true" enforcement="BLOCKING" thinking_mode="standard">
-      <action>Execute TDD GREEN phase - minimal implementation aligned with RISE expectations</action>
+      <action>Execute TDD GREEN phase - minimal implementation aligned with RISE expectations with coverage measurement</action>
       <interleaved_thinking enforcement="MANDATORY">
         <pre_analysis>
           - What minimal implementation approach will make tests pass?
@@ -132,6 +135,7 @@
           - [Role Question: Does implementation align with defined role and expertise level?]
           - [Steps Question: Am I following the defined steps systematically?]
           - [Testing Question: Are all tests now passing with focused implementation?]
+          - [Coverage Question: Execute pytest-cov to measure test coverage and ensure ≥90% threshold?]
           - [Quality Question: Does implementation meet role-appropriate standards?]
           - [Efficiency Question: Can implementation be optimized for performance?]
         </critical_thinking>
@@ -146,10 +150,16 @@
         <context_efficiency>How can GREEN phase optimize context window usage?</context_efficiency>
         <dependency_analysis>What implementation tasks can be parallelized?</dependency_analysis>
       </parallel_execution_considerations>
-      <output_format>MINIMAL_IMPLEMENTATION: Code aligned with RISE framework and passing tests</output_format>
-      <validation>All tests pass with role-appropriate, step-aligned implementation and enhanced reasoning</validation>
-      <enforcement>BLOCK refactoring until GREEN achieved - use quality/tdd.md#green_phase</enforcement>
-      <context_transfer>GREEN implementation for refactoring phase</context_transfer>
+      <output_format>MINIMAL_IMPLEMENTATION: Code aligned with RISE framework and passing tests with coverage report</output_format>
+      <coverage_measurement enforcement="MANDATORY">
+        <tool>pytest-cov for Python projects (or appropriate coverage tool for other languages)</tool>
+        <execution>Run coverage measurement: pytest --cov=. --cov-report=term-missing --cov-fail-under=90</execution>
+        <validation>Verify coverage meets 90% threshold with detailed line-by-line analysis</validation>
+        <reporting>Generate coverage report showing covered/uncovered lines</reporting>
+      </coverage_measurement>
+      <validation>All tests pass with role-appropriate, step-aligned implementation and ≥90% coverage achieved</validation>
+      <enforcement>BLOCK refactoring until GREEN achieved AND coverage ≥90% - use quality/tdd.md#green_phase</enforcement>
+      <context_transfer>GREEN implementation with coverage validation for refactoring phase</context_transfer>
     </checkpoint>
     <checkpoint id="5" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
       <action>Execute TDD REFACTOR phase with RISE Expectations validation</action>
@@ -184,7 +194,7 @@
       <context_transfer>Refactored implementation for final validation</context_transfer>
     </checkpoint>
     <checkpoint id="6" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
-      <action>Apply RISE framework - Validate Expectations and quality gates</action>
+      <action>Apply RISE framework - Validate Expectations and quality gates with comprehensive coverage validation</action>
       <interleaved_thinking enforcement="MANDATORY">
         <pre_analysis>
           - What final validation ensures RISE expectations and quality standards?
@@ -211,9 +221,16 @@
         <dependency_analysis>What validation checks can be parallelized?</dependency_analysis>
       </parallel_execution_considerations>
       <output_format>EXPECTATION_VALIDATION: RISE expectations met, coverage [%], quality gates [status]</output_format>
-      <validation>RISE expectations fulfilled, quality gates passed, role standards met with enhanced reasoning</validation>
-      <enforcement>BLOCK completion until RISE expectations and quality standards achieved</enforcement>
-      <context_transfer>Complete validation with quality confirmation</context_transfer>
+      <coverage_validation enforcement="MANDATORY">
+        <final_coverage_check>Execute final coverage validation: pytest --cov=. --cov-report=html --cov-report=term-missing</final_coverage_check>
+        <threshold_verification>Verify final coverage meets or exceeds 90% threshold with no regression</threshold_verification>
+        <gap_analysis>Analyze any remaining coverage gaps and document justification for exclusions</gap_analysis>
+        <quality_assessment>Assess coverage quality - ensure meaningful tests, not just line coverage</quality_assessment>
+        <reporting>Generate comprehensive coverage report with detailed analysis and recommendations</reporting>
+      </coverage_validation>
+      <validation>RISE expectations fulfilled, quality gates passed, role standards met with ≥90% coverage verified</validation>
+      <enforcement>BLOCK completion until RISE expectations, quality standards, AND coverage requirements achieved</enforcement>
+      <context_transfer>Complete validation with quality and coverage confirmation</context_transfer>
     </checkpoint>
   </thinking_pattern>
   
@@ -245,6 +262,7 @@
         <tdd_validation>BLOCK unless ALL tests pass with minimal implementation</tdd_validation>
         <implementation_scope>VERIFY no features beyond test requirements</implementation_scope>
         <test_execution>CONFIRM all tests green with current implementation</test_execution>
+        <coverage_validation>EXECUTE pytest-cov and VERIFY ≥90% coverage threshold achieved</coverage_validation>
         <quality_gate>Reference quality/tdd.md#green_phase_validation</quality_gate>
       </checkpoint_4_green_phase>
       
@@ -257,8 +275,10 @@
       
       <checkpoint_6_final_validation>
         <tdd_validation>BLOCK unless 90%+ test coverage achieved</tdd_validation>
+        <coverage_validation>EXECUTE comprehensive coverage analysis with HTML report generation</coverage_validation>
         <quality_standards>VERIFY production-ready quality with comprehensive testing</quality_standards>
         <integration_testing>CONFIRM integration tests pass for external dependencies</integration_testing>
+        <coverage_quality_assessment>ASSESS coverage quality - meaningful tests, not just line coverage</coverage_quality_assessment>
         <quality_gate>Reference quality/tdd.md#final_validation</quality_gate>
       </checkpoint_6_final_validation>
     </checkpoint_enforcement>
@@ -273,6 +293,11 @@
       <condition>Final deliverable below role-appropriate quality standards</condition>
       <condition>TDD cycle skipped or bypassed for expedited delivery</condition>
       <condition>Test coverage below 90% for new code</condition>
+      <condition>Coverage tools not installed or properly configured</condition>
+      <condition>Coverage measurement not executed during GREEN phase</condition>
+      <condition>Coverage reports not generated or reviewed</condition>
+      <condition>Coverage validation bypassed or skipped</condition>
+      <condition>Coverage quality assessment not performed</condition>
     </blocking_conditions>
   </tdd_integration>
   

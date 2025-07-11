@@ -6,6 +6,9 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+
+────────────────────────────────────────────────────────────────────────────────
+
 ```xml
 <module name="research_analysis_pattern" category="patterns">
   
@@ -202,8 +205,8 @@
   </integration_points>
   
   <pattern_usage>
-    <uses_pattern from="pattern-library.md">systematic_analysis</uses_pattern>
-    <uses_pattern from="pattern-library.md">parallel_execution</uses_pattern>
+    <uses_pattern from="patterns/pattern-library.md">systematic_analysis</uses_pattern>
+    <uses_pattern from="patterns/pattern-library.md">parallel_execution</uses_pattern>
     <implementation_notes>
       Enables informed decision-making through comprehensive research
       Supports parallel tool execution for efficient information gathering

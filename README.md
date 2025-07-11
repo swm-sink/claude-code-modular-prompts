@@ -1,8 +1,8 @@
-# Claude Code Modular Agents Framework
+# Claude Code Modular Prompts Framework
 
 > 🚀 **A prompt engineering framework that improves Claude Code workflow efficiency through organized prompts and GitHub integration**
 
-[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://github.com/swm-sink/claude-code-modular-agents)
+[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://github.com/swm-sink/claude-code-modular-prompts)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Claude 4](https://img.shields.io/badge/Claude-4%20Optimized-purple.svg)](CLAUDE.md)
 [![Framework](https://img.shields.io/badge/Framework-3.0%20Meta--Prompting-purple.svg)](CLAUDE.md)
@@ -10,7 +10,7 @@
 
 # What is This?
 
-Claude Code Modular Agents is a revolutionary Framework 3.0 development tool that enhances your Claude Code workflow through:
+Claude Code Modular Prompts is a revolutionary Framework 3.0 development tool that enhances your Claude Code workflow through:
 
 - **🎯 Smart Commands**: Intelligent routing with TDD-aware decision making
 - **🧩 Modular Prompts**: 100+ reusable components with dependency management
@@ -20,7 +20,7 @@ Claude Code Modular Agents is a revolutionary Framework 3.0 development tool tha
 - **🧠 Meta-Prompting**: Self-improving framework with adaptive capabilities
 - **⚡ Claude 4 Optimized**: Advanced thinking patterns and parallel execution
 
-**Framework 3.0**: This is a sophisticated meta-prompting system with self-improvement capabilities, NOT autonomous AI agents. It's a personal productivity tool that evolves with your needs.
+**Framework 3.0**: This is a sophisticated meta-prompting system with self-improvement capabilities, NOT autonomous AI systems. It's a personal productivity tool that evolves with your needs.
 
 
 # Quick Start (30 seconds!)
@@ -31,12 +31,12 @@ Claude Code Modular Agents is a revolutionary Framework 3.0 development tool tha
 ```bash
 
 # Clone the framework
-git clone https://github.com/swm-sink/claude-code-modular-agents.git
+git clone https://github.com/swm-sink/claude-code-modular-prompts.git
 
 
 # Copy framework to your project
-cp -r claude-code-modular-agents/.claude your-project/
-cp claude-code-modular-agents/CLAUDE.md your-project/
+cp -r claude-code-modular-prompts/.claude your-project/
+cp claude-code-modular-prompts/CLAUDE.md your-project/
 ```
 
 
@@ -97,7 +97,7 @@ Your Request → /auto → Intelligent Routing → Right Command → Quality Out
 
 # ❌ What It Doesn't Do
 
-- **Not autonomous agents** - it's organized prompts
+- **Not autonomous systems** - it's organized prompts
 - **Not enterprise software** - it's a personal tool
 - **Not magic** - it enhances Claude Code, doesn't replace thinking
 - **Not a platform** - it's workflow automation
@@ -246,8 +246,8 @@ We welcome contributions! Framework 3.0 is designed for extensibility:
 
 # Support
 
-- **Issues**: [GitHub Issues](https://github.com/swm-sink/claude-code-modular-agents/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/swm-sink/claude-code-modular-agents/discussions)
+- **Issues**: [GitHub Issues](https://github.com/swm-sink/claude-code-modular-prompts/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/swm-sink/claude-code-modular-prompts/discussions)
 - **Quick Help**: Use `/query "your question"` for research or `/docs generate` for documentation
 
 

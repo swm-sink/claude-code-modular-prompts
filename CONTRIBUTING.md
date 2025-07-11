@@ -1,6 +1,6 @@
-# Contributing to Claude Code Modular Agents Framework
+# Contributing to Claude Code Modular Prompts Framework
 
-Thank you for your interest in contributing to the Claude Code Modular Agents Framework! This guide will help you get started with contributing to our project.
+Thank you for your interest in contributing to the Claude Code Modular Prompts Framework! This guide will help you get started with contributing to our project.
 
 
 # Table of Contents
@@ -24,8 +24,8 @@ We are committed to fostering a welcoming and inclusive community. Please be res
 
 1. **Fork the Repository**
    ```bash
-   git clone https://github.com/YOUR-USERNAME/claude-code-modular-agents.git
-   cd claude-code-modular-agents
+   git clone https://github.com/YOUR-USERNAME/claude-code-modular-prompts.git
+   cd claude-code-modular-prompts
    ```
 
 2. **Create a Feature Branch**
@@ -305,8 +305,8 @@ Clear description of what this does
 
 # Getting Help
 
-- **Questions**: Open a [GitHub Discussion](https://github.com/swm-sink/claude-code-modular-agents/discussions)
-- **Bugs**: Create an [Issue](https://github.com/swm-sink/claude-code-modular-agents/issues)
+- **Questions**: Open a [GitHub Discussion](https://github.com/swm-sink/claude-code-modular-prompts/discussions)
+- **Bugs**: Create an [Issue](https://github.com/swm-sink/claude-code-modular-prompts/issues)
 - **Ideas**: Start a discussion or create a feature request issue
 
 
@@ -317,4 +317,4 @@ Contributors will be recognized in:
 - Release notes
 - Special mentions for significant contributions
 
-Thank you for helping make Claude Code Modular Agents better! 🚀
+Thank you for helping make Claude Code Modular Prompts better! 🚀

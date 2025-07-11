@@ -6,6 +6,9 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+
+────────────────────────────────────────────────────────────────────────────────
+
 ```xml
 <purpose>Autonomous requirement extraction and comprehensive product requirement documentation generation</purpose>
 ```

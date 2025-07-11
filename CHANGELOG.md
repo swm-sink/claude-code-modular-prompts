@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Claude Code Modular Agents Framework will be documented in this file.
+All notable changes to the Claude Code Modular Prompts Framework will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -259,7 +259,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### 🚀 Framework 2.0 - Complete Transformation
 
-**The Claude Code Modular Agents Framework has been completely rewritten from the ground up for maximum efficiency and Claude 4 optimization.**
+**The Claude Code Modular Prompts Framework has been completely rewritten from the ground up for maximum efficiency and Claude 4 optimization.**
 
 ### 🎯 Core Philosophy
 - **Single Source of Truth**: Every concept lives in exactly one place

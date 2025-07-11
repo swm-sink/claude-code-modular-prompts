@@ -1,8 +1,11 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 1.1.0   | 2025-01-08   | stable |
+| 1.1.0   | 2025-07-11   | stable |
 
 # TDD Module
+
+────────────────────────────────────────────────────────────────────────────────
+
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -56,14 +59,18 @@
         Cover edge cases and boundary conditions with dedicated tests
         Ensure test names clearly describe behavior being tested
         MANDATORY: Execute tests to confirm they fail with expected messages
+        MANDATORY: Run coverage tool to establish baseline (expect 0% for new code)
         MANDATORY: Document test failure reasons for validation
+        ENFORCEMENT: Use quality/test-coverage.md#tdd_red_phase_coverage
       </actions>
       <validation>
         All tests fail with clear failure messages indicating missing functionality
         Test coverage includes normal cases, edge cases, and error conditions
         Test names provide clear documentation of expected behaviors
+        Coverage baseline established (0% for new code, existing % for modifications)
         ENFORCEMENT: No implementation code written until this phase complete
         VERIFICATION: Test execution results showing expected failures documented
+        COVERAGE: pytest --cov=module_name tests/ (expect low/0% coverage)
       </validation>
       <blocking_conditions>
         <condition>Tests pass when they should fail (indicates test errors)</condition>
@@ -86,21 +93,27 @@
         Resist adding features not required by current tests
         Ensure implementation directly addresses test requirements
         MANDATORY: Execute full test suite to verify all tests pass
+        MANDATORY: Run coverage tool to measure implementation coverage
+        MANDATORY: Verify coverage approaching or exceeding 90% threshold
         MANDATORY: Verify no new functionality beyond test requirements
         ENFORCEMENT: Reject implementations that exceed test scope
+        ENFORCEMENT: Use quality/test-coverage.md#tdd_green_phase_coverage
       </actions>
       <validation>
         All tests pass with minimal implementation
         No unnecessary complexity or premature optimization present
         Implementation directly corresponds to test specifications
+        Coverage report shows ≥90% line coverage for new code
         VERIFICATION: Test execution results showing all tests green
         ENFORCEMENT: Code review confirms minimal implementation principle
+        COVERAGE: pytest --cov=module_name --cov-fail-under=90 tests/
       </validation>
       <blocking_conditions>
         <condition>Any tests still failing after implementation</condition>
         <condition>Implementation includes features not tested</condition>
         <condition>Premature optimization present (complex algorithms, caching, etc.)</condition>
         <condition>Dependencies added that aren't strictly necessary</condition>
+        <condition>Code coverage below 90% threshold for new/modified code</condition>
       </blocking_conditions>
     </phase>
     
@@ -117,21 +130,28 @@
         Apply SOLID principles and appropriate design patterns
         Extract common functionality and eliminate code duplication
         MANDATORY: Run tests after EVERY refactoring step
+        MANDATORY: Run coverage tool to ensure no regression
+        MANDATORY: Verify coverage percentage maintained or improved
         MANDATORY: Commit after each successful refactoring iteration
         ENFORCEMENT: Stop immediately if any test starts failing
+        ENFORCEMENT: Stop if coverage drops below GREEN phase level
+        ENFORCEMENT: Use quality/test-coverage.md#tdd_refactor_phase_coverage
       </actions>
       <validation>
         All tests continue to pass throughout refactoring
         Code quality improved with better structure and maintainability
         No behavior changes introduced during refactoring process
+        Coverage percentage maintained at ≥90% (no regression from GREEN)
         VERIFICATION: Continuous test execution confirms behavior preservation
         ENFORCEMENT: Git history shows incremental refactoring commits
+        COVERAGE: pytest --cov=module_name --cov-fail-under=90 tests/
       </validation>
       <blocking_conditions>
         <condition>Any test failure during refactoring (immediate rollback required)</condition>
         <condition>Behavior changes detected (test assertions modified)</condition>
         <condition>New functionality added during refactoring</condition>
         <condition>Refactoring steps too large (not incrementally verifiable)</condition>
+        <condition>Coverage percentage drops below GREEN phase level</condition>
       </blocking_conditions>
     </phase>
     
@@ -293,12 +313,14 @@
       patterns/tool-usage.md for parallel test execution optimization
       quality/critical-thinking.md for rigorous test case analysis
       git/conventional-commits.md for TDD-aware commit message generation
+      quality/test-coverage.md for coverage tool execution and validation
     </depends_on>
     <provides_to>
       development/task-management.md for TDD workflow integration
       quality/production-standards.md for enhanced coverage requirements
       development/prompt-engineering.md for prompt testing methodology
       git/conventional-commits.md for test-driven commit messaging
+      quality/test-coverage.md for TDD phase coverage integration
       All commands for strict TDD enforcement
     </provides_to>
   </integration_points>

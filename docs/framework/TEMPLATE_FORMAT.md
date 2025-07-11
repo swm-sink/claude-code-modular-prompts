@@ -2,7 +2,7 @@
 
 
 # Overview
-This document defines the standard format for creating and storing prompts in the Claude Code Modular Agents framework.
+This document defines the standard format for creating and storing prompts in the Claude Code Modular Prompts framework.
 
 
 # Template Format

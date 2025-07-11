@@ -72,7 +72,7 @@ def check_concepts_in_file(filepath, concepts):
 
 def main():
     """Main function to check for duplications."""
-    base_path = '/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents'
+    base_path = '/Users/smenssink/Documents/Github/claude-code-modular-prompts'
     modules_path = os.path.join(base_path, '.claude/modules')
     
     modules = find_modules(modules_path)

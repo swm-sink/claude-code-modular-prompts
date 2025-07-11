@@ -1,4 +1,0 @@
-module VoiceModule {
-    header "/Users/smenssink/Documents/Github personal projects/claude-code-modular-agents/test-projects/voice-ios-builder/voice-module/.build/arm64-apple-macosx/debug/VoiceModule.build/VoiceModule-Swift.h"
-    requires objc
-}

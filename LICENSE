@@ -3,7 +3,7 @@
   <type>MIT License</type>
   <copyright_year>2025</copyright_year>
   <copyright_holder>Stefan Menssink</copyright_holder>
-  <framework>Claude Framework with Modular Agents</framework>
+  <framework>Claude Framework with Modular Prompts</framework>
   <optimization>Claude 4 compatible with XML metadata wrapper</optimization>
 </license_metadata>
 -->
