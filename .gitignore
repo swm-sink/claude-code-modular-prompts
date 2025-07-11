@@ -114,6 +114,7 @@ secrets/
 .claude/settings.local.json
 .claude/cache/
 .claude/tmp/
+archive/analytics/
 
 # Git worktrees
 worktrees/
