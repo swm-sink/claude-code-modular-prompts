@@ -208,7 +208,7 @@
             """
             # Arrange - Set up the bug conditions
             email_with_special_char = "user+test@example.com"
-            password = "validpassword123"
+            password = "[SECURE_PASSWORD_PLACEHOLDER]"
             
             # Act - Perform the action that should work but currently fails
             result = authenticate_user(email_with_special_char, password)
@@ -243,7 +243,7 @@
             ]
             
             for email in valid_special_emails:
-                result = authenticate_user(email, "validpassword123")
+                result = authenticate_user(email, "[SECURE_PASSWORD_PLACEHOLDER]")
                 assert result.success == True, f"Failed to authenticate {email}"
                 assert result.user.email == email
         ```
