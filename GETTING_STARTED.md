@@ -29,7 +29,7 @@ cp claude-code-modular-prompts/PROJECT_CONFIG.xml your-project/
 
 ## 🔥 How Framework 3.0 Actually Works
 
-**This is a configuration-driven prompt engineering system that adapts to your project through PROJECT_CONFIG.xml.**
+**This is a configuration-driven prompt engineering framework that adapts to your project through PROJECT_CONFIG.xml.**
 
 ### What Makes Framework 3.0 Powerful:
 

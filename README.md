@@ -20,7 +20,7 @@ Claude Code Modular Prompts is a revolutionary Framework 3.0 development tool th
 - **🧠 Meta-Prompting**: Advanced meta-prompting with continuous optimization
 - **⚡ Claude 4 Optimized**: Advanced thinking patterns and parallel execution
 
-**Framework 3.0**: This is a fully implemented modular prompt engineering system with meta-prompting capabilities and self-improvement frameworks, NOT autonomous AI systems. It's a sophisticated productivity tool that evolves with your needs.
+**Framework 3.0**: This is a fully implemented modular prompt engineering framework with meta-prompting capabilities and self-improvement frameworks, NOT autonomous AI frameworks. It's a sophisticated productivity tool that evolves with your needs.
 
 
 # Quick Start (30 seconds!)
