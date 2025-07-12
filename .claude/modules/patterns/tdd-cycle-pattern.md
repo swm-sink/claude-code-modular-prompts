@@ -41,12 +41,19 @@
         Use clear, descriptive test names
         Verify tests fail with expected error messages
       </actions>
+      <atomic_commit_integration>
+        <checkpoint>git add -A && git commit -m "TDD RED: [test_description] - failing tests created"</checkpoint>
+        <validation_before_commit>Tests must fail with expected error messages</validation_before_commit>
+        <rollback_trigger>If tests don't fail correctly, rollback with: git reset --hard HEAD~1</rollback_trigger>
+        <safety_check>Verify tests fail for right reasons before proceeding to GREEN phase</safety_check>
+      </atomic_commit_integration>
       <validation>
         Tests are written before any implementation
         Tests fail with clear, expected error messages
         All requirements are covered by tests
         Test names clearly describe behavior
         Tests fail for the right reasons (not syntax errors)
+        Atomic commit completed with failing test state
       </validation>
     </phase>
     
@@ -64,12 +71,20 @@
         Avoid premature optimization
         Run tests frequently to ensure they pass
       </actions>
+      <atomic_commit_integration>
+        <checkpoint>git add -A && git commit -m "TDD GREEN: [implementation] - tests passing with minimal code"</checkpoint>
+        <validation_before_commit>All tests must pass and coverage ≥90% validated</validation_before_commit>
+        <rollback_trigger>If tests fail or coverage insufficient, rollback with: git reset --hard HEAD~1</rollback_trigger>
+        <safety_check>Verify all tests green and coverage threshold met before proceeding to REFACTOR</safety_check>
+      </atomic_commit_integration>
       <validation>
         All tests pass with minimal implementation
         No unnecessary complexity added
         Implementation directly addresses test requirements
         No features beyond what tests specify
         Tests can be run repeatedly with consistent results
+        Atomic commit completed with passing test state
+        Coverage threshold validated and committed
       </validation>
     </phase>
     
@@ -87,12 +102,20 @@
         Run tests after each refactoring step
         Make small, incremental improvements
       </actions>
+      <atomic_commit_integration>
+        <checkpoint>git add -A && git commit -m "TDD REFACTOR: [refactoring] - quality improved while keeping tests green"</checkpoint>
+        <validation_before_commit>All tests must remain green and coverage maintained/improved</validation_before_commit>
+        <rollback_trigger>If tests break or quality decreases, rollback with: git reset --hard HEAD~1</rollback_trigger>
+        <safety_check>Verify tests still pass and code quality improved before completing cycle</safety_check>
+      </atomic_commit_integration>
       <validation>
         All tests remain green throughout refactoring
         Code quality is improved
         No behavior changes introduced
         Each refactoring step is small and safe
         Code is more maintainable after refactoring
+        Atomic commit completed with improved quality state
+        Coverage maintained or improved during refactoring
       </validation>
     </phase>
     

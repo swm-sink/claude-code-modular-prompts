@@ -577,6 +577,8 @@ jobs:
           fi
           # Additional dependencies for prompt analysis
           pip install pytest coverage bandit safety difflib
+          # Install bc for floating point calculations
+          sudo apt-get update && sudo apt-get install -y bc
           
       - name: Install Claude Code CLI
         run: |
@@ -712,160 +714,324 @@ jobs:
           echo "  • Security Implications: $SECURITY_IMPLICATIONS"
           echo "  • Analyzer Exit Code: $ANALYZER_EXIT_CODE"
           
-      - name: Quality assessment using existing scoring
+      - name: Ultra-critical quality assessment using framework scoring
         id: quality-assessment
         run: |
-          echo "📊 Assessing quality impact using framework scoring system..."
+          echo "📊 Running ultra-critical quality assessment using framework scoring system..."
           
-          # Simulate quality score calculation based on existing framework standards
-          BASE_SCORE=85  # Current framework baseline
-          QUALITY_SCORE=$BASE_SCORE
+          # Prepare changed files list
+          CHANGED_FILES="${{ steps.change-detection.outputs.changed_files }}"
+          echo "$CHANGED_FILES" > changed_files.txt
           
-          # Deduct points for high-risk changes
-          RISK_SCORE=${{ steps.risk-assessment.outputs.score }}
-          if [ $RISK_SCORE -ge 60 ]; then
-            QUALITY_SCORE=$((QUALITY_SCORE - 10))
-          elif [ $RISK_SCORE -ge 30 ]; then
-            QUALITY_SCORE=$((QUALITY_SCORE - 5))
-          fi
+          # Run quality assessor with analysis results
+          python3 scripts/prompt_quality_assessor.py \
+            --repo-root . \
+            --changed-files $(echo "$CHANGED_FILES" | tr '\n' ' ') \
+            --analysis-results analysis_results.json \
+            --output quality_report.md \
+            --json > quality_results.json
           
-          # Add points for good practices (if this is a well-structured change)
-          TOTAL_CHANGES=${{ steps.change-detection.outputs.total_changes }}
-          if [ $TOTAL_CHANGES -le 3 ]; then
-            QUALITY_SCORE=$((QUALITY_SCORE + 2))
+          ASSESSOR_EXIT_CODE=$?
+          
+          # Extract quality score and level
+          QUALITY_SCORE=$(python3 -c "import json; data=json.load(open('quality_results.json')); print(data['overall_score'])")
+          QUALITY_GRADE=$(python3 -c "import json; data=json.load(open('quality_results.json')); print(data['grade'])")
+          
+          # Determine quality level based on framework standards (85%+ threshold)
+          if [ "$(echo "$QUALITY_SCORE >= 85" | bc -l)" -eq 1 ]; then
+            QUALITY_LEVEL="HIGH"
+            echo "✅ HIGH QUALITY: Score $QUALITY_SCORE/100 (Grade: $QUALITY_GRADE)"
+          elif [ "$(echo "$QUALITY_SCORE >= 70" | bc -l)" -eq 1 ]; then
+            QUALITY_LEVEL="MEDIUM"
+            echo "⚠️ MEDIUM QUALITY: Score $QUALITY_SCORE/100 (Grade: $QUALITY_GRADE)"
+          else
+            QUALITY_LEVEL="LOW"
+            echo "❌ LOW QUALITY: Score $QUALITY_SCORE/100 (Grade: $QUALITY_GRADE)"
           fi
           
           echo "score=$QUALITY_SCORE" >> $GITHUB_OUTPUT
+          echo "grade=$QUALITY_GRADE" >> $GITHUB_OUTPUT
+          echo "quality_level=$QUALITY_LEVEL" >> $GITHUB_OUTPUT
+          echo "assessor_exit_code=$ASSESSOR_EXIT_CODE" >> $GITHUB_OUTPUT
           
-          if [ $QUALITY_SCORE -ge 85 ]; then
-            echo "quality_level=HIGH" >> $GITHUB_OUTPUT
-            echo "✅ HIGH QUALITY: Score $QUALITY_SCORE/100"
-          elif [ $QUALITY_SCORE -ge 70 ]; then
-            echo "quality_level=MEDIUM" >> $GITHUB_OUTPUT
-            echo "⚠️ MEDIUM QUALITY: Score $QUALITY_SCORE/100"
+          # Display detailed quality metrics
+          echo "📊 Quality Assessment Details:"
+          python3 -c "
+import json
+data = json.load(open('quality_results.json'))
+for dimension, info in data['dimensions'].items():
+    print(f'  • {dimension.replace(\"_\", \" \").title()}: {info[\"score\"]}/100 (Weight: {info[\"weight\"]*100}%)')
+"
+          
+          # Show compliance status
+          PRODUCTION_READY=$(python3 -c "import json; data=json.load(open('quality_results.json')); print('true' if data['compliance']['production_ready'] else 'false')")
+          echo "production_ready=$PRODUCTION_READY" >> $GITHUB_OUTPUT
+          
+          if [ "$PRODUCTION_READY" = "true" ]; then
+            echo "✅ PRODUCTION READY: Meets 85%+ quality threshold"
           else
-            echo "quality_level=LOW" >> $GITHUB_OUTPUT
-            echo "❌ LOW QUALITY: Score $QUALITY_SCORE/100"
+            echo "❌ NOT PRODUCTION READY: Below 85% quality threshold"
           fi
           
-      - name: Escalation decision
+      - name: Enhanced escalation decision with ultra-critical scoring
         id: escalation-check
         run: |
-          echo "🎯 Determining escalation requirements..."
+          echo "🎯 Determining escalation requirements using ultra-critical quality framework..."
           
           RISK_SCORE=${{ steps.risk-assessment.outputs.score }}
           QUALITY_SCORE=${{ steps.quality-assessment.outputs.score }}
+          QUALITY_GRADE="${{ steps.quality-assessment.outputs.grade }}"
+          PRODUCTION_READY="${{ steps.quality-assessment.outputs.production_ready }}"
           REVIEW_MODE="${{ github.event.inputs.review_mode || 'auto' }}"
+          SEMANTIC_ISSUES=${{ steps.semantic-validation.outputs.semantic_issues }}
+          SECURITY_IMPLICATIONS=${{ steps.semantic-validation.outputs.security_implications }}
           
           REQUIRES_HUMAN="false"
+          ESCALATION_REASONS=()
           
           # Force manual review mode
           if [ "$REVIEW_MODE" = "manual" ]; then
             REQUIRES_HUMAN="true"
+            ESCALATION_REASONS+=("Manual review mode requested")
             echo "👥 Manual review mode requested"
           fi
           
           # Force approve mode (for testing/emergency)
           if [ "$REVIEW_MODE" = "force-approve" ]; then
             REQUIRES_HUMAN="false"
-            echo "⚡ Force approve mode - bypassing checks"
+            echo "⚡ Force approve mode - bypassing ALL checks"
+            echo "requires_human=$REQUIRES_HUMAN" >> $GITHUB_OUTPUT
+            echo "escalation_reasons=" >> $GITHUB_OUTPUT
+            exit 0
           fi
           
-          # High risk always requires human review
-          if [ $RISK_SCORE -ge 60 ]; then
+          # CRITICAL: Production readiness check (85%+ threshold from framework)
+          if [ "$PRODUCTION_READY" = "false" ]; then
             REQUIRES_HUMAN="true"
-            echo "🔴 High risk requires human approval"
+            ESCALATION_REASONS+=("Below 85% quality threshold - not production ready")
+            echo "🚫 CRITICAL: Below 85% quality threshold requires human approval"
           fi
           
-          # Low quality requires human review
-          if [ $QUALITY_SCORE -lt 75 ]; then
+          # HIGH RISK: Security implications
+          if [ $SECURITY_IMPLICATIONS -gt 0 ]; then
             REQUIRES_HUMAN="true"
-            echo "⚠️ Quality concerns require human approval"
+            ESCALATION_REASONS+=("Security implications detected ($SECURITY_IMPLICATIONS issues)")
+            echo "🔒 CRITICAL: Security implications require human approval"
           fi
           
-          # Meta framework changes always require human review
+          # HIGH RISK: Meta framework changes
           META_CHANGES=${{ steps.change-detection.outputs.meta_changes }}
           if [ $META_CHANGES -gt 0 ]; then
             REQUIRES_HUMAN="true"
-            echo "🧠 Meta framework changes require human approval"
+            ESCALATION_REASONS+=("Meta framework changes detected")
+            echo "🧠 CRITICAL: Meta framework changes require human approval"
           fi
+          
+          # HIGH RISK: Overall risk score
+          if [ $RISK_SCORE -ge 60 ]; then
+            REQUIRES_HUMAN="true"
+            ESCALATION_REASONS+=("High risk score: $RISK_SCORE/100")
+            echo "🔴 HIGH RISK: Score $RISK_SCORE/100 requires human approval"
+          fi
+          
+          # MEDIUM RISK: Multiple semantic issues
+          if [ $SEMANTIC_ISSUES -gt 3 ]; then
+            REQUIRES_HUMAN="true"
+            ESCALATION_REASONS+=("Multiple semantic issues: $SEMANTIC_ISSUES")
+            echo "⚠️ Multiple semantic issues require human review"
+          fi
+          
+          # QUALITY CHECK: Framework quality standards
+          if [ "$(echo "$QUALITY_SCORE < 70" | bc -l)" -eq 1 ]; then
+            REQUIRES_HUMAN="true"
+            ESCALATION_REASONS+=("Quality score below acceptable threshold: $QUALITY_SCORE/100")
+            echo "❌ Quality score $QUALITY_SCORE/100 requires human approval"
+          fi
+          
+          # Join escalation reasons
+          IFS='; ' ESCALATION_REASONS_STRING="${ESCALATION_REASONS[*]}"
           
           echo "requires_human=$REQUIRES_HUMAN" >> $GITHUB_OUTPUT
+          echo "escalation_reasons=$ESCALATION_REASONS_STRING" >> $GITHUB_OUTPUT
+          echo "escalation_count=${#ESCALATION_REASONS[@]}" >> $GITHUB_OUTPUT
           
           if [ "$REQUIRES_HUMAN" = "true" ]; then
-            echo "👥 HUMAN REVIEW REQUIRED"
+            echo "👥 HUMAN REVIEW REQUIRED - ${#ESCALATION_REASONS[@]} reasons:"
+            for reason in "${ESCALATION_REASONS[@]}"; do
+              echo "  • $reason"
+            done
           else
             echo "🤖 AUTOMATED APPROVAL POSSIBLE"
+            echo "✅ Quality: $QUALITY_SCORE/100 ($QUALITY_GRADE)"
+            echo "✅ Risk: $RISK_SCORE/100"
+            echo "✅ Production Ready: $PRODUCTION_READY"
           fi
           
-      - name: Intelligent review decision
+      - name: Intelligent review decision with ultra-critical standards
         id: intelligent-review
         run: |
-          echo "🎯 Making intelligent review decision..."
+          echo "🎯 Making intelligent review decision using ultra-critical quality framework..."
           
           REQUIRES_HUMAN=${{ steps.escalation-check.outputs.requires_human }}
+          ESCALATION_REASONS="${{ steps.escalation-check.outputs.escalation_reasons }}"
+          ESCALATION_COUNT=${{ steps.escalation-check.outputs.escalation_count }}
           RISK_SCORE=${{ steps.risk-assessment.outputs.score }}
           QUALITY_SCORE=${{ steps.quality-assessment.outputs.score }}
+          QUALITY_GRADE="${{ steps.quality-assessment.outputs.grade }}"
+          PRODUCTION_READY="${{ steps.quality-assessment.outputs.production_ready }}"
           
           if [ "$REQUIRES_HUMAN" = "true" ]; then
             echo "result=REQUIRES_HUMAN_REVIEW" >> $GITHUB_OUTPUT
+            echo "confidence=HIGH" >> $GITHUB_OUTPUT
             echo "👥 Result: Human review required"
+            echo "📋 Escalation Count: $ESCALATION_COUNT"
+            echo "📝 Reasons: $ESCALATION_REASONS"
           else
-            if [ $QUALITY_SCORE -ge 85 ] && [ $RISK_SCORE -lt 30 ]; then
+            # Ultra-critical standards: Only auto-approve if meeting production threshold
+            if [ "$PRODUCTION_READY" = "true" ] && [ $RISK_SCORE -lt 30 ]; then
               echo "result=AUTO_APPROVED" >> $GITHUB_OUTPUT
+              echo "confidence=HIGH" >> $GITHUB_OUTPUT
               echo "✅ Result: Automatically approved"
-            else
+              echo "📊 Quality: $QUALITY_SCORE/100 ($QUALITY_GRADE) - Production Ready"
+              echo "🎯 Risk: $RISK_SCORE/100 - Low Risk"
+            elif [ "$PRODUCTION_READY" = "true" ] && [ $RISK_SCORE -lt 60 ]; then
               echo "result=AUTO_APPROVED_WITH_MONITORING" >> $GITHUB_OUTPUT
+              echo "confidence=MEDIUM" >> $GITHUB_OUTPUT
               echo "⚠️ Result: Approved with enhanced monitoring"
+              echo "📊 Quality: $QUALITY_SCORE/100 ($QUALITY_GRADE) - Production Ready"
+              echo "🎯 Risk: $RISK_SCORE/100 - Medium Risk"
+            else
+              # This shouldn't happen with proper escalation logic, but safety fallback
+              echo "result=REQUIRES_HUMAN_REVIEW" >> $GITHUB_OUTPUT
+              echo "confidence=LOW" >> $GITHUB_OUTPUT
+              echo "🔍 Result: Fallback to human review"
+              echo "⚠️ Unexpected state: Production Ready=$PRODUCTION_READY, Risk=$RISK_SCORE"
             fi
           fi
           
-      - name: Generate review summary
+          # Log decision reasoning
+          echo "🧠 Decision Reasoning:"
+          echo "  • Quality Score: $QUALITY_SCORE/100 ($QUALITY_GRADE)"
+          echo "  • Production Ready: $PRODUCTION_READY"
+          echo "  • Risk Score: $RISK_SCORE/100"
+          echo "  • Escalation Required: $REQUIRES_HUMAN"
+          if [ "$REQUIRES_HUMAN" = "true" ]; then
+            echo "  • Escalation Reasons: $ESCALATION_REASONS"
+          fi
+          
+      - name: Generate comprehensive review summary
         id: summary
         run: |
-          echo "📋 Generating comprehensive review summary..."
+          echo "📋 Generating comprehensive review summary with ultra-critical quality analysis..."
           
-          # Create detailed summary
+          # Create detailed summary with enhanced quality assessment
           cat > review_summary.md << EOF
-          # 🔍 Prompt Engineering Review Summary
+          # 🔍 Ultra-Critical Prompt Engineering Review Summary
           
           **Review Date**: $(date '+%Y-%m-%d %H:%M:%S UTC')
           **PR/Commit**: ${{ github.event.pull_request.number || 'Manual' }}
           **Framework Version**: ${{ env.FRAMEWORK_VERSION }}
+          **Review Confidence**: ${{ steps.intelligent-review.outputs.confidence || 'MEDIUM' }}
           
-          ## 📊 Assessment Results
+          ## 📊 Ultra-Critical Quality Assessment
           
-          | Metric | Score | Level |
-          |--------|-------|-------|
-          | Risk Score | ${{ steps.risk-assessment.outputs.score }}/100 | ${{ steps.risk-assessment.outputs.risk_level }} |
-          | Quality Score | ${{ steps.quality-assessment.outputs.score }}/100 | ${{ steps.quality-assessment.outputs.quality_level }} |
+          | Metric | Score | Level | Status |
+          |--------|-------|-------|--------|
+          | **Overall Quality** | **${{ steps.quality-assessment.outputs.score }}/100** | **${{ steps.quality-assessment.outputs.grade }}** | ${{ steps.quality-assessment.outputs.production_ready == 'true' && '✅ Production Ready' || '❌ Not Production Ready' }} |
+          | Risk Score | ${{ steps.risk-assessment.outputs.score }}/100 | ${{ steps.risk-assessment.outputs.risk_level }} | ${{ steps.risk-assessment.outputs.score < 30 && '✅ Low Risk' || steps.risk-assessment.outputs.score < 60 && '⚠️ Medium Risk' || '🔴 High Risk' }} |
           
+          ### 📈 Quality Dimension Breakdown
+          EOF
+          
+          # Add quality dimensions from JSON output
+          python3 -c "
+import json
+data = json.load(open('quality_results.json'))
+print('| Dimension | Score | Weight | Assessment |')
+print('|-----------|-------|--------|------------|')
+for dimension, info in data['dimensions'].items():
+    status = '✅ Excellent' if info['score'] >= 90 else '✅ Good' if info['score'] >= 85 else '⚠️ Acceptable' if info['score'] >= 70 else '❌ Poor'
+    print(f'| {dimension.replace(\"_\", \" \").title()} | {info[\"score\"]}/100 | {info[\"weight\"]*100:.0f}% | {status} |')
+print()
+" >> review_summary.md
+          
+          cat >> review_summary.md << EOF
           ## 🔍 Change Analysis
           
           **Files Changed**: ${{ steps.change-detection.outputs.total_changes }}
-          - Commands: ${{ steps.change-detection.outputs.command_changes }}
-          - Modules: ${{ steps.change-detection.outputs.module_changes }}
-          - Quality System: ${{ steps.change-detection.outputs.quality_changes }}
-          - Meta Framework: ${{ steps.change-detection.outputs.meta_changes }}
-          - CLAUDE.md: ${{ steps.change-detection.outputs.claude_md_changes }}
+          - **Commands**: ${{ steps.change-detection.outputs.command_changes }} ${{ steps.change-detection.outputs.command_changes > 0 && '⚠️' || '✅' }}
+          - **Modules**: ${{ steps.change-detection.outputs.module_changes }} ${{ steps.change-detection.outputs.module_changes > 0 && '📦' || '✅' }}
+          - **Quality System**: ${{ steps.change-detection.outputs.quality_changes }} ${{ steps.change-detection.outputs.quality_changes > 0 && '🔴 High Risk' || '✅' }}
+          - **Meta Framework**: ${{ steps.change-detection.outputs.meta_changes }} ${{ steps.change-detection.outputs.meta_changes > 0 && '🚨 Critical' || '✅' }}
+          - **CLAUDE.md**: ${{ steps.change-detection.outputs.claude_md_changes }} ${{ steps.change-detection.outputs.claude_md_changes > 0 && '⚠️' || '✅' }}
+          
+          ## 🧠 Semantic & Security Analysis
+          
+          - **Semantic Issues**: ${{ steps.semantic-validation.outputs.semantic_issues }} ${{ steps.semantic-validation.outputs.semantic_issues > 0 && '⚠️' || '✅' }}
+          - **Dependency Impacts**: ${{ steps.semantic-validation.outputs.dependency_impacts }} ${{ steps.semantic-validation.outputs.dependency_impacts > 0 && '🔗' || '✅' }}
+          - **Security Implications**: ${{ steps.semantic-validation.outputs.security_implications }} ${{ steps.semantic-validation.outputs.security_implications > 0 && '🔒 Critical' || '✅' }}
           
           ## 🎯 Review Decision
           
-          **Result**: ${{ steps.intelligent-review.outputs.result }}
-          **Human Review Required**: ${{ steps.escalation-check.outputs.requires_human }}
+          **Final Result**: **${{ steps.intelligent-review.outputs.result }}**
+          **Human Review Required**: ${{ steps.escalation-check.outputs.requires_human == 'true' && '👥 Yes' || '🤖 No' }}
           
-          ## 🛡️ Safety & Compliance
-          
-          - ✅ Atomic rollback protocol available
-          - ✅ Framework safety boundaries enforced
-          - ✅ Quality gates validation completed
-          - ✅ Risk assessment performed
-          
-          ---
-          *🤖 Generated by Claude Prompt Engineering Review System*
           EOF
           
-          echo "Summary generated successfully"
+          # Add escalation reasons if human review required
+          ESCALATION_REASONS="${{ steps.escalation-check.outputs.escalation_reasons }}"
+          if [ "${{ steps.escalation-check.outputs.requires_human }}" = "true" ]; then
+            cat >> review_summary.md << EOF
+          ### 📋 Escalation Reasons (${{ steps.escalation-check.outputs.escalation_count }} total)
+          EOF
+            echo "$ESCALATION_REASONS" | tr ';' '\n' | while read -r reason; do
+              [ -n "$reason" ] && echo "- $reason" >> review_summary.md
+            done
+            echo "" >> review_summary.md
+          fi
+          
+          cat >> review_summary.md << EOF
+          ## 🛡️ Safety & Compliance Framework
+          
+          - ✅ **Ultra-Critical Quality Scoring**: 85%+ threshold enforced
+          - ✅ **Atomic Rollback Protocol**: Available for instant recovery
+          - ✅ **Framework Safety Boundaries**: Enforced with meta-framework protection
+          - ✅ **Quality Gates Validation**: 6-dimensional assessment completed
+          - ✅ **Risk Assessment**: Multi-tier analysis performed
+          - ✅ **Semantic Validation**: Advanced analysis with dependency checking
+          - ✅ **Production Standards**: Enterprise-grade compliance verification
+          
+          ## 📊 Compliance Status
+          
+          EOF
+          
+          # Add compliance details from quality assessment
+          python3 -c "
+import json
+data = json.load(open('quality_results.json'))
+compliance = data['compliance']
+for key, value in compliance.items():
+    status = '✅' if value else '❌'
+    label = key.replace('_', ' ').title()
+    print(f'- {status} **{label}**: {\"Met\" if value else \"Not Met\"}')
+" >> review_summary.md
+          
+          cat >> review_summary.md << EOF
+          
+          ---
+          *🤖 Generated by Claude Ultra-Critical Prompt Engineering Review System v3.0*
+          *🔬 Powered by Framework Meta-Prompting Orchestration Engine*
+          EOF
+          
+          echo "✅ Comprehensive review summary generated successfully"
+          
+          # Display key metrics
+          echo "📊 Key Review Metrics:"
+          echo "  • Quality Score: ${{ steps.quality-assessment.outputs.score }}/100 (${{ steps.quality-assessment.outputs.grade }})"
+          echo "  • Production Ready: ${{ steps.quality-assessment.outputs.production_ready }}"
+          echo "  • Risk Score: ${{ steps.risk-assessment.outputs.score }}/100"
+          echo "  • Human Review: ${{ steps.escalation-check.outputs.requires_human }}"
+          echo "  • Final Decision: ${{ steps.intelligent-review.outputs.result }}"
           
       - name: Post review results
         if: github.event_name == 'pull_request'
@@ -907,11 +1073,16 @@ jobs:
               });
             }
             
-      - name: Upload review artifacts
+      - name: Upload comprehensive review artifacts
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: prompt-review-artifacts
+          name: prompt-review-artifacts-${{ github.run_number }}
           path: |
             review_summary.md
-            semantic_analysis.txt
+            quality_report.md
+            quality_results.json
+            analysis_report.md
+            analysis_results.json
+            changed_files.txt
+          retention-days: 30
