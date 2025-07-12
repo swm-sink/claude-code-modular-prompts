@@ -1,6 +1,6 @@
 | version | last_updated | status | readiness |
 |---------|--------------|--------|----------|
-| 3.0.0   | 2025-07-12   | stable | 80%      |
+| 3.0.0   | 2025-07-12   | stable | 95%      |
 
 # Auto Command - Intelligent Routing and Framework Selection
 
@@ -274,6 +274,7 @@ Analyze the request and route to the optimal command for: $ARGUMENTS
   </contextual_modules>
   
   <support_modules>
+    <module>patterns/comprehensive-error-handling.md</module>
     <module>patterns/error-recovery.md</module>
     <module>patterns/context-management-pattern.md</module>
     <module>quality/universal-quality-gates.md</module>
@@ -281,7 +282,28 @@ Analyze the request and route to the optimal command for: $ARGUMENTS
 </module_orchestration>
 ```
 
-## Error Handling
+## Intelligent Routing Error Handling
+
+```xml
+<error_handling framework="intelligent_routing" enforcement="ADAPTIVE">
+  <error_classification_integration>
+    <module>patterns/comprehensive-error-handling.md</module>
+    <routing_specific_patterns>Command selection failures, context analysis errors, routing decision conflicts</routing_specific_patterns>
+  </error_classification_integration>
+  
+  <graceful_degradation>
+    <routing_analysis_failures>Fall back to conservative command selection, provide multiple options</routing_analysis_failures>
+    <context_analysis_failures>Use simplified analysis, request user clarification</context_analysis_failures>
+    <decision_conflicts>Present alternative approaches, escalate to human decision</decision_conflicts>
+  </graceful_degradation>
+  
+  <adaptive_learning>
+    <routing_optimization>Learn from successful routing decisions, improve pattern recognition</routing_optimization>
+    <failure_analysis>Analyze routing failures, enhance decision algorithms</failure_analysis>
+  </adaptive_learning>
+</error_handling>
+
+## Original Error Handling
 
 ```xml
 <error_handling>

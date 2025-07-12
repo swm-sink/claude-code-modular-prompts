@@ -1,6 +1,6 @@
 | version | last_updated | status | readiness |
 |---------|--------------|--------|----------|
-| 3.0.0   | 2025-07-12   | stable | 80%      |
+| 3.0.0   | 2025-07-12   | stable | 95%      |
 
 # Task Command - Research-First TDD Development
 
@@ -261,6 +261,7 @@ Execute the following workflow for the task: $ARGUMENTS
   </contextual_modules>
   
   <support_modules>
+    <module>patterns/comprehensive-error-handling.md</module>
     <module>patterns/error-recovery.md</module>
     <module>patterns/context-management-pattern.md</module>
     <module>patterns/validation-pattern.md</module>
@@ -268,30 +269,209 @@ Execute the following workflow for the task: $ARGUMENTS
 </module_orchestration>
 ```
 
-## Error Handling
+## Comprehensive Error Handling
 
 ```xml
-<error_handling>
-  <rollback_procedures>
-    <tdd_failure>git reset --hard HEAD~1 to previous checkpoint</tdd_failure>
-    <coverage_failure>git reset --hard HEAD~1 and retry with improved tests</coverage_failure>
-    <quality_gate_failure>Address specific failures and re-validate</quality_gate_failure>
-    <implementation_failure>Return to GREEN phase with corrected approach</implementation_failure>
-  </rollback_procedures>
+<error_handling framework="comprehensive" enforcement="PRODUCTION_GRADE">
   
-  <escalation_paths>
-    <requirements_unclear>Route to /query for clarification</requirements_unclear>
-    <multi_component_scope>Route to /swarm for coordination</multi_component_scope>
-    <complex_integration>Route to /feature for comprehensive planning</complex_integration>
-    <production_deployment>Route to /protocol for strict standards</production_deployment>
+  <error_classification_integration>
+    <module>patterns/comprehensive-error-handling.md</module>
+    <classification_system>BLOCKING | CONDITIONAL | OPTIONAL | ESCALATION</classification_system>
+    <real_time_classification>Error severity determined dynamically based on context and impact</real_time_classification>
+  </error_classification_integration>
+  
+  <graceful_degradation_patterns enforcement="MANDATORY">
+    <research_phase_failures>
+      <trigger>Research analysis incomplete or inconclusive</trigger>
+      <degradation>Continue with available information, flag gaps for manual review</degradation>
+      <fallback>Use existing patterns and best practices, document assumptions</fallback>
+      <escalation>Route to /query for comprehensive research when critical gaps identified</escalation>
+    </research_phase_failures>
+    
+    <tdd_red_phase_failures>
+      <trigger>Tests don't fail as expected or test creation blocked</trigger>
+      <degradation>Create manual test scenarios, document expected behaviors</degradation>
+      <fallback>Proceed with implementation using behavioral specifications</fallback>
+      <rollback>git reset --hard HEAD~1 to research phase, retry with alternative test approach</rollback>
+      <escalation>BLOCKING - Cannot proceed without proper failing tests</escalation>
+    </tdd_red_phase_failures>
+    
+    <tdd_green_phase_failures>
+      <trigger>Implementation fails to make tests pass or coverage insufficient</trigger>
+      <degradation>Implement minimal viable solution, document coverage gaps</degradation>
+      <fallback>Focus on core functionality, defer edge cases</fallback>
+      <rollback>git reset --hard HEAD~1 to RED phase, improve tests or approach</rollback>
+      <escalation>CONDITIONAL - May proceed with reduced scope if core functionality works</escalation>
+    </tdd_green_phase_failures>
+    
+    <refactor_phase_failures>
+      <trigger>Refactoring breaks tests or introduces regressions</trigger>
+      <degradation>Skip refactoring, proceed with working implementation</degradation>
+      <fallback>Apply minimal code quality improvements only</fallback>
+      <rollback>git reset --hard HEAD~1 to GREEN phase, maintain working state</rollback>
+      <escalation>OPTIONAL - Refactoring can be deferred to future iterations</escalation>
+    </refactor_phase_failures>
+    
+    <quality_gate_failures>
+      <trigger>Quality standards not met, security issues, or performance problems</trigger>
+      <degradation>Document quality issues, implement mitigation strategies</degradation>
+      <fallback>Meet minimum viable quality thresholds, plan improvement iterations</fallback>
+      <rollback>git reset --hard HEAD~1 to previous phase, address quality issues</rollback>
+      <escalation>BLOCKING for security, CONDITIONAL for performance, OPTIONAL for style</escalation>
+    </quality_gate_failures>
+  </graceful_degradation_patterns>
+  
+  <atomic_rollback_mechanisms enforcement="CRITICAL">
+    <immediate_rollback>
+      <trigger>BLOCKING errors, security violations, system instability</trigger>
+      <procedure>git reset --hard HEAD~1 && git clean -fd</procedure>
+      <validation>Verify system state after rollback, confirm stability</validation>
+      <documentation>Log rollback reason, impact assessment, recovery plan</documentation>
+    </immediate_rollback>
+    
+    <progressive_rollback>
+      <trigger>CONDITIONAL errors affecting multiple phases</trigger>
+      <procedure>Step-by-step rollback through checkpoints until stable state</procedure>
+      <preservation>Maintain successfully completed work where possible</preservation>
+      <guidance>Provide specific recovery steps for each failed phase</guidance>
+    </progressive_rollback>
+    
+    <emergency_rollback>
+      <trigger>Data corruption risk, compliance violations, critical system errors</trigger>
+      <procedure>git reset --hard HEAD~5 && git reflog to find last known good state</procedure>
+      <escalation>Immediate human intervention required</escalation>
+      <documentation>Comprehensive incident report with timeline and impact assessment</documentation>
+    </emergency_rollback>
+  </atomic_rollback_mechanisms>
+  
+  <recovery_procedures enforcement="INTELLIGENT">
+    <automatic_retry>
+      <transient_failures>
+        <examples>Network timeouts, temporary resource unavailability, process locks</examples>
+        <strategy>Exponential backoff: 1s, 2s, 4s delays, maximum 3 attempts</strategy>
+        <learning>Track success patterns, optimize retry timing</learning>
+      </transient_failures>
+      
+      <resource_contention>
+        <examples>File locks, database connections, memory pressure</examples>
+        <strategy>Linear backoff with resource monitoring, maximum 5 attempts</strategy>
+        <adaptation>Adjust strategy based on resource availability patterns</adaptation>
+      </resource_contention>
+      
+      <test_execution_failures>
+        <examples>Flaky tests, environment issues, dependency problems</examples>
+        <strategy>Immediate retry once, then longer delay retry, maximum 2 attempts</strategy>
+        <improvement>Identify and fix flaky test patterns</improvement>
+      </test_execution_failures>
+    </automatic_retry>
+    
+    <intelligent_escalation>
+      <pattern_recognition>
+        <recurring_errors>Escalate to alternative approach after 2 occurrences</recurring_errors>
+        <error_clusters>Escalate when multiple related errors detected</error_clusters>
+        <time_based>Escalate when recovery attempts exceed 5 minutes</time_based>
+      </pattern_recognition>
+      
+      <escalation_levels>
+        <level_1>Parameter adjustment and immediate retry</level_1>
+        <level_2>Alternative approach selection (different test framework, implementation pattern)</level_2>
+        <level_3>Scope reduction with quality maintenance</level_3>
+        <level_4>Human intervention with complete context and options</level_4>
+      </escalation_levels>
+    </intelligent_escalation>
+    
+    <adaptive_learning>
+      <success_tracking>
+        <metric>Recovery success rate by error type and strategy</metric>
+        <metric>Time to recovery optimization</metric>
+        <metric>Quality impact of different recovery approaches</metric>
+      </success_tracking>
+      
+      <strategy_optimization>
+        <principle>Learn from successful manual interventions</principle>
+        <principle>Adapt retry timing based on historical effectiveness</principle>
+        <principle>Optimize recovery paths through pattern analysis</principle>
+      </strategy_optimization>
+    </adaptive_learning>
+  </recovery_procedures>
+  
+  <monitoring_and_alerting enforcement="COMPREHENSIVE">
+    <error_tracking>
+      <metrics>
+        <error_frequency>Track error rates by phase and type</error_frequency>
+        <recovery_success>Measure recovery effectiveness by strategy</recovery_success>
+        <quality_impact>Assess quality degradation during error scenarios</quality_impact>
+        <user_experience>Monitor task completion rates and satisfaction</user_experience>
+      </metrics>
+      
+      <alerting>
+        <critical_errors>Immediate notification for BLOCKING errors</critical_errors>
+        <pattern_alerts>Notification when error patterns suggest systemic issues</pattern_alerts>
+        <recovery_failures>Alert when recovery mechanisms repeatedly fail</recovery_failures>
+        <threshold_alerts>Warning when error rates exceed baseline by 50%</threshold_alerts>
+      </alerting>
+    </error_tracking>
+    
+    <performance_monitoring>
+      <execution_overhead>Measure error handling impact on task completion time</execution_overhead>
+      <recovery_efficiency>Track time to successful recovery for different error types</recovery_efficiency>
+      <resource_utilization>Monitor system resource usage during error scenarios</resource_utilization>
+      <quality_preservation>Ensure error handling doesn't compromise output quality</quality_preservation>
+    </performance_monitoring>
+    
+    <effectiveness_measurement>
+      <success_metrics>
+        <automated_recovery_rate>Percentage of errors resolved without human intervention</automated_recovery_rate>
+        <recovery_time>Average and P95 time to complete recovery</recovery_time>
+        <quality_maintenance>Quality standard compliance during error scenarios</quality_maintenance>
+        <user_satisfaction>Task completion satisfaction despite error occurrences</user_satisfaction>
+      </success_metrics>
+      
+      <continuous_improvement>
+        <feedback_integration>Learn from user feedback on error handling experience</feedback_integration>
+        <pattern_analysis>Identify and eliminate recurring error sources</pattern_analysis>
+        <process_optimization>Continuously improve error handling procedures</process_optimization>
+      </continuous_improvement>
+    </effectiveness_measurement>
+  </monitoring_and_alerting>
+  
+  <escalation_paths enhancement="INTELLIGENT_ROUTING">
+    <requirements_unclear severity="ESCALATION">
+      <trigger>Ambiguous requirements, conflicting specifications, incomplete acceptance criteria</trigger>
+      <route>/query for comprehensive research and stakeholder clarification</route>
+      <context>Provide detailed analysis of ambiguities and proposed clarification questions</context>
+      <fallback>Proceed with best interpretation, document assumptions and risks</fallback>
+    </requirements_unclear>
+    
+    <multi_component_scope severity="ESCALATION">
+      <trigger>Task affects >3 files, requires coordination across systems, complex dependencies</trigger>
+      <route>/swarm for multi-agent coordination and dependency management</route>
+      <context>Provide component analysis, dependency map, coordination requirements</context>
+      <fallback>Implement core component only, document integration requirements</fallback>
+    </multi_component_scope>
+    
+    <complex_integration severity="CONDITIONAL">
+      <trigger>Integration requirements unclear, external system dependencies, API changes needed</trigger>
+      <route>/feature for comprehensive planning and PRD development</route>
+      <context>Provide integration analysis, risk assessment, planning recommendations</context>
+      <fallback>Implement isolated functionality, define integration interfaces</fallback>
+    </complex_integration>
+    
+    <production_deployment severity="BLOCKING">
+      <trigger>Production environment requirements, security implications, compliance needs</trigger>
+      <route>/protocol for strict production standards and comprehensive validation</route>
+      <context>Provide security assessment, compliance analysis, production readiness evaluation</context>
+      <fallback>NONE - Production deployment requires full protocol compliance</fallback>
+    </production_deployment>
+    
+    <resource_limitations severity="ESCALATION">
+      <trigger>Insufficient development environment, missing tools, access restrictions</trigger>
+      <route>Human intervention for resource provisioning and environment setup</route>
+      <context>Provide detailed resource requirements, alternative approaches, timeline impact</context>
+      <fallback>Implement using available resources, document limitations and risks</fallback>
+    </resource_limitations>
   </escalation_paths>
   
-  <failure_recovery>
-    <test_failures>Analyze failure root cause, fix tests or implementation</test_failures>
-    <coverage_insufficient>Identify missing test scenarios, add comprehensive coverage</coverage_insufficient>
-    <quality_standards>Address specific quality issues, re-validate gates</quality_standards>
-    <atomic_commit_issues>Review commit strategy, ensure proper checkpointing</atomic_commit_issues>
-  </failure_recovery>
 </error_handling>
 ```
 

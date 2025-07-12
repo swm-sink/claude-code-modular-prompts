@@ -54,6 +54,7 @@
         Map threats to mitigations: preventive, detective, responsive controls
         Prioritize implementations based on risk scores and business impact
       </actions>
+      <security_disclaimer>IMPORTANT: DREAD "Exploitability" assessment is a defensive security measure used to evaluate how easily vulnerabilities can be exploited in order to prioritize protective controls</security_disclaimer>
       <validation>
         All STRIDE categories analyzed for each system component
         DREAD scores calculated with documented rationale
