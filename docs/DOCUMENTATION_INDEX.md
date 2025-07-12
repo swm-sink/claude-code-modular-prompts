@@ -144,10 +144,10 @@
 
 
 # 📋 Essential Reports
-- **[Production Readiness](reports/PRODUCTION_READINESS_VALIDATION_REPORT_2025-07-08.md)** - Framework validation
-- **[GitHub Issues Cleanup](reports/GITHUB_ISSUES_CLEANUP_2025-07-08.md)** - Maintenance record
-- **[Meta-Framework Safety Analysis](META_FRAMEWORK_SAFETY_ANALYSIS.md)** - Safety implementation audit
-- **[Module Dependency Audit](MODULE_DEPENDENCY_AUDIT.md)** - Module system analysis
+- **[Production Readiness](../internal/reports/certification/production/PRODUCTION_READINESS_VALIDATION_REPORT_2025-07-08.md)** - Framework validation
+- **[GitHub Issues Cleanup](../internal/reports/framework/optimization/GITHUB_ISSUES_CLEANUP_2025-07-08.md)** - Maintenance record
+- **[Reports Index](../internal/reports/README.md)** - Complete internal reports organization
+- **[Integration Test Report](integration_test_report.md)** - Framework integration testing
 
 ---
 

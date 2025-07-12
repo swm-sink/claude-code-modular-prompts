@@ -9,6 +9,13 @@
 
 This directory contains the complete collection of framework development reports, analysis documents, and certification materials organized into a professional structure that supports ongoing development while maintaining clean separation from user-facing documentation.
 
+**Consolidation Status (2025-07-12)**: All scattered reports have been consolidated from:
+- `docs/reports/` → `internal/reports/certification/production/` and `framework/optimization/`
+- `internal/artifacts/` → `internal/reports/analysis/dependency/` and `quality/`
+- `reports/` (root) → `internal/reports/analysis/` (by category)
+
+This consolidation ensures single-source documentation management while maintaining logical organization by purpose and audience.
+
 ## Organization Structure
 
 ### 📋 Agent Reports (`agents/`)
@@ -23,8 +30,10 @@ Individual agent completion reports organized by development phases:
 Technical analysis and assessment documentation:
 
 - **`dependency/`** - Module dependency analysis, reference mapping, fix reports
-- **`performance/`** - Performance optimization, benchmarking, and metrics
+- **`performance/`** - Performance optimization, benchmarking, and metrics  
 - **`quality/`** - Quality audits, integration testing, compliance validation
+- **`analytics/`** - Framework health monitoring, performance metrics
+- **`monitoring/`** - Real-time monitoring data, dashboards, current status
 
 ### 🏆 Certification Reports (`certification/`)
 Production readiness and validation documentation:
@@ -51,7 +60,9 @@ Framework evolution and architectural documentation:
 ### Technical Analysis Reports
 - **Dependency Analysis**: Module relationships, reference mapping
 - **Performance Analysis**: Optimization reports, benchmark results
-- **Quality Analysis**: Integration testing, compliance validation
+- **Quality Analysis**: Integration testing, compliance validation, A/B testing
+- **Analytics**: Framework health monitoring, performance dashboards
+- **Monitoring**: Real-time system monitoring, operational status tracking
 
 ### Production Certification
 - **Security Certification**: Vulnerability scanning, compliance validation
@@ -128,9 +139,10 @@ Framework evolution and architectural documentation:
 
 ### By Concern Area
 - **Security**: `agents/phase-1-security/` + `certification/security/`
-- **Performance**: `analysis/performance/` + `certification/performance/`
+- **Performance**: `analysis/performance/` + `certification/performance/` + `analysis/analytics/`
 - **Quality**: `analysis/quality/` + `certification/production/`
 - **Architecture**: `framework/architecture/` + `framework/migration/`
+- **Monitoring**: `analysis/monitoring/` + `analysis/analytics/`
 
 ## Maintenance
 

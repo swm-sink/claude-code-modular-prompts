@@ -6,8 +6,7 @@ This directory contains all development artifacts, tools, and reports that are n
 
 - **agents/** - Multi-agent Python scripts used for framework development and validation
 - **analysis/** - JSON analysis results and data files from development processes  
-- **reports/** - Agent completion reports, certification documents, and summaries
-- **artifacts/** - Development artifacts, migration reports, and technical documentation
+- **reports/** - Consolidated agent reports, certification documents, analysis files, and technical documentation
 - **development/** - Development-focused scripts (testing, optimization, tools)
 - **validation/** - Quality assurance and validation scripts
 - **monitoring/** - Production monitoring and health checking scripts
@@ -15,6 +14,8 @@ This directory contains all development artifacts, tools, and reports that are n
 ## Purpose
 
 These files support the framework development and validation process but are not needed for normal framework usage. Users should focus on the root-level documentation and the `.claude/` framework structure.
+
+**Note**: All scattered reports and development documentation have been consolidated into the `reports/` directory with logical organization by purpose and audience.
 
 ## Scripts Organization
 
