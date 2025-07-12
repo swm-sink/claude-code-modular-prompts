@@ -331,7 +331,7 @@ cp /path/to/claude-code-modular-prompts/examples/advanced/command-chaining/PROJE
 - **State Management**: [.claude/system/session/](../../../.claude/system/session/)
 
 ### Performance and Optimization
-- **Parallel Execution Patterns**: [.claude/prompt_eng/patterns/](../../../.claude/prompt_eng/patterns/)
+- **Parallel Execution Patterns**: [.claude/modules/patterns/](../../../.claude/modules/patterns/)
 - **Context Optimization**: [.claude/system/context/](../../../.claude/system/context/)
 - **Performance Monitoring**: [internal/monitoring/](../../../internal/monitoring/)
 

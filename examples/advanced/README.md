@@ -256,7 +256,7 @@ cd performance-optimization/
 ### Performance and Optimization
 - **Claude 4 Optimization**: [docs/advanced/claude-4-optimization.md](../../docs/advanced/claude-4-optimization.md)
 - **Context Management**: [.claude/system/context/](../../.claude/system/context/)
-- **Parallel Execution**: [.claude/prompt_eng/patterns/](../../.claude/prompt_eng/patterns/)
+- **Parallel Execution**: [.claude/modules/patterns/](../../.claude/modules/patterns/)
 
 ### Enterprise and Scale
 - **Team Configuration**: [docs/user-guide/customization/](../../docs/user-guide/customization/)

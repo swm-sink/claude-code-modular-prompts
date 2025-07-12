@@ -315,7 +315,7 @@ cp /path/to/claude-code-modular-prompts/examples/workflows/multi-agent-developme
 - **Result Validation**: [.claude/modules/development/validation/](../../../.claude/modules/development/validation/)
 
 ### Performance and Optimization
-- **Parallel Execution Optimization**: [.claude/prompt_eng/patterns/](../../../.claude/prompt_eng/patterns/)
+- **Parallel Execution Optimization**: [.claude/modules/patterns/](../../../.claude/modules/patterns/)
 - **Coordination Monitoring**: [internal/monitoring/](../../../internal/monitoring/)
 - **Performance Analytics**: [internal/analysis/performance/](../../../internal/analysis/performance/)
 
