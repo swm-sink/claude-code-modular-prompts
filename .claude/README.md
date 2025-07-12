@@ -1,33 +1,79 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 3.0.0   | 2025-07-08   | stable |
+| 3.0.0   | 2025-07-12   | stable |
 
-# .claude Directory - Framework 3.0 Core
+# .claude Directory - Framework Core
 
-────────────────────────────────────────────────────────────────────────────────
+## Overview
 
-## Purpose
+The `.claude` directory contains the **complete Claude Code framework implementation** - a powerful modular system for automated development workflows. This framework provides intelligent command routing, comprehensive quality gates, and advanced prompt engineering capabilities optimized for Claude 4.
 
-The `.claude` directory contains the **Framework 3.0 implementation** of the Claude Code Modular Agents system with revolutionary meta-prompting capabilities. This is where commands delegate to modules through the Module Runtime Engine, creating a powerful composition system with self-improvement capabilities for automated development workflows.
+## Quick Start
 
-## Directory Structure
+### For New Users
+```bash
+# Start with intelligent routing - it will guide you to the right command
+/auto "your development request"
+
+# Or try these common commands:
+/task "fix this bug"           # Single file/component work
+/feature "add user auth"       # Complete feature development  
+/query "how does this work"    # Research and analysis
+```
+
+### For Experienced Users
+```bash
+/init                          # Set up framework in your project
+/swarm "complex refactoring"   # Multi-component coordination
+/session "long development"    # Managed development sessions
+/docs "create documentation"   # Documentation generation
+```
+
+## Framework Architecture
 
 ```
 .claude/
-├── commands/              # 8 core commands with Module Runtime Engine integration
-├── modules/               # 100+ modular components organized by domain
-│   ├── patterns/         # Multi-agent patterns, intelligent routing, session management
-│   ├── quality/          # Universal quality gates, TDD enforcement, critical thinking
-│   ├── security/         # Threat modeling, audit, financial compliance
-│   ├── development/      # Development workflows, documentation, research analysis
-│   ├── planning/         # PRD generation, MVP strategy, feature workflow
-│   ├── testing/          # Auto-testing, iterative testing patterns
-│   └── frameworks/       # FOCUS, AWARE, RISE, TRACE framework implementations
-├── templates/            # Framework 3.0 format templates
-├── context/              # Session management and artifact preservation
-├── analytics/            # Framework health monitoring and metrics
-└── settings.local.json   # Local configuration with meta-prompting settings
+├── commands/              # 15 production commands (auto, task, feature, swarm, etc.)
+├── modules/               # 100+ specialized modules organized by domain
+│   ├── patterns/         # Execution patterns and orchestration
+│   ├── quality/          # Quality gates and TDD enforcement  
+│   ├── security/         # Security validation and threat modeling
+│   ├── development/      # Development workflows and task management
+│   └── meta/             # Framework meta-operations and self-improvement
+├── prompt_eng/            # Advanced prompt engineering patterns
+│   ├── frameworks/       # RISE, TRACE, CARE, CLEAR, SOAR frameworks
+│   ├── personas/         # 25+ specialized engineering personas
+│   └── patterns/         # Thinking patterns and composition
+├── system/                # Framework infrastructure
+│   ├── quality/          # Quality gates infrastructure (36 modules)
+│   ├── security/         # Security frameworks and compliance
+│   ├── context/          # Context management and preservation
+│   └── session/          # Session tracking and reliability
+├── domain/                # Domain-specific templates and adaptation
+└── meta/                  # Self-improving meta-framework capabilities
 ```
+
+## Navigation by Use Case
+
+### I want to use the framework
+- **Start here**: Use `/auto "your request"` for intelligent routing
+- **Commands**: See `/commands/README.md` for all 15 available commands
+- **Setup**: Use `/init` to configure the framework for your project
+
+### I want to understand the framework
+- **Architecture**: See `/modules/README.md` for module organization
+- **Quality System**: See `/system/quality/` for quality gates and TDD
+- **Advanced Features**: See `/prompt_eng/` for prompt engineering patterns
+
+### I want to extend the framework
+- **Add Commands**: See `/commands/` directory and follow delegation patterns
+- **Add Modules**: See `/modules/` categories and standardized interfaces
+- **Custom Domains**: See `/domain/` for domain-specific customization
+
+### I want to troubleshoot
+- **Common Issues**: Check README files in each major directory
+- **Quality Problems**: See `/system/quality/universal-quality-gates.md`
+- **Performance**: See `/modules/patterns/performance-optimization-pattern.md`
 
 ## Core Components
 

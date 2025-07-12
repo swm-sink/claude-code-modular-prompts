@@ -25,6 +25,64 @@
 - `.claude/meta/` - Self-improving meta-framework capabilities
 
 
+# ⚠️ CRITICAL: Claude Code Settings Protection
+
+```xml
+<settings_protection enforcement = "MAXIMUM" priority = "CRITICAL">
+  <purpose>Protect optimized Claude Code settings from wildcard syntax regression</purpose>
+  
+  <protected_configuration>
+    <file>/.claude/settings.local.json</file>
+    <status>OPTIMIZED FOR MAXIMUM AUTONOMY - DO NOT MODIFY</status>
+    <critical_fix>Wildcard permissions syntax DOES NOT WORK in Claude Code</critical_fix>
+  </protected_configuration>
+  
+  <wildcard_bug_documentation>
+    <broken_syntax>
+      <pattern>"Bash(git:*)" ❌ BROKEN - Known Claude Code bug</pattern>
+      <pattern>"Bash(ls:*)" ❌ BROKEN - Intermittent failures</pattern>
+      <pattern>"Bash(*)" ❌ BROKEN - Documented GitHub issues</pattern>
+      <pattern>"Bash(*:*)" ❌ BROKEN - Memory management issues</pattern>
+    </broken_syntax>
+    <working_syntax>
+      <pattern>"Bash(git)" ✅ WORKS - Individual command permissions</pattern>
+      <pattern>"Bash(git add)" ✅ WORKS - Specific command variants</pattern>
+      <pattern>"Bash(ls)" ✅ WORKS - No wildcards or colons</pattern>
+      <pattern>"Bash(python)" ✅ WORKS - Simple command names</pattern>
+    </working_syntax>
+  </wildcard_bug_documentation>
+  
+  <github_issues_evidence>
+    <issue>GitHub Issue #462: "Allowing `Bash(*)` or `Bash(*:*)` doesn't seem to work"</issue>
+    <issue>GitHub Issue #2560: "Claude code keeps asking for permission despite already having it"</issue>
+    <issue>GitHub Issue #2733: "Infinite bash permission loop"</issue>
+    <issue>GitHub Issue #74: "Claude does not understand that it does have the correct bash permissions"</issue>
+  </github_issues_evidence>
+  
+  <protection_rules enforcement = "MANDATORY">
+    <rule priority = "HIGHEST">NEVER revert to wildcard syntax (patterns with : or *)</rule>
+    <rule priority = "HIGHEST">NEVER use "Bash(command:*)" format</rule>
+    <rule priority = "HIGHEST">ALWAYS use "Bash(command)" format for individual commands</rule>
+    <rule priority = "HIGHEST">CURRENT CONFIGURATION IS BATTLE-TESTED AND WORKS</rule>
+    <rule priority = "CRITICAL">Modification requires explicit approval after wildcard bug research</rule>
+  </protection_rules>
+  
+  <configuration_status>
+    <optimized_date>2025-07-12</optimized_date>
+    <research_basis>Extensive GitHub issues analysis and developer community feedback</research_basis>
+    <permissions_count>140+ individual command permissions</permissions_count>
+    <wildcard_removal>Complete elimination of problematic wildcard patterns</wildcard_removal>
+    <autonomy_level>Maximum - eliminates permission prompts</autonomy_level>
+  </configuration_status>
+  
+  <emergency_rollback>
+    <backup_commit>Available via git log - pre-optimization state preserved</backup_commit>
+    <recovery_time>60 seconds maximum via git reset</recovery_time>
+    <validation_required>Test permission prompts after any changes</validation_required>
+  </emergency_rollback>
+</settings_protection>
+```
+
 # Command Status (Agent 9 Integration Test Results)
 
 ```xml
