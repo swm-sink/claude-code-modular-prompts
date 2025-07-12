@@ -74,6 +74,12 @@
         Assess task complexity and determine session requirements
         Plan TDD approach with comprehensive test strategy informed by research
       </actions>
+      <atomic_commit_integration>
+        <checkpoint>git add -A && git commit -m "PRE-OP: task-management - backup state before task implementation"</checkpoint>
+        <validation_before_commit>Current state preserved for rollback capability</validation_before_commit>
+        <rollback_trigger>If task analysis reveals complexity > scope, rollback with: git reset --hard HEAD~1</rollback_trigger>
+        <safety_check>Verify task scope appropriate for single-component development before proceeding</safety_check>
+      </atomic_commit_integration>
       <validation>
         Research-first context understanding documented with domain insights
         RISE framework integration validated with clear role and expectation definition
@@ -100,6 +106,12 @@
         REFACTOR: Improve code structure while maintaining green tests using research findings
         Continuous testing after each significant change with research-based validation
       </actions>
+      <atomic_commit_integration>
+        <checkpoint>git add . && git commit -m "OP-EXEC: task-management implementation - TDD cycle complete with tests passing"</checkpoint>
+        <validation_before_commit>All tests must pass and coverage thresholds met</validation_before_commit>
+        <rollback_trigger>If implementation fails or tests don't pass, rollback with: git reset --hard HEAD~1</rollback_trigger>
+        <safety_check>Verify complete TDD cycle compliance before proceeding to quality verification</safety_check>
+      </atomic_commit_integration>
       <validation>
         Research insights successfully integrated into implementation
         RISE framework steps completed with structured development approach
@@ -124,6 +136,12 @@
         Execute comprehensive quality gate verification suite
         Generate quality compliance certificate with evidence archive
       </actions>
+      <atomic_commit_integration>
+        <checkpoint>git add -A && git commit -m "POST-OP: task-management complete - quality verification passed with evidence"</checkpoint>
+        <validation_before_commit>All quality gates must pass with evidence collection</validation_before_commit>
+        <rollback_trigger>If quality verification fails, rollback with: git reset --hard HEAD~2 (return to pre-task state)</rollback_trigger>
+        <safety_check>Verify complete quality compliance before task completion</safety_check>
+      </atomic_commit_integration>
       <validation>
         TDD evidence trail complete with RED-GREEN-REFACTOR proof
         Security threats identified and mitigated with evidence

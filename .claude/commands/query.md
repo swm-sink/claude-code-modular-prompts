@@ -44,6 +44,27 @@ Research and analysis command for understanding codebases and requirements.
 <thinking_pattern enforcement="MANDATORY">
   
   <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="extended">
+    <action>Pre-Research Atomic Commit: Create secure rollback point before research analysis (read-only safety)</action>
+    <interleaved_thinking enforcement="MANDATORY">
+      <pre_analysis>
+        - What is the current state that should be preserved before research begins?
+        - What context or findings might need to be rolled back if research direction changes?
+        - How can we ensure clean state management for read-only research operations?
+      </pre_analysis>
+      <critical_thinking minimum_time="30_seconds">
+        - [Safety Question: Is the current state safely preserved before research begins?]
+        - [Research Question: What read-only research approach ensures comprehensive findings?]
+        - [State Question: How can we maintain clean state management during analysis?]
+      </critical_thinking>
+    </interleaved_thinking>
+    <atomic_commit enforcement="MANDATORY">
+      <pre_operation>git add -A && git commit -m "PRE-OP: query - backup state before research analysis (read-only)"</pre_operation>
+      <validation>Research baseline established for clean state management</validation>
+      <rollback_capability>Available via: git reset --hard HEAD~1</rollback_capability>
+    </atomic_commit>
+  </checkpoint>
+  
+  <checkpoint id="2" verify="true" enforcement="BLOCKING" thinking_mode="extended">
     <action>Research Planning and Scope Definition: Comprehensive analysis of research objectives and systematic information gathering strategy</action>
     <interleaved_thinking enforcement="MANDATORY">
       <pre_analysis>
@@ -198,6 +219,11 @@ Research and analysis command for understanding codebases and requirements.
       <context_efficiency>Create documentation and validation concurrently where appropriate</context_efficiency>
       <dependency_analysis>Identify documentation steps that can be optimized while maintaining quality</dependency_analysis>
     </parallel_execution_considerations>
+    <atomic_commit enforcement="MANDATORY">
+      <post_operation>git add research-findings.md && git commit -m "POST-OP: query complete - research analysis documented with findings preservation"</post_operation>
+      <validation>Research findings documented and preserved for future reference</validation>
+      <rollback_trigger>Documentation failure triggers: git reset --hard HEAD~1 (return to research baseline)</rollback_trigger>
+    </atomic_commit>
     <output_format>DOCUMENTATION: [research_report] with [knowledge_transfer] ensuring [future_accessibility]</output_format>
     <validation>Documentation comprehensive, knowledge transfer effective, accessibility confirmed, professional quality met</validation>
     <enforcement>CONDITIONAL - proceed if documentation adds value, skip if research complete</enforcement>

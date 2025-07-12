@@ -44,6 +44,27 @@ Documentation generation and management.
 <thinking_pattern enforcement="MANDATORY">
   
   <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="extended">
+    <action>Pre-Documentation Atomic Commit: Create secure rollback point before documentation generation</action>
+    <interleaved_thinking enforcement="MANDATORY">
+      <pre_analysis>
+        - What is the current state that must be preserved before documentation work begins?
+        - What documentation changes will be made that need rollback capability?
+        - How can we ensure instant recovery if documentation needs to be regenerated?
+      </pre_analysis>
+      <critical_thinking minimum_time="30_seconds">
+        - [Safety Question: Is the current state safely preserved before documentation generation?]
+        - [Documentation Question: What documentation steps need atomic safety protection?]
+        - [Recovery Question: Can we rollback if documentation generation fails or needs restart?]
+      </critical_thinking>
+    </interleaved_thinking>
+    <atomic_commit enforcement="MANDATORY">
+      <pre_operation>git add -A && git commit -m "PRE-OP: docs - backup state before documentation generation"</pre_operation>
+      <validation>Documentation baseline established for instant rollback</validation>
+      <rollback_capability>Available via: git reset --hard HEAD~1</rollback_capability>
+    </atomic_commit>
+  </checkpoint>
+  
+  <checkpoint id="2" verify="true" enforcement="BLOCKING" thinking_mode="extended">
     <action>Documentation Scope and Audience Analysis: Comprehensive analysis of documentation requirements and target audience needs</action>
     <interleaved_thinking enforcement="MANDATORY">
       <pre_analysis>

@@ -44,6 +44,27 @@ Long-running session management with GitHub issue tracking.
 <thinking_pattern enforcement="MANDATORY">
   
   <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="extended">
+    <action>Pre-Session Atomic Commit: Create secure rollback point before long-running session begins</action>
+    <interleaved_thinking enforcement="MANDATORY">
+      <pre_analysis>
+        - What is the current state that must be preserved before the long-running session?
+        - What session changes will be made that need comprehensive rollback capability?
+        - How can we ensure instant recovery if the session needs to be restarted?
+      </pre_analysis>
+      <critical_thinking minimum_time="30_seconds">
+        - [Safety Question: Is the current state safely preserved before session begins?]
+        - [Session Question: What long-running operations need atomic safety protection?]
+        - [Recovery Question: Can we rollback session changes if issues arise?]
+      </critical_thinking>
+    </interleaved_thinking>
+    <atomic_commit enforcement="MANDATORY">
+      <pre_operation>git add -A && git commit -m "PRE-OP: session - backup state before long-running session"</pre_operation>
+      <validation>Session baseline established for comprehensive rollback</validation>
+      <rollback_capability>Available via: git reset --hard HEAD~1</rollback_capability>
+    </atomic_commit>
+  </checkpoint>
+  
+  <checkpoint id="2" verify="true" enforcement="BLOCKING" thinking_mode="extended">
     <action>Project Scope Analysis and Phase Planning: Comprehensive analysis of project requirements and systematic phase breakdown</action>
     <interleaved_thinking enforcement="MANDATORY">
       <pre_analysis>

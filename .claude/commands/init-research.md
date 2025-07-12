@@ -1,10 +1,138 @@
-# /init-research - Research-Driven Framework Configuration
+| version | last_updated | status | readiness |
+|---------|--------------|--------|-----------|
+| 3.0.0   | 2025-07-12   | stable | 95%       |
 
-Configures the framework based on current best practices for your specific domain and tech stack.
+# Init-Research Command - Atomic Research-Driven Configuration
 
-## Usage
+────────────────────────────────────────────────────────────────────────────────
+
+
+────────────────────────────────────────────────────────────────────────────────
+
+```xml
+<command name="init-research" category="initialization" enforcement="BLOCKING">
+  
+  <purpose>
+    Research-driven framework configuration with atomic commits safety, evidence-based best practices, and comprehensive domain optimization with Claude 4 enhancement.
+  </purpose>
+  
+  <scope>
+    <includes>Domain research, best practices analysis, evidence-based configuration, cutting-edge technique integration</includes>
+    <excludes>Manual configuration, outdated practices, assumption-based setup</excludes>
+    <boundaries>All research must be from 2025 sources with atomic commits for instant rollback</boundaries>
+  </scope>
+  
+  <input_specification>
+    <required_arguments>Domain/industry type, technology stack, project scale and complexity</required_arguments>
+    <context_requirements>Research access, project context, quality standards requirements</context_requirements>
+    <preconditions>Internet access for research, valid project directory, git repository available</preconditions>
+  </input_specification>
+  
+  <output_specification>
+    <deliverables>Research-backed PROJECT_CONFIG.xml, best practices documentation, source citations, atomic commit trail</deliverables>
+    <success_criteria>Comprehensive research completed, evidence-based configuration generated, rollback capability established</success_criteria>
+    <artifacts>PROJECT_CONFIG.xml, research report, source citations, configuration justification, atomic commit history</artifacts>
+  </output_specification>
+</command>
 ```
-/init-research
+
+Research-driven framework configuration with atomic commits safety.
+
+## Thinking Pattern - Claude 4 Enhanced
+
+```xml
+<thinking_pattern enforcement="MANDATORY">
+  
+  <checkpoint id="1" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
+    <action>Pre-Research Atomic Commit: Create secure rollback point before research and configuration</action>
+    <interleaved_thinking enforcement="MANDATORY">
+      <pre_analysis>
+        - What is the current state that must be preserved before research begins?
+        - What research-driven changes will be made that need rollback capability?
+        - How can we ensure instant recovery if research leads to incorrect configuration?
+      </pre_analysis>
+      <critical_thinking minimum_time="30_seconds">
+        - [Safety Question: Is the current state safely preserved before research-driven changes?]
+        - [Research Question: What evidence-based research approach will be most effective?]
+        - [Recovery Question: Can we rollback if research findings prove inadequate?]
+      </critical_thinking>
+    </interleaved_thinking>
+    <atomic_commit enforcement="MANDATORY">
+      <pre_operation>git add -A && git commit -m "PRE-OP: init-research - backup state before research-driven configuration"</pre_operation>
+      <validation>Research baseline established for instant rollback</validation>
+      <rollback_capability>Available via: git reset --hard HEAD~1</rollback_capability>
+    </atomic_commit>
+  </checkpoint>
+  
+  <checkpoint id="2" verify="true" enforcement="BLOCKING" thinking_mode="research">
+    <action>Comprehensive Domain Research: Evidence-based research of current best practices and standards</action>
+    <interleaved_thinking enforcement="MANDATORY">
+      <research_scope>
+        - What are the current 2025 best practices for this domain and tech stack?
+        - What industry standards and proven patterns should be applied?
+        - What cutting-edge techniques are being adopted in leading organizations?
+        - What quality standards and security requirements are current?
+      </research_scope>
+      <critical_thinking minimum_time="60_seconds">
+        - [Evidence Question: Are research sources current and authoritative (2025 only)?]
+        - [Completeness Question: Is research comprehensive across all relevant areas?]
+        - [Quality Question: Do findings represent proven best practices vs experimental approaches?]
+      </critical_thinking>
+    </interleaved_thinking>
+    <module_delegation enforcement="MANDATORY">
+      <research_modules>
+        <module>development/domain-research-analyzer.md</module>
+        <module>patterns/best-practices-discovery.md</module>
+        <module>patterns/technology-stack-optimization.md</module>
+      </research_modules>
+    </module_delegation>
+  </checkpoint>
+  
+  <checkpoint id="3" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
+    <action>Evidence-Based Configuration Synthesis: Transform research findings into optimal framework configuration</action>
+    <interleaved_thinking enforcement="MANDATORY">
+      <synthesis_process>
+        - How should research findings be translated into specific configuration settings?
+        - What proven patterns should be implemented in the framework setup?
+        - How should quality thresholds be set based on industry standards?
+        - What domain-specific optimizations should be applied?
+      </synthesis_process>
+      <critical_thinking minimum_time="45_seconds">
+        - [Translation Question: Are research findings properly translated into actionable configuration?]
+        - [Evidence Question: Is each configuration choice backed by research evidence?]
+        - [Optimization Question: Does the configuration represent optimal setup for this domain?]
+      </critical_thinking>
+    </interleaved_thinking>
+    <atomic_commit enforcement="MANDATORY">
+      <operation_execution>git add PROJECT_CONFIG.xml research-report.md && git commit -m "OP-EXEC: init-research configuration - evidence-based PROJECT_CONFIG.xml with research backing"</operation_execution>
+      <validation>Configuration generated with comprehensive research backing</validation>
+      <rollback_trigger>Configuration errors trigger: git reset --hard HEAD~1</rollback_trigger>
+    </atomic_commit>
+  </checkpoint>
+  
+  <checkpoint id="4" verify="true" enforcement="BLOCKING" thinking_mode="interleaved">
+    <action>Research-Driven Setup Validation: Comprehensive validation of research-backed configuration</action>
+    <interleaved_thinking enforcement="MANDATORY">
+      <validation_scope>
+        - Does the configuration accurately reflect research findings?
+        - Are all research-backed recommendations properly implemented?
+        - Is the setup optimized for current industry best practices?
+        - Are sources properly documented for future reference?
+      </validation_scope>
+      <critical_thinking minimum_time="30_seconds">
+        - [Accuracy Question: Does the final configuration accurately implement research findings?]
+        - [Completeness Question: Are all research recommendations addressed in the setup?]
+        - [Documentation Question: Are research sources properly cited for future validation?]
+      </critical_thinking>
+    </interleaved_thinking>
+    <atomic_commit enforcement="MANDATORY">
+      <post_operation>git add -A && git commit -m "POST-OP: init-research complete - research-driven configuration validated with source documentation"</post_operation>
+      <validation>Research-backed setup validated and atomic commit trail established</validation>
+      <rollback_trigger>Validation failure triggers: git reset --hard HEAD~2 (return to pre-research)</rollback_trigger>
+    </atomic_commit>
+  </checkpoint>
+  
+</thinking_pattern>
 ```
 
 ## What It Does

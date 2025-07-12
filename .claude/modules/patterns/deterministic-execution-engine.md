@@ -33,13 +33,39 @@ Provides formal execution scheduling, state transition validation, and predictiv
 <execution_pattern>
   <claude_4_behavior>
     WHEN invoked:
-    1. Analyze command structure for deterministic execution requirements
-    2. Generate formal execution schedule with dependency ordering
-    3. Validate state transitions for consistency and reproducibility
-    4. Predict resource requirements and optimization opportunities
-    5. Ensure execution determinism through formal verification
+    1. Create atomic commit baseline for deterministic execution rollback
+    2. Analyze command structure for deterministic execution requirements
+    3. Generate formal execution schedule with dependency ordering
+    4. Validate state transitions for consistency and reproducibility
+    5. Predict resource requirements and optimization opportunities
+    6. Ensure execution determinism through formal verification
+    7. Complete with atomic commit for execution state preservation
   </claude_4_behavior>
 </execution_pattern>
+```
+
+### Atomic Execution Safety
+
+```xml
+<atomic_execution_safety>
+  <pre_execution_commit>
+    <checkpoint>git add -A && git commit -m "PRE-OP: deterministic-execution - baseline before formal execution"</checkpoint>
+    <validation>Execution baseline established for deterministic rollback</validation>
+    <rollback_capability>Available via: git reset --hard HEAD~1</rollback_capability>
+  </pre_execution_commit>
+  
+  <execution_state_preservation>
+    <checkpoint>git add execution-state.json && git commit -m "OP-EXEC: execution state - deterministic schedule and validation complete"</checkpoint>
+    <validation>Execution state preserved with formal verification</validation>
+    <rollback_trigger>Non-deterministic behavior triggers: git reset --hard HEAD~1</rollback_trigger>
+  </execution_state_preservation>
+  
+  <post_execution_validation>
+    <checkpoint>git add -A && git commit -m "POST-OP: deterministic-execution complete - formal verification passed"</checkpoint>
+    <validation>Complete execution validated and atomic commit trail established</validation>
+    <rollback_trigger>Validation failure triggers: git reset --hard HEAD~2 (return to pre-execution)</rollback_trigger>
+  </post_execution_validation>
+</atomic_execution_safety>
 ```
 
 ## Deterministic Execution Framework

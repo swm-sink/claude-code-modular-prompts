@@ -49,6 +49,13 @@
         Define clear success metrics and KPIs
         Document assumptions and constraints
       </actions>
+      <atomic_commit_integration>
+        <checkpoint>git add -A && git commit -m "PRE-OP: feature-workflow - backup state before feature development"</checkpoint>
+        <validation_before_commit>Current state preserved for complete feature rollback capability</validation_before_commit>
+        <rollback_trigger>If PRD generation fails or requirements unclear, rollback with: git reset --hard HEAD~1</rollback_trigger>
+        <safety_check>Verify PRD completeness and stakeholder approval before proceeding to implementation</safety_check>
+      </atomic_commit_integration>
+      </actions>
       <validation>
         PRD document complete with all required sections
         Stakeholder sign-off obtained and documented
