@@ -153,7 +153,7 @@
       development/documentation.md for incident records
     </provides_to>
     <depends_on>
-      ../../prompt_eng/../../prompt_eng/patterns/thinking/critical-thinking-pattern.md for failure analysis
+      ../../prompt_eng/../../prompt_eng/patterns/critical-thinking-pattern.md for failure analysis
       patterns/quality-validation-pattern.md with resilience testing
     </depends_on>
   </integration_points>

@@ -135,7 +135,7 @@
         User experience validated through testing
       </requirements>
       <actions>
-        Delegate to modules/quality/production-standards.md for validation execution
+        Delegate to system/quality/production-standards.md for validation execution
         Execute comprehensive test suite including integration tests
         Conduct performance testing and optimization
         Perform security review and vulnerability assessment

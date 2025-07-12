@@ -532,11 +532,11 @@ jobs:
     
     - name: Setup Test Environment
       run: |
-        chmod +x .claude/modules/quality/rd-quality-gates-integration-test.sh
+        chmod +x .claude/system/quality/rd-quality-gates-integration-test.sh
         
     - name: Execute R&D Quality Gates Integration Tests
       run: |
-        .claude/modules/quality/rd-quality-gates-integration-test.sh
+        .claude/system/quality/rd-quality-gates-integration-test.sh
         
     - name: Upload Test Results
       uses: actions/upload-artifact@v3

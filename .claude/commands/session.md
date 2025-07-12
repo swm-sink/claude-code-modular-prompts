@@ -272,7 +272,7 @@ Execute long-running development session workflow for: $ARGUMENTS
 ```xml
 <module_orchestration>
   <core_modules>
-    <module>patterns/thinking/critical-thinking-pattern.md</module>
+    <module>patterns/critical-thinking-pattern.md</module>
     <module>system/session/session-management.md</module>
     <module>development/task-management.md</module>
     <module>quality/universal-quality-gates.md</module>

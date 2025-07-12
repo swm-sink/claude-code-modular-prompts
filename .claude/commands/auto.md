@@ -261,7 +261,7 @@ Analyze the request and route to the optimal command for: $ARGUMENTS
 ```xml
 <module_orchestration>
   <core_modules>
-    <module>patterns/thinking/critical-thinking-pattern.md</module>
+    <module>patterns/critical-thinking-pattern.md</module>
     <module>patterns/intelligent-routing.md</module>
     <module>development/deterministic-routing.md</module>
     <module>prompt_eng/frameworks/framework-selector.md</module>

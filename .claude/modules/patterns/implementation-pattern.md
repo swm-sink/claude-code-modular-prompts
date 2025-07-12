@@ -151,7 +151,7 @@
     <depends_on>
       patterns/tdd-cycle-pattern.md for test-driven development
       patterns/research-analysis-pattern.md for informed decisions
-      ../../prompt_eng/../../prompt_eng/patterns/thinking/critical-thinking-pattern.md for design choices
+      ../../prompt_eng/../../prompt_eng/patterns/critical-thinking-pattern.md for design choices
     </depends_on>
   </integration_points>
   

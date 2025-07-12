@@ -152,7 +152,7 @@
       patterns/documentation-pattern.md for knowledge sharing
     </provides_to>
     <depends_on>
-      ../../prompt_eng/../../prompt_eng/patterns/thinking/critical-thinking-pattern.md for user needs analysis
+      ../../prompt_eng/../../prompt_eng/patterns/critical-thinking-pattern.md for user needs analysis
     </depends_on>
   </integration_points>
   

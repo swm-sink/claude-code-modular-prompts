@@ -510,4 +510,4 @@ Provides formal execution scheduling, state transition validation, and predictiv
 
 ────────────────────────────────────────────────────────────────────────────────
 
-**Dependencies**: ../../prompt_eng/../../prompt_eng/patterns/visualization/prompt-construction-visualization.md, ../../prompt_eng/../../prompt_eng/patterns/visualization/runtime-execution-dashboard.md, ../../system/../../system/quality/universal-quality-gates.md
+**Dependencies**: ../../prompt_eng/../../prompt_eng/patterns/prompt-construction-visualization.md, ../../prompt_eng/../../prompt_eng/patterns/runtime-execution-dashboard.md, ../../system/../../system/quality/universal-quality-gates.md

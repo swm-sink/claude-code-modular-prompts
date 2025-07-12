@@ -1508,32 +1508,32 @@ Reference patterns directly:
 
 **standardized_interfaces**
 - Architecture pattern: Consistent interfaces across all framework components
-- Primary in: ../../prompt_eng/patterns/thinking/thinking-pattern-template.md for pattern consistency
+- Primary in: ../../prompt_eng/patterns/thinking-pattern-template.md for pattern consistency
 - Integration: Modular composition and dependency injection
 
 **checkpoint_validation**
 - Quality pattern: Systematic validation at defined checkpoints
-- Primary in: ../../prompt_eng/patterns/thinking/thinking-pattern-template.md for validation enforcement
+- Primary in: ../../prompt_eng/patterns/thinking-pattern-template.md for validation enforcement
 - Integration: Quality gates and enforcement mechanisms
 
 **enforcement_mechanisms**
 - Framework pattern: Systematic enforcement of rules and quality standards
-- Primary in: ../../prompt_eng/patterns/thinking/thinking-pattern-template.md for rule enforcement
+- Primary in: ../../prompt_eng/patterns/thinking-pattern-template.md for rule enforcement
 - Integration: Quality gates and validation frameworks
 
 **modular_composition**
 - Architecture pattern: Composable modules with clear boundaries
-- Primary in: ../../prompt_eng/../../prompt_eng/patterns/composition/module-composition-framework.md for system architecture
+- Primary in: ../../prompt_eng/../../prompt_eng/patterns/module-composition-framework.md for system architecture
 - Integration: Dependency injection and execution orchestration
 
 **dependency_injection**
 - Architecture pattern: Inject dependencies rather than create them
-- Primary in: ../../prompt_eng/../../prompt_eng/patterns/composition/module-composition-framework.md for loose coupling
+- Primary in: ../../prompt_eng/../../prompt_eng/patterns/module-composition-framework.md for loose coupling
 - Integration: Modular composition and interface contracts
 
 **execution_orchestration**
 - Coordination pattern: Orchestrate complex multi-step execution flows
-- Primary in: ../../prompt_eng/../../prompt_eng/patterns/composition/module-composition-framework.md for workflow management
+- Primary in: ../../prompt_eng/../../prompt_eng/patterns/module-composition-framework.md for workflow management
 - Integration: Parallel execution and batch operations
 
 **framework_selection_intelligence**

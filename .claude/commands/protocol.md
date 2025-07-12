@@ -247,7 +247,7 @@ Execute production-ready workflow for: $ARGUMENTS
 ```xml
 <module_orchestration>
   <core_modules>
-    <module>patterns/thinking/critical-thinking-pattern.md</module>
+    <module>patterns/critical-thinking-pattern.md</module>
     <module>quality/tdd.md</module>
     <module>security/threat-modeling.md</module>
     <module>quality/universal-quality-gates.md</module>

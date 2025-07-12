@@ -225,7 +225,7 @@ Execute comprehensive documentation generation workflow for: $ARGUMENTS
 ```xml
 <module_orchestration>
   <core_modules>
-    <module>patterns/thinking/critical-thinking-pattern.md</module>
+    <module>patterns/critical-thinking-pattern.md</module>
     <module>development/documentation.md</module>
     <module>patterns/documentation-pattern.md</module>
     <module>patterns/user-interaction-pattern.md</module>

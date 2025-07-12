@@ -164,7 +164,7 @@
       ../../patterns/implementation-pattern.md for code development
     </provides_to>
     <depends_on>
-      ../../prompt_eng/../../prompt_eng/patterns/thinking/critical-thinking-pattern.md for test design
+      ../../prompt_eng/../../prompt_eng/patterns/critical-thinking-pattern.md for test design
       development/research-analysis.md for understanding requirements
       ../../system/../../system/quality/tdd.md for TDD enforcement framework
     </depends_on>

@@ -359,7 +359,7 @@
     • Uses continuous_monitoring pattern for ongoing validation support
     
     See modules/getting-started/adaptation-validation.md for validation orchestration
-    See modules/quality/universal-quality-gates.md for quality gate validation
+    See system/quality/universal-quality-gates.md for quality gate validation
     See modules/patterns/validation-pattern.md for validation methodology
   </pattern_usage>
   

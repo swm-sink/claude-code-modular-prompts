@@ -313,7 +313,7 @@
   <depends_on>
     meta/recursive-architecture-analyzer.md for pattern analysis
     meta/safety-validator.md for generation safety validation
-    ../../prompt_eng/../../prompt_eng/patterns/composition/module-composition-framework.md for framework integration
+    ../../prompt_eng/../../prompt_eng/patterns/module-composition-framework.md for framework integration
   </depends_on>
   
   <integration_contracts>

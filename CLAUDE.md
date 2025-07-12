@@ -368,11 +368,7 @@
       <core>Core engineering personas</core>
       <rd_engineering>R&D engineering personas (25 specialized roles)</rd_engineering>
     </personas>
-    <patterns location = "patterns/">
-      <thinking>Thinking patterns, critical thinking templates</thinking>
-      <composition>Module composition, prompt construction patterns</composition>
-      <visualization>Runtime dashboards, execution visualization</visualization>
-    </patterns>
+    <patterns location = "patterns/">All pattern types consolidated - thinking, composition, visualization patterns</patterns>
     <modules location = "modules/">
       <routing>Intelligent routing, persona management</routing>
       <orchestration>Multi-agent coordination, swarm patterns</orchestration>
@@ -380,9 +376,9 @@
   </prompt_engineering>
   
   <system_components location = ".claude/system/">
-    <quality>Quality gates, TDD enforcement, testing frameworks</quality>
-    <security>Security modules, threat modeling, compliance</security>
-    <context>Context management, preservation, artifacts</context>
+    <quality>Quality gates, TDD enforcement, testing frameworks (consolidated from modules/quality)</quality>
+    <security>Security modules, threat modeling, compliance (consolidated from modules/security)</security>
+    <context>Context management, preservation, artifacts, templates (subdirectories consolidated)</context>
     <session>Session management, compression, reliability</session>
     <git>Git operations, conventional commits, worktree isolation</git>
   </system_components>

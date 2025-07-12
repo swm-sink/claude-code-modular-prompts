@@ -277,7 +277,7 @@ Execute comprehensive research and analysis workflow for: $ARGUMENTS
 ```xml
 <module_orchestration>
   <core_modules>
-    <module>patterns/thinking/critical-thinking-pattern.md</module>
+    <module>patterns/critical-thinking-pattern.md</module>
     <module>development/research-analysis.md</module>
     <module>patterns/research-analysis-pattern.md</module>
     <module>patterns/context-management-pattern.md</module>

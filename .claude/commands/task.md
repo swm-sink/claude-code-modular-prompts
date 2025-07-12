@@ -248,7 +248,7 @@ Execute the following workflow for the task: $ARGUMENTS
 ```xml
 <module_orchestration>
   <core_modules>
-    <module>patterns/thinking/critical-thinking-pattern.md</module>
+    <module>patterns/critical-thinking-pattern.md</module>
     <module>quality/tdd.md</module>
     <module>development/task-management.md</module>
     <module>quality/universal-quality-gates.md</module>

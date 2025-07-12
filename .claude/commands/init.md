@@ -200,7 +200,7 @@ Execute framework initialization workflow for: $ARGUMENTS
 ```xml
 <module_orchestration>
   <core_modules>
-    <module>patterns/thinking/critical-thinking-pattern.md</module>
+    <module>patterns/critical-thinking-pattern.md</module>
     <module>getting-started/project-initialization.md</module>
     <module>getting-started/framework-configurator.md</module>
     <module>getting-started/domain-classification.md</module>

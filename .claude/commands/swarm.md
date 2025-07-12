@@ -244,7 +244,7 @@ Execute multi-component development workflow for: $ARGUMENTS
 ```xml
 <module_orchestration>
   <core_modules>
-    <module>patterns/thinking/critical-thinking-pattern.md</module>
+    <module>patterns/critical-thinking-pattern.md</module>
     <module>quality/tdd.md</module>
     <module>patterns/multi-agent.md</module>
     <module>quality/universal-quality-gates.md</module>
