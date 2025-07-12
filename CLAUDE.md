@@ -389,6 +389,7 @@
     <cmd name = "/init-new" module = "commands/init-new.md" critical = "true"/>
     <cmd name = "/init-research" module = "commands/init-research.md" critical = "true"/>
     <cmd name = "/init-validate" module = "commands/init-validate.md" critical = "true"/>
+    <cmd name = "/chain" module = "patterns/command-chaining-architecture.md" critical = "true"/>
     <cmd name = "/meta-review" module = "meta/framework-auditor.md" critical = "true"/>
     <cmd name = "/meta-evolve" module = "meta/update-cycle-manager.md" critical = "true"/>
     <cmd name = "/meta-optimize" module = "meta/continuous-optimizer.md" critical = "true"/>
@@ -858,6 +859,44 @@
 ```
 
 
+# Advanced Command Chaining
+
+```xml
+<command_chaining version = "1.0.0" enforcement = "PRODUCTION_GRADE">
+  <purpose>Sophisticated multi-command workflows with state management, parallel optimization, and comprehensive error recovery</purpose>
+  
+  <workflow_patterns>
+    <sequential>Commands execute in order with state passing between them</sequential>
+    <parallel>Independent commands execute simultaneously with coordination</parallel>
+    <conditional>Dynamic routing based on execution results and conditions</conditional>
+    <iterative>Commands repeat until criteria met or convergence achieved</iterative>
+  </workflow_patterns>
+  
+  <orchestration_features>
+    <state_management>Context preservation and transfer between commands</state_management>
+    <atomic_safety>Rollback capabilities at workflow and command levels</atomic_safety>
+    <error_recovery>Intelligent retry, alternative routing, graceful degradation</error_recovery>
+    <performance_optimization>Parallel execution, resource allocation, load balancing</performance_optimization>
+    <quality_integration>Quality gates at workflow and command boundaries</quality_integration>
+  </orchestration_features>
+  
+  <common_workflows>
+    <research_plan_execute>/query → /feature → /task (Research → Plan → Implement)</research_plan_execute>
+    <initialize_validate_deploy>/init → /validate → /protocol (Setup → Validate → Deploy)</initialize_validate_deploy>
+    <multi_agent_development>/swarm + parallel(/task, /task, /task) + /session</multi_agent_development>
+    <adaptive_development>/auto with conditional routing to optimal commands</adaptive_development>
+  </common_workflows>
+  
+  <usage_examples>
+    <sequential>/chain sequential --commands="/query,/feature,/task" --target="user auth system"</sequential>
+    <parallel>/chain parallel --coordination="/swarm" --commands="/task:frontend,/task:backend,/task:testing"</parallel>
+    <conditional>/chain conditional --start="/auto" --routing="complexity_based"</conditional>
+    <iterative>/chain iterative --command="/task" --criteria="quality_threshold_90" --max_iterations="3"</iterative>
+  </usage_examples>
+</command_chaining>
+```
+
+
 # Command Selection Decision Trees
 
 ```xml
@@ -866,8 +905,9 @@
     <simple>Single task → /task | Multi-step + research → /query→/task | Clear requirements → /task</simple>
     <features>New feature specs → /feature | Multi-component → /swarm | Unclear → /auto</features>
     <analysis>Understand code → /query | Create docs → /docs | Long sessions → /session</analysis>
+    <workflows>Complex coordination → /chain | Multi-command sequences → /chain | Advanced orchestration → /chain</workflows>
   </routing>
-  <rules>Single file<50 lines → /task | Multiple files → /feature | Research → /query | System-wide → /swarm</rules>
+  <rules>Single file<50 lines → /task | Multiple files → /feature | Research → /query | System-wide → /swarm | Multi-command → /chain</rules>
 </command_selection>
 ```
 
