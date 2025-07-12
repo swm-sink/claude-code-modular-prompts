@@ -676,40 +676,41 @@ jobs:
             echo "🟢 LOW RISK: Score $RISK_SCORE/100"
           fi
           
-      - name: Semantic validation using meta-framework
+      - name: Advanced semantic validation using intelligent analyzer
         id: semantic-validation
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          echo "🧠 Performing semantic validation using meta-framework..."
+          echo "🧠 Performing advanced semantic validation..."
           
-          # Create temporary analysis prompt
-          cat > semantic_analysis.txt << 'EOF'
-          Analyze the following prompt engineering changes for semantic consistency, framework integration, and potential issues:
+          # Prepare changed files list
+          CHANGED_FILES="${{ steps.change-detection.outputs.changed_files }}"
+          echo "$CHANGED_FILES" > changed_files.txt
           
-          FRAMEWORK CONTEXT:
-          - Version: ${{ env.FRAMEWORK_VERSION }}
-          - Purpose: Personal Claude Code workflow efficiency tool
-          - Architecture: Modular composition with quality gates
-          - Standards: 85%+ quality score, TDD enforcement, security compliance
+          # Run intelligent prompt change analyzer
+          python3 scripts/prompt_change_analyzer.py \
+            --repo-root . \
+            --changed-files $(echo "$CHANGED_FILES" | tr '\n' ' ') \
+            --output analysis_report.md \
+            --json > analysis_results.json
           
-          CHANGES TO ANALYZE:
-          ${{ steps.change-detection.outputs.changed_files }}
+          ANALYZER_EXIT_CODE=$?
           
-          Please assess:
-          1. Semantic consistency with existing framework
-          2. Module dependency impacts
-          3. Quality gate compliance
-          4. Security implications
-          5. Performance impacts
+          # Extract results
+          SEMANTIC_ISSUES=$(python3 -c "import json; data=json.load(open('analysis_results.json')); print(len(data.get('semantic_issues', [])))")
+          DEPENDENCY_IMPACTS=$(python3 -c "import json; data=json.load(open('analysis_results.json')); print(len(data.get('dependency_impacts', [])))")
+          SECURITY_IMPLICATIONS=$(python3 -c "import json; data=json.load(open('analysis_results.json')); print(len(data.get('security_implications', [])))")
           
-          Provide a structured analysis with recommendations.
-          EOF
+          echo "semantic_issues=$SEMANTIC_ISSUES" >> $GITHUB_OUTPUT
+          echo "dependency_impacts=$DEPENDENCY_IMPACTS" >> $GITHUB_OUTPUT
+          echo "security_implications=$SECURITY_IMPLICATIONS" >> $GITHUB_OUTPUT
+          echo "analyzer_exit_code=$ANALYZER_EXIT_CODE" >> $GITHUB_OUTPUT
           
-          # Use Claude for semantic analysis (simulation for now)
-          echo "semantic_issues=0" >> $GITHUB_OUTPUT
-          echo "recommendations=No issues detected in semantic analysis" >> $GITHUB_OUTPUT
-          echo "✅ Semantic validation completed"
+          echo "📊 Analysis Results:"
+          echo "  • Semantic Issues: $SEMANTIC_ISSUES"
+          echo "  • Dependency Impacts: $DEPENDENCY_IMPACTS"
+          echo "  • Security Implications: $SECURITY_IMPLICATIONS"
+          echo "  • Analyzer Exit Code: $ANALYZER_EXIT_CODE"
           
       - name: Quality assessment using existing scoring
         id: quality-assessment
