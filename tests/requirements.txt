@@ -21,3 +21,6 @@ pytest-benchmark==4.0.0
 # Utilities
 coverage[toml]==7.3.2
 pre-commit==3.5.0
+
+# Security
+defusedxml==0.7.1

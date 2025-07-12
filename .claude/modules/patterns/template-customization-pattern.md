@@ -54,10 +54,10 @@
   <integration_points>
     <depends_on>
       patterns/pattern-library.md for customization patterns
-      getting-started/domain-adaptation.md for domain context
+      ../../domain/adaptation/domain-adaptation.md for domain context
     </depends_on>
     <provides_to>
-      getting-started/template-orchestration.md for template management
+      ../../domain/adaptation/template-orchestration.md for template management
       commands/adapt.md for adaptation execution
     </provides_to>
   </integration_points>

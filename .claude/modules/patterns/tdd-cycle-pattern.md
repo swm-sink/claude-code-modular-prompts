@@ -136,14 +136,14 @@
   
   <integration_points>
     <provides_to>
-      quality/quality-validation.md for comprehensive testing
+      ../../system/quality/quality-validation.md for comprehensive testing
       development/task-management.md for development workflow
-      patterns/implementation.md for code development
+      ../../patterns/implementation-pattern.md for code development
     </provides_to>
     <depends_on>
-      patterns/critical-thinking-pattern.md for test design
+      ../../prompt_eng/../../prompt_eng/patterns/thinking/critical-thinking-pattern.md for test design
       development/research-analysis.md for understanding requirements
-      quality/tdd.md for TDD enforcement framework
+      ../../system/../../system/quality/tdd.md for TDD enforcement framework
     </depends_on>
   </integration_points>
   

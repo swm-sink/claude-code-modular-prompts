@@ -72,7 +72,7 @@
       patterns/context-management-pattern.md for efficiency
     </provides_to>
     <depends_on>
-      patterns/critical-thinking-pattern.md for optimization decisions
+      ../../prompt_eng/../../prompt_eng/patterns/thinking/critical-thinking-pattern.md for optimization decisions
     </depends_on>
   </integration_points>
   

@@ -1,0 +1,292 @@
+{
+  "dry_run": false,
+  "files_fixed": 33,
+  "total_fixes": 156,
+  "fixes_by_file": {
+    ".claude/modules/domains/domain-specific-validation.md": [
+      "quality/universal-quality-gates.md \u2192 system/quality/universal-quality-gates.md",
+      "quality/domain-validation.md \u2192 system/quality/domain-validation.md"
+    ],
+    ".claude/modules/patterns/integration-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md \u2192 prompt_eng/patterns/thinking/critical-thinking-pattern.md"
+    ],
+    ".claude/modules/patterns/research-analysis-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md \u2192 prompt_eng/patterns/thinking/critical-thinking-pattern.md"
+    ],
+    ".claude/modules/patterns/validation-pattern.md": [
+      "quality/universal-quality-gates.md \u2192 system/quality/universal-quality-gates.md",
+      "quality/test-coverage.md \u2192 system/quality/test-coverage.md"
+    ],
+    ".claude/modules/patterns/configuration-analysis.md": [
+      "quality/universal-quality-gates.md \u2192 system/quality/universal-quality-gates.md"
+    ],
+    ".claude/modules/patterns/context-management-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md \u2192 prompt_eng/patterns/thinking/critical-thinking-pattern.md"
+    ],
+    ".claude/modules/patterns/parallel-execution.md": [
+      "quality/performance-validation.md \u2192 system/quality/performance-validation.md",
+      "patterns/orchestration/execution-orchestration.md \u2192 prompt_eng/patterns/orchestration/execution-orchestration.md"
+    ],
+    ".claude/modules/patterns/error-recovery-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md \u2192 prompt_eng/patterns/thinking/critical-thinking-pattern.md"
+    ],
+    ".claude/modules/patterns/multi-agent.md": [
+      "quality/universal-quality-gates.md \u2192 system/quality/universal-quality-gates.md",
+      "quality/universal-quality-gates.md \u2192 system/quality/universal-quality-gates.md",
+      "quality/tdd.md \u2192 system/quality/tdd.md",
+      "quality/tdd.md \u2192 system/quality/tdd.md",
+      "quality/critical-thinking.md \u2192 system/quality/critical-thinking.md",
+      "quality/critical-thinking.md \u2192 system/quality/critical-thinking.md",
+      "system/git/worktree-isolation.md \u2192 system/git/worktree-isolation.md",
+      "system/git/worktree-isolation.md \u2192 system/git/worktree-isolation.md",
+      "system/git/worktree-isolation.md \u2192 system/git/worktree-isolation.md",
+      "system/git/worktree-isolation.md \u2192 system/git/worktree-isolation.md",
+      "system/git/worktree-isolation.md \u2192 system/git/worktree-isolation.md",
+      "system/git/worktree-isolation.md \u2192 system/git/worktree-isolation.md",
+      "patterns/orchestration/coordination-patterns.md \u2192 prompt_eng/patterns/orchestration/coordination-patterns.md",
+      "development/complex-feature-development.md \u2192 development/feature-development.md"
+    ],
+    ".claude/modules/patterns/performance-optimization.md": [
+      "quality/performance-validation.md \u2192 system/quality/performance-validation.md"
+    ],
+    ".claude/modules/patterns/quality-validation-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md \u2192 prompt_eng/patterns/thinking/critical-thinking-pattern.md"
+    ],
+    ".claude/modules/patterns/deterministic-execution-engine.md": [
+      "quality/universal-quality-gates.md \u2192 system/quality/universal-quality-gates.md",
+      "patterns/visualization/prompt-construction-visualization.md \u2192 prompt_eng/patterns/visualization/prompt-construction-visualization.md",
+      "patterns/visualization/runtime-execution-dashboard.md \u2192 prompt_eng/patterns/visualization/runtime-execution-dashboard.md"
+    ],
+    ".claude/modules/patterns/setup-orchestration-pattern.md": [
+      "quality/universal-quality-gates.md \u2192 system/quality/universal-quality-gates.md"
+    ],
+    ".claude/modules/patterns/validation-reporting.md": [
+      "quality/universal-quality-gates.md \u2192 system/quality/universal-quality-gates.md",
+      "quality/comprehensive-testing.md \u2192 system/quality/comprehensive-testing.md"
+    ],
+    ".claude/modules/patterns/documentation-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md \u2192 prompt_eng/patterns/thinking/critical-thinking-pattern.md"
+    ],
+    ".claude/modules/patterns/implementation-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md \u2192 prompt_eng/patterns/thinking/critical-thinking-pattern.md"
+    ],
+    ".claude/modules/patterns/error-recovery.md": [
+      "quality/universal-quality-gates.md \u2192 system/quality/universal-quality-gates.md"
+    ],
+    ".claude/modules/patterns/tdd-cycle-pattern.md": [
+      "quality/tdd.md \u2192 system/quality/tdd.md",
+      "quality/quality-validation.md \u2192 system/quality/quality-validation.md",
+      "patterns/thinking/critical-thinking-pattern.md \u2192 prompt_eng/patterns/thinking/critical-thinking-pattern.md"
+    ],
+    ".claude/modules/patterns/pattern-library.md": [
+      "quality/universal-quality-gates.md \u2192 system/quality/universal-quality-gates.md",
+      "quality/tdd.md \u2192 system/quality/tdd.md",
+      "quality/tdd.md \u2192 system/quality/tdd.md",
+      "quality/tdd.md \u2192 system/quality/tdd.md",
+      "quality/tdd.md \u2192 system/quality/tdd.md",
+      "quality/tdd.md \u2192 system/quality/tdd.md",
+      "quality/critical-thinking.md \u2192 system/quality/critical-thinking.md",
+      "quality/critical-thinking.md \u2192 system/quality/critical-thinking.md",
+      "quality/production-standards.md \u2192 system/quality/production-standards.md",
+      "quality/test-coverage.md \u2192 system/quality/test-coverage.md",
+      "quality/test-coverage.md \u2192 system/quality/test-coverage.md",
+      "quality/performance-validation.md \u2192 system/quality/performance-validation.md",
+      "quality/performance-validation.md \u2192 system/quality/performance-validation.md",
+      "quality/domain-validation.md \u2192 system/quality/domain-validation.md",
+      "meta/adaptation-validation.md \u2192 meta/validation/adaptation-validation.md",
+      "meta/adaptation-validation.md \u2192 meta/validation/adaptation-validation.md",
+      "meta/adaptation-validation.md \u2192 meta/validation/adaptation-validation.md",
+      "quality/domain-documentation.md \u2192 system/quality/domain-documentation.md",
+      "quality/security-validation.md \u2192 system/quality/security-validation.md",
+      "quality/security-validation.md \u2192 system/quality/security-validation.md",
+      "quality/setup-validation.md \u2192 system/quality/setup-validation.md",
+      "quality/setup-validation.md \u2192 system/quality/setup-validation.md",
+      "quality/feature-validation.md \u2192 system/quality/feature-validation.md",
+      "quality/compliance-validation.md \u2192 system/quality/compliance-validation.md",
+      "quality/compliance-validation.md \u2192 system/quality/compliance-validation.md",
+      "quality/compliance-validation.md \u2192 system/quality/compliance-validation.md",
+      "quality/general-validation.md \u2192 system/quality/general-validation.md",
+      "quality/general-validation.md \u2192 system/quality/general-validation.md",
+      "patterns/composition/module-composition-framework.md \u2192 prompt_eng/patterns/composition/module-composition-framework.md",
+      "patterns/composition/module-composition-framework.md \u2192 prompt_eng/patterns/composition/module-composition-framework.md",
+      "patterns/composition/module-composition-framework.md \u2192 prompt_eng/patterns/composition/module-composition-framework.md",
+      "patterns/thinking-pattern-template.md \u2192 prompt_eng/patterns/thinking/thinking-pattern-template.md",
+      "patterns/thinking-pattern-template.md \u2192 prompt_eng/patterns/thinking/thinking-pattern-template.md",
+      "patterns/thinking-pattern-template.md \u2192 prompt_eng/patterns/thinking/thinking-pattern-template.md",
+      "patterns/optimization.md \u2192 patterns/performance-optimization.md",
+      "patterns/optimization.md \u2192 patterns/performance-optimization.md",
+      "patterns/optimization.md \u2192 patterns/performance-optimization.md",
+      "getting-started/template-systems.md \u2192 domain/templates/template-systems.md",
+      "getting-started/template-systems.md \u2192 domain/templates/template-systems.md",
+      "getting-started/template-systems.md \u2192 domain/templates/template-systems.md",
+      "getting-started/domain-specific-validation.md \u2192 domain/validation/domain-specific-validation.md",
+      "getting-started/domain-specific-validation.md \u2192 domain/validation/domain-specific-validation.md",
+      "getting-started/domain-specific-validation.md \u2192 domain/validation/domain-specific-validation.md",
+      "development/configuration-analysis.md \u2192 development/analysis/configuration-analysis.md",
+      "development/configuration-analysis.md \u2192 development/analysis/configuration-analysis.md",
+      "development/conventional-commits.md \u2192 development/git/conventional-commits.md",
+      "development/reproduce-issue.md \u2192 development/debugging/reproduce-issue.md",
+      "development/reproduce-issue.md \u2192 development/debugging/reproduce-issue.md",
+      "development/reproduce-issue.md \u2192 development/debugging/reproduce-issue.md",
+      "planning/mvp-strategy.md \u2192 planning/strategy/mvp-strategy.md",
+      "testing/comprehensive-testing.md \u2192 system/testing/comprehensive-testing.md",
+      "testing/comprehensive-testing.md \u2192 system/testing/comprehensive-testing.md"
+    ],
+    ".claude/modules/patterns/performance-optimization-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md \u2192 prompt_eng/patterns/thinking/critical-thinking-pattern.md"
+    ],
+    ".claude/modules/patterns/user-interaction-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md \u2192 prompt_eng/patterns/thinking/critical-thinking-pattern.md"
+    ],
+    ".claude/modules/patterns/intelligent-routing.md": [
+      "quality/critical-thinking.md \u2192 system/quality/critical-thinking.md",
+      "quality/critical-thinking.md \u2192 system/quality/critical-thinking.md"
+    ],
+    ".claude/modules/development/task-management.md": [
+      "quality/tdd.md \u2192 system/quality/tdd.md",
+      "quality/critical-thinking.md \u2192 system/quality/critical-thinking.md",
+      "quality/tdd-enforcement.md \u2192 system/quality/tdd-enforcement.md",
+      "quality/tdd-enforcement.md \u2192 system/quality/tdd-enforcement.md",
+      "quality/tdd-enforcement.md \u2192 system/quality/tdd-enforcement.md",
+      "quality/security-gate-verification.md \u2192 system/quality/security-gate-verification.md",
+      "quality/security-gate-verification.md \u2192 system/quality/security-gate-verification.md",
+      "quality/security-gate-verification.md \u2192 system/quality/security-gate-verification.md",
+      "quality/performance-gates.md \u2192 system/quality/performance-gates.md",
+      "quality/performance-gates.md \u2192 system/quality/performance-gates.md",
+      "quality/performance-gates.md \u2192 system/quality/performance-gates.md",
+      "quality/gate-verification.md \u2192 system/quality/gate-verification.md",
+      "quality/gate-verification.md \u2192 system/quality/gate-verification.md",
+      "quality/gate-verification.md \u2192 system/quality/gate-verification.md",
+      "quality/gate-verification.md \u2192 system/quality/gate-verification.md",
+      "quality/production-standards.md \u2192 system/quality/production-standards.md"
+    ],
+    ".claude/modules/development/research-analysis.md": [
+      "quality/critical-thinking.md \u2192 system/quality/critical-thinking.md",
+      "quality/critical-thinking.md \u2192 system/quality/critical-thinking.md",
+      "quality/critical-thinking.md \u2192 system/quality/critical-thinking.md"
+    ],
+    ".claude/modules/development/prompt-engineering.md": [
+      "quality/tdd.md \u2192 system/quality/tdd.md",
+      "quality/production-standards.md \u2192 system/quality/production-standards.md",
+      "security/audit.md \u2192 system/security/audit.md"
+    ],
+    ".claude/modules/development/code-review.md": [
+      "quality/tdd.md \u2192 system/quality/tdd.md",
+      "quality/production-standards.md \u2192 system/quality/production-standards.md",
+      "quality/pre-commit.md \u2192 system/quality/pre-commit.md",
+      "system/git/git-operations.md \u2192 system/git/git-operations.md",
+      "system/git/git-operations.md \u2192 system/git/git-operations.md",
+      "system/git/git-operations.md \u2192 system/git/git-operations.md",
+      "system/git/git-operations.md \u2192 system/git/git-operations.md",
+      "system/git/git-operations.md \u2192 system/git/git-operations.md",
+      "system/git/git-operations.md \u2192 system/git/git-operations.md"
+    ],
+    ".claude/modules/development/documentation.md": [
+      "quality/critical-thinking.md \u2192 system/quality/critical-thinking.md",
+      "quality/critical-thinking.md \u2192 system/quality/critical-thinking.md"
+    ],
+    ".claude/modules/planning/feature-workflow.md": [
+      "quality/tdd.md \u2192 system/quality/tdd.md",
+      "quality/tdd-enforcement.md \u2192 system/quality/tdd-enforcement.md",
+      "quality/tdd-enforcement.md \u2192 system/quality/tdd-enforcement.md",
+      "quality/security-gate-verification.md \u2192 system/quality/security-gate-verification.md",
+      "quality/security-gate-verification.md \u2192 system/quality/security-gate-verification.md",
+      "quality/performance-gates.md \u2192 system/quality/performance-gates.md",
+      "quality/performance-gates.md \u2192 system/quality/performance-gates.md",
+      "quality/gate-verification.md \u2192 system/quality/gate-verification.md",
+      "quality/gate-verification.md \u2192 system/quality/gate-verification.md",
+      "quality/production-standards.md \u2192 system/quality/production-standards.md",
+      "quality/production-standards.md \u2192 system/quality/production-standards.md",
+      "quality/production-standards.md \u2192 system/quality/production-standards.md",
+      "planning/prd-generation.md \u2192 planning/prd/prd-generation.md",
+      "planning/prd-generation.md \u2192 planning/prd/prd-generation.md",
+      "planning/prd-generation.md \u2192 planning/prd/prd-generation.md",
+      "planning/mvp-strategy.md \u2192 planning/strategy/mvp-strategy.md",
+      "planning/mvp-strategy.md \u2192 planning/strategy/mvp-strategy.md",
+      "planning/mvp-strategy.md \u2192 planning/strategy/mvp-strategy.md",
+      "planning/intelligent-prd.md \u2192 planning/prd/intelligent-prd.md",
+      "planning/intelligent-prd.md \u2192 planning/prd/intelligent-prd.md",
+      "planning/prd-core.md \u2192 planning/prd/prd-core.md",
+      "planning/prd-core.md \u2192 planning/prd/prd-core.md",
+      "modules/testing/iterative-testing.md \u2192 system/testing/iterative-testing.md"
+    ],
+    ".claude/modules/meta/safety-validator.md": [
+      "quality/universal-quality-gates.md \u2192 system/quality/universal-quality-gates.md"
+    ],
+    ".claude/modules/meta/human-oversight.md": [
+      "quality/universal-quality-gates.md \u2192 system/quality/universal-quality-gates.md"
+    ],
+    ".claude/modules/meta/context-aware-module-generator.md": [
+      "patterns/composition/module-composition-framework.md \u2192 prompt_eng/patterns/composition/module-composition-framework.md"
+    ],
+    ".claude/modules/getting-started/domain-classification.md": [
+      "quality/domain-validation.md \u2192 system/quality/domain-validation.md"
+    ],
+    ".claude/modules/getting-started/project-initialization.md": [
+      "quality/universal-quality-gates.md \u2192 system/quality/universal-quality-gates.md"
+    ]
+  },
+  "reference_mapping": {
+    "quality/universal-quality-gates.md": "system/quality/universal-quality-gates.md",
+    "quality/tdd.md": "system/quality/tdd.md",
+    "quality/critical-thinking.md": "system/quality/critical-thinking.md",
+    "quality/tdd-enforcement.md": "system/quality/tdd-enforcement.md",
+    "quality/security-gate-verification.md": "system/quality/security-gate-verification.md",
+    "quality/performance-gates.md": "system/quality/performance-gates.md",
+    "quality/gate-verification.md": "system/quality/gate-verification.md",
+    "quality/production-standards.md": "system/quality/production-standards.md",
+    "quality/pre-commit.md": "system/quality/pre-commit.md",
+    "quality/test-coverage.md": "system/quality/test-coverage.md",
+    "quality/performance-validation.md": "system/quality/performance-validation.md",
+    "quality/domain-validation.md": "system/quality/domain-validation.md",
+    "quality/error-recovery.md": "patterns/error-recovery.md",
+    "patterns/critical-thinking-pattern.md": "prompt_eng/patterns/thinking/critical-thinking-pattern.md",
+    "patterns/git-operations.md": "system/git/git-operations.md",
+    "patterns/session-management.md": "system/session/session-management.md",
+    "patterns/module-composition-framework.md": "prompt_eng/patterns/composition/module-composition-framework.md",
+    "patterns/implementation.md": "patterns/implementation-pattern.md",
+    "patterns/coordination-patterns.md": "prompt_eng/patterns/orchestration/coordination-patterns.md",
+    "patterns/execution-orchestration.md": "prompt_eng/patterns/orchestration/execution-orchestration.md",
+    "patterns/prompt-construction-visualization.md": "prompt_eng/patterns/visualization/prompt-construction-visualization.md",
+    "patterns/runtime-execution-dashboard.md": "prompt_eng/patterns/visualization/runtime-execution-dashboard.md",
+    "getting-started/template-orchestration.md": "domain/adaptation/template-orchestration.md",
+    "getting-started/domain-templates.md": "domain/templates/README.md",
+    "getting-started/adaptation-validation.md": "domain/adaptation/adaptation-validation.md",
+    "getting-started/domain-adaptation.md": "domain/adaptation/domain-adaptation.md",
+    "development/knowledge-management.md": "development/documentation/knowledge-management.md",
+    "security/audit.md": "system/security/audit.md",
+    "system/git/worktree-isolation.md": "system/git/worktree-isolation.md",
+    "meta/framework-evolver.md": "meta/evolution/framework-evolver.md",
+    "meta/adaptation-validation.md": "meta/validation/adaptation-validation.md",
+    "quality/comprehensive-testing.md": "system/quality/comprehensive-testing.md",
+    "quality/quality-validation.md": "system/quality/quality-validation.md",
+    "quality/domain-documentation.md": "system/quality/domain-documentation.md",
+    "quality/security-validation.md": "system/quality/security-validation.md",
+    "quality/setup-validation.md": "system/quality/setup-validation.md",
+    "quality/feature-validation.md": "system/quality/feature-validation.md",
+    "quality/compliance-validation.md": "system/quality/compliance-validation.md",
+    "quality/general-validation.md": "system/quality/general-validation.md",
+    "patterns/thinking/critical-thinking-pattern.md": "prompt_eng/patterns/thinking/critical-thinking-pattern.md",
+    "patterns/composition/module-composition-framework.md": "prompt_eng/patterns/composition/module-composition-framework.md",
+    "patterns/orchestration/coordination-patterns.md": "prompt_eng/patterns/orchestration/coordination-patterns.md",
+    "patterns/orchestration/execution-orchestration.md": "prompt_eng/patterns/orchestration/execution-orchestration.md",
+    "patterns/visualization/prompt-construction-visualization.md": "prompt_eng/patterns/visualization/prompt-construction-visualization.md",
+    "patterns/visualization/runtime-execution-dashboard.md": "prompt_eng/patterns/visualization/runtime-execution-dashboard.md",
+    "patterns/thinking-pattern-template.md": "prompt_eng/patterns/thinking/thinking-pattern-template.md",
+    "patterns/optimization.md": "patterns/performance-optimization.md",
+    "getting-started/template-systems.md": "domain/templates/template-systems.md",
+    "getting-started/domain-specific-validation.md": "domain/validation/domain-specific-validation.md",
+    "development/complex-feature-development.md": "development/feature-development.md",
+    "development/configuration-analysis.md": "development/analysis/configuration-analysis.md",
+    "development/conventional-commits.md": "development/git/conventional-commits.md",
+    "development/reproduce-issue.md": "development/debugging/reproduce-issue.md",
+    "planning/prd-generation.md": "planning/prd/prd-generation.md",
+    "planning/mvp-strategy.md": "planning/strategy/mvp-strategy.md",
+    "planning/intelligent-prd.md": "planning/prd/intelligent-prd.md",
+    "planning/prd-core.md": "planning/prd/prd-core.md",
+    "testing/comprehensive-testing.md": "system/testing/comprehensive-testing.md",
+    "modules/testing/iterative-testing.md": "system/testing/iterative-testing.md",
+    "modules/planning/mvp-strategy.md": "planning/strategy/mvp-strategy.md",
+    "system/git/git-operations.md": "system/git/git-operations.md"
+  }
+}

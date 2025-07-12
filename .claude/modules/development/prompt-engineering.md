@@ -170,8 +170,8 @@
       /feature delegates to:
       - planning/feature-workflow.md (main orchestration)
       - development/task-management.md (implementation)
-      - quality/tdd.md (testing standards)
-      - security/audit.md (security validation)
+      - ../../system/../../system/quality/tdd.md (testing standards)
+      - ../../system/../../system/security/audit.md (security validation)
     </example>
   </command_composition>
   
@@ -182,7 +182,7 @@
   
   <quality_enforcement>
     <description>Mandatory quality enforcement through specialized modules</description>
-    <implementation>quality/production-standards.md</implementation>
+    <implementation>../../system/../../system/quality/production-standards.md</implementation>
   </quality_enforcement>
   
 </advanced_patterns>

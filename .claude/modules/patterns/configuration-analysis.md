@@ -54,7 +54,7 @@
   <integration_points>
     <depends_on>
       patterns/pattern-library.md for analysis patterns
-      quality/universal-quality-gates.md for validation standards
+      ../../system/../../system/quality/universal-quality-gates.md for validation standards
     </depends_on>
     <provides_to>
       commands/validate.md for validation execution

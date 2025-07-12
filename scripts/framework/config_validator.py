@@ -10,7 +10,12 @@ Version: 1.0.0
 Date: 2025-07-11
 """
 
-import xml.etree.ElementTree as ET
+try:
+    import defusedxml.ElementTree as ET
+except ImportError:
+    import xml.etree.ElementTree as ET
+    import warnings
+    warnings.warn("defusedxml not available, using standard XML parser. Install defusedxml for better security.")
 from pathlib import Path
 from typing import Dict, List, Any, Tuple, Optional
 import logging

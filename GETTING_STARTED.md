@@ -49,6 +49,66 @@ cp claude-code-modular-prompts/PROJECT_CONFIG.xml your-project/
 
 ## 🎯 How to Actually Initialize Framework 3.0
 
+### Easy Setup with Init Commands (RECOMMENDED)
+
+**🚀 NEW: Automatic Setup Commands** - Skip manual configuration entirely:
+
+#### For Existing Projects (1 minute)
+```bash
+# Copy framework files
+cp -r claude-code-modular-prompts/.claude your-project/
+cp claude-code-modular-prompts/CLAUDE.md your-project/
+cd your-project/
+
+# Auto-configure based on your existing code
+/init-custom
+# → Analyzes your codebase, detects tech stack
+# → Automatically generates PROJECT_CONFIG.xml
+# → Framework adapts to YOUR existing patterns
+```
+
+#### For New Projects (1 minute)
+```bash
+# Copy framework files  
+cp -r claude-code-modular-prompts/.claude your-new-project/
+cp claude-code-modular-prompts/CLAUDE.md your-new-project/
+cd your-new-project/
+
+# Interactive setup wizard
+/init-new  
+# → Asks questions about your project
+# → Generates optimized PROJECT_CONFIG.xml
+# → Sets up framework for your specific needs
+```
+
+#### For Research-Driven Setup (2 minutes)
+```bash
+# Copy framework files
+cp -r claude-code-modular-prompts/.claude your-project/
+cp claude-code-modular-prompts/CLAUDE.md your-project/
+cd your-project/
+
+# Research best practices for your domain
+/init-research
+# → Searches current best practices for your domain
+# → Generates evidence-based configuration
+# → Applies latest 2025 patterns and standards
+```
+
+#### For Comprehensive Validation (3 minutes)
+```bash
+# After any setup, validate everything works
+/init-validate
+# → Spawns 6 specialized validation agents
+# → Comprehensive framework validation
+# → Generates detailed validation report
+# → Fixes any issues automatically
+```
+
+### Manual Configuration (Alternative)
+
+If you prefer manual setup or need custom configuration:
+
 ### Step 1: Copy Framework Files (30 seconds)
 ```bash
 # Clone framework
@@ -502,10 +562,13 @@ Framework 3.0 automatically adapts to YOUR project domain:
 git clone https://github.com/swm-sink/claude-code-modular-prompts.git
 cp -r claude-code-modular-prompts/.claude your-new-project/
 cp claude-code-modular-prompts/CLAUDE.md your-new-project/
-cp claude-code-modular-prompts/PROJECT_CONFIG.xml your-new-project/
+cd your-new-project/
 
-# 2. Configure for your project type
-# Edit PROJECT_CONFIG.xml with your tech stack and preferences
+# 2. Automatic setup (NEW!)
+/init-new
+# → Interactive questionnaire
+# → Generates PROJECT_CONFIG.xml automatically
+# → Framework configures for your specific needs
 
 # 3. Start building  
 /auto "set up React app with authentication"
@@ -519,11 +582,14 @@ git add . && git commit -m "backup before framework integration"
 # 2. Add framework
 cp -r claude-code-modular-prompts/.claude .
 cp claude-code-modular-prompts/CLAUDE.md .
-cp claude-code-modular-prompts/PROJECT_CONFIG.xml .
 
-# 3. Configure PROJECT_CONFIG.xml to match your existing project
+# 3. Automatic configuration (NEW!)
+/init-custom
+# → Analyzes your existing codebase
+# → Detects patterns and tech stack
+# → Generates PROJECT_CONFIG.xml automatically
 
-# 4. Start with research
+# 4. Start with enhanced capabilities
 /query "analyze the current architecture"
 /task "add feature X using existing patterns"
 ```
@@ -649,7 +715,12 @@ python ../claude-code-modular-prompts/scripts/framework/config_validator.py
 
 ### "I want to use a different project template"
 ```bash
-# SOLUTION: Customize the default template for your specific needs:
+# SOLUTION: Use the new init commands for automatic setup:
+/init-new        # Interactive setup for new projects
+/init-custom     # Auto-configure based on existing code
+/init-research   # Research-driven configuration for your domain
+
+# Or manually customize the template:
 # Edit PROJECT_CONFIG.xml to match your project structure, tech stack, and requirements
 ```
 

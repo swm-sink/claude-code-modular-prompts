@@ -89,7 +89,7 @@
         Research insights integrated into TDD cycle implementation
         RISE framework steps followed for structured development
         TDD cycle strictly followed: RED-GREEN-REFACTOR
-        Test coverage maintained per quality/tdd.md standards
+        Test coverage maintained per ../../system/../../system/quality/tdd.md standards
         Code quality gates enforced throughout development
       </requirements>
       <actions>
@@ -112,10 +112,10 @@
     
     <phase name="quality_verification" order="3">
       <requirements>
-        TDD enforcement evidence collected per quality/tdd-enforcement.md
-        Security verification completed per quality/security-gate-verification.md
-        Performance benchmarks validated per quality/performance-gates.md
-        Comprehensive quality gates passed per quality/gate-verification.md
+        TDD enforcement evidence collected per ../../system/../../system/quality/tdd-enforcement.md
+        Security verification completed per ../../system/../../system/quality/security-gate-verification.md
+        Performance benchmarks validated per ../../system/../../system/quality/performance-gates.md
+        Comprehensive quality gates passed per ../../system/../../system/quality/gate-verification.md
       </requirements>
       <actions>
         Execute TDD enforcement verification with evidence collection
@@ -138,10 +138,10 @@
   <quality_gates enforcement="strict">
     <gate name="research_first_validation" requirement="Research-first methodology properly applied with context understanding" blocking="true"/>
     <gate name="rise_framework_integration" requirement="RISE framework integration validated with structured development approach" blocking="true"/>
-    <gate name="tdd_enforcement" requirement="Mandatory TDD enforcement per quality/tdd-enforcement.md" blocking="true"/>
-    <gate name="security_verification" requirement="Security gate verification per quality/security-gate-verification.md" blocking="true"/>
-    <gate name="performance_benchmarks" requirement="Performance gates per quality/performance-gates.md" blocking="true"/>
-    <gate name="gate_verification" requirement="Comprehensive quality gate verification per quality/gate-verification.md" blocking="true"/>
+    <gate name="tdd_enforcement" requirement="Mandatory TDD enforcement per ../../system/../../system/quality/tdd-enforcement.md" blocking="true"/>
+    <gate name="security_verification" requirement="Security gate verification per ../../system/../../system/quality/security-gate-verification.md" blocking="true"/>
+    <gate name="performance_benchmarks" requirement="Performance gates per ../../system/../../system/quality/performance-gates.md" blocking="true"/>
+    <gate name="gate_verification" requirement="Comprehensive quality gate verification per ../../system/../../system/quality/gate-verification.md" blocking="true"/>
     <gate name="code_quality" requirement="Zero linting errors, clean type checking" blocking="true"/>
     <gate name="integration_testing" requirement="All integration scenarios tested successfully" blocking="false"/>
   </quality_gates>
@@ -183,16 +183,16 @@
   
   <integration_points>
     <depends_on>
-      quality/tdd-enforcement.md for non-bypassable TDD enforcement
-      quality/security-gate-verification.md for security verification
-      quality/performance-gates.md for performance benchmarking
-      quality/gate-verification.md for comprehensive quality gate orchestration
-      quality/critical-thinking.md for requirement analysis
-      patterns/session-management.md for session decisions
+      ../../system/../../system/quality/tdd-enforcement.md for non-bypassable TDD enforcement
+      ../../system/../../system/quality/security-gate-verification.md for security verification
+      ../../system/../../system/quality/performance-gates.md for performance benchmarking
+      ../../system/../../system/quality/gate-verification.md for comprehensive quality gate orchestration
+      ../../system/../../system/quality/critical-thinking.md for requirement analysis
+      ../../system/session/session-management.md for session decisions
     </depends_on>
     <provides_to>
-      quality/gate-verification.md for task-level quality gate results
-      quality/production-standards.md for production standards integration
+      ../../system/../../system/quality/gate-verification.md for task-level quality gate results
+      ../../system/../../system/quality/production-standards.md for production standards integration
       patterns/multi-agent.md for escalation triggers
     </provides_to>
   </integration_points>

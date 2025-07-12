@@ -17,10 +17,10 @@
   </purpose>
   
   <thinking_pattern enforcement="MANDATORY">
-    <step>1. Generate comprehensive PRD using planning/prd-generation.md patterns</step>
+    <step>1. Generate comprehensive PRD using ../../planning/prd/prd-generation.md patterns</step>
     <step>2. Auto-detect tech stack and existing patterns in codebase</step>
     <step>3. Create GitHub session for tracking ALWAYS</step>
-    <step>4. Define MVP using planning/mvp-strategy.md with clear phases</step>
+    <step>4. Define MVP using ../../planning/strategy/mvp-strategy.md with clear phases</step>
     <step>5. Calculate complexity: >15 score triggers delegation to /swarm</step>
     <step>6. Execute with TDD: Write ALL tests FIRST before implementation</step>
     <step>7. Apply quality gates from production-standards.md throughout</step>
@@ -43,8 +43,8 @@
         Stakeholder approval obtained before proceeding
       </requirements>
       <actions>
-        Delegate to planning/prd-generation.md for manual PRD OR planning/intelligent-prd.md for autonomous PRD creation
-        Ensure all PRD standards from planning/prd-core.md are followed
+        Delegate to ../../planning/prd/prd-generation.md for manual PRD OR ../../planning/prd/intelligent-prd.md for autonomous PRD creation
+        Ensure all PRD standards from ../../planning/prd/prd-core.md are followed
         Conduct stakeholder review and approval process
         Define clear success metrics and KPIs
         Document assumptions and constraints
@@ -72,7 +72,7 @@
         Implementation timeline established
       </requirements>
       <actions>
-        Delegate to modules/planning/mvp-strategy.md for MVP definition
+        Delegate to modules/../../planning/strategy/mvp-strategy.md for MVP definition
         Prioritize features using MoSCoW method
         Design technical architecture with scalability considerations
         Create implementation roadmap with milestones
@@ -100,14 +100,14 @@
         Progressive enhancement approach maintained
       </requirements>
       <actions>
-        Delegate to modules/testing/iterative-testing.md for TDD implementation
+        Delegate to ../../system/testing/iterative-testing.md for TDD implementation
         Implement feature in small, testable increments
         Conduct regular stakeholder demos and feedback sessions
         Maintain high test coverage with quality assertions
       </actions>
       <validation>
         All code follows TDD RED-GREEN-REFACTOR cycle
-        Test coverage maintained per quality/tdd.md standards throughout development
+        Test coverage maintained per ../../system/../../system/quality/tdd.md standards throughout development
         Stakeholder feedback integrated at each iteration
         No regression bugs introduced during development
       </validation>
@@ -128,7 +128,7 @@
         User experience validated through testing
       </requirements>
       <actions>
-        Delegate to modules/quality/production-standards.md for validation execution
+        Delegate to modules/../../system/../../system/quality/production-standards.md for validation execution
         Execute comprehensive test suite including integration tests
         Conduct performance testing and optimization
         Perform security review and vulnerability assessment
@@ -180,10 +180,10 @@
   <quality_gates enforcement="strict">
     <gate name="prd_approval" requirement="Complete PRD with stakeholder sign-off" blocking="true"/>
     <gate name="mvp_definition" requirement="Clear MVP scope with technical feasibility" blocking="true"/>
-    <gate name="tdd_enforcement" requirement="Mandatory TDD enforcement per quality/tdd-enforcement.md" blocking="true"/>
-    <gate name="security_verification" requirement="Security gate verification per quality/security-gate-verification.md" blocking="true"/>
-    <gate name="performance_benchmarks" requirement="Performance gates per quality/performance-gates.md" blocking="true"/>
-    <gate name="gate_verification" requirement="Comprehensive quality gate verification per quality/gate-verification.md" blocking="true"/>
+    <gate name="tdd_enforcement" requirement="Mandatory TDD enforcement per ../../system/../../system/quality/tdd-enforcement.md" blocking="true"/>
+    <gate name="security_verification" requirement="Security gate verification per ../../system/../../system/quality/security-gate-verification.md" blocking="true"/>
+    <gate name="performance_benchmarks" requirement="Performance gates per ../../system/../../system/quality/performance-gates.md" blocking="true"/>
+    <gate name="gate_verification" requirement="Comprehensive quality gate verification per ../../system/../../system/quality/gate-verification.md" blocking="true"/>
     <gate name="user_acceptance" requirement="All acceptance criteria validated" blocking="true"/>
     <gate name="deployment_readiness" requirement="Production deployment approved" blocking="true"/>
   </quality_gates>
@@ -212,25 +212,25 @@
   
   <integration_points>
     <depends_on>
-      planning/prd-core.md for shared PRD standards and templates
-      planning/prd-generation.md OR planning/intelligent-prd.md for PRD creation process
-      planning/mvp-strategy.md for MVP definition methodology
-      quality/tdd-enforcement.md for non-bypassable TDD enforcement
-      quality/security-gate-verification.md for security verification
-      quality/performance-gates.md for performance benchmarking
-      quality/gate-verification.md for comprehensive quality gate orchestration
-      quality/production-standards.md for validation procedures
-      patterns/session-management.md for GitHub issue integration
+      ../../planning/prd/prd-core.md for shared PRD standards and templates
+      ../../planning/prd/prd-generation.md OR ../../planning/prd/intelligent-prd.md for PRD creation process
+      ../../planning/strategy/mvp-strategy.md for MVP definition methodology
+      ../../system/../../system/quality/tdd-enforcement.md for non-bypassable TDD enforcement
+      ../../system/../../system/quality/security-gate-verification.md for security verification
+      ../../system/../../system/quality/performance-gates.md for performance benchmarking
+      ../../system/../../system/quality/gate-verification.md for comprehensive quality gate orchestration
+      ../../system/../../system/quality/production-standards.md for validation procedures
+      ../../system/session/session-management.md for GitHub issue integration
     </depends_on>
     <provides_to>
       Commands/feature.md for complete feature development workflow
-      quality/production-standards.md for feature quality requirements
+      ../../system/../../system/quality/production-standards.md for feature quality requirements
       patterns/multi-agent.md for complex feature coordination
     </provides_to>
     <smart_planning_integration>
       <prd_mode_selection>Automatically selects between manual and intelligent PRD based on context complexity</prd_mode_selection>
       <quality_integration>All quality modules (tdd.md, feature-validation.md, production-standards.md) integrated at appropriate workflow steps</quality_integration>
-      <pattern_integration>Leverages patterns/session-management.md for coordination and patterns/multi-agent.md for complex features</pattern_integration>
+      <pattern_integration>Leverages ../../system/session/session-management.md for coordination and patterns/multi-agent.md for complex features</pattern_integration>
     </smart_planning_integration>
   </integration_points>
   

@@ -57,12 +57,12 @@
   <integration_points>
     <depends_on>
       getting-started/domain-classification.md for domain detection
-      getting-started/template-orchestration.md for template management
-      quality/universal-quality-gates.md for validation setup
+      ../../domain/adaptation/template-orchestration.md for template management
+      ../../system/../../system/quality/universal-quality-gates.md for validation setup
     </depends_on>
     <provides_to>
       All commands for basic framework functionality
-      getting-started/adaptation-validation.md for setup verification
+      ../../domain/adaptation/adaptation-validation.md for setup verification
     </provides_to>
   </integration_points>
   

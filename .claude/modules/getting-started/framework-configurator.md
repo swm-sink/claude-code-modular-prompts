@@ -57,12 +57,12 @@
   <integration_points>
     <depends_on>
       getting-started/domain-classification.md for domain identification
-      getting-started/template-orchestration.md for template management
+      ../../domain/adaptation/template-orchestration.md for template management
       patterns/configuration-pattern.md for configuration standards
     </depends_on>
     <provides_to>
       All commands for domain-specific functionality
-      getting-started/adaptation-validation.md for configuration verification
+      ../../domain/adaptation/adaptation-validation.md for configuration verification
     </provides_to>
   </integration_points>
   

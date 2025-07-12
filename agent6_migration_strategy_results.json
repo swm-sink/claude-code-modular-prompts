@@ -1,0 +1,1167 @@
+{
+  "analysis_timestamp": "2025-07-11T22:34:30.550301",
+  "agent": "Agent 6 - Migration Strategist",
+  "strategy_summary": {
+    "architecture_source": "Agent 5 unified design",
+    "execution_phases": 5,
+    "automation_scripts": 13,
+    "total_duration_estimate": "3.5 hours",
+    "risk_level": "LOW (comprehensive mitigation)",
+    "rollback_capability": "COMPLETE (git-based)"
+  },
+  "migration_requirements": {
+    "architecture_blueprint": {
+      "target_structure": {
+        ".claude/": {
+          "purpose": "Framework root - all Claude Code components",
+          "enforcement": "MANDATORY",
+          "subdirectories": {
+            "commands/": {
+              "purpose": "All command definitions (delegate only)",
+              "source_consolidation": [
+                "existing .claude/commands/",
+                "scattered command files"
+              ],
+              "file_count_target": "21 command files",
+              "rationale": "Agent 4 found 13/21 commands functional - centralize all"
+            },
+            "modules/": {
+              "purpose": "All implementation modules (single hierarchy)",
+              "source_consolidation": [
+                ".claude/modules/",
+                ".claude/prompt_eng/modules/",
+                "scattered module directories"
+              ],
+              "subdirectories": {
+                "quality/": {
+                  "purpose": "Quality gates, TDD, testing frameworks",
+                  "source": "Consolidate all quality modules",
+                  "protection": "Agent 4 found 100% accessible - preserve all"
+                },
+                "patterns/": {
+                  "purpose": "All pattern modules (SINGLE SOURCE)",
+                  "source_consolidation": [
+                    ".claude/modules/patterns/",
+                    ".claude/prompt_eng/patterns/"
+                  ],
+                  "rationale": "Agent 2 found CRITICAL pattern duplication"
+                },
+                "development/": {
+                  "purpose": "Development workflow modules",
+                  "source": "Consolidate development modules"
+                },
+                "meta/": {
+                  "purpose": "Meta-framework capabilities",
+                  "source": "Preserve meta modules"
+                },
+                "security/": {
+                  "purpose": "Security validation modules",
+                  "source": "Consolidate security modules"
+                }
+              }
+            },
+            "system/": {
+              "purpose": "System infrastructure (context, session, git)",
+              "source_consolidation": [
+                "existing .claude/system/",
+                "system scattered files"
+              ],
+              "subdirectories": {
+                "context/": {
+                  "purpose": "Context management"
+                },
+                "session/": {
+                  "purpose": "Session management"
+                },
+                "git/": {
+                  "purpose": "Git operations"
+                }
+              }
+            },
+            "prompt_eng/": {
+              "purpose": "Pure prompt engineering (frameworks, personas)",
+              "note": "Remove modules/ and patterns/ subdirs (moved to .claude/modules/)",
+              "subdirectories": {
+                "frameworks/": {
+                  "purpose": "RISE, TRACE, CARE frameworks"
+                },
+                "personas/": {
+                  "purpose": "Specialized AI personas"
+                }
+              }
+            },
+            "domain/": {
+              "purpose": "Domain-specific templates and adaptation",
+              "source": "Preserve existing domain structure"
+            }
+          }
+        }
+      },
+      "directory_reduction": "45 \u2192 12 directories (73% reduction)",
+      "consolidation_impact": {
+        "files_to_move": 241,
+        "directories_to_merge": 4,
+        "references_to_update": 101,
+        "complexity_reduction": 30
+      },
+      "duplication_elimination": "Pattern duplication completely resolved"
+    },
+    "consolidation_targets": {
+      "critical_consolidations": [
+        {
+          "priority": "HIGH",
+          "action": "CONSOLIDATE_MODULES",
+          "source_directories": [
+            ".claude/development",
+            ".claude/development/documentation",
+            ".claude/development/debugging",
+            ".claude/development/planning",
+            ".claude/development/testing",
+            ".claude/prompt_eng/modules",
+            ".claude/prompt_eng/modules/orchestration",
+            ".claude/prompt_eng/modules/routing",
+            ".claude/modules/development",
+            ".claude/modules/planning"
+          ],
+          "target_directory": ".claude/modules/modules/",
+          "rationale": "Centralize modules functionality",
+          "procedure": "Merge and organize by function"
+        },
+        {
+          "priority": "HIGH",
+          "action": "CONSOLIDATE_PATTERNS",
+          "source_directories": [
+            ".claude/prompt_eng/patterns",
+            ".claude/prompt_eng/patterns/visualization",
+            ".claude/prompt_eng/patterns/composition",
+            ".claude/prompt_eng/patterns/thinking",
+            ".claude/modules/patterns"
+          ],
+          "target_directory": ".claude/modules/patterns/",
+          "rationale": "Centralize patterns functionality",
+          "procedure": "Merge and organize by function"
+        },
+        {
+          "priority": "HIGH",
+          "action": "CONSOLIDATE_COMMANDS",
+          "source_directories": [
+            ".claude/prompt_eng/commands",
+            ".claude/prompt_eng/commands/setup",
+            ".claude/prompt_eng/commands/meta",
+            ".claude/templates",
+            ".claude/commands"
+          ],
+          "target_directory": ".claude/modules/commands/",
+          "rationale": "Centralize commands functionality",
+          "procedure": "Merge and organize by function"
+        },
+        {
+          "priority": "CRITICAL",
+          "action": "MERGE_PATTERN_DIRECTORIES",
+          "source_directories": [
+            ".claude/modules/patterns",
+            ".claude/prompt_eng/patterns",
+            ".claude/prompt_eng/patterns/visualization",
+            ".claude/prompt_eng/patterns/composition",
+            ".claude/prompt_eng/patterns/thinking"
+          ],
+          "target_directory": ".claude/modules/patterns/",
+          "rationale": "Eliminate pattern duplication confusion",
+          "files_affected": "All pattern files in both locations",
+          "procedure": "Merge content, deduplicate, update all references"
+        }
+      ],
+      "merge_procedures": {},
+      "reference_update_strategy": {
+        "total_references_to_fix": 101,
+        "approach": "Update after structure consolidation",
+        "automation": "Scripted path updates for all references",
+        "verification": "Agent 8 will verify all reference fixes"
+      }
+    },
+    "file_movement_scope": {
+      "total_files": 241,
+      "files_by_category": {
+        "DOCUMENTATION": 4,
+        "DEVELOPMENT_MODULE": 18,
+        "META_MODULE": 23,
+        "SYSTEM_MODULE": 1,
+        "CONTEXT_MODULE": 7,
+        "QUALITY_MODULE": 36,
+        "SECURITY_MODULE": 3,
+        "GIT_MODULE": 3,
+        "SESSION_MODULE": 4,
+        "PROMPT_ENGINEERING": 1,
+        "PROMPT_PATTERN": 5,
+        "PERSONA": 30,
+        "COMMAND": 22,
+        "PROMPT_FRAMEWORK": 11,
+        "MODULE": 13,
+        "TEMPLATE": 3,
+        "PATTERN_MODULE": 35,
+        "DOMAIN_MODULE": 22
+      },
+      "dependency_files": "159 files with dependencies"
+    },
+    "reference_update_scope": {
+      "broken_references": 101,
+      "total_references": 1093,
+      "fix_strategies": [
+        {
+          "priority": "HIGH",
+          "strategy": "FIX_PATH_RESOLUTION_FAILURE",
+          "description": "Address 56 broken references of type PATH_RESOLUTION_FAILURE",
+          "affected_count": 56,
+          "effort": "HIGH"
+        },
+        {
+          "priority": "CRITICAL",
+          "strategy": "STRUCTURAL_CONSOLIDATION_FIRST",
+          "description": "Consolidate structure before fixing references",
+          "affected_count": 101,
+          "effort": "HIGH",
+          "prerequisites": [
+            "Agent 5 architecture design",
+            "Agent 6 migration plan"
+          ]
+        }
+      ]
+    },
+    "functionality_protection": {
+      "working_commands": 13,
+      "total_commands": 21,
+      "accessible_quality_modules": 36,
+      "baseline_score": 80.95238095238095
+    },
+    "migration_phases": {
+      "phase_1_preparation": {
+        "description": "Backup current state and prepare migration environment",
+        "actions": [
+          "Create git branch for migration",
+          "Full backup of current structure",
+          "Validate all foundation data"
+        ],
+        "success_criteria": "Clean migration environment ready"
+      },
+      "phase_2_critical_consolidation": {
+        "description": "Resolve critical pattern duplication first",
+        "actions": [
+          "Merge .claude/modules/patterns/ and .claude/prompt_eng/patterns/",
+          "Deduplicate content",
+          "Update immediate pattern references"
+        ],
+        "success_criteria": "Pattern duplication eliminated"
+      },
+      "phase_3_directory_restructure": {
+        "description": "Implement unified directory structure",
+        "actions": [
+          "Create new unified directory structure",
+          "Move files to new locations",
+          "Remove empty old directories"
+        ],
+        "success_criteria": "45 \u2192 12 directory reduction achieved"
+      },
+      "phase_4_reference_reconciliation": {
+        "description": "Update all file references to new structure",
+        "actions": [
+          "Update all broken references identified by Agent 3",
+          "Standardize all reference paths",
+          "Validate reference integrity"
+        ],
+        "success_criteria": "90%+ reference integrity maintained"
+      },
+      "phase_5_validation": {
+        "description": "Validate functionality and production readiness",
+        "actions": [
+          "Test all command functionality",
+          "Verify quality module accessibility",
+          "Confirm production readiness"
+        ],
+        "success_criteria": "Production readiness achieved"
+      }
+    }
+  },
+  "execution_plan": {
+    "phase_1_preparation": {
+      "description": "Prepare migration environment with safety measures",
+      "duration_estimate": "30 minutes",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Create migration branch",
+          "command": "git checkout -b framework-migration-phase3",
+          "validation": "Confirm clean working directory",
+          "rollback": "git checkout main"
+        },
+        {
+          "step": 2,
+          "action": "Full backup current state",
+          "command": "git add -A && git commit -m \"Pre-migration backup: Complete current state\"",
+          "validation": "Verify commit hash recorded",
+          "rollback": "git reset --hard HEAD~1"
+        },
+        {
+          "step": 3,
+          "action": "Validate foundation data integrity",
+          "command": "python3 validate_foundation_data.py",
+          "validation": "All agent data files present and valid",
+          "rollback": "N/A - read-only validation"
+        },
+        {
+          "step": 4,
+          "action": "Create target directory structure",
+          "command": "python3 create_target_structure.py",
+          "validation": "New structure created without conflicts",
+          "rollback": "rm -rf .claude_new && git checkout ."
+        }
+      ],
+      "success_criteria": "Clean migration environment with target structure ready",
+      "failure_recovery": "Return to main branch, investigate blockers"
+    },
+    "phase_2_critical_consolidation": {
+      "description": "Resolve CRITICAL pattern duplication first",
+      "duration_estimate": "45 minutes",
+      "priority": "CRITICAL",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Analyze pattern duplication conflicts",
+          "command": "python3 analyze_pattern_conflicts.py",
+          "validation": "All pattern conflicts identified and categorized",
+          "rollback": "N/A - analysis only"
+        },
+        {
+          "step": 2,
+          "action": "Merge .claude/modules/patterns/ content",
+          "command": "python3 merge_pattern_directories.py --source modules/patterns --target unified/patterns",
+          "validation": "All modules/patterns files moved successfully",
+          "rollback": "git restore .claude/modules/patterns/"
+        },
+        {
+          "step": 3,
+          "action": "Merge .claude/prompt_eng/patterns/ content",
+          "command": "python3 merge_pattern_directories.py --source prompt_eng/patterns --target unified/patterns",
+          "validation": "All prompt_eng/patterns files merged without conflicts",
+          "rollback": "git restore .claude/prompt_eng/patterns/"
+        },
+        {
+          "step": 4,
+          "action": "Deduplicate merged pattern content",
+          "command": "python3 deduplicate_patterns.py --target unified/patterns",
+          "validation": "No duplicate patterns, single source of truth established",
+          "rollback": "git restore unified/patterns/ from backup"
+        },
+        {
+          "step": 5,
+          "action": "Update immediate pattern references",
+          "command": "python3 update_pattern_references.py --new-location modules/patterns",
+          "validation": "Critical pattern references updated successfully",
+          "rollback": "git restore all modified files"
+        }
+      ],
+      "success_criteria": "Pattern duplication eliminated, single source established",
+      "failure_recovery": "Restore pattern directories, analyze conflicts"
+    },
+    "phase_3_directory_restructure": {
+      "description": "Implement unified directory structure (45 \u2192 12 dirs)",
+      "duration_estimate": "60 minutes",
+      "priority": "HIGH",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Move commands to .claude/commands/",
+          "command": "python3 move_files.py --category COMMAND --target .claude/commands/",
+          "validation": "All 21 command files moved to single location",
+          "rollback": "python3 restore_files.py --category COMMAND"
+        },
+        {
+          "step": 2,
+          "action": "Consolidate quality modules",
+          "command": "python3 move_files.py --category QUALITY_MODULE --target .claude/modules/quality/",
+          "validation": "All 36 quality modules preserved in single location",
+          "rollback": "python3 restore_files.py --category QUALITY_MODULE"
+        },
+        {
+          "step": 3,
+          "action": "Consolidate development modules",
+          "command": "python3 move_files.py --category DEVELOPMENT_MODULE --target .claude/modules/development/",
+          "validation": "Development modules unified",
+          "rollback": "python3 restore_files.py --category DEVELOPMENT_MODULE"
+        },
+        {
+          "step": 4,
+          "action": "Consolidate meta modules",
+          "command": "python3 move_files.py --category META_MODULE --target .claude/modules/meta/",
+          "validation": "Meta modules unified",
+          "rollback": "python3 restore_files.py --category META_MODULE"
+        },
+        {
+          "step": 5,
+          "action": "Consolidate security modules",
+          "command": "python3 move_files.py --category SECURITY_MODULE --target .claude/modules/security/",
+          "validation": "Security modules unified",
+          "rollback": "python3 restore_files.py --category SECURITY_MODULE"
+        },
+        {
+          "step": 6,
+          "action": "Preserve system infrastructure",
+          "command": "python3 preserve_system.py --target .claude/system/",
+          "validation": "System modules preserved in correct location",
+          "rollback": "python3 restore_files.py --category SYSTEM_MODULE"
+        },
+        {
+          "step": 7,
+          "action": "Refine prompt_eng structure",
+          "command": "python3 refine_prompt_eng.py --keep frameworks,personas --remove modules,patterns",
+          "validation": "Prompt_eng contains only frameworks and personas",
+          "rollback": "git restore .claude/prompt_eng/"
+        },
+        {
+          "step": 8,
+          "action": "Remove empty directories",
+          "command": "python3 cleanup_empty_dirs.py",
+          "validation": "No empty directories remain",
+          "rollback": "git restore deleted directories"
+        }
+      ],
+      "success_criteria": "45 \u2192 12 directory reduction achieved, unified structure implemented",
+      "failure_recovery": "Restore all files to original locations"
+    },
+    "phase_4_reference_reconciliation": {
+      "description": "Update all references to new unified structure",
+      "duration_estimate": "45 minutes",
+      "priority": "HIGH",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Generate reference mapping",
+          "command": "python3 generate_reference_map.py --old-structure current --new-structure unified",
+          "validation": "Complete old\u2192new path mapping generated",
+          "rollback": "N/A - mapping generation only"
+        },
+        {
+          "step": 2,
+          "action": "Update broken references from Agent 3",
+          "command": "python3 fix_broken_references.py --reference-list agent3_broken_refs.json",
+          "validation": "101 broken references fixed",
+          "rollback": "git restore all modified files"
+        },
+        {
+          "step": 3,
+          "action": "Update all command references",
+          "command": "python3 update_references.py --category COMMAND --mapping reference_map.json",
+          "validation": "All command references point to new locations",
+          "rollback": "git restore all command files"
+        },
+        {
+          "step": 4,
+          "action": "Update all module references",
+          "command": "python3 update_references.py --category MODULE --mapping reference_map.json",
+          "validation": "All module references updated",
+          "rollback": "git restore all module files"
+        },
+        {
+          "step": 5,
+          "action": "Validate reference integrity",
+          "command": "python3 validate_references.py --target-threshold 95",
+          "validation": "95%+ reference integrity achieved",
+          "rollback": "Investigate and fix failing references"
+        }
+      ],
+      "success_criteria": "95%+ reference integrity, all paths resolve correctly",
+      "failure_recovery": "Restore original references, analyze mapping issues"
+    },
+    "phase_5_validation_and_testing": {
+      "description": "Validate functionality and confirm production readiness",
+      "duration_estimate": "30 minutes",
+      "priority": "CRITICAL",
+      "steps": [
+        {
+          "step": 1,
+          "action": "Test command functionality",
+          "command": "python3 test_command_functionality.py",
+          "validation": "All 13 working commands still functional",
+          "rollback": "Investigate broken commands"
+        },
+        {
+          "step": 2,
+          "action": "Test quality module accessibility",
+          "command": "python3 test_quality_modules.py",
+          "validation": "All 36 quality modules accessible",
+          "rollback": "Investigate accessibility issues"
+        },
+        {
+          "step": 3,
+          "action": "Validate unified structure compliance",
+          "command": "python3 validate_structure.py --blueprint agent5_architecture.json",
+          "validation": "Structure matches Agent 5 blueprint exactly",
+          "rollback": "Fix structure deviations"
+        },
+        {
+          "step": 4,
+          "action": "Production readiness check",
+          "command": "python3 production_readiness_check.py",
+          "validation": "All production blockers removed",
+          "rollback": "Address remaining blockers"
+        },
+        {
+          "step": 5,
+          "action": "Final commit and tag",
+          "command": "git add -A && git commit -m \"Framework Migration Complete: 45\u219212 dirs, chaos eliminated\"",
+          "validation": "Migration committed successfully",
+          "rollback": "git reset --hard HEAD~1"
+        }
+      ],
+      "success_criteria": "Production readiness achieved, all functionality preserved",
+      "failure_recovery": "Full rollback to pre-migration state"
+    }
+  },
+  "automation_scripts": {
+    "foundation_scripts": {
+      "validate_foundation_data.py": {
+        "purpose": "Validate all Phase 1 agent data integrity",
+        "inputs": [
+          "agent1-5 JSON files"
+        ],
+        "outputs": [
+          "Validation report"
+        ],
+        "critical": true
+      },
+      "create_target_structure.py": {
+        "purpose": "Create unified directory structure from Agent 5 blueprint",
+        "inputs": [
+          "agent5_architecture_design_results.json"
+        ],
+        "outputs": [
+          "New .claude structure"
+        ],
+        "critical": true
+      }
+    },
+    "consolidation_scripts": {
+      "analyze_pattern_conflicts.py": {
+        "purpose": "Analyze pattern duplication conflicts",
+        "inputs": [
+          "Agent 2 overlap data"
+        ],
+        "outputs": [
+          "Conflict analysis report"
+        ],
+        "critical": true
+      },
+      "merge_pattern_directories.py": {
+        "purpose": "Merge pattern directories with conflict resolution",
+        "inputs": [
+          "Source directory",
+          "Target directory"
+        ],
+        "outputs": [
+          "Merged patterns"
+        ],
+        "critical": true
+      },
+      "deduplicate_patterns.py": {
+        "purpose": "Remove duplicate pattern content",
+        "inputs": [
+          "Merged pattern directory"
+        ],
+        "outputs": [
+          "Deduplicated patterns"
+        ],
+        "critical": true
+      }
+    },
+    "migration_scripts": {
+      "move_files.py": {
+        "purpose": "Move files by category with tracking",
+        "inputs": [
+          "Category",
+          "Target directory"
+        ],
+        "outputs": [
+          "File movement log"
+        ],
+        "critical": true
+      },
+      "restore_files.py": {
+        "purpose": "Restore files to original locations (rollback)",
+        "inputs": [
+          "Category or movement log"
+        ],
+        "outputs": [
+          "Restored file structure"
+        ],
+        "critical": true
+      }
+    },
+    "reference_scripts": {
+      "generate_reference_map.py": {
+        "purpose": "Generate old\u2192new path mapping",
+        "inputs": [
+          "Current structure",
+          "New structure"
+        ],
+        "outputs": [
+          "Reference mapping JSON"
+        ],
+        "critical": true
+      },
+      "fix_broken_references.py": {
+        "purpose": "Fix specific broken references from Agent 3",
+        "inputs": [
+          "Agent 3 broken reference list"
+        ],
+        "outputs": [
+          "Fixed references"
+        ],
+        "critical": true
+      },
+      "update_references.py": {
+        "purpose": "Update references using path mapping",
+        "inputs": [
+          "File category",
+          "Reference mapping"
+        ],
+        "outputs": [
+          "Updated references"
+        ],
+        "critical": true
+      }
+    },
+    "validation_scripts": {
+      "validate_references.py": {
+        "purpose": "Validate reference integrity",
+        "inputs": [
+          "Target threshold percentage"
+        ],
+        "outputs": [
+          "Reference integrity report"
+        ],
+        "critical": true
+      },
+      "test_command_functionality.py": {
+        "purpose": "Test command functionality preservation",
+        "inputs": [
+          "Working command list from Agent 4"
+        ],
+        "outputs": [
+          "Functionality test report"
+        ],
+        "critical": true
+      },
+      "production_readiness_check.py": {
+        "purpose": "Final production readiness validation",
+        "inputs": [
+          "Agent 4 production criteria"
+        ],
+        "outputs": [
+          "Production readiness status"
+        ],
+        "critical": true
+      }
+    }
+  },
+  "risk_mitigation": {
+    "data_loss_prevention": {
+      "risk": "Accidental file loss during migration",
+      "probability": "MEDIUM",
+      "impact": "HIGH",
+      "mitigation": [
+        "Full git backup before any changes",
+        "Atomic commits at each phase",
+        "File movement tracking with restore capability",
+        "Dry-run mode for all scripts"
+      ],
+      "detection": "File count validation at each step",
+      "recovery": "Git-based rollback to any previous state"
+    },
+    "functionality_regression": {
+      "risk": "Breaking working commands/modules during migration",
+      "probability": "MEDIUM",
+      "impact": "CRITICAL",
+      "mitigation": [
+        "Preserve Agent 4 baseline (13 commands, 36 quality modules)",
+        "Functionality testing at each phase",
+        "No modifications to working file content",
+        "Path-only updates for references"
+      ],
+      "detection": "Automated functionality testing",
+      "recovery": "Restore specific components from backup"
+    },
+    "reference_integrity_failure": {
+      "risk": "Broken references preventing framework operation",
+      "probability": "LOW",
+      "impact": "HIGH",
+      "mitigation": [
+        "Reference mapping validation before updates",
+        "Gradual reference updates with testing",
+        "95% integrity threshold requirement",
+        "Agent 3 baseline: 90.8% already functional"
+      ],
+      "detection": "Reference validation scripts",
+      "recovery": "Restore original references, fix mapping"
+    },
+    "directory_structure_corruption": {
+      "risk": "Invalid final directory structure",
+      "probability": "LOW",
+      "impact": "HIGH",
+      "mitigation": [
+        "Structure validation against Agent 5 blueprint",
+        "Directory creation with validation",
+        "Empty directory cleanup tracking",
+        "Structure compliance testing"
+      ],
+      "detection": "Blueprint compliance validation",
+      "recovery": "Recreate structure from blueprint"
+    },
+    "migration_failure_cascade": {
+      "risk": "Failure in one phase corrupting subsequent phases",
+      "probability": "LOW",
+      "impact": "CRITICAL",
+      "mitigation": [
+        "Phase independence with validation gates",
+        "Rollback capability at each phase",
+        "Success criteria validation before proceeding",
+        "Manual approval gates for critical phases"
+      ],
+      "detection": "Phase success validation",
+      "recovery": "Phase-specific rollback procedures"
+    }
+  },
+  "rollback_procedures": {
+    "immediate_rollback": {
+      "description": "Quick rollback for immediate issues",
+      "trigger": "Any script failure or validation error",
+      "procedure": [
+        "Stop current operation immediately",
+        "git stash any unstaged changes",
+        "git reset --hard to last known good commit",
+        "Validate rollback success",
+        "Analyze failure cause"
+      ],
+      "recovery_time": "< 2 minutes",
+      "data_loss_risk": "NONE"
+    },
+    "phase_rollback": {
+      "description": "Rollback entire phase while preserving previous progress",
+      "trigger": "Phase success criteria not met",
+      "procedure": [
+        "Identify phase start commit",
+        "git reset --hard to phase start commit",
+        "Validate previous phase integrity",
+        "Document phase failure reasons",
+        "Prepare corrected phase execution"
+      ],
+      "recovery_time": "< 5 minutes",
+      "data_loss_risk": "NONE (protected by git)"
+    },
+    "complete_rollback": {
+      "description": "Full migration rollback to original state",
+      "trigger": "Multiple phase failures or critical issues",
+      "procedure": [
+        "git checkout main branch",
+        "Delete migration branch",
+        "Validate original state integrity",
+        "Full analysis of migration failure",
+        "Update migration strategy based on learnings"
+      ],
+      "recovery_time": "< 1 minute",
+      "data_loss_risk": "NONE (returns to original state)"
+    },
+    "selective_rollback": {
+      "description": "Rollback specific components while preserving others",
+      "trigger": "Partial migration success with specific failures",
+      "procedure": [
+        "Identify successful vs failed components",
+        "Restore failed components from backup",
+        "Validate partial migration state",
+        "Continue with corrected migration plan",
+        "Update automation scripts as needed"
+      ],
+      "recovery_time": "5-15 minutes",
+      "data_loss_risk": "LOW (targeted restoration)"
+    },
+    "git_commands": {
+      "emergency_rollback": "git reset --hard HEAD~1",
+      "phase_rollback": "git reset --hard <phase_start_commit>",
+      "complete_rollback": "git checkout main && git branch -D framework-migration-phase3",
+      "file_specific_rollback": "git checkout HEAD~1 -- <file_path>"
+    }
+  },
+  "monitoring_system": {
+    "progress_tracking": {
+      "phase_completion": "Track phase completion percentage",
+      "file_movement": "Track files moved vs total files",
+      "reference_updates": "Track references updated vs total references",
+      "validation_success": "Track validation pass rates"
+    },
+    "success_metrics": {
+      "directory_count": "Target: 45 \u2192 12 directories",
+      "pattern_duplication": "Target: 0 duplicated patterns",
+      "reference_integrity": "Target: 95%+ reference resolution",
+      "functionality_preservation": "Target: 100% working component preservation",
+      "production_readiness": "Target: All blockers removed"
+    },
+    "monitoring_checkpoints": {
+      "pre_migration": "Validate starting state and foundation data",
+      "post_phase_2": "Validate pattern duplication elimination",
+      "post_phase_3": "Validate directory structure compliance",
+      "post_phase_4": "Validate reference integrity",
+      "post_phase_5": "Validate production readiness"
+    },
+    "failure_detection": {
+      "script_failures": "Monitor script exit codes and error outputs",
+      "validation_failures": "Monitor validation script results",
+      "file_integrity": "Monitor file counts and checksums",
+      "structure_compliance": "Monitor directory structure vs blueprint"
+    }
+  },
+  "critical_success_factors": {
+    "pattern_duplication_elimination": {
+      "criticality": "HIGHEST",
+      "description": "Must eliminate CRITICAL pattern duplication",
+      "success_measure": "Single .claude/modules/patterns/ directory",
+      "failure_impact": "Continued structural chaos"
+    },
+    "functionality_preservation": {
+      "criticality": "HIGHEST",
+      "description": "Must preserve Agent 4 baseline functionality",
+      "success_measure": "13 commands + 36 quality modules working",
+      "failure_impact": "Framework regression"
+    },
+    "directory_reduction": {
+      "criticality": "HIGH",
+      "description": "Must achieve 45 \u2192 12 directory reduction",
+      "success_measure": "Maximum 12 core directories",
+      "failure_impact": "Continued complexity chaos"
+    },
+    "reference_integrity": {
+      "criticality": "HIGH",
+      "description": "Must maintain 95%+ reference resolution",
+      "success_measure": "95%+ references resolve correctly",
+      "failure_impact": "Framework navigation broken"
+    },
+    "git_safety": {
+      "criticality": "CRITICAL",
+      "description": "Must maintain complete rollback capability",
+      "success_measure": "All changes tracked, instant rollback available",
+      "failure_impact": "Potential data loss"
+    }
+  },
+  "handoff_data": {
+    "agent_7_execution_requirements": {
+      "execution_plan": {
+        "phase_1_preparation": {
+          "description": "Prepare migration environment with safety measures",
+          "duration_estimate": "30 minutes",
+          "steps": [
+            {
+              "step": 1,
+              "action": "Create migration branch",
+              "command": "git checkout -b framework-migration-phase3",
+              "validation": "Confirm clean working directory",
+              "rollback": "git checkout main"
+            },
+            {
+              "step": 2,
+              "action": "Full backup current state",
+              "command": "git add -A && git commit -m \"Pre-migration backup: Complete current state\"",
+              "validation": "Verify commit hash recorded",
+              "rollback": "git reset --hard HEAD~1"
+            },
+            {
+              "step": 3,
+              "action": "Validate foundation data integrity",
+              "command": "python3 validate_foundation_data.py",
+              "validation": "All agent data files present and valid",
+              "rollback": "N/A - read-only validation"
+            },
+            {
+              "step": 4,
+              "action": "Create target directory structure",
+              "command": "python3 create_target_structure.py",
+              "validation": "New structure created without conflicts",
+              "rollback": "rm -rf .claude_new && git checkout ."
+            }
+          ],
+          "success_criteria": "Clean migration environment with target structure ready",
+          "failure_recovery": "Return to main branch, investigate blockers"
+        },
+        "phase_2_critical_consolidation": {
+          "description": "Resolve CRITICAL pattern duplication first",
+          "duration_estimate": "45 minutes",
+          "priority": "CRITICAL",
+          "steps": [
+            {
+              "step": 1,
+              "action": "Analyze pattern duplication conflicts",
+              "command": "python3 analyze_pattern_conflicts.py",
+              "validation": "All pattern conflicts identified and categorized",
+              "rollback": "N/A - analysis only"
+            },
+            {
+              "step": 2,
+              "action": "Merge .claude/modules/patterns/ content",
+              "command": "python3 merge_pattern_directories.py --source modules/patterns --target unified/patterns",
+              "validation": "All modules/patterns files moved successfully",
+              "rollback": "git restore .claude/modules/patterns/"
+            },
+            {
+              "step": 3,
+              "action": "Merge .claude/prompt_eng/patterns/ content",
+              "command": "python3 merge_pattern_directories.py --source prompt_eng/patterns --target unified/patterns",
+              "validation": "All prompt_eng/patterns files merged without conflicts",
+              "rollback": "git restore .claude/prompt_eng/patterns/"
+            },
+            {
+              "step": 4,
+              "action": "Deduplicate merged pattern content",
+              "command": "python3 deduplicate_patterns.py --target unified/patterns",
+              "validation": "No duplicate patterns, single source of truth established",
+              "rollback": "git restore unified/patterns/ from backup"
+            },
+            {
+              "step": 5,
+              "action": "Update immediate pattern references",
+              "command": "python3 update_pattern_references.py --new-location modules/patterns",
+              "validation": "Critical pattern references updated successfully",
+              "rollback": "git restore all modified files"
+            }
+          ],
+          "success_criteria": "Pattern duplication eliminated, single source established",
+          "failure_recovery": "Restore pattern directories, analyze conflicts"
+        },
+        "phase_3_directory_restructure": {
+          "description": "Implement unified directory structure (45 \u2192 12 dirs)",
+          "duration_estimate": "60 minutes",
+          "priority": "HIGH",
+          "steps": [
+            {
+              "step": 1,
+              "action": "Move commands to .claude/commands/",
+              "command": "python3 move_files.py --category COMMAND --target .claude/commands/",
+              "validation": "All 21 command files moved to single location",
+              "rollback": "python3 restore_files.py --category COMMAND"
+            },
+            {
+              "step": 2,
+              "action": "Consolidate quality modules",
+              "command": "python3 move_files.py --category QUALITY_MODULE --target .claude/modules/quality/",
+              "validation": "All 36 quality modules preserved in single location",
+              "rollback": "python3 restore_files.py --category QUALITY_MODULE"
+            },
+            {
+              "step": 3,
+              "action": "Consolidate development modules",
+              "command": "python3 move_files.py --category DEVELOPMENT_MODULE --target .claude/modules/development/",
+              "validation": "Development modules unified",
+              "rollback": "python3 restore_files.py --category DEVELOPMENT_MODULE"
+            },
+            {
+              "step": 4,
+              "action": "Consolidate meta modules",
+              "command": "python3 move_files.py --category META_MODULE --target .claude/modules/meta/",
+              "validation": "Meta modules unified",
+              "rollback": "python3 restore_files.py --category META_MODULE"
+            },
+            {
+              "step": 5,
+              "action": "Consolidate security modules",
+              "command": "python3 move_files.py --category SECURITY_MODULE --target .claude/modules/security/",
+              "validation": "Security modules unified",
+              "rollback": "python3 restore_files.py --category SECURITY_MODULE"
+            },
+            {
+              "step": 6,
+              "action": "Preserve system infrastructure",
+              "command": "python3 preserve_system.py --target .claude/system/",
+              "validation": "System modules preserved in correct location",
+              "rollback": "python3 restore_files.py --category SYSTEM_MODULE"
+            },
+            {
+              "step": 7,
+              "action": "Refine prompt_eng structure",
+              "command": "python3 refine_prompt_eng.py --keep frameworks,personas --remove modules,patterns",
+              "validation": "Prompt_eng contains only frameworks and personas",
+              "rollback": "git restore .claude/prompt_eng/"
+            },
+            {
+              "step": 8,
+              "action": "Remove empty directories",
+              "command": "python3 cleanup_empty_dirs.py",
+              "validation": "No empty directories remain",
+              "rollback": "git restore deleted directories"
+            }
+          ],
+          "success_criteria": "45 \u2192 12 directory reduction achieved, unified structure implemented",
+          "failure_recovery": "Restore all files to original locations"
+        },
+        "phase_4_reference_reconciliation": {
+          "description": "Update all references to new unified structure",
+          "duration_estimate": "45 minutes",
+          "priority": "HIGH",
+          "steps": [
+            {
+              "step": 1,
+              "action": "Generate reference mapping",
+              "command": "python3 generate_reference_map.py --old-structure current --new-structure unified",
+              "validation": "Complete old\u2192new path mapping generated",
+              "rollback": "N/A - mapping generation only"
+            },
+            {
+              "step": 2,
+              "action": "Update broken references from Agent 3",
+              "command": "python3 fix_broken_references.py --reference-list agent3_broken_refs.json",
+              "validation": "101 broken references fixed",
+              "rollback": "git restore all modified files"
+            },
+            {
+              "step": 3,
+              "action": "Update all command references",
+              "command": "python3 update_references.py --category COMMAND --mapping reference_map.json",
+              "validation": "All command references point to new locations",
+              "rollback": "git restore all command files"
+            },
+            {
+              "step": 4,
+              "action": "Update all module references",
+              "command": "python3 update_references.py --category MODULE --mapping reference_map.json",
+              "validation": "All module references updated",
+              "rollback": "git restore all module files"
+            },
+            {
+              "step": 5,
+              "action": "Validate reference integrity",
+              "command": "python3 validate_references.py --target-threshold 95",
+              "validation": "95%+ reference integrity achieved",
+              "rollback": "Investigate and fix failing references"
+            }
+          ],
+          "success_criteria": "95%+ reference integrity, all paths resolve correctly",
+          "failure_recovery": "Restore original references, analyze mapping issues"
+        },
+        "phase_5_validation_and_testing": {
+          "description": "Validate functionality and confirm production readiness",
+          "duration_estimate": "30 minutes",
+          "priority": "CRITICAL",
+          "steps": [
+            {
+              "step": 1,
+              "action": "Test command functionality",
+              "command": "python3 test_command_functionality.py",
+              "validation": "All 13 working commands still functional",
+              "rollback": "Investigate broken commands"
+            },
+            {
+              "step": 2,
+              "action": "Test quality module accessibility",
+              "command": "python3 test_quality_modules.py",
+              "validation": "All 36 quality modules accessible",
+              "rollback": "Investigate accessibility issues"
+            },
+            {
+              "step": 3,
+              "action": "Validate unified structure compliance",
+              "command": "python3 validate_structure.py --blueprint agent5_architecture.json",
+              "validation": "Structure matches Agent 5 blueprint exactly",
+              "rollback": "Fix structure deviations"
+            },
+            {
+              "step": 4,
+              "action": "Production readiness check",
+              "command": "python3 production_readiness_check.py",
+              "validation": "All production blockers removed",
+              "rollback": "Address remaining blockers"
+            },
+            {
+              "step": 5,
+              "action": "Final commit and tag",
+              "command": "git add -A && git commit -m \"Framework Migration Complete: 45\u219212 dirs, chaos eliminated\"",
+              "validation": "Migration committed successfully",
+              "rollback": "git reset --hard HEAD~1"
+            }
+          ],
+          "success_criteria": "Production readiness achieved, all functionality preserved",
+          "failure_recovery": "Full rollback to pre-migration state"
+        }
+      },
+      "automation_scripts": "All scripts designed and specified",
+      "rollback_procedures": {
+        "immediate_rollback": {
+          "description": "Quick rollback for immediate issues",
+          "trigger": "Any script failure or validation error",
+          "procedure": [
+            "Stop current operation immediately",
+            "git stash any unstaged changes",
+            "git reset --hard to last known good commit",
+            "Validate rollback success",
+            "Analyze failure cause"
+          ],
+          "recovery_time": "< 2 minutes",
+          "data_loss_risk": "NONE"
+        },
+        "phase_rollback": {
+          "description": "Rollback entire phase while preserving previous progress",
+          "trigger": "Phase success criteria not met",
+          "procedure": [
+            "Identify phase start commit",
+            "git reset --hard to phase start commit",
+            "Validate previous phase integrity",
+            "Document phase failure reasons",
+            "Prepare corrected phase execution"
+          ],
+          "recovery_time": "< 5 minutes",
+          "data_loss_risk": "NONE (protected by git)"
+        },
+        "complete_rollback": {
+          "description": "Full migration rollback to original state",
+          "trigger": "Multiple phase failures or critical issues",
+          "procedure": [
+            "git checkout main branch",
+            "Delete migration branch",
+            "Validate original state integrity",
+            "Full analysis of migration failure",
+            "Update migration strategy based on learnings"
+          ],
+          "recovery_time": "< 1 minute",
+          "data_loss_risk": "NONE (returns to original state)"
+        },
+        "selective_rollback": {
+          "description": "Rollback specific components while preserving others",
+          "trigger": "Partial migration success with specific failures",
+          "procedure": [
+            "Identify successful vs failed components",
+            "Restore failed components from backup",
+            "Validate partial migration state",
+            "Continue with corrected migration plan",
+            "Update automation scripts as needed"
+          ],
+          "recovery_time": "5-15 minutes",
+          "data_loss_risk": "LOW (targeted restoration)"
+        },
+        "git_commands": {
+          "emergency_rollback": "git reset --hard HEAD~1",
+          "phase_rollback": "git reset --hard <phase_start_commit>",
+          "complete_rollback": "git checkout main && git branch -D framework-migration-phase3",
+          "file_specific_rollback": "git checkout HEAD~1 -- <file_path>"
+        }
+      },
+      "success_criteria": "All phase validation requirements",
+      "monitoring_requirements": "Progress tracking and failure detection"
+    },
+    "agent_8_reference_reconciliation": {
+      "reference_update_plan": "Detailed in Phase 4 execution plan",
+      "broken_reference_targets": "101 broken references from Agent 3",
+      "path_mapping_strategy": "Old\u2192new structure mapping",
+      "validation_requirements": "95%+ reference integrity"
+    },
+    "phase_3_completion_criteria": {
+      "migration_strategy_complete": true,
+      "execution_plan_detailed": true,
+      "automation_designed": true,
+      "risk_mitigation_comprehensive": true,
+      "agent_7_unblocked": true
+    }
+  }
+}

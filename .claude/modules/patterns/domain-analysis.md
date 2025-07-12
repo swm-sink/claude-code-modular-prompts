@@ -60,8 +60,8 @@
       getting-started/domain-classification.md for classification algorithms
     </depends_on>
     <provides_to>
-      getting-started/domain-adaptation.md for adaptation guidance
-      getting-started/template-orchestration.md for template selection
+      ../../domain/adaptation/domain-adaptation.md for adaptation guidance
+      ../../domain/adaptation/template-orchestration.md for template selection
     </provides_to>
   </integration_points>
   

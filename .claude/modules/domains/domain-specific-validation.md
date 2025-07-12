@@ -53,12 +53,12 @@
   
   <integration_points>
     <depends_on>
-      quality/universal-quality-gates.md for quality standards
+      ../../system/../../system/quality/universal-quality-gates.md for quality standards
       patterns/validation-pattern.md for validation methodology
     </depends_on>
     <provides_to>
       commands/validate.md for domain validation
-      quality/domain-validation.md for domain-specific validation
+      ../../system/../../system/quality/domain-validation.md for domain-specific validation
     </provides_to>
   </integration_points>
   

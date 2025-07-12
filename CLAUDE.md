@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 3.0.0   | 2025-07-11   | stable |
+| 3.0.1   | 2025-07-12   | enhanced |
 
 # CLAUDE.md - Framework Control Document
 
@@ -317,7 +317,7 @@
 
 ```xml
 <architecture>
-  <commands location = ".claude/prompt_eng/commands/" delegate_only = "true" enforcement = "MANDATORY">
+  <commands location = ".claude/commands/" delegate_only = "true" enforcement = "MANDATORY">
     <cmd name = "/auto" module = "prompt_eng/modules/routing/intelligent-routing.md"/>
     <cmd name = "/task" module = "development/task-management.md"/>
     <cmd name = "/feature" module = "development/planning/feature-workflow.md"/>
@@ -330,6 +330,10 @@
     <cmd name = "/context-prime" module = "system/context/project-priming.md"/>
     <cmd name = "/adapt" module = "domain/adaptation/template-orchestration.md"/>
     <cmd name = "/validate" module = "domain/adaptation/adaptation-validation.md"/>
+    <cmd name = "/init-custom" module = "commands/init-custom.md" critical = "true"/>
+    <cmd name = "/init-new" module = "commands/init-new.md" critical = "true"/>
+    <cmd name = "/init-research" module = "commands/init-research.md" critical = "true"/>
+    <cmd name = "/init-validate" module = "commands/init-validate.md" critical = "true"/>
     <cmd name = "/meta-review" module = "meta/framework-auditor.md" critical = "true"/>
     <cmd name = "/meta-evolve" module = "meta/update-cycle-manager.md" critical = "true"/>
     <cmd name = "/meta-optimize" module = "meta/continuous-optimizer.md" critical = "true"/>
@@ -441,6 +445,143 @@
     <on_error>Comment on issue with error details and recovery plan</on_error>
   </enforcement>
 </github_workflow>
+```
+
+
+# Atomic Commits & Instant Rollback Protocol
+
+```xml
+<atomic_rollback_protocol version = "3.0.0" enforcement = "CRITICAL">
+  <purpose>Guarantee zero data loss with instant recovery for all framework operations</purpose>
+  
+  <atomic_commit_strategy enforcement = "MANDATORY">
+    <principle>Every operation MUST be atomic with instant rollback capability</principle>
+    <implementation>
+      <pre_operation>git add -A && git commit -m "Pre-operation backup: [operation_name]"</pre_operation>
+      <during_operation>All changes tracked in real-time with staged commits</during_operation>
+      <post_operation>git add -A && git commit -m "Operation complete: [operation_name] - [success_criteria]"</post_operation>
+      <validation>Automated validation BEFORE committing changes</validation>
+    </implementation>
+    <commit_granularity>
+      <rule>One atomic commit per logical operation (file move, reference update, validation)</rule>
+      <rule>Never batch unrelated changes into single commit</rule>
+      <rule>Each commit MUST pass validation before proceeding</rule>
+      <rule>Commit messages MUST include rollback criteria</rule>
+    </commit_granularity>
+  </atomic_commit_strategy>
+  
+  <instant_rollback_capability enforcement = "CRITICAL">
+    <rollback_types>
+      <immediate>git reset --hard HEAD~1 (< 2 seconds)</immediate>
+      <phase_rollback>git reset --hard [phase_start_commit] (< 5 seconds)</phase_rollback>
+      <complete_rollback>git checkout main && git branch -D [migration_branch] (< 1 second)</complete_rollback>
+      <selective_rollback>git checkout HEAD~1 -- [specific_file_path] (< 3 seconds)</selective_rollback>
+    </rollback_types>
+    <rollback_triggers>
+      <script_failure>Any automation script exit code != 0</script_failure>
+      <validation_failure>Any validation threshold not met</validation_failure>
+      <user_abort>Manual user intervention or cancellation</user_abort>
+      <integrity_check_failure>File count, checksum, or structure validation failure</integrity_check_failure>
+    </rollback_triggers>
+    <rollback_validation>
+      <rule>After rollback, MUST validate return to known good state</rule>
+      <rule>MUST verify no data loss occurred during rollback</rule>
+      <rule>MUST document rollback reason and corrective actions</rule>
+      <rule>MUST test rollback procedures regularly</rule>
+    </rollback_validation>
+  </instant_rollback_capability>
+  
+  <safety_guarantees enforcement = "MAXIMUM">
+    <data_protection>
+      <guarantee>ZERO data loss - all changes reversible within seconds</guarantee>
+      <guarantee>Complete operation history - every change tracked</guarantee>
+      <guarantee>State validation - automated integrity checks</guarantee>
+      <guarantee>Recovery procedures - documented rollback for every operation</guarantee>
+    </data_protection>
+    <failure_isolation>
+      <rule>Failed operations CANNOT corrupt successful operations</rule>
+      <rule>Rollback of one operation CANNOT affect other operations</rule>
+      <rule>Each operation isolated in separate git commits</rule>
+      <rule>Validation checkpoints prevent cascade failures</rule>
+    </failure_isolation>
+    <recovery_time_objectives>
+      <immediate_rollback>2 seconds maximum</immediate_rollback>
+      <phase_rollback>5 seconds maximum</phase_rollback>
+      <complete_recovery>10 seconds maximum</complete_recovery>
+      <validation_time>30 seconds maximum</validation_time>
+    </recovery_time_objectives>
+  </safety_guarantees>
+  
+  <migration_specific_protocol enforcement = "CRITICAL">
+    <migration_branch_strategy>
+      <rule>ALL migration work MUST occur on dedicated branch</rule>
+      <rule>Main branch remains untouched until migration complete</rule>
+      <rule>Each migration phase gets atomic commit with validation</rule>
+      <rule>Full rollback available at any point via branch deletion</rule>
+    </migration_branch_strategy>
+    <validation_checkpoints>
+      <pre_migration>Validate starting state and foundation data</pre_migration>
+      <post_consolidation>Validate pattern duplication elimination</post_consolidation>
+      <post_restructure>Validate directory structure compliance</post_restructure>
+      <post_references>Validate reference integrity ≥95%</post_references>
+      <pre_merge>Validate production readiness criteria</pre_merge>
+    </validation_checkpoints>
+    <rollback_procedures>
+      <emergency>git stash && git reset --hard HEAD~1</emergency>
+      <phase_failure>git reset --hard [last_successful_phase_commit]</phase_failure>
+      <complete_abort>git checkout main && git branch -D migration-branch</complete_abort>
+      <selective_fix>git checkout HEAD~[n] -- [specific_files]</selective_fix>
+    </rollback_procedures>
+  </migration_specific_protocol>
+  
+  <automation_integration enforcement = "MANDATORY">
+    <script_requirements>
+      <rule>Every automation script MUST implement atomic operations</rule>
+      <rule>Every script MUST validate success before committing</rule>
+      <rule>Every script MUST provide rollback capability</rule>
+      <rule>Every script MUST log operations for audit trail</rule>
+    </script_requirements>
+    <error_handling>
+      <rule>Script failure TRIGGERS immediate rollback</rule>
+      <rule>Validation failure BLOCKS commit and triggers rollback</rule>
+      <rule>User abort PRESERVES current state and offers rollback</rule>
+      <rule>System error ACTIVATES emergency rollback procedures</rule>
+    </error_handling>
+    <monitoring>
+      <rule>Real-time monitoring of all git operations</rule>
+      <rule>Automated detection of rollback triggers</rule>
+      <rule>Continuous validation of repository integrity</rule>
+      <rule>Alert system for any rollback activations</rule>
+    </monitoring>
+  </automation_integration>
+  
+  <implementation_commands enforcement = "REFERENCE">
+    <backup_commands>
+      <pre_operation>git add -A && git commit -m "Backup: Pre-[operation] state"</pre_operation>
+      <checkpoint>git add -A && git commit -m "Checkpoint: [operation] phase complete"</checkpoint>
+      <validation>git add -A && git commit -m "Validated: [operation] success criteria met"</validation>
+    </backup_commands>
+    <rollback_commands>
+      <immediate>git reset --hard HEAD~1</immediate>
+      <to_checkpoint>git reset --hard [checkpoint_commit_hash]</to_checkpoint>
+      <file_specific>git checkout HEAD~1 -- [file_path]</file_specific>
+      <branch_abort>git checkout main && git branch -D [working_branch]</branch_abort>
+    </rollback_commands>
+    <validation_commands>
+      <state_check>git status && git log --oneline -5</state_check>
+      <integrity_check>git fsck && git gc</integrity_check>
+      <file_count>find .claude -name "*.md" | wc -l</file_count>
+      <structure_check>tree .claude -d -L 3</structure_check>
+    </validation_commands>
+  </implementation_commands>
+  
+  <quality_integration>
+    <tdd_compliance>Atomic commits support TDD cycle: RED→commit→GREEN→commit→REFACTOR→commit</tdd_compliance>
+    <quality_gates>Each commit MUST pass quality validation before acceptance</quality_gates>
+    <coverage_protection>Rollback triggered if test coverage drops below threshold</coverage_protection>
+    <security_validation>All commits scanned for security issues before acceptance</security_validation>
+  </quality_integration>
+</atomic_rollback_protocol>
 ```
 
 

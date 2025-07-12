@@ -1,0 +1,630 @@
+{
+  "summary": {
+    "total_modules": 52,
+    "total_references": 235,
+    "total_broken_references": 92,
+    "broken_percentage": 39.15,
+    "circular_dependencies_count": 32
+  },
+  "broken_references": {
+    "domains/domain-specific-validation.md": [
+      "system/quality/domain-validation.md",
+      "system/quality/universal-quality-gates.md"
+    ],
+    "patterns/integration-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md"
+    ],
+    "patterns/research-analysis-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md"
+    ],
+    "patterns/validation-pattern.md": [
+      "system/quality/test-coverage.md",
+      "system/quality/universal-quality-gates.md"
+    ],
+    "patterns/configuration-analysis.md": [
+      "system/quality/universal-quality-gates.md"
+    ],
+    "patterns/context-management-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md"
+    ],
+    "patterns/parallel-execution.md": [
+      "patterns/orchestration/execution-orchestration.md",
+      "system/quality/performance-validation.md"
+    ],
+    "patterns/error-recovery-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md"
+    ],
+    "patterns/multi-agent.md": [
+      "development/feature-development.md",
+      "system/quality/tdd.md",
+      "system/quality/universal-quality-gates.md",
+      "patterns/orchestration/coordination-patterns.md",
+      "system/git/worktree-isolation.md",
+      "system/quality/critical-thinking.md"
+    ],
+    "patterns/performance-optimization.md": [
+      "system/quality/performance-validation.md"
+    ],
+    "patterns/quality-validation-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md"
+    ],
+    "patterns/deterministic-execution-engine.md": [
+      "patterns/visualization/runtime-execution-dashboard.md",
+      "system/quality/universal-quality-gates.md",
+      "patterns/visualization/prompt-construction-visualization.md"
+    ],
+    "patterns/setup-orchestration-pattern.md": [
+      "system/quality/universal-quality-gates.md"
+    ],
+    "patterns/validation-reporting.md": [
+      "system/quality/universal-quality-gates.md",
+      "system/quality/comprehensive-testing.md"
+    ],
+    "patterns/documentation-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md"
+    ],
+    "patterns/implementation-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md"
+    ],
+    "patterns/error-recovery.md": [
+      "system/quality/universal-quality-gates.md"
+    ],
+    "patterns/tdd-cycle-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md",
+      "system/quality/quality-validation.md",
+      "system/quality/tdd.md"
+    ],
+    "patterns/pattern-library.md": [
+      "patterns/composition/module-composition-framework.md",
+      "system/quality/security-validation.md",
+      "patterns/thinking/thinking-pattern-template.md",
+      "planning/strategy/mvp-strategy.md",
+      "system/quality/production-standards.md",
+      "system/quality/test-coverage.md",
+      "system/quality/tdd.md",
+      "development/analysis/configuration-analysis.md",
+      "system/quality/compliance-validation.md",
+      "system/quality/domain-validation.md",
+      "system/quality/feature-validation.md",
+      "meta/validation/adaptation-validation.md",
+      "system/testing/comprehensive-testing.md",
+      "system/quality/setup-validation.md",
+      "development/debugging/reproduce-issue.md",
+      "system/quality/critical-thinking.md",
+      "system/quality/universal-quality-gates.md",
+      "system/quality/general-validation.md",
+      "system/session/session-management.md",
+      "system/quality/performance-validation.md",
+      "development/git/conventional-commits.md",
+      "system/quality/domain-documentation.md"
+    ],
+    "patterns/performance-optimization-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md"
+    ],
+    "patterns/user-interaction-pattern.md": [
+      "patterns/thinking/critical-thinking-pattern.md"
+    ],
+    "patterns/intelligent-routing.md": [
+      "system/quality/critical-thinking.md"
+    ],
+    "development/task-management.md": [
+      "system/quality/production-standards.md",
+      "system/quality/tdd.md",
+      "system/quality/performance-gates.md",
+      "system/quality/gate-verification.md",
+      "system/quality/security-gate-verification.md",
+      "system/quality/tdd-enforcement.md",
+      "system/session/session-management.md",
+      "system/quality/critical-thinking.md"
+    ],
+    "development/research-analysis.md": [
+      "system/quality/critical-thinking.md"
+    ],
+    "development/prompt-engineering.md": [
+      "system/security/audit.md",
+      "system/quality/production-standards.md",
+      "system/quality/tdd.md"
+    ],
+    "development/code-review.md": [
+      "system/quality/pre-commit.md",
+      "system/quality/production-standards.md",
+      "system/quality/tdd.md",
+      "system/git/git-operations.md"
+    ],
+    "development/documentation.md": [
+      "system/quality/critical-thinking.md",
+      "development/documentation/knowledge-management.md"
+    ],
+    "planning/feature-workflow.md": [
+      "planning/strategy/mvp-strategy.md",
+      "system/testing/iterative-testing.md",
+      "planning/prd/prd-core.md",
+      "system/quality/production-standards.md",
+      "system/quality/tdd.md",
+      "planning/prd/intelligent-prd.md",
+      "system/quality/gate-verification.md",
+      "system/quality/security-gate-verification.md",
+      "system/quality/tdd-enforcement.md",
+      "system/session/session-management.md",
+      "planning/prd/prd-generation.md",
+      "system/quality/performance-gates.md"
+    ],
+    "meta/safety-validator.md": [
+      "system/quality/universal-quality-gates.md"
+    ],
+    "meta/human-oversight.md": [
+      "system/quality/universal-quality-gates.md"
+    ],
+    "meta/context-aware-module-generator.md": [
+      "patterns/composition/module-composition-framework.md"
+    ],
+    "meta/adaptive-customization.md": [
+      "meta/evolution/framework-evolver.md"
+    ],
+    "getting-started/domain-classification.md": [
+      "system/quality/domain-validation.md"
+    ],
+    "getting-started/project-initialization.md": [
+      "system/quality/universal-quality-gates.md"
+    ]
+  },
+  "circular_dependencies": [
+    [
+      "patterns/template-systems.md",
+      "patterns/configuration-management.md"
+    ],
+    [
+      "patterns/research-analysis-pattern.md",
+      "development/research-analysis.md"
+    ],
+    [
+      "patterns/research-analysis-pattern.md",
+      "patterns/implementation-pattern.md"
+    ],
+    [
+      "patterns/configuration-analysis.md",
+      "patterns/configuration-pattern.md"
+    ],
+    [
+      "patterns/context-management-pattern.md",
+      "patterns/performance-optimization-pattern.md"
+    ],
+    [
+      "patterns/context-management-pattern.md",
+      "patterns/session-management-pattern.md"
+    ],
+    [
+      "patterns/parallel-execution.md",
+      "meta/performance-optimizer.md"
+    ],
+    [
+      "patterns/parallel-execution.md",
+      "patterns/pattern-library.md"
+    ],
+    [
+      "patterns/error-recovery-pattern.md",
+      "patterns/quality-validation-pattern.md"
+    ],
+    [
+      "patterns/error-recovery-pattern.md",
+      "patterns/implementation-pattern.md"
+    ],
+    [
+      "patterns/configuration-management.md",
+      "patterns/pattern-library.md"
+    ],
+    [
+      "patterns/multi-agent.md",
+      "meta/multi-agent-swarm-orchestrator.md"
+    ],
+    [
+      "patterns/performance-optimization.md",
+      "patterns/pattern-library.md"
+    ],
+    [
+      "patterns/quality-validation-pattern.md",
+      "patterns/implementation-pattern.md"
+    ],
+    [
+      "patterns/technology-detection.md",
+      "patterns/pattern-library.md"
+    ],
+    [
+      "patterns/technology-detection.md",
+      "patterns/codebase-analysis.md"
+    ],
+    [
+      "patterns/technology-detection.md",
+      "getting-started/domain-classification.md"
+    ],
+    [
+      "patterns/configuration-pattern.md",
+      "getting-started/framework-configurator.md"
+    ],
+    [
+      "patterns/configuration-pattern.md",
+      "patterns/pattern-library.md"
+    ],
+    [
+      "patterns/validation-reporting.md",
+      "patterns/pattern-library.md"
+    ],
+    [
+      "patterns/documentation-pattern.md",
+      "patterns/user-interaction-pattern.md"
+    ],
+    [
+      "patterns/implementation-pattern.md",
+      "patterns/tdd-cycle-pattern.md"
+    ],
+    [
+      "patterns/error-recovery.md",
+      "meta/safety-validator.md"
+    ],
+    [
+      "patterns/error-recovery.md",
+      "patterns/pattern-library.md"
+    ],
+    [
+      "patterns/error-recovery.md",
+      "meta/human-oversight.md"
+    ],
+    [
+      "patterns/pattern-library.md",
+      "development/code-review.md"
+    ],
+    [
+      "patterns/pattern-library.md",
+      "getting-started/project-initialization.md"
+    ],
+    [
+      "patterns/pattern-library.md",
+      "getting-started/framework-configurator.md"
+    ],
+    [
+      "patterns/pattern-library.md",
+      "meta/adaptive-customization.md"
+    ],
+    [
+      "patterns/codebase-analysis.md",
+      "getting-started/domain-classification.md"
+    ],
+    [
+      "patterns/user-interaction-pattern.md",
+      "patterns/session-management-pattern.md"
+    ],
+    [
+      "patterns/intelligent-routing.md",
+      "development/research-analysis.md"
+    ]
+  ],
+  "most_dependent_modules": [
+    [
+      "patterns/pattern-library.md",
+      37
+    ],
+    [
+      "planning/feature-workflow.md",
+      14
+    ],
+    [
+      "development/task-management.md",
+      9
+    ],
+    [
+      "patterns/multi-agent.md",
+      7
+    ],
+    [
+      "patterns/tdd-cycle-pattern.md",
+      7
+    ],
+    [
+      "patterns/research-analysis-pattern.md",
+      6
+    ],
+    [
+      "development/research-analysis.md",
+      6
+    ],
+    [
+      "development/prompt-engineering.md",
+      6
+    ],
+    [
+      "development/code-review.md",
+      6
+    ],
+    [
+      "development/documentation.md",
+      6
+    ]
+  ],
+  "most_referenced_modules": [
+    [
+      "patterns/pattern-library.md",
+      23
+    ],
+    [
+      "system/quality/universal-quality-gates.md",
+      12
+    ],
+    [
+      "meta/safety-validator.md",
+      11
+    ],
+    [
+      "patterns/thinking/critical-thinking-pattern.md",
+      10
+    ],
+    [
+      "system/quality/tdd.md",
+      7
+    ],
+    [
+      "system/quality/critical-thinking.md",
+      6
+    ],
+    [
+      "getting-started/domain-classification.md",
+      6
+    ],
+    [
+      "meta/performance-optimizer.md",
+      5
+    ],
+    [
+      "meta/human-oversight.md",
+      5
+    ],
+    [
+      "system/quality/production-standards.md",
+      5
+    ]
+  ],
+  "isolated_modules": [],
+  "problematic_patterns": [
+    {
+      "type": "high_broken_reference_ratio",
+      "module": "patterns/validation-pattern.md",
+      "total_refs": 3,
+      "broken_refs": 2,
+      "ratio": 66.67
+    },
+    {
+      "type": "high_broken_reference_ratio",
+      "module": "patterns/multi-agent.md",
+      "total_refs": 7,
+      "broken_refs": 6,
+      "ratio": 85.71
+    },
+    {
+      "type": "high_broken_reference_ratio",
+      "module": "patterns/deterministic-execution-engine.md",
+      "total_refs": 3,
+      "broken_refs": 3,
+      "ratio": 100.0
+    },
+    {
+      "type": "high_broken_reference_ratio",
+      "module": "patterns/validation-reporting.md",
+      "total_refs": 3,
+      "broken_refs": 2,
+      "ratio": 66.67
+    },
+    {
+      "type": "high_broken_reference_ratio",
+      "module": "patterns/pattern-library.md",
+      "total_refs": 37,
+      "broken_refs": 22,
+      "ratio": 59.46
+    },
+    {
+      "type": "high_broken_reference_ratio",
+      "module": "development/task-management.md",
+      "total_refs": 9,
+      "broken_refs": 8,
+      "ratio": 88.89
+    },
+    {
+      "type": "high_broken_reference_ratio",
+      "module": "development/code-review.md",
+      "total_refs": 6,
+      "broken_refs": 4,
+      "ratio": 66.67
+    },
+    {
+      "type": "high_broken_reference_ratio",
+      "module": "planning/feature-workflow.md",
+      "total_refs": 14,
+      "broken_refs": 12,
+      "ratio": 85.71
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "domains/domain-specific-validation.md",
+      "direct_deps": 4,
+      "indirect_deps": 38
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/template-systems.md",
+      "direct_deps": 2,
+      "indirect_deps": 39
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/research-analysis-pattern.md",
+      "direct_deps": 6,
+      "indirect_deps": 51
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/validation-pattern.md",
+      "direct_deps": 3,
+      "indirect_deps": 37
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/configuration-analysis.md",
+      "direct_deps": 3,
+      "indirect_deps": 40
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/parallel-execution.md",
+      "direct_deps": 4,
+      "indirect_deps": 39
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/error-recovery-pattern.md",
+      "direct_deps": 4,
+      "indirect_deps": 11
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/template-customization-pattern.md",
+      "direct_deps": 1,
+      "indirect_deps": 37
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/configuration-management.md",
+      "direct_deps": 4,
+      "indirect_deps": 40
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/performance-optimization.md",
+      "direct_deps": 4,
+      "indirect_deps": 41
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/quality-validation-pattern.md",
+      "direct_deps": 4,
+      "indirect_deps": 12
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/setup-orchestration-pattern.md",
+      "direct_deps": 4,
+      "indirect_deps": 38
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/technology-detection.md",
+      "direct_deps": 4,
+      "indirect_deps": 39
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/configuration-pattern.md",
+      "direct_deps": 4,
+      "indirect_deps": 38
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/validation-reporting.md",
+      "direct_deps": 3,
+      "indirect_deps": 37
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/implementation-pattern.md",
+      "direct_deps": 5,
+      "indirect_deps": 11
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/error-recovery.md",
+      "direct_deps": 4,
+      "indirect_deps": 39
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/domain-analysis.md",
+      "direct_deps": 2,
+      "indirect_deps": 38
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/tool-usage.md",
+      "direct_deps": 1,
+      "indirect_deps": 37
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/tdd-cycle-pattern.md",
+      "direct_deps": 7,
+      "indirect_deps": 49
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/pattern-library.md",
+      "direct_deps": 37,
+      "indirect_deps": 34
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "patterns/codebase-analysis.md",
+      "direct_deps": 3,
+      "indirect_deps": 40
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "development/domain-documentation.md",
+      "direct_deps": 3,
+      "indirect_deps": 43
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "development/research-analysis.md",
+      "direct_deps": 6,
+      "indirect_deps": 18
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "development/prompt-engineering.md",
+      "direct_deps": 6,
+      "indirect_deps": 18
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "development/code-review.md",
+      "direct_deps": 6,
+      "indirect_deps": 41
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "planning/feature-workflow.md",
+      "direct_deps": 14,
+      "indirect_deps": 12
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "meta/recursive-architecture-analyzer.md",
+      "direct_deps": 3,
+      "indirect_deps": 11
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "meta/adaptive-customization.md",
+      "direct_deps": 4,
+      "indirect_deps": 39
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "getting-started/project-initialization.md",
+      "direct_deps": 3,
+      "indirect_deps": 38
+    },
+    {
+      "type": "deep_dependency_chain",
+      "module": "getting-started/framework-configurator.md",
+      "direct_deps": 3,
+      "indirect_deps": 41
+    }
+  ]
+}

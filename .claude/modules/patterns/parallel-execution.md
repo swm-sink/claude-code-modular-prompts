@@ -54,11 +54,11 @@
   <integration_points>
     <depends_on>
       patterns/pattern-library.md for execution patterns
-      quality/performance-validation.md for performance metrics
+      ../../system/../../system/quality/performance-validation.md for performance metrics
     </depends_on>
     <provides_to>
       meta/performance-optimizer.md for performance optimization
-      patterns/execution-orchestration.md for orchestration
+      ../../prompt_eng/../../prompt_eng/patterns/orchestration/execution-orchestration.md for orchestration
     </provides_to>
   </integration_points>
   

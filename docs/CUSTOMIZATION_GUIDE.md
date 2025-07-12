@@ -2,12 +2,29 @@
 
 This guide explains how to customize the Claude Code Modular Prompts Framework for your specific project needs using the PROJECT_CONFIG.xml system.
 
+## New Initialization Commands
+
+Framework 3.0 introduces four powerful initialization commands that automate the setup process:
+
+- **`/init-custom`**: Analyzes your existing codebase and automatically generates PROJECT_CONFIG.xml
+- **`/init-new`**: Interactive questionnaire for new projects with guided setup
+- **`/init-research`**: Searches for domain-specific best practices and applies them to your configuration
+- **`/init-validate`**: Comprehensive validation using 6 specialized agents to ensure everything works perfectly
+
+These commands eliminate most manual configuration needs while still allowing full customization when needed.
+
 ## Quick Start
 
+**Option 1: Automatic Setup (RECOMMENDED)**
+1. **Copy framework files**: Copy `.claude/` and `CLAUDE.md` to your project
+2. **Auto-configure**: Run `/init-custom` for existing projects or `/init-new` for new projects
+3. **Validate**: Run `/init-validate` to ensure everything works
+
+**Option 2: Manual Setup**
 1. **Copy the template**: Copy `PROJECT_CONFIG_TEMPLATE.md` to your project root
 2. **Create your config**: Save it as `PROJECT_CONFIG.xml` 
 3. **Replace placeholders**: Fill in all [INSERT ...] tags with your values
-4. **Initialize**: Run `/init --wizard` to validate and apply configuration
+4. **Validate**: Run `/init-validate` to validate and apply configuration
 
 ## Understanding Customization
 
@@ -145,7 +162,7 @@ Create multiple configs:
 - `PROJECT_CONFIG.prod.xml` - Production settings
 - `PROJECT_CONFIG.ci.xml` - CI/CD settings
 
-Load with: `/init --config PROJECT_CONFIG.dev.xml`
+Load with: `/init-custom` (automatically detects and applies appropriate config)
 
 ### Dynamic Values
 Some values support dynamic resolution:
@@ -207,7 +224,7 @@ Some values support dynamic resolution:
 
 ### Validate Your Configuration
 ```bash
-/init --validate
+/init-validate
 ```
 
 This will:
@@ -232,7 +249,7 @@ This will:
 
 ### Debug Mode
 ```bash
-/init --debug
+/init-validate
 ```
 
 Shows:
@@ -253,14 +270,14 @@ Shows:
 
 If you have existing projects:
 
-1. Run `/init --wizard` to generate initial config
+1. Run `/init-custom` to automatically generate initial config
 2. Review detected values and adjust as needed
 3. Test thoroughly with new configuration
 4. Remove any local framework modifications
 
 ## Getting Help
 
-- Run `/init --help` for command options
+- Run `/init-validate` for comprehensive validation and troubleshooting
 - Check logs in `.claude/logs/` for detailed errors
 - Framework adapts to YOUR project, not vice versa
 

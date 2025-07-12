@@ -503,12 +503,12 @@ The Domain Classification System provides intelligent, automated domain detectio
     <depends_on>
       patterns/codebase-analysis.md for project structure analysis
       patterns/technology-detection.md for technology stack identification
-      getting-started/domain-templates.md for domain template management
-      quality/domain-validation.md for classification validation
+      ../../domain/templates/README.md for domain template management
+      ../../system/../../system/quality/domain-validation.md for classification validation
     </depends_on>
     <provides_to>
-      getting-started/domain-adaptation.md for adaptation orchestration
-      getting-started/template-orchestration.md for template selection
+      ../../domain/adaptation/domain-adaptation.md for adaptation orchestration
+      ../../domain/adaptation/template-orchestration.md for template selection
       commands/init.md for initialization domain detection
       commands/adapt.md for adaptation domain requirements
     </provides_to>
