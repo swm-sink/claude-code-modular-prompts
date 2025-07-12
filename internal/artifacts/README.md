@@ -4,21 +4,30 @@ Development artifacts, migration reports, and technical documentation from the f
 
 ## Artifact Categories
 
-- **Migration Reports**: Framework migration and remediation documentation
+- **Configuration Files**: Project configuration templates and frameworks
 - **Integration Fixes**: Claude Code integration and compatibility fixes
-- **Dependency Maps**: Module dependency visualization and analysis
-- **Validation Reports**: Script and framework validation results
+- **Migration Plans**: Framework migration strategies and plans (not reports)
+- **Development Documentation**: User guides, change logs, and contributing guidelines
 
 ## Key Files
 
-- **REMEDIATION_*.md**: Framework remediation and fix tracking
-- **CLAUDE_CODE_INTEGRATION_FIX.md**: Claude Code compatibility updates
-- **module_dependency_*.{dot,md}**: Dependency visualization and analysis
-- **integration_test_report.md**: Comprehensive integration testing results
 - **PROJECT_CONFIG.xml**: Primary project configuration (moved from root)
 - **PROJECT_CONFIG_*.{xml,md}**: Configuration templates and frameworks
+- **CLAUDE_CODE_INTEGRATION_FIX.md**: Claude Code compatibility updates
+- **CHANGELOG.md**: Framework change history
+- **CONTRIBUTING.md**: Development contribution guidelines
+- **USER_GUIDE.md**: Framework user documentation
+
+## Moved to Reports
+
+All analysis reports and technical assessment documents have been consolidated into `../reports/analysis/` with logical organization by purpose:
+- Dependency analysis → `../reports/analysis/dependency/`
+- Quality reports → `../reports/analysis/quality/`
+- Performance reports → `../reports/analysis/performance/`
+
+## Development Environment
+
 - **.pre-commit-config.yaml**: Development environment configuration
-- **CHANGELOG.md, CONTRIBUTING.md, USER_GUIDE.md**: Development documentation
 
 ## Historical Value
 
