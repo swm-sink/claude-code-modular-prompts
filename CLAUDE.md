@@ -86,27 +86,27 @@
 # Command Status (Agent 9 Integration Test Results)
 
 ```xml
-<command_status test_date = "2025-07-11" agent = "9">
-  <functional_commands count = "4">
-        <command name = "init" status = "FULLY_FUNCTIONAL"/>
+<command_status test_date = "2025-07-12" agent = "V3">
+  <functional_commands count = "9">
+    <command name = "init" status = "FULLY_FUNCTIONAL"/>
     <command name = "task" status = "FULLY_FUNCTIONAL"/>
     <command name = "feature" status = "FULLY_FUNCTIONAL"/>
     <command name = "protocol" status = "FULLY_FUNCTIONAL"/>
+    <command name = "auto" status = "FULLY_FUNCTIONAL"/>
+    <command name = "query" status = "FULLY_FUNCTIONAL"/>
+    <command name = "swarm" status = "FULLY_FUNCTIONAL"/>
+    <command name = "docs" status = "FULLY_FUNCTIONAL"/>
+    <command name = "session" status = "FULLY_FUNCTIONAL"/>
   </functional_commands>
-  <accessible_commands count = "9">
-        <command name = "init-validate" status = "ACCESSIBLE_BUT_UNSTRUCTURED"/>
-    <command name = "auto" status = "ACCESSIBLE_BUT_UNSTRUCTURED"/>
+  <accessible_commands count = "4">
+    <command name = "init-validate" status = "ACCESSIBLE_BUT_UNSTRUCTURED"/>
     <command name = "init-custom" status = "ACCESSIBLE_BUT_UNSTRUCTURED"/>
     <command name = "init-research" status = "ACCESSIBLE_BUT_UNSTRUCTURED"/>
-    <command name = "query" status = "ACCESSIBLE_BUT_UNSTRUCTURED"/>
-    <command name = "swarm" status = "ACCESSIBLE_BUT_UNSTRUCTURED"/>
     <command name = "init-new" status = "ACCESSIBLE_BUT_UNSTRUCTURED"/>
-    <command name = "docs" status = "ACCESSIBLE_BUT_UNSTRUCTURED"/>
-    <command name = "session" status = "ACCESSIBLE_BUT_UNSTRUCTURED"/>
   </accessible_commands>
   <integration_status>
     <total_tested>13</total_tested>
-    <success_rate>30.8%</success_rate>
+    <success_rate>69.2%</success_rate>
     <production_ready>True</production_ready>
   </integration_status>
 </command_status>
@@ -431,13 +431,13 @@
 ```xml
 <architecture>
   <commands location = ".claude/commands/" delegate_only = "true" enforcement = "MANDATORY">
-    <cmd name = "/auto" module = "prompt_eng/modules/routing/intelligent-routing.md"/>
+    <cmd name = "/auto" module = "modules/patterns/intelligent-routing.md"/>
     <cmd name = "/task" module = "development/task-management.md"/>
     <cmd name = "/feature" module = "development/planning/feature-workflow.md"/>
-    <cmd name = "/swarm" module = "prompt_eng/modules/orchestration/multi-agent.md"/>
-    <cmd name = "/query" module = "development/research-analysis.md"/>
+    <cmd name = "/swarm" module = "modules/development/multi-agent.md"/>
+    <cmd name = "/query" module = "modules/development/research-analysis.md"/>
     <cmd name = "/session" module = "system/session/session-management.md"/>
-    <cmd name = "/docs" module = "development/documentation/documentation.md" critical = "true"/>
+    <cmd name = "/docs" module = "modules/development/documentation.md" critical = "true"/>
     <cmd name = "/protocol" module = "system/session/session-management.md"/>
     <cmd name = "/init" module = "domain/wizard/README.md"/>
     <cmd name = "/context-prime" module = "system/context/project-priming.md"/>
