@@ -172,7 +172,7 @@
 
 # Browse by Location
 - **Commands**: `.claude/commands/` (8 core commands)
-- **Modules**: `.claude/modules/` (100+ implementation modules)
+- **Modules**: `.claude/modules/` (108+ implementation modules)
 - **Core Guides**: `docs/framework/` (streamlined essentials)
 - **Advanced**: `docs/advanced/` (complex workflows)
 

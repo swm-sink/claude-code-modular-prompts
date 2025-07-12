@@ -164,7 +164,7 @@ The Claude Code Framework implements a **two-tier command system** designed to s
 ### Full Framework Architecture
 
 **Structure**: Command-module delegation pattern
-**Dependencies**: 100+ modules organized by domain
+**Dependencies**: 108+ modules organized by domain
 **Quality**: Universal quality gates with blocking enforcement
 **Execution**: Module runtime engine with meta-prompting
 **Output**: Comprehensive results with advanced analytics
@@ -175,7 +175,7 @@ The Claude Code Framework implements a **two-tier command system** designed to s
 ├── auto.md           # Intelligent routing
 ├── task.md           # TDD-enforced development
 ├── swarm.md          # Multi-agent coordination
-└── /modules/         # 100+ supporting modules
+└── /modules/         # 108+ supporting modules
 ```
 
 ---

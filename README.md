@@ -13,7 +13,7 @@
 Claude Code Modular Prompts is a revolutionary Framework 3.0 development tool that enhances your Claude Code workflow through:
 
 - **🎯 Smart Commands**: Intelligent routing with TDD-aware decision making
-- **🧩 Modular Framework**: 100+ specialized modules with dependency management
+- **🧩 Modular Framework**: 108+ specialized modules with dependency management
 - **✅ Quality Gates**: Automated TDD enforcement and quality validation
 - **📊 GitHub Integration**: Issue-based tracking with session management
 - **🔧 Meta-Architecture**: Self-improving framework with adaptive capabilities
@@ -152,7 +152,7 @@ Your Request → /auto → Intelligent Routing → Right Command → Quality Out
 ```
 .claude/
 ├── commands/        # 8 core commands with module runtime engine
-├── modules/         # 100+ implementation modules organized by category
+├── modules/         # 108+ implementation modules organized by category
 │   ├── security/    # Threat modeling, audit, compliance
 │   ├── quality/     # TDD, critical thinking, universal quality gates
 │   ├── development/ # Research, documentation, task management
