@@ -1,55 +1,75 @@
-# Scripts Directory
+# Scripts Directory - User Operations
 
-This directory contains utility scripts for framework maintenance and analysis.
+This directory contains user-facing operational scripts for the Claude Code Framework. These scripts are designed for everyday framework operations, setup, and utilities.
 
-## Scripts
+## Directory Structure
 
-### validate.py
-- Validates framework structure and module integrity
-- Checks version consistency across all modules
-- Verifies dependency relationships
-- Ensures compliance with framework rules
+```
+scripts/
+├── README.md               # This file - user guide to available scripts
+├── setup/                  # User setup utilities
+├── config/                 # Configuration management
+└── utilities/              # User utility scripts
+```
 
-### optimize.py
-- Optimizes module performance and structure
-- Identifies redundant patterns
-- Suggests improvements for token efficiency
-- Analyzes module interconnections
+## User-Facing Scripts
 
-### quality-optimizer.py
-- Analyzes code quality metrics
-- Optimizes quality gate configurations
-- Generates quality improvement recommendations
-- Tracks quality trends over time
+### Setup Scripts (`setup/`)
+**Purpose**: Initial framework setup and configuration
+- `setup_precommit.sh` - Sets up pre-commit hooks for framework validation
 
-### visualize.py
-- Creates visual representations of module dependencies
-- Generates framework structure diagrams
-- Visualizes command routing paths
-- Produces integration maps
+### Configuration Scripts (`config/`)
+**Purpose**: Framework configuration and management utilities
+- `framework/` - Core framework configuration utilities
+  - `config_validator.py` - Validates framework configuration files
+  - `template_resolver.py` - Resolves configuration templates
+  - `xml_utils.py` - XML configuration utilities
+- `routing/` - Intelligent routing configuration
+  - `deterministic_router.py` - Deterministic command routing logic
 
-### check-duplications.py
-- Scans for duplicate content across modules
-- Identifies redundant implementations
-- Suggests consolidation opportunities
-- Maintains framework DRY principles
+### Utility Scripts (`utilities/`)
+**Purpose**: General purpose utilities for framework users
+- `check-duplications.py` - Scans for duplicate content across modules
+- `visualize.py` - Creates visual representations of framework structure
 
 ## Usage
 
 All scripts should be run from the project root:
 
 ```bash
-python scripts/validate.py
-python scripts/optimize.py
-python scripts/quality-optimizer.py
-python scripts/visualize.py
-python scripts/check-duplications.py
+# Setup scripts
+bash scripts/setup/setup_precommit.sh
+
+# Configuration validation
+python scripts/config/framework/config_validator.py
+
+# Utilities
+python scripts/utilities/check-duplications.py
+python scripts/utilities/visualize.py
 ```
 
-## Output
+## For Developers
 
-Script outputs are ignored by git (.gitignore configured for):
+Development, testing, validation, and monitoring scripts have been moved to organized directories:
+
+- **Development Scripts**: `internal/development/` - Development tools, testing, optimization
+- **Validation Scripts**: `internal/validation/` - Quality assurance and validation tools
+- **Monitoring Scripts**: `internal/monitoring/` - Health monitoring and performance tracking
+
+See respective README files in those directories for development-focused scripts.
+
+## Output and Logs
+
+Script outputs are ignored by git (configured in .gitignore):
 - `scripts/output/`
 - `scripts/logs/`
 - `*.output`
 - `*.result`
+
+## Support
+
+For issues with scripts:
+1. Check the specific script's documentation
+2. Verify your environment meets requirements
+3. Run with `-v` or `--verbose` flags when available
+4. Consult the framework documentation in `docs/`

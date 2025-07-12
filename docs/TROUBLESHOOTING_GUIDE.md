@@ -78,7 +78,7 @@ ls .claude/system/quality/tdd.md
 git checkout main -- .claude/commands/
 
 # Fix broken module references
-python scripts/fix_module_references.py
+python internal/development/tools/fix_module_references.py
 
 # Verify functionality
 python tests/integration/test_command_workflows.py
@@ -94,7 +94,7 @@ Error: Module patterns/critical-thinking-pattern.md not found
 **Quick Fix**:
 ```bash
 # Run automated reference fixer
-python scripts/fix_module_references.py
+python internal/development/tools/fix_module_references.py
 ```
 
 **Check Progress**:
@@ -278,7 +278,7 @@ grep -c "Loading module" debug.log
 time echo "/task 'Simple function'" | claude-code
 
 # Analyze dependency complexity
-python scripts/performance_analyzer.py
+python internal/development/optimization/performance_optimizer.py
 
 # Optimize context window
 python scripts/context_optimizer.py
@@ -317,7 +317,7 @@ python scripts/update_command_mapping.py
 python tests/integration/test_command_workflows.py
 
 # Fix any broken references
-python scripts/fix_module_references.py
+python internal/development/tools/fix_module_references.py
 ```
 
 ## Framework Health Assessment
@@ -365,7 +365,7 @@ python tests/integration/test_command_workflows.py
 python module_dependency_analyzer.py
 
 # Performance baseline
-python scripts/performance_benchmark.py
+python tests/performance_benchmark.py
 ```
 
 ## Recovery Procedures
@@ -382,7 +382,7 @@ cp -r .claude .claude.backup.$(date +%Y%m%d_%H%M%S)
 git checkout main -- .claude/
 
 # 3. Apply custom fixes
-python scripts/fix_module_references.py
+python internal/development/tools/fix_module_references.py
 
 # 4. Validate recovery
 python tests/integration/test_command_workflows.py
@@ -403,7 +403,7 @@ python module_dependency_analyzer.py > reference_analysis.txt
 python scripts/generate_reference_fixes.py reference_analysis.txt
 
 # 3. Apply fixes in batches
-python scripts/fix_module_references.py --batch-size 10
+python internal/development/tools/fix_module_references.py --batch-size 10
 
 # 4. Verify each batch
 python module_dependency_analyzer.py
@@ -439,7 +439,7 @@ python module_dependency_analyzer.py
 python tests/integration/test_command_workflows.py
 
 # Monthly reference cleanup
-python scripts/fix_module_references.py
+python internal/development/tools/fix_module_references.py
 
 # Quarterly full validation
 python tests/framework_validation.py

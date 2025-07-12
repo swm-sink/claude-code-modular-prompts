@@ -354,7 +354,7 @@ rm -f .claude/settings.local.json && ln -sf ~/.claude/settings.json .claude/sett
 
 ```bash
 # Framework health check
-python scripts/health_check.py
+python internal/monitoring/health_check.py
 
 # Validate configuration
 python scripts/framework/config_validator.py --verbose

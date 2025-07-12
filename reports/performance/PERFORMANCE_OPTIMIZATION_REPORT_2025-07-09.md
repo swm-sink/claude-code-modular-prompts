@@ -49,7 +49,7 @@ Overall Performance: ✅ All operations within targets
 
 ### 1. Context Window Optimization 📝
 
-**Implementation**: `/scripts/performance_optimizer.py`
+**Implementation**: `/internal/development/optimization/performance_optimizer.py`
 
 **Features**:
 - Hierarchical content loading with priority-based optimization
@@ -109,7 +109,7 @@ Overall Performance: ✅ All operations within targets
 
 ### 5. Real-Time Performance Dashboard 📊
 
-**Implementation**: `/scripts/performance_dashboard.py`
+**Implementation**: `/internal/monitoring/performance_dashboard.py`
 
 **Features**:
 - Live performance metrics collection

@@ -244,7 +244,7 @@ cat .claude/commands/task.md
 python module_dependency_analyzer.py
 
 # Fix broken references
-python scripts/fix_module_references.py
+python internal/development/tools/fix_module_references.py
 
 # Verify fixes
 python module_dependency_analyzer.py
@@ -392,7 +392,7 @@ python tests/integration/test_command_workflows.py::TestCommandWorkflows::test_t
 python module_dependency_analyzer.py
 
 # Generate dependency map
-python scripts/create_dependency_graph.py
+python internal/development/tools/create_dependency_graph.py
 
 # Visual analysis (if Graphviz installed)
 dot -Tpng module_dependencies.dot -o dependencies.png
@@ -408,7 +408,7 @@ time /task "Simple validation function"
 grep -c "token" claude_code_session.log
 
 # Analyze parallel efficiency
-python scripts/performance_analyzer.py
+python internal/development/optimization/performance_optimizer.py
 ```
 
 ## Conclusion
