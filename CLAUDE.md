@@ -443,10 +443,10 @@
     <cmd name = "/context-prime" module = "system/context/project-priming.md"/>
     <cmd name = "/adapt" module = "domain/adaptation/template-orchestration.md"/>
     <cmd name = "/validate" module = "domain/adaptation/adaptation-validation.md"/>
-    <cmd name = "/init-custom" module = "commands/init-custom.md" critical = "true"/>
-    <cmd name = "/init-new" module = "commands/init-new.md" critical = "true"/>
-    <cmd name = "/init-research" module = "commands/init-research.md" critical = "true"/>
-    <cmd name = "/init-validate" module = "commands/init-validate.md" critical = "true"/>
+    <cmd name = "/init-custom" module = "domain/wizard/domain-wizard.md" critical = "true"/>
+    <cmd name = "/init-new" module = "development/project-initialization.md" critical = "true"/>
+    <cmd name = "/init-research" module = "development/research-analysis.md" critical = "true"/>
+    <cmd name = "/init-validate" module = "quality/setup-validation.md" critical = "true"/>
     <cmd name = "/chain" module = "patterns/command-chaining-architecture.md" critical = "true"/>
     <cmd name = "/meta-review" module = "meta/framework-auditor.md" critical = "true"/>
     <cmd name = "/meta-evolve" module = "meta/update-cycle-manager.md" critical = "true"/>
