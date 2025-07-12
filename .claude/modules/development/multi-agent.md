@@ -782,14 +782,47 @@
       <description>ACTUAL Batch() implementation for homogeneous work</description>
       <implementation>
         ```javascript
-        // NATIVE BATCH() WITH WORKTREE PREPARATION
+        // SECURITY IMPORTS: Use secure subprocess execution
+        const { execFile } = require('child_process');
+        const { promisify } = require('util');
+        const execFileAsync = promisify(execFile);
+        
+        // SECURITY FUNCTION: Sanitize service names to prevent injection attacks
+        function sanitizeServiceName(service) {
+          // Only allow alphanumeric characters, hyphens, and underscores
+          // This prevents shell injection through service names
+          const sanitized = service.replace(/[^a-zA-Z0-9\-_]/g, '');
+          
+          // Ensure the sanitized name is not empty and has reasonable length
+          if (!sanitized || sanitized.length === 0 || sanitized.length > 50) {
+            return null;
+          }
+          
+          // Prevent directory traversal attempts
+          if (sanitized.includes('..') || sanitized.startsWith('-')) {
+            return null;
+          }
+          
+          return sanitized;
+        }
+        
+        // NATIVE BATCH() WITH WORKTREE PREPARATION - SECURITY HARDENED
         async function executeBatchRefactoring(services) {
           // Prepare worktrees for batch operations
           const worktrees = await Promise.all(
             services.map(async (service) => {
-              const worktreePath = `../worktrees/batch-refactor-${service.toLowerCase()}`;
-              await exec(`git worktree add ${worktreePath} -b refactor/${service}`);
-              return { service, worktreePath };
+              // SECURITY: Validate and sanitize service name to prevent code injection
+              const sanitizedService = sanitizeServiceName(service);
+              if (!sanitizedService) {
+                throw new Error(`Invalid service name: ${service}`);
+              }
+              
+              const worktreePath = `../worktrees/batch-refactor-${sanitizedService.toLowerCase()}`;
+              const branchName = `refactor/${sanitizedService}`;
+              
+              // SECURITY: Use subprocess.execFile with array arguments to prevent injection
+              await execFileAsync('git', ['worktree', 'add', worktreePath, '-b', branchName]);
+              return { service: sanitizedService, worktreePath };
             })
           );
           
@@ -816,6 +849,8 @@
         - Consistent approach across all services
         - Isolated worktrees prevent cross-contamination
         - Automatic progress tracking in session
+        - Security hardened against code injection attacks
+        - Input validation prevents malicious service names
       </performance_gains>
     </native_batch_implementation>
     
@@ -876,6 +911,27 @@
       </resilience_features>
     </error_recovery_integration>
   </concrete_implementations>
+  
+  <security_hardening>
+    <code_injection_prevention>
+      <vulnerability_description>
+        Previous implementation used exec() with string concatenation, allowing code injection
+        through malicious service names (e.g., "; rm -rf /; echo ")
+      </vulnerability_description>
+      <security_measures>
+        1. Input sanitization: Only allow alphanumeric chars, hyphens, underscores
+        2. Length validation: Prevent excessively long inputs
+        3. Directory traversal prevention: Block ".." and leading "-" characters
+        4. Secure subprocess execution: Use execFile() with array arguments
+        5. Error handling: Fail fast on invalid inputs with clear error messages
+      </security_measures>
+      <validation_requirements>
+        ALL user inputs MUST be validated before subprocess execution
+        NO string concatenation in shell commands - use array arguments only
+        Service names MUST match pattern: /^[a-zA-Z0-9\-_]{1,50}$/
+      </validation_requirements>
+    </code_injection_prevention>
+  </security_hardening>
   
   <critical_integration_requirements>
     <git_worktree_mandatory>
