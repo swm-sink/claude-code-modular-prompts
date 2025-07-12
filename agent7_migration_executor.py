@@ -66,6 +66,12 @@ class MigrationExecutor:
                     self.log_operation(f"Validation failed for: {message}", "FAILED")
                     return False
             
+            # Check if there are changes to commit
+            status_result = subprocess.run(['git', 'status', '--porcelain'], capture_output=True, text=True)
+            if not status_result.stdout.strip():
+                self.log_operation(f"No changes to commit for: {message}", "INFO")
+                return True  # No changes is not a failure
+            
             # Atomic commit
             result = subprocess.run(['git', 'add', '-A'], capture_output=True, text=True)
             if result.returncode != 0:
