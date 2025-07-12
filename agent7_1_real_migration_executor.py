@@ -26,6 +26,7 @@ class Agent71RealMigrationExecutor:
             'rollback_points': []
         }
         self.operations_log = []
+        self.atomic_commits = []
         
     def log_operation(self, operation, status, details=None):
         """Log operation with timestamp"""
