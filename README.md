@@ -1,171 +1,136 @@
 # Claude Code Modular Prompts Framework
 
-> 🚀 **A prompt engineering framework that improves Claude Code workflow efficiency through organized prompts and GitHub integration**
+> 🚀 **Transform Claude Code from good to exceptional**: Intelligent commands that adapt to YOUR project, enforce quality automatically, and get smarter over time.
 
 [![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://github.com/swm-sink/claude-code-modular-prompts)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Claude 4](https://img.shields.io/badge/Claude-4%20Optimized-purple.svg)](CLAUDE.md)
 [![Framework](https://img.shields.io/badge/Framework-3.0%20Meta--Prompting-purple.svg)](CLAUDE.md)
 
+## 30-Second Understanding
 
-# What is This?
+**What**: Smart commands that automatically adapt to your tech stack and project needs
+**How**: Drop 3 files into your project, start with `/auto "your task"`
+**Result**: Claude Code produces better code, enforces quality, learns your patterns
 
-Claude Code Modular Prompts is a revolutionary Framework 3.0 development tool that enhances your Claude Code workflow through:
-
-- **🎯 Smart Commands**: Intelligent routing with TDD-aware decision making
-- **🧩 Modular Framework**: 108+ specialized modules with dependency management
-- **✅ Quality Gates**: Automated TDD enforcement and quality validation
-- **📊 GitHub Integration**: Issue-based tracking with session management
-- **🔧 Meta-Architecture**: Self-improving framework with adaptive capabilities
-- **🧠 Meta-Prompting**: Advanced meta-prompting with continuous optimization
-- **⚡ Claude 4 Optimized**: Advanced thinking patterns and parallel execution
-
-**Framework 3.0**: This is a fully implemented modular prompt engineering framework with meta-prompting capabilities and self-improvement frameworks, NOT autonomous AI frameworks. It's a sophisticated productivity tool that evolves with your needs.
-
-
-# Quick Start (30 seconds!)
-
-
-# Installation
+**Perfect for**: Any project (React, Python, Go, mobile, data science, etc.)
 
 ```bash
-# Clone the framework
+# 1. Copy framework to your project (30 seconds)
 git clone https://github.com/swm-sink/claude-code-modular-prompts.git
-
-# Copy framework to your project
 cp -r claude-code-modular-prompts/.claude your-project/
 cp claude-code-modular-prompts/CLAUDE.md your-project/
 cp claude-code-modular-prompts/PROJECT_CONFIG.xml your-project/
 
-# Optional: Copy additional resources
-cp -r claude-code-modular-prompts/docs your-project/
-cp -r claude-code-modular-prompts/scripts your-project/
+# 2. Start using immediately (30 seconds)
+cd your-project/
+/auto "add user authentication"        # ← Framework adapts to YOUR tech stack
 ```
 
-# Start Using Immediately
+**✅ Success Indicators**: Claude Code suggests tech-specific solutions, follows your project patterns, enforces quality automatically
 
+## Choose Your Journey
+
+### 🏃‍♂️ **I want to use it now** (5 minutes)
+👉 **[GETTING_STARTED.md](GETTING_STARTED.md)** - Complete setup with PROJECT_CONFIG.xml customization
+
+### 🔬 **I want to understand it first** (15 minutes) 
+👉 **[examples/quick-start/](examples/quick-start/)** - Working examples you can try immediately
+
+### 🚀 **I want to master it** (1+ hours)
+👉 **[docs/](docs/)** - Full documentation, advanced patterns, and customization guides
+
+
+## Essential Commands (Pick One to Start)
+
+**🤖 `/auto "your request"`** - Let framework decide the best approach
 ```bash
-# Not sure what command to use? Start here:
-/auto "Add user authentication to my app"
-
-# Quick focused task:
-/task "Fix the login bug"
-
-# Just researching:
-/query "How does our caching work?"
+/auto "add user authentication"     # → Routes to /feature for new feature
+/auto "fix login bug"              # → Routes to /task for focused fix
+/auto "understand auth system"     # → Routes to /query for research
 ```
 
-📚 **[Full Getting Started Guide](docs/GETTING_STARTED.md)** - 3 minute read, working in 30 seconds!
-
-
-# Key Commands
-
-
-# The Essential Commands
-
-| Command | Purpose | Framework 3.0 Enhancement | Example |
-|---------|---------|-------------------------|---------|
-| `/auto` | Smart routing with TDD awareness | Meta-prompting intelligence | `/auto "add user login"` |
-| `/task` | Single component work | Strict TDD enforcement | `/task "fix password reset"` |
-| `/feature` | Complete feature with PRD | PRD-driven with quality gates | `/feature "shopping cart"` |
-| `/swarm` | Complex multi-component work | Multi-agent coordination | `/swarm "migrate to GraphQL"` |
-| `/query` | Research without changes | Test-aware analysis | `/query "explain auth flow"` |
-| `/docs` | Documentation gateway | FOCUS framework integration | `/docs generate "API Guide"` |
-| `/session` | Session management | GitHub issue tracking | `/session create "feature work"` |
-| `/protocol` | Production standards | Maximum quality enforcement | `/protocol "deploy feature"` |
-
-
-# Visual Command Flow
-
-```
-Your Request → /auto → Intelligent Routing → Right Command → Quality Output
+**🔧 `/task "focused work"`** - Single component, guaranteed TDD
+```bash
+/task "add password validation"    # → Creates tests first, then implementation
 ```
 
+**🏗️ `/feature "complete feature"`** - Full feature with requirements
+```bash
+/feature "shopping cart system"    # → PRD → planning → implementation → validation
+```
 
-# What This Actually Does
+**🔍 `/query "research question"`** - Understand before changing
+```bash
+/query "how does our auth work?"   # → Analysis without modifications
+```
 
-
-# ✅ What It Does Well
-
-- **Organizes complex prompts** into reusable modules
-- **Routes requests intelligently** to the right approach
-- **Enforces best practices** like TDD automatically
-- **Tracks complex work** with GitHub integration
-- **Provides helpful reminders** for quality code
-
-
-# ❌ What It Doesn't Do
-
-- **Not autonomous systems** - it's organized prompts
-- **Not enterprise software** - it's a personal tool
-- **Not magic** - it enhances Claude Code, doesn't replace thinking
-- **Not a platform** - it's workflow automation
+> **Start with `/auto`** - it's intelligent routing that picks the right approach for your specific request.
 
 
-# Real-World Examples
+## What This Framework Actually Does
+
+**✅ Makes Claude Code Smarter**:
+- **Adapts to YOUR tech stack**: Same command → React components for React projects, Python classes for Django
+- **Enforces quality automatically**: TDD, test coverage, security checks
+- **Learns your patterns**: Gets better at producing code that matches your style
+- **Routes intelligently**: `/auto` picks the right command based on your request
+
+**❌ What It's NOT**:
+- **Not autonomous**: It's enhanced prompts, not AI agents
+- **Not magic**: Still requires your thinking and decisions
+- **Not one-size-fits-all**: Adapts to YOUR specific project
 
 
-# Building a Feature
+## See It In Action
+
+### 🔧 Simple Fix (2 minutes)
+```bash
+/task "Fix password reset email"
+```
+**Result**: Creates failing test → implements fix → verifies tests pass → ready to commit
+
+### 🏗️ Complete Feature (20 minutes)  
 ```bash
 /feature "User profile with avatar upload"
-
-# → Creates requirements doc (PRD)
-
-# → Plans minimal viable approach
-
-# → Implements with tests
-
-# → Validates everything works
 ```
+**Result**: Writes PRD → plans architecture → implements with tests → validates functionality
 
-
-# Fixing a Bug
+### 🔍 Understanding Code (5 minutes)
 ```bash
-/task "Fix: Users can't reset password"
-
-# → Writes test for the bug first
-
-# → Implements the fix
-
-# → Verifies test passes
-
-# → No regressions
+/query "How does our authentication system work?"
 ```
+**Result**: Analyzes code → explains architecture → identifies patterns → suggests improvements
+
+> **Next Step**: Try one of these examples in your project! Each command adapts to your specific tech stack.
 
 
-# Complex Project
-```bash
-/swarm "Convert REST API to GraphQL"
+## Success Validation
 
-# → Creates GitHub tracking issue
+**✅ Tier 1 Complete** (30 seconds - 5 minutes):
+- [ ] Framework responds to `/auto` command
+- [ ] Suggestions match your tech stack
+- [ ] Quality enforcement works (mentions tests, security, etc.)
 
-# → Breaks into manageable phases
+**✅ Tier 2 Complete** (5-60 minutes):
+- [ ] `/task` creates tests before implementation
+- [ ] `/feature` produces PRD and plans
+- [ ] `/query` analyzes without changing code
+- [ ] Commands suggest project-specific patterns
 
-# → Coordinates the work
+**✅ Tier 3 Complete** (1+ hours):
+- [ ] Framework learns your coding style
+- [ ] Meta-commands optimize for your project
+- [ ] Custom modules integrate smoothly
+- [ ] Team members can use shared configuration
 
-# → Tracks progress
-```
+## Ready to Level Up?
 
+**🎯 Master the Basics**: Try all 4 essential commands in your project  
+**🔧 Customize Framework**: Edit PROJECT_CONFIG.xml for your exact needs  
+**🚀 Advanced Usage**: Explore [docs/](docs/) for meta-prompting and custom modules  
 
-# Framework Structure
-
-```
-.claude/
-├── commands/        # 8 core commands with module runtime engine
-├── modules/         # 108+ implementation modules organized by category
-│   ├── security/    # Threat modeling, audit, compliance
-│   ├── quality/     # TDD, critical thinking, universal quality gates
-│   ├── development/ # Research, documentation, task management
-│   ├── patterns/    # Multi-agent, session management, intelligent routing
-│   ├── planning/    # PRD generation, MVP strategy, feature workflow
-│   ├── testing/     # Auto-testing, iterative testing patterns
-│   └── frameworks/  # FOCUS, AWARE, RISE, TRACE framework implementations
-├── templates/       # Framework 3.0 format templates
-├── context/         # Session management and artifact preservation
-└── analytics/       # Framework health monitoring and metrics
-```
-
-**Framework 3.0 Philosophy**: *"Commands delegate, modules implement, meta-prompting evolves"*
+> **Remember**: Framework gets smarter about YOUR project every time you use it!
 
 
 # File Format Standard (Framework 3.0)
@@ -211,16 +176,22 @@ All framework files follow a standardized table-based format:
 - **TDD integration**: Mandatory test-driven development patterns
 
 
-# Documentation (Framework 3.0)
+## Documentation & Resources
 
-- **[Getting Started](docs/GETTING_STARTED.md)** - 3-minute quickstart with Framework 3.0
-- **[Documentation Index](docs/DOCUMENTATION_INDEX.md)** - Navigate the streamlined docs
-- **[CLAUDE.md](CLAUDE.md)** - Framework 3.0 control document (reference)
-- **[Quality & Production Standards](docs/framework/quality-and-production-standards.md)** - Comprehensive quality guide
-- **[Development Standards](docs/framework/development-standards.md)** - TDD and critical thinking
-- **[Claude 4 Integration](docs/CLAUDE_4_PROMPT_GUIDE.md)** - Advanced Claude 4 optimization
-- **[Command Selection Guide](docs/COMMAND_SELECTION_GUIDE.md)** - Choose the right command
-- **[Templates](.claude/templates/)** - Framework 3.0 format templates
+### 🚀 **Getting Started** (Choose Your Path)
+- **[GETTING_STARTED.md](GETTING_STARTED.md)** - Complete 5-minute setup guide
+- **[examples/quick-start/](examples/quick-start/)** - Try working examples immediately  
+- **[examples/project-configs/](examples/project-configs/)** - Pre-built configs for your tech stack
+
+### 📖 **User Guides** (Build Your Skills)
+- **[docs/user-guide/](docs/user-guide/)** - Systematic skill building
+- **[docs/user-guide/commands/](docs/user-guide/commands/)** - Master all commands
+- **[docs/user-guide/workflows/](docs/user-guide/workflows/)** - Real-world patterns
+
+### 🔧 **Advanced Usage** (Framework Mastery)
+- **[docs/advanced/](docs/advanced/)** - Custom modules, meta-prompting, optimization
+- **[examples/advanced/](examples/advanced/)** - Sophisticated usage patterns
+- **[CLAUDE.md](CLAUDE.md)** - Complete framework reference (developers)
 
 
 # Requirements

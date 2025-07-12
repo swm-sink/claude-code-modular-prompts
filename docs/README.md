@@ -1,91 +1,129 @@
-# Documentation - Your Path to Framework Mastery
+# Documentation - 3-Tier Learning Journey
 
-> **Quick Start**: New to the framework? Start with [Getting Started](getting-started/quick-start.md) for 5-minute success!
+> **🎯 Perfect Progression**: 30-second understanding → 5-minute success → Framework mastery. Choose your starting tier!
 
-Welcome to the Claude Code Framework documentation. This guide is designed to take you from newcomer to power user through a progressive learning journey.
+## 🚀 Tier 1: Immediate Success (0-5 minutes)
+**Get framework working and see immediate results**
 
-## 📍 Choose Your Starting Point
+### Start Here: [Getting Started](getting-started/)
+- **[Quick Start](getting-started/quick-start.md)** - 5-minute setup with guaranteed success
+- **[Installation](getting-started/installation.md)** - Copy 3 files, start using
+- **[First Commands](getting-started/first-commands.md)** - `/auto`, `/task`, `/query` basics
 
-### 🚀 I'm New Here (5 minutes to success)
-Start with [Getting Started](getting-started/) - designed to get you productive immediately:
-- [Quick Start Guide](getting-started/quick-start.md) - 5-minute setup and first command
-- [Installation](getting-started/installation.md) - Complete setup instructions
-- [First Commands](getting-started/first-commands.md) - Essential commands you'll use daily
-
-### 🎯 I Want to Use the Framework (Daily workflows)
-Explore [User Guide](user-guide/) for practical, task-oriented help:
-- [Commands](user-guide/commands/) - How to use each command effectively
-- [Workflows](user-guide/workflows/) - Common patterns and best practices
-- [Customization](user-guide/customization/) - Adapt the framework to your project
-
-### 📚 I Need Reference Information (Complete details)
-Check [Reference](reference/) for comprehensive documentation:
-- [Commands Reference](reference/commands-reference.md) - Complete command documentation
-- [Configuration](reference/configuration.md) - All configuration options
-- [Troubleshooting](reference/troubleshooting.md) - Solutions to common problems
-
-### ⚡ I Want Advanced Features (Power user content)
-Dive into [Advanced](advanced/) for sophisticated usage:
-- [Framework Architecture](advanced/framework-architecture.md) - How it all works
-- [Extending Framework](advanced/extending-framework.md) - Custom modules and patterns
-- [Contributing](advanced/contributing.md) - Help improve the framework
-
-## 🗺️ Learning Path Recommendations
-
-### For Beginners
-1. **Start**: [Quick Start](getting-started/quick-start.md) (5 min)
-2. **Learn**: [First Commands](getting-started/first-commands.md) (10 min)
-3. **Practice**: [Common Workflows](user-guide/workflows/common-patterns.md) (20 min)
-4. **Customize**: [Project Configuration](user-guide/customization/project-config.md) (15 min)
-
-### For Regular Users
-1. **Optimize**: [Advanced Workflows](user-guide/workflows/advanced-patterns.md)
-2. **Master**: [Command Mastery](user-guide/commands/command-selection.md)
-3. **Customize**: [Advanced Configuration](user-guide/customization/advanced-config.md)
-4. **Troubleshoot**: [Common Issues](reference/troubleshooting.md)
-
-### For Power Users
-1. **Architect**: [Framework Architecture](advanced/framework-architecture.md)
-2. **Extend**: [Custom Modules](advanced/extending-framework.md)
-3. **Contribute**: [Development Guide](advanced/contributing.md)
-4. **Optimize**: [Performance Tuning](advanced/performance-optimization.md)
-
-## 🔍 Quick Navigation
-
-### By Task
-- **Set up the framework** → [Installation Guide](getting-started/installation.md)
-- **Learn basic commands** → [Command Basics](user-guide/commands/basics.md)
-- **Solve a problem** → [Troubleshooting](reference/troubleshooting.md)
-- **Customize for my project** → [Configuration Guide](user-guide/customization/)
-- **Understand architecture** → [Framework Architecture](advanced/framework-architecture.md)
-
-### By User Type
-- **New Developer** → Start with [Getting Started](getting-started/)
-- **Experienced Developer** → Jump to [User Guide](user-guide/)
-- **Team Lead** → Focus on [Customization](user-guide/customization/) and [Workflows](user-guide/workflows/)
-- **Framework Developer** → Head to [Advanced](advanced/)
-
-## 💡 Documentation Principles
-
-This documentation follows these principles to ensure the best learning experience:
-
-- **Progressive Disclosure**: Information is revealed as you need it
-- **Task-Oriented**: Focus on what you want to accomplish
-- **Real Examples**: Every concept includes practical examples
-- **Clear Next Steps**: Each section points you to logical next steps
-- **Multiple Entry Points**: Start wherever makes sense for your needs
-
-## 🆘 Need Immediate Help?
-
-- **Can't find what you need?** Try the [site search](search.md) or [troubleshooting guide](reference/troubleshooting.md)
-- **Having setup issues?** Check [common setup problems](getting-started/installation.md#troubleshooting)
-- **Commands not working?** Review [command basics](user-guide/commands/basics.md)
-- **Framework behaving oddly?** See [troubleshooting guide](reference/troubleshooting.md)
-
-## 📈 Feedback and Improvements
-
-This documentation is continuously improved based on user feedback. Found something confusing or missing? Let us know through [contributing guidelines](advanced/contributing.md).
+**✅ Tier 1 Complete**: Framework responds to commands, adapts to your tech stack, enforces quality
 
 ---
 
-**Ready to start?** Choose your path above and begin your journey to framework mastery!
+## 📖 Tier 2: Practical Mastery (5-60 minutes)  
+**Master the workflow patterns professionals use daily**
+
+### Build Skills: [User Guide](user-guide/)
+- **[Commands Mastery](user-guide/commands/)** - All 8 commands with real examples
+- **[Common Workflows](user-guide/workflows/)** - Research → Plan → Implement patterns
+- **[Customization](user-guide/customization/)** - Adapt framework to YOUR project needs
+
+**✅ Tier 2 Complete**: TDD automatic, quality gates enforced, patterns mastered, team-ready
+
+---
+
+## 🔧 Tier 3: Framework Mastery (1+ hours)
+**Unlock meta-prompting, custom modules, and advanced patterns**
+
+### Advanced Power: [Advanced Documentation](advanced/)
+- **[Framework Architecture](advanced/framework-architecture.md)** - Understand the 108+ module system
+- **[Extending Framework](advanced/extending-framework.md)** - Custom modules and meta-prompting
+- **[Claude 4 Optimization](advanced/claude-4-optimization.md)** - Advanced thinking patterns
+
+**✅ Tier 3 Complete**: Custom modules created, meta-prompting mastered, framework evolves with you
+
+## 🎯 Your Learning Journey
+
+### 🚀 **Complete Beginner** (Start here!)
+1. **[README.md](../README.md)** - 30-second understanding → 2-minute setup  
+2. **[examples/quick-start/](../examples/quick-start/)** - Guaranteed 2-minute success
+3. **[GETTING_STARTED.md](../GETTING_STARTED.md)** - 5-minute comprehensive setup
+4. **Tier 1 Complete!** ✅
+
+### 📖 **Ready for Real Work** (Build skills)
+1. **[examples/workflows/](../examples/workflows/)** - Professional development patterns
+2. **[user-guide/commands/](user-guide/commands/)** - Master all commands  
+3. **[user-guide/workflows/](user-guide/workflows/)** - Advanced pattern mastery
+4. **Tier 2 Complete!** ✅
+
+### 🔧 **Want Maximum Power** (Framework mastery)
+1. **[examples/advanced/](../examples/advanced/)** - Sophisticated usage patterns
+2. **[advanced/](advanced/)** - Architecture, modules, meta-prompting
+3. **Custom development** - Build your own extensions
+4. **Tier 3 Complete!** ✅
+
+## ✅ Success Validation System
+
+### **Tier 1 Checkpoints** (0-5 minutes)
+- [ ] Framework responds to `/auto` command
+- [ ] Claude Code suggests tech-specific solutions  
+- [ ] Quality enforcement mentions tests/security
+- [ ] Ready to try workflows
+
+### **Tier 2 Checkpoints** (5-60 minutes)
+- [ ] `/task` automatically creates tests first
+- [ ] `/feature` produces PRD and implementation plan
+- [ ] `/query` analyzes without making changes
+- [ ] Workflows feel natural and productive
+
+### **Tier 3 Checkpoints** (1+ hours)
+- [ ] Meta-commands optimize framework for your project
+- [ ] Custom modules integrate seamlessly
+- [ ] Framework learns and adapts to your patterns
+- [ ] Team members successfully use shared configuration
+
+## 🚀 Navigation & Cross-References
+
+### **By Current Need**
+- **"I need to get started"** → [README.md](../README.md) → [examples/quick-start/](../examples/quick-start/)
+- **"I want to see examples"** → [examples/](../examples/) → Choose your tier
+- **"I need detailed docs"** → [docs/](.) → Follow your tier progression
+- **"I need help"** → [reference/troubleshooting.md](reference/troubleshooting.md)
+
+### **By Experience Level** 
+- **Never used framework** → Tier 1: [README.md](../README.md) (30 sec) → [examples/quick-start/hello-world/](../examples/quick-start/hello-world/) (2 min)
+- **Ready for real work** → Tier 2: [examples/workflows/](../examples/workflows/) → [user-guide/](user-guide/)  
+- **Want advanced features** → Tier 3: [examples/advanced/](../examples/advanced/) → [advanced/](advanced/)
+
+### **By Framework Component**
+- **Commands** → [user-guide/commands/](user-guide/commands/) + [reference/commands-reference.md](reference/commands-reference.md)
+- **Configuration** → [user-guide/customization/](user-guide/customization/) + [examples/project-configs/](../examples/project-configs/)
+- **Workflows** → [examples/workflows/](../examples/workflows/) + [user-guide/workflows/](user-guide/workflows/)
+- **Architecture** → [advanced/framework-architecture.md](advanced/framework-architecture.md) + [CLAUDE.md](../CLAUDE.md)
+
+## 📚 Complete Resource Map
+
+### **Root Experience** (Start here)
+- **[README.md](../README.md)** - 30-second understanding + 2-minute setup
+- **[GETTING_STARTED.md](../GETTING_STARTED.md)** - Complete 5-minute setup guide  
+- **[CLAUDE.md](../CLAUDE.md)** - Framework control document (advanced reference)
+
+### **Examples** (Learn by doing)
+- **[examples/quick-start/](../examples/quick-start/)** - 2-minute guaranteed success
+- **[examples/workflows/](../examples/workflows/)** - Professional patterns (5-60 min)
+- **[examples/advanced/](../examples/advanced/)** - Framework mastery (1+ hours)
+- **[examples/project-configs/](../examples/project-configs/)** - Ready-to-use configurations
+
+### **Documentation** (Systematic learning)
+- **[docs/getting-started/](getting-started/)** - Installation and first commands
+- **[docs/user-guide/](user-guide/)** - Daily usage patterns and customization
+- **[docs/reference/](reference/)** - Complete command and configuration reference  
+- **[docs/advanced/](advanced/)** - Architecture, extension, and optimization
+
+## 🆘 Instant Help
+
+**Framework not working?**
+1. **Check setup**: [getting-started/installation.md](getting-started/installation.md) 
+2. **Try simple example**: [examples/quick-start/hello-world/](../examples/quick-start/hello-world/)
+3. **Debug commands**: [user-guide/commands/basics.md](user-guide/commands/basics.md)
+4. **Get help**: [reference/troubleshooting.md](reference/troubleshooting.md)
+
+---
+
+**🎯 Remember**: Perfect progression is Tier 1 → Tier 2 → Tier 3. Each tier builds on the previous, and you can succeed at any level!
+
+**Start your journey**: [README.md](../README.md) for 30-second understanding → [examples/quick-start/hello-world/](../examples/quick-start/hello-world/) for 2-minute success! 🚀
