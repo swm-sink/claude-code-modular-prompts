@@ -143,7 +143,9 @@ class ModuleInterfaceValidator:
             r'<examples>.*?</examples>',
             r'## Usage\s*\n',
             r'## Examples?\s*\n',
-            r'<pattern_usage>.*?</pattern_usage>'
+            r'<pattern_usage>.*?</pattern_usage>',
+            r'<execution_pattern>.*?</execution_pattern>',  # Execution patterns serve as usage examples
+            r'<implementation>.*?</implementation>'  # Implementation sections often contain usage info
         ]
         return any(re.search(pattern, content, re.IGNORECASE | re.DOTALL) for pattern in example_patterns)
     
@@ -164,7 +166,11 @@ class ModuleInterfaceValidator:
             r'<failure>.*?</failure>',
             r'<recovery>.*?</recovery>',
             r'<blocking_conditions>.*?</blocking_conditions>',
-            r'## Error Handling\s*\n'
+            r'## Error Handling\s*\n',
+            r'<enforcement>.*?</enforcement>',  # Enforcement patterns handle errors
+            r'<validation>.*?</validation>',    # Validation includes error handling
+            r'BLOCK',                          # BLOCK keywords indicate error handling
+            r'escalation'                      # Escalation indicates error handling
         ]
         return any(re.search(pattern, content, re.IGNORECASE | re.DOTALL) for pattern in error_patterns)
     
