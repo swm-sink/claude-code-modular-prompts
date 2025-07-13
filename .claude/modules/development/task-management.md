@@ -74,12 +74,6 @@
         Assess task complexity and determine session requirements
         Plan TDD approach with comprehensive test strategy informed by research
       </actions>
-      <atomic_commit_integration>
-        <checkpoint>git add -A && git commit -m "PRE-OP: task-management - backup state before task implementation"</checkpoint>
-        <validation_before_commit>Current state preserved for rollback capability</validation_before_commit>
-        <rollback_trigger>If task analysis reveals complexity > scope, rollback with: git reset --hard HEAD~1</rollback_trigger>
-        <safety_check>Verify task scope appropriate for single-component development before proceeding</safety_check>
-      </atomic_commit_integration>
       <validation>
         Research-first context understanding documented with domain insights
         RISE framework integration validated with clear role and expectation definition
@@ -95,7 +89,7 @@
         Research insights integrated into TDD cycle implementation
         RISE framework steps followed for structured development
         TDD cycle strictly followed: RED-GREEN-REFACTOR
-        Test coverage maintained per ../../system/../../system/quality/tdd.md standards
+        Test coverage maintained per quality/tdd.md standards
         Code quality gates enforced throughout development
       </requirements>
       <actions>
@@ -106,12 +100,6 @@
         REFACTOR: Improve code structure while maintaining green tests using research findings
         Continuous testing after each significant change with research-based validation
       </actions>
-      <atomic_commit_integration>
-        <checkpoint>git add . && git commit -m "OP-EXEC: task-management implementation - TDD cycle complete with tests passing"</checkpoint>
-        <validation_before_commit>All tests must pass and coverage thresholds met</validation_before_commit>
-        <rollback_trigger>If implementation fails or tests don't pass, rollback with: git reset --hard HEAD~1</rollback_trigger>
-        <safety_check>Verify complete TDD cycle compliance before proceeding to quality verification</safety_check>
-      </atomic_commit_integration>
       <validation>
         Research insights successfully integrated into implementation
         RISE framework steps completed with structured development approach
@@ -124,10 +112,10 @@
     
     <phase name="quality_verification" order="3">
       <requirements>
-        TDD enforcement evidence collected per ../../system/../../system/quality/tdd-enforcement.md
-        Security verification completed per ../../system/../../system/quality/security-gate-verification.md
-        Performance benchmarks validated per ../../system/../../system/quality/performance-gates.md
-        Comprehensive quality gates passed per ../../system/../../system/quality/gate-verification.md
+        TDD enforcement evidence collected per quality/tdd-enforcement.md
+        Security verification completed per quality/security-gate-verification.md
+        Performance benchmarks validated per quality/performance-gates.md
+        Comprehensive quality gates passed per quality/gate-verification.md
       </requirements>
       <actions>
         Execute TDD enforcement verification with evidence collection
@@ -136,12 +124,6 @@
         Execute comprehensive quality gate verification suite
         Generate quality compliance certificate with evidence archive
       </actions>
-      <atomic_commit_integration>
-        <checkpoint>git add -A && git commit -m "POST-OP: task-management complete - quality verification passed with evidence"</checkpoint>
-        <validation_before_commit>All quality gates must pass with evidence collection</validation_before_commit>
-        <rollback_trigger>If quality verification fails, rollback with: git reset --hard HEAD~2 (return to pre-task state)</rollback_trigger>
-        <safety_check>Verify complete quality compliance before task completion</safety_check>
-      </atomic_commit_integration>
       <validation>
         TDD evidence trail complete with RED-GREEN-REFACTOR proof
         Security threats identified and mitigated with evidence
@@ -156,10 +138,10 @@
   <quality_gates enforcement="strict">
     <gate name="research_first_validation" requirement="Research-first methodology properly applied with context understanding" blocking="true"/>
     <gate name="rise_framework_integration" requirement="RISE framework integration validated with structured development approach" blocking="true"/>
-    <gate name="tdd_enforcement" requirement="Mandatory TDD enforcement per ../../system/../../system/quality/tdd-enforcement.md" blocking="true"/>
-    <gate name="security_verification" requirement="Security gate verification per ../../system/../../system/quality/security-gate-verification.md" blocking="true"/>
-    <gate name="performance_benchmarks" requirement="Performance gates per ../../system/../../system/quality/performance-gates.md" blocking="true"/>
-    <gate name="gate_verification" requirement="Comprehensive quality gate verification per ../../system/../../system/quality/gate-verification.md" blocking="true"/>
+    <gate name="tdd_enforcement" requirement="Mandatory TDD enforcement per quality/tdd-enforcement.md" blocking="true"/>
+    <gate name="security_verification" requirement="Security gate verification per quality/security-gate-verification.md" blocking="true"/>
+    <gate name="performance_benchmarks" requirement="Performance gates per quality/performance-gates.md" blocking="true"/>
+    <gate name="gate_verification" requirement="Comprehensive quality gate verification per quality/gate-verification.md" blocking="true"/>
     <gate name="code_quality" requirement="Zero linting errors, clean type checking" blocking="true"/>
     <gate name="integration_testing" requirement="All integration scenarios tested successfully" blocking="false"/>
   </quality_gates>
@@ -201,16 +183,16 @@
   
   <integration_points>
     <depends_on>
-      ../../system/../../system/quality/tdd-enforcement.md for non-bypassable TDD enforcement
-      ../../system/../../system/quality/security-gate-verification.md for security verification
-      ../../system/../../system/quality/performance-gates.md for performance benchmarking
-      ../../system/../../system/quality/gate-verification.md for comprehensive quality gate orchestration
-      ../../system/../../system/quality/critical-thinking.md for requirement analysis
-      ../../system/session/session-management.md for session decisions
+      quality/tdd-enforcement.md for non-bypassable TDD enforcement
+      quality/security-gate-verification.md for security verification
+      quality/performance-gates.md for performance benchmarking
+      quality/gate-verification.md for comprehensive quality gate orchestration
+      quality/critical-thinking.md for requirement analysis
+      patterns/session-management.md for session decisions
     </depends_on>
     <provides_to>
-      ../../system/../../system/quality/gate-verification.md for task-level quality gate results
-      ../../system/../../system/quality/production-standards.md for production standards integration
+      quality/gate-verification.md for task-level quality gate results
+      quality/production-standards.md for production standards integration
       patterns/multi-agent.md for escalation triggers
     </provides_to>
   </integration_points>
