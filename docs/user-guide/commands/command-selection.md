@@ -79,20 +79,8 @@ Do you want to CREATE/UPDATE documentation?
 **Perfect for**: User stories, complete features, multi-component work
 
 ```bash
-# User stories
-/feature "user can reset password via email"
-/feature "admin can manage user permissions"
-/feature "customers can save items to wishlist"
-
-# Complete features
-/feature "shopping cart with persistent storage"
-/feature "real-time chat between users"
-/feature "advanced search with filters"
-
-# Business capabilities
-/feature "payment processing with multiple gateways"
-/feature "notification system with email and SMS"
-/feature "analytics dashboard for admin users"
+# Examples
+See comprehensive examples in [Commands Reference](../../reference/commands-reference.md#feature---complete-feature-development)
 ```
 
 **Scope**: Multiple files, complete user-facing functionality, includes tests and documentation.
@@ -101,20 +89,8 @@ Do you want to CREATE/UPDATE documentation?
 **Perfect for**: Complex requests, uncertain approach, mixed research and implementation
 
 ```bash
-# Complex improvements
-/auto "modernize our authentication system"
-/auto "improve API performance and reliability"
-/auto "add comprehensive error handling"
-
-# Mixed analysis and implementation
-/auto "analyze current security and fix issues"
-/auto "review testing strategy and improve coverage"
-/auto "optimize our build and deployment process"
-
-# Uncertain scope
-/auto "improve user experience in checkout flow"
-/auto "make our app more accessible"
-/auto "add monitoring and observability"
+# Examples
+See comprehensive examples in [Commands Reference](../../reference/commands-reference.md#auto---intelligent-routing)
 ```
 
 **Smart routing**: Framework analyzes request and routes to optimal command(s).
@@ -149,10 +125,8 @@ Do you want to CREATE/UPDATE documentation?
 /swarm "refactor monolith to microservices"
 /swarm "upgrade React 16 to React 18 across all components"
 
-# Large-scale refactoring
-/swarm "implement comprehensive TypeScript migration"
-/swarm "replace Redux with Zustand state management"
-/swarm "modernize CSS from styled-components to Tailwind"
+# Examples
+See comprehensive examples in [Commands Reference](../../reference/commands-reference.md#swarm---complex-coordination)
 
 # System-wide improvements
 /swarm "implement end-to-end testing framework"
@@ -166,15 +140,8 @@ Do you want to CREATE/UPDATE documentation?
 **Perfect for**: Multi-day projects, milestone tracking, complex coordination
 
 ```bash
-# Complex projects
-/session "implement new user onboarding flow"
-/session "migrate database to new provider"
-/session "redesign mobile application UI"
-
-# Milestone tracking
-/session "prepare for Q2 product launch"
-/session "complete security audit remediation"
-/session "implement GDPR compliance features"
+# Examples
+See comprehensive examples in [Commands Reference](../../reference/commands-reference.md#session---long-term-tracking)
 ```
 
 **GitHub integration**: Creates issues, tracks progress, manages context across sessions.
@@ -183,15 +150,8 @@ Do you want to CREATE/UPDATE documentation?
 **Perfect for**: Production deployments, critical fixes, high-stakes changes
 
 ```bash
-# Production deployments
-/protocol "deploy payment system update to production"
-/protocol "release critical security patch"
-/protocol "migrate production database"
-
-# Critical fixes
-/protocol "fix critical payment processing bug"
-/protocol "resolve production API outage"
-/protocol "implement emergency security fix"
+# Examples
+See comprehensive examples in [Commands Reference](../../reference/commands-reference.md#protocol---production-critical)
 
 # High-stakes changes
 /protocol "update production infrastructure"

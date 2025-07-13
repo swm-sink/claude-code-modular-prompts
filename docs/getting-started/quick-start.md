@@ -5,16 +5,13 @@
 ## 🚀 Ultra-Fast Setup
 
 ### 1. Copy Framework Files (30 seconds)
+For detailed installation options, see the [Installation Guide](installation.md).
+
+Quick setup:
 ```bash
-# Clone the framework
+# Clone and copy framework files
 git clone https://github.com/swm-sink/claude-code-modular-prompts.git
-
-# Copy to your project (replace 'your-project' with your actual project directory)
-cp -r claude-code-modular-prompts/.claude your-project/
-cp claude-code-modular-prompts/CLAUDE.md your-project/
-cp claude-code-modular-prompts/PROJECT_CONFIG.xml your-project/
-
-# Navigate to your project
+cp -r claude-code-modular-prompts/{.claude,CLAUDE.md,PROJECT_CONFIG.xml} your-project/
 cd your-project/
 ```
 
