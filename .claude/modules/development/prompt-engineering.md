@@ -21,6 +21,10 @@
     <delegation_pattern>
       <description>Commands delegate ALL implementation to specialized modules</description>
       <structure>
+</module>
+</modular_composition>
+</delegation_pattern>
+</structure>
         ```xml
         <command purpose="...">
           <delegation target="modules/[category]/[module-name].md">

@@ -56,6 +56,10 @@
     
     <github_storage>
       <format>
+</module>
+</implementation>
+</github_storage>
+</format>
         ```json
         {
           "session_id": "uuid",

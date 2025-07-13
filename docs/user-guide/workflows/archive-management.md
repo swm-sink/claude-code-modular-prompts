@@ -128,11 +128,11 @@ For immediate archival needs:
 ```bash
 
 # Restore archived file
-/task restore /archive/modules/useful-module.md
+/task restore /archive/.claude/modules/useful-module.md
 
 
 # Restore with dependencies
-/task restore --with-deps /archive/modules/feature-set.md
+/task restore --with-deps /archive/.claude/modules/feature-set.md
 ```
 
 

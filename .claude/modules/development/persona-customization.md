@@ -171,6 +171,10 @@
     <override_example>
       <scenario>Project using Rust instead of typical backend languages</scenario>
       <configuration>
+</module>
+</examples>
+</override_example>
+</configuration>
         ```xml
         <persona_overrides>
           <backend_engineer>

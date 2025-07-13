@@ -221,6 +221,9 @@
     </execution_model>
     
     <implementation_template>
+</orchestration_patterns>
+</sequential_workflow_pattern>
+</implementation_template>
       ```javascript
       class SequentialWorkflow {
         async execute(commands, context) {

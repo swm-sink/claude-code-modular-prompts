@@ -130,6 +130,7 @@ Warning: Circular dependency between module A and module B
 # View all circular dependencies
 python module_dependency_analyzer.py | grep -A 20 "CIRCULAR DEPENDENCIES"
 ```
+<!-- BROKEN EXAMPLE: Line 12: Path does not exist: scripts/framework/config_validator.py - Agent V24 validation -->
 
 **Resolution Strategy**:
 - Minor circles (2-3 modules): Usually safe to ignore

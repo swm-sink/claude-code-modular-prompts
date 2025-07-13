@@ -31,6 +31,10 @@
     <context_injection>
       <description>Every Task() call receives comprehensive persona context</description>
       <structure>
+</module>
+</persona_propagation_architecture>
+</context_injection>
+</structure>
         ```xml
         <persona_context active="{persona_name}">
           <thinking_framework>{persona_approach}</thinking_framework>

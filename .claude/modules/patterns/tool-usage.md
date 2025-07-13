@@ -76,6 +76,10 @@
     <read_before_write>
       <description>Always read file content before making any modifications</description>
       <pattern>
+</module>
+</tool_patterns>
+</read_before_write>
+</pattern>
         ```python
         # ALWAYS read first
         Read("file.md")

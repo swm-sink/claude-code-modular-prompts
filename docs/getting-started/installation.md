@@ -105,6 +105,7 @@ Edit `PROJECT_CONFIG.xml` to match your project:
     </test_coverage>
   </quality_standards>
 </project_configuration>
+</?xml>
 ```
 
 ## 🔍 Verification Steps

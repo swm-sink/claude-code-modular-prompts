@@ -33,6 +33,7 @@
     <success_criteria>All acceptance criteria met, tests pass, performance targets achieved, production ready</success_criteria>
     <artifacts>Feature code, test files, API documentation, integration tests, deployment guides</artifacts>
   </output_specification>
+</command>
 ```
 
 PRD-driven autonomous feature development with comprehensive planning and atomic commits.

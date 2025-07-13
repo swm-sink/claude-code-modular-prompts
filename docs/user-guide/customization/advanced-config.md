@@ -39,6 +39,7 @@ Configure different settings for development, staging, and production:
     </production>
   </environments>
 </project_configuration>
+</?xml>
 ```
 
 ### Custom Quality Gates
@@ -379,6 +380,7 @@ Configure framework integration with CI/CD pipelines:
   </deployment_pipeline>
 </ci_cd_integration>
 ```
+<!-- BROKEN EXAMPLE: Unmatched closing tag: </test_coverage> - Agent V24 validation -->
 
 ### External Tool Integration
 

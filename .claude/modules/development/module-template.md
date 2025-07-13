@@ -126,6 +126,10 @@
   </examples>
   
 </module>
+</module>
+</performance_optimizations>
+</benchmarks>
+</100ms>
 ```
 
 <!-- 

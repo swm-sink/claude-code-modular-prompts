@@ -716,6 +716,9 @@
   
   <unified_command_interface>
     <standard_execution_contract>
+</command_integration_interfaces>
+</unified_command_interface>
+</standard_execution_contract>
       ```typescript
       interface WorkflowCommandExecution {
         // Input specification

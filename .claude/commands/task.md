@@ -33,6 +33,7 @@
     <success_criteria>Tests pass, coverage ≥90%, TDD cycle completed, production standards met</success_criteria>
     <artifacts>Test files, implementation code, commit history, coverage reports</artifacts>
   </output_specification>
+</command>
 ```
 
 Research-first focused development with mandatory TDD cycle and atomic commits.

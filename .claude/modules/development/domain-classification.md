@@ -514,6 +514,8 @@ The Domain Classification System provides intelligent, automated domain detectio
     </provides_to>
   </integration_points>
 </integration_points>
+</integration_points>
+</module_dependencies>
 ```
 
 ## Quality Assurance

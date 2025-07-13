@@ -196,6 +196,10 @@
   <test_patterns>
     <bug_reproduction_test>
       <structure>
+</module>
+</test_patterns>
+</bug_reproduction_test>
+</structure>
         ```python
         def test_bug_reproduction_issue_123():
             """

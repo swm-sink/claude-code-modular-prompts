@@ -106,6 +106,12 @@
             - `param2` (type, optional): [Description and default value]
             
             **Request Body** (if applicable):
+</module>
+</documentation_types>
+</api_documentation>
+</rest_apis>
+</endpoint_documentation>
+</format>
             ```json
             {
               "field1": "value",

@@ -255,6 +255,7 @@ python scripts/framework/template_resolver.py --text "Source: [PROJECT_CONFIG: p
     </git_workflow>
   </development_workflow>
 </project_configuration>
+</?xml>
 ```
 
 ### Dynamic Framework Adaptation:

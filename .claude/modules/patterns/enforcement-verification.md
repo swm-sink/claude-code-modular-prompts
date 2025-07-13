@@ -222,6 +222,12 @@
   </usage_example>
   
 </module>
+</module>
+</standard_checkpoints>
+</checkpoint>
+</template>
+</200ms)>
+</10)>
 ```
 
 ────────────────────────────────────────────────────────────────────────────────

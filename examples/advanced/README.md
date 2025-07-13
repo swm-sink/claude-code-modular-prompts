@@ -31,7 +31,7 @@ cd command-chaining/
 **Mastery Time**: 2-4 hours
 
 ```bash
-cd custom-modules/
+cd custom-.claude/modules/
 # Learn to extend framework capabilities with custom modules
 ```
 

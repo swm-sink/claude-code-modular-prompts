@@ -83,6 +83,9 @@
   
   <artifact_schema>
     <preserved_structure>
+</module>
+</artifact_schema>
+</preserved_structure>
       ```json
       {
         "artifacts": {

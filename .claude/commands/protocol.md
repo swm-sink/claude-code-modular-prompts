@@ -33,6 +33,7 @@
     <success_criteria>All security gates pass, compliance verified, monitoring active, rollback procedures tested</success_criteria>
     <artifacts>Security assessment, compliance reports, deployment documentation, rollback procedures, monitoring configuration</artifacts>
   </output_specification>
+</command>
 ```
 
 Production-ready protocol execution with strict quality gates and atomic commits.

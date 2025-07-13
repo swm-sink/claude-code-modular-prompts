@@ -962,6 +962,9 @@
   </routing>
   <rules>Single file<50 lines → /task | Multiple files → /feature | Research → /query | System-wide → /swarm | Multi-command → /chain</rules>
 </command_selection>
+</command_selection>
+</rules>
+</50>
 ```
 
 

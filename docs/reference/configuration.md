@@ -11,6 +11,7 @@
 <project_configuration version="1.0.0" type="project">
   <!-- All configuration sections go here -->
 </project_configuration>
+</?xml>
 ```
 
 **Root Attributes**:
@@ -324,6 +325,7 @@
   <required_status_checks>ci,security-scan</required_status_checks>
 </git_workflow>
 ```
+<!-- BROKEN EXAMPLE: Unmatched closing tag: </project_configuration> - Agent V24 validation -->
 
 **Git Workflow Fields**:
 

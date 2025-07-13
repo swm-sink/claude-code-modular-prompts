@@ -41,6 +41,10 @@
   <detection_strategies>
     <static_analysis>
       <pre_merge_detection>
+</module>
+</detection_strategies>
+</static_analysis>
+</pre_merge_detection>
         ```bash
         # Check for file conflicts
         git diff --name-only swarm-agent1...swarm-agent2

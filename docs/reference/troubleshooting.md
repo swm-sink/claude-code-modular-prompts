@@ -136,6 +136,7 @@ head -20 CLAUDE.md | grep "Claude Code"
 # Test new standards
 /task "create simple test function" # Should respect new thresholds
 ```
+<!-- BROKEN EXAMPLE: Line 6: Path does not exist: .claude/commands/* - Agent V24 validation -->
 
 ### File and Directory Issues
 
@@ -388,6 +389,7 @@ npm test  # Or your test command
 # Framework learning status
 /meta-review "show framework learning and adaptation status"
 ```
+<!-- BROKEN EXAMPLE: Line 2: Path does not exist: .claude/settings.json - Agent V24 validation -->
 
 ## 📞 Getting Additional Help
 

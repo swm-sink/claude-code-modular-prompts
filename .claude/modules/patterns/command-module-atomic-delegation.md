@@ -163,6 +163,10 @@
     <example name="task_command_to_task_management_module">
       <scenario>Task command delegates to task-management module</scenario>
       <command_code>
+</module>
+</delegation_examples>
+</example>
+</command_code>
         ```
         # PRE-OP atomic commit
         git add -A && git commit -m "PRE-OP: task - backup before task-management delegation"

@@ -33,6 +33,7 @@
     <success_criteria>Correct command selected, appropriate framework chosen, successful delegation completed</success_criteria>
     <artifacts>Routing analysis, complexity assessment, framework selection rationale, delegation results</artifacts>
   </output_specification>
+</command>
 ```
 
 Intelligent routing with framework selection and optimal command routing.

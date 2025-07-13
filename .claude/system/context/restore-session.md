@@ -368,4 +368,9 @@
   </pattern_usage>
   
 </module>
+</module>
+</context_prime_integration>
+</enhanced_capabilities>
+</performance_sharing>
+</3s>
 ```
