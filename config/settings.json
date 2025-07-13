@@ -209,7 +209,6 @@
   
   "permissions": {
     "allow": [
-      "Bash(*)",
       "Read(*)", 
       "Edit(*)",
       "Write(*)",
