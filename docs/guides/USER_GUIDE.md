@@ -415,8 +415,8 @@ Not sure → /auto
 **Need Help?** 
 
 - Start with `/query "your question"` or `/auto "what you need"`
-- Check [GETTING_STARTED.md](docs/GETTING_STARTED.md) for quick start
-- Review [Documentation Index](docs/DOCUMENTATION_INDEX.md) for comprehensive guides
+- Check [GETTING_STARTED.md](../getting-started/quick-start.md) for quick start
+- Review [Documentation Index](../README.md) for comprehensive guides
 
 ---
 

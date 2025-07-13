@@ -304,7 +304,7 @@ After completing this workflow, you should have:
 - **Multi-Agent Development**: [examples/workflows/multi-agent-development/](../multi-agent-development/)
 - **Long-Running Sessions**: [examples/workflows/long-running-session/](../long-running-session/)
 - **Command Chaining**: [examples/advanced/command-chaining/](../../advanced/command-chaining/)
-- **Quality Gates**: [docs/quality/universal-quality-gates.md](../../../.claude/modules/quality/universal-quality-gates.md)
+- **Quality Gates**: [docs/quality/universal-quality-gates.md](../../../.claude/system/quality/universal-quality-gates.md)
 
 ---
 

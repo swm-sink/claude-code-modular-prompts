@@ -251,7 +251,7 @@ cd performance-optimization/
 ### Framework Architecture Deep Dives
 - **Module Runtime Engine**: [docs/advanced/framework-architecture.md](../../docs/advanced/framework-architecture.md)
 - **Command Orchestration**: [docs/advanced/extending-framework.md](../../docs/advanced/extending-framework.md)
-- **Quality Gate Systems**: [.claude/modules/quality/](../../.claude/modules/quality/)
+- **Quality Gate Systems**: [.claude/modules/quality/](../../.claude/system/quality/)
 
 ### Performance and Optimization
 - **Claude 4 Optimization**: [docs/advanced/claude-4-optimization.md](../../docs/advanced/claude-4-optimization.md)
@@ -260,7 +260,7 @@ cd performance-optimization/
 
 ### Enterprise and Scale
 - **Team Configuration**: [docs/user-guide/customization/](../../docs/user-guide/customization/)
-- **Security Framework**: [.claude/modules/security/](../../.claude/modules/security/)
+- **Security Framework**: [.claude/modules/security/](../../.claude/system/security/)
 - **Monitoring and Analytics**: [internal/monitoring/](../../internal/monitoring/)
 
 ---

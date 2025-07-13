@@ -305,10 +305,10 @@ pip --version
 
 ### This Week
 - **Master command selection**: [Command Guide](../user-guide/commands/)
-- **Customize for your team**: [Team Configuration](../user-guide/customization/team-setup.md)
+- **Customize for your team**: Team Configuration
 
 ### Ongoing
-- **Optimize performance**: [Performance Guide](../advanced/performance-optimization.md)
+- **Optimize performance**: Performance Guide
 - **Extend functionality**: [Custom Modules](../advanced/extending-framework.md)
 
 ---

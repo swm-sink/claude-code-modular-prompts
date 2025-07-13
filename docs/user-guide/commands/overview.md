@@ -550,7 +550,7 @@ The runtime engine provides comprehensive error handling:
 
 # Runtime Engine Details
 - **[Module Composition Framework](../../.claude/modules/patterns/module-composition-framework.md)** - Technical architecture
-- **[Universal Quality Gates](../../.claude/modules/quality/universal-quality-gates.md)** - Gate specifications
+- **[Universal Quality Gates](../../.claude/system/quality/universal-quality-gates.md)** - Gate specifications
 - **[Development Standards](../framework/development-standards.md)** - TDD methodology and critical thinking
 - **[Thinking Pattern Template](../../.claude/modules/patterns/thinking-pattern-template.md)** - Standardized patterns
 

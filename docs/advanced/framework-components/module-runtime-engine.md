@@ -474,7 +474,7 @@ The runtime engine evolves through:
 
 # Implementation Details
 - [Module Composition Framework](.claude/modules/patterns/module-composition-framework.md) - Technical architecture
-- [Universal Quality Gates](.claude/modules/quality/universal-quality-gates.md) - Gate specifications
+- [Universal Quality Gates](.claude/system/quality/universal-quality-gates.md) - Gate specifications
 - [Thinking Pattern Template](.claude/modules/patterns/thinking-pattern-template.md) - Standardized patterns
 
 *This guide provides comprehensive coverage of the Module Runtime Engine for practical development usage. For technical implementation details, see the module documentation referenced above.*

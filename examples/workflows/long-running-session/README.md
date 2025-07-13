@@ -367,13 +367,9 @@ cp /path/to/claude-code-modular-prompts/examples/workflows/long-running-session/
 - **GitHub Integration**: [.claude/system/git/](../../../.claude/system/git/)
 
 ### Extended Development Patterns
-- **Project Management**: [.claude/modules/development/project-management.md](../../../.claude/modules/development/project-management.md)
-- **Progress Tracking**: [.claude/modules/development/progress-tracking.md](../../../.claude/modules/development/progress-tracking.md)
-- **Team Coordination**: [.claude/modules/development/team-coordination.md](../../../.claude/modules/development/team-coordination.md)
 
 ### Quality and Validation
-- **Quality Gates**: [.claude/modules/quality/universal-quality-gates.md](../../../.claude/modules/quality/universal-quality-gates.md)
-- **Validation Frameworks**: [.claude/modules/development/validation/](../../../.claude/modules/development/validation/)
+- **Quality Gates**: [.claude/modules/quality/universal-quality-gates.md](../../../.claude/system/quality/universal-quality-gates.md)
 - **Production Readiness**: [.claude/system/session/production-protocols.md](../../../.claude/system/session/production-protocols.md)
 
 ---

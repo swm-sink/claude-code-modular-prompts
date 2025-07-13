@@ -380,12 +380,12 @@ You're using workflows effectively when:
 3. **Feature Development** - Core development workflow
 
 ### Then Explore Advanced Patterns
-- [Advanced Workflows](advanced-patterns.md) - Complex coordination patterns
-- [Team Workflows](team-patterns.md) - Collaborative development patterns
-- [Production Workflows](production-patterns.md) - Deployment and maintenance patterns
+- Advanced Workflows - Complex coordination patterns
+- Team Workflows - Collaborative development patterns
+- Production Workflows - Deployment and maintenance patterns
 
 ---
 
-**Ready for more complex patterns?** Continue to [Advanced Workflows](advanced-patterns.md).
+**Ready for more complex patterns?** Continue to Advanced Workflows.
 
-**Want to see team collaboration?** Check out [Team Patterns](team-patterns.md).
+**Want to see team collaboration?** Check out Team Patterns.

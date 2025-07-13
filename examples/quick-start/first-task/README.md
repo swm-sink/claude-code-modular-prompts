@@ -200,9 +200,9 @@ git status  # see what was created
 
 ## 📚 Related Concepts
 
-- **TDD Fundamentals**: [docs/quality/tdd.md](../../../.claude/modules/quality/tdd.md)
+- **TDD Fundamentals**: [docs/quality/tdd.md](../../../.claude/system/quality/tdd.md)
 - **Task Management**: [docs/development/task-management.md](../../../.claude/modules/development/task-management.md)
-- **Quality Gates**: [docs/quality/universal-quality-gates.md](../../../.claude/modules/quality/universal-quality-gates.md)
+- **Quality Gates**: [docs/quality/universal-quality-gates.md](../../../.claude/system/quality/universal-quality-gates.md)
 - **Command Selection**: [docs/user-guide/commands/command-selection.md](../../../docs/user-guide/commands/command-selection.md)
 
 ---

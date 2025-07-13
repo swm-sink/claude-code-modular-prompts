@@ -33,8 +33,10 @@ class ReferenceValidator:
     def find_markdown_files(self):
         """Find all markdown files in the project"""
         for root, dirs, files in os.walk(self.root_path):
-            # Skip .git and other hidden directories
+            # Skip .git and other hidden directories, and internal reports
             dirs[:] = [d for d in dirs if not d.startswith('.') or d == '.claude']
+            if 'internal/reports' in root:
+                continue
             
             for file in files:
                 if file.endswith('.md'):

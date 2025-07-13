@@ -474,7 +474,7 @@ python scripts/framework/config_backup.py --restore daily_backup
 ### Master Advanced Features
 - **Framework Architecture**: [Understanding the System](../../advanced/framework-architecture.md)
 - **Custom Extensions**: [Extending Framework](../../advanced/extending-framework.md)
-- **Performance Optimization**: [Optimization Guide](../../advanced/performance-optimization.md)
+- **Performance Optimization**: Optimization Guide
 
 ### Team Implementation
 - **Change Management**: Plan rollout of advanced configuration

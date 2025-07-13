@@ -267,8 +267,8 @@ You're using commands correctly when:
 - **Try advanced commands**: [Advanced Commands](../user-guide/commands/advanced-commands.md)
 
 ### Ongoing
-- **Master complex workflows**: [Advanced Patterns](../user-guide/workflows/advanced-patterns.md)
-- **Optimize your setup**: [Performance Optimization](../advanced/performance-optimization.md)
+- **Master complex workflows**: Advanced Patterns
+- **Optimize your setup**: Performance Optimization
 
 ---
 

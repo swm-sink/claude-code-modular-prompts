@@ -36,7 +36,7 @@ We are committed to fostering a welcoming and inclusive community. Please be res
 3. **Set Up Development Environment**
    - Ensure you have Claude Code installed
    - Install GitHub CLI: `brew install gh` (macOS) or see [installation guide](https://cli.github.com/)
-   - Familiarize yourself with [CLAUDE.md](CLAUDE.md) framework rules
+   - Familiarize yourself with [CLAUDE.md](../CLAUDE.md) framework rules
 
 
 # Development Process

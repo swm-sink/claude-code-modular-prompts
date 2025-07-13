@@ -95,8 +95,8 @@ chmod +x .claude/commands/*
 - **Customize configuration**: [Project Configuration](../user-guide/customization/project-config.md)
 
 ### This Week
-- **Master advanced features**: [Advanced Workflows](../user-guide/workflows/advanced-patterns.md)
-- **Integrate with your team**: [Team Configuration](../user-guide/customization/team-setup.md)
+- **Master advanced features**: Advanced Workflows
+- **Integrate with your team**: Team Configuration
 
 ## 💡 Pro Tips for Immediate Success
 

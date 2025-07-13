@@ -286,19 +286,19 @@ pre_commit_security() {
 - Components Analyzed: {component_count}
 - Threats Identified: {threat_count}
 - Risk Ratings: {high}/{medium}/{low}
-- [Full Threat Model](evidence/security/{task_id}/threat-model.json)
+- # Evidence directory (created at runtime): evidence/
 
 ## Vulnerability Scan Results ✓
 - SAST Issues: {sast_count} (High: {high}, Medium: {medium})
 - Dependency Vulnerabilities: {dep_vulns}
 - Secrets Found: {secrets_count}
-- [Scan Reports](evidence/security/{task_id}/scans/)
+- # Evidence directory (created at runtime): evidence/
 
 ## Mitigation Status ✓
 - Required Mitigations: {required_count}
 - Implemented: {implemented_count}
 - Verified: {verified_count}
-- [Verification Evidence](evidence/security/{task_id}/mitigations/)
+- # Evidence directory (created at runtime): evidence/
 
 ## Security Gates
 - ✅ Pre-Development: Threat model approved

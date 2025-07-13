@@ -310,9 +310,7 @@ cp /path/to/claude-code-modular-prompts/examples/workflows/multi-agent-developme
 - **Agent Specialization**: [.claude/prompt_eng/personas/](../../../.claude/prompt_eng/personas/)
 
 ### Quality and Integration
-- **Quality Gate Coordination**: [.claude/modules/quality/universal-quality-gates.md](../../../.claude/modules/quality/universal-quality-gates.md)
-- **Integration Testing**: [.claude/modules/development/testing/](../../../.claude/modules/development/testing/)
-- **Result Validation**: [.claude/modules/development/validation/](../../../.claude/modules/development/validation/)
+- **Quality Gate Coordination**: [.claude/modules/quality/universal-quality-gates.md](../../../.claude/system/quality/universal-quality-gates.md)
 
 ### Performance and Optimization
 - **Parallel Execution Optimization**: [.claude/modules/patterns/](../../../.claude/modules/patterns/)

@@ -76,6 +76,9 @@ class ReferenceFixer:
                 
         # Fix references that are missing .claude prefix
         if old_ref.startswith('modules/') and not old_ref.startswith('.claude/'):
+            # Don't add .claude if the path already has ../.claude
+            if '../.claude' in str(file_path.parent / old_ref):
+                return old_ref
             return '.claude/' + old_ref
             
         # Fix CLAUDE.md canonical sources

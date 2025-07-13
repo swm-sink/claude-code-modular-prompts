@@ -486,9 +486,9 @@
   <rule>Coverage: [PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]%+ with assertions</rule>
   <rule>Features: PRD-first approach</rule>
   <canonical_sources>
-    <tdd>.claude/modules/quality/tdd.md</tdd>
-    <security>.claude/modules/security/threat-modeling.md</security>
-    <test_coverage>.claude/modules/quality/test-coverage.md</test_coverage>
+    <tdd>.claude/system/quality/tdd.md</tdd>
+    <security>.claude/system/security/threat-modeling.md</security>
+    <test_coverage>.claude/system/quality/test-coverage.md</test_coverage>
   </canonical_sources>
 </quality_gates>
 ```
@@ -534,7 +534,7 @@
     <condition>Attempting to bypass coverage requirements</condition>
   </blocking_conditions>
   
-  <canonical_source>.claude/modules/quality/test-coverage.md</canonical_source>
+  <canonical_source>.claude/system/quality/test-coverage.md</canonical_source>
 </test_coverage_enforcement>
 ```
 
@@ -969,7 +969,7 @@
 
 ```xml
 <quality_gate_enforcement>
-  <canonical_source>quality/universal-quality-gates.md</canonical_source>
+  <canonical_source>.claude/system/quality/universal-quality-gates.md</canonical_source>
   <master_mandate>ALL commands MUST validate through quality gates with BLOCKING enforcement</master_mandate>
   <critical_gates>
     <gate>TDD Compliance: RED→GREEN→REFACTOR mandatory</gate>
@@ -986,7 +986,7 @@
 
 ```xml
 <archive_management>
-  <canonical_source>patterns/duplication-prevention.md</canonical_source>
+  <canonical_source>.claude/modules/patterns/duplication-prevention.md</canonical_source>
   <master_rule>Check dependencies BEFORE archiving. Test AFTER archiving</master_rule>
   <archive_structure>/archive/[modules|commands|reports|experiments|documentation]/</archive_structure>
   <enforcement_context>Archive operations MUST follow dependency checking and validation procedures from duplication prevention module</enforcement_context>
@@ -1103,7 +1103,7 @@
 
 ```xml
 <command_module_integration enforcement = "MANDATORY">
-  <canonical_source>patterns/module-composition-framework.md</canonical_source>
+  <canonical_source>.claude/modules/patterns/module-composition-framework.md</canonical_source>
   <critical_rules>
     <rule>EVERY command has explicit thinking_pattern section</rule>
     <rule>EVERY module has explicit thinking_pattern section</rule>
@@ -1155,7 +1155,7 @@
   </command_runtime_specification>
   
   <tdd_enforcement>
-    <canonical_source>quality/tdd.md</canonical_source>
+    <canonical_source>.claude/system/quality/tdd.md</canonical_source>
     <master_mandate>RED→GREEN→REFACTOR cycle MANDATORY for ALL development commands</master_mandate>
     <universal_requirement>Write failing tests FIRST, implement minimal code, refactor while keeping tests green</universal_requirement>
     <blocking_enforcement>ANY implementation before tests BLOCKS command execution</blocking_enforcement>

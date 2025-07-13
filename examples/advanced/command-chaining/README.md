@@ -337,7 +337,7 @@ cp /path/to/claude-code-modular-prompts/examples/advanced/command-chaining/PROJE
 
 ### Advanced Workflow Design
 - **Multi-Agent Coordination**: [.claude/prompt_eng/modules/orchestration/multi-agent.md](../../../.claude/prompt_eng/modules/orchestration/multi-agent.md)
-- **Quality Gate Integration**: [.claude/modules/quality/](../../../.claude/modules/quality/)
+- **Quality Gate Integration**: [.claude/modules/quality/](../../../.claude/system/quality/)
 - **Session Management**: [.claude/system/session/session-management.md](../../../.claude/system/session/session-management.md)
 
 ---
