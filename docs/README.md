@@ -20,6 +20,7 @@
 ### Build Skills: [User Guide](user-guide/)
 - **[Commands Mastery](user-guide/commands/)** - All 8 commands with real examples
 - **[Common Workflows](user-guide/workflows/)** - Research → Plan → Implement patterns
+- **[Module Usage](user-guide/modules/using-modules.md)** - Leverage 108+ intelligent modules
 - **[Customization](user-guide/customization/)** - Adapt framework to YOUR project needs
 
 **✅ Tier 2 Complete**: TDD automatic, quality gates enforced, patterns mastered, team-ready
@@ -91,6 +92,7 @@
 
 ### **By Framework Component**
 - **Commands** → [user-guide/commands/](user-guide/commands/) + [reference/commands-reference.md](reference/commands-reference.md)
+- **Modules** → [user-guide/modules/using-modules.md](user-guide/modules/using-modules.md) + [advanced/framework-architecture.md](advanced/framework-architecture.md)
 - **Configuration** → [user-guide/customization/](user-guide/customization/) + [examples/project-configs/](../examples/project-configs/)
 - **Workflows** → [examples/workflows/](../examples/workflows/) + [user-guide/workflows/](user-guide/workflows/)
 - **Architecture** → [advanced/framework-architecture.md](advanced/framework-architecture.md) + [CLAUDE.md](../CLAUDE.md)
@@ -121,6 +123,8 @@
 2. **Try simple example**: [examples/quick-start/hello-world/](../examples/quick-start/hello-world/)
 3. **Debug commands**: [user-guide/commands/basics.md](user-guide/commands/basics.md)
 4. **Get help**: [reference/troubleshooting.md](reference/troubleshooting.md)
+
+**Quick answers?** Check our new **[FAQ](reference/FAQ.md)** for instant solutions!
 
 ---
 
