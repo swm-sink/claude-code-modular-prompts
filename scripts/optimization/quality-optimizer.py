@@ -26,6 +26,7 @@ class QualityOptimizer:
         quality_issues = []
         
         # Run validation checks programmatically
+        sys.path.insert(0, str(self.framework_path / 'scripts' / 'validation'))
         from validate import (
             check_version_table, check_horizontal_separators, check_xml_blocks,
             check_module_references, check_dependency_declarations, 

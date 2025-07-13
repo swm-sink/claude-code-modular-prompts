@@ -1,0 +1,5 @@
+# Minimal required dependencies
+# For basic framework operation
+
+psutil>=5.9.0
+defusedxml>=0.7.1

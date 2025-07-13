@@ -1,0 +1,15 @@
+# Auto-generated requirements from dependency analysis
+# Generated on: 2025-07-13
+
+defusedxml
+loader
+metrics
+numpy>=1.21.0
+pandas>=1.5.0
+psutil
+requests
+schedule
+template_resolver
+validate
+validator
+xml_utils
