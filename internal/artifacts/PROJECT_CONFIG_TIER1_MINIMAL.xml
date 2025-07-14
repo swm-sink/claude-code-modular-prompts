@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+PROJECT_CONFIG - TIER 1: MINIMAL
+30-second setup for immediate framework success
+Auto-detects everything possible, minimal user input required
+-->
+<project_configuration version="1.0.0" tier="minimal">
+  <project_info>
+    <name>{{auto-detect-from-directory}}</name>
+    <domain>general-development</domain>
+    <description>Auto-configured project with smart defaults</description>
+    <primary_language>{{auto-detect-from-files}}</primary_language>
+    <framework_stack>{{auto-detect-from-package-files}}</framework_stack>
+  </project_info>
+
+  <!-- Everything below uses intelligent defaults -->
+  <project_structure>
+    <root_directory>.</root_directory>
+    <source_directory>{{auto-detect-src-dir}}</source_directory>
+    <test_directory>{{auto-detect-test-dir}}</test_directory>
+    <docs_directory>docs</docs_directory>
+    <scripts_directory>scripts</scripts_directory>
+    <config_directory>config</config_directory>
+    <build_directory>{{auto-detect-build-dir}}</build_directory>
+  </project_structure>
+
+  <quality_standards>
+    <test_coverage>
+      <threshold>{{smart-default-based-on-language}}</threshold>
+      <enforcement>ADVISORY</enforcement>
+      <tool>{{auto-detect-test-tool}}</tool>
+    </test_coverage>
+    <performance>
+      <response_time_p95>{{domain-appropriate-default}}</response_time_p95>
+      <response_time_p99>{{domain-appropriate-default}}</response_time_p99>
+      <memory_limit>{{language-appropriate-default}}</memory_limit>
+    </performance>
+    <code_quality>
+      <linter>{{auto-detect-linter}}</linter>
+      <formatter>{{auto-detect-formatter}}</formatter>
+      <type_checker>{{auto-detect-type-checker}}</type_checker>
+    </code_quality>
+  </quality_standards>
+
+  <development_workflow>
+    <commands>
+      <install>{{auto-detect-install-command}}</install>
+      <test>{{auto-detect-test-command}}</test>
+      <lint>{{auto-detect-lint-command}}</lint>
+      <build>{{auto-detect-build-command}}</build>
+      <run>{{auto-detect-run-command}}</run>
+      <format>{{auto-detect-format-command}}</format>
+    </commands>
+    <git_workflow>
+      <branch_pattern>feature/*</branch_pattern>
+      <commit_style>conventional</commit_style>
+      <pr_template>disabled</pr_template>
+    </git_workflow>
+  </development_workflow>
+
+  <domain_specific_rules>
+    <rule>Follow language-specific best practices</rule>
+    <rule>Implement basic error handling</rule>
+    <rule>Use semantic versioning</rule>
+    <rule>Maintain clear documentation</rule>
+  </domain_specific_rules>
+
+  <framework_behavior>
+    <file_creation_policy>conservative</file_creation_policy>
+    <documentation_generation>on-request</documentation_generation>
+    <test_first_enforcement>moderate</test_first_enforcement>
+    <ai_temperature>
+      <factual>0.2</factual>
+      <analysis>0.3</analysis>
+      <creative>0.5</creative>
+    </ai_temperature>
+  </framework_behavior>
+
+  <context_management>
+    <max_file_tokens>4000</max_file_tokens>
+    <max_context_tokens>120000</max_context_tokens>
+    <reserved_work_tokens>50000</reserved_work_tokens>
+  </context_management>
+
+  <security_requirements>
+    <authentication>{{auto-detect-or-none}}</authentication>
+    <data_encryption>{{auto-detect-or-basic}}</data_encryption>
+    <compliance>none</compliance>
+    <vulnerability_scanning>{{auto-detect-basic-tools}}</vulnerability_scanning>
+  </security_requirements>
+</project_configuration>
