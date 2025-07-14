@@ -151,7 +151,47 @@
       ]
     }
   ],
-  "active_batch": null,
+  "active_batch": {
+    "batch_id": "batch4-file-cleanup",
+    "status": "executing", 
+    "started": "2025-07-14T17:30:00Z",
+    "target_completion": "2025-07-14T18:45:00Z",
+    "execution_time_target": "75 minutes",
+    "quality_standard": "BRUTAL - PROVEN BY EPIC 1 SUCCESS",
+    "agents": [
+      {
+        "agent_id": "agent13",
+        "mission": "REMOVE Generated/Cache Directories", 
+        "status": "launching",
+        "target_deliverables": 6,
+        "expected_quality_score": ">95%"
+      },
+      {
+        "agent_id": "agent14",
+        "mission": "CONSOLIDATE Agent Communications Structure",
+        "status": "launching",
+        "target_deliverables": 6, 
+        "expected_quality_score": ">95%"
+      },
+      {
+        "agent_id": "agent15",
+        "mission": "ARCHIVE Obsolete Test Directories",
+        "status": "launching",
+        "target_deliverables": 6,
+        "expected_quality_score": ">95%" 
+      },
+      {
+        "agent_id": "agent16",
+        "mission": "CLEAN Redundant Example/Artifact Directories",
+        "status": "launching",
+        "target_deliverables": 6,
+        "expected_quality_score": ">95%"
+      }
+    ],
+    "brutal_standards_enforced": true,
+    "expected_overall_quality_score": ">96%",
+    "epic": "Epic 2 - Mass Cleanup and Consolidation"
+  },
   "completed_batches": [
     {
       "batch_id": "batch3-infrastructure-stream",
