@@ -578,6 +578,58 @@
     <atomic_commits>Per agent completion with rollback capability</atomic_commits>
   </coordination_structure>
   
+  <brutal_quality_standards enforcement = "CRITICAL" version = "2.0.0">
+    <purpose>ELIMINATE VAGUE BULLSHIT - DEMAND ACTIONABLE PROMPT ENGINEERING</purpose>
+    
+    <prompt_engineering_deliverable_requirements enforcement = "BLOCKING">
+      <working_prompts>ALL agents MUST deliver FUNCTIONAL .md prompts that can be immediately used</working_prompts>
+      <tested_prompt_patterns>Every deliverable MUST include tested prompt patterns with demonstrated results</tested_prompt_patterns>
+      <measurable_improvements>ALL performance claims MUST be backed by ACTUAL before/after prompt effectiveness</measurable_improvements>
+      <usable_modules>Agents deliver FUNCTIONAL prompt modules, not theoretical frameworks</usable_modules>
+      <validation_evidence>ALL claims MUST be supported by prompt testing and effectiveness validation</validation_evidence>
+    </prompt_engineering_deliverable_requirements>
+    
+    <prohibited_bullshit enforcement = "BLOCKING">
+      <vague_concepts>BANNED: Abstract frameworks without concrete prompt implementations</vague_concepts>
+      <unvalidated_claims>BANNED: Prompt improvements without testing evidence</unvalidated_claims>
+      <future_implementations>BANNED: "Will create prompts" - deliver WORKING prompts NOW</future_implementations>
+      <aspirational_metrics>BANNED: "Target 90% improvement" - show ACTUAL prompt testing results</aspirational_metrics>
+      <theoretical_patterns>BANNED: Prompt patterns without working examples and test results</theoretical_patterns>
+    </prohibited_bullshit>
+    
+    <prompt_quality_validation_gates enforcement = "BLOCKING">
+      <prompt_execution>Every deliverable prompt MUST be tested and produce expected outputs</prompt_execution>
+      <effectiveness_measurement>All optimization claims MUST be backed by before/after prompt performance</effectiveness_measurement>
+      <integration_testing>All prompt modules MUST integrate successfully with existing framework</integration_testing>
+      <user_effectiveness>All UX improvements MUST be validated with actual prompt usage testing</user_effectiveness>
+      <production_readiness>All deliverables MUST be ready for immediate framework deployment</production_readiness>
+    </prompt_quality_validation_gates>
+    
+    <agent_failure_criteria enforcement = "IMMEDIATE">
+      <theory_without_prompts>Agent fails if deliverables are concepts without working prompt implementations</theory_without_prompts>
+      <untested_prompts>Agent fails if prompts cannot be validated and tested</untested_prompts>
+      <unsubstantiated_claims>Agent fails if prompt effectiveness claims lack testing evidence</unsubstantiated_claims>
+      <incomplete_implementation>Agent fails if prompt modules are partial or require "future work"</incomplete_implementation>
+      <missing_validation>Agent fails if prompt testing and validation results are not provided</missing_validation>
+    </agent_failure_criteria>
+    
+    <acceptable_prompt_standards enforcement = "MANDATORY">
+      <functional_prompts>Working .md files that can be immediately used in the framework</functional_prompts>
+      <comprehensive_testing>Prompt testing with clear before/after results and effectiveness metrics</comprehensive_testing>
+      <performance_benchmarks>Before/after measurements proving prompt optimization claims</performance_benchmarks>
+      <integration_examples>Working examples showing prompt integration with existing framework</integration_examples>
+      <deployment_instructions>Clear, tested instructions for implementing prompts in production</deployment_instructions>
+    </acceptable_prompt_standards>
+    
+    <enforcement_protocol enforcement = "IMMEDIATE">
+      <agent_review>Every agent deliverable undergoes brutal quality review for prompt effectiveness</agent_review>
+      <prompt_testing>All prompts must be tested and validated in controlled environment</prompt_testing>
+      <claim_validation>All prompt effectiveness and improvement claims must be empirically verified</claim_validation>
+      <rejection_criteria>Agents delivering theoretical prompt concepts are immediately rejected and restarted</rejection_criteria>
+      <standards_escalation>Prompt quality standards increase with each batch - no regression tolerance</standards_escalation>
+    </enforcement_protocol>
+  </brutal_quality_standards>
+  
   <tracker_schema enforcement = "MANDATORY">
     <coordination_meta>Session metadata, version, batch planning</coordination_meta>
     <active_batch>Current batch status, agent progress, deliverables tracking</active_batch>

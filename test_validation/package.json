@@ -1,0 +1,17 @@
+{
+  "name": "test-react-project",
+  "version": "1.0.0",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "@testing-library/react": "^13.0.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "react-scripts build",
+    "start": "react-scripts start"
+  }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project_configuration>
+  <project_info>
+    <!-- Missing required name field -->
+    <primary_language>python</primary_language>
+  </project_info>
+  <quality_standards>
+    <test_coverage>
+      <threshold>150</threshold> <!-- Invalid: > 100 -->
+    </test_coverage>
+  </quality_standards>
+</project_configuration>
