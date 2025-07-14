@@ -31,13 +31,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Module Count**: 93 modules vs 108+ claimed in documentation
 - **Timed-out Agents**: V35 (Quality Gates), V37 (Module Comp), V38 (Meta), V40 (E2E)
 
-### 🧹 Framework Simplification (Upcoming)
+### 🧹 Framework Simplification (Completed)
 
-#### Planned Reductions
-- **Agent Communications**: 63 files → 0 (archive historical validation)
-- **Personas**: 30 → 8 core personas (remove overly specific R&D roles)
-- **Modules**: 99 → ~50 (consolidate overlapping functionality)
-- **Total Files**: 250+ → ~125 (50% reduction)
+#### Achieved Reductions
+- **Agent Communications**: 56 files → 0 (archived historical validation)
+- **Personas**: 30 → 9 core personas (70% reduction)
+- **Modules**: 99 → 92 (consolidated overlapping functionality)
+- **Total Files**: 251 → 220 (12% reduction)
+- **Root Directory**: Cleaned up 12 analysis artifacts
+
+#### Simplification Details
+- **Archived**: All 56 agent validation reports to `archive/validation-history/`
+- **Personas**: Kept only essential roles (backend, frontend, devops, security + 5 core)
+- **Modules**: Consolidated workflow (3→1) and error handling (3→1) modules
+- **Documentation**: Removed legacy troubleshooting and validation plans
+- **Artifacts**: Archived JSON analysis files and duplicate requirements
 
 ### 🔧 Technical Improvements
 

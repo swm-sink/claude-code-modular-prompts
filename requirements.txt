@@ -1,14 +1,22 @@
-# Auto-generated requirements from dependency analysis
-# Generated on: 2025-07-13
+# Framework requirements
+# Updated: 2025-07-14 - Added test coverage enforcement
 
+# Core dependencies
 defusedxml
-loader
-metrics
 numpy>=1.21.0
 pandas>=1.5.0
 psutil
 requests
 schedule
+
+# Testing requirements - CRITICAL for quality gates
+pytest>=7.0.0
+pytest-cov>=4.0.0
+coverage[toml]>=7.0.0
+
+# Optional analysis tools
+loader
+metrics
 template_resolver
 validate
 validator
