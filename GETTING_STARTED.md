@@ -33,7 +33,7 @@ cp claude-code-modular-prompts/PROJECT_CONFIG.xml your-project/
 
 ### What Makes Framework 3.0 Powerful:
 
-🧬 **Configuration-Based Adaptation**: Framework uses PROJECT_CONFIG.xml to customize 108+ modules for your specific tech stack, directory structure, and quality standards
+🧬 **Configuration-Based Adaptation**: Framework uses PROJECT_CONFIG.xml to customize 88 modules for your specific tech stack, directory structure, and quality standards
 
 🎯 **Dynamic Placeholder Resolution**: Same command `/task "add validation"` produces React components for React projects, Python classes for Django projects, or Go structs for Go projects - based on your configuration
 
@@ -202,7 +202,7 @@ python scripts/framework/template_resolver.py --text "Source: [PROJECT_CONFIG: p
   <!-- Basic Project Information -->
   <project_info>
     <name>Your Amazing App</name>
-    <domain>web-development</domain>  <!-- Adapts 108+ modules for web dev -->
+    <domain>web-development</domain>  <!-- Adapts 88 modules for web dev -->
     <description>Your project description</description>
     <primary_language>typescript</primary_language>  <!-- All prompts optimized for TS -->
     <framework_stack>react+next+tailwind</framework_stack>  <!-- Specific tech patterns -->
@@ -532,7 +532,7 @@ Framework 3.0 automatically adapts to YOUR project domain:
 **Framework Performance:**
 - Average improvement: 13.0%
 - Directory structure: 35 .claude directories
-- Quality modules: 108 modules optimized
+- Quality modules: 88 modules optimized
 - Overall responsiveness: 7.0/10 (B+ Grade)
 - Production ready: ✅ Yes
 

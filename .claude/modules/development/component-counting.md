@@ -1,3 +1,7 @@
+| version | last_updated | status |
+|---------|--------------|--------|
+| 1.0.0   | 2025-07-14   | stable |
+
 # Component Counting System v1.0.0
 
 ## Overview

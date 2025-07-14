@@ -20,7 +20,7 @@
 ### Build Skills: [User Guide](user-guide/)
 - **[Commands Mastery](user-guide/commands/)** - All 8 commands with real examples
 - **[Common Workflows](user-guide/workflows/)** - Research → Plan → Implement patterns
-- **[Module Usage](user-guide/modules/using-modules.md)** - Leverage 108+ intelligent modules
+- **[Module Usage](user-guide/modules/using-modules.md)** - Leverage 88 intelligent modules
 - **[Customization](user-guide/customization/)** - Adapt framework to YOUR project needs
 
 **✅ Tier 2 Complete**: TDD automatic, quality gates enforced, patterns mastered, team-ready
@@ -31,7 +31,7 @@
 **Unlock meta-prompting, custom modules, and advanced patterns**
 
 ### Advanced Power: [Advanced Documentation](advanced/)
-- **[Framework Architecture](advanced/framework-architecture.md)** - Understand the 108+ module system
+- **[Framework Architecture](advanced/framework-architecture.md)** - Understand the 88 module system
 - **[Extending Framework](advanced/extending-framework.md)** - Custom modules and meta-prompting
 - **[Claude 4 Optimization](advanced/claude-4-optimization.md)** - Advanced thinking patterns
 
