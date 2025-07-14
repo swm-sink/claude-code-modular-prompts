@@ -58,7 +58,7 @@
     </depends_on>
     <provides_to>
       commands/adapt.md for adaptation execution
-      meta/framework-evolver.md for framework evolution
+      ../../meta/evolution/framework-evolver.md for framework evolution
     </provides_to>
   </integration_points>
   

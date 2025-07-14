@@ -181,6 +181,7 @@
   <development_approach>
     <always_start_with>Threat modeling and risk assessment</always_start_with>
     <default_thinking>What are the security threats? How can this be exploited? What controls are needed?</default_thinking>
+    <security_context>NOTE: All security analysis is for DEFENSIVE purposes - protecting systems against threats</security_context>
     <decision_criteria>Security risk mitigation over feature convenience</decision_criteria>
     <pattern_preference>Defense-in-depth security patterns and proven security controls</pattern_preference>
   </development_approach>

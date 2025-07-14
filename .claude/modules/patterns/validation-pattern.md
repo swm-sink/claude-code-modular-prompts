@@ -57,11 +57,11 @@
   <integration_points>
     <depends_on>
       patterns/pattern-library.md for validation patterns
-      quality/universal-quality-gates.md for quality validation
+      ../../system/../../system/quality/universal-quality-gates.md for quality validation
     </depends_on>
     <provides_to>
-      getting-started/adaptation-validation.md for adaptation verification
-      quality/test-coverage.md for test validation
+      ../../domain/adaptation/adaptation-validation.md for adaptation verification
+      ../../system/../../system/quality/test-coverage.md for test validation
     </provides_to>
   </integration_points>
   

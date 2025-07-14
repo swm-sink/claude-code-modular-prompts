@@ -110,7 +110,7 @@
   
   <depends_on>
     patterns/duplication-prevention.md for change validation
-    quality/universal-quality-gates.md for quality enforcement
+    ../../system/../../system/quality/universal-quality-gates.md for quality enforcement
     patterns/error-recovery.md for failure handling
   </depends_on>
   

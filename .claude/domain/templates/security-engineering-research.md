@@ -17,9 +17,10 @@ Security Engineering & Research R&D domain template provides specialized framewo
   <core_capabilities>
     <security_architecture>Zero-trust architecture, defense-in-depth, secure by design</security_architecture>
     <threat_modeling>Systematic threat identification, risk assessment, mitigation strategies</threat_modeling>
-    <vulnerability_research>Security research, exploit development, vulnerability analysis</vulnerability_research>
+    <vulnerability_research>Security research, defensive exploit analysis, vulnerability assessment</vulnerability_research>
     <security_automation>Automated security testing, continuous compliance, DevSecOps</security_automation>
     <incident_response>Security incident handling, forensics, threat hunting</incident_response>
+    <ethical_framework>CRITICAL: All security research conducted for DEFENSIVE and EDUCATIONAL purposes only - protecting systems, not attacking them</ethical_framework>
   </core_capabilities>
   
   <security_domains>

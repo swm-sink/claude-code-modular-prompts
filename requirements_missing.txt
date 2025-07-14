@@ -1,0 +1,5 @@
+# Missing dependencies only
+# Generated on: 2025-07-13
+
+defusedxml>=0.7.1
+schedule>=1.2.0

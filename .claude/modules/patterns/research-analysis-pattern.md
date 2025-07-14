@@ -193,9 +193,9 @@
   
   <integration_points>
     <provides_to>
-      patterns/critical-thinking-pattern.md for decision-making
+      ../../prompt_eng/../../prompt_eng/patterns/critical-thinking-pattern.md for decision-making
       patterns/tdd-cycle-pattern.md with requirement understanding
-      patterns/implementation.md with informed approach
+      ../../patterns/implementation-pattern.md with informed approach
       development/documentation.md for knowledge sharing
     </provides_to>
     <depends_on>

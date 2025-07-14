@@ -57,7 +57,7 @@
   <integration_points>
     <depends_on>
       patterns/pattern-library.md for orchestration patterns
-      quality/universal-quality-gates.md for validation gates
+      ../../system/../../system/quality/universal-quality-gates.md for validation gates
     </depends_on>
     <provides_to>
       getting-started/project-initialization.md for setup workflow

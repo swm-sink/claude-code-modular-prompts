@@ -153,6 +153,10 @@
     <worktree_creation>
       <description>Automated worktree creation for parallel development</description>
       <implementation>
+</module>
+</git_worktree_patterns>
+</worktree_creation>
+</implementation>
         ```bash
         # AUTOMATED WORKTREE CREATION PATTERN
         create_feature_worktree() {

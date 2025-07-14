@@ -57,7 +57,7 @@
       patterns/parallel-execution.md for parallel processing
     </depends_on>
     <provides_to>
-      quality/performance-validation.md for performance validation
+      ../../system/../../system/quality/performance-validation.md for performance validation
       meta/performance-optimizer.md for automated optimization
     </provides_to>
   </integration_points>

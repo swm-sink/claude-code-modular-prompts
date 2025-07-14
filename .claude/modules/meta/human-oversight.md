@@ -186,7 +186,7 @@
   <depends_on>
     meta/safety-validator.md for safety boundary enforcement
     patterns/error-recovery.md for failure handling
-    quality/universal-quality-gates.md for quality validation
+    ../../system/../../system/quality/universal-quality-gates.md for quality validation
   </depends_on>
   
   <integration_contracts>

@@ -401,7 +401,7 @@ The Meta-Prompting Orchestration Engine enables the Claude Code Framework to lea
       <swarm_intelligence>
         <particle_swarm_optimization>Particle swarm optimization for global optimization</particle_swarm_optimization>
         <ant_colony_optimization>Ant colony optimization for path finding</ant_colony_optimization>
-        <bee_algorithm>Bee algorithm for exploration and exploitation</bee_algorithm>
+        <bee_algorithm>Bee algorithm for exploration and exploitation (mathematical optimization terms)</bee_algorithm>
         <differential_evolution>Differential evolution for parameter tuning</differential_evolution>
       </swarm_intelligence>
     </evolutionary_optimization>
@@ -416,7 +416,7 @@ The Meta-Prompting Orchestration Engine enables the Claude Code Framework to lea
       
       <bayesian_optimization>
         <gaussian_processes>Gaussian processes for uncertainty quantification</gaussian_processes>
-        <acquisition_functions>Acquisition functions for exploration-exploitation</acquisition_functions>
+        <acquisition_functions>Acquisition functions for exploration-exploitation (Bayesian optimization terminology)</acquisition_functions>
         <hyperparameter_tuning>Bayesian hyperparameter tuning</hyperparameter_tuning>
         <multi_fidelity_optimization>Multi-fidelity optimization for efficiency</multi_fidelity_optimization>
       </bayesian_optimization>

@@ -243,19 +243,19 @@ pre_commit_tdd_check() {
 - Test Created: {test_file}
 - Test Failed: YES
 - Error: {error_message}
-- Evidence: [red-phase-evidence.json](evidence/tdd/{task_id}/red-phase.json)
+- Evidence: # Evidence directory (created at runtime): evidence/
 
 ## GREEN Phase ✓
 - Implementation: {implementation_file}
 - Test Passed: YES
 - Coverage: {coverage}%
-- Evidence: [green-phase-evidence.json](evidence/tdd/{task_id}/green-phase.json)
+- Evidence: # Evidence directory (created at runtime): evidence/
 
 ## REFACTOR Phase ✓
 - Metrics Improved: {metrics}
 - Tests Stable: YES
 - Performance: {performance}
-- Evidence: [refactor-evidence.json](evidence/tdd/{task_id}/refactor.json)
+- Evidence: # Evidence directory (created at runtime): evidence/
 
 ## Compliance Certificate
 All TDD requirements met. Quality gate PASSED.

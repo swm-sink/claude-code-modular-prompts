@@ -72,7 +72,7 @@
       patterns/user-interaction-pattern.md for knowledge sharing
     </provides_to>
     <depends_on>
-      patterns/critical-thinking-pattern.md for content analysis
+      ../../prompt_eng/../../prompt_eng/patterns/critical-thinking-pattern.md for content analysis
     </depends_on>
   </integration_points>
   

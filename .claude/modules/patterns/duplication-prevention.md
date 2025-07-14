@@ -172,6 +172,11 @@
   </metrics_tracking>
   
 </module>
+</module>
+</duplication_decision_framework>
+</criteria_for_enhancement>
+</criterion>
+</20%>
 ```
 
 ────────────────────────────────────────────────────────────────────────────────

@@ -154,7 +154,7 @@
     </provides_to>
     <depends_on>
       patterns/tdd-cycle-pattern.md implementation validation
-      patterns/critical-thinking-pattern.md for issue analysis
+      ../../prompt_eng/../../prompt_eng/patterns/critical-thinking-pattern.md for issue analysis
     </depends_on>
   </integration_points>
   

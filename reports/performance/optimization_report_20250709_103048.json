@@ -1,7 +1,0 @@
-{
-  "optimization_profile": {
-    "target_context_budget": 50000,
-    "max_execution_time_ms": 1000.0,
-    "cache_size_mb": 100.0,
-    "parallel_workers": 8,
-    "optimization_level": 

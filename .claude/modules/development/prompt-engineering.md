@@ -21,6 +21,10 @@
     <delegation_pattern>
       <description>Commands delegate ALL implementation to specialized modules</description>
       <structure>
+</module>
+</modular_composition>
+</delegation_pattern>
+</structure>
         ```xml
         <command purpose="...">
           <delegation target="modules/[category]/[module-name].md">
@@ -170,8 +174,8 @@
       /feature delegates to:
       - planning/feature-workflow.md (main orchestration)
       - development/task-management.md (implementation)
-      - quality/tdd.md (testing standards)
-      - security/audit.md (security validation)
+      - ../../system/../../system/quality/tdd.md (testing standards)
+      - ../../system/../../system/security/audit.md (security validation)
     </example>
   </command_composition>
   
@@ -182,7 +186,7 @@
   
   <quality_enforcement>
     <description>Mandatory quality enforcement through specialized modules</description>
-    <implementation>quality/production-standards.md</implementation>
+    <implementation>../../system/../../system/quality/production-standards.md</implementation>
   </quality_enforcement>
   
 </advanced_patterns>

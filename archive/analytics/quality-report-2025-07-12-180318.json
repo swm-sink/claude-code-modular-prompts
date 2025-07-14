@@ -1,0 +1,26 @@
+{
+  "timestamp": "2025-07-12T18:03:18.195225",
+  "complexity_metrics": {
+    "file_count": 201,
+    "total_lines": 65565,
+    "xml_blocks": 494,
+    "module_dependencies": 99,
+    "pattern_usage": 191,
+    "quality_gates": 184
+  },
+  "quality_analysis": {
+    "quality_score": 0,
+    "risk_level": "HIGH",
+    "estimated_effort_hours": 317.7,
+    "critical_issues_count": 154,
+    "total_issues_count": 171,
+    "complexity_score": 100,
+    "recommendations": [
+      "\ud83d\udea8 CRITICAL: Immediate quality remediation required before production",
+      "\u26a0\ufe0f  High complexity detected - consider module refactoring",
+      "\ud83d\udd27 Focus on resolving critical structural issues first",
+      "\ud83d\udccb Batch format corrections for efficiency"
+    ]
+  },
+  "framework_version": "3.0.0"
+}

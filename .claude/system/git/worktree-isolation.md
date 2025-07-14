@@ -18,6 +18,9 @@
   
   <worktree_architecture>
     <structure>
+</module>
+</worktree_architecture>
+</structure>
       ```
       main-repo/
       ├── .git/

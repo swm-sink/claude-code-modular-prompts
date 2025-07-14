@@ -414,6 +414,9 @@
     </example>
   </usage_examples>
 </module>
+</module>
+</intelligent_anticipation_framework>
+</intelligent_decision_support>
 ```
 
 ────────────────────────────────────────────────────────────────────────────────

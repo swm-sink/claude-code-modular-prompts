@@ -470,6 +470,10 @@ The Continuous Improvement System provides adaptive learning and optimization ca
     </deployment_systems>
   </external_integration>
 </integration_points>
+</integration_points>
+</external_integration>
+</deployment_systems>
+</rollback_systems">
 ```
 
 ## Success Metrics

@@ -116,6 +116,16 @@
   </integration_points>
   
 </module>
+</module>
+</implementation>
+</complexity_scoring>
+</scoring_algorithm>
+</simple>
+</100>
+</moderate>
+</500>
+</complex>
+</2000>
 ```
 
 ────────────────────────────────────────────────────────────────────────────────

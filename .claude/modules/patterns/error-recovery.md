@@ -54,7 +54,7 @@
   <integration_points>
     <depends_on>
       patterns/pattern-library.md for recovery patterns
-      quality/universal-quality-gates.md for quality validation
+      ../../system/../../system/quality/universal-quality-gates.md for quality validation
     </depends_on>
     <provides_to>
       meta/safety-validator.md for safety validation

@@ -210,6 +210,9 @@ The Template Orchestration System provides intelligent, automated framework cust
     </merge_algorithms>
   </composition_strategies>
 </template_composition_engine>
+</template_composition_engine>
+</composition_strategies>
+</hierarchical_composition>
 ```
 
 ## Dynamic Configuration System

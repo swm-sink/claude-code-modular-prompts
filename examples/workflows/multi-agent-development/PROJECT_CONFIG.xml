@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Multi-Agent Development - Coordination-Optimized Configuration -->
+<project_configuration version="1.0.0">
+  <project_info>
+    <name>Multi-Agent Development Coordination</name>
+    <domain>multi-agent-coordination</domain>
+    <description>Optimized configuration for sophisticated multi-agent development workflows</description>
+    <primary_language>javascript</primary_language>
+    <framework_stack>full-stack</framework_stack>
+  </project_info>
+
+  <project_structure>
+    <root_directory>.</root_directory>
+    <source_directory>src</source_directory>
+    <test_directory>tests</test_directory>
+    <docs_directory>docs</docs_directory>
+    <scripts_directory>scripts</scripts_directory>
+    <config_directory>config</config_directory>
+    <build_directory>build</build_directory>
+  </project_structure>
+
+  <quality_standards>
+    <test_coverage>
+      <threshold>92</threshold>
+      <enforcement>BLOCKING</enforcement>
+      <tool>jest</tool>
+    </test_coverage>
+    <performance>
+      <response_time_p95>200ms</response_time_p95>
+      <response_time_p99>500ms</response_time_p99>
+      <memory_limit>512MB</memory_limit>
+    </performance>
+    <code_quality>
+      <linter>eslint</linter>
+      <formatter>prettier</formatter>
+      <type_checker>typescript</type_checker>
+    </code_quality>
+  </quality_standards>
+
+  <development_workflow>
+    <commands>
+      <install>npm install</install>
+      <test>npm test</test>
+      <lint>npm run lint</lint>
+      <build>npm run build</build>
+      <run>npm start</run>
+      <format>npm run format</format>
+    </commands>
+    <git_workflow>
+      <branch_pattern>feature/*</branch_pattern>
+      <commit_style>conventional</commit_style>
+      <pr_template>enabled</pr_template>
+    </git_workflow>
+  </development_workflow>
+
+  <multi_agent_coordination>
+    <agent_configuration>
+      <specialization>domain-expert</specialization>
+      <coordination_strategy>intelligent</coordination_strategy>
+      <communication_protocol>real-time</communication_protocol>
+      <conflict_resolution>automated</conflict_resolution>
+    </agent_configuration>
+    
+    <work_distribution>
+      <strategy>intelligent</strategy>
+      <factors>complexity,dependencies,agent_expertise,parallel_opportunities</factors>
+      <optimization>automatic</optimization>
+      <load_balancing>dynamic</load_balancing>
+    </work_distribution>
+    
+    <quality_coordination>
+      <per_agent_gates>individual_quality_standards</per_agent_gates>
+      <integration_gates>cross_agent_compatibility</integration_gates>
+      <final_validation>comprehensive_system_validation</final_validation>
+      <conflict_resolution>automated_with_escalation</conflict_resolution>
+    </quality_coordination>
+    
+    <performance_optimization>
+      <parallel_execution>maximum</parallel_execution>
+      <coordination_overhead>minimized</coordination_overhead>
+      <result_integration>optimized</result_integration>
+      <monitoring>real_time</monitoring>
+    </performance_optimization>
+  </multi_agent_coordination>
+
+  <domain_specific_rules>
+    <rule>AGENT SPECIALIZATION: Each agent focuses on specific domain expertise</rule>
+    <rule>COORDINATION INTELLIGENCE: Use intelligent work distribution and load balancing</rule>
+    <rule>PARALLEL EXECUTION: Maximize parallel development opportunities</rule>
+    <rule>INTEGRATION MANAGEMENT: Ensure seamless integration of agent results</rule>
+    <rule>CONFLICT RESOLUTION: Automatically detect and resolve development conflicts</rule>
+    <rule>QUALITY CONSISTENCY: Apply consistent quality standards across all agents</rule>
+    <rule>COMMUNICATION EFFICIENCY: Optimize agent communication and coordination</rule>
+    <rule>RESULT VALIDATION: Comprehensive validation of integrated agent outputs</rule>
+    <rule>PERFORMANCE MONITORING: Real-time monitoring of coordination efficiency</rule>
+    <rule>ADAPTIVE COORDINATION: Adjust coordination strategy based on project needs</rule>
+  </domain_specific_rules>
+
+  <framework_behavior>
+    <file_creation_policy>coordinated</file_creation_policy>
+    <documentation_generation>comprehensive</documentation_generation>
+    <test_first_enforcement>strict</test_first_enforcement>
+    <ai_temperature>
+      <factual>0.2</factual>
+      <analysis>0.3</analysis>
+      <creative>0.4</creative>
+    </ai_temperature>
+  </framework_behavior>
+</project_configuration>

@@ -57,8 +57,8 @@
       patterns/configuration-management.md for configuration systems
     </depends_on>
     <provides_to>
-      getting-started/template-orchestration.md for template orchestration
-      getting-started/domain-templates.md for domain templates
+      ../../domain/adaptation/template-orchestration.md for template orchestration
+      ../../domain/templates/README.md for domain templates
     </provides_to>
   </integration_points>
   

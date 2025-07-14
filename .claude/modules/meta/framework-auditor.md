@@ -225,4 +225,7 @@
     </performance_metrics>
   </success_metrics>
 </module>
+</module>
+</compliance_standards>
+</framework_compliance>
 ```

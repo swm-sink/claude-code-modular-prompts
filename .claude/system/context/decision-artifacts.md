@@ -94,6 +94,9 @@
   
   <decision_artifact_schema>
     <core_schema>
+</module>
+</decision_artifact_schema>
+</core_schema>
       ```json
       {
         "$schema": "http://json-schema.org/draft-07/schema#",

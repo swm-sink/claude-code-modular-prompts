@@ -72,7 +72,7 @@
       patterns/error-recovery-pattern.md for robust integration
     </provides_to>
     <depends_on>
-      patterns/critical-thinking-pattern.md for architecture decisions
+      ../../prompt_eng/../../prompt_eng/patterns/critical-thinking-pattern.md for architecture decisions
     </depends_on>
   </integration_points>
   

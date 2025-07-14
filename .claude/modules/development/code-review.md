@@ -593,14 +593,14 @@
   
   <integration_points>
     <depends_on>
-      quality/pre-commit.md for automated quality checking infrastructure
+      ../../system/../../system/quality/pre-commit.md for automated quality checking infrastructure
       git/conventional-commits.md for PR title and description generation
-      quality/tdd.md for test coverage and quality standards
-      patterns/git-operations.md for git workflow integration
+      ../../system/../../system/quality/tdd.md for test coverage and quality standards
+      ../../../../../system/git/git-operations.md for git workflow integration
     </depends_on>
     <provides_to>
-      patterns/git-operations.md for enhanced PR workflow automation
-      quality/production-standards.md for comprehensive quality validation
+      ../../../../../system/git/git-operations.md for enhanced PR workflow automation
+      ../../system/../../system/quality/production-standards.md for comprehensive quality validation
       development/task-management.md for review process integration
       All commands for automated review workflow
     </provides_to>

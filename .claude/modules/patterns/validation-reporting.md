@@ -54,11 +54,11 @@
   <integration_points>
     <depends_on>
       patterns/pattern-library.md for reporting patterns
-      quality/universal-quality-gates.md for validation standards
+      ../../system/../../system/quality/universal-quality-gates.md for validation standards
     </depends_on>
     <provides_to>
       commands/validate.md for validation execution
-      quality/comprehensive-testing.md for testing reports
+      ../../system/quality/comprehensive-testing.md for testing reports
     </provides_to>
   </integration_points>
   

@@ -109,6 +109,9 @@ yarn-error.log*
 .env.*.local
 secrets/
 
+# Gemini CLI configuration
+.gemini/
+
 # Claude Code specific
 .claude/analytics/
 .claude/settings.local.json
@@ -182,3 +185,260 @@ benchmark-results/
 
 # Integration test reports with sensitive paths
 reports/testing/integration/*.json
+
+# ===================================================================
+# AGENT R3: Comprehensive Generated File Prevention (50+ patterns)
+# ===================================================================
+
+# Agent-generated files (Python scripts)
+agent*.py
+agent[0-9]*.py
+agent_*.py
+*_agent.py
+*_agent_*.py
+
+# Agent-generated files (JSON results)
+agent*.json
+agent[0-9]*.json
+agent_*.json
+*_agent.json
+*_agent_*.json
+*_results.json
+*_validation_results.json
+*_optimization_results.json
+*_certification_results.json
+*_completion_results.json
+
+# Agent-generated files (Markdown reports)
+agent*.md
+agent[0-9]*.md
+agent_*.md
+*_agent.md
+*_agent_*.md
+AGENT*.md
+AGENT_*.md
+
+# Analysis and validation files
+*_analysis.json
+*-analysis.json
+*_analysis_*.json
+*-analysis-*.json
+analysis_*.json
+analysis-*.json
+*_validation.json
+*-validation.json
+validation_*.json
+validation-*.json
+
+# Metrics and performance files
+*_metrics.json
+*-metrics.json
+metrics_*.json
+metrics-*.json
+*_performance.json
+*-performance.json
+performance_*.json
+performance-*.json
+*_benchmark.json
+*-benchmark.json
+benchmark_*.json
+benchmark-*.json
+
+# Monitoring and dashboard files
+*_monitoring.json
+*-monitoring.json
+monitoring_*.json
+monitoring-*.json
+*_dashboard.json
+*-dashboard.json
+dashboard_*.json
+dashboard-*.json
+*_health.json
+*-health.json
+health_*.json
+health-*.json
+
+# Reports directory patterns (generated content)
+reports/current/
+reports/daily/
+reports/analytics/
+reports/dashboard/
+reports/monitoring/
+reports/metrics/
+reports/performance/
+reports/validation/
+reports/testing/ab-testing/
+reports/testing/integration/
+reports/testing/ux-validation/
+reports/continuous-improvement/
+
+# Generated report files with timestamps
+*-report-*.json
+*-report-*.md
+*_report_*.json
+*_report_*.md
+report-*-*.json
+report-*-*.md
+
+# Summary and completion files
+*-summary-*.json
+*-summary-*.md
+*_summary_*.json
+*_summary_*.md
+*-completion-*.json
+*-completion-*.md
+*_completion_*.json
+*_completion_*.md
+
+# KPI and opportunity files
+kpis-*.json
+kpi-*.json
+*_kpis.json
+*-kpis.json
+opportunities-*.json
+opportunity-*.json
+*_opportunities.json
+*-opportunities.json
+
+# Latest/current generated files
+*-latest.json
+*-latest.md
+*_latest.json
+*_latest.md
+latest/*.json
+latest/*.md
+current/*.json
+current/*.md
+
+# Timestamped files
+*-[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*.json
+*-[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*.md
+*_[0-9][0-9][0-9][0-9]_[0-9][0-9]_[0-9][0-9]_*.json
+*_[0-9][0-9][0-9][0-9]_[0-9][0-9]_[0-9][0-9]_*.md
+
+# Test and quality files
+*-test-*.json
+*_test_*.json
+test-*-*.json
+test_*_*.json
+*-quality-*.json
+*_quality_*.json
+quality-*-*.json
+quality_*_*.json
+
+# Audit and compliance files
+*-audit-*.json
+*_audit_*.json
+audit-*-*.json
+audit_*_*.json
+*-compliance-*.json
+*_compliance_*.json
+compliance-*-*.json
+compliance_*_*.json
+
+# Integration and orchestration files
+*-integration-*.json
+*_integration_*.json
+integration-*-*.json
+integration_*_*.json
+*-orchestration-*.json
+*_orchestration_*.json
+orchestration-*-*.json
+orchestration_*_*.json
+
+# Framework internal files
+*-framework-*.json
+*_framework_*.json
+framework-*-*.json
+framework_*_*.json
+
+# Temporary and generated directories
+temp_*/
+tmp_*/
+generated_*/
+output_*/
+results_*/
+analysis_*/
+metrics_*/
+reports_temp/
+reports_generated/
+
+# Log files with timestamps
+*.log.*[0-9]
+*-[0-9][0-9][0-9][0-9][0-9][0-9].log
+*_[0-9][0-9][0-9][0-9][0-9][0-9].log
+logs/[0-9]*
+
+# HTML dashboard files
+dashboard-*.html
+dashboard_*.html
+*-dashboard.html
+*_dashboard.html
+
+# Dot graph files
+*.dot
+*_dependencies.dot
+*-dependencies.dot
+dependency_*.dot
+dependency-*.dot
+
+# Runtime optimization files
+*-optimization-*.json
+*_optimization_*.json
+optimization-*-*.json
+optimization_*_*.json
+*-optimizer-*.json
+*_optimizer_*.json
+optimizer-*-*.json
+optimizer_*_*.json
+
+# Session and state files
+session-*.json
+session_*.json
+*-session.json
+*_session.json
+state-*.json
+state_*.json
+*-state.json
+*_state.json
+
+# Evidence and artifact files
+evidence-*.json
+evidence_*.json
+*-evidence.json
+*_evidence.json
+artifact-*.json
+artifact_*.json
+*-artifact.json
+*_artifact.json
+
+# Security and threat files
+*-security-*.json
+*_security_*.json
+security-*-*.json
+security_*_*.json
+*-threat-*.json
+*_threat_*.json
+threat-*-*.json
+threat_*_*.json
+
+# Migration and deployment files
+*-migration-*.json
+*_migration_*.json
+migration-*-*.json
+migration_*_*.json
+*-deployment-*.json
+*_deployment_*.json
+deployment-*-*.json
+deployment_*_*.json
+
+# Configuration backup files
+*.config.bak
+*_config.bak
+*-config.bak
+config_*.bak
+config-*.bak
+
+# ===================================================================
+# END Agent R3 Enhancement
+# ===================================================================

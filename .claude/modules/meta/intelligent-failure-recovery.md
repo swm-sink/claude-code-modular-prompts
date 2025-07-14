@@ -247,7 +247,7 @@
   <depends_on>
     meta/safety-validator.md for safety boundary enforcement
     meta/human-oversight.md for critical failure escalation
-    quality/error-recovery.md for core recovery mechanisms
+    ../../patterns/error-recovery.md for core recovery mechanisms
   </depends_on>
   
   <integration_contracts>
