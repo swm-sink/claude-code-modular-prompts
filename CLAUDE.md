@@ -557,6 +557,60 @@
 ```
 
 
+# Agent Coordination Protocol
+
+```xml
+<agent_coordination_protocol version = "1.0.0" enforcement = "CRITICAL">
+  <purpose>Structured coordination for parallel agent execution with comprehensive tracking and quality enforcement</purpose>
+  
+  <communication_requirements enforcement = "MANDATORY">
+    <agent_comms_location>agent_comms/ - ALL agent communications MUST go in this root directory</agent_comms_location>
+    <coordination_tracking>agent_comms/agent-coordination-tracker.json - Simple JSON tracker for all agent coordination</coordination_tracking>
+    <output_consolidation>framework-transformation/batch{N}-results/ - Organized results per batch</output_consolidation>
+    <atomic_documentation>Each agent produces comprehensive deliverable documentation</atomic_documentation>
+  </communication_requirements>
+  
+  <coordination_structure enforcement = "MANDATORY">
+    <batch_execution>Maximum 4 agents per batch for optimal parallel performance</batch_execution>
+    <agent_tracking>Real-time status updates in coordination tracker JSON</agent_tracking>
+    <quality_gates>All agents must pass TDD and quality validation before completion</quality_gates>
+    <interruption_handling>Resume from last checkpoint with full state preservation</interruption_handling>
+    <atomic_commits>Per agent completion with rollback capability</atomic_commits>
+  </coordination_structure>
+  
+  <tracker_schema enforcement = "MANDATORY">
+    <coordination_meta>Session metadata, version, batch planning</coordination_meta>
+    <active_batch>Current batch status, agent progress, deliverables tracking</active_batch>
+    <batch_queue>Planned batch execution with missions and status</batch_queue>
+    <epic_progress>High-level progress tracking across all epics</epic_progress>
+    <coordination_rules>Enforcement rules and execution protocols</coordination_rules>
+  </tracker_schema>
+  
+  <execution_workflow enforcement = "MANDATORY">
+    <pre_batch>Update tracker with batch initialization and agent assignments</pre_batch>
+    <during_execution>Real-time status updates as agents complete tasks</during_execution>
+    <post_completion>Consolidate results, validate quality, commit atomically</post_completion>
+    <between_batches>Compile results, update epic progress, prepare next batch</between_batches>
+  </execution_workflow>
+  
+  <integration_with_existing_framework enforcement = "MANDATORY">
+    <file_discipline>Agent communications respect file organization rules</file_discipline>
+    <quality_gates>Agent coordination must pass universal quality gates</quality_gates>
+    <atomic_commits>Integration with existing atomic rollback protocol</atomic_commits>
+    <tdd_enforcement>All agent outputs subject to TDD validation</tdd_enforcement>
+    <github_workflow>Large multi-agent operations create GitHub issues for tracking</github_workflow>
+  </integration_with_existing_framework>
+  
+  <parallel_optimization enforcement = "MANDATORY">
+    <task_batching>Use Task() calls for parallel agent execution</task_batching>
+    <resource_allocation>Balanced workload distribution across agents</resource_allocation>
+    <coordination_efficiency>Minimal overhead coordination protocol</coordination_efficiency>
+    <quality_preservation>Parallel execution maintains quality standards</quality_preservation>
+  </parallel_optimization>
+</agent_coordination_protocol>
+```
+
+
 # Atomic Commits & Instant Rollback Protocol
 
 ```xml
