@@ -1,0 +1,41 @@
+[tool.pytest.ini_options]
+# Test coverage enforcement - CRITICAL for quality gates
+addopts = """
+    --cov=.
+    --cov-report=term-missing
+    --cov-report=html
+    --cov-fail-under=90
+    --cov-config=.coveragerc
+    -v
+"""
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+
+[tool.coverage.run]
+source = ["."]
+omit = [
+    "*/tests/*",
+    "*/test_*.py",
+    "*/__pycache__/*",
+    "*/venv/*",
+    "*/env/*",
+    "*/archive/*",
+    "*/internal/*",
+    "*/scripts/agent-communications/*"
+]
+
+[tool.coverage.report]
+# Enforce 90% coverage minimum
+fail_under = 90
+precision = 1
+show_missing = true
+skip_covered = false
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
