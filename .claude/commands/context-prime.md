@@ -16,7 +16,7 @@
 ```xml
 <command purpose="Intelligent project context establishment with CARE framework and performance optimization">
   
-  <delegation target="modules/context/project-priming.md">
+  <delegation target="system/context/project-priming.md">
     CARE framework → Context analysis → Action planning → Result optimization → Evaluation and priming
   </delegation>
   
@@ -243,8 +243,8 @@
     • Implements performance_optimization for <3s loading and memory efficiency
     • Integrates tdd_awareness for development workflow compatibility
     
-    See modules/frameworks/care.md for CARE framework implementation
-    See modules/context/project-priming.md for intelligent context loading
+    See prompt_eng/frameworks/care.md for CARE framework implementation
+    See system/context/project-priming.md for intelligent context loading
     See modules/patterns/context-preservation.md for context management
   </pattern_usage>
   
@@ -355,4 +355,4 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
-**Reference**: Delegates to modules/context/project-priming.md for complete implementation details including intelligent context loading, performance optimization, and security controls.
+**Reference**: Delegates to system/context/project-priming.md for complete implementation details including intelligent context loading, performance optimization, and security controls.

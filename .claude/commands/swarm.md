@@ -263,7 +263,7 @@ Execute multi-component development workflow for: $ARGUMENTS
     <module>patterns/error-recovery.md</module>
     <module>patterns/context-management-pattern.md</module>
     <module>patterns/validation-pattern.md</module>
-    <module>system/git/git-worktree-management.md</module>
+    <module>system/git/worktree-isolation.md</module>
   </support_modules>
 </module_orchestration>
 ```

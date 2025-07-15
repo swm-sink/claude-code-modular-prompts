@@ -290,7 +290,7 @@ Execute long-running development session workflow for: $ARGUMENTS
     <module>patterns/error-recovery.md</module>
     <module>patterns/context-management-pattern.md</module>
     <module>patterns/validation-pattern.md</module>
-    <module>system/git/git-management.md</module>
+    <module>system/git/git-operations.md</module>
   </support_modules>
 </module_orchestration>
 ```
