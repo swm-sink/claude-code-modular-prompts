@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  PROJECT_CONFIG.xml - Claude Code Modular Prompts Framework Configuration
+  
+  This file customizes the framework for your specific project. The framework
+  reads these values at runtime and adapts all commands and modules accordingly.
+  
+  USAGE:
+  1. Copy this file to your project root
+  2. Edit the values below to match your project
+  3. The framework will automatically use these settings
+  
+  VARIABLES:
+  - All [PROJECT_CONFIG: variable_name | DEFAULT: value] references in CLAUDE.md
+    will be replaced with your custom values
+  - If a value is not specified, the DEFAULT value will be used
+  
+  VERSION: 3.0.0
+  LAST_UPDATED: 2025-07-15
+-->
+
+<project_config>
+  <!-- PROJECT IDENTIFICATION -->
+  <project_metadata>
+    <name>your-project-name</name>
+    <version>1.0.0</version>
+    <description>Brief description of your project</description>
+    <repository>https://github.com/your-org/your-project</repository>
+  </project_metadata>
+
+  <!-- TECHNOLOGY STACK -->
+  <tech_stack>
+    <!-- Primary programming language: python, javascript, typescript, go, java, rust, etc. -->
+    <primary_language>python</primary_language>
+    
+    <!-- Framework: django, flask, react, vue, angular, express, gin, spring, etc. -->
+    <framework>django</framework>
+    
+    <!-- Database: postgresql, mysql, sqlite, mongodb, redis, etc. -->
+    <database>postgresql</database>
+    
+    <!-- Additional technologies: docker, kubernetes, aws, etc. -->
+    <additional_tech>
+      <tech>docker</tech>
+      <tech>redis</tech>
+      <tech>celery</tech>
+    </additional_tech>
+  </tech_stack>
+
+  <!-- PROJECT STRUCTURE -->
+  <project_structure>
+    <!-- Source code directory (DEFAULT: src) -->
+    <source_directory>src</source_directory>
+    
+    <!-- Test directory (DEFAULT: tests) -->
+    <test_directory>tests</test_directory>
+    
+    <!-- Documentation directory (DEFAULT: docs) -->
+    <docs_directory>docs</docs_directory>
+    
+    <!-- Scripts directory (DEFAULT: scripts) -->
+    <scripts_directory>scripts</scripts_directory>
+    
+    <!-- Configuration directory -->
+    <config_directory>config</config_directory>
+    
+    <!-- Static files directory (for web projects) -->
+    <static_directory>static</static_directory>
+    
+    <!-- Templates directory (for web projects) -->
+    <templates_directory>templates</templates_directory>
+  </project_structure>
+
+  <!-- DEVELOPMENT COMMANDS -->
+  <commands>
+    <!-- Test command (DEFAULT: language-specific) -->
+    <test>python -m pytest</test>
+    
+    <!-- Lint command (DEFAULT: language-specific) -->
+    <lint>flake8 . && black --check .</lint>
+    
+    <!-- Build command (DEFAULT: language-specific) -->
+    <build>python -m build</build>
+    
+    <!-- Format command -->
+    <format>black . && isort .</format>
+    
+    <!-- Development server command -->
+    <dev_server>python manage.py runserver</dev_server>
+    
+    <!-- Database migration command -->
+    <migrate>python manage.py migrate</migrate>
+    
+    <!-- Install dependencies command -->
+    <install>pip install -r requirements.txt</install>
+  </commands>
+
+  <!-- QUALITY STANDARDS -->
+  <quality_standards>
+    <!-- Test coverage settings -->
+    <test_coverage>
+      <!-- Coverage threshold percentage (DEFAULT: 90) -->
+      <threshold>90</threshold>
+      
+      <!-- Enforcement level: blocking, warning, info (DEFAULT: blocking) -->
+      <enforcement>blocking</enforcement>
+    </test_coverage>
+    
+    <!-- Performance requirements -->
+    <performance>
+      <!-- Response time 95th percentile in milliseconds (DEFAULT: 200ms) -->
+      <response_time_p95>200</response_time_p95>
+      
+      <!-- Memory usage limit in MB -->
+      <memory_limit>512</memory_limit>
+    </performance>
+    
+    <!-- Code quality settings -->
+    <code_quality>
+      <!-- Complexity threshold -->
+      <max_complexity>10</max_complexity>
+      
+      <!-- Maximum line length -->
+      <max_line_length>100</max_line_length>
+    </code_quality>
+  </quality_standards>
+
+  <!-- FRAMEWORK BEHAVIOR -->
+  <framework_behavior>
+    <!-- File creation policy: conservative, moderate, aggressive (DEFAULT: conservative) -->
+    <file_creation_policy>conservative</file_creation_policy>
+    
+    <!-- TDD enforcement: strict, moderate, flexible (DEFAULT: strict) -->
+    <test_first_enforcement>strict</test_first_enforcement>
+    
+    <!-- Context management -->
+    <context_management>
+      <!-- Maximum tokens per file (DEFAULT: 4K) -->
+      <max_file_tokens>4000</max_file_tokens>
+      
+      <!-- Maximum total context tokens (DEFAULT: 120K) -->
+      <max_context_tokens>120000</max_context_tokens>
+      
+      <!-- Reserved tokens for work (DEFAULT: 50K+) -->
+      <reserved_work_tokens>50000</reserved_work_tokens>
+    </context_management>
+  </framework_behavior>
+
+  <!-- AI TEMPERATURE SETTINGS -->
+  <ai_temperature>
+    <!-- Factual analysis temperature (DEFAULT: 0.2) -->
+    <factual>0.2</factual>
+    
+    <!-- Code analysis temperature (DEFAULT: 0.0-0.3) -->
+    <analysis>0.1</analysis>
+    
+    <!-- Creative/brainstorming temperature (DEFAULT: 0.7-1.0) -->
+    <creative>0.8</creative>
+  </ai_temperature>
+
+  <!-- SECURITY SETTINGS -->
+  <security>
+    <!-- Security scanning enabled -->
+    <security_scanning>true</security_scanning>
+    
+    <!-- Dependency vulnerability checking -->
+    <dependency_scanning>true</dependency_scanning>
+    
+    <!-- Secrets detection -->
+    <secrets_detection>true</secrets_detection>
+  </security>
+
+  <!-- DEVELOPMENT WORKFLOW -->
+  <development_workflow>
+    <!-- Git workflow: feature-branch, git-flow, github-flow -->
+    <git_workflow>feature-branch</git_workflow>
+    
+    <!-- Branch naming convention -->
+    <branch_naming>feature/description</branch_naming>
+    
+    <!-- Commit message format -->
+    <commit_format>conventional</commit_format>
+    
+    <!-- Code review requirements -->
+    <code_review>
+      <required>true</required>
+      <min_reviewers>1</min_reviewers>
+    </code_review>
+  </development_workflow>
+
+  <!-- TESTING STRATEGY -->
+  <testing_strategy>
+    <!-- Test types to enforce -->
+    <test_types>
+      <unit_tests>true</unit_tests>
+      <integration_tests>true</integration_tests>
+      <end_to_end_tests>false</end_to_end_tests>
+    </test_types>
+    
+    <!-- Test framework specific settings -->
+    <test_framework>
+      <name>pytest</name>
+      <config_file>pytest.ini</config_file>
+    </test_framework>
+  </testing_strategy>
+
+  <!-- DEPLOYMENT SETTINGS -->
+  <deployment>
+    <!-- Deployment strategy: manual, ci-cd, staging-prod -->
+    <strategy>ci-cd</strategy>
+    
+    <!-- Environments -->
+    <environments>
+      <environment>
+        <name>development</name>
+        <url>http://localhost:8000</url>
+      </environment>
+      <environment>
+        <name>staging</name>
+        <url>https://staging.yourproject.com</url>
+      </environment>
+      <environment>
+        <name>production</name>
+        <url>https://yourproject.com</url>
+      </environment>
+    </environments>
+  </deployment>
+
+  <!-- TEAM CONFIGURATION -->
+  <team>
+    <!-- Team size -->
+    <size>small</size>
+    
+    <!-- Development methodology: agile, waterfall, lean -->
+    <methodology>agile</methodology>
+    
+    <!-- Communication preferences -->
+    <communication>
+      <issue_tracking>github</issue_tracking>
+      <documentation_style>markdown</documentation_style>
+    </communication>
+  </team>
+
+  <!-- CUSTOM MODULES -->
+  <custom_modules>
+    <!-- Add custom module paths if you've created project-specific modules -->
+    <module_paths>
+      <path>.claude/custom/</path>
+    </module_paths>
+  </custom_modules>
+
+  <!-- INTEGRATIONS -->
+  <integrations>
+    <!-- External service integrations -->
+    <services>
+      <service>
+        <name>github</name>
+        <enabled>true</enabled>
+        <config>
+          <issue_tracking>true</issue_tracking>
+          <pr_automation>true</pr_automation>
+        </config>
+      </service>
+    </services>
+  </integrations>
+
+  <!-- EXAMPLE CONFIGURATIONS FOR DIFFERENT PROJECT TYPES -->
+  <!--
+    PYTHON/DJANGO PROJECT:
+    <tech_stack>
+      <primary_language>python</primary_language>
+      <framework>django</framework>
+      <database>postgresql</database>
+    </tech_stack>
+    <commands>
+      <test>python manage.py test</test>
+      <lint>flake8 . && black --check .</lint>
+      <build>python manage.py collectstatic</build>
+    </commands>
+    
+    JAVASCRIPT/REACT PROJECT:
+    <tech_stack>
+      <primary_language>javascript</primary_language>
+      <framework>react</framework>
+      <database>mongodb</database>
+    </tech_stack>
+    <commands>
+      <test>npm test</test>
+      <lint>eslint . && prettier --check .</lint>
+      <build>npm run build</build>
+    </commands>
+    
+    GO/GIN PROJECT:
+    <tech_stack>
+      <primary_language>go</primary_language>
+      <framework>gin</framework>
+      <database>postgresql</database>
+    </tech_stack>
+    <commands>
+      <test>go test ./...</test>
+      <lint>golangci-lint run</lint>
+      <build>go build -o bin/app</build>
+    </commands>
+  -->
+</project_config>
