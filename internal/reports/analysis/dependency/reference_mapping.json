@@ -1,8 +1,0 @@
-{
-  "old_patterns_modules": ".claude/modules/patterns/",
-  "old_patterns_prompt": ".claude/modules/patterns/",
-  "old_scattered_commands": ".claude/commands/",
-  "old_scattered_quality": ".claude/modules/quality/",
-  "broken_references_count": 101,
-  "total_references": 1093
-}
