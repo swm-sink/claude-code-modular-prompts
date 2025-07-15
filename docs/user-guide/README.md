@@ -1,7 +1,26 @@
 # User Guide - Claude Code Modular Prompts Framework
 
+## Table of Contents
+1. [Overview](#overview)
+2. [Learning Path](#learning-path)
+   - [Foundation Level (0-1 hours)](#foundation-level-0-1-hours)
+   - [Intermediate Level (1-5 hours)](#intermediate-level-1-5-hours)
+   - [Advanced Level (5+ hours)](#advanced-level-5-hours)
+   - [Expert Level (10+ hours)](#expert-level-10-hours)
+3. [Quick Reference](#quick-reference)
+4. [Common Workflows](#common-workflows)
+5. [Getting Help](#getting-help)
+6. [Contributing](#contributing)
+7. [Next Steps](#next-steps)
+
 ## Overview
 This user guide provides comprehensive documentation for mastering the Claude Code Modular Prompts Framework. Follow the progressive skill-building path below to go from beginner to expert.
+
+**New to the framework?** Start with the [Getting Started Guide](../../GETTING_STARTED.md) for 5-minute setup.
+
+**Looking for quick answers?** Check the [CLAUDE.md Quick Reference](../../CLAUDE.md#quick-reference) or [FAQ](faq.md).
+
+**Need help with issues?** See the [Troubleshooting Guide](troubleshooting.md).
 
 ## Learning Path
 

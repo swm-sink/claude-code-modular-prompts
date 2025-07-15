@@ -1,5 +1,26 @@
 # Frequently Asked Questions (FAQ)
 
+## Table of Contents
+1. [Getting Started](#getting-started)
+2. [Commands](#commands)
+3. [Configuration](#configuration)
+4. [Quality and Testing](#quality-and-testing)
+5. [Performance](#performance)
+6. [Troubleshooting](#troubleshooting)
+7. [Advanced Usage](#advanced-usage)
+8. [Meta-Framework](#meta-framework)
+9. [Security and Privacy](#security-and-privacy)
+10. [Migration and Integration](#migration-and-integration)
+11. [Limitations and Workarounds](#limitations-and-workarounds)
+12. [Best Practices](#best-practices)
+13. [Quick Reference](#quick-reference)
+
+**Quick answers to common questions:**
+- **How do I know if the framework is working?** → Try `/auto "test framework setup"`
+- **Which command should I use?** → Use `/auto` when uncertain
+- **Why are responses slow?** → Check [Performance](#performance) section
+- **Commands not working?** → See [Troubleshooting](#troubleshooting) section
+
 ## Getting Started
 
 ### Q: How do I know if the framework is working?

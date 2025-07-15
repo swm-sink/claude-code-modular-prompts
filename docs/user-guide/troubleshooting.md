@@ -1,7 +1,34 @@
 # Troubleshooting Guide
 
+## Table of Contents
+1. [Overview](#overview)
+2. [Common Issues and Solutions](#common-issues-and-solutions)
+   - [Framework Not Working](#framework-not-working)
+   - [Quality Gates Not Enforcing](#quality-gates-not-enforcing)
+   - [Performance Issues](#performance-issues)
+   - [Generic AI Responses](#generic-ai-responses)
+   - [Integration Issues](#integration-issues)
+   - [Validation and Testing](#validation-and-testing)
+3. [Advanced Troubleshooting](#advanced-troubleshooting)
+4. [Getting Help](#getting-help)
+5. [Prevention](#prevention)
+6. [Quick Reference](#quick-reference)
+
 ## Overview
 This guide helps you resolve common issues when using the Claude Code Modular Prompts Framework. For quick fixes, see the [CLAUDE.md Quick Reference](../../CLAUDE.md#troubleshooting-quick-fixes).
+
+**Quick fixes for common issues:**
+- **Commands not working** → Check CLAUDE.md is in project root
+- **Generic responses** → Configure PROJECT_CONFIG.xml
+- **Slow performance** → Use `/meta-optimize "improve performance"`
+- **Quality gates issues** → Check enforcement settings in PROJECT_CONFIG.xml
+
+**Need immediate help?** Try these emergency commands:
+```bash
+/meta-review "system health check"      # Diagnose issues
+/validate "check framework setup"       # Validate configuration
+/meta-optimize "improve performance"    # Fix performance issues
+```
 
 ## Common Issues and Solutions
 

@@ -1,15 +1,32 @@
 # Advanced Usage Guide
 
+## Table of Contents
+1. [Overview](#overview)
+2. [Prerequisites](#prerequisites)
+3. [Custom Modules](#custom-modules)
+4. [Meta-Prompting](#meta-prompting)
+5. [Framework Customization](#framework-customization)
+6. [Performance Optimization](#performance-optimization)
+7. [Team Integration](#team-integration)
+8. [Advanced Workflows](#advanced-workflows)
+9. [Configuration Examples](#advanced-configuration-examples)
+10. [Best Practices](#best-practices-for-advanced-usage)
+11. [Related Documentation](#related-documentation)
+12. [Next Steps](#next-steps)
+
 ## Overview
 This guide covers advanced techniques for power users who want to extend and customize the Claude Code Modular Prompts Framework. These techniques are for users who have mastered the [Foundation](../user-guide/README.md#foundation-level) and [Intermediate](../user-guide/README.md#intermediate-level) levels.
 
-## Table of Contents
-1. [Custom Modules](#custom-modules)
-2. [Meta-Prompting](#meta-prompting)
-3. [Framework Customization](#framework-customization)
-4. [Performance Optimization](#performance-optimization)
-5. [Team Integration](#team-integration)
-6. [Advanced Workflows](#advanced-workflows)
+## Prerequisites
+Before using advanced techniques, ensure you have:
+- ✅ Completed [Foundation Level](../user-guide/README.md#foundation-level) training
+- ✅ Mastered [Intermediate Level](../user-guide/README.md#intermediate-level) skills
+- ✅ Customized [PROJECT_CONFIG.xml](../../PROJECT_CONFIG.xml) for your project
+- ✅ Successfully used all [core commands](../user-guide/commands/README.md)
+
+**Need to review basics?** See the [User Guide](../user-guide/README.md) or [API Reference](../api-reference.md).
+
+**Looking for examples?** Check [Advanced Examples](../../examples/advanced/) directory.
 
 ## Custom Modules
 

@@ -1,7 +1,33 @@
 # API Reference
 
+## Table of Contents
+1. [Overview](#overview)
+2. [Configuration API](#configuration-api)
+   - [PROJECT_CONFIG.xml Schema](#project_configxml-schema)
+   - [Tech Stack Configuration](#tech-stack-configuration)
+   - [Quality Standards](#quality-standards)
+3. [Command API](#command-api)
+   - [Core Commands](#core-commands)
+   - [Support Commands](#support-commands)
+   - [Meta Commands](#meta-commands)
+4. [Integration Patterns](#integration-patterns)
+5. [Response Formats](#response-formats)
+6. [Configuration Validation](#configuration-validation)
+7. [Environment Variables](#environment-variables)
+8. [Error Codes](#error-codes)
+9. [Performance Metrics](#performance-metrics)
+10. [Migration Guide](#migration-guide)
+11. [Best Practices](#best-practices)
+12. [Quick Reference](#quick-reference)
+
 ## Overview
 This document provides comprehensive API reference for the Claude Code Modular Prompts Framework, including configuration schemas, command interfaces, and integration patterns.
+
+**New to the framework?** Start with the [Getting Started Guide](../GETTING_STARTED.md) before diving into the API.
+
+**Looking for examples?** See [Examples Directory](../examples/) for practical usage.
+
+**Need help?** Check the [Troubleshooting Guide](user-guide/troubleshooting.md) or [FAQ](user-guide/faq.md).
 
 ## Configuration API
 
