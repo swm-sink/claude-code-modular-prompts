@@ -65,90 +65,15 @@ This user guide provides comprehensive documentation for mastering the Claude Co
 
 ## Quick Reference
 
-### Essential Commands
-```bash
-/auto "your request"          # Intelligent routing - use when unsure
-/task "focused work"          # Single component with TDD
-/feature "complete feature"   # Full feature lifecycle with PRD
-/query "research question"    # Analysis without modifications
-```
+For a comprehensive quick reference including commands, workflows, configuration, and troubleshooting, see the [CLAUDE.md Quick Reference](../../CLAUDE.md#quick-reference).
 
-### Support Commands
-```bash
-/session "long-running work"  # Extended work sessions
-/swarm "complex coordination" # Multi-agent coordination
-/protocol "production work"   # Production-ready workflows
-/docs "documentation"         # Documentation generation
-```
+### Essential Commands Summary
+- **[/auto](commands/auto-command.md)** - Intelligent routing when uncertain
+- **[/task](commands/task-command.md)** - Single component with TDD
+- **[/feature](commands/feature-command.md)** - Complete feature lifecycle
+- **[/query](commands/query-command.md)** - Research without modifications
 
-### Meta Commands
-```bash
-/meta-review "analyze performance"    # Framework analysis
-/meta-optimize "improve efficiency"   # Performance optimization
-/meta-evolve "adapt to patterns"     # Adaptive learning
-/meta-govern "enforce compliance"     # Governance and compliance
-```
-
-## Common Workflows
-
-### New Feature Development
-```bash
-1. /query "understand existing related functionality"
-2. /feature "implement new feature with requirements"
-3. /task "add specific component or fix"
-4. /protocol "prepare for production deployment"
-```
-
-### Bug Investigation and Fix
-```bash
-1. /query "analyze the bug and understand root cause"
-2. /task "implement fix with comprehensive tests"
-3. /protocol "ensure fix meets production standards"
-```
-
-### Code Research and Documentation
-```bash
-1. /query "analyze codebase and create documentation"
-2. /docs "generate comprehensive documentation"
-3. /task "add missing tests or improve coverage"
-```
-
-## Configuration Quick Start
-
-### Basic PROJECT_CONFIG.xml
-```xml
-<project_config>
-  <tech_stack>
-    <primary_language>python</primary_language>
-    <framework>django</framework>
-  </tech_stack>
-  <commands>
-    <test>pytest --cov=src</test>
-    <lint>flake8 src</lint>
-  </commands>
-  <quality_standards>
-    <test_coverage>
-      <threshold>90</threshold>
-    </test_coverage>
-  </quality_standards>
-</project_config>
-```
-
-## Troubleshooting
-
-### Common Issues
-
-**Issue**: Commands not working
-- **Solution**: Check CLAUDE.md is in project root
-- **Check**: Verify .claude directory exists
-
-**Issue**: Generic responses
-- **Solution**: Customize PROJECT_CONFIG.xml for your tech stack
-- **Check**: Verify configuration is project-specific
-
-**Issue**: Quality gates not enforcing
-- **Solution**: Check quality_standards in PROJECT_CONFIG.xml
-- **Check**: Verify enforcement is set to "blocking"
+For detailed usage of each command, see the [Command Documentation](commands/).
 
 ### Getting Help
 
