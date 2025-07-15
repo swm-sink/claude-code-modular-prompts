@@ -479,17 +479,31 @@
 # Quality Gates
 
 ```xml
-<quality_gates>
-  <rule>TDD: RED→GREEN→REFACTOR mandatory</rule>
-  <rule>Security: Threat model first</rule>
-  <rule>Performance: [PROJECT_CONFIG: performance.response_time_p95 | DEFAULT: 200ms] p95</rule>
-  <rule>Coverage: [PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]%+ with assertions</rule>
-  <rule>Features: PRD-first approach</rule>
+<quality_gates version = "3.0.0" enforcement = "CRITICAL">
+  <purpose>Universal quality enforcement across all commands and modules with comprehensive validation and blocking controls</purpose>
+  
+  <master_mandate>ALL commands MUST validate through quality gates with BLOCKING enforcement</master_mandate>
+  
+  <critical_gates>
+    <gate name = "TDD_Compliance">RED→GREEN→REFACTOR mandatory cycle enforcement</gate>
+    <gate name = "Security_Standards">Threat model first | Zero high-severity issues</gate>
+    <gate name = "Performance_Benchmarks">[PROJECT_CONFIG: performance.response_time_p95 | DEFAULT: 200ms] p95 required</gate>
+    <gate name = "Code_Quality">[PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]%+ coverage with assertions</gate>
+    <gate name = "Features_Approach">PRD-first development approach mandatory</gate>
+  </critical_gates>
+  
   <canonical_sources>
     <tdd>.claude/system/quality/tdd.md</tdd>
     <security>.claude/system/security/threat-modeling.md</security>
     <test_coverage>.claude/system/quality/test-coverage.md</test_coverage>
+    <universal_gates>.claude/system/quality/universal-quality-gates.md</universal_gates>
   </canonical_sources>
+  
+  <orchestration>
+    <delegation>Commands delegate to quality modules for detailed validation and enforcement procedures</delegation>
+    <integration>Quality gates enforced at both command and module levels</integration>
+    <validation>Each quality gate execution gets atomic commit with validation</validation>
+  </orchestration>
 </quality_gates>
 ```
 
@@ -1031,21 +1045,6 @@
 ```
 
 
-# Quality Gate Enforcement
-
-```xml
-<quality_gate_enforcement>
-  <canonical_source>.claude/system/quality/universal-quality-gates.md</canonical_source>
-  <master_mandate>ALL commands MUST validate through quality gates with BLOCKING enforcement</master_mandate>
-  <critical_gates>
-    <gate>TDD Compliance: RED→GREEN→REFACTOR mandatory</gate>
-    <gate>Security Standards: Zero high-severity issues</gate>
-    <gate>Performance Benchmarks: [PROJECT_CONFIG: performance.response_time_p95 | DEFAULT: 200ms] p95 required</gate>
-    <gate>Code Quality: [PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]%+ coverage required</gate>
-  </critical_gates>
-  <orchestration>Commands delegate to quality modules for detailed validation and enforcement procedures</orchestration>
-</quality_gate_enforcement>
-```
 
 
 # Archive Management
