@@ -1353,11 +1353,25 @@
 ```
 
 
-# Meta-Prompting Framework
+# Meta-Framework Control
 
 ```xml
-<meta_prompting_framework version = "3.0.0" enforcement = "CRITICAL">
-  <purpose>Comprehensive framework management through intelligent meta-prompting with self-improvement capabilities</purpose>
+<meta_framework_control version = "3.0.0" enforcement = "CRITICAL">
+  <purpose>Self-improving, adaptive framework evolution with comprehensive management capabilities, safety boundaries, and human oversight</purpose>
+  
+  <meta_architecture>
+    <stable_core immutable = "true">8 commands | 88 modules | Quality gates | Thinking patterns</stable_core>
+    <enhancement mutable = "true">Learning | Adaptation | Optimization | Generation engines</enhancement>
+    <safety enforcement = "MANDATORY">Boundary protection | Human oversight | Rollback | Monitoring</safety>
+    <intelligent_routing>Meta commands route to specialized modules for implementation</intelligent_routing>
+    <continuous_learning>Meta-operations learn and improve from experience</continuous_learning>
+  </meta_architecture>
+  
+  <self_improvement enforcement = "MANDATORY">
+    <cycle>Analysis→Recognition→Generation→Validation→Implementation→Evaluation</cycle>
+    <boundaries>Immutable core | Additive only | 5%/week limit | Human approval | 60s rollback</boundaries>
+    <control>Incremental changes | 99.9% stability | Performance monitoring | Human override</control>
+  </self_improvement>
   
   <meta_commands enforcement = "MANDATORY">
     <meta_review>
@@ -1396,73 +1410,23 @@
     </meta_fix>
   </meta_commands>
   
-  <meta_architecture>
-    <intelligent_routing>Meta commands route to specialized modules for implementation</intelligent_routing>
-    <safety_integration>All meta operations respect framework safety boundaries</safety_integration>
-    <human_oversight>Human authority maintained over all meta-operations</human_oversight>
-    <continuous_learning>Meta-operations learn and improve from experience</continuous_learning>
-  </meta_architecture>
-  
-  <meta_capabilities>
-    <framework_evolution>Self-improving framework with controlled evolution cycles</framework_evolution>
-    <compliance_enforcement>Automated compliance monitoring and correction</compliance_enforcement>
-    <performance_optimization>Continuous optimization based on usage patterns</performance_optimization>
-    <governance_integration>Comprehensive governance with human oversight</governance_integration>
-  </meta_capabilities>
-  
-  <integration_points>
-    <existing_commands>Meta commands complement existing command set</existing_commands>
-    <module_runtime>Integration with Module Runtime Engine for execution</module_runtime>
-    <quality_gates>Meta operations enforce universal quality gates</quality_gates>
-    <safety_boundaries>Meta operations respect all safety boundaries</safety_boundaries>
-  </integration_points>
-</meta_prompting_framework>
-```
-
-
-# Security and Performance Optimization
-
-```xml
-<security_performance enforcement = "CRITICAL">
-  <security>Data minimization | Ephemeral contexts | Role-based access | Operation logging | Threat modeling | Secure defaults</security>
-  <performance>Hierarchical prioritization | XML compression | Lazy loading | 50K+ budget | 40min sessions | Parallel execution</performance>
-  <optimization>Concurrent batching | Pipeline optimization | Validation checkpoints | Multi-perspective analysis</optimization>
-</security_performance>
-```
-
-**Remember**: Critical thinking partner. Research deeply. Challenge assumptions. Map consequences.
-
-
-# Meta Framework Control
-
-```xml
-<meta_framework_control version = "3.0.0" enforcement = "CRITICAL">
-  <purpose>Self-improving, adaptive framework evolution with safety boundaries and human oversight</purpose>
-  
-  <meta_architecture>
-    <stable_core immutable = "true">8 commands | 88 modules | Quality gates | Thinking patterns</stable_core>
-    <enhancement mutable = "true">Learning | Adaptation | Optimization | Generation engines</enhancement>
-    <safety enforcement = "MANDATORY">Boundary protection | Human oversight | Rollback | Monitoring</safety>
-  </meta_architecture>
-  
-  <self_improvement enforcement = "MANDATORY">
-    <cycle>Analysis→Recognition→Generation→Validation→Implementation→Evaluation</cycle>
-    <boundaries>Immutable core | Additive only | 5%/week limit | Human approval | 60s rollback</boundaries>
-    <control>Incremental changes | 99.9% stability | Performance monitoring | Human override</control>
-  </self_improvement>
-  
-  <meta_commands enforcement = "MANDATORY">
-    <analyze>Pattern analysis and optimization opportunities</analyze>
-    <optimize>Implement approved enhancements with monitoring</optimize>
-    <evolve>Framework evolution with human approval</evolve>
-    <rollback>Stability restoration and failure analysis</rollback>
-  </meta_commands>
-  
   <meta_modules enforcement = "MANDATORY">
     <safety>safety-validator | human-oversight | stability-monitor</safety>
     <intelligence>pattern-recognizer | performance-optimizer | module-generator</intelligence>
     <evolution>framework-evolver | learning-integrator | adaptation-engine</evolution>
   </meta_modules>
+  
+  <revolutionary_capabilities>
+    <framework_evolution>Self-improving framework with controlled evolution cycles</framework_evolution>
+    <compliance_enforcement>Automated compliance monitoring and correction</compliance_enforcement>
+    <performance_optimization>Continuous optimization based on usage patterns</performance_optimization>
+    <governance_integration>Comprehensive governance with human oversight</governance_integration>
+    <pattern_recognition>Automatically identifies and optimizes usage patterns</pattern_recognition>
+    <intelligent_failure_recovery>Learns from failures and prevents recurrence</intelligent_failure_recovery>
+    <context_aware_generation>Generates modules and workflows based on needs</context_aware_generation>
+    <predictive_enhancement>Anticipates needs and pre-optimizes workflows</predictive_enhancement>
+    <adaptive_routing>Command routing improves based on success patterns</adaptive_routing>
+  </revolutionary_capabilities>
   
   <human_ai_collaboration enforcement = "CRITICAL">
     <authority>Ultimate control | Override capability | Approval gates | Full transparency</authority>
@@ -1475,12 +1439,21 @@
     <stability>99.9% uptime | Zero regression | 60s rollback | Instant human override</stability>
   </performance_targets>
   
+  <safety_guarantees>
+    <stability_preservation>Core framework stability maintained at 99.9%</stability_preservation>
+    <human_control>Human authority over all meta-operations</human_control>
+    <rollback_capability>60-second rollback for any problematic change</rollback_capability>
+    <boundary_enforcement>Immutable core protection with safety boundaries</boundary_enforcement>
+  </safety_guarantees>
+  
   <integration_points>
     <core_framework>
       <claude_4_control>Meta-capabilities leverage Claude 4 advanced features</claude_4_control>
       <module_runtime>Integration with existing module runtime engine</module_runtime>
       <quality_gates>Meta-changes must pass all existing quality gates</quality_gates>
       <command_orchestration>Meta-commands integrate with existing command system</command_orchestration>
+      <existing_commands>Meta commands complement existing command set</existing_commands>
+      <safety_boundaries>Meta operations respect all safety boundaries</safety_boundaries>
     </core_framework>
     
     <data_structures>
@@ -1500,27 +1473,14 @@
 ```
 
 
-# Meta-Enhanced Framework Capabilities
+# Security and Performance Optimization
 
 ```xml
-<meta_capabilities>
-  <current_state>Static, manually-maintained framework</current_state>
-  <enhanced_state>Self-improving, adaptive, learning framework</enhanced_state>
-  
-  <revolutionary_features>
-    <pattern_recognition>Automatically identifies and optimizes usage patterns</pattern_recognition>
-    <performance_optimization>Real-time efficiency improvements based on usage data</performance_optimization>
-    <intelligent_failure_recovery>Learns from failures and prevents recurrence</intelligent_failure_recovery>
-    <context_aware_generation>Generates modules and workflows based on needs</context_aware_generation>
-    <predictive_enhancement>Anticipates needs and pre-optimizes workflows</predictive_enhancement>
-    <adaptive_routing>Command routing improves based on success patterns</adaptive_routing>
-  </revolutionary_features>
-  
-  <safety_guarantees>
-    <stability_preservation>Core framework stability maintained at 99.9%</stability_preservation>
-    <human_control>Human authority over all meta-operations</human_control>
-    <rollback_capability>60-second rollback for any problematic change</rollback_capability>
-    <boundary_enforcement>Immutable core protection with safety boundaries</boundary_enforcement>
-  </safety_guarantees>
-</meta_capabilities>
+<security_performance enforcement = "CRITICAL">
+  <security>Data minimization | Ephemeral contexts | Role-based access | Operation logging | Threat modeling | Secure defaults</security>
+  <performance>Hierarchical prioritization | XML compression | Lazy loading | 50K+ budget | 40min sessions | Parallel execution</performance>
+  <optimization>Concurrent batching | Pipeline optimization | Validation checkpoints | Multi-perspective analysis</optimization>
+</security_performance>
 ```
+
+**Remember**: Critical thinking partner. Research deeply. Challenge assumptions. Map consequences.
