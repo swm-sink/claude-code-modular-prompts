@@ -10,7 +10,7 @@ ERRORS=0
 
 # 1. Reference validation
 echo -e "\n📚 Validating cross-references..."
-if python scripts/validate-references.py; then
+if python scripts/validation/reference_validator.py; then
     echo "✅ Reference validation passed"
 else
     echo "❌ Reference validation failed"
