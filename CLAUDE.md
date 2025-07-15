@@ -485,7 +485,12 @@
   <master_mandate>ALL commands MUST validate through quality gates with BLOCKING enforcement</master_mandate>
   
   <critical_gates>
-    <gate name = "TDD_Compliance">RED→GREEN→REFACTOR mandatory cycle enforcement</gate>
+    <gate name = "TDD_Compliance">
+      <cycle>RED→GREEN→REFACTOR mandatory cycle enforcement</cycle>
+      <universal_requirement>Write failing tests FIRST, implement minimal code, refactor while keeping tests green</universal_requirement>
+      <blocking_enforcement>ANY implementation before tests BLOCKS command execution</blocking_enforcement>
+      <atomic_integration>Atomic commits at each TDD phase with validation checkpoints</atomic_integration>
+    </gate>
     <gate name = "Security_Standards">Threat model first | Zero high-severity issues</gate>
     <gate name = "Performance_Benchmarks">[PROJECT_CONFIG: performance.response_time_p95 | DEFAULT: 200ms] p95 required</gate>
     <gate name = "Code_Quality">[PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]%+ coverage with assertions</gate>
@@ -692,7 +697,7 @@
   
   <framework_wide_integration enforcement = "MANDATORY">
     <development_workflows>
-      <tdd_cycle>RED→commit→GREEN→commit→REFACTOR→commit (atomic TDD enforcement)</tdd_cycle>
+      <tdd_workflow>Atomic commits at each TDD phase with validation checkpoints</tdd_workflow>
       <feature_development>Planning→commit→Implementation→commit→Validation→commit (atomic feature phases)</feature_development>
       <code_changes>Analysis→commit→Modification→commit→Testing→commit (atomic change management)</code_changes>
       <quality_gates>Pre-check→commit→Validation→commit→Post-check→commit (atomic quality enforcement)</quality_gates>
@@ -914,7 +919,7 @@
   </reference_commands>
   
   <quality_integration>
-    <tdd_compliance>Atomic commits support TDD cycle: RED→commit→GREEN→commit→REFACTOR→commit</tdd_compliance>
+    <tdd_integration>Atomic commits support TDD cycle with validation at each phase</tdd_integration>
     <quality_gates>Each commit MUST pass quality validation before acceptance</quality_gates>
     <coverage_protection>Rollback triggered if test coverage drops below threshold</coverage_protection>
     <security_validation>All commits scanned for security issues before acceptance</security_validation>
@@ -1219,13 +1224,10 @@
     </implementations>
   </command_runtime_specification>
   
-  <tdd_enforcement>
+  <tdd_integration>
     <canonical_source>.claude/system/quality/tdd.md</canonical_source>
-    <master_mandate>RED→GREEN→REFACTOR cycle MANDATORY for ALL development commands</master_mandate>
-    <universal_requirement>Write failing tests FIRST, implement minimal code, refactor while keeping tests green</universal_requirement>
-    <blocking_enforcement>ANY implementation before tests BLOCKS command execution</blocking_enforcement>
-    <orchestration>Commands delegate to TDD module for detailed cycle enforcement and validation procedures</orchestration>
-  </tdd_enforcement>
+    <enforcement>Commands delegate to TDD module for detailed cycle enforcement and validation procedures</enforcement>
+  </tdd_integration>
   
   <execution_optimization>
     <parallel>Tool batching | Independent modules | Dependency optimization</parallel>
