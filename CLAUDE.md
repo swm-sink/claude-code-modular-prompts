@@ -215,6 +215,226 @@
 ```
 
 
+# Quick Reference
+
+## Essential Commands
+
+```xml
+<command_reference>
+  <core_commands>
+    <command name="/auto" purpose="Intelligent routing - use when uncertain about approach">
+      <usage>/auto "your request here"</usage>
+      <best_for>Unclear requirements | Complex decisions | Route optimization</best_for>
+    </command>
+    
+    <command name="/task" purpose="Single component focused development with TDD">
+      <usage>/task "implement specific functionality"</usage>
+      <best_for>Single file changes | Bug fixes | <50 lines of code</best_for>
+    </command>
+    
+    <command name="/feature" purpose="Complete feature lifecycle with PRD">
+      <usage>/feature "develop new feature with requirements"</usage>
+      <best_for>New features | Multi-component changes | System integration</best_for>
+    </command>
+    
+    <command name="/query" purpose="Research and analysis without modifications">
+      <usage>/query "analyze codebase or investigate issue"</usage>
+      <best_for>Code research | Understanding systems | Read-only analysis</best_for>
+    </command>
+    
+    <command name="/swarm" purpose="Multi-agent coordination for complex tasks">
+      <usage>/swarm "coordinate multiple development tasks"</usage>
+      <best_for>Complex projects | Parallel development | Team coordination</best_for>
+    </command>
+    
+    <command name="/session" purpose="Long-running work with context preservation">
+      <usage>/session "manage extended development session"</usage>
+      <best_for>Extended work | Context preservation | Progress tracking</best_for>
+    </command>
+    
+    <command name="/protocol" purpose="Production-ready workflows with safety">
+      <usage>/protocol "production deployment or critical changes"</usage>
+      <best_for>Production deployments | Critical fixes | Safety-critical work</best_for>
+    </command>
+    
+    <command name="/docs" purpose="Documentation generation and management">
+      <usage>/docs "generate or update documentation"</usage>
+      <best_for>Documentation | README files | API docs | User guides</best_for>
+    </command>
+  </core_commands>
+  
+  <meta_commands>
+    <command name="/meta-review" purpose="Framework performance analysis">
+      <usage>/meta-review "analyze framework effectiveness"</usage>
+      <best_for>Performance analysis | Usage optimization | Compliance checking</best_for>
+    </command>
+    
+    <command name="/meta-optimize" purpose="Framework performance improvement">
+      <usage>/meta-optimize "improve framework efficiency"</usage>
+      <best_for>Performance tuning | Workflow optimization | Resource efficiency</best_for>
+    </command>
+    
+    <command name="/meta-evolve" purpose="Framework adaptation and learning">
+      <usage>/meta-evolve "adapt framework to patterns"</usage>
+      <best_for>Team adaptation | Pattern learning | Workflow evolution</best_for>
+    </command>
+  </meta_commands>
+</command_reference>
+```
+
+## Configuration Quick Start
+
+```xml
+<configuration_reference>
+  <essential_setup>
+    <file name="CLAUDE.md">Must be in project root directory</file>
+    <file name="PROJECT_CONFIG.xml">Project-specific configuration template</file>
+    <directory name=".claude/">Framework modules and components</directory>
+  </essential_setup>
+  
+  <project_config_essentials>
+    <tech_stack>
+      <primary_language>python | javascript | typescript | go | rust | java</primary_language>
+      <framework>django | react | nextjs | gin | fastapi | spring</framework>
+      <database>postgresql | mysql | mongodb | redis</database>
+    </tech_stack>
+    
+    <commands>
+      <test>pytest --cov=src | npm test | go test</test>
+      <lint>flake8 | eslint | golangci-lint</lint>
+      <build>python setup.py | npm run build | go build</build>
+    </commands>
+    
+    <quality_standards>
+      <test_coverage>
+        <threshold>90</threshold>
+        <enforcement>blocking</enforcement>
+      </test_coverage>
+      <performance>
+        <response_time_p95>200</response_time_p95>
+      </performance>
+    </quality_standards>
+  </project_config_essentials>
+</configuration_reference>
+```
+
+## Common Workflows
+
+```xml
+<workflow_reference>
+  <workflow name="New Feature Development">
+    <steps>
+      <step>1. /query "understand existing related functionality"</step>
+      <step>2. /feature "implement new feature with requirements"</step>
+      <step>3. /task "add specific components or fixes"</step>
+      <step>4. /protocol "prepare for production deployment"</step>
+    </steps>
+  </workflow>
+  
+  <workflow name="Bug Investigation and Fix">
+    <steps>
+      <step>1. /query "analyze bug and understand root cause"</step>
+      <step>2. /task "implement fix with comprehensive tests"</step>
+      <step>3. /protocol "ensure fix meets production standards"</step>
+    </steps>
+  </workflow>
+  
+  <workflow name="Code Research and Documentation">
+    <steps>
+      <step>1. /query "analyze codebase and create documentation"</step>
+      <step>2. /docs "generate comprehensive documentation"</step>
+      <step>3. /task "add missing tests or improve coverage"</step>
+    </steps>
+  </workflow>
+  
+  <workflow name="Performance Optimization">
+    <steps>
+      <step>1. /meta-review "analyze current performance"</step>
+      <step>2. /meta-optimize "implement optimizations"</step>
+      <step>3. /task "apply specific performance improvements"</step>
+      <step>4. /meta-evolve "learn from optimization patterns"</step>
+    </steps>
+  </workflow>
+</workflow_reference>
+```
+
+## Troubleshooting Quick Fixes
+
+```xml
+<troubleshooting_reference>
+  <issue name="Commands not working">
+    <symptoms>Generic responses | Commands not recognized | No framework behavior</symptoms>
+    <solutions>
+      <solution>Check CLAUDE.md is in project root directory</solution>
+      <solution>Verify .claude/ directory exists with modules</solution>
+      <solution>Ensure PROJECT_CONFIG.xml is properly configured</solution>
+    </solutions>
+  </issue>
+  
+  <issue name="Quality gates not enforcing">
+    <symptoms>No TDD enforcement | Coverage ignored | Tests skipped</symptoms>
+    <solutions>
+      <solution>Check quality_standards in PROJECT_CONFIG.xml</solution>
+      <solution>Verify enforcement is set to "blocking"</solution>
+      <solution>Ensure test commands are properly configured</solution>
+    </solutions>
+  </issue>
+  
+  <issue name="Poor performance">
+    <symptoms>Slow responses | High token usage | Context timeouts</symptoms>
+    <solutions>
+      <solution>Run /meta-review to analyze performance</solution>
+      <solution>Use /meta-optimize for automated improvements</solution>
+      <solution>Check context_management settings in PROJECT_CONFIG.xml</solution>
+    </solutions>
+  </issue>
+  
+  <issue name="Generic AI responses">
+    <symptoms>Not following framework patterns | Missing domain expertise</symptoms>
+    <solutions>
+      <solution>Customize PROJECT_CONFIG.xml for your tech stack</solution>
+      <solution>Verify configuration is project-specific</solution>
+      <solution>Use /meta-evolve to adapt to your patterns</solution>
+    </solutions>
+  </issue>
+</troubleshooting_reference>
+```
+
+## Setup Checklist
+
+```xml
+<setup_checklist>
+  <prerequisites>
+    <item>✓ Claude Code CLI installed and authenticated</item>
+    <item>✓ Project directory with existing codebase</item>
+    <item>✓ Git repository initialized</item>
+    <item>✓ Development environment configured</item>
+  </prerequisites>
+  
+  <framework_setup>
+    <item>✓ Copy CLAUDE.md to project root</item>
+    <item>✓ Copy PROJECT_CONFIG.xml to project root</item>
+    <item>✓ Create .claude/ directory structure</item>
+    <item>✓ Customize PROJECT_CONFIG.xml for your stack</item>
+  </framework_setup>
+  
+  <validation>
+    <item>✓ Run /auto "test framework setup" to verify</item>
+    <item>✓ Try /task "simple test task" to confirm TDD</item>
+    <item>✓ Check /meta-review for any issues</item>
+    <item>✓ Verify quality gates are enforcing</item>
+  </validation>
+  
+  <optimization>
+    <item>✓ Run /meta-optimize after first week of usage</item>
+    <item>✓ Use /meta-evolve to adapt to team patterns</item>
+    <item>✓ Regular /meta-review for performance monitoring</item>
+    <item>✓ Update PROJECT_CONFIG.xml as project evolves</item>
+  </optimization>
+</setup_checklist>
+```
+
+
 # Critical Thinking Rules
 
 ```xml
