@@ -21,11 +21,14 @@ scripts/
 ### Configuration Scripts (`config/`)
 **Purpose**: Framework configuration and management utilities
 - `framework/` - Core framework configuration utilities
-  - `config_validator.py` - Validates framework configuration files
   - `template_resolver.py` - Resolves configuration templates
   - `xml_utils.py` - XML configuration utilities
 - `routing/` - Intelligent routing configuration
   - `deterministic_router.py` - Deterministic command routing logic
+
+### Validation Scripts (`validation/`)
+**Purpose**: Configuration validation and testing utilities
+- `project_config_validator.py` - Unified PROJECT_CONFIG.xml validation system
 
 ### Utility Scripts (`utilities/`)
 **Purpose**: General purpose utilities for framework users
@@ -41,7 +44,7 @@ All scripts should be run from the project root:
 bash scripts/setup/setup_precommit.sh
 
 # Configuration validation
-python scripts/config/framework/config_validator.py
+python scripts/validation/project_config_validator.py
 
 # Utilities
 python scripts/utilities/check-duplications.py

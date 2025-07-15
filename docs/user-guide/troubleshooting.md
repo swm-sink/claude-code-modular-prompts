@@ -355,8 +355,8 @@ cp CLAUDE.md CLAUDE.md.backup
 **Solutions:**
 1. **Test Example Validation**
    ```bash
-   # Run example validation script
-   python scripts/validate_examples.py
+   # Run configuration validation script
+   python scripts/validation/project_config_validator.py --verbose
    ```
 
 2. **Check Example Dependencies**

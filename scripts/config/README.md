@@ -14,7 +14,6 @@ config/
 ## Framework Configuration (`framework/`)
 
 ### Core Configuration Utilities
-- `config_validator.py` - Validates framework configuration files
 - `template_resolver.py` - Resolves configuration templates
 - `xml_utils.py` - XML configuration utilities
 - `config_integration.py` - Configuration integration helpers
@@ -22,15 +21,14 @@ config/
 
 **Usage**:
 ```bash
-# Validate configuration
-python scripts/config/framework/config_validator.py
-
 # Resolve templates
 python scripts/config/framework/template_resolver.py
 
 # XML utilities
 python scripts/config/framework/xml_utils.py
 ```
+
+**Note**: Configuration validation has been moved to `scripts/validation/project_config_validator.py` for better organization.
 
 ## Routing Configuration (`routing/`)
 
@@ -55,7 +53,7 @@ The framework uses several configuration file types:
 
 Always validate your configuration after changes:
 ```bash
-python scripts/config/framework/config_validator.py
+python scripts/validation/project_config_validator.py
 ```
 
 ## Integration
