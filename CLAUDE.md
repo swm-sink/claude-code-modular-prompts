@@ -292,21 +292,28 @@
 
 ```xml
 <claude_4_advanced_control version = "3.0.0" enforcement = "CRITICAL">
-  <interleaved_thinking enforcement = "MANDATORY">
-    <config>16K thinking length | Trigger: tool calls, uncertainty, complexity</config>
-    <rules>ALWAYS think before act | 5X think:act ratio | "ultrathink" = extended</rules>
-  </interleaved_thinking>
+  <purpose>Comprehensive Claude 4 optimization with advanced reasoning, prompt construction, and execution transparency</purpose>
   
-  <parallel_execution enforcement = "MANDATORY">
-    <principle>All independent operations execute simultaneously</principle>
-    <patterns>Batch tool calls | Parallel analysis | Concurrent validation</patterns>
-    <performance>Claude 4 optimized with parallel execution and thinking patterns</performance>
-  </parallel_execution>
-  
-  <context_optimization enforcement = "MANDATORY">
-    <management>Hierarchical loading | XML structured | Dynamic context</management>
-    <limits>[PROJECT_CONFIG: max_file_tokens | DEFAULT: 4K] tokens/file | [PROJECT_CONFIG: max_context_tokens | DEFAULT: 120K] total | [PROJECT_CONFIG: reserved_work_tokens | DEFAULT: 50K+] reserved for work</limits>
-  </context_optimization>
+  <core_capabilities>
+    <interleaved_thinking enforcement = "MANDATORY">
+      <config>16K thinking length | Trigger: tool calls, uncertainty, complexity</config>
+      <rules>ALWAYS think before act | 5X think:act ratio | "ultrathink" = extended</rules>
+      <critical_thinking>30-second minimum analysis with consequence mapping</critical_thinking>
+    </interleaved_thinking>
+    
+    <parallel_execution enforcement = "MANDATORY">
+      <principle>All independent operations execute simultaneously</principle>
+      <patterns>Batch tool calls | Parallel analysis | Concurrent validation</patterns>
+      <performance>Claude 4 optimized with parallel execution and thinking patterns</performance>
+      <tool_optimization>Intelligent batching | Cascaded memory 5 hops | Token efficiency</tool_optimization>
+    </parallel_execution>
+    
+    <context_optimization enforcement = "MANDATORY">
+      <management>Hierarchical loading | XML structured | Dynamic context</management>
+      <limits>[PROJECT_CONFIG: max_file_tokens | DEFAULT: 4K] tokens/file | [PROJECT_CONFIG: max_context_tokens | DEFAULT: 120K] total | [PROJECT_CONFIG: reserved_work_tokens | DEFAULT: 50K+] reserved for work</limits>
+      <structure>XML structure 4 levels | 200K context window | Token budget tracking</structure>
+    </context_optimization>
+  </core_capabilities>
   
   <extended_reasoning_capabilities enforcement = "MANDATORY">
     <purpose>Leverage Claude 4's enhanced reasoning for complex problem solving</purpose>
@@ -323,18 +330,52 @@
     </optimization_techniques>
   </extended_reasoning_capabilities>
   
+  <prompt_construction_methodology>
+    <execution_model>
+      <step order = "1">Parse command structure and extract thinking pattern checkpoints</step>
+      <step order = "2">Load required modules and validate interface contracts</step>
+      <step order = "3">Construct execution workflow with dependency resolution</step>
+      <step order = "4">Optimize context window usage through parallel execution</step>
+      <step order = "5">Execute with real-time progress tracking and error handling</step>
+    </execution_model>
+    
+    <transparency_features>
+      <workflow_preview>Visual representation of execution flow before starting</workflow_preview>
+      <progress_indicators>Real-time checkpoint completion with time estimates</progress_indicators>
+      <context_visualization>Token usage tracking with optimization suggestions</context_visualization>
+      <debug_information>Module state and decision reasoning visibility</debug_information>
+    </transparency_features>
+    
+    <lego_block_assembly>
+      <command_role>Blueprint that selects and orders execution blocks with clear dependency chains</command_role>
+      <module_role>Self-contained execution units with standardized interfaces and predictable outputs</module_role>
+      <runtime_role>Assembly engine that constructs final prompt with optimization and validation</runtime_role>
+      <integration_role>Composition coordinator that manages module interactions and state transitions</integration_role>
+    </lego_block_assembly>
+  </prompt_construction_methodology>
+  
   <behavioral_control>
     <thinking>Use thinking blocks, 3x think:act ratio minimum</thinking>
     <efficiency>Parallel tool calls MANDATORY across all operations</efficiency>
     <precision>NO assumptions - verify everything before execution</precision>
     <orchestration>Delegate to appropriate commands and modules per framework architecture</orchestration>
+    <frameworks>RISE/TRACE/CARE (foundational) | APE/CLEAR/SOAR/CRISP/SPARK (specialized)</frameworks>
   </behavioral_control>
+  
+  <performance_targets>
+    <assembly_time>Prompt construction within 5 seconds for complex workflows</assembly_time>
+    <execution_visibility>Real-time progress updates every 10 seconds</execution_visibility>
+    <context_efficiency>Significant improvement through optimized tool batching</context_efficiency>
+    <error_recovery>Sub-second failure detection with immediate recovery options</error_recovery>
+    <session_optimization>40min sessions | Strategic /compact | Cost monitoring</session_optimization>
+  </performance_targets>
   
   <hallucination_prevention enforcement = "CRITICAL">
     <temperature>Factual: [PROJECT_CONFIG: ai_temperature.factual | DEFAULT: 0.2] | Analysis: [PROJECT_CONFIG: ai_temperature.analysis | DEFAULT: 0.0-0.3] | General: 0.4-0.5 | Creative: [PROJECT_CONFIG: ai_temperature.creative | DEFAULT: 0.7-1.0]</temperature>
     <validation>Sources: 2025 only | Evidence required | "I don't know" when uncertain</validation>
     <accuracy>Ground in evidence | Conservative language | Step-by-step reasoning</accuracy>
     <protocols>Pre-publication review | Immediate correction | Iterative refinement</protocols>
+    <quality_enforcement>Evidence validation | Consequence mapping | TDD mandatory</quality_enforcement>
   </hallucination_prevention>
 </claude_4_advanced_control>
 ```
@@ -1157,16 +1198,6 @@
 ```
 
 
-# Advanced Prompt Optimization
-
-```xml
-<prompt_optimization enforcement = "CRITICAL">
-  <claude_4>XML structure 4 levels | Parallel execution | 16K thinking | 200K context</claude_4>
-  <frameworks>RISE/TRACE/CARE (foundational) | APE/CLEAR/SOAR/CRISP/SPARK (specialized)</frameworks>
-  <performance>Intelligent batching | Cascaded memory 5 hops | 40min sessions | Token efficiency</performance>
-  <quality>30s thinking | Consequence mapping | Evidence validation | TDD mandatory</quality>
-</prompt_optimization>
-```
 
 
 # Command-Module Integration
@@ -1274,72 +1305,6 @@
 ```
 
 
-# Prompt Construction Methodology
-
-```xml
-<prompt_construction_methodology version = "3.0.0" enforcement = "CRITICAL">
-  <purpose>Make Claude 4 prompt construction and execution transparent through visualization, interface contracts, and runtime dashboards</purpose>
-  
-  <visualization_requirements>
-    <execution_preview>Show assembled workflow BEFORE execution with visual flow diagrams</execution_preview>
-    <runtime_dashboard>Live progress tracking through checkpoints with real-time status updates</runtime_dashboard>
-    <context_budget>Token usage visualization and optimization with performance metrics</context_budget>
-    <error_boundaries>Clear failure points and recovery options with escalation paths</error_boundaries>
-  </visualization_requirements>
-
-  <lego_block_assembly>
-    <command_role>Blueprint that selects and orders execution blocks with clear dependency chains</command_role>
-    <module_role>Self-contained execution units with standardized interfaces and predictable outputs</module_role>
-    <runtime_role>Assembly engine that constructs final prompt with optimization and validation</runtime_role>
-    <integration_role>Composition coordinator that manages module interactions and state transitions</integration_role>
-  </lego_block_assembly>
-  
-  <claude_4_execution_model>
-    <prompt_assembly>
-      <step order = "1">Parse command structure and extract thinking pattern checkpoints</step>
-      <step order = "2">Load required modules and validate interface contracts</step>
-      <step order = "3">Construct execution workflow with dependency resolution</step>
-      <step order = "4">Optimize context window usage through parallel execution</step>
-      <step order = "5">Execute with real-time progress tracking and error handling</step>
-    </prompt_assembly>
-    
-    <thinking_integration>
-      <checkpoint_execution>Each checkpoint validates conditions before proceeding</checkpoint_execution>
-      <critical_thinking>30-second minimum analysis with consequence mapping</critical_thinking>
-      <decision_points>Explicit branching logic based on context and conditions</decision_points>
-      <validation_gates>Quality gates enforced at each execution boundary</validation_gates>
-    </thinking_integration>
-    
-    <runtime_optimization>
-      <parallel_execution>Batch tool calls for significant performance improvement</parallel_execution>
-      <context_management>Token budget tracking with predictive optimization</context_management>
-      <error_recovery>Graceful degradation with fallback execution paths</error_recovery>
-      <state_isolation>Module boundaries prevent cascade failures</state_isolation>
-    </runtime_optimization>
-  </claude_4_execution_model>
-  
-  <transparency_features>
-    <workflow_preview>Visual representation of execution flow before starting</workflow_preview>
-    <progress_indicators>Real-time checkpoint completion with time estimates</progress_indicators>
-    <context_visualization>Token usage tracking with optimization suggestions</context_visualization>
-    <debug_information>Module state and decision reasoning visibility</debug_information>
-  </transparency_features>
-  
-  <performance_targets>
-    <assembly_time>Prompt construction within 5 seconds for complex workflows</assembly_time>
-    <execution_visibility>Real-time progress updates every 10 seconds</execution_visibility>
-    <context_efficiency>Significant improvement through optimized tool batching</context_efficiency>
-    <error_recovery>Sub-second failure detection with immediate recovery options</error_recovery>
-  </performance_targets>
-  
-  <integration_points>
-    <module_runtime_engine>Leverages existing module composition framework</module_runtime_engine>
-    <quality_gates>Integrates with universal quality gate enforcement</quality_gates>
-    <tdd_methodology>Visualizes test-driven development workflows</tdd_methodology>
-    <session_management>Coordinates with GitHub issue tracking</session_management>
-  </integration_points>
-</prompt_construction_methodology>
-```
 
 
 # Claude Code Integration
