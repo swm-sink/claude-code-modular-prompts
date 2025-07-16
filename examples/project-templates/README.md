@@ -11,20 +11,36 @@ Ready-to-use PROJECT_CONFIG.xml templates for common tech stacks. Copy, customiz
 - [react-project-config.xml](web-applications/react-project-config.xml) - **React/Next.js** projects with TypeScript, Jest, ESLint
 - [python-django-config.xml](web-applications/python-django-config.xml) - **Django** projects with pytest, black, mypy
 - [go-api-config.xml](web-applications/go-api-config.xml) - **Go API** projects with testing and linting standards
+- [nodejs-express-config.xml](web-applications/nodejs-express-config.xml) - **Node.js/Express** projects with TypeScript, MongoDB
+
+### Data Science
+**Directory**: [data-science/](data-science/)
+
+**Templates**:
+- [python-datascience-config.xml](data-science/python-datascience-config.xml) - **Data Science** projects with Jupyter, pandas, scikit-learn
+
+### Mobile Applications
+**Directory**: [mobile/](mobile/)
+
+**Templates**:
+- [react-native-config.xml](mobile/react-native-config.xml) - **React Native** projects with Expo, TypeScript
 
 ## 🎯 How to Use Templates
 
 ### 1. Choose Your Template
 Pick the template that matches your tech stack:
 ```bash
-# For React projects
+# Web Applications
 cp examples/project-templates/web-applications/react-project-config.xml PROJECT_CONFIG.xml
-
-# For Django projects  
 cp examples/project-templates/web-applications/python-django-config.xml PROJECT_CONFIG.xml
-
-# For Go API projects
 cp examples/project-templates/web-applications/go-api-config.xml PROJECT_CONFIG.xml
+cp examples/project-templates/web-applications/nodejs-express-config.xml PROJECT_CONFIG.xml
+
+# Data Science
+cp examples/project-templates/data-science/python-datascience-config.xml PROJECT_CONFIG.xml
+
+# Mobile Applications
+cp examples/project-templates/mobile/react-native-config.xml PROJECT_CONFIG.xml
 ```
 
 ### 2. Customize for Your Project

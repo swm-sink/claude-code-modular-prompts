@@ -41,13 +41,13 @@
   </project_structure>
 
   <commands>
-    <test>go test -v -race -coverprofile=coverage.out ./... && go tool cover -html=coverage.out -o coverage.html</test>
+    <test>go test -v -race -coverprofile=coverage.out ./... &amp;&amp; go tool cover -html=coverage.out -o coverage.html</test>
     <lint>golangci-lint run --timeout=5m</lint>
     <build>go build -o bin/api cmd/api/main.go</build>
-    <format>gofmt -w . && goimports -w .</format>
+    <format>gofmt -w . &amp;&amp; goimports -w .</format>
     <dev_server>go run cmd/api/main.go</dev_server>
     <migrate>go run cmd/migrate/main.go</migrate>
-    <install>go mod download && go mod tidy</install>
+    <install>go mod download &amp;&amp; go mod tidy</install>
   </commands>
 
   <quality_standards>

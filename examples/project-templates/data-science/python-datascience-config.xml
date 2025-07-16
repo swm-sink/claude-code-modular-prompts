@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Python Data Science Project Configuration
+  
+  This configuration is optimized for Python data science projects with
+  Jupyter notebooks, pandas, scikit-learn, and comprehensive analysis workflows.
+  
+  Copy this file to your data science project root as PROJECT_CONFIG.xml
+  and customize the values for your specific project.
+-->
+
+<project_config>
+  <project_metadata>
+    <name>my-datascience-project</name>
+    <version>1.0.0</version>
+    <description>Python data science project with ML pipelines</description>
+    <repository>https://github.com/yourorg/my-datascience-project</repository>
+  </project_metadata>
+
+  <tech_stack>
+    <primary_language>python</primary_language>
+    <framework>pandas</framework>
+    <database>none</database>
+    <additional_tech>
+      <tech>jupyter</tech>
+      <tech>numpy</tech>
+      <tech>scikit-learn</tech>
+      <tech>matplotlib</tech>
+      <tech>seaborn</tech>
+      <tech>plotly</tech>
+    </additional_tech>
+  </tech_stack>
+
+  <project_structure>
+    <source_directory>src</source_directory>
+    <test_directory>tests</test_directory>
+    <docs_directory>docs</docs_directory>
+    <scripts_directory>scripts</scripts_directory>
+    <config_directory>config</config_directory>
+    <data_directory>data</data_directory>
+    <notebooks_directory>notebooks</notebooks_directory>
+    <models_directory>models</models_directory>
+    <reports_directory>reports</reports_directory>
+  </project_structure>
+
+  <commands>
+    <test>pytest tests/ --cov=src --cov-report=term-missing</test>
+    <lint>flake8 src tests &amp;&amp; black --check src tests</lint>
+    <build>python setup.py build</build>
+    <format>black src tests &amp;&amp; isort src tests</format>
+    <notebook>jupyter lab</notebook>
+    <train>python src/train_model.py</train>
+    <install>pip install -r requirements.txt</install>
+  </commands>
+
+  <quality_standards>
+    <test_coverage>
+      <threshold>75</threshold>
+      <enforcement>conditional</enforcement>
+    </test_coverage>
+    <performance>
+      <response_time_p95>10000</response_time_p95>
+      <memory_limit>8192</memory_limit>
+    </performance>
+    <code_quality>
+      <max_complexity>12</max_complexity>
+      <max_line_length>88</max_line_length>
+    </code_quality>
+  </quality_standards>
+
+  <framework_behavior>
+    <file_creation_policy>moderate</file_creation_policy>
+    <test_first_enforcement>conditional</test_first_enforcement>
+    <context_management>
+      <max_file_tokens>5000</max_file_tokens>
+      <max_context_tokens>150000</max_context_tokens>
+      <reserved_work_tokens>60000</reserved_work_tokens>
+    </context_management>
+  </framework_behavior>
+
+  <ai_temperature>
+    <factual>0.1</factual>
+    <analysis>0.2</analysis>
+    <creative>0.5</creative>
+  </ai_temperature>
+
+  <security>
+    <security_scanning>true</security_scanning>
+    <dependency_scanning>true</dependency_scanning>
+    <secrets_detection>true</secrets_detection>
+  </security>
+
+  <development_workflow>
+    <git_workflow>feature-branch</git_workflow>
+    <branch_naming>experiment/model-name</branch_naming>
+    <commit_format>conventional</commit_format>
+    <code_review>
+      <required>true</required>
+      <min_reviewers>1</min_reviewers>
+    </code_review>
+  </development_workflow>
+
+  <testing_strategy>
+    <test_types>
+      <unit_tests>true</unit_tests>
+      <integration_tests>true</integration_tests>
+      <data_validation_tests>true</data_validation_tests>
+    </test_types>
+    <test_framework>
+      <name>pytest</name>
+      <config_file>pytest.ini</config_file>
+    </test_framework>
+  </testing_strategy>
+
+  <deployment>
+    <strategy>model-deployment</strategy>
+    <environments>
+      <environment>
+        <name>development</name>
+        <url>http://localhost:8888</url>
+      </environment>
+      <environment>
+        <name>staging</name>
+        <url>https://staging-ml.myapp.com</url>
+      </environment>
+      <environment>
+        <name>production</name>
+        <url>https://ml.myapp.com</url>
+      </environment>
+    </environments>
+  </deployment>
+
+  <team>
+    <size>small</size>
+    <methodology>agile</methodology>
+    <communication>
+      <issue_tracking>github</issue_tracking>
+      <documentation_style>sphinx</documentation_style>
+    </communication>
+  </team>
+
+  <integrations>
+    <services>
+      <service>
+        <name>github</name>
+        <enabled>true</enabled>
+        <config>
+          <issue_tracking>true</issue_tracking>
+          <pr_automation>true</pr_automation>
+        </config>
+      </service>
+      <service>
+        <name>mlflow</name>
+        <enabled>true</enabled>
+        <config>
+          <experiment_tracking>true</experiment_tracking>
+          <model_registry>true</model_registry>
+        </config>
+      </service>
+      <service>
+        <name>wandb</name>
+        <enabled>false</enabled>
+        <config>
+          <experiment_tracking>true</experiment_tracking>
+          <visualization>true</visualization>
+        </config>
+      </service>
+    </services>
+  </integrations>
+
+  <!-- Data Science-specific configurations -->
+  <datascience_specific>
+    <python_version>3.9</python_version>
+    <notebook_environment>jupyter-lab</notebook_environment>
+    <data_processing>pandas</data_processing>
+    <machine_learning>scikit-learn</machine_learning>
+    <visualization>matplotlib+seaborn</visualization>
+    <experiment_tracking>mlflow</experiment_tracking>
+    <model_deployment>fastapi</model_deployment>
+    <data_validation>great-expectations</data_validation>
+    <reproducibility>
+      <seed_fixed>true</seed_fixed>
+      <environment_locked>true</environment_locked>
+      <data_versioning>dvc</data_versioning>
+    </reproducibility>
+  </datascience_specific>
+</project_config>

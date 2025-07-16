@@ -1,62 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  React Project Configuration
+  React Native Project Configuration
   
-  This configuration is optimized for React applications with TypeScript,
-  Jest testing, and modern development practices.
+  This configuration is optimized for React Native applications with TypeScript,
+  Jest testing, and cross-platform mobile development.
   
-  Copy this file to your React project root as PROJECT_CONFIG.xml
+  Copy this file to your React Native project root as PROJECT_CONFIG.xml
   and customize the values for your specific project.
 -->
 
 <project_config>
   <project_metadata>
-    <name>my-react-app</name>
+    <name>my-react-native-app</name>
     <version>1.0.0</version>
-    <description>Modern React application with TypeScript</description>
-    <repository>https://github.com/yourorg/my-react-app</repository>
+    <description>React Native mobile application</description>
+    <repository>https://github.com/yourorg/my-react-native-app</repository>
   </project_metadata>
 
   <tech_stack>
     <primary_language>typescript</primary_language>
-    <framework>react</framework>
-    <database>none</database>
+    <framework>react-native</framework>
+    <database>asyncstorage</database>
     <additional_tech>
-      <tech>vite</tech>
-      <tech>tailwindcss</tech>
+      <tech>expo</tech>
+      <tech>react-navigation</tech>
+      <tech>react-native-reanimated</tech>
       <tech>react-query</tech>
-      <tech>react-router</tech>
+      <tech>zustand</tech>
     </additional_tech>
   </tech_stack>
 
   <project_structure>
     <source_directory>src</source_directory>
-    <test_directory>src/__tests__</test_directory>
+    <test_directory>__tests__</test_directory>
     <docs_directory>docs</docs_directory>
     <scripts_directory>scripts</scripts_directory>
     <config_directory>config</config_directory>
-    <static_directory>public</static_directory>
-    <templates_directory>src/templates</templates_directory>
+    <assets_directory>assets</assets_directory>
+    <components_directory>src/components</components_directory>
   </project_structure>
 
   <commands>
-    <test>npm test</test>
+    <test>npm test -- --coverage --watchAll=false</test>
     <lint>eslint src --ext .ts,.tsx &amp;&amp; prettier --check src</lint>
-    <build>npm run build</build>
+    <build>npx expo build</build>
     <format>prettier --write src &amp;&amp; eslint src --ext .ts,.tsx --fix</format>
-    <dev_server>npm run dev</dev_server>
-    <migrate>echo &quot;No migrations needed for frontend-only app&quot;</migrate>
+    <ios>npx expo run:ios</ios>
+    <android>npx expo run:android</android>
     <install>npm install</install>
   </commands>
 
   <quality_standards>
     <test_coverage>
-      <threshold>85</threshold>
+      <threshold>80</threshold>
       <enforcement>blocking</enforcement>
     </test_coverage>
     <performance>
-      <response_time_p95>100</response_time_p95>
-      <memory_limit>256</memory_limit>
+      <response_time_p95>500</response_time_p95>
+      <memory_limit>512</memory_limit>
     </performance>
     <code_quality>
       <max_complexity>8</max_complexity>
@@ -75,9 +76,9 @@
   </framework_behavior>
 
   <ai_temperature>
-    <factual>0.1</factual>
-    <analysis>0.2</analysis>
-    <creative>0.6</creative>
+    <factual>0.2</factual>
+    <analysis>0.3</analysis>
+    <creative>0.7</creative>
   </ai_temperature>
 
   <security>
@@ -88,7 +89,7 @@
 
   <development_workflow>
     <git_workflow>github-flow</git_workflow>
-    <branch_naming>feature/component-name</branch_naming>
+    <branch_naming>feature/screen-name</branch_naming>
     <commit_format>conventional</commit_format>
     <code_review>
       <required>true</required>
@@ -100,7 +101,7 @@
     <test_types>
       <unit_tests>true</unit_tests>
       <integration_tests>true</integration_tests>
-      <end_to_end_tests>true</end_to_end_tests>
+      <e2e_tests>true</e2e_tests>
     </test_types>
     <test_framework>
       <name>jest</name>
@@ -113,15 +114,15 @@
     <environments>
       <environment>
         <name>development</name>
-        <url>http://localhost:3000</url>
+        <url>expo://localhost:19000</url>
       </environment>
       <environment>
         <name>staging</name>
-        <url>https://staging.myapp.com</url>
+        <url>https://expo.dev/@yourorg/my-app-staging</url>
       </environment>
       <environment>
         <name>production</name>
-        <url>https://myapp.com</url>
+        <url>app-store</url>
       </environment>
     </environments>
   </deployment>
@@ -138,31 +139,47 @@
   <integrations>
     <services>
       <service>
-        <name>github</name>
+        <name>expo</name>
         <enabled>true</enabled>
         <config>
-          <issue_tracking>true</issue_tracking>
-          <pr_automation>true</pr_automation>
+          <build_service>true</build_service>
+          <over_the_air_updates>true</over_the_air_updates>
         </config>
       </service>
       <service>
-        <name>vercel</name>
+        <name>firebase</name>
         <enabled>true</enabled>
         <config>
-          <auto_deploy>true</auto_deploy>
-          <preview_deployments>true</preview_deployments>
+          <analytics>true</analytics>
+          <crashlytics>true</crashlytics>
+          <authentication>true</authentication>
+        </config>
+      </service>
+      <service>
+        <name>app_center</name>
+        <enabled>false</enabled>
+        <config>
+          <crash_reporting>true</crash_reporting>
+          <analytics>true</analytics>
         </config>
       </service>
     </services>
   </integrations>
 
-  <!-- React-specific configurations -->
-  <react_specific>
-    <component_style>functional</component_style>
-    <state_management>context</state_management>
-    <routing>react-router</routing>
-    <styling>tailwind</styling>
-    <build_tool>vite</build_tool>
-    <testing_library>react-testing-library</testing_library>
-  </react_specific>
+  <!-- React Native-specific configurations -->
+  <react_native_specific>
+    <react_native_version>0.72</react_native_version>
+    <expo_version>49.x</expo_version>
+    <navigation>react-navigation</navigation>
+    <state_management>zustand</state_management>
+    <ui_library>native-base</ui_library>
+    <animations>reanimated</animations>
+    <data_fetching>react-query</data_fetching>
+    <local_storage>async-storage</local_storage>
+    <push_notifications>expo-notifications</push_notifications>
+    <testing>
+      <component_testing>react-native-testing-library</component_testing>
+      <e2e_testing>detox</e2e_testing>
+    </testing>
+  </react_native_specific>
 </project_config>
