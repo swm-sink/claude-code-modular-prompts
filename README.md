@@ -9,23 +9,11 @@
 
 ## 30-Second Understanding
 
-**What**: Smart commands that automatically adapt to your tech stack and project needs
-**How**: Drop 3 files into your project, start with `/auto "your task"`
-**Result**: Claude Code produces better code, enforces quality, learns your patterns
+**What**: Smart commands that automatically adapt to your tech stack and project needs  
+**How**: 5-minute setup, then commands like `/auto`, `/task`, `/feature` work intelligently  
+**Result**: Claude Code produces better code, enforces quality, learns your patterns  
 
 **Perfect for**: Any project (React, Python, Go, mobile, data science, etc.)
-
-```bash
-# 1. Copy framework to your project (30 seconds)
-git clone https://github.com/swm-sink/claude-code-modular-prompts.git
-cp -r claude-code-modular-prompts/.claude your-project/
-cp claude-code-modular-prompts/CLAUDE.md your-project/
-cp claude-code-modular-prompts/PROJECT_CONFIG.xml your-project/
-
-# 2. Start using immediately (30 seconds)
-cd your-project/
-/auto "add user authentication"        # ← Framework adapts to YOUR tech stack
-```
 
 **✅ Success Indicators**: Claude Code suggests tech-specific solutions, follows your project patterns, enforces quality automatically
 
@@ -35,37 +23,23 @@ cd your-project/
 👉 **[GETTING_STARTED.md](GETTING_STARTED.md)** - Complete setup with PROJECT_CONFIG.xml customization
 
 ### 🔬 **I want to understand it first** (15 minutes) 
-👉 **[examples/quick-start/](examples/quick-start/)** - Working examples you can try immediately
+👉 **[examples/01-beginner/](examples/01-beginner/)** - Working examples you can try immediately
 
 ### 🚀 **I want to master it** (1+ hours)
 👉 **[docs/](docs/)** - Full documentation, advanced patterns, and customization guides
 
 
-## Essential Commands (Pick One to Start)
+## Essential Commands
 
-**🤖 `/auto "your request"`** - Let framework decide the best approach
-```bash
-/auto "add user authentication"     # → Routes to /feature for new feature
-/auto "fix login bug"              # → Routes to /task for focused fix
-/auto "understand auth system"     # → Routes to /query for research
-```
+**4 Smart Commands** that adapt to your project:
+- **`/auto`** - Intelligent routing when uncertain about approach
+- **`/task`** - Single component development with TDD  
+- **`/feature`** - Complete feature lifecycle
+- **`/query`** - Research and analysis without modifications
 
-**🔧 `/task "focused work"`** - Single component, guaranteed TDD
-```bash
-/task "add password validation"    # → Creates tests first, then implementation
-```
+> **Start with `/auto`** - it picks the right approach for your specific request.
 
-**🏗️ `/feature "complete feature"`** - Full feature with requirements
-```bash
-/feature "shopping cart system"    # → PRD → planning → implementation → validation
-```
-
-**🔍 `/query "research question"`** - Understand before changing
-```bash
-/query "how does our auth work?"   # → Analysis without modifications
-```
-
-> **Start with `/auto`** - it's intelligent routing that picks the right approach for your specific request.
+👉 **[See examples](examples/01-beginner/basic-commands/)** for hands-on command learning
 
 
 ## What This Framework Actually Does
@@ -82,98 +56,23 @@ cd your-project/
 - **Not one-size-fits-all**: Adapts to YOUR specific project
 
 
-## See It In Action
+## Ready to Start?
 
-### 🔧 Simple Fix (2 minutes)
-```bash
-/task "Fix password reset email"
-```
-**Result**: Creates failing test → implements fix → verifies tests pass → ready to commit
-
-### 🏗️ Complete Feature (20 minutes)  
-```bash
-/feature "User profile with avatar upload"
-```
-**Result**: Writes PRD → plans architecture → implements with tests → validates functionality
-
-### 🔍 Understanding Code (5 minutes)
-```bash
-/query "How does our authentication system work?"
-```
-**Result**: Analyzes code → explains architecture → identifies patterns → suggests improvements
-
-> **Next Step**: Try one of these examples in your project! Each command adapts to your specific tech stack.
+**👉 [GETTING_STARTED.md](GETTING_STARTED.md)** - 5-minute setup guide  
+**👉 [examples/01-beginner/](examples/01-beginner/)** - Try working examples immediately
 
 
 ## Success Validation
 
-**✅ Tier 1 Complete** (30 seconds - 5 minutes):
+**✅ Working Correctly**:
 - [ ] Framework responds to `/auto` command
 - [ ] Suggestions match your tech stack
-- [ ] Quality enforcement works (mentions tests, security, etc.)
-
-**✅ Tier 2 Complete** (5-60 minutes):
 - [ ] `/task` creates tests before implementation
-- [ ] `/feature` produces PRD and plans
-- [ ] `/query` analyzes without changing code
 - [ ] Commands suggest project-specific patterns
 
-**✅ Tier 3 Complete** (1+ hours):
-- [ ] Framework learns your coding style
-- [ ] Meta-commands optimize for your project
-- [ ] Custom modules integrate smoothly
-- [ ] Team members can use shared configuration
-
-## Ready to Level Up?
-
-**🎯 Master the Basics**: Try all 4 essential commands in your project  
-**🔧 Customize Framework**: Edit PROJECT_CONFIG.xml for your exact needs  
-**🚀 Advanced Usage**: Explore [docs/](docs/) for meta-prompting and custom modules  
-
-> **Remember**: Framework gets smarter about YOUR project every time you use it!
+**🎯 Next Steps**: Try all commands → Customize PROJECT_CONFIG.xml → Explore [advanced features](docs/advanced/)
 
 
-# File Format Standard (Framework 3.0)
-
-All framework files follow a standardized table-based format:
-
-
-# Version Table Header
-```markdown
-| version | last_updated | status |
-|---------|--------------|--------|
-| 3.0.0   | 2025-07-11   | stable |
-```
-
-
-# Document Structure
-```markdown
-
-# Document Title
-
-```xml
-<command purpose = "Clear purpose statement">
-  <!-- XML-structured content -->
-</command>
-```
-
-```
-
-
-# Framework 3.0 Format Elements
-- **Version table**: Tracks versions, updates, and status with temporal standards
-- **Horizontal separators**: 80-character lines using ``
-- **XML configuration blocks**: Structured, semantic content with Claude 4 optimization
-- **Thinking patterns**: Interleaved thinking blocks with critical analysis
-- **Module runtime**: Deterministic execution with quality gates
-- **Meta-prompting**: Self-improvement capabilities with safety boundaries
-
-
-# Templates Available
-- **Command template**: `.claude/templates/command-template.md` (Framework 3.0)
-- **Module template**: `.claude/templates/module-template.md` (Framework 3.0)
-- **Quality gates**: Universal validation framework
-- **TDD integration**: Mandatory test-driven development patterns
 
 
 ## Documentation & Resources
