@@ -1,6 +1,6 @@
 | version | last_updated | status | readiness |
 |---------|--------------|--------|----------|
-| 3.0.0   | 2025-07-12   | stable | 95%      |
+| 3.0.0   | 2025-07-16   | stable | 85%      |
 
 # Swarm Command - Multi-Agent Development Coordination
 

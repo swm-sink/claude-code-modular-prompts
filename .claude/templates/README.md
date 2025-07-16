@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 3.0.0   | $(date '+%Y-%m-%d') | stable |
+| 3.0.0   | 2025-07-16 | stable |
 
 # Framework Templates Directory
 

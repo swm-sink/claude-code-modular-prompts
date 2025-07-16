@@ -26,7 +26,7 @@ Before using advanced techniques, ensure you have:
 
 **Need to review basics?** See the [User Guide](../user-guide/README.md) or [API Reference](../api-reference.md).
 
-**Looking for examples?** Check [Advanced Examples](../../examples/advanced/) directory.
+**Looking for examples?** Check [Advanced Examples](../../examples/03-advanced/) directory.
 
 ## Custom Modules
 
@@ -582,7 +582,7 @@ cp PROJECT_CONFIG.xml PROJECT_CONFIG.production.xml
 ## Related Documentation
 - [User Guide](../user-guide/README.md) - Foundation and intermediate usage
 - [API Reference](../api-reference.md) - Complete API documentation
-- [Examples](../../examples/advanced/) - Advanced usage examples
+- [Examples](../../examples/03-advanced/) - Advanced usage examples
 - [Contributing](../../CONTRIBUTING.md) - Contributing to the framework
 
 ## Next Steps

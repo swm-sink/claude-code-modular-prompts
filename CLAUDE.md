@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 3.0.0   | 2025-07-12   | stable |
+| 3.0.0   | 2025-07-16   | stable |
 
 # CLAUDE.md - Framework Control Document
 
@@ -483,7 +483,7 @@
     <rule>
       Scan before create | Prefer enhance over new | Document decisions
     </rule>
-    <module>patterns/duplication-prevention.md</module>
+    <module>modules/patterns/</module>
   </duplication_prevention>
   
   <verification_checklist>
@@ -618,57 +618,48 @@
 <directory_structure enforcement = "MANDATORY" version = "3.0.0">
   <purpose>Organized framework structure with clear separation of concerns</purpose>
   
-  <prompt_engineering location = ".claude/prompt_eng/">
+  <actual_structure location = ".claude/">
     <commands location = "commands/">
       <core>Main commands (auto, task, feature, swarm, query, session, docs, protocol)</core>
       <meta>Meta-framework commands (meta-review, meta-evolve, meta-optimize, meta-govern, meta-fix)</meta>
-      <setup>Setup and initialization commands (init, context-prime, adapt, validate)</setup>
+      <setup>Setup and initialization commands (init, context-prime, chain)</setup>
     </commands>
-    <frameworks location = "frameworks/">All prompt engineering frameworks (RISE, TRACE, CARE, CLEAR, SOAR, etc.)</frameworks>
-    <personas location = "personas/">
-      <core>Core engineering personas</core>
-      <rd_engineering>R&D engineering personas (25 specialized roles)</rd_engineering>
-    </personas>
-    <patterns location = "patterns/">All pattern types consolidated - thinking, composition, visualization patterns</patterns>
     <modules location = "modules/">
-      <routing>Intelligent routing, persona management</routing>
-      <orchestration>Multi-agent coordination, swarm patterns</orchestration>
+      <patterns>Advanced patterns - thinking, composition, routing, orchestration</patterns>
+      <development>Development support modules</development>
+      <meta>Meta-framework modules</meta>
     </modules>
-  </prompt_engineering>
-  
-  <system_components location = ".claude/system/">
-    <quality>Quality gates, TDD enforcement, testing frameworks (consolidated from modules/quality)</quality>
-    <security>Security modules, threat modeling, compliance (consolidated from modules/security)</security>
-    <context>Context management, preservation, artifacts, templates (subdirectories consolidated)</context>
-    <session>Session management, compression, reliability</session>
-    <git>Git operations, conventional commits, worktree isolation</git>
-  </system_components>
-  
-  <domain_content location = ".claude/domain/">
-    <templates>Domain-specific templates (12 R&D domains)</templates>
-    <adaptation>Domain adaptation, validation, orchestration</adaptation>
-    <wizard>Domain wizard, guides, initialization</wizard>
-  </domain_content>
-  
-  <development_support location = ".claude/development/">
-    <documentation>Documentation generation, auto-docs</documentation>
-    <debugging>Debugging tools, issue reproduction</debugging>
-    <testing>Testing frameworks, iterative testing</testing>
-  </development_support>
-  
-  <meta_framework location = ".claude/meta/">
-    <evolution>Framework evolution tracking and management</evolution>
-    <optimization>Performance and workflow optimization</optimization>
-    <governance>Safety, human oversight, compliance</governance>
-    <validation>Framework validation and testing</validation>
-  </meta_framework>
+    <system location = "system/">
+      <quality>Quality gates, TDD enforcement, testing frameworks</quality>
+      <security>Security modules, threat modeling, compliance</security>
+      <context>Context management, preservation, artifacts, templates</context>
+      <session>Session management, compression, reliability</session>
+      <git>Git operations, conventional commits, worktree isolation</git>
+    </system>
+    <prompt_eng location = "prompt_eng/">
+      <frameworks>Prompt engineering frameworks</frameworks>
+    </prompt_eng>
+    <domain location = "domain/">
+      <templates>Domain-specific templates</templates>
+      <wizard>Domain wizard, guides, initialization</wizard>
+    </domain>
+    <meta location = "meta/">
+      <meta_prompting>Meta-prompting orchestration</meta_prompting>
+    </meta>
+    <sessions location = "sessions/">
+      <session_data>Session data and artifacts</session_data>
+    </sessions>
+    <templates location = "templates/">
+      <framework_templates>Framework templates</framework_templates>
+    </templates>
+  </actual_structure>
   
   <enforcement_rules priority = "CRITICAL">
-    <rule>ALL prompt engineering components MUST be in prompt_eng/</rule>
-    <rule>NO prompt patterns or commands outside prompt_eng/</rule>
-    <rule>System modules MUST be in system/ directory</rule>
+    <rule>Commands MUST be in commands/ directory</rule>
+    <rule>Modules MUST be in modules/ with patterns, development, meta subdirectories</rule>
+    <rule>System components MUST be in system/ directory</rule>
     <rule>Domain templates MUST be in domain/ directory</rule>
-    <rule>Strict separation between prompt engineering and system components</rule>
+    <rule>Strict separation between different component types</rule>
     <rule>New components MUST follow this structure or be rejected</rule>
   </enforcement_rules>
   
@@ -687,28 +678,28 @@
 ```xml
 <architecture>
   <commands location = ".claude/commands/" delegate_only = "true" enforcement = "MANDATORY">
-    <cmd name = "/auto" module = "patterns/intelligent-routing.md"/>
-    <cmd name = "/task" module = "development/task-management.md"/>
-    <cmd name = "/feature" module = "development/planning/feature-workflow.md"/>
-    <cmd name = "/swarm" module = "development/multi-agent.md"/>
-    <cmd name = "/query" module = "development/research-analysis.md"/>
-    <cmd name = "/session" module = "system/session/session-management.md"/>
-    <cmd name = "/docs" module = "development/documentation.md" critical = "true"/>
-    <cmd name = "/protocol" module = "system/session/session-management.md"/>
+    <cmd name = "/auto" module = "modules/patterns/intelligent-routing.md"/>
+    <cmd name = "/task" module = "modules/patterns/tdd-cycle-pattern.md"/>
+    <cmd name = "/feature" module = "modules/patterns/workflow-orchestration-engine.md"/>
+    <cmd name = "/swarm" module = "modules/patterns/multi-agent.md"/>
+    <cmd name = "/query" module = "modules/patterns/research-analysis-pattern.md"/>
+    <cmd name = "/session" module = "modules/patterns/session-management-pattern.md"/>
+    <cmd name = "/docs" module = "modules/patterns/documentation-pattern.md" critical = "true"/>
+    <cmd name = "/protocol" module = "modules/patterns/workflow-orchestration-engine.md"/>
     <cmd name = "/init" module = "domain/wizard/README.md"/>
     <cmd name = "/context-prime" module = "system/context/project-priming.md"/>
-    <cmd name = "/adapt" module = "domain/adaptation/template-orchestration.md"/>
-    <cmd name = "/validate" module = "domain/adaptation/adaptation-validation.md"/>
-    <cmd name = "/init-custom" module = "domain/wizard/domain-wizard.md" critical = "true"/>
-    <cmd name = "/init-new" module = "development/project-initialization.md" critical = "true"/>
-    <cmd name = "/init-research" module = "development/research-analysis.md" critical = "true"/>
-    <cmd name = "/init-validate" module = "quality/setup-validation.md" critical = "true"/>
-    <cmd name = "/chain" module = "patterns/command-chaining-architecture.md" critical = "true"/>
-    <cmd name = "/meta-review" module = "meta/framework-auditor.md" critical = "true"/>
-    <cmd name = "/meta-evolve" module = "meta/update-cycle-manager.md" critical = "true"/>
-    <cmd name = "/meta-optimize" module = "meta/continuous-optimizer.md" critical = "true"/>
-    <cmd name = "/meta-govern" module = "meta/governance-enforcer.md" critical = "true"/>
-    <cmd name = "/meta-fix" module = "meta/compliance-diagnostics.md" critical = "true"/>
+    <cmd name = "/adapt" module = "domain/templates/"/>
+    <cmd name = "/validate" module = "system/quality/adaptation-validation.md"/>
+    <cmd name = "/init-custom" module = "domain/wizard/"/>
+    <cmd name = "/init-new" module = "modules/development/"/>
+    <cmd name = "/init-research" module = "modules/patterns/research-analysis-pattern.md"/>
+    <cmd name = "/init-validate" module = "system/quality/comprehensive-validation.md"/>
+    <cmd name = "/chain" module = "modules/patterns/command-chaining-architecture.md" critical = "true"/>
+    <cmd name = "/meta-review" module = "modules/meta/"/>
+    <cmd name = "/meta-evolve" module = "modules/meta/"/>
+    <cmd name = "/meta-optimize" module = "modules/meta/"/>
+    <cmd name = "/meta-govern" module = "modules/meta/"/>
+    <cmd name = "/meta-fix" module = "modules/meta/"/>
   </commands>
   <documentation_enforcement>
     <rule priority = "CRITICAL">NEVER generate project documentation without /docs command</rule>
@@ -717,7 +708,7 @@
     <exception>CLAUDE.md updates and command documentation are allowed</exception>
   </documentation_enforcement>
   <modules location = ".claude/modules/" implement_only = "true">
-    <category name = "security|quality|development|patterns|planning|testing"/>
+    <category name = "patterns|development|meta"/>
   </modules>
 </architecture>
 ```
@@ -732,7 +723,7 @@
   <phase>3. Architect approach</phase>
   <phase>4. Run systematically</phase>
   <phase>5. Evaluate/document</phase>
-  <canonical_source>docs/framework/aware-framework.md</canonical_source>
+  <canonical_source>.claude/modules/patterns/</canonical_source>
 </aware_process>
 ```
 
@@ -759,8 +750,8 @@
   </critical_gates>
   
   <canonical_sources>
-    <tdd>.claude/system/quality/tdd.md</tdd>
-    <security>.claude/system/security/threat-modeling.md</security>
+    <tdd>.claude/modules/patterns/tdd-cycle-pattern.md</tdd>
+    <security>.claude/system/security/</security>
     <test_coverage>.claude/system/quality/test-coverage.md</test_coverage>
     <universal_gates>.claude/system/quality/universal-quality-gates.md</universal_gates>
   </canonical_sources>
@@ -1459,7 +1450,7 @@
     <thinking_engine>Checkpoint patterns | TDD mandatory | 30s critical thinking | Validation gates</thinking_engine>
     <composition>Discovery→Loading→Orchestration→Integration | Topological sorting | State isolation</composition>
     <quality_gates>Foundational | Development | Coordination | Documentation | Analysis</quality_gates>
-    <sources>patterns/thinking-pattern-template.md | patterns/module-composition-framework.md | quality/universal-quality-gates.md</sources>
+    <sources>modules/patterns/thinking-pattern-template.md | modules/patterns/module-composition-framework.md | system/quality/universal-quality-gates.md</sources>
   </runtime_architecture>
   
   <command_runtime_specification>
@@ -1476,7 +1467,7 @@
   </command_runtime_specification>
   
   <tdd_integration>
-    <canonical_source>.claude/system/quality/tdd.md</canonical_source>
+    <canonical_source>.claude/modules/patterns/tdd-cycle-pattern.md</canonical_source>
     <enforcement>Commands delegate to TDD module for detailed cycle enforcement and validation procedures</enforcement>
   </tdd_integration>
   
@@ -1501,10 +1492,10 @@
     </core_framework_integration>
     
     <module_dependencies>
-      <thinking_patterns>patterns/thinking-pattern-template.md for standardized checkpoints</thinking_patterns>
-      <composition_framework>patterns/module-composition-framework.md for runtime orchestration</composition_framework>
-      <quality_gates>quality/universal-quality-gates.md for comprehensive validation</quality_gates>
-      <tdd_enforcement>quality/tdd.md for strict test-driven development</tdd_enforcement>
+      <thinking_patterns>modules/patterns/thinking-pattern-template.md for standardized checkpoints</thinking_patterns>
+      <composition_framework>modules/patterns/module-composition-framework.md for runtime orchestration</composition_framework>
+      <quality_gates>system/quality/universal-quality-gates.md for comprehensive validation</quality_gates>
+      <tdd_enforcement>modules/patterns/tdd-cycle-pattern.md for strict test-driven development</tdd_enforcement>
     </module_dependencies>
   </integration_points>
   

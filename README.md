@@ -13,7 +13,8 @@
 **How**: 5-minute setup, then commands like `/auto`, `/task`, `/feature` work intelligently  
 **Result**: Claude Code produces better code, enforces quality, learns your patterns  
 
-**Perfect for**: Any project (React, Python, Go, mobile, data science, etc.)
+**Perfect for**: Any project (React, Python, Go, mobile, data science, etc.)  
+**Framework Version**: 3.0.0 with Claude 4 optimization
 
 **✅ Success Indicators**: Claude Code suggests tech-specific solutions, follows your project patterns, enforces quality automatically
 
@@ -23,7 +24,7 @@
 👉 **[GETTING_STARTED.md](GETTING_STARTED.md)** - Complete setup with PROJECT_CONFIG.xml customization
 
 ### 🔬 **I want to understand it first** (15 minutes) 
-👉 **[examples/01-beginner/](examples/01-beginner/)** - Working examples you can try immediately
+👉 **[examples/01-beginner/](examples/01-beginner/)** - Working examples with clear learning progression
 
 ### 🚀 **I want to master it** (1+ hours)
 👉 **[docs/](docs/)** - Full documentation, advanced patterns, and customization guides
@@ -37,7 +38,7 @@
 - **`/feature`** - Complete feature lifecycle
 - **`/query`** - Research and analysis without modifications
 
-> **Start with `/auto`** - it picks the right approach for your specific request.
+> **Start with `/auto`** - it intelligently picks the right approach for your specific request.
 
 👉 **[See examples](examples/01-beginner/basic-commands/)** for hands-on command learning
 
@@ -59,16 +60,16 @@
 ## Ready to Start?
 
 **👉 [GETTING_STARTED.md](GETTING_STARTED.md)** - 5-minute setup guide  
-**👉 [examples/01-beginner/](examples/01-beginner/)** - Try working examples immediately
+**👉 [examples/01-beginner/](examples/01-beginner/)** - Working examples with clear learning progression
 
 
 ## Success Validation
 
 **✅ Working Correctly**:
-- [ ] Framework responds to `/auto` command
-- [ ] Suggestions match your tech stack
-- [ ] `/task` creates tests before implementation
-- [ ] Commands suggest project-specific patterns
+- [ ] Framework responds to `/auto` command with intelligent routing
+- [ ] Suggestions match your tech stack and project patterns
+- [ ] `/task` enforces TDD by creating tests before implementation
+- [ ] Commands provide project-specific, contextual suggestions
 
 **🎯 Next Steps**: Try all commands → Customize PROJECT_CONFIG.xml → Explore [advanced features](docs/advanced/)
 
@@ -79,8 +80,8 @@
 
 ### 🚀 **Getting Started** (Choose Your Path)
 - **[GETTING_STARTED.md](GETTING_STARTED.md)** - Complete 5-minute setup guide
-- **[examples/quick-start/](examples/quick-start/)** - Try working examples immediately  
-- **[examples/project-configs/](examples/project-configs/)** - Pre-built configs for your tech stack
+- **[examples/01-beginner/](examples/01-beginner/)** - Try working examples immediately  
+- **[examples/project-templates/](examples/project-templates/)** - Pre-built configs for your tech stack
 
 ### 📖 **User Guides** (Build Your Skills)
 - **[docs/user-guide/](docs/user-guide/)** - Systematic skill building
@@ -89,7 +90,7 @@
 
 ### 🔧 **Advanced Usage** (Framework Mastery)
 - **[docs/advanced/](docs/advanced/)** - Custom modules, meta-prompting, optimization
-- **[examples/advanced/](examples/advanced/)** - Sophisticated usage patterns
+- **[examples/03-advanced/](examples/03-advanced/)** - Sophisticated usage patterns
 - **[CLAUDE.md](CLAUDE.md)** - Complete framework reference (developers)
 
 

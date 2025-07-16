@@ -77,13 +77,13 @@
     <test>python -m pytest</test>
     
     <!-- Lint command (DEFAULT: language-specific) -->
-    <lint>flake8 . && black --check .</lint>
+    <lint>flake8 . &amp;&amp; black --check .</lint>
     
     <!-- Build command (DEFAULT: language-specific) -->
     <build>python -m build</build>
     
     <!-- Format command -->
-    <format>black . && isort .</format>
+    <format>black . &amp;&amp; isort .</format>
     
     <!-- Development server command -->
     <dev_server>python manage.py runserver</dev_server>
@@ -274,7 +274,7 @@
     </tech_stack>
     <commands>
       <test>python manage.py test</test>
-      <lint>flake8 . && black --check .</lint>
+      <lint>flake8 . &amp;&amp; black -\-check .</lint>
       <build>python manage.py collectstatic</build>
     </commands>
     
@@ -286,7 +286,7 @@
     </tech_stack>
     <commands>
       <test>npm test</test>
-      <lint>eslint . && prettier --check .</lint>
+      <lint>eslint . &amp;&amp; prettier -\-check .</lint>
       <build>npm run build</build>
     </commands>
     

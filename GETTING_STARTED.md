@@ -1,8 +1,8 @@
 # Getting Started Guide
 
-> 🚀 **5-minute setup**: Install and configure the framework for your project.
+> 🚀 **5-minute setup**: Install and configure the Framework 3.0 for your project.
 
-**What this guide covers**: Framework installation, project configuration, command validation
+**What this guide covers**: Framework installation, project configuration, command validation, and production-ready setup
 
 ## Quick Start (30 seconds)
 
@@ -18,7 +18,7 @@ cd your-project/
 /auto "analyze my project structure"
 ```
 
-**✅ Success**: Claude Code responds with project-specific analysis
+**✅ Success**: Claude Code responds with intelligent, project-specific analysis
 
 ## Step-by-Step Setup (5 minutes)
 
@@ -81,10 +81,10 @@ Test the 4 essential commands work correctly:
 ```
 
 **✅ Success Indicators**:
-- [ ] Commands respond with project-specific suggestions
-- [ ] `/task` mentions creating tests first (TDD)
-- [ ] `/auto` picks appropriate approaches
-- [ ] Suggestions match your actual tech stack
+- [ ] Commands respond with intelligent, project-specific suggestions
+- [ ] `/task` enforces TDD by creating tests first
+- [ ] `/auto` provides intelligent routing and picks appropriate approaches
+- [ ] Suggestions match your actual tech stack and project patterns
 
 👉 **[Learn commands in detail](examples/01-beginner/basic-commands/)** with hands-on examples
 
@@ -159,13 +159,13 @@ Try all 4 essential commands in your project:
 ## Support & Resources
 
 ### 📚 **Documentation**
-- **[examples/quick-start/](examples/quick-start/)** - Working examples you can try
+- **[examples/01-beginner/](examples/01-beginner/)** - Working examples you can try
 - **[docs/user-guide/](docs/user-guide/)** - Comprehensive command guides
 - **[CLAUDE.md](CLAUDE.md)** - Complete framework reference (developers)
 
 ### 🔧 **Configuration**
 - **[PROJECT_CONFIG.xml](PROJECT_CONFIG.xml)** - Customize for your project
-- **[examples/project-configs/](examples/project-configs/)** - Pre-built configurations
+- **[examples/project-templates/](examples/project-templates/)** - Pre-built configurations
 
 ### 🆘 **Help**
 - **Issues**: [GitHub Issues](https://github.com/swm-sink/claude-code-modular-prompts/issues)
