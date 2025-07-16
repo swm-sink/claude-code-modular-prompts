@@ -29,7 +29,7 @@ This user guide provides comprehensive documentation for mastering the Claude Co
 
 1. **[Getting Started](../../GETTING_STARTED.md)** - 5-minute setup
 2. **[Basic Commands](commands/README.md)** - Essential command overview
-3. **[Quick Examples](../../examples/quick-start/)** - Try working examples
+3. **[Quick Examples](../../examples/01-beginner/)** - Try working examples
 
 **Success Criteria**: Can use `/auto`, `/task`, `/feature`, `/query` commands successfully
 
@@ -117,7 +117,7 @@ See [Contributing Guidelines](../../CONTRIBUTING.md) for details.
 ## Next Steps
 
 1. **Start with Foundation**: Complete [Getting Started](../../GETTING_STARTED.md)
-2. **Try Examples**: Work through [Quick Start Examples](../../examples/quick-start/)
+2. **Try Examples**: Work through [Quick Start Examples](../../examples/01-beginner/)
 3. **Master Commands**: Read [Command Guides](commands/)
 4. **Build Skills**: Progress through the learning path at your own pace
 

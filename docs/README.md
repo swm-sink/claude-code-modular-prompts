@@ -7,7 +7,7 @@ This is the complete documentation for the Claude Code Modular Prompts Framework
 New to the framework? Start here:
 1. **[Getting Started Guide](../GETTING_STARTED.md)** - 5-minute setup
 2. **[Quick Reference](../CLAUDE.md#quick-reference)** - Essential commands and workflows
-3. **[Basic Examples](../examples/quick-start/)** - Try working examples
+3. **[Basic Examples](../examples/01-beginner/)** - Try working examples
 
 ## 📚 Complete Learning Path
 
@@ -17,7 +17,7 @@ New to the framework? Start here:
 1. **[Getting Started](../GETTING_STARTED.md)** - Setup and first steps
 2. **[User Guide](user-guide/README.md)** - Progressive skill-building path
 3. **[Command Basics](user-guide/commands/README.md)** - Essential command overview
-4. **[Quick Examples](../examples/quick-start/)** - Hands-on practice
+4. **[Basic Examples](../examples/01-beginner/)** - Hands-on practice
 
 **Success Criteria**: Can use `/auto`, `/task`, `/feature`, `/query` commands successfully
 
@@ -72,7 +72,7 @@ New to the framework? Start here:
 - **[Troubleshooting](user-guide/troubleshooting.md)** - Fix common issues
 
 ### Development Workflows
-- **[Basic Examples](../examples/quick-start/)** - Simple usage patterns
+- **[Basic Examples](../examples/01-beginner/)** - Simple usage patterns
 - **[Advanced Examples](../examples/advanced/)** - Complex scenarios
 - **[Team Integration](advanced/README.md#team-integration)** - Multi-developer workflows
 
@@ -140,16 +140,16 @@ New to the framework? Start here:
 ### By Development Task
 - **Bug Fixing**: [Task Command](user-guide/commands/task-command.md) + [Troubleshooting](user-guide/troubleshooting.md)
 - **New Features**: [Feature Command](user-guide/commands/feature-command.md) + [Advanced Examples](../examples/advanced/)
-- **Code Research**: [Query Command](user-guide/commands/query-command.md) + [Basic Examples](../examples/quick-start/)
+- **Code Research**: [Query Command](user-guide/commands/query-command.md) + [Basic Examples](../examples/01-beginner/)
 - **Documentation**: [API Reference](api-reference.md) + [Advanced Usage](advanced/README.md)
 
 ### By Technology Stack
-- **Python/Django**: [Python Config](../examples/project-configs/python-django-config.xml) + [Task Examples](../examples/quick-start/)
-- **JavaScript/React**: [React Config](../examples/project-configs/react-project-config.xml) + [Feature Examples](../examples/quick-start/)
-- **Go APIs**: [Go Config](../examples/project-configs/go-api-config.xml) + [Advanced Examples](../examples/advanced/)
+- **Python/Django**: [Python Config](../examples/project-templates/web-applications/python-django-config.xml) + [Task Examples](../examples/01-beginner/)
+- **JavaScript/React**: [React Config](../examples/project-templates/web-applications/react-project-config.xml) + [Feature Examples](../examples/01-beginner/)
+- **Go APIs**: [Go Config](../examples/project-templates/web-applications/go-api-config.xml) + [Advanced Examples](../examples/advanced/)
 
 ### By Team Size
-- **Individual Developer**: [User Guide](user-guide/README.md) + [Basic Examples](../examples/quick-start/)
+- **Individual Developer**: [User Guide](user-guide/README.md) + [Basic Examples](../examples/01-beginner/)
 - **Small Team**: [Advanced Usage](advanced/README.md#team-integration) + [Configuration Guide](api-reference.md)
 - **Large Team**: [Team Integration](advanced/README.md#team-integration) + [Performance Optimization](advanced/README.md#performance-optimization)
 
@@ -163,7 +163,7 @@ New to the framework? Start here:
 - **Performance Problems**: [Advanced Usage](advanced/README.md#performance-optimization)
 
 ### By Experience Level
-- **Beginner**: [User Guide](user-guide/README.md) → [Commands](user-guide/commands/README.md) → [Examples](../examples/quick-start/)
+- **Beginner**: [User Guide](user-guide/README.md) → [Commands](user-guide/commands/README.md) → [Examples](../examples/01-beginner/)
 - **Intermediate**: [API Reference](api-reference.md) → [Advanced Usage](advanced/README.md) → [Advanced Examples](../examples/advanced/)
 - **Expert**: [Meta-Prompting](advanced/README.md#meta-prompting) → [Custom Modules](advanced/README.md#custom-modules) → [Framework Customization](advanced/README.md#framework-customization)
 
@@ -220,7 +220,7 @@ New to the framework? Start here:
 ## 🚀 Next Steps
 
 1. **[Set up the framework](../GETTING_STARTED.md)** if you haven't already
-2. **[Try the examples](../examples/quick-start/)** to understand basic usage
+2. **[Try the examples](../examples/01-beginner/)** to understand basic usage
 3. **[Customize PROJECT_CONFIG.xml](../PROJECT_CONFIG.xml)** for your project
 4. **[Progress through the learning path](user-guide/README.md)** at your own pace
 5. **[Join the community](../CONTRIBUTING.md)** and share your experiences

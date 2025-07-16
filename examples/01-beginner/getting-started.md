@@ -291,17 +291,17 @@ Confirm everything is working:
 ### Getting More Help
 
 If you encounter issues:
-1. Check [troubleshooting/](troubleshooting/) for specific error solutions
-2. Use `/help` command for context-specific assistance
-3. Review installation documentation
-4. Check framework community forums
+1. Use `/help` command for context-specific assistance
+2. Review installation documentation  
+3. Check framework community forums
+4. Try the basic command examples to verify your setup
 
 ## 🎯 Next Steps
 
 Now that you have the framework working:
 
 1. **Explore Basic Commands**: Start with [basic-commands/task-command.md](basic-commands/task-command.md)
-2. **Learn by Doing**: Try the [first-project](first-project/) walkthrough
+2. **Learn Workflows**: Master [workflow patterns](../02-intermediate/) for complex problems
 3. **Understand Configuration**: Study PROJECT_CONFIG.xml options
 4. **Practice Regularly**: Use the framework for real development tasks
 
