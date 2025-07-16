@@ -38,16 +38,15 @@ This user guide provides comprehensive documentation for mastering the Claude Co
 ### 🔧 **Intermediate Level** (1-5 hours)
 **Goal**: Master all commands and understand quality enforcement
 
-1. **[Command Mastery](commands/)** - Deep dive into each command
-   - [Auto Command](commands/auto-command.md) - Intelligent routing
-   - [Task Command](commands/task-command.md) - Focused TDD development
-   - [Feature Command](commands/feature-command.md) - Complete feature lifecycle
-   - [Query Command](commands/query-command.md) - Research and analysis
+1. **[Command Examples](../../examples/01-beginner/basic-commands/)** - Hands-on command learning
+   - [Auto Command](../../examples/01-beginner/basic-commands/auto-command.md) - Intelligent routing
+   - [Task Command](../../examples/01-beginner/basic-commands/task-command.md) - Focused TDD development
+   - [Query Command](../../examples/01-beginner/basic-commands/query-command.md) - Research and analysis
 
-2. **[Workflow Patterns](workflows/)** - Real-world usage patterns
-   - [Bug Fixing Workflow](workflows/bug-fixing-workflow.md)
-   - [Feature Development Workflow](workflows/feature-development-workflow.md)
-   - [Code Research Workflow](workflows/code-research-workflow.md)
+2. **[Workflow Patterns](../../examples/02-intermediate/multi-command-workflows/)** - Real-world usage patterns
+   - [Bug Investigation Workflow](../../examples/02-intermediate/multi-command-workflows/bug-investigation.md)
+   - [Feature Development Workflow](../../examples/02-intermediate/multi-command-workflows/feature-development.md)
+   - [Refactoring Workflow](../../examples/02-intermediate/multi-command-workflows/refactoring-workflow.md)
 
 3. **[Quality Enforcement](quality-enforcement.md)** - Understanding TDD and quality gates
 
@@ -87,12 +86,11 @@ This user guide provides comprehensive documentation for mastering the Claude Co
 For a comprehensive quick reference including commands, workflows, configuration, and troubleshooting, see the [CLAUDE.md Quick Reference](../../CLAUDE.md#quick-reference).
 
 ### Essential Commands Summary
-- **[/auto](commands/auto-command.md)** - Intelligent routing when uncertain
-- **[/task](commands/task-command.md)** - Single component with TDD
-- **[/feature](commands/feature-command.md)** - Complete feature lifecycle
-- **[/query](commands/query-command.md)** - Research without modifications
+- **[/auto](../../examples/01-beginner/basic-commands/auto-command.md)** - Intelligent routing when uncertain
+- **[/task](../../examples/01-beginner/basic-commands/task-command.md)** - Single component with TDD
+- **[/query](../../examples/01-beginner/basic-commands/query-command.md)** - Research without modifications
 
-For detailed usage of each command, see the [Command Documentation](commands/).
+For hands-on command learning, see the [Command Examples](../../examples/01-beginner/basic-commands/).
 
 ### Getting Help
 
@@ -127,7 +125,7 @@ See [Contributing Guidelines](../../CONTRIBUTING.md) for details.
 
 - **[Getting Started](../../GETTING_STARTED.md)** - Setup and first steps
 - **[Examples](../../examples/)** - Working examples
-- **[Commands](commands/)** - Detailed command documentation
-- **[Workflows](workflows/)** - Real-world patterns
+- **[Command Examples](../../examples/01-beginner/basic-commands/)** - Hands-on command learning
+- **[Workflow Examples](../../examples/02-intermediate/multi-command-workflows/)** - Real-world patterns
 - **[Advanced](../advanced/)** - Advanced techniques
 - **[PROJECT_CONFIG.xml](../../PROJECT_CONFIG.xml)** - Configuration template

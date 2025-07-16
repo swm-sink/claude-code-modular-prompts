@@ -11,7 +11,7 @@
 - **[PROJECT_CONFIG.xml](../PROJECT_CONFIG.xml)** - Configuration template
 
 ### Command Reference
-- **[Command Details](user-guide/commands/README.md)** - Complete command documentation
+- **[Command Examples](../examples/01-beginner/basic-commands/)** - Hands-on command learning
 - **[Troubleshooting](user-guide/troubleshooting.md)** - Fix common issues
 - **[FAQ](user-guide/faq.md)** - Frequently asked questions
 

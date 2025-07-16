@@ -185,8 +185,8 @@ All framework files follow a standardized table-based format:
 
 ### 📖 **User Guides** (Build Your Skills)
 - **[docs/user-guide/](docs/user-guide/)** - Systematic skill building
-- **[docs/user-guide/commands/](docs/user-guide/commands/)** - Master all commands
-- **[docs/user-guide/workflows/](docs/user-guide/workflows/)** - Real-world patterns
+- **[examples/01-beginner/basic-commands/](examples/01-beginner/basic-commands/)** - Master all commands
+- **[examples/02-intermediate/multi-command-workflows/](examples/02-intermediate/multi-command-workflows/)** - Real-world patterns
 
 ### 🔧 **Advanced Usage** (Framework Mastery)
 - **[docs/advanced/](docs/advanced/)** - Custom modules, meta-prompting, optimization
