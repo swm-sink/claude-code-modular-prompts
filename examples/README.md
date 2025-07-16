@@ -20,17 +20,16 @@ This directory contains examples organized into three progressive levels, each b
 
 **Start Here**: [01-beginner/README.md](01-beginner/README.md)
 
-### 🟡 [02-intermediate/](02-intermediate/) - Mastering Workflows
-**Target Audience**: Regular users familiar with basic concepts  
-**Prerequisites**: Completed beginner examples, 1-2 weeks experience  
-**Estimated Time**: 4-8 hours to complete all examples
+### 🟡 [02-intermediate/](02-intermediate/) - Multi-Command Workflow Mastery
+**Target Audience**: Users ready to solve complex problems systematically  
+**Prerequisites**: Completed beginner examples, 1+ weeks experience  
+**Estimated Time**: 2-3 hours to master core workflow patterns
 
 **What You'll Learn**:
-- Multi-command workflows and orchestration
-- Advanced project configuration patterns
-- External tool integrations (CI/CD, IDEs, Git)
-- Performance optimization techniques
-- Team collaboration patterns
+- **Bug Investigation Workflow** - Research → Fix → Deploy pattern
+- **Feature Development Workflow** - Plan → Implement → Validate pattern  
+- **Refactoring Workflow** - Analysis → Improve → Deploy pattern
+- **Strategic command chaining** for complex development challenges
 
 **Continue With**: [02-intermediate/README.md](02-intermediate/README.md)
 
@@ -48,155 +47,71 @@ This directory contains examples organized into three progressive levels, each b
 
 **Master With**: [03-advanced/README.md](03-advanced/README.md)
 
-### 🏗️ [project-templates/](project-templates/) - Ready-to-Use Templates
-**Purpose**: Complete project setups with framework integration  
-**Audience**: All levels - choose templates matching your experience  
+### 🏗️ [project-templates/](project-templates/) - Basic Configuration Templates
+**Purpose**: Simple PROJECT_CONFIG.xml examples for common tech stacks  
+**Audience**: Reference for setting up new projects  
 
-**Available Templates**:
-- **Web Applications**: React, Django, Node.js, Vue
-- **Mobile Applications**: React Native, Flutter, iOS
-- **Data Science**: Jupyter, R, ML Pipelines
-- **DevOps**: Kubernetes, Terraform, CI/CD
-- **Enterprise**: Java Spring, .NET Core, Microservices
+**Available**: Basic config files for React, Django, and Go API projects
 
-**Browse Templates**: [project-templates/README.md](project-templates/README.md)
+**Browse Templates**: [project-templates/](project-templates/)
 
 ## 🎯 Quick Start Guide
 
-### For Complete Beginners
-1. Start with [01-beginner/getting-started.md](01-beginner/getting-started.md)
-2. Follow the [basic commands](01-beginner/basic-commands/) examples
-3. Try the [first project](01-beginner/first-project/) walkthrough
-4. Use [troubleshooting](01-beginner/troubleshooting/) if you encounter issues
+### New to the Framework?
+1. **Start here**: [01-beginner/getting-started.md](01-beginner/getting-started.md)
+2. **Learn commands**: [01-beginner/basic-commands/](01-beginner/basic-commands/)
+3. **Get comfortable** with basic framework usage
 
-### For Experienced Developers
-1. Review [01-beginner/basic-commands/](01-beginner/basic-commands/) quickly
-2. Jump to [02-intermediate/multi-command-workflows/](02-intermediate/multi-command-workflows/)
-3. Explore [advanced configuration](02-intermediate/advanced-configuration/)
-4. Try [integration patterns](02-intermediate/integration-patterns/)
+### Ready for Complex Problems?
+1. **Master workflows**: [02-intermediate/multi-command-workflows/](02-intermediate/multi-command-workflows/)
+2. **Learn the 3 core patterns** for systematic problem-solving
+3. **Apply to real projects** and complex development challenges
 
-### For Framework Contributors
-1. Start with [03-advanced/meta-framework/](03-advanced/meta-framework/)
-2. Explore [custom modules](03-advanced/custom-modules/)
-3. Study [enterprise patterns](03-advanced/enterprise-patterns/)
-4. Experiment with [research applications](03-advanced/research-applications/)
+### Want to Extend the Framework?
+1. **Explore advanced**: [03-advanced/](03-advanced/) for meta-framework capabilities
+2. **Create custom modules** and framework extensions
 
-## 📋 Learning Objectives by Level
+## 📋 Learning Objectives
 
-### Beginner Level Objectives
-- [ ] Successfully install and configure the framework
-- [ ] Execute basic commands (`/task`, `/query`, `/auto`)
-- [ ] Create a simple PROJECT_CONFIG.xml
-- [ ] Complete a basic development workflow
-- [ ] Resolve common setup issues
+### 🟢 Beginner Goals
+- [ ] Install and use basic commands (`/task`, `/query`, `/auto`)
+- [ ] Create simple PROJECT_CONFIG.xml  
+- [ ] Complete basic development tasks with framework
 
-### Intermediate Level Objectives
-- [ ] Chain multiple commands for complex workflows
-- [ ] Configure advanced project settings
-- [ ] Integrate with external development tools
-- [ ] Optimize framework performance
-- [ ] Implement team collaboration patterns
+### 🟡 Intermediate Goals  
+- [ ] **Master workflow patterns** - Bug investigation, feature development, refactoring
+- [ ] **Chain commands strategically** for complex problems
+- [ ] **Think systematically** about development challenges
 
-### Advanced Level Objectives
-- [ ] Use meta-framework capabilities for self-improvement
-- [ ] Develop custom framework modules
-- [ ] Implement enterprise governance patterns
-- [ ] Contribute to framework development
-- [ ] Research new framework applications
+### 🔴 Advanced Goals
+- [ ] Use meta-framework capabilities for continuous improvement
+- [ ] Develop custom modules and extensions
+- [ ] Contribute to framework evolution
 
-## 🔧 Prerequisites by Level
+## 🔧 Prerequisites
 
-### System Requirements
-- **Operating System**: macOS, Linux, or Windows
-- **Programming Experience**: At least 6 months in any language
-- **Tools**: Git, text editor/IDE, terminal/command line
+### Basic Requirements
+- **Programming experience** (6+ months in any language)
+- **Command line basics** and Git familiarity
+- **Claude Code CLI** installed and configured
 
-### Beginner Prerequisites
-- Basic programming knowledge (variables, functions, control flow)
-- Familiarity with command line basics
-- Understanding of software development concepts
+### By Level
+- **🟢 Beginner**: Just basic programming knowledge
+- **🟡 Intermediate**: Completed beginner examples + 1+ weeks framework usage  
+- **🔴 Advanced**: Mastered workflow patterns + 1+ months experience
 
-### Intermediate Prerequisites
-- Completed all beginner examples
-- 1-2 weeks experience with the framework
-- Understanding of software architecture concepts
-- Experience with version control (Git)
+## 🚀 Getting Started
 
-### Advanced Prerequisites
-- Completed all intermediate examples
-- 1+ months regular framework usage
-- Deep software development experience
-- Understanding of software engineering principles
-- Experience with meta-programming concepts
+### Simple Path to Mastery
+1. **🟢 Start with basics**: [01-beginner/getting-started.md](01-beginner/getting-started.md)
+2. **🟡 Learn workflows**: [02-intermediate/multi-command-workflows/](02-intermediate/multi-command-workflows/)  
+3. **🔴 Go advanced**: [03-advanced/](03-advanced/) when ready
 
-## 🛠️ Setup Instructions
+### 🆘 Need Help?
+- **Issues with setup**: Check [01-beginner/getting-started.md](01-beginner/getting-started.md)
+- **Workflow questions**: Study the workflow examples carefully
+- **Framework help**: Use `/help` command for assistance
 
-### Initial Setup
-1. **Install Claude Code**: Follow installation instructions for your platform
-2. **Clone Examples**: `git clone <repository-url>` or download examples
-3. **Navigate to Examples**: `cd examples/`
-4. **Choose Your Level**: Start with appropriate difficulty level
+---
 
-### Validation
-Before starting, ensure your setup works:
-```bash
-# Test basic framework functionality
-/auto "test framework installation"
-
-# Verify configuration
-python scripts/validation/project_config_validator.py --validate
-```
-
-## 🎓 Completion Criteria
-
-### How to Know You're Ready for the Next Level
-
-**Ready for Intermediate**:
-- Can execute all basic commands successfully
-- Completed at least one full beginner project
-- Understand PROJECT_CONFIG.xml structure
-- Can troubleshoot common issues independently
-
-**Ready for Advanced**:
-- Can design multi-command workflows
-- Successfully integrated with external tools
-- Optimized framework performance for your project
-- Can help others with intermediate concepts
-
-**Framework Mastery**:
-- Using meta-framework capabilities regularly
-- Developed custom modules or extensions
-- Implementing enterprise patterns
-- Contributing to framework community
-
-## 🆘 Getting Help
-
-### Resources by Level
-- **Beginner**: [troubleshooting/](01-beginner/troubleshooting/) directory
-- **Intermediate**: Framework documentation and community forums
-- **Advanced**: Source code, research papers, and contribution guides
-
-### Support Channels
-1. **Built-in Help**: Use `/help` command for context-specific assistance
-2. **Examples Issues**: Check if your issue is covered in example troubleshooting
-3. **Community**: Framework community forums and discussion groups
-4. **Documentation**: Comprehensive framework documentation
-
-### Common Learning Paths
-
-```mermaid
-graph TD
-    A[Complete Beginner] --> B[Basic Commands]
-    B --> C[First Project]
-    C --> D[Troubleshooting Skills]
-    D --> E[Intermediate Workflows]
-    E --> F[Advanced Configuration]
-    F --> G[Tool Integration]
-    G --> H[Performance Optimization]
-    H --> I[Advanced Meta-Framework]
-    I --> J[Custom Modules]
-    J --> K[Enterprise Patterns]
-    K --> L[Framework Contribution]
-```
-
-Start your journey with the appropriate level and progress at your own pace. Each level builds essential skills for framework mastery!
+**The key insight**: Framework mastery comes from **learning workflow patterns**, not memorizing commands. Focus on the **3 core workflows** in intermediate examples - they solve 80% of complex development problems!

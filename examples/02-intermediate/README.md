@@ -1,237 +1,152 @@
-# 🟡 Intermediate Examples - Mastering Workflows
+# 🟡 Intermediate Examples - Multi-Command Workflow Mastery
 
-Welcome to intermediate framework usage! This section focuses on complex workflows, advanced configurations, and professional development patterns.
+Welcome to intermediate framework usage! This section focuses on **multi-command workflows** - the core skill for solving complex development problems systematically.
 
-## 📋 What You'll Master
+## 🎯 What You'll Master
 
-By completing this section, you will:
-- ✅ Design and execute multi-command workflows
-- ✅ Configure complex, multi-language projects  
-- ✅ Integrate framework with external development tools
-- ✅ Optimize framework performance for your team
-- ✅ Implement team collaboration patterns
+Master the art of **chaining commands** to solve real-world development challenges:
+- ✅ **Research → Fix → Deploy** workflows for complex bugs
+- ✅ **Analysis → Refactor → Validate** workflows for architectural improvements  
+- ✅ **Plan → Implement → Monitor** workflows for feature development
+- ✅ **Strategic thinking** about when and how to combine commands
 
-## 🎯 Learning Path
+## 🔥 Core Workflow Patterns
 
-### Phase 1: Multi-Command Workflows
-**Time**: 2-3 hours  
+### Multi-Command Workflows
+**Time**: 2-3 hours to master all patterns  
 **Files**: [multi-command-workflows/](multi-command-workflows/)
 
-Master sophisticated development patterns:
-- [feature-development.md](multi-command-workflows/feature-development.md) - Complete feature lifecycle
-- [bug-investigation.md](multi-command-workflows/bug-investigation.md) - Research → Fix → Test workflow
-- [refactoring-workflow.md](multi-command-workflows/refactoring-workflow.md) - Analysis → Plan → Refactor
-- [deployment-pipeline.md](multi-command-workflows/deployment-pipeline.md) - Development → Testing → Deployment
+**The Essential Patterns:**
+- [feature-development.md](multi-command-workflows/feature-development.md) - **Complete feature lifecycle** (query → feature → protocol)
+- [bug-investigation.md](multi-command-workflows/bug-investigation.md) - **Systematic debugging** (query → task → protocol)  
+- [refactoring-workflow.md](multi-command-workflows/refactoring-workflow.md) - **Architectural improvements** (query → feature → protocol)
 
-### Phase 2: Advanced Configuration
-**Time**: 1-2 hours  
-**Files**: [advanced-configuration/](advanced-configuration/)
-
-Configure complex project scenarios:
-- [multi-language-project.md](advanced-configuration/multi-language-project.md) - Polyglot project setup
-- [microservices-config.md](advanced-configuration/microservices-config.md) - Distributed system configuration
-- [quality-gates-setup.md](advanced-configuration/quality-gates-setup.md) - Advanced quality enforcement
-- [team-customization.md](advanced-configuration/team-customization.md) - Team-specific adaptations
-
-### Phase 3: Integration Patterns
-**Time**: 2-3 hours  
-**Files**: [integration-patterns/](integration-patterns/)
-
-Connect with development ecosystem:
-- [ci-cd-integration.md](integration-patterns/ci-cd-integration.md) - Pipeline integration
-- [ide-integration.md](integration-patterns/ide-integration.md) - Development environment setup
-- [git-workflow-integration.md](integration-patterns/git-workflow-integration.md) - Git hooks and workflows
-- [monitoring-integration.md](integration-patterns/monitoring-integration.md) - Health monitoring setup
-
-### Phase 4: Performance Optimization
-**Time**: 1-2 hours  
-**Files**: [performance-optimization/](performance-optimization/)
-
-Optimize framework efficiency:
-- [response-time-tuning.md](performance-optimization/response-time-tuning.md) - Speed improvements
-- [context-management.md](performance-optimization/context-management.md) - Memory efficiency
-- [resource-optimization.md](performance-optimization/resource-optimization.md) - System resources
+**Why These Matter:**
+- **Solve 80% of real development scenarios**
+- **Teach systematic thinking** about complex problems
+- **Reusable patterns** across languages and projects
+- **Proven workflows** that consistently deliver results
 
 ## 📚 Prerequisites
 
-### Required Skills
-- Completed all [beginner examples](../01-beginner/)
-- 1-2 weeks regular framework usage
-- Understanding of software architecture concepts
-- Experience with version control (Git)
-- Familiarity with CI/CD concepts
+### Required Experience
+- Completed [beginner examples](../01-beginner/) 
+- 1+ weeks regular framework usage
+- Comfortable with basic commands (`/auto`, `/task`, `/query`)
+- Understanding of TDD workflow and quality gates
 
-### Required Knowledge
-- Multiple programming languages (helpful but not required)
-- Development tool ecosystem (IDEs, linters, formatters)
-- Testing frameworks and methodologies
-- Basic DevOps and deployment concepts
+### Development Skills Needed
+- Experience with multi-file projects
+- Basic understanding of software architecture
+- Familiarity with testing concepts
+- Experience with Git and collaboration
 
-### Tools and Environment
-- Framework configured and working smoothly
-- Access to development tools (IDEs, Git, CI/CD systems)
-- Understanding of your team's development workflow
-- Multi-project development experience
+## 🚀 Ready to Start?
 
-## 🚀 Quick Assessment
-
-Before starting, verify you're ready:
-
-### Framework Mastery Check
-- [ ] Can execute all basic commands confidently
-- [ ] Created and customized PROJECT_CONFIG.xml files
-- [ ] Completed several real development tasks with framework
-- [ ] Understand TDD workflow and quality gates
-
-### Development Experience Check
-- [ ] Worked with multiple programming languages or frameworks
-- [ ] Experience with development tools beyond basic editor
-- [ ] Understanding of software testing concepts
-- [ ] Familiarity with team development workflows
-
-### Project Complexity Check
-- [ ] Worked on projects with multiple files/modules
-- [ ] Experience with external dependencies and integrations
-- [ ] Understanding of deployment and production concerns
-- [ ] Collaborative development experience
+**Quick Assessment:**
+- [ ] Can use basic framework commands confidently
+- [ ] Understand when to use `/query` vs `/task` vs `/auto`
+- [ ] Have worked on real development projects
+- [ ] Ready to learn systematic problem-solving approaches
 
 ## ✅ Success Criteria
 
-You're ready for [advanced examples](../03-advanced/) when you can:
+You've mastered intermediate workflow patterns when you can:
+- [ ] **Chain commands strategically** for complex development problems
+- [ ] **Choose the right workflow** based on problem type and scope
+- [ ] **Solve bugs systematically** using the research → fix → validate pattern
+- [ ] **Plan refactoring effectively** using the analysis → improve → deploy pattern
+- [ ] **Mentor others** in multi-command workflow patterns
 
-- [ ] Design custom multi-command workflows for complex requirements
-- [ ] Configure framework for diverse project types and team needs
-- [ ] Integrate framework seamlessly with your development ecosystem
-- [ ] Optimize framework performance for your specific use cases
-- [ ] Mentor others in framework usage and best practices
-- [ ] Contribute workflow patterns and configurations to team knowledge
+## 🎓 Workflow Pattern Mastery
 
-## 🎓 Completion Checklist
+Track your progress through the three core patterns:
 
-Track your progress through intermediate mastery:
+### Pattern 1: Bug Investigation Workflow  
+- [ ] Used `/query` to systematically analyze complex bugs
+- [ ] Applied `/task` with TDD to implement targeted fixes
+- [ ] Used `/protocol` to safely deploy bug fixes with monitoring
+- [ ] **Mastery**: Can debug any complex issue systematically
 
-### Multi-Command Workflows Mastery
-- [ ] Completed feature development lifecycle example
-- [ ] Successfully debugged complex issues using research workflow
-- [ ] Executed large-scale refactoring with framework guidance
-- [ ] Integrated deployment pipeline with framework validation
+### Pattern 2: Feature Development Workflow
+- [ ] Used `/query` to understand requirements and existing systems
+- [ ] Applied `/feature` for comprehensive PRD-driven development  
+- [ ] Used `/protocol` for production-ready feature deployment
+- [ ] **Mastery**: Can deliver complete features with quality
 
-### Advanced Configuration Expertise
-- [ ] Configured multi-language/polyglot project
-- [ ] Set up microservices or distributed system configuration
-- [ ] Implemented custom quality gates for team standards
-- [ ] Adapted framework for team collaboration patterns
+### Pattern 3: Refactoring Workflow
+- [ ] Used `/query` to analyze architectural problems and opportunities
+- [ ] Applied `/feature` to systematically improve code architecture
+- [ ] Used `/protocol` to safely deploy architectural changes
+- [ ] **Mastery**: Can improve legacy systems without breaking them
 
-### Integration Proficiency
-- [ ] Integrated framework with CI/CD pipeline
-- [ ] Connected framework with IDE/development environment
-- [ ] Set up Git workflow integration with hooks and automation
-- [ ] Implemented health monitoring and alerting
+## 🔧 Core Skills You'll Develop
 
-### Performance Optimization Skills
-- [ ] Optimized framework response times for project needs
-- [ ] Configured efficient context management
-- [ ] Tuned resource usage for optimal performance
-- [ ] Measured and validated performance improvements
+### Strategic Thinking
+- **Problem Analysis**: Break complex problems into systematic approaches
+- **Command Selection**: Choose the right command sequence for each situation
+- **Quality Focus**: Build validation and testing into every workflow
+- **Production Mindset**: Think about deployment and monitoring from the start
 
-## 🔧 Key Skills You'll Develop
+### Workflow Patterns
+- **Research First**: Always understand before implementing (`/query` → action)
+- **Systematic Execution**: Follow proven patterns for predictable results
+- **Validation Always**: Use `/protocol` for production-ready deployment
+- **Iterative Improvement**: Learn from each workflow to improve future approaches
 
-### Workflow Design
-- **Pattern Recognition**: Identify optimal command sequences for complex tasks
-- **Efficiency Optimization**: Design workflows that minimize manual intervention
-- **Error Recovery**: Build robust workflows with failure handling
-- **Scalability**: Create workflows that work for teams and large projects
+## 💡 Workflow Best Practices
 
-### Configuration Mastery
-- **Multi-Environment**: Configure framework for dev, test, and production
-- **Team Standards**: Encode team preferences and standards in configuration
-- **Tool Integration**: Connect framework with existing development tools
-- **Performance Tuning**: Optimize configuration for speed and efficiency
+### The Golden Rules
+1. **Start with `/query`** - Understand the problem completely before acting
+2. **Follow TDD** - Write tests first, implement minimally, refactor safely
+3. **Think Production** - Every change should be deployment-ready
+4. **Validate Everything** - Use `/protocol` for critical deployments
 
-### Professional Integration
-- **CI/CD Integration**: Incorporate framework into automated pipelines
-- **Quality Assurance**: Implement comprehensive quality gates and monitoring
-- **Team Collaboration**: Enable effective team usage and knowledge sharing
-- **Documentation**: Create team documentation and usage guidelines
-
-## 💡 Intermediate Best Practices
-
-### Workflow Design Principles
-1. **Start with Analysis** - Use `/query` to understand before acting
-2. **Atomic Operations** - Break complex workflows into manageable steps
-3. **Validation Points** - Include quality checks at each major step
-4. **Error Handling** - Plan for failures and recovery scenarios
-
-### Configuration Strategies
-1. **Environment-Specific** - Different configs for different environments
-2. **Team-Centric** - Encode team preferences and standards
-3. **Tool-Integrated** - Connect with existing development ecosystem
-4. **Performance-Focused** - Optimize for team's usage patterns
-
-### Integration Patterns
-1. **Non-Invasive** - Integrate without disrupting existing workflows
-2. **Incremental** - Add framework integration gradually
-3. **Reversible** - Maintain ability to work without framework
-4. **Team-Friendly** - Ensure all team members can use effectively
+### When to Use Each Pattern
+- **Bug Investigation**: For complex, production issues requiring systematic debugging
+- **Feature Development**: For complete new functionality with requirements and architecture
+- **Refactoring**: For improving existing code architecture and maintainability
 
 ## 🛟 Getting Help
 
-### When You Need Support
-- **Complex Workflows**: Reference the workflow examples for similar patterns
-- **Configuration Issues**: Check advanced configuration examples for guidance
-- **Integration Problems**: Review integration patterns for your specific tools
-- **Performance Issues**: Use performance optimization guides for tuning
+### When Workflows Aren't Working
+- **Study the examples** - Each workflow example shows complete problem → solution flows
+- **Start simpler** - If a 3-command workflow is too complex, try 2-command first  
+- **Practice the patterns** - Use the exact command sequences from examples
+- **Focus on one pattern** - Master one workflow before moving to the next
 
-### Advanced Resources
-- **Framework Documentation**: Deep dive into configuration options
-- **Community Examples**: Learn from other teams' integration patterns
-- **Performance Guides**: Detailed optimization and tuning resources
-- **Best Practices**: Industry patterns for framework usage
+### Common Issues
+- **Forgetting `/query`** - Always research and understand before implementing
+- **Skipping `/protocol`** - Don't deploy critical changes without validation
+- **Wrong command choice** - Reference "When to Use Each Pattern" section above
 
-### Troubleshooting Approach
-1. **Isolate the Issue** - Identify which component isn't working
-2. **Check Configuration** - Verify configuration matches requirements
-3. **Test Incrementally** - Add complexity gradually to identify problems
-4. **Validate Environment** - Ensure all dependencies and tools are working
+## 🎯 Learning Strategy
 
-## 🎯 Learning Strategies
+### Start Here
+1. **Read all three workflow examples** to understand the patterns
+2. **Pick one workflow** that matches a problem you're currently facing
+3. **Follow the exact command sequence** from the example
+4. **Adapt the pattern** to your specific situation
 
-### For Team Leaders
-- Focus on configuration and integration patterns
-- Emphasize team collaboration and standardization examples
-- Study performance optimization for team efficiency
-- Plan framework adoption and rollout strategies
-
-### For Senior Developers
-- Concentrate on complex workflow design patterns
-- Master advanced configuration for diverse project types
-- Study integration patterns for sophisticated development environments
-- Focus on mentoring and knowledge transfer approaches
-
-### For Technical Leads
-- Understand all aspects but focus on architecture integration
-- Master CI/CD and deployment pipeline integration
-- Study team customization and standardization approaches
-- Focus on performance optimization and scaling patterns
+### Practice Approach
+- **Use on real problems** - Don't just read, apply to actual development work
+- **Follow the patterns exactly** - Don't improvise until you've mastered the basics
+- **Share with team** - Teach others the patterns as you learn them
 
 ## 🔄 Next Steps
 
-After completing intermediate examples:
+After mastering these workflow patterns:
 
-1. **Apply to Real Projects** - Use complex workflows in actual development
-2. **Share Knowledge** - Help team members adopt intermediate patterns
-3. **Optimize Further** - Fine-tune configurations and workflows
-4. **Advance to Expert** - Begin [advanced examples](../03-advanced/) when ready
-5. **Contribute Back** - Share patterns and configurations with community
+1. **Apply regularly** - Use multi-command workflows for all complex problems
+2. **Develop intuition** - Learn to quickly identify which pattern fits each situation
+3. **Mentor others** - Share workflow patterns with team members
+4. **Advance to expert level** - Explore [advanced examples](../03-advanced/) for cutting-edge patterns
 
-## 🌟 Success Indicators
+## 🌟 You've Mastered Intermediate Skills When...
 
-You've mastered intermediate framework usage when:
+- **You think in workflows** - Complex problems automatically trigger multi-command thinking
+- **You choose commands strategically** - You know which command sequence fits each problem type
+- **You solve problems systematically** - No more ad-hoc approaches to complex issues
+- **You mentor others** - You can teach workflow patterns to team members
 
-- **Workflow Fluency** - You naturally design multi-command workflows for complex tasks
-- **Configuration Expertise** - You can configure framework for any project type
-- **Integration Mastery** - Framework integrates seamlessly with your development ecosystem
-- **Performance Optimization** - You actively optimize and tune framework performance
-- **Knowledge Sharing** - You help others adopt intermediate framework patterns
-
-**Ready to begin?** Start with [multi-command-workflows/feature-development.md](multi-command-workflows/feature-development.md) to master sophisticated development patterns!
+**Ready to begin?** Start with [multi-command-workflows/feature-development.md](multi-command-workflows/feature-development.md) to see a complete feature development workflow in action!
