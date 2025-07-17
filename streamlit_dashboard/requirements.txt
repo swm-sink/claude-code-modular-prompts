@@ -1,17 +1,28 @@
+# Core Streamlit dependencies for Railway deployment
 streamlit>=1.28.0
-plotly>=5.15.0
-networkx>=3.1
-pandas>=2.0.0
-numpy>=1.24.0
+plotly>=5.17.0
+pandas>=2.1.0
+networkx>=3.2
+
+# Additional visualization libraries
 pyvis>=0.3.0
-graphviz>=0.20.0
 bokeh>=3.2.0
+
+# Data processing
+numpy>=1.24.0
 pyyaml>=6.0
 xmltodict>=0.13.0
 markdown>=3.4.0
 beautifulsoup4>=4.12.0
+
+# Enhanced Streamlit components
 streamlit-aggrid>=0.3.0
 streamlit-option-menu>=0.3.0
+
+# Development and testing
 pytest>=7.4.0
 pytest-cov>=4.1.0
 pytest-mock>=3.11.0
+
+# Railway deployment optimization
+gunicorn>=21.2.0
