@@ -1,162 +1,117 @@
-# Examples - Progressive Framework Mastery
+# Claude Code Framework Examples
 
-> **Mission**: 2-minute immediate success → Common workflow patterns → Advanced framework power
+Comprehensive examples organized by complexity level with clear learning progression from beginner to expert.
 
-Welcome to the Claude Code framework examples! This directory provides a progressive learning path from immediate success to framework mastery through three carefully designed layers.
+## 📚 Learning Path Overview
 
-## 🚀 Progressive Learning Path
+This directory contains examples organized into three progressive levels, each building on the previous:
 
-### **Layer 1: Quick Start** - Immediate 2-Minute Success
-**Path**: `examples/quick-start/`
+### 🟢 [01-beginner/](01-beginner/) - Getting Started
+**Target Audience**: First-time users, new to the framework  
+**Prerequisites**: Basic programming knowledge  
+**Estimated Time**: 2-4 hours to complete all examples
 
-Perfect for your very first framework experience. These examples guarantee immediate success and working results.
+**What You'll Learn**:
+- Framework installation and setup
+- Basic command usage (`/task`, `/query`, `/auto`, `/session`)
+- Simple project configuration
+- Fundamental workflows
+- Troubleshooting common issues
 
-```bash
-# Get instant success in under 2 minutes
-cd examples/quick-start/hello-world/
-# Follow the README - copy, paste, done!
-```
+**Start Here**: [01-beginner/README.md](01-beginner/README.md)
 
-**What you'll achieve:**
-- ✅ Framework working in your project in 2 minutes
-- ✅ First successful command execution
-- ✅ Immediate confidence and working results
-- ✅ Clear next steps to more advanced patterns
+### 🟡 [02-intermediate/](02-intermediate/) - Multi-Command Workflow Mastery
+**Target Audience**: Users ready to solve complex problems systematically  
+**Prerequisites**: Completed beginner examples, 1+ weeks experience  
+**Estimated Time**: 2-3 hours to master core workflow patterns
 
----
+**What You'll Learn**:
+- **Bug Investigation Workflow** - Research → Fix → Deploy pattern
+- **Feature Development Workflow** - Plan → Implement → Validate pattern  
+- **Refactoring Workflow** - Analysis → Improve → Deploy pattern
+- **Strategic command chaining** for complex development challenges
 
-### **Layer 2: Workflows** - Common Pattern Mastery
-**Path**: `examples/workflows/`
+**Continue With**: [02-intermediate/README.md](02-intermediate/README.md)
 
-Once you've tasted success, learn the powerful workflow patterns that developers use every day.
+### 🔴 [03-advanced/](03-advanced/) - Framework Mastery
+**Target Audience**: Expert users, framework contributors  
+**Prerequisites**: Completed intermediate examples, 1+ months experience  
+**Estimated Time**: 8-16 hours to complete all examples
 
-```bash
-# Master common development patterns
-cd examples/workflows/research-plan-implement/
-# Learn the Query → Feature → Task pattern
-```
+**What You'll Learn**:
+- Meta-framework capabilities and self-improvement
+- Custom module development and framework extension
+- Enterprise patterns and governance
+- Research applications and experimental features
+- Framework contribution and customization
 
-**What you'll master:**
-- 🔄 Research → Plan → Implement workflows
-- 🤝 Multi-agent coordination patterns
-- 📋 Long-running session management
-- 🔍 Code review and quality workflows
-- 👥 Team collaboration setups
+**Master With**: [03-advanced/README.md](03-advanced/README.md)
 
----
+### 🏗️ [project-templates/](project-templates/) - Basic Configuration Templates
+**Purpose**: Simple PROJECT_CONFIG.xml examples for common tech stacks  
+**Audience**: Reference for setting up new projects  
 
-### **Layer 3: Advanced** - Framework Power User
-**Path**: `examples/advanced/`
+**Available**: Basic config files for React, Django, and Go API projects
 
-Ready to unlock the full power of the framework? Advanced patterns for sophisticated workflows.
+**Browse Templates**: [project-templates/](project-templates/)
 
-```bash
-# Unlock advanced framework capabilities
-cd examples/advanced/command-chaining/
-# Master complex workflow orchestration
-```
-
-**What you'll unlock:**
-- ⚡ Complex command chaining workflows
-- 🔧 Custom module development
-- 🏢 Enterprise-scale configurations
-- ⚙️ Performance optimization techniques
-
-## 🎯 Choose Your Starting Point
+## 🎯 Quick Start Guide
 
 ### New to the Framework?
-**Start here**: [examples/quick-start/hello-world/](quick-start/hello-world/)
-- Guaranteed 2-minute success
-- No prior knowledge needed
-- Working example to copy and paste
+1. **Start here**: [01-beginner/getting-started.md](01-beginner/getting-started.md)
+2. **Learn commands**: [01-beginner/basic-commands/](01-beginner/basic-commands/)
+3. **Get comfortable** with basic framework usage
 
-### Ready for Real Work?
-**Jump to**: [examples/workflows/](workflows/)
-- Real-world development patterns
-- Production-ready workflows
-- Team collaboration examples
+### Ready for Complex Problems?
+1. **Master workflows**: [02-intermediate/multi-command-workflows/](02-intermediate/multi-command-workflows/)
+2. **Learn the 3 core patterns** for systematic problem-solving
+3. **Apply to real projects** and complex development challenges
 
-### Want Maximum Power?
-**Explore**: [examples/advanced/](advanced/)
-- Complex orchestration patterns
-- Framework extension techniques
-- Performance optimization
+### Want to Extend the Framework?
+1. **Explore advanced**: [03-advanced/](03-advanced/) for meta-framework capabilities
+2. **Create custom modules** and framework extensions
 
-## 📖 How to Use This Directory
+## 📋 Learning Objectives
 
-### 1. **Follow the Progressive Path**
-Each layer builds on the previous:
-- **Quick Start** → Learn framework basics
-- **Workflows** → Master common patterns  
-- **Advanced** → Unlock full framework power
+### 🟢 Beginner Goals
+- [ ] Install and use basic commands (`/task`, `/query`, `/auto`)
+- [ ] Create simple PROJECT_CONFIG.xml  
+- [ ] Complete basic development tasks with framework
 
-### 2. **Copy-Paste Success**
-Every example includes:
-- ✅ Step-by-step README with copy-paste commands
-- ✅ Working PROJECT_CONFIG.xml
-- ✅ Expected outcomes clearly documented
-- ✅ Time estimates for completion
+### 🟡 Intermediate Goals  
+- [ ] **Master workflow patterns** - Bug investigation, feature development, refactoring
+- [ ] **Chain commands strategically** for complex problems
+- [ ] **Think systematically** about development challenges
 
-### 3. **Independent Examples**
-Each example can be completed standalone:
-- No dependencies between examples
-- Clear context and setup for each
-- Complete solutions, not fragments
+### 🔴 Advanced Goals
+- [ ] Use meta-framework capabilities for continuous improvement
+- [ ] Develop custom modules and extensions
+- [ ] Contribute to framework evolution
 
-### 4. **Cross-Referenced Learning**
-Examples link to relevant documentation:
-- 📚 Related docs/ content
-- 🔗 Command reference guides
-- 💡 Best practice explanations
+## 🔧 Prerequisites
 
-## 🏆 Success Criteria by Layer
+### Basic Requirements
+- **Programming experience** (6+ months in any language)
+- **Command line basics** and Git familiarity
+- **Claude Code CLI** installed and configured
 
-### Layer 1: Quick Start Success
-- [ ] Framework installed and working in 2 minutes
-- [ ] First command executed successfully
-- [ ] Basic PROJECT_CONFIG.xml customized
-- [ ] Confidence to proceed to workflows
+### By Level
+- **🟢 Beginner**: Just basic programming knowledge
+- **🟡 Intermediate**: Completed beginner examples + 1+ weeks framework usage  
+- **🔴 Advanced**: Mastered workflow patterns + 1+ months experience
 
-### Layer 2: Workflow Mastery
-- [ ] Research → Plan → Implement pattern mastered
-- [ ] Multi-agent coordination understood
-- [ ] Session management workflow familiar
-- [ ] Team collaboration configured
+## 🚀 Getting Started
 
-### Layer 3: Advanced Proficiency
-- [ ] Complex command chains executed
-- [ ] Custom modules created
-- [ ] Performance optimization applied
-- [ ] Enterprise patterns implemented
+### Simple Path to Mastery
+1. **🟢 Start with basics**: [01-beginner/getting-started.md](01-beginner/getting-started.md)
+2. **🟡 Learn workflows**: [02-intermediate/multi-command-workflows/](02-intermediate/multi-command-workflows/)  
+3. **🔴 Go advanced**: [03-advanced/](03-advanced/) when ready
 
-## 🚨 Quick Troubleshooting
-
-### Examples not working?
-1. **Check framework installation**: Ensure `CLAUDE.md` and `.claude/` exist in your project
-2. **Verify permissions**: Run `chmod +x .claude/commands/*` if needed
-3. **Update PROJECT_CONFIG.xml**: Customize for your specific project
-4. **Start simpler**: Drop back to a more basic example if advanced ones fail
-
-### Need help choosing?
-- **First time user**: Start with hello-world
-- **Experienced developer**: Jump to workflows that match your current task
-- **Team lead**: Explore team collaboration examples
-- **Performance focus**: Go straight to advanced optimization examples
-
-## 📚 Related Documentation
-
-- **Getting Started**: [docs/getting-started/](../docs/getting-started/) - Framework installation and setup
-- **User Guide**: [docs/user-guide/](../docs/user-guide/) - Comprehensive usage documentation
-- **Reference**: [docs/reference/](../docs/reference/) - Complete command and configuration reference
-- **Advanced**: [docs/advanced/](../docs/advanced/) - Framework architecture and extension
-
-## 🎯 Next Steps After Examples
-
-1. **Customize for your project**: Adapt successful examples to your specific needs
-2. **Explore documentation**: Dive deeper into specific commands and patterns
-3. **Join the community**: Share your success stories and get help
-4. **Contribute back**: Create examples for patterns you discover
+### 🆘 Need Help?
+- **Issues with setup**: Check [01-beginner/getting-started.md](01-beginner/getting-started.md)
+- **Workflow questions**: Study the workflow examples carefully
+- **Framework help**: Use `/help` command for assistance
 
 ---
 
-**Start your journey**: [examples/quick-start/hello-world/](quick-start/hello-world/) - 2 minutes to success! 🚀
+**The key insight**: Framework mastery comes from **learning workflow patterns**, not memorizing commands. Focus on the **3 core workflows** in intermediate examples - they solve 80% of complex development problems!

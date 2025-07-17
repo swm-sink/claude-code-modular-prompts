@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  React Native Project Configuration
+  
+  This configuration is optimized for React Native applications with TypeScript,
+  Jest testing, and cross-platform mobile development.
+  
+  Copy this file to your React Native project root as PROJECT_CONFIG.xml
+  and customize the values for your specific project.
+-->
+
+<project_config>
+  <project_metadata>
+    <name>my-react-native-app</name>
+    <version>1.0.0</version>
+    <description>React Native mobile application</description>
+    <repository>https://github.com/yourorg/my-react-native-app</repository>
+  </project_metadata>
+
+  <tech_stack>
+    <primary_language>typescript</primary_language>
+    <framework>react-native</framework>
+    <database>asyncstorage</database>
+    <additional_tech>
+      <tech>expo</tech>
+      <tech>react-navigation</tech>
+      <tech>react-native-reanimated</tech>
+      <tech>react-query</tech>
+      <tech>zustand</tech>
+    </additional_tech>
+  </tech_stack>
+
+  <project_structure>
+    <source_directory>src</source_directory>
+    <test_directory>__tests__</test_directory>
+    <docs_directory>docs</docs_directory>
+    <scripts_directory>scripts</scripts_directory>
+    <config_directory>config</config_directory>
+    <assets_directory>assets</assets_directory>
+    <components_directory>src/components</components_directory>
+  </project_structure>
+
+  <commands>
+    <test>npm test -- --coverage --watchAll=false</test>
+    <lint>eslint src --ext .ts,.tsx &amp;&amp; prettier --check src</lint>
+    <build>npx expo build</build>
+    <format>prettier --write src &amp;&amp; eslint src --ext .ts,.tsx --fix</format>
+    <ios>npx expo run:ios</ios>
+    <android>npx expo run:android</android>
+    <install>npm install</install>
+  </commands>
+
+  <quality_standards>
+    <test_coverage>
+      <threshold>80</threshold>
+      <enforcement>blocking</enforcement>
+    </test_coverage>
+    <performance>
+      <response_time_p95>500</response_time_p95>
+      <memory_limit>512</memory_limit>
+    </performance>
+    <code_quality>
+      <max_complexity>8</max_complexity>
+      <max_line_length>100</max_line_length>
+    </code_quality>
+  </quality_standards>
+
+  <framework_behavior>
+    <file_creation_policy>moderate</file_creation_policy>
+    <test_first_enforcement>strict</test_first_enforcement>
+    <context_management>
+      <max_file_tokens>3000</max_file_tokens>
+      <max_context_tokens>100000</max_context_tokens>
+      <reserved_work_tokens>40000</reserved_work_tokens>
+    </context_management>
+  </framework_behavior>
+
+  <ai_temperature>
+    <factual>0.2</factual>
+    <analysis>0.3</analysis>
+    <creative>0.7</creative>
+  </ai_temperature>
+
+  <security>
+    <security_scanning>true</security_scanning>
+    <dependency_scanning>true</dependency_scanning>
+    <secrets_detection>true</secrets_detection>
+  </security>
+
+  <development_workflow>
+    <git_workflow>github-flow</git_workflow>
+    <branch_naming>feature/screen-name</branch_naming>
+    <commit_format>conventional</commit_format>
+    <code_review>
+      <required>true</required>
+      <min_reviewers>1</min_reviewers>
+    </code_review>
+  </development_workflow>
+
+  <testing_strategy>
+    <test_types>
+      <unit_tests>true</unit_tests>
+      <integration_tests>true</integration_tests>
+      <e2e_tests>true</e2e_tests>
+    </test_types>
+    <test_framework>
+      <name>jest</name>
+      <config_file>jest.config.js</config_file>
+    </test_framework>
+  </testing_strategy>
+
+  <deployment>
+    <strategy>ci-cd</strategy>
+    <environments>
+      <environment>
+        <name>development</name>
+        <url>expo://localhost:19000</url>
+      </environment>
+      <environment>
+        <name>staging</name>
+        <url>https://expo.dev/@yourorg/my-app-staging</url>
+      </environment>
+      <environment>
+        <name>production</name>
+        <url>app-store</url>
+      </environment>
+    </environments>
+  </deployment>
+
+  <team>
+    <size>small</size>
+    <methodology>agile</methodology>
+    <communication>
+      <issue_tracking>github</issue_tracking>
+      <documentation_style>markdown</documentation_style>
+    </communication>
+  </team>
+
+  <integrations>
+    <services>
+      <service>
+        <name>expo</name>
+        <enabled>true</enabled>
+        <config>
+          <build_service>true</build_service>
+          <over_the_air_updates>true</over_the_air_updates>
+        </config>
+      </service>
+      <service>
+        <name>firebase</name>
+        <enabled>true</enabled>
+        <config>
+          <analytics>true</analytics>
+          <crashlytics>true</crashlytics>
+          <authentication>true</authentication>
+        </config>
+      </service>
+      <service>
+        <name>app_center</name>
+        <enabled>false</enabled>
+        <config>
+          <crash_reporting>true</crash_reporting>
+          <analytics>true</analytics>
+        </config>
+      </service>
+    </services>
+  </integrations>
+
+  <!-- React Native-specific configurations -->
+  <react_native_specific>
+    <react_native_version>0.72</react_native_version>
+    <expo_version>49.x</expo_version>
+    <navigation>react-navigation</navigation>
+    <state_management>zustand</state_management>
+    <ui_library>native-base</ui_library>
+    <animations>reanimated</animations>
+    <data_fetching>react-query</data_fetching>
+    <local_storage>async-storage</local_storage>
+    <push_notifications>expo-notifications</push_notifications>
+    <testing>
+      <component_testing>react-native-testing-library</component_testing>
+      <e2e_testing>detox</e2e_testing>
+    </testing>
+  </react_native_specific>
+</project_config>

@@ -76,6 +76,7 @@ coverage/
 *.coverage.*
 .hypothesis/
 .nox/
+test-ux-simulation/
 
 # Documentation
 docs/_build/

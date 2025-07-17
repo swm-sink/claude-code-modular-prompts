@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 1.0.0   | $(date '+%Y-%m-%d') | template |
+| 1.0.0   | 2025-07-16 | template |
 
 # [Module Name] - [Brief Description]
 
@@ -165,7 +165,7 @@ result = module.execute(
 
 ## Changelog
 
-### Version 1.0.0 - $(date '+%Y-%m-%d')
+### Version 1.0.0 - 2025-07-16
 - Initial module creation
 - Basic functionality implemented
 - Documentation completed

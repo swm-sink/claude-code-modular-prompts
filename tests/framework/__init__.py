@@ -1,1 +1,0 @@
-"""Framework validation tests for Claude Code Modular Prompts."""

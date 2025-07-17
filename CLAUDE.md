@@ -1,6 +1,6 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 3.0.0   | 2025-07-12   | stable |
+| 3.0.0   | 2025-07-16   | stable |
 
 # CLAUDE.md - Framework Control Document
 
@@ -11,7 +11,7 @@
 **Framework Status**: This repository contains a fully implemented modular prompt engineering framework with comprehensive `.claude/` architecture, advanced meta-prompting capabilities, and Claude 4 optimization.
 
 **What's Included**:
-- Complete `.claude/` modular framework with 108+ specialized modules
+- Complete `.claude/` modular framework with 64 specialized modules
 - PROJECT_CONFIG.xml configuration system with dynamic templates
 - Meta-prompting capabilities with self-improvement frameworks
 - Comprehensive validation and optimization scripts
@@ -19,7 +19,7 @@
 - Quality gates and TDD enforcement implementation
 
 **Framework Architecture**:
-- `.claude/modules/` - 108+ specialized modules across domains
+- `.claude/modules/` - 64 specialized modules across domains
 - `.claude/prompt_eng/` - Advanced prompt engineering patterns
 - `.claude/system/` - Quality gates and infrastructure components
 - `.claude/meta/` - Self-improving meta-framework capabilities
@@ -87,7 +87,7 @@
 
 ```xml
 <command_status test_date = "2025-07-12" agent = "V5">
-  <functional_commands count = "13">
+  <functional_commands count = "21">
     <command name = "init" status = "FULLY_FUNCTIONAL"/>
     <command name = "task" status = "FULLY_FUNCTIONAL"/>
     <command name = "feature" status = "FULLY_FUNCTIONAL"/>
@@ -103,7 +103,7 @@
     <command name = "init-new" status = "FULLY_FUNCTIONAL"/>
   </functional_commands>
   <integration_status>
-    <total_tested>13</total_tested>
+    <total_tested>21</total_tested>
     <success_rate>100%</success_rate>
     <production_ready>True</production_ready>
     <phase_1_complete>True</phase_1_complete>
@@ -125,7 +125,7 @@
     <commands_optimized>14</commands_optimized>
   </command_loading>
   <quality_modules>
-    <modules_found>108</modules_found>
+    <modules_found>64</modules_found>
     <optimization>20.0% improvement potential</optimization>
   </quality_modules>
   <overall_metrics>
@@ -215,6 +215,226 @@
 ```
 
 
+# Quick Reference
+
+## Essential Commands
+
+```xml
+<command_reference>
+  <core_commands>
+    <command name="/auto" purpose="Intelligent routing - use when uncertain about approach">
+      <usage>/auto "your request here"</usage>
+      <best_for>Unclear requirements | Complex decisions | Route optimization</best_for>
+    </command>
+    
+    <command name="/task" purpose="Single component focused development with TDD">
+      <usage>/task "implement specific functionality"</usage>
+      <best_for>Single file changes | Bug fixes | <50 lines of code</best_for>
+    </command>
+    
+    <command name="/feature" purpose="Complete feature lifecycle with PRD">
+      <usage>/feature "develop new feature with requirements"</usage>
+      <best_for>New features | Multi-component changes | System integration</best_for>
+    </command>
+    
+    <command name="/query" purpose="Research and analysis without modifications">
+      <usage>/query "analyze codebase or investigate issue"</usage>
+      <best_for>Code research | Understanding systems | Read-only analysis</best_for>
+    </command>
+    
+    <command name="/swarm" purpose="Multi-agent coordination for complex tasks">
+      <usage>/swarm "coordinate multiple development tasks"</usage>
+      <best_for>Complex projects | Parallel development | Team coordination</best_for>
+    </command>
+    
+    <command name="/session" purpose="Long-running work with context preservation">
+      <usage>/session "manage extended development session"</usage>
+      <best_for>Extended work | Context preservation | Progress tracking</best_for>
+    </command>
+    
+    <command name="/protocol" purpose="Production-ready workflows with safety">
+      <usage>/protocol "production deployment or critical changes"</usage>
+      <best_for>Production deployments | Critical fixes | Safety-critical work</best_for>
+    </command>
+    
+    <command name="/docs" purpose="Documentation generation and management">
+      <usage>/docs "generate or update documentation"</usage>
+      <best_for>Documentation | README files | API docs | User guides</best_for>
+    </command>
+  </core_commands>
+  
+  <meta_commands>
+    <command name="/meta-review" purpose="Framework performance analysis">
+      <usage>/meta-review "analyze framework effectiveness"</usage>
+      <best_for>Performance analysis | Usage optimization | Compliance checking</best_for>
+    </command>
+    
+    <command name="/meta-optimize" purpose="Framework performance improvement">
+      <usage>/meta-optimize "improve framework efficiency"</usage>
+      <best_for>Performance tuning | Workflow optimization | Resource efficiency</best_for>
+    </command>
+    
+    <command name="/meta-evolve" purpose="Framework adaptation and learning">
+      <usage>/meta-evolve "adapt framework to patterns"</usage>
+      <best_for>Team adaptation | Pattern learning | Workflow evolution</best_for>
+    </command>
+  </meta_commands>
+</command_reference>
+```
+
+## Configuration Quick Start
+
+```xml
+<configuration_reference>
+  <essential_setup>
+    <file name="CLAUDE.md">Must be in project root directory</file>
+    <file name="PROJECT_CONFIG.xml">Project-specific configuration template</file>
+    <directory name=".claude/">Framework modules and components</directory>
+  </essential_setup>
+  
+  <project_config_essentials>
+    <tech_stack>
+      <primary_language>python | javascript | typescript | go | rust | java</primary_language>
+      <framework>django | react | nextjs | gin | fastapi | spring</framework>
+      <database>postgresql | mysql | mongodb | redis</database>
+    </tech_stack>
+    
+    <commands>
+      <test>pytest --cov=src | npm test | go test</test>
+      <lint>flake8 | eslint | golangci-lint</lint>
+      <build>python setup.py | npm run build | go build</build>
+    </commands>
+    
+    <quality_standards>
+      <test_coverage>
+        <threshold>90</threshold>
+        <enforcement>blocking</enforcement>
+      </test_coverage>
+      <performance>
+        <response_time_p95>200</response_time_p95>
+      </performance>
+    </quality_standards>
+  </project_config_essentials>
+</configuration_reference>
+```
+
+## Common Workflows
+
+```xml
+<workflow_reference>
+  <workflow name="New Feature Development">
+    <steps>
+      <step>1. /query "understand existing related functionality"</step>
+      <step>2. /feature "implement new feature with requirements"</step>
+      <step>3. /task "add specific components or fixes"</step>
+      <step>4. /protocol "prepare for production deployment"</step>
+    </steps>
+  </workflow>
+  
+  <workflow name="Bug Investigation and Fix">
+    <steps>
+      <step>1. /query "analyze bug and understand root cause"</step>
+      <step>2. /task "implement fix with comprehensive tests"</step>
+      <step>3. /protocol "ensure fix meets production standards"</step>
+    </steps>
+  </workflow>
+  
+  <workflow name="Code Research and Documentation">
+    <steps>
+      <step>1. /query "analyze codebase and create documentation"</step>
+      <step>2. /docs "generate comprehensive documentation"</step>
+      <step>3. /task "add missing tests or improve coverage"</step>
+    </steps>
+  </workflow>
+  
+  <workflow name="Performance Optimization">
+    <steps>
+      <step>1. /meta-review "analyze current performance"</step>
+      <step>2. /meta-optimize "implement optimizations"</step>
+      <step>3. /task "apply specific performance improvements"</step>
+      <step>4. /meta-evolve "learn from optimization patterns"</step>
+    </steps>
+  </workflow>
+</workflow_reference>
+```
+
+## Troubleshooting Quick Fixes
+
+```xml
+<troubleshooting_reference>
+  <issue name="Commands not working">
+    <symptoms>Generic responses | Commands not recognized | No framework behavior</symptoms>
+    <solutions>
+      <solution>Check CLAUDE.md is in project root directory</solution>
+      <solution>Verify .claude/ directory exists with modules</solution>
+      <solution>Ensure PROJECT_CONFIG.xml is properly configured</solution>
+    </solutions>
+  </issue>
+  
+  <issue name="Quality gates not enforcing">
+    <symptoms>No TDD enforcement | Coverage ignored | Tests skipped</symptoms>
+    <solutions>
+      <solution>Check quality_standards in PROJECT_CONFIG.xml</solution>
+      <solution>Verify enforcement is set to "blocking"</solution>
+      <solution>Ensure test commands are properly configured</solution>
+    </solutions>
+  </issue>
+  
+  <issue name="Poor performance">
+    <symptoms>Slow responses | High token usage | Context timeouts</symptoms>
+    <solutions>
+      <solution>Run /meta-review to analyze performance</solution>
+      <solution>Use /meta-optimize for automated improvements</solution>
+      <solution>Check context_management settings in PROJECT_CONFIG.xml</solution>
+    </solutions>
+  </issue>
+  
+  <issue name="Generic AI responses">
+    <symptoms>Not following framework patterns | Missing domain expertise</symptoms>
+    <solutions>
+      <solution>Customize PROJECT_CONFIG.xml for your tech stack</solution>
+      <solution>Verify configuration is project-specific</solution>
+      <solution>Use /meta-evolve to adapt to your patterns</solution>
+    </solutions>
+  </issue>
+</troubleshooting_reference>
+```
+
+## Setup Checklist
+
+```xml
+<setup_checklist>
+  <prerequisites>
+    <item>✓ Claude Code CLI installed and authenticated</item>
+    <item>✓ Project directory with existing codebase</item>
+    <item>✓ Git repository initialized</item>
+    <item>✓ Development environment configured</item>
+  </prerequisites>
+  
+  <framework_setup>
+    <item>✓ Copy CLAUDE.md to project root</item>
+    <item>✓ Copy PROJECT_CONFIG.xml to project root</item>
+    <item>✓ Create .claude/ directory structure</item>
+    <item>✓ Customize PROJECT_CONFIG.xml for your stack</item>
+  </framework_setup>
+  
+  <validation>
+    <item>✓ Run /auto "test framework setup" to verify</item>
+    <item>✓ Try /task "simple test task" to confirm TDD</item>
+    <item>✓ Check /meta-review for any issues</item>
+    <item>✓ Verify quality gates are enforcing</item>
+  </validation>
+  
+  <optimization>
+    <item>✓ Run /meta-optimize after first week of usage</item>
+    <item>✓ Use /meta-evolve to adapt to team patterns</item>
+    <item>✓ Regular /meta-review for performance monitoring</item>
+    <item>✓ Update PROJECT_CONFIG.xml as project evolves</item>
+  </optimization>
+</setup_checklist>
+```
+
+
 # Critical Thinking Rules
 
 ```xml
@@ -263,7 +483,7 @@
     <rule>
       Scan before create | Prefer enhance over new | Document decisions
     </rule>
-    <module>patterns/duplication-prevention.md</module>
+    <module>modules/patterns/</module>
   </duplication_prevention>
   
   <verification_checklist>
@@ -292,21 +512,28 @@
 
 ```xml
 <claude_4_advanced_control version = "3.0.0" enforcement = "CRITICAL">
-  <interleaved_thinking enforcement = "MANDATORY">
-    <config>16K thinking length | Trigger: tool calls, uncertainty, complexity</config>
-    <rules>ALWAYS think before act | 5X think:act ratio | "ultrathink" = extended</rules>
-  </interleaved_thinking>
+  <purpose>Comprehensive Claude 4 optimization with advanced reasoning, prompt construction, and execution transparency</purpose>
   
-  <parallel_execution enforcement = "MANDATORY">
-    <principle>All independent operations execute simultaneously</principle>
-    <patterns>Batch tool calls | Parallel analysis | Concurrent validation</patterns>
-    <performance>Claude 4 optimized with parallel execution and thinking patterns</performance>
-  </parallel_execution>
-  
-  <context_optimization enforcement = "MANDATORY">
-    <management>Hierarchical loading | XML structured | Dynamic context</management>
-    <limits>[PROJECT_CONFIG: max_file_tokens | DEFAULT: 4K] tokens/file | [PROJECT_CONFIG: max_context_tokens | DEFAULT: 120K] total | [PROJECT_CONFIG: reserved_work_tokens | DEFAULT: 50K+] reserved for work</limits>
-  </context_optimization>
+  <core_capabilities>
+    <interleaved_thinking enforcement = "MANDATORY">
+      <config>16K thinking length | Trigger: tool calls, uncertainty, complexity</config>
+      <rules>ALWAYS think before act | 5X think:act ratio | "ultrathink" = extended</rules>
+      <critical_thinking>30-second minimum analysis with consequence mapping</critical_thinking>
+    </interleaved_thinking>
+    
+    <parallel_execution enforcement = "MANDATORY">
+      <principle>All independent operations execute simultaneously</principle>
+      <patterns>Batch tool calls | Parallel analysis | Concurrent validation</patterns>
+      <performance>Claude 4 optimized with parallel execution and thinking patterns</performance>
+      <tool_optimization>Intelligent batching | Cascaded memory 5 hops | Token efficiency</tool_optimization>
+    </parallel_execution>
+    
+    <context_optimization enforcement = "MANDATORY">
+      <management>Hierarchical loading | XML structured | Dynamic context</management>
+      <limits>[PROJECT_CONFIG: max_file_tokens | DEFAULT: 4K] tokens/file | [PROJECT_CONFIG: max_context_tokens | DEFAULT: 120K] total | [PROJECT_CONFIG: reserved_work_tokens | DEFAULT: 50K+] reserved for work</limits>
+      <structure>XML structure 4 levels | 200K context window | Token budget tracking</structure>
+    </context_optimization>
+  </core_capabilities>
   
   <extended_reasoning_capabilities enforcement = "MANDATORY">
     <purpose>Leverage Claude 4's enhanced reasoning for complex problem solving</purpose>
@@ -323,18 +550,52 @@
     </optimization_techniques>
   </extended_reasoning_capabilities>
   
+  <prompt_construction_methodology>
+    <execution_model>
+      <step order = "1">Parse command structure and extract thinking pattern checkpoints</step>
+      <step order = "2">Load required modules and validate interface contracts</step>
+      <step order = "3">Construct execution workflow with dependency resolution</step>
+      <step order = "4">Optimize context window usage through parallel execution</step>
+      <step order = "5">Execute with real-time progress tracking and error handling</step>
+    </execution_model>
+    
+    <transparency_features>
+      <workflow_preview>Visual representation of execution flow before starting</workflow_preview>
+      <progress_indicators>Real-time checkpoint completion with time estimates</progress_indicators>
+      <context_visualization>Token usage tracking with optimization suggestions</context_visualization>
+      <debug_information>Module state and decision reasoning visibility</debug_information>
+    </transparency_features>
+    
+    <lego_block_assembly>
+      <command_role>Blueprint that selects and orders execution blocks with clear dependency chains</command_role>
+      <module_role>Self-contained execution units with standardized interfaces and predictable outputs</module_role>
+      <runtime_role>Assembly engine that constructs final prompt with optimization and validation</runtime_role>
+      <integration_role>Composition coordinator that manages module interactions and state transitions</integration_role>
+    </lego_block_assembly>
+  </prompt_construction_methodology>
+  
   <behavioral_control>
     <thinking>Use thinking blocks, 3x think:act ratio minimum</thinking>
     <efficiency>Parallel tool calls MANDATORY across all operations</efficiency>
     <precision>NO assumptions - verify everything before execution</precision>
     <orchestration>Delegate to appropriate commands and modules per framework architecture</orchestration>
+    <frameworks>RISE/TRACE/CARE (foundational) | APE/CLEAR/SOAR/CRISP/SPARK (specialized)</frameworks>
   </behavioral_control>
+  
+  <performance_targets>
+    <assembly_time>Prompt construction within 5 seconds for complex workflows</assembly_time>
+    <execution_visibility>Real-time progress updates every 10 seconds</execution_visibility>
+    <context_efficiency>Significant improvement through optimized tool batching</context_efficiency>
+    <error_recovery>Sub-second failure detection with immediate recovery options</error_recovery>
+    <session_optimization>40min sessions | Strategic /compact | Cost monitoring</session_optimization>
+  </performance_targets>
   
   <hallucination_prevention enforcement = "CRITICAL">
     <temperature>Factual: [PROJECT_CONFIG: ai_temperature.factual | DEFAULT: 0.2] | Analysis: [PROJECT_CONFIG: ai_temperature.analysis | DEFAULT: 0.0-0.3] | General: 0.4-0.5 | Creative: [PROJECT_CONFIG: ai_temperature.creative | DEFAULT: 0.7-1.0]</temperature>
     <validation>Sources: 2025 only | Evidence required | "I don't know" when uncertain</validation>
     <accuracy>Ground in evidence | Conservative language | Step-by-step reasoning</accuracy>
     <protocols>Pre-publication review | Immediate correction | Iterative refinement</protocols>
+    <quality_enforcement>Evidence validation | Consequence mapping | TDD mandatory</quality_enforcement>
   </hallucination_prevention>
 </claude_4_advanced_control>
 ```
@@ -357,57 +618,48 @@
 <directory_structure enforcement = "MANDATORY" version = "3.0.0">
   <purpose>Organized framework structure with clear separation of concerns</purpose>
   
-  <prompt_engineering location = ".claude/prompt_eng/">
+  <actual_structure location = ".claude/">
     <commands location = "commands/">
       <core>Main commands (auto, task, feature, swarm, query, session, docs, protocol)</core>
       <meta>Meta-framework commands (meta-review, meta-evolve, meta-optimize, meta-govern, meta-fix)</meta>
-      <setup>Setup and initialization commands (init, context-prime, adapt, validate)</setup>
+      <setup>Setup and initialization commands (init, context-prime, chain)</setup>
     </commands>
-    <frameworks location = "frameworks/">All prompt engineering frameworks (RISE, TRACE, CARE, CLEAR, SOAR, etc.)</frameworks>
-    <personas location = "personas/">
-      <core>Core engineering personas</core>
-      <rd_engineering>R&D engineering personas (25 specialized roles)</rd_engineering>
-    </personas>
-    <patterns location = "patterns/">All pattern types consolidated - thinking, composition, visualization patterns</patterns>
     <modules location = "modules/">
-      <routing>Intelligent routing, persona management</routing>
-      <orchestration>Multi-agent coordination, swarm patterns</orchestration>
+      <patterns>Advanced patterns - thinking, composition, routing, orchestration</patterns>
+      <development>Development support modules</development>
+      <meta>Meta-framework modules</meta>
     </modules>
-  </prompt_engineering>
-  
-  <system_components location = ".claude/system/">
-    <quality>Quality gates, TDD enforcement, testing frameworks (consolidated from modules/quality)</quality>
-    <security>Security modules, threat modeling, compliance (consolidated from modules/security)</security>
-    <context>Context management, preservation, artifacts, templates (subdirectories consolidated)</context>
-    <session>Session management, compression, reliability</session>
-    <git>Git operations, conventional commits, worktree isolation</git>
-  </system_components>
-  
-  <domain_content location = ".claude/domain/">
-    <templates>Domain-specific templates (12 R&D domains)</templates>
-    <adaptation>Domain adaptation, validation, orchestration</adaptation>
-    <wizard>Domain wizard, guides, initialization</wizard>
-  </domain_content>
-  
-  <development_support location = ".claude/development/">
-    <documentation>Documentation generation, auto-docs</documentation>
-    <debugging>Debugging tools, issue reproduction</debugging>
-    <testing>Testing frameworks, iterative testing</testing>
-  </development_support>
-  
-  <meta_framework location = ".claude/meta/">
-    <evolution>Framework evolution tracking and management</evolution>
-    <optimization>Performance and workflow optimization</optimization>
-    <governance>Safety, human oversight, compliance</governance>
-    <validation>Framework validation and testing</validation>
-  </meta_framework>
+    <system location = "system/">
+      <quality>Quality gates, TDD enforcement, testing frameworks</quality>
+      <security>Security modules, threat modeling, compliance</security>
+      <context>Context management, preservation, artifacts, templates</context>
+      <session>Session management, compression, reliability</session>
+      <git>Git operations, conventional commits, worktree isolation</git>
+    </system>
+    <prompt_eng location = "prompt_eng/">
+      <frameworks>Prompt engineering frameworks</frameworks>
+    </prompt_eng>
+    <domain location = "domain/">
+      <templates>Domain-specific templates</templates>
+      <wizard>Domain wizard, guides, initialization</wizard>
+    </domain>
+    <meta location = "meta/">
+      <meta_prompting>Meta-prompting orchestration</meta_prompting>
+    </meta>
+    <sessions location = "sessions/">
+      <session_data>Session data and artifacts</session_data>
+    </sessions>
+    <templates location = "templates/">
+      <framework_templates>Framework templates</framework_templates>
+    </templates>
+  </actual_structure>
   
   <enforcement_rules priority = "CRITICAL">
-    <rule>ALL prompt engineering components MUST be in prompt_eng/</rule>
-    <rule>NO prompt patterns or commands outside prompt_eng/</rule>
-    <rule>System modules MUST be in system/ directory</rule>
+    <rule>Commands MUST be in commands/ directory</rule>
+    <rule>Modules MUST be in modules/ with patterns, development, meta subdirectories</rule>
+    <rule>System components MUST be in system/ directory</rule>
     <rule>Domain templates MUST be in domain/ directory</rule>
-    <rule>Strict separation between prompt engineering and system components</rule>
+    <rule>Strict separation between different component types</rule>
     <rule>New components MUST follow this structure or be rejected</rule>
   </enforcement_rules>
   
@@ -426,28 +678,28 @@
 ```xml
 <architecture>
   <commands location = ".claude/commands/" delegate_only = "true" enforcement = "MANDATORY">
-    <cmd name = "/auto" module = "patterns/intelligent-routing.md"/>
-    <cmd name = "/task" module = "development/task-management.md"/>
-    <cmd name = "/feature" module = "development/planning/feature-workflow.md"/>
-    <cmd name = "/swarm" module = "development/multi-agent.md"/>
-    <cmd name = "/query" module = "development/research-analysis.md"/>
-    <cmd name = "/session" module = "system/session/session-management.md"/>
-    <cmd name = "/docs" module = "development/documentation.md" critical = "true"/>
-    <cmd name = "/protocol" module = "system/session/session-management.md"/>
+    <cmd name = "/auto" module = "modules/patterns/intelligent-routing.md"/>
+    <cmd name = "/task" module = "modules/patterns/tdd-cycle-pattern.md"/>
+    <cmd name = "/feature" module = "modules/patterns/workflow-orchestration-engine.md"/>
+    <cmd name = "/swarm" module = "modules/patterns/multi-agent.md"/>
+    <cmd name = "/query" module = "modules/patterns/research-analysis-pattern.md"/>
+    <cmd name = "/session" module = "modules/patterns/session-management-pattern.md"/>
+    <cmd name = "/docs" module = "modules/patterns/documentation-pattern.md" critical = "true"/>
+    <cmd name = "/protocol" module = "modules/patterns/workflow-orchestration-engine.md"/>
     <cmd name = "/init" module = "domain/wizard/README.md"/>
     <cmd name = "/context-prime" module = "system/context/project-priming.md"/>
-    <cmd name = "/adapt" module = "domain/adaptation/template-orchestration.md"/>
-    <cmd name = "/validate" module = "domain/adaptation/adaptation-validation.md"/>
-    <cmd name = "/init-custom" module = "domain/wizard/domain-wizard.md" critical = "true"/>
-    <cmd name = "/init-new" module = "development/project-initialization.md" critical = "true"/>
-    <cmd name = "/init-research" module = "development/research-analysis.md" critical = "true"/>
-    <cmd name = "/init-validate" module = "quality/setup-validation.md" critical = "true"/>
-    <cmd name = "/chain" module = "patterns/command-chaining-architecture.md" critical = "true"/>
-    <cmd name = "/meta-review" module = "meta/framework-auditor.md" critical = "true"/>
-    <cmd name = "/meta-evolve" module = "meta/update-cycle-manager.md" critical = "true"/>
-    <cmd name = "/meta-optimize" module = "meta/continuous-optimizer.md" critical = "true"/>
-    <cmd name = "/meta-govern" module = "meta/governance-enforcer.md" critical = "true"/>
-    <cmd name = "/meta-fix" module = "meta/compliance-diagnostics.md" critical = "true"/>
+    <cmd name = "/adapt" module = "domain/templates/"/>
+    <cmd name = "/validate" module = "system/quality/adaptation-validation.md"/>
+    <cmd name = "/init-custom" module = "domain/wizard/"/>
+    <cmd name = "/init-new" module = "modules/development/"/>
+    <cmd name = "/init-research" module = "modules/patterns/research-analysis-pattern.md"/>
+    <cmd name = "/init-validate" module = "system/quality/comprehensive-validation.md"/>
+    <cmd name = "/chain" module = "modules/patterns/command-chaining-architecture.md" critical = "true"/>
+    <cmd name = "/meta-review" module = "modules/meta/"/>
+    <cmd name = "/meta-evolve" module = "modules/meta/"/>
+    <cmd name = "/meta-optimize" module = "modules/meta/"/>
+    <cmd name = "/meta-govern" module = "modules/meta/"/>
+    <cmd name = "/meta-fix" module = "modules/meta/"/>
   </commands>
   <documentation_enforcement>
     <rule priority = "CRITICAL">NEVER generate project documentation without /docs command</rule>
@@ -456,7 +708,7 @@
     <exception>CLAUDE.md updates and command documentation are allowed</exception>
   </documentation_enforcement>
   <modules location = ".claude/modules/" implement_only = "true">
-    <category name = "security|quality|development|patterns|planning|testing"/>
+    <category name = "patterns|development|meta"/>
   </modules>
 </architecture>
 ```
@@ -471,7 +723,7 @@
   <phase>3. Architect approach</phase>
   <phase>4. Run systematically</phase>
   <phase>5. Evaluate/document</phase>
-  <canonical_source>docs/framework/aware-framework.md</canonical_source>
+  <canonical_source>.claude/modules/patterns/</canonical_source>
 </aware_process>
 ```
 
@@ -479,17 +731,36 @@
 # Quality Gates
 
 ```xml
-<quality_gates>
-  <rule>TDD: RED→GREEN→REFACTOR mandatory</rule>
-  <rule>Security: Threat model first</rule>
-  <rule>Performance: [PROJECT_CONFIG: performance.response_time_p95 | DEFAULT: 200ms] p95</rule>
-  <rule>Coverage: [PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]%+ with assertions</rule>
-  <rule>Features: PRD-first approach</rule>
+<quality_gates version = "3.0.0" enforcement = "CRITICAL">
+  <purpose>Universal quality enforcement across all commands and modules with comprehensive validation and blocking controls</purpose>
+  
+  <master_mandate>ALL commands MUST validate through quality gates with BLOCKING enforcement</master_mandate>
+  
+  <critical_gates>
+    <gate name = "TDD_Compliance">
+      <cycle>RED→GREEN→REFACTOR mandatory cycle enforcement</cycle>
+      <universal_requirement>Write failing tests FIRST, implement minimal code, refactor while keeping tests green</universal_requirement>
+      <blocking_enforcement>ANY implementation before tests BLOCKS command execution</blocking_enforcement>
+      <atomic_integration>Atomic commits at each TDD phase with validation checkpoints</atomic_integration>
+    </gate>
+    <gate name = "Security_Standards">Threat model first | Zero high-severity issues</gate>
+    <gate name = "Performance_Benchmarks">[PROJECT_CONFIG: performance.response_time_p95 | DEFAULT: 200ms] p95 required</gate>
+    <gate name = "Code_Quality">[PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]%+ coverage with assertions</gate>
+    <gate name = "Features_Approach">PRD-first development approach mandatory</gate>
+  </critical_gates>
+  
   <canonical_sources>
-    <tdd>.claude/system/quality/tdd.md</tdd>
-    <security>.claude/system/security/threat-modeling.md</security>
+    <tdd>.claude/modules/patterns/tdd-cycle-pattern.md</tdd>
+    <security>.claude/system/security/</security>
     <test_coverage>.claude/system/quality/test-coverage.md</test_coverage>
+    <universal_gates>.claude/system/quality/universal-quality-gates.md</universal_gates>
   </canonical_sources>
+  
+  <orchestration>
+    <delegation>Commands delegate to quality modules for detailed validation and enforcement procedures</delegation>
+    <integration>Quality gates enforced at both command and module levels</integration>
+    <validation>Each quality gate execution gets atomic commit with validation</validation>
+  </orchestration>
 </quality_gates>
 ```
 
@@ -557,152 +828,128 @@
 ```
 
 
-# Atomic Commits & Instant Rollback Protocol
+# Agent Coordination Protocol
 
 ```xml
-<atomic_rollback_protocol version = "3.0.0" enforcement = "CRITICAL">
-  <purpose>Guarantee zero data loss with instant recovery for all framework operations</purpose>
+<agent_coordination_protocol version = "1.0.0" enforcement = "CRITICAL">
+  <purpose>Structured coordination for parallel agent execution with comprehensive tracking and quality enforcement</purpose>
   
-  <atomic_commit_strategy enforcement = "MANDATORY">
-    <principle>Every operation MUST be atomic with instant rollback capability</principle>
-    <implementation>
-      <pre_operation>git add -A && git commit -m "Pre-operation backup: [operation_name]"</pre_operation>
-      <during_operation>All changes tracked in real-time with staged commits</during_operation>
-      <post_operation>git add -A && git commit -m "Operation complete: [operation_name] - [success_criteria]"</post_operation>
-      <validation>Automated validation BEFORE committing changes</validation>
-    </implementation>
-    <commit_granularity>
-      <rule>One atomic commit per logical operation (file move, reference update, validation)</rule>
-      <rule>Never batch unrelated changes into single commit</rule>
-      <rule>Each commit MUST pass validation before proceeding</rule>
-      <rule>Commit messages MUST include rollback criteria</rule>
-    </commit_granularity>
-  </atomic_commit_strategy>
+  <communication_requirements enforcement = "MANDATORY">
+    <agent_comms_location>agent_comms/ - ALL agent communications MUST go in this root directory</agent_comms_location>
+    <coordination_tracking>agent_comms/agent-coordination-tracker.json - Simple JSON tracker for all agent coordination</coordination_tracking>
+    <output_consolidation>framework-transformation/batch{N}-results/ - Organized results per batch</output_consolidation>
+    <atomic_documentation>Each agent produces comprehensive deliverable documentation</atomic_documentation>
+  </communication_requirements>
   
-  <instant_rollback_capability enforcement = "CRITICAL">
-    <rollback_types>
-      <immediate>git reset --hard HEAD~1 (< 2 seconds)</immediate>
-      <phase_rollback>git reset --hard [phase_start_commit] (< 5 seconds)</phase_rollback>
-      <complete_rollback>git checkout main && git branch -D [migration_branch] (< 1 second)</complete_rollback>
-      <selective_rollback>git checkout HEAD~1 -- [specific_file_path] (< 3 seconds)</selective_rollback>
-    </rollback_types>
-    <rollback_triggers>
-      <script_failure>Any automation script exit code != 0</script_failure>
-      <validation_failure>Any validation threshold not met</validation_failure>
-      <user_abort>Manual user intervention or cancellation</user_abort>
-      <integrity_check_failure>File count, checksum, or structure validation failure</integrity_check_failure>
-    </rollback_triggers>
-    <rollback_validation>
-      <rule>After rollback, MUST validate return to known good state</rule>
-      <rule>MUST verify no data loss occurred during rollback</rule>
-      <rule>MUST document rollback reason and corrective actions</rule>
-      <rule>MUST test rollback procedures regularly</rule>
-    </rollback_validation>
-  </instant_rollback_capability>
+  <coordination_structure enforcement = "MANDATORY">
+    <batch_execution>Maximum 4 agents per batch for optimal parallel performance</batch_execution>
+    <agent_tracking>Real-time status updates in coordination tracker JSON</agent_tracking>
+    <quality_gates>All agents must pass TDD and quality validation before completion</quality_gates>
+    <interruption_handling>Resume from last checkpoint with full state preservation</interruption_handling>
+    <atomic_commits>Per agent completion with rollback capability</atomic_commits>
+  </coordination_structure>
   
-  <safety_guarantees enforcement = "MAXIMUM">
-    <data_protection>
-      <guarantee>ZERO data loss - all changes reversible within seconds</guarantee>
-      <guarantee>Complete operation history - every change tracked</guarantee>
-      <guarantee>State validation - automated integrity checks</guarantee>
-      <guarantee>Recovery procedures - documented rollback for every operation</guarantee>
-    </data_protection>
-    <failure_isolation>
-      <rule>Failed operations CANNOT corrupt successful operations</rule>
-      <rule>Rollback of one operation CANNOT affect other operations</rule>
-      <rule>Each operation isolated in separate git commits</rule>
-      <rule>Validation checkpoints prevent cascade failures</rule>
-    </failure_isolation>
-    <recovery_time_objectives>
-      <immediate_rollback>2 seconds maximum</immediate_rollback>
-      <phase_rollback>5 seconds maximum</phase_rollback>
-      <complete_recovery>10 seconds maximum</complete_recovery>
-      <validation_time>30 seconds maximum</validation_time>
-    </recovery_time_objectives>
-  </safety_guarantees>
+  <brutal_quality_standards enforcement = "CRITICAL" version = "2.0.0">
+    <purpose>ELIMINATE VAGUE BULLSHIT - DEMAND ACTIONABLE PROMPT ENGINEERING</purpose>
+    
+    <prompt_engineering_deliverable_requirements enforcement = "BLOCKING">
+      <working_prompts>ALL agents MUST deliver FUNCTIONAL .md prompts that can be immediately used</working_prompts>
+      <tested_prompt_patterns>Every deliverable MUST include tested prompt patterns with demonstrated results</tested_prompt_patterns>
+      <measurable_improvements>ALL performance claims MUST be backed by ACTUAL before/after prompt effectiveness</measurable_improvements>
+      <usable_modules>Agents deliver FUNCTIONAL prompt modules, not theoretical frameworks</usable_modules>
+      <validation_evidence>ALL claims MUST be supported by prompt testing and effectiveness validation</validation_evidence>
+    </prompt_engineering_deliverable_requirements>
+    
+    <prohibited_bullshit enforcement = "BLOCKING">
+      <vague_concepts>BANNED: Abstract frameworks without concrete prompt implementations</vague_concepts>
+      <unvalidated_claims>BANNED: Prompt improvements without testing evidence</unvalidated_claims>
+      <future_implementations>BANNED: "Will create prompts" - deliver WORKING prompts NOW</future_implementations>
+      <aspirational_metrics>BANNED: "Target 90% improvement" - show ACTUAL prompt testing results</aspirational_metrics>
+      <theoretical_patterns>BANNED: Prompt patterns without working examples and test results</theoretical_patterns>
+    </prohibited_bullshit>
+    
+    <prompt_quality_validation_gates enforcement = "BLOCKING">
+      <prompt_execution>Every deliverable prompt MUST be tested and produce expected outputs</prompt_execution>
+      <effectiveness_measurement>All optimization claims MUST be backed by before/after prompt performance</effectiveness_measurement>
+      <integration_testing>All prompt modules MUST integrate successfully with existing framework</integration_testing>
+      <user_effectiveness>All UX improvements MUST be validated with actual prompt usage testing</user_effectiveness>
+      <production_readiness>All deliverables MUST be ready for immediate framework deployment</production_readiness>
+    </prompt_quality_validation_gates>
+    
+    <agent_failure_criteria enforcement = "IMMEDIATE">
+      <theory_without_prompts>Agent fails if deliverables are concepts without working prompt implementations</theory_without_prompts>
+      <untested_prompts>Agent fails if prompts cannot be validated and tested</untested_prompts>
+      <unsubstantiated_claims>Agent fails if prompt effectiveness claims lack testing evidence</unsubstantiated_claims>
+      <incomplete_implementation>Agent fails if prompt modules are partial or require "future work"</incomplete_implementation>
+      <missing_validation>Agent fails if prompt testing and validation results are not provided</missing_validation>
+    </agent_failure_criteria>
+    
+    <acceptable_prompt_standards enforcement = "MANDATORY">
+      <functional_prompts>Working .md files that can be immediately used in the framework</functional_prompts>
+      <comprehensive_testing>Prompt testing with clear before/after results and effectiveness metrics</comprehensive_testing>
+      <performance_benchmarks>Before/after measurements proving prompt optimization claims</performance_benchmarks>
+      <integration_examples>Working examples showing prompt integration with existing framework</integration_examples>
+      <deployment_instructions>Clear, tested instructions for implementing prompts in production</deployment_instructions>
+    </acceptable_prompt_standards>
+    
+    <enforcement_protocol enforcement = "IMMEDIATE">
+      <agent_review>Every agent deliverable undergoes brutal quality review for prompt effectiveness</agent_review>
+      <prompt_testing>All prompts must be tested and validated in controlled environment</prompt_testing>
+      <claim_validation>All prompt effectiveness and improvement claims must be empirically verified</claim_validation>
+      <rejection_criteria>Agents delivering theoretical prompt concepts are immediately rejected and restarted</rejection_criteria>
+      <standards_escalation>Prompt quality standards increase with each batch - no regression tolerance</standards_escalation>
+    </enforcement_protocol>
+  </brutal_quality_standards>
   
-  <migration_specific_protocol enforcement = "CRITICAL">
-    <migration_branch_strategy>
-      <rule>ALL migration work MUST occur on dedicated branch</rule>
-      <rule>Main branch remains untouched until migration complete</rule>
-      <rule>Each migration phase gets atomic commit with validation</rule>
-      <rule>Full rollback available at any point via branch deletion</rule>
-    </migration_branch_strategy>
-    <validation_checkpoints>
-      <pre_migration>Validate starting state and foundation data</pre_migration>
-      <post_consolidation>Validate pattern duplication elimination</post_consolidation>
-      <post_restructure>Validate directory structure compliance</post_restructure>
-      <post_references>Validate reference integrity ≥95%</post_references>
-      <pre_merge>Validate production readiness criteria</pre_merge>
-    </validation_checkpoints>
-    <rollback_procedures>
-      <emergency>git stash && git reset --hard HEAD~1</emergency>
-      <phase_failure>git reset --hard [last_successful_phase_commit]</phase_failure>
-      <complete_abort>git checkout main && git branch -D migration-branch</complete_abort>
-      <selective_fix>git checkout HEAD~[n] -- [specific_files]</selective_fix>
-    </rollback_procedures>
-  </migration_specific_protocol>
+  <tracker_schema enforcement = "MANDATORY">
+    <coordination_meta>Session metadata, version, batch planning</coordination_meta>
+    <active_batch>Current batch status, agent progress, deliverables tracking</active_batch>
+    <batch_queue>Planned batch execution with missions and status</batch_queue>
+    <epic_progress>High-level progress tracking across all epics</epic_progress>
+    <coordination_rules>Enforcement rules and execution protocols</coordination_rules>
+  </tracker_schema>
   
-  <automation_integration enforcement = "MANDATORY">
-    <script_requirements>
-      <rule>Every automation script MUST implement atomic operations</rule>
-      <rule>Every script MUST validate success before committing</rule>
-      <rule>Every script MUST provide rollback capability</rule>
-      <rule>Every script MUST log operations for audit trail</rule>
-    </script_requirements>
-    <error_handling>
-      <rule>Script failure TRIGGERS immediate rollback</rule>
-      <rule>Validation failure BLOCKS commit and triggers rollback</rule>
-      <rule>User abort PRESERVES current state and offers rollback</rule>
-      <rule>System error ACTIVATES emergency rollback procedures</rule>
-    </error_handling>
-    <monitoring>
-      <rule>Real-time monitoring of all git operations</rule>
-      <rule>Automated detection of rollback triggers</rule>
-      <rule>Continuous validation of repository integrity</rule>
-      <rule>Alert system for any rollback activations</rule>
-    </monitoring>
-  </automation_integration>
+  <execution_workflow enforcement = "MANDATORY">
+    <pre_batch>Update tracker with batch initialization and agent assignments</pre_batch>
+    <during_execution>Real-time status updates as agents complete tasks</during_execution>
+    <post_completion>Consolidate results, validate quality, commit atomically</post_completion>
+    <between_batches>Compile results, update epic progress, prepare next batch</between_batches>
+  </execution_workflow>
   
-  <implementation_commands enforcement = "REFERENCE">
-    <backup_commands>
-      <pre_operation>git add -A && git commit -m "Backup: Pre-[operation] state"</pre_operation>
-      <checkpoint>git add -A && git commit -m "Checkpoint: [operation] phase complete"</checkpoint>
-      <validation>git add -A && git commit -m "Validated: [operation] success criteria met"</validation>
-    </backup_commands>
-    <rollback_commands>
-      <immediate>git reset --hard HEAD~1</immediate>
-      <to_checkpoint>git reset --hard [checkpoint_commit_hash]</to_checkpoint>
-      <file_specific>git checkout HEAD~1 -- [file_path]</file_specific>
-      <branch_abort>git checkout main && git branch -D [working_branch]</branch_abort>
-    </rollback_commands>
-    <validation_commands>
-      <state_check>git status && git log --oneline -5</state_check>
-      <integrity_check>git fsck && git gc</integrity_check>
-      <file_count>find .claude -name "*.md" | wc -l</file_count>
-      <structure_check>tree .claude -d -L 3</structure_check>
-    </validation_commands>
-  </implementation_commands>
+  <integration_with_existing_framework enforcement = "MANDATORY">
+    <file_discipline>Agent communications respect file organization rules</file_discipline>
+    <quality_gates>Agent coordination must pass universal quality gates</quality_gates>
+    <atomic_commits>Integration with existing atomic rollback protocol</atomic_commits>
+    <tdd_enforcement>All agent outputs subject to TDD validation</tdd_enforcement>
+    <github_workflow>Large multi-agent operations create GitHub issues for tracking</github_workflow>
+  </integration_with_existing_framework>
   
-  <quality_integration>
-    <tdd_compliance>Atomic commits support TDD cycle: RED→commit→GREEN→commit→REFACTOR→commit</tdd_compliance>
-    <quality_gates>Each commit MUST pass quality validation before acceptance</quality_gates>
-    <coverage_protection>Rollback triggered if test coverage drops below threshold</coverage_protection>
-    <security_validation>All commits scanned for security issues before acceptance</security_validation>
-  </quality_integration>
-</atomic_rollback_protocol>
+  <parallel_optimization enforcement = "MANDATORY">
+    <task_batching>Use Task() calls for parallel agent execution</task_batching>
+    <resource_allocation>Balanced workload distribution across agents</resource_allocation>
+    <coordination_efficiency>Minimal overhead coordination protocol</coordination_efficiency>
+    <quality_preservation>Parallel execution maintains quality standards</quality_preservation>
+  </parallel_optimization>
+</agent_coordination_protocol>
 ```
 
 
-# Universal Atomic Commits Enforcement
+# Atomic Commits & Instant Rollback Protocol
 
 ```xml
-<universal_atomic_commits enforcement = "CRITICAL" version = "3.0.2">
-  <purpose>Embed atomic commits with instant rollback into ALL framework processes, ensuring zero data loss across every development workflow</purpose>
+<atomic_rollback_protocol version = "3.0.2" enforcement = "CRITICAL">
+  <purpose>Guarantee zero data loss with instant recovery for all framework operations, embedded into every development workflow</purpose>
+  
+  <core_principles enforcement = "MANDATORY">
+    <atomic_strategy>Every operation MUST be atomic with instant rollback capability</atomic_strategy>
+    <zero_data_loss>All changes reversible within seconds with complete operation history</zero_data_loss>
+    <framework_integration>Embedded into ALL framework processes and commands</framework_integration>
+    <performance_targets>Commit <1s, Rollback <2s, Validation <5s, Recovery <10s</performance_targets>
+  </core_principles>
   
   <framework_wide_integration enforcement = "MANDATORY">
     <development_workflows>
-      <tdd_cycle>RED→commit→GREEN→commit→REFACTOR→commit (atomic TDD enforcement)</tdd_cycle>
+      <tdd_workflow>Atomic commits at each TDD phase with validation checkpoints</tdd_workflow>
       <feature_development>Planning→commit→Implementation→commit→Validation→commit (atomic feature phases)</feature_development>
       <code_changes>Analysis→commit→Modification→commit→Testing→commit (atomic change management)</code_changes>
       <quality_gates>Pre-check→commit→Validation→commit→Post-check→commit (atomic quality enforcement)</quality_gates>
@@ -776,14 +1023,17 @@
     </development_modules>
   </module_atomic_patterns>
   
-  <enhanced_rollback_capabilities enforcement = "CRITICAL">
-    <instant_rollback_types>
+  <comprehensive_rollback_capabilities enforcement = "CRITICAL">
+    <rollback_types>
+      <immediate>git reset --hard HEAD~1 # Rollback last operation (< 2 seconds)</immediate>
+      <phase_rollback>git reset --hard [phase_start_commit] # Rollback to phase start (< 5 seconds)</phase_rollback>
       <command_rollback>git reset --hard HEAD~1 # Rollback last command operation</command_rollback>
-      <phase_rollback>git reset --hard [phase_start_commit] # Rollback to phase start</phase_rollback>
       <module_rollback>git checkout HEAD~1 -- [module_files] # Rollback specific module changes</module_rollback>
       <quality_rollback>git reset --hard [last_passing_quality_commit] # Rollback to passing quality</quality_rollback>
+      <complete_rollback>git checkout main && git branch -D [migration_branch] # Complete abort (< 1 second)</complete_rollback>
+      <selective_rollback>git checkout HEAD~1 -- [specific_file_path] # Selective file rollback (< 3 seconds)</selective_rollback>
       <emergency_rollback>git stash && git reset --hard [safe_state_commit] # Emergency full rollback</emergency_rollback>
-    </instant_rollback_types>
+    </rollback_types>
     
     <rollback_triggers>
       <automatic_triggers>
@@ -791,6 +1041,9 @@
         <quality_failure>Quality gate failures trigger rollback to passing quality state</quality_failure>
         <security_failure>Security violations trigger immediate rollback to safe state</security_failure>
         <coverage_failure>Coverage drops trigger rollback to coverage-compliant state</coverage_failure>
+        <script_failure>Any automation script exit code != 0</script_failure>
+        <validation_failure>Any validation threshold not met</validation_failure>
+        <integrity_check_failure>File count, checksum, or structure validation failure</integrity_check_failure>
       </automatic_triggers>
       <manual_triggers>
         <user_abort>User intervention triggers safe rollback with state preservation</user_abort>
@@ -804,10 +1057,63 @@
       <data_integrity>Rollback procedures validate no data loss occurred</data_integrity>
       <functionality_check>Rollback validation includes functionality verification</functionality_check>
       <audit_trail>All rollback operations logged with reason and recovery actions</audit_trail>
+      <rule>After rollback, MUST validate return to known good state</rule>
+      <rule>MUST verify no data loss occurred during rollback</rule>
+      <rule>MUST document rollback reason and corrective actions</rule>
+      <rule>MUST test rollback procedures regularly</rule>
     </rollback_validation>
-  </enhanced_rollback_capabilities>
+  </comprehensive_rollback_capabilities>
   
-  <integration_with_existing_framework enforcement = "MANDATORY">
+  <safety_guarantees enforcement = "MAXIMUM">
+    <data_protection>
+      <guarantee>ZERO data loss - all changes reversible within seconds</guarantee>
+      <guarantee>Complete operation history - every change tracked</guarantee>
+      <guarantee>State validation - automated integrity checks</guarantee>
+      <guarantee>Recovery procedures - documented rollback for every operation</guarantee>
+    </data_protection>
+    <failure_isolation>
+      <rule>Failed operations CANNOT corrupt successful operations</rule>
+      <rule>Rollback of one operation CANNOT affect other operations</rule>
+      <rule>Each operation isolated in separate git commits</rule>
+      <rule>Validation checkpoints prevent cascade failures</rule>
+    </failure_isolation>
+    <performance_guarantees>
+      <commit_speed>Atomic commits complete within 1 second</commit_speed>
+      <rollback_speed>Rollback operations complete within 2 seconds</rollback_speed>
+      <validation_speed>Validation checkpoints complete within 5 seconds</validation_speed>
+      <recovery_speed>Error recovery with rollback completes within 10 seconds</recovery_speed>
+    </performance_guarantees>
+  </safety_guarantees>
+  
+  <implementation_integration enforcement = "MANDATORY">
+    <commit_granularity>
+      <rule>One atomic commit per logical operation (file move, reference update, validation)</rule>
+      <rule>Never batch unrelated changes into single commit</rule>
+      <rule>Each commit MUST pass validation before proceeding</rule>
+      <rule>Commit messages MUST include rollback criteria</rule>
+    </commit_granularity>
+    
+    <automation_integration>
+      <script_requirements>
+        <rule>Every automation script MUST implement atomic operations</rule>
+        <rule>Every script MUST validate success before committing</rule>
+        <rule>Every script MUST provide rollback capability</rule>
+        <rule>Every script MUST log operations for audit trail</rule>
+      </script_requirements>
+      <error_handling>
+        <rule>Script failure TRIGGERS immediate rollback</rule>
+        <rule>Validation failure BLOCKS commit and triggers rollback</rule>
+        <rule>User abort PRESERVES current state and offers rollback</rule>
+        <rule>System error ACTIVATES emergency rollback procedures</rule>
+      </error_handling>
+      <monitoring>
+        <rule>Real-time monitoring of all git operations</rule>
+        <rule>Automated detection of rollback triggers</rule>
+        <rule>Continuous validation of repository integrity</rule>
+        <rule>Alert system for any rollback activations</rule>
+      </monitoring>
+    </automation_integration>
+    
     <module_runtime_engine>
       <atomic_composition>Module composition uses atomic transactions with rollback capability</atomic_composition>
       <checkpoint_validation>Runtime checkpoints trigger atomic commits with validation</checkpoint_validation>
@@ -825,24 +1131,52 @@
       <enforcement_safety>Quality enforcement uses atomic commits with rollback capability</enforcement_safety>
       <compliance_tracking>Quality compliance tracked with atomic audit commits</compliance_tracking>
     </quality_gate_enforcement>
-  </integration_with_existing_framework>
+  </implementation_integration>
   
-  <performance_and_safety_targets enforcement = "MANDATORY">
-    <performance_targets>
-      <commit_speed>Atomic commits complete within 1 second</commit_speed>
-      <rollback_speed>Rollback operations complete within 2 seconds</rollback_speed>
-      <validation_speed>Validation checkpoints complete within 5 seconds</validation_speed>
-      <recovery_speed>Error recovery with rollback completes within 10 seconds</recovery_speed>
-    </performance_targets>
+  <migration_and_production_protocols enforcement = "CRITICAL">
+    <migration_branch_strategy>
+      <rule>ALL migration work MUST occur on dedicated branch</rule>
+      <rule>Main branch remains untouched until migration complete</rule>
+      <rule>Each migration phase gets atomic commit with validation</rule>
+      <rule>Full rollback available at any point via branch deletion</rule>
+    </migration_branch_strategy>
     
-    <safety_guarantees>
-      <zero_data_loss>GUARANTEED: No data loss during any framework operation</zero_data_loss>
-      <instant_recovery>GUARANTEED: Instant rollback capability at any point</instant_recovery>
-      <state_integrity>GUARANTEED: Consistent state maintenance across all operations</state_integrity>
-      <operation_isolation>GUARANTEED: Failed operations cannot corrupt successful ones</operation_isolation>
-    </safety_guarantees>
-  </performance_and_safety_targets>
-</universal_atomic_commits>
+    <validation_checkpoints>
+      <pre_migration>Validate starting state and foundation data</pre_migration>
+      <post_consolidation>Validate pattern duplication elimination</post_consolidation>
+      <post_restructure>Validate directory structure compliance</post_restructure>
+      <post_references>Validate reference integrity ≥95%</post_references>
+      <pre_merge>Validate production readiness criteria</pre_merge>
+    </validation_checkpoints>
+  </migration_and_production_protocols>
+  
+  <reference_commands enforcement = "REFERENCE">
+    <backup_commands>
+      <pre_operation>git add -A && git commit -m "Backup: Pre-[operation] state"</pre_operation>
+      <checkpoint>git add -A && git commit -m "Checkpoint: [operation] phase complete"</checkpoint>
+      <validation>git add -A && git commit -m "Validated: [operation] success criteria met"</validation>
+    </backup_commands>
+    <rollback_commands>
+      <immediate>git reset --hard HEAD~1</immediate>
+      <to_checkpoint>git reset --hard [checkpoint_commit_hash]</to_checkpoint>
+      <file_specific>git checkout HEAD~1 -- [file_path]</file_specific>
+      <branch_abort>git checkout main && git branch -D [working_branch]</branch_abort>
+    </rollback_commands>
+    <validation_commands>
+      <state_check>git status && git log --oneline -5</state_check>
+      <integrity_check>git fsck && git gc</integrity_check>
+      <file_count>find .claude -name "*.md" | wc -l</file_count>
+      <structure_check>tree .claude -d -L 3</structure_check>
+    </validation_commands>
+  </reference_commands>
+  
+  <quality_integration>
+    <tdd_integration>Atomic commits support TDD cycle with validation at each phase</tdd_integration>
+    <quality_gates>Each commit MUST pass quality validation before acceptance</quality_gates>
+    <coverage_protection>Rollback triggered if test coverage drops below threshold</coverage_protection>
+    <security_validation>All commits scanned for security issues before acceptance</security_validation>
+  </quality_integration>
+</atomic_rollback_protocol>
 ```
 
 
@@ -968,21 +1302,6 @@
 ```
 
 
-# Quality Gate Enforcement
-
-```xml
-<quality_gate_enforcement>
-  <canonical_source>.claude/system/quality/universal-quality-gates.md</canonical_source>
-  <master_mandate>ALL commands MUST validate through quality gates with BLOCKING enforcement</master_mandate>
-  <critical_gates>
-    <gate>TDD Compliance: RED→GREEN→REFACTOR mandatory</gate>
-    <gate>Security Standards: Zero high-severity issues</gate>
-    <gate>Performance Benchmarks: [PROJECT_CONFIG: performance.response_time_p95 | DEFAULT: 200ms] p95 required</gate>
-    <gate>Code Quality: [PROJECT_CONFIG: test_coverage.threshold | DEFAULT: 90]%+ coverage required</gate>
-  </critical_gates>
-  <orchestration>Commands delegate to quality modules for detailed validation and enforcement procedures</orchestration>
-</quality_gate_enforcement>
-```
 
 
 # Archive Management
@@ -1090,16 +1409,6 @@
 ```
 
 
-# Advanced Prompt Optimization
-
-```xml
-<prompt_optimization enforcement = "CRITICAL">
-  <claude_4>XML structure 4 levels | Parallel execution | 16K thinking | 200K context</claude_4>
-  <frameworks>RISE/TRACE/CARE (foundational) | APE/CLEAR/SOAR/CRISP/SPARK (specialized)</frameworks>
-  <performance>Intelligent batching | Cascaded memory 5 hops | 40min sessions | Token efficiency</performance>
-  <quality>30s thinking | Consequence mapping | Evidence validation | TDD mandatory</quality>
-</prompt_optimization>
-```
 
 
 # Command-Module Integration
@@ -1141,7 +1450,7 @@
     <thinking_engine>Checkpoint patterns | TDD mandatory | 30s critical thinking | Validation gates</thinking_engine>
     <composition>Discovery→Loading→Orchestration→Integration | Topological sorting | State isolation</composition>
     <quality_gates>Foundational | Development | Coordination | Documentation | Analysis</quality_gates>
-    <sources>patterns/thinking-pattern-template.md | patterns/module-composition-framework.md | quality/universal-quality-gates.md</sources>
+    <sources>modules/patterns/thinking-pattern-template.md | modules/patterns/module-composition-framework.md | system/quality/universal-quality-gates.md</sources>
   </runtime_architecture>
   
   <command_runtime_specification>
@@ -1157,13 +1466,10 @@
     </implementations>
   </command_runtime_specification>
   
-  <tdd_enforcement>
-    <canonical_source>.claude/system/quality/tdd.md</canonical_source>
-    <master_mandate>RED→GREEN→REFACTOR cycle MANDATORY for ALL development commands</master_mandate>
-    <universal_requirement>Write failing tests FIRST, implement minimal code, refactor while keeping tests green</universal_requirement>
-    <blocking_enforcement>ANY implementation before tests BLOCKS command execution</blocking_enforcement>
-    <orchestration>Commands delegate to TDD module for detailed cycle enforcement and validation procedures</orchestration>
-  </tdd_enforcement>
+  <tdd_integration>
+    <canonical_source>.claude/modules/patterns/tdd-cycle-pattern.md</canonical_source>
+    <enforcement>Commands delegate to TDD module for detailed cycle enforcement and validation procedures</enforcement>
+  </tdd_integration>
   
   <execution_optimization>
     <parallel>Tool batching | Independent modules | Dependency optimization</parallel>
@@ -1186,10 +1492,10 @@
     </core_framework_integration>
     
     <module_dependencies>
-      <thinking_patterns>patterns/thinking-pattern-template.md for standardized checkpoints</thinking_patterns>
-      <composition_framework>patterns/module-composition-framework.md for runtime orchestration</composition_framework>
-      <quality_gates>quality/universal-quality-gates.md for comprehensive validation</quality_gates>
-      <tdd_enforcement>quality/tdd.md for strict test-driven development</tdd_enforcement>
+      <thinking_patterns>modules/patterns/thinking-pattern-template.md for standardized checkpoints</thinking_patterns>
+      <composition_framework>modules/patterns/module-composition-framework.md for runtime orchestration</composition_framework>
+      <quality_gates>system/quality/universal-quality-gates.md for comprehensive validation</quality_gates>
+      <tdd_enforcement>modules/patterns/tdd-cycle-pattern.md for strict test-driven development</tdd_enforcement>
     </module_dependencies>
   </integration_points>
   
@@ -1210,72 +1516,6 @@
 ```
 
 
-# Prompt Construction Methodology
-
-```xml
-<prompt_construction_methodology version = "3.0.0" enforcement = "CRITICAL">
-  <purpose>Make Claude 4 prompt construction and execution transparent through visualization, interface contracts, and runtime dashboards</purpose>
-  
-  <visualization_requirements>
-    <execution_preview>Show assembled workflow BEFORE execution with visual flow diagrams</execution_preview>
-    <runtime_dashboard>Live progress tracking through checkpoints with real-time status updates</runtime_dashboard>
-    <context_budget>Token usage visualization and optimization with performance metrics</context_budget>
-    <error_boundaries>Clear failure points and recovery options with escalation paths</error_boundaries>
-  </visualization_requirements>
-
-  <lego_block_assembly>
-    <command_role>Blueprint that selects and orders execution blocks with clear dependency chains</command_role>
-    <module_role>Self-contained execution units with standardized interfaces and predictable outputs</module_role>
-    <runtime_role>Assembly engine that constructs final prompt with optimization and validation</runtime_role>
-    <integration_role>Composition coordinator that manages module interactions and state transitions</integration_role>
-  </lego_block_assembly>
-  
-  <claude_4_execution_model>
-    <prompt_assembly>
-      <step order = "1">Parse command structure and extract thinking pattern checkpoints</step>
-      <step order = "2">Load required modules and validate interface contracts</step>
-      <step order = "3">Construct execution workflow with dependency resolution</step>
-      <step order = "4">Optimize context window usage through parallel execution</step>
-      <step order = "5">Execute with real-time progress tracking and error handling</step>
-    </prompt_assembly>
-    
-    <thinking_integration>
-      <checkpoint_execution>Each checkpoint validates conditions before proceeding</checkpoint_execution>
-      <critical_thinking>30-second minimum analysis with consequence mapping</critical_thinking>
-      <decision_points>Explicit branching logic based on context and conditions</decision_points>
-      <validation_gates>Quality gates enforced at each execution boundary</validation_gates>
-    </thinking_integration>
-    
-    <runtime_optimization>
-      <parallel_execution>Batch tool calls for significant performance improvement</parallel_execution>
-      <context_management>Token budget tracking with predictive optimization</context_management>
-      <error_recovery>Graceful degradation with fallback execution paths</error_recovery>
-      <state_isolation>Module boundaries prevent cascade failures</state_isolation>
-    </runtime_optimization>
-  </claude_4_execution_model>
-  
-  <transparency_features>
-    <workflow_preview>Visual representation of execution flow before starting</workflow_preview>
-    <progress_indicators>Real-time checkpoint completion with time estimates</progress_indicators>
-    <context_visualization>Token usage tracking with optimization suggestions</context_visualization>
-    <debug_information>Module state and decision reasoning visibility</debug_information>
-  </transparency_features>
-  
-  <performance_targets>
-    <assembly_time>Prompt construction within 5 seconds for complex workflows</assembly_time>
-    <execution_visibility>Real-time progress updates every 10 seconds</execution_visibility>
-    <context_efficiency>Significant improvement through optimized tool batching</context_efficiency>
-    <error_recovery>Sub-second failure detection with immediate recovery options</error_recovery>
-  </performance_targets>
-  
-  <integration_points>
-    <module_runtime_engine>Leverages existing module composition framework</module_runtime_engine>
-    <quality_gates>Integrates with universal quality gate enforcement</quality_gates>
-    <tdd_methodology>Visualizes test-driven development workflows</tdd_methodology>
-    <session_management>Coordinates with GitHub issue tracking</session_management>
-  </integration_points>
-</prompt_construction_methodology>
-```
 
 
 # Claude Code Integration
@@ -1290,11 +1530,25 @@
 ```
 
 
-# Meta-Prompting Framework
+# Meta-Framework Control
 
 ```xml
-<meta_prompting_framework version = "3.0.0" enforcement = "CRITICAL">
-  <purpose>Comprehensive framework management through intelligent meta-prompting with self-improvement capabilities</purpose>
+<meta_framework_control version = "3.0.0" enforcement = "CRITICAL">
+  <purpose>Self-improving, adaptive framework evolution with comprehensive management capabilities, safety boundaries, and human oversight</purpose>
+  
+  <meta_architecture>
+    <stable_core immutable = "true">8 commands | 64 modules | Quality gates | Thinking patterns</stable_core>
+    <enhancement mutable = "true">Learning | Adaptation | Optimization | Generation engines</enhancement>
+    <safety enforcement = "MANDATORY">Boundary protection | Human oversight | Rollback | Monitoring</safety>
+    <intelligent_routing>Meta commands route to specialized modules for implementation</intelligent_routing>
+    <continuous_learning>Meta-operations learn and improve from experience</continuous_learning>
+  </meta_architecture>
+  
+  <self_improvement enforcement = "MANDATORY">
+    <cycle>Analysis→Recognition→Generation→Validation→Implementation→Evaluation</cycle>
+    <boundaries>Immutable core | Additive only | 5%/week limit | Human approval | 60s rollback</boundaries>
+    <control>Incremental changes | 99.9% stability | Performance monitoring | Human override</control>
+  </self_improvement>
   
   <meta_commands enforcement = "MANDATORY">
     <meta_review>
@@ -1333,73 +1587,23 @@
     </meta_fix>
   </meta_commands>
   
-  <meta_architecture>
-    <intelligent_routing>Meta commands route to specialized modules for implementation</intelligent_routing>
-    <safety_integration>All meta operations respect framework safety boundaries</safety_integration>
-    <human_oversight>Human authority maintained over all meta-operations</human_oversight>
-    <continuous_learning>Meta-operations learn and improve from experience</continuous_learning>
-  </meta_architecture>
-  
-  <meta_capabilities>
-    <framework_evolution>Self-improving framework with controlled evolution cycles</framework_evolution>
-    <compliance_enforcement>Automated compliance monitoring and correction</compliance_enforcement>
-    <performance_optimization>Continuous optimization based on usage patterns</performance_optimization>
-    <governance_integration>Comprehensive governance with human oversight</governance_integration>
-  </meta_capabilities>
-  
-  <integration_points>
-    <existing_commands>Meta commands complement existing command set</existing_commands>
-    <module_runtime>Integration with Module Runtime Engine for execution</module_runtime>
-    <quality_gates>Meta operations enforce universal quality gates</quality_gates>
-    <safety_boundaries>Meta operations respect all safety boundaries</safety_boundaries>
-  </integration_points>
-</meta_prompting_framework>
-```
-
-
-# Security and Performance Optimization
-
-```xml
-<security_performance enforcement = "CRITICAL">
-  <security>Data minimization | Ephemeral contexts | Role-based access | Operation logging | Threat modeling | Secure defaults</security>
-  <performance>Hierarchical prioritization | XML compression | Lazy loading | 50K+ budget | 40min sessions | Parallel execution</performance>
-  <optimization>Concurrent batching | Pipeline optimization | Validation checkpoints | Multi-perspective analysis</optimization>
-</security_performance>
-```
-
-**Remember**: Critical thinking partner. Research deeply. Challenge assumptions. Map consequences.
-
-
-# Meta Framework Control
-
-```xml
-<meta_framework_control version = "3.0.0" enforcement = "CRITICAL">
-  <purpose>Self-improving, adaptive framework evolution with safety boundaries and human oversight</purpose>
-  
-  <meta_architecture>
-    <stable_core immutable = "true">8 commands | 60+ modules | Quality gates | Thinking patterns</stable_core>
-    <enhancement mutable = "true">Learning | Adaptation | Optimization | Generation engines</enhancement>
-    <safety enforcement = "MANDATORY">Boundary protection | Human oversight | Rollback | Monitoring</safety>
-  </meta_architecture>
-  
-  <self_improvement enforcement = "MANDATORY">
-    <cycle>Analysis→Recognition→Generation→Validation→Implementation→Evaluation</cycle>
-    <boundaries>Immutable core | Additive only | 5%/week limit | Human approval | 60s rollback</boundaries>
-    <control>Incremental changes | 99.9% stability | Performance monitoring | Human override</control>
-  </self_improvement>
-  
-  <meta_commands enforcement = "MANDATORY">
-    <analyze>Pattern analysis and optimization opportunities</analyze>
-    <optimize>Implement approved enhancements with monitoring</optimize>
-    <evolve>Framework evolution with human approval</evolve>
-    <rollback>Stability restoration and failure analysis</rollback>
-  </meta_commands>
-  
   <meta_modules enforcement = "MANDATORY">
     <safety>safety-validator | human-oversight | stability-monitor</safety>
     <intelligence>pattern-recognizer | performance-optimizer | module-generator</intelligence>
     <evolution>framework-evolver | learning-integrator | adaptation-engine</evolution>
   </meta_modules>
+  
+  <revolutionary_capabilities>
+    <framework_evolution>Self-improving framework with controlled evolution cycles</framework_evolution>
+    <compliance_enforcement>Automated compliance monitoring and correction</compliance_enforcement>
+    <performance_optimization>Continuous optimization based on usage patterns</performance_optimization>
+    <governance_integration>Comprehensive governance with human oversight</governance_integration>
+    <pattern_recognition>Automatically identifies and optimizes usage patterns</pattern_recognition>
+    <intelligent_failure_recovery>Learns from failures and prevents recurrence</intelligent_failure_recovery>
+    <context_aware_generation>Generates modules and workflows based on needs</context_aware_generation>
+    <predictive_enhancement>Anticipates needs and pre-optimizes workflows</predictive_enhancement>
+    <adaptive_routing>Command routing improves based on success patterns</adaptive_routing>
+  </revolutionary_capabilities>
   
   <human_ai_collaboration enforcement = "CRITICAL">
     <authority>Ultimate control | Override capability | Approval gates | Full transparency</authority>
@@ -1412,12 +1616,21 @@
     <stability>99.9% uptime | Zero regression | 60s rollback | Instant human override</stability>
   </performance_targets>
   
+  <safety_guarantees>
+    <stability_preservation>Core framework stability maintained at 99.9%</stability_preservation>
+    <human_control>Human authority over all meta-operations</human_control>
+    <rollback_capability>60-second rollback for any problematic change</rollback_capability>
+    <boundary_enforcement>Immutable core protection with safety boundaries</boundary_enforcement>
+  </safety_guarantees>
+  
   <integration_points>
     <core_framework>
       <claude_4_control>Meta-capabilities leverage Claude 4 advanced features</claude_4_control>
       <module_runtime>Integration with existing module runtime engine</module_runtime>
       <quality_gates>Meta-changes must pass all existing quality gates</quality_gates>
       <command_orchestration>Meta-commands integrate with existing command system</command_orchestration>
+      <existing_commands>Meta commands complement existing command set</existing_commands>
+      <safety_boundaries>Meta operations respect all safety boundaries</safety_boundaries>
     </core_framework>
     
     <data_structures>
@@ -1437,27 +1650,14 @@
 ```
 
 
-# Meta-Enhanced Framework Capabilities
+# Security and Performance Optimization
 
 ```xml
-<meta_capabilities>
-  <current_state>Static, manually-maintained framework</current_state>
-  <enhanced_state>Self-improving, adaptive, learning framework</enhanced_state>
-  
-  <revolutionary_features>
-    <pattern_recognition>Automatically identifies and optimizes usage patterns</pattern_recognition>
-    <performance_optimization>Real-time efficiency improvements based on usage data</performance_optimization>
-    <intelligent_failure_recovery>Learns from failures and prevents recurrence</intelligent_failure_recovery>
-    <context_aware_generation>Generates modules and workflows based on needs</context_aware_generation>
-    <predictive_enhancement>Anticipates needs and pre-optimizes workflows</predictive_enhancement>
-    <adaptive_routing>Command routing improves based on success patterns</adaptive_routing>
-  </revolutionary_features>
-  
-  <safety_guarantees>
-    <stability_preservation>Core framework stability maintained at 99.9%</stability_preservation>
-    <human_control>Human authority over all meta-operations</human_control>
-    <rollback_capability>60-second rollback for any problematic change</rollback_capability>
-    <boundary_enforcement>Immutable core protection with safety boundaries</boundary_enforcement>
-  </safety_guarantees>
-</meta_capabilities>
+<security_performance enforcement = "CRITICAL">
+  <security>Data minimization | Ephemeral contexts | Role-based access | Operation logging | Threat modeling | Secure defaults</security>
+  <performance>Hierarchical prioritization | XML compression | Lazy loading | 50K+ budget | 40min sessions | Parallel execution</performance>
+  <optimization>Concurrent batching | Pipeline optimization | Validation checkpoints | Multi-perspective analysis</optimization>
+</security_performance>
 ```
+
+**Remember**: Critical thinking partner. Research deeply. Challenge assumptions. Map consequences.

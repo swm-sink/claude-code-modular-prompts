@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Node.js/Express Project Configuration
+  
+  This configuration is optimized for Node.js Express applications with TypeScript,
+  Jest testing, and MongoDB or PostgreSQL.
+  
+  Copy this file to your Node.js project root as PROJECT_CONFIG.xml
+  and customize the values for your specific project.
+-->
+
+<project_config>
+  <project_metadata>
+    <name>my-express-api</name>
+    <version>1.0.0</version>
+    <description>Node.js Express API with TypeScript</description>
+    <repository>https://github.com/yourorg/my-express-api</repository>
+  </project_metadata>
+
+  <tech_stack>
+    <primary_language>typescript</primary_language>
+    <framework>express</framework>
+    <database>mongodb</database>
+    <additional_tech>
+      <tech>mongoose</tech>
+      <tech>redis</tech>
+      <tech>passport</tech>
+      <tech>helmet</tech>
+      <tech>compression</tech>
+    </additional_tech>
+  </tech_stack>
+
+  <project_structure>
+    <source_directory>src</source_directory>
+    <test_directory>tests</test_directory>
+    <docs_directory>docs</docs_directory>
+    <scripts_directory>scripts</scripts_directory>
+    <config_directory>config</config_directory>
+    <static_directory>public</static_directory>
+    <templates_directory>views</templates_directory>
+  </project_structure>
+
+  <commands>
+    <test>npm test -- --coverage --watchAll=false</test>
+    <lint>eslint src tests --ext .ts,.js &amp;&amp; prettier --check src tests</lint>
+    <build>npm run build</build>
+    <format>prettier --write src tests &amp;&amp; eslint src tests --ext .ts,.js --fix</format>
+    <dev_server>npm run dev</dev_server>
+    <migrate>npm run migrate</migrate>
+    <install>npm install</install>
+  </commands>
+
+  <quality_standards>
+    <test_coverage>
+      <threshold>85</threshold>
+      <enforcement>blocking</enforcement>
+    </test_coverage>
+    <performance>
+      <response_time_p95>250</response_time_p95>
+      <memory_limit>256</memory_limit>
+    </performance>
+    <code_quality>
+      <max_complexity>8</max_complexity>
+      <max_line_length>100</max_line_length>
+    </code_quality>
+  </quality_standards>
+
+  <framework_behavior>
+    <file_creation_policy>moderate</file_creation_policy>
+    <test_first_enforcement>strict</test_first_enforcement>
+    <context_management>
+      <max_file_tokens>3500</max_file_tokens>
+      <max_context_tokens>115000</max_context_tokens>
+      <reserved_work_tokens>45000</reserved_work_tokens>
+    </context_management>
+  </framework_behavior>
+
+  <ai_temperature>
+    <factual>0.2</factual>
+    <analysis>0.3</analysis>
+    <creative>0.6</creative>
+  </ai_temperature>
+
+  <security>
+    <security_scanning>true</security_scanning>
+    <dependency_scanning>true</dependency_scanning>
+    <secrets_detection>true</secrets_detection>
+  </security>
+
+  <development_workflow>
+    <git_workflow>github-flow</git_workflow>
+    <branch_naming>feature/endpoint-name</branch_naming>
+    <commit_format>conventional</commit_format>
+    <code_review>
+      <required>true</required>
+      <min_reviewers>1</min_reviewers>
+    </code_review>
+  </development_workflow>
+
+  <testing_strategy>
+    <test_types>
+      <unit_tests>true</unit_tests>
+      <integration_tests>true</integration_tests>
+      <end_to_end_tests>true</end_to_end_tests>
+    </test_types>
+    <test_framework>
+      <name>jest</name>
+      <config_file>jest.config.js</config_file>
+    </test_framework>
+  </testing_strategy>
+
+  <deployment>
+    <strategy>ci-cd</strategy>
+    <environments>
+      <environment>
+        <name>development</name>
+        <url>http://localhost:3000</url>
+      </environment>
+      <environment>
+        <name>staging</name>
+        <url>https://staging-api.myapp.com</url>
+      </environment>
+      <environment>
+        <name>production</name>
+        <url>https://api.myapp.com</url>
+      </environment>
+    </environments>
+  </deployment>
+
+  <team>
+    <size>small</size>
+    <methodology>agile</methodology>
+    <communication>
+      <issue_tracking>github</issue_tracking>
+      <documentation_style>jsdoc</documentation_style>
+    </communication>
+  </team>
+
+  <integrations>
+    <services>
+      <service>
+        <name>github</name>
+        <enabled>true</enabled>
+        <config>
+          <issue_tracking>true</issue_tracking>
+          <pr_automation>true</pr_automation>
+        </config>
+      </service>
+      <service>
+        <name>heroku</name>
+        <enabled>true</enabled>
+        <config>
+          <auto_deploy>true</auto_deploy>
+          <review_apps>true</review_apps>
+        </config>
+      </service>
+      <service>
+        <name>mongodb_atlas</name>
+        <enabled>true</enabled>
+        <config>
+          <monitoring>true</monitoring>
+          <backup>true</backup>
+        </config>
+      </service>
+    </services>
+  </integrations>
+
+  <!-- Node.js/Express-specific configurations -->
+  <nodejs_specific>
+    <node_version>18.x</node_version>
+    <package_manager>npm</package_manager>
+    <web_framework>express</web_framework>
+    <orm>mongoose</orm>
+    <authentication>passport</authentication>
+    <validation>joi</validation>
+    <logging>winston</logging>
+    <compression>true</compression>
+    <cors_enabled>true</cors_enabled>
+    <rate_limiting>true</rate_limiting>
+  </nodejs_specific>
+</project_config>
