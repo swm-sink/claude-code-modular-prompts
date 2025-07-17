@@ -8,6 +8,59 @@
 
 <purpose>Personal Claude Code workflow efficiency tool - NOT enterprise software</purpose>
 
+# 🔗 Repository Information
+
+```xml
+<repository_config enforcement = "HARDCODED" version = "3.0.0">
+  <github_details>
+    <repository_url>https://github.com/swm-sink/claude-code-modular-prompts</repository_url>
+    <repository_name>claude-code-modular-prompts</repository_name>
+    <owner>swm-sink</owner>
+    <default_branch>main</default_branch>
+    <current_branch>framework-simplification-v3</current_branch>
+    <clone_url>git@github.com:swm-sink/claude-code-modular-prompts.git</clone_url>
+    <https_clone>https://github.com/swm-sink/claude-code-modular-prompts.git</https_clone>
+  </github_details>
+  
+  <project_structure>
+    <root_directory>/Users/smenssink/Documents/Github/claude-code-modular-prompts</root_directory>
+    <framework_files>
+      <claude_md>CLAUDE.md</claude_md>
+      <project_config>PROJECT_CONFIG.xml</project_config>
+      <framework_directory>.claude/</framework_directory>
+      <getting_started>GETTING_STARTED.md</getting_started>
+    </framework_files>
+  </project_structure>
+  
+  <deployment_info>
+    <last_deployment>2025-07-17</last_deployment>
+    <deployment_commit>1bf59bb</deployment_commit>
+    <deployment_status>Production Ready - Framework finalization complete</deployment_status>
+    <branch_status>framework-simplification-v3 pushed successfully</branch_status>
+  </deployment_info>
+  
+  <usage_urls>
+    <issues>https://github.com/swm-sink/claude-code-modular-prompts/issues</issues>
+    <pull_requests>https://github.com/swm-sink/claude-code-modular-prompts/pulls</pull_requests>
+    <releases>https://github.com/swm-sink/claude-code-modular-prompts/releases</releases>
+    <documentation>https://github.com/swm-sink/claude-code-modular-prompts/blob/main/README.md</documentation>
+    <getting_started>https://github.com/swm-sink/claude-code-modular-prompts/blob/main/GETTING_STARTED.md</getting_started>
+  </usage_urls>
+  
+  <quick_setup>
+    <clone_command>git clone https://github.com/swm-sink/claude-code-modular-prompts.git</clone_command>
+    <copy_framework>cp -r claude-code-modular-prompts/.claude your-project/ && cp claude-code-modular-prompts/CLAUDE.md your-project/ && cp claude-code-modular-prompts/PROJECT_CONFIG.xml your-project/</copy_framework>
+    <test_command>/auto "analyze my project structure"</test_command>
+  </quick_setup>
+  
+  <authentication>
+    <github_cli>gh auth status</github_cli>
+    <active_account>swm-sink</active_account>
+    <required_permissions>repo, workflow, gist</required_permissions>
+  </authentication>
+</repository_config>
+```
+
 **Framework Status**: This repository contains a fully implemented modular prompt engineering framework with comprehensive `.claude/` architecture, advanced meta-prompting capabilities, and Claude 4 optimization.
 
 **What's Included**:
@@ -813,7 +866,13 @@
 # GitHub Workflow
 
 ```xml
-<github_workflow trigger = ">10 steps">
+<github_workflow trigger = ">10 steps" repository = "swm-sink/claude-code-modular-prompts">
+  <repository_info>
+    <url>https://github.com/swm-sink/claude-code-modular-prompts</url>
+    <issues_url>https://github.com/swm-sink/claude-code-modular-prompts/issues</issues_url>
+    <cli_command>gh issue create --repo swm-sink/claude-code-modular-prompts</cli_command>
+    <authentication>Use GitHub CLI with swm-sink account</authentication>
+  </repository_info>
   <epic>Project overview, metrics, dependencies</epic>
   <phases>Atomic steps, checkboxes, acceptance criteria</phases>
   <rule>Create issues BEFORE starting. Close only when 100% complete</rule>
@@ -824,6 +883,11 @@
     <on_progress>Update issue checklist items as completed</on_progress>
     <on_error>Comment on issue with error details and recovery plan</on_error>
   </enforcement>
+  <commands>
+    <create_issue>gh issue create --title "Epic: [title]" --body "[description]" --repo swm-sink/claude-code-modular-prompts</create_issue>
+    <update_issue>gh issue comment [issue_number] --body "[update]" --repo swm-sink/claude-code-modular-prompts</update_issue>
+    <close_issue>gh issue close [issue_number] --comment "[completion_summary]" --repo swm-sink/claude-code-modular-prompts</close_issue>
+  </commands>
 </github_workflow>
 ```
 
