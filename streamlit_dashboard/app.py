@@ -5,6 +5,7 @@ Follows separation of concerns - handles only configuration and routing
 
 import streamlit as st
 import os
+import time
 from pathlib import Path
 from typing import Optional, Dict, Any
 from components.command_explorer import CommandExplorer
@@ -34,6 +35,7 @@ from components.ab_prompt_comparison import ABPromptComparison
 from components.pattern_recognition_engine import PatternRecognitionEngine
 from components.intelligent_recommendation_engine import IntelligentRecommendationEngine
 from utils.session_manager import init_session_management
+from utils.health_monitor import health_monitor
 
 
 class EnvironmentDetector:
@@ -169,6 +171,7 @@ class LocalDevelopmentConfig(BaseEnvironmentConfig):
             "Meta Framework": True,
             "Performance Monitor": True,
             "Usage Analytics": True,
+            "Health Monitor": True,
         }
 
 
@@ -219,6 +222,7 @@ class RailwayProductionConfig(BaseEnvironmentConfig):
             "A/B Prompt Comparison": True,
             "Performance Monitor": True,
             "Usage Analytics": True,
+            "Health Monitor": True,
             "URL Sharing": True,
             "Template Manager": True,
         }
@@ -1002,6 +1006,18 @@ def route_to_page(page_name, app_config):
                     with st.expander("Error Details"):
                         import traceback
                         st.code(traceback.format_exc())
+            elif config["component"] == "health_monitor":
+                try:
+                    # Render health monitoring dashboard
+                    health_monitor.render_health_dashboard()
+                except Exception as e:
+                    st.error(f"Error loading Health Monitor: {str(e)}")
+                    if app_config.debug_mode:
+                        with st.expander("Error Details"):
+                            import traceback
+                            st.code(traceback.format_exc())
+                    else:
+                        health_monitor.log_error(e, "health_monitor_render")
         else:
             st.info(config["message"])
     else:
