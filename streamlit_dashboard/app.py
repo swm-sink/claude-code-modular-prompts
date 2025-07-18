@@ -1008,8 +1008,27 @@ def route_to_page(page_name, app_config):
         st.error(f"Unknown page: {page_name}")
 
 
+def configure_security():
+    """Configure security settings for the Streamlit app"""
+    # Set security-related page config
+    st.set_page_config(
+        page_title="Claude Code Framework Dashboard",
+        page_icon="🤖",
+        layout="wide",
+        initial_sidebar_state="expanded",
+        menu_items={
+            'Report a bug': None,  # Disable default menu items for security
+            'Get Help': None,
+            'About': "# Claude Code Framework Dashboard\nSecure enterprise-grade prompt engineering platform."
+        }
+    )
+
+
 def main():
-    """Main application entry point with dual-environment support"""
+    """Main application entry point with dual-environment support and security"""
+    # Configure security settings
+    configure_security()
+    
     # Setup navigation and get selected page with configuration
     selected_page, app_config = setup_navigation()
     
