@@ -1,6 +1,6 @@
 """
 Command Explorer Component for Claude Code Modular Prompts Framework
-Provides interactive command exploration, filtering, and visualization
+Provides intelligent command exploration, decision support, and routing recommendations
 """
 
 import streamlit as st
@@ -336,17 +336,32 @@ class CommandExplorer:
             # Check for initialization errors
             if not self._check_initialization():
                 return
-            # Load commands
-            commands = self.load_commands_from_framework()
-            if not commands:
+            # Load commands with rich data
+            commands_data = self._load_commands_with_rich_data()
+            if not commands_data:
                 st.info("No commands found in the framework")
                 return
-            # Render main interface
-            filtered_commands = self._render_command_interface(commands)
-            self._render_command_details()
-            self._render_visualizations(filtered_commands)
-            self._render_commands_table(filtered_commands, commands)
             
+            # Create tabs for different views
+            tab1, tab2, tab3, tab4 = st.tabs([
+                "🎯 Command Recommendation", 
+                "🔍 Command Explorer", 
+                "📊 Command Analysis", 
+                "🧠 Decision Support"
+            ])
+            
+            with tab1:
+                self._render_command_recommendation(commands_data)
+            
+            with tab2:
+                self._render_command_explorer(commands_data)
+            
+            with tab3:
+                self._render_command_analysis(commands_data)
+            
+            with tab4:
+                self._render_decision_support(commands_data)
+                
         except FileNotFoundError:
             st.error("Framework not found")
         except ValueError as e:
@@ -357,7 +372,418 @@ class CommandExplorer:
     def _render_header(self):
         """Render the header section"""
         st.title("🔍 Command Explorer")
-        st.markdown("Explore and analyze framework commands interactively")
+        st.markdown("Intelligent command exploration with decision support and routing recommendations")
+    
+    def _load_commands_with_rich_data(self) -> List[Dict[str, Any]]:
+        """Load commands with rich parsed data from framework"""
+        try:
+            framework_data = self.framework_parser.parse()
+            return framework_data.get('commands', [])
+        except Exception as e:
+            st.error(f"Error loading commands: {str(e)}")
+            return []
+    
+    def _render_command_recommendation(self, commands_data: List[Dict[str, Any]]):
+        """Render intelligent command recommendation interface"""
+        st.subheader("🎯 What do you want to accomplish?")
+        
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            # Goal-based recommendation
+            user_goal = st.text_area(
+                "Describe your goal:",
+                placeholder="e.g., 'I want to fix a bug in my authentication system' or 'I need to implement a new user dashboard'",
+                height=100
+            )
+            
+            # Quick goal buttons
+            st.markdown("**Quick goals:**")
+            col1a, col1b, col1c = st.columns(3)
+            with col1a:
+                if st.button("🐛 Fix a bug"):
+                    user_goal = "Fix a bug in my code"
+                    st.rerun()
+            with col1b:
+                if st.button("✨ Add new feature"):
+                    user_goal = "Add a new feature"
+                    st.rerun()
+            with col1c:
+                if st.button("📚 Research code"):
+                    user_goal = "Research and understand existing code"
+                    st.rerun()
+        
+        with col2:
+            # Context filters
+            st.markdown("**Context:**")
+            project_size = st.selectbox(
+                "Project size:",
+                ["Small (1-5 files)", "Medium (6-20 files)", "Large (20+ files)"]
+            )
+            
+            complexity = st.selectbox(
+                "Task complexity:",
+                ["Simple", "Medium", "Complex"]
+            )
+            
+            urgency = st.selectbox(
+                "Urgency:",
+                ["Low", "Medium", "High"]
+            )
+        
+        # Generate recommendations
+        if user_goal:
+            recommendations = self._generate_intelligent_recommendations(
+                user_goal, commands_data, project_size, complexity, urgency
+            )
+            
+            if recommendations:
+                st.subheader("🎯 Recommended Commands")
+                
+                for i, rec in enumerate(recommendations[:3]):  # Show top 3
+                    with st.expander(f"#{i+1} **{rec['command']}** - {rec['confidence']:.0%} match"):
+                        st.markdown(f"**Why this command?** {rec['reasoning']}")
+                        st.markdown(f"**What it does:** {rec['description']}")
+                        st.markdown(f"**Best for:** {rec['use_case']}")
+                        
+                        if st.button(f"Use /{rec['command']}", key=f"use_{rec['command']}"):
+                            st.success(f"Great choice! Use `/{rec['command']}` for your task.")
+                            st.code(f"/{rec['command']} \"{user_goal}\"")
+    
+    def _generate_intelligent_recommendations(self, user_goal: str, commands_data: List[Dict[str, Any]], 
+                                           project_size: str, complexity: str, urgency: str) -> List[Dict[str, Any]]:
+        """Generate intelligent command recommendations based on user input"""
+        recommendations = []
+        user_goal_lower = user_goal.lower()
+        
+        # Define recommendation rules
+        recommendation_rules = {
+            'auto': {
+                'keywords': ['not sure', 'help me decide', 'what should i use', 'confused'],
+                'reasoning': 'Auto command analyzes your request and routes to the optimal command',
+                'use_case': 'When you\'re unsure which approach to take'
+            },
+            'query': {
+                'keywords': ['research', 'understand', 'analyze', 'investigate', 'learn', 'study'],
+                'reasoning': 'Query command provides comprehensive research without making changes',
+                'use_case': 'Understanding existing code and systems'
+            },
+            'task': {
+                'keywords': ['fix', 'bug', 'single file', 'small change', 'quick', 'focused'],
+                'reasoning': 'Task command handles focused, single-component work with TDD',
+                'use_case': 'Bug fixes and single-file modifications'
+            },
+            'feature': {
+                'keywords': ['new feature', 'add', 'implement', 'create', 'build', 'develop'],
+                'reasoning': 'Feature command provides comprehensive feature development with PRD',
+                'use_case': 'Complete feature development with multiple components'
+            },
+            'swarm': {
+                'keywords': ['complex', 'multiple', 'coordinate', 'team', 'parallel'],
+                'reasoning': 'Swarm command coordinates multiple agents for complex tasks',
+                'use_case': 'Complex multi-component projects requiring coordination'
+            }
+        }
+        
+        # Score each command based on user input
+        for command_data in commands_data:
+            command_name = command_data['name']
+            if command_name in recommendation_rules:
+                rule = recommendation_rules[command_name]
+                
+                # Calculate confidence score
+                confidence = 0.0
+                keyword_matches = sum(1 for keyword in rule['keywords'] if keyword in user_goal_lower)
+                confidence += keyword_matches * 0.2
+                
+                # Adjust based on complexity
+                if command_name == 'task' and complexity == 'Simple':
+                    confidence += 0.3
+                elif command_name == 'feature' and complexity in ['Medium', 'Complex']:
+                    confidence += 0.3
+                elif command_name == 'swarm' and complexity == 'Complex':
+                    confidence += 0.3
+                elif command_name == 'auto' and complexity == 'Medium':
+                    confidence += 0.2
+                
+                # Adjust based on project size
+                if command_name == 'task' and 'Small' in project_size:
+                    confidence += 0.2
+                elif command_name == 'feature' and 'Medium' in project_size:
+                    confidence += 0.2
+                elif command_name == 'swarm' and 'Large' in project_size:
+                    confidence += 0.2
+                
+                # Base confidence from command purpose
+                purpose = command_data.get('purpose', '').lower()
+                if any(keyword in purpose for keyword in rule['keywords']):
+                    confidence += 0.2
+                
+                # Ensure minimum confidence for relevant commands
+                if confidence > 0.1:
+                    recommendations.append({
+                        'command': command_name,
+                        'confidence': min(confidence, 1.0),
+                        'reasoning': rule['reasoning'],
+                        'description': command_data.get('description', ''),
+                        'use_case': rule['use_case']
+                    })
+        
+        # Sort by confidence and return top recommendations
+        recommendations.sort(key=lambda x: x['confidence'], reverse=True)
+        return recommendations
+    
+    def _render_command_explorer(self, commands_data: List[Dict[str, Any]]):
+        """Render enhanced command explorer with rich data"""
+        st.subheader("🔍 Explore Commands")
+        
+        # Filter interface
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            # Command selection
+            command_names = [cmd['name'] for cmd in commands_data]
+            selected_command = st.selectbox(
+                "Select a command to explore:",
+                options=command_names,
+                key="command_explorer_selector"
+            )
+        
+        with col2:
+            # Category filter
+            categories = list(set(cmd.get('category', 'general') for cmd in commands_data))
+            category_filter = st.selectbox(
+                "Filter by category:",
+                options=["All"] + sorted(categories),
+                key="command_explorer_category"
+            )
+        
+        # Show selected command details
+        if selected_command:
+            command_data = next((cmd for cmd in commands_data if cmd['name'] == selected_command), None)
+            if command_data:
+                self._render_rich_command_details(command_data)
+    
+    def _render_rich_command_details(self, command_data: Dict[str, Any]):
+        """Render rich command details using parsed data"""
+        st.subheader(f"📋 {command_data['name']} Command")
+        
+        # Basic info
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            st.markdown(f"**Description:** {command_data.get('description', 'No description available')}")
+            st.markdown(f"**Purpose:** {command_data.get('purpose', 'No purpose specified')}")
+            
+            # Scope information
+            scope = command_data.get('scope', {})
+            if scope:
+                st.markdown("**Scope:**")
+                if scope.get('includes'):
+                    st.markdown(f"- **Includes:** {scope['includes']}")
+                if scope.get('excludes'):
+                    st.markdown(f"- **Excludes:** {scope['excludes']}")
+                if scope.get('boundaries'):
+                    st.markdown(f"- **Boundaries:** {scope['boundaries']}")
+        
+        with col2:
+            # Metadata
+            metadata = command_data.get('metadata', {})
+            if metadata:
+                st.markdown("**Metadata:**")
+                for key, value in metadata.items():
+                    st.markdown(f"- **{key.replace('_', ' ').title()}:** {value}")
+            
+            # Complexity level
+            complexity = command_data.get('complexity_level', 'medium')
+            complexity_color = {'simple': 'green', 'medium': 'orange', 'complex': 'red'}
+            st.markdown(f"**Complexity:** :{complexity_color.get(complexity, 'gray')}[{complexity.title()}]")
+        
+        # When to use
+        when_to_use = command_data.get('when_to_use', [])
+        if when_to_use:
+            st.markdown("**When to use:**")
+            for use_case in when_to_use:
+                st.markdown(f"- {use_case}")
+        
+        # Examples
+        examples = command_data.get('examples', [])
+        if examples:
+            st.markdown("**Examples:**")
+            for example in examples:
+                st.code(example)
+        
+        # Workflow
+        workflow = command_data.get('workflow', [])
+        if workflow:
+            st.markdown("**Workflow steps:**")
+            for i, step in enumerate(workflow, 1):
+                st.markdown(f"{i}. {step}")
+    
+    def _render_command_analysis(self, commands_data: List[Dict[str, Any]]):
+        """Render command analysis and insights"""
+        st.subheader("📊 Command Analysis")
+        
+        # Command statistics
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.metric("Total Commands", len(commands_data))
+            
+            # Complexity distribution
+            complexity_counts = {}
+            for cmd in commands_data:
+                complexity = cmd.get('complexity_level', 'medium')
+                complexity_counts[complexity] = complexity_counts.get(complexity, 0) + 1
+            
+            st.markdown("**Complexity Distribution:**")
+            for complexity, count in complexity_counts.items():
+                st.markdown(f"- {complexity.title()}: {count}")
+        
+        with col2:
+            # Category distribution
+            category_counts = {}
+            for cmd in commands_data:
+                category = cmd.get('category', 'general')
+                category_counts[category] = category_counts.get(category, 0) + 1
+            
+            st.markdown("**Category Distribution:**")
+            for category, count in category_counts.items():
+                st.markdown(f"- {category.title()}: {count}")
+        
+        # Visualizations
+        st.subheader("📈 Visual Analysis")
+        
+        # Complexity pie chart
+        if complexity_counts:
+            fig = px.pie(
+                values=list(complexity_counts.values()),
+                names=list(complexity_counts.keys()),
+                title="Command Complexity Distribution"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+        
+        # Command readiness
+        readiness_data = []
+        for cmd in commands_data:
+            metadata = cmd.get('metadata', {})
+            if metadata.get('readiness'):
+                readiness_data.append({
+                    'command': cmd['name'],
+                    'readiness': metadata['readiness'].replace('%', ''),
+                    'status': metadata.get('status', 'unknown')
+                })
+        
+        if readiness_data:
+            df = pd.DataFrame(readiness_data)
+            df['readiness'] = pd.to_numeric(df['readiness'], errors='coerce')
+            
+            fig = px.bar(
+                df,
+                x='command',
+                y='readiness',
+                color='status',
+                title="Command Readiness Status"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+    
+    def _render_decision_support(self, commands_data: List[Dict[str, Any]]):
+        """Render decision support system"""
+        st.subheader("🧠 Decision Support")
+        
+        # Decision tree
+        st.markdown("### Command Selection Decision Tree")
+        
+        # Interactive decision tree
+        col1, col2 = st.columns([1, 1])
+        
+        with col1:
+            st.markdown("**Step 1: Define your task scope**")
+            scope_choice = st.radio(
+                "What's the scope of your task?",
+                ["Single file or focused change", "Multiple files or components", "Research or analysis only", "Not sure / complex decision"]
+            )
+            
+            st.markdown("**Step 2: Define your goal**")
+            goal_choice = st.radio(
+                "What's your primary goal?",
+                ["Fix a bug", "Add new functionality", "Understand existing code", "Optimize or refactor", "Complex multi-step task"]
+            )
+        
+        with col2:
+            st.markdown("**Step 3: Get recommendation**")
+            
+            # Generate recommendation based on choices
+            if scope_choice and goal_choice:
+                recommendation = self._get_decision_tree_recommendation(scope_choice, goal_choice)
+                
+                st.success(f"**Recommended Command: `/{recommendation['command']}`**")
+                st.markdown(f"**Reasoning:** {recommendation['reasoning']}")
+                st.markdown(f"**Next Steps:** {recommendation['next_steps']}")
+                
+                # Show command details
+                command_data = next((cmd for cmd in commands_data if cmd['name'] == recommendation['command']), None)
+                if command_data:
+                    with st.expander("Command Details"):
+                        self._render_rich_command_details(command_data)
+        
+        # Workflow recommendations
+        st.markdown("### Common Workflows")
+        
+        workflows = {
+            "Bug Fix Workflow": ["query", "task"],
+            "Feature Development": ["feature", "task"],
+            "Research & Documentation": ["query", "docs"],
+            "Complex Project": ["auto", "swarm", "session"]
+        }
+        
+        for workflow_name, commands in workflows.items():
+            with st.expander(workflow_name):
+                st.markdown(f"**Recommended sequence:** {' → '.join(f'`/{cmd}`' for cmd in commands)}")
+                for i, cmd in enumerate(commands, 1):
+                    cmd_data = next((c for c in commands_data if c['name'] == cmd), None)
+                    if cmd_data:
+                        st.markdown(f"**Step {i}: /{cmd}** - {cmd_data.get('description', '')}")
+    
+    def _get_decision_tree_recommendation(self, scope: str, goal: str) -> Dict[str, str]:
+        """Get recommendation based on decision tree logic"""
+        # Decision tree logic
+        if "Research" in goal or "Understand" in goal:
+            return {
+                'command': 'query',
+                'reasoning': 'Query command is perfect for research and understanding existing code without making changes',
+                'next_steps': 'Use /query to analyze and understand the codebase, then decide on next actions'
+            }
+        elif "Single file" in scope and "Fix" in goal:
+            return {
+                'command': 'task',
+                'reasoning': 'Task command handles focused, single-file bug fixes with proper TDD methodology',
+                'next_steps': 'Use /task to fix the bug with comprehensive testing and atomic commits'
+            }
+        elif "Multiple files" in scope and "Add" in goal:
+            return {
+                'command': 'feature',
+                'reasoning': 'Feature command provides comprehensive feature development across multiple components',
+                'next_steps': 'Use /feature to develop the complete feature with PRD-driven approach'
+            }
+        elif "complex" in scope.lower() or "Complex" in goal:
+            return {
+                'command': 'swarm',
+                'reasoning': 'Swarm command coordinates multiple agents for complex, multi-step tasks',
+                'next_steps': 'Use /swarm to break down the complex task into manageable parallel components'
+            }
+        elif "Not sure" in scope:
+            return {
+                'command': 'auto',
+                'reasoning': 'Auto command analyzes your request and routes to the optimal approach',
+                'next_steps': 'Use /auto to get intelligent routing to the best command for your specific needs'
+            }
+        else:
+            return {
+                'command': 'auto',
+                'reasoning': 'Auto command will analyze your specific requirements and route appropriately',
+                'next_steps': 'Use /auto to get personalized routing based on your exact needs'
+            }
     
     def _check_initialization(self) -> bool:
         """Check if the component is properly initialized"""
