@@ -1,8 +1,12 @@
-| version | last_updated | status |
-|---------|--------------|--------|
-| 3.0.0   | 2025-07-11   | stable |
+# Meta-Review Command - Analyze how well the framework is working
 
-# /meta-review - Comprehensive Framework Audit & Validation
+**Description**: Analyze how well the framework is working
+
+────────────────────────────────────────────────────────────────────────────────
+
+| version | last_updated | status | readiness |
+|---------|--------------|--------|----------|
+| 3.0.0   | 2025-07-11   | stable | 95%      |
 
 ────────────────────────────────────────────────────────────────────────────────
 

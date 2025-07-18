@@ -1,8 +1,12 @@
-| version | last_updated | status |
-|---------|--------------|--------|
-| 3.0.0   | 2025-07-11   | stable |
+# Meta-Govern Command - Manage framework rules and policies
 
-# /meta-govern - Governance & Compliance Framework Management
+**Description**: Manage framework rules and policies
+
+────────────────────────────────────────────────────────────────────────────────
+
+| version | last_updated | status | readiness |
+|---------|--------------|--------|----------|
+| 3.0.0   | 2025-07-11   | stable | 85%      |
 
 ────────────────────────────────────────────────────────────────────────────────
 

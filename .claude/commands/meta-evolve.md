@@ -1,8 +1,12 @@
-| version | last_updated | status |
-|---------|--------------|--------|
-| 3.0.0   | 2025-07-11   | stable |
+# Meta-Evolve Command - Adapt framework to your coding patterns
 
-# /meta-evolve - Intelligent Framework Evolution & Update Cycles
+**Description**: Adapt framework to your coding patterns
+
+────────────────────────────────────────────────────────────────────────────────
+
+| version | last_updated | status | readiness |
+|---------|--------------|--------|----------|
+| 3.0.0   | 2025-07-11   | stable | 90%      |
 
 ────────────────────────────────────────────────────────────────────────────────
 

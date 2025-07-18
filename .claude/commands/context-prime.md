@@ -1,8 +1,12 @@
-| version | last_updated | status |
-|---------|--------------|--------|
-| 3.0.0   | 2025-07-16   | stable |
+# Context-Prime Command - Learn about your project structure
 
-/context-prime - Intelligent project context establishment
+**Description**: Learn about your project structure
+
+────────────────────────────────────────────────────────────────────────────────
+
+| version | last_updated | status | readiness |
+|---------|--------------|--------|----------|
+| 3.0.0   | 2025-07-16   | stable | 95%      |
 
 ────────────────────────────────────────────────────────────────────────────────
 

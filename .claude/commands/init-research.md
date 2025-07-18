@@ -1,8 +1,12 @@
+# Init-Research Command - Analyze existing project before setup
+
+**Description**: Analyze existing project before setup
+
+────────────────────────────────────────────────────────────────────────────────
+
 | version | last_updated | status | readiness |
 |---------|--------------|--------|-----------|
 | 3.0.0   | 2025-07-12   | stable | 95%       |
-
-# Init-Research Command - Atomic Research-Driven Configuration
 
 ────────────────────────────────────────────────────────────────────────────────
 

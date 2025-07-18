@@ -1,8 +1,12 @@
+# Init-Validate Command - Check if framework is working correctly
+
+**Description**: Check if framework is working correctly
+
+────────────────────────────────────────────────────────────────────────────────
+
 | version | last_updated | status | readiness |
 |---------|--------------|--------|-----------|
 | 3.0.0   | 2025-07-12   | stable | 95%       |
-
-# Init-Validate Command - Atomic Framework Validation
 
 ────────────────────────────────────────────────────────────────────────────────
 

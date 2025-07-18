@@ -1,8 +1,12 @@
-| version | last_updated | status |
-|---------|--------------|--------|
-| 3.0.0   | 2025-07-16   | stable |
+# Meta-Fix Command - Fix framework issues automatically
 
-# /meta-fix - Compliance Issue Diagnosis & Self-Correction
+**Description**: Fix framework issues automatically
+
+────────────────────────────────────────────────────────────────────────────────
+
+| version | last_updated | status | readiness |
+|---------|--------------|--------|----------|
+| 3.0.0   | 2025-07-16   | stable | 85%      |
 
 ────────────────────────────────────────────────────────────────────────────────
 

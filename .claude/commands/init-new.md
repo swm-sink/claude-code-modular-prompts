@@ -1,8 +1,12 @@
+# Init-New Command - Create a new project with the framework
+
+**Description**: Create a new project with the framework
+
+────────────────────────────────────────────────────────────────────────────────
+
 | version | last_updated | status | readiness |
 |---------|--------------|--------|----------|
 | 3.0.0   | 2025-07-12   | stable | 95%      |
-
-# Init-New Command - Atomic Project Initialization
 
 ────────────────────────────────────────────────────────────────────────────────
 

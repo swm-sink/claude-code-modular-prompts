@@ -1,8 +1,12 @@
+# Init-Custom Command - Set up framework with custom settings
+
+**Description**: Set up framework with custom settings
+
+────────────────────────────────────────────────────────────────────────────────
+
 | version | last_updated | status | readiness |
 |---------|--------------|--------|----------|
 | 3.0.0   | 2025-07-12   | stable | 95%      |
-
-# Init-Custom Command - Atomic Framework Configuration
 
 ────────────────────────────────────────────────────────────────────────────────
 

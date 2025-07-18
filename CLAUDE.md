@@ -281,12 +281,12 @@
 ```xml
 <command_reference>
   <core_commands>
-    <command name="/auto" purpose="Intelligent routing - use when uncertain about approach">
+    <command name="/auto" purpose="Intelligent routing and framework selection">
       <usage>/auto "your request here"</usage>
       <best_for>Unclear requirements | Complex decisions | Route optimization</best_for>
     </command>
     
-    <command name="/task" purpose="Single component focused development with TDD">
+    <command name="/task" purpose="Single component TDD development">
       <usage>/task "implement specific functionality"</usage>
       <best_for>Single file changes | Bug fixes | <50 lines of code</best_for>
     </command>
@@ -320,6 +320,41 @@
       <usage>/docs "generate or update documentation"</usage>
       <best_for>Documentation | README files | API docs | User guides</best_for>
     </command>
+    
+    <command name="/chain" purpose="Advanced workflow orchestration">
+      <usage>/chain "execute multi-command workflows"</usage>
+      <best_for>Complex workflows | Sequential operations | Conditional routing</best_for>
+    </command>
+    
+    <command name="/context-prime" purpose="Intelligent project context establishment">
+      <usage>/context-prime "establish project context"</usage>
+      <best_for>Project initialization | Context analysis | Environment setup</best_for>
+    </command>
+    
+    <command name="/init" purpose="Framework initialization and setup">
+      <usage>/init "initialize framework"</usage>
+      <best_for>New projects | Framework setup | Configuration</best_for>
+    </command>
+    
+    <command name="/init-custom" purpose="Custom framework configuration">
+      <usage>/init-custom "customize framework setup"</usage>
+      <best_for>Existing projects | Custom configurations | Specialized setups</best_for>
+    </command>
+    
+    <command name="/init-new" purpose="New project initialization">
+      <usage>/init-new "create new project"</usage>
+      <best_for>New projects | Interactive setup | Guided configuration</best_for>
+    </command>
+    
+    <command name="/init-research" purpose="Research-based project analysis">
+      <usage>/init-research "analyze project requirements"</usage>
+      <best_for>Project analysis | Requirements gathering | Research workflows</best_for>
+    </command>
+    
+    <command name="/init-validate" purpose="Framework validation and verification">
+      <usage>/init-validate "validate framework setup"</usage>
+      <best_for>Quality assurance | Framework integrity | Production readiness</best_for>
+    </command>
   </core_commands>
   
   <meta_commands>
@@ -336,6 +371,16 @@
     <command name="/meta-evolve" purpose="Framework adaptation and learning">
       <usage>/meta-evolve "adapt framework to patterns"</usage>
       <best_for>Team adaptation | Pattern learning | Workflow evolution</best_for>
+    </command>
+    
+    <command name="/meta-govern" purpose="Governance and compliance framework">
+      <usage>/meta-govern "manage governance policies"</usage>
+      <best_for>Policy enforcement | Compliance monitoring | Emergency controls</best_for>
+    </command>
+    
+    <command name="/meta-fix" purpose="Compliance issue diagnosis and correction">
+      <usage>/meta-fix "resolve compliance issues"</usage>
+      <best_for>Automated fixes | Root cause analysis | Prevention strategies</best_for>
     </command>
   </meta_commands>
 </command_reference>
