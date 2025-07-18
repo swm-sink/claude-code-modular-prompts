@@ -1,0 +1,74 @@
+{
+  "development": {
+    "environment_id": "development",
+    "name": "Development",
+    "description": "General development environment with moderate safety",
+    "max_execution_time": 30.0,
+    "max_memory_mb": 256,
+    "max_output_length": 10000,
+    "allowed_modules": [
+      "json",
+      "math",
+      "datetime",
+      "random",
+      "string",
+      "re"
+    ],
+    "blocked_modules": [
+      "subprocess",
+      "os",
+      "sys"
+    ],
+    "safety_level": "moderate",
+    "isolation_level": "medium",
+    "metadata": {}
+  },
+  "production": {
+    "environment_id": "production",
+    "name": "Production",
+    "description": "Production environment with strict safety controls",
+    "max_execution_time": 10.0,
+    "max_memory_mb": 128,
+    "max_output_length": 10000,
+    "allowed_modules": [
+      "json",
+      "math",
+      "datetime",
+      "random",
+      "string",
+      "re"
+    ],
+    "blocked_modules": [
+      "subprocess",
+      "os",
+      "sys"
+    ],
+    "safety_level": "strict",
+    "isolation_level": "medium",
+    "metadata": {}
+  },
+  "research": {
+    "environment_id": "research",
+    "name": "Research",
+    "description": "Research environment with extended resources",
+    "max_execution_time": 60.0,
+    "max_memory_mb": 1024,
+    "max_output_length": 10000,
+    "allowed_modules": [
+      "json",
+      "math",
+      "datetime",
+      "random",
+      "string",
+      "re"
+    ],
+    "blocked_modules": [
+      "subprocess",
+      "os",
+      "sys"
+    ],
+    "safety_level": "permissive",
+    "isolation_level": "medium",
+    "metadata": {}
+  }
+}

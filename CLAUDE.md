@@ -29,7 +29,13 @@
       <project_config>PROJECT_CONFIG.xml</project_config>
       <framework_directory>.claude/</framework_directory>
       <getting_started>GETTING_STARTED.md</getting_started>
+      <streamlit_dashboard>streamlit_dashboard/</streamlit_dashboard>
     </framework_files>
+    <deployment_documentation>
+      <railway_guide>streamlit_dashboard/RAILWAY_DEPLOYMENT_GUIDE.md</railway_guide>
+      <dashboard_plan>STREAMLIT_DASHBOARD_PLAN.md</dashboard_plan>
+      <agent_coordination>streamlit_dashboard/agent_comms/agent-coordination-tracker.json</agent_coordination>
+    </deployment_documentation>
   </project_structure>
   
   <deployment_info>
