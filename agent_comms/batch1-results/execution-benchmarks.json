@@ -1,0 +1,200 @@
+{
+  "timestamp": "2025-07-19T15:55:20.705105",
+  "execution_times": {
+    "auto": {
+      "avg_time_ms": 2.595949172973633,
+      "min_time_ms": 2.5589466094970703,
+      "max_time_ms": 2.691030502319336,
+      "std_dev_ms": 0.054104052417997046,
+      "avg_memory_mb": 0.003125,
+      "iterations": 5
+    },
+    "task": {
+      "avg_time_ms": 3.8483619689941406,
+      "min_time_ms": 3.805875778198242,
+      "max_time_ms": 3.97491455078125,
+      "std_dev_ms": 0.07127387742873986,
+      "avg_memory_mb": 0.003125,
+      "iterations": 5
+    },
+    "feature": {
+      "avg_time_ms": 1.3282299041748047,
+      "min_time_ms": 1.2857913970947266,
+      "max_time_ms": 1.4910697937011719,
+      "std_dev_ms": 0.09107090402067379,
+      "avg_memory_mb": 0.0,
+      "iterations": 5
+    },
+    "query": {
+      "avg_time_ms": 2.5641918182373047,
+      "min_time_ms": 2.550840377807617,
+      "max_time_ms": 2.599000930786133,
+      "std_dev_ms": 0.019959636797446313,
+      "avg_memory_mb": 0.003125,
+      "iterations": 5
+    },
+    "swarm": {
+      "avg_time_ms": 2.5545120239257812,
+      "min_time_ms": 2.537965774536133,
+      "max_time_ms": 2.605915069580078,
+      "std_dev_ms": 0.02892273854567214,
+      "avg_memory_mb": 0.0,
+      "iterations": 5
+    },
+    "meta": {
+      "avg_time_ms": 3.813028335571289,
+      "min_time_ms": 3.798961639404297,
+      "max_time_ms": 3.8530826568603516,
+      "std_dev_ms": 0.022995345267089743,
+      "avg_memory_mb": 0.0,
+      "iterations": 5
+    }
+  },
+  "memory_usage": {},
+  "cpu_usage": {},
+  "command_simulations": {
+    "simple_task": {
+      "total_time_ms": 19.311189651489258,
+      "steps": [
+        {
+          "command": "auto",
+          "time_ms": 2.5513172149658203,
+          "memory_mb": 0.0
+        },
+        {
+          "command": "task",
+          "time_ms": 3.7452379862467446,
+          "memory_mb": 0.0
+        }
+      ],
+      "total_memory_mb": 0.0,
+      "command_count": 2
+    },
+    "feature_flow": {
+      "total_time_ms": 34.90877151489258,
+      "steps": [
+        {
+          "command": "auto",
+          "time_ms": 2.5502840677897134,
+          "memory_mb": 0.0
+        },
+        {
+          "command": "feature",
+          "time_ms": 1.2958049774169922,
+          "memory_mb": 0.0
+        },
+        {
+          "command": "task",
+          "time_ms": 3.8019021352132163,
+          "memory_mb": 0.0
+        },
+        {
+          "command": "task",
+          "time_ms": 3.799279530843099,
+          "memory_mb": 0.0
+        }
+      ],
+      "total_memory_mb": 0.0,
+      "command_count": 4
+    },
+    "research_flow": {
+      "total_time_ms": 15.949249267578125,
+      "steps": [
+        {
+          "command": "query",
+          "time_ms": 2.552032470703125,
+          "memory_mb": 0.005208333333333333
+        },
+        {
+          "command": "docs",
+          "time_ms": 2.663135528564453,
+          "memory_mb": 0.0
+        }
+      ],
+      "total_memory_mb": 0.005208333333333333,
+      "command_count": 2
+    },
+    "complex_flow": {
+      "total_time_ms": 60.156822204589844,
+      "steps": [
+        {
+          "command": "auto",
+          "time_ms": 2.5419394175211587,
+          "memory_mb": 0.0
+        },
+        {
+          "command": "swarm",
+          "time_ms": 2.5506019592285156,
+          "memory_mb": 0.0
+        },
+        {
+          "command": "task",
+          "time_ms": 3.804763158162435,
+          "memory_mb": 0.0
+        },
+        {
+          "command": "task",
+          "time_ms": 3.8068294525146484,
+          "memory_mb": 0.0
+        },
+        {
+          "command": "task",
+          "time_ms": 3.858168919881185,
+          "memory_mb": 0.0
+        },
+        {
+          "command": "protocol",
+          "time_ms": 2.9179255167643228,
+          "memory_mb": 0.052083333333333336
+        }
+      ],
+      "total_memory_mb": 0.052083333333333336,
+      "command_count": 6
+    }
+  },
+  "file_access_patterns": {
+    "claude_md_reads": 1,
+    "module_reads": 2,
+    "command_reads": 2,
+    "total_io_operations": 6,
+    "avg_io_time_ms": 0.4629294077555339,
+    "total_io_time_ms": 2.777576446533203
+  },
+  "real_world_costs": {
+    "simple_task": {
+      "tokens": 37262,
+      "cost_usd": 0.5589,
+      "cost_per_run": 0.5589,
+      "daily_cost_10_runs": 5.59,
+      "monthly_cost_300_runs": 167.68
+    },
+    "feature_development": {
+      "tokens": 64325,
+      "cost_usd": 0.9649,
+      "cost_per_run": 0.9649,
+      "daily_cost_10_runs": 9.65,
+      "monthly_cost_300_runs": 289.46
+    },
+    "research_analysis": {
+      "tokens": 43946,
+      "cost_usd": 0.6592,
+      "cost_per_run": 0.6592,
+      "daily_cost_10_runs": 6.59,
+      "monthly_cost_300_runs": 197.76
+    },
+    "multi_agent": {
+      "tokens": 52807,
+      "cost_usd": 0.7921,
+      "cost_per_run": 0.7921,
+      "daily_cost_10_runs": 7.92,
+      "monthly_cost_300_runs": 237.63
+    },
+    "full_auto": {
+      "tokens": 34965,
+      "cost_usd": 0.5245,
+      "cost_per_run": 0.5245,
+      "daily_cost_10_runs": 5.24,
+      "monthly_cost_300_runs": 157.34
+    }
+  }
+}

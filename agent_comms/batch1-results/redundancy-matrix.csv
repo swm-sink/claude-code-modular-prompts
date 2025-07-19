@@ -1,0 +1,56 @@
+Module Category,Module Name,Similar Modules,Overlap %,Unique Functions,Recommendation
+TDD,tdd-cycle-pattern.md,"tdd-cycle-pattern-enhanced.md, tdd.md",85%,Basic TDD cycle,Keep as primary
+TDD,tdd-cycle-pattern-enhanced.md,"tdd-cycle-pattern.md, tdd-enforcement.md",90%,Enhanced validation,Merge into primary
+TDD,tdd-enforcement.md,"tdd.md, tdd-verification.md",75%,Enforcement rules,Keep enforcement separate
+TDD,tdd-verification.md,"tdd-enforcement.md, tdd.md",80%,Verification only,Merge into enforcement
+TDD,tdd.md,"tdd-cycle-pattern.md, tdd-enforcement.md",70%,Basic concepts,Archive
+TDD,test-coverage.md,"tdd-enforcement.md, comprehensive-testing.md",60%,Coverage specific,Keep separate
+TDD,comprehensive-testing.md,"test-coverage.md, iterative-testing.md",65%,Full test suite,Merge with coverage
+TDD,iterative-testing.md,"comprehensive-testing.md, tdd-cycle-pattern.md",70%,Iteration focus,Archive
+Validation,adaptation-validation.md (3x),domain-validation.md,100%,None - duplicated,Delete 2 copies
+Validation,comprehensive-validation.md,"general-validation.md, validation-pattern.md",85%,Comprehensive checks,Keep as primary
+Validation,domain-validation.md,"adaptation-validation.md, general-validation.md",75%,Domain specific,Merge into comprehensive
+Validation,general-validation.md,"comprehensive-validation.md, validation-pattern.md",80%,Generic validation,Archive
+Validation,performance-validation.md,"performance-gates.md, comprehensive-validation.md",60%,Performance specific,Keep separate
+Validation,security-validation.md,"security-gate-verification.md, comprehensive-validation.md",55%,Security specific,Keep separate
+Validation,setup-validation.md,"comprehensive-validation.md, general-validation.md",70%,Setup only,Merge into comprehensive
+Validation,validation-pattern.md,"quality-validation-pattern.md, comprehensive-validation.md",90%,Pattern definition,Keep as pattern
+Validation,quality-validation-pattern.md,"validation-pattern.md, gate-verification.md",85%,Quality focus,Merge into validation-pattern
+Quality Gates,universal-quality-gates.md,"adaptive-quality-gates.md, gate-verification.md",75%,Universal rules,Keep as primary
+Quality Gates,adaptive-quality-gates.md,"universal-quality-gates.md, performance-gates.md",80%,Adaptation logic,Merge into universal
+Quality Gates,gate-verification.md,"universal-quality-gates.md, security-gate-verification.md",70%,Verification logic,Keep separate
+Quality Gates,performance-gates.md,"adaptive-quality-gates.md, performance-validation.md",65%,Performance gates,Keep separate
+Quality Gates,security-gate-verification.md,"gate-verification.md, security-validation.md",75%,Security gates,Merge with security-validation
+Research,research-analysis-pattern.md,"research-analysis-pattern-enhanced.md, research-analysis.md",70%,Basic pattern,Keep as primary
+Research,research-analysis-pattern-enhanced.md,"research-analysis-pattern.md, research-analysis-pattern-parallel.md",85%,Enhanced features,Merge into primary
+Research,research-analysis-pattern-parallel.md,"research-analysis-pattern-enhanced.md, parallel-execution.md",80%,Parallel focus,Archive
+Research,research-analysis.md,"research-analysis-pattern.md, query command",60%,Development module,Archive
+Session,session-management.md,"session-management-pattern.md, session-storage.md",75%,Core management,Keep as primary
+Session,session-management-pattern.md,"session-management.md, context-management-pattern.md",80%,Pattern definition,Merge into management
+Session,session-compression.md,"session-storage.md, session-management.md",60%,Compression logic,Keep separate
+Session,session-reliability.md,"session-management.md, error-recovery.md",65%,Reliability focus,Keep separate
+Session,session-storage.md,"session-management.md, context templates",70%,Storage logic,Merge into management
+Workflow,workflow-orchestration-engine.md,"command-chaining-architecture.md, deterministic-execution-engine.md",70%,Orchestration core,Keep as primary
+Workflow,command-chaining-architecture.md,"workflow-orchestration-engine.md, chain command",75%,Chaining specific,Keep separate
+Workflow,deterministic-execution-engine.md,"workflow-orchestration-engine.md, module-runtime-engine.md",65%,Execution engine,Merge into runtime
+Module System,module-composition-framework.md,"module-runtime-engine.md, thinking-pattern-template.md",60%,Composition rules,Keep as primary
+Module System,module-runtime-engine.md,"deterministic-execution-engine.md, module-composition-framework.md",70%,Runtime engine,Keep separate
+Module System,thinking-pattern-template.md,"module-composition-framework.md, critical-thinking-pattern.md",65%,Thinking patterns,Keep as template
+Context,context-management-pattern.md,"context-preservation.md, project-priming.md",75%,Pattern definition,Keep as primary
+Context,context-preservation.md,"context-management-pattern.md, session-storage.md",80%,Preservation only,Archive
+Context,project-priming.md,"context-management-pattern.md, context-prime command",70%,Priming specific,Keep for command
+Prompt Eng,advanced-frameworks.md,"framework-selector.md, individual frameworks",85%,Meta-framework,Keep as reference
+Prompt Eng,framework-selector.md,"advanced-frameworks.md, auto command",75%,Selection logic,Keep for auto command
+Prompt Eng,Individual frameworks (10),"advanced-frameworks.md, each other",40-60%,Specific patterns,Keep all separate
+Meta,meta-prompting-orchestration.md,"meta-framework-control.md, archived meta commands",75%,Orchestration,Keep as primary
+Meta,meta-framework-control.md,"meta-prompting-orchestration.md, meta command",80%,Control logic,Keep for meta command
+Meta,Archived meta commands (5),"meta command, meta modules",90%,Old implementations,Keep archived
+Security,threat-modeling.md,"security-validation.md, secure-defaults.md",55%,Threat specific,Keep separate
+Security,secure-defaults.md,"security-validation.md, production-standards.md",60%,Default configs,Keep separate
+Security,command-security-integration.md,"secure-defaults.md, universal-quality-gates.md",65%,Integration logic,Merge into secure-defaults
+Development,init.md,"project-initialization.md, init command",85%,Init module,Keep for command
+Development,adapt.md,"domain-adaptation.md, adaptation-validation.md",75%,Adaptation logic,Keep as primary
+Development,validate.md,"comprehensive-validation.md, init-validate command",80%,Validation module,Keep for command
+Development,code-review.md,"quality-orchestration.md, review patterns",60%,Review specific,Keep separate
+Development,domain-classification.md,"domain templates, domain-adaptation.md",70%,Classification,Keep as primary
+EOF < /dev/null

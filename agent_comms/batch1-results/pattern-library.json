@@ -1,0 +1,274 @@
+{
+  "version": "1.0.0",
+  "generated": "2025-07-19",
+  "patterns": {
+    "configuration": {
+      "single_file_claude_md": {
+        "name": "Single File Configuration",
+        "source": "claude-conductor",
+        "implementation": {
+          "file": "CLAUDE.md",
+          "structure": {
+            "commands": "Define available commands and routing",
+            "boundaries": "Specify file/directory access rules",
+            "context": "Project-specific context and rules",
+            "optimization": "Token saving configurations"
+          }
+        },
+        "benefits": {
+          "token_reduction": "70%",
+          "maintenance": "Single source of truth",
+          "adoption": "Immediate understanding"
+        },
+        "example": "forbidden_directories: ['node_modules/', '.git/', 'build/']"
+      },
+      "file_boundaries": {
+        "name": "Explicit File Boundaries",
+        "source": "awesome-claude-code",
+        "implementation": {
+          "forbidden_directories": [
+            "node_modules/",
+            ".git/",
+            "build/",
+            "dist/",
+            "coverage/",
+            "__pycache__/"
+          ],
+          "explicit_paths": {
+            "read_only": ["src/", "docs/"],
+            "write_allowed": ["src/", "tests/"],
+            "always_ignore": ["*.log", "*.tmp", ".env"]
+          }
+        },
+        "benefits": {
+          "token_reduction": "30%",
+          "security": "Prevents accidental exposure",
+          "performance": "Faster file operations"
+        }
+      }
+    },
+    "commands": {
+      "lightweight_router": {
+        "name": "Simple Command Router",
+        "source": "awesome-claude-prompts",
+        "implementation": {
+          "pattern": "command_map",
+          "code": "commands = {\n  '/task': 'single_file_tdd',\n  '/feature': 'multi_component_prd',\n  '/query': 'research_only',\n  '/auto': 'intelligent_routing'\n}",
+          "routing": "Direct map lookup, no complex orchestration"
+        },
+        "benefits": {
+          "performance": "50% faster routing",
+          "maintainability": "Clear command purposes",
+          "extensibility": "Easy to add new commands"
+        }
+      },
+      "compact_strategy": {
+        "name": "Context Compaction Strategy",
+        "source": "anthropics/claude-code",
+        "implementation": {
+          "triggers": {
+            "30%": "Continue normally",
+            "50%": "Use /compact",
+            "70%": "Start new chat"
+          },
+          "automation": "Monitor context usage and suggest compaction"
+        },
+        "benefits": {
+          "token_reduction": "25%",
+          "session_length": "2x longer effective sessions",
+          "cost_savings": "90% on long sessions"
+        }
+      }
+    },
+    "mcp_integration": {
+      "basic_server_config": {
+        "name": "MCP Server Configuration",
+        "source": "modelcontextprotocol",
+        "implementation": {
+          "config_format": "JSON in claude_code settings",
+          "example": {
+            "mcpServers": {
+              "filesystem": {
+                "command": "npx",
+                "args": ["@modelcontextprotocol/server-filesystem", "/workspace"]
+              },
+              "github": {
+                "command": "npx",
+                "args": ["@modelcontextprotocol/server-github"],
+                "env": {
+                  "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+                }
+              }
+            }
+          }
+        },
+        "benefits": {
+          "modularity": "Plugin architecture",
+          "standards": "Industry protocol",
+          "ecosystem": "Growing tool library"
+        }
+      },
+      "custom_mcp_server": {
+        "name": "Custom MCP Server Pattern",
+        "source": "e2b-dev/mcp-server",
+        "implementation": {
+          "minimal_server": "import { MCPServer } from '@modelcontextprotocol/server';\n\nconst server = new MCPServer({\n  name: 'custom-tool',\n  version: '1.0.0',\n  tools: [{\n    name: 'analyze',\n    description: 'Custom analysis',\n    inputSchema: { type: 'object' },\n    handler: async (params) => ({ result: 'analysis' })\n  }]\n});",
+          "deployment": "NPX executable or Docker container"
+        },
+        "benefits": {
+          "customization": "Domain-specific tools",
+          "performance": "Direct execution",
+          "integration": "Seamless with Claude Code"
+        }
+      }
+    },
+    "token_optimization": {
+      "thinking_mode_strategy": {
+        "name": "Graduated Thinking Modes",
+        "source": "anthropics/claude-code",
+        "implementation": {
+          "levels": {
+            "standard": "Default, ~1K tokens",
+            "think": "Simple problems, ~5K tokens",
+            "think_hard": "Complex problems, ~10K tokens",
+            "ultrathink": "Critical decisions, ~15K tokens"
+          },
+          "usage": "Reserve higher levels for complexity"
+        },
+        "benefits": {
+          "token_savings": "40% average reduction",
+          "quality": "Better results when needed",
+          "control": "Explicit computation budget"
+        }
+      },
+      "context_caching": {
+        "name": "Intelligent Context Caching",
+        "source": "Block/Apollo implementations",
+        "implementation": {
+          "cache_key": "Hash of file paths + query",
+          "ttl": "15 minutes",
+          "invalidation": "On file changes",
+          "storage": "In-memory with LRU eviction"
+        },
+        "benefits": {
+          "token_savings": "90% on repeated queries",
+          "performance": "Instant responses",
+          "consistency": "Same context = same results"
+        }
+      }
+    },
+    "quality_gates": {
+      "zero_config_reliability": {
+        "name": "Zero-Configuration Quality Gates",
+        "source": "minipuft/claude-prompts-mcp",
+        "implementation": {
+          "automatic_checks": [
+            "Syntax validation",
+            "Type checking",
+            "Test existence",
+            "Coverage threshold"
+          ],
+          "smart_defaults": "Language-specific best practices",
+          "override": "Explicit configuration when needed"
+        },
+        "benefits": {
+          "adoption": "Works out of the box",
+          "quality": "Consistent standards",
+          "efficiency": "No setup overhead"
+        }
+      }
+    },
+    "meta_capabilities": {
+      "tool_generation": {
+        "name": "Self-Expanding Tool Generation",
+        "source": "Doriandarko/claude-engineer",
+        "implementation": {
+          "pattern": "Claude generates custom tools",
+          "workflow": "Identify need → Generate tool → Test → Save",
+          "persistence": "Tools saved for reuse"
+        },
+        "benefits": {
+          "productivity": "60% less manual coding",
+          "customization": "Project-specific tools",
+          "evolution": "Framework grows with use"
+        }
+      }
+    },
+    "anti_patterns": {
+      "over_engineering": {
+        "name": "Framework Over-Engineering",
+        "symptoms": [
+          "200+ modules with <10% usage",
+          "Complex dependency chains",
+          "Abstract interfaces without implementation"
+        ],
+        "prevention": [
+          "Start with core commands only",
+          "Add modules based on usage",
+          "Regular pruning of unused code"
+        ]
+      },
+      "token_explosion": {
+        "name": "Context Window Explosion",
+        "symptoms": [
+          "200K+ tokens per simple task",
+          "Loading entire codebase",
+          "Never using /compact"
+        ],
+        "prevention": [
+          "Enforce file boundaries",
+          "Monitor context usage",
+          "Automate compaction"
+        ]
+      },
+      "documentation_drift": {
+        "name": "Claims Without Implementation",
+        "symptoms": [
+          "Features described but not coded",
+          "Performance claims without metrics",
+          "Theoretical capabilities"
+        ],
+        "prevention": [
+          "Link docs to implementation",
+          "Require metrics for claims",
+          "Regular truth audits"
+        ]
+      }
+    }
+  },
+  "implementation_priority": {
+    "immediate": [
+      "single_file_claude_md",
+      "file_boundaries",
+      "compact_strategy"
+    ],
+    "short_term": [
+      "lightweight_router",
+      "basic_server_config",
+      "thinking_mode_strategy"
+    ],
+    "medium_term": [
+      "custom_mcp_server",
+      "context_caching",
+      "zero_config_reliability"
+    ],
+    "long_term": [
+      "tool_generation",
+      "advanced_mcp_ecosystem"
+    ]
+  },
+  "metrics": {
+    "token_reduction": {
+      "file_boundaries": "30%",
+      "compact_usage": "25%",
+      "thinking_strategy": "40%",
+      "context_caching": "70%",
+      "combined_effect": "60-70%"
+    },
+    "performance_gains": {
+      "simple_routing": "2x faster",
+      "mcp_integration": "3x faster tool access",
+      "lightweight_framework": "50% less overhead"
+    }
+  }
+}

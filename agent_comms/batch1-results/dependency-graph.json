@@ -1,0 +1,177 @@
+{
+  "framework_version": "3.0.0",
+  "analysis_date": "2025-07-19",
+  "total_files": 187,
+  "total_size_tokens": 587361,
+  "command_to_module_mappings": {
+    "/auto": "modules/patterns/intelligent-routing.md",
+    "/task": "modules/patterns/tdd-cycle-pattern.md",
+    "/feature": "modules/patterns/workflow-orchestration-engine.md",
+    "/swarm": "modules/patterns/multi-agent.md",
+    "/query": "modules/patterns/research-analysis-pattern.md",
+    "/session": "modules/patterns/session-management-pattern.md",
+    "/protocol": "modules/patterns/workflow-orchestration-engine.md",
+    "/init": "domain/wizard/README.md",
+    "/init-new": "modules/development/",
+    "/init-custom": "domain/wizard/",
+    "/init-research": "modules/patterns/research-analysis-pattern.md",
+    "/init-validate": "system/quality/comprehensive-validation.md",
+    "/meta": "modules/meta/",
+    "/docs": "modules/patterns/documentation-pattern.md",
+    "/chain": "modules/patterns/command-chaining-architecture.md",
+    "/context-prime": "system/context/project-priming.md"
+  },
+  "module_categories": {
+    "patterns": {
+      "count": 29,
+      "total_tokens": 115234,
+      "key_modules": [
+        "workflow-orchestration-engine.md",
+        "command-chaining-architecture.md",
+        "module-composition-framework.md",
+        "tdd-cycle-pattern.md",
+        "intelligent-routing.md"
+      ]
+    },
+    "development": {
+      "count": 23,
+      "total_tokens": 87432,
+      "key_modules": [
+        "init.md",
+        "adapt.md",
+        "validate.md",
+        "code-review.md",
+        "domain-classification.md"
+      ]
+    },
+    "quality": {
+      "count": 33,
+      "total_tokens": 156789,
+      "key_modules": [
+        "universal-quality-gates.md",
+        "tdd-enforcement.md",
+        "production-standards.md",
+        "performance-gates.md",
+        "gate-verification.md"
+      ]
+    },
+    "system": {
+      "count": 42,
+      "total_tokens": 198234,
+      "key_modules": [
+        "session-management.md",
+        "project-priming.md",
+        "atomic-rollback-protocol.md",
+        "git-operations.md"
+      ]
+    },
+    "meta": {
+      "count": 7,
+      "total_tokens": 43211,
+      "key_modules": [
+        "meta-prompting-orchestration.md",
+        "meta-framework-control.md",
+        "framework-auditor.md"
+      ]
+    }
+  },
+  "redundancy_patterns": {
+    "tdd_related": {
+      "files": 9,
+      "modules": [
+        "tdd-cycle-pattern.md",
+        "tdd-cycle-pattern-enhanced.md",
+        "tdd-enforcement.md",
+        "tdd-verification.md",
+        "tdd.md",
+        "test-coverage.md",
+        "comprehensive-testing.md",
+        "iterative-testing.md"
+      ],
+      "redundancy_factor": 4.5,
+      "recommendation": "Consolidate to 2 modules: tdd-pattern.md and test-enforcement.md"
+    },
+    "validation_related": {
+      "files": 22,
+      "modules": [
+        "adaptation-validation.md (3 copies)",
+        "comprehensive-validation.md",
+        "domain-validation.md",
+        "general-validation.md",
+        "performance-validation.md",
+        "security-validation.md",
+        "setup-validation.md",
+        "validation-pattern.md",
+        "quality-validation-pattern.md"
+      ],
+      "redundancy_factor": 7.3,
+      "recommendation": "Consolidate to 3 modules: validation-pattern.md, security-validation.md, performance-validation.md"
+    },
+    "quality_gates": {
+      "files": 5,
+      "modules": [
+        "universal-quality-gates.md",
+        "adaptive-quality-gates.md",
+        "gate-verification.md",
+        "performance-gates.md",
+        "security-gate-verification.md"
+      ],
+      "redundancy_factor": 2.5,
+      "recommendation": "Consolidate to 2 modules: quality-gates.md and gate-verification.md"
+    },
+    "research_analysis": {
+      "files": 4,
+      "modules": [
+        "research-analysis-pattern.md",
+        "research-analysis-pattern-enhanced.md",
+        "research-analysis-pattern-parallel.md",
+        "research-analysis.md"
+      ],
+      "redundancy_factor": 2.0,
+      "recommendation": "Consolidate to 1 module: research-analysis-pattern.md"
+    }
+  },
+  "dead_code_analysis": {
+    "unused_modules": [
+      "modules/patterns/conflict-resolution.md",
+      "modules/patterns/enforcement-verification.md",
+      "modules/patterns/context-preservation.md",
+      "modules/development/mvp-strategy.md",
+      "modules/development/prd-core.md",
+      "system/security/financial-compliance.md",
+      "system/security/security-documentation-standards.md"
+    ],
+    "deprecated_modules": [
+      "modules/patterns/thinking-pattern-template-USAGE.md",
+      "modules/patterns/module-composition-framework-USAGE.md",
+      "commands/task-enhanced.md"
+    ],
+    "archived_but_referenced": [
+      "archive/2025-07-19/meta/*.md (5 files)"
+    ]
+  },
+  "circular_dependencies": {
+    "detected": false,
+    "note": "No circular dependencies found in module references"
+  },
+  "optimization_opportunities": {
+    "token_reduction": {
+      "current_total": 587361,
+      "after_consolidation": 352416,
+      "reduction_percentage": 40,
+      "method": "Remove redundancy, consolidate similar modules"
+    },
+    "file_reduction": {
+      "current_files": 187,
+      "after_consolidation": 112,
+      "reduction_percentage": 40,
+      "method": "Merge related functionality, remove unused"
+    },
+    "load_time_improvement": {
+      "current_estimate": "15-20 seconds",
+      "after_optimization": "8-10 seconds",
+      "improvement_percentage": 45
+    }
+  }
+}
+EOF < /dev/null

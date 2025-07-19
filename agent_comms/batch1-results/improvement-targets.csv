@@ -1,0 +1,21 @@
+Priority,Pain Point,Current State,Target State,Success Metric,Implementation Effort,User Impact,Timeline
+CRITICAL,Configuration Complexity,305-line XML with 50+ fields,20-line minimal config with wizard,Config lines < 20,HIGH,VERY HIGH,Immediate
+CRITICAL,Invisible Failures,Silent framework failures with no feedback,Clear error messages and validation,Failure detection rate 100%,MEDIUM,VERY HIGH,Immediate
+CRITICAL,Onboarding Complexity,4+ hour learning curve to productivity,15-minute quick start guide,Time to first success < 15 min,HIGH,VERY HIGH,Short-term
+HIGH,Expectation Mismatch,Claims 5-min setup but takes 30-90 min,Accurate time estimates in docs,Setup time matches claims ±20%,LOW,HIGH,Immediate
+HIGH,Framework Size Shock,2.6MB framework with 187 files,Core 10-20 files with optional modules,Core framework < 500KB,HIGH,HIGH,Short-term
+HIGH,Command Proliferation,18 commands with unclear distinctions,8-10 clear commands with decision tree,Commands to learn < 10,MEDIUM,HIGH,Short-term
+HIGH,Documentation Overload,20+ documentation pages required,5-8 essential pages with progressive disclosure,Initial docs < 10 pages,MEDIUM,HIGH,Short-term
+HIGH,Explanation Burden,Difficult to justify to team/others,Clear value prop with ROI calculator,Explanation time < 5 minutes,MEDIUM,HIGH,Medium-term
+MEDIUM,Setup Ambiguity,Multiple conflicting setup instructions,Single unified setup process,Setup success rate > 90%,LOW,MEDIUM,Immediate
+MEDIUM,Validation Vacuum,No configuration validation tool,Auto-validation with helpful feedback,Config errors caught 100%,MEDIUM,MEDIUM,Short-term
+MEDIUM,Abstract Command Design,Complex delegation patterns confusing,Direct command execution model,Mental model clarity > 80%,HIGH,MEDIUM,Medium-term
+MEDIUM,Enforcement Friction,Rigid quality gates block quick work,Flexible modes (prototype/production),Quick task overhead < 30%,MEDIUM,MEDIUM,Short-term
+LOW,Meta-Command Confusion,5 meta sub-commands add complexity,Simplified meta operations,Meta command usage > 10%,LOW,LOW,Long-term
+QUICK WIN,Minimal Starter Config,No minimal configuration example,Working 20-line example config,New user success rate > 80%,LOW,HIGH,Immediate
+QUICK WIN,Command Consolidation,5 init command variants,Single init with options,Command decision time < 30s,LOW,MEDIUM,Immediate
+QUICK WIN,Setup Validator,No setup validation exists,/validate-setup command,Setup validation usage 100%,MEDIUM,HIGH,Immediate
+QUICK WIN,Visual Command Guide,Text-only command documentation,Interactive decision flowchart,Command selection accuracy > 90%,MEDIUM,HIGH,Short-term
+ENHANCEMENT,Progressive Disclosure,All-or-nothing framework approach,Starter/Standard/Advanced modes,User retention > 60%,HIGH,HIGH,Medium-term
+ENHANCEMENT,Framework Lite,Monolithic framework only,Modular plugin architecture,Adoption rate > 50%,VERY HIGH,HIGH,Long-term
+ENHANCEMENT,Adaptive Framework,Static enforcement rules,Context-aware adaptations,User satisfaction > 80%,VERY HIGH,MEDIUM,Long-term
