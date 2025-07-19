@@ -16,6 +16,17 @@
     Systematic threat identification using STRIDE methodology with DREAD risk assessment and regulatory compliance integration.
   </purpose>
   
+  <interface_contract>
+    <inputs>
+      <required>system_architecture, data_flows, trust_boundaries, regulatory_requirements</required>
+      <optional>existing_security_controls, compliance_frameworks, risk_appetite, threat_intelligence</optional>
+    </inputs>
+    <outputs>
+      <success>threat_model_document, stride_analysis_results, dread_risk_scores, mitigation_strategy, compliance_mapping</success>
+      <failure>analysis_errors, incomplete_threat_coverage, regulatory_gaps, mitigation_failures</failure>
+    </outputs>
+  </interface_contract>
+  
   <trigger_conditions>
     <condition type="automatic">Security architecture design, compliance requirements, vulnerability assessments</condition>
     <condition type="explicit">User requests threat analysis, security modeling, or compliance threat assessment</condition>

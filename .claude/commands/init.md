@@ -1,12 +1,12 @@
-# Init Command - Set up the framework in your project
+# Init Command - Framework Initialization
 
-**Description**: Set up the framework in your project
+**Description**: Initialize the framework in your project
 
 ────────────────────────────────────────────────────────────────────────────────
 
 | version | last_updated | status | readiness |
 |---------|--------------|--------|----------|
-| 3.0.0   | 2025-07-18   | stable | 80%      |
+| 3.0.0   | 2025-07-19   | stable | 95%      |
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -49,6 +49,14 @@
 - **Configuration**: Sets up project-specific configuration
 - **Validation**: Ensures framework is working correctly
 - **Guided setup**: Walks through setup process step by step
+
+## Related Commands
+
+For specific initialization scenarios, use:
+- `/init-new` - New project with full scaffolding
+- `/init-custom` - Custom configuration for complex projects
+- `/init-research` - Research-focused framework setup
+- `/init-validate` - Validate existing framework installation
 
 ## Examples
 
