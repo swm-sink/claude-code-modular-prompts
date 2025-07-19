@@ -55,6 +55,24 @@
 - **Rollback ready**: Atomic rollback capability for instant recovery
 - **Compliance**: Full compliance with production standards and regulations
 
+## Actual Capabilities
+
+This command provides:
+- Structured deployment workflow with safety checks
+- Integration with quality gates and testing
+- Atomic commit strategy for safe rollbacks
+- Security validation through existing modules
+- Production-grade deployment patterns
+
+## Future Enhancements
+
+*Note: The following features are planned but not yet implemented:*
+- Performance profiling and bottleneck identification
+- Resource optimization recommendations
+- Automated caching strategy implementation
+- Policy enforcement and compliance automation
+- Advanced monitoring and observability setup
+
 ## Examples
 
 - `/protocol "Deploy API changes"` - Deploys with full production safety validation

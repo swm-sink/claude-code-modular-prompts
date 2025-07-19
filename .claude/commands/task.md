@@ -54,6 +54,14 @@
 - **Atomic commits**: Creates safe rollback points at each TDD phase
 - **Scope validation**: Escalates to appropriate command for larger tasks
 
+## Future Enhancements
+
+*Note: The following features are planned but not yet implemented:*
+- Auto-fix capabilities for linting and formatting
+- Automated test failure analysis
+- Coverage gap identification
+- Pattern-based fixes for common issues
+
 ## Examples
 
 - `/task "Add input validation"` - Creates validation with comprehensive tests
