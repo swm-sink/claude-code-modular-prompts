@@ -707,6 +707,190 @@
 
 ────────────────────────────────────────────────────────────────────────────────
 
+## Deployment Workflows
+
+### Production Deployment Patterns
+
+```xml
+<deployment_workflows enforcement="PRODUCTION_GRADE">
+  
+  <deployment_patterns>
+    <blue_green_deployment>
+      <purpose>Zero-downtime deployment with instant rollback capability</purpose>
+      <workflow_definition>
+        <phase name="preparation" order="1">
+          <actions>
+            <action>Prepare green environment with new version</action>
+            <action>Run comprehensive health checks on green</action>
+            <action>Verify database migrations compatibility</action>
+            <action>Validate configuration and secrets</action>
+          </actions>
+          <quality_gates>
+            <gate>All health checks passing on green environment</gate>
+            <gate>Database migration validation successful</gate>
+            <gate>Configuration parity verified</gate>
+          </quality_gates>
+        </phase>
+        
+        <phase name="validation" order="2">
+          <actions>
+            <action>Run smoke tests on green environment</action>
+            <action>Execute integration test suite</action>
+            <action>Verify API compatibility</action>
+            <action>Load test green environment</action>
+          </actions>
+          <quality_gates>
+            <gate>100% smoke test pass rate</gate>
+            <gate>Integration tests meeting SLA</gate>
+            <gate>Performance within acceptable thresholds</gate>
+          </quality_gates>
+        </phase>
+        
+        <phase name="switch" order="3">
+          <actions>
+            <action>Begin traffic shift to green (canary 10%)</action>
+            <action>Monitor error rates and performance</action>
+            <action>Gradual traffic increase (25%, 50%, 100%)</action>
+            <action>Update DNS/load balancer configuration</action>
+          </actions>
+          <rollback_triggers>
+            <trigger>Error rate > 1% threshold</trigger>
+            <trigger>Response time > 200ms p95</trigger>
+            <trigger>Health check failures</trigger>
+          </rollback_triggers>
+        </phase>
+        
+        <phase name="cleanup" order="4">
+          <actions>
+            <action>Verify stable operation on green</action>
+            <action>Decommission blue environment</action>
+            <action>Update deployment documentation</action>
+            <action>Archive deployment artifacts</action>
+          </actions>
+        </phase>
+      </workflow_definition>
+    </blue_green_deployment>
+    
+    <canary_deployment>
+      <purpose>Gradual rollout with continuous validation</purpose>
+      <workflow_definition>
+        <phase name="canary_setup" order="1">
+          <actions>
+            <action>Deploy new version to canary instances (5%)</action>
+            <action>Configure traffic routing rules</action>
+            <action>Enable enhanced monitoring</action>
+          </actions>
+        </phase>
+        
+        <phase name="progressive_rollout" order="2">
+          <actions>
+            <action>Monitor canary metrics for 15 minutes</action>
+            <action>Increase traffic to 10% if healthy</action>
+            <action>Continue monitoring and increase to 25%</action>
+            <action>Final rollout to 100% after validation</action>
+          </actions>
+          <automatic_rollback>
+            <condition>Error rate deviation > 0.5%</condition>
+            <condition>Latency increase > 10%</condition>
+            <condition>CPU/Memory spike > 20%</condition>
+          </automatic_rollback>
+        </phase>
+      </workflow_definition>
+    </canary_deployment>
+    
+    <emergency_rollback>
+      <purpose>Rapid recovery from failed deployments</purpose>
+      <workflow_definition>
+        <phase name="detection" order="1" max_duration="30s">
+          <actions>
+            <action>Identify rollback trigger (automated or manual)</action>
+            <action>Capture current state for analysis</action>
+            <action>Alert stakeholders</action>
+          </actions>
+        </phase>
+        
+        <phase name="rollback_execution" order="2" max_duration="2m">
+          <actions>
+            <action>Switch traffic to previous version</action>
+            <action>Revert database migrations if needed</action>
+            <action>Restore configuration to previous state</action>
+            <action>Verify service health</action>
+          </actions>
+        </phase>
+        
+        <phase name="stabilization" order="3">
+          <actions>
+            <action>Monitor system stability</action>
+            <action>Generate incident report</action>
+            <action>Schedule postmortem</action>
+          </actions>
+        </phase>
+      </workflow_definition>
+    </emergency_rollback>
+  </deployment_patterns>
+  
+  <deployment_quality_gates>
+    <pre_deployment_validation>
+      <test_coverage_check>
+        <requirement>Minimum 90% test coverage</requirement>
+        <validation_command>pytest --cov=src --cov-fail-under=90</validation_command>
+      </test_coverage_check>
+      
+      <security_scan>
+        <requirement>No high or critical vulnerabilities</requirement>
+        <validation_command>security-scan --severity=high</validation_command>
+      </security_scan>
+      
+      <performance_baseline>
+        <requirement>Performance regression < 5%</requirement>
+        <validation_command>performance-test --compare-baseline</validation_command>
+      </performance_baseline>
+    </pre_deployment_validation>
+    
+    <post_deployment_validation>
+      <health_checks>
+        <endpoint_availability>All health endpoints returning 200</endpoint_availability>
+        <database_connectivity>Database connections established</database_connectivity>
+        <external_dependencies>All external services reachable</external_dependencies>
+      </health_checks>
+      
+      <functional_validation>
+        <smoke_tests>Critical user paths functional</smoke_tests>
+        <api_compatibility>API backwards compatibility maintained</api_compatibility>
+        <data_integrity>No data corruption or loss</data_integrity>
+      </functional_validation>
+    </post_deployment_validation>
+  </deployment_quality_gates>
+  
+  <deployment_state_management>
+    <deployment_record>
+      <deployment_id>Unique identifier for deployment</deployment_id>
+      <version>Application version being deployed</version>
+      <timestamp>Deployment initiation time</timestamp>
+      <environment>Target environment (staging/production)</environment>
+      <deployment_type>blue-green|canary|rolling|emergency</deployment_type>
+      <status>initiated|validating|deploying|completed|rolled_back|failed</status>
+    </deployment_record>
+    
+    <state_persistence>
+      <git_tracking>
+        <deployment_branch>deployment/[environment]/[deployment_id]</deployment_branch>
+        <commit_message>"DEPLOY: [version] to [environment] via [deployment_type]"</commit_message>
+        <tags>deployment-[environment]-[version]-[timestamp]</tags>
+      </git_tracking>
+      
+      <artifact_storage>
+        <deployment_manifest>Complete deployment configuration</deployment_manifest>
+        <validation_results>All quality gate results</validation_results>
+        <rollback_plan>Automated rollback instructions</rollback_plan>
+      </artifact_storage>
+    </state_persistence>
+  </deployment_state_management>
+</deployment_workflows>
+```
+
+────────────────────────────────────────────────────────────────────────────────
+
 ## Integration Interfaces
 
 ### Command Integration Points

@@ -388,6 +388,147 @@
 </module>
 ```
 
+## Human Team Coordination
+
+### Team Collaboration Patterns
+
+```xml
+<team_coordination_patterns enforcement="PRODUCTION_GRADE">
+  
+  <human_team_features>
+    <purpose>Extend multi-agent patterns to coordinate human development teams</purpose>
+    
+    <team_distribution_patterns>
+      <expertise_based_distribution>
+        <frontend_specialist>
+          <responsibilities>UI/UX implementation, component development, styling</responsibilities>
+          <workspace>Isolated worktree for frontend development</workspace>
+          <coordination>Sync points with backend for API contracts</coordination>
+        </frontend_specialist>
+        
+        <backend_specialist>
+          <responsibilities>API development, business logic, database design</responsibilities>
+          <workspace>Isolated worktree for backend development</workspace>
+          <coordination>API contract definition, data model synchronization</coordination>
+        </backend_specialist>
+        
+        <fullstack_generalist>
+          <responsibilities>Integration, deployment, cross-cutting concerns</responsibilities>
+          <workspace>Main branch with integration focus</workspace>
+          <coordination>Bridge between specialists, resolve conflicts</coordination>
+        </fullstack_generalist>
+        
+        <qa_specialist>
+          <responsibilities>Test strategy, automation, quality gates</responsibilities>
+          <workspace>Test-focused worktree with full system access</workspace>
+          <coordination>Continuous validation across all workstreams</coordination>
+        </qa_specialist>
+      </expertise_based_distribution>
+      
+      <feature_based_distribution>
+        <vertical_slicing>Complete features assigned to individuals/pairs</vertical_slicing>
+        <horizontal_coordination>Shared components and integration points</horizontal_coordination>
+        <dependency_management>Clear interfaces between feature teams</dependency_management>
+      </feature_based_distribution>
+    </team_distribution_patterns>
+    
+    <synchronization_mechanisms>
+      <daily_sync_points>
+        <morning_standup>
+          <purpose>Align on daily goals and blockers</purpose>
+          <outputs>Updated task assignments, identified dependencies</outputs>
+          <duration>15 minutes max</duration>
+        </morning_standup>
+        
+        <midday_checkpoint>
+          <purpose>Progress check and course correction</purpose>
+          <outputs>Adjusted priorities, resolved blockers</outputs>
+          <duration>Optional 10 minutes</duration>
+        </midday_checkpoint>
+        
+        <end_of_day_integration>
+          <purpose>Merge work and validate integration</purpose>
+          <outputs>Integrated codebase, identified conflicts</outputs>
+          <duration>30 minutes for resolution</duration>
+        </end_of_day_integration>
+      </daily_sync_points>
+      
+      <async_coordination>
+        <pull_request_protocols>
+          <draft_pr_for_visibility>Early visibility into work in progress</draft_pr_for_visibility>
+          <review_assignments>Automatic assignment based on expertise</review_assignments>
+          <merge_requirements>Two approvals, passing tests, no conflicts</merge_requirements>
+        </pull_request_protocols>
+        
+        <communication_channels>
+          <team_chat>Real-time discussion and quick questions</team_chat>
+          <documentation_wiki>Persistent knowledge and decisions</documentation_wiki>
+          <issue_tracking>Task management and progress visibility</issue_tracking>
+        </communication_channels>
+      </async_coordination>
+    </synchronization_mechanisms>
+    
+    <conflict_resolution>
+      <technical_conflicts>
+        <merge_conflicts>Resolved through pair programming session</merge_conflicts>
+        <architecture_disagreements>Escalated to technical lead with team input</architecture_disagreements>
+        <performance_tradeoffs>Data-driven decision with benchmarks</performance_tradeoffs>
+      </technical_conflicts>
+      
+      <process_conflicts>
+        <priority_disputes>Product owner arbitration with team input</priority_disputes>
+        <resource_allocation>Team consensus with manager approval</resource_allocation>
+        <timeline_pressure>Scope negotiation preserving quality</timeline_pressure>
+      </process_conflicts>
+    </conflict_resolution>
+    
+    <progress_tracking>
+      <individual_metrics>
+        <task_completion>Tasks completed vs assigned</task_completion>
+        <code_quality>Review feedback, test coverage</code_quality>
+        <collaboration>PR reviews, pair programming hours</collaboration>
+      </individual_metrics>
+      
+      <team_metrics>
+        <velocity>Story points completed per sprint</velocity>
+        <quality>Defect rates, test coverage trends</quality>
+        <collaboration_health>PR turnaround, knowledge sharing</collaboration_health>
+      </team_metrics>
+      
+      <visibility_tools>
+        <burndown_charts>Sprint progress visualization</burndown_charts>
+        <kanban_boards>Work in progress limits and flow</kanban_boards>
+        <dependency_graphs>Cross-team dependency tracking</dependency_graphs>
+      </visibility_tools>
+    </progress_tracking>
+  </human_team_features>
+  
+  <team_workflow_orchestration>
+    <sprint_kickoff>
+      <activities>
+        <planning>Story breakdown and estimation</planning>
+        <assignment>Task distribution based on expertise</assignment>
+        <dependency_mapping>Identify and plan for dependencies</dependency_mapping>
+      </activities>
+    </sprint_kickoff>
+    
+    <daily_workflow>
+      <morning>Standup → Task selection → Development</morning>
+      <afternoon>Development → Integration → Testing</afternoon>
+      <evening>Code review → Documentation → Handoff prep</evening>
+    </daily_workflow>
+    
+    <sprint_completion>
+      <activities>
+        <integration_testing>Full system validation</integration_testing>
+        <retrospective>Team learning and improvement</retrospective>
+        <knowledge_transfer>Documentation and handoff</knowledge_transfer>
+      </activities>
+    </sprint_completion>
+  </team_workflow_orchestration>
+</team_coordination_patterns>
+```
+
 ## Multi-Agent Coordination Examples
 
 ### Example 1: Authentication System Development

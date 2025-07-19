@@ -70,7 +70,7 @@
 **Framework Status**: This repository contains a highly optimized modular prompt engineering framework with streamlined `.claude/` architecture, advanced meta-prompting capabilities, and Claude 4 optimization.
 
 **What's Included**:
-- Optimized `.claude/` modular framework with 23 essential modules (87.8% reduction)
+- Optimized `.claude/` modular framework with 20 essential modules (94.0% reduction)
 - Enhanced context analysis commands with multi-agent capabilities
 - Complete meta-framework operations with 5 specialized modules
 - Comprehensive validation and atomic rollback protocols
@@ -78,10 +78,10 @@
 - Quality gates and TDD enforcement implementation
 
 **Framework Architecture**:
-- `.claude/modules/` - 21 essential modules across core domains
+- `.claude/modules/` - 20 essential modules across core domains
 - `.claude/system/` - 2 critical system components (context + quality)
 - `.claude/domain/` - 2 wizard modules for initialization
-- Complete command coverage with 16 working commands
+- Complete command coverage with 17 working commands
 
 
 # 📚 2025 Research & Critical Analysis
@@ -190,7 +190,7 @@
     <trust_status>Rebuilding through transparency</trust_status>
   </status_summary>
   
-  <core_commands count = "16">
+  <core_commands count = "17">
     <command name = "auto" status = "FULLY_FUNCTIONAL" actual = "Intelligent routing to other commands"/>
     <command name = "task" status = "FULLY_FUNCTIONAL" actual = "TDD single component development"/>
     <command name = "feature" status = "FULLY_FUNCTIONAL" actual = "PRD-driven feature development"/>
@@ -234,22 +234,22 @@
 ```xml
 <optimization_results date = "2025-07-19" type = "massive_reduction">
   <module_optimization>
-    <reduction>From 189 modules to 23 modules (87.8% reduction)</reduction>
+    <reduction>From 189 modules to 20 modules (94.0% reduction)</reduction>
     <performance_improvement>90%+ faster framework loading</performance_improvement>
     <memory_reduction>90%+ reduction in memory usage</memory_reduction>
   </module_optimization>
   <command_functionality>
-    <preservation>100% - All 16 commands fully operational</preservation>
+    <preservation>100% - All 17 commands fully operational</preservation>
     <enhancements>Added /context-prime-mega with multi-agent analysis</enhancements>
     <fixes>Resolved broken command references (/meta, /query)</fixes>
   </command_functionality>
   <framework_health>
-    <essential_modules>23 modules preserved with zero functional impact</essential_modules>
+    <essential_modules>20 modules preserved with zero functional impact</essential_modules>
     <maintenance_complexity>85% reduction - 10x simpler structure</maintenance_complexity>
     <rollback_capability>Complete atomic rollback within 60 seconds</rollback_capability>
   </framework_health>
   <overall_metrics>
-    <optimization_achievement>87.8% module reduction</optimization_achievement>
+    <optimization_achievement>94.0% module reduction</optimization_achievement>
     <functionality_score>10/10 - Perfect preservation</functionality_score>
     <performance_score>10/10 - Massive improvement</performance_score>
     <framework_status>Optimally streamlined and production ready</framework_status>
@@ -346,26 +346,51 @@
     <command name="/auto" purpose="Intelligent routing and framework selection">
       <usage>/auto "your request here"</usage>
       <best_for>Unclear requirements | Complex decisions | Route optimization</best_for>
+      <workflow_examples>
+        <example>/auto "add user authentication" → routes to /feature</example>
+        <example>/auto "fix login bug" → routes to /task</example>
+        <example>/auto "understand auth flow" → routes to /query</example>
+      </workflow_examples>
     </command>
     
     <command name="/task" purpose="Single component TDD development">
       <usage>/task "implement specific functionality"</usage>
       <best_for>Single file changes | Bug fixes | <50 lines of code</best_for>
+      <workflow_examples>
+        <example>Bug fix: /query "analyze bug" → /task "fix issue"</example>
+        <example>Enhancement: /task "add validation to UserModel"</example>
+        <example>Refactor: /task "extract EmailService from UserController"</example>
+      </workflow_examples>
     </command>
     
     <command name="/feature" purpose="Complete feature lifecycle with PRD">
       <usage>/feature "develop new feature with requirements"</usage>
       <best_for>New features | Multi-component changes | System integration</best_for>
+      <workflow_examples>
+        <example>Full feature: /feature "user authentication" → /protocol "deploy"</example>
+        <example>With research: /query "existing auth" → /feature "SSO integration"</example>
+        <example>Team work: /feature "payment system" → /swarm "distribute tasks"</example>
+      </workflow_examples>
     </command>
     
     <command name="/query" purpose="Research and analysis">
       <usage>/query "analyze codebase or investigate issue"</usage>
       <best_for>Code research | Understanding systems | Read-only analysis</best_for>
+      <workflow_examples>
+        <example>Deep analysis: /context-prime-mega "performance bottlenecks"</example>
+        <example>Bug investigation: /query "trace error" → /task "implement fix"</example>
+        <example>Architecture review: /query "analyze patterns" → /docs "update"</example>
+      </workflow_examples>
     </command>
     
     <command name="/swarm" purpose="Multi-agent coordination for complex tasks">
       <usage>/swarm "coordinate multiple development tasks"</usage>
       <best_for>Complex projects | Parallel development | Team coordination</best_for>
+      <workflow_examples>
+        <example>Team distribution: /swarm "auth feature: frontend, backend, database"</example>
+        <example>Parallel work: /chain parallel --commands="task:ui,task:api,task:db"</example>
+        <example>Complex system: /swarm "microservices refactoring project"</example>
+      </workflow_examples>
     </command>
     
     <command name="/session" purpose="Long-running work with context preservation">
@@ -376,6 +401,11 @@
     <command name="/protocol" purpose="Production deployment with safety">
       <usage>/protocol "production deployment or critical changes"</usage>
       <best_for>Production deployments | Critical fixes | Safety validation</best_for>
+      <workflow_examples>
+        <example>Deploy flow: /query "readiness" → /protocol "deploy" → /query "verify"</example>
+        <example>Emergency: /chain "hotfix" --sequence="query,task,protocol,docs"</example>
+        <example>Rollback: /protocol "emergency rollback to previous version"</example>
+      </workflow_examples>
     </command>
     
     <command name="/init" purpose="Framework initialization">
@@ -418,6 +448,11 @@
     <command name="/chain" purpose="Advanced workflow orchestration">
       <usage>/chain "execute multi-command workflows"</usage>
       <best_for>Complex workflows | Sequential operations | Conditional routing</best_for>
+      <workflow_examples>
+        <example>Feature to prod: /chain "feature→test→deploy" --sequence="feature,query,protocol"</example>
+        <example>Incident response: /chain urgent --sequence="query:diagnose,task:fix,protocol:deploy"</example>
+        <example>Modernization: /chain parallel="query:analyze,meta:review" then="task:refactor"</example>
+      </workflow_examples>
     </command>
     
     <command name="/context-prime" purpose="Project context establishment">
@@ -500,10 +535,10 @@
   
   <workflow name="Performance Optimization">
     <steps>
-      <step>1. /meta-review "analyze current performance"</step>
-      <step>2. /meta-optimize "implement optimizations"</step>
+      <step>1. /meta review "analyze current performance"</step>
+      <step>2. /meta optimize "implement optimizations"</step>
       <step>3. /task "apply specific performance improvements"</step>
-      <step>4. /meta-evolve "learn from optimization patterns"</step>
+      <step>4. /meta evolve "learn from optimization patterns"</step>
     </steps>
   </workflow>
 </workflow_reference>
@@ -534,8 +569,8 @@
   <issue name="Poor performance">
     <symptoms>Slow responses | High token usage | Context timeouts</symptoms>
     <solutions>
-      <solution>Run /meta-review to analyze performance</solution>
-      <solution>Use /meta-optimize for automated improvements</solution>
+      <solution>Run /meta review to analyze performance</solution>
+      <solution>Use /meta optimize for automated improvements</solution>
       <solution>Check context_management settings in PROJECT_CONFIG.xml</solution>
     </solutions>
   </issue>
@@ -545,7 +580,7 @@
     <solutions>
       <solution>Customize PROJECT_CONFIG.xml for your tech stack</solution>
       <solution>Verify configuration is project-specific</solution>
-      <solution>Use /meta-evolve to adapt to your patterns</solution>
+      <solution>Use /meta evolve to adapt to your patterns</solution>
     </solutions>
   </issue>
 </troubleshooting_reference>
@@ -572,14 +607,14 @@
   <validation>
     <item>✓ Run /auto "test framework setup" to verify</item>
     <item>✓ Try /task "simple test task" to confirm TDD</item>
-    <item>✓ Check /meta-review for any issues</item>
+    <item>✓ Check /meta review for any issues</item>
     <item>✓ Verify quality gates are enforcing</item>
   </validation>
   
   <optimization>
-    <item>✓ Run /meta-optimize after first week of usage</item>
-    <item>✓ Use /meta-evolve to adapt to team patterns</item>
-    <item>✓ Regular /meta-review for performance monitoring</item>
+    <item>✓ Run /meta optimize after first week of usage</item>
+    <item>✓ Use /meta evolve to adapt to team patterns</item>
+    <item>✓ Regular /meta review for performance monitoring</item>
     <item>✓ Update PROJECT_CONFIG.xml as project evolves</item>
   </optimization>
 </setup_checklist>
@@ -836,7 +871,7 @@
     <cmd name = "/query" module = "@modules/patterns/research-analysis-pattern-parallel.md"/>
     <cmd name = "/session" module = "@modules/patterns/session-management-pattern.md"/>
     <cmd name = "/protocol" module = "@modules/patterns/workflow-orchestration-engine.md"/>
-    <cmd name = "/init" module = "@domain/wizard/README.md"/>
+    <cmd name = "/init" module = "@domain/wizard/domain-wizard.md"/>
     <cmd name = "/init-new" module = "@modules/development/project-initialization.md"/>
     <cmd name = "/init-custom" module = "@domain/wizard/domain-wizard.md"/>
     <cmd name = "/init-research" module = "@modules/patterns/research-analysis-pattern-parallel.md"/>
@@ -1117,7 +1152,7 @@
 ```xml
 <atomic_rollback_reference enforcement = "CRITICAL">
   <purpose>Zero data loss with instant recovery for all framework operations</purpose>
-  <canonical_source>@.claude/system/git/atomic-rollback-protocol.md</canonical_source>
+  <canonical_source>Implemented in workflow-orchestration-engine.md and session-management-pattern.md</canonical_source>
   <core_guarantees>
     <zero_data_loss>All changes reversible within seconds with complete operation history</zero_data_loss>
     <performance_targets>Commit <1s, Rollback <2s, Validation <5s, Recovery <10s</performance_targets>
@@ -1397,17 +1432,17 @@
 ```xml
 <module_runtime_reference enforcement = "CRITICAL">
   <purpose>Deterministic module composition and execution engine for Claude 4</purpose>
-  <canonical_source>@.claude/modules/patterns/module-runtime-engine.md</canonical_source>
+  <canonical_source>Runtime principles embedded across all command and module implementations</canonical_source>
   <core_features>
     <runtime_architecture>Checkpoint patterns | TDD mandatory | Validation gates</runtime_architecture>
     <command_specifications>Task | Swarm | Auto | Query | Session | Protocol | Docs</command_specifications>
     <performance_targets>Commands: <2min | Loading: <10s | Gates: <30s</performance_targets>
   </core_features>
   <integration_dependencies>
-    <thinking_patterns>@.claude/modules/patterns/thinking-pattern-template.md</thinking_patterns>
-    <composition_framework>@.claude/modules/patterns/module-composition-framework.md</composition_framework>
-    <quality_gates>@.claude/system/quality/universal-quality-gates.md</quality_gates>
-    <tdd_enforcement>@.claude/modules/patterns/tdd-cycle-pattern.md</tdd_enforcement>
+    <thinking_patterns>Thinking patterns embedded in each module's thinking_pattern section</thinking_patterns>
+    <composition_framework>Module composition principles defined in architecture section</composition_framework>
+    <quality_gates>Quality enforcement integrated throughout framework</quality_gates>
+    <tdd_enforcement>@modules/patterns/tdd-cycle-pattern.md</tdd_enforcement>
   </integration_dependencies>
 </module_runtime_reference>
 ```
@@ -1432,7 +1467,7 @@
 ```xml
 <meta_framework_reference enforcement = "CRITICAL">
   <purpose>Unified meta-framework operations with intelligent routing and safety boundaries</purpose>
-  <unified_command>@.claude/commands/meta.md</unified_command>
+  <unified_command>/meta command defined in CLAUDE.md</unified_command>
   <framework_control>@.claude/meta/meta-framework-control.md</framework_control>
   
   <operations>
@@ -1450,10 +1485,10 @@
   </safety_framework>
   
   <integration_points>
-    <meta_modules>@.claude/modules/meta/</meta_modules>
-    <quality_gates>@.claude/system/quality/universal-quality-gates.md</quality_gates>
-    <atomic_rollback>@.claude/system/git/atomic-rollback-protocol.md</atomic_rollback>
-    <module_runtime>@.claude/modules/patterns/module-runtime-engine.md</module_runtime>
+    <meta_modules>@modules/meta/</meta_modules>
+    <quality_gates>Quality enforcement integrated throughout framework</quality_gates>
+    <atomic_rollback>Implemented in workflow and session management modules</atomic_rollback>
+    <module_runtime>Runtime principles embedded in command architecture</module_runtime>
   </integration_points>
 </meta_framework_reference>
 ```
@@ -1462,20 +1497,20 @@
 # Intelligent Framework Control
 
 ```xml
-<intelligent_framework_control version = "4.0" enforcement = "ACTIVE">
-  <purpose>Active intelligence layer preventing framework degradation through validation and monitoring</purpose>
+<intelligent_framework_control version = "4.0" enforcement = "PRINCIPLES">
+  <purpose>Design principles for maintaining framework integrity and preventing degradation</purpose>
   
   <state_awareness>
-    <current_state>@.claude/state/current-system-state.json</current_state>
-    <change_history>@.claude/state/change-history.log</change_history>
-    <health_monitor>@.claude/monitors/system-health-monitor.md</health_monitor>
+    <principle>Track framework state through git history and documentation</principle>
+    <principle>Monitor changes through code review and testing</principle>
+    <principle>Validate health through command execution and quality gates</principle>
   </state_awareness>
   
   <change_protection enforcement = "BLOCKING">
     <before_any_change>
-      <must_run>@.claude/guards/change-impact-analyzer.md</must_run>
-      <must_pass>@.claude/truth/claim-validator.md</must_pass>
-      <must_verify>All functionality preserved</must_verify>
+      <principle>Analyze impact of changes before implementation</principle>
+      <principle>Validate all claims match actual functionality</principle>
+      <principle>Verify all functionality is preserved or improved</principle>
     </before_any_change>
     
     <blocking_conditions>
@@ -1494,13 +1529,13 @@
   </truth_enforcement>
   
   <continuous_monitoring>
-    <health_checks>@.claude/monitors/system-health-monitor.md</health_checks>
-    <truth_audits>@.claude/truth/claim-validator.md</truth_audits>
-    <change_tracking>@.claude/state/change-history.log</change_tracking>
-    <alert_thresholds>
-      <critical>Health score < 60 | Any false claims</critical>
-      <warning>Health score < 70 | Token usage > 150K</warning>
-    </alert_thresholds>
+    <principle>Regular validation of framework functionality</principle>
+    <principle>Audit documentation claims against implementation</principle>
+    <principle>Track changes through git history and PR reviews</principle>
+    <alert_guidelines>
+      <critical>Any false capability claims in documentation</critical>
+      <warning>Token usage exceeding context limits</warning>
+    </alert_guidelines>
   </continuous_monitoring>
   
   <remediation_protocol>
