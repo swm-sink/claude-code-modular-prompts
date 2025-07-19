@@ -148,21 +148,21 @@ jobs:
           if [ -f "safety-report.json" ]; then
             # Parse and display results
             python -c "
-import json
-try:
-    with open('safety-report.json') as f:
-        report = json.load(f)
-    
-    if report:
-        print('❌ Security vulnerabilities found:')
-        for vuln in report:
-            print(f'  - {vuln.get(\"package\")}: {vuln.get(\"vulnerability\")}')
-        exit(1)
-    else:
-        print('✅ No known vulnerabilities found')
-except:
-    print('✅ No vulnerabilities detected')
-"
+            import json
+            try:
+                with open('safety-report.json') as f:
+                    report = json.load(f)
+                
+                if report:
+                    print('❌ Security vulnerabilities found:')
+                    for vuln in report:
+                        print(f'  - {vuln.get(\"package\")}: {vuln.get(\"vulnerability\")}')
+                    exit(1)
+                else:
+                    print('✅ No known vulnerabilities found')
+            except:
+                print('✅ No vulnerabilities detected')
+            "
           else
             echo "✅ No vulnerabilities detected"
           fi
@@ -178,31 +178,31 @@ except:
           if [ -f "bandit-report.json" ]; then
             # Parse and display results
             python -c "
-import json
-try:
-    with open('bandit-report.json') as f:
-        report = json.load(f)
-    
-    results = report.get('results', [])
-    high_severity = [r for r in results if r.get('issue_severity') == 'HIGH']
-    medium_severity = [r for r in results if r.get('issue_severity') == 'MEDIUM']
-    
-    if high_severity:
-        print(f'❌ {len(high_severity)} HIGH severity security issues found')
-        for issue in high_severity[:3]:  # Show first 3
-            print(f'  - {issue.get(\"test_name\")}: {issue.get(\"filename\")}:{issue.get(\"line_number\")}')
-        exit(1)
-    elif medium_severity:
-        print(f'⚠️  {len(medium_severity)} MEDIUM severity security issues found')
-        for issue in medium_severity[:3]:  # Show first 3
-            print(f'  - {issue.get(\"test_name\")}: {issue.get(\"filename\")}:{issue.get(\"line_number\")}')
-        print('Consider reviewing these issues')
-    else:
-        print('✅ No high or medium severity security issues found')
-        
-except Exception as e:
-    print('✅ Static analysis completed')
-"
+            import json
+            try:
+                with open('bandit-report.json') as f:
+                    report = json.load(f)
+                
+                results = report.get('results', [])
+                high_severity = [r for r in results if r.get('issue_severity') == 'HIGH']
+                medium_severity = [r for r in results if r.get('issue_severity') == 'MEDIUM']
+                
+                if high_severity:
+                    print(f'❌ {len(high_severity)} HIGH severity security issues found')
+                    for issue in high_severity[:3]:  # Show first 3
+                        print(f'  - {issue.get(\"test_name\")}: {issue.get(\"filename\")}:{issue.get(\"line_number\")}')
+                    exit(1)
+                elif medium_severity:
+                    print(f'⚠️  {len(medium_severity)} MEDIUM severity security issues found')
+                    for issue in medium_severity[:3]:  # Show first 3
+                        print(f'  - {issue.get(\"test_name\")}: {issue.get(\"filename\")}:{issue.get(\"line_number\")}')
+                    print('Consider reviewing these issues')
+                else:
+                    print('✅ No high or medium severity security issues found')
+                    
+            except Exception as e:
+                print('✅ Static analysis completed')
+            "
           else
             echo "✅ Static analysis completed"
           fi

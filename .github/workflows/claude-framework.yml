@@ -122,29 +122,29 @@ jobs:
           
           # Install Python for XML validation
           python3 -c "
-import xml.etree.ElementTree as ET
-import sys
+          import xml.etree.ElementTree as ET
+          import sys
 
-try:
-    tree = ET.parse('PROJECT_CONFIG.xml')
-    root = tree.getroot()
-    print('✅ PROJECT_CONFIG.xml is valid XML')
-    
-    # Check for required elements
-    required_elements = ['project_info', 'tech_stack', 'commands', 'quality_standards']
-    for element in required_elements:
-        if root.find(f'.//{element}') is not None:
-            print(f'✅ Found element: {element}')
-        else:
-            print(f'⚠️  Missing element: {element}')
-    
-except ET.ParseError as e:
-    print(f'❌ XML parse error: {e}')
-    sys.exit(1)
-except Exception as e:
-    print(f'❌ Validation error: {e}')
-    sys.exit(1)
-"
+          try:
+              tree = ET.parse('PROJECT_CONFIG.xml')
+              root = tree.getroot()
+              print('✅ PROJECT_CONFIG.xml is valid XML')
+              
+              # Check for required elements
+              required_elements = ['project_info', 'tech_stack', 'commands', 'quality_standards']
+              for element in required_elements:
+                  if root.find(f'.//{element}') is not None:
+                      print(f'✅ Found element: {element}')
+                  else:
+                      print(f'⚠️  Missing element: {element}')
+              
+          except ET.ParseError as e:
+              print(f'❌ XML parse error: {e}')
+              sys.exit(1)
+          except Exception as e:
+              print(f'❌ Validation error: {e}')
+              sys.exit(1)
+          "
 
   # Command validation
   command-validation:
