@@ -64,4 +64,15 @@ coverage.xml
 .railway/
 
 # Streamlit
-.streamlit/
+.streamlit/# Analytics Data - Generated Runtime Files
+
+# Session analytics data (temporary)
+streamlit_dashboard/data/analytics/sessions/
+streamlit_dashboard/data/analytics/actions/
+streamlit_dashboard/data/sessions/
+
+# Logs and temporary files
+*.log
+streamlit_dashboard/logs/
+debug.log
+streamlit_*.log
