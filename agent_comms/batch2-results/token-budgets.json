@@ -1,0 +1,235 @@
+{
+  "framework_version": "3.0.0",
+  "optimization_target": "60% reduction",
+  "baseline_total": 261315,
+  "optimized_total": 104526,
+  "last_updated": "2025-07-19",
+  
+  "global_limits": {
+    "max_context_window": 200000,
+    "reserved_for_work": 50000,
+    "available_for_framework": 150000,
+    "safety_margin": 0.2
+  },
+  
+  "context_tiers": {
+    "minimal": {
+      "token_budget": 20000,
+      "description": "Core functionality only",
+      "components": {
+        "claude_md_compressed": 2000,
+        "command_definition": 1000,
+        "core_modules": 5000,
+        "thinking_patterns": 3000,
+        "error_handling": 2000,
+        "working_memory": 7000
+      }
+    },
+    "standard": {
+      "token_budget": 50000,
+      "description": "Enhanced features with quality gates",
+      "components": {
+        "minimal_tier": 20000,
+        "quality_gates": 8000,
+        "tdd_enforcement": 5000,
+        "performance_monitoring": 3000,
+        "domain_templates": 6000,
+        "extended_modules": 8000
+      }
+    },
+    "full": {
+      "token_budget": 100000,
+      "description": "Complete framework capabilities",
+      "components": {
+        "standard_tier": 50000,
+        "meta_framework": 15000,
+        "advanced_patterns": 10000,
+        "full_module_set": 15000,
+        "experimental_features": 5000,
+        "analytics_telemetry": 5000
+      }
+    }
+  },
+  
+  "command_budgets": {
+    "/auto": {
+      "minimal": 12000,
+      "standard": 20000,
+      "maximum": 35000,
+      "cache_priority": "high",
+      "parallel_optimization": true
+    },
+    "/task": {
+      "minimal": 15000,
+      "standard": 25000,
+      "maximum": 40000,
+      "cache_priority": "high",
+      "parallel_optimization": true
+    },
+    "/feature": {
+      "minimal": 30000,
+      "standard": 50000,
+      "maximum": 80000,
+      "cache_priority": "medium",
+      "parallel_optimization": true
+    },
+    "/query": {
+      "minimal": 10000,
+      "standard": 20000,
+      "maximum": 35000,
+      "cache_priority": "high",
+      "parallel_optimization": true
+    },
+    "/swarm": {
+      "minimal": 40000,
+      "standard": 70000,
+      "maximum": 100000,
+      "cache_priority": "low",
+      "parallel_optimization": true
+    },
+    "/session": {
+      "minimal": 25000,
+      "standard": 45000,
+      "maximum": 70000,
+      "cache_priority": "medium",
+      "parallel_optimization": false
+    },
+    "/protocol": {
+      "minimal": 35000,
+      "standard": 60000,
+      "maximum": 90000,
+      "cache_priority": "low",
+      "parallel_optimization": true
+    },
+    "/init": {
+      "minimal": 8000,
+      "standard": 15000,
+      "maximum": 25000,
+      "cache_priority": "high",
+      "parallel_optimization": false
+    },
+    "/meta": {
+      "minimal": 20000,
+      "standard": 40000,
+      "maximum": 60000,
+      "cache_priority": "low",
+      "parallel_optimization": true
+    },
+    "/docs": {
+      "minimal": 12000,
+      "standard": 25000,
+      "maximum": 40000,
+      "cache_priority": "medium",
+      "parallel_optimization": true
+    },
+    "/chain": {
+      "minimal": 25000,
+      "standard": 50000,
+      "maximum": 80000,
+      "cache_priority": "low",
+      "parallel_optimization": true
+    },
+    "/context-prime": {
+      "minimal": 15000,
+      "standard": 30000,
+      "maximum": 50000,
+      "cache_priority": "high",
+      "parallel_optimization": true
+    }
+  },
+  
+  "module_budgets": {
+    "patterns": {
+      "thinking_patterns": 3000,
+      "tdd_cycle": 2500,
+      "workflow_orchestration": 4000,
+      "intelligent_routing": 2000,
+      "multi_agent": 5000,
+      "research_analysis": 3000,
+      "session_management": 3500,
+      "documentation": 2000,
+      "command_chaining": 3000
+    },
+    "system": {
+      "quality_gates": 4000,
+      "test_coverage": 2000,
+      "security": 3000,
+      "context_management": 3500,
+      "git_operations": 2500,
+      "atomic_rollback": 2000
+    },
+    "meta": {
+      "framework_control": 5000,
+      "optimization": 4000,
+      "evolution": 4500,
+      "governance": 3500,
+      "diagnostics": 3000
+    },
+    "domain": {
+      "template_per_tech": 1500,
+      "wizard": 2000,
+      "initialization": 2500
+    }
+  },
+  
+  "optimization_strategies": {
+    "caching": {
+      "prompt_templates": {
+        "size_limit_mb": 10,
+        "ttl_hours": 24,
+        "expected_hit_rate": 0.95
+      },
+      "module_responses": {
+        "size_limit_mb": 50,
+        "ttl_hours": 12,
+        "expected_hit_rate": 0.90
+      },
+      "context_snapshots": {
+        "size_limit_mb": 100,
+        "ttl_hours": 6,
+        "expected_hit_rate": 0.85
+      },
+      "execution_results": {
+        "size_limit_mb": 200,
+        "ttl_hours": 1,
+        "expected_hit_rate": 0.70
+      }
+    },
+    "progressive_loading": {
+      "immediate_threshold": 0.9,
+      "on_demand_threshold": 0.7,
+      "lazy_threshold": 0.3
+    },
+    "parallel_execution": {
+      "tool_batching": true,
+      "concurrent_analysis": true,
+      "validation_grouping": true,
+      "expected_time_savings": 0.7
+    }
+  },
+  
+  "monitoring_thresholds": {
+    "token_usage": {
+      "warning": 0.8,
+      "critical": 0.95,
+      "emergency": 1.0
+    },
+    "cache_performance": {
+      "min_hit_rate": 0.8,
+      "optimization_trigger": 0.7
+    },
+    "response_time": {
+      "target_seconds": 5,
+      "warning_seconds": 8,
+      "critical_seconds": 10
+    }
+  },
+  
+  "cost_projections": {
+    "baseline_monthly": 432,
+    "optimized_monthly": 173,
+    "monthly_savings": 259,
+    "annual_savings": 3108,
+    "roi_percentage": 240
+  }
+}

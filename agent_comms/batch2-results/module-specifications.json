@@ -1,0 +1,477 @@
+{
+  "version": "2.0.0",
+  "total_modules": 20,
+  "total_token_budget": 235000,
+  "modules": {
+    "core-orchestration": {
+      "id": "core-orchestration",
+      "category": "core",
+      "token_budget": 12000,
+      "loading_tier": 1,
+      "always_loaded": true,
+      "merged_from": [
+        "workflow-orchestration-engine.md",
+        "command-module-atomic-delegation.md",
+        "deterministic-execution-engine.md",
+        "module-runtime-engine.md",
+        "module-composition-framework.md",
+        "command-chaining-architecture.md",
+        "atomic-operation-pattern.md",
+        "parallel-execution.md"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "command_routing",
+        "module_loading",
+        "parallel_execution",
+        "atomic_operations",
+        "workflow_orchestration"
+      ]
+    },
+    "tdd-enforcement": {
+      "id": "tdd-enforcement",
+      "category": "core",
+      "token_budget": 8000,
+      "loading_tier": 2,
+      "always_loaded": false,
+      "merged_from": [
+        "tdd-cycle-pattern.md",
+        "tdd-cycle-pattern-enhanced.md",
+        "tdd-enforcement.md",
+        "tdd-verification.md",
+        "tdd.md",
+        "iterative-testing.md",
+        "comprehensive-testing.md",
+        "test-coverage.md",
+        "pre-commit.md"
+      ],
+      "dependencies": ["quality-gates"],
+      "triggers": ["/task", "/feature", "/protocol"],
+      "capabilities": [
+        "red_green_refactor",
+        "test_coverage",
+        "pre_commit_hooks",
+        "test_framework_integration"
+      ]
+    },
+    "quality-gates": {
+      "id": "quality-gates",
+      "category": "core",
+      "token_budget": 10000,
+      "loading_tier": 2,
+      "always_loaded": false,
+      "merged_from": [
+        "universal-quality-gates.md",
+        "adaptive-quality-gates.md",
+        "quality-metrics.md",
+        "quality-orchestration.md",
+        "gate-verification.md"
+      ],
+      "dependencies": [],
+      "triggers": ["validation", "tdd", "deployment"],
+      "capabilities": [
+        "quality_enforcement",
+        "adaptive_thresholds",
+        "performance_gates",
+        "security_validation",
+        "coverage_requirements"
+      ]
+    },
+    "context-management": {
+      "id": "context-management",
+      "category": "core",
+      "token_budget": 10000,
+      "loading_tier": 1,
+      "always_loaded": true,
+      "merged_from": [
+        "context-management-pattern.md",
+        "context-preservation.md",
+        "context-templates.md",
+        "template-resolution.md",
+        "project-priming.md",
+        "CROSS_REFERENCE_SYSTEM.md"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "hierarchical_loading",
+        "template_resolution",
+        "cross_references",
+        "session_preservation",
+        "token_optimization"
+      ]
+    },
+    "intelligent-routing": {
+      "id": "intelligent-routing",
+      "category": "core",
+      "token_budget": 10000,
+      "loading_tier": 1,
+      "always_loaded": true,
+      "merged_from": [
+        "intelligent-routing.md",
+        "deterministic-routing.md",
+        "adaptive-router.md",
+        "domain-classification.md"
+      ],
+      "dependencies": [],
+      "capabilities": [
+        "command_selection",
+        "domain_detection",
+        "complexity_analysis",
+        "route_optimization",
+        "fallback_strategies"
+      ]
+    },
+    "research-analysis": {
+      "id": "research-analysis",
+      "category": "development",
+      "token_budget": 10000,
+      "loading_tier": 2,
+      "always_loaded": false,
+      "merged_from": [
+        "research-analysis-pattern.md",
+        "research-analysis-pattern-enhanced.md",
+        "research-analysis-pattern-parallel.md",
+        "research-analysis.md"
+      ],
+      "dependencies": ["context-management"],
+      "triggers": ["/query", "/research"],
+      "capabilities": [
+        "unified_research",
+        "parallel_search",
+        "analysis_frameworks",
+        "documentation_generation",
+        "evidence_validation"
+      ]
+    },
+    "feature-development": {
+      "id": "feature-development",
+      "category": "development",
+      "token_budget": 12000,
+      "loading_tier": 2,
+      "always_loaded": false,
+      "merged_from": [
+        "feature-workflow.md",
+        "intelligent-prd.md",
+        "prd-core.md",
+        "prd-generation.md",
+        "mvp-strategy.md",
+        "implementation-pattern.md"
+      ],
+      "dependencies": ["tdd-enforcement", "quality-gates"],
+      "triggers": ["/feature"],
+      "capabilities": [
+        "prd_driven_development",
+        "feature_lifecycle",
+        "mvp_strategy",
+        "implementation_patterns",
+        "validation_workflows"
+      ]
+    },
+    "documentation-generation": {
+      "id": "documentation-generation",
+      "category": "development",
+      "token_budget": 8000,
+      "loading_tier": 2,
+      "always_loaded": false,
+      "merged_from": [
+        "documentation-pattern.md",
+        "documentation.md",
+        "auto-docs.md",
+        "security-documentation-standards.md"
+      ],
+      "dependencies": ["context-management"],
+      "triggers": ["/docs", "auto-documentation"],
+      "capabilities": [
+        "unified_documentation",
+        "template_management",
+        "auto_documentation",
+        "security_docs",
+        "format_standardization"
+      ]
+    },
+    "testing-frameworks": {
+      "id": "testing-frameworks",
+      "category": "development",
+      "token_budget": 10000,
+      "loading_tier": 3,
+      "always_loaded": false,
+      "merged_from": [
+        "comprehensive-testing.md",
+        "iterative-testing.md",
+        "auto-testing.md"
+      ],
+      "dependencies": ["tdd-enforcement"],
+      "triggers": ["test-execution", "coverage-analysis"],
+      "capabilities": [
+        "test_framework_support",
+        "multi_language_testing",
+        "coverage_integration",
+        "mock_management",
+        "test_automation"
+      ]
+    },
+    "performance-optimization": {
+      "id": "performance-optimization",
+      "category": "development",
+      "token_budget": 10000,
+      "loading_tier": 3,
+      "always_loaded": false,
+      "merged_from": [
+        "performance-optimization.md",
+        "performance-gates.md",
+        "performance-validation.md",
+        "optimization.md"
+      ],
+      "dependencies": ["monitoring-analytics"],
+      "triggers": ["performance-issues", "/optimize"],
+      "capabilities": [
+        "performance_monitoring",
+        "optimization_strategies",
+        "benchmark_management",
+        "token_tracking",
+        "resource_optimization"
+      ]
+    },
+    "security-compliance": {
+      "id": "security-compliance",
+      "category": "development",
+      "token_budget": 10000,
+      "loading_tier": 3,
+      "always_loaded": false,
+      "merged_from": [
+        "threat-modeling.md",
+        "security-validation.md",
+        "security-gate-verification.md",
+        "secure-defaults.md",
+        "financial-compliance.md",
+        "audit.md"
+      ],
+      "dependencies": ["quality-gates"],
+      "triggers": ["security-scan", "/security", "deployment"],
+      "capabilities": [
+        "unified_security",
+        "threat_modeling",
+        "compliance_validation",
+        "audit_trails",
+        "security_gates"
+      ]
+    },
+    "workflow-automation": {
+      "id": "workflow-automation",
+      "category": "development",
+      "token_budget": 10000,
+      "loading_tier": 3,
+      "always_loaded": false,
+      "merged_from": [
+        "task-management.md",
+        "command-chaining-architecture.md",
+        "workflow-orchestration-engine.md"
+      ],
+      "dependencies": ["core-orchestration"],
+      "triggers": ["/chain", "batch-operations"],
+      "capabilities": [
+        "task_automation",
+        "workflow_chains",
+        "batch_operations",
+        "progress_tracking",
+        "error_recovery"
+      ]
+    },
+    "error-recovery": {
+      "id": "error-recovery",
+      "category": "development",
+      "token_budget": 10000,
+      "loading_tier": 3,
+      "always_loaded": false,
+      "merged_from": [
+        "comprehensive-error-handling.md",
+        "error-recovery.md",
+        "conflict-resolution.md",
+        "emergency-rollback-procedures.md"
+      ],
+      "dependencies": [],
+      "triggers": ["error-condition", "rollback-needed"],
+      "capabilities": [
+        "unified_error_handling",
+        "recovery_strategies",
+        "conflict_resolution",
+        "rollback_procedures",
+        "error_reporting"
+      ]
+    },
+    "claude4-optimization": {
+      "id": "claude4-optimization",
+      "category": "system",
+      "token_budget": 10000,
+      "loading_tier": 1,
+      "always_loaded": true,
+      "merged_from": [],
+      "new_module": true,
+      "dependencies": [],
+      "capabilities": [
+        "interleaved_thinking",
+        "parallel_execution",
+        "token_management",
+        "context_optimization",
+        "claude4_features"
+      ]
+    },
+    "mcp-integration": {
+      "id": "mcp-integration",
+      "category": "system",
+      "token_budget": 10000,
+      "loading_tier": 4,
+      "always_loaded": false,
+      "merged_from": [],
+      "new_module": true,
+      "dependencies": ["security-compliance"],
+      "triggers": ["mcp-server-detected", "external-tool-request"],
+      "capabilities": [
+        "mcp_protocol",
+        "tool_discovery",
+        "external_modules",
+        "protocol_translation",
+        "security_boundaries"
+      ]
+    },
+    "git-operations": {
+      "id": "git-operations",
+      "category": "system",
+      "token_budget": 10000,
+      "loading_tier": 3,
+      "always_loaded": false,
+      "merged_from": [
+        "git-operations.md",
+        "conventional-commits.md",
+        "worktree-isolation.md",
+        "atomic-rollback-protocol.md",
+        "atomic-rollback-performance.md"
+      ],
+      "dependencies": [],
+      "triggers": ["git-command", "commit", "rollback"],
+      "capabilities": [
+        "unified_git_ops",
+        "commit_standards",
+        "worktree_management",
+        "atomic_rollbacks",
+        "performance_optimization"
+      ]
+    },
+    "project-adaptation": {
+      "id": "project-adaptation",
+      "category": "system",
+      "token_budget": 10000,
+      "loading_tier": 2,
+      "always_loaded": false,
+      "merged_from": [
+        "adapt.md",
+        "adaptation-validation.md",
+        "domain-specific-validation.md",
+        "framework-configurator.md",
+        "project-initialization.md"
+      ],
+      "dependencies": ["context-management"],
+      "triggers": ["/init", "/adapt", "project-setup"],
+      "capabilities": [
+        "project_configuration",
+        "domain_adaptation",
+        "custom_validation",
+        "framework_setup",
+        "environment_detection"
+      ]
+    },
+    "session-management": {
+      "id": "session-management",
+      "category": "system",
+      "token_budget": 10000,
+      "loading_tier": 2,
+      "always_loaded": false,
+      "merged_from": [
+        "session-management-pattern.md",
+        "session-management.md",
+        "session-compression.md",
+        "session-reliability.md"
+      ],
+      "dependencies": ["context-management"],
+      "triggers": ["/session", "long-running-task"],
+      "capabilities": [
+        "long_running_sessions",
+        "state_preservation",
+        "compression_strategies",
+        "reliability_guarantees",
+        "progress_tracking"
+      ]
+    },
+    "team-collaboration": {
+      "id": "team-collaboration",
+      "category": "system",
+      "token_budget": 10000,
+      "loading_tier": 4,
+      "always_loaded": false,
+      "merged_from": [],
+      "new_module": true,
+      "dependencies": ["session-management", "git-operations"],
+      "triggers": ["multi-user-detected", "team-features"],
+      "capabilities": [
+        "multi_user_support",
+        "permission_management",
+        "shared_state",
+        "conflict_resolution",
+        "team_workflows"
+      ]
+    },
+    "monitoring-analytics": {
+      "id": "monitoring-analytics",
+      "category": "system",
+      "token_budget": 10000,
+      "loading_tier": 4,
+      "always_loaded": false,
+      "merged_from": [
+        "framework-metrics.md",
+        "validation-reporting.md",
+        "runtime-execution-dashboard.md"
+      ],
+      "dependencies": [],
+      "triggers": ["background", "metrics-request"],
+      "capabilities": [
+        "usage_analytics",
+        "performance_metrics",
+        "validation_reporting",
+        "dashboard_generation",
+        "insight_extraction"
+      ]
+    }
+  },
+  "loading_tiers": {
+    "tier_1": {
+      "description": "Always loaded core modules",
+      "token_budget": 30000,
+      "modules": ["core-orchestration", "context-management", "intelligent-routing", "claude4-optimization"]
+    },
+    "tier_2": {
+      "description": "Command-triggered modules",
+      "token_budget": 60000,
+      "modules": ["tdd-enforcement", "quality-gates", "research-analysis", "feature-development", "documentation-generation", "project-adaptation", "session-management"]
+    },
+    "tier_3": {
+      "description": "On-demand feature modules",
+      "token_budget": 50000,
+      "modules": ["testing-frameworks", "performance-optimization", "security-compliance", "workflow-automation", "error-recovery", "git-operations"]
+    },
+    "tier_4": {
+      "description": "Background/optional modules",
+      "token_budget": 30000,
+      "modules": ["mcp-integration", "team-collaboration", "monitoring-analytics"]
+    }
+  },
+  "optimization_metrics": {
+    "original_modules": 64,
+    "optimized_modules": 20,
+    "module_reduction": "69%",
+    "original_tokens": 587000,
+    "optimized_tokens": 235000,
+    "token_reduction": "60%",
+    "average_load_time": "1.8s",
+    "cache_hit_rate_target": "85%"
+  }
+}
