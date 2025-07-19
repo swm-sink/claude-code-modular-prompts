@@ -207,6 +207,7 @@
     <command name = "docs" status = "FULLY_FUNCTIONAL" actual = "Documentation generation"/>
     <command name = "chain" status = "FULLY_FUNCTIONAL" actual = "Workflow orchestration"/>
     <command name = "context-prime" status = "FULLY_FUNCTIONAL" actual = "Project context analysis"/>
+    <command name = "context-prime-mega" status = "FULLY_FUNCTIONAL" actual = "Multi-agent comprehensive codebase analysis"/>
   </core_commands>
   
   <remediation_actions>
@@ -418,6 +419,11 @@
     <command name="/context-prime" purpose="Project context establishment">
       <usage>/context-prime "establish project context"</usage>
       <best_for>Project initialization | Context analysis | Environment setup</best_for>
+    </command>
+    
+    <command name="/context-prime-mega" purpose="Comprehensive multi-agent codebase analysis">
+      <usage>/context-prime-mega "perform deep codebase analysis with specialized agents"</usage>
+      <best_for>Enterprise codebases | Critical analysis | Multi-agent coordination | Detailed findings documentation</best_for>
     </command>
   </core_commands>
 </command_reference>
@@ -817,33 +823,55 @@
 # Architecture
 
 ```xml
-<architecture>
+<architecture version = "3.1.0" enhancement = "@link_optimization">
   <commands location = ".claude/commands/" delegate_only = "true" enforcement = "MANDATORY">
-    <cmd name = "/auto" module = "modules/patterns/intelligent-routing.md"/>
-    <cmd name = "/task" module = "modules/patterns/tdd-cycle-pattern.md"/>
-    <cmd name = "/feature" module = "modules/patterns/workflow-orchestration-engine.md"/>
-    <cmd name = "/swarm" module = "modules/patterns/multi-agent.md"/>
-    <cmd name = "/query" module = "modules/patterns/research-analysis-pattern.md"/>
-    <cmd name = "/session" module = "modules/patterns/session-management-pattern.md"/>
-    <cmd name = "/protocol" module = "modules/patterns/workflow-orchestration-engine.md"/>
-    <cmd name = "/init" module = "domain/wizard/README.md"/>
-    <cmd name = "/init-new" module = "modules/development/"/>
-    <cmd name = "/init-custom" module = "domain/wizard/"/>
-    <cmd name = "/init-research" module = "modules/patterns/research-analysis-pattern.md"/>
-    <cmd name = "/init-validate" module = "system/quality/comprehensive-validation.md"/>
-    <cmd name = "/meta" module = "modules/meta/"/>
-    <cmd name = "/docs" module = "modules/patterns/documentation-pattern.md" critical = "true"/>
-    <cmd name = "/chain" module = "modules/patterns/command-chaining-architecture.md" critical = "true"/>
-    <cmd name = "/context-prime" module = "system/context/project-priming.md"/>
+    <cmd name = "/auto" module = "@modules/patterns/intelligent-routing.md"/>
+    <cmd name = "/task" module = "@modules/patterns/tdd-cycle-pattern.md"/>
+    <cmd name = "/feature" module = "@modules/patterns/workflow-orchestration-engine.md"/>
+    <cmd name = "/swarm" module = "@modules/patterns/multi-agent.md"/>
+    <cmd name = "/query" module = "@modules/patterns/research-analysis-pattern-parallel.md"/>
+    <cmd name = "/session" module = "@modules/patterns/session-management-pattern.md"/>
+    <cmd name = "/protocol" module = "@modules/patterns/workflow-orchestration-engine.md"/>
+    <cmd name = "/init" module = "@domain/wizard/README.md"/>
+    <cmd name = "/init-new" module = "@modules/development/project-initialization.md"/>
+    <cmd name = "/init-custom" module = "@domain/wizard/domain-wizard.md"/>
+    <cmd name = "/init-research" module = "@modules/patterns/research-analysis-pattern-parallel.md"/>
+    <cmd name = "/init-validate" module = "@system/quality/comprehensive-validation.md"/>
+    <cmd name = "/meta" module = "@modules/meta/meta-framework-control.md"/>
+    <cmd name = "/docs" module = "@modules/patterns/documentation-pattern.md" critical = "true"/>
+    <cmd name = "/chain" module = "@modules/patterns/command-chaining-architecture.md" critical = "true"/>
+    <cmd name = "/context-prime" module = "@system/context/project-priming.md"/>
+    <cmd name = "/context-prime-mega" module = "@system/context/context-prime-mega.md" new = "true"/>
   </commands>
+  
+  <module_resolution enforcement = "MANDATORY">
+    <link_pattern>@{category}/{subcategory}/{module}.md</link_pattern>
+    <base_path>.claude/</base_path>
+    <resolution_order>
+      1. Direct @ link resolution from CLAUDE.md
+      2. Module delegation chain following
+      3. Quality gate validation
+      4. Context management integration
+    </resolution_order>
+  </module_resolution>
+  
+  <loading_optimization>
+    <lazy_loading>Load modules only when command is invoked</lazy_loading>
+    <caching>Cache frequently used modules for 15-minute sessions</caching>
+    <parallel_resolution>Resolve independent @ links simultaneously</parallel_resolution>
+    <hierarchical_loading>Load core modules first, then specializations</hierarchical_loading>
+  </loading_optimization>
+  
   <documentation_enforcement>
-    <rule priority = "CRITICAL">NEVER generate project documentation without /docs command</rule>
-    <rule priority = "CRITICAL">All documentation MUST go through /docs for consistency</rule>
-    <rule priority = "CRITICAL">README, guides, docs ONLY via /docs command</rule>
+    <rule priority = "CRITICAL">NEVER generate project documentation without @modules/patterns/documentation-pattern.md</rule>
+    <rule priority = "CRITICAL">All documentation MUST go through @modules/patterns/documentation-pattern.md for consistency</rule>
+    <rule priority = "CRITICAL">README, guides, docs ONLY via @modules/patterns/documentation-pattern.md</rule>
     <exception>CLAUDE.md updates and command documentation are allowed</exception>
   </documentation_enforcement>
+  
   <modules location = ".claude/modules/" implement_only = "true">
     <category name = "patterns|development|meta"/>
+    <resolution>@{category}/{module}.md direct access</resolution>
   </modules>
 </architecture>
 ```
