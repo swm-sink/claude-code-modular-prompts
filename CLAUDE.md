@@ -8,6 +8,17 @@
 
 <purpose>Personal Claude Code workflow efficiency tool - NOT enterprise software</purpose>
 
+## 🛡️ Framework Hardening (v3.1.0)
+
+The framework has been hardened against common LLM coding failures with:
+- **ARCHITECTURAL_CONSTRAINTS.md** - Explicit rules for reliable code generation
+- **REFERENCE_IMPLEMENTATIONS.md** - Copy-paste patterns that work
+- **EDGE_CASES.md** - Comprehensive edge case handling
+- **SECURITY_VALIDATION.md** - Practical security for personal tools
+- **RECOVERY_PROCEDURES.md** - Fast recovery when things go wrong
+
+All modules now include input validation, error recovery, and security checks.
+
 # 🔗 Repository Information
 
 ```xml
@@ -180,10 +191,10 @@
 </settings_protection>
 ```
 
-# Command Status (Framework Remediation)
+# Command Status (Hardened)
 
 ```xml
-<command_status test_date = "2025-07-19" phase = "remediation" honesty = "RESTORED">
+<command_status test_date = "2025-07-20" phase = "hardened" security = "VALIDATED">
   <status_summary>
     <previous_issue>Phase 3 consolidation created false capability claims</previous_issue>
     <current_state>Documentation aligned with actual capabilities</current_state>
@@ -218,6 +229,14 @@
     <action>Moved critical commands back from utilities</action>
     <action>Created truth audit report in .claude/truth/</action>
   </remediation_actions>
+  
+  <hardening_actions>
+    <action>Created .claude/commands/ directory (was missing)</action>
+    <action>Added comprehensive hardening documents</action>
+    <action>Enhanced intelligent-routing.md with input validation</action>
+    <action>Implemented security patterns across framework</action>
+    <action>Added error recovery procedures</action>
+  </hardening_actions>
   
   <future_commitment>
     <principle>Documentation matches implementation</principle>

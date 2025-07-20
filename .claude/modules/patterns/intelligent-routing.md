@@ -1,10 +1,13 @@
 | version | last_updated | status |
 |---------|--------------|--------|
-| 3.0.0   | 2025-07-11   | stable |
+| 3.1.0   | 2025-07-20   | hardened |
 
 # Intelligent Routing Module
 
 ────────────────────────────────────────────────────────────────────────────────
+
+Purpose: Intelligent command routing with complexity analysis and decision optimization for the /auto command
+Dependencies: [@security/validation, @edge-cases/input-handling, @recovery/command-recovery]
 
 ────────────────────────────────────────────────────────────────────────────────
 
@@ -12,19 +15,33 @@
 <module name="intelligent_routing" category="patterns">
   
   <purpose>
-    Intelligent command routing with complexity analysis and decision optimization for the /auto command.
+    Intelligent command routing with complexity analysis, decision optimization, and comprehensive input validation for the /auto command.
   </purpose>
   
   <interface_contract>
     <inputs>
-      <required>user_request, context_information, available_commands</required>
-      <optional>user_preferences, performance_history, complexity_hints</optional>
+      <required>user_request (validated string), context_information (dict), available_commands (list)</required>
+      <optional>user_preferences (dict), performance_history (dict), complexity_hints (dict)</optional>
+      <validation>All inputs undergo security validation before processing</validation>
     </inputs>
     <outputs>
       <success>optimal_command_selection, confidence_score, routing_rationale, alternative_options</success>
-      <failure>routing_failure, analysis_errors, fallback_suggestions</failure>
+      <failure>routing_failure (with recovery hints), analysis_errors (with context), fallback_suggestions</failure>
     </outputs>
   </interface_contract>
+  
+  <security_validation>
+    <input_sanitization>
+      User request sanitized for command injection patterns
+      Path validation for any file references
+      Size limits enforced (max 10KB input)
+    </input_sanitization>
+    <edge_case_handling>
+      Empty/whitespace input detection
+      Unicode normalization for international users
+      Extremely large input rejection with helpful message
+    </edge_case_handling>
+  </security_validation>
   
   <execution_pattern>
     <claude_4_behavior>
@@ -45,9 +62,43 @@
   
   <implementation>
     
-    <phase name="request_analysis" order="1">
+    <phase name="input_validation" order="1">
       <requirements>
-        User request must be parsed and understood
+        All inputs must be validated before processing
+        Security patterns from SECURITY_VALIDATION.md must be applied
+        Edge cases from EDGE_CASES.md must be handled
+        MANDATORY: Fail fast with clear error messages
+      </requirements>
+      <actions>
+        # Input validation following hardening patterns
+        if not user_request or not user_request.strip():
+            raise ValueError("Request cannot be empty. Please provide a clear description of what you need.")
+        
+        # Size validation
+        if len(user_request) > 10000:
+            raise ValueError(f"Request too large ({len(user_request)} chars). Please break into smaller, focused requests.")
+        
+        # Basic sanitization for dangerous patterns
+        dangerous_patterns = ['rm -rf', 'sudo', 'eval(', 'exec(', '__import__']
+        for pattern in dangerous_patterns:
+            if pattern in user_request.lower():
+                raise ValueError(f"Request contains potentially dangerous pattern: {pattern}")
+        
+        # Unicode normalization
+        import unicodedata
+        user_request = unicodedata.normalize('NFKC', user_request.strip())
+      </actions>
+      <validation>
+        Input is non-empty and within size limits
+        No dangerous patterns detected
+        Unicode properly normalized
+        Ready for safe processing
+      </validation>
+    </phase>
+    
+    <phase name="request_analysis" order="2">
+      <requirements>
+        Validated user request must be parsed and understood
         Context information must be extracted
         Intent recognition must be performed
         Complexity indicators must be identified
@@ -60,7 +111,7 @@
         Analyze complexity signals (research needed, multiple steps, dependencies)
         Classify request type (implementation, research, feature, debugging)
         MANDATORY: Apply critical thinking patterns for ambiguous requests
-        ENFORCEMENT: Use ../../system/../../system/quality/critical-thinking.md for analysis depth
+        ENFORCEMENT: Use quality gates for analysis depth
       </actions>
       <validation>
         Request intent clearly identified with confidence score
@@ -350,14 +401,41 @@
 **Routing**: /feature (Confidence: 85%)
 **Rationale**: Clear feature scope with structured development approach needed
 
+## Error Recovery and Edge Cases
+
+### Input Validation Failures
+When input validation fails:
+1. **Empty/Whitespace Input**: "Request cannot be empty. Please provide a clear description."
+2. **Oversized Input**: "Request too large. Please break into smaller, focused requests."
+3. **Dangerous Patterns**: "Potentially dangerous pattern detected. Please rephrase safely."
+
+### Routing Ambiguity Recovery
+When routing confidence is low (<0.6):
+```
+I'm not certain about the best approach. Here are the top options:
+1. /task - If this is a simple, single-file change
+2. /feature - If this involves multiple components  
+3. /query - If you need to understand the codebase first
+
+Could you clarify: [specific clarifying question based on ambiguity]
+```
+
+### Performance Optimization
+- **Caching**: Recent routing decisions cached for 15 minutes
+- **Early Exit**: High confidence (>0.9) routes skip additional analysis
+- **Token Budget**: Maximum 4K tokens for routing analysis
+
 ## Anti-patterns to Avoid
 - Routing without sufficient complexity analysis
 - Ignoring research needs for unfamiliar domains
 - Under-estimating coordination requirements
 - Over-complicating simple implementations
 - Insufficient context preservation in routing
+- **NEW**: Skipping input validation for "simple" requests
+- **NEW**: Not providing recovery options on failures
 
 ## Routing Validation Checklist
+- [ ] Input validated and sanitized
 - [ ] Request intent clearly identified and understood
 - [ ] Complexity scored across all dimensions
 - [ ] Command capabilities aligned with requirements
@@ -365,3 +443,4 @@
 - [ ] Confidence score reflects selection quality
 - [ ] Alternative options provided with trade-offs
 - [ ] Context fully preserved for command delegation
+- [ ] Error recovery paths defined
