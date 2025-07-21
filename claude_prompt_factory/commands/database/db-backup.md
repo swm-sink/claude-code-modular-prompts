@@ -1,3 +1,21 @@
+---
+description: Automated database backup with integrity validation, compression, and secure storage
+argument-hint: "[backup_type] [storage_location]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /db backup - Database Backup System
+
+Comprehensive database backup system with integrity validation, compression options, and secure storage capabilities.
+
+## Usage
+```bash
+/db backup full                              # Complete database backup
+/db backup incremental                       # Incremental backup since last full
+/db backup --compress                        # Backup with compression
+/db backup --encrypt                         # Encrypted backup with security
+```
+
 <command_file>
   <metadata>
     <name>/db backup</name>

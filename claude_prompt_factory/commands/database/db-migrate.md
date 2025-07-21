@@ -1,3 +1,21 @@
+---
+description: Safe database migration with rollback capabilities, validation, and change tracking
+argument-hint: "[migration_direction] [target_version]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /db migrate - Database Migration System
+
+Advanced database migration system with safe execution, rollback capabilities, and comprehensive change tracking.
+
+## Usage
+```bash
+/db migrate up                               # Apply pending migrations
+/db migrate down                             # Rollback last migration
+/db migrate --target 1.2.3                  # Migrate to specific version
+/db migrate --dry-run                        # Preview migration changes
+```
+
 <command_file>
   <metadata>
     <name>/db migrate</name>

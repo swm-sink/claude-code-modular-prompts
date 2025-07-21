@@ -1,3 +1,21 @@
+---
+description: Bridge academic research with practical implementation using advanced AI reasoning frameworks
+argument-hint: "[research_domain] [implementation_target]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /academic bridge - Research-to-Implementation Bridge
+
+Advanced system for bridging academic research with practical implementation using AI reasoning frameworks and adaptive thinking.
+
+## Usage
+```bash
+/academic bridge "machine learning" web-app  # Bridge ML research to web application
+/academic bridge "cryptography" security     # Apply crypto research to security
+/academic bridge --survey                    # Research survey and synthesis
+/academic bridge --prototype                 # Create research prototype
+```
+
 <command_file>
   <metadata>
     <n>/academic-bridge</n>

@@ -1,29 +1,20 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T00:59:38.460882
+**Generated**: 2025-07-21T01:20:05.437871
 
 ## 📋 Executive Summary
 - **Total Files**: 193
 - **Valid Files**: 193 (100.0%)
-- **Overall Score**: 7958/19300 (41.2%)
+- **Overall Score**: 8099/19300 (42.0%)
 
-## 🚨 Critical Issues (237 errors)
+## 🚨 Critical Issues (234 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
 - ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/research/academic-bridge.md
-- ❌ Missing YAML frontmatter
 
 ### claude_prompt_factory/commands/innovation/emerging-tech.md
 - ❌ Missing YAML frontmatter
 
 ### claude_prompt_factory/commands/ecosystem/marketplace-grow.md
-- ❌ Missing YAML frontmatter
-
-### claude_prompt_factory/commands/database/db-backup.md
-- ❌ Missing YAML frontmatter
-
-### claude_prompt_factory/commands/database/db-migrate.md
 - ❌ Missing YAML frontmatter
 
 ### claude_prompt_factory/commands/database/db-restore.md
