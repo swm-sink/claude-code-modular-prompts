@@ -1,3 +1,21 @@
+---
+description: Advanced industry adaptation with sector-specific optimization, compliance frameworks, and market alignment
+argument-hint: "[industry_sector] [adaptation_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /industry adapt - Advanced Industry Adaptation
+
+Sophisticated industry adaptation system with sector-specific optimization, comprehensive compliance frameworks, and market alignment strategies.
+
+## Usage
+```bash
+/industry adapt fintech                      # Financial technology adaptation
+/industry adapt --healthcare                 # Healthcare sector optimization
+/industry adapt --manufacturing              # Manufacturing industry alignment
+/industry adapt --comprehensive              # Multi-sector adaptation analysis
+```
+
 <command_file>
   <metadata>
     <n>/industry-adapt</n>

@@ -1,19 +1,19 @@
 ---
-description: Explore and integrate emerging technologies with adaptive evaluation and implementation strategies
-argument-hint: "[technology_domain] [integration_scope]"
+description: Advanced emerging technology integration with trend analysis, adoption strategies, and innovation frameworks
+argument-hint: "[tech_domain] [integration_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /emerging tech - Emerging Technology Integration
+# /emerging tech - Advanced Emerging Technology Integration
 
-Advanced system for exploring, evaluating, and integrating emerging technologies with adaptive thinking and risk assessment.
+Sophisticated emerging technology integration system with trend analysis, adoption strategies, and comprehensive innovation frameworks.
 
 ## Usage
 ```bash
-/emerging tech AI                            # Explore AI technology integration
-/emerging tech blockchain web3              # Evaluate blockchain/Web3 opportunities  
-/emerging tech --assess                      # Technology assessment and evaluation
-/emerging tech --integrate                   # Integration planning and implementation
+/emerging tech ai                            # AI technology integration
+/emerging tech --blockchain                  # Blockchain technology adoption
+/emerging tech --quantum                     # Quantum computing exploration
+/emerging tech --comprehensive               # Comprehensive tech landscape analysis
 ```
 
 <command_file>

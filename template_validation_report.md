@@ -1,14 +1,17 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T01:43:39.316195
+**Generated**: 2025-07-21T02:09:22.010016
 
 ## 📋 Executive Summary
-- **Total Files**: 197
-- **Valid Files**: 197 (100.0%)
-- **Overall Score**: 8792/19700 (44.6%)
+- **Total Files**: 200
+- **Valid Files**: 200 (100.0%)
+- **Overall Score**: 9022/20000 (45.1%)
 
-## 🚨 Critical Issues (209 errors)
+## 🚨 Critical Issues (208 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
 - ❌ Missing YAML frontmatter
+- ❌ Missing <command_file> XML structure
+
+### claude_prompt_factory/commands/innovation/innovation-lab.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/database/db-restore.md
@@ -67,7 +70,6 @@
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/agents/dag-orchestrator.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/agents/researcher.md
@@ -200,17 +202,11 @@
 ### claude_prompt_factory/commands/testing/test-integration.md
 - ❌ Missing <command_file> XML structure
 
-### claude_prompt_factory/commands/deployment/auto-provision.md
-- ❌ Missing YAML frontmatter
-
 ### claude_prompt_factory/commands/deployment/cd-rollback.md
 - ❌ Missing YAML frontmatter
 
-### claude_prompt_factory/commands/deployment/deploy.md
-- ❌ Missing YAML frontmatter
-
 ### claude_prompt_factory/commands/deployment/ci-setup.md
-- ❌ Missing YAML frontmatter
+- ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/deployment/global-deploy.md
 - ❌ Missing YAML frontmatter
@@ -233,8 +229,11 @@
 - ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
-### claude_prompt_factory/commands/industry/industry-adapt.md
-- ❌ Missing YAML frontmatter
+### claude_prompt_factory/commands/industry/healthcare-optimize.md
+- ❌ Missing <command_file> XML structure
+
+### claude_prompt_factory/commands/industry/fintech-secure.md
+- ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/api/api-test.md
 - ❌ Missing <command_file> XML structure

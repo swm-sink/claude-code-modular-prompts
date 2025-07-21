@@ -1,3 +1,21 @@
+---
+description: Advanced deployment orchestration with intelligent strategies, rollback capabilities, and environment management
+argument-hint: "[deployment_target] [strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /deploy - Advanced Deployment Orchestration
+
+Sophisticated deployment orchestration system with intelligent strategies, automated rollback capabilities, and comprehensive environment management.
+
+## Usage
+```bash
+/deploy production                           # Production deployment
+/deploy --blue-green                         # Blue-green deployment strategy
+/deploy --canary                             # Canary deployment with monitoring
+/deploy --zero-downtime                      # Zero-downtime deployment
+```
+
 <command_file>
   <metadata>
     <name>/deploy</name>

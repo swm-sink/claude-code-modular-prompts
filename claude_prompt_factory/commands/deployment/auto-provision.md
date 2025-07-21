@@ -1,3 +1,21 @@
+---
+description: Advanced infrastructure auto-provisioning with intelligent resource optimization, cost management, and scalability
+argument-hint: "[infrastructure_type] [provisioning_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /deploy auto-provision - Advanced Infrastructure Auto-Provisioning
+
+Sophisticated infrastructure auto-provisioning system with intelligent resource optimization, cost management, and dynamic scalability.
+
+## Usage
+```bash
+/deploy auto-provision cloud                 # Cloud infrastructure provisioning
+/deploy auto-provision --kubernetes          # Kubernetes cluster provisioning
+/deploy auto-provision --serverless          # Serverless infrastructure setup
+/deploy auto-provision --cost-optimized      # Cost-optimized provisioning
+```
+
 <command_file>
   <metadata>
     <n>/auto-provision</n>
