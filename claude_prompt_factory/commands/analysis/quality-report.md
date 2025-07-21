@@ -1,56 +1,51 @@
-# Quality Report Command
+<command_file>
+  <metadata>
+    <name>/quality report</name>
+    <purpose>Generates a comprehensive quality report with trends, history, and improvement recommendations.</purpose>
+    <usage>
+      <![CDATA[
+      /quality report <target_path=".">
+      ]]>
+    </usage>
+  </metadata>
 
-## Purpose
-Generate comprehensive quality reports with trends, history, and improvement recommendations for codebase quality management.
+  <arguments>
+    <argument name="target_path" type="string" required="false" default=".">
+      <description>The file or directory to analyze. Defaults to the current directory.</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Generate a quality report for the entire project.</description>
+      <usage>/quality report</usage>
+    </example>
+  </examples>
 
-## Usage
-```bash
-/quality report [scope] [format] [--timeframe=7d]
-```
+  <claude_prompt>
+    <prompt>
+      You are a QA engineering lead. The user wants a comprehensive quality report for their project.
+      Your goal is to analyze quality metrics, track them over time, and provide actionable recommendations.
 
-## Command Options
-- `scope`: full|module|security|performance (default: full)
-- `format`: console|markdown|json|html (default: console)
-- `--timeframe`: 1d|7d|30d|90d (default: 7d)
+      <include component="components/context/find-relevant-code.md" />
 
-## Features
+      Once the scope is identified, perform the following analysis:
+      1.  **Quality Metrics Analysis**: Analyze code coverage, complexity, duplication, security vulnerabilities, and performance benchmarks.
+      2.  **Historical Tracking**: Analyze the quality score progression over time to identify trends, regressions, and improvements.
 
-### Quality Metrics Analysis
-- Code coverage percentage and trends
-- Complexity metrics (cyclomatic, cognitive)
-- Duplication analysis and hotspots
-- Security vulnerability assessment
-- Performance benchmark comparisons
+      Compile all your findings into a detailed report.
 
-### Historical Tracking
-- Quality score progression over time
-- Regression identification and alerts
-- Improvement milestone tracking
-- Commit-level quality impact analysis
+      <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-### Team Collaboration
-- Shareable quality dashboards
-- Team performance comparisons
-- Quality gate compliance status
-- Actionable improvement recommendations
-
-### Report Formats
-- **Console**: Interactive dashboard view
-- **Markdown**: Documentation-ready reports
-- **JSON**: API integration and automation
-- **HTML**: Stakeholder presentation format
-
-## Example Usage
-```bash
-/quality report security markdown --timeframe=30d
-/quality report performance json
-/quality report full html --timeframe=90d
-```
-
-## Report Sections
-1. Executive summary with key metrics
-2. Quality trends and historical analysis
-3. Critical issues requiring immediate attention
-4. Improvement recommendations with priority
-5. Team performance insights
-6. Quality gate compliance status
+  <dependencies>
+    <includes_components>
+      <component>components/context/find-relevant-code.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>paths.source</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

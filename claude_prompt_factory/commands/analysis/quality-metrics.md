@@ -1,44 +1,49 @@
-# /quality metrics - Quality Metrics Command
+<command_file>
+  <metadata>
+    <name>/quality metrics</name>
+    <purpose>Calculates and tracks code quality metrics, with support for trend analysis and benchmarks.</purpose>
+    <usage>
+      <![CDATA[
+      /quality metrics <target_path=".">
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Calculate and track code quality metrics, with support for trend analysis and comparison against benchmarks.
-
-## Usage
-```bash
-/quality metrics [scope]
-```
-
-## Workflow
-
-The `/quality metrics` command follows a systematic process to calculate and analyze code quality metrics.
-
-```xml
-<metrics_workflow>
-  <step name="Analyze Codebase">
-    <description>Perform a comprehensive analysis of the codebase to calculate a wide range of quality metrics, including code complexity, maintainability, test coverage, and technical debt.</description>
-    <tool_usage>
-      <tool>Parallel Grep/Glob/Read</tool>
-      <description>Scan the codebase to collect all necessary data for metric calculation.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="target_path" type="string" required="false" default=".">
+      <description>The file or directory to analyze. Defaults to the current directory.</description>
+    </argument>
+  </arguments>
   
-  <step name="Perform Trend Analysis">
-    <description>Compare the current metrics against historical data to identify trends and track the impact of recent changes on code quality.</description>
-  </step>
-  
-  <step name="Compare Against Benchmarks">
-    <description>Compare the project's quality metrics against industry standards and the team's own baseline to provide context and identify areas for improvement.</description>
-  </step>
-  
-  <step name="Generate Report">
-    <description>Generate a detailed report of the quality metrics, including trend analysis, benchmark comparisons, and a set of actionable recommendations for improvement.</description>
-    <output>A comprehensive quality metrics report.</output>
-  </step>
-</metrics_workflow>
-```
+  <examples>
+    <example>
+      <description>Calculate quality metrics for the entire project.</description>
+      <usage>/quality metrics</usage>
+    </example>
+  </examples>
 
-## Quality Metrics
+  <claude_prompt>
+    <prompt>
+      You are a software quality analyst. The user wants you to calculate code quality metrics.
 
-The following quality metrics are calculated:
+      <include component="components/context/find-relevant-code.md" />
 
-*   **Code Quality**: Cyclomatic complexity, maintainability index, readability score, and test coverage.
-*   **Technical Debt**: Technical debt ratio, code smells, duplication percentage, and security vulnerabilities.
+      Once the code is identified, perform the following analysis:
+      1.  **Calculate Metrics**: Analyze the codebase to calculate metrics for complexity, maintainability, test coverage, and technical debt.
+      2.  **Perform Trend Analysis**: Compare current metrics against historical data to identify trends.
+      3.  **Compare Against Benchmarks**: Compare metrics against industry standards to identify areas for improvement.
+
+      <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/context/find-relevant-code.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>paths.source</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

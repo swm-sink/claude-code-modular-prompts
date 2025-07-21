@@ -87,3 +87,9 @@ dmypy.json
 
 # pyenv
 .python-version
+
+# Prompt Factory Specific
+dependency_graph.md
+generate_dependency_graph.py
+.claude-backup-*/
+temp_validation_project/

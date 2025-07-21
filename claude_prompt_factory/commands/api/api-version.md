@@ -1,38 +1,44 @@
-# /api version - API Version Management Command
+<command_file>
+  <metadata>
+    <name>/api version</name>
+    <purpose>Manages API versions, including incrementing versions and planning deprecation strategies.</purpose>
+    <usage>
+      <![CDATA[
+      /api version <increment="patch">
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Manage API versions, including incrementing versions, planning deprecation strategies, and ensuring backward compatibility.
-
-## Usage
-```bash
-/api version [--increment=major|minor|patch] [--deprecate=version]
-```
-
-## Workflow
-
-The `/api version` command follows a systematic process to manage API versions.
-
-```xml
-<api_versioning_workflow>
-  <step name="Analyze Changes">
-    <description>Analyze the recent changes to the API to identify any breaking changes and determine the appropriate version increment (major, minor, or patch) based on semantic versioning.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Use `git diff` to analyze changes since the last version tag.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="increment" type="string" required="false" default="patch">
+      <description>The semantic version to increment (major, minor, or patch).</description>
+    </argument>
+  </arguments>
   
-  <step name="Implement Versioning">
-    <description>Implement the new version by updating the API version headers, implementing version routing, and, if necessary, maintaining legacy endpoints with deprecation warnings.</description>
-  </step>
-  
-  <step name="Plan Migration & Deprecation">
-    <description>Create a migration guide that documents any breaking changes, provides code examples for the new version, and sets a clear deprecation timeline for the old version.</description>
-  </step>
-</api_versioning_workflow>
-```
+  <examples>
+    <example>
+      <description>Perform a patch version increment.</description>
+      <usage>/api version</usage>
+    </example>
+    <example>
+      <description>Perform a major version increment for a breaking change.</description>
+      <usage>/api version increment="major"</usage>
+    </example>
+  </examples>
 
-## Quality Gates
-- **Semantic Versioning Compliance**: Ensures that version numbers are incremented correctly based on the nature of the changes.
-- **Backward Compatibility Verification**: Verifies that non-breaking changes do not unintentionally break existing clients.
-- **Migration Path Validation**: Validates that the provided migration path is clear and actionable for API consumers.
-- **Consumer Impact Assessment**: Assesses the potential impact of the version change on API consumers.
+  <claude_prompt>
+    <prompt>
+      You are an API release manager. The user wants to manage their API version.
+
+      1.  **Analyze Changes**: Analyze recent API changes to identify breaking changes and determine the appropriate version increment (major, minor, patch).
+      2.  **Implement Versioning**: Propose code changes to implement the new version, such as updating version headers or routing.
+      3.  **Plan Migration & Deprecation**: Create a migration guide for users, documenting breaking changes and setting a deprecation timeline for the old version.
+
+      Your output should be a plan and the proposed code changes.
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <!-- This command is self-contained -->
+  </dependencies>
+</command_file>

@@ -1,40 +1,43 @@
-# /api design - API Design & Specification Command
+<command_file>
+  <metadata>
+    <name>/api design</name>
+    <purpose>Designs RESTful or GraphQL APIs and generates comprehensive specifications and documentation.</purpose>
+    <usage>
+      <![CDATA[
+      /api design "[description]" <type="rest">
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Design RESTful or GraphQL APIs and generate comprehensive specifications and documentation.
-
-## Usage
-```bash
-/api design "[description of API]" [--type=rest|graphql]
-```
-
-## Workflow
-
-The `/api design` command follows a systematic process to design and specify APIs.
-
-```xml
-<api_design_workflow>
-  <step name="Analyze Requirements">
-    <description>Analyze the user's description of the desired API to understand the business needs, data models, and core functionality.</description>
-  </step>
+  <arguments>
+    <argument name="description" type="string" required="true">
+      <description>A natural language description of the API to be designed.</description>
+    </argument>
+    <argument name="type" type="string" required="false" default="rest">
+      <description>The type of API to design ('rest' or 'graphql').</description>
+    </argument>
+  </arguments>
   
-  <step name="Design Endpoints & Schema">
-    <description>Design the RESTful resource endpoints or GraphQL schema, including the operations, parameters, and request/response models.</description>
-  </step>
-  
-  <step name="Generate API Specification">
-    <description>Generate a complete API specification in the OpenAPI or GraphQL schema format, including data models, authentication patterns, error handling, and versioning strategies.</description>
-    <tool_usage>
-      <tool>Write</tool>
-      <description>Create the API specification file.</description>
-    </tool_usage>
-  </step>
-</api_design_workflow>
-```
+  <examples>
+    <example>
+      <description>Design a REST API for a simple user management system.</description>
+      <usage>/api design "a user service with create, read, update, delete endpoints"</usage>
+    </example>
+  </examples>
 
-## Key Features
-- **Specification Generation**: Creates OpenAPI 3.0/3.1 or GraphQL schema specifications.
-- **JSON Schema Validation**: Defines request/response models with JSON Schema.
-- **Authentication & Authorization**: Includes patterns for authentication and authorization.
-- **Error Handling**: Defines standardized error response formats.
-- **Versioning**: Supports various versioning strategies.
-- **Rate Limiting**: Includes definitions for rate limiting.
+  <claude_prompt>
+    <prompt>
+      You are an expert API architect. The user wants you to design an API based on their description.
+
+      1.  **Analyze Requirements**: Analyze the user's description to understand the business needs, data models, and core functionality.
+      2.  **Design Endpoints & Schema**: Design the RESTful resource endpoints or GraphQL schema, including operations, parameters, and models.
+      3.  **Generate API Specification**: Generate a complete API specification in OpenAPI 3.0 (for REST) or GraphQL schema format. Include data models, authentication patterns, and error handling.
+
+      Your output should be the raw specification file content.
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <!-- This command is self-contained -->
+  </dependencies>
+</command_file>

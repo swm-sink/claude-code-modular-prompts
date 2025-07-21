@@ -1,8 +1,0 @@
-Type,Component,Impact,Details,Optimization
-excessive_tokens,command/meta,high,"{""tokens"": 47093, ""optimization"": ""Reduce by 89%""}",Reduce by 89%
-excessive_tokens,command/feature,high,"{""tokens"": 16125, ""optimization"": ""Reduce by 68%""}",Reduce by 68%
-excessive_tokens,command/chain,high,"{""tokens"": 16636, ""optimization"": ""Reduce by 69%""}",Reduce by 69%
-excessive_tokens,command/context-prime,high,"{""tokens"": 18300, ""optimization"": ""Reduce by 72%""}",Reduce by 72%
-excessive_tokens,command/protocol,high,"{""tokens"": 16302, ""optimization"": ""Reduce by 69%""}",Reduce by 69%
-potential_duplication,module/meta/README,medium,"{""duplicate_of"": ""patterns/README"", ""tokens_wasted"": 806}",N/A
-framework_overhead,,critical,"{""total_tokens"": 261315, ""optimization"": ""Implement lazy loading and modular composition""}",Implement lazy loading and modular composition

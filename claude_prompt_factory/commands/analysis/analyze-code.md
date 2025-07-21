@@ -1,60 +1,60 @@
-# Analyze Code Command
+<command_file>
+  <metadata>
+    <name>/analyze code</name>
+    <purpose>Performs a comprehensive analysis of a codebase, focusing on structure, complexity, and quality.</purpose>
+    <usage>
+      <![CDATA[
+      /analyze code <target_path="." focus="full">
+      ]]>
+    </usage>
+  </metadata>
 
-## Overview
-The `/analyze code` command provides comprehensive code analysis focusing on structure, patterns, complexity, and improvement opportunities across multiple languages.
+  <arguments>
+    <argument name="target_path" type="string" required="false" default=".">
+      <description>The file or directory to analyze. Defaults to the current directory.</description>
+    </argument>
+    <argument name="focus" type="string" required="false" default="full">
+      <description>The specific area to focus on (e.g., 'performance', 'security', 'quality').</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Run a full analysis on the entire project.</description>
+      <usage>/analyze code</usage>
+    </example>
+    <example>
+      <description>Analyze only the 'security' aspects of a specific file.</description>
+      <usage>/analyze code "src/auth/service.py" focus="security"</usage>
+    </example>
+  </examples>
 
-## Usage
-```bash
-/analyze code [file_path] [focus_area]
-```
+  <claude_prompt>
+    <prompt>
+      You are an expert code analyst. The user wants to perform a comprehensive analysis of their codebase.
+      Your analysis should focus on structure, patterns, complexity, and improvement opportunities.
 
-## Focus Areas
-- **structure** - Architecture patterns and organization
-- **complexity** - Cyclomatic complexity and code metrics  
-- **patterns** - Design patterns and anti-patterns
-- **quality** - Code smells and maintainability
-- **performance** - Performance bottlenecks and optimizations
-- **security** - Security vulnerabilities and best practices
+      <include component="components/context/find-relevant-code.md" />
 
-## Analysis Process
-1. **Code Structure Review**
-   - Component relationships and dependencies
-   - Architectural patterns identification
-   - Module cohesion and coupling analysis
+      Once the code is identified, perform the following analysis steps:
+      1.  **Code Structure Review**: Analyze component relationships, dependencies, and architectural patterns.
+      2.  **Complexity Analysis**: Calculate cyclomatic complexity, assess function length, and evaluate nesting depth.
+      3.  **Pattern Recognition**: Identify design patterns, anti-patterns, and code duplication.
+      4.  **Quality Assessment**: Detect code smells, score maintainability, and identify technical debt.
+      5.  **Improvement Recommendations**: Suggest refactoring opportunities and performance optimizations.
 
-2. **Complexity Analysis**
-   - Cyclomatic complexity metrics
-   - Function/method length assessment
-   - Nesting depth evaluation
+      <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-3. **Pattern Recognition**
-   - Design patterns usage
-   - Anti-pattern detection
-   - Code duplication identification
-
-4. **Quality Assessment**
-   - Code smell detection
-   - Maintainability scoring
-   - Technical debt identification
-
-5. **Improvement Recommendations**
-   - Refactoring opportunities
-   - Performance optimization suggestions
-   - Best practice adherence
-
-## Supported Languages
-Python, JavaScript, TypeScript, Java, C#, Go, Rust, PHP, Ruby
-
-## Output Format
-- Executive summary with key findings
-- Detailed analysis by category
-- Code examples with specific issues
-- Prioritized improvement recommendations
-- Metrics dashboard with scores
-
-## Example Usage
-```bash
-/analyze code src/auth/models.py security
-/analyze code . complexity
-/analyze code components/ patterns
-```
+  <dependencies>
+    <includes_components>
+      <component>components/context/find-relevant-code.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>paths.source</value>
+      <value>paths.tests</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

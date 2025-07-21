@@ -1,67 +1,52 @@
-# /analyze security - Security Analysis Command
+<command_file>
+  <metadata>
+    <name>/analyze security</name>
+    <purpose>Performs a comprehensive security analysis of the codebase based on OWASP standards.</purpose>
+    <usage>
+      <![CDATA[
+      /analyze security <target_path=".">
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Perform a comprehensive security analysis of the codebase, based on OWASP standards, and provide a prioritized list of vulnerabilities with recommended fixes.
-
-## Usage
-```bash
-/analyze security [target] [--level=basic|deep] [--fix]
-```
-
-## Workflow
-
-The `/analyze security` command follows a systematic process to identify and report security vulnerabilities.
-
-```xml
-<security_analysis_workflow>
-  <step name="Scan for Vulnerabilities">
-    <description>Perform a comprehensive scan of the codebase to identify a wide range of security vulnerabilities, including the OWASP Top 10, hard-coded secrets, and insecure dependencies.</description>
-    <tool_usage>
-      <tool>Parallel Grep/Glob</tool>
-      <description>Scan the codebase for common vulnerability patterns.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="target_path" type="string" required="false" default=".">
+      <description>The file or directory to analyze. Defaults to the current directory.</description>
+    </argument>
+  </arguments>
   
-  <step name="Analyze Security Patterns">
-    <description>Analyze the codebase's security patterns, including authentication, authorization, input validation, and data encryption, to identify any weaknesses or misconfigurations.</description>
-  </step>
-  
-  <step name="Generate Prioritized Report">
-    <description>Generate a detailed security report that prioritizes vulnerabilities by severity and provides clear, actionable recommendations for how to fix them. If the `--fix` flag is used, the command will also attempt to automatically apply the recommended fixes.</description>
-    <output>A comprehensive security report with a prioritized list of vulnerabilities and recommended fixes.</output>
-  </step>
-</security_analysis_workflow>
-```
+  <examples>
+    <example>
+      <description>Run a security analysis on the entire project.</description>
+      <usage>/analyze security</usage>
+    </example>
+  </examples>
 
-## Security Checks
-- SQL injection vulnerabilities
-- Cross-site scripting (XSS)
-- Insecure authentication
-- Sensitive data exposure
-- Security misconfigurations
-- Vulnerable dependencies
-- Insufficient logging
+  <claude_prompt>
+    <prompt>
+      You are a principal security engineer. Your task is to perform a comprehensive security analysis.
 
-## Output Format
-```
-SECURITY ANALYSIS REPORT
-━━━━━━━━━━━━━━━━━━━━━
-Critical Issues: X
-High Priority: Y
-Medium Priority: Z
+      <include component="components/context/find-relevant-code.md" />
 
-[CRITICAL] Issue description
-  Location: file:line
-  Impact: Explanation
-  Fix: Specific recommendation
-```
+      Once the code is identified, perform the following:
+      1.  **Scan for Vulnerabilities**: Scan the codebase for a wide range of security vulnerabilities, including the OWASP Top 10, hard-coded secrets, and insecure dependencies.
+      2.  **Analyze Security Patterns**: Analyze authentication, authorization, input validation, and data encryption patterns for weaknesses.
+      3.  **Generate Report**: Generate a prioritized report of vulnerabilities by severity.
 
-## Options
-- `--level`: Analysis depth (basic/deep/paranoid)
-- `--fix`: Attempt automatic fixes
-- `--report`: Generate detailed report
-- `--owasp`: Include OWASP mapping
+      <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-## Related Commands
-- `/fix security` - Fix security issues
-- `/security harden` - Security hardening
-- `/audit trail` - Add audit logging
+  <dependencies>
+    <invokes_commands>
+      <command>/security fix</command>
+    </invokes_commands>
+    <includes_components>
+      <component>components/context/find-relevant-code.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>paths.source</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
