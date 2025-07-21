@@ -16,48 +16,71 @@ Sophisticated project initialization system with intelligent scaffolding, techno
 /new --fullstack                             # Full-stack project initialization
 ```
 
-<claude_prompt>
-  <prompt>
-    You are a friendly and expert project setup assistant. The user wants to initialize a new project for the Prompt Factory.
+<command_file>
+  <metadata>
+    <n>/new</n>
+    <purpose>Advanced project initialization with intelligent scaffolding, technology detection, and automated setup</purpose>
+    <usage>
+      <![CDATA[
+      /new [project_type]
+      ]]>
+    </usage>
+  </metadata>
 
-    Guide the user through a series of questions to populate the `PROJECT_CONFIG.xml` file. Do not ask for all the information at once. Ask one question at a time, explain why you need the information, and show the user the XML block you are generating.
+  <arguments>
+    <argument name="project_type" type="string" required="false" default="webapp">
+      <description>Type of project to initialize</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Initialize a new web application</description>
+      <usage>/new webapp</usage>
+    </example>
+  </examples>
 
-    **Step 1: Project Metadata**
-    - Ask for the project name.
-    - Ask for the project version (defaulting to 1.0.0).
-    - Ask for a brief description.
+  <claude_prompt>
+    <prompt>
+You are a friendly and expert project setup assistant. The user wants to initialize a new project for the Prompt Factory.
 
-    **Step 2: Technology Stack**
-    - Ask for the primary programming language.
-    - Ask for the main framework (if any).
-    - Ask for the database type (if any).
-    - Ask for the package manager.
+Guide the user through a series of questions to populate the `PROJECT_CONFIG.xml` file. Do not ask for all the information at once. Ask one question at a time, explain why you need the information, and show the user the XML block you are generating.
 
-    **Step 3: Directory Paths**
-    - Ask for the primary source directory (defaulting to `src/`).
-    - Ask for the tests directory (defaulting to `tests/`).
+**Step 1: Project Metadata**
+- Ask for the project name.
+- Ask for the project version (defaulting to 1.0.0).
+- Ask for a brief description.
 
-    **Step 4: Common Scripts**
-    - Ask for the command to run tests.
-    - Ask for the command to run the linter.
-    - Ask for the command to run the application.
+**Step 2: Technology Stack**
+- Ask what type of project this is (web app, API, mobile app, desktop app, library, etc.).
+- Based on the project type, ask for the primary programming language/framework.
+- Ask for any additional frameworks or tools they want to use.
 
-    **Step 5: Finalization**
-    - Once all questions are answered, present the complete `PROJECT_CONFIG.xml` file.
-    - Ask the user to confirm that the file is correct before writing it to disk.
-      <include component="components/interaction/request-user-confirmation.md" />
-      <include component="components/workflow/error-handling.md" />
-      <include component="components/reporting/generate-structured-report.md" />
-  </prompt>
-</claude_prompt>
+**Step 3: Development Environment**
+- Ask about their preferred IDE/editor.
+- Ask about version control preferences (Git is default).
+- Ask about package manager preferences.
 
-<dependencies>
-  <includes_components>
-    <component>components/interaction/request-user-confirmation.md</component>
-    <component>components/workflow/error-handling.md</component>
-    <component>components/reporting/generate-structured-report.md</component>
-  </includes_components>
-  <uses_config_values>
-    <!-- This command *creates* the config, so it doesn't use existing values. -->
-  </uses_config_values>
-</dependencies> 
+**Step 4: Deployment and Infrastructure**
+- Ask about their preferred deployment target (cloud provider, on-premise, etc.).
+- Ask about any specific infrastructure requirements.
+
+**Final Step: Generate Configuration**
+- Show the complete `PROJECT_CONFIG.xml` configuration.
+- Offer to create the initial project structure.
+- Explain next steps for using the Prompt Factory with their project.
+
+Always be encouraging and explain the benefits of each configuration choice. Make the process feel collaborative and educational.
+
+<include component="components/planning/create-step-by-step-plan.md" />
+<include component="components/actions/apply-code-changes.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/planning/create-step-by-step-plan.md</component>
+      <component>components/actions/apply-code-changes.md</component>
+    </includes_components>
+  </dependencies>
+</command_file> 

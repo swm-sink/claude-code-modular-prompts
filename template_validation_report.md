@@ -1,19 +1,13 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T02:27:07.281971
+**Generated**: 2025-07-21T02:50:58.609856
 
 ## 📋 Executive Summary
 - **Total Files**: 202
 - **Valid Files**: 202 (100.0%)
-- **Overall Score**: 10089/20200 (49.9%)
+- **Overall Score**: 10212/20200 (50.6%)
 
-## 🚨 Critical Issues (175 errors)
+## 🚨 Critical Issues (172 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/research/research-analyze.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/innovation/innovation-lab.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/ecosystem/platform-scale.md
@@ -32,9 +26,6 @@
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/context/prime.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/core/new.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/core/research.md

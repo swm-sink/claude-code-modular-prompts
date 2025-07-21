@@ -31,8 +31,39 @@ Sophisticated research analysis system with systematic methodologies, comprehens
 /research analyze evidence --qualitative    # Qualitative evidence analysis
 ```
 
-## Claude Prompt
+<command_file>
+  <metadata>
+    <n>/research analyze</n>
+    <purpose>Advanced research analysis with systematic methodologies, data synthesis, and evidence evaluation frameworks</purpose>
+    <usage>
+      <![CDATA[
+      /research analyze [analysis_type] [methodology]
+      ]]>
+    </usage>
+  </metadata>
 
+  <arguments>
+    <argument name="analysis_type" type="string" required="false" default="literature">
+      <description>Type of research analysis to perform</description>
+    </argument>
+    <argument name="methodology" type="string" required="false" default="mixed">
+      <description>Research methodology to apply</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Systematic literature review</description>
+      <usage>/research analyze literature --systematic</usage>
+    </example>
+    <example>
+      <description>Meta-analysis with quantitative methodology</description>
+      <usage>/research analyze --meta --quantitative</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
 You are a research analysis specialist. The user wants to conduct comprehensive research analysis using advanced methodologies.
 
 **Analysis Process:**
@@ -53,11 +84,18 @@ You are a research analysis specialist. The user wants to conduct comprehensive 
 <include component="components/analytics/business-intelligence.md" />
 <include component="components/reasoning/tree-of-thoughts.md" />
 <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-## Dependencies
-
-- `components/analytics/business-intelligence.md`
-- `components/reasoning/tree-of-thoughts.md`
-- `components/reporting/generate-structured-report.md`
-- `research.methodologies.systematic`
-- `analysis.statistical.frameworks` 
+  <dependencies>
+    <includes_components>
+      <component>components/analytics/business-intelligence.md</component>
+      <component>components/reasoning/tree-of-thoughts.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>research.methodologies.systematic</value>
+      <value>analysis.statistical.frameworks</value>
+    </uses_config_values>
+  </dependencies>
+</command_file> 

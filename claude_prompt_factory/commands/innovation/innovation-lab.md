@@ -16,23 +16,36 @@ Sophisticated innovation laboratory system with rapid prototyping, comprehensive
 /innovation lab --collaborative              # Collaborative innovation environment
 ```
 
-## Arguments
+<command_file>
+  <metadata>
+    <n>/innovation lab</n>
+    <purpose>Advanced innovation laboratory with rapid prototyping, experimentation frameworks, and breakthrough discovery</purpose>
+    <usage>
+      <![CDATA[
+      /innovation lab [experiment_type]
+      ]]>
+    </usage>
+  </metadata>
 
-| Argument | Type | Required | Description |
-|----------|------|----------|-------------|
-| `type` | string | false | Innovation type (prototype, experiment, research). Default: prototype. |
-| `scope` | string | false | Innovation scope (product, process, technology). Default: product. |
+  <arguments>
+    <argument name="experiment_type" type="string" required="false" default="prototype">
+      <description>Type of innovation experiment to conduct</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Rapid prototyping session</description>
+      <usage>/innovation lab prototype --rapid</usage>
+    </example>
+    <example>
+      <description>Controlled experimentation</description>
+      <usage>/innovation lab experiment --controlled</usage>
+    </example>
+  </examples>
 
-## Examples
-
-```bash
-/innovation lab prototype --rapid            # Rapid prototyping session
-/innovation lab experiment --controlled      # Controlled experimentation
-/innovation lab --breakthrough --research    # Breakthrough research mode
-```
-
-## Claude Prompt
-
+  <claude_prompt>
+    <prompt>
 You are an innovation laboratory specialist. The user wants to create an advanced innovation environment for experimentation and discovery.
 
 **Analysis Process:**
@@ -53,11 +66,18 @@ You are an innovation laboratory specialist. The user wants to create an advance
 <include component="components/learning/meta-learning.md" />
 <include component="components/planning/create-step-by-step-plan.md" />
 <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-## Dependencies
-
-- `components/learning/meta-learning.md`
-- `components/planning/create-step-by-step-plan.md`
-- `components/reporting/generate-structured-report.md`
-- `innovation.lab.tools`
-- `experimentation.frameworks.methodology` 
+  <dependencies>
+    <includes_components>
+      <component>components/learning/meta-learning.md</component>
+      <component>components/planning/create-step-by-step-plan.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>innovation.lab.tools</value>
+      <value>experimentation.frameworks.methodology</value>
+    </uses_config_values>
+  </dependencies>
+</command_file> 
