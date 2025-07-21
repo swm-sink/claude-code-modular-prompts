@@ -1,54 +1,86 @@
 ---
-description: Advanced code formatting with intelligent styling, consistency enforcement, and automated quality improvements
-argument-hint: "[format_scope] [style_strategy]"
+description: Intelligent code formatting with automated style enforcement, multi-language support, and comprehensive configuration
+argument-hint: "[language] [style_guide]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /code format - Advanced Code Formatting
+# /code format - Intelligent Code Formatting
 
-Sophisticated code formatting system with intelligent styling, consistency enforcement, and automated quality improvements.
+Advanced code formatting system with automated style enforcement, multi-language support, and comprehensive, customizable configuration.
 
 ## Usage
 ```bash
-/code format project                         # Project-wide formatting
-/code format --style-guide                   # Style guide enforcement
-/code format --intelligent                   # Intelligent formatting optimization
-/code format --comprehensive                 # Comprehensive formatting and cleanup
+/code format python --style black          # Format Python code using the Black style
+/code format --javascript --style prettier # Format JavaScript code using Prettier
+/code format --all                         # Format all supported files in the project
+/code format --check                       # Check for formatting issues without applying changes
 ```
 
-## Workflow
+<command_file>
+  <metadata>
+    <n>/code format</n>
+    <purpose>Intelligent code formatting with automated style enforcement, multi-language support, and comprehensive configuration</purpose>
+    <usage>
+      <![CDATA[
+      /code format [language] --style [style_guide]
+      ]]>
+    </usage>
+  </metadata>
 
-The `/code format` command follows a systematic process to format code.
-
-```xml
-<code_formatting_workflow>
-  <step name="Detect Language & Style Guide">
-    <description>Analyze the files to detect the programming language and any project-specific style guide configurations (e.g., `.prettierrc`, `pyproject.toml`).</description>
-    <tool_usage>
-      <tool>Read</tool>
-      <description>Read configuration files to identify the style guide.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="language" type="string" required="false">
+      <description>The programming language to format</description>
+    </argument>
+    <argument name="style_guide" type="string" required="false" default="default">
+      <description>The style guide to use for formatting (e.g., black, prettier, google)</description>
+    </argument>
+    <argument name="check" type="boolean" required="false" default="false">
+      <description>Whether to check for formatting issues without applying changes</description>
+    </argument>
+  </arguments>
   
-  <step name="Apply Formatting">
-    <description>Apply language-specific formatting rules to the target files, fixing indentation, sorting imports, and enforcing the detected style guide.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run the appropriate formatting tool (e.g., Prettier, Black, gofmt) on the target files.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Verify & Report">
-    <description>Verify that the formatting was applied correctly and generate a report summarizing the changes made.</description>
-    <output>A summary of the formatting changes.</output>
-  </step>
-</code_formatting_workflow>
-```
+  <examples>
+    <example>
+      <description>Format Python code using the Black style</description>
+      <usage>/code format python --style black</usage>
+    </example>
+    <example>
+      <description>Format all supported files in the project</description>
+      <usage>/code format --all</usage>
+    </example>
+  </examples>
 
-### Language-Specific Formatting
-- **Python**: Applies Black for formatting, isort for imports, and ensures PEP 8 compliance.
-- **JavaScript/TypeScript**: Uses Prettier and ESLint auto-fix capabilities.
-- **Java**: Applies Google or Oracle style guides and organizes imports.
-- **Go**: Runs `gofmt` and `goimports`.
-- **Rust**: Applies `rustfmt`.
-- **C/C++**: Applies `clang-format`.
+  <claude_prompt>
+    <prompt>
+You are an advanced code formatting specialist. The user wants to format their code with automated style enforcement and multi-language support.
+
+**Formatting Process:**
+1. **Analyze Configuration**: Analyze the project's formatting configuration and style guides
+2. **Discover Files**: Discover all relevant files to be formatted
+3. **Apply Formatting**: Apply the specified formatting rules to the code
+4. **Report Changes**: Report the changes made and any issues encountered
+5. **Handle Edge Cases**: Handle complex formatting scenarios and edge cases gracefully
+
+**Implementation Strategy:**
+- Automatically detect the project's programming languages and existing formatting configurations
+- Discover all files that match the supported language extensions
+- Apply the appropriate formatter (e.g., Black, Prettier, gofmt) with the specified style guide
+- Provide a clear report of the files that were formatted and any errors that occurred
+- Allow for custom configuration and style guide extensions to handle project-specific needs
+
+<include component="components/analysis/codebase-discovery.md" />
+<include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>formatting.style_guide.default</value>
+      <value>formatting.exclude_patterns</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

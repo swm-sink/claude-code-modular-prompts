@@ -1,12 +1,12 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T03:15:14.794992
+**Generated**: 2025-07-21T03:59:12.777304
 
 ## 📋 Executive Summary
 - **Total Files**: 202
 - **Valid Files**: 202 (100.0%)
-- **Overall Score**: 12060/20200 (59.7%)
+- **Overall Score**: 12922/20200 (64.0%)
 
-## 🚨 Critical Issues (145 errors)
+## 🚨 Critical Issues (136 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
 - ❌ Missing <command_file> XML structure
 
@@ -31,53 +31,26 @@
 ### claude_prompt_factory/commands/utilities/backup-create.md
 - ❌ XML Parse Error: not well-formed (invalid token): line 44, column 17
 
-### claude_prompt_factory/commands/utilities/ai-review.md
-- ❌ Missing <command_file> XML structure
-
 ### claude_prompt_factory/commands/utilities/monitor-alerts.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/utilities/help.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 44, column 16
 
 ### claude_prompt_factory/commands/utilities/cloud-provision.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 44, column 17
 
 ### claude_prompt_factory/commands/utilities/ai-suggest.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 43, column 17
 
 ### claude_prompt_factory/commands/utilities/monitor-logs.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/utilities/code-format.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/utilities/code-lint.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/utilities/cost-analyze.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 44, column 16
 
 ### claude_prompt_factory/commands/utilities/monitor-dashboard.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/utilities/think-deep.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/testing/test-unit.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/testing/test-e2e.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 44, column 14
 
 ### claude_prompt_factory/commands/testing/test-report.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 41, column 23
 
 ### claude_prompt_factory/commands/testing/test-integration.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/deployment/ci-setup.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 43, column 17
 
 ### claude_prompt_factory/commands/workflow/pipeline-create.md
 - ❌ Missing <command_file> XML structure
@@ -332,7 +305,7 @@
 - ❌ Missing <description> element
 - ❌ Missing <output> section
 
-## ⚠️ Warnings (22 warnings)
+## ⚠️ Warnings (27 warnings)
 ### claude_prompt_factory/commands/documentation/docs-generate.md
 - ⚠️ Dependencies section doesn't match actual includes
 
@@ -375,6 +348,19 @@
 ### claude_prompt_factory/commands/utilities/backup-create.md
 - ⚠️ Component not found: components/database/db-backup.md
 - ⚠️ Component not found: components/security/secure-config.md
+
+### claude_prompt_factory/commands/utilities/cloud-provision.md
+- ⚠️ Component not found: components/deployment/auto-provision.md
+
+### claude_prompt_factory/commands/testing/test-unit.md
+- ⚠️ Component not found: components/testing/test-unit.md
+
+### claude_prompt_factory/commands/testing/test-e2e.md
+- ⚠️ Component not found: components/testing/test-e2e.md
+
+### claude_prompt_factory/commands/testing/test-integration.md
+- ⚠️ Component not found: components/testing/test-integration.md
+- ⚠️ Component not found: components/deployment/auto-provision.md
 
 ### claude_prompt_factory/commands/workflow/mega-platform-builder.md
 - ⚠️ Dependencies section doesn't match actual includes

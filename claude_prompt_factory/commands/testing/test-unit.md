@@ -1,80 +1,88 @@
 ---
-description: Comprehensive unit testing with automated test generation, coverage analysis, and quality validation
-argument-hint: "[test_scope] [coverage_target]"
+description: Intelligent unit testing with automated test generation, comprehensive coverage analysis, and detailed reporting
+argument-hint: "[file_path] [coverage_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /test unit - Unit Testing Framework
+# /test unit - Intelligent Unit Testing
 
-Advanced unit testing system with automated test generation, comprehensive coverage analysis, and quality validation.
+Advanced unit testing system with automated test case generation, comprehensive coverage analysis, and detailed, actionable reporting.
 
 ## Usage
 ```bash
-/test unit all                              # Run all unit tests
-/test unit --coverage 90                   # Run tests with 90% coverage target
-/test unit --generate                      # Generate missing unit tests
-/test unit --watch                         # Run tests in watch mode
+/test unit "path/to/my_file.py"              # Generate and run unit tests for a specific file
+/test unit --coverage "high" "path/to/dir"   # Aim for high test coverage for a directory
+/test unit --report "detailed"               # Generate a detailed unit test report
+/test unit --auto-fix "true"                 # Automatically fix simple test failures
 ```
 
-## Workflow
+<command_file>
+  <metadata>
+    <n>/test unit</n>
+    <purpose>Intelligent unit testing with automated test generation, comprehensive coverage analysis, and detailed reporting</purpose>
+    <usage>
+      <![CDATA[
+      /test unit "[file_path]" --coverage [coverage_level]
+      ]]>
+    </usage>
+  </metadata>
 
-The `/test unit` command follows a systematic process to generate high-quality unit tests.
-
-```xml
-<unit_test_generation_workflow>
-  <step name="Analyze Component">
-    <description>Analyze the target component to understand its public API, dependencies, and logic.</description>
-    <tool_usage>
-      <tool>Read</tool>
-      <description>Read the contents of the target component's file.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="file_path" type="string" required="true">
+      <description>The path to the file or directory to generate unit tests for</description>
+    </argument>
+    <argument name="coverage_level" type="string" required="false" default="medium">
+      <description>The desired test coverage level (e.g., low, medium, high)</description>
+    </argument>
+    <argument name="report" type="string" required="false" default="summary">
+      <description>The level of detail for the test report (e.g., summary, detailed)</description>
+    </argument>
+  </arguments>
   
-  <step name="Identify Test Cases">
-    <description>Identify a comprehensive set of test cases to cover the component's functionality, including happy paths, edge cases, and error conditions.</description>
-  </step>
-  
-  <step name="Generate Test Suite">
-    <description>Generate a new test file with a full suite of unit tests, using the appropriate testing framework and mocking libraries as defined in `PROJECT_CONFIG.xml`.</description>
-    <tool_usage>
-      <tool>Write</tool>
-      <description>Create the new test file in the project's designated test directory.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Verify Tests">
-    <description>Run the newly created tests to ensure they are working correctly. The tests should fail initially (as per TDD), and then pass once the implementation is complete.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run the project's test command.</description>
-    </tool_usage>
-  </step>
-</unit_test_generation_workflow>
-```
+  <examples>
+    <example>
+      <description>Generate and run unit tests for a specific file</description>
+      <usage>/test unit "src/my_module/my_file.py"</usage>
+    </example>
+    <example>
+      <description>Aim for high test coverage for a directory</description>
+      <usage>/test unit --coverage "high" "src/my_module/"</usage>
+    </example>
+  </examples>
 
-## Configuration
+  <claude_prompt>
+    <prompt>
+You are an advanced unit testing specialist. The user wants to generate and run unit tests for their code.
 
-The behavior of the `/test unit` command is configured in the `PROJECT_CONFIG.xml` file.
+**Unit Testing Process:**
+1. **Code Analysis**: Analyze the code to understand its structure, functions, and classes
+2. **Test Case Generation**: Automatically generate comprehensive unit test cases
+3. **Test Execution**: Execute the generated tests and capture the results
+4. **Coverage Analysis**: Analyze the test coverage and identify gaps
+5. **Report Generation**: Generate a detailed report with test results and coverage metrics
 
-```xml
-<project_config>
-  <testing_strategy>
-    <test_framework>
-      <name>pytest</name>
-      <config_file>pytest.ini</config_file>
-    </test_framework>
-    <mocking_library>unittest.mock</mocking_library>
-  </testing_strategy>
-</project_config>
-```
+**Implementation Strategy:**
+- Analyze the source code to identify public functions, methods, and edge cases
+- Generate unit tests using the appropriate testing framework (e.g., pytest, Jest, JUnit)
+- Execute the tests in a controlled environment and capture stdout, stderr, and exit codes
+- Use code coverage tools to measure line, branch, and function coverage
+- Generate a clear, actionable report with test results, coverage gaps, and suggestions for improvement
 
-## Output
-- A new test file containing a comprehensive suite of unit tests.
-- A summary of the generated tests and their coverage.
-
-**Focus**: Generating high-quality, isolated unit tests for individual components.
-
+<include component="components/testing/test-unit.md" />
 <include component="components/analysis/codebase-discovery.md" />
-<include component="components/planning/create-step-by-step-plan.md" />
-<include component="components/testing/mutation-testing.md" />
 <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/testing/test-unit.md</component>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>testing.unit.framework</value>
+      <value>testing.coverage.threshold</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

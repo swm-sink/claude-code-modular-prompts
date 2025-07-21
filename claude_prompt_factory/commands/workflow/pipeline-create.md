@@ -1,83 +1,87 @@
 ---
-description: Advanced pipeline creation with DAG orchestration, dependency management, and automated execution
-argument-hint: "[pipeline_type] [orchestration_strategy]"
+description: Intelligent pipeline creation with automated definition, modular component integration, and comprehensive validation
+argument-hint: "[pipeline_type] [config_file]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /pipeline create - Advanced Pipeline Builder
+# /pipeline create - Intelligent Pipeline Creation
 
-Sophisticated pipeline creation system with DAG orchestration, dependency management, and intelligent execution strategies.
+Advanced pipeline creation system with automated definition, modular component integration, and comprehensive validation of workflow orchestration.
 
 ## Usage
 ```bash
-/pipeline create ci-cd                       # Create CI/CD pipeline
-/pipeline create data-processing             # Data processing pipeline
-/pipeline create --dag                       # DAG-based workflow pipeline
-/pipeline create --parallel                  # Parallel execution optimization
+/pipeline create ci/cd --config "jenkinsfile" # Create a CI/CD pipeline from a Jenkinsfile
+/pipeline create --data-flow "spark_job"     # Create a data flow pipeline for a Spark job
+/pipeline create --custom-template "template.yaml" # Create a pipeline from a custom template
 ```
 
-## Templates
-```yaml
-templates:
-  ci-cd:
-    stages: [build, test, security-scan, deploy]
-    gates: [coverage-80%, security-pass, performance-ok]
+<command_file>
+  <metadata>
+    <n>/pipeline create</n>
+    <purpose>Intelligent pipeline creation with automated definition, modular component integration, and comprehensive validation</purpose>
+    <usage>
+      <![CDATA[
+      /pipeline create [pipeline_type] --config "[config_file]"
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="pipeline_type" type="string" required="true" default="ci/cd">
+      <description>The type of pipeline to create (e.g., ci/cd, data_flow, deployment)</description>
+    </argument>
+    <argument name="config_file" type="string" required="false">
+      <description>The path to the pipeline configuration file</description>
+    </argument>
+    <argument name="template" type="string" required="false">
+      <description>A template to use for pipeline creation</description>
+    </argument>
+  </arguments>
   
-  feature:
-    stages: [design, implement, test, review, integrate]
-    gates: [design-approval, tests-pass, code-review]
-  
-  hotfix:
-    stages: [patch, test, approve, deploy]
-    gates: [critical-tests-pass, security-check]
-```
+  <examples>
+    <example>
+      <description>Create a CI/CD pipeline from a Jenkinsfile</description>
+      <usage>/pipeline create ci/cd --config "Jenkinsfile"</usage>
+    </example>
+    <example>
+      <description>Create a data flow pipeline for a Spark job</description>
+      <usage>/pipeline create --data-flow "spark_job_definition.py"</usage>
+    </example>
+  </examples>
 
-## Core Logic
-```yaml
-creation:
-  template: load predefined structure
-  customize: stages and gates per requirements
-  validate: dependencies and gate logic
-  version: pipeline definition for tracking
-  save: to .claude/pipelines/<name>.yml
+  <claude_prompt>
+    <prompt>
+You are an advanced pipeline creation specialist. The user wants to create an intelligent pipeline with automated definition and modular component integration.
 
-stage_types:
-  sequential: execute in order
-  parallel: execute simultaneously
-  conditional: based on gate results
-  manual: require approval
+**Pipeline Creation Process:**
+1. **Requirement Analysis**: Analyze pipeline requirements, type, and components
+2. **Automated Definition**: Automatically define the pipeline structure and stages
+3. **Component Integration**: Integrate modular components and tasks into the pipeline
+4. **Validation**: Validate the pipeline configuration and dependencies
+5. **Deployment & Activation**: Deploy and activate the created pipeline
 
-quality_gates:
-  automated: test coverage, security scans
-  manual: code review, design approval
-  performance: benchmarks, load tests
-  compliance: security, legal requirements
-```
+**Implementation Strategy:**
+- Analyze pipeline requirements to determine optimal structure and orchestration
+- Automatically generate pipeline definitions using YAML, JSON, or DSLs (e.g., Jenkinsfile, GitLab CI config)
+- Integrate modular components into the pipeline, ensuring proper data flow and execution order
+- Validate the pipeline configuration for correctness, syntax, and dependency resolution
+- Deploy the pipeline to the target CI/CD or workflow orchestration system and activate it for execution
 
-## Examples
-- `/pipeline create deploy-prod --template ci-cd --gates security-pass,performance-ok`
-- `/pipeline create feature-auth --template feature --parallel test,security-scan`
-- `/pipeline create emergency-patch --template hotfix --stages patch,test,deploy`
+<include component="components/orchestration/dag-orchestrator.md" />
+<include component="components/integration/cicd-integration.md" />
+<include component="components/planning/create-step-by-step-plan.md" />
+    </prompt>
+  </claude_prompt>
 
-## Pipeline Definition
-```yaml
-name: deploy-prod
-version: 1.0
-stages:
-  - name: build
-    type: sequential
-    commands: [/test, /build]
-  - name: security
-    type: parallel
-    commands: [/security scan, /deps audit]
-    gates: [no-high-vulns]
-  - name: deploy
-    type: manual
-    requires: [build, security]
-    gates: [approval-required]
-```
-
-## Related Commands
-- `/pipeline run` - Execute pipeline
-- `/flow create` - Simple workflows
-- `/swarm pipeline` - Multi-agent execution 
+  <dependencies>
+    <includes_components>
+      <component>components/orchestration/dag-orchestrator.md</component>
+      <component>components/integration/cicd-integration.md</component>
+      <component>components/planning/create-step-by-step-plan.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>pipeline.default_template</value>
+      <value>pipeline.deployment_target</value>
+    </uses_config_values>
+  </dependencies>
+</command_file> 

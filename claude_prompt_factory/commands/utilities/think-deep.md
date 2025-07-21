@@ -1,63 +1,85 @@
 ---
-description: Advanced deep thinking with comprehensive analysis, systematic reasoning, and breakthrough problem-solving methodologies
-argument-hint: "[thinking_depth] [analysis_scope]"
+description: Advanced deep thinking and problem-solving with structured analysis, multi-perspective exploration, and comprehensive synthesis
+argument-hint: "[problem_statement] [thinking_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /think deep - Advanced Deep Thinking Framework
+# /think deep - Advanced Deep Thinking
 
-Sophisticated deep thinking system with comprehensive analysis, systematic reasoning, and breakthrough problem-solving methodologies.
+A powerful command for deep thinking and complex problem-solving, utilizing structured analysis, multi-perspective exploration, and comprehensive synthesis.
 
 ## Usage
 ```bash
-/think deep analyze                          # Deep analytical thinking
-/think deep --systematic                     # Systematic reasoning approach
-/think deep --breakthrough                   # Breakthrough thinking methodology
-/think deep --comprehensive                  # Comprehensive deep analysis
+/think deep "How can we optimize our database performance?" # Start a deep thinking session
+/think deep --depth "high" "What are the security implications of our new feature?" # High-depth thinking
+/think deep --framework "first_principles" "Analyze our user engagement strategy" # Use a specific thinking framework
 ```
 
-## Workflow
+<command_file>
+  <metadata>
+    <n>/think deep</n>
+    <purpose>Advanced deep thinking and problem-solving with structured analysis, multi-perspective exploration, and comprehensive synthesis</purpose>
+    <usage>
+      <![CDATA[
+      /think deep "[problem_statement]" --depth [thinking_depth] --framework [thinking_framework]
+      ]]>
+    </usage>
+  </metadata>
 
-The `/think deep` command follows a systematic process for deep analysis.
-
-```xml
-<deep_think_workflow>
-  <step name="Activate Thinking Mode & Decompose Problem">
-    <description>Activate the appropriate thinking mode (e.g., 'extended' for a deep dive, 'ultra' for maximum depth) and decompose the complex problem into smaller, more manageable facets.</description>
-    <tool_usage>
-      <tool>AI Analysis</tool>
-      <description>Use an advanced AI model to break down the problem.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="problem_statement" type="string" required="true">
+      <description>The problem or question to think deeply about</description>
+    </argument>
+    <argument name="thinking_depth" type="string" required="false" default="medium">
+      <description>The depth of the thinking process (e.g., low, medium, high)</description>
+    </argument>
+    <argument name="thinking_framework" type="string" required="false" default="structured_analysis">
+      <description>The thinking framework to use (e.g., structured_analysis, first_principles, six_thinking_hats)</description>
+    </argument>
+  </arguments>
   
-  <step name="Explore Solutions & Consider Implications">
-    <description>Explore multiple potential solution paths, considering the pros and cons, edge cases, and long-term implications of each approach. This may involve running parallel analyses to compare different strategies.</description>
-    <tool_usage>
-      <tool>AI Simulation/Analysis</tool>
-      <description>Leverage AI to simulate and analyze different solution paths.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Synthesize Insights & Provide Recommendations">
-    <description>Synthesize the insights from the analysis into a comprehensive, structured recommendation. The output includes a detailed explanation of the recommended approach, confidence scores, and a clear, actionable implementation plan.</description>
-    <output>A detailed deep analysis report.</output>
-  </step>
-</deep_think_workflow>
-```
+  <examples>
+    <example>
+      <description>Start a deep thinking session on database performance</description>
+      <usage>/think deep "How can we optimize our database performance by 50%?"</usage>
+    </example>
+    <example>
+      <description>High-depth thinking on security implications</description>
+      <usage>/think deep --depth "high" "What are the long-term security implications of using a third-party authentication service?"</usage>
+    </example>
+  </examples>
 
-## Configuration
+  <claude_prompt>
+    <prompt>
+You are an advanced deep thinking and problem-solving specialist. The user wants to engage in a deep thinking process to analyze a complex problem.
 
-The `/think deep` command can be configured through the `PROJECT_CONFIG.xml` file.
+**Thinking Process:**
+1. **Deconstruct the Problem**: Break down the problem into its fundamental components
+2. **Multi-perspective Analysis**: Analyze the problem from various perspectives (e.g., technical, business, user)
+3. **Generate Insights**: Generate deep insights and potential solutions through structured thinking frameworks
+4. **Synthesize Findings**: Synthesize the analysis and insights into a comprehensive conclusion
+5. **Formulate Action Plan**: Formulate a clear, actionable plan based on the synthesized findings
 
-```xml
-<command name="/think deep">
-  <setting name="default_thinking_mode" value="extended" description="The default thinking mode to use." />
-  <setting name="include_confidence_scores" value="true" description="Whether to include confidence scores in the analysis." />
-</command>
-```
+**Implementation Strategy:**
+- Use the specified thinking framework to guide the analysis (e.g., First Principles, Six Thinking Hats, SWOT Analysis)
+- Explore the problem from multiple angles, considering short-term and long-term implications
+- Generate a wide range of ideas and solutions, then critically evaluate them
+- Synthesize the findings into a structured report with clear arguments and evidence
+- Provide a prioritized, actionable plan with concrete next steps
 
-## Use Cases
+<include component="components/reasoning/tree-of-thoughts.md" />
+<include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-*   **Architectural Decisions**: Analyze complex architectural trade-offs to make informed decisions.
-*   **Complex Debugging**: Investigate and diagnose challenging bugs and performance issues.
-*   **Strategic Planning**: Explore the long-term implications of different technical strategies.
+  <dependencies>
+    <includes_components>
+      <component>components/reasoning/tree-of-thoughts.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>thinking.default_framework</value>
+      <value>reporting.output.format</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

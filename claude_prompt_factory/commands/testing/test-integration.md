@@ -1,60 +1,87 @@
 ---
-description: Integration testing with service interaction validation, API testing, and system integration verification
-argument-hint: "[integration_scope] [test_environment]"
+description: Intelligent integration testing with automated environment setup, service dependency management, and comprehensive validation
+argument-hint: "[test_suite] [environment_config]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /test integration - Integration Testing Framework
+# /test integration - Intelligent Integration Testing
 
-Advanced integration testing system with service interaction validation, API testing, and comprehensive system integration verification.
+Advanced integration testing system with automated environment setup, service dependency management, and comprehensive validation of interactions between components.
 
 ## Usage
 ```bash
-/test integration api                        # Test API integrations
-/test integration database                   # Test database integrations
-/test integration services                   # Test microservice integrations
-/test integration --environment staging     # Run on specific environment
+/test integration "user_service_tests" --env "docker-compose.yml" # Run integration tests for a specific service
+/test integration --all --setup-db "true" # Run all integration tests and set up the database
+/test integration --report "detailed" # Generate a detailed integration test report
 ```
 
-## Workflow
+<command_file>
+  <metadata>
+    <n>/test integration</n>
+    <purpose>Intelligent integration testing with automated environment setup, service dependency management, and comprehensive validation</purpose>
+    <usage>
+      <![CDATA[
+      /test integration "[test_suite]" --env "[environment_config]"
+      ]]>
+    </usage>
+  </metadata>
 
-The `/test integration` command follows a systematic process to execute integration tests.
-
-```xml
-<integration_testing_workflow>
-  <step name="Environment Setup">
-    <description>Configure the test environment, including setting up test databases and external services, initializing test data fixtures, and setting environment variables.</description>
-  </step>
+  <arguments>
+    <argument name="test_suite" type="string" required="true">
+      <description>The name of the integration test suite to run</description>
+    </argument>
+    <argument name="environment_config" type="string" required="true">
+      <description>The path to the environment configuration file (e.g., docker-compose.yml)</description>
+    </argument>
+    <argument name="setup_db" type="boolean" required="false" default="false">
+      <description>Whether to set up and seed the database before running the tests</description>
+    </argument>
+  </arguments>
   
-  <step name="Component Discovery">
-    <description>Identify service boundaries, map API endpoints and contracts, locate integration test suites, and analyze dependency chains.</description>
-    <tool_usage>
-      <tool>Parallel Grep/Glob/Read</tool>
-      <description>Scan the codebase to discover and map components and their interactions.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Execute Tests">
-    <description>Run API integration tests, database transactions, external service calls, and cross-component workflows.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run the project's configured integration test command.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Validate Results">
-    <description>Validate data consistency, test error propagation, verify timeout handling, and check rollback mechanisms.</description>
-  </step>
-</integration_testing_workflow>
-```
+  <examples>
+    <example>
+      <description>Run integration tests for a specific service using a Docker Compose environment</description>
+      <usage>/test integration "user_service_tests" --env "environments/docker-compose.test.yml"</usage>
+    </example>
+    <example>
+      <description>Run all integration tests and set up the database</description>
+      <usage>/test integration --all --setup-db "true"</usage>
+    </example>
+  </examples>
 
-## Output
-- Integration test results by service.
-- Component interaction verification.
-- External dependency health checks.
-- Performance metrics for integrated workflows.
+  <claude_prompt>
+    <prompt>
+You are an advanced integration testing specialist. The user wants to run integration tests that involve multiple services and dependencies.
 
-<include component="components/analysis/dependency-mapping.md" />
-<include component="components/orchestration/dag-orchestrator.md" />
-<include component="components/interaction/progress-reporting.md" />
+**Integration Testing Process:**
+1. **Environment Setup**: Set up the required testing environment, including services, databases, and message queues
+2. **Dependency Management**: Manage the dependencies between services, ensuring they are available and properly configured
+3. **Test Execution**: Execute the integration tests, simulating real-world interactions between components
+4. **Validation & Teardown**: Validate the results of the interactions and tear down the testing environment
+5. **Report Generation**: Generate a comprehensive report with the results of the integration tests
+
+**Implementation Strategy:**
+- Use infrastructure-as-code tools like Docker Compose or Kubernetes to define and set up the testing environment
+- Manage service dependencies and startup order to ensure a stable environment for testing
+- Execute test suites that cover the interactions and data flows between different services and components
+- Perform comprehensive validation of the results, including database state, API responses, and message queue contents
+- Generate a detailed report with the results of each test case, including logs and performance metrics from all services
+
+<include component="components/testing/test-integration.md" />
+<include component="components/deployment/auto-provision.md" />
 <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/testing/test-integration.md</component>
+      <component>components/deployment/auto-provision.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>testing.integration.environment</value>
+      <value>testing.integration.db_seed_script</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

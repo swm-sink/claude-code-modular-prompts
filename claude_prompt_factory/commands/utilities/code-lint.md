@@ -1,58 +1,86 @@
 ---
-description: Advanced code linting with intelligent analysis, quality enforcement, and automated improvement suggestions
-argument-hint: "[lint_scope] [analysis_depth]"
+description: Intelligent code linting with automated issue detection, configurable rules, and comprehensive reporting
+argument-hint: "[language] [config_file]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /code lint - Advanced Code Linting
+# /code lint - Intelligent Code Linting
 
-Sophisticated code linting system with intelligent analysis, quality enforcement, and automated improvement suggestions.
+Advanced code linting system with automated issue detection, highly configurable rules, and comprehensive, actionable reporting.
 
 ## Usage
 ```bash
-/code lint comprehensive                     # Comprehensive linting analysis
-/code lint --security                        # Security-focused linting
-/code lint --performance                     # Performance optimization linting
-/code lint --quality                         # Quality enforcement linting
+/code lint python --config .pylintrc       # Lint Python code using a specific config file
+/code lint --javascript --fix              # Lint and automatically fix JavaScript issues
+/code lint --all                           # Lint all supported files in the project
+/code lint --report "summary"              # Generate a summary report of linting issues
 ```
 
-## Workflow
+<command_file>
+  <metadata>
+    <n>/code lint</n>
+    <purpose>Intelligent code linting with automated issue detection, configurable rules, and comprehensive reporting</purpose>
+    <usage>
+      <![CDATA[
+      /code lint [language] --config [config_file]
+      ]]>
+    </usage>
+  </metadata>
 
-The `/code lint` command follows a systematic process to lint code.
-
-```xml
-<code_linting_workflow>
-  <step name="Detect Language & Linter">
-    <description>Analyze the files to detect the programming language and any project-specific linter configurations (e.g., `.eslintrc`, `pyproject.toml`).</description>
-    <tool_usage>
-      <tool>Read</tool>
-      <description>Read configuration files to identify the linter and its rules.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="language" type="string" required="false">
+      <description>The programming language to lint</description>
+    </argument>
+    <argument name="config_file" type="string" required="false">
+      <description>The path to the linting configuration file</description>
+    </argument>
+    <argument name="fix" type="boolean" required="false" default="false">
+      <description>Whether to automatically fix linting issues</description>
+    </argument>
+  </arguments>
   
-  <step name="Run Linter & Analyze Issues">
-    <description>Run the appropriate linter on the target files, performing static analysis and style checks to identify violations. Violations are categorized by severity (error, warning, info).</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run the appropriate linter (e.g., ESLint, Pylint, Go vet) on the target files.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Apply Fixes & Generate Report">
-    <description>If the `--fix` flag is used, apply any safe, automatic fixes. Generate a comprehensive report of the results, including a list of all violations, their severity, and any fixes that were applied.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run the linter with the `--fix` flag.</description>
-    </tool_usage>
-    <output>A comprehensive linting report.</output>
-  </step>
-</code_linting_workflow>
-```
+  <examples>
+    <example>
+      <description>Lint Python code using a specific config file</description>
+      <usage>/code lint python --config .pylintrc</usage>
+    </example>
+    <example>
+      <description>Lint and automatically fix JavaScript issues</description>
+      <usage>/code lint --javascript --fix</usage>
+    </example>
+  </examples>
 
-## Linting Areas
-- **Syntax Errors**: Invalid code structure.
-- **Style Violations**: Formatting and naming conventions.
-- **Code Smells**: Complexity, duplication, and dead code.
-- **Type Issues**: Type annotation and compatibility problems.
-- **Import Problems**: Unused, circular, or missing imports.
-- **Security Issues**: Basic vulnerability patterns.
+  <claude_prompt>
+    <prompt>
+You are an advanced code linting specialist. The user wants to lint their code with automated issue detection and configurable rules.
+
+**Linting Process:**
+1. **Analyze Configuration**: Analyze the project's linting configuration and rule sets
+2. **Discover Files**: Discover all relevant files to be linted
+3. **Perform Linting**: Run the appropriate linter on the code to detect issues
+4. **Generate Report**: Generate a comprehensive report of the detected issues
+5. **Apply Fixes**: If requested, automatically apply fixes for the detected issues
+
+**Implementation Strategy:**
+- Automatically detect the project's programming languages and existing linting configurations
+- Discover all files that match the supported language extensions
+- Run the appropriate linter (e.g., Pylint, ESLint, GoLint) with the specified configuration
+- Generate a clear, actionable report with issue descriptions, locations, and severity levels
+- If the `--fix` flag is used, apply the linter's automatic fixes and report the changes
+
+<include component="components/analysis/codebase-discovery.md" />
+<include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>linting.config.default</value>
+      <value>linting.auto_fix</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

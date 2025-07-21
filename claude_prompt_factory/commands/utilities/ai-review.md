@@ -1,26 +1,91 @@
 ---
-description: Advanced AI code review with intelligent assessment, quality metrics, and automated improvement suggestions
-argument-hint: "[review_scope] [quality_focus]"
+description: Intelligent AI-powered code review with advanced context awareness, comprehensive quality checks, and actionable feedback
+argument-hint: "[review_scope] [feedback_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /ai review - Advanced AI Code Review
+# /ai review - Intelligent AI Code Review
 
-Sophisticated AI code review system with intelligent assessment, comprehensive quality metrics, and automated improvement suggestions.
+Advanced AI code review system with intelligent context awareness, comprehensive quality checks, and actionable, constructive feedback.
 
 ## Usage
 ```bash
-/ai review comprehensive                     # Comprehensive code review
-/ai review --security                        # Security-focused review
-/ai review --performance                     # Performance optimization review
-/ai review --quality                         # Code quality assessment
+/ai review function "Review this function"   # Review a specific function
+/ai review --file "Review this file"       # Review an entire file
+/ai review --detailed "Provide detailed feedback" # Provide detailed review feedback
+/ai review --concise "Summarize key issues"      # Provide a concise review summary
 ```
 
-## Examples
-- `/ai review src/component.py` - Review single file
-- `/ai review api/ --depth=thorough` - Deep API review
-- `/ai review --depth=comprehensive --fix` - Full review with fixes
-- `/ai review feature/ --score` - Review with quality scores
+<command_file>
+  <metadata>
+    <n>/ai review</n>
+    <purpose>Intelligent AI-powered code review with advanced context awareness, comprehensive quality checks, and actionable feedback</purpose>
+    <usage>
+      <![CDATA[
+      /ai review [review_scope] "[description]"
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="review_scope" type="string" required="true" default="function">
+      <description>Scope of code to review (e.g., function, file, component)</description>
+    </argument>
+    <argument name="description" type="string" required="true">
+      <description>Specific focus for the review (e.g., security, performance, readability)</description>
+    </argument>
+    <argument name="feedback_level" type="string" required="false" default="high">
+      <description>Level of detail for the review feedback</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Review a specific function</description>
+      <usage>/ai review function "Review this function for potential race conditions"</usage>
+    </example>
+    <example>
+      <description>Review an entire file</description>
+      <usage>/ai review --file "Review this file for adherence to our coding standards"</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced AI code review specialist. The user wants a thorough code review with intelligent context awareness and actionable feedback.
+
+**Review Process:**
+1. **Requirement Analysis**: Analyze the review request and context
+2. **Contextual Awareness**: Gather relevant codebase context, dependencies, and standards
+3. **In-depth Analysis**: Perform a deep analysis of the code for quality, security, and performance
+4. **Feedback Generation**: Generate clear, constructive, and actionable feedback
+5. **Report Formulation**: Format the review into a structured, easy-to-understand report
+
+**Implementation Strategy:**
+- Analyze user requests to understand the specific review focus and goals
+- Implement intelligent context gathering with dependency and coding standards analysis
+- Perform in-depth code analysis, checking for bugs, vulnerabilities, and anti-patterns
+- Generate clear, constructive feedback with examples and suggestions for improvement
+- Format the review report with severity levels, code snippets, and clear explanations
+
+<include component="components/analysis/codebase-discovery.md" />
+<include component="components/quality/anti-pattern-detection.md" />
+<include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/quality/anti-pattern-detection.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>ai_review.feedback.detail_level</value>
+      <value>quality.coding_standards.file</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
 
 ## Process
 

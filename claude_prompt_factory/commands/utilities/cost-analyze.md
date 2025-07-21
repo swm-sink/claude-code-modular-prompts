@@ -1,103 +1,88 @@
 ---
-description: Advanced cost analysis with intelligent optimization, predictive modeling, and comprehensive financial insights
-argument-hint: "[analysis_scope] [optimization_strategy]"
+description: Intelligent cost analysis with automated resource tracking, comprehensive spending reports, and actionable optimization recommendations
+argument-hint: "[cloud_provider] [analysis_period]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /cost analyze - Advanced Cost Analysis
+# /cost analyze - Intelligent Cost Analysis
 
-Sophisticated cost analysis system with intelligent optimization, predictive modeling, and comprehensive financial insights.
+Advanced cost analysis system with automated resource tracking, comprehensive spending reports, and actionable recommendations for optimization.
 
 ## Usage
 ```bash
-/cost analyze infrastructure                 # Infrastructure cost analysis
-/cost analyze --optimize                     # Cost optimization recommendations
-/cost analyze --predict                      # Predictive cost modeling
-/cost analyze --comprehensive                # Comprehensive financial analysis
+/cost analyze aws --period "last_month"      # Analyze AWS costs for the last month
+/cost analyze --gcp --service "gke"        # Analyze GCP costs for a specific service
+/cost analyze --report "detailed"            # Generate a detailed cost analysis report
+/cost analyze --recommendations "true"       # Get cost optimization recommendations
 ```
 
-## Examples
-- `/cost analyze` - Overall cost analysis
-- `/cost analyze api/ --breakdown` - Detailed API cost breakdown
-- `/cost analyze --optimize` - Get optimization suggestions
-- `/cost analyze --forecast 6m` - 6-month cost projection
+<command_file>
+  <metadata>
+    <n>/cost analyze</n>
+    <purpose>Intelligent cost analysis with automated resource tracking, comprehensive spending reports, and actionable optimization recommendations</purpose>
+    <usage>
+      <![CDATA[
+      /cost analyze [cloud_provider] --period [analysis_period]
+      ]]>
+    </usage>
+  </metadata>
 
-## Process
+  <arguments>
+    <argument name="cloud_provider" type="string" required="true" default="aws">
+      <description>The cloud provider to analyze costs for (e.g., aws, gcp, azure)</description>
+    </argument>
+    <argument name="analysis_period" type="string" required="false" default="last_30_days">
+      <description>The period to analyze costs for (e.g., last_7_days, last_month, custom)</description>
+    </argument>
+    <argument name="recommendations" type="boolean" required="false" default="true">
+      <description>Whether to include cost optimization recommendations in the report</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Analyze AWS costs for the last month</description>
+      <usage>/cost analyze aws --period "last_month"</usage>
+    </example>
+    <example>
+      <description>Analyze GCP costs for a specific service</description>
+      <usage>/cost analyze --gcp --service "gke"</usage>
+    </example>
+  </examples>
 
-Leveraging R18 Cost Optimization Research:
-1. Identify cost drivers:
-   - API calls and token usage
-   - Database queries
-   - Storage usage
-   - Compute resources
-   - Third-party services
-2. Analyze usage patterns:
-   - Peak usage times
-   - Inefficient operations
-   - Redundant processes
-   - Caching opportunities
-3. Calculate current costs:
-   - Per operation
-   - Per user/feature
-   - Growth projections
-4. Generate optimization plan:
-   - Quick wins (immediate)
-   - Strategic changes (1-3 months)
-   - Architecture evolution (3-6 months)
+  <claude_prompt>
+    <prompt>
+You are an advanced cost analysis specialist. The user wants to analyze their cloud costs and get recommendations for optimization.
 
-## Cost Categories
-- **API/Token Usage**: LLM API calls, token consumption
-- **Infrastructure**: Compute, storage, bandwidth
-- **Database**: Queries, storage, backups
-- **Services**: Third-party APIs, SaaS tools
-- **Development**: Time costs, inefficiencies
+**Cost Analysis Process:**
+1. **Data Ingestion**: Ingest cost and usage data from the cloud provider
+2. **Resource Tagging Analysis**: Analyze resource tags to attribute costs accurately
+3. **Spending Pattern Analysis**: Analyze spending patterns to identify trends and anomalies
+4. **Generate Report**: Generate a comprehensive report with detailed cost breakdowns
+5. **Provide Recommendations**: Provide actionable recommendations for cost optimization
 
-## Output Format
-```
-COST ANALYSIS REPORT
-━━━━━━━━━━━━━━━━━━━
-Current Monthly Cost: $4,850
+**Implementation Strategy:**
+- Ingest cost and usage data from cloud provider APIs (e.g., AWS Cost Explorer, GCP Billing)
+- Analyze resource tags to group costs by project, service, or environment
+- Use statistical analysis and machine learning to identify spending trends, anomalies, and waste
+- Generate detailed, easy-to-understand reports with visualizations and cost breakdowns
+- Provide concrete, actionable recommendations for cost optimization, such as rightsizing instances, using reserved instances, or deleting unused resources
 
-BREAKDOWN:
-━━━━━━━━━━━━━━━━━━━
-API Calls:      $2,100 (43%)
-├─ LLM APIs:    $1,800
-├─ Search APIs: $200
-└─ Other:       $100
+<include component="components/performance/cost-optimization.md" />
+<include component="components/analytics/business-intelligence.md" />
+<include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-Infrastructure: $1,850 (38%)
-├─ Compute:     $1,200
-├─ Storage:     $400
-└─ Bandwidth:   $250
-
-Database:       $900 (19%)
-
-OPTIMIZATION OPPORTUNITIES:
-━━━━━━━━━━━━━━━━━━━━━━━━━
-1. Implement caching (Save: $840/mo)
-   - Cache API responses
-   - 40% reduction possible
-
-2. Optimize queries (Save: $450/mo)
-   - Add indexes
-   - Batch operations
-   
-3. Use spot instances (Save: $360/mo)
-   - 30% compute savings
-
-TOTAL SAVINGS: $1,650/mo (34%)
-━━━━━━━━━━━━━━━━━━━━━━━━━
-Optimized Cost: $3,200/mo
-Annual Savings: $19,800
-```
-
-## Options
-- `--breakdown`: Detailed cost breakdown
-- `--optimize`: Generate optimization plan
-- `--forecast`: Cost projections
-- `--compare`: Compare periods
-
-## Related Commands
-- `/cost optimize` - Apply optimizations
-- `/perf optimize` - Performance tuning
-- `/monitor costs` - Cost monitoring
+  <dependencies>
+    <includes_components>
+      <component>components/performance/cost-optimization.md</component>
+      <component>components/analytics/business-intelligence.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>cost_analysis.provider.credentials</value>
+      <value>cost_optimization.recommendation_level</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

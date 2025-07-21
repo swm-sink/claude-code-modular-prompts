@@ -1,77 +1,85 @@
 ---
-description: End-to-end testing with user workflow simulation, cross-browser testing, and comprehensive validation
-argument-hint: "[test_suite] [browser_target]"
+description: Intelligent end-to-end (E2E) testing with automated test script generation, browser automation, and comprehensive reporting
+argument-hint: "[url] [test_scenario]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /test e2e - End-to-End Testing Framework
+# /test e2e - Intelligent End-to-End Testing
 
-Advanced end-to-end testing system with user workflow simulation, cross-browser testing, and comprehensive validation.
+Advanced end-to-end (E2E) testing system with automated test script generation, browser automation, and comprehensive, actionable reporting.
 
 ## Usage
 ```bash
-/test e2e all                               # Run all E2E tests
-/test e2e user-flows                        # Test critical user workflows
-/test e2e --browser chrome                  # Run tests in specific browser
-/test e2e --headless                        # Run in headless mode
+/test e2e "https://example.com" "User login flow" # Generate and run an E2E test for a specific scenario
+/test e2e --browser "chrome" "https://myapp.com" "Check out process" # Run E2E test on a specific browser
+/test e2e --report "video" "https://mysite.com" # Generate a video report of the E2E test
 ```
 
-## Arguments
+<command_file>
+  <metadata>
+    <n>/test e2e</n>
+    <purpose>Intelligent end-to-end (E2E) testing with automated test script generation, browser automation, and comprehensive reporting</purpose>
+    <usage>
+      <![CDATA[
+      /test e2e "[url]" "[test_scenario]"
+      ]]>
+    </usage>
+  </metadata>
 
-```yaml
-workflow:
-  type: string
-  required: true
-  description: The name of the user workflow to test (e.g., 'user-registration', 'product-purchase').
-```
+  <arguments>
+    <argument name="url" type="string" required="true">
+      <description>The URL of the application to test</description>
+    </argument>
+    <argument name="test_scenario" type="string" required="true">
+      <description>The user flow or scenario to test</description>
+    </argument>
+    <argument name="browser" type="string" required="false" default="chromium">
+      <description>The browser to run the test on (e.g., chromium, firefox, webkit)</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Generate and run an E2E test for a user login flow</description>
+      <usage>/test e2e "https://my-app.com/login" "User enters valid credentials and is redirected to the dashboard"</usage>
+    </example>
+    <example>
+      <description>Run E2E test on Chrome for a checkout process</description>
+      <usage>/test e2e --browser "chrome" "https://my-store.com/checkout" "User adds an item to the cart and completes the checkout process"</usage>
+    </example>
+  </examples>
 
-## Examples
+  <claude_prompt>
+    <prompt>
+You are an advanced end-to-end (E2E) testing specialist. The user wants to generate and run E2E tests for their web application.
 
-```yaml
-workflow:
-  type: string
-  required: true
-  description: The name of the user workflow to test (e.g., 'user-registration', 'product-purchase').
-```
+**E2E Testing Process:**
+1. **Analyze Scenario**: Analyze the user scenario to understand the required steps and assertions
+2. **Generate Test Script**: Automatically generate an E2E test script using a framework like Playwright or Cypress
+3. **Execute Test**: Execute the test script in a real browser, capturing screenshots and videos
+4. **Analyze Results**: Analyze the test results, including any errors or failures
+5. **Generate Report**: Generate a comprehensive report with test steps, assertions, and visual artifacts
 
-## claude_prompt
+**Implementation Strategy:**
+- Parse the user's scenario description to generate a sequence of browser actions and assertions
+- Generate a test script using a modern E2E testing framework like Playwright
+- Launch a browser, navigate to the specified URL, and execute the generated test script
+- Capture screenshots, videos, and browser console logs for debugging and reporting
+- Generate a detailed report with a step-by-step breakdown of the test execution, including visual comparisons and performance metrics
 
-```yaml
-prompt:
-  type: string
-  required: true
-  description: You are an E2E test automation engineer. The user wants to run an end-to-end test for a specific user workflow.
-
-  1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to identify the E2E testing framework (e.g., Cypress, Playwright) and the command to run the tests.
-  2.  **Generate Test Script (if needed)**:
-      *   Analyze the `workflow` description.
-      *   If a test script for this workflow doesn't exist, generate a new one using the configured E2E framework. The script should simulate the user's journey step-by-step.
-  3.  **Execute Tests**:
-      *   Construct the command to run the specific E2E test for the workflow.
-      *   Present the command to the user for execution.
-  4.  **Generate Report**:
-      *   After execution, create a detailed report summarizing the results.
-      *   Include pass/fail status for each step in the workflow, performance metrics (e.g., page load times), and screenshots or videos on failure.
-      *   <include component="components/reporting/generate-structured-report.md" />
-```
-
-## Dependencies
-
-```yaml
-dependencies:
-  uses_config_values:
-    type: array
-    items:
-      type: string
-    description: The names of the configuration values to use.
-  includes_components:
-    type: array
-    items:
-      type: string
-    description: The names of the components to include.
-```
-
-<include component="components/orchestration/dag-orchestrator.md" />
-<include component="components/planning/create-step-by-step-plan.md" />
-<include component="components/interaction/progress-reporting.md" />
+<include component="components/testing/test-e2e.md" />
 <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/testing/test-e2e.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>testing.e2e.framework</value>
+      <value>testing.e2e.video_recording</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
