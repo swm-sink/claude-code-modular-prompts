@@ -1,72 +1,85 @@
 ---
-description: Comprehensive security audit with OWASP compliance checking and vulnerability assessment
-argument-hint: "[scope] [severity_level]"
+description: Advanced security audit with comprehensive vulnerability assessment, compliance validation, and threat modeling
+argument-hint: "[audit_scope] [compliance_framework]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /secure audit - Comprehensive Security Audit
+# /secure audit - Advanced Security Audit
 
-Advanced security audit system with OWASP compliance, vulnerability assessment, and automated remediation recommendations.
+Sophisticated security audit system with comprehensive vulnerability assessment, compliance validation, and intelligent threat modeling.
 
 ## Usage
 ```bash
-/secure audit full                    # Complete security audit
-/secure audit dependencies           # Focus on dependency vulnerabilities  
-/secure audit code --severity high   # Code audit for high-severity issues
+/secure audit comprehensive                  # Comprehensive security audit
+/secure audit --owasp                        # OWASP-focused security audit
+/secure audit --compliance                   # Compliance framework audit
+/secure audit --penetration                  # Penetration testing audit
 ```
 
-## Arguments
+<command_file>
+  <metadata>
+    <n>/secure audit</n>
+    <purpose>Advanced security audit with comprehensive vulnerability assessment, compliance validation, and threat modeling</purpose>
+    <usage>
+      <![CDATA[
+      /secure audit [audit_scope]
+      ]]>
+    </usage>
+  </metadata>
 
-```bash
-/secure audit <standard="owasp">
-```
+  <arguments>
+    <argument name="audit_scope" type="string" required="false" default="comprehensive">
+      <description>Scope of security audit to perform</description>
+    </argument>
+    <argument name="compliance_framework" type="string" required="false" default="owasp">
+      <description>Compliance framework to apply</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Comprehensive security audit</description>
+      <usage>/secure audit comprehensive</usage>
+    </example>
+    <example>
+      <description>OWASP-focused security audit</description>
+      <usage>/secure audit --owasp</usage>
+    </example>
+  </examples>
 
-### Standard
-- `owasp`: OWASP Top 10 (2021)
-- `nist`: NIST SP 800-53
-- `iso27001`: ISO 27001
+  <claude_prompt>
+    <prompt>
+You are an advanced security audit specialist. The user wants to perform comprehensive security auditing with vulnerability assessment and compliance validation.
 
-### Scope
-- `full`: Comprehensive audit of all code, configuration, and access controls.
-- `dependencies`: Focus on third-party dependencies and their vulnerabilities.
-- `code`: Specific code audit for a given severity level (e.g., `--severity high`).
+**Audit Process:**
+1. **Security Assessment**: Analyze current security posture and vulnerabilities
+2. **Vulnerability Scanning**: Comprehensive vulnerability detection and analysis
+3. **Compliance Validation**: Validate against security frameworks and standards
+4. **Threat Modeling**: Model potential threats and attack vectors
+5. **Remediation Planning**: Create prioritized remediation and improvement plans
 
-## Examples
+**Implementation Strategy:**
+- Perform automated and manual security vulnerability scanning
+- Apply OWASP Top 10 and industry security frameworks
+- Conduct penetration testing and security assessments
+- Validate compliance with regulatory requirements
+- Generate comprehensive security reports with prioritized recommendations
 
-```bash
-/secure audit
-```
+<include component="components/security/owasp-compliance.md" />
+<include component="components/constitutional/safety-framework.md" />
+<include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-```bash
-/secure audit standard="nist"
-```
-
-## Analysis
-
-You are a security auditor. The user wants to perform a compliance audit.
-
-1.  **Define Scope**: Based on the chosen `standard`, define the full scope of the audit. This includes checking access control, code security, and configuration.
-2.  **Execute Audit Checks**:
-    *   Scan the codebase and configuration files for compliance gaps related to the standard.
-    *   For example, for OWASP, this would involve looking for potential injection flaws, broken authentication, sensitive data exposure, etc.
-    *   <include component="components/context/find-relevant-code.md" />
-3.  **Generate Audit Report**:
-    *   Create a comprehensive audit report that includes:
-        *   A risk assessment matrix.
-        *   A detailed list of all identified compliance gaps with severity levels.
-        *   A prioritized remediation roadmap.
-    *   <include component="components/reporting/generate-structured-report.md" />
-
-## Dependencies
-
-```bash
-/secure audit
-```
-
-```bash
-/secure audit standard="nist"
-```
-
-```bash
-/secure audit code --severity high
-```
+  <dependencies>
+    <includes_components>
+      <component>components/security/owasp-compliance.md</component>
+      <component>components/constitutional/safety-framework.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>security.audit.depth</value>
+      <value>compliance.frameworks.required</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

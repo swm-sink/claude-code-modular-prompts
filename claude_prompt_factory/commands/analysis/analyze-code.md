@@ -1,60 +1,85 @@
 ---
-description: Comprehensive code analysis with quality metrics, pattern detection, and improvement recommendations
+description: Advanced code analysis with intelligent pattern detection, quality assessment, and comprehensive insights
 argument-hint: "[analysis_scope] [analysis_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /analyze code - Comprehensive Code Analysis
+# /analyze code - Advanced Code Analysis
 
-Advanced code analysis system with quality metrics, pattern detection, technical debt assessment, and improvement recommendations.
+Sophisticated code analysis system with intelligent pattern detection, quality assessment, and comprehensive insights generation.
 
 ## Usage
 ```bash
-/analyze code quality                        # Analyze code quality metrics
-/analyze code patterns                       # Detect code patterns and anti-patterns
-/analyze code security                       # Security-focused code analysis
-/analyze code performance                    # Performance bottleneck analysis
+/analyze code comprehensive                  # Comprehensive code analysis
+/analyze code --security                     # Security-focused analysis
+/analyze code --performance                  # Performance analysis
+/analyze code --quality                      # Quality assessment analysis
 ```
 
-## Arguments
+<command_file>
+  <metadata>
+    <n>/analyze code</n>
+    <purpose>Advanced code analysis with intelligent pattern detection, quality assessment, and comprehensive insights</purpose>
+    <usage>
+      <![CDATA[
+      /analyze code [analysis_scope]
+      ]]>
+    </usage>
+  </metadata>
 
-<argument name="target_path" type="string" required="false" default=".">
-  <description>The file or directory to analyze. Defaults to the current directory.</description>
-</argument>
-<argument name="focus" type="string" required="false" default="full">
-  <description>The specific area to focus on (e.g., 'performance', 'security', 'quality').</description>
-</argument>
+  <arguments>
+    <argument name="analysis_scope" type="string" required="false" default="comprehensive">
+      <description>Scope of code analysis to perform</description>
+    </argument>
+    <argument name="analysis_depth" type="string" required="false" default="detailed">
+      <description>Depth of analysis to conduct</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Comprehensive code analysis</description>
+      <usage>/analyze code comprehensive</usage>
+    </example>
+    <example>
+      <description>Security-focused analysis</description>
+      <usage>/analyze code --security</usage>
+    </example>
+  </examples>
 
-## Examples
+  <claude_prompt>
+    <prompt>
+You are an advanced code analysis specialist. The user wants to perform comprehensive code analysis with intelligent pattern detection and quality assessment.
 
-<example>
-  <description>Run a full analysis on the entire project.</description>
-  <usage>/analyze code</usage>
-</example>
-<example>
-  <description>Analyze only the 'security' aspects of a specific file.</description>
-  <usage>/analyze code "src/auth/service.py" focus="security"</usage>
-</example>
+**Analysis Process:**
+1. **Code Discovery**: Scan and catalog codebase structure and components
+2. **Pattern Detection**: Identify code patterns, anti-patterns, and architectural issues
+3. **Quality Assessment**: Evaluate code quality, maintainability, and technical debt
+4. **Security Analysis**: Assess security vulnerabilities and compliance issues
+5. **Performance Evaluation**: Analyze performance bottlenecks and optimization opportunities
 
-## Claude Prompt
-
-You are an expert code analyst. The user wants to perform a comprehensive analysis of their codebase.
-Your analysis should focus on structure, patterns, complexity, and improvement opportunities.
+**Implementation Strategy:**
+- Perform static code analysis and dynamic testing
+- Apply industry best practices and coding standards
+- Generate comprehensive reports with actionable recommendations
+- Identify refactoring opportunities and improvement strategies
+- Create priority-based improvement roadmaps
 
 <include component="components/analysis/codebase-discovery.md" />
 <include component="components/quality/anti-pattern-detection.md" />
-<include component="components/context/adaptive-thinking.md" />
 <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-## Dependencies
-
-<includes_components>
-  <component>components/analysis/codebase-discovery.md</component>
-  <component>components/quality/anti-pattern-detection.md</component>
-  <component>components/context/adaptive-thinking.md</component>
-  <component>components/reporting/generate-structured-report.md</component>
-</includes_components>
-<uses_config_values>
-  <value>paths.source</value>
-  <value>paths.tests</value>
-</uses_config_values>
+  <dependencies>
+    <includes_components>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/quality/anti-pattern-detection.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>analysis.quality.standards</value>
+      <value>security.scan.depth</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

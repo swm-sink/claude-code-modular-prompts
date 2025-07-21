@@ -1,35 +1,85 @@
 ---
-description: Safe database restoration with validation, rollback capabilities, and integrity verification
-argument-hint: "[backup_source] [restore_target]"
+description: Advanced database restoration with intelligent recovery, point-in-time restoration, and comprehensive data integrity validation
+argument-hint: "[restore_strategy] [recovery_point]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /db restore - Database Restoration System
+# /db restore - Advanced Database Restoration
 
-Comprehensive database restoration system with safety validation, integrity checks, and rollback capabilities.
+Sophisticated database restoration system with intelligent recovery, point-in-time restoration, and comprehensive data integrity validation.
 
 ## Usage
 ```bash
-/db restore latest                           # Restore from latest backup
-/db restore --backup backup_20240127.sql    # Restore from specific backup
-/db restore --dry-run                        # Preview restoration process
-/db restore --verify                         # Restore with integrity verification
+/db restore backup_file                      # Standard database restoration
+/db restore --point-in-time                  # Point-in-time recovery
+/db restore --incremental                    # Incremental restoration
+/db restore --validate                       # Restoration with validation
 ```
 
-## Arguments
+<command_file>
+  <metadata>
+    <n>/db restore</n>
+    <purpose>Advanced database restoration with intelligent recovery, point-in-time restoration, and comprehensive data integrity validation</purpose>
+    <usage>
+      <![CDATA[
+      /db restore [backup_source] [restore_strategy]
+      ]]>
+    </usage>
+  </metadata>
 
-```bash
-/db restore <backup_file>
-```
+  <arguments>
+    <argument name="backup_source" type="string" required="true">
+      <description>Path or identifier of the backup source to restore from</description>
+    </argument>
+    <argument name="restore_strategy" type="string" required="false" default="full">
+      <description>Restoration strategy (full, incremental, point-in-time)</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Full database restoration</description>
+      <usage>/db restore backup_20240101.sql full</usage>
+    </example>
+    <example>
+      <description>Point-in-time recovery</description>
+      <usage>/db restore --point-in-time "2024-01-01 12:00:00"</usage>
+    </example>
+  </examples>
 
-## Examples
+  <claude_prompt>
+    <prompt>
+You are a database restoration specialist. The user wants to perform advanced database restoration with intelligent recovery capabilities.
 
-```bash
-/db restore "backups/db_2024-07-21.sql.gz"
-```
+**Restoration Process:**
+1. **Backup Validation**: Validate backup integrity and compatibility
+2. **Recovery Planning**: Plan optimal restoration strategy and timeline
+3. **Data Restoration**: Execute restoration with integrity monitoring
+4. **Validation Testing**: Comprehensive testing of restored data
+5. **Performance Optimization**: Optimize restored database performance
 
-## Dependencies
+**Implementation Strategy:**
+- Validate backup files and check integrity
+- Plan restoration timeline and rollback strategies
+- Execute point-in-time or full restoration procedures
+- Perform comprehensive data validation and integrity checks
+- Optimize database performance post-restoration
 
-```bash
-/db restore <backup_file>
-```
+<include component="components/error/circuit-breaker.md" />
+<include component="components/quality/framework-validation.md" />
+<include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/error/circuit-breaker.md</component>
+      <component>components/quality/framework-validation.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>database.backup.retention_days</value>
+      <value>database.restore.validation_level</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

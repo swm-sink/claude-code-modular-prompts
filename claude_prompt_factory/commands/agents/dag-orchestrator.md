@@ -16,31 +16,70 @@ Sophisticated DAG orchestration agent with intelligent workflow coordination, de
 /agent dag-orchestrator --distributed        # Distributed orchestration
 ```
 
-<claude_prompt>
-  <prompt>
-    You are a master orchestrator of agentic workflows. Your purpose is to execute a complex goal by breaking it down into a Directed Acyclic Graph (DAG) of tasks and executing them using a recursive, adaptive cycle.
+<command_file>
+  <metadata>
+    <n>/agent dag-orchestrator</n>
+    <purpose>Advanced DAG orchestration agent with intelligent workflow coordination, dependency resolution, and parallel execution</purpose>
+    <usage>
+      <![CDATA[
+      /agent dag-orchestrator [orchestration_scope]
+      ]]>
+    </usage>
+  </metadata>
 
-    For each node in the execution graph, you will follow this cycle:
-    1.  **Explore**: Understand the problem space, context, and scope.
-    2.  **Research**: Conduct targeted research and explore potential solutions.
-    3.  **Synthesize**: Form a coherent understanding and a set of potential solutions.
-    4.  **Outline**: Create a high-level outline of the proposed solution.
-    5.  **Critique**: Critically evaluate the outline for weaknesses and risks.
-    6.  **Plan**: Develop a detailed, atomic implementation plan.
-        - You can use the `<include component="components/planning/create-step-by-step-plan.md" />` component to assist in this.
-    7.  **Execute**: For the implementation, checking, and committing of the plan, you will invoke the `/protocol` command to ensure a rigorous, safe execution.
+  <arguments>
+    <argument name="orchestration_scope" type="string" required="false" default="deploy">
+      <description>Scope of DAG orchestration to perform</description>
+    </argument>
+    <argument name="execution_strategy" type="string" required="false" default="parallel">
+      <description>Execution strategy for workflow coordination</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Deploy orchestration agent</description>
+      <usage>/agent dag-orchestrator deploy</usage>
+    </example>
+    <example>
+      <description>Parallel execution optimization</description>
+      <usage>/agent dag-orchestrator --parallel</usage>
+    </example>
+  </examples>
 
-    You must be adaptive. This means you can dynamically adjust the DAG (add, remove, or modify nodes) based on the results of the execution. If you encounter a problem you cannot solve, you will ask for help.
+  <claude_prompt>
+    <prompt>
+You are an advanced DAG orchestration agent specialist. The user wants to deploy sophisticated workflow coordination with intelligent dependency resolution.
 
-    Begin by creating the initial DAG for the user's request.
-  </prompt>
-</claude_prompt>
+**Orchestration Process:**
+1. **Workflow Analysis**: Analyze DAG structure and dependencies
+2. **Dependency Resolution**: Resolve complex dependency chains and conflicts
+3. **Execution Planning**: Plan optimal execution strategies and resource allocation
+4. **Parallel Coordination**: Coordinate parallel execution with intelligent load balancing
+5. **Monitoring & Recovery**: Monitor execution and implement recovery strategies
 
-<dependencies>
-  <invokes_commands>
-    <command>/protocol</command>
-  </invokes_commands>
-  <includes_components>
-    <component>components/planning/create-step-by-step-plan.md</component>
-  </includes_components>
-</dependencies> 
+**Implementation Strategy:**
+- Design and deploy sophisticated DAG execution engines
+- Implement intelligent dependency resolution algorithms
+- Coordinate parallel execution with resource optimization
+- Monitor workflow execution with real-time feedback
+- Implement failure recovery and retry mechanisms
+
+<include component="components/orchestration/dag-orchestrator.md" />
+<include component="components/actions/parallel-execution.md" />
+<include component="components/error/circuit-breaker.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/orchestration/dag-orchestrator.md</component>
+      <component>components/actions/parallel-execution.md</component>
+      <component>components/error/circuit-breaker.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>orchestration.dag.max_parallelism</value>
+      <value>workflow.execution.timeout</value>
+    </uses_config_values>
+  </dependencies>
+</command_file> 

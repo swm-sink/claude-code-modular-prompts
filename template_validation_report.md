@@ -1,19 +1,13 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T02:50:58.609856
+**Generated**: 2025-07-21T02:57:19.024970
 
 ## 📋 Executive Summary
 - **Total Files**: 202
 - **Valid Files**: 202 (100.0%)
-- **Overall Score**: 10212/20200 (50.6%)
+- **Overall Score**: 10648/20200 (52.7%)
 
-## 🚨 Critical Issues (172 errors)
+## 🚨 Critical Issues (163 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/ecosystem/platform-scale.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/database/db-restore.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/documentation/docs-check.md
@@ -25,29 +19,8 @@
 ### claude_prompt_factory/commands/documentation/docs-publish.md
 - ❌ Missing <command_file> XML structure
 
-### claude_prompt_factory/commands/context/prime.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/core/research.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/analysis/analyze-dependencies.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/analysis/quality-report.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/analysis/analyze-code.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/security/secure-audit.md
-- ❌ Missing <command_file> XML structure
-
 ### claude_prompt_factory/commands/agents/dag-orchestrator.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/agents/researcher.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 41, column 17
 
 ### claude_prompt_factory/commands/agents/refactorer.md
 - ❌ Missing <command_file> XML structure
@@ -411,7 +384,7 @@
 - ❌ Missing <description> element
 - ❌ Missing <output> section
 
-## ⚠️ Warnings (16 warnings)
+## ⚠️ Warnings (15 warnings)
 ### claude_prompt_factory/commands/documentation/docs-generate.md
 - ⚠️ Dependencies section doesn't match actual includes
 
@@ -428,9 +401,6 @@
 - ⚠️ Dependencies section doesn't match actual includes
 
 ### claude_prompt_factory/commands/agents/agent-spawn.md
-- ⚠️ Dependencies section doesn't match actual includes
-
-### claude_prompt_factory/commands/agents/researcher.md
 - ⚠️ Dependencies section doesn't match actual includes
 
 ### claude_prompt_factory/commands/agents/dag-orchestrate.md

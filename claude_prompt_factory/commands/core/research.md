@@ -16,6 +16,74 @@ Sophisticated research system with intelligent information gathering, comprehens
 /research --comprehensive                    # Comprehensive multi-domain research
 ```
 
+<command_file>
+  <metadata>
+    <n>/research</n>
+    <purpose>Advanced research framework with intelligent information gathering, analysis synthesis, and knowledge discovery</purpose>
+    <usage>
+      <![CDATA[
+      /research [research_domain]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="research_domain" type="string" required="false" default="technology">
+      <description>Domain of research to conduct</description>
+    </argument>
+    <argument name="depth_level" type="string" required="false" default="comprehensive">
+      <description>Depth level of research analysis</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Technology research and analysis</description>
+      <usage>/research technology</usage>
+    </example>
+    <example>
+      <description>Academic research methodology</description>
+      <usage>/research --academic</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced research specialist. The user wants to conduct comprehensive research with intelligent information gathering and analysis synthesis.
+
+**Research Process:**
+1. **Domain Analysis**: Analyze the research domain and define scope
+2. **Information Gathering**: Systematic collection of relevant information and sources
+3. **Analysis Synthesis**: Synthesize findings into coherent insights
+4. **Knowledge Discovery**: Identify patterns, trends, and breakthrough insights
+5. **Report Generation**: Create comprehensive research reports and recommendations
+
+**Implementation Strategy:**
+- Conduct systematic literature reviews and source analysis
+- Apply advanced research methodologies and frameworks
+- Synthesize information from multiple sources and perspectives
+- Generate actionable insights and recommendations
+- Create comprehensive documentation and knowledge bases
+
+<include component="components/analytics/business-intelligence.md" />
+<include component="components/reasoning/tree-of-thoughts.md" />
+<include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/analytics/business-intelligence.md</component>
+      <component>components/reasoning/tree-of-thoughts.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>research.domains.preferred</value>
+      <value>analysis.depth.default</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
+
 ## Workflow
 
 The `/init research` command follows a systematic process to set up the Prompt Factory for a research project.
