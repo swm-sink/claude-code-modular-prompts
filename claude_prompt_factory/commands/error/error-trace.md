@@ -1,3 +1,21 @@
+---
+description: Advanced error tracing with stack trace analysis, distributed tracing, and root cause investigation
+argument-hint: "[trace_id] [trace_depth]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /error trace - Advanced Error Tracing
+
+Comprehensive error tracing system with stack trace analysis, distributed tracing, and multi-layer investigation.
+
+## Usage
+```bash
+/error trace 12345                          # Trace specific error by ID
+/error trace --stack                        # Analyze current stack trace
+/error trace --distributed                  # Distributed tracing analysis
+/error trace --deep                         # Deep trace with all call paths
+```
+
 <command_file>
   <metadata>
     <name>/error trace</name>

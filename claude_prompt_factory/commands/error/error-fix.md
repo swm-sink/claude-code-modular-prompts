@@ -1,3 +1,21 @@
+---
+description: Automated error remediation with safe fixes, validation, and rollback capabilities
+argument-hint: "[error_type] [fix_approach]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /error fix - Automated Error Remediation
+
+Intelligent error fixing system with automated remediation, safety validation, and rollback capabilities.
+
+## Usage
+```bash
+/error fix syntax                            # Fix syntax errors automatically
+/error fix "undefined variable x"           # Fix specific error instance  
+/error fix --safe                          # Apply only safe, low-risk fixes
+/error fix --validate                      # Fix with comprehensive validation
+```
+
 <command_file>
   <metadata>
     <name>/error fix</name>
@@ -62,6 +80,8 @@
       <component>components/context/find-relevant-code.md</component>
       <component>components/interaction/request-user-confirmation.md</component>
       <component>components/actions/apply-code-changes.md</component>
+      <component>components/quality/anti-pattern-detection.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
     </includes_components>
   </dependencies>
 </command_file>

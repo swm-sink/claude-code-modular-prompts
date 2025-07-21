@@ -1,3 +1,21 @@
+---
+description: Performance analysis with bottleneck detection, optimization recommendations, and benchmarking
+argument-hint: "[performance_scope] [analysis_depth]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /analyze performance - Performance Analysis Framework
+
+Advanced performance analysis system with bottleneck detection, optimization recommendations, and comprehensive benchmarking.
+
+## Usage
+```bash
+/analyze performance cpu                     # CPU usage analysis
+/analyze performance memory                  # Memory profiling and analysis
+/analyze performance database               # Database performance analysis
+/analyze performance network                # Network latency and throughput analysis
+```
+
 <command_file>
   <metadata>
     <name>/analyze performance</name>
@@ -34,6 +52,10 @@
       You are a senior performance engineer. The user wants to analyze their application for performance bottlenecks and get optimization recommendations.
 
       <include component="components/context/find-relevant-code.md" />
+      <include component="components/analysis/codebase-discovery.md" />
+      <include component="components/performance/auto-scaling.md" />
+      <include component="components/context/adaptive-thinking.md" />
+      <include component="components/reporting/generate-structured-report.md" />
 
       Once the target code is identified, perform a deep performance analysis covering these areas:
       - **Bottleneck Detection**: Algorithmic complexity, hot paths, memory leaks, and I/O blocking.
@@ -41,8 +63,6 @@
       - **Metrics Analysis**: Response times, throughput, and resource utilization.
 
       Based on your analysis, provide a set of actionable optimization recommendations.
-
-      <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

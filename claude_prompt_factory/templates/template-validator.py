@@ -261,7 +261,8 @@ class TemplateValidator:
         
         report.append("## 📋 Executive Summary")
         report.append(f"- **Total Files**: {total_files}")
-        report.append(f"- **Valid Files**: {valid_files} ({valid_files/total_files*100:.1f}%)")
+        valid_pct = (valid_files/total_files*100) if total_files > 0 else 0
+        report.append(f"- **Valid Files**: {valid_files} ({valid_pct:.1f}%)")
         report.append(f"- **Overall Score**: {summary['total_score']}/{summary['max_possible_score']} ({score_pct:.1f}%)")
         report.append("")
         

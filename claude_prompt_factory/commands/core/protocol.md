@@ -1,3 +1,21 @@
+---
+description: Safe, rigorous protocol for critical changes with validation, rollback, and comprehensive testing
+argument-hint: "[protocol_type] [risk_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /protocol - Critical Change Protocol
+
+Ultra-safe protocol for critical changes with comprehensive validation, rollback capabilities, and multi-stage testing.
+
+## Usage
+```bash
+/protocol database                           # Database migration protocol
+/protocol security                           # Security update protocol
+/protocol production                         # Production deployment protocol
+/protocol emergency                          # Emergency hotfix protocol
+```
+
 <claude_prompt>
   <prompt>
     You are executing a development task using the rigorous EPICCC protocol. Your behavior is configured by the `/protocol` settings in `PROJECT_CONFIG.xml`.

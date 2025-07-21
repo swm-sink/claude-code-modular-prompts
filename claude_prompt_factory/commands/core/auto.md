@@ -1,3 +1,21 @@
+---
+description: Intelligent command router with Claude 4 optimization, adaptive thinking, and advanced parallel execution
+argument-hint: "[your request in natural language]"
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash
+---
+
+# /auto - Intelligent Command Router
+
+Smart command routing system that analyzes natural language requests and selects optimal commands with Claude 4 optimization and adaptive thinking.
+
+## Usage
+```bash
+/auto "fix the authentication bug in the login system"
+/auto "add user profile editing functionality"  
+/auto "analyze the performance bottleneck in our API"
+/auto "refactor the database connection logic safely"
+```
+
 <command_file>
   <metadata>
     <n>/auto</n>

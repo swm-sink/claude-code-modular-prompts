@@ -1,17 +1,19 @@
 ---
-description: Detects design patterns, identifies violations and anti-patterns
-argument-hint: "[target_path]"
-allowed-tools: Read, Grep, Glob
+description: Advanced pattern analysis with design pattern detection, anti-pattern identification, and architectural insights
+argument-hint: "[pattern_type] [analysis_scope]"
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /analyze patterns - Design Pattern Analysis
+# /analyze patterns - Pattern Analysis Framework
 
-Detects design patterns, identifies violations and anti-patterns, and suggests architectural improvements.
+Advanced pattern analysis system with design pattern detection, anti-pattern identification, and comprehensive architectural insights.
 
 ## Usage
 ```bash
-/analyze patterns              # Analyze entire project
-/analyze patterns src/         # Analyze specific directory
+/analyze patterns design                     # Detect design patterns in codebase
+/analyze patterns anti                       # Identify anti-patterns and code smells
+/analyze patterns architectural             # Analyze architectural patterns
+/analyze patterns all                       # Comprehensive pattern analysis
 ```
 
 ## Arguments
@@ -49,16 +51,9 @@ You are a software architect. The user wants you to analyze their codebase for d
       
 ]]>
       <include component="components/context/find-relevant-code.md" />
-      <![CDATA[
-
-
-      Once the code is identified, perform the following analysis:
-      1.  **Detect Design Patterns**: Identify common design patterns (e.g., Gang of Four, architectural, domain-specific).
-      2.  **Identify Violations & Anti-Patterns**: Detect violations of established patterns and common anti-patterns.
-      3.  **Generate Improvement Suggestions**: Suggest opportunities for new patterns, refactoring, and fixing anti-patterns.
-
-      
-]]>
+      <include component="components/analysis/codebase-discovery.md" />
+      <include component="components/quality/anti-pattern-detection.md" />
+      <include component="components/context/adaptive-thinking.md" />
       <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
@@ -66,6 +61,9 @@ You are a software architect. The user wants you to analyze their codebase for d
   <dependencies>
     <includes_components>
       <component>components/context/find-relevant-code.md</component>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/quality/anti-pattern-detection.md</component>
+      <component>components/context/adaptive-thinking.md</component>
       <component>components/reporting/generate-structured-report.md</component>
     </includes_components>
     <uses_config_values>

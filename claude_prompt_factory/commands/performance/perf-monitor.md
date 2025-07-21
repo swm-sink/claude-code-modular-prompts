@@ -1,3 +1,20 @@
+---
+description: Real-time performance monitoring with alerting and automated issue detection
+argument-hint: "[monitor_type] [alert_threshold]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /perf monitor - Performance Monitoring System
+
+Real-time performance monitoring with intelligent alerting, anomaly detection, and automated diagnostics.
+
+## Usage
+```bash
+/perf monitor start                  # Start performance monitoring
+/perf monitor cpu --threshold 80    # Monitor CPU with 80% alert threshold
+/perf monitor memory --auto-alert   # Monitor memory with automatic alerting
+```
+
 <command_file>
   <metadata>
     <name>/perf monitor</name>

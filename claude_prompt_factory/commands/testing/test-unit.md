@@ -1,11 +1,19 @@
-# /test unit - Unit Test Generation Command
+---
+description: Comprehensive unit testing with automated test generation, coverage analysis, and quality validation
+argument-hint: "[test_scope] [coverage_target]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Purpose**: Automatically generate a comprehensive suite of unit tests for a given component, focusing on isolation, mocking, and edge case coverage.
+# /test unit - Unit Testing Framework
+
+Advanced unit testing system with automated test generation, comprehensive coverage analysis, and quality validation.
 
 ## Usage
 ```bash
-/test unit [file_path]
-/test unit "the user validation service"
+/test unit all                              # Run all unit tests
+/test unit --coverage 90                   # Run tests with 90% coverage target
+/test unit --generate                      # Generate missing unit tests
+/test unit --watch                         # Run tests in watch mode
 ```
 
 ## Workflow
@@ -65,3 +73,8 @@ The behavior of the `/test unit` command is configured in the `PROJECT_CONFIG.xm
 - A summary of the generated tests and their coverage.
 
 **Focus**: Generating high-quality, isolated unit tests for individual components.
+
+<include component="components/analysis/codebase-discovery.md" />
+<include component="components/planning/create-step-by-step-plan.md" />
+<include component="components/testing/mutation-testing.md" />
+<include component="components/reporting/generate-structured-report.md" />

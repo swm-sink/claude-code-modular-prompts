@@ -1,3 +1,20 @@
+---
+description: Security configuration validation and hardening recommendations
+argument-hint: "[config_type] [environment]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /secure config - Security Configuration Validator
+
+Advanced configuration security validator with environment-specific hardening and compliance checking.
+
+## Usage
+```bash
+/secure config server               # Server configuration security check
+/secure config database            # Database security configuration
+/secure config web --env production # Web server config for production
+```
+
 <command_file>
   <metadata>
     <name>/secure config</name>

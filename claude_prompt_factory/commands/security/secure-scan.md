@@ -1,3 +1,20 @@
+---
+description: Automated security scanning with vulnerability detection and compliance reporting
+argument-hint: "[scan_type] [output_format]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /secure scan - Automated Security Scanner
+
+High-performance security scanner with multiple detection engines and comprehensive reporting.
+
+## Usage
+```bash
+/secure scan vulnerabilities         # Scan for known vulnerabilities
+/secure scan dependencies           # Dependency vulnerability scan
+/secure scan static --format json   # Static code analysis with JSON output
+```
+
 <command_file>
   <metadata>
     <name>/secure scan</name>

@@ -1,3 +1,20 @@
+---
+description: Performance benchmarking with comprehensive metrics collection and analysis
+argument-hint: "[benchmark_type] [duration]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /perf benchmark - Performance Benchmarking System
+
+Advanced benchmarking system with load testing, metrics collection, and performance analysis.
+
+## Usage
+```bash
+/perf benchmark api                  # API performance benchmarking
+/perf benchmark database            # Database performance testing
+/perf benchmark full --duration 5m  # Complete system benchmark for 5 minutes
+```
+
 <command_file>
   <metadata>
     <name>/perf benchmark</name>

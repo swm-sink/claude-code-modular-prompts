@@ -1,3 +1,20 @@
+---
+description: Intelligent performance optimization with automated tuning and validation
+argument-hint: "[optimization_target] [scope]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /perf optimize - Performance Optimization Engine
+
+AI-powered performance optimization with automated tuning, validation, and rollback capabilities.
+
+## Usage
+```bash
+/perf optimize database              # Database performance optimization
+/perf optimize code --scope critical # Code optimization for critical paths
+/perf optimize infrastructure       # Infrastructure performance tuning
+```
+
 <command_file>
   <metadata>
     <name>/perf optimize</name>

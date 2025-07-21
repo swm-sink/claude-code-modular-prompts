@@ -1,3 +1,20 @@
+---
+description: Performance reporting with comprehensive metrics, trends, and recommendations
+argument-hint: "[report_type] [time_period]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /perf report - Performance Reporting System
+
+Comprehensive performance reporting with trend analysis, recommendations, and executive summaries.
+
+## Usage
+```bash
+/perf report weekly                  # Weekly performance report
+/perf report trends --period month  # Monthly trend analysis
+/perf report executive              # Executive performance summary
+```
+
 <command_file>
   <metadata>
     <name>/perf report</name>

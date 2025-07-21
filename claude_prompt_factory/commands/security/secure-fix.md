@@ -1,3 +1,20 @@
+---
+description: Automated security issue remediation with validation and rollback capabilities
+argument-hint: "[issue_type] [fix_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /secure fix - Automated Security Remediation
+
+Intelligent security issue remediation system with automated fixes, validation, and safe rollback.
+
+## Usage
+```bash
+/secure fix vulnerabilities         # Fix known vulnerabilities
+/secure fix permissions            # Fix file/directory permissions
+/secure fix dependencies --safe    # Safe dependency updates
+```
+
 <command_file>
   <metadata>
     <name>/secure fix</name>

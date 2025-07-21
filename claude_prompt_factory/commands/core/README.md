@@ -9,6 +9,7 @@ The fundamental building blocks of the factory for initialization, routing, and 
 *   **`/new`**: Initialize the factory for a new project through guided setup.
 *   **`/protocol`**: Rigorous EPICCC protocol for safe, high-stakes changes.
 *   **`/query`**: Intelligent code analysis and search without modifications.
+*   **`/task`**: Focused TDD workflow for single components with comprehensive testing.
 *   **`/research`**: Initialize for research-focused projects with specialized structure.
 
 ## Core Concepts

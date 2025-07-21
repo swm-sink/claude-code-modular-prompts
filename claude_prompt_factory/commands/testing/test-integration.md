@@ -1,10 +1,19 @@
-# /test integration - Integration Testing Command
+---
+description: Integration testing with service interaction validation, API testing, and system integration verification
+argument-hint: "[integration_scope] [test_environment]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Purpose**: Execute comprehensive integration tests to verify component interactions and system-wide functionality.
+# /test integration - Integration Testing Framework
+
+Advanced integration testing system with service interaction validation, API testing, and comprehensive system integration verification.
 
 ## Usage
 ```bash
-/test integration [scope] [--env=test|staging]
+/test integration api                        # Test API integrations
+/test integration database                   # Test database integrations
+/test integration services                   # Test microservice integrations
+/test integration --environment staging     # Run on specific environment
 ```
 
 ## Workflow
@@ -44,3 +53,8 @@ The `/test integration` command follows a systematic process to execute integrat
 - Component interaction verification.
 - External dependency health checks.
 - Performance metrics for integrated workflows.
+
+<include component="components/analysis/dependency-mapping.md" />
+<include component="components/orchestration/dag-orchestrator.md" />
+<include component="components/interaction/progress-reporting.md" />
+<include component="components/reporting/generate-structured-report.md" />

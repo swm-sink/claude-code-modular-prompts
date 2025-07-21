@@ -1,3 +1,21 @@
+---
+description: Comprehensive error handling patterns with recovery strategies and resilience patterns
+argument-hint: "[error_pattern] [recovery_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /error handle - Error Handling & Recovery
+
+Advanced error handling system with comprehensive recovery patterns, circuit breakers, and resilience engineering.
+
+## Usage
+```bash
+/error handle exceptions                     # Implement exception handling patterns
+/error handle async                         # Handle asynchronous error patterns
+/error handle resilience                    # Add resilience and circuit breaker patterns
+/error handle graceful-degradation          # Implement graceful degradation strategies
+```
+
 <command_file>
   <metadata>
     <name>/error handle</name>
@@ -57,3 +75,8 @@
     </includes_components>
   </dependencies>
 </command_file>
+
+<include component="components/error/circuit-breaker.md" />
+<include component="components/workflow/error-handling.md" />
+<include component="components/actions/parallel-execution.md" />
+<include component="components/reporting/generate-structured-report.md" />

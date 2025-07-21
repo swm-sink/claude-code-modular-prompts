@@ -1,3 +1,21 @@
+---
+description: Comprehensive quality review with automated code review, best practices validation, and improvement recommendations
+argument-hint: "[review_scope] [quality_standard]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /quality review - Quality Review Framework
+
+Advanced quality review system with automated code review, best practices validation, and comprehensive improvement recommendations.
+
+## Usage
+```bash
+/quality review code                         # Review code quality
+/quality review architecture                 # Review architectural quality
+/quality review security                     # Security-focused quality review
+/quality review performance                  # Performance quality review
+```
+
 <command_file>
   <metadata>
     <name>/quality review</name>
@@ -35,6 +53,9 @@
       -   **Test coverage**: Adequacy and quality of tests.
       -   **Security**: Adherence to best practices.
 
+      <include component="components/quality/anti-pattern-detection.md" />
+      <include component="components/quality/framework-validation.md" />
+      <include component="components/context/adaptive-thinking.md" />
       <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>

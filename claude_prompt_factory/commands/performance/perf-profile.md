@@ -1,3 +1,20 @@
+---
+description: Application profiling with detailed performance analysis and bottleneck identification
+argument-hint: "[profile_type] [depth_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /perf profile - Application Profiler
+
+Advanced application profiler with memory tracking, CPU analysis, and bottleneck identification.
+
+## Usage
+```bash
+/perf profile cpu                    # CPU usage profiling
+/perf profile memory --deep          # Deep memory profiling
+/perf profile full --duration 30s    # Complete profile for 30 seconds
+```
+
 <command_file>
   <metadata>
     <name>/perf profile</name>

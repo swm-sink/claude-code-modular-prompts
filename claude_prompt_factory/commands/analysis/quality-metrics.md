@@ -1,3 +1,21 @@
+---
+description: Quality metrics collection with comprehensive scoring, trend analysis, and benchmark comparison
+argument-hint: "[metrics_scope] [time_period]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /quality metrics - Quality Metrics Framework
+
+Advanced quality metrics system with comprehensive scoring, trend analysis, and benchmark comparison.
+
+## Usage
+```bash
+/quality metrics overall                     # Overall quality score
+/quality metrics trends                      # Quality trend analysis
+/quality metrics benchmarks                  # Compare against benchmarks
+/quality metrics dashboard                   # Generate quality dashboard
+```
+
 <command_file>
   <metadata>
     <name>/quality metrics</name>
@@ -33,6 +51,9 @@
       2.  **Perform Trend Analysis**: Compare current metrics against historical data to identify trends.
       3.  **Compare Against Benchmarks**: Compare metrics against industry standards to identify areas for improvement.
 
+      <include component="components/quality/quality-metrics.md" />
+      <include component="components/analytics/business-intelligence.md" />
+      <include component="components/context/adaptive-thinking.md" />
       <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>

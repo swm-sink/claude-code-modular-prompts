@@ -1,17 +1,18 @@
 ---
-description: Seeds a database with realistic test data, handling relationships and validation
-argument-hint: "[env] [count]"
-allowed-tools: Bash, Read, Write, Grep
+description: Populates database with seed data for development and testing environments
+argument-hint: "[environment] [data_type]"
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /db seed - Database Seeding Tool
+# /db seed - Database Seeding Command
 
-Seeds a database with realistic test data, properly handling relationships and validation.
+Intelligent database seeding system with environment-specific data sets and validation.
 
 ## Usage
 ```bash
-/db seed                          # Default: development with 100 records
-/db seed env="testing" count=500  # Testing environment with 500 records
+/db seed development              # Seed development environment
+/db seed testing --clean         # Clean and seed test environment
+/db seed production --confirm     # Seed production (with confirmation)
 ```
 
 ## Arguments

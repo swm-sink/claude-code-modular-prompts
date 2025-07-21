@@ -1,3 +1,20 @@
+---
+description: Comprehensive security reporting with metrics, compliance status, and remediation tracking
+argument-hint: "[report_type] [format]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /secure report - Security Reporting System
+
+Advanced security reporting with comprehensive metrics, compliance tracking, and executive summaries.
+
+## Usage
+```bash
+/secure report compliance            # Compliance status report
+/secure report vulnerabilities      # Vulnerability assessment report  
+/secure report executive --format pdf # Executive summary in PDF
+```
+
 <command_file>
   <metadata>
     <name>/secure report</name>

@@ -1,3 +1,21 @@
+---
+description: Automated documentation generation with intelligent content creation and validation
+argument-hint: "[doc_type] [output_format]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /docs generate - Automated Documentation Generator
+
+Advanced documentation generation system with intelligent content creation, multi-format output, and validation.
+
+## Usage
+```bash
+/docs generate api                           # Generate API documentation
+/docs generate readme                       # Generate comprehensive README
+/docs generate architecture                 # Generate architecture documentation
+/docs generate --format markdown           # Specify output format
+```
+
 <command_file>
   <metadata>
     <name>/docs generate</name>
@@ -56,3 +74,8 @@
     </includes_components>
   </dependencies>
 </command_file>
+
+<include component="components/analysis/codebase-discovery.md" />
+<include component="components/context/find-relevant-code.md" />
+<include component="components/planning/create-step-by-step-plan.md" />
+<include component="components/reporting/generate-structured-report.md" />
