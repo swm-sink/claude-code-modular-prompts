@@ -1,4 +1,20 @@
-# /reason-tot - FUNCTIONAL Tree of Thoughts Command
+---
+description: Advanced Tree-of-Thoughts reasoning with multi-path exploration, parallel evaluation, and optimal solution synthesis
+argument-hint: "[reasoning_depth] [exploration_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /reason tot - Tree-of-Thoughts Reasoning Framework
+
+Sophisticated Tree-of-Thoughts reasoning system with multi-path exploration, parallel evaluation, and intelligent solution synthesis.
+
+## Usage
+```bash
+/reason tot explore                          # Multi-path reasoning exploration
+/reason tot --parallel                       # Parallel thought evaluation
+/reason tot --synthesis                      # Optimal solution synthesis
+/reason tot --depth 5                        # Deep reasoning with 5 levels
+```
 
 ## Purpose
 **WORKING** command that executes Tree of Thoughts reasoning for systematic exploration of multiple solution paths with comparative analysis and synthesis.

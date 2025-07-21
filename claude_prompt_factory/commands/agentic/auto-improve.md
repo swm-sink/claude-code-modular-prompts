@@ -1,6 +1,20 @@
-# Auto-Improvement Command
+---
+description: Advanced self-improvement system with autonomous optimization, performance enhancement, and adaptive learning
+argument-hint: "[improvement_scope] [optimization_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-Continuously improve system capabilities using advanced optimization frameworks and meta-learning to automatically enhance performance, efficiency, and effectiveness across all operations.
+# /auto improve - Advanced Self-Improvement Framework
+
+Sophisticated self-improvement system with autonomous optimization, intelligent performance enhancement, and adaptive learning mechanisms.
+
+## Usage
+```bash
+/auto improve performance                    # Performance optimization improvements
+/auto improve --autonomous                   # Fully autonomous self-improvement
+/auto improve --learning                     # Continuous learning improvements
+/auto improve --framework                    # Framework-wide improvements
+```
 
 ## Command
 

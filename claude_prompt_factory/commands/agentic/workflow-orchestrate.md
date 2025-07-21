@@ -1,6 +1,20 @@
-# Agentic Workflow Orchestration Command
+---
+description: Advanced workflow orchestration with intelligent coordination, dynamic adaptation, and multi-agent synchronization
+argument-hint: "[orchestration_type] [coordination_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-Execute complex multi-phase workflows that combine reasoning, optimization, learning, and orchestration capabilities for comprehensive end-to-end task completion.
+# /workflow orchestrate - Advanced Workflow Orchestration
+
+Sophisticated workflow orchestration system with intelligent coordination, dynamic adaptation, and seamless multi-agent synchronization.
+
+## Usage
+```bash
+/workflow orchestrate complex                # Complex workflow coordination
+/workflow orchestrate --adaptive             # Adaptive workflow management
+/workflow orchestrate --parallel             # Parallel workflow execution
+/workflow orchestrate --multi-agent          # Multi-agent workflow coordination
+```
 
 ## Command
 
@@ -337,14 +351,3 @@ graph TD
 - **Quality Assurance**: Ongoing quality monitoring and improvement
 - **Adaptation Strategy**: Framework for handling evolving requirements
 ```
-
-## Benefits
-
-- **Comprehensive Capability**: Access to full spectrum of agentic AI capabilities
-- **Intelligent Coordination**: Optimal combination of different AI approaches
-- **Adaptive Execution**: Dynamic strategy adjustment based on emerging insights
-- **Quality Excellence**: Multi-layered quality assurance throughout execution
-- **Performance Optimization**: Continuous optimization at every phase
-- **Learning Integration**: Experience capture and application for future improvements
-
-This command enables the orchestration of sophisticated AI workflows that tackle the most complex challenges by intelligently combining reasoning, optimization, learning, and coordination capabilities in adaptive, high-performance execution patterns. 

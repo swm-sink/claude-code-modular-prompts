@@ -1,4 +1,20 @@
-# /meta-learn - FUNCTIONAL Meta-Learning Command
+---
+description: Advanced meta-learning system with adaptive algorithms, pattern recognition, and self-improving capabilities
+argument-hint: "[learning_strategy] [adaptation_scope]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /meta learn - Advanced Meta-Learning Framework
+
+Sophisticated meta-learning system with adaptive algorithms, intelligent pattern recognition, and autonomous self-improvement capabilities.
+
+## Usage
+```bash
+/meta learn patterns                         # Learn from codebase patterns
+/meta learn --adaptive                       # Adaptive learning with feedback loops
+/meta learn --transfer                       # Transfer learning across domains
+/meta learn --constitutional                 # Constitutional AI meta-learning
+```
 
 ## Purpose
 **WORKING** command that executes rapid adaptation and knowledge transfer using few-shot learning and pattern recognition for accelerated problem-solving.

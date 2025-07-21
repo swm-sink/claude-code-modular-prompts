@@ -1,10 +1,19 @@
-# /init research - Initialize for a Research Project
+---
+description: Advanced research framework with intelligent information gathering, analysis synthesis, and knowledge discovery
+argument-hint: "[research_domain] [depth_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Purpose**: Initialize the Prompt Factory for a research-focused project, with a focus on setting up a structured environment for experimentation, data analysis, and knowledge management.
+# /research - Advanced Research Framework
+
+Sophisticated research system with intelligent information gathering, comprehensive analysis synthesis, and automated knowledge discovery.
 
 ## Usage
 ```bash
-/init research "[research topic]"
+/research technology                         # Technology research and analysis
+/research --academic                         # Academic research methodology
+/research --market                           # Market research and trends
+/research --comprehensive                    # Comprehensive multi-domain research
 ```
 
 ## Workflow

@@ -1,3 +1,21 @@
+---
+description: Advanced development build system with intelligent optimization, parallel processing, and automated quality checks
+argument-hint: "[build_type] [optimization_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /dev build - Advanced Development Build
+
+Sophisticated development build system with intelligent optimization, parallel processing, and automated quality assurance.
+
+## Usage
+```bash
+/dev build production                        # Production-optimized build
+/dev build --parallel                        # Parallel build processing
+/dev build --optimize                        # Advanced optimization build
+/dev build --watch                           # Continuous build monitoring
+```
+
 <command_file>
   <metadata>
     <name>/dev build</name>

@@ -1,10 +1,19 @@
-# /cache clear - Cache Clearing Command
+---
+description: Intelligent cache management with selective clearing, optimization analysis, and performance monitoring
+argument-hint: "[cache_type] [clearing_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Purpose**: Clear various cache types across the project and development environment to improve performance, fix issues, and free storage space.
+# /cache clear - Intelligent Cache Management
+
+Advanced cache management system with selective clearing, optimization analysis, and comprehensive performance monitoring.
 
 ## Usage
 ```bash
-/cache clear [type]
+/cache clear all                             # Clear all cache types
+/cache clear --selective                     # Intelligent selective clearing
+/cache clear --analyze                       # Cache usage analysis
+/cache clear --optimize                      # Performance optimization
 ```
 
 ## Workflow

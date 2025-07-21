@@ -1,14 +1,19 @@
-# /meta-improve - User-Driven Prompt Improvement
+---
+description: Advanced meta-improvement framework with self-optimization, performance enhancement, and adaptive learning
+argument-hint: "[improvement_scope] [optimization_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Purpose**: Improve the behavior of a command by providing feedback on its output and guiding the LLM to refine the underlying prompt.
+# /meta improve - Advanced Meta-Improvement Framework
+
+Sophisticated meta-improvement system with self-optimization, performance enhancement, and adaptive learning capabilities.
 
 ## Usage
 ```bash
-# Improve the last command that was run
-/meta-improve
-
-# Improve a specific command
-/meta-improve --command=/task
+/meta improve framework                      # Framework-wide improvements
+/meta improve --performance                  # Performance optimization focus
+/meta improve --adaptive                     # Adaptive learning improvements
+/meta improve --autonomous                   # Autonomous self-improvement
 ```
 
 ## Workflow

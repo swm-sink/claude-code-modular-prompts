@@ -1,11 +1,19 @@
-# /ai generate - AI-Powered Code Generation
+---
+description: Advanced AI code generation with intelligent templates, context awareness, and quality optimization
+argument-hint: "[generation_type] [template_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-## Purpose
-Generate code from specifications, create boilerplate templates, build components, write comprehensive tests, and produce documentation using AI-powered development acceleration.
+# /ai generate - Advanced AI Code Generation
+
+Sophisticated AI code generation system with intelligent templates, context awareness, and automated quality optimization.
 
 ## Usage
 ```bash
-/ai generate [type] "[specification]"
+/ai generate component                       # Generate React/Vue components
+/ai generate --api                           # Generate API endpoints and schemas
+/ai generate --test                          # Generate comprehensive test suites
+/ai generate --intelligent                   # Context-aware intelligent generation
 ```
 
 ## Types

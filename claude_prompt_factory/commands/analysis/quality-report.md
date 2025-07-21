@@ -1,26 +1,20 @@
-<command_file>
-  <metadata>
-    <name>/quality report</name>
-    <purpose>Generates a comprehensive quality report with trends, history, and improvement recommendations.</purpose>
-    <usage>
-      <![CDATA[
-      /quality report <target_path=".">
-      ]]>
-    </usage>
-  </metadata>
+---
+description: Advanced quality reporting with intelligent metrics, trend analysis, and automated improvement recommendations
+argument-hint: "[report_scope] [metrics_focus]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-  <arguments>
-    <argument name="target_path" type="string" required="false" default=".">
-      <description>The file or directory to analyze. Defaults to the current directory.</description>
-    </argument>
-  </arguments>
-  
-  <examples>
-    <example>
-      <description>Generate a quality report for the entire project.</description>
-      <usage>/quality report</usage>
-    </example>
-  </examples>
+# /analyze quality-report - Advanced Quality Reporting
+
+Sophisticated quality reporting system with intelligent metrics, trend analysis, and automated improvement recommendations.
+
+## Usage
+```bash
+/analyze quality-report comprehensive        # Comprehensive quality report
+/analyze quality-report --trends             # Quality trend analysis
+/analyze quality-report --metrics            # Detailed metrics analysis
+/analyze quality-report --recommendations    # Automated improvement suggestions
+```
 
   <claude_prompt>
     <prompt>
@@ -48,4 +42,4 @@
       <value>paths.source</value>
     </uses_config_values>
   </dependencies>
-</command_file>
+</rewritten_file>

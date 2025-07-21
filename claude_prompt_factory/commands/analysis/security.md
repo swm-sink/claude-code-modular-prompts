@@ -1,3 +1,21 @@
+---
+description: Advanced security analysis with threat detection, vulnerability assessment, and automated compliance checking
+argument-hint: "[security_scope] [analysis_depth]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /analyze security - Advanced Security Analysis
+
+Comprehensive security analysis system with intelligent threat detection, vulnerability assessment, and automated compliance checking.
+
+## Usage
+```bash
+/analyze security comprehensive              # Comprehensive security analysis
+/analyze security --threats                  # Threat detection and modeling
+/analyze security --vulnerabilities         # Vulnerability assessment
+/analyze security --compliance              # Compliance framework analysis
+```
+
 <command_file>
   <metadata>
     <name>/analyze security</name>

@@ -1,11 +1,19 @@
-# /monitor alerts - Alert Management Command
+---
+description: Intelligent alerting utilities with smart notifications, escalation management, and noise reduction
+argument-hint: "[alert_management] [notification_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-## Purpose
-Comprehensive alert management system for configuring, tuning, and tracking alerts across infrastructure, applications, and business metrics.
+# /monitor alerts - Intelligent Alert Management
+
+Advanced alert management utilities with smart notifications, intelligent escalation management, and automated noise reduction.
 
 ## Usage
 ```bash
-/monitor alerts [action] [scope] [--level=critical|high|medium|low] [--mode=create|update|silence]
+/monitor alerts manage                       # Alert management and configuration
+/monitor alerts --smart                      # Smart alert filtering and correlation
+/monitor alerts --escalate                   # Escalation policy management
+/monitor alerts --reduce-noise               # Intelligent noise reduction
 ```
 
 ## Core Alert Management

@@ -1,3 +1,21 @@
+---
+description: Advanced development testing with comprehensive coverage, intelligent test generation, and automated quality validation
+argument-hint: "[test_scope] [coverage_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /dev test - Advanced Development Testing
+
+Sophisticated development testing system with comprehensive coverage, intelligent test generation, and automated quality validation.
+
+## Usage
+```bash
+/dev test comprehensive                      # Comprehensive test suite
+/dev test --coverage                         # Test coverage analysis
+/dev test --generate                         # Intelligent test generation
+/dev test --parallel                         # Parallel test execution
+```
+
 <command_file>
   <metadata>
     <name>/dev test</name>

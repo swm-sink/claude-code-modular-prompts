@@ -1,10 +1,19 @@
-# /env setup - Environment Setup Command
+---
+description: Intelligent environment setup with automated configuration, dependency resolution, and platform optimization
+argument-hint: "[environment_type] [platform]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Purpose**: Configure and validate development environment settings, including environment files, secrets, and tool configurations.
+# /env setup - Intelligent Environment Setup
+
+Advanced environment setup system with automated configuration, intelligent dependency resolution, and platform optimization.
 
 ## Usage
 ```bash
-/env setup [environment] [--validate]
+/env setup development                       # Development environment setup
+/env setup --docker                         # Containerized environment
+/env setup --cloud                          # Cloud environment configuration
+/env setup --auto                           # Fully automated setup
 ```
 
 ## Workflow

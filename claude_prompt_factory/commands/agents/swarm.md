@@ -1,3 +1,21 @@
+---
+description: Advanced swarm intelligence with multi-agent coordination, distributed processing, and collective problem-solving
+argument-hint: "[swarm_size] [coordination_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /agent swarm - Advanced Swarm Intelligence
+
+Sophisticated swarm intelligence system with multi-agent coordination, distributed processing, and collective problem-solving capabilities.
+
+## Usage
+```bash
+/agent swarm deploy 10                       # Deploy 10-agent swarm
+/agent swarm --coordinated                   # Coordinated swarm processing
+/agent swarm --distributed                   # Distributed task processing
+/agent swarm --collective                    # Collective intelligence mode
+```
+
 <claude_prompt>
   <prompt>
     You are a master coordinator of a swarm of specialized AI agents. Your purpose is to solve a complex problem by decomposing it and assigning the sub-tasks to a team of agents who will work in parallel.

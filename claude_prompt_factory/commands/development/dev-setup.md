@@ -1,24 +1,20 @@
-<command_file>
-  <metadata>
-    <name>/dev setup</name>
-    <purpose>Sets up and configures a complete development environment for a project.</purpose>
-    <usage>
-      <![CDATA[
-      /dev setup
-      ]]>
-    </usage>
-  </metadata>
+---
+description: Advanced development environment setup with intelligent automation, dependency resolution, and platform optimization
+argument-hint: "[environment_type] [automation_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-  <arguments>
-    <!-- No arguments, all configuration is read from PROJECT_CONFIG.xml -->
-  </arguments>
-  
-  <examples>
-    <example>
-      <description>Set up the development environment based on the project's configuration.</description>
-      <usage>/dev setup</usage>
-    </example>
-  </examples>
+# /dev setup - Advanced Development Setup
+
+Sophisticated development environment setup with intelligent automation, dependency resolution, and platform optimization.
+
+## Usage
+```bash
+/dev setup full                              # Complete development environment
+/dev setup --auto                            # Fully automated setup
+/dev setup --docker                          # Containerized development environment
+/dev setup --cloud                           # Cloud development environment
+```
 
   <claude_prompt>
     <prompt>
@@ -48,4 +44,3 @@
       <component>components/reporting/generate-structured-report.md</component>
     </includes_components>
   </dependencies>
-</command_file>

@@ -1,11 +1,19 @@
-# /monitor health - System Health Status Command
+---
+description: Advanced health monitoring with intelligent diagnostics, predictive analysis, and automated remediation
+argument-hint: "[health_scope] [monitoring_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-## Purpose
-Comprehensive system health monitoring with service availability tracking and resource health assessment.
+# /monitor health - Advanced Health Monitoring
+
+Sophisticated health monitoring system with intelligent diagnostics, predictive analysis, and automated remediation capabilities.
 
 ## Usage
 ```bash
-/monitor health [scope] [--format=summary|detailed|json] [--interval=30s]
+/monitor health system                       # System health monitoring
+/monitor health --predictive                 # Predictive health analysis
+/monitor health --auto-remediate             # Automated issue remediation
+/monitor health --comprehensive              # Comprehensive health assessment
 ```
 
 ## Core Health Checks

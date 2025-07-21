@@ -1,22 +1,19 @@
-# /ai explain - AI-Powered Code Explanation
+---
+description: Advanced AI code explanation with intelligent analysis, pattern recognition, and educational insights
+argument-hint: "[explanation_scope] [detail_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Command**: `/ai explain [target] [options]`
+# /ai explain - Advanced AI Code Explanation
 
-## Purpose
-Provide intelligent, comprehensive explanations of complex code, algorithms, and programming concepts using AI-powered analysis.
-
-## Core Capabilities
-- **Algorithm Analysis**: Break down complex algorithms step-by-step
-- **Code Flow Explanation**: Trace execution paths and data flow
-- **Concept Teaching**: Explain programming patterns and principles
-- **Architecture Overview**: Describe system design and interactions
-- **Performance Insights**: Explain computational complexity and bottlenecks
+Sophisticated AI explanation system with intelligent analysis, pattern recognition, and comprehensive educational insights.
 
 ## Usage
 ```bash
-/ai explain function.py --level=beginner
-/ai explain algorithm.js --focus=complexity,performance
-/ai explain src/auth/ --type=architecture --visual
+/ai explain complex                          # Explain complex code patterns
+/ai explain --architecture                   # Architectural explanation
+/ai explain --beginner                       # Beginner-friendly explanations
+/ai explain --comprehensive                  # Comprehensive technical analysis
 ```
 
 ## Options

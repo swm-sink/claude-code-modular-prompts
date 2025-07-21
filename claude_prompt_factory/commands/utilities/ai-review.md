@@ -1,10 +1,19 @@
-# /ai review Command
+---
+description: Advanced AI code review with intelligent assessment, quality metrics, and automated improvement suggestions
+argument-hint: "[review_scope] [quality_focus]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-Purpose: AI-powered code review with improvement suggestions and quality scoring
+# /ai review - Advanced AI Code Review
+
+Sophisticated AI code review system with intelligent assessment, comprehensive quality metrics, and automated improvement suggestions.
 
 ## Usage
-```
-/ai review [target] [--depth=quick|thorough|comprehensive] [--fix]
+```bash
+/ai review comprehensive                     # Comprehensive code review
+/ai review --security                        # Security-focused review
+/ai review --performance                     # Performance optimization review
+/ai review --quality                         # Code quality assessment
 ```
 
 ## Examples
