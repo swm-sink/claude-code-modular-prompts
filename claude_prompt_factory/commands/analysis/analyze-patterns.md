@@ -1,3 +1,22 @@
+---
+description: Detects design patterns, identifies violations and anti-patterns
+argument-hint: "[target_path]"
+allowed-tools: Read, Grep, Glob
+---
+
+# /analyze patterns - Design Pattern Analysis
+
+Detects design patterns, identifies violations and anti-patterns, and suggests architectural improvements.
+
+## Usage
+```bash
+/analyze patterns              # Analyze entire project
+/analyze patterns src/         # Analyze specific directory
+```
+
+## Arguments
+- `target_path` (optional): File or directory to analyze (default: current directory)
+
 <command_file>
   <metadata>
     <name>/analyze patterns</name>

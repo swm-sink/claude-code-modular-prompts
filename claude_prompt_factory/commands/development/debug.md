@@ -1,3 +1,23 @@
+---
+description: Performs advanced AI-assisted debugging to diagnose and fix issues
+argument-hint: "[issue_description] [interactive]"
+allowed-tools: Read, Grep, Edit, Bash
+---
+
+# /debug - AI-Assisted Debugging
+
+Performs an advanced, AI-assisted debugging session to diagnose and fix issues.
+
+## Usage
+```bash
+/debug "Users can't log in; page just refreshes"        # Automatic debugging
+/debug "Undefined error in Cart.js" interactive=true    # Interactive session
+```
+
+## Arguments
+- `issue_description` (required): Detailed description of the bug or issue
+- `interactive` (optional): Enables step-by-step interactive debugging (default: false)
+
 <command_file>
   <metadata>
     <name>/debug</name>

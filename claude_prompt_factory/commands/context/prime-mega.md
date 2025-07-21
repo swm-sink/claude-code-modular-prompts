@@ -1,3 +1,24 @@
+---
+description: Performs a comprehensive, deep codebase analysis using specialized agents
+argument-hint: ""
+allowed-tools: Bash, Read, Grep, Glob, Task
+---
+
+# /context prime-mega - Master Project Auditor
+
+Performs a comprehensive, deep codebase analysis using a sequence of specialized analysis agents.
+
+## Usage
+```bash
+/context prime-mega  # Run complete multi-agent analysis
+```
+
+## What It Does
+1. **Assess & Plan**: Analyzes project scale and creates analysis plan
+2. **Request Confirmation**: Presents plan for user approval
+3. **Execute Analysis**: Runs specialized commands in sequence
+4. **Synthesize Report**: Creates comprehensive master analysis report
+
 <command_file>
   <metadata>
     <name>/context prime-mega</name>

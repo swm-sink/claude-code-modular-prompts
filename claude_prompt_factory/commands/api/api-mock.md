@@ -1,3 +1,27 @@
+---
+description: Creates a mock API server from OpenAPI specification for parallel development and testing
+argument-hint: "[spec_file]"
+allowed-tools: Read, Write, Bash
+---
+
+# /api mock - Mock API Server Generator
+
+Creates a mock API server from an OpenAPI specification or examples for parallel development and testing.
+
+## Usage
+```bash
+/api mock "docs/api/openapi.json"     # Generate mock server from OpenAPI spec
+/api mock "swagger.yaml"              # Generate from YAML specification
+```
+
+## Arguments
+- `spec_file` (required): Path to OpenAPI specification file (JSON or YAML)
+
+## What It Does
+1. **Parse Specification**: Reads OpenAPI spec to understand endpoints and schemas
+2. **Generate Mock Data**: Creates realistic data matching defined schemas
+3. **Set Up Server**: Provides code for mock server with configurable delays and errors
+
 <command_file>
   <metadata>
     <name>/api mock</name>

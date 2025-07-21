@@ -1,10 +1,30 @@
+---
+description: Seeds a database with realistic test data, handling relationships and validation
+argument-hint: "[env] [count]"
+allowed-tools: Bash, Read, Write, Grep
+---
+
+# /db seed - Database Seeding Tool
+
+Seeds a database with realistic test data, properly handling relationships and validation.
+
+## Usage
+```bash
+/db seed                          # Default: development with 100 records
+/db seed env="testing" count=500  # Testing environment with 500 records
+```
+
+## Arguments
+- `env` (optional): Target environment (default: "development")
+- `count` (optional): Number of records per table (default: 100)
+
 <command_file>
   <metadata>
     <name>/db seed</name>
     <purpose>Seeds a database with realistic test data, handling relationships and validation.</purpose>
     <usage>
       <![CDATA[
-      /db seed <env="development"> <count=100>
+      /db seed env="development" count=100
       ]]>
     </usage>
   </metadata>
@@ -34,7 +54,7 @@
       You are a database seeding tool. The user wants to populate the database with test data. This may be a destructive action.
 
       1.  **Warning & Confirmation**: Inform the user that this action might truncate existing data and require their explicit confirmation to proceed.
-          <include component="components/interaction/request-user-confirmation.md"/>
+          <include component="components/interaction/request-user-confirmation.md" />
 
       2.  **On Confirmation**:
           *   **Read Configuration**: Read `PROJECT_CONFIG.xml` to find the seed configuration file (e.g., `db/seeds.js`).

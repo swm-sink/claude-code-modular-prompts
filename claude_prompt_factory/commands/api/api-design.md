@@ -1,3 +1,23 @@
+---
+description: Designs RESTful or GraphQL APIs and generates comprehensive specifications
+argument-hint: "[description] [type]"
+allowed-tools: Write, Read
+---
+
+# /api design - API Design & Specification
+
+Designs RESTful or GraphQL APIs and generates comprehensive specifications and documentation.
+
+## Usage
+```bash
+/api design "user management with CRUD endpoints"     # REST API (default)
+/api design "social media API" type="graphql"         # GraphQL API
+```
+
+## Arguments
+- `description` (required): Natural language description of the API to design
+- `type` (optional): API type - "rest" or "graphql" (default: "rest")
+
 <command_file>
   <metadata>
     <name>/api design</name>

@@ -1,3 +1,23 @@
+---
+description: Manages API versions, incrementing versions and planning deprecation strategies
+argument-hint: "[increment]"
+allowed-tools: Read, Write, Grep, Edit
+---
+
+# /api version - API Version Management
+
+Manages API versions, including incrementing versions and planning deprecation strategies.
+
+## Usage
+```bash
+/api version                    # Patch version increment (default)
+/api version increment="major"  # Major version for breaking changes
+/api version increment="minor"  # Minor version for new features
+```
+
+## Arguments
+- `increment` (optional): Semantic version to increment - "major", "minor", or "patch" (default: "patch")
+
 <command_file>
   <metadata>
     <name>/api version</name>

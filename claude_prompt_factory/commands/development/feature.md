@@ -1,3 +1,29 @@
+---
+description: Orchestrates end-to-end development of complete features from requirements to implementation
+argument-hint: "[feature_description]"
+allowed-tools: Read, Write, Edit, Bash, Grep, Glob
+---
+
+# /feature - Complete Feature Development
+
+Orchestrates the end-to-end development of a complete feature, from requirements to implementation and testing.
+
+## Usage
+```bash
+/feature "User profile management with avatar upload"
+/feature "Shopping cart with persistent sessions"
+```
+
+## Arguments
+- `feature_description` (required): Clear, high-level description of the feature to be built
+
+## What It Does
+1. **Requirements Analysis**: Clarifies scope and requirements
+2. **Architecture & Planning**: Designs full feature architecture  
+3. **Request Confirmation**: Presents plan for user approval
+4. **Parallel Implementation**: Generates all necessary code
+5. **Integration & Verification**: Provides setup and testing instructions
+
 <command_file>
   <metadata>
     <name>/feature</name>

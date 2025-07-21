@@ -1,3 +1,30 @@
+---
+description: Performs mutation testing to assess the effectiveness of existing test suites
+argument-hint: "[target_file] [auto_fix]"
+allowed-tools: Read, Write, Bash, Edit
+---
+
+# /test mutation - Mutation Testing
+
+Performs mutation testing to assess the effectiveness of an existing test suite by introducing deliberate bugs.
+
+## Usage
+```bash
+/test mutation "src/utils/stringUtils.js"              # Basic mutation testing
+/test mutation "src/core/authService.js" auto_fix=true # Auto-generate missing tests
+```
+
+## Arguments
+- `target_file` (required): File containing code to be mutation-tested
+- `auto_fix` (optional): Auto-generate tests for surviving mutants (default: false)
+
+## What It Does
+1. **Analyze**: Reads target file and corresponding test file
+2. **Generate Mutants**: Creates deliberate bugs in source code
+3. **Test Mutants**: Runs test suite against each mutant
+4. **Report**: Calculates mutation score and lists survivors
+5. **Auto-Fix**: Optionally generates tests to kill survivors
+
 <command_file>
   <metadata>
     <name>/test mutation</name>
