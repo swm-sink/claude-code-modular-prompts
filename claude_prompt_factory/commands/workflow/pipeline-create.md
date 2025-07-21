@@ -1,10 +1,19 @@
-# /pipeline create - Define Multi-Stage Pipeline
+---
+description: Advanced pipeline creation with DAG orchestration, dependency management, and automated execution
+argument-hint: "[pipeline_type] [orchestration_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-Create sophisticated development pipelines with stages, quality gates, and templates.
+# /pipeline create - Advanced Pipeline Builder
+
+Sophisticated pipeline creation system with DAG orchestration, dependency management, and intelligent execution strategies.
 
 ## Usage
-```
-/pipeline create <name> --template <type> [--stages] [--gates] [--parallel]
+```bash
+/pipeline create ci-cd                       # Create CI/CD pipeline
+/pipeline create data-processing             # Data processing pipeline
+/pipeline create --dag                       # DAG-based workflow pipeline
+/pipeline create --parallel                  # Parallel execution optimization
 ```
 
 ## Templates

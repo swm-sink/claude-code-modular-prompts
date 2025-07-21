@@ -1,18 +1,19 @@
 ---
-description: Dynamic DAG execution engine with parallel processing and unlimited agent coordination
-argument-hint: "[dag_definition] [execution_mode] [parallelism_level]"
-allowed-tools: Task, Read, Write, Edit, Bash
+description: DAG execution engine with dependency resolution, parallel processing, and error recovery
+argument-hint: "[dag_definition] [execution_mode]"
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /dag executor - Dynamic DAG Execution Engine
+# /dag executor - DAG Execution Engine
 
-Dynamic DAG execution engine capable of coordinating unlimited agents with parallel processing, dependency resolution, and real-time optimization.
+Advanced DAG execution system with intelligent dependency resolution, parallel processing, and comprehensive error recovery.
 
 ## Usage
 ```bash
-/dag executor dag_definition.yaml                    # Execute predefined DAG
-/dag executor mode=parallel parallelism=unlimited   # Maximum parallel execution
-/dag executor adaptive=true optimization=aggressive # Adaptive optimization mode
+/dag executor run workflow.yaml              # Execute DAG from definition
+/dag executor --parallel                     # Maximum parallel execution
+/dag executor --recover                      # Execute with error recovery
+/dag executor --dry-run                      # Preview execution plan
 ```
 
 <command_file>

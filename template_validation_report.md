@@ -1,12 +1,12 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T01:28:56.114103
+**Generated**: 2025-07-21T01:29:55.273035
 
 ## 📋 Executive Summary
 - **Total Files**: 194
 - **Valid Files**: 194 (100.0%)
-- **Overall Score**: 8037/19400 (41.4%)
+- **Overall Score**: 8061/19400 (41.6%)
 
-## 🚨 Critical Issues (232 errors)
+## 🚨 Critical Issues (231 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
 - ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
@@ -245,7 +245,6 @@
 - ❌ Missing YAML frontmatter
 
 ### claude_prompt_factory/commands/workflow/pipeline-create.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/workflow/workflow.md
