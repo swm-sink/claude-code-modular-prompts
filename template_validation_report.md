@@ -1,5 +1,5 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T13:07:16.075356
+**Generated**: 2025-07-21T13:12:52.044933
 
 ## 📋 Executive Summary
 - **Total Files**: 225
@@ -79,7 +79,7 @@
 - ❌ Missing <output> section
 
 ### claude_prompt_factory/components/learning/meta-learning.md
-- ❌ XML Parse Error: not well-formed (invalid token): line 98, column 51
+- ❌ XML Parse Error: mismatched tag: line 450, column 8
 - ❌ Missing <output> section
 
 ### claude_prompt_factory/components/learning/meta-learning-framework.md
@@ -94,7 +94,7 @@
 - ❌ Missing <output> section
 
 ### claude_prompt_factory/components/optimization/opro-framework.md
-- ❌ XML Parse Error: not well-formed (invalid token): line 297, column 39
+- ❌ XML Parse Error: mismatched tag: line 351, column 8
 
 ### claude_prompt_factory/components/optimization/dspy-framework.md
 - ❌ XML Parse Error: mismatched tag: line 410, column 8
@@ -138,7 +138,7 @@
 - ❌ Missing <output> section
 
 ### claude_prompt_factory/components/testing/mutation-testing.md
-- ❌ XML Parse Error: not well-formed (invalid token): line 18, column 22
+- ❌ XML Parse Error: not well-formed (invalid token): line 24, column 22
 - ❌ Missing <output> section
 
 ### claude_prompt_factory/components/testing/test-unit.md

@@ -294,7 +294,7 @@ bayesian_optimization:
         "score_progression": [0.65, 0.72, 0.78, 0.85, 0.89],
         "improvement_rate": "consistent",
         "plateau_detection": "none",
-        "statistical_significance": "p<0.001"
+        "statistical_significance": "p&lt;0.001"
       }
     }
   }

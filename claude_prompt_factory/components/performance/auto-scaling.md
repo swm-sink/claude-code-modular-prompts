@@ -392,8 +392,6 @@ CLAUDE AUTO-SCALING SEQUENCE:
         </efficiency_optimization>
       </adaptive_scaling_algorithms>
     </dynamic_performance_adaptation>
-  </dynamic_performance_adaptation>
-</session_performance_scaling>
 ```
 
 ## ADVANCED AUTO-SCALING FEATURES

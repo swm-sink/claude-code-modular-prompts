@@ -15,7 +15,7 @@
           <arithmetic_mutations>
             - Change + to - and vice versa
             - Change * to / and vice versa
-            - Change < to <= and vice versa
+            - Change &lt; to &lt;= and vice versa
             - Change == to != and vice versa
             - Change increment to decrement operations
           </arithmetic_mutations>

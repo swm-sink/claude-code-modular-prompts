@@ -95,7 +95,7 @@ Meta-learning enables Claude to "learn how to learn" by:
          * @throws IllegalArgumentException if income is negative
          */
         public BigDecimal calculateTax(BigDecimal income) {
-            if (income.compareTo(BigDecimal.ZERO) < 0) {
+            if (income.compareTo(BigDecimal.ZERO) &lt; 0) {
                 throw new IllegalArgumentException("Income cannot be negative");
             }
             return income.multiply(BigDecimal.valueOf(TAX_RATE));
