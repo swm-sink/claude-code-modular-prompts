@@ -1,46 +1,85 @@
 ---
-description: Automated documentation publishing with deployment pipelines and version management
-argument-hint: "[publish_target] [version]"
+description: Advanced documentation publishing with multi-platform distribution, automated deployment, and comprehensive formatting
+argument-hint: "[publish_target] [distribution_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /docs publish - Documentation Publishing System
+# /docs publish - Advanced Documentation Publishing
 
-Advanced documentation publishing with automated deployment, version management, and multi-platform support.
+Sophisticated documentation publishing system with multi-platform distribution, automated deployment, and comprehensive formatting optimization.
 
 ## Usage
 ```bash
-/docs publish staging                        # Publish to staging environment
-/docs publish production --version 2.1.0    # Publish specific version to production
-/docs publish github-pages                  # Publish to GitHub Pages
-/docs publish s3                            # Publish to S3 static hosting
+/docs publish web                            # Web-based documentation publishing
+/docs publish --multi-platform               # Multi-platform distribution
+/docs publish --automated                    # Fully automated publishing
+/docs publish --comprehensive                # Comprehensive publishing framework
 ```
 
-<claude_prompt>
+<command_file>
+  <metadata>
+    <n>/docs publish</n>
+    <purpose>Advanced documentation publishing with multi-platform distribution, automated deployment, and comprehensive formatting</purpose>
+    <usage>
+      <![CDATA[
+      /docs publish [publish_target]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="publish_target" type="string" required="false" default="web">
+      <description>Target platform for documentation publishing</description>
+    </argument>
+    <argument name="distribution_strategy" type="string" required="false" default="automated">
+      <description>Strategy for documentation distribution</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Web-based documentation publishing</description>
+      <usage>/docs publish web</usage>
+    </example>
+    <example>
+      <description>Multi-platform distribution</description>
+      <usage>/docs publish --multi-platform</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
     <prompt>
-      You are a documentation deployment pipeline. The user wants to publish the project's documentation.
+You are an advanced documentation publishing specialist. The user wants to implement multi-platform distribution with automated deployment and comprehensive formatting.
 
-      1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the documentation build tool (e.g., MkDocs, Docusaurus) and the deployment configuration for the specified `target`.
-      2.  **Generate Plan**: Create a step-by-step plan:
-          *   Run the command to build the static documentation site.
-          *   Run the command to deploy the built site to the target platform.
-          *   Run a final verification step to check that the site is live.
-      3.  **Propose Script**: Present the full script to the user for confirmation.
-      4.  **Execute**: Upon approval, execute the script and report on the outcome.
+**Publishing Process:**
+1. **Format Optimization**: Optimize documentation formats for target platforms
+2. **Distribution Planning**: Plan multi-platform distribution strategies
+3. **Automated Deployment**: Execute automated publishing and deployment
+4. **Quality Validation**: Validate published content and accessibility
+5. **Performance Monitoring**: Monitor publishing performance and analytics
 
-      <include component="components/deployment/ci-cd-integration.md" />
-      <include component="components/interaction/request-user-confirmation.md" />
-      <include component="components/interaction/progress-reporting.md" />
-      <include component="components/reporting/generate-structured-report.md" />
+**Implementation Strategy:**
+- Optimize documentation formats for web, PDF, mobile, and API platforms
+- Implement automated publishing pipelines with CI/CD integration
+- Apply comprehensive formatting and accessibility standards
+- Create multi-platform distribution with intelligent routing
+- Establish analytics and performance monitoring for published content
+
+<include component="components/integration/cicd-integration.md" />
+<include component="components/quality/framework-validation.md" />
+<include component="components/performance/auto-scaling.md" />
     </prompt>
   </claude_prompt>
 
   <dependencies>
-    <uses_config_values>
-      <value>documentation.build_tool</value>
-      <value>documentation.deployment.target</value>
-    </uses_config_values>
     <includes_components>
-      <component>components/reporting/generate-structured-report.md</component>
+      <component>components/integration/cicd-integration.md</component>
+      <component>components/quality/framework-validation.md</component>
+      <component>components/performance/auto-scaling.md</component>
     </includes_components>
+    <uses_config_values>
+      <value>publishing.platforms.enabled</value>
+      <value>deployment.documentation.strategy</value>
+    </uses_config_values>
   </dependencies>
+</command_file>

@@ -1,26 +1,88 @@
 ---
-description: Advanced prompt optimization with intelligent refinement, performance analysis, and automated enhancement techniques
+description: Advanced prompt optimization with automatic enhancement, performance tuning, and effectiveness maximization
 argument-hint: "[optimization_scope] [enhancement_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
 # /optimize prompt - Advanced Prompt Optimization
 
-Sophisticated prompt optimization system with intelligent refinement, performance analysis, and automated enhancement techniques.
+Sophisticated prompt optimization system with automatic enhancement, intelligent performance tuning, and comprehensive effectiveness maximization.
 
 ## Usage
 ```bash
 /optimize prompt performance                 # Performance-focused optimization
-/optimize prompt --clarity                   # Clarity enhancement optimization
-/optimize prompt --effectiveness             # Effectiveness improvement
-/optimize prompt --comprehensive             # Comprehensive prompt optimization
+/optimize prompt --automatic                 # Fully automatic optimization
+/optimize prompt --effectiveness             # Effectiveness maximization
+/optimize prompt --comprehensive             # Comprehensive optimization framework
 ```
 
-## Purpose
-**WORKING** command that executes real prompt optimization cycles with measurable accuracy and efficiency improvements.
+<command_file>
+  <metadata>
+    <n>/optimize prompt</n>
+    <purpose>Advanced prompt optimization with automatic enhancement, performance tuning, and effectiveness maximization</purpose>
+    <usage>
+      <![CDATA[
+      /optimize prompt [optimization_scope]
+      ]]>
+    </usage>
+  </metadata>
 
-## Command
-`/optimize-prompt`
+  <arguments>
+    <argument name="optimization_scope" type="string" required="false" default="performance">
+      <description>Scope of prompt optimization to implement</description>
+    </argument>
+    <argument name="enhancement_strategy" type="string" required="false" default="automatic">
+      <description>Strategy for prompt enhancement and tuning</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Performance-focused optimization</description>
+      <usage>/optimize prompt performance</usage>
+    </example>
+    <example>
+      <description>Fully automatic optimization</description>
+      <usage>/optimize prompt --automatic</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced prompt optimization specialist. The user wants to implement sophisticated automatic enhancement with performance tuning and effectiveness maximization.
+
+**Optimization Process:**
+1. **Prompt Analysis**: Analyze current prompt structure and effectiveness
+2. **Enhancement Planning**: Plan comprehensive optimization strategies
+3. **Automatic Tuning**: Apply automatic performance tuning and refinement
+4. **Effectiveness Testing**: Test and validate optimization improvements
+5. **Continuous Improvement**: Implement continuous optimization and adaptation
+
+**Implementation Strategy:**
+- Analyze prompt effectiveness using performance metrics and benchmarks
+- Apply automatic optimization techniques including DSPy, OPRO, and TextGrad
+- Implement continuous improvement with A/B testing and validation
+- Create comprehensive prompt libraries with optimized templates
+- Integrate constitutional AI principles for ethical optimization
+
+<include component="components/optimization/autoprompt-framework.md" />
+<include component="components/optimization/dspy-framework.md" />
+<include component="components/optimization/textgrad-framework.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/optimization/autoprompt-framework.md</component>
+      <component>components/optimization/dspy-framework.md</component>
+      <component>components/optimization/textgrad-framework.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>optimization.prompt.auto_enabled</value>
+      <value>performance.testing.frameworks</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
 
 ## Functional Implementation
 

@@ -1,20 +1,88 @@
 ---
-description: Advanced workflow orchestration with intelligent coordination, dynamic adaptation, and multi-agent synchronization
-argument-hint: "[orchestration_type] [coordination_strategy]"
+description: Advanced workflow orchestration with intelligent task coordination, dynamic resource allocation, and adaptive execution
+argument-hint: "[workflow_type] [orchestration_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
 # /workflow orchestrate - Advanced Workflow Orchestration
 
-Sophisticated workflow orchestration system with intelligent coordination, dynamic adaptation, and seamless multi-agent synchronization.
+Sophisticated workflow orchestration system with intelligent task coordination, dynamic resource allocation, and comprehensive adaptive execution.
 
 ## Usage
 ```bash
-/workflow orchestrate complex                # Complex workflow coordination
-/workflow orchestrate --adaptive             # Adaptive workflow management
+/workflow orchestrate pipeline               # Pipeline-based workflow orchestration
 /workflow orchestrate --parallel             # Parallel workflow execution
-/workflow orchestrate --multi-agent          # Multi-agent workflow coordination
+/workflow orchestrate --adaptive             # Adaptive workflow management
+/workflow orchestrate --comprehensive        # Comprehensive orchestration framework
 ```
+
+<command_file>
+  <metadata>
+    <n>/workflow orchestrate</n>
+    <purpose>Advanced workflow orchestration with intelligent task coordination, dynamic resource allocation, and adaptive execution</purpose>
+    <usage>
+      <![CDATA[
+      /workflow orchestrate [workflow_type]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="workflow_type" type="string" required="false" default="pipeline">
+      <description>Type of workflow orchestration to implement</description>
+    </argument>
+    <argument name="orchestration_strategy" type="string" required="false" default="adaptive">
+      <description>Strategy for workflow coordination and execution</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Pipeline-based workflow orchestration</description>
+      <usage>/workflow orchestrate pipeline</usage>
+    </example>
+    <example>
+      <description>Parallel workflow execution</description>
+      <usage>/workflow orchestrate --parallel</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced workflow orchestration specialist. The user wants to implement sophisticated task coordination with dynamic resource allocation and adaptive execution.
+
+**Orchestration Process:**
+1. **Workflow Analysis**: Analyze workflow requirements and dependencies
+2. **Task Coordination**: Design intelligent task coordination and sequencing
+3. **Resource Allocation**: Implement dynamic resource allocation and optimization
+4. **Execution Management**: Manage adaptive execution with error handling
+5. **Performance Optimization**: Optimize workflow performance and efficiency
+
+**Implementation Strategy:**
+- Design workflow orchestration architectures with intelligent task coordination
+- Implement dynamic resource allocation with load balancing and optimization
+- Apply adaptive execution strategies with error recovery and resilience
+- Create comprehensive monitoring and performance optimization
+- Integrate with constitutional AI for ethical workflow management
+
+<include component="components/workflow/dag-orchestrator.md" />
+<include component="components/performance/auto-scaling.md" />
+<include component="components/constitutional/safety-framework.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/workflow/dag-orchestrator.md</component>
+      <component>components/performance/auto-scaling.md</component>
+      <component>components/constitutional/safety-framework.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>workflow.orchestration.max_parallel</value>
+      <value>resource.allocation.strategy</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
 
 ## Command
 

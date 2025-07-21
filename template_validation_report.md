@@ -1,44 +1,26 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T03:03:43.338602
+**Generated**: 2025-07-21T03:09:39.083187
 
 ## 📋 Executive Summary
 - **Total Files**: 202
 - **Valid Files**: 202 (100.0%)
-- **Overall Score**: 11241/20200 (55.6%)
+- **Overall Score**: 11720/20200 (58.0%)
 
-## 🚨 Critical Issues (154 errors)
+## 🚨 Critical Issues (148 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/documentation/docs-update.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/documentation/docs-publish.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/agents/dag-orchestrator.md
 - ❌ XML Parse Error: not well-formed (invalid token): line 41, column 17
 
-### claude_prompt_factory/commands/agentic/workflow-orchestrate.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/agentic/optimize-prompt.md
-- ❌ Missing <command_file> XML structure
-
 ### claude_prompt_factory/commands/utilities/deps-update.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 41, column 17
 
 ### claude_prompt_factory/commands/utilities/cache-clear.md
 - ❌ Missing <command_file> XML structure
 
-### claude_prompt_factory/commands/utilities/monitor-setup.md
-- ❌ Missing <command_file> XML structure
-
 ### claude_prompt_factory/commands/utilities/code-clean.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/utilities/monitor-health.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 41, column 17
 
 ### claude_prompt_factory/commands/utilities/env-setup.md
 - ❌ Missing <command_file> XML structure
@@ -357,11 +339,8 @@
 - ❌ Missing <description> element
 - ❌ Missing <output> section
 
-## ⚠️ Warnings (15 warnings)
+## ⚠️ Warnings (17 warnings)
 ### claude_prompt_factory/commands/documentation/docs-generate.md
-- ⚠️ Dependencies section doesn't match actual includes
-
-### claude_prompt_factory/commands/documentation/docs-publish.md
 - ⚠️ Dependencies section doesn't match actual includes
 
 ### claude_prompt_factory/commands/analysis/analyze-performance.md
@@ -381,6 +360,15 @@
 
 ### claude_prompt_factory/commands/agents/swarm-coordinator.md
 - ⚠️ Dependencies section doesn't match actual includes
+
+### claude_prompt_factory/commands/agentic/workflow-orchestrate.md
+- ⚠️ Component not found: components/workflow/dag-orchestrator.md
+
+### claude_prompt_factory/commands/utilities/deps-update.md
+- ⚠️ Component not found: components/testing/framework-validation.md
+
+### claude_prompt_factory/commands/utilities/code-clean.md
+- ⚠️ Component not found: components/testing/framework-validation.md
 
 ### claude_prompt_factory/commands/workflow/mega-platform-builder.md
 - ⚠️ Dependencies section doesn't match actual includes

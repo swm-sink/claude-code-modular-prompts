@@ -1,20 +1,88 @@
 ---
-description: Intelligent dependency updates with security scanning, compatibility checking, and safe upgrade paths
-argument-hint: "[update_strategy] [scope]"
+description: Intelligent dependency updates with automated vulnerability scanning, compatibility validation, and rollback safety
+argument-hint: "[update_scope] [validation_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /deps update - Intelligent Dependency Management
+# /deps update - Intelligent Dependency Updates
 
-Advanced dependency update system with security scanning, compatibility validation, and safe automated upgrades.
+Advanced dependency management with automated vulnerability scanning, intelligent compatibility validation, and comprehensive rollback safety.
 
 ## Usage
 ```bash
-/deps update security                        # Update security-critical dependencies
-/deps update major                           # Handle major version updates
-/deps update --safe                          # Only safe, minor updates
-/deps update --interactive                   # Interactive update selection
+/deps update security                        # Security-focused dependency updates
+/deps update --automated                     # Fully automated dependency management
+/deps update --compatibility                 # Compatibility-validated updates
+/deps update --comprehensive                 # Comprehensive dependency optimization
 ```
+
+<command_file>
+  <metadata>
+    <n>/deps update</n>
+    <purpose>Intelligent dependency updates with automated vulnerability scanning, compatibility validation, and rollback safety</purpose>
+    <usage>
+      <![CDATA[
+      /deps update [update_scope]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="update_scope" type="string" required="false" default="security">
+      <description>Scope of dependency updates to perform</description>
+    </argument>
+    <argument name="validation_level" type="string" required="false" default="comprehensive">
+      <description>Level of validation and safety checks</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Security-focused dependency updates</description>
+      <usage>/deps update security</usage>
+    </example>
+    <example>
+      <description>Fully automated dependency management</description>
+      <usage>/deps update --automated</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced dependency management specialist. The user wants to implement intelligent updates with vulnerability scanning and comprehensive safety validation.
+
+**Update Process:**
+1. **Dependency Analysis**: Analyze current dependencies and identify update candidates
+2. **Security Scanning**: Perform comprehensive vulnerability and security scanning
+3. **Compatibility Testing**: Validate compatibility and breaking change detection
+4. **Automated Updates**: Execute intelligent updates with rollback mechanisms
+5. **Validation & Monitoring**: Monitor updates and validate system stability
+
+**Implementation Strategy:**
+- Analyze dependency trees for security vulnerabilities and outdated packages
+- Implement automated security scanning with vulnerability databases
+- Apply intelligent compatibility testing and breaking change detection
+- Create comprehensive rollback mechanisms and safety nets
+- Establish continuous monitoring for dependency health and security
+
+<include component="components/analysis/dependency-mapping.md" />
+<include component="components/security/owasp-compliance.md" />
+<include component="components/testing/framework-validation.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/analysis/dependency-mapping.md</component>
+      <component>components/security/owasp-compliance.md</component>
+      <component>components/testing/framework-validation.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>dependencies.auto_update.enabled</value>
+      <value>security.vulnerability.scan_level</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
 
 ## Workflow
 
@@ -51,7 +119,6 @@ The `/deps update` command follows a systematic process to safely update depende
     <output>A comprehensive dependency update report.</output>
   </step>
 </deps_update_workflow>
-```
 
 ## Key Features
 - **Smart Updates**: Analyzes dependency compatibility before updating.
