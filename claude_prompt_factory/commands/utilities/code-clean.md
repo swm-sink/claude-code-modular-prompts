@@ -56,7 +56,7 @@ You are an advanced code cleaning specialist. The user wants to implement intell
 2. **Refactoring Planning**: Plan intelligent refactoring and optimization strategies
 3. **Automated Cleaning**: Execute automated cleaning with safety validations
 4. **Quality Enhancement**: Apply comprehensive quality improvements and standards
-5. **Validation & Testing**: Validate cleaned code and ensure functionality preservation
+5. **Validation &amp; Testing**: Validate cleaned code and ensure functionality preservation
 
 **Implementation Strategy:**
 - Analyze code quality using static analysis and pattern detection
@@ -98,7 +98,7 @@ The `/code clean` command follows a systematic process to safely clean the codeb
     </tool_usage>
   </step>
   
-  <step name="Preview & Confirm Changes">
+  <step name="Preview &amp; Confirm Changes">
     <description>Present a preview of the proposed changes to the user and request confirmation before applying them. If the `--preview` flag is used, the command will exit after this step.</description>
   </step>
   
@@ -112,7 +112,7 @@ The `/code clean` command follows a systematic process to safely clean the codeb
     </tool_usage>
   </step>
   
-  <step name="Verify & Report">
+  <step name="Verify &amp; Report">
     <description>Verify that the cleaning operations were applied correctly and did not introduce any regressions. Generate a report summarizing the changes made.</description>
     <tool_usage>
       <tool>Bash</tool>

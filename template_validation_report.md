@@ -1,35 +1,14 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T09:59:19.054028
+**Generated**: 2025-07-21T10:11:14.362858
 
 ## 📋 Executive Summary
 - **Total Files**: 206
 - **Valid Files**: 206 (100.0%)
-- **Overall Score**: 13802/20600 (67.0%)
+- **Overall Score**: 13946/20600 (67.7%)
 
-## 🚨 Critical Issues (124 errors)
+## 🚨 Critical Issues (113 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
 - ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/agents/dag-orchestrator.md
-- ❌ XML Parse Error: not well-formed (invalid token): line 50, column 17
-
-### claude_prompt_factory/commands/utilities/deps-update.md
-- ❌ XML Parse Error: not well-formed (invalid token): line 41, column 17
-
-### claude_prompt_factory/commands/utilities/code-clean.md
-- ❌ XML Parse Error: not well-formed (invalid token): line 41, column 17
-
-### claude_prompt_factory/commands/utilities/env-setup.md
-- ❌ XML Parse Error: not well-formed (invalid token): line 41, column 17
-
-### claude_prompt_factory/commands/utilities/ai-generate.md
-- ❌ XML Parse Error: not well-formed (invalid token): line 44, column 18
-
-### claude_prompt_factory/commands/utilities/ai-refactor.md
-- ❌ XML Parse Error: not well-formed (invalid token): line 44, column 17
-
-### claude_prompt_factory/commands/utilities/backup-create.md
-- ❌ XML Parse Error: not well-formed (invalid token): line 44, column 17
 
 ### claude_prompt_factory/commands/utilities/monitor-alerts.md
 - ❌ XML Parse Error: not well-formed (invalid token): line 44, column 16
@@ -45,9 +24,6 @@
 
 ### claude_prompt_factory/commands/utilities/monitor-dashboard.md
 - ❌ XML Parse Error: not well-formed (invalid token): line 44, column 14
-
-### claude_prompt_factory/commands/testing/test-report.md
-- ❌ XML Parse Error: not well-formed (invalid token): line 50, column 23
 
 ### claude_prompt_factory/commands/testing/test-integration.md
 - ❌ XML Parse Error: not well-formed (invalid token): line 52, column 17
@@ -80,8 +56,7 @@
 - ❌ Missing <output> section
 
 ### claude_prompt_factory/components/context/adaptive-thinking.md
-- ❌ Missing <step> element
-- ❌ Missing <description> element
+- ❌ XML Parse Error: junk after document element: line 78, column 0
 - ❌ Missing <output> section
 
 ### claude_prompt_factory/components/context/context-optimization.md
@@ -95,7 +70,7 @@
 - ❌ Missing <output> section
 
 ### claude_prompt_factory/components/constitutional/constitutional-framework.md
-- ❌ XML Parse Error: mismatched tag: line 172, column 8
+- ❌ XML Parse Error: mismatched tag: line 598, column 8
 - ❌ Missing <output> section
 
 ### claude_prompt_factory/components/constitutional/safety-framework.md
@@ -109,8 +84,7 @@
 - ❌ Missing <output> section
 
 ### claude_prompt_factory/components/quality/anti-pattern-detection.md
-- ❌ Missing <step> element
-- ❌ Missing <description> element
+- ❌ XML Parse Error: junk after document element: line 227, column 0
 - ❌ Missing <output> section
 
 ### claude_prompt_factory/components/quality/framework-validation.md
@@ -118,8 +92,7 @@
 - ❌ Missing <output> section
 
 ### claude_prompt_factory/components/quality/quality-metrics.md
-- ❌ Missing <step> element
-- ❌ Missing <description> element
+- ❌ XML Parse Error: junk after document element: line 360, column 0
 - ❌ Missing <output> section
 
 ### claude_prompt_factory/components/intelligence/cognitive-architecture.md
@@ -269,7 +242,7 @@
 - ❌ Missing <description> element
 - ❌ Missing <output> section
 
-## ⚠️ Warnings (67 warnings)
+## ⚠️ Warnings (66 warnings)
 ### claude_prompt_factory/commands/ecosystem/marketplace-grow.md
 - ⚠️ Dependencies section doesn't match actual includes
 
@@ -310,9 +283,6 @@
 - ⚠️ Dependencies section doesn't match actual includes
 
 ### claude_prompt_factory/commands/development/task.md
-- ⚠️ Dependencies section doesn't match actual includes
-
-### claude_prompt_factory/commands/agents/dag-orchestrator.md
 - ⚠️ Dependencies section doesn't match actual includes
 
 ### claude_prompt_factory/commands/agents/agent-spawn.md

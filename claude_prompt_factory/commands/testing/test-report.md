@@ -64,7 +64,7 @@ You are an advanced test reporting specialist. The user wants to generate compre
 
 **Test Reporting Process:**
 1. **Data Ingestion**: Ingest test data from various sources and formats (e.g., JUnit XML, Cobertura, JSON)
-2. **Data Aggregation & Analysis**: Aggregate and analyze the data to extract key metrics and trends
+2. **Data Aggregation &amp; Analysis**: Aggregate and analyze the data to extract key metrics and trends
 3. **Visualization Generation**: Generate a rich set of visualizations to represent the data clearly
 4. **Report Formulation**: Formulate a comprehensive report with insights and recommendations
 5. **Distribution**: Distribute the report in the desired format (e.g., HTML, PDF, email)
@@ -116,7 +116,7 @@ The `/test report` command follows a systematic process to generate detailed tes
     </tool_usage>
   </step>
   
-  <step name="Analyze & Synthesize Data">
+  <step name="Analyze &amp; Synthesize Data">
     <description>Analyze the gathered data to calculate test metrics, identify execution time trends, detect flaky tests, and categorize failures.</description>
   </step>
   

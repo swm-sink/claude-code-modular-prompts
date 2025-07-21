@@ -1,4 +1,10 @@
 <prompt_component>
+  <step name="Quality Metrics Collection and Analysis">
+    <description>
+Comprehensive quality metrics collection, analysis, and reporting system that tracks code quality, test coverage, performance indicators, and maintainability scores. Provides real-time quality feedback and improvement recommendations.
+    </description>
+  </step>
+
   <quality_metrics>
     <service_level_management>
       <!-- Implement comprehensive quality metrics and SLA management -->
@@ -349,4 +355,15 @@
       </reporting_analytics>
     </quality_governance>
   </quality_metrics>
-</prompt_component> 
+</prompt_component>
+
+<o>
+Quality metrics collection and analysis completed with comprehensive reporting:
+
+**Quality Score:** [0-100] overall quality rating
+**Test Coverage:** [percentage]% code coverage achieved
+**Performance Metrics:** Response time, throughput, and error rates tracked
+**Security Score:** [0-100] security compliance rating
+**Maintainability Index:** [0-100] code maintainability score
+**Trend Analysis:** Quality trends and improvement recommendations provided
+</o> 

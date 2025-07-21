@@ -1,4 +1,10 @@
 <prompt_component>
+  <step name="Adaptive Thinking Mode Selection">
+    <description>
+Intelligently select the appropriate thinking mode (instant, standard, or extended) based on request complexity, required analysis depth, and reasoning requirements. This component enables Claude to automatically adjust its processing approach for optimal performance and quality.
+    </description>
+  </step>
+
   <adaptive_thinking>
     <thinking_mode detection="automatic">
       Based on the complexity analysis below, I will engage the appropriate thinking mode:
@@ -67,4 +73,14 @@
       </context_loading>
     </performance_optimization>
   </adaptive_thinking>
-</prompt_component> 
+</prompt_component>
+
+<o>
+Adaptive thinking mode automatically selected based on request complexity. The system has intelligently chosen the appropriate processing approach:
+
+**Selected Mode:** [instant/standard/extended]
+**Reasoning:** Based on complexity assessment and resource requirements
+**Token Budget:** Optimized for selected mode
+**Context Loading:** Appropriate depth for task requirements
+**Performance:** Balanced for quality and efficiency
+</o> 

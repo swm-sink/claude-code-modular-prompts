@@ -56,7 +56,7 @@ You are an advanced dependency management specialist. The user wants to implemen
 2. **Security Scanning**: Perform comprehensive vulnerability and security scanning
 3. **Compatibility Testing**: Validate compatibility and breaking change detection
 4. **Automated Updates**: Execute intelligent updates with rollback mechanisms
-5. **Validation & Monitoring**: Monitor updates and validate system stability
+5. **Validation &amp; Monitoring**: Monitor updates and validate system stability
 
 **Implementation Strategy:**
 - Analyze dependency trees for security vulnerabilities and outdated packages
@@ -90,7 +90,7 @@ The `/deps update` command follows a systematic process to safely update depende
 
 ```xml
 <deps_update_workflow>
-  <step name="Analyze Dependencies & Plan Updates">
+  <step name="Analyze Dependencies &amp; Plan Updates">
     <description>Analyze the project's dependencies to identify outdated packages and plan the update strategy (e.g., minor updates only, patch updates only). Check for any known breaking changes.</description>
     <tool_usage>
       <tool>Bash</tool>
