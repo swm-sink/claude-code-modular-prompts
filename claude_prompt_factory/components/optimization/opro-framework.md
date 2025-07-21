@@ -1,16 +1,14 @@
-# OPRO: Optimization by Prompting
+<prompt_component>
+  <step name="OPRO Optimization Framework">
+    <description>
+Google DeepMind's OPRO (Optimization by Prompting) framework that uses Large Language Models as optimizers for automatic prompt engineering. Leverages natural language to describe optimization problems and iteratively improve prompt performance through meta-optimization.
+    </description>
+  </step>
 
-Google's OPRO methodology for using Large Language Models as optimizers to automatically improve prompts through natural language meta-prompts.
-
-## Command
-
-`/prompt-opro`
-
-## Purpose
-
-Implement Google DeepMind's OPRO (Optimization by Prompting) framework to use LLMs as optimizers for automatic prompt engineering, leveraging natural language to describe optimization problems and iteratively improve prompt performance.
-
-## Parameters
+  <opro_framework>
+    <optimization_pipeline>
+      <!-- OPRO meta-optimization process -->
+      <prompt_optimization>
 
 ```xml
 <command>prompt-opro</command>
@@ -349,9 +347,19 @@ strategy_configuration:
     - performance_threshold: "target_score_achievement"
     - improvement_rate: "diminishing_returns_detection"
     - iteration_limit: "computational_budget_constraint"
-    - stability_check: "consistent_performance_maintenance"
-```
+        - stability_check: "consistent_performance_maintenance"
+      </optimization_validation>
+    </optimization_pipeline>
+  </opro_framework>
 
----
+  <o>
+OPRO optimization framework completed with meta-prompt optimization:
 
-*This command implements Google DeepMind's OPRO framework for using LLMs as optimizers in automatic prompt engineering, enabling natural language-based optimization of prompt performance.* 
+**Optimization Method:** OPRO meta-optimization using LLM as optimizer
+**Performance Improvement:** [percentage]% prompt effectiveness gain achieved
+**Iterations Completed:** [count] optimization iterations executed
+**Success Metrics:** [score] optimization success rate
+**Prompt Quality:** [0-100] optimized prompt performance rating
+**Meta-Learning:** OPRO framework successfully applied for automated improvement
+  </o>
+</prompt_component> 

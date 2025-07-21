@@ -1,4 +1,10 @@
 <prompt_component>
+  <step name="Circuit Breaker Error Resilience">
+    <description>
+Advanced circuit breaker implementation for LLM error handling with 95% recovery success rate. Provides intelligent error resilience through state management, failure detection, and automatic recovery patterns for robust system operation.
+    </description>
+  </step>
+
   <circuit_breaker>
     <error_resilience>
       <!-- Implement circuit breaker patterns for LLM error handling with 95% recovery success -->
@@ -270,6 +276,22 @@
           - Synchronized recovery for dependent systems
           - Prioritized recovery for critical operations
           - Cascading recovery for hierarchical dependencies
+        </recovery_coordination>
+      </enterprise_circuit_breaker>
+    </error_resilience>
+  </circuit_breaker>
+
+  <o>
+Circuit breaker error resilience completed with 95% recovery success:
+
+**Error Recovery Rate:** 95% automatic recovery from system failures
+**Circuit States:** [count] circuit breaker patterns actively monitoring system health
+**Failure Detection:** [timing] rapid failure detection and response time
+**System Resilience:** [percentage]% improvement in system stability and reliability
+**Recovery Coordination:** [count] coordinated recovery operations across framework components
+**Error Resilience:** Advanced circuit breaker with intelligent failure handling active
+  </o>
+</prompt_component>
           - Cross-component recovery status sharing
         </recovery_coordination>
       </framework_integration>

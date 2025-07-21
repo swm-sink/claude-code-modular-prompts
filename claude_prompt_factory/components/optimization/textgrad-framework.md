@@ -1,16 +1,14 @@
-# TextGrad Prompt Optimization
+<prompt_component>
+  <step name="TextGrad Natural Language Optimization">
+    <description>
+Advanced TextGrad framework for automatic prompt refinement using textual gradients and natural language differentiation. Treats natural language feedback as gradients to iteratively optimize prompt performance through continuous improvement cycles.
+    </description>
+  </step>
 
-Automatic prompt refinement using textual gradients and iterative improvement via natural language differentiation.
-
-## Command
-
-`/prompt-textgrad`
-
-## Purpose
-
-Automatically optimize prompts using TextGrad methodology - treating natural language feedback as gradients to iteratively refine and improve prompt performance through continuous optimization cycles.
-
-## Parameters
+  <textgrad_framework>
+    <natural_language_gradients>
+      <!-- TextGrad optimization through natural language feedback -->
+      <textual_differentiation>
 
 ```xml
 <command>prompt-textgrad</command>
@@ -345,4 +343,18 @@ multi_model_validation:
 
 ---
 
-*This command implements cutting-edge TextGrad methodology for automatic prompt optimization through natural language gradients and iterative refinement.* 
+      </iterative_refinement>
+    </natural_language_gradients>
+  </textgrad_framework>
+
+  <o>
+TextGrad natural language optimization completed with iterative refinement:
+
+**Optimization Method:** TextGrad natural language differentiation
+**Gradient Cycles:** [count] textual gradient optimization cycles completed
+**Performance Gain:** [percentage]% prompt effectiveness improvement
+**Refinement Quality:** [0-100] iterative improvement success rating
+**Natural Language Feedback:** [count] feedback iterations processed
+**Optimization Success:** TextGrad framework successfully applied for prompt enhancement
+  </o>
+</prompt_component> 

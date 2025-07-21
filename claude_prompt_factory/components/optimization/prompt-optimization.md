@@ -1,24 +1,14 @@
-# Prompt Optimization Component
+<prompt_component>
+  <step name="Native Prompt Optimization">
+    <description>
+Advanced prompt optimization using Claude's iterative improvement and self-evaluation capabilities. Provides native optimization through iterative refinement, prompt analysis, performance evaluation, and adaptive enhancement without external optimization tools.
+    </description>
+  </step>
 
-## Purpose
-Native prompt optimization using Claude's iterative improvement and self-evaluation capabilities.
-
-## Component Metadata
-```xml
-<component_metadata>
-  <name>prompt-optimization</name>
-  <version>1.0.0</version>
-  <category>optimization</category>
-  <dependencies>[]</dependencies>
-  <capabilities>["iterative_improvement", "prompt_analysis", "performance_evaluation", "adaptive_refinement"]</capabilities>
-</component_metadata>
-```
-
-## Native Optimization Process
-
-### Core Optimization Cycle
-```xml
-<optimization_cycle>
+  <prompt_optimization>
+    <native_optimization>
+      <!-- Native prompt optimization using Claude's capabilities -->
+      <optimization_cycle>
   <analyze>Examine current prompt structure and performance</analyze>
   <identify>Find specific areas for improvement</identify>
   <modify>Generate improved version with targeted changes</modify>
@@ -329,4 +319,18 @@ Claude leverages its natural language understanding to optimize prompts through:
 </optimization_settings>
 ```
 
-This optimization component provides Claude with systematic prompt improvement capabilities, enabling continuous enhancement of communication effectiveness while remaining completely native to Claude's language understanding and generation abilities. 
+      </optimization_settings>
+    </native_optimization>
+  </prompt_optimization>
+
+  <o>
+Native prompt optimization completed with iterative improvement:
+
+**Optimization Cycles:** [count] iterative improvement cycles completed
+**Performance Gain:** [percentage]% prompt effectiveness improvement achieved
+**Quality Enhancement:** [0-100] prompt quality optimization rating
+**Iterative Refinement:** [count] refinement iterations executed
+**Communication Effectiveness:** [percentage]% communication clarity improvement
+**Native Integration:** Advanced prompt optimization using Claude's natural capabilities
+  </o>
+</prompt_component> 

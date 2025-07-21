@@ -1,4 +1,10 @@
 <prompt_component>
+  <step name="Context Optimization and Token Management">
+    <description>
+Advanced context optimization system that maximizes Claude 4's 200K token window through intelligent hierarchical loading, dynamic context management, and adaptive compression. Provides optimal performance while maintaining full context awareness and quality.
+    </description>
+  </step>
+
   <context_optimization>
     <token_management>
       <!-- Optimize for Claude 4's full 200K token context window -->
@@ -137,4 +143,15 @@
       </cross_command_coherence>
     </context_continuity>
   </context_optimization>
+
+  <o>
+Context optimization completed with intelligent token management and hierarchical loading:
+
+**Context Capacity:** 200K tokens optimally allocated across priority levels
+**Loading Strategy:** Multi-tier hierarchical loading with intelligent prioritization
+**Token Efficiency:** [percentage]% token utilization optimization achieved
+**Performance:** [timing] context loading time with adaptive compression
+**Cache Effectiveness:** [percentage]% cache hit rate for frequently accessed context
+**Optimization Score:** [0-100] overall context management effectiveness rating
+  </o>
 </prompt_component> 

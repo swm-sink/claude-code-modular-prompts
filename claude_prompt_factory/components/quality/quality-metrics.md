@@ -355,9 +355,8 @@ Comprehensive quality metrics collection, analysis, and reporting system that tr
       </reporting_analytics>
     </quality_governance>
   </quality_metrics>
-</prompt_component>
 
-<o>
+  <o>
 Quality metrics collection and analysis completed with comprehensive reporting:
 
 **Quality Score:** [0-100] overall quality rating
@@ -366,4 +365,5 @@ Quality metrics collection and analysis completed with comprehensive reporting:
 **Security Score:** [0-100] security compliance rating
 **Maintainability Index:** [0-100] code maintainability score
 **Trend Analysis:** Quality trends and improvement recommendations provided
-</o> 
+  </o>
+</prompt_component> 

@@ -1,4 +1,10 @@
 <prompt_component>
+  <step name="Parallel Execution Framework">
+    <description>
+Advanced parallel execution system that coordinates multiple tool operations simultaneously for maximum efficiency. Implements intelligent tool grouping, dependency management, and atomic operations to achieve 100% parallel execution success rate.
+    </description>
+  </step>
+
   <parallel_execution>
     <execution_strategy>
       <!-- Implement 100% parallel tool success rate through optimized prompting -->
@@ -103,6 +109,22 @@
           - Continue with successful operations
           - Retry failed operations intelligently
           - Maintain partial progress where possible
+        </parallel_resilience>
+      </error_handling>
+    </execution_strategy>
+  </parallel_execution>
+
+  <o>
+Parallel execution framework completed with 100% coordination success:
+
+**Execution Efficiency:** [percentage]% improvement in operation speed through parallelization
+**Success Rate:** 100% parallel tool coordination achieved
+**Tool Grouping:** [count] intelligent tool groups optimized for parallel execution
+**Dependency Management:** [count] dependency chains resolved and optimized
+**Performance Gain:** [multiplier]x speed improvement through parallel operations
+**Coordination Excellence:** Advanced parallel execution with atomic operation support
+  </o>
+</prompt_component>
           - Provide clear error reporting for failed operations
         </parallel_resilience>
       </error_handling>

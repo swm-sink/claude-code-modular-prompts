@@ -1,31 +1,25 @@
-# Auto-Scaling Performance Component - FUNCTIONAL System
+<prompt_component>
+  <step name="Auto-Scaling Performance Framework">
+    <description>
+Advanced auto-scaling performance component that dynamically optimizes system resources, adapts to usage patterns, and provides intelligent performance tuning for maximum efficiency. Provides real-time resource allocation, pattern recognition, and automated optimization.
+    </description>
+  </step>
 
-## Purpose
-**WORKING** auto-scaling performance component that dynamically optimizes system resources, adapts to usage patterns, and provides intelligent performance tuning for maximum efficiency.
-
-## Component Type
-`performance/auto-scaling`
-
-## Functional Implementation
-
-### XML Component Structure
-```xml
-<component>
-  <name>auto-scaling-performance</name>
-  <type>performance</type>
-  <capabilities>
-    <resource_optimization>Dynamic resource allocation and scaling</resource_optimization>
-    <pattern_recognition>Usage pattern analysis and prediction</pattern_recognition>
-    <performance_tuning>Automatic optimization based on workload</performance_tuning>
-    <efficiency_monitoring>Real-time performance tracking and adjustment</efficiency_monitoring>
-  </capabilities>
-  <integration>
-    <command_optimization>Optimize command execution based on complexity</command_optimization>
-    <session_scaling>Scale session resources based on context size and activity</session_scaling>
-    <component_caching>Intelligent caching and preloading of components</component_caching>
-  </integration>
-</component>
-```
+  <auto_scaling>
+    <performance_optimization>
+      <!-- Auto-scaling performance framework -->
+      <scaling_capabilities>
+        <resource_optimization>Dynamic resource allocation and scaling</resource_optimization>
+        <pattern_recognition>Usage pattern analysis and prediction</pattern_recognition>
+        <performance_tuning>Automatic optimization based on workload</performance_tuning>
+        <efficiency_monitoring>Real-time performance tracking and adjustment</efficiency_monitoring>
+      </scaling_capabilities>
+      
+      <integration_framework>
+        <command_optimization>Optimize command execution based on complexity</command_optimization>
+        <session_scaling>Scale session resources based on context size and activity</session_scaling>
+        <component_caching>Intelligent caching and preloading of components</component_caching>
+      </integration_framework>
 
 ## ACTUAL AUTO-SCALING IMPLEMENTATION
 
@@ -51,9 +45,9 @@ CLAUDE AUTO-SCALING SEQUENCE:
 <auto_scaling_execution>
   <performance_monitoring>
     <current_system_state>
-      <memory_usage>340MB (target: <500MB)</memory_usage>
+      <memory_usage>340MB (target: under 500MB)</memory_usage>
       <processing_load>Medium - 3 concurrent commands</processing_load>
-      <response_time_average>6.8 seconds (target: <10 seconds)</response_time_average>
+      <response_time_average>6.8 seconds (target: under 10 seconds)</response_time_average>
       <user_session_count>5 active sessions</user_session_count>
     </current_system_state>
     
@@ -452,4 +446,18 @@ OPTIMIZATION EFFECTIVENESS:
 ✅ Quality Maintenance: 97% quality preserved under optimization
 ```
 
-This auto-scaling performance component provides **intelligent, adaptive optimization** that automatically tunes system performance based on usage patterns, ensuring maximum efficiency while maintaining high quality outputs. 
+      </system_optimization>
+    </performance_optimization>
+  </auto_scaling>
+
+  <o>
+Auto-scaling performance framework completed with intelligent optimization:
+
+**Resource Allocation:** [count] dynamic resources optimally allocated
+**Pattern Recognition:** [count] usage patterns identified and leveraged
+**Performance Gain:** [percentage]% system performance improvement achieved
+**Efficiency Optimization:** [0-100] auto-scaling effectiveness rating
+**Adaptive Learning:** [count] optimization patterns learned from usage
+**System Intelligence:** Advanced auto-scaling with predictive optimization capabilities
+  </o>
+</prompt_component> 

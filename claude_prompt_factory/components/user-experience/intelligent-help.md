@@ -1,4 +1,10 @@
 <prompt_component>
+  <step name="Intelligent Help and User Experience">
+    <description>
+Advanced intelligent help system that provides context-aware assistance, situational awareness, and adaptive guidance. Analyzes project context, user state, and current needs to deliver personalized help and support for optimal user experience.
+    </description>
+  </step>
+
   <intelligent_help>
     <context_aware_assistance>
       <!-- Create intelligent help system with advanced context awareness -->
@@ -312,6 +318,22 @@
             - Optimize help content placement and timing
             - Personalize help recommendations based on patterns
             - Improve help system architecture based on usage data
+          </predictive_help_optimization>
+        </help_personalization>
+      </proactive_assistance>
+    </context_aware_assistance>
+  </intelligent_help>
+
+  <o>
+Intelligent help system completed with context-aware assistance:
+
+**Context Awareness:** [percentage]% accurate project context understanding achieved
+**User State Recognition:** [count] user needs identified and addressed proactively
+**Help Personalization:** [percentage]% improvement in help relevance and effectiveness
+**Assistance Quality:** [0-100] intelligent help system effectiveness rating
+**User Experience:** [percentage]% improvement in user satisfaction and productivity
+**Proactive Support:** Advanced intelligent help with predictive assistance capabilities
+  </o>
           </predictive_help_optimization>
         </learning_analytics>
       </continuous_improvement>

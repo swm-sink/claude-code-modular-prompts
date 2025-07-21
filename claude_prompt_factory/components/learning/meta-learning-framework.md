@@ -1,16 +1,14 @@
-# Meta-Learning Framework for AI Agents
+<prompt_component>
+  <step name="Meta-Learning Framework for AI Agents">
+    <description>
+Advanced meta-learning framework enabling agents to rapidly adapt to new tasks through learning-to-learn principles and few-shot optimization. Implements sophisticated algorithms for quick adaptation with minimal data using learned optimization strategies and adaptive initialization.
+    </description>
+  </step>
 
-Advanced meta-learning framework enabling agents to rapidly adapt to new tasks through learning-to-learn principles and few-shot optimization.
-
-## Command
-
-`/meta-learning-framework`
-
-## Purpose
-
-Implement sophisticated meta-learning algorithms that enable AI agents to quickly adapt to new tasks with minimal data, leveraging learned optimization strategies and adaptive initialization procedures.
-
-## Parameters
+  <meta_learning_framework>
+    <adaptive_learning>
+      <!-- Meta-learning framework for rapid task adaptation -->
+      <learning_algorithms>
 
 ```xml
 <command>meta-learning-framework</command>
@@ -86,17 +84,15 @@ Implement sophisticated meta-learning algorithms that enable AI agents to quickl
       <forgetting_measure>true</forgetting_measure>
     </metrics>
   </evaluation>
-</params>
-</command>
-```
+      </adaptive_learning>
+    </meta_learning_framework>
 
 ## Algorithm Implementations
 
 ### Model-Agnostic Meta-Learning (MAML)
-```xml
-<maml_implementation>
-  <objective>min_θ Σ_τ L_τ(f_θ')</objective>
-  <inner_update>θ' = θ - α∇_θL_τ(f_θ)</inner_update>
+MAML Implementation:
+  - Objective: min_θ Σ_τ L_τ(f_θ')
+  - Inner update: θ' = θ - α∇_θL_τ(f_θ)
   <outer_update>θ = θ - β∇_θΣ_τL_τ(f_θ')</outer_update>
   <gradient_computation>second_order</gradient_computation>
   
@@ -365,4 +361,18 @@ Implement sophisticated meta-learning algorithms that enable AI agents to quickl
 - Transfer knowledge across patient populations
 - Personalize treatment recommendations
 
-This meta-learning framework provides a comprehensive foundation for building AI agents that can rapidly adapt to new tasks, leveraging the latest advances in meta-learning research to achieve superior few-shot performance and cross-task generalization. 
+      </medical_ai>
+    </algorithm_implementations>
+  </meta_learning_framework>
+
+  <o>
+Meta-learning framework completed with advanced adaptation algorithms:
+
+**Algorithm Integration:** [count] meta-learning algorithms implemented (MAML, Reptile, etc.)
+**Adaptation Speed:** [timing] rapid adaptation to new tasks achieved
+**Few-Shot Performance:** [percentage]% improvement in few-shot learning effectiveness
+**Cross-Task Transfer:** [count] successful knowledge transfers across domains
+**Research Integration:** [0-100] latest meta-learning research implementation rating
+**Framework Completeness:** Comprehensive meta-learning foundation for AI agent development
+  </o>
+</prompt_component> 

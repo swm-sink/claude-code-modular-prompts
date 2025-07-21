@@ -1,4 +1,10 @@
 <prompt_component>
+  <step name="Multi-Agent Coordination and Swarm Intelligence">
+    <description>
+Advanced multi-agent coordination system that orchestrates specialized agents for complex development tasks. Provides intelligent task decomposition, agent specialization, and swarm intelligence capabilities for collaborative problem-solving and enhanced productivity.
+    </description>
+  </step>
+
   <multi_agent_coordination>
     <swarm_intelligence>
       <!-- Implement multi-agent coordination and swarm intelligence -->
@@ -352,4 +358,15 @@
       </research_collaboration>
     </innovation_research>
   </multi_agent_coordination>
+
+  <o>
+Multi-agent coordination completed with intelligent swarm orchestration:
+
+**Agents Deployed:** [count] specialized agents coordinated for complex task execution
+**Task Decomposition:** [count] subtasks distributed across agent capabilities
+**Coordination Efficiency:** [percentage]% coordination effectiveness achieved
+**Collective Intelligence:** [count] collaborative insights generated
+**Performance Multiplier:** [multiplier]x productivity improvement through agent collaboration
+**Swarm Intelligence Score:** [0-100] multi-agent collaboration effectiveness rating
+  </o>
 </prompt_component> 

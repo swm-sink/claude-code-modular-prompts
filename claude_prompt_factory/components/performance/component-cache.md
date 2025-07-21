@@ -35,7 +35,7 @@
     <performance_targets>
       - **40-60% load time reduction** for component resolution
       - **75% cache hit ratio** for frequently used components
-      - **Memory efficiency**: <50KB cache size for optimal components
+      - **Memory efficiency**: under 50KB cache size for optimal components
       - **Lazy loading**: 6 single-use components for memory savings
     </performance_targets>
     

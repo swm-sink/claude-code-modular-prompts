@@ -1,16 +1,14 @@
-# AutoPrompt: Gradient-Based Prompt Optimization
+<prompt_component>
+  <step name="AutoPrompt Gradient-Based Optimization">
+    <description>
+Advanced AutoPrompt framework for automatic prompt discovery using gradient-based optimization methods. Eliminates manual prompt engineering by finding optimal discrete prompts through gradient-guided token sequence optimization for maximum task performance.
+    </description>
+  </step>
 
-Automatic prompt discovery using gradient-based optimization for finding optimal discrete prompts without manual prompt engineering.
-
-## Command
-
-`/autoprompt-optimization`
-
-## Purpose
-
-Automatically discover and optimize discrete prompts using gradient-based methods, eliminating the need for manual prompt engineering while finding optimal token sequences that maximize task performance.
-
-## Parameters
+  <autoprompt_framework>
+    <gradient_optimization>
+      <!-- AutoPrompt gradient-based optimization process -->
+      <discrete_prompt_optimization>
 
 ```xml
 <command>autoprompt-optimization</command>
@@ -59,14 +57,13 @@ Automatically discover and optimize discrete prompts using gradient-based method
   <!-- Output Configuration -->
   <save_intermediate>true</save_intermediate>
   <log_frequency>10</log_frequency>
-  <output_best_k>5</output_best_k>
-</params>
-</command>
-
-## Technical Implementation
-
-### Gradient-Based Search
-- **Embedding Gradients**: Compute gradients with respect to token embeddings
+        <output_best_k>5</output_best_k>
+      </gradient_configuration>
+    </gradient_optimization>
+    
+    <technical_implementation>
+      <gradient_search>
+        <embedding_gradients>Compute gradients with respect to token embeddings</embedding_gradients>
 - **Discrete Optimization**: Map continuous gradients to discrete token selections
 - **HotFlip Algorithm**: Efficiently find optimal token substitutions
 - **Beam Search**: Maintain multiple candidate prompt hypotheses
@@ -221,4 +218,29 @@ Based on cutting-edge research in automatic prompt optimization:
 - Optimize diagnostic reasoning prompt templates
 - Discover effective prompts for treatment recommendation
 
-This command leverages state-of-the-art gradient-based optimization to automatically discover high-performing prompts, eliminating manual prompt engineering while achieving superior task performance through systematic exploration of the prompt space. 
+      </gradient_validation>
+    </gradient_optimization>
+  </autoprompt_framework>
+
+  <o>
+AutoPrompt gradient-based optimization completed with discrete prompt discovery:
+
+**Optimization Method:** Gradient-based discrete prompt optimization
+**Performance Improvement:** [percentage]% task performance gain achieved
+**Token Sequences:** [count] optimal token sequences discovered
+**Gradient Steps:** [count] optimization iterations executed
+**Discovery Success:** [0-100] prompt discovery effectiveness rating
+**Automation Level:** Full automation of manual prompt engineering achieved
+      </technical_implementation>
+    </autoprompt_framework>
+
+  <o>
+AutoPrompt gradient-based optimization completed with discrete prompt optimization:
+
+**Optimization Method:** AutoPrompt gradient-based discrete optimization
+**Prompt Performance:** [percentage]% improvement in task performance achieved
+**Token Efficiency:** [count] optimal tokens identified through gradient search
+**Optimization Quality:** [0-100] AutoPrompt optimization effectiveness rating
+**Discrete Excellence:** Advanced gradient-based prompt optimization with HotFlip algorithm
+  </o>
+</prompt_component> 

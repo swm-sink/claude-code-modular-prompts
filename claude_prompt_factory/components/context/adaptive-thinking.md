@@ -73,9 +73,8 @@ Intelligently select the appropriate thinking mode (instant, standard, or extend
       </context_loading>
     </performance_optimization>
   </adaptive_thinking>
-</prompt_component>
 
-<o>
+  <o>
 Adaptive thinking mode automatically selected based on request complexity. The system has intelligently chosen the appropriate processing approach:
 
 **Selected Mode:** [instant/standard/extended]
@@ -83,4 +82,5 @@ Adaptive thinking mode automatically selected based on request complexity. The s
 **Token Budget:** Optimized for selected mode
 **Context Loading:** Appropriate depth for task requirements
 **Performance:** Balanced for quality and efficiency
-</o> 
+  </o>
+</prompt_component> 

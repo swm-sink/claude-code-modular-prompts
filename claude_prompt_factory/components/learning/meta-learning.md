@@ -1,21 +1,15 @@
-# Meta-Learning Component - COMPLETE IMPLEMENTATION
+<prompt_component>
+  <step name="Meta-Learning Framework">
+    <description>
+Advanced meta-learning implementation using Claude's few-shot learning capabilities and pattern recognition. Provides rapid adaptation, knowledge transfer, experience integration, and pattern extraction for continuous learning and improvement without external learning algorithms.
+    </description>
+  </step>
 
-## Purpose
-**FULLY FUNCTIONAL** meta-learning implementation using Claude's few-shot learning capabilities and pattern recognition without external learning algorithms.
-
-## Component Metadata
-```xml
-<component_metadata>
-  <name>meta-learning</name>
-  <version>2.0.0</version>
-  <category>learning</category>
-  <status>PRODUCTION_READY</status>
-  <dependencies>[]</dependencies>
-  <capabilities>["few_shot_learning", "pattern_extraction", "rapid_adaptation", "knowledge_transfer", "experience_integration"]</capabilities>
-</component_metadata>
-```
-
-## Meta-Learning Principles
+  <meta_learning>
+    <learning_framework>
+      <!-- Meta-learning implementation using Claude's native capabilities -->
+      <few_shot_learning>
+        <!-- Core meta-learning concept -->
 
 ### Core Concept
 Meta-learning enables Claude to "learn how to learn" by:
@@ -538,4 +532,18 @@ Meta-learning enables Claude to "learn how to learn" by:
 </knowledge_quality>
 ```
 
-This complete meta-learning implementation provides **REAL WORKING** rapid adaptation and knowledge transfer capabilities that Claude can execute immediately for accelerated learning and problem-solving. 
+      </knowledge_quality>
+    </learning_framework>
+  </meta_learning>
+
+  <o>
+Meta-learning framework completed with advanced adaptation capabilities:
+
+**Learning Patterns:** [count] patterns identified and integrated for rapid adaptation
+**Knowledge Transfer:** [percentage]% cross-domain transfer effectiveness achieved
+**Adaptation Speed:** [timing] rapid learning cycle completion time
+**Experience Integration:** [count] previous experiences leveraged for current tasks
+**Learning Efficiency:** [0-100] meta-learning system effectiveness rating
+**Continuous Improvement:** Advanced meta-learning with real-time adaptation active
+  </o>
+</prompt_component> 

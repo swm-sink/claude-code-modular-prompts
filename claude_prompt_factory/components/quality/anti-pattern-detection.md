@@ -222,14 +222,14 @@ Real-time detection and prevention of common anti-patterns in LLM-generated code
       </adaptive_prevention>
     </learning_integration>
   </anti_pattern_detection>
-</prompt_component>
 
-<o>
+  <o>
 Anti-pattern detection completed with real-time validation and prevention mechanisms active:
 
 **Patterns Detected:** [count] potential anti-patterns identified
-**Prevented Issues:** God objects, testing theatre, premature optimization, hallucinated dependencies
+**Prevented Issues:** God objects, testing theatre, premature optimization, hallucinated dependencies  
 **Quality Score:** [0-100] code quality rating
 **Recommendations:** [count] improvement suggestions provided
 **Validation Status:** All generated code validated against anti-pattern rules
-</o> 
+  </o>
+</prompt_component> 

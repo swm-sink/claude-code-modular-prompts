@@ -1,16 +1,14 @@
-# Advanced Multi-Agent Orchestration
+<prompt_component>
+  <step name="Advanced Multi-Agent Orchestration">
+    <description>
+Sophisticated multi-agent coordination using advanced orchestration patterns, communication protocols, and adaptive coordination strategies. Coordinates complex multi-agent systems with hierarchical coordination, distributed consensus, and adaptive role allocation.
+    </description>
+  </step>
 
-Sophisticated multi-agent coordination using advanced orchestration patterns, communication protocols, and adaptive coordination strategies.
-
-## Command
-
-`/agent-orchestration`
-
-## Purpose
-
-Coordinate complex multi-agent systems using advanced orchestration patterns including hierarchical coordination, distributed consensus, and adaptive role allocation with sophisticated communication protocols.
-
-## Parameters
+  <agent_orchestration>
+    <multi_agent_coordination>
+      <!-- Advanced multi-agent orchestration framework -->
+      <orchestration_patterns>
 
 ```xml
 <command>agent-orchestration</command>
@@ -434,6 +432,18 @@ performance_tuning:
   resource_prediction: "time_series_analysis"
 ```
 
----
+      </orchestration_analytics>
+    </multi_agent_coordination>
+  </agent_orchestration>
 
-*This command provides enterprise-grade multi-agent orchestration with advanced coordination patterns, fault tolerance, and adaptive capabilities for complex distributed systems.* 
+  <o>
+Advanced multi-agent orchestration completed with sophisticated coordination:
+
+**Orchestration Pattern:** [pattern] hierarchical coordination system active
+**Agent Count:** [count] autonomous agents coordinated successfully
+**Coordination Efficiency:** [percentage]% multi-agent coordination effectiveness
+**Communication Protocols:** [count] advanced protocols implemented
+**System Performance:** [0-100] orchestration system effectiveness rating
+**Enterprise Grade:** Advanced multi-agent coordination ready for complex distributed systems
+  </o>
+</prompt_component> 

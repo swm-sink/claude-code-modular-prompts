@@ -1,4 +1,10 @@
 <prompt_component>
+  <step name="Cost Optimization and Budget Management">
+    <description>
+Advanced cost optimization system that provides intelligent budget management, real-time cost tracking, and usage analytics. Monitors token consumption, tracks costs across operations, and implements optimization strategies for maximum efficiency and budget control.
+    </description>
+  </step>
+
   <cost_optimization>
     <intelligent_budget_management>
       <!-- Implement cost optimization and budget tracking -->

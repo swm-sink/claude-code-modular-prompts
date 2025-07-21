@@ -1,16 +1,14 @@
-# DSPy Declarative Prompt Optimization
+<prompt_component>
+  <step name="DSPy Declarative Prompt Optimization">
+    <description>
+Advanced DSPy framework for declarative self-improving prompt pipelines with automatic few-shot example optimization and modular composition. Creates optimized prompt systems through programmatic optimization and modular design patterns.
+    </description>
+  </step>
 
-Declarative self-improving prompt pipelines with automatic few-shot example optimization and modular composition.
-
-## Command
-
-`/prompt-dspy`
-
-## Purpose
-
-Create and optimize declarative prompt pipelines using DSPy methodology - automatically generating few-shot examples, optimizing prompt composition, and building self-improving modular systems.
-
-## Parameters
+  <dspy_framework>
+    <declarative_pipeline>
+      <!-- DSPy optimization process -->
+      <modular_optimization>
 
 ```xml
 <command>prompt-dspy</command>
@@ -409,6 +407,18 @@ model_configuration:
       few_shot_examples: 6
 ```
 
----
+      </pipeline_optimization>
+    </declarative_pipeline>
+  </dspy_framework>
 
-*This command implements the powerful DSPy framework for declarative prompt optimization and self-improving pipeline construction with automatic few-shot example generation.* 
+  <o>
+DSPy declarative optimization completed with modular pipeline construction:
+
+**Pipeline Type:** [signature] declarative prompt pipeline optimized
+**Modules Composed:** [count] modular components integrated
+**Few-Shot Examples:** [count] automatically generated training examples
+**Performance Gain:** [percentage]% improvement through DSPy optimization
+**Module Effectiveness:** [0-100] modular composition success rating
+**Optimization Success:** DSPy framework successfully applied for pipeline enhancement
+  </o>
+</prompt_component> 

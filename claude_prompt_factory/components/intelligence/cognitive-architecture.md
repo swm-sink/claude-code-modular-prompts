@@ -1,16 +1,14 @@
-# Cognitive Architecture Framework
+<prompt_component>
+  <step name="Cognitive Architecture Framework">
+    <description>
+Advanced cognitive architecture framework implementing ACT-R, SOAR, CLARION, and hybrid cognitive systems for building human-like intelligent agents. Provides sophisticated memory systems, reasoning capabilities, problem-solving frameworks, and adaptive learning for explainable cognitive processes.
+    </description>
+  </step>
 
-Advanced cognitive architectures implementing ACT-R, SOAR, CLARION, and hybrid cognitive systems for building human-like intelligent agents with memory, reasoning, and learning capabilities.
-
-## Command
-
-`/cognitive-architecture`
-
-## Purpose
-
-Implement sophisticated cognitive architectures that model human-like reasoning, memory systems, problem-solving, and learning, enabling AI agents to operate with explainable cognitive processes and adaptive intelligence.
-
-## Parameters
+  <cognitive_architecture>
+    <hybrid_cognitive_systems>
+      <!-- Advanced cognitive architecture implementation -->
+      <architecture_selection>
 
 ```xml
 <command>cognitive-architecture</command>
@@ -207,17 +205,21 @@ Implement sophisticated cognitive architectures that model human-like reasoning,
       <trace_level>detailed</trace_level>
       <visualization>true</visualization>
       <cognitive_modeling>true</cognitive_modeling>
-    </debugging>
-  </monitoring>
-</params>
-</command>
-```
+        </debugging>
+      </monitoring>
+    </hybrid_cognitive_systems>
+  </cognitive_architecture>
 
-## Memory Systems Implementation
+  <o>
+Cognitive architecture completed with hybrid intelligent systems:
 
-### Declarative Memory (ACT-R Style)
-```xml
-<declarative_memory_system>
+**Cognitive Capabilities:** [count] advanced cognitive functions implemented
+**Memory Systems:** [count] declarative and procedural memory systems active
+**Reasoning Framework:** [percentage]% multi-modal reasoning accuracy achieved
+**Intelligence Integration:** [0-100] cognitive architecture effectiveness rating
+**Adaptive Learning:** [count] learning patterns integrated across cognitive systems
+**Hybrid Intelligence:** Advanced cognitive architecture with comprehensive reasoning capabilities
+  </o>
   <chunk_structure>
     <activation_equation>Ai = Bi + Σj Wj Sji + ε</activation_equation>
     <base_level_learning>Bi = ln(Σk t_k^(-d))</base_level_learning>
@@ -484,4 +486,18 @@ Implement sophisticated cognitive architectures that model human-like reasoning,
 - Optimize human-machine interaction and collaboration
 - Predict and prevent human errors in complex systems
 
-This cognitive architecture framework provides a sophisticated foundation for building AI agents with human-like cognitive capabilities, incorporating decades of research in cognitive science and artificial intelligence to create systems that can reason, learn, and adapt in psychologically plausible ways. 
+      </cognitive_research>
+    </hybrid_cognitive_systems>
+  </cognitive_architecture>
+
+  <o>
+Cognitive architecture framework completed with human-like intelligence systems:
+
+**Architecture Type:** [primary_system] hybrid cognitive architecture implemented
+**Memory Systems:** [count] memory subsystems active (declarative, procedural, working)
+**Reasoning Capabilities:** [count] reasoning frameworks integrated (ACT-R, SOAR, CLARION)
+**Learning Mechanisms:** [count] adaptive learning systems operational
+**Cognitive Performance:** [0-100] human-like cognitive capability rating
+**Intelligence Level:** Advanced cognitive architecture successfully deployed
+  </o>
+</prompt_component> 

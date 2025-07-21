@@ -1,40 +1,13 @@
-<command_file>
-  <metadata>
-    <n>/framework-optimize</n>
-    <purpose>Analyze and optimize Claude Code Prompt Factory performance, including command loading, execution efficiency, token usage, and system responsiveness.</purpose>
-    <usage>
-      <![CDATA[
-      /framework-optimize --target=[loading|execution|memory|tokens] --scope=[commands|components|system]
-      ]]>
-    </usage>
-  </metadata>
+<prompt_component>
+  <step name="Framework Performance Optimization">
+    <description>
+Advanced framework optimization system that analyzes and optimizes Claude Code Prompt Factory performance including command loading, execution efficiency, token usage, and system responsiveness. Provides comprehensive performance optimization across all framework components.
+    </description>
+  </step>
 
-  <arguments>
-    <argument name="target" type="string" required="false" default="execution">
-      <description>Optimization target: loading (startup performance), execution (runtime performance), memory (resource usage), tokens (context optimization).</description>
-    </argument>
-    <argument name="scope" type="string" required="false" default="system">
-      <description>Optimization scope: commands (command optimization), components (component optimization), system (full system optimization).</description>
-    </argument>
-  </arguments>
-  
-  <examples>
-    <example>
-      <description>Optimize command execution performance</description>
-      <usage>/framework-optimize --target=execution --scope=commands</usage>
-    </example>
-    <example>
-      <description>Optimize token usage across the entire system</description>
-      <usage>/framework-optimize --target=tokens --scope=system</usage>
-    </example>
-  </examples>
-
-  <claude_prompt>
-    <prompt>
-      <include component="components/context/adaptive-thinking.md" />
-      <include component="components/performance/cost-optimization.md" />
-      <include component="components/actions/parallel-execution.md" />
-      <![CDATA[
+  <framework_optimization>
+    <performance_analysis>
+      <!-- Framework performance optimization system -->
 
 
       You are an expert performance optimization specialist with deep understanding of Claude's capabilities, token optimization, and large-scale system performance. Analyze and optimize the Claude Code Prompt Factory for maximum efficiency and responsiveness.
@@ -259,21 +232,6 @@
       Execute comprehensive performance optimization using Claude's intelligence to identify bottlenecks, implement improvements, and establish continuous performance management. Focus on practical optimizations that deliver measurable performance improvements.
 
       **Remember**: Performance optimization is an ongoing process. Focus on the highest-impact optimizations first, and establish monitoring to ensure continuous performance improvement and regression prevention.
-]]>
-    </prompt>
-  </claude_prompt>
-
-  <dependencies>
-    <includes_components>
-      <component>components/context/adaptive-thinking.md</component>
-      <component>components/performance/cost-optimization.md</component>
-      <component>components/actions/parallel-execution.md</component>
-    </includes_components>
-    <uses_config_values>
-      <config>performance_targets</config>
-      <config>optimization_preferences</config>
-      <config>resource_constraints</config>
-      <config>monitoring_thresholds</config>
-    </uses_config_values>
-  </dependencies>
-</command_file> 
+    </performance_analysis>
+  </framework_optimization>
+</prompt_component> 

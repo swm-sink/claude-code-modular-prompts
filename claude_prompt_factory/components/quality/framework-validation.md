@@ -1,22 +1,14 @@
-<command_file>
-  <metadata>
-    <n>/framework-validate</n>
-    <purpose>Comprehensive validation and testing of the entire Claude Code Prompt Factory framework, ensuring all components, dependencies, and integrations are functioning correctly.</purpose>
-    <usage>
-      <![CDATA[
-      /framework-validate --scope=[full|components|commands|dependencies] --level=[basic|comprehensive|enterprise]
-      ]]>
-    </usage>
-  </metadata>
+<prompt_component>
+  <step name="Framework Validation and Testing">
+    <description>
+Comprehensive validation and testing framework for the entire Claude Code Prompt Factory. Ensures all components, dependencies, commands, and integrations are functioning correctly through systematic validation protocols, dependency checking, and quality assurance testing.
+    </description>
+  </step>
 
-  <arguments>
-    <argument name="scope" type="string" required="false" default="full">
-      <description>Validation scope: full (everything), components (component validation), commands (command validation), dependencies (dependency checks).</description>
-    </argument>
-    <argument name="level" type="string" required="false" default="comprehensive">
-      <description>Validation level: basic (quick checks), comprehensive (thorough validation), enterprise (full compliance validation).</description>
-    </argument>
-  </arguments>
+  <framework_validation>
+    <comprehensive_testing>
+      <!-- Framework validation and testing protocols -->
+      <validation_scope>
   
   <examples>
     <example>
@@ -244,4 +236,17 @@
       <config>performance_benchmarks</config>
     </uses_config_values>
   </dependencies>
-</command_file> 
+      </comprehensive_testing>
+    </framework_validation>
+
+  <o>
+Framework validation completed with comprehensive testing and quality assurance:
+
+**Validation Scope:** [scope] framework components validated
+**Test Coverage:** [percentage]% of framework tested and verified
+**Quality Score:** [0-100] overall framework quality rating
+**Compliance Status:** [count] regulatory standards validated
+**Performance Metrics:** [count] performance benchmarks achieved
+**Enterprise Readiness:** Framework validated for enterprise deployment
+  </o>
+</prompt_component> 

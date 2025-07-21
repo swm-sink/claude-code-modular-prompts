@@ -26,20 +26,18 @@
          - Consistent indentation (2 spaces)
     </validation_rules>
     <template>
-      ```xml
-      <command_file>
+      <command_file_template>
         <metadata>
           <name>{command_name}</name>
           <purpose>{command_purpose}</purpose>
-          <usage>
-            <![CDATA[
+          <usage_pattern>
             {usage_pattern}
             ]]>
           </usage>
         </metadata>
         
         <arguments>
-          <argument name="{arg_name}" type="{arg_type}" required="{true|false}">
+          <argument name="{arg_name}" type="{type}" required="{true/false}">
             <description>{arg_description}</description>
           </argument>
         </arguments>
@@ -47,18 +45,12 @@
         <steps>
           <step name="{step_name}">
             <description>{step_description}</description>
-            <action>{step_action}</action>
           </step>
         </steps>
         
-        <output>
-          <format>{output_format}</format>
-          <example>
-            <![CDATA[
-            {output_example}
-            ]]>
-          </example>
-        </output>
+        <o>
+          {expected_output}
+        </o>
       </command_file>
       ```
     </template>

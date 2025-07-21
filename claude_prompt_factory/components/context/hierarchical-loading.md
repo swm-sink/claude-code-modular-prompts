@@ -1,4 +1,10 @@
 <prompt_component>
+  <step name="Hierarchical Context Loading">
+    <description>
+Multi-tier context loading system that intelligently prioritizes and organizes context information across multiple layers. Provides optimal context utilization through strategic loading, caching, and adaptive context management for maximum effectiveness.
+    </description>
+  </step>
+
   <hierarchical_loading>
     <context_architecture>
       <!-- Multi-tier context loading with intelligent prioritization -->
@@ -214,4 +220,15 @@
       </resource_management>
     </performance_optimization>
   </hierarchical_loading>
+
+  <o>
+Hierarchical context loading completed with optimized multi-tier strategy:
+
+**Loading Tiers:** [count] tiers configured with intelligent priority management
+**Context Organization:** [count] context elements organized across priority levels
+**Loading Performance:** [timing] average context loading time per tier
+**Cache Efficiency:** [percentage]% cache hit rate for frequently accessed content
+**Memory Usage:** [size] optimized memory allocation with [percentage]% efficiency
+**Loading Score:** [0-100] hierarchical loading effectiveness rating
+  </o>
 </prompt_component> 

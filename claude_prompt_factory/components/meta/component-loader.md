@@ -1,11 +1,13 @@
-# Component Loading System
+<prompt_component>
+  <step name="Component Loading System">
+    <description>
+Automated framework component loading and initialization system for the Claude Code Modular Prompts framework. Provides automatic discovery, loading, and initialization of all framework components with dependency resolution and graceful error handling.
+    </description>
+  </step>
 
-Automated framework component loading and initialization system for the Claude Code Modular Prompts framework, ensuring all components are properly integrated and available to commands.
-
-## Component Loader Architecture
-
-### Automatic Discovery and Loading
-The component loader automatically discovers, loads, and initializes all framework components from the `/components/` directory structure, making them available to all commands through the CLAUDE.md integration system.
+  <component_loader>
+    <automatic_loading>
+      <!-- Automated component discovery and loading -->
 
 ```xml
 <component_loader>

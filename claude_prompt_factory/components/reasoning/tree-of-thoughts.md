@@ -1,23 +1,15 @@
-# Tree of Thoughts Component
+<prompt_component>
+  <step name="Tree of Thoughts Reasoning">
+    <description>
+Advanced Tree of Thoughts reasoning framework using Claude's natural branching and exploration capabilities. Enables multi-path exploration, thought tree construction, branch evaluation, and path synthesis for comprehensive problem-solving.
+    </description>
+  </step>
 
-## Purpose
-Native implementation of Tree of Thoughts reasoning using Claude's natural branching and exploration capabilities.
-
-## Component Metadata
-```xml
-<component_metadata>
-  <name>tree-of-thoughts</name>
-  <version>1.0.0</version>
-  <category>reasoning</category>
-  <dependencies>[]</dependencies>
-  <capabilities>["multi_path_exploration", "thought_tree_construction", "branch_evaluation", "path_synthesis"]</capabilities>
-</component_metadata>
-```
-
-## Tree of Thoughts Pattern
-
-### Core Concept
-Tree of Thoughts allows Claude to explore multiple reasoning paths simultaneously, evaluate them, and synthesize the best elements into a final solution.
+  <tree_of_thoughts>
+    <reasoning_framework>
+      <!-- Tree of Thoughts multi-path reasoning implementation -->
+      <thought_exploration>
+        <core_concept>Tree of Thoughts allows Claude to explore multiple reasoning paths simultaneously, evaluate them, and synthesize the best elements into a final solution.</core_concept>
 
 ```xml
 <tot_structure>
@@ -294,4 +286,18 @@ Claude naturally builds thought trees through structured exploration:
 - **Efficient synthesis** to combine insights
 - **Context-aware** depth and breadth control
 
-This Tree of Thoughts implementation provides Claude with powerful systematic exploration capabilities while remaining completely native to its reasoning processes. 
+      </exploration_capabilities>
+    </reasoning_framework>
+  </tree_of_thoughts>
+
+  <o>
+Tree of Thoughts reasoning completed with multi-path exploration:
+
+**Thought Branches:** [count] reasoning paths explored and evaluated
+**Path Synthesis:** [count] optimal solution elements combined
+**Exploration Depth:** [level] systematic reasoning depth achieved
+**Solution Quality:** [percentage]% improvement through multi-path analysis
+**Branch Evaluation:** [0-100] thought tree construction effectiveness rating
+**Systematic Exploration:** Advanced Tree of Thoughts with comprehensive problem-solving
+  </o>
+</prompt_component> 

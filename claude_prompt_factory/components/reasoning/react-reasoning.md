@@ -1,17 +1,14 @@
-# ReAct Reasoning Component
+<prompt_component>
+  <step name="ReAct Reasoning Framework">
+    <description>
+Advanced ReAct (Reasoning + Acting) framework that combines systematic reasoning with action planning. Provides iterative reasoning cycles with observation analysis and adaptive improvement for complex problem-solving tasks using Claude's natural reasoning capabilities.
+    </description>
+  </step>
 
-## Purpose
-Pure prompting implementation of ReAct (Reasoning + Acting) that leverages Claude's natural reasoning capabilities.
-
-## Component Metadata
-```xml
-<component_metadata>
-  <name>react-reasoning</name>
-  <version>1.0.0</version>
-  <category>reasoning</category>
-  <dependencies>[]</dependencies>
-  <capabilities>["step_reasoning", "action_planning", "observation_analysis", "iterative_improvement"]</capabilities>
-</component_metadata>
+  <react_reasoning>
+    <reasoning_acting_cycle>
+      <!-- ReAct iterative reasoning and action framework -->
+      <core_react_cycle>
 ```
 
 ## ReAct Pattern Implementation
@@ -208,4 +205,18 @@ To activate ReAct reasoning in any command:
 - **Context-aware** reasoning appropriate to domain
 - **Goal-oriented** maintains focus on objectives
 
-This ReAct implementation provides Claude with a powerful, systematic approach to complex problem-solving while remaining completely native to Claude's reasoning capabilities. 
+      </adaptability>
+    </reasoning_acting_cycle>
+  </react_reasoning>
+
+  <o>
+ReAct reasoning framework completed with systematic problem-solving:
+
+**Reasoning Cycles:** [count] iterative reasoning and action cycles completed
+**Problem Resolution:** [percentage]% complex problem resolution success rate
+**Action Planning:** [count] strategic actions planned and executed
+**Observation Analysis:** [percentage]% observation accuracy and insight generation
+**Adaptive Improvement:** [0-100] reasoning framework effectiveness rating
+**Systematic Approach:** Advanced ReAct reasoning with native Claude capabilities
+  </o>
+</prompt_component> 

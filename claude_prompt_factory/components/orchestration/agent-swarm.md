@@ -1,16 +1,14 @@
-# Agent Swarm Intelligence Coordination
+<prompt_component>
+  <step name="Agent Swarm Intelligence Coordination">
+    <description>
+Advanced multi-agent swarm coordination using emergent behavior patterns and decentralized decision-making. Coordinates multiple autonomous agents using swarm intelligence principles for complex task execution with emergent behavior, self-organization, and adaptive coordination patterns.
+    </description>
+  </step>
 
-Advanced multi-agent swarm coordination using emergent behavior patterns and decentralized decision-making.
-
-## Command
-
-`/agent-swarm`
-
-## Purpose
-
-Coordinate multiple autonomous agents using swarm intelligence principles for complex task execution with emergent behavior, self-organization, and adaptive coordination patterns.
-
-## Parameters
+  <agent_swarm>
+    <swarm_intelligence>
+      <!-- Advanced agent swarm coordination framework -->
+      <swarm_coordination>
 
 ```xml
 <command>agent-swarm</command>
@@ -259,4 +257,18 @@ Based on cutting-edge research in:
 
 ---
 
-*This command implements state-of-the-art swarm intelligence principles for unprecedented multi-agent coordination and collective problem-solving capabilities.* 
+      </swarm_analytics>
+    </swarm_intelligence>
+  </agent_swarm>
+
+  <o>
+Agent swarm intelligence coordination completed with emergent behavior:
+
+**Swarm Size:** [count] autonomous agents coordinated in swarm
+**Emergent Behavior:** [count] emergent patterns identified and leveraged
+**Task Completion:** [percentage]% swarm task execution success rate
+**Self-Organization:** [0-100] swarm self-organization effectiveness rating
+**Coordination Quality:** [count] decentralized decision-making protocols active
+**Intelligence Level:** Advanced swarm coordination with emergent problem-solving capabilities
+  </o>
+</prompt_component> 
