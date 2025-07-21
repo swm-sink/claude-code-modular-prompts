@@ -2,20 +2,19 @@
 <project_config>
 
   <metadata>
-    <name>claude-code-prompt-factory</name>
-    <version>1.0.0</version>
-    <description>A modular, configurable, and comprehensive library of prompt-based commands that feel native to the Claude Code environment.</description>
+    <n>claude-code-prompt-factory</n>
+    <version>2.0.0</version>
+    <description>A streamlined, modular prompt engineering framework for Claude Code that emphasizes simplicity and effectiveness over complexity.</description>
   </metadata>
 
   <tech_stack>
     <languages>
       <language name="markdown" primary="true" />
       <language name="xml" />
-      <language name="python" />
     </languages>
     <tools>
-      <tool type="linter" name="markdownlint" command="markdownlint" config_file=".markdownlint.json" />
-      <tool type="linter" name="xmllint" command="xmllint --noout" />
+      <tool type="linter" name="markdownlint" command="markdownlint ." />
+      <tool type="linter" name="xmllint" command="xmllint --noout PROJECT_CONFIG.xml" />
     </tools>
   </tech_stack>
 
@@ -24,12 +23,25 @@
     <docs>docs/</docs>
     <components>claude_prompt_factory/components/</components>
     <commands>claude_prompt_factory/commands/</commands>
+    <examples>examples/</examples>
   </paths>
 
   <scripts>
-    <script id="lint">markdownlint . && xmllint --noout $(find . -name "*.xml")</script>
-    <script id="test">echo "No automated tests configured."</script>
+    <script id="lint">markdownlint . &amp;&amp; xmllint --noout PROJECT_CONFIG.xml</script>
+    <script id="validate">find . -name "*.md" -exec wc -l {} + | tail -1</script>
+    <script id="clean">find . -name ".DS_Store" -delete</script>
   </scripts>
+
+  <quality_standards>
+    <documentation>
+      <enforcement>advisory</enforcement>
+      <style>clean_simple</style>
+    </documentation>
+    <structure>
+      <enforcement>advisory</enforcement>
+      <max_file_size>500</max_file_size>
+    </structure>
+  </quality_standards>
 
   <command_settings>
     <command name="/protocol">
@@ -38,8 +50,8 @@
       <setting key="epiccc.check.request_peer_review" value="true" />
     </command>
     <command name="/docs generate">
-        <setting key="style" value="google" />
-        <setting key="output_dir" value="docs/generated/" />
+      <setting key="style" value="simple" />
+      <setting key="output_dir" value="docs/generated/" />
     </command>
   </command_settings>
 

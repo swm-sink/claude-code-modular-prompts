@@ -1,37 +1,66 @@
-# Example: Analyzing Code with `/query`
-
-The `/query` command is a powerful tool for analyzing your codebase without making any modifications. You can use it to ask questions, understand how different parts of your system work, and find specific pieces of information.
+# Using the `/query` Command
 
 ## Scenario
 
 You're a new developer on a project, and you've been tasked with fixing a bug in the authentication system. Before you start making changes, you want to understand how authentication is currently handled.
 
-## Usage
+## The Problem
 
-You can use the `/query` command to ask a high-level question about the authentication system:
+You need to:
+1. Understand the authentication flow
+2. Locate relevant code files
+3. Identify potential security considerations
+4. Get oriented without making any changes
+
+## The Solution: `/query`
+
+The `/query` command is perfect for exploring and understanding code without making modifications.
+
+### Example Usage
 
 ```bash
-/query "how is authentication handled in this project?"
+/query "how does user authentication work in this application?"
 ```
 
-## Expected Output
+### What the Command Does
 
-The `/query` command will perform a parallel search and analysis of your codebase and then synthesize the results into a clear, structured report. The output might look something like this:
+1. **Parallel Search**: Uses multiple search strategies to find authentication-related code
+2. **Context Gathering**: Reads relevant files and builds understanding
+3. **Analysis**: Identifies patterns, security considerations, and architecture
+4. **Reporting**: Provides a structured summary of findings
 
-> 🤖 **Authentication Analysis**
->
-> Here's a summary of how authentication is handled in this project:
->
-> *   **Primary Method**: JWT tokens with Passport.js middleware.
-> *   **Key Files**:
->     *   `src/middleware/auth.js`: Contains the main authentication middleware.
->     *   `src/services/tokenService.js`: Handles the creation and verification of JWTs.
->     *   `config/passport.js`: Configures the Passport.js strategy.
-> *   **Workflow**:
->     1.  A user logs in via the `/api/login` endpoint.
->     2.  The `tokenService` generates a JWT.
->     3.  The JWT is sent back to the client.
->     4.  The client includes the JWT in the `Authorization` header for all subsequent requests.
->     5.  The `auth.js` middleware verifies the JWT and attaches the user to the request object.
+### Expected Output
 
-This kind of detailed, context-aware analysis can save you hours of manual code exploration and help you get up to speed on a new project much more quickly. 
+The command will provide:
+
+- **Authentication Flow**: Step-by-step breakdown of the login process
+- **Key Files**: List of files involved in authentication
+- **Security Patterns**: Identification of security measures in place
+- **Dependencies**: External libraries or services used
+- **Potential Issues**: Areas that might need attention
+
+### Follow-up Actions
+
+Based on the query results, you might:
+
+```bash
+# Focus on a specific area
+/query "what validation happens during login?"
+
+# Start targeted development
+/task "fix email validation in login form"
+
+# Use safe protocol for critical changes
+/protocol "update password hashing algorithm"
+```
+
+## Why This Works
+
+The `/query` command is designed to:
+- Be **non-destructive** - never modifies code
+- Provide **comprehensive analysis** - searches broadly then focuses
+- Generate **actionable insights** - gives you next steps
+- **Save time** - avoids manual code exploration
+
+---
+*This example demonstrates the framework's philosophy: start with understanding, then take focused action.* 
