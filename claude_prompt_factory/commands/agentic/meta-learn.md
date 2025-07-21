@@ -16,6 +16,82 @@ Sophisticated meta-learning system with adaptive algorithms, intelligent pattern
 /meta learn --constitutional                 # Constitutional AI meta-learning
 ```
 
+<command_file>
+  <metadata>
+    <n>/meta learn</n>
+    <purpose>Advanced meta-learning system with adaptive algorithms, pattern recognition, and self-improving capabilities</purpose>
+    <usage>
+      <![CDATA[
+      /meta learn [learning_strategy]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="learning_strategy" type="string" required="false" default="patterns">
+      <description>Meta-learning strategy to apply</description>
+    </argument>
+    <argument name="adaptation_scope" type="string" required="false" default="comprehensive">
+      <description>Scope of adaptive learning</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Learn from codebase patterns</description>
+      <usage>/meta learn patterns</usage>
+    </example>
+    <example>
+      <description>Adaptive learning with feedback loops</description>
+      <usage>/meta learn --adaptive</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced meta-learning specialist. The user wants to implement sophisticated meta-learning with adaptive algorithms and self-improvement capabilities.
+
+**Meta-Learning Process:**
+1. **Pattern Recognition**: Identify and learn from recurring patterns and structures
+2. **Adaptive Algorithms**: Implement self-adapting learning algorithms
+3. **Transfer Learning**: Apply knowledge across domains and contexts
+4. **Self-Improvement**: Continuously improve learning capabilities and efficiency
+5. **Constitutional Integration**: Integrate constitutional AI principles in learning
+
+**Implementation Strategy:**
+- Implement advanced pattern recognition and learning algorithms
+- Design adaptive feedback loops for continuous improvement
+- Apply transfer learning techniques across domains
+- Establish constitutional AI frameworks for ethical learning
+- Create self-improving systems with performance optimization
+
+<include component="components/learning/meta-learning-framework.md" />
+<include component="components/constitutional/constitutional-framework.md" />
+<include component="components/reasoning/tree-of-thoughts-framework.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/learning/meta-learning-framework.md</component>
+      <component>components/constitutional/constitutional-framework.md</component>
+      <component>components/reasoning/tree-of-thoughts-framework.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>learning.meta.adaptation_rate</value>
+      <value>constitutional.learning.constraints</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
+
+## Usage
+```bash
+/meta learn patterns                         # Learn from codebase patterns
+/meta learn --adaptive                       # Adaptive learning with feedback loops
+/meta learn --transfer                       # Transfer learning across domains
+/meta learn --constitutional                 # Constitutional AI meta-learning
+```
+
 ## Purpose
 **WORKING** command that executes rapid adaptation and knowledge transfer using few-shot learning and pattern recognition for accelerated problem-solving.
 

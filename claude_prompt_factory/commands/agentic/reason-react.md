@@ -16,6 +16,74 @@ Sophisticated ReAct reasoning system with intelligent action-observation cycles,
 /reason react --comprehensive                # Comprehensive ReAct framework
 ```
 
+<command_file>
+  <metadata>
+    <n>/reason react</n>
+    <purpose>Advanced ReAct reasoning with intelligent action-observation cycles, dynamic planning, and adaptive execution</purpose>
+    <usage>
+      <![CDATA[
+      /reason react [reasoning_mode]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="reasoning_complexity" type="string" required="false" default="comprehensive">
+      <description>Complexity level of ReAct reasoning</description>
+    </argument>
+    <argument name="action_scope" type="string" required="false" default="adaptive">
+      <description>Scope of actions and observations</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Exploratory ReAct reasoning</description>
+      <usage>/reason react explore</usage>
+    </example>
+    <example>
+      <description>Planning-focused reasoning</description>
+      <usage>/reason react --planning</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced ReAct reasoning specialist. The user wants to implement sophisticated reasoning with action-observation cycles and dynamic planning.
+
+**ReAct Reasoning Process:**
+1. **Thought Generation**: Generate reasoning thoughts and hypotheses
+2. **Action Planning**: Plan actions based on current reasoning state
+3. **Action Execution**: Execute planned actions and gather observations
+4. **Observation Analysis**: Analyze observations and update reasoning
+5. **Iterative Refinement**: Refine reasoning through action-observation cycles
+
+**Implementation Strategy:**
+- Implement ReAct (Reasoning and Acting) framework with thought-action-observation cycles
+- Design dynamic planning with adaptive action selection
+- Apply iterative reasoning refinement based on observations
+- Integrate with constitutional AI for ethical reasoning and actions
+- Create comprehensive reasoning traces and documentation
+
+<include component="components/reasoning/react-framework.md" />
+<include component="components/planning/create-step-by-step-plan.md" />
+<include component="components/constitutional/constitutional-framework.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/reasoning/react-framework.md</component>
+      <component>components/planning/create-step-by-step-plan.md</component>
+      <component>components/constitutional/constitutional-framework.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>reasoning.react.max_iterations</value>
+      <value>planning.action.validation_level</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
+
 ## Purpose
 **WORKING** command that executes ReAct (Reasoning and Acting) framework for complex problem-solving through structured thought-action-observation cycles.
 

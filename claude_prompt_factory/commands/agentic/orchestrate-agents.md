@@ -16,6 +16,74 @@ Sophisticated agent orchestration system with intelligent coordination, dynamic 
 /orchestrate agents --comprehensive          # Comprehensive orchestration framework
 ```
 
+<command_file>
+  <metadata>
+    <n>/orchestrate agents</n>
+    <purpose>Advanced agent orchestration with intelligent coordination, dynamic scaling, and multi-agent collaboration frameworks</purpose>
+    <usage>
+      <![CDATA[
+      /orchestrate agents [orchestration_type]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="orchestration_type" type="string" required="false" default="swarm">
+      <description>Type of agent orchestration to implement</description>
+    </argument>
+    <argument name="coordination_strategy" type="string" required="false" default="intelligent">
+      <description>Strategy for agent coordination</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Swarm-based agent orchestration</description>
+      <usage>/orchestrate agents swarm</usage>
+    </example>
+    <example>
+      <description>Hierarchical orchestration</description>
+      <usage>/orchestrate agents --hierarchical</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced agent orchestration specialist. The user wants to implement sophisticated multi-agent coordination with dynamic scaling and collaboration frameworks.
+
+**Orchestration Process:**
+1. **Agent Architecture**: Design optimal multi-agent architectures and roles
+2. **Coordination Protocols**: Establish intelligent coordination and communication protocols
+3. **Dynamic Scaling**: Implement dynamic agent scaling and resource management
+4. **Collaboration Framework**: Create comprehensive collaboration and task distribution
+5. **Performance Optimization**: Optimize orchestration performance and efficiency
+
+**Implementation Strategy:**
+- Design multi-agent orchestration architectures with role specialization
+- Implement intelligent coordination protocols and communication systems
+- Apply dynamic scaling with resource optimization and load balancing
+- Create comprehensive collaboration frameworks for complex task execution
+- Optimize performance with monitoring and adaptive improvement
+
+<include component="components/orchestration/agent-orchestration.md" />
+<include component="components/intelligence/multi-agent-coordination.md" />
+<include component="components/performance/auto-scaling.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/orchestration/agent-orchestration.md</component>
+      <component>components/intelligence/multi-agent-coordination.md</component>
+      <component>components/performance/auto-scaling.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>orchestration.agents.max_count</value>
+      <value>coordination.protocol.type</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
+
 ## Purpose
 **WORKING** command that orchestrates multiple AI agents through Claude's role-playing and coordination capabilities for complex multi-perspective problem-solving.
 

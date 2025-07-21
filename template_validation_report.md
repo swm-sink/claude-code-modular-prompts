@@ -1,16 +1,13 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T02:57:19.024970
+**Generated**: 2025-07-21T03:03:43.338602
 
 ## 📋 Executive Summary
 - **Total Files**: 202
 - **Valid Files**: 202 (100.0%)
-- **Overall Score**: 10648/20200 (52.7%)
+- **Overall Score**: 11241/20200 (55.6%)
 
-## 🚨 Critical Issues (163 errors)
+## 🚨 Critical Issues (154 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/documentation/docs-check.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/documentation/docs-update.md
@@ -22,31 +19,7 @@
 ### claude_prompt_factory/commands/agents/dag-orchestrator.md
 - ❌ XML Parse Error: not well-formed (invalid token): line 41, column 17
 
-### claude_prompt_factory/commands/agents/refactorer.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/agents/swarm.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/agentic/meta-learn.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/agentic/reason-tot.md
-- ❌ Missing <command_file> XML structure
-
 ### claude_prompt_factory/commands/agentic/workflow-orchestrate.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/agentic/reason-react.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/agentic/auto-improve.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/agentic/constitutional-ai-framework.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/agentic/orchestrate-agents.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/agentic/optimize-prompt.md

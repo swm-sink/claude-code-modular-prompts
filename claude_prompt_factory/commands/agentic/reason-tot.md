@@ -16,6 +16,74 @@ Sophisticated Tree-of-Thoughts reasoning system with multi-path exploration, par
 /reason tot --depth 5                        # Deep reasoning with 5 levels
 ```
 
+<command_file>
+  <metadata>
+    <n>/reason tot</n>
+    <purpose>Advanced Tree-of-Thoughts reasoning with multi-path exploration, parallel evaluation, and optimal solution synthesis</purpose>
+    <usage>
+      <![CDATA[
+      /reason tot [reasoning_mode]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="reasoning_depth" type="string" required="false" default="comprehensive">
+      <description>Depth of Tree-of-Thoughts reasoning</description>
+    </argument>
+    <argument name="exploration_strategy" type="string" required="false" default="parallel">
+      <description>Strategy for thought exploration</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Multi-path reasoning exploration</description>
+      <usage>/reason tot explore</usage>
+    </example>
+    <example>
+      <description>Parallel thought evaluation</description>
+      <usage>/reason tot --parallel</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced Tree-of-Thoughts reasoning specialist. The user wants to implement sophisticated multi-path reasoning with parallel evaluation and solution synthesis.
+
+**Tree-of-Thoughts Process:**
+1. **Problem Decomposition**: Break complex problems into thought trees
+2. **Multi-Path Exploration**: Explore multiple reasoning paths simultaneously
+3. **Parallel Evaluation**: Evaluate thoughts and paths in parallel
+4. **Solution Synthesis**: Synthesize optimal solutions from multiple paths
+5. **Iterative Refinement**: Refine reasoning through iterative improvement
+
+**Implementation Strategy:**
+- Design Tree-of-Thoughts architectures for complex reasoning
+- Implement parallel thought exploration and evaluation
+- Apply systematic solution synthesis and optimization
+- Create iterative refinement and improvement loops
+- Integrate with constitutional AI for ethical reasoning
+
+<include component="components/reasoning/tree-of-thoughts-framework.md" />
+<include component="components/actions/parallel-execution.md" />
+<include component="components/constitutional/constitutional-framework.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/reasoning/tree-of-thoughts-framework.md</component>
+      <component>components/actions/parallel-execution.md</component>
+      <component>components/constitutional/constitutional-framework.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>reasoning.tot.max_depth</value>
+      <value>parallel.thought.evaluation</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
+
 ## Purpose
 **WORKING** command that executes Tree of Thoughts reasoning for systematic exploration of multiple solution paths with comparative analysis and synthesis.
 

@@ -16,6 +16,74 @@ Sophisticated self-improvement system with autonomous optimization, intelligent 
 /auto improve --framework                    # Framework-wide improvements
 ```
 
+<command_file>
+  <metadata>
+    <n>/auto improve</n>
+    <purpose>Advanced self-improvement system with autonomous optimization, performance enhancement, and adaptive learning</purpose>
+    <usage>
+      <![CDATA[
+      /auto improve [improvement_scope]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="improvement_scope" type="string" required="false" default="performance">
+      <description>Scope of self-improvement to implement</description>
+    </argument>
+    <argument name="optimization_strategy" type="string" required="false" default="autonomous">
+      <description>Strategy for optimization and improvement</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Performance optimization improvements</description>
+      <usage>/auto improve performance</usage>
+    </example>
+    <example>
+      <description>Fully autonomous self-improvement</description>
+      <usage>/auto improve --autonomous</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced self-improvement specialist. The user wants to implement sophisticated autonomous optimization with performance enhancement and adaptive learning.
+
+**Self-Improvement Process:**
+1. **Performance Analysis**: Analyze current performance and identify improvement opportunities
+2. **Optimization Planning**: Plan comprehensive optimization strategies and approaches
+3. **Autonomous Execution**: Execute self-improvement with autonomous decision-making
+4. **Adaptive Learning**: Implement continuous learning and adaptation mechanisms
+5. **Framework Enhancement**: Enhance overall framework capabilities and efficiency
+
+**Implementation Strategy:**
+- Implement autonomous performance monitoring and optimization
+- Apply machine learning for continuous improvement and adaptation
+- Design self-modifying systems with safety constraints
+- Create feedback loops for iterative enhancement
+- Establish constitutional AI principles for ethical self-improvement
+
+<include component="components/learning/meta-learning-framework.md" />
+<include component="components/performance/auto-scaling.md" />
+<include component="components/constitutional/safety-framework.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/learning/meta-learning-framework.md</component>
+      <component>components/performance/auto-scaling.md</component>
+      <component>components/constitutional/safety-framework.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>improvement.autonomous.enabled</value>
+      <value>optimization.safety.constraints</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
+
 ## Command
 
 `/auto-improve`

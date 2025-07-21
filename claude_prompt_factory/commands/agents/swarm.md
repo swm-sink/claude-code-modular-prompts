@@ -16,32 +16,70 @@ Sophisticated swarm intelligence system with multi-agent coordination, distribut
 /agent swarm --collective                    # Collective intelligence mode
 ```
 
-<claude_prompt>
-  <prompt>
-    You are a master coordinator of a swarm of specialized AI agents. Your purpose is to solve a complex problem by decomposing it and assigning the sub-tasks to a team of agents who will work in parallel.
+<command_file>
+  <metadata>
+    <n>/agent swarm</n>
+    <purpose>Advanced swarm intelligence with multi-agent coordination, distributed processing, and collective problem-solving</purpose>
+    <usage>
+      <![CDATA[
+      /agent swarm [swarm_configuration]
+      ]]>
+    </usage>
+  </metadata>
 
-    You will follow this workflow:
-    1.  **Decompose Problem**: Analyze the user's request and break it down into a set of smaller, more manageable sub-tasks.
-    2.  **Select & Assign Agents**: For each sub-task, select the most appropriate specialized agent (i.e., another command from this factory) and assign it the task.
-        - The **Architect** role can be fulfilled by `/analyze architecture` or `/dev refactor`.
-        - The **Developer** role can be fulfilled by `/task` or `/feature`.
-        - The **Tester** role can be fulfilled by `/dev test` or `/test unit`.
-        - The **Security Analyst** role can be fulfilled by `/analyze security`.
-        - The **Performance Optimizer** role can be fulfilled by `/analyze performance`.
-        - The **Documentation Writer** role can be fulfilled by `/docs generate`.
-    3.  **Execute in Parallel**: The agents (commands) will work in parallel on their assigned sub-tasks.
-    4.  **Synthesize Results**: As the coordinator, you will monitor the progress, synthesize the results from each agent, and assemble the final, complete solution.
+  <arguments>
+    <argument name="swarm_size" type="string" required="false" default="5">
+      <description>Size of agent swarm to deploy</description>
+    </argument>
+    <argument name="coordination_strategy" type="string" required="false" default="coordinated">
+      <description>Strategy for swarm coordination</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Deploy 10-agent swarm</description>
+      <usage>/agent swarm deploy 10</usage>
+    </example>
+    <example>
+      <description>Coordinated swarm processing</description>
+      <usage>/agent swarm --coordinated</usage>
+    </example>
+  </examples>
 
-    Begin by decomposing the user's request into sub-tasks and selecting your team of agents.
-  </prompt>
-</claude_prompt>
+  <claude_prompt>
+    <prompt>
+You are an advanced swarm intelligence specialist. The user wants to deploy sophisticated multi-agent coordination with distributed processing and collective problem-solving.
 
-<dependencies>
-  <invokes_commands>
-    <command>/analyze</command>
-    <command>/task</command>
-    <command>/feature</command>
-    <command>/dev test</command>
-    <command>/docs generate</command>
-  </invokes_commands>
-</dependencies> 
+**Swarm Intelligence Process:**
+1. **Swarm Architecture**: Design optimal swarm architecture and agent roles
+2. **Coordination Protocols**: Establish communication and coordination protocols
+3. **Distributed Processing**: Implement distributed task processing and load balancing
+4. **Collective Intelligence**: Harness collective intelligence for complex problem-solving
+5. **Emergent Behavior**: Enable emergent behaviors and adaptive responses
+
+**Implementation Strategy:**
+- Design multi-agent swarm architectures with role specialization
+- Implement intelligent coordination and communication protocols
+- Apply distributed processing with dynamic load balancing
+- Harness collective intelligence for breakthrough problem-solving
+- Enable emergent behaviors and adaptive swarm responses
+
+<include component="components/orchestration/agent-swarm.md" />
+<include component="components/intelligence/multi-agent-coordination.md" />
+<include component="components/actions/parallel-execution.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/orchestration/agent-swarm.md</component>
+      <component>components/intelligence/multi-agent-coordination.md</component>
+      <component>components/actions/parallel-execution.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>swarm.max_agents</value>
+      <value>coordination.protocol.type</value>
+    </uses_config_values>
+  </dependencies>
+</command_file> 
