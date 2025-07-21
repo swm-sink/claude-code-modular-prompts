@@ -1,20 +1,90 @@
 ---
-description: Intelligent session creation with auto-configuration, context detection, and workspace optimization
-argument-hint: "[session_type] [configuration]"
+description: Intelligent session creation with automated context loading, goal setting, and productivity optimization
+argument-hint: "[session_name] [goal_description]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
 # /session create - Intelligent Session Creation
 
-Advanced session creation system with auto-configuration, intelligent context detection, and optimized workspace setup.
+Advanced session creation system with automated context loading, clear goal setting, and intelligent productivity optimization to kickstart your workflow.
 
 ## Usage
 ```bash
-/session create development                   # Create development session
-/session create --auto-config                # Auto-configure from project
-/session create --template react             # Create from template
-/session create --collaborative              # Multi-user collaborative session
+/session create "New Feature" "Implement user authentication" # Create a new session with a goal
+/session create --template "bug_fix" "Fix login issue"     # Create a session from a template
+/session create --context "previous_session_id" "Continue work" # Create a session with context from a previous one
 ```
+
+<command_file>
+  <metadata>
+    <n>/session create</n>
+    <purpose>Intelligent session creation with automated context loading, goal setting, and productivity optimization</purpose>
+    <usage>
+      <![CDATA[
+      /session create "[session_name]" "[goal_description]"
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="session_name" type="string" required="true">
+      <description>The name for the new session</description>
+    </argument>
+    <argument name="goal_description" type="string" required="true">
+      <description>A clear description of the session's goal</description>
+    </argument>
+    <argument name="template" type="string" required="false">
+      <description>A template to use for the new session (e.g., bug_fix, feature_dev, research)</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Create a new session to implement a feature</description>
+      <usage>/session create "User Profile Feature" "Implement the user profile page with editable fields"</usage>
+    </example>
+    <example>
+      <description>Create a new session from a bug fix template</description>
+      <usage>/session create --template "bug_fix" "Fix the off-by-one error in the pagination logic"</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced session management specialist. The user wants to create a new, productive session.
+
+**Session Creation Process:**
+1. **Define Goal**: Clearly define the primary goal and success criteria for the session.
+2. **Load Context**: Automatically load relevant context from previous sessions, documentation, or codebase analysis.
+3. **Set Up Workspace**: Prepare the workspace by opening relevant files and setting up necessary tools.
+4. **Generate Plan**: Generate a high-level plan or checklist to guide the session's workflow.
+5. **Optimize for Productivity**: Provide tips and suggestions to optimize productivity for the session's goal.
+
+**Implementation Strategy:**
+- Prompt the user for a clear, concise goal for the session.
+- Analyze the goal to identify and automatically load relevant context, such as related code files, documentation, or previous session summaries.
+- Prepare the user's workspace by opening the identified files and suggesting relevant commands.
+- Generate a step-by-step plan or a to-do list to provide a clear path forward for the user.
+- Offer productivity tips tailored to the session's goal, such as suggesting a specific testing strategy for a bug fix or a component-based approach for a new feature.
+
+<include component="components/context/context-optimization.md" />
+<include component="components/planning/create-step-by-step-plan.md" />
+<include component="components/user-experience/intelligent-help.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/context/context-optimization.md</component>
+      <component>components/planning/create-step-by-step-plan.md</component>
+      <component>components/user-experience/intelligent-help.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>session.create.default_template</value>
+      <value>session.create.auto_load_context</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
 
 ## Purpose
 **WORKING** command that creates a new Claude Code development session with comprehensive metadata tracking, context preservation, and productivity analytics.

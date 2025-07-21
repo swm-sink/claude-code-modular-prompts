@@ -16,6 +16,73 @@ Sophisticated framework optimization system with intelligent performance tuning,
 /optimize framework --comprehensive          # Comprehensive framework optimization
 ```
 
+<command_file>
+  <metadata>
+    <n>/optimize framework</n>
+    <purpose>Advanced framework optimization with intelligent performance tuning, bottleneck analysis, and scalability enhancement</purpose>
+    <usage>
+      <![CDATA[
+      /optimize framework [target] --scope [scope]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="target" type="string" required="false" default="comprehensive">
+      <description>The optimization target (e.g., execution, tokens, memory, loading, comprehensive)</description>
+    </argument>
+    <argument name="scope" type="string" required="false" default="system">
+      <description>The scope of the optimization (e.g., commands, components, system)</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Optimize the entire system for execution performance</description>
+      <usage>/optimize framework execution --scope system</usage>
+    </example>
+    <example>
+      <description>Optimize command token usage</description>
+      <usage>/optimize framework tokens --scope commands</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced framework optimization specialist. The user wants to analyze and optimize the framework's performance.
+
+**Optimization Process:**
+1. **Performance Baseline and Analysis**: Measure the current performance across all dimensions and identify bottlenecks.
+2. **Optimization Strategy Development**: Develop a detailed optimization roadmap with clear targets and methods.
+3. **Systematic Optimization Implementation**: Apply optimizations in measured steps, continuously monitoring for improvements.
+4. **Validation and Continuous Improvement**: Validate the effectiveness of optimizations and establish ongoing performance monitoring.
+
+**Implementation Strategy:**
+- Use profiling and benchmarking tools to get a clear picture of the framework's current performance.
+- Analyze the data to identify performance hotspots and areas for improvement.
+- Apply a variety of optimization techniques, including algorithmic improvements, caching, parallel processing, and memory management.
+- Rigorously test all changes to ensure that they do not introduce regressions.
+- Provide a detailed report of the optimizations applied and the resulting performance improvements.
+
+<include component="components/performance/framework-optimization.md" />
+<include component="components/constitutional/constitutional-framework.md" />
+<include component="components/quality/framework-validation.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/performance/framework-optimization.md</component>
+      <component>components/constitutional/constitutional-framework.md</component>
+      <component>components/quality/framework-validation.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>optimization.default_target</value>
+      <value>optimization.default_scope</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
+
 ## Command
 
 `/optimize-framework`

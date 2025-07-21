@@ -16,6 +16,74 @@ Sophisticated session listing system with intelligent organization, search capab
 /session list --comprehensive                # Comprehensive session overview
 ```
 
+<command_file>
+  <metadata>
+    <n>/session list</n>
+    <purpose>Advanced session listing with intelligent organization, search capabilities, and comprehensive session management</purpose>
+    <usage>
+      <![CDATA[
+      /session list [filter] --sort [sort_by]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="filter" type="string" required="false" default="active">
+      <description>The filter to apply to the session list (e.g., active, completed, archived, all)</description>
+    </argument>
+    <argument name="sort_by" type="string" required="false" default="recent">
+      <description>The criteria to sort the sessions by (e.g., recent, duration, progress, productivity)</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>List all active sessions, sorted by the most recent</description>
+      <usage>/session list active --sort recent</usage>
+    </example>
+    <example>
+      <description>List all completed sessions, sorted by productivity score</description>
+      <usage>/session list completed --sort productivity</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced session management specialist. The user wants to list and manage their saved sessions.
+
+**Session Listing Process:**
+1. **Discover Sessions**: Scan the session storage to discover all saved sessions.
+2. **Filter and Sort**: Apply the user-specified filters and sorting criteria.
+3. **Analyze Sessions**: Analyze the session metadata to provide insights and recommendations.
+4. **Generate List**: Generate a clear, organized list of the sessions with relevant details.
+5. **Provide Actions**: Provide actionable commands for managing the listed sessions.
+
+**Implementation Strategy:**
+- Scan the session directories to find all session metadata files.
+- Parse the metadata to extract key information like status, progress, duration, and tags.
+- Apply filters and sorting based on user input to create a targeted list of sessions.
+- Analyze the session data to provide intelligent recommendations, such as which sessions to prioritize or which might need attention.
+- Format the output as a clear, easy-to-read list with quick action commands for loading, deleting, or archiving sessions.
+
+<include component="components/analytics/session-tracking.md" />
+<include component="components/context/session-discovery.md" />
+<include component="components/optimization/search-ranking.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/analytics/session-tracking.md</component>
+      <component>components/context/session-discovery.md</component>
+      <component>components/optimization/search-ranking.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>session.list.default_filter</value>
+      <value>session.list.default_sort</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
+
 ## Purpose
 **WORKING** command that provides comprehensive session discovery, filtering, and management capabilities with intelligent search and analytics.
 

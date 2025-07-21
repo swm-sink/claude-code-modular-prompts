@@ -16,6 +16,74 @@ Sophisticated session compacting system with intelligent compression, context op
 /session compact --comprehensive             # Comprehensive session optimization
 ```
 
+<command_file>
+  <metadata>
+    <n>/session compact</n>
+    <purpose>Advanced session compacting with intelligent compression, context optimization, and efficient state management</purpose>
+    <usage>
+      <![CDATA[
+      /session compact [strategy] --level [optimization_level]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="strategy" type="string" required="false" default="balanced">
+      <description>The compression strategy to use (e.g., conservative, balanced, aggressive)</description>
+    </argument>
+    <argument name="optimization_level" type="string" required="false" default="standard">
+      <description>The level of optimization to apply during compacting</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Compact the session with a balanced strategy</description>
+      <usage>/session compact balanced</usage>
+    </example>
+    <example>
+      <description>Compact the session aggressively to maximize free space</description>
+      <usage>/session compact aggressive --level high</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced session compacting specialist. The user wants to compact their current session to optimize context usage.
+
+**Compacting Process:**
+1. **Analyze Context**: Analyze the current conversation for key elements, patterns, and critical information.
+2. **Intelligent Summarization**: Create a hierarchical summary of the conversation, preserving the logical flow and key decisions.
+3. **Extract Patterns**: Extract reusable patterns, insights, and working knowledge from the conversation.
+4. **Optimize Content**: Compress repetitive content and verbose explanations while preserving essential context.
+5. **Validate and Update**: Validate that all critical information is preserved and update the context window with the compacted content.
+
+**Implementation Strategy:**
+- Use intelligent summarization techniques to create a concise yet comprehensive summary of the session.
+- Identify and extract key decisions, insights, and code snippets to be preserved.
+- Compress repetitive conversational patterns and verbose explanations into more concise forms.
+- Ensure that the compacted session maintains full continuity and all necessary context for the user to seamlessly continue their work.
+- Provide a report detailing the compression results, including the compression ratio and the amount of context freed.
+
+<include component="components/optimization/context-compression.md" />
+<include component="components/context/intelligent-summarization.md" />
+<include component="components/reasoning/pattern-extraction.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/optimization/context-compression.md</component>
+      <component>components/context/intelligent-summarization.md</component>
+      <component>components/reasoning/pattern-extraction.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>session.compact.default_strategy</value>
+      <value>session.compact.preservation_priority</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
+
 ## Purpose
 **WORKING** command that optimizes current session context using intelligent summarization while preserving all critical decisions, insights, and working knowledge.
 

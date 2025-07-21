@@ -16,6 +16,74 @@ Advanced session restoration system with intelligent context rebuilding, state v
 /session load --auto-restore                 # Automatic session restoration
 ```
 
+<command_file>
+  <metadata>
+    <n>/session load</n>
+    <purpose>Intelligent session restoration with context rebuilding, state validation, and continuity management</purpose>
+    <usage>
+      <![CDATA[
+      /session load "[session_name]" --strategy [load_strategy]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="session_name" type="string" required="true">
+      <description>The name of the session to load</description>
+    </argument>
+    <argument name="load_strategy" type="string" required="false" default="resume">
+      <description>The strategy for loading the session (e.g., resume, review, analyze)</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Load a saved session to resume work</description>
+      <usage>/session load "feature-x-development"</usage>
+    </example>
+    <example>
+      <description>Load a session for review and analysis</description>
+      <usage>/session load "bug-fix-session" --strategy "review"</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced session management specialist. The user wants to load a previously saved session.
+
+**Session Load Process:**
+1. **Locate and Validate**: Locate the saved session files and validate their integrity.
+2. **Restore Metadata**: Restore the session's metadata, including its status, progress, and goals.
+3. **Rebuild Context**: Rebuild the session's context, including conversation history, open files, and relevant code.
+4. **Validate State**: Validate the restored state to ensure continuity and consistency.
+5. **Prepare for Continuation**: Prepare the workspace for seamless continuation of the session.
+
+**Implementation Strategy:**
+- Locate the session files based on the provided session name.
+- Parse the session metadata to restore the session's state and progress.
+- Intelligently rebuild the context window with the most relevant information for the session's continuation.
+- Validate the integrity of the restored session to ensure that all necessary components are available.
+- Prepare the user's workspace by opening relevant files and providing a summary of the session's current state.
+
+<include component="components/context/persistent-memory.md" />
+<include component="components/context/session-restoration.md" />
+<include component="components/analytics/session-tracking.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/context/persistent-memory.md</component>
+      <component>components/context/session-restoration.md</component>
+      <component>components/analytics/session-tracking.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>session.load.default_strategy</value>
+      <value>session.load.validate_integrity</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
+
 ## Purpose
 **WORKING** command that loads previous Claude Code sessions with full context restoration, conversation history, and seamless continuation capabilities.
 

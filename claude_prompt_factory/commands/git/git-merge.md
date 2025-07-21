@@ -16,49 +16,60 @@ Advanced git merge system with automated conflict resolution, comprehensive safe
 /git merge --strategy rebase                 # Rebase merge strategy
 ```
 
-## Arguments
+<command_file>
+  <metadata>
+    <n>/git merge</n>
+    <purpose>Intelligent git merge with automated conflict resolution, safety checks, and rollback strategies</purpose>
+    <usage>
+      <![CDATA[
+      /git merge [branch_name] --strategy [merge_strategy]
+      ]]>
+    </usage>
+  </metadata>
 
-<argument_list>
-  <argument name="branch" type="string" required="true">
-    <description>The branch to merge into the current branch.</description>
-  </argument>
-</argument_list>
+  <arguments>
+    <argument name="branch_name" type="string" required="true">
+      <description>The branch to merge into the current branch.</description>
+    </argument>
+    <argument name="merge_strategy" type="string" required="false" default="default">
+      <description>The merge strategy to use (e.g., default, rebase, squash)</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Merge the 'develop' branch into the current branch.</description>
+      <usage>/git merge "develop"</usage>
+    </example>
+    <example>
+      <description>Merge a feature branch using a rebase strategy.</description>
+      <usage>/git merge "feature/new-login" --strategy "rebase"</usage>
+    </example>
+  </examples>
 
-## Examples
+  <claude_prompt>
+    <prompt>
+You are a git expert. The user wants to safely merge a branch.
 
-<example_list>
-  <example>
-    <description>Merge the 'develop' branch into the current branch.</description>
-    <usage>/git merge "develop"</usage>
-  </example>
-</example_list>
+**Merge Process:**
+1. **Pre-Merge Validation**: Check for a clean working directory (`git status`). Fetch the latest remote changes (`git fetch origin`). Preview potential merge conflicts.
+2. **Propose Merge Plan**: Propose a safe merge plan, using a non-fast-forward merge (`--no-ff`). If conflicts are anticipated, provide a strategy for resolving them.
+3. **Execute Merge**: Present the merge command to the user. If conflicts occur, guide the user through the resolution process.
+4. **Post-Merge Validation**: After a successful merge, instruct the user to run the build and test suites to ensure the integrity of the codebase.
 
-## Claude Prompt
+<include component="components/git/git-merge.md" />
+<include component="components/workflow/command-execution.md" />
+    </prompt>
+  </claude_prompt>
 
-<claude_prompt>
-  <prompt>
-    You are a git expert. The user wants to safely merge a branch.
-
-    1.  **Pre-Merge Validation**:
-        *   Check for a clean working directory (`git status`).
-        *   Fetch the latest remote changes (`git fetch origin`).
-        *   Preview potential merge conflicts.
-    2.  **Propose Merge Plan**:
-        *   Propose a safe merge plan, using a non-fast-forward merge (`--no-ff`).
-        *   If conflicts are anticipated, provide a strategy for resolving them.
-    3.  **Execute Merge**:
-        *   Present the merge command to the user.
-        *   If conflicts occur, guide the user through the resolution process.
-    4.  **Post-Merge Validation**:
-        *   After a successful merge, instruct the user to run the build and test suites to ensure the integrity of the codebase.
-  </prompt>
-</claude_prompt>
-
-## Dependencies
-
-<dependencies>
-  <chain>
-    <command>/dev build</command>
-    <command>/dev test</command>
-  </chain>
-</dependencies>
+  <dependencies>
+    <includes_components>
+      <component>components/git/git-merge.md</component>
+      <component>components/workflow/command-execution.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>git.default_merge_strategy</value>
+      <value>git.auto_resolve_conflicts</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

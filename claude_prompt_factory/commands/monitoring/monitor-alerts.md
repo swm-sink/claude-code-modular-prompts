@@ -1,63 +1,88 @@
 ---
-description: Intelligent alerting system with smart notifications, escalation policies, and anomaly detection
-argument-hint: "[alert_type] [severity]"
+description: Intelligent alert monitoring with automated correlation, root cause analysis, and comprehensive incident management
+argument-hint: "[alert_source] [analysis_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /monitor alerts - Intelligent Alerting System
+# /monitor alerts - Intelligent Alert Monitoring
 
-Advanced alerting system with smart notifications, intelligent escalation policies, and machine learning-based anomaly detection.
+Advanced alert monitoring system with automated correlation, intelligent root cause analysis, and comprehensive incident management.
 
 ## Usage
 ```bash
-/monitor alerts create                       # Create new alert rules
-/monitor alerts anomaly                      # Setup anomaly detection
-/monitor alerts escalation                   # Configure escalation policies
-/monitor alerts --smart                      # ML-based intelligent alerting
+/monitor alerts prometheus                 # Monitor alerts from Prometheus
+/monitor alerts --correlate "high_cpu"       # Correlate alerts related to a specific issue
+/monitor alerts --analyze "db_latency"       # Analyze the root cause of an alert
+/monitor alerts --incident "create"          # Create a new incident from an alert
 ```
 
-## Arguments
+<command_file>
+  <metadata>
+    <n>/monitor alerts</n>
+    <purpose>Intelligent alert monitoring with automated correlation, root cause analysis, and comprehensive incident management</purpose>
+    <usage>
+      <![CDATA[
+      /monitor alerts [alert_source] "[query]"
+      ]]>
+    </usage>
+  </metadata>
 
-| Argument | Type | Required | Description |
-|----------|------|----------|-------------|
-| `type` | string | false | Alert type (threshold, anomaly, composite). Default: threshold. |
-| `severity` | string | false | Alert severity (critical, warning, info). Default: warning. |
+  <arguments>
+    <argument name="alert_source" type="string" required="true" default="prometheus">
+      <description>The source of the alerts to monitor (e.g., prometheus, cloudwatch, datadog)</description>
+    </argument>
+    <argument name="query" type="string" required="true">
+      <description>A query to filter or analyze alerts</description>
+    </argument>
+    <argument name="analysis_level" type="string" required="false" default="high">
+      <description>Level of root cause analysis to perform</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Monitor alerts from Prometheus</description>
+      <usage>/monitor alerts prometheus "severity='critical'"</usage>
+    </example>
+    <example>
+      <description>Correlate alerts related to a specific issue</description>
+      <usage>/monitor alerts --correlate "high_cpu_usage"</usage>
+    </example>
+  </examples>
 
-## Examples
+  <claude_prompt>
+    <prompt>
+You are an advanced alert monitoring specialist. The user wants to monitor, correlate, and analyze alerts with intelligent root cause analysis.
 
-```bash
-/monitor alerts create --severity critical   # Create critical alerts
-/monitor alerts anomaly --ml                 # ML-based anomaly detection
-/monitor alerts escalation --oncall          # On-call escalation setup
-```
-
-## Claude Prompt
-
-You are an intelligent alerting specialist. The user wants to set up comprehensive alerting for their monitoring system.
-
-**Analysis Process:**
-1. **Metric Analysis**: Identify key metrics that require alerting
-2. **Threshold Calculation**: Determine intelligent thresholds based on historical data
-3. **Alert Configuration**: Create alert rules with appropriate conditions and severity levels
-4. **Notification Setup**: Configure notification channels (email, Slack, PagerDuty, etc.)
-5. **Escalation Policies**: Design escalation workflows for different severity levels
+**Alert Monitoring Process:**
+1. **Alert Aggregation**: Aggregate alerts from various sources
+2. **Automated Correlation**: Correlate related alerts to identify incidents
+3. **Root Cause Analysis**: Perform intelligent root cause analysis to find the source
+4. **Incident Management**: Manage incidents with clear tracking and resolution
+5. **Reporting & Analytics**: Provide comprehensive reporting and analytics on alerts
 
 **Implementation Strategy:**
-- Configure threshold-based alerts for key performance indicators
-- Set up anomaly detection using statistical analysis or ML models
-- Create composite alerts that combine multiple metrics
-- Implement intelligent noise reduction and alert correlation
-- Design on-call rotation and escalation policies
-- Set up alert testing and validation procedures
+- Aggregate alerts from multiple monitoring systems into a unified view
+- Implement automated alert correlation using machine learning and pattern analysis
+- Perform intelligent root cause analysis with dependency mapping and historical data
+- Integrate with incident management systems for seamless tracking and resolution
+- Generate comprehensive reports and analytics to identify trends and systemic issues
 
-<include component="components/error/circuit-breaker.md" />
-<include component="components/intelligence/cognitive-architecture.md" />
+<include component="components/analysis/dependency-mapping.md" />
+<include component="components/analytics/business-intelligence.md" />
 <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-## Dependencies
-
-- `components/error/circuit-breaker.md`
-- `components/intelligence/cognitive-architecture.md`
-- `components/reporting/generate-structured-report.md`
-- `monitoring.alerting.channels`
-- `team.oncall.rotation` 
+  <dependencies>
+    <includes_components>
+      <component>components/analysis/dependency-mapping.md</component>
+      <component>components/analytics/business-intelligence.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>monitoring.alerts.correlation_engine</value>
+      <value>incident_management.auto_create</value>
+    </uses_config_values>
+  </dependencies>
+</command_file> 

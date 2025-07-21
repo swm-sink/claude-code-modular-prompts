@@ -16,6 +16,74 @@ Advanced session state management with intelligent compression, encryption, and 
 /session save --encrypt                      # Encrypted session data
 ```
 
+<command_file>
+  <metadata>
+    <n>/session save</n>
+    <purpose>Intelligent session state persistence with compression, encryption, and cross-session continuity</purpose>
+    <usage>
+      <![CDATA[
+      /session save [session_name] --strategy [save_strategy]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="session_name" type="string" required="true" default="current-session">
+      <description>The name to save the session as</description>
+    </argument>
+    <argument name="save_strategy" type="string" required="false" default="standard">
+      <description>The strategy for saving the session (e.g., standard, compress, encrypt)</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Save the current session with a specific name</description>
+      <usage>/session save "feature-x-development"</usage>
+    </example>
+    <example>
+      <description>Save the session with encryption</description>
+      <usage>/session save "secure-session" --strategy "encrypt"</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced session management specialist. The user wants to save their current session state.
+
+**Session Save Process:**
+1. **Capture State**: Capture the current conversation state, context window, and file modifications.
+2. **Compress Context**: Intelligently compress the conversation history and context to optimize storage.
+3. **Encrypt Data**: If requested, encrypt the session data for security.
+4. **Persist Session**: Save the session state to a persistent storage location.
+5. **Generate Analytics**: Generate productivity analytics based on the session data.
+
+**Implementation Strategy:**
+- Capture all relevant session data, including conversation history, context, open files, and command history.
+- Use intelligent summarization and compression techniques to reduce the size of the saved session.
+- Apply strong encryption to the session data if the user requests it.
+- Save the session state to a structured format (e.g., JSON, YAML) in a well-defined location.
+- Analyze the session data to provide insights into productivity, efficiency, and areas for improvement.
+
+<include component="components/context/persistent-memory.md" />
+<include component="components/optimization/context-compression.md" />
+<include component="components/analytics/session-tracking.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/context/persistent-memory.md</component>
+      <component>components/optimization/context-compression.md</component>
+      <component>components/analytics/session-tracking.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>session.save.default_strategy</value>
+      <value>session.encryption.key</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
+
 ## Purpose
 **WORKING** command that saves current Claude Code session state with intelligent context compression, conversation preservation, and productivity analytics.
 

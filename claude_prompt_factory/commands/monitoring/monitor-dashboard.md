@@ -1,63 +1,86 @@
 ---
-description: Intelligent dashboard creation with automated visualization, insights generation, and interactive analytics
+description: Intelligent monitoring dashboards with automated visualization, customizable widgets, and comprehensive data integration
 argument-hint: "[dashboard_type] [data_source]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /monitor dashboard - Intelligent Dashboard Creation
+# /monitor dashboard - Intelligent Monitoring Dashboards
 
-Advanced dashboard creation system with automated visualization, intelligent insights generation, and interactive analytics.
+Advanced monitoring dashboard system with automated visualization, highly customizable widgets, and comprehensive integration with various data sources.
 
 ## Usage
 ```bash
-/monitor dashboard create                    # Create comprehensive dashboard
-/monitor dashboard sre                       # SRE-focused dashboard
-/monitor dashboard business                  # Business metrics dashboard
-/monitor dashboard --auto                    # Auto-generated dashboard from metrics
+/monitor dashboard create "My Dashboard"     # Create a new dashboard
+/monitor dashboard --add-widget "cpu_usage"  # Add a widget to a dashboard
+/monitor dashboard --import "grafana"      # Import a dashboard from Grafana
+/monitor dashboard --share "team@example.com" # Share a dashboard with others
 ```
 
-## Arguments
+<command_file>
+  <metadata>
+    <n>/monitor dashboard</n>
+    <purpose>Intelligent monitoring dashboards with automated visualization, customizable widgets, and comprehensive data integration</purpose>
+    <usage>
+      <![CDATA[
+      /monitor dashboard [action] "[name]"
+      ]]>
+    </usage>
+  </metadata>
 
-| Argument | Type | Required | Description |
-|----------|------|----------|-------------|
-| `type` | string | false | Dashboard type (operational, business, sre, custom). Default: operational. |
-| `source` | string | false | Data source (prometheus, datadog, cloudwatch). Default: auto-detect. |
+  <arguments>
+    <argument name="action" type="string" required="true" default="create">
+      <description>The action to perform on the dashboard (e.g., create, add-widget, import, share)</description>
+    </argument>
+    <argument name="name" type="string" required="true">
+      <description>The name of the dashboard or widget</description>
+    </argument>
+    <argument name="data_source" type="string" required="false" default="prometheus">
+      <description>The data source for the dashboard or widget</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Create a new dashboard</description>
+      <usage>/monitor dashboard create "My Application Dashboard"</usage>
+    </example>
+    <example>
+      <description>Add a widget to a dashboard</description>
+      <usage>/monitor dashboard --add-widget "cpu_usage --dashboard My_Dashboard"</usage>
+    </example>
+  </examples>
 
-## Examples
+  <claude_prompt>
+    <prompt>
+You are an advanced monitoring dashboard specialist. The user wants to create, customize, and manage monitoring dashboards.
 
-```bash
-/monitor dashboard create --type sre         # SRE dashboard creation
-/monitor dashboard business --kpis           # Business KPI dashboard
-/monitor dashboard --auto --responsive       # Auto-responsive dashboard
-```
-
-## Claude Prompt
-
-You are a dashboard visualization specialist. The user wants to create comprehensive monitoring dashboards.
-
-**Analysis Process:**
-1. **Data Source Analysis**: Identify available metrics and data sources
-2. **Visualization Strategy**: Design appropriate chart types and layouts for different metrics
-3. **Dashboard Architecture**: Create logical groupings and hierarchical organization
-4. **Interactive Elements**: Add filters, drill-downs, and dynamic time ranges
-5. **Performance Optimization**: Ensure dashboards load quickly and update efficiently
+**Dashboard Process:**
+1. **Requirement Analysis**: Understand the user's requirements for the dashboard
+2. **Data Source Integration**: Integrate with the necessary data sources (e.g., Prometheus, CloudWatch, Loki)
+3. **Widget Configuration**: Configure widgets with appropriate visualizations and queries
+4. **Dashboard Layout**: Arrange widgets in a clear, intuitive, and aesthetically pleasing layout
+5. **Sharing & Collaboration**: Enable sharing and collaboration features for the dashboard
 
 **Implementation Strategy:**
-- Create operational dashboards for infrastructure and application metrics
-- Design business dashboards with KPIs and user experience metrics
-- Build SRE dashboards focused on SLIs, SLOs, and error budgets
-- Implement automated dashboard generation based on available metrics
-- Add intelligent insights and anomaly highlighting
-- Configure dashboard sharing and access controls
+- Provide a user-friendly interface for creating and customizing dashboards
+- Integrate with a wide range of data sources to provide a unified view of the system
+- Offer a rich library of customizable widgets with various visualization options
+- Use a flexible grid-based layout system to allow users to arrange widgets as they see fit
+- Implement robust sharing and collaboration features with access control and versioning
 
 <include component="components/analytics/business-intelligence.md" />
-<include component="components/performance/auto-scaling.md" />
 <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-## Dependencies
-
-- `components/analytics/business-intelligence.md`
-- `components/performance/auto-scaling.md`
-- `components/reporting/generate-structured-report.md`
-- `monitoring.dashboards.default_timerange`
-- `visualization.themes.corporate` 
+  <dependencies>
+    <includes_components>
+      <component>components/analytics/business-intelligence.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>dashboard.default_data_source</value>
+      <value>dashboard.sharing.enabled</value>
+    </uses_config_values>
+  </dependencies>
+</command_file> 

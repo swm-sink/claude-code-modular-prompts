@@ -1,63 +1,85 @@
 ---
-description: Comprehensive monitoring setup with observability, alerting, and intelligent dashboard creation
-argument-hint: "[monitoring_stack] [environment]"
+description: Advanced monitoring setup with intelligent alerting, comprehensive dashboards, and predictive analytics
+argument-hint: "[monitoring_scope] [analytics_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /monitor setup - Comprehensive Monitoring Setup
+# /monitor setup - Advanced Monitoring Setup
 
-Advanced monitoring system setup with observability, intelligent alerting, automated dashboard creation, and performance tracking.
+Sophisticated monitoring system with intelligent alerting, comprehensive dashboards, real-time analytics, and predictive insights.
 
 ## Usage
 ```bash
-/monitor setup full                          # Complete monitoring stack setup
-/monitor setup --prometheus                  # Prometheus-based monitoring
-/monitor setup --grafana                     # Grafana dashboard creation
-/monitor setup --alerts                      # Intelligent alerting system
+/monitor setup infrastructure               # Infrastructure monitoring setup
+/monitor setup --comprehensive              # Comprehensive monitoring framework
+/monitor setup --predictive                 # Predictive analytics monitoring
+/monitor setup --intelligent                # AI-powered monitoring system
 ```
 
-## Arguments
+<command_file>
+  <metadata>
+    <n>/monitor setup</n>
+    <purpose>Advanced monitoring setup with intelligent alerting, comprehensive dashboards, and predictive analytics</purpose>
+    <usage>
+      <![CDATA[
+      /monitor setup [monitoring_scope] --analytics [analytics_level]
+      ]]>
+    </usage>
+  </metadata>
 
-| Argument | Type | Required | Description |
-|----------|------|----------|-------------|
-| `stack` | string | false | Monitoring stack (prometheus, datadog, newrelic). Default: prometheus. |
-| `environment` | string | false | Target environment (dev, staging, prod). Default: current. |
+  <arguments>
+    <argument name="monitoring_scope" type="string" required="false" default="infrastructure">
+      <description>Scope of monitoring system to set up</description>
+    </argument>
+    <argument name="analytics_level" type="string" required="false" default="comprehensive">
+      <description>Level of analytics and intelligence to implement</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Infrastructure monitoring setup</description>
+      <usage>/monitor setup infrastructure</usage>
+    </example>
+    <example>
+      <description>Comprehensive monitoring framework</description>
+      <usage>/monitor setup --comprehensive</usage>
+    </example>
+  </examples>
 
-## Examples
+  <claude_prompt>
+    <prompt>
+You are an advanced monitoring setup specialist. The user wants to implement intelligent alerting with comprehensive dashboards and predictive analytics.
 
-```bash
-/monitor setup full                          # Complete monitoring setup
-/monitor setup --prometheus --alerts        # Prometheus with alerting
-/monitor setup --environment production     # Production monitoring
-```
-
-## Claude Prompt
-
-You are a monitoring setup specialist. The user wants to establish comprehensive monitoring for their application.
-
-**Analysis Process:**
-1. **Environment Assessment**: Analyze current infrastructure and identify monitoring requirements
-2. **Stack Selection**: Choose appropriate monitoring tools based on requirements and constraints
-3. **Configuration Generation**: Create monitoring configurations, dashboards, and alert rules
-4. **Integration Setup**: Integrate monitoring with existing CI/CD and deployment pipelines
-5. **Validation**: Test monitoring setup and ensure proper data collection
+**Setup Process:**
+1. **Monitoring Architecture**: Design optimal monitoring architecture and infrastructure
+2. **Instrumentation**: Implement comprehensive instrumentation and data collection
+3. **Dashboard Creation**: Create intelligent dashboards with real-time visualization
+4. **Alerting System**: Establish smart alerting with anomaly detection
+5. **Predictive Analytics**: Implement predictive monitoring and forecasting
 
 **Implementation Strategy:**
-- Set up metrics collection (CPU, memory, disk, network, application metrics)
-- Configure log aggregation and analysis
-- Create intelligent dashboards with key performance indicators
-- Implement alerting rules with escalation policies
-- Set up distributed tracing for microservices
-- Configure synthetic monitoring for uptime checks
+- Design monitoring architectures with comprehensive coverage and scalability
+- Implement intelligent instrumentation with automatic discovery and configuration
+- Create advanced dashboards with real-time analytics and custom visualizations
+- Establish smart alerting systems with machine learning anomaly detection
+- Apply predictive analytics for proactive issue prevention and capacity planning
 
-<include component="components/performance/auto-scaling.md" />
-<include component="components/error/circuit-breaker.md" />
+<include component="components/analytics/business-intelligence.md" />
+<include component="components/performance/framework-optimization.md" />
 <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-## Dependencies
-
-- `components/performance/auto-scaling.md`
-- `components/error/circuit-breaker.md`  
-- `components/reporting/generate-structured-report.md`
-- `deployment.environments.monitoring.stack`
-- `infrastructure.monitoring.retention_days` 
+  <dependencies>
+    <includes_components>
+      <component>components/analytics/business-intelligence.md</component>
+      <component>components/performance/framework-optimization.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>monitoring.setup.auto_discovery</value>
+      <value>analytics.predictive.enabled</value>
+    </uses_config_values>
+  </dependencies>
+</command_file> 
