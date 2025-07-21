@@ -1,6 +1,20 @@
-# Constitutional AI Framework
+---
+description: Advanced Constitutional AI framework with safety principles, ethical reasoning, and value alignment systems
+argument-hint: "[constitutional_scope] [safety_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-Advanced constitutional AI implementation with democratic principle design, RLHF integration, and multi-layered safety alignment for responsible AI development.
+# /constitutional ai-framework - Advanced Constitutional AI Framework
+
+Sophisticated Constitutional AI framework with safety principles, ethical reasoning, and comprehensive value alignment systems.
+
+## Usage
+```bash
+/constitutional ai-framework safety          # Safety-focused constitutional framework
+/constitutional ai-framework --ethical       # Ethical reasoning framework
+/constitutional ai-framework --alignment     # Value alignment system
+/constitutional ai-framework --comprehensive # Comprehensive constitutional AI
+```
 
 ## Command
 

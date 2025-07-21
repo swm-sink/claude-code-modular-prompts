@@ -1,10 +1,19 @@
-# /cost analyze Command
+---
+description: Advanced cost analysis with intelligent optimization, predictive modeling, and comprehensive financial insights
+argument-hint: "[analysis_scope] [optimization_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-Purpose: Analyze and optimize costs with 40-98% reduction potential
+# /cost analyze - Advanced Cost Analysis
+
+Sophisticated cost analysis system with intelligent optimization, predictive modeling, and comprehensive financial insights.
 
 ## Usage
-```
-/cost analyze [scope] [--breakdown] [--optimize] [--forecast]
+```bash
+/cost analyze infrastructure                 # Infrastructure cost analysis
+/cost analyze --optimize                     # Cost optimization recommendations
+/cost analyze --predict                      # Predictive cost modeling
+/cost analyze --comprehensive                # Comprehensive financial analysis
 ```
 
 ## Examples

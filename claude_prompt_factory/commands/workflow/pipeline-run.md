@@ -1,10 +1,19 @@
-# /pipeline run - Multi-Stage Pipeline Execution
+---
+description: Advanced pipeline execution with intelligent orchestration, parallel processing, and comprehensive monitoring
+argument-hint: "[execution_mode] [orchestration_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-Execute complex multi-stage pipelines with parallel execution, quality gates, and comprehensive monitoring.
+# /pipeline run - Advanced Pipeline Execution
+
+Sophisticated pipeline execution system with intelligent orchestration, parallel processing, and comprehensive monitoring.
 
 ## Usage
-```
-/pipeline run <pipeline-name> [--stage=<stage>] [--parallel] [--params key=value]
+```bash
+/pipeline run optimized                      # Optimized pipeline execution
+/pipeline run --parallel                     # Parallel execution mode
+/pipeline run --monitoring                   # Comprehensive execution monitoring
+/pipeline run --intelligent                  # Intelligent adaptive execution
 ```
 
 ## Core Logic

@@ -1,19 +1,19 @@
 ---
-description: Strategic marketplace growth with community building, analytics, and sustainable expansion
-argument-hint: "[growth_strategy] [target_market]"
+description: Advanced marketplace growth with ecosystem development, community building, and platform optimization strategies
+argument-hint: "[growth_strategy] [ecosystem_scope]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /marketplace grow - Strategic Marketplace Growth
+# /ecosystem marketplace-grow - Advanced Marketplace Growth
 
-Advanced marketplace growth system with community engagement, business intelligence, and sustainable expansion strategies.
+Sophisticated marketplace growth system with ecosystem development, community building, and comprehensive platform optimization strategies.
 
 ## Usage
 ```bash
-/marketplace grow community                  # Focus on community building and engagement
-/marketplace grow analytics                  # Data-driven growth optimization
-/marketplace grow expansion                  # Market expansion and scaling
-/marketplace grow --sustainable              # Sustainable growth with long-term focus
+/ecosystem marketplace-grow community        # Community-driven growth strategies
+/ecosystem marketplace-grow --platform       # Platform optimization and scaling
+/ecosystem marketplace-grow --network        # Network effects maximization
+/ecosystem marketplace-grow --comprehensive  # Comprehensive ecosystem development
 ```
 
 <command_file>

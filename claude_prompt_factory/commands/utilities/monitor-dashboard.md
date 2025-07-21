@@ -1,17 +1,19 @@
-# Monitor Dashboard Command
+---
+description: Advanced dashboard monitoring utilities with intelligent visualization, real-time analytics, and comprehensive insights
+argument-hint: "[dashboard_type] [visualization_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-## Command
-`/monitor dashboard [type] [options]`
+# /monitor dashboard - Advanced Dashboard Monitoring Utilities
 
-## Purpose
-Creates monitoring dashboards with key metrics visualization and system status overview.
+Sophisticated dashboard monitoring utilities with intelligent visualization, real-time analytics, and comprehensive insights generation.
 
 ## Usage
 ```bash
-/monitor dashboard               # Full system dashboard
-/monitor dashboard app          # Application metrics
-/monitor dashboard infra        # Infrastructure status
-/monitor dashboard custom      # Custom dashboard wizard
+/monitor dashboard create                    # Create intelligent dashboards
+/monitor dashboard --real-time               # Real-time monitoring dashboards
+/monitor dashboard --analytics               # Advanced analytics dashboards
+/monitor dashboard --comprehensive           # Comprehensive monitoring visualization
 ```
 
 ## Implementation

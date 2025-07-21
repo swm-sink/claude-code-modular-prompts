@@ -1,10 +1,19 @@
-# /cloud provision - Cloud Resource Provisioning Command
+---
+description: Advanced cloud provisioning with intelligent resource optimization, multi-cloud management, and automated scaling
+argument-hint: "[cloud_provider] [provisioning_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Purpose**: Provision cloud infrastructure using Infrastructure as Code (IaC) with built-in security best practices, cost estimation, and deployment planning.
+# /cloud provision - Advanced Cloud Provisioning
+
+Sophisticated cloud provisioning system with intelligent resource optimization, multi-cloud management, and automated scaling capabilities.
 
 ## Usage
 ```bash
-/cloud provision "[description of infrastructure]" [--provider=aws|gcp|azure] [--iac=terraform|cloudformation]
+/cloud provision aws                         # AWS cloud provisioning
+/cloud provision --multi-cloud              # Multi-cloud provisioning strategy
+/cloud provision --cost-optimized           # Cost-optimized resource provisioning
+/cloud provision --auto-scale               # Auto-scaling infrastructure setup
 ```
 
 ## Workflow

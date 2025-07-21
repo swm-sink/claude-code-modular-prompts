@@ -1,10 +1,19 @@
-# /code lint - Code Linting Command
+---
+description: Advanced code linting with intelligent analysis, quality enforcement, and automated improvement suggestions
+argument-hint: "[lint_scope] [analysis_depth]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Purpose**: Perform comprehensive code linting with style checking, issue detection, and automated fixing capabilities.
+# /code lint - Advanced Code Linting
+
+Sophisticated code linting system with intelligent analysis, quality enforcement, and automated improvement suggestions.
 
 ## Usage
 ```bash
-/code lint [path] [--fix]
+/code lint comprehensive                     # Comprehensive linting analysis
+/code lint --security                        # Security-focused linting
+/code lint --performance                     # Performance optimization linting
+/code lint --quality                         # Quality enforcement linting
 ```
 
 ## Workflow

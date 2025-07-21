@@ -1,3 +1,21 @@
+---
+description: Advanced quality suggestions with intelligent recommendations, automated improvements, and best practice guidance
+argument-hint: "[suggestion_scope] [improvement_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /analyze quality-suggest - Advanced Quality Suggestions
+
+Sophisticated quality suggestion system with intelligent recommendations, automated improvements, and comprehensive best practice guidance.
+
+## Usage
+```bash
+/analyze quality-suggest comprehensive       # Comprehensive quality suggestions
+/analyze quality-suggest --performance       # Performance improvement suggestions
+/analyze quality-suggest --security          # Security enhancement suggestions
+/analyze quality-suggest --maintainability   # Maintainability improvements
+```
+
 <command_file>
   <metadata>
     <name>/quality suggest</name>

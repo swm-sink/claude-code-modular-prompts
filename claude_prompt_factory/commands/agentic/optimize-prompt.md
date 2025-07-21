@@ -1,4 +1,20 @@
-# /optimize-prompt - FUNCTIONAL Prompt Optimization Command
+---
+description: Advanced prompt optimization with intelligent refinement, performance analysis, and automated enhancement techniques
+argument-hint: "[optimization_scope] [enhancement_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /optimize prompt - Advanced Prompt Optimization
+
+Sophisticated prompt optimization system with intelligent refinement, performance analysis, and automated enhancement techniques.
+
+## Usage
+```bash
+/optimize prompt performance                 # Performance-focused optimization
+/optimize prompt --clarity                   # Clarity enhancement optimization
+/optimize prompt --effectiveness             # Effectiveness improvement
+/optimize prompt --comprehensive             # Comprehensive prompt optimization
+```
 
 ## Purpose
 **WORKING** command that executes real prompt optimization cycles with measurable accuracy and efficiency improvements.

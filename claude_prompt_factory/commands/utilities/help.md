@@ -1,4 +1,20 @@
-# /help - FUNCTIONAL Intelligent Help System
+---
+description: Advanced help system with intelligent assistance, contextual guidance, and comprehensive documentation access
+argument-hint: "[help_scope] [assistance_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /help - Advanced Help System
+
+Sophisticated help system with intelligent assistance, contextual guidance, and comprehensive documentation access.
+
+## Usage
+```bash
+/help commands                               # Command help and documentation
+/help --interactive                          # Interactive help assistant
+/help --contextual                           # Contextual guidance system
+/help --comprehensive                        # Comprehensive help ecosystem
+```
 
 ## Purpose
 **WORKING** intelligent help system that provides contextual assistance, adaptive onboarding, and personalized recommendations based on user expertise and current context.

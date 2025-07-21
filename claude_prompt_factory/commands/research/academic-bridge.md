@@ -1,19 +1,19 @@
 ---
-description: Bridge academic research with practical implementation using advanced AI reasoning frameworks
-argument-hint: "[research_domain] [implementation_target]"
+description: Advanced academic bridge with research integration, peer review systems, and scholarly collaboration frameworks
+argument-hint: "[research_domain] [collaboration_type]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /academic bridge - Research-to-Implementation Bridge
+# /research academic-bridge - Advanced Academic Bridge
 
-Advanced system for bridging academic research with practical implementation using AI reasoning frameworks and adaptive thinking.
+Sophisticated academic bridge system with research integration, peer review systems, and comprehensive scholarly collaboration frameworks.
 
 ## Usage
 ```bash
-/academic bridge "machine learning" web-app  # Bridge ML research to web application
-/academic bridge "cryptography" security     # Apply crypto research to security
-/academic bridge --survey                    # Research survey and synthesis
-/academic bridge --prototype                 # Create research prototype
+/research academic-bridge collaborate        # Academic collaboration setup
+/research academic-bridge --peer-review      # Peer review system integration
+/research academic-bridge --publications     # Academic publication management
+/research academic-bridge --comprehensive    # Comprehensive research ecosystem
 ```
 
 <command_file>

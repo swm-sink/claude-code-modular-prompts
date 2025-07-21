@@ -1,10 +1,19 @@
-# /code format - Code Formatting Command
+---
+description: Advanced code formatting with intelligent styling, consistency enforcement, and automated quality improvements
+argument-hint: "[format_scope] [style_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Purpose**: Apply consistent formatting standards, fix indentation, organize structure, and enforce code style guidelines across all project files.
+# /code format - Advanced Code Formatting
+
+Sophisticated code formatting system with intelligent styling, consistency enforcement, and automated quality improvements.
 
 ## Usage
 ```bash
-/code format [path] [--style=prettier|black]
+/code format project                         # Project-wide formatting
+/code format --style-guide                   # Style guide enforcement
+/code format --intelligent                   # Intelligent formatting optimization
+/code format --comprehensive                 # Comprehensive formatting and cleanup
 ```
 
 ## Workflow

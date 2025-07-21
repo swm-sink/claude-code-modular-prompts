@@ -1,14 +1,19 @@
+---
+description: Advanced workflow orchestration with intelligent automation, dynamic adaptation, and comprehensive process management
+argument-hint: "[workflow_type] [orchestration_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
 # /workflow - Advanced Workflow Orchestration
 
-**Purpose**: Define, execute, and manage complex, multi-step workflows with support for parallel execution, conditional logic, and multi-agent coordination.
+Sophisticated workflow orchestration system with intelligent automation, dynamic adaptation, and comprehensive process management.
 
 ## Usage
 ```bash
-# Execute a workflow defined in a file
-/workflow run --file=my-workflow.yml
-
-# Create a new workflow interactively
-/workflow create "A workflow to analyze, fix, and test security issues"
+/workflow create                             # Create advanced workflow
+/workflow --automated                        # Automated workflow execution
+/workflow --adaptive                         # Adaptive workflow management
+/workflow --comprehensive                    # Comprehensive workflow orchestration
 ```
 
 ## Core Concepts

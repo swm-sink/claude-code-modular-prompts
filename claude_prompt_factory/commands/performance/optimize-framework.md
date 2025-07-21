@@ -1,6 +1,20 @@
-# Framework Optimization Command
+---
+description: Advanced framework optimization with intelligent performance tuning, bottleneck analysis, and scalability enhancement
+argument-hint: "[optimization_scope] [performance_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-Optimize Claude Code Prompt Factory performance using advanced optimization frameworks for loading, execution, memory, and token efficiency.
+# /optimize framework - Advanced Framework Optimization
+
+Sophisticated framework optimization system with intelligent performance tuning, bottleneck analysis, and comprehensive scalability enhancement.
+
+## Usage
+```bash
+/optimize framework performance              # Performance optimization focus
+/optimize framework --scalability            # Scalability enhancement
+/optimize framework --bottlenecks            # Bottleneck analysis and resolution
+/optimize framework --comprehensive          # Comprehensive framework optimization
+```
 
 ## Command
 

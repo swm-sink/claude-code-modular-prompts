@@ -1,3 +1,21 @@
+---
+description: Advanced test coverage analysis with intelligent gap detection, quality metrics, and comprehensive coverage optimization
+argument-hint: "[coverage_scope] [analysis_depth]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /test coverage - Advanced Test Coverage Analysis
+
+Sophisticated test coverage analysis system with intelligent gap detection, quality metrics, and comprehensive coverage optimization.
+
+## Usage
+```bash
+/test coverage analyze                       # Coverage analysis and reporting
+/test coverage --gaps                        # Coverage gap detection
+/test coverage --quality                     # Quality-focused coverage analysis
+/test coverage --comprehensive               # Comprehensive coverage optimization
+```
+
 <command_file>
   <metadata>
     <name>/test coverage</name>

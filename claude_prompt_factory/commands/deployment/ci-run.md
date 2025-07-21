@@ -1,3 +1,21 @@
+---
+description: Advanced CI execution with intelligent pipeline optimization, parallel processing, and automated quality gates
+argument-hint: "[execution_mode] [optimization_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /deploy ci-run - Advanced CI Execution
+
+Sophisticated CI execution system with intelligent pipeline optimization, parallel processing, and automated quality gates.
+
+## Usage
+```bash
+/deploy ci-run optimized                     # Optimized CI execution
+/deploy ci-run --parallel                    # Parallel pipeline execution
+/deploy ci-run --quality-gates               # Quality-gated CI execution
+/deploy ci-run --comprehensive               # Comprehensive CI orchestration
+```
+
 <command_file>
   <metadata>
     <name>/ci run</name>

@@ -1,11 +1,19 @@
-# /monitor logs - Log Monitoring and Analysis
+---
+description: Advanced log monitoring utilities with intelligent analysis, pattern detection, and comprehensive troubleshooting
+argument-hint: "[log_scope] [analysis_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-## Purpose
-Intelligent log monitoring, search, and analysis system for application troubleshooting and system insights.
+# /monitor logs - Advanced Log Monitoring Utilities
+
+Sophisticated log monitoring utilities with intelligent analysis, pattern detection, and comprehensive troubleshooting capabilities.
 
 ## Usage
 ```bash
-/monitor logs [level] [source] [options]
+/monitor logs analyze                        # Intelligent log analysis
+/monitor logs --patterns                     # Pattern detection and analysis
+/monitor logs --troubleshoot                 # Comprehensive troubleshooting
+/monitor logs --comprehensive                # Comprehensive log monitoring
 ```
 
 ## Log Levels

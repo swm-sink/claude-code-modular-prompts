@@ -1,10 +1,19 @@
-# /think deep - Deep Thinking & Analysis Command
+---
+description: Advanced deep thinking with comprehensive analysis, systematic reasoning, and breakthrough problem-solving methodologies
+argument-hint: "[thinking_depth] [analysis_scope]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Purpose**: Leverage advanced AI thinking modes for in-depth analysis of complex problems.
+# /think deep - Advanced Deep Thinking Framework
+
+Sophisticated deep thinking system with comprehensive analysis, systematic reasoning, and breakthrough problem-solving methodologies.
 
 ## Usage
 ```bash
-/think deep "[problem description]" [--mode=extended|ultra]
+/think deep analyze                          # Deep analytical thinking
+/think deep --systematic                     # Systematic reasoning approach
+/think deep --breakthrough                   # Breakthrough thinking methodology
+/think deep --comprehensive                  # Comprehensive deep analysis
 ```
 
 ## Workflow

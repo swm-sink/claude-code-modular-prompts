@@ -1,4 +1,20 @@
-# /reason-react - FUNCTIONAL ReAct Reasoning Command
+---
+description: Advanced ReAct reasoning with intelligent action-observation cycles, dynamic planning, and adaptive execution
+argument-hint: "[reasoning_complexity] [action_scope]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /reason react - Advanced ReAct Reasoning Framework
+
+Sophisticated ReAct reasoning system with intelligent action-observation cycles, dynamic planning, and adaptive execution strategies.
+
+## Usage
+```bash
+/reason react explore                        # Exploratory ReAct reasoning
+/reason react --planning                     # Planning-focused reasoning
+/reason react --adaptive                     # Adaptive reasoning with feedback
+/reason react --comprehensive                # Comprehensive ReAct framework
+```
 
 ## Purpose
 **WORKING** command that executes ReAct (Reasoning and Acting) framework for complex problem-solving through structured thought-action-observation cycles.

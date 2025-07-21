@@ -1,22 +1,19 @@
-# /ai suggest - AI-Powered Code Suggestions
+---
+description: Advanced AI suggestions with intelligent recommendations, contextual analysis, and proactive assistance
+argument-hint: "[suggestion_scope] [intelligence_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Command**: `/ai suggest [target] [options]`
+# /ai suggest - Advanced AI Suggestion System
 
-## Purpose
-Generate intelligent code suggestions, improvements, and optimizations using AI analysis to enhance developer productivity.
-
-## Core Capabilities
-- **Code Generation**: Smart code completion and scaffolding
-- **Pattern Recognition**: Suggest appropriate design patterns
-- **Optimization Hints**: Performance and efficiency improvements
-- **Best Practices**: Language-specific recommendations
-- **API Discovery**: Suggest relevant libraries and methods
+Sophisticated AI suggestion system with intelligent recommendations, contextual analysis, and proactive assistance capabilities.
 
 ## Usage
 ```bash
-/ai suggest --context="need authentication" --lang=python
-/ai suggest file.js --focus=performance --depth=detailed
-/ai suggest --pattern=factory --framework=react
+/ai suggest improvements                     # Intelligent improvement suggestions
+/ai suggest --contextual                     # Contextual AI recommendations
+/ai suggest --proactive                      # Proactive assistance suggestions
+/ai suggest --comprehensive                  # Comprehensive AI guidance
 ```
 
 ## Options

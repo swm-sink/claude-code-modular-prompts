@@ -1,17 +1,23 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T02:09:22.010016
+**Generated**: 2025-07-21T02:22:16.046285
 
 ## 📋 Executive Summary
-- **Total Files**: 200
-- **Valid Files**: 200 (100.0%)
-- **Overall Score**: 9022/20000 (45.1%)
+- **Total Files**: 202
+- **Valid Files**: 202 (100.0%)
+- **Overall Score**: 9808/20200 (48.6%)
 
-## 🚨 Critical Issues (208 errors)
+## 🚨 Critical Issues (181 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
 - ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
+### claude_prompt_factory/commands/research/research-analyze.md
+- ❌ Missing <command_file> XML structure
+
 ### claude_prompt_factory/commands/innovation/innovation-lab.md
+- ❌ Missing <command_file> XML structure
+
+### claude_prompt_factory/commands/ecosystem/platform-scale.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/database/db-restore.md
@@ -30,7 +36,6 @@
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/core/new.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/core/research.md
@@ -51,17 +56,11 @@
 ### claude_prompt_factory/commands/analysis/quality-report.md
 - ❌ Missing <command_file> XML structure
 
-### claude_prompt_factory/commands/analysis/quality-suggest.md
-- ❌ Missing YAML frontmatter
-
 ### claude_prompt_factory/commands/analysis/analyze-code.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/security/secure-audit.md
 - ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/development/dev-refactor.md
-- ❌ Missing YAML frontmatter
 
 ### claude_prompt_factory/commands/development/dev-setup.md
 - ❌ Missing <command_file> XML structure
@@ -91,22 +90,18 @@
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/agentic/reason-react.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/agentic/auto-improve.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/agentic/constitutional-ai-framework.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/agentic/orchestrate-agents.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/agentic/optimize-prompt.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/deps-update.md
@@ -116,7 +111,6 @@
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/monitor-setup.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/code-clean.md
@@ -148,85 +142,57 @@
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/help.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/cloud-provision.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
-### claude_prompt_factory/commands/utilities/enterprise-examples.md
-- ❌ Missing YAML frontmatter
-
 ### claude_prompt_factory/commands/utilities/ai-suggest.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/monitor-logs.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/code-format.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/code-lint.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/cost-analyze.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/monitor-dashboard.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/think-deep.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/testing/test-unit.md
 - ❌ Missing <command_file> XML structure
 
-### claude_prompt_factory/commands/testing/test-coverage.md
-- ❌ Missing YAML frontmatter
-
 ### claude_prompt_factory/commands/testing/test-e2e.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/testing/test-report.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/testing/test-integration.md
 - ❌ Missing <command_file> XML structure
 
-### claude_prompt_factory/commands/deployment/cd-rollback.md
-- ❌ Missing YAML frontmatter
-
 ### claude_prompt_factory/commands/deployment/ci-setup.md
 - ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/deployment/global-deploy.md
-- ❌ Missing YAML frontmatter
-
-### claude_prompt_factory/commands/deployment/ci-run.md
-- ❌ Missing YAML frontmatter
 
 ### claude_prompt_factory/commands/workflow/pipeline-create.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/workflow/workflow.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/workflow/pipeline-run.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/workflow/flow-schedule.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/industry/healthcare-optimize.md
@@ -248,7 +214,6 @@
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/performance/optimize-framework.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/error/error-report.md
@@ -267,11 +232,9 @@
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/session/session-compact.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/session/session-list.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/session/session-create.md

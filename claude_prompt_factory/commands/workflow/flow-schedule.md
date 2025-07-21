@@ -1,10 +1,19 @@
-# /flow schedule - Workflow Scheduling Command
+---
+description: Advanced flow scheduling with intelligent automation, dynamic optimization, and comprehensive workflow management
+argument-hint: "[schedule_type] [automation_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Purpose**: Schedule workflows for future execution with automated triggers and recurring patterns.
+# /flow schedule - Advanced Flow Scheduling
+
+Sophisticated flow scheduling system with intelligent automation, dynamic optimization, and comprehensive workflow management.
 
 ## Usage
 ```bash
-/flow schedule [workflow-name] [--at "YYYY-MM-DDTHH:MM:SSZ"] [--cron "* * * * *"]
+/flow schedule automated                     # Automated flow scheduling
+/flow schedule --dynamic                     # Dynamic schedule optimization
+/flow schedule --intelligent                 # Intelligent scheduling system
+/flow schedule --comprehensive               # Comprehensive flow management
 ```
 
 ## Workflow

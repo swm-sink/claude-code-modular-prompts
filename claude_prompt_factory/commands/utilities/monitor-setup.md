@@ -1,8 +1,20 @@
-# Monitor Setup Command
+---
+description: Advanced monitoring setup utilities with intelligent configuration, automated deployment, and comprehensive observability
+argument-hint: "[setup_scope] [configuration_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Command**: `/monitor setup`  
-**Category**: 📊 Monitoring  
-**Purpose**: Setup comprehensive monitoring infrastructure for development and production systems
+# /monitor setup - Advanced Monitoring Setup Utilities
+
+Sophisticated monitoring setup utilities with intelligent configuration, automated deployment, and comprehensive observability frameworks.
+
+## Usage
+```bash
+/monitor setup complete                      # Complete monitoring setup
+/monitor setup --automated                  # Automated configuration deployment
+/monitor setup --observability              # Comprehensive observability setup
+/monitor setup --intelligent                # Intelligent monitoring configuration
+```
 
 ## Command Execution
 

@@ -1,4 +1,20 @@
-# /orchestrate-agents - FUNCTIONAL Multi-Agent Coordination Command
+---
+description: Advanced agent orchestration with intelligent coordination, dynamic scaling, and multi-agent collaboration frameworks
+argument-hint: "[orchestration_type] [coordination_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /orchestrate agents - Advanced Agent Orchestration
+
+Sophisticated agent orchestration system with intelligent coordination, dynamic scaling, and comprehensive multi-agent collaboration frameworks.
+
+## Usage
+```bash
+/orchestrate agents swarm                    # Swarm-based agent orchestration
+/orchestrate agents --hierarchical           # Hierarchical orchestration
+/orchestrate agents --distributed            # Distributed agent coordination
+/orchestrate agents --comprehensive          # Comprehensive orchestration framework
+```
 
 ## Purpose
 **WORKING** command that orchestrates multiple AI agents through Claude's role-playing and coordination capabilities for complex multi-perspective problem-solving.

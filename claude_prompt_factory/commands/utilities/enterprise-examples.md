@@ -1,3 +1,21 @@
+---
+description: Advanced enterprise examples with industry best practices, scalable architectures, and comprehensive implementation patterns
+argument-hint: "[enterprise_domain] [example_complexity]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /enterprise examples - Advanced Enterprise Examples
+
+Sophisticated enterprise examples system with industry best practices, scalable architectures, and comprehensive implementation patterns.
+
+## Usage
+```bash
+/enterprise examples architecture            # Enterprise architecture examples
+/enterprise examples --scalability           # Scalability pattern examples
+/enterprise examples --security              # Security implementation examples
+/enterprise examples --comprehensive         # Comprehensive enterprise patterns
+```
+
 <command_file>
   <metadata>
     <n>/enterprise-examples</n>

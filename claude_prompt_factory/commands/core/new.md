@@ -1,3 +1,21 @@
+---
+description: Advanced project initialization with intelligent scaffolding, technology detection, and automated setup
+argument-hint: "[project_type] [technology_stack]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /new - Advanced Project Initialization
+
+Sophisticated project initialization system with intelligent scaffolding, technology detection, and comprehensive automated setup.
+
+## Usage
+```bash
+/new webapp                                  # Web application initialization
+/new --react                                 # React project scaffolding
+/new --api                                   # API project setup
+/new --fullstack                             # Full-stack project initialization
+```
+
 <claude_prompt>
   <prompt>
     You are a friendly and expert project setup assistant. The user wants to initialize a new project for the Prompt Factory.

@@ -1,4 +1,20 @@
-# /session-compact - Intelligent Session Context Compression
+---
+description: Advanced session compacting with intelligent compression, context optimization, and efficient state management
+argument-hint: "[compact_strategy] [optimization_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /session compact - Advanced Session Compacting
+
+Sophisticated session compacting system with intelligent compression, context optimization, and efficient state management.
+
+## Usage
+```bash
+/session compact optimize                    # Optimize session for efficiency
+/session compact --intelligent               # Intelligent context compression
+/session compact --preserve                  # Preserve critical information
+/session compact --comprehensive             # Comprehensive session optimization
+```
 
 ## Purpose
 **WORKING** command that optimizes current session context using intelligent summarization while preserving all critical decisions, insights, and working knowledge.

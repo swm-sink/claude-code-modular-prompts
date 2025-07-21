@@ -1,3 +1,21 @@
+---
+description: Advanced CD rollback with intelligent recovery, automated health checks, and zero-downtime restoration
+argument-hint: "[rollback_strategy] [recovery_scope]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /deploy cd-rollback - Advanced CD Rollback
+
+Sophisticated CD rollback system with intelligent recovery, automated health checks, and zero-downtime restoration capabilities.
+
+## Usage
+```bash
+/deploy cd-rollback immediate                # Immediate rollback execution
+/deploy cd-rollback --health-check           # Health-check driven rollback
+/deploy cd-rollback --zero-downtime          # Zero-downtime rollback strategy
+/deploy cd-rollback --comprehensive          # Comprehensive recovery protocol
+```
+
 <command_file>
   <metadata>
     <name>/cd rollback</name>

@@ -1,4 +1,20 @@
-# /session-list - Session Discovery and Management
+---
+description: Advanced session listing with intelligent organization, search capabilities, and comprehensive session management
+argument-hint: "[list_scope] [organization_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /session list - Advanced Session Management
+
+Sophisticated session listing system with intelligent organization, search capabilities, and comprehensive session management.
+
+## Usage
+```bash
+/session list active                         # List active sessions
+/session list --search                       # Search sessions with filters
+/session list --organize                     # Organize sessions intelligently
+/session list --comprehensive                # Comprehensive session overview
+```
 
 ## Purpose
 **WORKING** command that provides comprehensive session discovery, filtering, and management capabilities with intelligent search and analytics.

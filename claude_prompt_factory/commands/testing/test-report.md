@@ -1,10 +1,19 @@
-# /test report - Test Report Generator
+---
+description: Advanced test reporting with intelligent analytics, trend analysis, and comprehensive quality insights
+argument-hint: "[report_scope] [analytics_depth]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Purpose**: Generate comprehensive test reports with coverage, quality metrics, failure analysis, and trend tracking for complete testing visibility.
+# /test report - Advanced Test Reporting
+
+Sophisticated test reporting system with intelligent analytics, trend analysis, and comprehensive quality insights.
 
 ## Usage
 ```bash
-/test report [scope] [--format=console|markdown|json|html]
+/test report comprehensive                   # Comprehensive test reporting
+/test report --trends                        # Test trend analysis
+/test report --quality                       # Quality metrics reporting
+/test report --analytics                     # Advanced test analytics
 ```
 
 ## Workflow

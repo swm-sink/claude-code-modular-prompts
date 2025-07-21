@@ -1,3 +1,21 @@
+---
+description: Advanced global deployment with multi-region orchestration, geographic optimization, and intelligent traffic management
+argument-hint: "[deployment_scope] [region_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /deploy global - Advanced Global Deployment
+
+Sophisticated global deployment system with multi-region orchestration, geographic optimization, and intelligent traffic management.
+
+## Usage
+```bash
+/deploy global multi-region                  # Multi-region deployment
+/deploy global --cdn                         # CDN-optimized global deployment
+/deploy global --traffic-management          # Intelligent traffic management
+/deploy global --comprehensive               # Comprehensive global orchestration
+```
+
 <command_file>
   <metadata>
     <n>/global-deploy</n>

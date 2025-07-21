@@ -1,3 +1,21 @@
+---
+description: Advanced development refactoring with intelligent code optimization, pattern recognition, and architectural improvements
+argument-hint: "[refactor_scope] [optimization_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /dev refactor - Advanced Development Refactoring
+
+Sophisticated development refactoring system with intelligent code optimization, pattern recognition, and comprehensive architectural improvements.
+
+## Usage
+```bash
+/dev refactor architecture                   # Architectural refactoring
+/dev refactor --performance                  # Performance optimization refactoring
+/dev refactor --patterns                     # Design pattern improvements
+/dev refactor --comprehensive                # Comprehensive code enhancement
+```
+
 <command_file>
   <metadata>
     <name>/dev refactor</name>
