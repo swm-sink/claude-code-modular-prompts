@@ -1,30 +1,20 @@
-<command_file>
-  <metadata>
-    <name>/git commit</name>
-    <purpose>Generates intelligent, meaningful commit messages following the Conventional Commits format.</purpose>
-    <usage>
-      <![CDATA[
-      /git commit <auto_stage=true>
-      ]]>
-    </usage>
-  </metadata>
+---
+description: Intelligent git commit automation with conventional commits, semantic analysis, and automated staging
+argument-hint: "[commit_type] [scope]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-  <arguments>
-    <argument name="auto_stage" type="boolean" required="false" default="true">
-      <description>If true, automatically stages all tracked, changed files before committing.</description>
-    </argument>
-  </arguments>
-  
-  <examples>
-    <example>
-      <description>Analyze staged changes and generate a conventional commit message.</description>
-      <usage>/git commit</usage>
-    </example>
-    <example>
-      <description>Stage all current changes and then generate the commit message.</description>
-      <usage>/git commit auto_stage=true</usage>
-    </example>
-  </examples>
+# /git commit - Intelligent Commit Automation
+
+Advanced git commit system with conventional commit standards, semantic analysis, and intelligent staging automation.
+
+## Usage
+```bash
+/git commit feat                             # Feature commit with auto-analysis
+/git commit fix                              # Bug fix commit with context
+/git commit --auto                           # Fully automated commit generation
+/git commit --semantic                       # Semantic commit message analysis
+```
 
   <claude_prompt>
     <prompt>
@@ -48,4 +38,3 @@
   <dependencies>
     <!-- This command interacts directly with git -->
   </dependencies>
-</command_file>

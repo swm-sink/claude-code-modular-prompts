@@ -1,4 +1,20 @@
-# /session-create - Create New Development Session
+---
+description: Intelligent session creation with auto-configuration, context detection, and workspace optimization
+argument-hint: "[session_type] [configuration]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /session create - Intelligent Session Creation
+
+Advanced session creation system with auto-configuration, intelligent context detection, and optimized workspace setup.
+
+## Usage
+```bash
+/session create development                   # Create development session
+/session create --auto-config                # Auto-configure from project
+/session create --template react             # Create from template
+/session create --collaborative              # Multi-user collaborative session
+```
 
 ## Purpose
 **WORKING** command that creates a new Claude Code development session with comprehensive metadata tracking, context preservation, and productivity analytics.

@@ -1,3 +1,21 @@
+---
+description: Intelligent git history analysis with pattern detection, contributor insights, and code evolution tracking
+argument-hint: "[analysis_type] [scope]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /git history - Intelligent History Analysis
+
+Advanced git history analysis with pattern detection, contributor insights, code evolution tracking, and intelligent reporting.
+
+## Usage
+```bash
+/git history analyze                         # Comprehensive history analysis
+/git history contributors                    # Contributor insights and patterns
+/git history evolution                       # Code evolution and trend analysis
+/git history --pattern                       # Pattern detection in commit history
+```
+
 <command_file>
   <metadata>
     <name>/git history</name>

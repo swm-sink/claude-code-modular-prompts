@@ -1,19 +1,19 @@
 ---
-description: Dynamic specialized micro agent spawning system with unlimited scaling capabilities
-argument-hint: "[agent_type] [specialization] [resource_limits]"
-allowed-tools: Task, Read, Write, Edit, Bash, Grep, Glob
+description: Advanced agent spawning with intelligent orchestration, capability matching, and dynamic scaling
+argument-hint: "[agent_type] [capabilities]"
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /agent spawn - Dynamic Agent Creation Engine
+# /agent spawn - Advanced Agent Orchestration
 
-Spawns task-specific micro agents (<30k tokens) specialized for Claude Code Prompt Factory transformation. Creates agents focused on command conversion, XML validation, component management, and framework testing.
+Sophisticated agent spawning system with intelligent orchestration, capability matching, dynamic scaling, and multi-agent coordination.
 
 ## Usage
 ```bash
-/agent spawn command-converter                       # Command file conversion specialist
-/agent spawn xml-parser                             # XML validation and error fixing
-/agent spawn component-linker                       # Component dependency management
-/agent spawn framework-tester                       # Framework validation and testing
+/agent spawn developer                       # Spawn development-focused agent
+/agent spawn --specialist security          # Spawn security specialist agent
+/agent spawn --swarm 5                       # Spawn coordinated agent swarm
+/agent spawn --adaptive                      # Adaptive agent with dynamic capabilities
 ```
 
 ## Task-Specific Agent Types

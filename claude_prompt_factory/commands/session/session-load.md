@@ -1,4 +1,20 @@
-# /session-load - Load Previous Development Session
+---
+description: Intelligent session restoration with context rebuilding, state validation, and continuity management
+argument-hint: "[session_name] [load_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /session load - Intelligent Session Restoration
+
+Advanced session restoration system with intelligent context rebuilding, state validation, and seamless continuity management.
+
+## Usage
+```bash
+/session load project-state                  # Load saved session state
+/session load --validate                     # Load with state validation
+/session load --merge                        # Merge with current session
+/session load --auto-restore                 # Automatic session restoration
+```
 
 ## Purpose
 **WORKING** command that loads previous Claude Code sessions with full context restoration, conversation history, and seamless continuation capabilities.

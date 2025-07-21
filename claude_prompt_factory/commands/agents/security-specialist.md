@@ -1,18 +1,19 @@
 ---
-description: Comprehensive security analysis and vulnerability detection specialist with threat modeling
-argument-hint: "[specialization] [compliance_framework] [threat_level]"
-allowed-tools: Bash, Read, Grep, Glob, Write
+description: Advanced security specialist agent with vulnerability assessment, threat modeling, and automated security testing
+argument-hint: "[security_focus] [assessment_scope]"
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /security specialist - Advanced Security Agent
+# /agent security-specialist - Advanced Security Agent
 
-Comprehensive security analysis and vulnerability detection specialist with advanced threat modeling, compliance validation, and penetration testing capabilities.
+Sophisticated security specialist agent with comprehensive vulnerability assessment, intelligent threat modeling, and automated security testing.
 
 ## Usage
 ```bash
-/security specialist threat-modeling              # Threat modeling specialist
-/security specialist compliance-auditor GDPR     # GDPR compliance auditor
-/security specialist penetration-tester          # Ethical hacking specialist
+/agent security-specialist audit             # Comprehensive security audit
+/agent security-specialist pentest          # Penetration testing automation
+/agent security-specialist compliance       # Security compliance assessment
+/agent security-specialist --owasp          # OWASP-focused security analysis
 ```
 
 <command_file>

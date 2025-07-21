@@ -1,3 +1,21 @@
+---
+description: Intelligent pull request automation with automated review, validation, and CI/CD integration
+argument-hint: "[pr_action] [target_branch]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /git pr - Intelligent Pull Request Automation
+
+Advanced PR system with automated review, comprehensive validation, intelligent CI/CD integration, and merge automation.
+
+## Usage
+```bash
+/git pr create                               # Create PR with auto-generated description
+/git pr review                               # Automated code review and validation
+/git pr merge                                # Intelligent merge with safety checks
+/git pr --auto                               # Fully automated PR workflow
+```
+
 <command_file>
   <metadata>
     <name>/git pr</name>

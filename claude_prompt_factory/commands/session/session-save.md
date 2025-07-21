@@ -1,4 +1,20 @@
-# /session-save - Save Current Session State
+---
+description: Intelligent session state persistence with compression, encryption, and cross-session continuity
+argument-hint: "[session_name] [save_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
+
+# /session save - Intelligent Session Persistence
+
+Advanced session state management with intelligent compression, encryption, and seamless cross-session continuity.
+
+## Usage
+```bash
+/session save project-state                  # Save current session state
+/session save --auto                         # Automatic periodic saving
+/session save --compress                     # Compressed state storage
+/session save --encrypt                      # Encrypted session data
+```
 
 ## Purpose
 **WORKING** command that saves current Claude Code session state with intelligent context compression, conversation preservation, and productivity analytics.

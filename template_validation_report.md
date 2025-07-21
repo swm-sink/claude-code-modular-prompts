@@ -1,12 +1,12 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T01:29:55.273035
+**Generated**: 2025-07-21T01:35:36.489731
 
 ## 📋 Executive Summary
-- **Total Files**: 194
-- **Valid Files**: 194 (100.0%)
-- **Overall Score**: 8061/19400 (41.6%)
+- **Total Files**: 197
+- **Valid Files**: 197 (100.0%)
+- **Overall Score**: 8314/19700 (42.2%)
 
-## 🚨 Critical Issues (231 errors)
+## 🚨 Critical Issues (229 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
 - ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
@@ -265,6 +265,15 @@
 ### claude_prompt_factory/commands/api/api-test.md
 - ❌ Missing <command_file> XML structure
 
+### claude_prompt_factory/commands/monitoring/monitor-setup.md
+- ❌ Missing <command_file> XML structure
+
+### claude_prompt_factory/commands/monitoring/monitor-alerts.md
+- ❌ Missing <command_file> XML structure
+
+### claude_prompt_factory/commands/monitoring/monitor-dashboard.md
+- ❌ Missing <command_file> XML structure
+
 ### claude_prompt_factory/commands/performance/optimize-framework.md
 - ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
@@ -276,19 +285,12 @@
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/git/git-merge.md
-- ❌ Missing YAML frontmatter
+- ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/git/git-commit.md
-- ❌ Missing YAML frontmatter
-
-### claude_prompt_factory/commands/git/git-pr.md
-- ❌ Missing YAML frontmatter
-
-### claude_prompt_factory/commands/git/git-history.md
-- ❌ Missing YAML frontmatter
+- ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/session/session-save.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/session/session-compact.md
@@ -300,11 +302,9 @@
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/session/session-create.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/session/session-load.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/components/ecosystem/api-marketplace.md
