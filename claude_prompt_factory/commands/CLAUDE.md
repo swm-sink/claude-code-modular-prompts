@@ -1,4 +1,10 @@
-# Claude Code Commands - Quick Reference
+---
+description: Main Claude Code Prompt Factory documentation and command reference
+argument-hint: N/A
+allowed-tools: Read
+---
+
+# The Claude Code Prompt Factory
 
 This document is the central entry point to the Claude Code Prompt Factory. It provides a high-level overview of the available command categories and integrates foundational framework components.
 

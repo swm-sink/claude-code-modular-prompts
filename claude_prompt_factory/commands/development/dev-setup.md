@@ -4,43 +4,59 @@ argument-hint: "[environment_type] [automation_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /dev setup - Advanced Development Setup
+<command_file>
+  <metadata>
+    <name>/dev setup</name>
+    <purpose>Advanced development environment setup with intelligent automation and platform optimization</purpose>
+    <usage>
+      <![CDATA[
+      /dev setup [environment_type]
+      ]]>
+    </usage>
+  </metadata>
 
-Sophisticated development environment setup with intelligent automation, dependency resolution, and platform optimization.
-
-## Usage
-```bash
-/dev setup full                              # Complete development environment
-/dev setup --auto                            # Fully automated setup
-/dev setup --docker                          # Containerized development environment
-/dev setup --cloud                           # Cloud development environment
-```
+  <arguments>
+    <argument name="environment_type" type="string" required="false" default="full">
+      <description>Type of development environment to setup</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Setup complete development environment</description>
+      <usage>/dev setup full</usage>
+    </example>
+  </examples>
 
   <claude_prompt>
     <prompt>
-      You are a development environment specialist. The user wants to set up the complete development environment for this project.
+You are a development environment specialist. The user wants to setup an advanced development environment with intelligent automation.
 
-      1.  **Read Configuration**: Read the `PROJECT_CONFIG.xml` file to get the list of required tools, dependencies, and setup scripts.
-      2.  **Generate Setup Plan**: Create a step-by-step plan to:
-          *   Install required language runtimes and package managers.
-          *   Install project dependencies (e.g., `npm install`, `pip install -r requirements.txt`).
-          *   Configure development tools (linters, formatters).
-          *   Set up pre-commit Git hooks.
-      3.  **Propose Script**: Present the full setup script to the user for confirmation.
-      4.  **Execute and Verify**: Upon approval, execute the script. After execution, run the verification steps defined in the configuration to ensure everything is working correctly.
-      5.  **Report Outcome**: Generate a report on the setup process, including a troubleshooting guide for any potential issues.
+**Setup Process:**
+1. **Environment Analysis**: Analyze current system and requirements
+2. **Dependency Resolution**: Resolve and install required dependencies
+3. **Configuration Setup**: Configure development tools and environments
+4. **Platform Optimization**: Optimize for the target platform
+5. **Validation Testing**: Test the setup for completeness
 
-      <include component="components/reporting/generate-structured-report.md" />
+**Implementation Strategy:**
+- Detect operating system and platform requirements
+- Install and configure development tools and runtimes
+- Setup IDE configurations and extensions
+- Configure version control and deployment tools
+- Establish development workflows and automation
+
+<include component="components/context/adaptive-thinking.md" />
+<include component="components/actions/apply-code-changes.md" />
+<include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 
   <dependencies>
-    <uses_config_values>
-      <value>development.setup.dependencies</value>
-      <value>development.setup.scripts</value>
-      <value>development.setup.verification</value>
-    </uses_config_values>
     <includes_components>
+      <component>components/context/adaptive-thinking.md</component>
+      <component>components/actions/apply-code-changes.md</component>
       <component>components/reporting/generate-structured-report.md</component>
     </includes_components>
   </dependencies>
+</command_file>

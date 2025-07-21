@@ -4,68 +4,59 @@ argument-hint: "[improvement_scope] [optimization_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /meta improve - Advanced Meta-Improvement Framework
+<command_file>
+  <metadata>
+    <name>/meta improve</name>
+    <purpose>Advanced meta-improvement framework with self-optimization and adaptive learning</purpose>
+    <usage>
+      <![CDATA[
+      /meta improve [improvement_scope]
+      ]]>
+    </usage>
+  </metadata>
 
-Sophisticated meta-improvement system with self-optimization, performance enhancement, and adaptive learning capabilities.
-
-## Usage
-```bash
-/meta improve framework                      # Framework-wide improvements
-/meta improve --performance                  # Performance optimization focus
-/meta improve --adaptive                     # Adaptive learning improvements
-/meta improve --autonomous                   # Autonomous self-improvement
-```
-
-## Workflow
-
-The `/meta-improve` command initiates a conversational workflow to gather feedback and refine a command's prompt.
-
-```xml
-<improvement_workflow>
-  <step name="Identify Target Command">
-    <description>Identify the command to be improved. If the user doesn't specify a command, default to the last command that was run.</description>
-    <interaction>
-      <prompt>If the target command is not clear, ask the user: "Which command would you like to improve?"</prompt>
-    </interaction>
-  </step>
+  <arguments>
+    <argument name="improvement_scope" type="string" required="false" default="framework">
+      <description>Scope of improvement focus (framework, performance, adaptive, autonomous)</description>
+    </argument>
+  </arguments>
   
-  <step name="Gather Feedback">
-    <description>Engage the user in a conversation to understand what went wrong with the command's output and how it could be improved.</description>
-    <interaction>
-      <prompt>Ask the user to describe the issue: "What was the problem with the output of the `/task` command?"</prompt>
-      <prompt>Ask for specific examples: "Can you give me an example of the incorrect output and what you would have expected instead?"</prompt>
-      <prompt>Ask for suggestions: "How would you change the instructions for the `/task` command to prevent this issue in the future?"</prompt>
-    </interaction>
-  </step>
-  
-  <step name="Analyze & Generate Improvement">
-    <description>Analyze the user's feedback and the target command's current prompt. Based on this analysis, generate a new, improved version of the prompt.</description>
-    <tool_usage>
-      <tool>Read</tool>
-      <description>Read the contents of the target command's markdown file.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Propose Changes & Confirm">
-    <description>Present the proposed changes to the user as a diff and ask for confirmation before applying them.</description>
-    <interaction>
-      <prompt>Show the user a diff of the changes: "Here are the changes I'm proposing for the `/task` command. Do you approve?"</prompt>
-    </interaction>
-  </step>
-  
-  <step name="Apply Changes">
-    <description>Once the user confirms, apply the changes to the target command's markdown file.</description>
-    <tool_usage>
-      <tool>Write</tool>
-      <description>Write the new, improved prompt to the target command's file.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Final Summary">
-    <description>Provide a summary of the completed improvement and thank the user for their feedback.</description>
-    <output>A confirmation message: "Thank you for your feedback! The `/task` command has been successfully improved."</output>
-  </step>
-</improvement_workflow>
-```
+  <examples>
+    <example>
+      <description>Framework-wide improvements</description>
+      <usage>/meta improve framework</usage>
+    </example>
+  </examples>
 
-This user-driven improvement mechanism is a key feature of the "Prompt Factory," allowing the framework to learn and adapt based on real-world usage. 
+  <claude_prompt>
+    <prompt>
+You are a meta-improvement specialist. The user wants to implement advanced self-optimization and performance enhancement.
+
+**Improvement Process:**
+1. **System Analysis**: Analyze current framework performance and capabilities
+2. **Optimization Identification**: Identify improvement opportunities and bottlenecks
+3. **Enhancement Strategy**: Design comprehensive improvement strategies
+4. **Adaptive Learning**: Implement adaptive learning mechanisms
+5. **Performance Validation**: Validate improvements and measure impact
+
+**Implementation Strategy:**
+- Analyze framework performance metrics and usage patterns
+- Implement self-optimization algorithms and adaptive learning
+- Create performance enhancement and efficiency improvements
+- Establish continuous improvement and monitoring systems
+- Generate improvement reports and recommendations
+
+<include component="components/learning/meta-learning.md" />
+<include component="components/performance/auto-scaling.md" />
+<include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/learning/meta-learning.md</component>
+      <component>components/performance/auto-scaling.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

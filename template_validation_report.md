@@ -1,14 +1,13 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T02:22:16.046285
+**Generated**: 2025-07-21T02:27:07.281971
 
 ## 📋 Executive Summary
 - **Total Files**: 202
 - **Valid Files**: 202 (100.0%)
-- **Overall Score**: 9808/20200 (48.6%)
+- **Overall Score**: 10089/20200 (49.9%)
 
-## 🚨 Critical Issues (181 errors)
+## 🚨 Critical Issues (175 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/research/research-analyze.md
@@ -41,15 +40,6 @@
 ### claude_prompt_factory/commands/core/research.md
 - ❌ Missing <command_file> XML structure
 
-### claude_prompt_factory/commands/core/query.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/core/existing.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/core/protocol.md
-- ❌ Missing <command_file> XML structure
-
 ### claude_prompt_factory/commands/analysis/analyze-dependencies.md
 - ❌ Missing <command_file> XML structure
 
@@ -60,12 +50,6 @@
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/security/secure-audit.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/development/dev-setup.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/meta/meta-improve.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/agents/dag-orchestrator.md
@@ -436,14 +420,11 @@
 - ❌ Missing <description> element
 - ❌ Missing <output> section
 
-## ⚠️ Warnings (17 warnings)
+## ⚠️ Warnings (16 warnings)
 ### claude_prompt_factory/commands/documentation/docs-generate.md
 - ⚠️ Dependencies section doesn't match actual includes
 
 ### claude_prompt_factory/commands/documentation/docs-publish.md
-- ⚠️ Dependencies section doesn't match actual includes
-
-### claude_prompt_factory/commands/core/query.md
 - ⚠️ Dependencies section doesn't match actual includes
 
 ### claude_prompt_factory/commands/analysis/analyze-performance.md

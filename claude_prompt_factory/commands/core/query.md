@@ -1,55 +1,62 @@
 ---
-description: Intelligent codebase query system with semantic search and context-aware analysis
-argument-hint: "[question_or_search_term]"
+description: Intelligent codebase query and analysis with contextual understanding and comprehensive insights
+argument-hint: "[query_type] [analysis_scope]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /query - Intelligent Codebase Query
+<command_file>
+  <metadata>
+    <name>/query</name>
+    <purpose>Intelligent codebase query and analysis with contextual understanding and comprehensive insights</purpose>
+    <usage>
+      <![CDATA[
+      /query "[question about codebase]"
+      ]]>
+    </usage>
+  </metadata>
 
-Advanced query system with semantic search, pattern recognition, and context-aware code analysis.
-
-## Usage
-```bash
-/query "how does authentication work?"       # Semantic question about codebase
-/query "find all database models"           # Search for specific patterns
-/query "what are the API endpoints?"        # Functional queries
-/query "security vulnerabilities"           # Risk assessment queries
-```
-
-<analysis_workflow>
-  <step name="Intent Parsing">
-    <description>Understand the core question being asked and extract key terms and concepts.</description>
-  </step>
+  <arguments>
+    <argument name="question" type="string" required="true">
+      <description>Question about the codebase to analyze and answer</description>
+    </argument>
+  </arguments>
   
-  <step name="Parallel Search">
-    <description>Use multiple search strategies simultaneously to quickly locate relevant information.</description>
-    <strategies>
-      <strategy name="Keyword Search">Use grep for direct keywords from the user's query.</strategy>
-      <strategy name="Pattern Search">Use grep with regular expressions for common patterns.</strategy>
-      <strategy name="File Discovery">Use glob to find relevantly named files (e.g., `*auth*`, `*user*`).</strategy>
-      <strategy name="Config Search">Search for keywords within configuration files in the root directory.</strategy>
-    </strategies>
-  </step>
-  
-  <step name="Context Gathering">
-    <description>For each relevant file found, gather additional context to build a complete picture. This includes reading file contents, finding dependencies, and locating associated tests.</description>
-  </step>
-  
-  <step name="Synthesis">
-    <description>Analyze the gathered information to identify common patterns and synthesize a comprehensive answer.</description>
-    <include component="components/context/find-relevant-code.md" />
-    <include component="components/analysis/codebase-discovery.md" />
-    <include component="components/context/adaptive-thinking.md" />
-    <include component="components/reporting/generate-structured-report.md" />
-  </step>
-</analysis_workflow>
+  <examples>
+    <example>
+      <description>Query authentication implementation</description>
+      <usage>/query "How does user authentication work in this app?"</usage>
+    </example>
+  </examples>
 
-<dependencies>
-  <includes_components>
-    <component>components/reporting/generate-structured-report.md</component>
-  </includes_components>
-  <uses_config_values>
-    <value>command_settings.command#query.max_results</value>
-    <value>command_settings.command#query.semantic_search</value>
-  </uses_config_values>
-</dependencies> 
+  <claude_prompt>
+    <prompt>
+You are an intelligent codebase analyst. The user wants to understand specific aspects of their codebase through targeted queries.
+
+**Analysis Process:**
+1. **Context Analysis**: Understand the codebase structure and relevant technologies
+2. **Query Processing**: Parse and interpret the user's question
+3. **Code Investigation**: Search and analyze relevant code sections
+4. **Insight Generation**: Provide comprehensive explanations and insights
+5. **Recommendation Synthesis**: Offer actionable recommendations when appropriate
+
+**Implementation Strategy:**
+- Perform semantic code search to find relevant implementations
+- Analyze code patterns, dependencies, and relationships
+- Provide clear explanations with code examples
+- Identify potential improvements or issues
+- Generate actionable insights and recommendations
+
+<include component="components/context/find-relevant-code.md" />
+<include component="components/analysis/codebase-discovery.md" />
+<include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/context/find-relevant-code.md</component>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file> 
