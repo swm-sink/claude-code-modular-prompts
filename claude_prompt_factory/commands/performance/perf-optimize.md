@@ -1,57 +1,65 @@
-# /perf optimize - Performance Optimization Command
+<command_file>
+  <metadata>
+    <name>/perf optimize</name>
+    <purpose>Applies targeted performance optimizations to improve efficiency and reduce memory usage.</purpose>
+    <usage>
+      <![CDATA[
+      /perf optimize "[target_file_or_function]" <focus="cpu">
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Apply targeted performance optimizations to improve algorithm efficiency, reduce memory usage, and enhance overall system performance.
-
-## Usage
-```bash
-/perf optimize <target> [--focus=<focus>] [--safe]
-```
-
-## Workflow
-
-The `/perf optimize` command follows a systematic process to optimize performance.
-
-```xml
-<perf_optimize_workflow>
-  <step name="Profile & Analyze Bottlenecks">
-    <description>First, run the `/perf profile` command to gather detailed performance data and identify the primary bottlenecks (e.g., CPU, memory, I/O).</description>
-    <tool_usage>
-      <tool>/perf profile</tool>
-      <description>Use the performance profiling command to identify bottlenecks.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="target" type="string" required="true">
+      <description>The specific file, function, or class to optimize.</description>
+    </argument>
+    <argument name="focus" type="string" required="false" default="cpu">
+      <description>The optimization focus (e.g., 'cpu', 'memory', 'io').</description>
+    </argument>
+  </arguments>
   
-  <step name="Identify & Apply Optimizations">
-    <description>Based on the profiling data, identify and apply the most effective optimization techniques. The `--focus` flag can be used to target a specific area (e.g., 'cpu', 'memory'). The `--safe` flag ensures that only low-risk optimizations are applied.</description>
-    <tool_usage>
-      <tool>AI/Code Refactoring</tool>
-      <description>Apply performance optimization patterns to the code.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Benchmark & Verify">
-    <description>Run the `/perf benchmark` command to compare the before and after performance and verify that the optimizations have had the desired effect without introducing any regressions.</description>
-    <tool_usage>
-      <tool>/perf benchmark</tool>
-      <description>Use the performance benchmark command to verify the improvements.</description>
-    </tool_usage>
-  </step>
-</perf_optimize_workflow>
-```
+  <examples>
+    <example>
+      <description>Analyze and suggest CPU optimizations for a specific function.</description>
+      <usage>/perf optimize "src/utils/dataProcessor.js:processLargeFile"</usage>
+    </example>
+    <example>
+      <description>Focus on memory optimizations for a data-intensive module.</description>
+      <usage>/perf optimize "src/analytics/engine.py" focus="memory"</usage>
+    </example>
+  </examples>
 
-## Configuration
+  <claude_prompt>
+    <prompt>
+      You are a performance optimization expert. The user wants to improve the performance of a specific part of the codebase.
 
-The `/perf optimize` command can be configured through the `PROJECT_CONFIG.xml` file.
+      1.  **Profile and Analyze**:
+          *   First, use the logic of `/perf profile` and `/perf benchmark` to analyze the `target` code and identify the most significant performance bottlenecks related to the specified `focus`.
+      2.  **Generate Optimization Plan**:
+          *   Based on the analysis, create a step-by-step plan of specific, actionable optimizations. Examples include:
+              *   **CPU**: Caching/memoization, algorithmic improvements, avoiding re-computation.
+              *   **Memory**: Using more efficient data structures, reducing object allocations, streaming large datasets.
+              *   **I/O**: Batching operations, using asynchronous I/O, compressing data.
+          *   <include component="components/planning/create-step-by-step-plan.md" />
+      3.  **Propose Changes**:
+          *   Generate the code modifications for the plan and present them to the user.
+          *   <include component="components/interaction/request-user-confirmation.md" />
+      4.  **Apply and Verify**:
+          *   On confirmation, apply the changes.
+          *   <include component="components/actions/apply-code-changes.md" />
+          *   Instruct the user to re-run the benchmark (`/perf benchmark`) to verify the improvement.
+    </prompt>
+  </claude_prompt>
 
-```xml
-<command name="/perf optimize">
-  <setting name="default_focus" value="auto" description="The default optimization focus (e.g., 'auto', 'cpu', 'memory')." />
-  <setting name="default_optimization_level" value="safe" description="The default optimization level to apply (e.g., 'safe', 'aggressive')." />
-</command>
-```
-
-## Use Cases
-
-*   **Improving Application Speed**: Optimize critical code paths to reduce latency and improve user experience.
-*   **Reducing Infrastructure Costs**: Reduce memory and CPU usage to lower hosting costs.
-*   **Scaling Applications**: Proactively optimize code to handle increasing traffic and data volumes.
+  <dependencies>
+    <chain>
+      <command>/perf profile</command>
+      <command>/perf benchmark</command>
+    </chain>
+    <includes_components>
+      <component>components/planning/create-step-by-step-plan.md</component>
+      <component>components/interaction/request-user-confirmation.md</component>
+      <component>components/actions/apply-code-changes.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

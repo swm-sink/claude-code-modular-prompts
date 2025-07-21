@@ -1,23 +1,13 @@
-# Framework requirements
-# Updated: 2025-07-14 - Added test coverage enforcement
+# Core dependencies for analysis scripts
+# Updated: 2025-07-21 - Consolidated and cleaned for final validation
 
-# Core dependencies
 defusedxml
 numpy>=1.21.0
 pandas>=1.5.0
 psutil
 requests
-schedule
 
-# Testing requirements - CRITICAL for quality gates
+# Testing requirements
 pytest>=7.0.0
 pytest-cov>=4.0.0
 coverage[toml]>=7.0.0
-
-# Optional analysis tools
-loader
-metrics
-template_resolver
-validate
-validator
-xml_utils

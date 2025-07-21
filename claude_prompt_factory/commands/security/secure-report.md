@@ -1,51 +1,57 @@
-# /secure report - Security Report Generator
+<command_file>
+  <metadata>
+    <name>/secure report</name>
+    <purpose>Generates comprehensive security reports with trends, remediation status, and compliance insights.</purpose>
+    <usage>
+      <![CDATA[
+      /secure report <timeframe="30d">
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Generate comprehensive security reports with vulnerability trends, remediation status, and compliance insights for stakeholders.
+  <arguments>
+    <argument name="timeframe" type="string" required="false" default="30d">
+      <description>The time window for the report (e.g., '7d', '30d', '90d').</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Generate a security report for the last 30 days.</description>
+      <usage>/secure report</usage>
+    </example>
+    <example>
+      <description>Generate a security report for the last quarter.</description>
+      <usage>/secure report timeframe="90d"</usage>
+    </example>
+  </examples>
 
-## Usage
-```bash
-/secure report [scope] [--format=summary|detailed|json|sarif]
-```
+  <claude_prompt>
+    <prompt>
+      You are a security analyst. The user wants a comprehensive report on the project's security posture.
 
-## Workflow
+      1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the configured security scanning and monitoring service integrations.
+      2.  **Gather Security Data**:
+          *   Fetch vulnerability and compliance data from the configured services for the specified `timeframe`.
+          *   Incorporate results from recent `/secure scan` and `/secure audit` runs.
+      3.  **Analyze and Synthesize**:
+          *   Analyze the data to identify security trends (e.g., new vs. fixed vulnerabilities).
+          *   Calculate key metrics like risk scores, time-to-remediate, and compliance status.
+          *   Identify the highest-risk vulnerabilities that need immediate attention.
+      4.  **Generate Report**:
+          *   Create a detailed security report with clear visualizations.
+          *   Include a prioritized list of actionable recommendations.
+          *   <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-The `/secure report` command follows a systematic process to generate detailed security reports.
-
-```xml
-<security_report_workflow>
-  <step name="Gather Security Data">
-    <description>Collect security data from various sources, including vulnerability scans, compliance tools, and incident response systems.</description>
-    <tool_usage>
-      <tool>Parallel Read</tool>
-      <description>Read data from security scan reports, compliance logs, and incident databases.</description>
-    </tool_usage>
-  </step>
-  <step name="Analyze & Synthesize Data">
-    <description>Analyze the gathered data to calculate security metrics, identify vulnerability trends, assess compliance status, and identify priority issues.</description>
-  </step>
-  <step name="Generate Report">
-    <description>Generate a comprehensive security report in the specified format, including security metrics, trend analysis, actionable intelligence, and remediation plans.</description>
-    <output>A detailed security report.</output>
-  </step>
-</security_report_workflow>
-```
-
-## Report Content
-
-### Security Metrics
-- **Vulnerability Count**: Critical, High, Medium, Low severity
-- **Risk Score**: CVSS-based organizational risk rating
-- **Compliance Status**: OWASP 2025, SOC2, ISO27001 alignment
-- **Remediation Rate**: Time-to-fix averages, SLA compliance
-
-### Trend Analysis
-- **Vulnerability Trends**: New vs. fixed vulnerabilities over time
-- **Attack Surface**: Changes in exposed services and endpoints
-- **Compliance Drift**: Deviation from security baselines
-- **Team Performance**: Security fix velocity by team/component
-
-### Actionable Intelligence
-- **Priority Issues**: Highest-risk vulnerabilities requiring immediate attention
-- **Remediation Plans**: Recommended fix sequences and timelines
-- **Resource Needs**: Security team capacity and training gaps
-- **Policy Updates**: Required security policy changes
+  <dependencies>
+    <uses_config_values>
+      <value>security.scanning_service</value>
+      <value>security.monitoring_service</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

@@ -1,55 +1,58 @@
-# /docs generate - Documentation Generation Command
+<command_file>
+  <metadata>
+    <name>/docs generate</name>
+    <purpose>Automatically generates comprehensive documentation from source code.</purpose>
+    <usage>
+      <![CDATA[
+      /docs generate <target_directory="./src">
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Automatically generate comprehensive documentation from code, with intelligent content extraction and formatting.
-
-## Usage
-```bash
-/docs generate [target] [--type=api|readme|guide] [--format=md|html]
-```
-
-## Workflow
-
-The `/docs generate` command follows a systematic process to generate high-quality documentation.
-
-```xml
-<doc_generation_workflow>
-  <step name="Analyze Code">
-    <description>Recursively scan the target directory to analyze the code and extract all relevant information for documentation, including function signatures, class structures, comments, and dependencies.</description>
-    <tool_usage>
-      <tool>Parallel Grep/Glob</tool>
-      <description>Find all source code files in the target directory and extract relevant information.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="target" type="string" required="false" default="./src">
+      <description>The source directory to scan for code to document.</description>
+    </argument>
+  </arguments>
   
-  <step name="Extract Content & Generate Examples">
-    <description>Extract the core content for the documentation and intelligently generate usage examples based on the code's structure and any existing tests.</description>
-  </step>
-  
-  <step name="Generate Documentation">
-    <description>Assemble the extracted content and generated examples into a structured, readable documentation file, using the appropriate format and style as defined in `PROJECT_CONFIG.xml`.</description>
-    <tool_usage>
-      <tool>Write</tool>
-      <description>Create the new documentation file in the project's designated docs directory.</description>
-    </tool_usage>
-  </step>
-</doc_generation_workflow>
-```
+  <examples>
+    <example>
+      <description>Generate documentation for all code in the default 'src' directory.</description>
+      <usage>/docs generate</usage>
+    </example>
+    <example>
+      <description>Generate documentation for a specific component directory.</description>
+      <usage>/docs generate target="./src/components"</usage>
+    </example>
+  </examples>
 
-## Configuration
+  <claude_prompt>
+    <prompt>
+      You are a technical writer. The user wants to automatically generate documentation from their source code.
 
-The behavior of the `/docs generate` command is configured in the `PROJECT_CONFIG.xml` file.
+      1.  **Analyze Code**: Scan the `target` directory to analyze the code. Extract information such as:
+          *   Class and function signatures.
+          *   Docstrings and comments.
+          *   Dependencies and relationships between modules.
+      2.  **Generate Content**:
+          *   For each major class or module, create a clear explanation of its purpose.
+          *   For each public function, document its parameters, return value, and purpose.
+          *   Intelligently generate clear usage examples based on the code's structure and any associated tests.
+      3.  **Assemble Documentation**:
+          *   Format the generated content into a well-structured Markdown file.
+          *   Apply the documentation style guide defined in `PROJECT_CONFIG.xml`.
+          *   Propose the new documentation file to the user.
+          *   <include component="components/actions/apply-code-changes.md" />
+    </prompt>
+  </claude_prompt>
 
-```xml
-<project_config>
-  <documentation>
-    <style>google</style>
-    <output_format>markdown</output_format>
-    <include_private_members>false</include_private_members>
-  </documentation>
-</project_config>
-```
-
-## Examples
-- `/docs generate src/` - Generate docs for source directory
-- `/docs generate --type=api` - Create API documentation  
-- `/docs generate components/ --format=html` - HTML format docs
+  <dependencies>
+    <uses_config_values>
+      <value>documentation.style</value>
+      <value>documentation.output_dir</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/actions/apply-code-changes.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

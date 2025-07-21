@@ -1,54 +1,51 @@
-# /git commit - Intelligent Commit Message Generator
+<command_file>
+  <metadata>
+    <name>/git commit</name>
+    <purpose>Generates intelligent, meaningful commit messages following the Conventional Commits format.</purpose>
+    <usage>
+      <![CDATA[
+      /git commit <auto_stage=true>
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Generate intelligent, meaningful commit messages following the Conventional Commits format, with automated staging and quality validation.
-
-## Usage
-```bash
-/git commit "[description]" [--type=feat|fix|docs|style|refactor|test|chore]
-```
-
-## Workflow
-
-The `/git commit` command follows a systematic process to create high-quality commits.
-
-```xml
-<git_commit_workflow>
-  <step name="Analyze & Stage Changes">
-    <description>Analyze the changed files to determine the appropriate commit type and scope. Stage the relevant files for a coherent commit.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Use `git status` and `git diff` to analyze changes, and `git add` to stage them.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="auto_stage" type="boolean" required="false" default="true">
+      <description>If true, automatically stages all tracked, changed files before committing.</description>
+    </argument>
+  </arguments>
   
-  <step name="Generate Commit Message">
-    <description>Generate a commit message that follows the Conventional Commits standard, including the type, scope, description, and any breaking changes.</description>
-  </step>
-  
-  <step name="Validate & Commit">
-    <description>Validate the commit message format and run any pre-commit hooks (linting, formatting, tests). If validation passes, create the commit.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run pre-commit hooks and then `git commit`.</description>
-    </tool_usage>
-  </step>
-</git_commit_workflow>
-```
+  <examples>
+    <example>
+      <description>Analyze staged changes and generate a conventional commit message.</description>
+      <usage>/git commit</usage>
+    </example>
+    <example>
+      <description>Stage all current changes and then generate the commit message.</description>
+      <usage>/git commit auto_stage=true</usage>
+    </example>
+  </examples>
 
-## Conventional Commit Format
-```
-<type>[optional scope]: <description>
+  <claude_prompt>
+    <prompt>
+      You are a git expert. The user wants to create a high-quality commit.
 
-[optional body]
+      1.  **Analyze Changes**:
+          *   If `auto_stage` is true, stage all changed files (`git add .`).
+          *   Analyze the staged changes using `git diff --staged`.
+          *   Based on the changes, determine the appropriate commit type (feat, fix, refactor, etc.) and scope.
 
-[optional footer(s)]
-```
+      2.  **Generate Commit Message**:
+          *   Generate a commit message that follows the Conventional Commits specification.
+          *   The message should have a clear, concise subject line.
+          *   The body should explain the "what" and "why" of the change.
 
-### Types
-- **feat**: A new feature
-- **fix**: A bug fix
-- **docs**: Documentation only changes
-- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-- **refactor**: A code change that neither fixes a bug nor adds a feature
-- **test**: Adding missing tests or correcting existing tests
-- **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
+      3.  **Propose Commit Command**:
+          *   Present the final `git commit -m "..."` command to the user for them to execute.
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <!-- This command interacts directly with git -->
+  </dependencies>
+</command_file>

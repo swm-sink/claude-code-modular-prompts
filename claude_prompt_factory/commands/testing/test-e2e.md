@@ -1,50 +1,56 @@
-# /test e2e - End-to-End Testing Command
+<command_file>
+  <metadata>
+    <name>/test e2e</name>
+    <purpose>Executes comprehensive end-to-end tests that validate complete user workflows.</purpose>
+    <usage>
+      <![CDATA[
+      /test e2e "[workflow_name]"
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Execute comprehensive end-to-end tests that validate complete user workflows across the entire system.
+  <arguments>
+    <argument name="workflow" type="string" required="true">
+      <description>The name of the user workflow to test (e.g., 'user-registration', 'product-purchase').</description>
+    </argument>
+  </arguments>
 
-## Usage
-```bash
-/test e2e [workflow] [--browser=chrome|firefox]
-```
+  <examples>
+    <example>
+      <description>Run the end-to-end test for the user registration workflow.</description>
+      <usage>/test e2e "user-registration"</usage>
+    </example>
+    <example>
+      <description>Run the end-to-end test for the full checkout process.</description>
+      <usage>/test e2e "checkout-process"</usage>
+    </example>
+  </examples>
 
-## Workflow
+  <claude_prompt>
+    <prompt>
+      You are an E2E test automation engineer. The user wants to run an end-to-end test for a specific user workflow.
 
-The `/test e2e` command follows a systematic process to execute end-to-end tests.
+      1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to identify the E2E testing framework (e.g., Cypress, Playwright) and the command to run the tests.
+      2.  **Generate Test Script (if needed)**:
+          *   Analyze the `workflow` description.
+          *   If a test script for this workflow doesn't exist, generate a new one using the configured E2E framework. The script should simulate the user's journey step-by-step.
+      3.  **Execute Tests**:
+          *   Construct the command to run the specific E2E test for the workflow.
+          *   Present the command to the user for execution.
+      4.  **Generate Report**:
+          *   After execution, create a detailed report summarizing the results.
+          *   Include pass/fail status for each step in the workflow, performance metrics (e.g., page load times), and screenshots or videos on failure.
+          *   <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-```xml
-<e2e_testing_workflow>
-  <step name="Simulate User Workflow">
-    <description>Simulate complete user journeys across the application, testing cross-system interactions, business process flows, and user interface behavior.</description>
-    <tool_usage>
-      <tool>Browser Automation</tool>
-      <description>Launch browser instances, execute UI interactions, and capture screenshots/videos.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Validate System Integration">
-    <description>Validate integrations with APIs, databases, and external services, ensuring data consistency and correct behavior across all system components.</description>
-  </step>
-  
-  <step name="Perform Performance Validation">
-    <description>Measure page load times, monitor resource usage, and test under realistic load to ensure the system meets performance expectations.</description>
-  </step>
-  
-  <step name="Generate Report">
-    <description>Generate a detailed end-to-end test report, including pass/fail status, performance metrics, and any issues found.</description>
-    <output>A comprehensive end-to-end test report.</output>
-  </step>
-</e2e_testing_workflow>
-```
-
-## Features
-- **User Workflow Simulation**: Simulate complete user journeys and test cross-system interactions.
-- **Browser Automation**: Launch browser instances, execute UI interactions, and capture visual evidence.
-- **System Integration Testing**: Validate API integrations, database transactions, and external service calls.
-- **Performance Validation**: Measure page load times, monitor resource usage, and test under realistic load.
-
-## Quality Gates
-- All critical user paths must pass.
-- Performance must be within defined SLA thresholds.
-- No console errors or warnings should be present.
-- Accessibility standards should be met.
-- Cross-browser compatibility must be verified.
+  <dependencies>
+    <uses_config_values>
+      <value>testing.e2e_framework</value>
+      <value>testing.e2e_test_command</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

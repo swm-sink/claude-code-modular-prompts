@@ -1,43 +1,57 @@
-# /test coverage - Test Coverage Analysis Command
+<command_file>
+  <metadata>
+    <name>/test coverage</name>
+    <purpose>Analyzes test coverage, generates comprehensive reports, and tracks coverage metrics.</purpose>
+    <usage>
+      <![CDATA[
+      /test coverage <path="./src">
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Analyze test coverage, generate comprehensive reports, and track coverage metrics over time.
+  <arguments>
+    <argument name="path" type="string" required="false" default="./src">
+      <description>The source directory to analyze for test coverage.</description>
+    </argument>
+  </arguments>
 
-## Usage
-```bash
-/test coverage [path] [--threshold=80] [--format=html|json|text]
-```
+  <examples>
+    <example>
+      <description>Calculate test coverage for the entire 'src' directory.</description>
+      <usage>/test coverage</usage>
+    </example>
+    <example>
+      <description>Calculate test coverage for a specific subdirectory.</description>
+      <usage>/test coverage path="./src/api"</usage>
+    </example>
+  </examples>
 
-## Workflow
+  <claude_prompt>
+    <prompt>
+      You are a quality assurance analyst. The user wants to analyze the project's test coverage.
 
-The `/test coverage` command follows a systematic process to analyze and report on test coverage.
+      1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the configured test command and coverage options.
+      2.  **Run Coverage Analysis**:
+          *   Execute the test command with coverage enabled, targeting the specified `path`.
+      3.  **Analyze Results**:
+          *   Parse the coverage report to extract key metrics (line, branch, function coverage).
+          *   Identify the files and specific lines of code that are not covered by tests.
+      4.  **Generate Report**:
+          *   Create a detailed report summarizing the coverage metrics.
+          *   Highlight the top 5 least-covered files that need attention.
+          *   Provide actionable recommendations for improving test coverage.
+          *   <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-```xml
-<coverage_analysis_workflow>
-  <step name="Discover Code & Tests">
-    <description>Identify all source code files and their corresponding test files within the specified path. Also, detect the testing framework in use.</description>
-    <tool_usage>
-      <tool>Parallel Grep/Glob</tool>
-      <description>Scan the project for source code and test files.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Measure Coverage">
-    <description>Run the test suite with coverage measurement enabled. Calculate coverage percentages for lines, branches, and functions, and identify uncovered code.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run the test command with coverage flags.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Generate Reports & Recommendations">
-    <description>Generate detailed coverage reports in the specified format, highlight coverage gaps, and provide actionable recommendations for improving test coverage.</description>
-    <output>A comprehensive test coverage report with identified gaps and recommendations.</output>
-  </step>
-</coverage_analysis_workflow>
-```
-
-## Output
-- Coverage percentage by file/function.
-- Uncovered code identification.
-- Trend analysis and threshold compliance.
-- Actionable recommendations for improvement.
+  <dependencies>
+    <uses_config_values>
+      <value>testing.test_command</value>
+      <value>testing.coverage_options</value>
+      <value>paths.source</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

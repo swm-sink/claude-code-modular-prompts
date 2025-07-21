@@ -1,51 +1,46 @@
-# /context prime - Standard Codebase Analysis
+<command_file>
+  <metadata>
+    <name>/context prime</name>
+    <purpose>Performs a standard analysis of the codebase to provide a high-level overview of the project.</purpose>
+    <usage>
+      <![CDATA[
+      /context prime
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Perform a standard analysis of the codebase to provide a high-level overview of the project.
-
-## Usage
-```bash
-/context prime
-```
-
-## Workflow
-
-The `/context prime` command follows a systematic process to perform a standard codebase analysis.
-
-```xml
-<context_prime_workflow>
-  <step name="Analyze Codebase Structure">
-    <description>Scan the project to understand its overall structure, including the primary language, framework, and key directories.</description>
-    <tool_usage>
-      <tool>Codebase Analysis</tool>
-      <description>Analyze the codebase to understand the project's structure.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <!-- No arguments -->
+  </arguments>
   
-  <step name="Analyze Dependencies">
-    <description>Analyze the project's dependencies to identify key libraries and potential vulnerabilities.</description>
-    <tool_usage>
-      <tool>Dependency Analysis</tool>
-      <description>Analyze the project's dependencies.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Identify Key Patterns">
-    <description>Identify the key design patterns and coding conventions used in the project.</description>
-    <tool_usage>
-      <tool>Pattern Analysis</tool>
-      <description>Analyze the codebase to identify key patterns.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Generate Summary Report">
-    <description>Generate a summary report of the findings, providing a high-level overview of the project.</description>
-    <output>A standard codebase analysis report.</output>
-  </step>
-</context_prime_workflow>
-```
+  <examples>
+    <example>
+      <description>Run a standard analysis on the current project.</description>
+      <usage>/context prime</usage>
+    </example>
+  </examples>
 
-## Use Cases
+  <claude_prompt>
+    <prompt>
+      You are a codebase analysis tool. Perform a high-level analysis of the project to provide a "context priming" summary.
 
-*   **New Developer Onboarding**: Quickly get a high-level overview of a new project.
-*   **Project Health Check**: Perform a quick check of a project's overall health and structure.
-*   **Refactoring Planning**: Get a high-level understanding of a codebase before planning a major refactoring. 
+      1.  **Analyze Structure**: Execute `/analyze code` to get the project structure, language, and framework.
+      2.  **Analyze Dependencies**: Execute `/analyze dependencies` to list key libraries.
+      3.  **Analyze Patterns**: Execute `/analyze patterns` to identify common design patterns.
+      4.  **Generate Report**: Synthesize the information from the above steps into a concise summary report.
+
+      <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <chain>
+      <command>/analyze code</command>
+      <command>/analyze dependencies</command>
+      <command>/analyze patterns</command>
+    </chain>
+    <includes_components>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file> 

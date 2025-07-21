@@ -1,71 +1,63 @@
-# /test mutation - Mutation Testing Command
+<command_file>
+  <metadata>
+    <name>/test mutation</name>
+    <purpose>Performs mutation testing to assess the effectiveness of an existing test suite.</purpose>
+    <usage>
+      <![CDATA[
+      /test mutation "[target_file]" <auto_fix=false>
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Perform advanced mutation testing to assess the effectiveness of existing test suites and identify gaps in test coverage.
+  <arguments>
+    <argument name="target" type="string" required="true">
+      <description>The file containing the code to be mutation-tested.</description>
+    </argument>
+    <argument name="auto_fix" type="boolean" required="false" default="false">
+      <description>If true, automatically generates new tests to kill surviving mutants.</description>
+    </argument>
+  </arguments>
 
-## Usage
-```bash
-/test mutation [target] [--threshold=85] [--fix-survivors]
-```
+  <examples>
+    <example>
+      <description>Run mutation testing on a specific utility file.</description>
+      <usage>/test mutation "src/utils/stringUtils.js"</usage>
+    </example>
+    <example>
+      <description>Run mutation testing and automatically generate tests for any surviving mutants.</description>
+      <usage>/test mutation "src/core/authService.js" auto_fix=true</usage>
+    </example>
+  </examples>
 
-## Workflow
+  <claude_prompt>
+    <prompt>
+      You are a quality assurance engineer specializing in mutation testing. The user wants to assess the quality of their tests for a specific file.
 
-The `/test mutation` command follows a systematic process to perform mutation testing.
+      1.  **Analyze Code and Tests**:
+          *   Read the `target` file and its corresponding test file.
+      2.  **Generate Mutants**:
+          *   Create a set of "mutants" by introducing small, deliberate bugs into the source code (e.g., changing `<` to `<=`, negating a boolean, changing a `+` to a `-`).
+      3.  **Run Tests Against Mutants**:
+          *   For each mutant, run the existing test suite against it.
+          *   If the tests fail, the mutant is "killed."
+          *   If the tests pass, the mutant "survived," indicating a gap in the test suite.
+      4.  **Generate Report**:
+          *   Calculate the mutation score (percentage of mutants killed).
+          *   Provide a report listing all surviving mutants and the specific code change that was not caught by the tests.
+          *   <include component="components/reporting/generate-structured-report.md" />
+      5.  **Fix Survivors (Optional)**:
+          *   If `auto_fix` is true, for each surviving mutant, generate a new test case that specifically "kills" it and add it to the test suite.
+          *   <include component="components/actions/apply-code-changes.md" />
+    </prompt>
+  </claude_prompt>
 
-```xml
-<mutation_testing_workflow>
-  <step name="Identify Testable Code">
-    <description>Identify the testable code within the specified target, excluding non-functional code or third-party libraries.</description>
-  </step>
-  
-  <step name="Generate Intelligent Mutations">
-    <description>Generate a variety of intelligent mutations (e.g., conditional boundary changes, boolean negations, return value modifications) within the testable code.</description>
-  </step>
-  
-  <step name="Run Tests Against Mutants">
-    <description>Execute the existing test suite against each generated mutant. A successful test suite should "kill" (fail) the mutant, indicating effective test coverage.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run the test command against each mutant.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Identify Surviving Mutants & Generate Killing Tests">
-    <description>Identify any "surviving" mutants (those that did not cause a test failure). If the `--fix-survivors` flag is used, generate new tests designed to kill these surviving mutants.</description>
-    <tool_usage>
-      <tool>Write</tool>
-      <description>Create new tests for surviving mutants.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Report Mutation Score">
-    <description>Generate a detailed report of the mutation testing results, including the mutation score, a list of killed and surviving mutants, and suggestions for improving test effectiveness.</description>
-    <output>A comprehensive mutation testing report.</output>
-  </step>
-</mutation_testing_workflow>
-```
-
-## Mutation Types
-- Conditional boundary (< to <=)
-- Boolean negation (!condition)
-- Return value mutation
-- Exception throwing removal
-- Mathematical operator changes
-- String literal modifications
-
-## Output Format
-```
-MUTATION TESTING REPORT
-━━━━━━━━━━━━━━━━━━━━━
-Mutation Score: 87.3% (Target: 85%)
-
-Mutants: 156 total
-  Killed: 136 (87.2%)
-  Survived: 18 (11.5%)
-  Timeout: 2 (1.3%)
-
-Top Survivors:
-1. auth.js:45 - Boundary condition
-   Suggestion: Add edge case test
-2. utils.js:23 - Return value
-   Suggestion: Test null return
-```
+  <dependencies>
+    <uses_config_values>
+      <value>testing.mutation_tool</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/reporting/generate-structured-report.md</component>
+      <component>components/actions/apply-code-changes.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

@@ -1,54 +1,54 @@
-# /error trace - Error Tracing Command
+<command_file>
+  <metadata>
+    <name>/error trace</name>
+    <purpose>Traces error propagation paths and analyzes error flow to identify root causes.</purpose>
+    <usage>
+      <![CDATA[
+      /error trace "[error_message_or_log_file]"
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Trace error propagation paths and analyze error flow patterns to identify root causes and prevent recurrence.
-
-## Usage
-```bash
-/error trace [--stack] [--flow] [--depth=<depth>]
-```
-
-## Workflow
-
-The `/error trace` command follows a systematic process to trace errors.
-
-```xml
-<error_trace_workflow>
-  <step name="Collect Trace Data">
-    <description>Collect trace data from various sources, including stack traces, application logs, and distributed tracing systems. The depth of the trace can be controlled with the `--depth` flag.</description>
-    <tool_usage>
-      <tool>Log/Trace Reader</tool>
-      <description>Read and parse trace data from various sources.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="error_context" type="string" required="true">
+      <description>The full error message, stack trace, or path to a log file containing the error to be traced.</description>
+    </argument>
+  </arguments>
   
-  <step name="Analyze Trace & Build Flow Map">
-    <description>Analyze the collected trace data to build a map of the error flow through the system. This involves identifying the origin of the error and tracing its propagation path across different components and services.</description>
-    <tool_usage>
-      <tool>Graph Analysis</tool>
-      <description>Use graph analysis techniques to model and visualize the error flow.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Generate Trace Report">
-    <description>Generate a report that summarizes the error trace analysis. The report includes a visualization of the error flow, an identification of the root cause, and recommendations for preventing similar errors in the future.</description>
-    <output>A detailed error trace report.</output>
-  </step>
-</error_trace_workflow>
-```
+  <examples>
+    <example>
+      <description>Trace the propagation path of a specific error message.</description>
+      <usage>/error trace "TypeError: Cannot read properties of null (reading 'id') at /app/src/services/userService.js:25:12"</usage>
+    </example>
+  </examples>
 
-## Configuration
+  <claude_prompt>
+    <prompt>
+      You are a system diagnostician. The user wants to trace an error's propagation path through the system.
 
-The `/error trace` command can be configured through the `PROJECT_CONFIG.xml` file.
+      1.  **Analyze Context**:
+          *   Parse the provided `error_context` to identify the origin point of the error (file, function, line number).
+      2.  **Trace Backwards**:
+          *   Starting from the error's origin, trace the execution flow backwards.
+          *   Identify the sequence of function calls that led to the error state.
+          *   Examine how data (especially the data causing the error) was passed between functions.
+      3.  **Build Flow Map**:
+          *   Construct a map or diagram of the error flow, showing how the error propagated from its root cause to the point where it was reported.
+      4.  **Generate Trace Report**:
+          *   Generate a report that includes:
+              *   A visualization of the error flow (e.g., as a Mermaid sequence diagram).
+              *   An identification of the root cause.
+              *   Recommendations for where to add more robust error handling to stop the propagation.
+          *   <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-```xml
-<command name="/error trace">
-  <setting name="default_trace_depth" value="5" description="The default depth for error traces." />
-  <setting name="trace_output_format" value="diagram" description="The default format for the trace report (e.g., 'diagram', 'json')." />
-</command>
-```
-
-## Use Cases
-
-*   **Complex Bug Analysis**: Understand how errors propagate in a complex, distributed system.
-*   **System Hardening**: Identify and fix weaknesses in error handling and propagation.
-*   **Performance Optimization**: Analyze how error handling affects application performance.
+  <dependencies>
+    <uses_config_values>
+      <value>monitoring.distributed_tracing_service</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

@@ -1,45 +1,48 @@
-# /ci run - CI Pipeline Execution Command
+<command_file>
+  <metadata>
+    <name>/ci run</name>
+    <purpose>Executes a CI/CD pipeline, with support for progress tracking and failure handling.</purpose>
+    <usage>
+      <![CDATA[
+      /ci run <pipeline_name>
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Execute a CI/CD pipeline, with support for progress tracking and failure handling.
-
-## Usage
-```bash
-/ci run [pipeline]
-```
-
-## Workflow
-
-The `/ci run` command follows a systematic process to execute a CI/CD pipeline.
-
-```xml
-<ci_run_workflow>
-  <step name="Detect CI/CD Platform">
-    <description>Detect the CI/CD platform (e.g., GitHub Actions, GitLab CI) in use by searching for known configuration files.</description>
-  </step>
+  <arguments>
+    <argument name="pipeline_name" type="string" required="true">
+      <description>The name of the CI pipeline to execute as defined in the project's CI configuration.</description>
+    </argument>
+  </arguments>
   
-  <step name="Execute Pipeline">
-    <description>Execute the specified pipeline using the appropriate platform-specific commands.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run the appropriate command to trigger the CI/CD pipeline.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Monitor Progress & Handle Results">
-    <description>Monitor the progress of the pipeline in real-time. If the pipeline fails, provide debug logs and error analysis. If it succeeds, generate a build report.</description>
-  </step>
-</ci_run_workflow>
-```
+  <examples>
+    <example>
+      <description>Run the 'main-build' pipeline.</description>
+      <usage>/ci run "main-build"</usage>
+    </example>
+  </examples>
 
-## Features
-- **Multi-CI Support**: GitHub Actions, GitLab CI, Jenkins, CircleCI
-- **Progress Tracking**: Real-time build status updates  
-- **Failure Handling**: Debug logs and error analysis
-- **Build Reports**: Detailed execution summaries
-- **Debug Mode**: Verbose logging for troubleshooting
+  <claude_prompt>
+    <prompt>
+      You are a CI/CD orchestrator. The user wants to run a specific CI pipeline.
 
-## Integration
-- Links to deployment commands
-- Generates test reports
-- Updates build badges
-- Notifies team channels
+      1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` and the CI configuration file (e.g., `.github/workflows/main.yml`) to understand the available pipelines and the CI platform.
+      2.  **Validate Pipeline**: Verify that the requested `pipeline_name` is a valid pipeline.
+      3.  **Generate Execution Command**: Construct the platform-specific command to trigger the pipeline (e.g., using `gh workflow run`, `glab ci run`).
+      4.  **Monitor Progress**: Propose commands to monitor the pipeline's progress and fetch the results.
+      5.  **Report Results**: After completion, generate a report on the outcome.
+
+      <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <uses_config_values>
+      <value>deployment.ci_platform</value>
+      <value>deployment.ci_config_file</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

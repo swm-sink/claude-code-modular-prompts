@@ -1,46 +1,50 @@
-# /git merge - Safe Git Merge Command
+<command_file>
+  <metadata>
+    <name>/git merge</name>
+    <purpose>Performs safe Git merges with pre-merge validation and conflict resolution assistance.</purpose>
+    <usage>
+      <![CDATA[
+      /git merge <branch>
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Perform safe Git merges with comprehensive pre-merge validation and conflict resolution assistance.
-
-## Usage
-```bash
-/git merge [branch]
-```
-
-## Workflow
-
-The `/git merge` command follows a systematic process to perform safe Git merges.
-
-```xml
-<git_merge_workflow>
-  <step name="Pre-Merge Validation">
-    <description>Perform a series of pre-merge validation checks, including verifying a clean working directory, checking for remote updates, and previewing potential merge conflicts.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run `git fetch`, `git status`, and `git diff` to perform pre-merge checks.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="branch" type="string" required="true">
+      <description>The branch to merge into the current branch.</description>
+    </argument>
+  </arguments>
   
-  <step name="Perform Merge">
-    <description>Perform the merge using a safe, non-fast-forward strategy. If conflicts are detected, provide interactive assistance to resolve them.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run `git merge --no-ff` and, if necessary, `git mergetool`.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Post-Merge Validation">
-    <description>After the merge is complete, run a series of post-merge quality gates, including running tests, verifying the build, and performing lint checks, to ensure the integrity of the merged codebase.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run tests, build, and lint commands.</description>
-    </tool_usage>
-  </step>
-</git_merge_workflow>
-```
+  <examples>
+    <example>
+      <description>Merge the 'develop' branch into the current branch.</description>
+      <usage>/git merge "develop"</usage>
+    </example>
+  </examples>
 
-## Quality Gates
-- **Test Validation**: Runs tests before finalizing the merge.
-- **Build Verification**: Ensures the build succeeds after the merge.
-- **Lint Checks**: Validates code quality standards on the merged code.
-- **Documentation Updates**: Checks for corresponding documentation changes.
+  <claude_prompt>
+    <prompt>
+      You are a git expert. The user wants to safely merge a branch.
+
+      1.  **Pre-Merge Validation**:
+          *   Check for a clean working directory (`git status`).
+          *   Fetch the latest remote changes (`git fetch origin`).
+          *   Preview potential merge conflicts.
+      2.  **Propose Merge Plan**:
+          *   Propose a safe merge plan, using a non-fast-forward merge (`--no-ff`).
+          *   If conflicts are anticipated, provide a strategy for resolving them.
+      3.  **Execute Merge**:
+          *   Present the merge command to the user.
+          *   If conflicts occur, guide the user through the resolution process.
+      4.  **Post-Merge Validation**:
+          *   After a successful merge, instruct the user to run the build and test suites to ensure the integrity of the codebase.
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <chain>
+      <command>/dev build</command>
+      <command>/dev test</command>
+    </chain>
+  </dependencies>
+</command_file>

@@ -1,75 +1,57 @@
-# /db seed - Database Seeding Command
+<command_file>
+  <metadata>
+    <name>/db seed</name>
+    <purpose>Seeds a database with realistic test data, handling relationships and validation.</purpose>
+    <usage>
+      <![CDATA[
+      /db seed <env="development"> <count=100>
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Seed a database with realistic test data, with support for relationship handling, data validation, and environment-specific data sets.
-
-## Usage
-```bash
-/db seed [--env=development] [--tables=users,orders] [--count=100]
-```
-
-## Workflow
-
-The `/db seed` command follows a systematic process to safely seed a database with high-quality test data.
-
-```xml
-<seeding_workflow>
-  <step name="Parse Configuration">
-    <description>Parse the user's request and the project's seed configuration to determine the target environment, tables, and data volumes.</description>
-    <tool_usage>
-      <tool>Read</tool>
-      <description>Read the project's seed configuration file.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="env" type="string" required="false" default="development">
+      <description>The target environment to seed (e.g., development, testing).</description>
+    </argument>
+    <argument name="count" type="integer" required="false" default="100">
+      <description>The number of records to generate for primary tables.</description>
+    </argument>
+  </arguments>
   
-  <step name="Generate Data">
-    <description>Generate a set of realistic test data, using faker libraries and other techniques to ensure the data is varied and realistic. This step also ensures that all foreign key relationships are maintained.</description>
-  </step>
-  
-  <step name="Validate Schema & Insert Data">
-    <description>Validate that the generated data matches the database schema constraints, and then insert the data safely using transactions with rollback on failure.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run the database insertion commands within a transaction.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Verify Integrity">
-    <description>After the data has been inserted, run a series of post-insertion validation checks to ensure data integrity and consistency.</description>
-  </step>
-</seeding_workflow>
-```
+  <examples>
+    <example>
+      <description>Seed the development database with 100 records per table.</description>
+      <usage>/db seed</usage>
+    </example>
+    <example>
+      <description>Seed the testing database with 500 records per table.</description>
+      <usage>/db seed env="testing" count=500</usage>
+    </example>
+  </examples>
 
-## Capabilities
-- **Data Generation**: Creates realistic test data using faker libraries
-- **Relationship Handling**: Maintains foreign key relationships and referential integrity
-- **Environment Support**: Supports dev/test/staging environments with different data sets
-- **Validation**: Verifies data integrity and constraint compliance
-- **Configurable**: Allows custom data volumes and scenarios
+  <claude_prompt>
+    <prompt>
+      You are a database seeding tool. The user wants to populate the database with test data. This may be a destructive action.
 
-## Technical Implementation
-1. **Parse Configuration**: Read seed configuration and target environment
-2. **Generate Data**: Create realistic data using faker with proper relationships
-3. **Validate Schema**: Ensure data matches database schema constraints
-4. **Insert Safely**: Use transactions with rollback on validation failures
-5. **Verify Integrity**: Run post-insert validation checks
+      1.  **Warning & Confirmation**: Inform the user that this action might truncate existing data and require their explicit confirmation to proceed.
+          <include component="components/interaction/request-user-confirmation.md"/>
 
-## Quality Gates
-- All foreign key relationships must be valid
-- Data must pass schema validation
-- Transaction rollback on any constraint violation
-- Configurable data volume limits to prevent accidents
+      2.  **On Confirmation**:
+          *   **Read Configuration**: Read `PROJECT_CONFIG.xml` to find the seed configuration file (e.g., `db/seeds.js`).
+          *   **Generate Seeding Script**: Generate a data seeding script (e.g., Python, Node.js, or SQL) that:
+              *   Generates realistic data for the specified `env` and `count`.
+              *   Correctly handles foreign key relationships to maintain integrity.
+              *   Wraps all insertion operations in a single transaction.
+          *   **Present Script**: Present the complete seeding script to the user for review and execution.
+    </prompt>
+  </claude_prompt>
 
-## Output
-- Data generation summary with counts per table
-- Relationship validation report
-- Performance metrics (insert speed, validation time)
-- Error details for any failed constraints
-
-## Error Handling
-- Transaction rollback on constraint violations
-- Graceful handling of duplicate key conflicts
-- Memory management for large data sets
-- Connection pool management
-
----
-*Part of Claude Code database management suite - Good seed data enables effective testing*
+  <dependencies>
+    <uses_config_values>
+      <value>database.seed_config_file</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/interaction/request-user-confirmation.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

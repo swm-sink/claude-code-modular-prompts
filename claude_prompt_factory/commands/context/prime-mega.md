@@ -1,45 +1,61 @@
-# /context prime-mega - Deep Multi-Agent Codebase Analysis
+<command_file>
+  <metadata>
+    <name>/context prime-mega</name>
+    <purpose>Performs a comprehensive, deep codebase analysis using a sequence of specialized agents.</purpose>
+    <usage>
+      <![CDATA[
+      /context prime-mega
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Perform a comprehensive, deep codebase analysis using a sequence of specialized AI agents, compiling their findings into a master report with actionable insights.
-
-## Usage
-```bash
-/context prime-mega
-```
-
-## Workflow
-
-The `/context prime-mega` command follows a sophisticated, multi-phase process to conduct a deep analysis of the codebase.
-
-```xml
-<context_prime_mega_workflow>
-  <step name="Phase 1: Assess & Plan">
-    <description>First, I will assess the codebase size and complexity (small, medium, large, enterprise) by scanning the directory structure and counting files/lines of code. Based on this, I will determine the optimal number of specialized analysis agents required and present this plan to you for confirmation before proceeding.</description>
-    <tool_usage>
-      <tool>File System Analysis</tool>
-      <description>Scan the project to determine its scale.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <!-- No arguments -->
+  </arguments>
   
-  <step name="Phase 2: Sequential Agent Analysis">
-    <description>I will execute a sequence of specialized AI agents, each building upon the findings of the previous one. Each agent will perform a deep analysis in its specific domain (e.g., Architecture, Dependencies, Security, Performance), documenting its findings in a detailed report before passing its conclusions to the next agent in the chain.</description>
-    <agent_specializations>
-      <small_codebase>Structure, Issues</small_codebase>
-      <medium_codebase>Structure, Dependencies, Patterns, Issues</medium_codebase>
-      <large_codebase>Architecture, Dependencies, Security, Performance, Patterns, Issues</large_codebase>
-      <enterprise_codebase>Architecture, Services, Data, Security, Performance, Quality, Patterns, Issues</enterprise_codebase>
-    </agent_specializations>
-  </step>
-  
-  <step name="Phase 3: Compile Master Report">
-    <description>After all agents have completed their analysis, I will aggregate all individual findings into a single, unified structure. I will perform a cross-agent analysis to identify reinforcing or conflicting findings, prioritize all identified issues by severity and impact, and generate a final, comprehensive master analysis report.</description>
-    <output>A master analysis report including an executive summary, detailed findings, and an actionable improvement roadmap.</output>
-  </step>
-</context_prime_mega_workflow>
-```
+  <examples>
+    <example>
+      <description>Run a deep, multi-agent analysis on the current project.</description>
+      <usage>/context prime-mega</usage>
+    </example>
+  </examples>
 
-## Use Cases
+  <claude_prompt>
+    <prompt>
+      You are a master project auditor. Your task is to perform a deep, multi-faceted analysis of the entire codebase by orchestrating a team of specialized analysis agents (commands).
 
-*   **Deep Architectural Review**: Get a comprehensive, multi-faceted understanding of a project's architecture before a major redesign.
-*   **Pre-Release Audit**: Perform a full audit of a project's security, performance, and quality before a major release.
-*   **Strategic Technical Planning**: Generate a detailed technical debt assessment and an actionable roadmap for long-term improvements. 
+      1.  **Assess & Plan**:
+          *   First, get a sense of the project's scale (e.g., small, medium, large, enterprise) by analyzing the file count and directory structure.
+          *   Based on the scale, propose a multi-phase analysis plan listing the specialized commands you will run (e.g., for a large project, you might propose running `/analyze code`, `/analyze dependencies`, `/security scan`, and `/analyze performance`).
+
+      2.  **Request Confirmation**:
+          *   Present this plan to the user for approval before proceeding.
+          *   <!-- <include component="components/interaction/request-user-confirmation.md" /> -->
+
+      3.  **Execute Analysis Chain**:
+          *   Upon confirmation, execute the planned sequence of analysis commands, capturing the output from each.
+
+      4.  **Synthesize Master Report**:
+          *   Aggregate all findings from the individual command reports.
+          *   Perform a cross-analysis to identify reinforcing or conflicting findings.
+          *   Prioritize all identified issues by severity and impact.
+          *   Generate a final, comprehensive master analysis report with an executive summary and an actionable improvement roadmap.
+          *   <!-- <include component="components/reporting/generate-structured-report.md" /> -->
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <invokes_commands>
+      <command>/analyze code</command>
+      <command>/analyze dependencies</command>
+      <command>/analyze patterns</command>
+      <command>/analyze performance</command>
+      <command>/security scan</command>
+      <command>/quality report</command>
+    </invokes_commands>
+    <includes_components>
+      <!-- <component>components/interaction/request-user-confirmation.md</component> -->
+      <!-- <component>components/reporting/generate-structured-report.md</component> -->
+    </includes_components>
+  </dependencies>
+</command_file> 

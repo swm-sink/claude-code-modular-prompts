@@ -29,13 +29,13 @@
       3.  **Evaluate Quality Gates**: Compare the measured metrics against the configured thresholds.
       4.  **Generate Report & Enforce**: Generate a detailed report. If any gates fail, state that you would exit with a non-zero status code to block a pipeline.
 
-      <include component="components/reporting/generate-structured-report.md" />
+      <!-- <include component="components/reporting/generate-structured-report.md" /> -->
     </prompt>
   </claude_prompt>
 
   <dependencies>
     <includes_components>
-      <component>components/reporting/generate-structured-report.md</component>
+      <!-- <component>components/reporting/generate-structured-report.md</component> -->
     </includes_components>
     <uses_config_values>
       <value>quality_standards.test_coverage.threshold</value>

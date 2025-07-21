@@ -1,63 +1,77 @@
-# /db migrate - Database Migration Command
+<command_file>
+  <metadata>
+    <name>/db migrate</name>
+    <purpose>Safely manages database migrations with support for creation, execution, and rollback.</purpose>
+    <usage>
+      <![CDATA[
+      /db migrate <action="up"> <name="migration_name">
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Safely manage database migrations with support for creation, execution, rollback, and status checks.
-
-## Usage
-```bash
-/db migrate [action] [target]
-```
-
-## Workflow
-
-The `/db migrate` command follows a systematic process to safely manage database migrations.
-
-```xml
-<migration_workflow>
-  <step name="Detect Database System">
-    <description>Detect the database system (e.g., PostgreSQL, MySQL) and migration framework (e.g., Django, Rails, Alembic) in use.</description>
-    <tool_usage>
-      <tool>Read</tool>
-      <description>Read project configuration files to identify the database system and migration framework.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="action" type="string" required="false" default="up">
+      <description>The migration action to perform. Can be 'up', 'down', 'status', or 'create'.</description>
+    </argument>
+    <argument name="name" type="string" required="false">
+      <description>The name for a new migration file (only used with action="create").</description>
+    </argument>
+  </arguments>
   
-  <step name="Validate Migration Safety">
-    <description>Perform a series of safety checks to ensure that the migration can be applied without data loss. This includes verifying backups, checking schema compatibility, and ensuring data preservation.</description>
-  </step>
-  
-  <step name="Execute Migration">
-    <description>Execute the migration with real-time progress monitoring and error capture. If any issues occur, the command will automatically prepare for a rollback.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run the project's configured migration command.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Verify Schema Integrity">
-    <description>After the migration is complete, verify the integrity of the database schema to ensure that the changes were applied correctly.</description>
-  </step>
-</migration_workflow>
-```
+  <examples>
+    <example>
+      <description>Apply all pending database migrations.</description>
+      <usage>/db migrate</usage>
+    </example>
+    <example>
+      <description>Create a new migration file named 'add_user_roles'.</description>
+      <usage>/db migrate action="create" name="add_user_roles"</usage>
+    </example>
+    <example>
+      <description>Roll back the last applied migration.</description>
+      <usage>/db migrate action="down"</usage>
+    </example>
+     <example>
+      <description>Check the status of all migrations.</description>
+      <usage>/db migrate action="status"</usage>
+    </example>
+  </examples>
 
-## Safety Features
-- **Backup validation**: Ensures recent backup exists
-- **Dry-run mode**: Preview changes without applying
-- **Rollback protection**: Automatic rollback scripts
-- **Schema verification**: Post-migration validation
-- **Data preservation**: No destructive operations without confirmation
+  <claude_prompt>
+    <prompt>
+      You are a database administrator. The user wants to manage database migrations.
 
-## Output Format
-```
-MIGRATION STATUS
-━━━━━━━━━━━━━━━━
-✓ Backup verified (5 minutes ago)
-✓ 3 pending migrations
+      1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to determine the migration framework (e.g., Alembic, Django migrations, Rails migrations) and directory.
+      2.  **Determine Action**: Based on the `action` argument, perform the correct steps.
+      3.  **Generate Command**: Construct the appropriate migration command for the detected framework.
 
-APPLYING MIGRATIONS:
-[1/3] 001_add_users_table.sql... ✓ Complete (0.2s)
-[2/3] 002_add_indexes.sql... ✓ Complete (1.1s)  
-[3/3] 003_update_schema.sql... ✓ Complete (0.3s)
+      *   **For `up`**:
+          *   First, run the framework's "check" or "dry-run" command to ensure safety.
+          *   Present the plan to the user for confirmation.
+          *   On approval, run the command to apply pending migrations.
+          *   Afterward, run the "status" command to verify.
 
-Schema integrity: ✓ Valid
-Migration history: Updated
-```
+      *   **For `down`**:
+          *   Present a clear warning about rolling back.
+          *   On approval, run the command to roll back the last migration.
+
+      *   **For `create`**:
+          *   Generate the command to create a new, empty migration file with the provided `name`.
+
+      *   **For `status`**:
+          *   Run the command to show the current migration status.
+
+      <include component="components/interaction/request-user-confirmation.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <uses_config_values>
+      <value>database.migration_framework</value>
+      <value>database.migration_directory</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/interaction/request-user-confirmation.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

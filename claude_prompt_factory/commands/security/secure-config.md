@@ -1,51 +1,59 @@
-# /secure config - Security Configuration Command
+<command_file>
+  <metadata>
+    <name>/secure config</name>
+    <purpose>Configures comprehensive security settings for applications to prevent vulnerabilities.</purpose>
+    <usage>
+      <![CDATA[
+      /secure config <compliance_standard="none">
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Configure comprehensive security settings for applications, including authentication, authorization, encryption, and security headers, to prevent vulnerabilities and ensure secure deployment.
-
-## Usage
-```bash
-/secure config [component] [--strict] [--compliance=GDPR|HIPAA|SOC2|PCI-DSS]
-```
-
-## Workflow
-
-The `/secure config` command follows a systematic process to configure security settings.
-
-```xml
-<security_config_workflow>
-  <step name="Assess Current Security Gaps">
-    <description>Analyze the existing codebase and configuration to identify current security gaps and areas for improvement.</description>
-  </step>
+  <arguments>
+    <argument name="compliance" type="string" required="false" default="none">
+      <description>The compliance standard to configure for (e.g., 'gdpr', 'hipaa', 'pci-dss').</description>
+    </argument>
+  </arguments>
   
-  <step name="Configure Security Components">
-    <description>Based on the assessment and user input, configure various security components such as authentication, authorization rules, security headers, encryption, and secrets management.</description>
-    <component_options>
-      <option name="Authentication">Configure multi-factor authentication, OAuth2/JWT, and session management.</option>
-      <option name="Authorization">Implement role-based access control (RBAC) and other authorization rules.</option>
-      <option name="Security Headers">Set Content Security Policy (CSP), HSTS, X-Frame-Options, and other relevant security headers.</option>
-      <option name="Encryption">Set up AES-256-GCM, TLS 1.3, and certificate management for data at rest and in transit.</option>
-      <option name="Secrets Management">Configure secure vaults, environment variables, and key rotation strategies.</option>
-    </component_options>
-    <tool_usage>
-      <tool>Edit</tool>
-      <description>Modify configuration files to apply security settings.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Validate & Audit Configuration">
-    <description>Validate the applied security controls and generate an audit report to ensure compliance with specified standards (e.g., GDPR, HIPAA, SOC2, PCI-DSS).</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run security validation and audit tools.</description>
-    </tool_usage>
-  </step>
-</security_config_workflow>
-```
+  <examples>
+    <example>
+      <description>Review and suggest baseline security configurations.</description>
+      <usage>/secure config</usage>
+    </example>
+    <example>
+      <description>Apply strict security configurations required for HIPAA compliance.</description>
+      <usage>/secure config compliance="hipaa"</usage>
+    </example>
+  </examples>
 
-## Configuration Components
-- Authentication: JWT tokens, OAuth2, session management, rate limiting
-- Security Headers: Content Security Policy, CORS, clickjacking protection
-- Encryption: Data-at-rest, data-in-transit, key management, certificate rotation
-- Input Validation: Schema validation, XSS prevention, SQL injection protection
-- Secrets: Environment variables, secure vaults, API key rotation
-- Audit Logging: Security events, compliance reporting, threat detection
+  <claude_prompt>
+    <prompt>
+      You are a security architect. The user wants to apply security best-practice configurations to their project.
+
+      1.  **Analyze Current Configuration**: Scan the project's configuration files (e.g., framework settings, web server configs) to assess the current security posture.
+      2.  **Generate Hardening Plan**:
+          *   Based on security best practices and the specified `compliance` standard, create a plan to harden the configuration.
+          *   This should include recommendations for:
+              *   Authentication (e.g., password policies, MFA).
+              *   Security Headers (e.g., CSP, HSTS).
+              *   Encryption settings.
+              *   Secrets management.
+              *   Secure cookie settings.
+          *   <include component="components/planning/create-step-by-step-plan.md" />
+      3.  **Propose Changes**:
+          *   Generate the necessary configuration changes and present them for user approval.
+          *   <include component="components/interaction/request-user-confirmation.md" />
+      4.  **Apply and Verify**:
+          *   On confirmation, apply the changes.
+          *   <include component="components/actions/apply-code-changes.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/planning/create-step-by-step-plan.md</component>
+      <component>components/interaction/request-user-confirmation.md</component>
+      <component>components/actions/apply-code-changes.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

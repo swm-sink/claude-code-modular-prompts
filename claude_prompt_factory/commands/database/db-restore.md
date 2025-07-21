@@ -1,42 +1,50 @@
-# /db restore - Database Restoration Command
+<command_file>
+  <metadata>
+    <name>/db restore</name>
+    <purpose>Restores a database from a backup, with support for validation and multiple recovery options.</purpose>
+    <usage>
+      <![CDATA[
+      /db restore <backup_file>
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Restore a database from a backup, with support for validation and multiple recovery options.
-
-## Usage
-```bash
-/db restore [backup_file]
-```
-
-## Workflow
-
-The `/db restore` command follows a systematic process to safely restore a database from a backup.
-
-```xml
-<restore_workflow>
-  <step name="Validate Backup">
-    <description>Validate the integrity, compatibility, and metadata of the backup file to ensure that it can be safely restored.</description>
-  </step>
+  <arguments>
+    <argument name="backup_file" type="string" required="true">
+      <description>Path to the database backup file to restore.</description>
+    </argument>
+  </arguments>
   
-  <step name="Plan Restoration">
-    <description>Create a restoration plan based on the user's requirements, which may include a full or partial restore, point-in-time recovery, or a cross-environment restore.</description>
-  </step>
-  
-  <step name="Execute Restoration">
-    <description>Execute the restoration plan, with real-time progress monitoring and error capture.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run the appropriate database restore command (e.g., 'pg_restore', 'mysql').</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Verify Data">
-    <description>After the restoration is complete, perform a series of data verification checks, including row counts, index reconstruction, and foreign key validation, to ensure the data is consistent and correct.</description>
-  </step>
-</restore_workflow>
-```
+  <examples>
+    <example>
+      <description>Restore the database from a specified backup file.</description>
+      <usage>/db restore "backups/db_2024-07-21.sql.gz"</usage>
+    </example>
+  </examples>
 
-## Safety Features
-- Automatic backup before restore
-- Rollback capability
-- Progress monitoring
-- Error recovery procedures
+  <claude_prompt>
+    <prompt>
+      You are a database administrator. The user wants to restore the database from a backup file. This is a highly destructive operation.
+
+      1.  **EXTREME WARNING**: Present a clear, severe warning to the user about the destructive nature of this action (overwriting the current database).
+      2.  **Request Confirmation**: Require explicit confirmation from the user before proceeding.
+          <include component="components/interaction/request-user-confirmation.md" />
+
+      3.  **On Confirmation**:
+          *   **Validate Backup**: First, validate the integrity and compatibility of the backup file.
+          *   **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the database type and connection details.
+          *   **Generate Restore Command**: Construct the appropriate native restore command (e.g., `pg_restore`, `mysql`).
+          *   **Propose Script**: Present the full restore script to the user for final review before they execute it.
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <uses_config_values>
+      <value>database.type</value>
+      <value>database.connection_string</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/interaction/request-user-confirmation.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

@@ -1,46 +1,60 @@
-# /git pr - Pull Request Creation Command
+<command_file>
+  <metadata>
+    <name>/git pr</name>
+    <purpose>Intelligently creates pull requests with auto-generated descriptions, linked issues, and reviewers.</purpose>
+    <usage>
+      <![CDATA[
+      /git pr "[title]" <draft=false>
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Intelligently create pull requests with auto-generated descriptions, linked issues, and appropriate reviewers.
-
-## Usage
-```bash
-/git pr "[title]" [--draft]
-```
-
-## Workflow
-
-The `/git pr` command follows a systematic process to create high-quality pull requests.
-
-```xml
-<git_pr_workflow>
-  <step name="Analyze Branch & Commits">
-    <description>Analyze the current branch against the main branch to understand the changes. Extract commit messages and file changes to generate a comprehensive summary.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Use `git log` and `git diff` to analyze the branch.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="title" type="string" required="true">
+      <description>The title of the pull request.</description>
+    </argument>
+    <argument name="draft" type="boolean" required="false" default="false">
+      <description>If true, creates the pull request as a draft.</description>
+    </argument>
+  </arguments>
   
-  <step name="Generate PR Description">
-    <description>Generate a descriptive title and a comprehensive pull request description, including a summary of changes, motivation, testing instructions, and any breaking changes. It will also automatically link to any related issues found in the branch name or commit messages.</description>
-  </step>
-  
-  <step name="Suggest Reviewers & Labels">
-    <description>Suggest appropriate reviewers based on the `CODEOWNERS` file or `git blame` history. Also, suggest relevant labels based on the types of files changed.</description>
-  </step>
-  
-  <step name="Create Pull Request">
-    <description>Create the pull request on the Git hosting platform (e.g., GitHub, GitLab), including the generated title, description, reviewers, and labels.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Use the platform-specific CLI (e.g., `gh pr create`) to create the pull request.</description>
-    </tool_usage>
-  </step>
-</git_pr_workflow>
-```
+  <examples>
+    <example>
+      <description>Create a new pull request for a feature branch.</description>
+      <usage>/git pr "feat: Add user profile management"</usage>
+    </example>
+    <example>
+      <description>Create a draft pull request for a work-in-progress.</description>
+      <usage>/git pr "WIP: Refactor authentication service" draft=true</usage>
+    </example>
+  </examples>
 
-## Smart Defaults
-- **Draft Mode**: Support for creating draft pull requests for work in progress.
-- **Template Selection**: Can use project-defined pull request templates.
-- **Conflict Detection**: Detects and warns about merge conflicts.
-- **CI/CD Integration**: Can integrate with CI/CD status checks.
+  <claude_prompt>
+    <prompt>
+      You are a git expert. The user wants to create a high-quality pull request.
+
+      1.  **Analyze Branch**:
+          *   Analyze the commits on the current branch compared to the main branch (`git log main..HEAD`).
+          *   Summarize the changes based on the commit messages.
+      2.  **Generate PR Description**:
+          *   Create a comprehensive PR description that includes:
+              *   A summary of the changes.
+              *   The motivation behind the changes.
+              *   Steps for testing and verification.
+          *   Automatically find and link any related issues (e.g., closes #123) mentioned in commit messages.
+      3.  **Suggest Reviewers**:
+          *   Suggest a list of reviewers by analyzing `git blame` on the changed files to see who has the most context.
+      4.  **Propose PR Command**:
+          *   Construct the full command to create the pull request using the platform's CLI (e.g., `gh pr create`).
+          *   Include the title, the generated body, suggested reviewers, and the draft flag.
+          *   Present the command to the user for execution.
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <uses_config_values>
+      <value>git.hosting_platform</value>
+      <value>git.main_branch</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

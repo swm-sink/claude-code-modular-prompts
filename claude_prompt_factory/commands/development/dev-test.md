@@ -1,59 +1,53 @@
-# /dev test - Test Execution Command
+<command_file>
+  <metadata>
+    <name>/dev test</name>
+    <purpose>Executes a test suite, with support for filtering, coverage reporting, and failure analysis.</purpose>
+    <usage>
+      <![CDATA[
+      /dev test <pattern>
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Execute a test suite, with support for filtering, coverage reporting, and failure analysis.
-
-## Usage
-```bash
-/dev test [pattern]
-```
-
-## Workflow
-
-The `/dev test` command follows a systematic process to execute a test suite.
-
-```xml
-<test_execution_workflow>
-  <step name="Detect Test Framework">
-    <description>Detect the testing framework (e.g., pytest, Jest, JUnit) in use by analyzing the project's configuration and dependencies.</description>
-    <tool_usage>
-      <tool>Read</tool>
-      <description>Read project configuration files to identify the testing framework.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="pattern" type="string" required="false">
+      <description>A pattern or filter to run a specific subset of tests.</description>
+    </argument>
+  </arguments>
   
-  <step name="Execute Test Suite">
-    <description>Execute the test suite, applying any user-provided filters or patterns. The command will capture the results, timing, and coverage data.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run the project's configured test command.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Analyze Failures & Generate Report">
-    <description>If any tests have failed, analyze the failures and provide suggestions for how to fix them. Generate a final report with a summary of the test run, including pass/fail counts, coverage, and any suggestions for improvement.</description>
-    <output>A comprehensive test execution report.</output>
-  </step>
-</test_execution_workflow>
-```
+  <examples>
+    <example>
+      <description>Run the entire test suite.</description>
+      <usage>/dev test</usage>
+    </example>
+    <example>
+      <description>Run only the tests that match the 'user-authentication' pattern.</description>
+      <usage>/dev test "user-authentication"</usage>
+    </example>
+  </examples>
 
-## Output Format
-```
-🧪 TEST EXECUTION RESULTS
+  <claude_prompt>
+    <prompt>
+      You are a test runner. The user wants to execute a test suite.
 
-Framework: [detected framework]
-Pattern: [filter applied]
-Duration: [execution time]
+      1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the test command and coverage options for the project's detected test framework.
+      2.  **Construct Test Command**: Build the full test command, incorporating the user's `pattern` if provided.
+      3.  **Execute Tests**: Run the test command.
+      4.  **Generate Report**: After execution, parse the output and generate a comprehensive report.
+          *   Include pass/fail counts, duration, and code coverage percentage.
+          *   For failed tests, provide the error details and suggestions for fixes.
+          *   <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-✅ Passed: [count]
-❌ Failed: [count]  
-⚠️ Skipped: [count]
-📊 Coverage: [percentage]%
-
-Failed Tests:
-• [test name]: [failure reason]
-• [test name]: [failure reason]
-
-Suggestions:
-- [improvement recommendation]
-- [fix suggestion]
-```
+  <dependencies>
+    <uses_config_values>
+      <value>testing.framework</value>
+      <value>testing.test_command</value>
+      <value>testing.coverage_options</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

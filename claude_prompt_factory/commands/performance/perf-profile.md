@@ -1,57 +1,60 @@
-# /perf profile - Performance Profiling Command
+<command_file>
+  <metadata>
+    <name>/perf profile</name>
+    <purpose>Conducts deep performance profiling to identify bottlenecks, hotspots, and resource usage patterns.</purpose>
+    <usage>
+      <![CDATA[
+      /perf profile "[target_file_or_function]" <type="cpu">
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Conduct deep performance profiling to identify bottlenecks, hotspots, and resource usage patterns in the code.
-
-## Usage
-```bash
-/perf profile <target> [--type=<type>] [--depth=<depth>] [--flamegraph]
-```
-
-## Workflow
-
-The `/perf profile` command follows a systematic process to profile code.
-
-```xml
-<perf_profile_workflow>
-  <step name="Initialize & Attach Profiler">
-    <description>Initialize the appropriate profiler (e.g., CPU, memory, I/O) and attach it to the target process or application. The type of profiling can be specified with the `--type` flag.</description>
-    <tool_usage>
-      <tool>Profiler Tool</tool>
-      <description>Use a language-specific profiler (e.g., cProfile for Python, V8 profiler for Node.js).</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="target" type="string" required="true">
+      <description>The specific file, function, or class to profile.</description>
+    </argument>
+    <argument name="type" type="string" required="false" default="cpu">
+      <description>The type of profiling to perform (e.g., 'cpu', 'memory').</description>
+    </argument>
+  </arguments>
   
-  <step name="Collect Performance Samples">
-    <description>Run the target code and collect performance samples over a specified duration. The `--depth` flag can control the stack depth of the collected samples.</description>
-    <tool_usage>
-      <tool>Profiler Tool</tool>
-      <description>Collect performance data while the code is running.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Analyze Hotspots & Generate Visualizations">
-    <description>Analyze the collected samples to identify performance hotspots, memory leaks, and other bottlenecks. If the `--flamegraph` flag is used, generate a flame graph visualization to make the data easier to understand.</description>
-    <tool_usage>
-      <tool>Analysis & Visualization Tools</tool>
-      <description>Use tools to analyze the profiling data and generate visualizations.</description>
-    </tool_usage>
-  </step>
-</perf_profile_workflow>
-```
+  <examples>
+    <example>
+      <description>Run a CPU profile on a specific data processing function.</description>
+      <usage>/perf profile "src/utils/dataProcessor.js:processLargeFile"</usage>
+    </example>
+    <example>
+      <description>Run a memory profile on an analytics engine.</description>
+      <usage>/perf profile "src/analytics/engine.py" type="memory"</usage>
+    </example>
+  </examples>
 
-## Configuration
+  <claude_prompt>
+    <prompt>
+      You are a performance engineer. The user wants to profile a specific part of the code.
 
-The `/perf profile` command can be configured through the `PROJECT_CONFIG.xml` file.
+      1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the project's configured profiling tool.
+      2.  **Generate Profiling Script**:
+          *   Create a script that initializes the appropriate profiler (CPU or memory).
+          *   The script should attach the profiler to the `target` code and execute it.
+      3.  **Execute and Collect Data**:
+          *   Present the profiling script to the user and, on confirmation, execute it to collect performance samples.
+      4.  **Analyze and Report**:
+          *   Analyze the collected profiling data to identify performance hotspots and bottlenecks.
+          *   Generate a report that includes:
+              *   A summary of the most time-consuming function calls (for CPU profiling).
+              *   An analysis of memory allocation and potential leaks (for memory profiling).
+              *   A flame graph visualization for intuitive analysis.
+          *   <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-```xml
-<command name="/perf profile">
-  <setting name="default_profiling_type" value="cpu" description="The default type of profiling to perform." />
-  <setting name="default_sampling_rate" value="100" description="The default sampling rate in Hz." />
-</command>
-```
-
-## Use Cases
-
-*   **Identifying Performance Bottlenecks**: Pinpoint the exact lines of code that are causing performance issues.
-*   **Memory Leak Detection**: Analyze memory usage patterns to identify and fix memory leaks.
-*   **Optimizing Resource Usage**: Understand how the application is using resources like CPU and I/O to optimize its performance.
+  <dependencies>
+    <uses_config_values>
+      <value>performance.profiling_tool</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

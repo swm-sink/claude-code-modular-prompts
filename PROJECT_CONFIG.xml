@@ -1,67 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  PROJECT_CONFIG.xml
-  This file is the central configuration for the Claude Code Prompt Factory.
-  It is used to adapt the generic commands to the specific needs of your project.
-  The `/init` commands can help generate and update this file.
-  See `docs/PROJECT_CONFIG_SCHEMA.md` for a full reference.
--->
 <project_config>
 
   <metadata>
-    <name>your-project-name</name>
+    <name>claude-code-prompt-factory</name>
     <version>1.0.0</version>
-    <description>A brief description of the project.</description>
+    <description>A modular, configurable, and comprehensive library of prompt-based commands that feel native to the Claude Code environment.</description>
   </metadata>
 
   <tech_stack>
     <languages>
-      <language name="python" version="3.11" primary="true" />
+      <language name="markdown" primary="true" />
+      <language name="xml" />
+      <language name="python" />
     </languages>
-    <frameworks>
-      <framework name="django" version="4.2" primary="true" />
-    </frameworks>
-    <database type="postgresql" version="15" />
-    <package_managers>
-      <manager language="python" name="pip" manifest="requirements.txt" />
-    </package_managers>
     <tools>
-      <tool type="linter" name="flake8" command="flake8" config_file=".flake8" />
-      <tool type="formatter" name="black" command="black" config_file="pyproject.toml" />
+      <tool type="linter" name="markdownlint" command="markdownlint" config_file=".markdownlint.json" />
+      <tool type="linter" name="xmllint" command="xmllint --noout" />
     </tools>
   </tech_stack>
 
   <paths>
-    <source>src/</source>
-    <tests>tests/</tests>
+    <source>claude_prompt_factory/</source>
     <docs>docs/</docs>
+    <components>claude_prompt_factory/components/</components>
+    <commands>claude_prompt_factory/commands/</commands>
   </paths>
 
   <scripts>
-    <script id="test">python -m pytest</script>
-    <script id="lint">flake8 .</script>
-    <script id="build">python setup.py sdist bdist_wheel</script>
-    <script id="run:dev">python src/manage.py runserver</script>
-    <script id="security:scan">bandit -r .</script>
+    <script id="lint">markdownlint . && xmllint --noout $(find . -name "*.xml")</script>
+    <script id="test">echo "No automated tests configured."</script>
   </scripts>
 
   <command_settings>
     <command name="/protocol">
-      <setting key="epiccc.evaluate.enabled" value="true" />
-      <setting key="epiccc.plan.enabled" value="true" />
-      <setting key="epiccc.implement.enabled" value="true" />
-      <setting key="epiccc.check.enabled" value="true" />
       <setting key="epiccc.check.run_static_analysis" value="true" />
-      <setting key="epiccc.check.run_unit_tests" value="true" />
-      <setting key="epiccc.check.run_integration_tests" value="false" />
-      <setting key="epiccc.check.run_security_scan" value="true" />
-      <setting key="epiccc.check.request_peer_review" value="false" />
-      <setting key="epiccc.commit.enabled" value="true" />
-      <setting key="epiccc.continue.enabled" value="true" />
+      <setting key="epiccc.check.run_unit_tests" value="false" />
+      <setting key="epiccc.check.request_peer_review" value="true" />
     </command>
-    <command name="/query">
-        <setting key="max_results" value="50" />
-        <setting key="semantic_search" value="true" />
+    <command name="/docs generate">
+        <setting key="style" value="google" />
+        <setting key="output_dir" value="docs/generated/" />
     </command>
   </command_settings>
 

@@ -1,50 +1,44 @@
-# /db backup - Database Backup Command
+<command_file>
+  <metadata>
+    <name>/db backup</name>
+    <purpose>Creates secure, verified database backups with support for compression and encryption.</purpose>
+    <usage>
+      <![CDATA[
+      /db backup
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Create secure, verified database backups, with support for full and incremental backups, compression, and encryption.
-
-## Usage
-```bash
-/db backup [--incremental]
-```
-
-## Workflow
-
-The `/db backup` command follows a systematic process to create secure and reliable database backups.
-
-```xml
-<backup_workflow>
-  <step name="Detect Database System">
-    <description>Detect the database system (e.g., PostgreSQL, MySQL) in use to determine the appropriate backup tools.</description>
-    <tool_usage>
-      <tool>Read</tool>
-      <description>Read project configuration files to identify the database system.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <!-- No arguments, but behavior is driven by PROJECT_CONFIG.xml -->
+  </arguments>
   
-  <step name="Create Backup">
-    <description>Create a full or incremental backup of the database using the appropriate native tools (e.g., 'pg_dump', 'mysqldump').</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run the appropriate database backup command.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Compress & Encrypt">
-    <description>Compress the backup to save space and, if configured, encrypt it to protect sensitive data.</description>
-  </step>
-  
-  <step name="Verify Integrity">
-    <description>After the backup is complete, perform an integrity check to ensure that the backup is valid and can be restored.</description>
-  </step>
-  
-  <step name="Store Securely">
-    <description>Store the backup in a secure location, as defined in the project's configuration.</description>
-  </step>
-</backup_workflow>
-```
+  <examples>
+    <example>
+      <description>Create a full, secure backup of the primary database.</description>
+      <usage>/db backup</usage>
+    </example>
+  </examples>
 
-## Security Features
-- Pre-backup connection testing
-- Encrypted backup files for production
-- Access control verification
-- Audit logging of backup operations
+  <claude_prompt>
+    <prompt>
+      You are a database administrator. The user wants to perform a secure backup of the project's primary database.
+
+      1.  **Read Configuration**: Read the `PROJECT_CONFIG.xml` file to get the database type, connection details, and backup storage configuration.
+      2.  **Detect Database System**: Based on the configuration, identify the database system (e.g., PostgreSQL, MySQL, SQLite).
+      3.  **Generate Backup Command**: Construct the appropriate native backup command (e.g., `pg_dump`, `mysqldump`). The command should include flags for compression.
+      4.  **Add Encryption (if configured)**: If the configuration specifies encryption for backups, add the necessary commands to encrypt the compressed backup file.
+      5.  **Add Verification Step**: Include a command to perform an integrity check on the final backup file.
+      6.  **Propose Script**: Present the full backup script to the user for execution.
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <uses_config_values>
+      <value>database.type</value>
+      <value>database.connection_string</value>
+      <value>backups.storage_location</value>
+      <value>backups.encryption.enabled</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>

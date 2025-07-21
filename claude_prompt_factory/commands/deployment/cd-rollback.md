@@ -1,59 +1,57 @@
-# /cd rollback - Deployment Rollback Command
+<command_file>
+  <metadata>
+    <name>/cd rollback</name>
+    <purpose>Safely rolls back a deployment to a previous version, with data integrity checks and incident reporting.</purpose>
+    <usage>
+      <![CDATA[
+      /cd rollback <version>
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Safely roll back a deployment to a previous version, with support for data integrity verification and automated incident reporting.
-
-## Usage
-```bash
-/cd rollback [version]
-```
-
-## Workflow
-
-The `/cd rollback` command follows a systematic process to safely roll back a deployment.
-
-```xml
-<rollback_workflow>
-  <step name="Validate Rollback Target">
-    <description>Validate that the specified rollback version is valid and available for rollback.</description>
-  </step>
+  <arguments>
+    <argument name="version" type="string" required="true">
+      <description>The specific, valid version or tag to roll back to.</description>
+    </argument>
+  </arguments>
   
-  <step name="Perform Pre-Rollback Checks">
-    <description>Perform a series of pre-rollback checks to ensure that the system is in a safe state for rollback. This includes backing up the database and verifying dependencies.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run pre-rollback check scripts.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Execute Rollback">
-    <description>Execute the rollback to the specified version, using the appropriate platform-specific commands (e.g., 'kubectl rollout undo', 'docker service update').</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run the appropriate rollback command for the target platform.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Verify Rollback Health">
-    <description>After the rollback is complete, perform a health check to verify that the system is stable and running correctly on the previous version.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run health check scripts.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Generate Incident Report">
-    <description>Automatically generate an incident report that documents the rollback, including the timestamp, the target version, the reason for the rollback, and the final health status.</description>
-    <tool_usage>
-      <tool>Write</tool>
-      <description>Create the incident report file.</description>
-    </tool_usage>
-  </step>
-</rollback_workflow>
-```
+  <examples>
+    <example>
+      <description>Roll back the current deployment to version 'v1.2.3'.</description>
+      <usage>/cd rollback "v1.2.3"</usage>
+    </example>
+  </examples>
 
-## Features
-- **Safe Execution**: Database backup before rollback
-- **Multi-Platform**: Kubernetes, Docker, Serverless, Heroku
-- **Health Verification**: Post-rollback system validation
-- **Data Protection**: Maintains data integrity during rollback
-- **Incident Tracking**: Automated incident report generation
+  <claude_prompt>
+    <prompt>
+      You are a deployment manager. The user wants to perform a rollback, which is a high-risk operation.
+
+      1.  **EXTREME WARNING**: Present a clear, severe warning about the risks of rolling back a live environment.
+      2.  **Request Confirmation**: Require explicit user confirmation to proceed.
+          <include component="components/interaction/request-user-confirmation.md" />
+
+      3.  **On Confirmation**:
+          *   **Read Configuration**: Read `PROJECT_CONFIG.xml` to determine the deployment platform (e.g., Kubernetes, Docker Swarm, Serverless).
+          *   **Validate Target**: Verify that the specified `version` is a valid and available rollback target.
+          *   **Generate Rollback Plan**: Propose a rollback plan including:
+              *   Pre-rollback steps (e.g., initiating a DB backup with `/db backup`).
+              *   The platform-specific rollback command (e.g., `kubectl rollout undo`, `docker service update`).
+              *   Post-rollback health check commands.
+          *   **Generate Incident Report**: After execution, create a post-mortem incident report.
+              <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <uses_config_values>
+      <value>deployment.platform</value>
+    </uses_config_values>
+    <chain>
+      <command>/db backup</command>
+    </chain>
+    <includes_components>
+      <component>components/interaction/request-user-confirmation.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

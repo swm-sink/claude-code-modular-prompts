@@ -1,54 +1,55 @@
-# /error diagnose - Error Diagnosis Command
+<command_file>
+  <metadata>
+    <name>/error diagnose</name>
+    <purpose>Performs AI-powered error diagnosis to identify the root cause of issues.</purpose>
+    <usage>
+      <![CDATA[
+      /error diagnose "[error_message_or_log_file]"
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Perform AI-powered error diagnosis to identify the root cause of issues with high accuracy.
-
-## Usage
-```bash
-/error diagnose "[error_message]" [--deep] [--suggest-fix]
-```
-
-## Workflow
-
-The `/error diagnose` command follows a systematic process to diagnose errors.
-
-```xml
-<error_diagnose_workflow>
-  <step name="Capture Error Context">
-    <description>Capture the full error context, including the error message, stack trace, relevant code snippets, recent changes, and system state.</description>
-    <tool_usage>
-      <tool>Bash/Read</tool>
-      <description>Extract error information from logs, source files, and version control.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="error_context" type="string" required="true">
+      <description>The full error message, stack trace, or path to a log file containing the error.</description>
+    </argument>
+  </arguments>
   
-  <step name="Analyze & Identify Root Cause">
-    <description>Apply pattern recognition and causal analysis to identify the root cause of the error. This involves matching against a knowledge base of known error patterns and tracing the execution flow to pinpoint the origin of the issue.</description>
-    <tool_usage>
-      <tool>AI Analysis</tool>
-      <description>Leverage an AI model trained on error patterns to analyze the context and determine the root cause.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Generate Diagnosis & Suggestions">
-    <description>Generate a comprehensive diagnosis that includes a clear explanation of the root cause, an assessment of the impact, and actionable recommendations for fixing the issue. If the `--suggest-fix` flag is used, provide a code patch.</description>
-    <output>A detailed error diagnosis report.</output>
-  </step>
-</error_diagnose_workflow>
-```
+  <examples>
+    <example>
+      <description>Diagnose a null pointer exception from a pasted error message.</description>
+      <usage>/error diagnose "TypeError: Cannot read properties of null (reading 'id') at /app/src/services/userService.js:25:12"</usage>
+    </example>
+    <example>
+      <description>Diagnose an error from a log file.</description>
+      <usage>/error diagnose "logs/production-error.log"</usage>
+    </example>
+  </examples>
 
-## Configuration
+  <claude_prompt>
+    <prompt>
+      You are an error analysis expert. The user has provided an error context and needs a root cause diagnosis.
 
-The `/error diagnose` command can be configured through the `PROJECT_CONFIG.xml` file.
+      1.  **Analyze Context**:
+          *   If the input is a file path, read the file.
+          *   Parse the error message, stack trace, and any other available information.
+      2.  **Find Relevant Code**:
+          *   Based on the file paths and line numbers in the stack trace, find the relevant code sections.
+          *   <include component="components/context/find-relevant-code.md" />
+      3.  **Identify Root Cause**:
+          *   Analyze the error in the context of the code to determine the most likely root cause. Consider things like null values, incorrect types, race conditions, or logic errors.
+      4.  **Generate Diagnosis Report**:
+          *   Provide a clear, concise explanation of the root cause.
+          *   Assess the potential impact of the error.
+          *   Offer actionable recommendations for a fix.
+          *   <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-```xml
-<command name="/error diagnose">
-  <setting name="confidence_threshold" value="0.8" description="The minimum confidence level for a diagnosis to be considered valid." />
-  <setting name="max_suggestions" value="3" description="The maximum number of fix suggestions to provide." />
-</command>
-```
-
-## Use Cases
-
-*   **Debugging**: Quickly understand the cause of a complex bug without extensive manual debugging.
-*   **Production Support**: Rapidly diagnose and resolve issues in a live environment.
-*   **Developer Onboarding**: Help new developers understand and fix common errors in the codebase.
+  <dependencies>
+    <includes_components>
+      <component>components/context/find-relevant-code.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

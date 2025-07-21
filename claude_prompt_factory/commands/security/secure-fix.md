@@ -1,80 +1,60 @@
-# /secure fix - Automated Security Remediation Command
+<command_file>
+  <metadata>
+    <name>/secure fix</name>
+    <purpose>Automatically fixes security vulnerabilities in code and dependencies, with verification and reporting.</purpose>
+    <usage>
+      <![CDATA[
+      /secure fix "[vulnerability_id_or_description]"
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Automatically fix security vulnerabilities in code and dependencies, with verification and reporting.
-
-## Usage
-```bash
-/secure fix [target] [--verify] [--backup]
-```
-
-## Workflow
-
-The `/secure fix` command follows a systematic process to identify, apply, and verify security fixes.
-
-```xml
-<security_fix_workflow>
-  <step name="Scan & Identify Vulnerabilities">
-    <description>Perform a quick scan to identify security vulnerabilities in the target code and its dependencies.</description>
-    <tool_usage>
-      <tool>Parallel Grep/Glob</tool>
-      <description>Scan relevant files for security issues.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="vulnerability" type="string" required="true">
+      <description>The specific vulnerability to fix, identified by an ID from a scan or a clear description.</description>
+    </argument>
+  </arguments>
   
-  <step name="Apply Fixes">
-    <description>Automatically apply fixes to identified vulnerabilities. This includes updating vulnerable dependencies and correcting insecure code patterns.</description>
-    <tool_usage>
-      <tool>Edit</tool>
-      <description>Apply code changes for security fixes.</description>
-      <tool>Bash</tool>
-      <description>Update dependency versions.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Verify Fixes">
-    <description>Run tests and perform additional security checks to ensure that the fixes have been successfully applied and have not introduced any regressions.</description>
-    <tool_usage>
-      <tool>Bash</tool>
-      <description>Run existing test suite and security verification scripts.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Generate Report">
-    <description>Generate a detailed report of all applied fixes, their verification status, and any remaining issues.</description>
-    <output>A comprehensive security fix report.</output>
-  </step>
-</security_fix_workflow>
-```
+  <examples>
+    <example>
+      <description>Fix a specific vulnerability identified by a security scanner (e.g., CVE-2023-12345).</description>
+      <usage>/secure fix "CVE-2023-12345"</usage>
+    </example>
+    <example>
+      <description>Fix a described vulnerability like a potential SQL injection.</description>
+      <usage>/secure fix "Potential SQL injection in user search API endpoint"</usage>
+    </example>
+  </examples>
 
-## Fix Types
-- Vulnerable dependency updates
-- SQL injection prevention
-- XSS sanitization patches
-- Authentication hardening
-- Input validation fixes
-- Encryption implementation
-- Logging security improvements
+  <claude_prompt>
+    <prompt>
+      You are a security remediation specialist. The user wants you to fix a specific security vulnerability.
 
-## Output Format
-```
-SECURITY FIX REPORT
-━━━━━━━━━━━━━━━━━━━
-Fixes Applied: X
-Dependencies Updated: Y
-Tests Passed: Z/Total
+      1.  **Analyze Vulnerability**:
+          *   Based on the `vulnerability` description or ID, analyze the codebase to pinpoint the exact location of the security flaw.
+          *   <include component="components/context/find-relevant-code.md" />
+      2.  **Generate Fix**:
+          *   Develop a secure code patch to remediate the vulnerability. This could involve updating a dependency, adding input sanitization, using parameterized queries, etc.
+      3.  **Ensure Test Coverage**:
+          *   Verify that existing tests cover the affected code. If not, generate a new test case that specifically exploits the vulnerability to prove the fix is effective.
+      4.  **Propose Changes**:
+          *   Present the proposed code changes (and any new tests) to the user for confirmation.
+          *   <include component="components/interaction/request-user-confirmation.md" />
+      5.  **Apply and Verify**:
+          *   On confirmation, apply the changes.
+          *   <include component="components/actions/apply-code-changes.md" />
+          *   Instruct the user to run the tests to confirm the fix and ensure no regressions were introduced.
+    </prompt>
+  </claude_prompt>
 
-[FIXED] Vulnerability type
-  File: path/to/file.ext:line
-  Fix: Description of applied patch
-  Status: ✓ Verified / ⚠ Needs Review
-```
-
-## Options
-- `--verify`: Run comprehensive fix verification
-- `--backup`: Create restore point before fixes
-- `--report`: Generate detailed fix documentation
-- `--safe-mode`: Apply only verified-safe fixes
-
-## Related Commands
-- `/analyze security` - Identify security issues
-- `/security harden` - Apply security hardening
+  <dependencies>
+    <chain>
+      <command>/test unit</command>
+    </chain>
+    <includes_components>
+      <component>components/context/find-relevant-code.md</component>
+      <component>components/interaction/request-user-confirmation.md</component>
+      <component>components/actions/apply-code-changes.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

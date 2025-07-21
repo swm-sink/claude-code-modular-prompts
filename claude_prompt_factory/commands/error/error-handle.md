@@ -1,57 +1,59 @@
-# /error handle - Error Handling Implementation Command
+<command_file>
+  <metadata>
+    <name>/error handle</name>
+    <purpose>Adds comprehensive and robust error handling to code to improve reliability.</purpose>
+    <usage>
+      <![CDATA[
+      /error handle "[file_path]"
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Add comprehensive and robust error handling to code to improve reliability and user experience.
-
-## Usage
-```bash
-/error handle <file_path> [--type=<type>] [--level=<level>]
-```
-
-## Workflow
-
-The `/error handle` command follows a systematic process to add error handling to code.
-
-```xml
-<error_handle_workflow>
-  <step name="Analyze Code & Identify Critical Paths">
-    <description>Analyze the specified file to identify critical code paths that require error handling. This includes I/O operations, network requests, and complex business logic.</description>
-    <tool_usage>
-      <tool>Static Analysis</tool>
-      <description>Use static analysis tools to identify potential points of failure.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="file_path" type="string" required="true">
+      <description>The path to the file where error handling should be added.</description>
+    </argument>
+  </arguments>
   
-  <step name="Implement Error Handling Patterns">
-    <description>Based on the analysis, implement the appropriate error handling patterns. This may include adding try-catch blocks, implementing error boundaries, or adding retry logic. The type and level of error handling can be controlled by the `--type` and `--level` flags.</description>
-    <tool_usage>
-      <tool>AI/Code Generation</tool>
-      <description>Generate code with the appropriate error handling patterns.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Add Logging & Monitoring">
-    <description>Add logging statements to capture detailed error information and integrate with monitoring systems to track error rates and other key metrics.</description>
-    <tool_usage>
-      <tool>Code Generation</tool>
-      <description>Add logging and monitoring hooks to the code.</description>
-    </tool_usage>
-  </step>
-</error_handle_workflow>
-```
+  <examples>
+    <example>
+      <description>Add robust error handling to a specific service file.</description>
+      <usage>/error handle "src/services/paymentService.js"</usage>
+    </example>
+  </examples>
 
-## Configuration
+  <claude_prompt>
+    <prompt>
+      You are a software reliability engineer. The user wants to add robust error handling to a file.
 
-The `/error handle` command can be configured through the `PROJECT_CONFIG.xml` file.
+      1.  **Analyze Code**:
+          *   Read the contents of the specified `file_path`.
+          *   Identify critical code paths that lack sufficient error handling (e.g., I/O operations, network requests, parsing, complex logic).
 
-```xml
-<command name="/error handle">
-  <setting name="default_handling_type" value="try-catch" description="The default error handling pattern to apply." />
-  <setting name="default_handling_level" value="basic" description="The default level of error handling to apply (e.g., 'basic', 'comprehensive')." />
-</command>
-```
+      2.  **Generate Plan**:
+          *   Propose a plan to add error handling. This should include:
+              *   Wrapping critical sections in `try-catch` blocks.
+              *   Implementing specific catch blocks for different error types.
+              *   Adding logging for errors.
+              *   Defining graceful fallback behavior.
+          *   <include component="components/planning/create-step-by-step-plan.md" />
 
-## Use Cases
+      3.  **Propose Changes**:
+          *   Generate the code modifications needed to implement the plan.
+          *   Present the changes to the user for confirmation.
+          *   <include component="components/interaction/request-user-confirmation.md" />
 
-*   **Improving Code Reliability**: Make code more resilient to unexpected errors.
-*   **Enhancing User Experience**: Provide graceful error recovery and clear feedback to users.
-*   **Proactive Maintenance**: Add error handling to legacy code to prevent future issues.
+      4.  **Apply Changes**:
+          *   On confirmation, apply the changes to the file.
+          *   <include component="components/actions/apply-code-changes.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/planning/create-step-by-step-plan.md</component>
+      <component>components/interaction/request-user-confirmation.md</component>
+      <component>components/actions/apply-code-changes.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

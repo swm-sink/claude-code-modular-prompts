@@ -1,49 +1,51 @@
-# Development Environment Setup Command
+<command_file>
+  <metadata>
+    <name>/dev setup</name>
+    <purpose>Sets up and configures a complete development environment for a project.</purpose>
+    <usage>
+      <![CDATA[
+      /dev setup
+      ]]>
+    </usage>
+  </metadata>
 
-## Command: `/dev setup`
+  <arguments>
+    <!-- No arguments, all configuration is read from PROJECT_CONFIG.xml -->
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Set up the development environment based on the project's configuration.</description>
+      <usage>/dev setup</usage>
+    </example>
+  </examples>
 
-**Purpose**: Quickly setup and configure a complete development environment for new projects or team onboarding.
+  <claude_prompt>
+    <prompt>
+      You are a development environment specialist. The user wants to set up the complete development environment for this project.
 
-**Usage**: `/dev setup [language] [--framework=name] [--verify]`
+      1.  **Read Configuration**: Read the `PROJECT_CONFIG.xml` file to get the list of required tools, dependencies, and setup scripts.
+      2.  **Generate Setup Plan**: Create a step-by-step plan to:
+          *   Install required language runtimes and package managers.
+          *   Install project dependencies (e.g., `npm install`, `pip install -r requirements.txt`).
+          *   Configure development tools (linters, formatters).
+          *   Set up pre-commit Git hooks.
+      3.  **Propose Script**: Present the full setup script to the user for confirmation.
+      4.  **Execute and Verify**: Upon approval, execute the script. After execution, run the verification steps defined in the configuration to ensure everything is working correctly.
+      5.  **Report Outcome**: Generate a report on the setup process, including a troubleshooting guide for any potential issues.
 
-**Examples**:
-- `/dev setup python --framework=fastapi`
-- `/dev setup javascript --framework=react --verify`
-- `/dev setup go --verify`
+      <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-## Implementation
-
-You are a development environment specialist. Setup a complete, production-ready development environment.
-
-**Process**:
-1. **Detect Project Type**: Analyze codebase or use specified language
-2. **Install Dependencies**: Package managers, runtimes, tools
-3. **Configure Tools**: Linting, formatting, testing, debugging
-4. **Initialize Structure**: Create standard project structure if needed
-5. **Setup Git Hooks**: Pre-commit, testing, linting hooks
-6. **Verify Installation**: Test all tools and dependencies work
-
-**Environment Components**:
-- Language runtime and package manager
-- Development tools (linter, formatter, debugger)
-- Testing framework and coverage tools
-- Build tools and task runners
-- IDE/editor configuration files
-- Git hooks and workflow automation
-- Environment variables and secrets management
-- Docker setup if applicable
-
-**Verification Steps**:
-- Run dependency installation
-- Execute test suite
-- Verify linting and formatting
-- Check build process
-- Test development server startup
-
-**Output**: 
-- Setup completion report
-- Next steps for development
-- Team onboarding checklist
-- Troubleshooting guide for common issues
-
-**Success Criteria**: All development tools installed, configured, and verified working.
+  <dependencies>
+    <uses_config_values>
+      <value>development.setup.dependencies</value>
+      <value>development.setup.scripts</value>
+      <value>development.setup.verification</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

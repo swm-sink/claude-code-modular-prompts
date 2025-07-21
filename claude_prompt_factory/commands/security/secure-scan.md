@@ -1,72 +1,61 @@
-# /secure scan - Security Vulnerability Scanner
+<command_file>
+  <metadata>
+    <name>/secure scan</name>
+    <purpose>Performs comprehensive security vulnerability scanning and threat detection.</purpose>
+    <usage>
+      <![CDATA[
+      /secure scan <target="all">
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Perform comprehensive security vulnerability scanning and threat detection across codebases, dependencies, and runtime environments.
-
-## Usage
-```bash
-/secure scan [target] [--level=quick|standard|deep]
-```
-
-## Workflow
-
-The `/secure scan` command follows a systematic process to identify security vulnerabilities.
-
-```xml
-<security_scan_workflow>
-  <step name="Determine Scan Scope & Level">
-    <description>Based on the user's input, determine the target (code, dependencies, config, secrets, or all) and the scan level (quick, standard, or deep).</description>
-  </step>
+  <arguments>
+    <argument name="target" type="string" required="false" default="all">
+      <description>The scan target (e.g., 'all', 'code', 'dependencies', 'secrets').</description>
+    </argument>
+  </arguments>
   
-  <step name="Execute Security Checks">
-    <description>Perform a series of security checks relevant to the target and scan level. This includes static analysis for code, vulnerability scanning for dependencies, and review of configuration and exposed secrets.</description>
-    <tool_usage>
-      <tool>Parallel Grep/Glob</tool>
-      <description>Scan relevant files for security patterns and vulnerabilities.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Generate Report">
-    <description>Generate a detailed security report in the specified format (summary, detailed, JSON, or SARIF), outlining all vulnerabilities found, their severity, and recommended remediations.</description>
-    <output>A comprehensive security scan report.</output>
-  </step>
-</security_scan_workflow>
-```
+  <examples>
+    <example>
+      <description>Run a comprehensive scan on all targets.</description>
+      <usage>/secure scan</usage>
+    </example>
+    <example>
+      <description>Scan only for hardcoded secrets in the codebase.</description>
+      <usage>/secure scan target="secrets"</usage>
+    </example>
+    <example>
+      <description>Scan only the project's third-party dependencies.</description>
+      <usage>/secure scan target="dependencies"</usage>
+    </example>
+  </examples>
 
-## Security Checks
-### Code Analysis
-- OWASP Top 10 vulnerability patterns
-- SQL injection and XSS detection
-- Authentication and authorization flaws
-- Insecure cryptographic implementations
+  <claude_prompt>
+    <prompt>
+      You are a security scanner. The user wants to scan the project for vulnerabilities.
 
-### Dependency Scanning
-- Known CVE vulnerability matching
-- License compliance verification
-- Outdated package identification
-- Supply chain risk assessment
+      1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the configured security scanning tools (e.g., Snyk, Trivy, Gitleaks).
+      2.  **Determine Scan Scope**: Based on the `target` argument, determine which scans to run.
+      3.  **Execute Scans**:
+          *   Run the appropriate configured tool(s) for the specified target(s).
+          *   For `code`, run a static analysis tool (SAST).
+          *   For `dependencies`, run a dependency vulnerability scanner.
+          *   For `secrets`, run a secret scanning tool.
+      4.  **Generate Report**:
+          *   Aggregate and de-duplicate the findings from all the tools.
+          *   Create a report that lists all identified vulnerabilities, their severity, and recommended remediations.
+          *   <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-### Configuration Review
-- Security misconfigurations
-- Exposed sensitive endpoints
-- Insufficient access controls
-- Weak encryption settings
-
-## Output Formats
-- **summary** - Executive vulnerability report
-- **detailed** - Technical findings with remediation
-- **json** - Machine-readable results
-- **sarif** - Static analysis results format
-
-## Examples
-```bash
-/secure scan quick code          # Fast code scan
-/secure scan standard deps       # Dependency audit
-/secure scan deep all --format json    # Complete scan
-/secure scan critical --compliance pci # Compliance scan
-```
-
-## Integration
-- CI/CD pipeline compatible
-- Security gate enforcement
-- Automated remediation suggestions
-- Threat intelligence integration
+  <dependencies>
+    <uses_config_values>
+      <value>security.sast_tool</value>
+      <value>security.dependency_scanner</value>
+      <value>security.secret_scanner</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>

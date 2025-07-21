@@ -1,54 +1,58 @@
-# /error report - Error Reporting Command
+<command_file>
+  <metadata>
+    <name>/error report</name>
+    <purpose>Generates comprehensive error analysis reports with trends, classifications, and actionable insights.</purpose>
+    <usage>
+      <![CDATA[
+      /error report <timeframe="7d">
+      ]]>
+    </usage>
+  </metadata>
 
-**Purpose**: Generate comprehensive error analysis reports with trends, classifications, and actionable insights.
-
-## Usage
-```bash
-/error report [--timeframe=<timeframe>] [--format=<format>]
-```
-
-## Workflow
-
-The `/error report` command follows a systematic process to generate error reports.
-
-```xml
-<error_report_workflow>
-  <step name="Gather Error Data">
-    <description>Gather error data from various sources, including logging platforms, monitoring tools, and version control history. The timeframe for the report can be specified with the `--timeframe` flag.</description>
-    <tool_usage>
-      <tool>API/Log Reader</tool>
-      <description>Fetch error data from logging services and parse log files.</description>
-    </tool_usage>
-  </step>
+  <arguments>
+    <argument name="timeframe" type="string" required="false" default="7d">
+      <description>The time window for the report (e.g., '24h', '7d', '30d').</description>
+    </argument>
+  </arguments>
   
-  <step name="Analyze & Classify Errors">
-    <description>Analyze the gathered data to identify trends, classify errors by type (e.g., syntax, runtime, logic), and calculate key metrics such as error frequency and resolution time.</description>
-    <tool_usage>
-      <tool>Data Analysis</tool>
-      <description>Use data analysis techniques to process the error data.</description>
-    </tool_usage>
-  </step>
-  
-  <step name="Generate Report">
-    <description>Generate a comprehensive report that summarizes the findings. The format of the report can be specified with the `--format` flag (e.g., 'summary', 'dashboard', 'detailed'). The report includes actionable insights and recommendations for improving code quality.</description>
-    <output>A detailed error report.</output>
-  </step>
-</error_report_workflow>
-```
+  <examples>
+    <example>
+      <description>Generate an error report for the last 7 days.</description>
+      <usage>/error report</usage>
+    </example>
+    <example>
+      <description>Generate an error report for the last 24 hours.</description>
+      <usage>/error report timeframe="24h"</usage>
+    </example>
+  </examples>
 
-## Configuration
+  <claude_prompt>
+    <prompt>
+      You are a data analyst specializing in software quality. The user wants a report on error trends.
 
-The `/error report` command can be configured through the `PROJECT_CONFIG.xml` file.
+      1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the configured logging and monitoring service integrations.
+      2.  **Gather Error Data**:
+          *   Fetch error data from the configured services (e.g., Sentry, LogRocket, Datadog) for the specified `timeframe`.
+          *   If no integration is configured, analyze local log files.
+      3.  **Analyze and Classify**:
+          *   Process the data to identify error trends.
+          *   Classify errors by type (e.g., Frontend, Backend, Database) and root cause.
+          *   Calculate key metrics like error frequency, impact (number of users affected), and new vs. regressed errors.
+      4.  **Generate Report**:
+          *   Create a comprehensive report summarizing the findings with clear visualizations.
+          *   Highlight the most critical errors that need immediate attention.
+          *   Provide actionable insights and recommendations.
+          *   <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-```xml
-<command name="/error report">
-  <setting name="default_timeframe" value="7d" description="The default timeframe for error reports (e.g., '7d' for 7 days)." />
-  <setting name="default_format" value="summary" description="The default format for error reports." />
-</command>
-```
-
-## Use Cases
-
-*   **Quality Assurance**: Track and analyze error trends to improve overall code quality.
-*   **Team Management**: Identify areas where developers may need additional training or support.
-*   **Project Planning**: Use error data to inform decisions about technical debt and refactoring priorities.
+  <dependencies>
+    <uses_config_values>
+      <value>monitoring.logging_service</value>
+      <value>monitoring.error_tracking_service</value>
+    </uses_config_values>
+    <includes_components>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+  </dependencies>
+</command_file>
