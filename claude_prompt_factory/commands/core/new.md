@@ -27,10 +27,18 @@
     **Step 5: Finalization**
     - Once all questions are answered, present the complete `PROJECT_CONFIG.xml` file.
     - Ask the user to confirm that the file is correct before writing it to disk.
+      <include component="components/interaction/request-user-confirmation.md" />
+      <include component="components/workflow/error-handling.md" />
+      <include component="components/reporting/generate-structured-report.md" />
   </prompt>
 </claude_prompt>
 
 <dependencies>
+  <includes_components>
+    <component>components/interaction/request-user-confirmation.md</component>
+    <component>components/workflow/error-handling.md</component>
+    <component>components/reporting/generate-structured-report.md</component>
+  </includes_components>
   <uses_config_values>
     <!-- This command *creates* the config, so it doesn't use existing values. -->
   </uses_config_values>

@@ -30,6 +30,10 @@
       4.  **Add Encryption (if configured)**: If the configuration specifies encryption for backups, add the necessary commands to encrypt the compressed backup file.
       5.  **Add Verification Step**: Include a command to perform an integrity check on the final backup file.
       6.  **Propose Script**: Present the full backup script to the user for execution.
+      <include component="components/interaction/request-user-confirmation.md" />
+      <include component="components/error/circuit-breaker.md" />
+      <include component="components/workflow/error-handling.md" />
+      <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 
