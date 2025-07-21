@@ -2,7 +2,7 @@
 
 This document is the central entry point to the Claude Code Prompt Factory. It provides a high-level overview of the available command categories.
 
-## Command Categories
+## Core Command Categories
 
 *   [**Agents**](./agents/README.md): High-level, autonomous agents that perform complex, multi-step tasks.
 *   [**Analysis**](./analysis/README.md): Comprehensive code analysis and quality checks.
@@ -23,6 +23,31 @@ This document is the central entry point to the Claude Code Prompt Factory. It p
 *   [**Testing**](./testing/README.md): Comprehensive testing support.
 *   [**Utilities**](./utilities/README.md): General productivity tools.
 *   [**Workflow**](./workflow/README.md): Coordinate complex multi-step CI/CD operations.
+
+## Advanced Enterprise Categories
+
+*   [**Ecosystem**](./ecosystem/README.md): Marketplace growth and platform expansion strategies.
+*   [**Industry**](./industry/README.md): Industry-specific solutions and compliance frameworks.
+*   [**Innovation**](./innovation/README.md): Emerging technology integration and cutting-edge capabilities.
+*   [**Research**](./research/README.md): Academic collaboration and research-quality implementations.
+
+---
+
+## Quick Start Commands
+
+*   **`/auto "[request]"`** - Smart router that selects optimal commands for your needs
+*   **`/task "[description]"`** - Focused TDD workflow for single components  
+*   **`/feature "[description]"`** - End-to-end feature development
+*   **`/protocol "[description]"`** - Safe, rigorous workflow for critical changes
+*   **`/query "[question]"`** - Analyze and understand your codebase
+
+## Advanced Capabilities
+
+*   **`/global-deploy "[regions]"`** - Multi-region deployment with cultural intelligence
+*   **`/industry-adapt "[industry]"`** - Industry-specific solutions and compliance
+*   **`/emerging-tech "[technology]"`** - Integrate AR/VR, IoT, blockchain, quantum computing
+*   **`/academic-bridge "[research_area]"`** - Research collaboration and publication-ready work
+*   **`/marketplace-grow "[target]"`** - Ecosystem expansion and platform growth
 
 ---
 *For a complete list of all commands, please refer to the `README.md` file within each category directory.*
