@@ -1,12 +1,12 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T03:09:39.083187
+**Generated**: 2025-07-21T03:15:14.794992
 
 ## 📋 Executive Summary
 - **Total Files**: 202
 - **Valid Files**: 202 (100.0%)
-- **Overall Score**: 11720/20200 (58.0%)
+- **Overall Score**: 12060/20200 (59.7%)
 
-## 🚨 Critical Issues (148 errors)
+## 🚨 Critical Issues (145 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
 - ❌ Missing <command_file> XML structure
 
@@ -16,27 +16,20 @@
 ### claude_prompt_factory/commands/utilities/deps-update.md
 - ❌ XML Parse Error: not well-formed (invalid token): line 41, column 17
 
-### claude_prompt_factory/commands/utilities/cache-clear.md
-- ❌ Missing <command_file> XML structure
-
 ### claude_prompt_factory/commands/utilities/code-clean.md
 - ❌ XML Parse Error: not well-formed (invalid token): line 41, column 17
 
 ### claude_prompt_factory/commands/utilities/env-setup.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 41, column 17
 
 ### claude_prompt_factory/commands/utilities/ai-generate.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 44, column 18
 
 ### claude_prompt_factory/commands/utilities/ai-refactor.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/utilities/ai-explain.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 44, column 17
 
 ### claude_prompt_factory/commands/utilities/backup-create.md
-- ❌ Missing YAML frontmatter
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 44, column 17
 
 ### claude_prompt_factory/commands/utilities/ai-review.md
 - ❌ Missing <command_file> XML structure
@@ -339,7 +332,7 @@
 - ❌ Missing <description> element
 - ❌ Missing <output> section
 
-## ⚠️ Warnings (17 warnings)
+## ⚠️ Warnings (22 warnings)
 ### claude_prompt_factory/commands/documentation/docs-generate.md
 - ⚠️ Dependencies section doesn't match actual includes
 
@@ -367,8 +360,21 @@
 ### claude_prompt_factory/commands/utilities/deps-update.md
 - ⚠️ Component not found: components/testing/framework-validation.md
 
+### claude_prompt_factory/commands/utilities/cache-clear.md
+- ⚠️ Component not found: components/reliability/circuit-breaker.md
+
 ### claude_prompt_factory/commands/utilities/code-clean.md
 - ⚠️ Component not found: components/testing/framework-validation.md
+
+### claude_prompt_factory/commands/utilities/env-setup.md
+- ⚠️ Component not found: components/testing/framework-validation.md
+
+### claude_prompt_factory/commands/utilities/ai-generate.md
+- ⚠️ Component not found: components/testing/test-e2e.md
+
+### claude_prompt_factory/commands/utilities/backup-create.md
+- ⚠️ Component not found: components/database/db-backup.md
+- ⚠️ Component not found: components/security/secure-config.md
 
 ### claude_prompt_factory/commands/workflow/mega-platform-builder.md
 - ⚠️ Dependencies section doesn't match actual includes

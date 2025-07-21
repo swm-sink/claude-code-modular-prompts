@@ -1,20 +1,88 @@
 ---
-description: Intelligent environment setup with automated configuration, dependency resolution, and platform optimization
-argument-hint: "[environment_type] [platform]"
+description: Intelligent environment setup with automated toolchain installation, configuration management, and comprehensive dependency resolution
+argument-hint: "[environment_type] [automation_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
 # /env setup - Intelligent Environment Setup
 
-Advanced environment setup system with automated configuration, intelligent dependency resolution, and platform optimization.
+Advanced environment setup system with automated toolchain installation, intelligent configuration management, and comprehensive dependency resolution.
 
 ## Usage
 ```bash
-/env setup development                       # Development environment setup
-/env setup --docker                         # Containerized environment
-/env setup --cloud                          # Cloud environment configuration
-/env setup --auto                           # Fully automated setup
+/env setup development                     # Development environment setup
+/env setup --automated                     # Fully automated setup process
+/env setup --production                    # Production environment setup
+/env setup --comprehensive                 # Comprehensive environment management
 ```
+
+<command_file>
+  <metadata>
+    <n>/env setup</n>
+    <purpose>Intelligent environment setup with automated toolchain installation, configuration management, and comprehensive dependency resolution</purpose>
+    <usage>
+      <![CDATA[
+      /env setup [environment_type]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="environment_type" type="string" required="false" default="development">
+      <description>Type of environment to set up</description>
+    </argument>
+    <argument name="automation_level" type="string" required="false" default="automated">
+      <description>Level of automation for the setup process</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Development environment setup</description>
+      <usage>/env setup development</usage>
+    </example>
+    <example>
+      <description>Fully automated setup process</description>
+      <usage>/env setup --automated</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced environment setup specialist. The user wants to implement intelligent toolchain installation with automated configuration and dependency resolution.
+
+**Setup Process:**
+1. **Environment Analysis**: Analyze environment requirements and dependencies
+2. **Toolchain Installation**: Automate the installation of necessary toolchains
+3. **Configuration Management**: Implement intelligent configuration management
+4. **Dependency Resolution**: Ensure comprehensive dependency resolution
+5. **Validation & Testing**: Validate the environment and run setup tests
+
+**Implementation Strategy:**
+- Analyze project requirements to determine optimal environment configuration
+- Automate toolchain installation with version management and verification
+- Implement intelligent configuration management with environment-specific settings
+- Ensure comprehensive dependency resolution with version pinning and validation
+- Establish validation testing to confirm environment integrity and functionality
+
+<include component="components/analysis/dependency-mapping.md" />
+<include component="components/integration/cicd-integration.md" />
+<include component="components/testing/framework-validation.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/analysis/dependency-mapping.md</component>
+      <component>components/integration/cicd-integration.md</component>
+      <component>components/testing/framework-validation.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>environment.setup.auto_install</value>
+      <value>dependency_resolution.strategy</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
 
 ## Workflow
 

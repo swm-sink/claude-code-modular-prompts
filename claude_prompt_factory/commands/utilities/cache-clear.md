@@ -1,20 +1,88 @@
 ---
-description: Intelligent cache management with selective clearing, optimization analysis, and performance monitoring
-argument-hint: "[cache_type] [clearing_strategy]"
+description: Intelligent cache clearing with automated invalidation, performance optimization, and comprehensive state management
+argument-hint: "[cache_type] [invalidation_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /cache clear - Intelligent Cache Management
+# /cache clear - Intelligent Cache Clearing
 
-Advanced cache management system with selective clearing, optimization analysis, and comprehensive performance monitoring.
+Advanced cache clearing system with automated invalidation, intelligent performance optimization, and comprehensive state management.
 
 ## Usage
 ```bash
-/cache clear all                             # Clear all cache types
-/cache clear --selective                     # Intelligent selective clearing
-/cache clear --analyze                       # Cache usage analysis
-/cache clear --optimize                      # Performance optimization
+/cache clear all                           # Clear all application caches
+/cache clear --selective                   # Selectively clear specific caches
+/cache clear --automated                   # Automated cache invalidation
+/cache clear --performance                 # Performance-optimized clearing
 ```
+
+<command_file>
+  <metadata>
+    <n>/cache clear</n>
+    <purpose>Intelligent cache clearing with automated invalidation, performance optimization, and comprehensive state management</purpose>
+    <usage>
+      <![CDATA[
+      /cache clear [cache_type]
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="cache_type" type="string" required="false" default="all">
+      <description>Type of cache to clear</description>
+    </argument>
+    <argument name="invalidation_strategy" type="string" required="false" default="automated">
+      <description>Strategy for cache invalidation and clearing</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Clear all application caches</description>
+      <usage>/cache clear all</usage>
+    </example>
+    <example>
+      <description>Selectively clear specific caches</description>
+      <usage>/cache clear --selective</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced cache management specialist. The user wants to implement intelligent cache clearing with automated invalidation and performance optimization.
+
+**Clearing Process:**
+1. **Cache Analysis**: Analyze current cache structure and usage patterns
+2. **Invalidation Strategy**: Design intelligent cache invalidation strategies
+3. **Automated Clearing**: Implement automated cache clearing mechanisms
+4. **Performance Optimization**: Optimize cache performance and efficiency
+5. **State Management**: Ensure comprehensive state consistency and management
+
+**Implementation Strategy:**
+- Analyze cache usage to identify optimization opportunities
+- Implement intelligent cache invalidation strategies (e.g., TTL, event-based)
+- Create automated cache clearing with safety checks and validation
+- Optimize cache performance with efficient data structures and algorithms
+- Establish comprehensive state management to prevent inconsistencies
+
+<include component="components/performance/cost-optimization.md" />
+<include component="components/reliability/circuit-breaker.md" />
+<include component="components/quality/framework-validation.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/performance/cost-optimization.md</component>
+      <component>components/reliability/circuit-breaker.md</component>
+      <component>components/quality/framework-validation.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>cache.invalidation.auto_enabled</value>
+      <value>performance.optimization.strategy</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
 
 ## Workflow
 
