@@ -43,15 +43,22 @@ Detects design patterns, identifies violations and anti-patterns, and suggests a
 
   <claude_prompt>
     <prompt>
-      You are a software architect. The user wants you to analyze their codebase for design patterns.
+      <![CDATA[
+You are a software architect. The user wants you to analyze their codebase for design patterns.
 
+      
+]]>
       <include component="components/context/find-relevant-code.md" />
+      <![CDATA[
+
 
       Once the code is identified, perform the following analysis:
       1.  **Detect Design Patterns**: Identify common design patterns (e.g., Gang of Four, architectural, domain-specific).
       2.  **Identify Violations & Anti-Patterns**: Detect violations of established patterns and common anti-patterns.
       3.  **Generate Improvement Suggestions**: Suggest opportunities for new patterns, refactoring, and fixing anti-patterns.
 
+      
+]]>
       <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>

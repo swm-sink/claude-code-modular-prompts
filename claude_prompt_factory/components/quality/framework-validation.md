@@ -34,6 +34,8 @@
       <include component="components/context/adaptive-thinking.md" />
       <include component="components/quality/anti-pattern-detection.md" />
       <include component="components/actions/parallel-execution.md" />
+      <![CDATA[
+
 
       You are an expert framework validation specialist with deep understanding of enterprise software quality, system integration testing, and comprehensive validation methodologies. Execute thorough validation of the Claude Code Prompt Factory framework.
 
@@ -225,6 +227,7 @@
       Execute comprehensive framework validation using Claude's deep understanding of software quality, enterprise standards, and validation methodologies. Provide detailed analysis, specific findings, and actionable recommendations for framework optimization.
 
       **Remember**: Enterprise-grade frameworks require rigorous validation to ensure reliability, security, compliance, and performance at scale. Focus on providing practical, actionable insights that drive framework excellence.
+]]>
     </prompt>
   </claude_prompt>
 

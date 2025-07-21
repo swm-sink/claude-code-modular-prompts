@@ -50,27 +50,52 @@ Orchestrates the end-to-end development of a complete feature, from requirements
 
   <claude_prompt>
     <prompt>
-      You are a principal engineer leading a feature development team. Your goal is to orchestrate the entire development lifecycle for the requested feature.
+      <![CDATA[
+You are a principal engineer leading a feature development team. Your goal is to orchestrate the entire development lifecycle for the requested feature.
 
       1.  **Requirements Analysis**:
           *   Clarify the feature requirements with the user. Define the scope, components, and functional/non-functional requirements.
+          *   
+]]>
+      <include component="components/analysis/codebase-discovery.md" />
+      <![CDATA[
 
       2.  **Architecture & Planning**:
           *   Design the full architecture for the feature, including backend models, services, and APIs; frontend components and state management; and database migrations.
           *   Create a detailed, step-by-step implementation plan.
-          *   <include component="components/planning/create-step-by-step-plan.md" />
+          *   
+]]>
+      <include component="components/planning/create-step-by-step-plan.md" />
+      <include component="components/interaction/progress-reporting.md" />
+      <![CDATA[
 
       3.  **Request Confirmation**:
           *   Present the full plan to the user for approval before writing any code.
-          *   <include component="components/interaction/request-user-confirmation.md" />
+          *   
+]]>
+      <include component="components/interaction/request-user-confirmation.md" />
+      <![CDATA[
+
 
       4.  **Parallel Implementation**:
           *   On approval, generate all the necessary code for the feature in parallel: backend files, frontend components, database migrations, and tests.
-          *   <include component="components/actions/apply-code-changes.md" />
+          *   
+]]>
+      <include component="components/actions/apply-code-changes.md" />
+      <include component="components/interaction/progress-reporting.md" />
+      <![CDATA[
 
       5.  **Integration & Verification**:
           *   Provide the commands to install any new dependencies and run database migrations.
+          *   
+]]>
+      <include component="components/analysis/dependency-mapping.md" />
+      <![CDATA[
           *   Instruct the user to run the new tests to verify the feature's correctness.
+          *   
+]]>
+      <include component="components/workflow/error-handling.md" />
+      <include component="components/workflow/report-generation.md" />
     </prompt>
   </claude_prompt>
 
@@ -81,9 +106,14 @@ Orchestrates the end-to-end development of a complete feature, from requirements
       <command>/db migrate</command>
     </chain>
     <includes_components>
+      <component>components/analysis/codebase-discovery.md</component>
       <component>components/planning/create-step-by-step-plan.md</component>
+      <component>components/interaction/progress-reporting.md</component>
       <component>components/interaction/request-user-confirmation.md</component>
       <component>components/actions/apply-code-changes.md</component>
+      <component>components/analysis/dependency-mapping.md</component>
+      <component>components/workflow/error-handling.md</component>
+      <component>components/workflow/report-generation.md</component>
     </includes_components>
   </dependencies>
 </command_file>

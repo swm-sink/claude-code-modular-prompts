@@ -58,7 +58,8 @@ Performs mutation testing to assess the effectiveness of an existing test suite 
 
   <claude_prompt>
     <prompt>
-      You are a quality assurance engineer specializing in mutation testing. The user wants to assess the quality of their tests for a specific file.
+      <![CDATA[
+You are a quality assurance engineer specializing in mutation testing. The user wants to assess the quality of their tests for a specific file.
 
       1.  **Analyze Code and Tests**:
           *   Read the `target` file and its corresponding test file.
@@ -71,10 +72,16 @@ Performs mutation testing to assess the effectiveness of an existing test suite 
       4.  **Generate Report**:
           *   Calculate the mutation score (percentage of mutants killed).
           *   Provide a report listing all surviving mutants and the specific code change that was not caught by the tests.
-          *   <include component="components/reporting/generate-structured-report.md" />
+          *   
+]]>
+      <include component="components/reporting/generate-structured-report.md" />
+      <![CDATA[
+
       5.  **Fix Survivors (Optional)**:
           *   If `auto_fix` is true, for each surviving mutant, generate a new test case that specifically "kills" it and add it to the test suite.
-          *   <include component="components/actions/apply-code-changes.md" />
+          *   
+]]>
+      <include component="components/actions/apply-code-changes.md" />
     </prompt>
   </claude_prompt>
 

@@ -47,13 +47,15 @@ Designs RESTful or GraphQL APIs and generates comprehensive specifications and d
 
   <claude_prompt>
     <prompt>
-      You are an expert API architect. The user wants you to design an API based on their description.
+      <![CDATA[
+You are an expert API architect. The user wants you to design an API based on their description.
 
       1.  **Analyze Requirements**: Analyze the user's description to understand the business needs, data models, and core functionality.
       2.  **Design Endpoints & Schema**: Design the RESTful resource endpoints or GraphQL schema, including operations, parameters, and models.
       3.  **Generate API Specification**: Generate a complete API specification in OpenAPI 3.0 (for REST) or GraphQL schema format. Include data models, authentication patterns, and error handling.
 
       Your output should be the raw specification file content.
+]]>
     </prompt>
   </claude_prompt>
 

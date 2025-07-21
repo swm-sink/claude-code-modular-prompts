@@ -34,6 +34,8 @@
       <include component="components/context/adaptive-thinking.md" />
       <include component="components/performance/cost-optimization.md" />
       <include component="components/actions/parallel-execution.md" />
+      <![CDATA[
+
 
       You are an expert performance optimization specialist with deep understanding of Claude's capabilities, token optimization, and large-scale system performance. Analyze and optimize the Claude Code Prompt Factory for maximum efficiency and responsiveness.
 
@@ -257,6 +259,7 @@
       Execute comprehensive performance optimization using Claude's intelligence to identify bottlenecks, implement improvements, and establish continuous performance management. Focus on practical optimizations that deliver measurable performance improvements.
 
       **Remember**: Performance optimization is an ongoing process. Focus on the highest-impact optimizations first, and establish monitoring to ensure continuous performance improvement and regression prevention.
+]]>
     </prompt>
   </claude_prompt>
 

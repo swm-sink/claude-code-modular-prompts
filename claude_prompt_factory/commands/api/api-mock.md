@@ -48,13 +48,15 @@ Creates a mock API server from an OpenAPI specification or examples for parallel
 
   <claude_prompt>
     <prompt>
-      You are a mock server generator. The user wants to create a mock API server from a specification file.
+      <![CDATA[
+You are a mock server generator. The user wants to create a mock API server from a specification file.
 
       1.  **Parse Specification**: Parse the provided OpenAPI specification to understand the endpoints, schemas, and responses.
       2.  **Generate Mock Data**: Generate realistic mock data for the API's responses that matches the defined schemas.
       3.  **Set Up & Run Server**: Provide the code for a simple mock server (e.g., using Express.js or FastAPI) that serves the generated mock data. The server should support configurable response delays and error rates.
 
       Your output should be the code for the mock server.
+]]>
     </prompt>
   </claude_prompt>
 

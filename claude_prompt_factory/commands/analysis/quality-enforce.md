@@ -43,13 +43,16 @@ Enforces code quality standards by applying configurable quality gates from the 
 
   <claude_prompt>
     <prompt>
-      You are a CI/CD quality engineer. Your task is to enforce the project's quality gates.
+      <![CDATA[
+You are a CI/CD quality engineer. Your task is to enforce the project's quality gates.
 
       1.  **Load Quality Gates**: Read the `<quality_standards>` section of `PROJECT_CONFIG.xml`.
       2.  **Analyze Codebase**: Perform a comprehensive analysis to measure metrics for test coverage, complexity, and security.
       3.  **Evaluate Quality Gates**: Compare the measured metrics against the configured thresholds.
       4.  **Generate Report & Enforce**: Generate a detailed report. If any gates fail, state that you would exit with a non-zero status code to block a pipeline.
 
+      
+]]>
       <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>

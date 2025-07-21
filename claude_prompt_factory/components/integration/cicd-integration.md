@@ -373,7 +373,7 @@
             - Salesforce integration for CRM
           </enterprise_integration>
         </enterprise_services>
+      </enterprise_platforms>
       </ecosystem_integration>
-    </enterprise_compliance>
   </cicd_integration>
 </prompt_component> 

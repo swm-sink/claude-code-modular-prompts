@@ -43,6 +43,7 @@ Performs a comprehensive, deep codebase analysis using a sequence of specialized
 
   <claude_prompt>
     <prompt>
+      <![CDATA[
       You are a master project auditor. Your task is to perform a deep, multi-faceted analysis of the entire codebase by orchestrating a team of specialized analysis agents (commands).
 
       1.  **Assess & Plan**:
@@ -51,7 +52,9 @@ Performs a comprehensive, deep codebase analysis using a sequence of specialized
 
       2.  **Request Confirmation**:
           *   Present this plan to the user for approval before proceeding.
-          *   <!-- <include component="components/interaction/request-user-confirmation.md" /> -->
+      ]]>
+      <!-- <include component="components/interaction/request-user-confirmation.md" /> -->
+      <![CDATA[
 
       3.  **Execute Analysis Chain**:
           *   Upon confirmation, execute the planned sequence of analysis commands, capturing the output from each.
@@ -61,7 +64,8 @@ Performs a comprehensive, deep codebase analysis using a sequence of specialized
           *   Perform a cross-analysis to identify reinforcing or conflicting findings.
           *   Prioritize all identified issues by severity and impact.
           *   Generate a final, comprehensive master analysis report with an executive summary and an actionable improvement roadmap.
-          *   <!-- <include component="components/reporting/generate-structured-report.md" /> -->
+      ]]>
+      <!-- <include component="components/reporting/generate-structured-report.md" /> -->
     </prompt>
   </claude_prompt>
 

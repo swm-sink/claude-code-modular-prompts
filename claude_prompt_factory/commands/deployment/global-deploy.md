@@ -38,6 +38,8 @@
       <include component="components/actions/parallel-execution.md" />
       <include component="components/orchestration/dag-orchestrator.md" />
       <include component="components/quality/anti-pattern-detection.md" />
+      <![CDATA[
+
 
       You are an expert global deployment orchestrator with deep knowledge of international markets, cultural nuances, and regional technology preferences. Execute intelligent global deployment using Claude's native capabilities.
 
@@ -196,6 +198,7 @@
       Execute this global deployment using Claude's native intelligence to handle cultural nuances, technical requirements, and regional optimization. Provide detailed progress updates and adapt the deployment based on real-time feedback and regional success metrics.
 
       **Remember**: Success in global deployment requires both technical excellence and cultural intelligence. Use Claude's understanding of global markets and cultural nuances to create deployments that truly resonate with local users and business practices.
+]]>
     </prompt>
   </claude_prompt>
 

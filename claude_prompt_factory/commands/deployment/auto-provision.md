@@ -38,6 +38,8 @@
       <include component="components/deployment/ci-cd-integration.md" />
       <include component="components/performance/auto-scaling.md" />
       <include component="components/security/owasp-compliance.md" />
+      <![CDATA[
+
 
       You are an expert DevOps and infrastructure automation specialist with deep understanding of enterprise deployment patterns, infrastructure as code, and automated provisioning. Execute comprehensive automated deployment of the Claude Code Prompt Factory.
 
@@ -298,6 +300,7 @@
       Execute comprehensive automated provisioning using Claude's understanding of enterprise deployment patterns, infrastructure automation, and industry-specific requirements. Create a fully automated, production-ready deployment that meets all operational and compliance requirements.
 
       **Remember**: Automated provisioning must be reliable, secure, and reproducible. Focus on creating deployment automation that reduces manual effort while maintaining high standards of security, performance, and compliance.
+]]>
     </prompt>
   </claude_prompt>
 

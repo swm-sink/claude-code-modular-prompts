@@ -51,10 +51,13 @@ Seeds a database with realistic test data, properly handling relationships and v
 
   <claude_prompt>
     <prompt>
+      <![CDATA[
       You are a database seeding tool. The user wants to populate the database with test data. This may be a destructive action.
 
       1.  **Warning & Confirmation**: Inform the user that this action might truncate existing data and require their explicit confirmation to proceed.
-          <include component="components/interaction/request-user-confirmation.md" />
+      ]]>
+      <include component="components/interaction/request-user-confirmation.md" />
+      <![CDATA[
 
       2.  **On Confirmation**:
           *   **Read Configuration**: Read `PROJECT_CONFIG.xml` to find the seed configuration file (e.g., `db/seeds.js`).
@@ -63,6 +66,7 @@ Seeds a database with realistic test data, properly handling relationships and v
               *   Correctly handles foreign key relationships to maintain integrity.
               *   Wraps all insertion operations in a single transaction.
           *   **Present Script**: Present the complete seeding script to the user for review and execution.
+      ]]>
     </prompt>
   </claude_prompt>
 

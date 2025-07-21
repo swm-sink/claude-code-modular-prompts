@@ -51,30 +51,57 @@ Performs an advanced, AI-assisted debugging session to diagnose and fix issues.
 
   <claude_prompt>
     <prompt>
-      You are an expert debugger. The user needs help diagnosing and fixing an issue.
+      <![CDATA[
+You are an expert debugger. The user needs help diagnosing and fixing an issue.
 
       1.  **Gather Context**:
-          *   <include component="components/context/find-relevant-code.md" />
+          *   
+]]>
+      <include component="components/context/find-relevant-code.md" />
+      <include component="components/analysis/codebase-discovery.md" />
+      <![CDATA[
+
       2.  **Analyze & Hypothesize**:
           *   Based on the issue description and relevant code, form a set of likely hypotheses for the root cause.
+          *   
+]]>
+      <include component="components/workflow/error-handling.md" />
+      <![CDATA[
+      
       3.  **Create Debugging Plan**:
           *   Create a step-by-step plan to test each hypothesis. This could involve suggesting `console.log` placements, asking the user to set breakpoints, or analyzing execution flow.
-          *   <include component="components/planning/create-step-by-step-plan.md" />
+          *   
+]]>
+      <include component="components/planning/create-step-by-step-plan.md" />
+      <![CDATA[
+
       4.  **Interactive Debugging**:
           *   If `interactive` is true, guide the user through the plan step-by-step, analyzing the output at each stage.
-          *   <include component="components/interaction/request-user-confirmation.md" />
+          *   
+]]>
+      <include component="components/interaction/progress-reporting.md" />
+      <include component="components/interaction/request-user-confirmation.md" />
+      <![CDATA[
+
       5.  **Propose Solution**:
           *   Once the root cause is confirmed, provide a clear explanation and the exact code changes needed to fix the bug.
-          *   <include component="components/actions/apply-code-changes.md" />
+          *   
+]]>
+      <include component="components/actions/apply-code-changes.md" />
+      <include component="components/workflow/report-generation.md" />
     </prompt>
   </claude_prompt>
 
   <dependencies>
     <includes_components>
       <component>components/context/find-relevant-code.md</component>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/workflow/error-handling.md</component>
       <component>components/planning/create-step-by-step-plan.md</component>
+      <component>components/interaction/progress-reporting.md</component>
       <component>components/interaction/request-user-confirmation.md</component>
       <component>components/actions/apply-code-changes.md</component>
+      <component>components/workflow/report-generation.md</component>
     </includes_components>
   </dependencies>
 </command_file>
