@@ -1,17 +1,19 @@
 ---
-description: Designs RESTful or GraphQL APIs and generates comprehensive specifications
-argument-hint: "[description] [type]"
-allowed-tools: Write, Read
+description: Comprehensive API design with OpenAPI specification, best practices, and validation
+argument-hint: "[api_type] [design_approach]"
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /api design - API Design & Specification
+# /api design - API Design & Architecture
 
-Designs RESTful or GraphQL APIs and generates comprehensive specifications and documentation.
+Advanced API design system with OpenAPI specification generation, RESTful best practices, and comprehensive validation.
 
 ## Usage
 ```bash
-/api design "user management with CRUD endpoints"     # REST API (default)
-/api design "social media API" type="graphql"         # GraphQL API
+/api design rest                             # Design RESTful API architecture
+/api design graphql                          # Design GraphQL API schema
+/api design --openapi                        # Generate OpenAPI specification
+/api design --validate                       # Validate API design patterns
 ```
 
 ## Arguments

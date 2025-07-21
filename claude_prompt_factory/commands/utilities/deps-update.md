@@ -1,10 +1,19 @@
-# /deps update - Safe Dependency Update Command
+---
+description: Intelligent dependency updates with security scanning, compatibility checking, and safe upgrade paths
+argument-hint: "[update_strategy] [scope]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Purpose**: Safely update project dependencies with compatibility validation, automated testing, and rollback protection to prevent breaking changes.
+# /deps update - Intelligent Dependency Management
+
+Advanced dependency update system with security scanning, compatibility validation, and safe automated upgrades.
 
 ## Usage
 ```bash
-/deps update [--minor|--patch] [--test-after]
+/deps update security                        # Update security-critical dependencies
+/deps update major                           # Handle major version updates
+/deps update --safe                          # Only safe, minor updates
+/deps update --interactive                   # Interactive update selection
 ```
 
 ## Workflow

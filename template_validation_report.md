@@ -1,12 +1,12 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T01:25:32.357251
+**Generated**: 2025-07-21T01:28:56.114103
 
 ## 📋 Executive Summary
 - **Total Files**: 194
 - **Valid Files**: 194 (100.0%)
-- **Overall Score**: 8015/19400 (41.3%)
+- **Overall Score**: 8037/19400 (41.4%)
 
-## 🚨 Critical Issues (234 errors)
+## 🚨 Critical Issues (232 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
 - ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
@@ -126,7 +126,6 @@
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/deps-update.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/cache-clear.md
@@ -138,7 +137,6 @@
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/code-clean.md
-- ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/utilities/monitor-health.md
@@ -266,7 +264,7 @@
 - ❌ Missing YAML frontmatter
 
 ### claude_prompt_factory/commands/api/api-test.md
-- ❌ Missing YAML frontmatter
+- ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/performance/optimize-framework.md
 - ❌ Missing YAML frontmatter

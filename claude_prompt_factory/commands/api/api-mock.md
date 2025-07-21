@@ -1,17 +1,19 @@
 ---
-description: Creates a mock API server from OpenAPI specification for parallel development and testing
-argument-hint: "[spec_file]"
-allowed-tools: Read, Write, Bash
+description: API mocking and simulation with realistic data generation and behavior simulation
+argument-hint: "[mock_type] [data_strategy]"
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /api mock - Mock API Server Generator
+# /api mock - API Mocking & Simulation
 
-Creates a mock API server from an OpenAPI specification or examples for parallel development and testing.
+Advanced API mocking system with realistic data generation, behavior simulation, and comprehensive testing support.
 
 ## Usage
 ```bash
-/api mock "docs/api/openapi.json"     # Generate mock server from OpenAPI spec
-/api mock "swagger.yaml"              # Generate from YAML specification
+/api mock server                             # Create mock API server
+/api mock endpoints                          # Mock specific endpoints
+/api mock --realistic                        # Generate realistic mock data
+/api mock --dynamic                          # Dynamic behavior simulation
 ```
 
 ## Arguments

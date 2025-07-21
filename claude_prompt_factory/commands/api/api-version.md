@@ -1,18 +1,19 @@
 ---
-description: Manages API versions, incrementing versions and planning deprecation strategies
-argument-hint: "[increment]"
-allowed-tools: Read, Write, Grep, Edit
+description: API versioning strategy with backward compatibility, migration paths, and deprecation management
+argument-hint: "[version_strategy] [migration_approach]"
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /api version - API Version Management
+# /api version - API Versioning Management
 
-Manages API versions, including incrementing versions and planning deprecation strategies.
+Comprehensive API versioning system with backward compatibility, migration strategies, and deprecation lifecycle management.
 
 ## Usage
 ```bash
-/api version                    # Patch version increment (default)
-/api version increment="major"  # Major version for breaking changes
-/api version increment="minor"  # Minor version for new features
+/api version create v2.0                     # Create new API version
+/api version migrate                         # Generate migration guide
+/api version deprecate v1.0                  # Manage version deprecation
+/api version --strategy semantic            # Implement semantic versioning
 ```
 
 ## Arguments

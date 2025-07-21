@@ -1,10 +1,19 @@
-# /code clean - Code Cleaning Command
+---
+description: Automated code cleanup with formatting, linting, dead code removal, and optimization
+argument-hint: "[cleanup_scope] [cleanup_level]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-**Purpose**: Remove dead code, optimize imports, eliminate debug statements, and clean build artifacts to improve code maintainability.
+# /code clean - Automated Code Cleanup
+
+Comprehensive code cleanup system with formatting, linting, dead code removal, and intelligent optimization.
 
 ## Usage
 ```bash
-/code clean [path] [--preview]
+/code clean format                           # Code formatting and style fixes
+/code clean lint                             # Linting and quality improvements
+/code clean dead                             # Remove dead code and imports
+/code clean --aggressive                     # Comprehensive cleanup with optimizations
 ```
 
 ## Workflow
@@ -44,11 +53,6 @@ The `/code clean` command follows a systematic process to safely clean the codeb
     <output>A summary of the cleaning changes.</output>
   </step>
 </code_cleaning_workflow>
-```
 
 ### Language-Specific Cleaning
-- **Python**: Removes unused imports, cleans `__pycache__`, and optimizes with `black` and `isort`.
-- **JavaScript/TypeScript**: Cleans `node_modules` artifacts, removes unused variables, and eliminates `console.log` statements.
-- **Java**: Removes unused imports, cleans `target` directories, and optimizes package structure.
-- **Go**: Runs `gofmt`, removes unused imports, and cleans the mod cache.
-- **Rust**: Removes unused code, cleans the `target` directory, and formats with `rustfmt`.
+- **Python**: Removes unused imports, cleans `__pycache__`, and optimizes with `black`
