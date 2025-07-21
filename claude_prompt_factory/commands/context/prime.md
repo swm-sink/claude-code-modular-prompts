@@ -1,24 +1,20 @@
-<command_file>
-  <metadata>
-    <name>/context prime</name>
-    <purpose>Performs a standard analysis of the codebase to provide a high-level overview of the project.</purpose>
-    <usage>
-      <![CDATA[
-      /context prime
-      ]]>
-    </usage>
-  </metadata>
+---
+description: Standard codebase analysis for context priming with comprehensive project overview
+argument-hint: "[analysis_depth] [focus_areas]"
+allowed-tools: Read, Write, Edit, Bash, Grep
+---
 
-  <arguments>
-    <!-- No arguments -->
-  </arguments>
-  
-  <examples>
-    <example>
-      <description>Run a standard analysis on the current project.</description>
-      <usage>/context prime</usage>
-    </example>
-  </examples>
+# /context prime - Codebase Context Priming
+
+Comprehensive codebase analysis system for generating high-level project overview and context priming summary.
+
+## Usage
+```bash
+/context prime                               # Standard comprehensive analysis
+/context prime --quick                       # Quick overview for rapid understanding
+/context prime --deep                        # Deep analysis with detailed insights
+/context prime --focus security             # Focus on specific aspects
+```
 
   <claude_prompt>
     <prompt>

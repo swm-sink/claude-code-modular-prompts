@@ -1,36 +1,30 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T01:20:05.437871
+**Generated**: 2025-07-21T01:25:32.357251
 
 ## 📋 Executive Summary
-- **Total Files**: 193
-- **Valid Files**: 193 (100.0%)
-- **Overall Score**: 8099/19300 (42.0%)
+- **Total Files**: 194
+- **Valid Files**: 194 (100.0%)
+- **Overall Score**: 8015/19400 (41.3%)
 
 ## 🚨 Critical Issues (234 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
 - ❌ Missing YAML frontmatter
 - ❌ Missing <command_file> XML structure
 
-### claude_prompt_factory/commands/innovation/emerging-tech.md
-- ❌ Missing YAML frontmatter
-
-### claude_prompt_factory/commands/ecosystem/marketplace-grow.md
-- ❌ Missing YAML frontmatter
-
 ### claude_prompt_factory/commands/database/db-restore.md
-- ❌ Missing YAML frontmatter
+- ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/documentation/docs-check.md
-- ❌ Missing YAML frontmatter
+- ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/documentation/docs-update.md
-- ❌ Missing YAML frontmatter
+- ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/documentation/docs-publish.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/context/prime.md
-- ❌ Missing YAML frontmatter
+- ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/core/new.md
 - ❌ Missing YAML frontmatter
@@ -481,6 +475,10 @@
 
 ### claude_prompt_factory/components/performance/framework-optimization.md
 - ❌ Missing <step> element
+- ❌ Missing <output> section
+
+### claude_prompt_factory/components/performance/component-cache.md
+- ❌ XML Parse Error: not well-formed (invalid token): line 38, column 32
 - ❌ Missing <output> section
 
 ### claude_prompt_factory/components/performance/auto-scaling.md
