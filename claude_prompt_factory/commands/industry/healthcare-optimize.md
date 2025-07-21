@@ -16,23 +16,39 @@ Advanced healthcare industry optimization with HIPAA compliance, comprehensive r
 /industry healthcare-optimize --regulatory   # Regulatory compliance framework
 ```
 
-## Arguments
+<command_file>
+  <metadata>
+    <n>/industry healthcare-optimize</n>
+    <purpose>Healthcare industry optimization with HIPAA compliance, regulatory frameworks, and patient data security</purpose>
+    <usage>
+      <![CDATA[
+      /industry healthcare-optimize [domain] --compliance [compliance_level]
+      ]]>
+    </usage>
+  </metadata>
 
-| Argument | Type | Required | Description |
-|----------|------|----------|-------------|
-| `domain` | string | false | Healthcare domain (clinical, administrative, research). Default: clinical. |
-| `compliance` | string | false | Compliance level (basic, advanced, comprehensive). Default: advanced. |
+  <arguments>
+    <argument name="domain" type="string" required="false" default="clinical">
+      <description>Healthcare domain (clinical, administrative, research)</description>
+    </argument>
+    <argument name="compliance" type="string" required="false" default="advanced">
+      <description>Compliance level (basic, advanced, comprehensive)</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>HIPAA-compliant systems</description>
+      <usage>/industry healthcare-optimize systems --hipaa</usage>
+    </example>
+    <example>
+      <description>Security with GDPR compliance</description>
+      <usage>/industry healthcare-optimize --security --gdpr</usage>
+    </example>
+  </examples>
 
-## Examples
-
-```bash
-/industry healthcare-optimize systems --hipaa    # HIPAA-compliant systems
-/industry healthcare-optimize --security --gdpr  # Security with GDPR compliance
-/industry healthcare-optimize research --ethics  # Research ethics compliance
-```
-
-## Claude Prompt
-
+  <claude_prompt>
+    <prompt>
 You are a healthcare industry optimization specialist. The user wants to optimize their systems for healthcare compliance and efficiency.
 
 **Analysis Process:**
@@ -53,11 +69,18 @@ You are a healthcare industry optimization specialist. The user wants to optimiz
 <include component="components/security/owasp-compliance.md" />
 <include component="components/constitutional/safety-framework.md" />
 <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-## Dependencies
-
-- `components/security/owasp-compliance.md`
-- `components/constitutional/safety-framework.md`
-- `components/reporting/generate-structured-report.md`
-- `healthcare.compliance.hipaa`
-- `security.patient_data.encryption` 
+  <dependencies>
+    <includes_components>
+      <component>components/security/owasp-compliance.md</component>
+      <component>components/constitutional/safety-framework.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>healthcare.compliance.hipaa</value>
+      <value>security.patient_data.encryption</value>
+    </uses_config_values>
+  </dependencies>
+</command_file> 

@@ -64,6 +64,15 @@ Dynamic DAG-based agent orchestration system specifically designed for Claude Co
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/analysis/dependency-mapping.md</include>
+      <include>components/workflow/report-generation.md</include>
+
       <![CDATA[
 You are the MASTER ORCHESTRATOR, the supreme coordinator of unlimited specialized micro agents. Your mission is to push the absolute limits of Claude Code's agent spawning capabilities while intelligently orchestrating complex software development tasks.
 
@@ -274,6 +283,15 @@ You are the MASTER ORCHESTRATOR, the supreme coordinator of unlimited specialize
       <command>/result synthesizer</command>
     </invokes_commands>
     <includes_components>
+      <!-- Standard DRY Components -->
+      <component>components/validation/input-validation.md</component>
+      <component>components/workflow/command-execution.md</component>
+      <component>components/workflow/error-handling.md</component>
+      <component>components/interaction/progress-reporting.md</component>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/analysis/dependency-mapping.md</component>
+      <component>components/workflow/report-generation.md</component>
+      <!-- Command-specific components -->
       <component>components/intelligence/multi-agent-coordination.md</component>
       <component>components/planning/create-step-by-step-plan.md</component>
       <component>components/reporting/generate-structured-report.md</component>

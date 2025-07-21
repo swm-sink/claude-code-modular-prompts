@@ -52,6 +52,15 @@ Sophisticated marketplace growth system with ecosystem development, community bu
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/analysis/dependency-mapping.md</include>
+      <include>components/workflow/report-generation.md</include>
+
       <include component="components/context/adaptive-thinking.md" />
       <include component="components/analytics/business-intelligence.md" />
       <include component="components/community/community-platform.md" />
@@ -314,6 +323,15 @@ Sophisticated marketplace growth system with ecosystem development, community bu
 
   <dependencies>
     <includes_components>
+      <!-- Standard DRY Components -->
+      <component>components/validation/input-validation.md</component>
+      <component>components/workflow/command-execution.md</component>
+      <component>components/workflow/error-handling.md</component>
+      <component>components/interaction/progress-reporting.md</component>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/analysis/dependency-mapping.md</component>
+      <component>components/workflow/report-generation.md</component>
+      <!-- Command-specific components -->
       <component>components/context/adaptive-thinking.md</component>
       <component>components/analytics/business-intelligence.md</component>
       <component>components/community/community-platform.md</component>

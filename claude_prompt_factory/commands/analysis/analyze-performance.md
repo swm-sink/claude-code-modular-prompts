@@ -49,6 +49,15 @@ Advanced performance analysis system with bottleneck detection, optimization rec
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/analysis/dependency-mapping.md</include>
+      <include>components/workflow/report-generation.md</include>
+
       You are a senior performance engineer. The user wants to analyze their application for performance bottlenecks and get optimization recommendations.
 
       <include component="components/context/find-relevant-code.md" />
@@ -68,6 +77,15 @@ Advanced performance analysis system with bottleneck detection, optimization rec
 
   <dependencies>
     <includes_components>
+      <!-- Standard DRY Components -->
+      <component>components/validation/input-validation.md</component>
+      <component>components/workflow/command-execution.md</component>
+      <component>components/workflow/error-handling.md</component>
+      <component>components/interaction/progress-reporting.md</component>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/analysis/dependency-mapping.md</component>
+      <component>components/workflow/report-generation.md</component>
+      <!-- Command-specific components -->
       <component>components/context/find-relevant-code.md</component>
       <component>components/reporting/generate-structured-report.md</component>
     </includes_components>

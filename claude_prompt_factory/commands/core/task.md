@@ -46,13 +46,23 @@ Integration-first test-driven development workflow with advanced quality assuran
 
   <claude_prompt>
     <prompt>
-      <include component="components/context/adaptive-thinking.md" />
-      <include component="components/context/persistent-memory.md" />
-      <include component="components/actions/parallel-execution.md" />
-      <include component="components/quality/anti-pattern-detection.md" />
-      <include component="components/security/owasp-compliance.md" />
-      <include component="components/testing/mutation-testing.md" />
-      <include component="components/error/circuit-breaker.md" />
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/analysis/dependency-mapping.md</include>
+      <include>components/workflow/report-generation.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/context/adaptive-thinking.md</include>
+      <include>components/context/persistent-memory.md</include>
+      <include>components/actions/parallel-execution.md</include>
+      <include>components/quality/anti-pattern-detection.md</include>
+      <include>components/security/owasp-compliance.md</include>
+      <include>components/testing/mutation-testing.md</include>
+      <include>components/error/circuit-breaker.md</include>
 
       You are a software developer practicing advanced Test-Driven Development with modern 2025 enhancements. 
       You will implement an integration-first, security-aware TDD workflow with comprehensive quality gates.
@@ -238,6 +248,15 @@ Integration-first test-driven development workflow with advanced quality assuran
 
   <dependencies>
     <includes_components>
+      <!-- Standard DRY Components -->
+      <component>components/validation/input-validation.md</component>
+      <component>components/workflow/command-execution.md</component>
+      <component>components/workflow/error-handling.md</component>
+      <component>components/interaction/progress-reporting.md</component>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/analysis/dependency-mapping.md</component>
+      <component>components/workflow/report-generation.md</component>
+      <!-- Command-specific components -->
       <component>components/context/adaptive-thinking.md</component>
       <component>components/context/persistent-memory.md</component>
       <component>components/actions/parallel-execution.md</component>

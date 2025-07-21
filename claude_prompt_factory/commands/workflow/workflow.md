@@ -1,20 +1,91 @@
 ---
-description: Advanced workflow orchestration with intelligent automation, dynamic adaptation, and comprehensive process management
-argument-hint: "[workflow_type] [orchestration_strategy]"
+description: Intelligent workflow management with automated task execution, dynamic resource allocation, and comprehensive progress tracking
+argument-hint: "[workflow_name] [action]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /workflow - Advanced Workflow Orchestration
+# /workflow - Intelligent Workflow Management
 
-Sophisticated workflow orchestration system with intelligent automation, dynamic adaptation, and comprehensive process management.
+Advanced workflow management system with automated task execution, dynamic resource allocation, and comprehensive progress tracking.
 
 ## Usage
 ```bash
-/workflow create                             # Create advanced workflow
-/workflow --automated                        # Automated workflow execution
-/workflow --adaptive                         # Adaptive workflow management
-/workflow --comprehensive                    # Comprehensive workflow orchestration
+/workflow start "My Development Workflow"   # Start a new workflow
+/workflow --pause "My Deployment Workflow" # Pause a running workflow
+/workflow --status "All Workflows"         # Get the status of all workflows
+/workflow --log "My CI/CD Workflow"        # View logs for a specific workflow
 ```
+
+<command_file>
+  <metadata>
+    <n>/workflow</n>
+    <purpose>Intelligent workflow management with automated task execution, dynamic resource allocation, and comprehensive progress tracking</purpose>
+    <usage>
+      <![CDATA[
+      /workflow [action] "[workflow_name]"
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="action" type="string" required="true" default="start">
+      <description>The action to perform on the workflow (e.g., start, pause, resume, stop, status, log)</description>
+    </argument>
+    <argument name="workflow_name" type="string" required="true">
+      <description>The name of the workflow to manage</description>
+    </argument>
+    <argument name="resource_allocation" type="string" required="false" default="dynamic">
+      <description>Strategy for resource allocation (e.g., static, dynamic)</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Start a new development workflow</description>
+      <usage>/workflow start "Feature Branch Development"</usage>
+    </example>
+    <example>
+      <description>Get the status of all running workflows</description>
+      <usage>/workflow --status "All running workflows"</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced workflow management specialist. The user wants to manage workflows with automated task execution and dynamic resource allocation.
+
+**Workflow Management Process:**
+1. **Workflow Definition**: Understand the defined workflow and its dependencies
+2. **Task Execution**: Automate the execution of tasks within the workflow
+3. **Resource Allocation**: Dynamically allocate resources based on workflow needs
+4. **Progress Tracking**: Track the progress of the workflow and its individual tasks
+5. **Error Handling**: Implement robust error handling and recovery mechanisms
+
+**Implementation Strategy:**
+- Parse workflow definitions (e.g., DAGs, sequential steps) to understand task dependencies and execution order
+- Automate task execution, integrating with various tools and services as needed
+- Dynamically allocate and deallocate compute, memory, and storage resources based on real-time workflow demands
+- Implement comprehensive progress tracking and visualization, providing real-time updates to the user
+- Design robust error handling and retry mechanisms to ensure workflow resilience and completion
+
+<include component="components/orchestration/dag-orchestrator.md" />
+<include component="components/performance/auto-scaling.md" />
+<include component="components/interaction/progress-reporting.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/orchestration/dag-orchestrator.md</component>
+      <component>components/performance/auto-scaling.md</component>
+      <component>components/interaction/progress-reporting.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>workflow.default_executor</value>
+      <value>resource.dynamic_allocation.enabled</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
 
 ## Core Concepts
 

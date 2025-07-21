@@ -42,6 +42,15 @@ Advanced quality metrics system with comprehensive scoring, trend analysis, and 
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/analysis/dependency-mapping.md</include>
+      <include>components/workflow/report-generation.md</include>
+
       You are a software quality analyst. The user wants you to calculate code quality metrics.
 
       <include component="components/context/find-relevant-code.md" />
@@ -60,6 +69,15 @@ Advanced quality metrics system with comprehensive scoring, trend analysis, and 
 
   <dependencies>
     <includes_components>
+      <!-- Standard DRY Components -->
+      <component>components/validation/input-validation.md</component>
+      <component>components/workflow/command-execution.md</component>
+      <component>components/workflow/error-handling.md</component>
+      <component>components/interaction/progress-reporting.md</component>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/analysis/dependency-mapping.md</component>
+      <component>components/workflow/report-generation.md</component>
+      <!-- Command-specific components -->
       <component>components/context/find-relevant-code.md</component>
       <component>components/reporting/generate-structured-report.md</component>
     </includes_components>

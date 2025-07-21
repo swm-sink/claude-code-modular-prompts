@@ -1,12 +1,12 @@
 # Claude Code Prompt Factory Template Validation Report
-**Generated**: 2025-07-21T03:59:12.777304
+**Generated**: 2025-07-21T04:05:23.231712
 
 ## 📋 Executive Summary
-- **Total Files**: 202
-- **Valid Files**: 202 (100.0%)
-- **Overall Score**: 12922/20200 (64.0%)
+- **Total Files**: 203
+- **Valid Files**: 203 (100.0%)
+- **Overall Score**: 13454/20300 (66.3%)
 
-## 🚨 Critical Issues (136 errors)
+## 🚨 Critical Issues (131 errors)
 ### claude_prompt_factory/commands/CLAUDE.md
 - ❌ Missing <command_file> XML structure
 
@@ -53,25 +53,16 @@
 - ❌ XML Parse Error: not well-formed (invalid token): line 43, column 17
 
 ### claude_prompt_factory/commands/workflow/pipeline-create.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/workflow/workflow.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 44, column 17
 
 ### claude_prompt_factory/commands/workflow/pipeline-run.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 43, column 21
 
 ### claude_prompt_factory/commands/workflow/flow-schedule.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/industry/healthcare-optimize.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 44, column 17
 
 ### claude_prompt_factory/commands/industry/fintech-secure.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/api/api-test.md
-- ❌ Missing <command_file> XML structure
+- ❌ XML Parse Error: not well-formed (invalid token): line 41, column 24
 
 ### claude_prompt_factory/commands/monitoring/monitor-setup.md
 - ❌ Missing <command_file> XML structure
@@ -83,12 +74,6 @@
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/performance/optimize-framework.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/error/error-report.md
-- ❌ Missing <command_file> XML structure
-
-### claude_prompt_factory/commands/error/error-diagnose.md
 - ❌ Missing <command_file> XML structure
 
 ### claude_prompt_factory/commands/git/git-merge.md
@@ -305,7 +290,7 @@
 - ❌ Missing <description> element
 - ❌ Missing <output> section
 
-## ⚠️ Warnings (27 warnings)
+## ⚠️ Warnings (29 warnings)
 ### claude_prompt_factory/commands/documentation/docs-generate.md
 - ⚠️ Dependencies section doesn't match actual includes
 
@@ -365,8 +350,14 @@
 ### claude_prompt_factory/commands/workflow/mega-platform-builder.md
 - ⚠️ Dependencies section doesn't match actual includes
 
+### claude_prompt_factory/commands/workflow/flow-schedule.md
+- ⚠️ Component not found: components/workflow/flow-schedule.md
+
 ### claude_prompt_factory/commands/workflow/dag-executor.md
 - ⚠️ Dependencies section doesn't match actual includes
+
+### claude_prompt_factory/commands/api/api-test.md
+- ⚠️ Component not found: components/testing/test-integration.md
 
 ### claude_prompt_factory/commands/error/error-handle.md
 - ⚠️ Dependencies section doesn't match actual includes
@@ -393,4 +384,4 @@
 - **claude_prompt_factory/components/actions/apply-code-changes.md**: 100/100 (100.0%)
 - **claude_prompt_factory/components/interaction/progress-reporting.md**: 100/100 (100.0%)
 - **claude_prompt_factory/components/interaction/request-user-confirmation.md**: 100/100 (100.0%)
-- **claude_prompt_factory/commands/core/auto.md**: 99/100 (99.0%)
+- **claude_prompt_factory/components/validation/yaml-frontmatter.md**: 100/100 (100.0%)

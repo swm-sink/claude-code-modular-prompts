@@ -1,20 +1,90 @@
 ---
-description: Advanced pipeline execution with intelligent orchestration, parallel processing, and comprehensive monitoring
-argument-hint: "[execution_mode] [orchestration_strategy]"
+description: Intelligent pipeline execution with automated trigger management, real-time monitoring, and comprehensive error handling
+argument-hint: "[pipeline_name] [trigger_type]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /pipeline run - Advanced Pipeline Execution
+# /pipeline run - Intelligent Pipeline Execution
 
-Sophisticated pipeline execution system with intelligent orchestration, parallel processing, and comprehensive monitoring.
+Advanced pipeline execution system with automated trigger management, real-time monitoring, and comprehensive error handling and recovery.
 
 ## Usage
 ```bash
-/pipeline run optimized                      # Optimized pipeline execution
-/pipeline run --parallel                     # Parallel execution mode
-/pipeline run --monitoring                   # Comprehensive execution monitoring
-/pipeline run --intelligent                  # Intelligent adaptive execution
+/pipeline run "My CI/CD Pipeline" --trigger "manual" # Manually trigger a CI/CD pipeline
+/pipeline run --data-flow "Daily ETL Job" --schedule "cron" # Run a data flow pipeline on a schedule
+/pipeline run --monitor "true" "My Deployment Pipeline" # Run and monitor a deployment pipeline in real-time
 ```
+
+<command_file>
+  <metadata>
+    <n>/pipeline run</n>
+    <purpose>Intelligent pipeline execution with automated trigger management, real-time monitoring, and comprehensive error handling</purpose>
+    <usage>
+      <![CDATA[
+      /pipeline run "[pipeline_name]" --trigger "[trigger_type]"
+      ]]>
+    </usage>
+  </metadata>
+
+  <arguments>
+    <argument name="pipeline_name" type="string" required="true">
+      <description>The name of the pipeline to execute</description>
+    </argument>
+    <argument name="trigger_type" type="string" required="false" default="manual">
+      <description>The type of trigger for pipeline execution (e.g., manual, schedule, webhook)</description>
+    </argument>
+    <argument name="monitor" type="boolean" required="false" default="true">
+      <description>Whether to enable real-time monitoring during pipeline execution</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>Manually trigger a CI/CD pipeline</description>
+      <usage>/pipeline run "My CI/CD Pipeline" --trigger "manual"</usage>
+    </example>
+    <example>
+      <description>Run a data flow pipeline on a schedule</description>
+      <usage>/pipeline run --data-flow "Daily ETL Job" --schedule "cron:0 0 * * *"</usage>
+    </example>
+  </examples>
+
+  <claude_prompt>
+    <prompt>
+You are an advanced pipeline execution specialist. The user wants to run a pipeline with automated trigger management and real-time monitoring.
+
+**Pipeline Execution Process:**
+1. **Trigger Management**: Manage pipeline triggers (manual, scheduled, event-driven)
+2. **Execution Orchestration**: Orchestrate the execution of pipeline stages and tasks
+3. **Real-time Monitoring**: Provide real-time monitoring and status updates during execution
+4. **Error Handling & Recovery**: Implement comprehensive error handling and recovery mechanisms
+5. **Post-Execution Reporting**: Generate detailed reports on pipeline execution outcomes
+
+**Implementation Strategy:**
+- Implement flexible trigger mechanisms to initiate pipeline execution based on various events or schedules
+- Orchestrate the execution of pipeline stages in parallel or sequentially, managing dependencies and retries
+- Provide real-time visibility into pipeline progress, logs, and resource utilization through integrated monitoring
+- Design robust error handling, including automatic retries, fallbacks, and notification systems
+- Generate comprehensive post-execution reports with performance metrics, success/failure status, and detailed logs
+
+<include component="components/orchestration/dag-orchestrator.md" />
+<include component="components/workflow/error-handling.md" />
+<include component="components/interaction/progress-reporting.md" />
+    </prompt>
+  </claude_prompt>
+
+  <dependencies>
+    <includes_components>
+      <component>components/orchestration/dag-orchestrator.md</component>
+      <component>components/workflow/error-handling.md</component>
+      <component>components/interaction/progress-reporting.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>pipeline.execution.default_trigger</value>
+      <value>monitoring.real_time.enabled</value>
+    </uses_config_values>
+  </dependencies>
+</command_file>
 
 ## Core Logic
 ```yaml

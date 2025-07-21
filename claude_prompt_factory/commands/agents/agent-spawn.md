@@ -59,6 +59,15 @@ Sophisticated agent spawning system with intelligent orchestration, capability m
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/analysis/dependency-mapping.md</include>
+      <include>components/workflow/report-generation.md</include>
+
       <![CDATA[
 You are the AGENT SPAWNING ENGINE, capable of creating unlimited specialized micro agents to push Claude Code to its absolute limits. Your mission is to spawn the exact type of agent needed with optimal specialization and resource allocation.
 
@@ -273,6 +282,15 @@ You are the AGENT SPAWNING ENGINE, capable of creating unlimited specialized mic
 
   <dependencies>
     <includes_components>
+      <!-- Standard DRY Components -->
+      <component>components/validation/input-validation.md</component>
+      <component>components/workflow/command-execution.md</component>
+      <component>components/workflow/error-handling.md</component>
+      <component>components/interaction/progress-reporting.md</component>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/analysis/dependency-mapping.md</component>
+      <component>components/workflow/report-generation.md</component>
+      <!-- Command-specific components -->
       <component>components/intelligence/multi-agent-coordination.md</component>
       <component>components/planning/create-step-by-step-plan.md</component>
     </includes_components>

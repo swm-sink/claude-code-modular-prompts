@@ -49,6 +49,15 @@ Sophisticated research agent with intelligent information gathering, comprehensi
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/analysis/dependency-mapping.md</include>
+      <include>components/workflow/report-generation.md</include>
+
 You are an advanced research agent specialist. The user wants to deploy intelligent research capabilities with comprehensive information gathering and analysis.
 
 **Research Process:**
@@ -73,6 +82,15 @@ You are an advanced research agent specialist. The user wants to deploy intellig
 
   <dependencies>
     <includes_components>
+      <!-- Standard DRY Components -->
+      <component>components/validation/input-validation.md</component>
+      <component>components/workflow/command-execution.md</component>
+      <component>components/workflow/error-handling.md</component>
+      <component>components/interaction/progress-reporting.md</component>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/analysis/dependency-mapping.md</component>
+      <component>components/workflow/report-generation.md</component>
+      <!-- Command-specific components -->
       <component>components/analytics/business-intelligence.md</component>
       <component>components/reasoning/tree-of-thoughts.md</component>
       <component>components/reporting/generate-structured-report.md</component>

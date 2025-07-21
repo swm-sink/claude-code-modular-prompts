@@ -1,63 +1,85 @@
 ---
-description: Financial technology security with PCI DSS compliance, regulatory frameworks, and fraud prevention systems
-argument-hint: "[fintech_domain] [security_level]"
+description: FinTech industry security with compliance frameworks (PCI-DSS, SOC 2), fraud detection, and transactional integrity
+argument-hint: "[fintech_domain] [security_standard]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /industry fintech-secure - Financial Technology Security
+# /industry fintech-secure - FinTech Industry Security
 
-Advanced fintech security system with PCI DSS compliance, comprehensive regulatory frameworks, and intelligent fraud prevention.
+Advanced FinTech industry security with compliance frameworks (PCI-DSS, SOC 2), advanced fraud detection, and transactional integrity systems.
 
 ## Usage
 ```bash
-/industry fintech-secure payments            # Payment systems security
-/industry fintech-secure --pci-dss           # PCI DSS compliance implementation
-/industry fintech-secure --fraud             # Fraud prevention systems
-/industry fintech-secure --regulatory        # Financial regulatory compliance
+/industry fintech-secure payments          # Payments systems security
+/industry fintech-secure --pci-dss         # PCI-DSS compliance framework
+/industry fintech-secure --fraud-detection   # Advanced fraud detection systems
+/industry fintech-secure --transactional-integrity # Transactional integrity validation
 ```
 
-## Arguments
+<command_file>
+  <metadata>
+    <n>/industry fintech-secure</n>
+    <purpose>FinTech industry security with compliance frameworks (PCI-DSS, SOC 2), fraud detection, and transactional integrity</purpose>
+    <usage>
+      <![CDATA[
+      /industry fintech-secure [domain] --standard [security_standard]
+      ]]>
+    </usage>
+  </metadata>
 
-| Argument | Type | Required | Description |
-|----------|------|----------|-------------|
-| `domain` | string | false | Fintech domain (payments, lending, trading, crypto). Default: payments. |
-| `security` | string | false | Security level (standard, enhanced, maximum). Default: enhanced. |
+  <arguments>
+    <argument name="domain" type="string" required="false" default="payments">
+      <description>FinTech domain (payments, banking, investments, insurance)</description>
+    </argument>
+    <argument name="security_standard" type="string" required="false" default="pci-dss">
+      <description>Security standard to comply with (pci-dss, soc_2, iso_27001)</description>
+    </argument>
+  </arguments>
+  
+  <examples>
+    <example>
+      <description>PCI-DSS compliant payments systems</description>
+      <usage>/industry fintech-secure payments --standard pci-dss</usage>
+    </example>
+    <example>
+      <description>Advanced fraud detection for banking</description>
+      <usage>/industry fintech-secure banking --fraud-detection</usage>
+    </example>
+  </examples>
 
-## Examples
+  <claude_prompt>
+    <prompt>
+You are a FinTech security specialist. The user wants to secure their systems with industry-specific compliance and fraud detection.
 
-```bash
-/industry fintech-secure payments --pci-dss     # PCI DSS payment security
-/industry fintech-secure trading --regulatory   # Trading regulatory compliance
-/industry fintech-secure crypto --enhanced      # Enhanced crypto security
-```
-
-## Claude Prompt
-
-You are a fintech security specialist. The user wants to implement comprehensive financial technology security and compliance.
-
-**Analysis Process:**
-1. **Financial Risk Assessment**: Analyze financial system risks and vulnerabilities
-2. **Regulatory Mapping**: Map applicable financial regulations (PCI DSS, PSD2, etc.)
-3. **Security Architecture**: Design comprehensive financial data security measures
-4. **Fraud Prevention**: Implement intelligent fraud detection and prevention systems
-5. **Compliance Validation**: Validate all systems against financial regulations
+**Security Process:**
+1. **FinTech Risk Assessment**: Analyze current systems for financial-specific risks
+2. **Compliance Framework Implementation**: Implement relevant compliance frameworks (PCI-DSS, SOC 2, etc.)
+3. **Fraud Detection Systems**: Design and integrate advanced fraud detection mechanisms
+4. **Transactional Integrity**: Ensure the integrity and security of financial transactions
+5. **Security Auditing & Reporting**: Conduct regular security audits and generate compliance reports
 
 **Implementation Strategy:**
-- Implement PCI DSS compliant payment processing and data handling
-- Design secure financial transaction flows with end-to-end encryption
-- Create fraud detection systems with machine learning capabilities
-- Establish financial regulatory compliance monitoring and reporting
-- Implement anti-money laundering (AML) and know your customer (KYC) processes
-- Design secure API architectures for financial data exchange
+- Implement robust compliance controls for standards like PCI-DSS, SOC 2, and ISO 27001
+- Design and integrate machine learning-based fraud detection systems for real-time analysis
+- Ensure end-to-end encryption and integrity checks for all financial transactions
+- Establish continuous security monitoring, logging, and alerting for financial systems
+- Conduct regular penetration testing and vulnerability assessments to identify and remediate security weaknesses
 
 <include component="components/security/owasp-compliance.md" />
-<include component="components/intelligence/cognitive-architecture.md" />
+<include component="components/constitutional/safety-framework.md" />
 <include component="components/reporting/generate-structured-report.md" />
+    </prompt>
+  </claude_prompt>
 
-## Dependencies
-
-- `components/security/owasp-compliance.md`
-- `components/intelligence/cognitive-architecture.md`
-- `components/reporting/generate-structured-report.md`
-- `fintech.compliance.pci_dss`
-- `security.financial_data.encryption` 
+  <dependencies>
+    <includes_components>
+      <component>components/security/owasp-compliance.md</component>
+      <component>components/constitutional/safety-framework.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+    </includes_components>
+    <uses_config_values>
+      <value>fintech.compliance.standard</value>
+      <value>security.fraud_detection.model</value>
+    </uses_config_values>
+  </dependencies>
+</command_file> 

@@ -49,6 +49,15 @@ Sophisticated swarm intelligence system with multi-agent coordination, distribut
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/analysis/dependency-mapping.md</include>
+      <include>components/workflow/report-generation.md</include>
+
 You are an advanced swarm intelligence specialist. The user wants to deploy sophisticated multi-agent coordination with distributed processing and collective problem-solving.
 
 **Swarm Intelligence Process:**
@@ -73,6 +82,15 @@ You are an advanced swarm intelligence specialist. The user wants to deploy soph
 
   <dependencies>
     <includes_components>
+      <!-- Standard DRY Components -->
+      <component>components/validation/input-validation.md</component>
+      <component>components/workflow/command-execution.md</component>
+      <component>components/workflow/error-handling.md</component>
+      <component>components/interaction/progress-reporting.md</component>
+      <component>components/analysis/codebase-discovery.md</component>
+      <component>components/analysis/dependency-mapping.md</component>
+      <component>components/workflow/report-generation.md</component>
+      <!-- Command-specific components -->
       <component>components/orchestration/agent-swarm.md</component>
       <component>components/intelligence/multi-agent-coordination.md</component>
       <component>components/actions/parallel-execution.md</component>
