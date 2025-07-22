@@ -48,6 +48,19 @@ AI-powered performance optimization with automated tuning, validation, and rollb
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/planning/create-step-by-step-plan.md</include>
+      <include>components/interaction/request-user-confirmation.md</include>
+      <include>components/actions/apply-code-changes.md</include>
+      <include>components/performance/optimization-strategies.md</include>
+      <include>components/performance/profiling-analysis.md</include>
+      
       You are a performance optimization expert. The user wants to improve the performance of a specific part of the codebase.
 
       1.  **Profile and Analyze**:
@@ -57,13 +70,10 @@ AI-powered performance optimization with automated tuning, validation, and rollb
               *   **CPU**: Caching/memoization, algorithmic improvements, avoiding re-computation.
               *   **Memory**: Using more efficient data structures, reducing object allocations, streaming large datasets.
               *   **I/O**: Batching operations, using asynchronous I/O, compressing data.
-          *   <include component="components/planning/create-step-by-step-plan.md" />
       3.  **Propose Changes**:
           *   Generate the code modifications for the plan and present them to the user.
-          *   <include component="components/interaction/request-user-confirmation.md" />
       4.  **Apply and Verify**:
           *   On confirmation, apply the changes.
-          *   <include component="components/actions/apply-code-changes.md" />
           *   Instruct the user to re-run the benchmark (`/perf benchmark`) to verify the improvement.
     </prompt>
   </claude_prompt>

@@ -49,6 +49,19 @@ Sophisticated documentation publishing system with multi-platform distribution, 
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/integration/cicd-integration.md</include>
+      <include>components/quality/framework-validation.md</include>
+      <include>components/performance/auto-scaling.md</include>
+      <include>components/documentation/format-optimization.md</include>
+      <include>components/deployment/multi-platform-strategies.md</include>
+      
 You are an advanced documentation publishing specialist. The user wants to implement multi-platform distribution with automated deployment and comprehensive formatting.
 
 **Publishing Process:**
@@ -64,10 +77,6 @@ You are an advanced documentation publishing specialist. The user wants to imple
 - Apply comprehensive formatting and accessibility standards
 - Create multi-platform distribution with intelligent routing
 - Establish analytics and performance monitoring for published content
-
-<include component="components/integration/cicd-integration.md" />
-<include component="components/quality/framework-validation.md" />
-<include component="components/performance/auto-scaling.md" />
     </prompt>
   </claude_prompt>
 

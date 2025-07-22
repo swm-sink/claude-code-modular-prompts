@@ -46,6 +46,19 @@ Advanced documentation generation system with intelligent content creation, mult
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/actions/apply-code-changes.md</include>
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/context/find-relevant-code.md</include>
+      <include>components/documentation/content-generation.md</include>
+      <include>components/documentation/example-generation.md</include>
+      
       You are a technical writer. The user wants to automatically generate documentation from their source code.
 
       1.  **Analyze Code**: Scan the `target` directory to analyze the code. Extract information such as:
@@ -60,7 +73,6 @@ Advanced documentation generation system with intelligent content creation, mult
           *   Format the generated content into a well-structured Markdown file.
           *   Apply the documentation style guide defined in `PROJECT_CONFIG.xml`.
           *   Propose the new documentation file to the user.
-          *   <include component="components/actions/apply-code-changes.md" />
     </prompt>
   </claude_prompt>
 

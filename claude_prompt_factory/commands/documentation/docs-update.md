@@ -49,6 +49,19 @@ Automated documentation update system with intelligent synchronization, comprehe
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/analysis/dependency-mapping.md</include>
+      <include>components/quality/framework-validation.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/documentation/sync-automation.md</include>
+      <include>components/quality/change-tracking.md</include>
+      
 You are an advanced documentation update specialist. The user wants to implement intelligent synchronization with automated maintenance and version control.
 
 **Update Process:**
@@ -64,10 +77,6 @@ You are an advanced documentation update specialist. The user wants to implement
 - Apply intelligent content generation and update strategies
 - Create comprehensive version control and change tracking
 - Establish quality gates for documentation accuracy
-
-<include component="components/analysis/dependency-mapping.md" />
-<include component="components/quality/framework-validation.md" />
-<include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

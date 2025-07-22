@@ -49,6 +49,19 @@ Sophisticated framework optimization system with intelligent performance tuning,
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/performance/framework-optimization.md</include>
+      <include>components/constitutional/constitutional-framework.md</include>
+      <include>components/quality/framework-validation.md</include>
+      <include>components/performance/bottleneck-analysis.md</include>
+      <include>components/performance/caching-strategies.md</include>
+      
 You are an advanced framework optimization specialist. The user wants to analyze and optimize the framework's performance.
 
 **Optimization Process:**
@@ -63,10 +76,6 @@ You are an advanced framework optimization specialist. The user wants to analyze
 - Apply a variety of optimization techniques, including algorithmic improvements, caching, parallel processing, and memory management.
 - Rigorously test all changes to ensure that they do not introduce regressions.
 - Provide a detailed report of the optimizations applied and the resulting performance improvements.
-
-<include component="components/performance/framework-optimization.md" />
-<include component="components/constitutional/constitutional-framework.md" />
-<include component="components/quality/framework-validation.md" />
     </prompt>
   </claude_prompt>
 

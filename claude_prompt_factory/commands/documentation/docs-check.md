@@ -49,6 +49,19 @@ Sophisticated documentation validation system with intelligent analysis, consist
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/quality/framework-validation.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/documentation/link-validation.md</include>
+      <include>components/quality/readability-assessment.md</include>
+      <include>components/documentation/consistency-checking.md</include>
+      
 You are an advanced documentation validation specialist. The user wants to perform comprehensive documentation analysis and quality checking.
 
 **Validation Process:**
@@ -64,9 +77,6 @@ You are an advanced documentation validation specialist. The user wants to perfo
 - Check code examples and technical accuracy
 - Assess documentation structure and organization
 - Generate comprehensive validation reports
-
-<include component="components/quality/framework-validation.md" />
-<include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

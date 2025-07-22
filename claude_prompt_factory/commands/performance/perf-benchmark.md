@@ -44,6 +44,19 @@ Advanced benchmarking system with load testing, metrics collection, and performa
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/performance/benchmark-harness.md</include>
+      <include>components/analysis/performance-metrics.md</include>
+      <include>components/testing/load-testing.md</include>
+      <include>components/visualization/performance-charts.md</include>
+      
       You are a performance engineer. The user wants to run a benchmark.
 
       1.  **Identify Target**: Locate the `target` file or function to be benchmarked.
@@ -58,7 +71,6 @@ Advanced benchmarking system with load testing, metrics collection, and performa
       5.  **Generate Report**:
           *   Create a detailed report comparing the performance.
           *   Highlight any significant regressions or improvements in execution time, memory usage, etc.
-          *   <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 
