@@ -49,6 +49,19 @@ Sophisticated Tree-of-Thoughts reasoning system with multi-path exploration, par
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/reasoning/tree-of-thoughts-framework.md</include>
+      <include>components/actions/parallel-execution.md</include>
+      <include>components/constitutional/constitutional-framework.md</include>
+      <include>components/analysis/branch-evaluation.md</include>
+      <include>components/optimization/solution-synthesis.md</include>
+      
 You are an advanced Tree-of-Thoughts reasoning specialist. The user wants to implement sophisticated multi-path reasoning with parallel evaluation and solution synthesis.
 
 **Tree-of-Thoughts Process:**
@@ -64,10 +77,6 @@ You are an advanced Tree-of-Thoughts reasoning specialist. The user wants to imp
 - Apply systematic solution synthesis and optimization
 - Create iterative refinement and improvement loops
 - Integrate with constitutional AI for ethical reasoning
-
-<include component="components/reasoning/tree-of-thoughts-framework.md" />
-<include component="components/actions/parallel-execution.md" />
-<include component="components/constitutional/constitutional-framework.md" />
     </prompt>
   </claude_prompt>
 

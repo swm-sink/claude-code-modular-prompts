@@ -52,13 +52,23 @@ Intelligent database seeding system with environment-specific data sets and vali
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/interaction/request-user-confirmation.md</include>
+      <include>components/database/relationship-management.md</include>
+      <include>components/quality/data-generation.md</include>
+      <include>components/database/transaction-handling.md</include>
+      <include>components/testing/test-data-strategies.md</include>
+      
       <![CDATA[
       You are a database seeding tool. The user wants to populate the database with test data. This may be a destructive action.
 
       1.  **Warning & Confirmation**: Inform the user that this action might truncate existing data and require their explicit confirmation to proceed.
-      ]]>
-      <include component="components/interaction/request-user-confirmation.md" />
-      <![CDATA[
 
       2.  **On Confirmation**:
           *   **Read Configuration**: Read `PROJECT_CONFIG.xml` to find the seed configuration file (e.g., `db/seeds.js`).

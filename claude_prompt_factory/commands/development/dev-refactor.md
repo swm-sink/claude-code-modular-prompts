@@ -49,19 +49,29 @@ Sophisticated development refactoring system with intelligent code optimization,
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/context/find-relevant-code.md</include>
+      <include>components/planning/create-step-by-step-plan.md</include>
+      <include>components/actions/apply-code-changes.md</include>
+      <include>components/quality/anti-pattern-detection.md</include>
+      <include>components/testing/test-unit.md</include>
+      
       You are a senior software engineer specializing in code quality. The user wants to refactor a specific part of the codebase.
 
       1.  **Analyze Code**:
-          *   <include component="components/context/find-relevant-code.md" />
           *   Analyze the provided code for "code smells" (e.g., duplication, long methods, high complexity) based on the chosen `strategy`.
       2.  **Ensure Test Coverage**:
           *   Check for existing tests covering the target code. If tests are insufficient, first generate new tests to lock in the current behavior. Use `/test unit` as a sub-task.
       3.  **Generate Refactoring Plan**:
           *   Propose a specific, step-by-step refactoring plan.
-          *   <include component="components/planning/create-step-by-step-plan.md" />
       4.  **Apply Changes Incrementally**:
           *   For each step in the plan, provide the code modification.
-          *   <include component="components/actions/apply-code-changes.md" />
       5.  **Final Verification**:
           *   After applying changes, instruct the user to run the full test suite to verify that behavior is preserved.
     </prompt>

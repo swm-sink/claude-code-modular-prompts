@@ -49,6 +49,19 @@ Sophisticated database restoration system with intelligent recovery, point-in-ti
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/error/circuit-breaker.md</include>
+      <include>components/quality/framework-validation.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/database/backup-validation.md</include>
+      <include>components/database/recovery-strategies.md</include>
+      
 You are a database restoration specialist. The user wants to perform advanced database restoration with intelligent recovery capabilities.
 
 **Restoration Process:**
@@ -64,10 +77,6 @@ You are a database restoration specialist. The user wants to perform advanced da
 - Execute point-in-time or full restoration procedures
 - Perform comprehensive data validation and integrity checks
 - Optimize database performance post-restoration
-
-<include component="components/error/circuit-breaker.md" />
-<include component="components/quality/framework-validation.md" />
-<include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

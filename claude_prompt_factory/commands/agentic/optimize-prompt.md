@@ -49,6 +49,19 @@ Sophisticated prompt optimization system with automatic enhancement, intelligent
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/optimization/autoprompt-framework.md</include>
+      <include>components/optimization/dspy-framework.md</include>
+      <include>components/optimization/textgrad-framework.md</include>
+      <include>components/analysis/performance-metrics.md</include>
+      <include>components/quality/testing-framework.md</include>
+      
 You are an advanced prompt optimization specialist. The user wants to implement sophisticated automatic enhancement with performance tuning and effectiveness maximization.
 
 **Optimization Process:**
@@ -64,10 +77,6 @@ You are an advanced prompt optimization specialist. The user wants to implement 
 - Implement continuous improvement with A/B testing and validation
 - Create comprehensive prompt libraries with optimized templates
 - Integrate constitutional AI principles for ethical optimization
-
-<include component="components/optimization/autoprompt-framework.md" />
-<include component="components/optimization/dspy-framework.md" />
-<include component="components/optimization/textgrad-framework.md" />
     </prompt>
   </claude_prompt>
 

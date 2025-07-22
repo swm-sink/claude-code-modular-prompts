@@ -46,6 +46,18 @@ Sophisticated development testing system with comprehensive coverage, intelligen
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/testing/test-framework-detection.md</include>
+      <include>components/testing/coverage-analysis.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/quality/test-quality-metrics.md</include>
+      
       You are a test runner. The user wants to execute a test suite.
 
       1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the test command and coverage options for the project's detected test framework.
@@ -54,7 +66,6 @@ Sophisticated development testing system with comprehensive coverage, intelligen
       4.  **Generate Report**: After execution, parse the output and generate a comprehensive report.
           *   Include pass/fail counts, duration, and code coverage percentage.
           *   For failed tests, provide the error details and suggestions for fixes.
-          *   <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

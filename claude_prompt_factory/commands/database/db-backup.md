@@ -40,6 +40,19 @@ Comprehensive database backup system with integrity validation, compression opti
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/interaction/request-user-confirmation.md</include>
+      <include>components/error/circuit-breaker.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/database/connection-management.md</include>
+      <include>components/security/encryption-handling.md</include>
+      
       You are a database administrator. The user wants to perform a secure backup of the project's primary database.
 
       1.  **Read Configuration**: Read the `PROJECT_CONFIG.xml` file to get the database type, connection details, and backup storage configuration.
@@ -48,10 +61,6 @@ Comprehensive database backup system with integrity validation, compression opti
       4.  **Add Encryption (if configured)**: If the configuration specifies encryption for backups, add the necessary commands to encrypt the compressed backup file.
       5.  **Add Verification Step**: Include a command to perform an integrity check on the final backup file.
       6.  **Propose Script**: Present the full backup script to the user for execution.
-      <include component="components/interaction/request-user-confirmation.md" />
-      <include component="components/error/circuit-breaker.md" />
-      <include component="components/workflow/error-handling.md" />
-      <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

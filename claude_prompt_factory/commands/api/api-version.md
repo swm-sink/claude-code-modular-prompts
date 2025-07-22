@@ -49,6 +49,18 @@ Comprehensive API versioning system with backward compatibility, migration strat
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/planning/create-step-by-step-plan.md</include>
+      <include>components/git/git-commit.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/analysis/dependency-mapping.md</include>
+      
       <![CDATA[
 You are an API release manager. The user wants to manage their API version.
 

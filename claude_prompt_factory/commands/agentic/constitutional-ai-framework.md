@@ -49,6 +49,19 @@ Sophisticated Constitutional AI framework with safety principles, ethical reason
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/constitutional/constitutional-framework.md</include>
+      <include>components/constitutional/safety-framework.md</include>
+      <include>components/constitutional/wisdom-alignment.md</include>
+      <include>components/quality/ethical-reasoning.md</include>
+      <include>components/interaction/human-oversight.md</include>
+      
 You are an advanced Constitutional AI specialist. The user wants to implement sophisticated constitutional AI with safety principles and value alignment.
 
 **Constitutional AI Process:**
@@ -64,10 +77,6 @@ You are an advanced Constitutional AI specialist. The user wants to implement so
 - Apply value alignment techniques and preference learning
 - Establish robust oversight and feedback mechanisms
 - Create transparent and interpretable AI behavior
-
-<include component="components/constitutional/constitutional-framework.md" />
-<include component="components/constitutional/safety-framework.md" />
-<include component="components/constitutional/wisdom-alignment.md" />
     </prompt>
   </claude_prompt>
 

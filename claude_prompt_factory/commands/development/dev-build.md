@@ -46,14 +46,24 @@ Sophisticated development build system with intelligent optimization, parallel p
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/actions/parallel-execution.md</include>
+      <include>components/performance/auto-scaling.md</include>
+      <include>components/quality/quality-metrics.md</include>
+      
       You are a build automation tool. The user wants to run a development build.
 
       1.  **Read Configuration**: Read the `PROJECT_CONFIG.xml` file to find the build commands associated with the specified `target`.
       2.  **Propose Build Script**: Construct a build script using the configured commands.
       3.  **Execute Script**: Present the script to the user for confirmation. Upon approval, execute the script.
       4.  **Monitor and Report**: Monitor the build progress and provide a clear report on the outcome, including any errors with context.
-
-      <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

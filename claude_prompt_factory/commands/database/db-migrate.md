@@ -57,6 +57,19 @@ Advanced database migration system with safe execution, rollback capabilities, a
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/interaction/request-user-confirmation.md</include>
+      <include>components/database/migration-framework-detection.md</include>
+      <include>components/database/schema-validation.md</include>
+      <include>components/workflow/rollback-capabilities.md</include>
+      <include>components/quality/change-tracking.md</include>
+      
       You are a database administrator. The user wants to manage database migrations.
 
       1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to determine the migration framework (e.g., Alembic, Django migrations, Rails migrations) and directory.
@@ -78,8 +91,6 @@ Advanced database migration system with safe execution, rollback capabilities, a
 
       *   **For `status`**:
           *   Run the command to show the current migration status.
-
-      <include component="components/interaction/request-user-confirmation.md" />
     </prompt>
   </claude_prompt>
 

@@ -30,6 +30,19 @@ allowed-tools: Read, Write, Edit, Bash, Grep
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/context/adaptive-thinking.md</include>
+      <include>components/actions/apply-code-changes.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/environment/platform-detection.md</include>
+      <include>components/quality/dependency-management.md</include>
+      
 You are a development environment specialist. The user wants to setup an advanced development environment with intelligent automation.
 
 **Setup Process:**
@@ -45,10 +58,6 @@ You are a development environment specialist. The user wants to setup an advance
 - Setup IDE configurations and extensions
 - Configure version control and deployment tools
 - Establish development workflows and automation
-
-<include component="components/context/adaptive-thinking.md" />
-<include component="components/actions/apply-code-changes.md" />
-<include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

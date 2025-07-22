@@ -51,44 +51,39 @@ Performs an advanced, AI-assisted debugging session to diagnose and fix issues.
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/context/find-relevant-code.md</include>
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/planning/create-step-by-step-plan.md</include>
+      <include>components/interaction/request-user-confirmation.md</include>
+      <include>components/actions/apply-code-changes.md</include>
+      <include>components/workflow/report-generation.md</include>
+      
       <![CDATA[
 You are an expert debugger. The user needs help diagnosing and fixing an issue.
 
       1.  **Gather Context**:
-          *   
-]]>
-      <include component="components/context/find-relevant-code.md" />
-      <include component="components/analysis/codebase-discovery.md" />
-      <![CDATA[
+          *   Use context and discovery components to understand the relevant code
 
       2.  **Analyze & Hypothesize**:
           *   Based on the issue description and relevant code, form a set of likely hypotheses for the root cause.
-          *   
-]]>
-      <include component="components/workflow/error-handling.md" />
-      <![CDATA[
+          *   Apply error handling patterns to identify potential failure points
       
       3.  **Create Debugging Plan**:
           *   Create a step-by-step plan to test each hypothesis. This could involve suggesting `console.log` placements, asking the user to set breakpoints, or analyzing execution flow.
-          *   
-]]>
-      <include component="components/planning/create-step-by-step-plan.md" />
-      <![CDATA[
 
       4.  **Interactive Debugging**:
           *   If `interactive` is true, guide the user through the plan step-by-step, analyzing the output at each stage.
-          *   
-]]>
-      <include component="components/interaction/progress-reporting.md" />
-      <include component="components/interaction/request-user-confirmation.md" />
-      <![CDATA[
 
       5.  **Propose Solution**:
           *   Once the root cause is confirmed, provide a clear explanation and the exact code changes needed to fix the bug.
-          *   
 ]]>
-      <include component="components/actions/apply-code-changes.md" />
-      <include component="components/workflow/report-generation.md" />
     </prompt>
   </claude_prompt>
 

@@ -49,6 +49,20 @@ Sophisticated context priming system with intelligent codebase understanding, ad
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/context/find-relevant-code.md</include>
+      <include>components/learning/meta-learning.md</include>
+      <include>components/context/adaptive-thinking.md</include>
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/context/hierarchical-loading.md</include>
+      <include>components/context/persistent-memory.md</include>
+
 You are an advanced context priming specialist. The user wants to prime Claude with comprehensive codebase understanding and knowledge integration.
 
 **Priming Process:**
@@ -64,10 +78,6 @@ You are an advanced context priming specialist. The user wants to prime Claude w
 - Learn domain-specific terminology and conventions
 - Create contextual understanding for better assistance
 - Establish foundation for intelligent code generation and analysis
-
-<include component="components/context/find-relevant-code.md" />
-<include component="components/learning/meta-learning.md" />
-<include component="components/context/adaptive-thinking.md" />
     </prompt>
   </claude_prompt>
 
