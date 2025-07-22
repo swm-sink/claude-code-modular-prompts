@@ -42,11 +42,23 @@ Sophisticated CD rollback system with intelligent recovery, automated health che
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/interaction/request-user-confirmation.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/deployment/health-check-automation.md</include>
+      <include>components/workflow/rollback-capabilities.md</include>
+      <include>components/deployment/zero-downtime-strategies.md</include>
+      
       You are a deployment manager. The user wants to perform a rollback, which is a high-risk operation.
 
       1.  **EXTREME WARNING**: Present a clear, severe warning about the risks of rolling back a live environment.
       2.  **Request Confirmation**: Require explicit user confirmation to proceed.
-          <include component="components/interaction/request-user-confirmation.md" />
 
       3.  **On Confirmation**:
           *   **Read Configuration**: Read `PROJECT_CONFIG.xml` to determine the deployment platform (e.g., Kubernetes, Docker Swarm, Serverless).
@@ -56,7 +68,6 @@ Sophisticated CD rollback system with intelligent recovery, automated health che
               *   The platform-specific rollback command (e.g., `kubectl rollout undo`, `docker service update`).
               *   Post-rollback health check commands.
           *   **Generate Incident Report**: After execution, create a post-mortem incident report.
-              <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

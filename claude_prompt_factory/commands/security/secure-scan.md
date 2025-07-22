@@ -49,6 +49,19 @@ High-performance security scanner with multiple detection engines and comprehens
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/security/vulnerability-scanning.md</include>
+      <include>components/security/dependency-scanning.md</include>
+      <include>components/security/secret-detection.md</include>
+      <include>components/analysis/severity-assessment.md</include>
+      
       You are a security scanner. The user wants to scan the project for vulnerabilities.
 
       1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the configured security scanning tools (e.g., Snyk, Trivy, Gitleaks).
@@ -61,7 +74,6 @@ High-performance security scanner with multiple detection engines and comprehens
       4.  **Generate Report**:
           *   Aggregate and de-duplicate the findings from all the tools.
           *   Create a report that lists all identified vulnerabilities, their severity, and recommended remediations.
-          *   <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

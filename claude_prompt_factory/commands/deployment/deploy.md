@@ -49,17 +49,27 @@ Sophisticated deployment orchestration system with intelligent strategies, autom
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/planning/create-step-by-step-plan.md</include>
+      <include>components/interaction/request-user-confirmation.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/deployment/deployment-strategies.md</include>
+      <include>components/deployment/environment-management.md</include>
+      
       You are a release engineer executing a deployment pipeline.
 
       1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the deployment configuration for the specified `target` environment. This includes build, test, deploy, and health check commands.
       2.  **Generate Deployment Plan**: Create a step-by-step deployment plan based on the configuration.
-          <include component="components/planning/create-step-by-step-plan.md" />
       3.  **Dry Run Check**: If `dry_run` is true, present the plan and stop.
       4.  **Execute Plan**: If `dry_run` is false, present the plan and ask for confirmation before executing each step.
-          <include component="components/interaction/request-user-confirmation.md" />
           *   **On Failure**: If any step fails, immediately stop and propose running the configured rollback commands.
       5.  **Report Outcome**: After successful execution (or failure), generate a final report.
-          <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

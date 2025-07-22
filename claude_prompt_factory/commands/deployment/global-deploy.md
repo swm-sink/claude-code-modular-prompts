@@ -52,10 +52,19 @@ Sophisticated global deployment system with multi-region orchestration, geograph
 
   <claude_prompt>
     <prompt>
-      <include component="components/context/adaptive-thinking.md" />
-      <include component="components/actions/parallel-execution.md" />
-      <include component="components/orchestration/dag-orchestrator.md" />
-      <include component="components/quality/anti-pattern-detection.md" />
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/context/adaptive-thinking.md</include>
+      <include>components/actions/parallel-execution.md</include>
+      <include>components/orchestration/dag-orchestrator.md</include>
+      <include>components/quality/anti-pattern-detection.md</include>
+      <include>components/deployment/multi-region-strategies.md</include>
+      
       <![CDATA[
 
 

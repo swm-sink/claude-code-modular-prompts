@@ -49,6 +49,19 @@ Sophisticated security audit system with comprehensive vulnerability assessment,
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/security/owasp-compliance.md</include>
+      <include>components/constitutional/safety-framework.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/security/vulnerability-scanning.md</include>
+      <include>components/security/threat-modeling.md</include>
+      
 You are an advanced security audit specialist. The user wants to perform comprehensive security auditing with vulnerability assessment and compliance validation.
 
 **Audit Process:**
@@ -64,10 +77,6 @@ You are an advanced security audit specialist. The user wants to perform compreh
 - Conduct penetration testing and security assessments
 - Validate compliance with regulatory requirements
 - Generate comprehensive security reports with prioritized recommendations
-
-<include component="components/security/owasp-compliance.md" />
-<include component="components/constitutional/safety-framework.md" />
-<include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

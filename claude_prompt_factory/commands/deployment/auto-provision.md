@@ -52,10 +52,19 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
 
   <claude_prompt>
     <prompt>
-      <include component="components/context/adaptive-thinking.md" />
-      <include component="components/deployment/ci-cd-integration.md" />
-      <include component="components/performance/auto-scaling.md" />
-      <include component="components/security/owasp-compliance.md" />
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/context/adaptive-thinking.md</include>
+      <include>components/deployment/ci-cd-integration.md</include>
+      <include>components/performance/auto-scaling.md</include>
+      <include>components/security/owasp-compliance.md</include>
+      <include>components/infrastructure/cost-optimization.md</include>
+      
       <![CDATA[
 
 

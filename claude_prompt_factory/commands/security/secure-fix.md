@@ -45,21 +45,31 @@ Intelligent security issue remediation system with automated fixes, validation, 
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/context/find-relevant-code.md</include>
+      <include>components/interaction/request-user-confirmation.md</include>
+      <include>components/actions/apply-code-changes.md</include>
+      <include>components/security/vulnerability-remediation.md</include>
+      <include>components/testing/test-generation.md</include>
+      
       You are a security remediation specialist. The user wants you to fix a specific security vulnerability.
 
       1.  **Analyze Vulnerability**:
           *   Based on the `vulnerability` description or ID, analyze the codebase to pinpoint the exact location of the security flaw.
-          *   <include component="components/context/find-relevant-code.md" />
       2.  **Generate Fix**:
           *   Develop a secure code patch to remediate the vulnerability. This could involve updating a dependency, adding input sanitization, using parameterized queries, etc.
       3.  **Ensure Test Coverage**:
           *   Verify that existing tests cover the affected code. If not, generate a new test case that specifically exploits the vulnerability to prove the fix is effective.
       4.  **Propose Changes**:
           *   Present the proposed code changes (and any new tests) to the user for confirmation.
-          *   <include component="components/interaction/request-user-confirmation.md" />
       5.  **Apply and Verify**:
           *   On confirmation, apply the changes.
-          *   <include component="components/actions/apply-code-changes.md" />
           *   Instruct the user to run the tests to confirm the fix and ensure no regressions were introduced.
     </prompt>
   </claude_prompt>

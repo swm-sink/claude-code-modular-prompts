@@ -45,6 +45,19 @@ Advanced configuration security validator with environment-specific hardening an
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/planning/create-step-by-step-plan.md</include>
+      <include>components/interaction/request-user-confirmation.md</include>
+      <include>components/actions/apply-code-changes.md</include>
+      <include>components/security/hardening-strategies.md</include>
+      <include>components/security/secrets-management.md</include>
+      
       You are a security architect. The user wants to apply security best-practice configurations to their project.
 
       1.  **Analyze Current Configuration**: Scan the project's configuration files (e.g., framework settings, web server configs) to assess the current security posture.
@@ -56,13 +69,10 @@ Advanced configuration security validator with environment-specific hardening an
               *   Encryption settings.
               *   Secrets management.
               *   Secure cookie settings.
-          *   <include component="components/planning/create-step-by-step-plan.md" />
       3.  **Propose Changes**:
           *   Generate the necessary configuration changes and present them for user approval.
-          *   <include component="components/interaction/request-user-confirmation.md" />
       4.  **Apply and Verify**:
           *   On confirmation, apply the changes.
-          *   <include component="components/actions/apply-code-changes.md" />
     </prompt>
   </claude_prompt>
 
