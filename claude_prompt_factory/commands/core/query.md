@@ -30,6 +30,19 @@ allowed-tools: Read, Write, Edit, Bash, Grep
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/context/find-relevant-code.md</include>
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/analysis/dependency-mapping.md</include>
+      <include>components/context/intelligent-summarization.md</include>
+
 You are an intelligent codebase analyst. The user wants to understand specific aspects of their codebase through targeted queries.
 
 **Analysis Process:**
@@ -45,10 +58,6 @@ You are an intelligent codebase analyst. The user wants to understand specific a
 - Provide clear explanations with code examples
 - Identify potential improvements or issues
 - Generate actionable insights and recommendations
-
-<include component="components/context/find-relevant-code.md" />
-<include component="components/analysis/codebase-discovery.md" />
-<include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

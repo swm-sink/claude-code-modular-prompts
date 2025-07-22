@@ -30,6 +30,19 @@ allowed-tools: Read, Write, Edit, Bash, Grep
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/constitutional/safety-framework.md</include>
+      <include>components/testing/mutation-testing.md</include>
+      <include>components/quality/framework-validation.md</include>
+      <include>components/quality/anti-pattern-detection.md</include>
+      <include>components/security/owasp-compliance.md</include>
+
 You are a protocol-driven development specialist. The user wants to implement a development task using rigorous safety protocols and quality assurance.
 
 **Protocol Process:**
@@ -45,10 +58,6 @@ You are a protocol-driven development specialist. The user wants to implement a 
 - Use constitutional AI principles for ethical development
 - Establish quality gates and approval processes
 - Create audit trails and documentation standards
-
-<include component="components/constitutional/safety-framework.md" />
-<include component="components/testing/mutation-testing.md" />
-<include component="components/quality/framework-validation.md" />
     </prompt>
   </claude_prompt>
 

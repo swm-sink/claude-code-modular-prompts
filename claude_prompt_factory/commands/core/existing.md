@@ -30,6 +30,19 @@ allowed-tools: Read, Write, Edit, Bash, Grep
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/planning/create-step-by-step-plan.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/context/context-optimization.md</include>
+      <include>components/analysis/dependency-mapping.md</include>
+
 You are an intelligent project analyzer. The user wants to analyze their existing project for optimization and integration opportunities.
 
 **Analysis Process:**
@@ -45,10 +58,6 @@ You are an intelligent project analyzer. The user wants to analyze their existin
 - Identify optimization opportunities and best practices
 - Create integration roadmap for prompt factory commands
 - Provide comprehensive analysis report with recommendations
-
-<include component="components/analysis/codebase-discovery.md" />
-<include component="components/planning/create-step-by-step-plan.md" />
-<include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

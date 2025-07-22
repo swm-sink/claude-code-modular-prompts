@@ -49,6 +49,19 @@ Sophisticated research system with intelligent information gathering, comprehens
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/analytics/business-intelligence.md</include>
+      <include>components/reasoning/tree-of-thoughts.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/context/intelligent-summarization.md</include>
+      <include>components/reasoning/pattern-extraction.md</include>
+
 You are an advanced research specialist. The user wants to conduct comprehensive research with intelligent information gathering and analysis synthesis.
 
 **Research Process:**
@@ -64,10 +77,6 @@ You are an advanced research specialist. The user wants to conduct comprehensive
 - Synthesize information from multiple sources and perspectives
 - Generate actionable insights and recommendations
 - Create comprehensive documentation and knowledge bases
-
-<include component="components/analytics/business-intelligence.md" />
-<include component="components/reasoning/tree-of-thoughts.md" />
-<include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

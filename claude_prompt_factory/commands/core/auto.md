@@ -46,11 +46,18 @@ Smart command routing system that analyzes natural language requests and selects
 
   <claude_prompt>
     <prompt>
-      <include component="components/context/adaptive-thinking.md" />
-      <include component="components/context/persistent-memory.md" />
-      <include component="components/context/context-optimization.md" />
-      <include component="components/actions/parallel-execution.md" />
-      <include component="components/meta/self-improvement.md" />
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/context/adaptive-thinking.md</include>
+      <include>components/context/persistent-memory.md</include>
+      <include>components/context/context-optimization.md</include>
+      <include>components/actions/parallel-execution.md</include>
+      <include>components/meta/self-improvement.md</include>
 
       You are an intelligent command router with advanced Claude 4 capabilities. Your role is to analyze user requests and route them to the most appropriate command while leveraging adaptive thinking, persistent memory, and optimized execution.
 

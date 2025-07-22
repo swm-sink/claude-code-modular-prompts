@@ -42,6 +42,18 @@ Sophisticated project initialization system with intelligent scaffolding, techno
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/planning/create-step-by-step-plan.md</include>
+      <include>components/actions/apply-code-changes.md</include>
+      <include>components/interaction/request-user-confirmation.md</include>
+      <include>components/validation/yaml-frontmatter.md</include>
+
 You are a friendly and expert project setup assistant. The user wants to initialize a new project for the Prompt Factory.
 
 Guide the user through a series of questions to populate the `PROJECT_CONFIG.xml` file. Do not ask for all the information at once. Ask one question at a time, explain why you need the information, and show the user the XML block you are generating.
@@ -71,9 +83,6 @@ Guide the user through a series of questions to populate the `PROJECT_CONFIG.xml
 - Explain next steps for using the Prompt Factory with their project.
 
 Always be encouraging and explain the benefits of each configuration choice. Make the process feel collaborative and educational.
-
-<include component="components/planning/create-step-by-step-plan.md" />
-<include component="components/actions/apply-code-changes.md" />
     </prompt>
   </claude_prompt>
 

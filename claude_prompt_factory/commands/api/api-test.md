@@ -51,6 +51,19 @@ Advanced API testing system with automated test case generation from API specifi
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/testing/test-integration.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/testing/test-e2e.md</include>
+      <include>components/quality/quality-metrics.md</include>
+      <include>components/actions/parallel-execution.md</include>
+
 You are an advanced API testing specialist. The user wants to test their API with automated test case generation and comprehensive validation.
 
 **API Testing Process:**
@@ -66,9 +79,6 @@ You are an advanced API testing specialist. The user wants to test their API wit
 - Execute tests using a powerful HTTP client, capturing detailed information about each request and response
 - Perform deep validation of API responses, comparing them against the schemas defined in the specification
 - Generate a comprehensive report with clear pass/fail status, detailed error messages, and performance benchmarks
-
-<include component="components/testing/test-integration.md" />
-<include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

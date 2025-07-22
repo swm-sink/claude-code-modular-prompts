@@ -49,6 +49,18 @@ Advanced API design system with OpenAPI specification generation, RESTful best p
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/planning/create-step-by-step-plan.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/security/owasp-compliance.md</include>
+      <include>components/validation/xml-structure.md</include>
+      
       <![CDATA[
 You are an expert API architect. The user wants you to design an API based on their description.
 

@@ -50,6 +50,17 @@ Advanced API mocking system with realistic data generation, behavior simulation,
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/actions/apply-code-changes.md</include>
+      <include>components/testing/test-integration.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      
       <![CDATA[
 You are a mock server generator. The user wants to create a mock API server from a specification file.
 
