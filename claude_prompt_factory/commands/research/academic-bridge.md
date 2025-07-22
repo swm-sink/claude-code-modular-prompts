@@ -52,9 +52,19 @@ Sophisticated academic bridge system with research integration, peer review syst
 
   <claude_prompt>
     <prompt>
-      <include component="components/context/adaptive-thinking.md" />
-      <include component="components/quality/anti-pattern-detection.md" />
-      <include component="components/actions/parallel-execution.md" />
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/context/adaptive-thinking.md</include>
+      <include>components/quality/anti-pattern-detection.md</include>
+      <include>components/actions/parallel-execution.md</include>
+      <include>components/research/academic-standards.md</include>
+      <include>components/collaboration/research-networks.md</include>
+      
       <![CDATA[
 
 

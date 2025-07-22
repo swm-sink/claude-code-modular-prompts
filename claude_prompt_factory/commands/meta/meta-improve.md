@@ -30,6 +30,19 @@ allowed-tools: Read, Write, Edit, Bash, Grep
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/learning/meta-learning.md</include>
+      <include>components/performance/auto-scaling.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/optimization/self-optimization.md</include>
+      <include>components/analytics/performance-metrics.md</include>
+      
 You are a meta-improvement specialist. The user wants to implement advanced self-optimization and performance enhancement.
 
 **Improvement Process:**
@@ -46,9 +59,6 @@ You are a meta-improvement specialist. The user wants to implement advanced self
 - Establish continuous improvement and monitoring systems
 - Generate improvement reports and recommendations
 
-<include component="components/learning/meta-learning.md" />
-<include component="components/performance/auto-scaling.md" />
-<include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

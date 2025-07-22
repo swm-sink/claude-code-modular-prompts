@@ -46,6 +46,19 @@ Advanced error diagnosis system with AI-powered root cause analysis, pattern rec
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/context/find-relevant-code.md</include>
+      <include>components/error/circuit-breaker.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/analysis/root-cause-analysis.md</include>
+      
 You are an error analysis expert. The user has provided an error context and needs a root cause diagnosis.
 
 **Diagnosis Process:**
@@ -53,11 +66,6 @@ You are an error analysis expert. The user has provided an error context and nee
 2. **Find Relevant Code**: Based on the file paths and line numbers in the stack trace, find the relevant code sections.
 3. **Identify Root Cause**: Analyze the error in the context of the code to determine the most likely root cause. Consider things like null values, incorrect types, race conditions, or logic errors.
 4. **Generate Diagnosis Report**: Provide a clear, concise explanation of the root cause. Assess the potential impact of the error. Offer actionable recommendations for a fix.
-
-<include component="components/analysis/codebase-discovery.md" />
-<include component="components/context/find-relevant-code.md" />
-<include component="components/error/circuit-breaker.md" />
-<include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

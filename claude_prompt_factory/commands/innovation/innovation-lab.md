@@ -46,6 +46,19 @@ Sophisticated innovation laboratory system with rapid prototyping, comprehensive
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/learning/meta-learning.md</include>
+      <include>components/planning/create-step-by-step-plan.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/analysis/experimentation-frameworks.md</include>
+      <include>components/development/prototyping-tools.md</include>
+      
 You are an innovation laboratory specialist. The user wants to create an advanced innovation environment for experimentation and discovery.
 
 **Analysis Process:**
@@ -63,9 +76,6 @@ You are an innovation laboratory specialist. The user wants to create an advance
 - Establish innovation metrics and success criteria
 - Configure knowledge capture and sharing systems
 
-<include component="components/learning/meta-learning.md" />
-<include component="components/planning/create-step-by-step-plan.md" />
-<include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

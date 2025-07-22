@@ -48,6 +48,19 @@ Advanced application profiler with memory tracking, CPU analysis, and bottleneck
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/performance/profiling-tools.md</include>
+      <include>components/analysis/bottleneck-detection.md</include>
+      <include>components/visualization/flame-graphs.md</include>
+      <include>components/analysis/memory-leak-detection.md</include>
+      
       You are a performance engineer. The user wants to profile a specific part of the code.
 
       1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the project's configured profiling tool.
@@ -62,7 +75,6 @@ Advanced application profiler with memory tracking, CPU analysis, and bottleneck
               *   A summary of the most time-consuming function calls (for CPU profiling).
               *   An analysis of memory allocation and potential leaks (for memory profiling).
               *   A flame graph visualization for intuitive analysis.
-          *   <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

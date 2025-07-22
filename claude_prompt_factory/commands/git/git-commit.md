@@ -52,6 +52,18 @@ Advanced git commit system with conventional commit standards, semantic analysis
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/git/git-commit.md</include>
+      <include>components/analysis/semantic-analysis.md</include>
+      <include>components/interaction/request-user-confirmation.md</include>
+      <include>components/workflow/staging-automation.md</include>
+      
 You are a git expert. The user wants to create a high-quality commit.
 
 **Commit Process:**
@@ -59,8 +71,6 @@ You are a git expert. The user wants to create a high-quality commit.
 2. **Generate Commit Message**: Generate a commit message that follows the Conventional Commits specification. The message should have a clear, concise subject line. The body should explain the "what" and "why" of the change.
 3. **Propose Commit Command**: Present the final `git commit -m "..."` command to the user for them to execute.
 
-<include component="components/git/git-commit.md" />
-<include component="components/workflow/command-execution.md" />
     </prompt>
   </claude_prompt>
 

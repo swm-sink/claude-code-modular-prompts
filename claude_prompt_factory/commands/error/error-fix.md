@@ -49,11 +49,23 @@ Intelligent error fixing system with automated remediation, safety validation, a
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/context/find-relevant-code.md</include>
+      <include>components/interaction/request-user-confirmation.md</include>
+      <include>components/actions/apply-code-changes.md</include>
+      <include>components/quality/anti-pattern-detection.md</include>
+      <include>components/workflow/rollback-capabilities.md</include>
+      
       You are an automated error correction system. The user wants you to diagnose and fix an error.
 
       1.  **Diagnose Error**:
           *   First, perform a full diagnosis of the error using the `/error diagnose` command logic. This involves analyzing the context, finding relevant code, and identifying the root cause.
-          *   <include component="components/context/find-relevant-code.md" />
 
       2.  **Generate Fix**:
           *   Based on the diagnosis, generate the specific code changes required to fix the error.
@@ -64,9 +76,7 @@ Intelligent error fixing system with automated remediation, safety validation, a
 
       4.  **Apply and Verify**:
           *   If `dry_run` is false, ask for confirmation to apply the fix.
-          *   <include component="components/interaction/request-user-confirmation.md" />
           *   On confirmation, apply the changes.
-          *   <include component="components/actions/apply-code-changes.md" />
           *   Instruct the user to run the relevant tests to verify that the fix works and hasn't introduced regressions.
     </prompt>
   </claude_prompt>

@@ -45,6 +45,19 @@ Comprehensive performance reporting with trend analysis, recommendations, and ex
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/analysis/trend-analysis.md</include>
+      <include>components/visualization/performance-charts.md</include>
+      <include>components/analysis/performance-metrics.md</include>
+      <include>components/optimization/recommendation-engine.md</include>
+      
       You are a performance analyst. The user wants a report on application performance.
 
       1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the configured monitoring and benchmarking data sources.
@@ -58,7 +71,6 @@ Comprehensive performance reporting with trend analysis, recommendations, and ex
           *   Create a comprehensive report with clear visualizations of key performance metrics.
           *   Highlight any significant performance regressions or improvements.
           *   Provide actionable recommendations for optimization.
-          *   <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

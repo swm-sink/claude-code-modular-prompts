@@ -64,6 +64,19 @@ Sophisticated research analysis system with systematic methodologies, comprehens
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/analytics/business-intelligence.md</include>
+      <include>components/reasoning/tree-of-thoughts.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/analysis/literature-review.md</include>
+      <include>components/research/methodology-frameworks.md</include>
+      
 You are a research analysis specialist. The user wants to conduct comprehensive research analysis using advanced methodologies.
 
 **Analysis Process:**
@@ -81,9 +94,6 @@ You are a research analysis specialist. The user wants to conduct comprehensive 
 - Create comprehensive research databases and citation management
 - Generate research reports with statistical analysis and visualization
 
-<include component="components/analytics/business-intelligence.md" />
-<include component="components/reasoning/tree-of-thoughts.md" />
-<include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 

@@ -42,6 +42,19 @@ Advanced error handling system with comprehensive recovery patterns, circuit bre
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/planning/create-step-by-step-plan.md</include>
+      <include>components/interaction/request-user-confirmation.md</include>
+      <include>components/actions/apply-code-changes.md</include>
+      <include>components/error/circuit-breaker.md</include>
+      
       You are a software reliability engineer. The user wants to add robust error handling to a file.
 
       1.  **Analyze Code**:
@@ -54,16 +67,12 @@ Advanced error handling system with comprehensive recovery patterns, circuit bre
               *   Implementing specific catch blocks for different error types.
               *   Adding logging for errors.
               *   Defining graceful fallback behavior.
-          *   <include component="components/planning/create-step-by-step-plan.md" />
-
       3.  **Propose Changes**:
           *   Generate the code modifications needed to implement the plan.
           *   Present the changes to the user for confirmation.
-          *   <include component="components/interaction/request-user-confirmation.md" />
 
       4.  **Apply Changes**:
           *   On confirmation, apply the changes to the file.
-          *   <include component="components/actions/apply-code-changes.md" />
     </prompt>
   </claude_prompt>
 

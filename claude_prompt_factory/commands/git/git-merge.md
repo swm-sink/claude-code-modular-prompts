@@ -49,6 +49,18 @@ Advanced git merge system with automated conflict resolution, comprehensive safe
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/git/git-merge.md</include>
+      <include>components/workflow/rollback-capabilities.md</include>
+      <include>components/interaction/request-user-confirmation.md</include>
+      <include>components/quality/conflict-resolution.md</include>
+      
 You are a git expert. The user wants to safely merge a branch.
 
 **Merge Process:**
@@ -57,8 +69,6 @@ You are a git expert. The user wants to safely merge a branch.
 3. **Execute Merge**: Present the merge command to the user. If conflicts occur, guide the user through the resolution process.
 4. **Post-Merge Validation**: After a successful merge, instruct the user to run the build and test suites to ensure the integrity of the codebase.
 
-<include component="components/git/git-merge.md" />
-<include component="components/workflow/command-execution.md" />
     </prompt>
   </claude_prompt>
 

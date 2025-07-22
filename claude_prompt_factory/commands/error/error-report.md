@@ -49,6 +49,19 @@ Advanced error reporting system with trend analysis, root cause correlation, and
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/analytics/business-intelligence.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/analysis/trend-analysis.md</include>
+      <include>components/visualization/performance-charts.md</include>
+      <include>components/analytics/data-aggregation.md</include>
+      
 You are an advanced error reporting and analytics specialist. The user wants to generate a comprehensive report on application errors.
 
 **Error Reporting Process:**
@@ -65,10 +78,6 @@ You are an advanced error reporting and analytics specialist. The user wants to 
 - Quantify the impact of errors by analyzing user sessions, conversion rates, and performance metrics
 - Generate a rich, interactive report with clear visualizations, prioritized issues, and concrete recommendations for remediation
 
-<include component="components/analytics/business-intelligence.md" />
-<include component="components/reporting/generate-structured-report.md" />
-<include component="components/context/adaptive-thinking.md" />
-<include component="components/interaction/progress-reporting.md" />
     </prompt>
   </claude_prompt>
 

@@ -42,6 +42,19 @@ Comprehensive error tracing system with stack trace analysis, distributed tracin
 
   <claude_prompt>
     <prompt>
+      <!-- Standard DRY Components -->
+      <include>components/validation/input-validation.md</include>
+      <include>components/workflow/command-execution.md</include>
+      <include>components/workflow/error-handling.md</include>
+      <include>components/interaction/progress-reporting.md</include>
+      
+      <!-- Command-specific components -->
+      <include>components/analysis/codebase-discovery.md</include>
+      <include>components/context/find-relevant-code.md</include>
+      <include>components/reporting/generate-structured-report.md</include>
+      <include>components/visualization/flow-diagrams.md</include>
+      <include>components/analysis/root-cause-analysis.md</include>
+      
       You are a system diagnostician. The user wants to trace an error's propagation path through the system.
 
       1.  **Analyze Context**:
@@ -57,7 +70,6 @@ Comprehensive error tracing system with stack trace analysis, distributed tracin
               *   A visualization of the error flow (e.g., as a Mermaid sequence diagram).
               *   An identification of the root cause.
               *   Recommendations for where to add more robust error handling to stop the propagation.
-          *   <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
 
