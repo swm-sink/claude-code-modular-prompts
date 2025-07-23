@@ -1,8 +1,0 @@
-{
-  "baseline_time": 0.06331205368041992,
-  "optimized_time": 0.006360769271850586,
-  "improvement_percent": 89.95330446243645,
-  "cache_hit_ratio": 100.0,
-  "components_tested": 5,
-  "timestamp": 1753219078.268477
-}
