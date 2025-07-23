@@ -30,7 +30,7 @@ remote.origin.url=https://github.com/swm-sink/claude-code-modular-prompts.git
 
 ### Current PAT Configuration
 - **Username**: `swm-sink`
-- **Token**: Stored in local credential helper (repository-scoped)
+- **Token**: [CONFIGURED LOCALLY - NOT STORED IN REPO]
 - **Scope**: Repository-specific to avoid global credential conflicts
 
 ## GitHub Operations for This Project
@@ -84,6 +84,7 @@ git config credential.https://github.com/swm-sink/claude-code-modular-prompts.gi
 git config credential.https://github.com/swm-sink/claude-code-modular-prompts.git.helper store
 
 # 4. On first push/pull, enter your PAT when prompted for password
+# Note: Never commit PAT tokens to the repository
 ```
 
 ## Security Notes

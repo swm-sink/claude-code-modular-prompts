@@ -379,6 +379,7 @@ credential.https://github.com/swm-sink/claude-code-modular-prompts.git.helper=st
 # - NO GitHub CLI to avoid conflicts
 # - Repository-scoped credentials only
 # - Isolated from global git configuration
+# - PAT token stored locally, NEVER committed to repository
 ```
 
 **GitHub Workflow Documentation**: See `.claude/docs/github-workflow.md` for complete setup and troubleshooting.
