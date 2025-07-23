@@ -1,0 +1,226 @@
+{
+  "execution_summary": {
+    "total_files": 32,
+    "successful_fixes": 32,
+    "failed_fixes": 0,
+    "validation_passed": 0,
+    "validation_failed": 32
+  },
+  "fixes_applied": [
+    {
+      "file": "claude_prompt_factory/components/ecosystem/api-marketplace.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 107 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/constitutional/constitutional-framework.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 119 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/constitutional/safety-framework.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 115 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/quality/framework-validation.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 38 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/quality/framework-validation.md",
+      "fixes": [
+        "<!\\[CDATA\\[([^]]*)(?<!\\]\\]>)$ -> <![CDATA[\\1]]>: 1 replacements",
+        "&(?!(amp|lt|gt|apos|quot);) -> &amp;: 6 replacements",
+        "<(?![^<]*>) -> &lt;: 2 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/intelligence/cognitive-architecture.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 89 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/learning/meta-learning.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 82 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/learning/meta-learning-framework.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 61 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/learning/examples-library.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 67 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/optimization/opro-framework.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 15 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/optimization/dspy-framework.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 19 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/optimization/prompt-optimization.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 51 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/optimization/prompt-optimization.md",
+      "fixes": [
+        "&(?!(amp|lt|gt|apos|quot);) -> &amp;: 1 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/optimization/autoprompt-framework.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 21 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/optimization/textgrad-framework.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 17 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/meta/component-loader.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 67 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/reasoning/react-reasoning.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 26 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/reasoning/tree-of-thoughts.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 50 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/testing/mutation-testing.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 48 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/user-experience/intelligent-help.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 69 replacements",
+        "<([^/>]+)\\s*/\\s*> -> <\\1 />: 1 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/deployment/ci-cd-integration.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 4 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/reliability/chaos-engineering.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 62 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/actions/parallel-execution.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 34 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/orchestration/agent-orchestration.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 22 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/orchestration/dag-orchestrator.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 68 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/orchestration/agent-swarm.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 17 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/performance/framework-optimization.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 32 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/performance/auto-scaling.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 82 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/community/community-platform.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 65 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/error/circuit-breaker.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 61 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/validation/xml-structure.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 14 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/validation/xml-structure.md",
+      "fixes": [
+        "&(?!(amp|lt|gt|apos|quot);) -> &amp;: 1 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/validation/input-validation.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 11 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/analytics/business-intelligence.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 70 replacements"
+      ]
+    },
+    {
+      "file": "claude_prompt_factory/components/analytics/user-feedback.md",
+      "fixes": [
+        "<([^/>]+)>\\s*$ -> <\\1></\\1>: 63 replacements"
+      ]
+    }
+  ],
+  "errors_encountered": [],
+  "success_rate": 100.0
+}

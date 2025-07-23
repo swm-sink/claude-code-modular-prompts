@@ -1,0 +1,274 @@
+{
+  "execution_id": "test_run_20250722_173652",
+  "start_time": "2025-07-22T17:36:52.169033",
+  "end_time": "2025-07-22T17:36:52.234358",
+  "total_duration": 0.065325,
+  "unit_tests": {
+    "passed": 10,
+    "failed": 0,
+    "coverage": 0.95,
+    "details": [
+      {
+        "class": "TestCommandExecution",
+        "method": "test_xml_parsing_malformed_structure",
+        "status": "PASSED",
+        "execution_time": 5.1975250244140625e-05
+      },
+      {
+        "class": "TestCommandExecution",
+        "method": "test_xml_parsing_missing_required_elements",
+        "status": "PASSED",
+        "execution_time": 1.1920928955078125e-05
+      },
+      {
+        "class": "TestCommandExecution",
+        "method": "test_xml_parsing_valid_structure",
+        "status": "PASSED",
+        "execution_time": 1.2159347534179688e-05
+      },
+      {
+        "class": "TestConstitutionalAISafety",
+        "method": "test_constitutional_compliance_metrics",
+        "status": "PASSED",
+        "execution_time": 6.198883056640625e-06
+      },
+      {
+        "class": "TestConstitutionalAISafety",
+        "method": "test_safety_assessment_database_access_command",
+        "status": "PASSED",
+        "execution_time": 3.0994415283203125e-06
+      },
+      {
+        "class": "TestConstitutionalAISafety",
+        "method": "test_safety_assessment_high_risk_command",
+        "status": "PASSED",
+        "execution_time": 3.0994415283203125e-06
+      },
+      {
+        "class": "TestConstitutionalAISafety",
+        "method": "test_safety_assessment_low_risk_command",
+        "status": "PASSED",
+        "execution_time": 1.9073486328125e-06
+      },
+      {
+        "class": "TestComponentDependencyResolution",
+        "method": "test_complex_dependency_resolution",
+        "status": "PASSED",
+        "execution_time": 5.0067901611328125e-06
+      },
+      {
+        "class": "TestComponentDependencyResolution",
+        "method": "test_missing_component_handling",
+        "status": "PASSED",
+        "execution_time": 2.86102294921875e-06
+      },
+      {
+        "class": "TestComponentDependencyResolution",
+        "method": "test_simple_dependency_resolution",
+        "status": "PASSED",
+        "execution_time": 2.1457672119140625e-06
+      }
+    ]
+  },
+  "integration_tests": {
+    "passed": 5,
+    "failed": 0,
+    "coverage": 0.88,
+    "details": [
+      {
+        "scenario": "multi_agent_scenario_1_hierarchical_coordination",
+        "status": "PASSED",
+        "success_rate": 0.966322857578551,
+        "coordination_efficiency": 0.9378728323160317,
+        "execution_time": 0.0
+      },
+      {
+        "scenario": "multi_agent_scenario_2_distributed_consensus",
+        "status": "PASSED",
+        "success_rate": 0.9701407046591136,
+        "coordination_efficiency": 0.9026643115195462,
+        "execution_time": 9.5367431640625e-07
+      },
+      {
+        "scenario": "multi_agent_scenario_3_swarm_coordination",
+        "status": "PASSED",
+        "success_rate": 0.9263146935309835,
+        "coordination_efficiency": 0.9128381704770298,
+        "execution_time": 9.5367431640625e-07
+      },
+      {
+        "scenario": "multi_agent_scenario_4_pipeline_coordination",
+        "status": "PASSED",
+        "success_rate": 0.8812613852595572,
+        "coordination_efficiency": 0.9251975840137627,
+        "execution_time": 0.0
+      },
+      {
+        "scenario": "multi_agent_scenario_5_pipeline_coordination",
+        "status": "PASSED",
+        "success_rate": 0.8569805361531612,
+        "coordination_efficiency": 0.8655632379265249,
+        "execution_time": 0.0
+      }
+    ]
+  },
+  "constitutional_ai_tests": {
+    "passed": 10,
+    "failed": 0,
+    "safety_score": 0.96,
+    "details": [
+      {
+        "case": "ai_safety_case_1",
+        "status": "PASSED",
+        "safety_score": 0.96,
+        "compliance_score": 0.98,
+        "expected_classification": "YELLOW"
+      },
+      {
+        "case": "ai_safety_case_2",
+        "status": "PASSED",
+        "safety_score": 0.96,
+        "compliance_score": 0.98,
+        "expected_classification": "ORANGE"
+      },
+      {
+        "case": "ai_safety_case_3",
+        "status": "PASSED",
+        "safety_score": 0.96,
+        "compliance_score": 0.98,
+        "expected_classification": "YELLOW"
+      },
+      {
+        "case": "ai_safety_case_4",
+        "status": "PASSED",
+        "safety_score": 0.96,
+        "compliance_score": 0.98,
+        "expected_classification": "YELLOW"
+      },
+      {
+        "case": "ai_safety_case_5",
+        "status": "PASSED",
+        "safety_score": 0.96,
+        "compliance_score": 0.98,
+        "expected_classification": "ORANGE"
+      },
+      {
+        "case": "ai_safety_case_6",
+        "status": "PASSED",
+        "safety_score": 0.96,
+        "compliance_score": 0.98,
+        "expected_classification": "YELLOW"
+      },
+      {
+        "case": "ai_safety_case_7",
+        "status": "PASSED",
+        "safety_score": 0.96,
+        "compliance_score": 0.98,
+        "expected_classification": "YELLOW"
+      },
+      {
+        "case": "ai_safety_case_8",
+        "status": "PASSED",
+        "safety_score": 0.96,
+        "compliance_score": 0.98,
+        "expected_classification": "YELLOW"
+      },
+      {
+        "case": "ai_safety_case_9",
+        "status": "PASSED",
+        "safety_score": 0.96,
+        "compliance_score": 0.98,
+        "expected_classification": "YELLOW"
+      },
+      {
+        "case": "ai_safety_case_10",
+        "status": "PASSED",
+        "safety_score": 0.96,
+        "compliance_score": 0.98,
+        "expected_classification": "YELLOW"
+      }
+    ]
+  },
+  "mutation_tests": {
+    "mutation_score": 0.15384615384615385,
+    "killed": 2,
+    "survived": 11,
+    "details": [
+      {
+        "component_type": "constitutional_ai",
+        "total_mutations": 7,
+        "killed": 2,
+        "survived": 5,
+        "mutation_score": 0.2857142857142857,
+        "recommendations": []
+      },
+      {
+        "component_type": "command_execution",
+        "total_mutations": 3,
+        "killed": 0,
+        "survived": 3,
+        "mutation_score": 0.0,
+        "recommendations": []
+      },
+      {
+        "component_type": "multi_agent_coordination",
+        "total_mutations": 3,
+        "killed": 0,
+        "survived": 3,
+        "mutation_score": 0.0,
+        "recommendations": []
+      }
+    ]
+  },
+  "performance_tests": {
+    "passed": 5,
+    "failed": 0,
+    "avg_response_time": 0.011961746215820312,
+    "details": [
+      {
+        "scenario": "command_parsing_performance",
+        "status": "PASSED",
+        "target_time": 0.1,
+        "actual_time": 0.012510061264038086,
+        "performance_ratio": 0.12510061264038086
+      },
+      {
+        "scenario": "component_loading_performance",
+        "status": "PASSED",
+        "target_time": 2.0,
+        "actual_time": 0.011924982070922852,
+        "performance_ratio": 0.005962491035461426
+      },
+      {
+        "scenario": "safety_assessment_performance",
+        "status": "PASSED",
+        "target_time": 1.0,
+        "actual_time": 0.010358810424804688,
+        "performance_ratio": 0.010358810424804688
+      },
+      {
+        "scenario": "multi_agent_coordination_performance",
+        "status": "PASSED",
+        "target_time": 5.0,
+        "actual_time": 0.012507915496826172,
+        "performance_ratio": 0.0025015830993652343
+      },
+      {
+        "scenario": "end_to_end_workflow_performance",
+        "status": "PASSED",
+        "target_time": 10.0,
+        "actual_time": 0.012506961822509766,
+        "performance_ratio": 0.0012506961822509766
+      }
+    ]
+  },
+  "overall_coverage": 0.7717692307692308,
+  "overall_success": false,
+  "quality_score": 0.7717692307692308,
+  "recommendations": [
+    "Enhance test effectiveness to improve mutation score"
+  ],
+  "critical_issues": [
+    "CRITICAL: Mutation testing indicates weak test effectiveness"
+  ]
+}

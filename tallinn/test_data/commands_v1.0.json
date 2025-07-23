@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "created_at": "2025-07-22T17:36:52.172195",
+  "dataset_name": "commands",
+  "item_count": 500,
+  "data": [
+    {
+      "command_name": "secure-audit",
+      "context": {
+        "timestamp": "2025-07-22T17:36:52.169067",
+        "user_id": "user_26",
+        "session_id": "session_4507"
+      },
+      "components": [
+        "constitutional/safety-framework",
+        "security/owasp-compliance",
+        "security/secure-audit"
+      ],
+      "expected_safety_level": "YELLOW",
+      "expected_execution_time": 1.795913483042781,
+      "description": "Generated simple secure-audit command #1",
+      "category": 

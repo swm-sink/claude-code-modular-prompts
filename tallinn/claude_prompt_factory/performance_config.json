@@ -1,0 +1,8 @@
+{
+  "cache_enabled": true,
+  "cache_size_mb": 100,
+  "cache_ttl_hours": 24,
+  "parallel_loading": true,
+  "token_optimization": true,
+  "preload_hot_components": true
+}

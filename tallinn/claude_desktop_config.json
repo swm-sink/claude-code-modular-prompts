@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "claude-code-mcp": {
+      "command": "python3",
+      "args": ["start_mcp_server.py"],
+      "env": {
+        "PYTHONPATH": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/tallinn"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/smenssink/conductor/repo/claude-code-modular-prompts/tallinn"],
+      "env": {}
+    },
+    "git": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "/Users/smenssink/conductor/repo/claude-code-modular-prompts/tallinn"],
+      "env": {}
+    }
+  },
+  "globalShortcut": "CommandOrControl+Shift+."
+}

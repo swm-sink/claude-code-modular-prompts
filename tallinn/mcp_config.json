@@ -1,0 +1,65 @@
+{
+  "server": {
+    "name": "claude-code-mcp",
+    "version": "1.0.0",
+    "description": "Model Context Protocol server for Claude Code framework",
+    "author": "Claude Code Team"
+  },
+  "resources": {
+    "commands_dir": ".claude/commands",
+    "components_dir": "claude_prompt_factory/components", 
+    "cache_refresh_interval": 300,
+    "max_resources_per_category": 1000
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "mcp_server.log",
+    "max_size_mb": 10,
+    "backup_count": 5,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "features": {
+    "command_execution": true,
+    "resource_caching": true,
+    "metadata_extraction": true,
+    "example_extraction": true
+  },
+  "uri_schemes": {
+    "commands": "claude-code://commands/",
+    "components": "claude-code://components/"
+  },
+  "tools": [
+    {
+      "name": "execute_command",
+      "description": "Execute a Claude Code command with arguments",
+      "enabled": true
+    },
+    {
+      "name": "list_commands", 
+      "description": "List all available Claude Code commands with optional category filter",
+      "enabled": true
+    },
+    {
+      "name": "get_command_info",
+      "description": "Get detailed information about a specific command including metadata and examples",
+      "enabled": true
+    }
+  ],
+  "categories": {
+    "core": "Core functionality commands (task, query, auto, etc.)",
+    "development": "Development workflow commands (feature, debug, etc.)",
+    "git": "Git and version control commands",
+    "testing": "Testing and quality assurance commands",
+    "security": "Security audit and compliance commands", 
+    "performance": "Performance optimization commands",
+    "api": "API design and testing commands",
+    "database": "Database management commands",
+    "deployment": "Deployment and CI/CD commands",
+    "analysis": "Code analysis and metrics commands",
+    "utilities": "Utility and helper commands",
+    "agents": "AI agent coordination commands",
+    "workflow": "Workflow orchestration commands",
+    "monitoring": "System monitoring commands",
+    "documentation": "Documentation generation commands"
+  }
+}

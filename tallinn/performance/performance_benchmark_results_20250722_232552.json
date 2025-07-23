@@ -1,0 +1,28 @@
+{
+  "memory_operations": {
+    "memory_benchmarks": {
+      "total_operations": 3,
+      "duration_stats": {
+        "min_seconds": 0.002004861831665039,
+        "max_seconds": 0.0051021575927734375,
+        "avg_seconds": 0.003894329071044922,
+        "total_seconds": 0.011682987213134766
+      },
+      "memory_stats": {
+        "min_peak_mb": 27.203125,
+        "max_peak_mb": 35.921875,
+        "avg_peak_mb": 31.984375
+      },
+      "cpu_stats": {
+        "min_percent": 0.0,
+        "max_percent": 0.1,
+        "avg_percent": 0.06666666666666667
+      },
+      "operations": [
+        "memory_allocation_cycle",
+        "string_operations",
+        "large_data_creation"
+      ]
+    }
+  }
+}

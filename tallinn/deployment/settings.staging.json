@@ -1,0 +1,19 @@
+{
+  "environment": "staging",
+  "features": {
+    "performance_optimization": true,
+    "security_audit": true,
+    "monitoring": true,
+    "rate_limiting": true
+  },
+  "limits": {
+    "max_request_size": "10MB",
+    "max_context_tokens": 200000,
+    "rate_limit_per_minute": 100
+  },
+  "integrations": {
+    "github": true,
+    "slack": false,
+    "datadog": false
+  }
+}

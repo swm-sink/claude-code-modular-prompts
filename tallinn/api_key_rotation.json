@@ -1,0 +1,27 @@
+{
+  "rotation_policy": {
+    "enabled": true,
+    "rotation_interval_days": 90,
+    "notification_days_before": 7,
+    "auto_rotation": false,
+    "last_rotation": "2025-07-23T00:53:49.265743",
+    "next_rotation": "2025-10-21T00:53:49.265760"
+  },
+  "api_keys": {
+    "primary": {
+      "key_id": "key_e5a608d44aa72c2f",
+      "created": "2025-07-23T00:53:49.265777",
+      "expires": "2025-10-21T00:53:49.265778",
+      "status": "active",
+      "hash": "bfb3ef9a2660b3abdf786d61405130e14078ba3247a5c5dc863b00b166914c7e"
+    },
+    "secondary": {
+      "key_id": "key_11af66cdec0ade3d",
+      "created": "2025-07-23T00:53:49.265810",
+      "expires": "2025-10-21T00:53:49.265812",
+      "status": "standby",
+      "hash": "e7f89cd3e9c1048e88b46499daea9cf0e97dd45d417da2a4e4401b5464661716"
+    }
+  },
+  "rotation_history": []
+}

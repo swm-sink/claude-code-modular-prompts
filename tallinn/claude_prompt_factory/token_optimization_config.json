@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "optimization_level": "balanced",
+  "compression_ratio": 0.7,
+  "preserve_keywords": true,
+  "semantic_compression": true
+}

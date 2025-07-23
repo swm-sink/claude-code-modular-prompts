@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "max_workers": 4,
+  "batch_size": 10,
+  "timeout": 5.0
+}
