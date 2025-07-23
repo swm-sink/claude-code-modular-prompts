@@ -364,6 +364,25 @@ Brief description of command functionality
 
 ## 🛠️ DEVELOPMENT TOOLS & AUTOMATION
 
+### **Git/GitHub Configuration (REPOSITORY-SPECIFIC)**
+
+**⚠️ CRITICAL: This project uses repository-scoped Git settings to avoid conflicts with other projects**
+
+```bash
+# Repository-specific configuration (LOCAL ONLY)
+user.name=swm-sink
+user.email=stefan.menssink@gmail.com
+credential.https://github.com/swm-sink/claude-code-modular-prompts.git.username=swm-sink
+credential.https://github.com/swm-sink/claude-code-modular-prompts.git.helper=store
+
+# Authentication Method: Personal Access Token (PAT) ONLY
+# - NO GitHub CLI to avoid conflicts
+# - Repository-scoped credentials only
+# - Isolated from global git configuration
+```
+
+**GitHub Workflow Documentation**: See `.claude/docs/github-workflow.md` for complete setup and troubleshooting.
+
 ### **Required Development Stack**
 ```bash
 # Testing Framework
