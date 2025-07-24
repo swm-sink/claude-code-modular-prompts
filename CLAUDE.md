@@ -20,6 +20,12 @@
 3. Tests before implementation
 4. Commands execute in <100ms
 5. One atomic commit per task
+6. **PARANOIA MANDATE**: Triple-check everything before commits
+   - Verify no sensitive data (keys, tokens, passwords)
+   - Check all file paths are correct
+   - Validate directory structure integrity
+   - Ensure .claude is never in .gitignore
+   - Scan for accidental duplicates or leftovers
 
 ## Status
 | Metric | Current | Target | Progress |
