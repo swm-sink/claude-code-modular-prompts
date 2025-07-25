@@ -407,7 +407,7 @@ This command integrates with existing systems:
 - **Pipeline System**: Works with `/pipeline` for deployment operations
 - **Security System**: Integrates with `/security` for compliance validation
 - **Quality System**: Works with `/quality` for validation and testing
-- **Analysis System**: Integrates with `/analyze` for dependency analysis
+- **Analysis System**: Integrates with `/analyze-code` for dependency analysis
 
 ## Consolidation Benefits
 
