@@ -33,7 +33,7 @@ Production Claude Code library with 75 slash commands and comprehensive agent or
 | MD files | 178 active | <50 | ❌ Need 128+ reduction |
 | Commands | 75 | 50 | ❌ Need 25 reduction |
 | Test coverage | 0% | 90% | ❌ Tests missing |
-| Max dir depth | 10 | 3 | ❌ VIOLATION - 7 levels over |
+| Max dir depth | 4 | 3 | ❌ VIOLATION - 1 level over |
 
 ## Context Engineering
 - Principles: `.claude/context/principles.md`
