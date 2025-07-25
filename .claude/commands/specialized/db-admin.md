@@ -29,6 +29,11 @@ Comprehensive database administration command combining migration management, ba
 /db-admin restore --point-in-time               # Point-in-time recovery
 /db-admin restore --incremental                 # Incremental restoration
 /db-admin restore --validate                    # Restoration with validation
+
+# Seeding Operations
+/db-admin seed development                       # Seed development environment
+/db-admin seed testing --clean                  # Clean and seed test environment
+/db-admin seed production --confirm             # Seed production (with confirmation)
 ```
 
 <command_file>
@@ -44,8 +49,8 @@ Comprehensive database administration command combining migration management, ba
   
   <arguments>
     <argument name="operation" type="string" required="true">
-      <description>Primary database operation: migrate, backup, or restore</description>
-      <valid_values>migrate,backup,restore</valid_values>
+      <description>Primary database operation: migrate, backup, restore, or seed</description>
+      <valid_values>migrate,backup,restore,seed</valid_values>
     </argument>
     <argument name="action" type="string" required="false">
       <description>Specific action within the operation (varies by operation type)</description>
@@ -90,6 +95,18 @@ Comprehensive database administration command combining migration management, ba
     <example>
       <description>Perform point-in-time recovery to specific timestamp</description>
       <usage>/db-admin restore --point-in-time "2024-01-01 12:00:00"</usage>
+    </example>
+    <example>
+      <description>Seed development database with default record count</description>
+      <usage>/db-admin seed development</usage>
+    </example>
+    <example>
+      <description>Clean and seed testing environment with 500 records</description>
+      <usage>/db-admin seed testing --clean count=500</usage>
+    </example>
+    <example>
+      <description>Seed production environment with confirmation</description>
+      <usage>/db-admin seed production --confirm</usage>
     </example>
   </examples>
 
@@ -185,6 +202,40 @@ Comprehensive database administration command combining migration management, ba
          - Optimize database performance post-restoration
          - Generate detailed restoration report
 
+      ### SEED Operations
+      When `operation` = "seed":
+      
+      1. **Environment Validation**:
+         - Validate target environment (development, testing, production)
+         - Check database connectivity and access permissions
+         - Warn about potential data truncation/overwriting
+         - Request explicit user confirmation for destructive operations
+      
+      2. **Configuration Loading**:
+         - Read `PROJECT_CONFIG.xml` to find seed configuration file
+         - Parse seeding parameters (record counts, data types, relationships)
+         - Validate seed data integrity and foreign key constraints
+      
+      3. **Route by Environment**:
+         - **"development"** (default): Standard development dataset
+         - **"testing"**: Testing-optimized dataset with edge cases
+         - **"production"**: Production-safe seeding (requires --confirm)
+         - **Custom environment**: Use environment-specific configuration
+      
+      4. **Process Options**:
+         - **--clean**: Truncate existing data before seeding
+         - **--confirm**: Explicit confirmation for production environments
+         - **count=N**: Override default record count per table
+         - **--validate**: Perform data integrity validation after seeding
+      
+      5. **Execute Seeding Pipeline**:
+         - Generate realistic test data with proper relationships
+         - Handle foreign key dependencies in correct order
+         - Wrap all operations in single transaction for atomicity
+         - Monitor progress and provide status updates
+         - Validate data integrity and constraint compliance
+         - Generate seeding report with statistics and metrics
+
       ## Safety and Orchestration Features
 
       ### Universal Safety Checks
@@ -225,6 +276,9 @@ Comprehensive database administration command combining migration management, ba
       <value>backups.encryption.enabled</value>
       <value>database.backup.retention_days</value>
       <value>database.restore.validation_level</value>
+      <value>database.seed_config_file</value>
+      <value>database.seed.default_record_count</value>
+      <value>database.seed.environments</value>
     </uses_config_values>
     
     <includes_components>
