@@ -1,8 +1,38 @@
 ---
-description: Advanced development environment setup with intelligent automation, dependency resolution, and platform optimization
+description: [DEPRECATED] Advanced development environment setup with intelligent automation, dependency resolution, and platform optimization - use /project setup instead
 argument-hint: "[environment_type] [automation_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+test_coverage: 0%
+# DEPRECATION METADATA
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/project setup"
+reason: "Consolidated into unified /project command for integrated development environment setup and project management"
+removal_date: "2025-08-25"
 ---
+
+# ⚠️ DEPRECATED: /dev-setup
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Please use `/project setup` instead:**
+```
+# Old command:
+/dev setup full
+
+# New command:
+/project setup development --full-stack
+```
+
+The new unified `/project` command provides:
+- ✅ All legacy development setup functionality in setup mode
+- ✅ Enhanced integration with environment provisioning and workflow management
+- ✅ Improved full-stack setup capabilities and IDE integration
+- ✅ Better platform optimization and dependency management
+- ✅ Unified configuration and validation across all setup operations
+
+---
+
 <command_file>
   <metadata>
     <name>/dev setup</name>

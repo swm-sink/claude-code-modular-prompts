@@ -1,8 +1,37 @@
 ---
-description: Intelligent environment setup with automated toolchain installation, configuration management, and comprehensive dependency resolution
+description: [DEPRECATED] Intelligent environment setup with automated toolchain installation, configuration management, and comprehensive dependency resolution - use /project setup instead
 argument-hint: "[environment_type] [automation_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+test_coverage: 0%
+# DEPRECATION METADATA
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/project setup"
+reason: "Consolidated into unified /project command for integrated environment setup and project management"
+removal_date: "2025-08-25"
 ---
+# ⚠️ DEPRECATED: /env-setup
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Please use `/project setup` instead:**
+```
+# Old command:
+/env setup development --automated
+
+# New command:
+/project setup development --automated
+```
+
+The new unified `/project` command provides:
+- ✅ All legacy environment setup functionality in setup mode
+- ✅ Enhanced integration with infrastructure provisioning and development workflows
+- ✅ Improved multi-environment support and configuration management
+- ✅ Better dependency resolution and toolchain management capabilities
+- ✅ Unified validation and testing across all setup operations
+
+---
+
 # /env setup - Intelligent Environment Setup
 Advanced environment setup system with automated toolchain installation, intelligent configuration management, and comprehensive dependency resolution.
 ## Usage

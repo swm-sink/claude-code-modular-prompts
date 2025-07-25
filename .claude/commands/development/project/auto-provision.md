@@ -1,8 +1,37 @@
 ---
-description: Advanced infrastructure auto-provisioning with intelligent resource optimization, cost management, and scalability
+description: [DEPRECATED] Advanced infrastructure auto-provisioning with intelligent resource optimization, cost management, and scalability - use /project provision instead
 argument-hint: "[infrastructure_type] [provisioning_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+test_coverage: 0%
+# DEPRECATION METADATA
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/project provision"
+reason: "Consolidated into unified /project command for integrated infrastructure provisioning and project management"
+removal_date: "2025-08-25"
 ---
+# ⚠️ DEPRECATED: /auto-provision
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Please use `/project provision` instead:**
+```
+# Old command:
+/auto-provision cloud --scale enterprise
+
+# New command:
+/project provision cloud --scale enterprise
+```
+
+The new unified `/project` command provides:
+- ✅ All legacy auto-provisioning functionality in provision mode
+- ✅ Enhanced integration with environment setup and deployment workflows
+- ✅ Improved multi-cloud and hybrid infrastructure support
+- ✅ Better cost optimization and resource management capabilities
+- ✅ Unified monitoring and compliance across all infrastructure operations
+
+---
+
 # /deploy auto-provision - Advanced Infrastructure Auto-Provisioning
 Sophisticated infrastructure auto-provisioning system with intelligent resource optimization, cost management, and dynamic scalability.
 ## Usage
