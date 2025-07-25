@@ -407,7 +407,7 @@ Based on cutting-edge multi-agent systems research:
 
 - Works with `/agent-swarm` for swarm-orchestration hybrid systems
 - Integrates with `/prompt-optimization` for coordinated prompt improvement
-- Connects to `/quality-review` for distributed quality assurance
+- Connects to `/quality review` for distributed quality assurance
 - Supports `/research-advanced` for collaborative research coordination
 
 ## Advanced Configuration Options

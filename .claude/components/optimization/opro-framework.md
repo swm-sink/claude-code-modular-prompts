@@ -313,7 +313,7 @@ Based on Google DeepMind's OPRO research:
 
 - Combines with `/prompt-textgrad` for hybrid text-based optimization
 - Works with `/prompt-dspy` for declarative prompt optimization
-- Integrates with `/quality-review` for multi-metric evaluation
+- Integrates with `/quality review` for multi-metric evaluation
 - Supports `/agent-swarm` for distributed prompt optimization
 
 ## Advanced Configuration

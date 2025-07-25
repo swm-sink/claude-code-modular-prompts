@@ -138,8 +138,8 @@ Agent orchestration involves coordinating multiple specialized agents to accompl
 **Example Commands**:
 ```bash
 /pipeline Code Analysis → Security Scan → Test Generation → Documentation → Deployment
-/pipeline-create ci/cd --config "jenkinsfile"
-/pipeline-run "deployment-pipeline" --monitor
+/pipeline create ci/cd --config "jenkinsfile"
+/pipeline run "deployment-pipeline" --monitor
 ```
 
 ### 4. Map-Reduce Pattern
@@ -543,7 +543,7 @@ All orchestration patterns integrate seamlessly with Claude Code's command syste
 
 ### Command Integration
 - Use `/swarm`, `/hierarchical`, `/pipeline`, `/map-reduce`, `/dag-orchestrate` for pattern execution
-- Leverage `/pipeline-create` and `/pipeline-run` for pipeline management
+- Leverage `/pipeline create` and `/pipeline run` for pipeline management
 - Combine with other Claude Code commands for comprehensive workflows
 
 ### Component System

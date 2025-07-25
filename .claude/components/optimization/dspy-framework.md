@@ -336,7 +336,7 @@ Based on Stanford's DSPy framework and related research:
 
 - Combines with `/prompt-textgrad` for hybrid optimization approaches
 - Works with `/agent-swarm` for distributed pipeline optimization
-- Integrates with `/quality-review` for performance validation
+- Integrates with `/quality review` for performance validation
 - Supports `/research-advanced` for knowledge synthesis pipelines
 
 ## Advanced Configuration

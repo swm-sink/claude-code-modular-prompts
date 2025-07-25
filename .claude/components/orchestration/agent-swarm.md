@@ -252,7 +252,7 @@ Based on cutting-edge research in:
 
 - Works with `/prompt-optimization` for swarm-based prompt evolution
 - Integrates with `/plan-hierarchical` for multi-level coordination
-- Connects to `/quality-review` for collective validation
+- Connects to `/quality review` for collective validation
 - Supports `/research-advanced` for distributed knowledge discovery
 
 ---

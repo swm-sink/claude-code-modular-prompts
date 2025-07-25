@@ -317,7 +317,7 @@ Based on Stanford's TextGrad research and related work:
 ## Integration Points
 
 - Combines with `/agent-swarm` for distributed prompt optimization
-- Works with `/quality-review` for validation and assessment
+- Works with `/quality review` for validation and assessment
 - Integrates with `/prompt-dspy` for declarative optimization comparison
 - Supports `/meta-improve` for framework enhancement
 
