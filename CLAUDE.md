@@ -36,8 +36,16 @@ Production Claude Code library with 75 slash commands and comprehensive agent or
 | Max dir depth | 4 | 3 | ❌ VIOLATION - 1 level over |
 
 ## Context Engineering
+
+### ⚠️ MANDATORY CONTEXT LOADING
+**CRITICAL**: The following context file MUST be loaded for all Claude Code sessions:
+- **Git History Anti-Patterns**: `.claude/context/git-history-antipatterns.md` 
+  - Documents 10 severe LLM anti-patterns from 500+ commits
+  - REQUIRED to prevent: theatrical commits, fake metrics, reorganization addiction
+  - Load this FIRST before any development work
+
+### Additional Context Files
 - Principles: `.claude/context/principles.md`
 - Anti-patterns: `.claude/context/llm-antipatterns.md`
-- Git History Lessons: `.claude/context/git-history-antipatterns.md`
 - Development: `.claude/context/development.md`
 - Commands: `.claude/context/commands.md`
