@@ -1,17 +1,17 @@
 # Claude Code Modular Prompts
 
-50 curated commands for Claude Code, with 90% test coverage.
+Production Claude Code library with 75 slash commands and comprehensive agent orchestration.
 
 ## Current Structure
 ```
 /
 ├── .claude/
-│   ├── commands/     # 63 curated commands
-│   ├── components/   # Reusable prompt components
+│   ├── commands/     # 75 commands (target: 50)
+│   ├── components/   # 85 reusable prompt components
 │   ├── context/      # Engineering guides & anti-patterns
 │   └── templates/    # Command templates
-├── .main.archive/    # ARCHIVED - Original tallinn content
-└── tests/            # Target: 90% coverage (currently: 0%)
+├── .main.archive/    # ARCHIVED - Original tallinn content (332 files)
+└── tests/            # MISSING - Target: 90% coverage (currently: 0%)
 ```
 
 ## Immutable Rules
@@ -30,10 +30,10 @@
 ## Status
 | Metric | Current | Target | Progress |
 |--------|---------|--------|----------|
-| MD files | 169 | <50 | 🔄 50% reduction |
-| Commands | 63 | 50 | ✅ Near target |
-| Test coverage | 0% | 90% | 🔄 Next phase |
-| Max dir depth | 3 | 3 | ✅ Achieved |
+| MD files | 178 active | <50 | ❌ Need 128+ reduction |
+| Commands | 75 | 50 | ❌ Need 25 reduction |
+| Test coverage | 0% | 90% | ❌ Tests missing |
+| Max dir depth | 10 | 3 | ❌ VIOLATION - 7 levels over |
 
 ## Context Engineering
 - Principles: `.claude/context/principles.md`
