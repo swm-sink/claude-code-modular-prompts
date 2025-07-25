@@ -68,8 +68,8 @@ Implementation Order:
 Migration Priority Matrix:
 ├── HIGH: Core commands (auto, query, research, task)
 ├── HIGH: Security commands (secure-audit, secure-scan)
-├── HIGH: Testing commands (test-unit, test-coverage)
-├── MEDIUM: Development commands (debug, dev-test, feature)
+├── HIGH: Testing commands (/test unified, test-e2e)
+├── MEDIUM: Development commands (debug, feature, refactor)
 └── LOW: Utility/workflow commands
 
 Process: Write Test → Migrate Command → Validate → Security Review

@@ -2,8 +2,39 @@
 description: Advanced test coverage analysis with intelligent gap detection, quality metrics, and comprehensive coverage optimization
 argument-hint: "[coverage_scope] [analysis_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/test"
+migration_path: "/test coverage or /test --coverage"
+removal_version: "2.0.0"
 ---
 # /test coverage - Advanced Test Coverage Analysis
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated and will be removed in version 2.0.0.**
+
+- **Deprecated Date**: 2025-07-25
+- **Migration Path**: Use `/test coverage` or `/test --coverage` instead
+- **Reason**: Command functionality has been consolidated into the unified `/test` command
+- **Timeline**: This command will continue to work until version 2.0.0
+
+### Migration Examples:
+```bash
+# Old usage:
+/test coverage analyze
+/test coverage --gaps
+/test coverage --quality
+
+# New usage:
+/test coverage
+/test --coverage
+/test coverage --gaps
+/test coverage --quality
+```
+
+---
+
 Sophisticated test coverage analysis system with intelligent gap detection, quality metrics, and comprehensive coverage optimization.
 ## Usage
 ```bash

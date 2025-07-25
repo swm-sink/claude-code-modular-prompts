@@ -2,8 +2,38 @@
 description: Intelligent test reporting with automated data aggregation, comprehensive visualization, and actionable insights
 argument-hint: "[report_type] [data_source]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/test"
+migration_path: "/test report --format [type]"
+removal_version: "2.0.0"
 ---
 # /test report - Intelligent Test Reporting
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated and will be removed in version 2.0.0.**
+
+- **Deprecated Date**: 2025-07-25
+- **Migration Path**: Use `/test report --format [type]` instead
+- **Reason**: Command functionality has been consolidated into the unified `/test` command
+- **Timeline**: This command will continue to work until version 2.0.0
+
+### Migration Examples:
+```bash
+# Old usage:
+/test report "summary" --source "junit.xml"
+/test report --detailed --source "coverage.json"
+/test report --historical "last_7_days"
+
+# New usage:
+/test report --format summary --source "junit.xml"
+/test report --format detailed --source "coverage.json"
+/test report --format historical --period "last_7_days"
+```
+
+---
+
 Advanced test reporting system with automated data aggregation from various testing tools, comprehensive visualizations, and actionable insights to improve quality.
 ## Usage
 ```bash

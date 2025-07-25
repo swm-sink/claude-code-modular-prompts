@@ -2,7 +2,24 @@
 description: Intelligent unit testing with automated test generation, comprehensive coverage analysis, and detailed reporting
 argument-hint: "[file_path] [coverage_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecated_date: 2025-07-25
+removal_date: 2025-08-25
+migration_path: /test
 ---
+# DEPRECATED: This command has been consolidated
+
+This command has been deprecated and will be removed on 2025-08-25.
+
+**Migration Path**: Use `/test` with the following options:
+- For unit testing: `/test unit [file_path]`
+- With coverage: `/test unit --coverage high`
+- For test generation: `/test unit --generate [file_path]`
+
+**Reason**: Consolidating testing commands to reduce complexity and improve user experience.
+
+---
+
 # /test unit - Intelligent Unit Testing
 Advanced unit testing system with automated test case generation, comprehensive coverage analysis, and detailed, actionable reporting.
 ## Usage

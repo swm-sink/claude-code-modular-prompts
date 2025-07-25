@@ -2,8 +2,42 @@
 description: Advanced development testing with comprehensive coverage, intelligent test generation, and automated quality validation
 argument-hint: "[test_scope] [coverage_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/test"
+migration_path: "/test with various options (--pattern, --watch, etc.)"
+removal_version: "2.0.0"
 ---
 # /dev test - Advanced Development Testing
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated and will be removed in version 2.0.0.**
+
+- **Deprecated Date**: 2025-07-25
+- **Migration Path**: Use `/test` with various options (--pattern, --watch, etc.) instead
+- **Reason**: Command functionality has been consolidated into the unified `/test` command
+- **Timeline**: This command will continue to work until version 2.0.0
+
+### Migration Examples:
+```bash
+# Old usage:
+/dev test comprehensive
+/dev test --coverage
+/dev test --generate
+/dev test --parallel
+/dev test "user-authentication"
+
+# New usage:
+/test --comprehensive
+/test --coverage
+/test --generate
+/test --parallel
+/test --pattern "user-authentication"
+```
+
+---
+
 Sophisticated development testing system with comprehensive coverage, intelligent test generation, and automated quality validation.
 ## Usage
 ```bash

@@ -31,7 +31,7 @@ This repository contains high-quality, tested commands for Claude Code that foll
 - **Core** (7): Essential commands like `/task`, `/query`, `/auto`
 - **Development** (7): `/debug`, `/refactor`, `/build`, etc.
 - **Security** (5): `/secure-audit`, `/secure-scan`, etc.
-- **Testing** (6): `/test-unit`, `/test-integration`, etc.
+- **Testing** (2): `/test` (unified testing), `/test-e2e` (browser automation)
 - **Analysis** (10): `/analyze-code`, `/analyze-patterns`, etc.
 - **Database** (4): `/db-backup`, `/db-migrate`, etc.
 - **Deployment** (6): `/deploy`, `/ci-setup`, etc.

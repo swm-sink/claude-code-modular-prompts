@@ -2,7 +2,24 @@
 description: Intelligent integration testing with automated environment setup, service dependency management, and comprehensive validation
 argument-hint: "[test_suite] [environment_config]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecated_date: 2025-07-25
+removal_date: 2025-08-25
+migration_path: /test
 ---
+# DEPRECATED: This command has been consolidated
+
+This command has been deprecated and will be removed on 2025-08-25.
+
+**Migration Path**: Use `/test` with the following options:
+- For integration testing: `/test integration [test_suite] --env [config]`
+- With database setup: `/test integration --setup-db`
+- For all integration tests: `/test integration --all`
+
+**Reason**: Consolidating testing commands to reduce complexity and improve user experience.
+
+---
+
 # /test integration - Intelligent Integration Testing
 Advanced integration testing system with automated environment setup, service dependency management, and comprehensive validation of interactions between components.
 ## Usage
