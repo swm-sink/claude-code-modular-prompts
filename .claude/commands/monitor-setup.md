@@ -2,8 +2,25 @@
 description: Advanced monitoring setup with intelligent alerting, comprehensive dashboards, and predictive analytics
 argument-hint: "[monitoring_scope] [analytics_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation:
+  reason: "Duplicate functionality - consolidated in main /monitor command"
+  replacement: "/monitor setup"
+  deadline: "2025-08-25"
+  status: "deprecated"
 ---
 # /monitor setup - Advanced Monitoring Setup
+
+⚠️ **DEPRECATED COMMAND** ⚠️
+
+This command is deprecated and will be removed on **2025-08-25**.
+
+**Reason**: Duplicate functionality - consolidated in main /monitor command  
+**Replacement**: Use `/monitor setup` instead  
+**Migration**: This functionality is now available through the main `/monitor` command
+
+---
+
 Sophisticated monitoring system with intelligent alerting, comprehensive dashboards, real-time analytics, and predictive insights.
 ## Usage
 ```bash

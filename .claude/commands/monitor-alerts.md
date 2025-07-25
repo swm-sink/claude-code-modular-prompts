@@ -2,8 +2,25 @@
 description: Intelligent alert monitoring with automated correlation, root cause analysis, and comprehensive incident management
 argument-hint: "[alert_source] [analysis_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation:
+  reason: "Duplicate functionality - consolidated in main /monitor command"
+  replacement: "/monitor alerts"
+  deadline: "2025-08-25"
+  status: "deprecated"
 ---
 # /monitor alerts - Intelligent Alert Monitoring
+
+⚠️ **DEPRECATED COMMAND** ⚠️
+
+This command is deprecated and will be removed on **2025-08-25**.
+
+**Reason**: Duplicate functionality - consolidated in main /monitor command  
+**Replacement**: Use `/monitor alerts` instead  
+**Migration**: This functionality is now available through the main `/monitor` command
+
+---
+
 Advanced alert monitoring system with automated correlation, intelligent root cause analysis, and comprehensive incident management.
 ## Usage
 ```bash

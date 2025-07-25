@@ -2,8 +2,25 @@
 description: Intelligent monitoring dashboards with automated visualization, customizable widgets, and comprehensive data integration
 argument-hint: "[dashboard_type] [data_source]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation:
+  reason: "Duplicate functionality - consolidated in main /monitor command"
+  replacement: "/monitor dashboard"
+  deadline: "2025-08-25"
+  status: "deprecated"
 ---
 # /monitor dashboard - Intelligent Monitoring Dashboards
+
+⚠️ **DEPRECATED COMMAND** ⚠️
+
+This command is deprecated and will be removed on **2025-08-25**.
+
+**Reason**: Duplicate functionality - consolidated in main /monitor command  
+**Replacement**: Use `/monitor dashboard` instead  
+**Migration**: This functionality is now available through the main `/monitor` command
+
+---
+
 Advanced monitoring dashboard system with automated visualization, highly customizable widgets, and comprehensive integration with various data sources.
 ## Usage
 ```bash
