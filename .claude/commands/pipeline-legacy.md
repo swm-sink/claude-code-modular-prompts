@@ -1,13 +1,41 @@
 ---
-name: /pipeline
-description: Execute sequential processing pipeline with specialized agents at each stage
-usage: /pipeline [multi-stage workflow description]
+name: /pipeline-legacy
+description: [DEPRECATED] Legacy sequential processing pipeline - use /pipeline orchestrate instead
+usage: /pipeline-legacy [multi-stage workflow description]
 tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob
 test_coverage: 0%
+# DEPRECATION METADATA
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/pipeline orchestrate"
+reason: "Superseded by unified /pipeline command with comprehensive mode support"
+migration_deadline: "2025-08-25"
 ---
 <command_file>
+
+# ⚠️ DEPRECATED: /pipeline-legacy
+
+**This command is deprecated and will be removed on 2025-08-25.**
+
+**Please use `/pipeline orchestrate` instead:**
+```
+# Old command:
+/pipeline-legacy Code Analysis → Security Scan → Test Generation
+
+# New command:
+/pipeline orchestrate Code Analysis → Security Scan → Test Generation
+```
+
+The new unified `/pipeline` command provides:
+- ✅ All legacy pipeline functionality in orchestrate mode
+- ✅ Additional modes (create, run, build, deploy, setup, rollback)
+- ✅ Better error handling and monitoring
+- ✅ Consistent interface across all pipeline operations
+
+---
+
 <purpose>
-Orchestrate a linear flow of tasks through specialized agent stages, with each stage processing and transforming data for the next.
+[LEGACY] Orchestrate a linear flow of tasks through specialized agent stages, with each stage processing and transforming data for the next.
 </purpose>
 <arguments>
 - stages: Description of pipeline stages and their purposes
