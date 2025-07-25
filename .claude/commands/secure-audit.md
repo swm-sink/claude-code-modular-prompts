@@ -2,8 +2,23 @@
 description: Advanced security audit with comprehensive vulnerability assessment, compliance validation, and threat modeling
 argument-hint: "[audit_scope] [compliance_framework]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation-date: 2025-07-25
+removal-date: 2025-08-25
+replacement: "/secure-assess audit"
 ---
 # /secure audit - Advanced Security Audit
+
+⚠️ **DEPRECATED COMMAND** ⚠️
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/secure-assess audit`
+
+This command has been consolidated into the new `/secure-assess` command with `audit` mode for better organization and consistency.
+
+---
+
 Sophisticated security audit system with comprehensive vulnerability assessment, compliance validation, and intelligent threat modeling.
 ## Usage
 ```bash

@@ -2,8 +2,23 @@
 description: Automated security issue remediation with validation and rollback capabilities
 argument-hint: "[issue_type] [fix_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation-date: 2025-07-25
+removal-date: 2025-08-25
+replacement: "/secure-manage fix"
 ---
 # /secure fix - Automated Security Remediation
+
+⚠️ **DEPRECATED COMMAND** ⚠️
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/secure-manage fix`
+
+This command has been consolidated into the new `/secure-manage` command with `fix` mode for better organization and consistency.
+
+---
+
 Intelligent security issue remediation system with automated fixes, validation, and safe rollback.
 ## Usage
 ```bash

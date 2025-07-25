@@ -2,8 +2,23 @@
 description: Automated security scanning with vulnerability detection and compliance reporting
 argument-hint: "[scan_type] [output_format]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation-date: 2025-07-25
+removal-date: 2025-08-25
+replacement: "/secure-assess scan"
 ---
 # /secure scan - Automated Security Scanner
+
+⚠️ **DEPRECATED COMMAND** ⚠️
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/secure-assess scan`
+
+This command has been consolidated into the new `/secure-assess` command with `scan` mode for better organization and consistency.
+
+---
+
 High-performance security scanner with multiple detection engines and comprehensive reporting.
 ## Usage
 ```bash

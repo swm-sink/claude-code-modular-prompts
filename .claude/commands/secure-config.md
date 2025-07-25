@@ -2,8 +2,23 @@
 description: Security configuration validation and hardening recommendations
 argument-hint: "[config_type] [environment]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation-date: 2025-07-25
+removal-date: 2025-08-25
+replacement: "/secure-manage config"
 ---
 # /secure config - Security Configuration Validator
+
+⚠️ **DEPRECATED COMMAND** ⚠️
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/secure-manage config`
+
+This command has been consolidated into the new `/secure-manage` command with `config` mode for better organization and consistency.
+
+---
+
 Advanced configuration security validator with environment-specific hardening and compliance checking.
 ## Usage
 ```bash

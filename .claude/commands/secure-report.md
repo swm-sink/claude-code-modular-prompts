@@ -2,8 +2,23 @@
 description: Comprehensive security reporting with metrics, compliance status, and remediation tracking
 argument-hint: "[report_type] [format]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation-date: 2025-07-25
+removal-date: 2025-08-25
+replacement: "/secure-manage report"
 ---
 # /secure report - Security Reporting System
+
+⚠️ **DEPRECATED COMMAND** ⚠️
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/secure-manage report`
+
+This command has been consolidated into the new `/secure-manage` command with `report` mode for better organization and consistency.
+
+---
+
 Advanced security reporting with comprehensive metrics, compliance tracking, and executive summaries.
 ## Usage
 ```bash

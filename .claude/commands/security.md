@@ -2,8 +2,23 @@
 description: Advanced security analysis with threat detection, vulnerability assessment, and automated compliance checking
 argument-hint: "[security_scope] [analysis_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation-date: 2025-07-25
+removal-date: 2025-08-25
+replacement: "/secure-assess full"
 ---
 # /analyze security - Advanced Security Analysis
+
+⚠️ **DEPRECATED COMMAND** ⚠️
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/secure-assess full`
+
+This command has been consolidated into the new `/secure-assess` command with `full` mode for better organization and consistency.
+
+---
+
 Comprehensive security analysis system with intelligent threat detection, vulnerability assessment, and automated compliance checking.
 ## Usage
 ```bash
