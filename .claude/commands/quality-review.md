@@ -2,8 +2,52 @@
 description: Comprehensive quality review with automated code review, best practices validation, and improvement recommendations
 argument-hint: "[review_scope] [quality_standard]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+# DEPRECATION METADATA
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/quality review"
+reason: "Consolidated into unified /quality command for better UX and maintainability"
+migration_deadline: "2025-08-25"
 ---
-# /quality review - Quality Review Framework
+# ⚠️ DEPRECATED: /quality-review
+
+**This command is deprecated and will be removed on 2025-08-25.**
+
+## Migration Path
+This functionality has been consolidated into the unified `/quality` command:
+
+### Old Usage → New Usage
+```bash
+# OLD (deprecated)
+/quality-review code                 # Review code quality
+/quality-review architecture         # Review architectural quality 
+/quality-review security             # Security-focused quality review
+/quality-review performance          # Performance quality review
+
+# NEW (recommended)
+/quality review "src/"               # Comprehensive code review
+/quality review --scope security     # Security-focused review
+/quality review --scope performance  # Performance-focused review
+/quality review --depth deep         # Deep architectural analysis
+```
+
+### Migration Benefits
+- **Unified Interface**: Single command for all quality operations
+- **Enhanced Options**: More granular control with --scope, --depth, --format flags
+- **Better Integration**: Seamless workflow with metrics, reports, and suggestions
+- **Consistent UX**: Standardized argument patterns across all quality functions
+
+### Quick Migration Guide
+1. Replace `/quality-review` calls with `/quality review`
+2. Add `--scope` flag for focused analysis areas
+3. Use `--depth deep` for comprehensive architectural review
+4. Combine with other modes: `/quality all` for complete analysis
+
+For detailed usage examples, see `/quality --help` or the [Quality Command Documentation](.claude/commands/quality/quality.md).
+
+---
+
+# /quality review - Quality Review Framework (LEGACY)
 Advanced quality review system with automated code review, best practices validation, and comprehensive improvement recommendations.
 ## Usage
 ```bash

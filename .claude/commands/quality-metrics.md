@@ -2,8 +2,62 @@
 description: Quality metrics collection with comprehensive scoring, trend analysis, and benchmark comparison
 argument-hint: "[metrics_scope] [time_period]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+# DEPRECATION METADATA
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/quality metrics"
+reason: "Consolidated into unified /quality command for better UX and maintainability"
+migration_deadline: "2025-08-25"
 ---
-# /quality metrics - Quality Metrics Framework
+# ⚠️ DEPRECATED: /quality-metrics
+
+**This command is deprecated and will be removed on 2025-08-25.**
+
+## Migration Path
+This functionality has been consolidated into the unified `/quality` command:
+
+### Old Usage → New Usage
+```bash
+# OLD (deprecated)
+/quality-metrics overall             # Overall quality score
+/quality-metrics trends              # Quality trend analysis
+/quality-metrics benchmarks          # Compare against benchmarks
+/quality-metrics dashboard           # Generate quality dashboard
+
+# NEW (recommended)
+/quality metrics                     # Calculate quality metrics
+/quality metrics --trend             # Show metric trends over time
+/quality metrics --benchmark         # Compare against industry standards
+/quality report --dashboard          # Interactive quality dashboard
+```
+
+### Migration Benefits
+- **Enhanced Analytics**: More sophisticated metric calculations
+- **Trend Analysis**: Built-in historical trend tracking
+- **Benchmark Comparison**: Industry standard comparisons
+- **Visual Dashboards**: Interactive charts and graphs
+- **Export Options**: JSON, HTML, PDF report formats
+
+### Advanced Features in New Command
+```bash
+# Advanced metrics with quality scoring (0-10)
+/quality metrics --threshold 8.0     # Enforce quality threshold
+/quality metrics --trend --format json  # Export trend data
+/quality all --threshold 7.5         # Full analysis with enforcement
+```
+
+### Quick Migration Guide
+1. Replace `/quality-metrics` calls with `/quality metrics`
+2. Add `--trend` flag for historical analysis
+3. Add `--benchmark` flag for industry comparisons
+4. Use `/quality report --dashboard` for visual dashboards
+5. Combine with thresholds: `--threshold X.X` for quality gates
+
+For detailed usage examples, see `/quality --help` or the [Quality Command Documentation](.claude/commands/quality/quality.md).
+
+---
+
+# /quality metrics - Quality Metrics Framework (LEGACY)
 Advanced quality metrics system with comprehensive scoring, trend analysis, and benchmark comparison.
 ## Usage
 ```bash
