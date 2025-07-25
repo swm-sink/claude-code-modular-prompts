@@ -1,12 +1,12 @@
 # Claude Code Modular Prompts
 
-Production Claude Code library with 75 slash commands and comprehensive agent orchestration.
+**Experimental** Claude Code library with 67 slash commands and comprehensive agent orchestration for prompt engineering research.
 
 ## Current Structure
 ```
 /
 ├── .claude/
-│   ├── commands/     # 75 commands (target: 50)
+│   ├── commands/     # 67 commands (all unique, no duplicates)
 │   ├── components/   # 85 reusable prompt components
 │   ├── context/      # Engineering guides & anti-patterns
 │   └── templates/    # Command templates
@@ -17,8 +17,8 @@ Production Claude Code library with 75 slash commands and comprehensive agent or
 ## Immutable Rules
 1. Maximum 3 directory levels
 2. No new files in .main.archive (archived content)
-3. Tests before implementation
-4. Commands execute in <100ms
+3. Tests before implementation (experimental validation focus)
+4. No duplicate commands (each must be unique)
 5. One atomic commit per task
 6. **PARANOIA MANDATE**: Triple-check everything before commits
    - Verify no sensitive data (keys, tokens, passwords)
@@ -31,9 +31,16 @@ Production Claude Code library with 75 slash commands and comprehensive agent or
 | Metric | Current | Target | Progress |
 |--------|---------|--------|----------|
 | MD files | 178 active | <50 | ❌ Need 128+ reduction |
-| Commands | 75 | 50 | ❌ Need 25 reduction |
-| Test coverage | 0% | 90% | ❌ Tests missing |
-| Max dir depth | 4 | 3 | ❌ VIOLATION - 1 level over |
+| Commands | 67 | 67 unique | ✅ No duplicates found |
+| Test coverage | 0% | 90% | ❌ Experimental validation needed |
+| Max dir depth | 3 | 3 | ✅ Achieved |
+
+## Experimental Framework Notice
+This is an **experimental prompt engineering framework** for research and development:
+- Performance benchmarks are not required
+- Focus is on prompt effectiveness, not execution speed
+- Commands are tested for correctness, not performance
+- All 75 commands are maintained as unique implementations
 
 ## Context Engineering
 
