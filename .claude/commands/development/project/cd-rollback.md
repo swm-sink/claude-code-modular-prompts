@@ -1,16 +1,38 @@
 ---
-description: Advanced CD rollback with intelligent recovery, automated health checks, and zero-downtime restoration
+description: [DEPRECATED] Advanced CD rollback with intelligent recovery, automated health checks, and zero-downtime restoration - use /project rollback instead
 argument-hint: "[rollback_strategy] [recovery_scope]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+test_coverage: 0%
+# DEPRECATION METADATA
 deprecated: true
-migration_notice: "This command has been consolidated into `/pipeline rollback`. Use `/pipeline rollback [version] [options]` instead."
+deprecated_date: "2025-07-25"
+replacement_command: "/project rollback"
+reason: "Consolidated into unified /project command for integrated rollback operations and project management"
+removal_date: "2025-08-25"
 ---
-# /deploy cd-rollback - Advanced CD Rollback [DEPRECATED]
+# ⚠️ DEPRECATED: /cd-rollback
 
-> **⚠️ DEPRECATION NOTICE**: This command has been consolidated into the unified `/pipeline` command.  
-> **New Usage**: `/pipeline rollback [version] [options]`  
-> **Migration**: Replace `/deploy cd-rollback` with `/pipeline rollback`  
-> **Benefits**: Access to full pipeline orchestration capabilities with rollback functionality
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Please use `/project rollback` instead:**
+```
+# Old command:
+/cd rollback "v1.2.3"
+
+# New command:
+/project rollback --version "v1.2.3"
+```
+
+The new unified `/project` command provides:
+- ✅ All legacy rollback functionality in rollback mode
+- ✅ Enhanced integration with deployment workflows and progress tracking
+- ✅ Improved version management and risk assessment capabilities
+- ✅ Better data integrity checks and recovery procedures
+- ✅ Unified incident reporting and post-rollback validation
+
+---
+
+# /deploy cd-rollback - Advanced CD Rollback [DEPRECATED]
 
 Sophisticated CD rollback system with intelligent recovery, automated health checks, and zero-downtime restoration capabilities.
 ## Migration to `/pipeline rollback`

@@ -1,21 +1,38 @@
 ---
-description: Advanced CI execution with intelligent pipeline optimization, parallel processing, and automated quality gates
+description: [DEPRECATED] Advanced CI execution with intelligent pipeline optimization, parallel processing, and automated quality gates - use /project run instead
 argument-hint: "[execution_mode] [optimization_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+test_coverage: 0%
+# DEPRECATION METADATA
 deprecated: true
-deprecation_date: "2025-07-25"
+deprecated_date: "2025-07-25"
+replacement_command: "/project run"
+reason: "Consolidated into unified /project command for integrated CI execution and project management"
 removal_date: "2025-08-25"
-replacement: "/pipeline run"
 ---
-# /deploy ci-run - Advanced CI Execution
-
-## ⚠️ DEPRECATION NOTICE
+# ⚠️ DEPRECATED: /ci-run
 
 **This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
 
-**Use instead:** `/pipeline run`
+**Please use `/project run` instead:**
+```
+# Old command:
+/ci run "main-build"
 
-This standalone command has been consolidated into the unified `/pipeline` command. The new command provides the same functionality with improved consistency and maintainability.
+# New command:
+/project run ci "main-build"
+```
+
+The new unified `/project` command provides:
+- ✅ All legacy CI execution functionality in run mode
+- ✅ Enhanced integration with workflow orchestration and progress tracking
+- ✅ Improved parallel processing and quality gate capabilities
+- ✅ Better pipeline optimization and failure handling
+- ✅ Unified monitoring and reporting across all project operations
+
+---
+
+# /deploy ci-run - Advanced CI Execution
 
 ---
 
