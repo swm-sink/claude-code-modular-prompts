@@ -2,8 +2,30 @@
 description: Advanced database restoration with intelligent recovery, point-in-time restoration, and comprehensive data integrity validation
 argument-hint: "[restore_strategy] [recovery_point]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation_date: "2025-07-25"
+deprecation_deadline: "2025-08-25"
+deprecation_replacement: "/db-admin restore"
+deprecation_reason: "Consolidated into unified /db-admin command for better maintenance and consistency"
 ---
 # /db restore - Advanced Database Restoration
+
+⚠️ **DEPRECATION NOTICE** ⚠️
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Migration:** Use `/db-admin restore` instead.
+
+**Examples:**
+- `/db restore backup_file` → `/db-admin restore backup_file`
+- `/db restore --point-in-time` → `/db-admin restore --point-in-time`
+- `/db restore --incremental` → `/db-admin restore --incremental`
+- `/db restore --validate` → `/db-admin restore --validate`
+
+The new `/db-admin` command provides all the same functionality with improved consistency and maintainability.
+
+---
+
 Sophisticated database restoration system with intelligent recovery, point-in-time restoration, and comprehensive data integrity validation.
 ## Usage
 ```bash

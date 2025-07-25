@@ -2,8 +2,30 @@
 description: Automated database backup with integrity validation, compression, and secure storage
 argument-hint: "[backup_type] [storage_location]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation_date: "2025-07-25"
+deprecation_deadline: "2025-08-25"
+deprecation_replacement: "/db-admin backup"
+deprecation_reason: "Consolidated into unified /db-admin command for better maintenance and consistency"
 ---
 # /db backup - Database Backup System
+
+⚠️ **DEPRECATION NOTICE** ⚠️
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Migration:** Use `/db-admin backup` instead.
+
+**Examples:**
+- `/db backup full` → `/db-admin backup full`
+- `/db backup incremental` → `/db-admin backup incremental`
+- `/db backup --compress` → `/db-admin backup --compress`
+- `/db backup --encrypt` → `/db-admin backup --encrypt`
+
+The new `/db-admin` command provides all the same functionality with improved consistency and maintainability.
+
+---
+
 Comprehensive database backup system with integrity validation, compression options, and secure storage capabilities.
 ## Usage
 ```bash

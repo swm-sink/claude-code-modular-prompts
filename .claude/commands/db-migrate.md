@@ -2,8 +2,30 @@
 description: Safe database migration with rollback capabilities, validation, and change tracking
 argument-hint: "[migration_direction] [target_version]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation_date: "2025-07-25"
+deprecation_deadline: "2025-08-25"
+deprecation_replacement: "/db-admin migrate"
+deprecation_reason: "Consolidated into unified /db-admin command for better maintenance and consistency"
 ---
 # /db migrate - Database Migration System
+
+⚠️ **DEPRECATION NOTICE** ⚠️
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Migration:** Use `/db-admin migrate` instead.
+
+**Examples:**
+- `/db migrate up` → `/db-admin migrate up`
+- `/db migrate down` → `/db-admin migrate down`
+- `/db migrate --target 1.2.3` → `/db-admin migrate --target 1.2.3`
+- `/db migrate --dry-run` → `/db-admin migrate --dry-run`
+
+The new `/db-admin` command provides all the same functionality with improved consistency and maintainability.
+
+---
+
 Advanced database migration system with safe execution, rollback capabilities, and comprehensive change tracking.
 ## Usage
 ```bash
