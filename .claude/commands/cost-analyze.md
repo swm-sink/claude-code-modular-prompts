@@ -1,8 +1,40 @@
 ---
-description: Intelligent cost analysis with automated resource tracking, comprehensive spending reports, and actionable optimization recommendations
+name: /cost-analyze
+description: [DEPRECATED] Intelligent cost analysis with automated resource tracking, comprehensive spending reports, and actionable optimization recommendations - use /analyze-system cost instead
 argument-hint: "[cloud_provider] [analysis_period]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+test_coverage: 0%
+# DEPRECATION METADATA
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/analyze-system cost"
+reason: "Superseded by unified /analyze-system command with comprehensive cost analysis"
+migration_deadline: "2025-08-25"
 ---
+<command_file>
+
+# ⚠️ DEPRECATED: /cost-analyze
+
+**This command is deprecated and will be removed on 2025-08-25.**
+
+**Please use `/analyze-system cost` instead:**
+```
+# Old command:
+/cost analyze aws --period "last_month"
+
+# New command:
+/analyze-system cost --provider=aws --period="last_month"
+```
+
+The new unified `/analyze-system` command provides:
+- ✅ All legacy cost analysis functionality in cost mode
+- ✅ Enhanced resource tracking with real-time monitoring
+- ✅ Multi-cloud cost analysis and comparison
+- ✅ Advanced optimization recommendations with ML insights
+- ✅ Better integration with performance and security analysis
+
+---
+
 # /cost analyze - Intelligent Cost Analysis
 Advanced cost analysis system with automated resource tracking, comprehensive spending reports, and actionable recommendations for optimization.
 ## Usage
@@ -74,4 +106,6 @@ You are an advanced cost analysis specialist. The user wants to analyze their cl
       <value>cost_optimization.recommendation_level</value>
     </uses_config_values>
   </dependencies>
+</command_file>
+
 </command_file>

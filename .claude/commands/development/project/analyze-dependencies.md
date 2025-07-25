@@ -1,8 +1,40 @@
 ---
-description: Advanced dependency analysis with intelligent mapping, vulnerability scanning, and optimization recommendations
+name: /analyze-dependencies
+description: [DEPRECATED] Advanced dependency analysis with intelligent mapping, vulnerability scanning, and optimization recommendations - use /analyze-system dependencies instead
 argument-hint: "[analysis_type] [scan_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+test_coverage: 0%
+# DEPRECATION METADATA
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/analyze-system dependencies"
+reason: "Superseded by unified /analyze-system command with comprehensive dependency analysis"
+migration_deadline: "2025-08-25"
 ---
+<command_file>
+
+# ⚠️ DEPRECATED: /analyze-dependencies
+
+**This command is deprecated and will be removed on 2025-08-25.**
+
+**Please use `/analyze-system dependencies` instead:**
+```
+# Old command:
+/analyze dependencies security
+
+# New command:
+/analyze-system dependencies --type=security
+```
+
+The new unified `/analyze-system` command provides:
+- ✅ All legacy dependency analysis functionality in dependencies mode
+- ✅ Enhanced vulnerability scanning with latest CVE databases
+- ✅ Intelligent dependency mapping with visualization
+- ✅ Advanced conflict resolution strategies
+- ✅ Better integration with security and performance analysis
+
+---
+
 # /analyze dependencies - Advanced Dependency Analysis
 Sophisticated dependency analysis system with intelligent mapping, vulnerability scanning, and comprehensive optimization recommendations.
 ## Usage
@@ -88,4 +120,6 @@ You are an advanced dependency analysis specialist. The user wants to perform co
       <value>analysis.vulnerability.sources</value>
     </uses_config_values>
   </dependencies>
+</command_file>
+
 </command_file>

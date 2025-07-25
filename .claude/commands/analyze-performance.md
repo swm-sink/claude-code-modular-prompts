@@ -1,8 +1,40 @@
 ---
-description: Performance analysis with bottleneck detection, optimization recommendations, and benchmarking
+name: /analyze-performance
+description: [DEPRECATED] Performance analysis with bottleneck detection, optimization recommendations, and benchmarking - use /analyze-system performance instead
 argument-hint: "[performance_scope] [analysis_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+test_coverage: 0%
+# DEPRECATION METADATA
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/analyze-system performance"
+reason: "Superseded by unified /analyze-system command with comprehensive performance analysis"
+migration_deadline: "2025-08-25"
 ---
+<command_file>
+
+# ⚠️ DEPRECATED: /analyze-performance
+
+**This command is deprecated and will be removed on 2025-08-25.**
+
+**Please use `/analyze-system performance` instead:**
+```
+# Old command:
+/analyze-performance cpu
+
+# New command:
+/analyze-system performance --focus=cpu
+```
+
+The new unified `/analyze-system` command provides:
+- ✅ All legacy performance analysis functionality in performance mode
+- ✅ Enhanced bottleneck detection with advanced algorithms
+- ✅ Integrated system-wide performance metrics
+- ✅ Comprehensive optimization recommendations
+- ✅ Better integration with other analysis tools
+
+---
+
 # /analyze performance - Performance Analysis Framework
 Advanced performance analysis system with bottleneck detection, optimization recommendations, and comprehensive benchmarking.
 ## Usage
@@ -81,4 +113,6 @@ Advanced performance analysis system with bottleneck detection, optimization rec
       <value>paths.source</value>
     </uses_config_values>
   </dependencies>
+</command_file>
+
 </command_file>
