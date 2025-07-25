@@ -3,11 +3,8 @@ description: Advanced development refactoring with intelligent code optimization
 argument-hint: "[refactor_scope] [optimization_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /dev refactor - Advanced Development Refactoring
-
 Sophisticated development refactoring system with intelligent code optimization, pattern recognition, and comprehensive architectural improvements.
-
 ## Usage
 ```bash
 /dev refactor architecture                   # Architectural refactoring
@@ -15,7 +12,6 @@ Sophisticated development refactoring system with intelligent code optimization,
 /dev refactor --patterns                     # Design pattern improvements
 /dev refactor --comprehensive                # Comprehensive code enhancement
 ```
-
 <command_file>
   <metadata>
     <name>/dev refactor</name>
@@ -26,7 +22,6 @@ Sophisticated development refactoring system with intelligent code optimization,
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="target" type="string" required="true">
       <description>The file or directory to analyze for refactoring opportunities.</description>
@@ -35,7 +30,6 @@ Sophisticated development refactoring system with intelligent code optimization,
       <description>The specific refactoring strategy to apply (e.g., 'extract-method', 'simplify-conditionals', 'remove-duplication').</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Automatically identify and suggest refactorings in a specific file.</description>
@@ -46,7 +40,6 @@ Sophisticated development refactoring system with intelligent code optimization,
       <usage>/dev refactor "src/core/main.py" strategy="extract-method"</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -54,16 +47,13 @@ Sophisticated development refactoring system with intelligent code optimization,
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
-      
       <!-- Command-specific components -->
       <include>components/context/find-relevant-code.md</include>
       <include>components/planning/create-step-by-step-plan.md</include>
       <include>components/actions/apply-code-changes.md</include>
       <include>components/quality/anti-pattern-detection.md</include>
       <include>components/testing/testing-framework.md</include>
-      
       You are a senior software engineer specializing in code quality. The user wants to refactor a specific part of the codebase.
-
       1.  **Analyze Code**:
           *   Analyze the provided code for "code smells" (e.g., duplication, long methods, high complexity) based on the chosen `strategy`.
       2.  **Ensure Test Coverage**:
@@ -76,7 +66,6 @@ Sophisticated development refactoring system with intelligent code optimization,
           *   After applying changes, instruct the user to run the full test suite to verify that behavior is preserved.
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <chain>
       <command>/test unit</command>

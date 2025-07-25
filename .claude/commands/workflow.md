@@ -3,11 +3,8 @@ description: Intelligent workflow management with automated task execution, dyna
 argument-hint: "[workflow_name] [action]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /workflow - Intelligent Workflow Management
-
 Advanced workflow management system with automated task execution, dynamic resource allocation, and comprehensive progress tracking.
-
 ## Usage
 ```bash
 /workflow start "My Development Workflow"   # Start a new workflow
@@ -15,7 +12,6 @@ Advanced workflow management system with automated task execution, dynamic resou
 /workflow --status "All Workflows"         # Get the status of all workflows
 /workflow --log "My CI/CD Workflow"        # View logs for a specific workflow
 ```
-
 <command_file>
   <metadata>
     <n>/workflow</n>
@@ -26,7 +22,6 @@ Advanced workflow management system with automated task execution, dynamic resou
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="action" type="string" required="true" default="start">
       <description>The action to perform on the workflow (e.g., start, pause, resume, stop, status, log)</description>
@@ -38,7 +33,6 @@ Advanced workflow management system with automated task execution, dynamic resou
       <description>Strategy for resource allocation (e.g., static, dynamic)</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Start a new development workflow</description>
@@ -49,31 +43,26 @@ Advanced workflow management system with automated task execution, dynamic resou
       <usage>/workflow --status "All running workflows"</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
 You are an advanced workflow management specialist. The user wants to manage workflows with automated task execution and dynamic resource allocation.
-
 **Workflow Management Process:**
 1. **Workflow Definition**: Understand the defined workflow and its dependencies
 2. **Task Execution**: Automate the execution of tasks within the workflow
 3. **Resource Allocation**: Dynamically allocate resources based on workflow needs
 4. **Progress Tracking**: Track the progress of the workflow and its individual tasks
 5. **Error Handling**: Implement robust error handling and recovery mechanisms
-
 **Implementation Strategy:**
 - Parse workflow definitions (e.g., DAGs, sequential steps) to understand task dependencies and execution order
 - Automate task execution, integrating with various tools and services as needed
 - Dynamically allocate and deallocate compute, memory, and storage resources based on real-time workflow demands
 - Implement comprehensive progress tracking and visualization, providing real-time updates to the user
 - Design robust error handling and retry mechanisms to ensure workflow resilience and completion
-
 <include component="components/orchestration/dag-orchestrator.md" />
 <include component="components/performance/auto-scaling.md" />
 <include component="components/interaction/progress-reporting.md" />
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <component>components/orchestration/dag-orchestrator.md</component>
@@ -86,11 +75,8 @@ You are an advanced workflow management specialist. The user wants to manage wor
     </uses_config_values>
   </dependencies>
 </command_file>
-
 ## Core Concepts
-
 This command provides a powerful orchestration engine that can execute different types of workflows.
-
 ```xml
 <workflow_concepts>
   <concept name="Chain">
@@ -111,11 +97,8 @@ This command provides a powerful orchestration engine that can execute different
   </concept>
 </workflow_concepts>
 ```
-
 ## Workflow Definition Syntax
-
 Workflows are defined using a simple YAML or XML format.
-
 ### Chain Workflow Example
 ```yaml
 type: chain
@@ -134,7 +117,6 @@ steps:
     params: "run all security tests"
     depends_on: [fix_issues]
 ```
-
 ### Swarm Workflow Example
 ```yaml
 type: swarm
@@ -151,21 +133,16 @@ agents:
     role: "Performance optimization specialist"
     tools: [/perf analyze, /perf optimize]
 ```
-
 ## Orchestration Logic
-
 When you execute a workflow, I will act as the orchestrator, following this process:
-
 ```xml
 <orchestration_logic>
   <step name="Parse Workflow">
     <description>Parse the workflow definition file (YAML or XML) to understand the steps, dependencies, and logic.</description>
   </step>
-  
   <step name="Build Execution Graph (DAG)">
     <description>Construct a Directed Acyclic Graph (DAG) of the workflow steps based on the `depends_on` attributes. This will determine the execution order and identify opportunities for parallel execution.</description>
   </step>
-  
   <step name="Execute Graph">
     <description>Execute the workflow by traversing the graph. I will execute all steps with no dependencies in parallel, and then move on to the next set of steps as their dependencies are met.</description>
     <tool_usage>
@@ -173,11 +150,9 @@ When you execute a workflow, I will act as the orchestrator, following this proc
       <description>Use parallel execution to run multiple commands at the same time.</description>
     </tool_usage>
   </step>
-  
   <step name="Handle Logic & State">
     <description>For `flow` workflows, I will evaluate the conditions at each decision point and take the appropriate path. For `swarm` workflows, I will coordinate the different agents and synthesize their results. I will also manage the state of the workflow and provide it as context to subsequent steps.</description>
   </step>
-  
   <step name="Monitor & Report">
     <description>Monitor the progress of the workflow, provide real-time updates, and generate a final report with the results of each step.</description>
   </step>
@@ -197,28 +172,22 @@ When you execute a workflow, I will act as the orchestrator, following this proc
   </step>
 </orchestration_logic>
 ```
-
 ## Monitoring & Analytics
-
 The `/workflow` command provides robust monitoring and analytics capabilities to give you real-time insights into your workflow execution.
-
 ### Real-time Metrics
 - **Progress Indicators**: Step completion status and overall workflow progress.
 - **Token Usage**: Track token consumption with real-time cost projections.
 - **Execution Time**: Monitor elapsed time and estimated completion.
 - **Resource Utilization**: Track API calls and memory usage.
 - **Performance Anomalies**: Detect deviations from baseline execution times.
-
 ### Alerting
 - **Failure Detection**: Immediate alerts on workflow failures or timeouts.
 - **Cost Thresholds**: Alerts when projected costs exceed predefined limits.
 - **Performance Degradation**: Notifications if execution time significantly increases.
 - **Resource Exhaustion**: Warnings for high resource usage.
-
 ### Reporting
 - **Comprehensive Output**: Detailed summary of workflow execution, including all metrics and any alerts.
 - **Historical Data**: Track trends over time for continuous optimization.
-
 ```xml
 <monitoring_capabilities>
   <metrics>
@@ -235,5 +204,4 @@ The `/workflow` command provides robust monitoring and analytics capabilities to
   </alerts>
 </monitoring_capabilities>
 ```
-
 This powerful, prompt-driven orchestration engine replaces the need for a complex, coded solution, making it a true "Claude Code Native" command. 

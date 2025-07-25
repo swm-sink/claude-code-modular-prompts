@@ -3,11 +3,8 @@ description: Intelligent monitoring dashboards with automated visualization, cus
 argument-hint: "[dashboard_type] [data_source]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /monitor dashboard - Intelligent Monitoring Dashboards
-
 Advanced monitoring dashboard system with automated visualization, highly customizable widgets, and comprehensive integration with various data sources.
-
 ## Usage
 ```bash
 /monitor dashboard create "My Dashboard"     # Create a new dashboard
@@ -15,7 +12,6 @@ Advanced monitoring dashboard system with automated visualization, highly custom
 /monitor dashboard --import "grafana"      # Import a dashboard from Grafana
 /monitor dashboard --share "team@example.com" # Share a dashboard with others
 ```
-
 <command_file>
   <metadata>
     <n>/monitor dashboard</n>
@@ -26,7 +22,6 @@ Advanced monitoring dashboard system with automated visualization, highly custom
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="action" type="string" required="true" default="create">
       <description>The action to perform on the dashboard (e.g., create, add-widget, import, share)</description>
@@ -38,7 +33,6 @@ Advanced monitoring dashboard system with automated visualization, highly custom
       <description>The data source for the dashboard or widget</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Create a new dashboard</description>
@@ -49,30 +43,25 @@ Advanced monitoring dashboard system with automated visualization, highly custom
       <usage>/monitor dashboard --add-widget "cpu_usage --dashboard My_Dashboard"</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
 You are an advanced monitoring dashboard specialist. The user wants to create, customize, and manage monitoring dashboards.
-
 **Dashboard Process:**
 1. **Requirement Analysis**: Understand the user's requirements for the dashboard
 2. **Data Source Integration**: Integrate with the necessary data sources (e.g., Prometheus, CloudWatch, Loki)
 3. **Widget Configuration**: Configure widgets with appropriate visualizations and queries
 4. **Dashboard Layout**: Arrange widgets in a clear, intuitive, and aesthetically pleasing layout
 5. **Sharing &amp; Collaboration**: Enable sharing and collaboration features for the dashboard
-
 **Implementation Strategy:**
 - Provide a user-friendly interface for creating and customizing dashboards
 - Integrate with a wide range of data sources to provide a unified view of the system
 - Offer a rich library of customizable widgets with various visualization options
 - Use a flexible grid-based layout system to allow users to arrange widgets as they see fit
 - Implement robust sharing and collaboration features with access control and versioning
-
 <include component="components/analytics/business-intelligence.md" />
 <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <component>components/analytics/business-intelligence.md</component>

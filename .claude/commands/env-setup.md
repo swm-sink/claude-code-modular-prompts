@@ -3,11 +3,8 @@ description: Intelligent environment setup with automated toolchain installation
 argument-hint: "[environment_type] [automation_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /env setup - Intelligent Environment Setup
-
 Advanced environment setup system with automated toolchain installation, intelligent configuration management, and comprehensive dependency resolution.
-
 ## Usage
 ```bash
 /env setup development                     # Development environment setup
@@ -15,7 +12,6 @@ Advanced environment setup system with automated toolchain installation, intelli
 /env setup --production                    # Production environment setup
 /env setup --comprehensive                 # Comprehensive environment management
 ```
-
 <command_file>
   <metadata>
     <n>/env setup</n>
@@ -26,7 +22,6 @@ Advanced environment setup system with automated toolchain installation, intelli
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="environment_type" type="string" required="false" default="development">
       <description>Type of environment to set up</description>
@@ -35,7 +30,6 @@ Advanced environment setup system with automated toolchain installation, intelli
       <description>Level of automation for the setup process</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Development environment setup</description>
@@ -46,31 +40,26 @@ Advanced environment setup system with automated toolchain installation, intelli
       <usage>/env setup --automated</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
 You are an advanced environment setup specialist. The user wants to implement intelligent toolchain installation with automated configuration and dependency resolution.
-
 **Setup Process:**
 1. **Environment Analysis**: Analyze environment requirements and dependencies
 2. **Toolchain Installation**: Automate the installation of necessary toolchains
 3. **Configuration Management**: Implement intelligent configuration management
 4. **Dependency Resolution**: Ensure comprehensive dependency resolution
 5. **Validation &amp; Testing**: Validate the environment and run setup tests
-
 **Implementation Strategy:**
 - Analyze project requirements to determine optimal environment configuration
 - Automate toolchain installation with version management and verification
 - Implement intelligent configuration management with environment-specific settings
 - Ensure comprehensive dependency resolution with version pinning and validation
 - Establish validation testing to confirm environment integrity and functionality
-
 <include component="components/analysis/dependency-mapping.md" />
 <include component="components/integration/cicd-integration.md" />
 <include component="components/testing/framework-validation.md" />
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <component>components/analysis/dependency-mapping.md</component>
@@ -83,11 +72,8 @@ You are an advanced environment setup specialist. The user wants to implement in
     </uses_config_values>
   </dependencies>
 </command_file>
-
 ## Workflow
-
 The `/env setup` command follows a systematic process to set up a development environment.
-
 ```xml
 <env_setup_workflow>
   <step name="Analyze Project Requirements">
@@ -97,7 +83,6 @@ The `/env setup` command follows a systematic process to set up a development en
       <description>Scan configuration and source files to identify requirements.</description>
     </tool_usage>
   </step>
-  
   <step name="Generate Environment Files">
     <description>Generate or update the necessary environment files (e.g., `.env`, `.env.example`, environment-specific configs) with the required variables.</description>
     <tool_usage>
@@ -105,17 +90,14 @@ The `/env setup` command follows a systematic process to set up a development en
       <description>Create or modify environment files.</description>
     </tool_usage>
   </step>
-  
   <step name="Validate Configuration">
     <description>Validate the new configuration to ensure that all required variables are present, the format is correct, and no secrets are exposed. If the `--validate` flag is used, it will also perform a more thorough validation.</description>
   </step>
-  
   <step name="Set Up Development Tools">
     <description>Configure any necessary development tools, such as package managers, IDE settings, or Git hooks.</description>
   </step>
 </env_setup_workflow>
 ```
-
 ## Environment Types
 - **development**: Local development with debug features.
 - **staging**: Pre-production testing environment.

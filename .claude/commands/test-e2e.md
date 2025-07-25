@@ -3,18 +3,14 @@ description: Intelligent end-to-end (E2E) testing with automated test script gen
 argument-hint: "[url] [test_scenario]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /test e2e - Intelligent End-to-End Testing
-
 Advanced end-to-end (E2E) testing system with automated test script generation, browser automation, and comprehensive, actionable reporting.
-
 ## Usage
 ```bash
 /test e2e "https://example.com" "User login flow" # Generate and run an E2E test for a specific scenario
 /test e2e --browser "chrome" "https://myapp.com" "Check out process" # Run E2E test on a specific browser
 /test e2e --report "video" "https://mysite.com" # Generate a video report of the E2E test
 ```
-
 <command_file>
   <metadata>
     <n>/test e2e</n>
@@ -25,7 +21,6 @@ Advanced end-to-end (E2E) testing system with automated test script generation, 
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="url" type="string" required="true">
       <description>The URL of the application to test</description>
@@ -37,7 +32,6 @@ Advanced end-to-end (E2E) testing system with automated test script generation, 
       <description>The browser to run the test on (e.g., chromium, firefox, webkit)</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Generate and run an E2E test for a user login flow</description>
@@ -48,7 +42,6 @@ Advanced end-to-end (E2E) testing system with automated test script generation, 
       <usage>/test e2e --browser "chrome" "https://my-store.com/checkout" "User adds an item to the cart and completes the checkout process"</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -59,28 +52,23 @@ Advanced end-to-end (E2E) testing system with automated test script generation, 
       <include>components/analysis/codebase-discovery.md</include>
       <include>components/analysis/dependency-mapping.md</include>
       <include>components/workflow/report-generation.md</include>
-
 You are an advanced end-to-end (E2E) testing specialist. The user wants to generate and run E2E tests for their web application.
-
 **E2E Testing Process:**
 1. **Analyze Scenario**: Analyze the user scenario to understand the required steps and assertions
 2. **Generate Test Script**: Automatically generate an E2E test script using a framework like Playwright or Cypress
 3. **Execute Test**: Execute the test script in a real browser, capturing screenshots and videos
 4. **Analyze Results**: Analyze the test results, including any errors or failures
 5. **Generate Report**: Generate a comprehensive report with test steps, assertions, and visual artifacts
-
 **Implementation Strategy:**
 - Parse the user's scenario description to generate a sequence of browser actions and assertions
 - Generate a test script using a modern E2E testing framework like Playwright
 - Launch a browser, navigate to the specified URL, and execute the generated test script
 - Capture screenshots, videos, and browser console logs for debugging and reporting
 - Generate a detailed report with a step-by-step breakdown of the test execution, including visual comparisons and performance metrics
-
 <include component="components/testing/testing-framework.md" />
 <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <!-- Standard DRY Components -->

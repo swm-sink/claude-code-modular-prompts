@@ -3,11 +3,8 @@ description: Advanced test coverage analysis with intelligent gap detection, qua
 argument-hint: "[coverage_scope] [analysis_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /test coverage - Advanced Test Coverage Analysis
-
 Sophisticated test coverage analysis system with intelligent gap detection, quality metrics, and comprehensive coverage optimization.
-
 ## Usage
 ```bash
 /test coverage analyze                       # Coverage analysis and reporting
@@ -15,7 +12,6 @@ Sophisticated test coverage analysis system with intelligent gap detection, qual
 /test coverage --quality                     # Quality-focused coverage analysis
 /test coverage --comprehensive               # Comprehensive coverage optimization
 ```
-
 <command_file>
   <metadata>
     <name>/test coverage</name>
@@ -26,13 +22,11 @@ Sophisticated test coverage analysis system with intelligent gap detection, qual
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="path" type="string" required="false" default="./src">
       <description>The source directory to analyze for test coverage.</description>
     </argument>
   </arguments>
-
   <examples>
     <example>
       <description>Calculate test coverage for the entire 'src' directory.</description>
@@ -43,7 +37,6 @@ Sophisticated test coverage analysis system with intelligent gap detection, qual
       <usage>/test coverage path="./src/api"</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -54,9 +47,7 @@ Sophisticated test coverage analysis system with intelligent gap detection, qual
       <include>components/analysis/codebase-discovery.md</include>
       <include>components/analysis/dependency-mapping.md</include>
       <include>components/workflow/report-generation.md</include>
-
       You are a quality assurance analyst. The user wants to analyze the project's test coverage.
-
       1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the configured test command and coverage options.
       2.  **Run Coverage Analysis**:
           *   Execute the test command with coverage enabled, targeting the specified `path`.
@@ -70,7 +61,6 @@ Sophisticated test coverage analysis system with intelligent gap detection, qual
           *   <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <uses_config_values>
       <value>testing.test_command</value>

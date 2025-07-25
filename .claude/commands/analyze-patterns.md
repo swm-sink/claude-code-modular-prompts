@@ -3,11 +3,8 @@ description: Advanced pattern analysis with design pattern detection, anti-patte
 argument-hint: "[pattern_type] [analysis_scope]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /analyze patterns - Pattern Analysis Framework
-
 Advanced pattern analysis system with design pattern detection, anti-pattern identification, and comprehensive architectural insights.
-
 ## Usage
 ```bash
 /analyze patterns design                     # Detect design patterns in codebase
@@ -15,10 +12,8 @@ Advanced pattern analysis system with design pattern detection, anti-pattern ide
 /analyze patterns architectural             # Analyze architectural patterns
 /analyze patterns all                       # Comprehensive pattern analysis
 ```
-
 ## Arguments
 - `target_path` (optional): File or directory to analyze (default: current directory)
-
 <command_file>
   <metadata>
     <name>/analyze patterns</name>
@@ -29,20 +24,17 @@ Advanced pattern analysis system with design pattern detection, anti-pattern ide
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="target_path" type="string" required="false" default=".">
       <description>The file or directory to analyze. Defaults to the current directory.</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Analyze design patterns in the entire project.</description>
       <usage>/analyze patterns</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -53,11 +45,8 @@ Advanced pattern analysis system with design pattern detection, anti-pattern ide
       <include>components/analysis/codebase-discovery.md</include>
       <include>components/analysis/dependency-mapping.md</include>
       <include>components/workflow/report-generation.md</include>
-
       <![CDATA[
 You are a software architect. The user wants you to analyze their codebase for design patterns.
-
-      
 ]]>
       <include component="components/context/find-relevant-code.md" />
       <include component="components/analysis/codebase-discovery.md" />
@@ -66,7 +55,6 @@ You are a software architect. The user wants you to analyze their codebase for d
       <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <!-- Standard DRY Components -->

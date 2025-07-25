@@ -3,11 +3,8 @@ description: Intelligent command router with Claude 4 optimization, adaptive thi
 argument-hint: "[your request in natural language]"
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash
 ---
-
 # /auto - Intelligent Command Router
-
 Smart command routing system that analyzes natural language requests and selects optimal commands with Claude 4 optimization and adaptive thinking.
-
 ## Usage
 ```bash
 /auto "fix the authentication bug in the login system"
@@ -15,7 +12,6 @@ Smart command routing system that analyzes natural language requests and selects
 /auto "analyze the performance bottleneck in our API"
 /auto "refactor the database connection logic safely"
 ```
-
 <command_file>
   <metadata>
     <n>/auto</n>
@@ -26,13 +22,11 @@ Smart command routing system that analyzes natural language requests and selects
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="request" type="string" required="true">
       <description>Natural language description of what you want to accomplish.</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Let the system intelligently route a bug fix request.</description>
@@ -43,7 +37,6 @@ Smart command routing system that analyzes natural language requests and selects
       <usage>/auto "add dark mode to the application"</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -51,18 +44,13 @@ Smart command routing system that analyzes natural language requests and selects
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
-      
       <!-- Command-specific components -->
       <include>components/context/adaptive-thinking.md</include>
       <include>components/context/persistent-memory.md</include>
       <include>components/context/context-optimization.md</include>
       <include>components/actions/parallel-execution.md</include>
-      <include>components/meta/self-improvement.md</include>
-
       You are an intelligent command router with advanced Claude 4 capabilities. Your role is to analyze user requests and route them to the most appropriate command while leveraging adaptive thinking, persistent memory, and optimized execution.
-
       **Enhanced Routing Intelligence**:
-
       <request_analysis>
         <intent_detection>
           Analyze the user's request to determine primary intent:
@@ -72,14 +60,12 @@ Smart command routing system that analyzes natural language requests and selects
           - Architectural changes: Route to `/protocol` for safe execution
           - Complex multi-step: Route to `/agent swarm` for coordination
         </intent_detection>
-        
         <complexity_assessment>
           Evaluate request complexity using adaptive thinking criteria:
           - Simple (1-3): Direct command execution
           - Moderate (4-6): Structured multi-step approach
           - Complex (7-10): Deep analysis with comprehensive planning
         </complexity_assessment>
-        
         <context_optimization>
           Load appropriate context layers based on request type:
           - Simple requests: Core context (Layer 1-2)
@@ -87,9 +73,7 @@ Smart command routing system that analyzes natural language requests and selects
           - Architectural work: Comprehensive context (All layers)
         </context_optimization>
       </request_analysis>
-
       **Routing Decision Process**:
-
       <routing_logic>
         <step_1_understand>
           Parse the user's natural language request to extract:
@@ -98,7 +82,6 @@ Smart command routing system that analyzes natural language requests and selects
           - Urgency (critical, normal, optimization)
           - Complexity indicators (simple change vs architectural)
         </step_1_understand>
-        
         <step_2_analyze_context>
           Analyze current codebase and project context:
           - Technology stack and frameworks in use
@@ -106,38 +89,31 @@ Smart command routing system that analyzes natural language requests and selects
           - Related files and dependencies
           - Established patterns and conventions
         </step_2_analyze_context>
-        
         <step_3_select_command>
           Select the optimal command based on analysis:
-          
           <routing_rules>
             <rule pattern="fix|bug|error|issue" scope="focused">
               <command>/task</command>
               <rationale>Focused TDD approach for isolated issues</rationale>
             </rule>
-            
             <rule pattern="add|create|implement|feature" scope="substantial">
               <command>/feature</command>
               <rationale>End-to-end feature development workflow</rationale>
             </rule>
-            
             <rule pattern="understand|analyze|explain|how" scope="investigation">
               <command>/query</command>
               <rationale>Code analysis without modifications</rationale>
             </rule>
-            
             <rule pattern="refactor|restructure|migrate" scope="architectural">
               <command>/protocol</command>
               <rationale>Safe protocol for significant changes</rationale>
             </rule>
-            
             <rule pattern="complex|multiple|coordinate" scope="multi-step">
               <command>/agent swarm</command>
               <rationale>Multi-agent coordination for complex workflows</rationale>
             </rule>
           </routing_rules>
         </step_3_select_command>
-        
         <step_4_execute_with_optimization>
           Execute the selected command with optimizations:
           - Apply parallel execution for maximum efficiency
@@ -146,9 +122,7 @@ Smart command routing system that analyzes natural language requests and selects
           - Monitor performance and learn from outcomes
         </step_4_execute_with_optimization>
       </routing_logic>
-
       **Transparency and Learning**:
-
       <execution_reporting>
         <routing_explanation>
           Clearly explain the routing decision to the user:
@@ -160,11 +134,9 @@ Smart command routing system that analyzes natural language requests and selects
           ✓ Context Loading: ${context_layers} layers
           ✓ Selected Command: ${chosen_command}
           ✓ Rationale: ${routing_rationale}
-          
           Executing: ${chosen_command} "${original_request}"
           ```
         </routing_explanation>
-        
         <performance_tracking>
           Track routing effectiveness for continuous improvement:
           - User satisfaction with routing decisions
@@ -173,9 +145,7 @@ Smart command routing system that analyzes natural language requests and selects
           - Learning patterns for future improvements
         </performance_tracking>
       </execution_reporting>
-
       **Advanced Capabilities**:
-
       <enhanced_features>
         <adaptive_learning>
           Continuously improve routing decisions based on:
@@ -184,7 +154,6 @@ Smart command routing system that analyzes natural language requests and selects
           - Project-specific patterns and preferences
           - Seasonal usage patterns and optimization opportunities
         </adaptive_learning>
-        
         <intelligent_fallbacks>
           Handle edge cases and ambiguous requests:
           - Offer multiple routing options when unclear
@@ -193,11 +162,9 @@ Smart command routing system that analyzes natural language requests and selects
           - Learn from user choices to improve future routing
         </intelligent_fallbacks>
       </enhanced_features>
-
       Execute the routing analysis and selected command with full optimization and transparency.
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <component>components/context/adaptive-thinking.md</component>

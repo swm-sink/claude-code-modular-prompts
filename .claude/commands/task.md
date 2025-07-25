@@ -3,11 +3,8 @@ description: Execute a focused, integration-first TDD workflow with mutation tes
 argument-hint: "[task_description]"
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash
 ---
-
 # /task - Focused TDD Development Workflow
-
 Integration-first test-driven development workflow with advanced quality assurance, security compliance, and comprehensive error handling.
-
 ## Usage
 ```bash
 /task "create email validation utility function"
@@ -15,7 +12,6 @@ Integration-first test-driven development workflow with advanced quality assuran
 /task "add pagination to the user listing component"
 /task "create secure API endpoint for user data"
 ```
-
 <command_file>
   <metadata>
     <name>/task</name>
@@ -26,13 +22,11 @@ Integration-first test-driven development workflow with advanced quality assuran
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="task_description" type="string" required="true">
       <description>A clear description of the component to be built or modified.</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Create a validation utility for email addresses using integration-first TDD.</description>
@@ -43,7 +37,6 @@ Integration-first test-driven development workflow with advanced quality assuran
       <usage>/task "Fix authentication bypass in user login endpoint."</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -54,7 +47,6 @@ Integration-first test-driven development workflow with advanced quality assuran
       <include>components/analysis/codebase-discovery.md</include>
       <include>components/analysis/dependency-mapping.md</include>
       <include>components/workflow/report-generation.md</include>
-      
       <!-- Command-specific components -->
       <include>components/context/adaptive-thinking.md</include>
       <include>components/context/persistent-memory.md</include>
@@ -62,13 +54,10 @@ Integration-first test-driven development workflow with advanced quality assuran
       <include>components/quality/anti-pattern-detection.md</include>
       <include>components/security/owasp-compliance.md</include>
       <include>components/testing/mutation-testing.md</include>
-      <include>components/error/circuit-breaker.md</include>
-
+      <include>components/reliability/circuit-breaker.md</include>
       You are a software developer practicing advanced Test-Driven Development with modern 2025 enhancements. 
       You will implement an integration-first, security-aware TDD workflow with comprehensive quality gates.
-
       **Enhanced TDD Workflow with 2025 Best Practices**:
-
       <advanced_tdd_cycle>
         <phase_1_analysis_and_integration_design>
           <requirement_analysis>
@@ -78,7 +67,6 @@ Integration-first test-driven development workflow with advanced quality assuran
             - Integration points and external dependencies
             - Performance and scalability considerations
           </requirement_analysis>
-          
           <integration_first_approach>
             Design integration strategy before implementation:
             - Identify all integration points and external dependencies
@@ -86,7 +74,6 @@ Integration-first test-driven development workflow with advanced quality assuran
             - Plan end-to-end user journey testing
             - Design behavior validation over structural testing
           </integration_first_approach>
-          
           <security_threat_modeling>
             Assess security implications using OWASP 2025 framework:
             - Evaluate potential attack vectors and vulnerabilities
@@ -95,7 +82,6 @@ Integration-first test-driven development workflow with advanced quality assuran
             - Design secure error handling and logging approaches
           </security_threat_modeling>
         </phase_1_analysis_and_integration_design>
-        
         <phase_2_integration_tests_first>
           <behavioral_test_design>
             Create integration tests that validate complete user journeys:
@@ -104,7 +90,6 @@ Integration-first test-driven development workflow with advanced quality assuran
             - External API and service integration testing
             - Security control validation testing
           </behavioral_test_design>
-          
           <contract_testing>
             Define and test component contracts:
             - Input/output contract validation
@@ -112,7 +97,6 @@ Integration-first test-driven development workflow with advanced quality assuran
             - Performance contract verification
             - Security contract enforcement
           </contract_testing>
-          
           <mutation_testing_preparation>
             Design tests that will survive mutation testing:
             - Focus on behavior validation, not just structural coverage
@@ -121,7 +105,6 @@ Integration-first test-driven development workflow with advanced quality assuran
             - Validate side effects and state changes
           </mutation_testing_preparation>
         </phase_2_integration_tests_first>
-        
         <phase_3_secure_implementation>
           <owasp_compliant_development>
             Implement with OWASP Top 10 2025 compliance:
@@ -130,7 +113,6 @@ Integration-first test-driven development workflow with advanced quality assuran
             - Use secure authentication and authorization patterns
             - Include comprehensive error handling and logging
           </owasp_compliant_development>
-          
           <anti_pattern_prevention>
             Actively prevent common anti-patterns during implementation:
             - Maintain single responsibility principle
@@ -138,7 +120,6 @@ Integration-first test-driven development workflow with advanced quality assuran
             - Implement proper separation of concerns
             - Use dependency injection and clean architecture
           </anti_pattern_prevention>
-          
           <circuit_breaker_integration>
             Include error resilience from the start:
             - Implement circuit breakers for external dependencies
@@ -147,7 +128,6 @@ Integration-first test-driven development workflow with advanced quality assuran
             - Design for graceful degradation
           </circuit_breaker_integration>
         </phase_3_secure_implementation>
-        
         <phase_4_comprehensive_validation>
           <mutation_testing_execution>
             Validate test quality through mutation testing:
@@ -156,7 +136,6 @@ Integration-first test-driven development workflow with advanced quality assuran
             - Achieve 80%+ mutation score for critical code paths
             - Improve tests based on surviving mutations
           </mutation_testing_execution>
-          
           <security_validation>
             Perform comprehensive security validation:
             - Static code analysis for security vulnerabilities
@@ -164,7 +143,6 @@ Integration-first test-driven development workflow with advanced quality assuran
             - OWASP compliance verification
             - Penetration testing for critical functionality
           </security_validation>
-          
           <integration_validation>
             Verify integration points and contracts:
             - End-to-end integration testing
@@ -173,7 +151,6 @@ Integration-first test-driven development workflow with advanced quality assuran
             - Error propagation and recovery testing
           </integration_validation>
         </phase_4_comprehensive_validation>
-        
         <phase_5_resilience_and_monitoring>
           <error_handling_validation>
             Test circuit breaker and error handling:
@@ -182,7 +159,6 @@ Integration-first test-driven development workflow with advanced quality assuran
             - Validate error logging and monitoring
             - Confirm user experience during failures
           </error_handling_validation>
-          
           <performance_and_monitoring>
             Implement monitoring and performance validation:
             - Add performance metrics and monitoring
@@ -192,9 +168,7 @@ Integration-first test-driven development workflow with advanced quality assuran
           </performance_and_monitoring>
         </phase_5_resilience_and_monitoring>
       </advanced_tdd_cycle>
-
       **Implementation Execution**:
-
       <execution_strategy>
         <parallel_development>
           Use parallel execution for maximum efficiency:
@@ -203,7 +177,6 @@ Integration-first test-driven development workflow with advanced quality assuran
           - Execute security scanning alongside functional testing
           - Perform mutation testing incrementally during development
         </parallel_development>
-        
         <adaptive_complexity_handling>
           Apply appropriate thinking modes based on task complexity:
           - Simple tasks: Focus on core TDD cycle with basic security
@@ -211,7 +184,6 @@ Integration-first test-driven development workflow with advanced quality assuran
           - Security-critical tasks: Enhanced threat modeling and validation
           - Performance-critical tasks: Load testing and optimization focus
         </adaptive_complexity_handling>
-        
         <quality_gate_enforcement>
           Enforce quality gates throughout development:
           - Anti-pattern detection during code generation
@@ -220,9 +192,7 @@ Integration-first test-driven development workflow with advanced quality assuran
           - Security vulnerability scanning results
         </quality_gate_enforcement>
       </execution_strategy>
-
       **Continuous Learning and Improvement**:
-
       <learning_integration>
         <pattern_recognition>
           Learn from development patterns and outcomes:
@@ -231,7 +201,6 @@ Integration-first test-driven development workflow with advanced quality assuran
           - Learn from mutation testing results and improvements
           - Adapt circuit breaker strategies based on effectiveness
         </pattern_recognition>
-        
         <feedback_incorporation>
           Incorporate feedback for continuous improvement:
           - User feedback on generated tests and implementation
@@ -240,12 +209,10 @@ Integration-first test-driven development workflow with advanced quality assuran
           - Integration testing results and contract refinements
         </feedback_incorporation>
       </learning_integration>
-
       Execute this enhanced TDD workflow, providing clear progress updates and explanations for each phase. 
       Focus on creating robust, secure, well-tested code that follows 2025 best practices while maintaining development velocity.
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <!-- Standard DRY Components -->

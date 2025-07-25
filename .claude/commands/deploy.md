@@ -3,11 +3,8 @@ description: Advanced deployment orchestration with intelligent strategies, roll
 argument-hint: "[deployment_target] [strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /deploy - Advanced Deployment Orchestration
-
 Sophisticated deployment orchestration system with intelligent strategies, automated rollback capabilities, and comprehensive environment management.
-
 ## Usage
 ```bash
 /deploy production                           # Production deployment
@@ -15,7 +12,6 @@ Sophisticated deployment orchestration system with intelligent strategies, autom
 /deploy --canary                             # Canary deployment with monitoring
 /deploy --zero-downtime                      # Zero-downtime deployment
 ```
-
 <command_file>
   <metadata>
     <name>/deploy</name>
@@ -26,7 +22,6 @@ Sophisticated deployment orchestration system with intelligent strategies, autom
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="target" type="string" required="true" default="staging">
       <description>The deployment environment to target (e.g., 'staging', 'production').</description>
@@ -35,7 +30,6 @@ Sophisticated deployment orchestration system with intelligent strategies, autom
       <description>If true, outputs the deployment plan without executing it.</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Deploy the current branch to the staging environment.</description>
@@ -46,7 +40,6 @@ Sophisticated deployment orchestration system with intelligent strategies, autom
       <usage>/deploy target="production" dry_run=true</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -54,16 +47,11 @@ Sophisticated deployment orchestration system with intelligent strategies, autom
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
-      
       <!-- Command-specific components -->
       <include>components/planning/create-step-by-step-plan.md</include>
       <include>components/interaction/request-user-confirmation.md</include>
       <include>components/reporting/generate-structured-report.md</include>
-      <include>components/deployment/deployment-strategies.md</include>
-      <include>components/deployment/environment-management.md</include>
-      
       You are a release engineer executing a deployment pipeline.
-
       1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the deployment configuration for the specified `target` environment. This includes build, test, deploy, and health check commands.
       2.  **Generate Deployment Plan**: Create a step-by-step deployment plan based on the configuration.
       3.  **Dry Run Check**: If `dry_run` is true, present the plan and stop.
@@ -72,7 +60,6 @@ Sophisticated deployment orchestration system with intelligent strategies, autom
       5.  **Report Outcome**: After successful execution (or failure), generate a final report.
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <uses_config_values>
       <value>deployment.environments.environment</value>

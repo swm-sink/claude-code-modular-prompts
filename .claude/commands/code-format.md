@@ -3,11 +3,8 @@ description: Intelligent code formatting with automated style enforcement, multi
 argument-hint: "[language] [style_guide]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /code format - Intelligent Code Formatting
-
 Advanced code formatting system with automated style enforcement, multi-language support, and comprehensive, customizable configuration.
-
 ## Usage
 ```bash
 /code format python --style black          # Format Python code using the Black style
@@ -15,7 +12,6 @@ Advanced code formatting system with automated style enforcement, multi-language
 /code format --all                         # Format all supported files in the project
 /code format --check                       # Check for formatting issues without applying changes
 ```
-
 <command_file>
   <metadata>
     <n>/code format</n>
@@ -26,7 +22,6 @@ Advanced code formatting system with automated style enforcement, multi-language
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="language" type="string" required="false">
       <description>The programming language to format</description>
@@ -38,7 +33,6 @@ Advanced code formatting system with automated style enforcement, multi-language
       <description>Whether to check for formatting issues without applying changes</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Format Python code using the Black style</description>
@@ -49,30 +43,25 @@ Advanced code formatting system with automated style enforcement, multi-language
       <usage>/code format --all</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
 You are an advanced code formatting specialist. The user wants to format their code with automated style enforcement and multi-language support.
-
 **Formatting Process:**
 1. **Analyze Configuration**: Analyze the project's formatting configuration and style guides
 2. **Discover Files**: Discover all relevant files to be formatted
 3. **Apply Formatting**: Apply the specified formatting rules to the code
 4. **Report Changes**: Report the changes made and any issues encountered
 5. **Handle Edge Cases**: Handle complex formatting scenarios and edge cases gracefully
-
 **Implementation Strategy:**
 - Automatically detect the project's programming languages and existing formatting configurations
 - Discover all files that match the supported language extensions
 - Apply the appropriate formatter (e.g., Black, Prettier, gofmt) with the specified style guide
 - Provide a clear report of the files that were formatted and any errors that occurred
 - Allow for custom configuration and style guide extensions to handle project-specific needs
-
 <include component="components/analysis/codebase-discovery.md" />
 <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <component>components/analysis/codebase-discovery.md</component>

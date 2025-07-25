@@ -3,11 +3,8 @@ description: Intelligent alert monitoring with automated correlation, root cause
 argument-hint: "[alert_source] [analysis_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /monitor alerts - Intelligent Alert Monitoring
-
 Advanced alert monitoring system with automated correlation, intelligent root cause analysis, and comprehensive incident management.
-
 ## Usage
 ```bash
 /monitor alerts prometheus                 # Monitor alerts from Prometheus
@@ -15,7 +12,6 @@ Advanced alert monitoring system with automated correlation, intelligent root ca
 /monitor alerts --analyze "db_latency"       # Analyze the root cause of an alert
 /monitor alerts --incident "create"          # Create a new incident from an alert
 ```
-
 <command_file>
   <metadata>
     <n>/monitor alerts</n>
@@ -26,7 +22,6 @@ Advanced alert monitoring system with automated correlation, intelligent root ca
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="alert_source" type="string" required="true" default="prometheus">
       <description>The source of the alerts to monitor (e.g., prometheus, cloudwatch, datadog)</description>
@@ -38,7 +33,6 @@ Advanced alert monitoring system with automated correlation, intelligent root ca
       <description>Level of root cause analysis to perform</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Monitor alerts from Prometheus</description>
@@ -49,31 +43,26 @@ Advanced alert monitoring system with automated correlation, intelligent root ca
       <usage>/monitor alerts --correlate "high_cpu_usage"</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
 You are an advanced alert monitoring specialist. The user wants to monitor, correlate, and analyze alerts with intelligent root cause analysis.
-
 **Alert Monitoring Process:**
 1. **Alert Aggregation**: Aggregate alerts from various sources
 2. **Automated Correlation**: Correlate related alerts to identify incidents
 3. **Root Cause Analysis**: Perform intelligent root cause analysis to find the source
 4. **Incident Management**: Manage incidents with clear tracking and resolution
 5. **Reporting &amp; Analytics**: Provide comprehensive reporting and analytics on alerts
-
 **Implementation Strategy:**
 - Aggregate alerts from multiple monitoring systems into a unified view
 - Implement automated alert correlation using machine learning and pattern analysis
 - Perform intelligent root cause analysis with dependency mapping and historical data
 - Integrate with incident management systems for seamless tracking and resolution
 - Generate comprehensive reports and analytics to identify trends and systemic issues
-
 <include component="components/analysis/dependency-mapping.md" />
 <include component="components/analytics/business-intelligence.md" />
 <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <component>components/analysis/dependency-mapping.md</component>

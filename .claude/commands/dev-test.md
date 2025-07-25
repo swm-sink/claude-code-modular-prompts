@@ -3,11 +3,8 @@ description: Advanced development testing with comprehensive coverage, intellige
 argument-hint: "[test_scope] [coverage_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /dev test - Advanced Development Testing
-
 Sophisticated development testing system with comprehensive coverage, intelligent test generation, and automated quality validation.
-
 ## Usage
 ```bash
 /dev test comprehensive                      # Comprehensive test suite
@@ -15,7 +12,6 @@ Sophisticated development testing system with comprehensive coverage, intelligen
 /dev test --generate                         # Intelligent test generation
 /dev test --parallel                         # Parallel test execution
 ```
-
 <command_file>
   <metadata>
     <name>/dev test</name>
@@ -26,13 +22,11 @@ Sophisticated development testing system with comprehensive coverage, intelligen
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="pattern" type="string" required="false">
       <description>A pattern or filter to run a specific subset of tests.</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Run the entire test suite.</description>
@@ -43,7 +37,6 @@ Sophisticated development testing system with comprehensive coverage, intelligen
       <usage>/dev test "user-authentication"</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -51,15 +44,9 @@ Sophisticated development testing system with comprehensive coverage, intelligen
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
-      
       <!-- Command-specific components -->
-      <include>components/testing/test-framework-detection.md</include>
-      <include>components/testing/coverage-analysis.md</include>
       <include>components/reporting/generate-structured-report.md</include>
-      <include>components/quality/test-quality-metrics.md</include>
-      
       You are a test runner. The user wants to execute a test suite.
-
       1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the test command and coverage options for the project's detected test framework.
       2.  **Construct Test Command**: Build the full test command, incorporating the user's `pattern` if provided.
       3.  **Execute Tests**: Run the test command.
@@ -68,7 +55,6 @@ Sophisticated development testing system with comprehensive coverage, intelligen
           *   For failed tests, provide the error details and suggestions for fixes.
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <uses_config_values>
       <value>testing.framework</value>

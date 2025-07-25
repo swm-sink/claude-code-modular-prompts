@@ -3,28 +3,22 @@ description: Performs mutation testing to assess the effectiveness of existing t
 argument-hint: "[target_file] [auto_fix]"
 allowed-tools: Read, Write, Bash, Edit
 ---
-
 # /test mutation - Mutation Testing
-
 Performs mutation testing to assess the effectiveness of an existing test suite by introducing deliberate bugs.
-
 ## Usage
 ```bash
 /test mutation "src/utils/stringUtils.js"              # Basic mutation testing
 /test mutation "src/core/authService.js" auto_fix=true # Auto-generate missing tests
 ```
-
 ## Arguments
 - `target_file` (required): File containing code to be mutation-tested
 - `auto_fix` (optional): Auto-generate tests for surviving mutants (default: false)
-
 ## What It Does
 1. **Analyze**: Reads target file and corresponding test file
 2. **Generate Mutants**: Creates deliberate bugs in source code
 3. **Test Mutants**: Runs test suite against each mutant
 4. **Report**: Calculates mutation score and lists survivors
 5. **Auto-Fix**: Optionally generates tests to kill survivors
-
 <command_file>
   <metadata>
     <name>/test mutation</name>
@@ -35,7 +29,6 @@ Performs mutation testing to assess the effectiveness of an existing test suite 
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="target" type="string" required="true">
       <description>The file containing the code to be mutation-tested.</description>
@@ -44,7 +37,6 @@ Performs mutation testing to assess the effectiveness of an existing test suite 
       <description>If true, automatically generates new tests to kill surviving mutants.</description>
     </argument>
   </arguments>
-
   <examples>
     <example>
       <description>Run mutation testing on a specific utility file.</description>
@@ -55,7 +47,6 @@ Performs mutation testing to assess the effectiveness of an existing test suite 
       <usage>/test mutation "src/core/authService.js" auto_fix=true</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -66,10 +57,8 @@ Performs mutation testing to assess the effectiveness of an existing test suite 
       <include>components/analysis/codebase-discovery.md</include>
       <include>components/analysis/dependency-mapping.md</include>
       <include>components/workflow/report-generation.md</include>
-
       <![CDATA[
 You are a quality assurance engineer specializing in mutation testing. The user wants to assess the quality of their tests for a specific file.
-
       1.  **Analyze Code and Tests**:
           *   Read the `target` file and its corresponding test file.
       2.  **Generate Mutants**:
@@ -85,7 +74,6 @@ You are a quality assurance engineer specializing in mutation testing. The user 
 ]]>
       <include component="components/reporting/generate-structured-report.md" />
       <![CDATA[
-
       5.  **Fix Survivors (Optional)**:
           *   If `auto_fix` is true, for each surviving mutant, generate a new test case that specifically "kills" it and add it to the test suite.
           *   
@@ -93,7 +81,6 @@ You are a quality assurance engineer specializing in mutation testing. The user 
       <include component="components/actions/apply-code-changes.md" />
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <uses_config_values>
       <value>testing.mutation_tool</value>

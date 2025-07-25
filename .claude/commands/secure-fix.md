@@ -3,18 +3,14 @@ description: Automated security issue remediation with validation and rollback c
 argument-hint: "[issue_type] [fix_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /secure fix - Automated Security Remediation
-
 Intelligent security issue remediation system with automated fixes, validation, and safe rollback.
-
 ## Usage
 ```bash
 /secure fix vulnerabilities         # Fix known vulnerabilities
 /secure fix permissions            # Fix file/directory permissions
 /secure fix dependencies --safe    # Safe dependency updates
 ```
-
 <command_file>
   <metadata>
     <name>/secure fix</name>
@@ -25,13 +21,11 @@ Intelligent security issue remediation system with automated fixes, validation, 
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="vulnerability" type="string" required="true">
       <description>The specific vulnerability to fix, identified by an ID from a scan or a clear description.</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Fix a specific vulnerability identified by a security scanner (e.g., CVE-2023-12345).</description>
@@ -42,7 +36,6 @@ Intelligent security issue remediation system with automated fixes, validation, 
       <usage>/secure fix "Potential SQL injection in user search API endpoint"</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -50,16 +43,11 @@ Intelligent security issue remediation system with automated fixes, validation, 
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
-      
       <!-- Command-specific components -->
       <include>components/context/find-relevant-code.md</include>
       <include>components/interaction/request-user-confirmation.md</include>
       <include>components/actions/apply-code-changes.md</include>
-      <include>components/security/vulnerability-remediation.md</include>
-      <include>components/testing/test-generation.md</include>
-      
       You are a security remediation specialist. The user wants you to fix a specific security vulnerability.
-
       1.  **Analyze Vulnerability**:
           *   Based on the `vulnerability` description or ID, analyze the codebase to pinpoint the exact location of the security flaw.
       2.  **Generate Fix**:
@@ -73,7 +61,6 @@ Intelligent security issue remediation system with automated fixes, validation, 
           *   Instruct the user to run the tests to confirm the fix and ensure no regressions were introduced.
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <chain>
       <command>/test unit</command>

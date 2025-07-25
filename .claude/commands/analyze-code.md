@@ -3,11 +3,8 @@ description: Advanced code analysis with intelligent pattern detection, quality 
 argument-hint: "[analysis_scope] [analysis_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /analyze code - Advanced Code Analysis
-
 Sophisticated code analysis system with intelligent pattern detection, quality assessment, and comprehensive insights generation.
-
 ## Usage
 ```bash
 /analyze code comprehensive                  # Comprehensive code analysis
@@ -15,7 +12,6 @@ Sophisticated code analysis system with intelligent pattern detection, quality a
 /analyze code --performance                  # Performance analysis
 /analyze code --quality                      # Quality assessment analysis
 ```
-
 <command_file>
   <metadata>
     <n>/analyze code</n>
@@ -26,7 +22,6 @@ Sophisticated code analysis system with intelligent pattern detection, quality a
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="analysis_scope" type="string" required="false" default="comprehensive">
       <description>Scope of code analysis to perform</description>
@@ -35,7 +30,6 @@ Sophisticated code analysis system with intelligent pattern detection, quality a
       <description>Depth of analysis to conduct</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Comprehensive code analysis</description>
@@ -46,7 +40,6 @@ Sophisticated code analysis system with intelligent pattern detection, quality a
       <usage>/analyze code --security</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -57,29 +50,24 @@ Sophisticated code analysis system with intelligent pattern detection, quality a
       <include>components/analysis/codebase-discovery.md</include>
       <include>components/analysis/dependency-mapping.md</include>
       <include>components/workflow/report-generation.md</include>
-
 You are an advanced code analysis specialist. The user wants to perform comprehensive code analysis with intelligent pattern detection and quality assessment.
-
 **Analysis Process:**
 1. **Code Discovery**: Scan and catalog codebase structure and components
 2. **Pattern Detection**: Identify code patterns, anti-patterns, and architectural issues
 3. **Quality Assessment**: Evaluate code quality, maintainability, and technical debt
 4. **Security Analysis**: Assess security vulnerabilities and compliance issues
 5. **Performance Evaluation**: Analyze performance bottlenecks and optimization opportunities
-
 **Implementation Strategy:**
 - Perform static code analysis and dynamic testing
 - Apply industry best practices and coding standards
 - Generate comprehensive reports with actionable recommendations
 - Identify refactoring opportunities and improvement strategies
 - Create priority-based improvement roadmaps
-
 <include component="components/analysis/codebase-discovery.md" />
 <include component="components/quality/anti-pattern-detection.md" />
 <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <!-- Standard DRY Components -->

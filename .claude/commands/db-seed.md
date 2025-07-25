@@ -3,22 +3,17 @@ description: Populates database with seed data for development and testing envir
 argument-hint: "[environment] [data_type]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /db seed - Database Seeding Command
-
 Intelligent database seeding system with environment-specific data sets and validation.
-
 ## Usage
 ```bash
 /db seed development              # Seed development environment
 /db seed testing --clean         # Clean and seed test environment
 /db seed production --confirm     # Seed production (with confirmation)
 ```
-
 ## Arguments
 - `env` (optional): Target environment (default: "development")
 - `count` (optional): Number of records per table (default: 100)
-
 <command_file>
   <metadata>
     <name>/db seed</name>
@@ -29,7 +24,6 @@ Intelligent database seeding system with environment-specific data sets and vali
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="env" type="string" required="false" default="development">
       <description>The target environment to seed (e.g., development, testing).</description>
@@ -38,7 +32,6 @@ Intelligent database seeding system with environment-specific data sets and vali
       <description>The number of records to generate for primary tables.</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Seed the development database with 100 records per table.</description>
@@ -49,7 +42,6 @@ Intelligent database seeding system with environment-specific data sets and vali
       <usage>/db seed env="testing" count=500</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -57,19 +49,11 @@ Intelligent database seeding system with environment-specific data sets and vali
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
-      
       <!-- Command-specific components -->
       <include>components/interaction/request-user-confirmation.md</include>
-      <include>components/database/relationship-management.md</include>
-      <include>components/quality/data-generation.md</include>
-      <include>components/database/transaction-handling.md</include>
-      <include>components/testing/test-data-strategies.md</include>
-      
       <![CDATA[
       You are a database seeding tool. The user wants to populate the database with test data. This may be a destructive action.
-
       1.  **Warning & Confirmation**: Inform the user that this action might truncate existing data and require their explicit confirmation to proceed.
-
       2.  **On Confirmation**:
           *   **Read Configuration**: Read `PROJECT_CONFIG.xml` to find the seed configuration file (e.g., `db/seeds.js`).
           *   **Generate Seeding Script**: Generate a data seeding script (e.g., Python, Node.js, or SQL) that:
@@ -80,7 +64,6 @@ Intelligent database seeding system with environment-specific data sets and vali
       ]]>
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <uses_config_values>
       <value>database.seed_config_file</value>

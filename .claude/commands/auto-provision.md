@@ -3,11 +3,8 @@ description: Advanced infrastructure auto-provisioning with intelligent resource
 argument-hint: "[infrastructure_type] [provisioning_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /deploy auto-provision - Advanced Infrastructure Auto-Provisioning
-
 Sophisticated infrastructure auto-provisioning system with intelligent resource optimization, cost management, and dynamic scalability.
-
 ## Usage
 ```bash
 /deploy auto-provision cloud                 # Cloud infrastructure provisioning
@@ -15,7 +12,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
 /deploy auto-provision --serverless          # Serverless infrastructure setup
 /deploy auto-provision --cost-optimized      # Cost-optimized provisioning
 ```
-
 <command_file>
   <metadata>
     <n>/auto-provision</n>
@@ -26,7 +22,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="environment" type="string" required="false" default="development">
       <description>Target environment: development (local setup), staging (pre-production), production (enterprise deployment).</description>
@@ -38,7 +33,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
       <description>Industry context for compliance and customization: auto (detect), healthcare, finance, manufacturing, government.</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Enterprise production deployment for healthcare</description>
@@ -49,7 +43,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
       <usage>/auto-provision --environment=development --scale=team --industry=auto</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -57,21 +50,12 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
-      
       <!-- Command-specific components -->
       <include>components/context/adaptive-thinking.md</include>
-      <include>components/deployment/ci-cd-integration.md</include>
-      <include>components/performance/auto-scaling.md</include>
       <include>components/security/owasp-compliance.md</include>
-      <include>components/infrastructure/cost-optimization.md</include>
-      
       <![CDATA[
-
-
       You are an expert DevOps and infrastructure automation specialist with deep understanding of enterprise deployment patterns, infrastructure as code, and automated provisioning. Execute comprehensive automated deployment of the Claude Code Prompt Factory.
-
       **Automated Provisioning Intelligence Framework**:
-
       <provisioning_framework>
         <environment_preparation>
           **Environment Setup and Preparation**:
@@ -82,7 +66,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Scalability Planning**: Plan for current and future scaling requirements
           - **Backup Strategy**: Implement comprehensive backup and disaster recovery
         </environment_preparation>
-        
         <configuration_automation>
           **Intelligent Configuration Management**:
           - **Auto-Discovery**: Automatically discover existing infrastructure and services
@@ -92,7 +75,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Performance Tuning**: Optimize configuration for performance and efficiency
           - **Integration Setup**: Configure integrations with existing systems and services
         </configuration_automation>
-        
         <deployment_orchestration>
           **Deployment Orchestration and Automation**:
           - **Infrastructure Provisioning**: Automated infrastructure setup and configuration
@@ -102,7 +84,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Security Implementation**: Deploy security controls and compliance measures
           - **Testing Automation**: Execute automated testing and validation procedures
         </deployment_orchestration>
-        
         <validation_verification>
           **Deployment Validation and Verification**:
           - **Health Checks**: Comprehensive health checking and service validation
@@ -113,9 +94,7 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Documentation Generation**: Generate deployment documentation and runbooks
         </validation_verification>
       </provisioning_framework>
-
       **Environment-Specific Deployment Strategies**:
-
       <environment_strategies>
         <development_environment>
           **Development Environment Provisioning**:
@@ -126,7 +105,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Code Quality**: Automated code quality and linting tools
           - **Documentation**: Developer documentation and getting started guides
         </development_environment>
-        
         <staging_environment>
           **Staging Environment Provisioning**:
           - **Production Mirror**: Environment that closely mirrors production setup
@@ -136,7 +114,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **UAT Support**: User acceptance testing environment and tools
           - **Deployment Validation**: Pre-production deployment validation and verification
         </staging_environment>
-        
         <production_environment>
           **Production Environment Provisioning**:
           - **High Availability**: Multi-zone deployment with failover capabilities
@@ -147,9 +124,7 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Compliance**: Regulatory compliance and audit trail implementation
         </production_environment>
       </environment_strategies>
-
       **Scale-Specific Deployment Patterns**:
-
       <scale_patterns>
         <single_developer>
           **Individual Developer Deployment**:
@@ -160,7 +135,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Development Focus**: Enhanced development experience and productivity
           - **Learning Resources**: Comprehensive learning materials and examples
         </single_developer>
-        
         <team_deployment>
           **Team-Scale Deployment**:
           - **Shared Resources**: Shared development and testing environments
@@ -170,7 +144,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Team Standards**: Enforced coding standards and best practices
           - **Knowledge Sharing**: Team knowledge base and documentation systems
         </team_deployment>
-        
         <enterprise_deployment>
           **Enterprise-Scale Deployment**:
           - **Multi-Tenant Architecture**: Scalable multi-organization support
@@ -181,9 +154,7 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Governance**: Enterprise governance and policy enforcement
         </enterprise_deployment>
       </scale_patterns>
-
       **Industry-Specific Provisioning**:
-
       <industry_provisioning>
         <healthcare_provisioning>
           **Healthcare Industry Deployment**:
@@ -194,7 +165,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Backup & Recovery**: HIPAA-compliant backup and disaster recovery
           - **Integration**: Healthcare system integration (HL7 FHIR, EHR systems)
         </healthcare_provisioning>
-        
         <finance_provisioning>
           **Financial Services Deployment**:
           - **Regulatory Compliance**: PCI DSS, SOX, and financial regulation compliance
@@ -204,7 +174,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Audit Compliance**: Financial audit trail and reporting systems
           - **Integration**: Banking and financial system integration
         </finance_provisioning>
-        
         <manufacturing_provisioning>
           **Manufacturing Industry Deployment**:
           - **Industrial IoT**: Integration with manufacturing systems and IoT devices
@@ -215,9 +184,7 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Integration**: Manufacturing execution system (MES) integration
         </manufacturing_provisioning>
       </industry_provisioning>
-
       **Automated Deployment Workflow**:
-
       <deployment_workflow>
         <pre_deployment>
           **Pre-Deployment Preparation**:
@@ -227,7 +194,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           4. Plan deployment strategy and rollback procedures
           5. Prepare monitoring and validation systems
         </pre_deployment>
-        
         <infrastructure_setup>
           **Infrastructure Provisioning**:
           1. Provision and configure infrastructure components and resources
@@ -236,7 +202,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           4. Configure load balancers and auto-scaling policies
           5. Implement backup and disaster recovery systems
         </infrastructure_setup>
-        
         <application_deployment>
           **Application and Service Deployment**:
           1. Deploy Claude Code Prompt Factory components and services
@@ -245,7 +210,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           4. Deploy monitoring and logging infrastructure
           5. Configure security controls and compliance measures
         </application_deployment>
-        
         <validation_optimization>
           **Deployment Validation and Optimization**:
           1. Execute comprehensive health checks and validation tests
@@ -255,9 +219,7 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           5. Generate deployment documentation and operational runbooks
         </validation_optimization>
       </deployment_workflow>
-
       **Infrastructure as Code Implementation**:
-
       <infrastructure_code>
         <configuration_templates>
           **Configuration Template Generation**:
@@ -268,7 +230,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Backup Templates**: Backup and disaster recovery configuration templates
           - **Integration Templates**: System integration and API configuration templates
         </configuration_templates>
-        
         <automation_scripts>
           **Automation and Deployment Scripts**:
           - **Provisioning Scripts**: Infrastructure provisioning and configuration automation
@@ -278,7 +239,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Backup Scripts**: Automated backup and recovery procedures
           - **Maintenance Scripts**: Ongoing maintenance and optimization automation
         </automation_scripts>
-        
         <orchestration_workflows>
           **Deployment Orchestration Workflows**:
           - **Blue-Green Deployment**: Zero-downtime blue-green deployment workflows
@@ -289,9 +249,7 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Maintenance Workflows**: Automated maintenance and update procedures
         </orchestration_workflows>
       </infrastructure_code>
-
       **Post-Deployment Operations**:
-
       <post_deployment>
         <monitoring_setup>
           **Comprehensive Monitoring and Alerting**:
@@ -302,7 +260,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Cost Monitoring**: Resource usage and cost optimization monitoring
           - **User Experience**: User experience and satisfaction monitoring
         </monitoring_setup>
-        
         <operational_procedures>
           **Operational Procedures and Runbooks**:
           - **Incident Response**: Automated incident detection and response procedures
@@ -312,7 +269,6 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Compliance Procedures**: Regular compliance validation and audit procedures
           - **Optimization Procedures**: Continuous optimization and improvement procedures
         </operational_procedures>
-        
         <continuous_improvement>
           **Continuous Improvement and Optimization**:
           - **Performance Optimization**: Ongoing performance monitoring and optimization
@@ -323,14 +279,11 @@ Sophisticated infrastructure auto-provisioning system with intelligent resource 
           - **Process Improvement**: Continuous process improvement and automation
         </continuous_improvement>
       </post_deployment>
-
       Execute comprehensive automated provisioning using Claude's understanding of enterprise deployment patterns, infrastructure automation, and industry-specific requirements. Create a fully automated, production-ready deployment that meets all operational and compliance requirements.
-
       **Remember**: Automated provisioning must be reliable, secure, and reproducible. Focus on creating deployment automation that reduces manual effort while maintaining high standards of security, performance, and compliance.
 ]]>
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <component>components/context/adaptive-thinking.md</component>

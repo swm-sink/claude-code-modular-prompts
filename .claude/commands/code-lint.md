@@ -3,11 +3,8 @@ description: Intelligent code linting with automated issue detection, configurab
 argument-hint: "[language] [config_file]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /code lint - Intelligent Code Linting
-
 Advanced code linting system with automated issue detection, highly configurable rules, and comprehensive, actionable reporting.
-
 ## Usage
 ```bash
 /code lint python --config .pylintrc       # Lint Python code using a specific config file
@@ -15,7 +12,6 @@ Advanced code linting system with automated issue detection, highly configurable
 /code lint --all                           # Lint all supported files in the project
 /code lint --report "summary"              # Generate a summary report of linting issues
 ```
-
 <command_file>
   <metadata>
     <n>/code lint</n>
@@ -26,7 +22,6 @@ Advanced code linting system with automated issue detection, highly configurable
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="language" type="string" required="false">
       <description>The programming language to lint</description>
@@ -38,7 +33,6 @@ Advanced code linting system with automated issue detection, highly configurable
       <description>Whether to automatically fix linting issues</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Lint Python code using a specific config file</description>
@@ -49,30 +43,25 @@ Advanced code linting system with automated issue detection, highly configurable
       <usage>/code lint --javascript --fix</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
 You are an advanced code linting specialist. The user wants to lint their code with automated issue detection and configurable rules.
-
 **Linting Process:**
 1. **Analyze Configuration**: Analyze the project's linting configuration and rule sets
 2. **Discover Files**: Discover all relevant files to be linted
 3. **Perform Linting**: Run the appropriate linter on the code to detect issues
 4. **Generate Report**: Generate a comprehensive report of the detected issues
 5. **Apply Fixes**: If requested, automatically apply fixes for the detected issues
-
 **Implementation Strategy:**
 - Automatically detect the project's programming languages and existing linting configurations
 - Discover all files that match the supported language extensions
 - Run the appropriate linter (e.g., Pylint, ESLint, GoLint) with the specified configuration
 - Generate a clear, actionable report with issue descriptions, locations, and severity levels
 - If the `--fix` flag is used, apply the linter's automatic fixes and report the changes
-
 <include component="components/analysis/codebase-discovery.md" />
 <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <component>components/analysis/codebase-discovery.md</component>

@@ -3,11 +3,8 @@ description: Advanced security audit with comprehensive vulnerability assessment
 argument-hint: "[audit_scope] [compliance_framework]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /secure audit - Advanced Security Audit
-
 Sophisticated security audit system with comprehensive vulnerability assessment, compliance validation, and intelligent threat modeling.
-
 ## Usage
 ```bash
 /secure audit comprehensive                  # Comprehensive security audit
@@ -15,7 +12,6 @@ Sophisticated security audit system with comprehensive vulnerability assessment,
 /secure audit --compliance                   # Compliance framework audit
 /secure audit --penetration                  # Penetration testing audit
 ```
-
 <command_file>
   <metadata>
     <n>/secure audit</n>
@@ -26,7 +22,6 @@ Sophisticated security audit system with comprehensive vulnerability assessment,
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="audit_scope" type="string" required="false" default="comprehensive">
       <description>Scope of security audit to perform</description>
@@ -35,7 +30,6 @@ Sophisticated security audit system with comprehensive vulnerability assessment,
       <description>Compliance framework to apply</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Comprehensive security audit</description>
@@ -46,7 +40,6 @@ Sophisticated security audit system with comprehensive vulnerability assessment,
       <usage>/secure audit --owasp</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -54,23 +47,17 @@ Sophisticated security audit system with comprehensive vulnerability assessment,
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
-      
       <!-- Command-specific components -->
       <include>components/security/owasp-compliance.md</include>
       <include>components/constitutional/safety-framework.md</include>
       <include>components/reporting/generate-structured-report.md</include>
-      <include>components/security/vulnerability-scanning.md</include>
-      <include>components/security/threat-modeling.md</include>
-      
 You are an advanced security audit specialist. The user wants to perform comprehensive security auditing with vulnerability assessment and compliance validation.
-
 **Audit Process:**
 1. **Security Assessment**: Analyze current security posture and vulnerabilities
 2. **Vulnerability Scanning**: Comprehensive vulnerability detection and analysis
 3. **Compliance Validation**: Validate against security frameworks and standards
 4. **Threat Modeling**: Model potential threats and attack vectors
 5. **Remediation Planning**: Create prioritized remediation and improvement plans
-
 **Implementation Strategy:**
 - Perform automated and manual security vulnerability scanning
 - Apply OWASP Top 10 and industry security frameworks
@@ -79,7 +66,6 @@ You are an advanced security audit specialist. The user wants to perform compreh
 - Generate comprehensive security reports with prioritized recommendations
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <component>components/security/owasp-compliance.md</component>

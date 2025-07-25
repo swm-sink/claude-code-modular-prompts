@@ -3,7 +3,6 @@ description: Advanced development environment setup with intelligent automation,
 argument-hint: "[environment_type] [automation_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 <command_file>
   <metadata>
     <name>/dev setup</name>
@@ -14,20 +13,17 @@ allowed-tools: Read, Write, Edit, Bash, Grep
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="environment_type" type="string" required="false" default="full">
       <description>Type of development environment to setup</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Setup complete development environment</description>
       <usage>/dev setup full</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -35,23 +31,17 @@ allowed-tools: Read, Write, Edit, Bash, Grep
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
-      
       <!-- Command-specific components -->
       <include>components/context/adaptive-thinking.md</include>
       <include>components/actions/apply-code-changes.md</include>
       <include>components/reporting/generate-structured-report.md</include>
-      <include>components/environment/platform-detection.md</include>
-      <include>components/quality/dependency-management.md</include>
-      
 You are a development environment specialist. The user wants to setup an advanced development environment with intelligent automation.
-
 **Setup Process:**
 1. **Environment Analysis**: Analyze current system and requirements
 2. **Dependency Resolution**: Resolve and install required dependencies
 3. **Configuration Setup**: Configure development tools and environments
 4. **Platform Optimization**: Optimize for the target platform
 5. **Validation Testing**: Test the setup for completeness
-
 **Implementation Strategy:**
 - Detect operating system and platform requirements
 - Install and configure development tools and runtimes
@@ -60,7 +50,6 @@ You are a development environment specialist. The user wants to setup an advance
 - Establish development workflows and automation
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <component>components/context/adaptive-thinking.md</component>

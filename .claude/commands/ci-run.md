@@ -3,11 +3,8 @@ description: Advanced CI execution with intelligent pipeline optimization, paral
 argument-hint: "[execution_mode] [optimization_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /deploy ci-run - Advanced CI Execution
-
 Sophisticated CI execution system with intelligent pipeline optimization, parallel processing, and automated quality gates.
-
 ## Usage
 ```bash
 /deploy ci-run optimized                     # Optimized CI execution
@@ -15,7 +12,6 @@ Sophisticated CI execution system with intelligent pipeline optimization, parall
 /deploy ci-run --quality-gates               # Quality-gated CI execution
 /deploy ci-run --comprehensive               # Comprehensive CI orchestration
 ```
-
 <command_file>
   <metadata>
     <name>/ci run</name>
@@ -26,20 +22,17 @@ Sophisticated CI execution system with intelligent pipeline optimization, parall
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="pipeline_name" type="string" required="true">
       <description>The name of the CI pipeline to execute as defined in the project's CI configuration.</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Run the 'main-build' pipeline.</description>
       <usage>/ci run "main-build"</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -47,16 +40,11 @@ Sophisticated CI execution system with intelligent pipeline optimization, parall
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
-      
       <!-- Command-specific components -->
       <include>components/reporting/generate-structured-report.md</include>
-      <include>components/deployment/pipeline-optimization.md</include>
       <include>components/actions/parallel-execution.md</include>
-      <include>components/quality/quality-gates.md</include>
-      <include>components/monitoring/pipeline-monitoring.md</include>
-      
+      <include>components/quality/quality-metrics.md</include>
       You are a CI/CD orchestrator. The user wants to run a specific CI pipeline.
-
       1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` and the CI configuration file (e.g., `.github/workflows/main.yml`) to understand the available pipelines and the CI platform.
       2.  **Validate Pipeline**: Verify that the requested `pipeline_name` is a valid pipeline.
       3.  **Generate Execution Command**: Construct the platform-specific command to trigger the pipeline (e.g., using `gh workflow run`, `glab ci run`).
@@ -64,7 +52,6 @@ Sophisticated CI execution system with intelligent pipeline optimization, parall
       5.  **Report Results**: After completion, generate a report on the outcome.
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <uses_config_values>
       <value>deployment.ci_platform</value>

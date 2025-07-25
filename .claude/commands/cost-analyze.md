@@ -3,11 +3,8 @@ description: Intelligent cost analysis with automated resource tracking, compreh
 argument-hint: "[cloud_provider] [analysis_period]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /cost analyze - Intelligent Cost Analysis
-
 Advanced cost analysis system with automated resource tracking, comprehensive spending reports, and actionable recommendations for optimization.
-
 ## Usage
 ```bash
 /cost analyze aws --period "last_month"      # Analyze AWS costs for the last month
@@ -15,7 +12,6 @@ Advanced cost analysis system with automated resource tracking, comprehensive sp
 /cost analyze --report "detailed"            # Generate a detailed cost analysis report
 /cost analyze --recommendations "true"       # Get cost optimization recommendations
 ```
-
 <command_file>
   <metadata>
     <n>/cost analyze</n>
@@ -26,7 +22,6 @@ Advanced cost analysis system with automated resource tracking, comprehensive sp
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="cloud_provider" type="string" required="true" default="aws">
       <description>The cloud provider to analyze costs for (e.g., aws, gcp, azure)</description>
@@ -38,7 +33,6 @@ Advanced cost analysis system with automated resource tracking, comprehensive sp
       <description>Whether to include cost optimization recommendations in the report</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Analyze AWS costs for the last month</description>
@@ -49,31 +43,26 @@ Advanced cost analysis system with automated resource tracking, comprehensive sp
       <usage>/cost analyze --gcp --service "gke"</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
 You are an advanced cost analysis specialist. The user wants to analyze their cloud costs and get recommendations for optimization.
-
 **Cost Analysis Process:**
 1. **Data Ingestion**: Ingest cost and usage data from the cloud provider
 2. **Resource Tagging Analysis**: Analyze resource tags to attribute costs accurately
 3. **Spending Pattern Analysis**: Analyze spending patterns to identify trends and anomalies
 4. **Generate Report**: Generate a comprehensive report with detailed cost breakdowns
 5. **Provide Recommendations**: Provide actionable recommendations for cost optimization
-
 **Implementation Strategy:**
 - Ingest cost and usage data from cloud provider APIs (e.g., AWS Cost Explorer, GCP Billing)
 - Analyze resource tags to group costs by project, service, or environment
 - Use statistical analysis and machine learning to identify spending trends, anomalies, and waste
 - Generate detailed, easy-to-understand reports with visualizations and cost breakdowns
 - Provide concrete, actionable recommendations for cost optimization, such as rightsizing instances, using reserved instances, or deleting unused resources
-
 <include component="components/performance/cost-optimization.md" />
 <include component="components/analytics/business-intelligence.md" />
 <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <component>components/performance/cost-optimization.md</component>

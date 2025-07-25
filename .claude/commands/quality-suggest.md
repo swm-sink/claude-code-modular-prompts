@@ -3,11 +3,8 @@ description: Advanced quality suggestions with intelligent recommendations, auto
 argument-hint: "[suggestion_scope] [improvement_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /analyze quality-suggest - Advanced Quality Suggestions
-
 Sophisticated quality suggestion system with intelligent recommendations, automated improvements, and comprehensive best practice guidance.
-
 ## Usage
 ```bash
 /analyze quality-suggest comprehensive       # Comprehensive quality suggestions
@@ -15,7 +12,6 @@ Sophisticated quality suggestion system with intelligent recommendations, automa
 /analyze quality-suggest --security          # Security enhancement suggestions
 /analyze quality-suggest --maintainability   # Maintainability improvements
 ```
-
 <command_file>
   <metadata>
     <name>/quality suggest</name>
@@ -26,20 +22,17 @@ Sophisticated quality suggestion system with intelligent recommendations, automa
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="target_path" type="string" required="false" default=".">
       <description>The file or directory to analyze. Defaults to the current directory.</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Get quality improvement suggestions for the entire project.</description>
       <usage>/quality suggest</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -50,22 +43,16 @@ Sophisticated quality suggestion system with intelligent recommendations, automa
       <include>components/analysis/codebase-discovery.md</include>
       <include>components/analysis/dependency-mapping.md</include>
       <include>components/workflow/report-generation.md</include>
-
       You are a senior software architect. Your task is to provide a prioritized, actionable list of quality improvements.
-
       <include component="components/context/find-relevant-code.md" />
-
       Once the code is identified, perform the following:
       1.  **Analyze Code Quality**: Identify areas for improvement in performance, maintainability, security, and documentation.
       2.  **Prioritize Opportunities**: Prioritize the opportunities based on their potential impact and estimated effort.
       3.  **Generate Suggestions**: Generate a clear list of suggestions, complete with code examples.
-
       Your output should be a structured report, but instead of findings, the sections should be prioritized suggestions (e.g., "Priority 1: High Impact, Low Effort").
-
       <include component="components/reporting/generate-structured-report.md" />
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <!-- Standard DRY Components -->

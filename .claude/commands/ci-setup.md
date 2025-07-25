@@ -3,18 +3,14 @@ description: Intelligent CI/CD setup with automated pipeline creation, configura
 argument-hint: "[ci_tool] [repo_url]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /ci setup - Intelligent CI/CD Setup
-
 Advanced CI/CD setup system with automated pipeline creation, intelligent configuration management, and comprehensive integration with popular version control systems.
-
 ## Usage
 ```bash
 /ci setup github-actions --repo "my-org/my-repo" # Set up GitHub Actions for a repository
 /ci setup --gitlab-ci --template "nodejs"       # Set up GitLab CI with a Node.js template
 /ci setup --jenkins --custom-config "path/to/config.xml" # Set up Jenkins with a custom configuration
 ```
-
 <command_file>
   <metadata>
     <n>/ci setup</n>
@@ -25,7 +21,6 @@ Advanced CI/CD setup system with automated pipeline creation, intelligent config
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="ci_tool" type="string" required="true" default="github-actions">
       <description>The CI/CD tool to set up (e.g., github-actions, gitlab-ci, jenkins)</description>
@@ -37,7 +32,6 @@ Advanced CI/CD setup system with automated pipeline creation, intelligent config
       <description>A template to use for the CI/CD pipeline configuration</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Set up GitHub Actions for a repository</description>
@@ -48,7 +42,6 @@ Advanced CI/CD setup system with automated pipeline creation, intelligent config
       <usage>/ci setup --gitlab-ci --template "nodejs"</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -56,23 +49,15 @@ Advanced CI/CD setup system with automated pipeline creation, intelligent config
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
-      
       <!-- Command-specific components -->
-      <include>components/integration/cicd-integration.md</include>
       <include>components/planning/create-step-by-step-plan.md</include>
-      <include>components/deployment/pipeline-templates.md</include>
-      <include>components/security/secrets-management.md</include>
-      <include>components/quality/best-practices-enforcement.md</include>
-      
 You are an advanced CI/CD setup specialist. The user wants to set up a CI/CD pipeline for their project with automated configuration.
-
 **CI/CD Setup Process:**
 1. **Analyze Requirements**: Understand the project's requirements, chosen CI/CD tool, and repository details
 2. **Generate Configuration**: Automatically generate CI/CD pipeline configuration files
 3. **Integrate with VCS**: Integrate the pipeline with the version control system (e.g., GitHub, GitLab)
 4. **Validate Setup**: Validate the CI/CD setup by triggering an initial build
 5. **Provide Guidance**: Provide guidance on common CI/CD workflows and best practices
-
 **Implementation Strategy:**
 - Analyze the project structure, language, and deployment targets to recommend optimal CI/CD practices
 - Generate boilerplate CI/CD configuration files (e.g., .github/workflows/*.yml, .gitlab-ci.yml, Jenkinsfile)
@@ -81,7 +66,6 @@ You are an advanced CI/CD setup specialist. The user wants to set up a CI/CD pip
 - Provide clear instructions and examples for customizing and extending the CI/CD pipeline
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <component>components/integration/cicd-integration.md</component>

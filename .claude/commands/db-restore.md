@@ -3,11 +3,8 @@ description: Advanced database restoration with intelligent recovery, point-in-t
 argument-hint: "[restore_strategy] [recovery_point]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-
 # /db restore - Advanced Database Restoration
-
 Sophisticated database restoration system with intelligent recovery, point-in-time restoration, and comprehensive data integrity validation.
-
 ## Usage
 ```bash
 /db restore backup_file                      # Standard database restoration
@@ -15,7 +12,6 @@ Sophisticated database restoration system with intelligent recovery, point-in-ti
 /db restore --incremental                    # Incremental restoration
 /db restore --validate                       # Restoration with validation
 ```
-
 <command_file>
   <metadata>
     <n>/db restore</n>
@@ -26,7 +22,6 @@ Sophisticated database restoration system with intelligent recovery, point-in-ti
       ]]>
     </usage>
   </metadata>
-
   <arguments>
     <argument name="backup_source" type="string" required="true">
       <description>Path or identifier of the backup source to restore from</description>
@@ -35,7 +30,6 @@ Sophisticated database restoration system with intelligent recovery, point-in-ti
       <description>Restoration strategy (full, incremental, point-in-time)</description>
     </argument>
   </arguments>
-  
   <examples>
     <example>
       <description>Full database restoration</description>
@@ -46,7 +40,6 @@ Sophisticated database restoration system with intelligent recovery, point-in-ti
       <usage>/db restore --point-in-time "2024-01-01 12:00:00"</usage>
     </example>
   </examples>
-
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
@@ -54,23 +47,17 @@ Sophisticated database restoration system with intelligent recovery, point-in-ti
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
-      
       <!-- Command-specific components -->
-      <include>components/error/circuit-breaker.md</include>
+      <include>components/reliability/circuit-breaker.md</include>
       <include>components/quality/framework-validation.md</include>
       <include>components/reporting/generate-structured-report.md</include>
-      <include>components/database/backup-validation.md</include>
-      <include>components/database/recovery-strategies.md</include>
-      
 You are a database restoration specialist. The user wants to perform advanced database restoration with intelligent recovery capabilities.
-
 **Restoration Process:**
 1. **Backup Validation**: Validate backup integrity and compatibility
 2. **Recovery Planning**: Plan optimal restoration strategy and timeline
 3. **Data Restoration**: Execute restoration with integrity monitoring
 4. **Validation Testing**: Comprehensive testing of restored data
 5. **Performance Optimization**: Optimize restored database performance
-
 **Implementation Strategy:**
 - Validate backup files and check integrity
 - Plan restoration timeline and rollback strategies
@@ -79,7 +66,6 @@ You are a database restoration specialist. The user wants to perform advanced da
 - Optimize database performance post-restoration
     </prompt>
   </claude_prompt>
-
   <dependencies>
     <includes_components>
       <component>components/error/circuit-breaker.md</component>
