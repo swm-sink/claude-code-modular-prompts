@@ -34,6 +34,12 @@ Comprehensive pipeline orchestration solution combining creation, execution, mon
 /pipeline deploy --canary --rollback-ready          # Canary deployment with rollback
 /pipeline deploy --zero-downtime --health-check     # Zero-downtime deployment
 
+# Rollback Mode
+/pipeline rollback "v1.2.3" --immediate           # Immediate rollback to specific version
+/pipeline rollback --health-check                   # Health-check driven rollback
+/pipeline rollback --zero-downtime                  # Zero-downtime rollback strategy
+/pipeline rollback --comprehensive                  # Comprehensive recovery protocol
+
 # CI/CD Setup Mode
 /pipeline setup github-actions --repo "my-repo"     # Setup GitHub Actions
 /pipeline setup gitlab-ci --template nodejs         # Setup GitLab CI with template
@@ -53,7 +59,7 @@ Comprehensive pipeline orchestration solution combining creation, execution, mon
       <![CDATA[
       /pipeline [mode] [pipeline_name] [options]
       
-      Modes: orchestrate, create, run, build, deploy, setup
+      Modes: orchestrate, create, run, build, deploy, setup, rollback
       Options: --trigger, --monitor, --parallel, --template, --config, --dry-run, --watch, --quality-gates
       ]]>
     </usage>
@@ -61,7 +67,7 @@ Comprehensive pipeline orchestration solution combining creation, execution, mon
   
   <arguments>
     <argument name="mode" type="string" required="false" default="orchestrate">
-      <description>Pipeline operation mode: orchestrate, create, run, build, deploy, setup</description>
+      <description>Pipeline operation mode: orchestrate, create, run, build, deploy, setup, rollback</description>
     </argument>
     <argument name="pipeline_name" type="string" required="false">
       <description>Name or identifier of the pipeline to operate on</description>
@@ -83,6 +89,12 @@ Comprehensive pipeline orchestration solution combining creation, execution, mon
     </argument>
     <argument name="repo_url" type="string" required="false">
       <description>Repository URL for CI/CD integration</description>
+    </argument>
+    <argument name="version" type="string" required="false">
+      <description>Specific version or tag to roll back to</description>
+    </argument>
+    <argument name="rollback_strategy" type="string" required="false" default="immediate">
+      <description>Rollback strategy: immediate, health-check, zero-downtime, comprehensive</description>
     </argument>
   </arguments>
   
@@ -110,6 +122,14 @@ Comprehensive pipeline orchestration solution combining creation, execution, mon
     <example>
       <description>Setup GitHub Actions for repository</description>
       <usage>/pipeline setup github-actions --repo "my-org/my-repo"</usage>
+    </example>
+    <example>
+      <description>Immediate rollback to specific version</description>
+      <usage>/pipeline rollback "v1.2.3" --immediate</usage>
+    </example>
+    <example>
+      <description>Zero-downtime rollback with health checks</description>
+      <usage>/pipeline rollback --zero-downtime --health-check</usage>
     </example>
   </examples>
   
@@ -248,6 +268,30 @@ Comprehensive CI/CD setup with automated configuration and integration:
 - **Jenkins**: Jenkinsfile, plugins, distributed builds
 - **Custom Tools**: Extensible setup for other CI/CD platforms
 
+## 7. ROLLBACK Mode
+Advanced deployment rollback with intelligent recovery, automated health checks, and zero-downtime restoration:
+
+### Rollback Strategies
+- **Immediate**: Fast rollback execution with minimal validation
+- **Health-Check**: Health-driven rollback with comprehensive validation
+- **Zero-Downtime**: Rolling rollback maintaining service availability
+- **Comprehensive**: Full recovery protocol with data integrity checks
+
+### Rollback Process
+1. **Risk Assessment**: Present severe warnings about rollback operations
+2. **User Confirmation**: Require explicit confirmation for high-risk operations
+3. **Target Validation**: Verify rollback version is valid and available
+4. **Pre-rollback Backup**: Automated database and configuration backup
+5. **Platform-Specific Rollback**: Execute deployment platform rollback commands
+6. **Health Verification**: Post-rollback health checks and validation
+7. **Incident Reporting**: Generate comprehensive post-mortem reports
+
+### Platform Support
+- **Kubernetes**: kubectl rollout undo and deployment management
+- **Docker Swarm**: Service update and rollback operations
+- **Serverless**: Function version management and traffic routing
+- **Custom Platforms**: Extensible rollback for additional deployment targets
+
 ## Universal Implementation Strategy
 
 ### Phase 1: Mode Detection and Validation
@@ -259,7 +303,8 @@ def detect_and_validate_mode(mode, arguments):
         'run': ExecuteStrategy(),
         'build': BuildStrategy(),
         'deploy': DeployStrategy(),
-        'setup': SetupStrategy()
+        'setup': SetupStrategy(),
+        'rollback': RollbackStrategy()
     }
     return mode_strategies.get(mode, mode_strategies['orchestrate'])
 ```
@@ -272,6 +317,34 @@ def detect_and_validate_mode(mode, arguments):
 
 ### Phase 3: Mode-Specific Execution
 Execute the selected mode with comprehensive error handling, progress tracking, and quality validation.
+
+### Special Mode: ROLLBACK Implementation
+When mode is 'rollback', execute advanced deployment rollback protocol:
+
+#### Rollback Safety Protocol
+1. **EXTREME WARNING**: Present clear, severe warning about rollback risks
+2. **User Confirmation**: Require explicit confirmation to proceed with high-risk operation
+3. **Configuration Reading**: Read PROJECT_CONFIG.xml to determine deployment platform
+4. **Target Validation**: Verify specified version is valid and available rollback target
+5. **Pre-rollback Backup**: Initiate database backup via `/db backup` command chain
+6. **Platform-Specific Rollback**: Execute appropriate rollback commands:
+   - Kubernetes: `kubectl rollout undo deployment/app --to-revision=N`
+   - Docker Swarm: `docker service update --rollback service-name`
+   - Serverless: Platform-specific version rollback commands
+7. **Health Verification**: Execute comprehensive post-rollback health checks
+8. **Incident Documentation**: Generate detailed post-mortem incident report
+
+#### Rollback Strategy Implementation
+```python
+def execute_rollback(version, strategy):
+    strategies = {
+        'immediate': immediate_rollback(version),
+        'health-check': health_driven_rollback(version),
+        'zero-downtime': zero_downtime_rollback(version),
+        'comprehensive': comprehensive_recovery(version)
+    }
+    return strategies.get(strategy, strategies['immediate'])
+```
 
 ### Phase 4: Unified Reporting
 Generate comprehensive reports covering:
@@ -333,11 +406,23 @@ Report your pipeline operation with:
       <component>components/integration/cicd-integration.md</component>
       <component>components/testing/testing-framework.md</component>
       
+      <!-- Rollback Components -->
+      <component>components/validation/validation-framework.md</component>
+      <component>components/workflow/command-execution.md</component>
+      <component>components/workflow/error-handling.md</component>
+      <component>components/interaction/progress-reporting.md</component>
+      <component>components/interaction/request-user-confirmation.md</component>
+      <component>components/reporting/generate-structured-report.md</component>
+      
       <!-- Reporting and Analytics -->
       <component>components/reporting/generate-structured-report.md</component>
       <component>components/optimization/dspy-framework.md</component>
       <component>components/meta/component-loader.md</component>
     </includes_components>
+    
+    <chain>
+      <command>/db backup</command>
+    </chain>
     
     <uses_config_values>
       <!-- Pipeline Configuration -->
@@ -364,6 +449,11 @@ Report your pipeline operation with:
       <!-- Monitoring Configuration -->
       <value>monitoring.real_time.enabled</value>
       <value>monitoring.quality_gates.enabled</value>
+      
+      <!-- Rollback Configuration -->
+      <value>deployment.platform</value>
+      <value>rollback.default_strategy</value>
+      <value>rollback.backup_required</value>
     </uses_config_values>
   </dependencies>
 </command_file>

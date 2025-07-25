@@ -2,10 +2,39 @@
 description: Advanced CD rollback with intelligent recovery, automated health checks, and zero-downtime restoration
 argument-hint: "[rollback_strategy] [recovery_scope]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+migration_notice: "This command has been consolidated into `/pipeline rollback`. Use `/pipeline rollback [version] [options]` instead."
 ---
-# /deploy cd-rollback - Advanced CD Rollback
+# /deploy cd-rollback - Advanced CD Rollback [DEPRECATED]
+
+> **⚠️ DEPRECATION NOTICE**: This command has been consolidated into the unified `/pipeline` command.  
+> **New Usage**: `/pipeline rollback [version] [options]`  
+> **Migration**: Replace `/deploy cd-rollback` with `/pipeline rollback`  
+> **Benefits**: Access to full pipeline orchestration capabilities with rollback functionality
+
 Sophisticated CD rollback system with intelligent recovery, automated health checks, and zero-downtime restoration capabilities.
-## Usage
+## Migration to `/pipeline rollback`
+
+### Old Usage → New Usage
+```bash
+# OLD: /deploy cd-rollback immediate
+# NEW: 
+/pipeline rollback "v1.2.3" --immediate
+
+# OLD: /deploy cd-rollback --health-check
+# NEW:
+/pipeline rollback --health-check
+
+# OLD: /deploy cd-rollback --zero-downtime
+# NEW:
+/pipeline rollback --zero-downtime
+
+# OLD: /deploy cd-rollback --comprehensive
+# NEW:
+/pipeline rollback --comprehensive
+```
+
+## Legacy Usage (Deprecated)
 ```bash
 /deploy cd-rollback immediate                # Immediate rollback execution
 /deploy cd-rollback --health-check           # Health-check driven rollback
