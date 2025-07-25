@@ -17,6 +17,12 @@ replacement: "/pipeline run"
 
 This standalone command has been consolidated into the unified `/pipeline` command. The new command provides the same functionality with improved consistency and maintainability.
 
+**Migration Guide:**
+- `/pipeline-run "Pipeline Name" --trigger manual` → `/pipeline run "Pipeline Name" --trigger manual`
+- `/pipeline-run --schedule "cron:0 0 * * *"` → `/pipeline run --schedule "cron:0 0 * * *"`
+- `/pipeline-run --monitor --parallel` → `/pipeline run --monitor --parallel`
+- All functionality has been preserved in the unified command
+
 ---
 
 Advanced pipeline execution system with automated trigger management, real-time monitoring, and comprehensive error handling and recovery.

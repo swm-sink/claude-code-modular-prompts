@@ -17,6 +17,11 @@ replacement: "/pipeline create"
 
 This standalone command has been consolidated into the unified `/pipeline` command. The new command provides the same functionality with improved consistency and maintainability.
 
+**Migration Guide:**
+- `/pipeline-create ci/cd --config "file"` → `/pipeline create ci/cd --config "file"`
+- `/pipeline-create data-flow --template "spark"` → `/pipeline create data-flow --template "spark"`
+- All functionality has been preserved in the unified command
+
 ---
 
 Advanced pipeline creation system with automated definition, modular component integration, and comprehensive validation of workflow orchestration.

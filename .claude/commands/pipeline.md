@@ -18,11 +18,13 @@ Comprehensive pipeline orchestration solution combining creation, execution, mon
 /pipeline create ci/cd --config "Jenkinsfile"       # Create CI/CD pipeline from config
 /pipeline create data-flow --template "spark_job"   # Create data processing pipeline
 /pipeline create --custom-template "template.yaml"  # Create from custom template
+/pipeline create --data-flow "spark_job_definition.py" # Create data flow pipeline for Spark job
 
 # Execution Mode
 /pipeline run "My CI/CD Pipeline" --trigger manual  # Execute specific pipeline
 /pipeline run --schedule "cron:0 0 * * *"          # Scheduled execution
 /pipeline run --monitor --parallel                  # Monitored parallel execution
+/pipeline run --data-flow "Daily ETL Job" --schedule "cron" # Run data flow pipeline on schedule
 
 # Build Mode
 /pipeline build production --optimize               # Production-optimized build
@@ -84,6 +86,9 @@ Comprehensive pipeline orchestration solution combining creation, execution, mon
     <argument name="template" type="string" required="false">
       <description>Template to use for pipeline creation</description>
     </argument>
+    <argument name="monitor" type="boolean" required="false" default="true">
+      <description>Whether to enable real-time monitoring during pipeline execution</description>
+    </argument>
     <argument name="ci_tool" type="string" required="false" default="github-actions">
       <description>CI/CD tool for setup: github-actions, gitlab-ci, jenkins</description>
     </argument>
@@ -108,8 +113,16 @@ Comprehensive pipeline orchestration solution combining creation, execution, mon
       <usage>/pipeline create ci/cd --config "Jenkinsfile"</usage>
     </example>
     <example>
+      <description>Create a data flow pipeline for a Spark job</description>
+      <usage>/pipeline create --data-flow "spark_job_definition.py"</usage>
+    </example>
+    <example>
       <description>Execute pipeline with parallel processing</description>
       <usage>/pipeline run "Build Pipeline" --parallel --monitor</usage>
+    </example>
+    <example>
+      <description>Run a data flow pipeline on a schedule</description>
+      <usage>/pipeline run --data-flow "Daily ETL Job" --schedule "cron:0 0 * * *"</usage>
     </example>
     <example>
       <description>Production build with optimization</description>
@@ -187,37 +200,98 @@ Execute sequential processing pipeline with specialized agents at each stage:
 - Performance monitoring and resource tracking
 
 ## 2. CREATE Mode
-Intelligent pipeline creation with automated definition and validation:
+Intelligent pipeline creation with automated definition, modular component integration, and comprehensive validation:
 
-### Creation Process
-1. **Requirement Analysis**: Analyze pipeline type, components, and integration needs
-2. **Automated Definition**: Generate pipeline structure using YAML/JSON/DSL
-3. **Component Integration**: Integrate modular components with proper data flow
-4. **Validation**: Validate configuration, syntax, and dependency resolution
-5. **Deployment**: Deploy to target CI/CD system and activate
+### Creation Process (from pipeline-create)
+1. **Requirement Analysis**: Analyze pipeline requirements, type, and components
+2. **Automated Definition**: Automatically define the pipeline structure and stages
+3. **Component Integration**: Integrate modular components and tasks into the pipeline
+4. **Validation**: Validate the pipeline configuration and dependencies
+5. **Deployment & Activation**: Deploy and activate the created pipeline
+
+### Implementation Strategy
+- Analyze pipeline requirements to determine optimal structure and orchestration
+- Automatically generate pipeline definitions using YAML, JSON, or DSLs (e.g., Jenkinsfile, GitLab CI config)
+- Integrate modular components into the pipeline, ensuring proper data flow and execution order
+- Validate the pipeline configuration for correctness, syntax, and dependency resolution
+- Deploy the pipeline to the target CI/CD or workflow orchestration system and activate it for execution
 
 ### Pipeline Types
-- **CI/CD Pipelines**: Build, test, deploy workflows
-- **Data Flow Pipelines**: ETL, stream processing, batch jobs
+- **CI/CD Pipelines**: Build, test, deploy workflows from Jenkinsfile or config
+- **Data Flow Pipelines**: ETL, stream processing, batch jobs (Spark, etc.)
 - **Deployment Pipelines**: Infrastructure, application, configuration deployment
-- **Custom Pipelines**: User-defined workflows with custom stages
+- **Custom Pipelines**: User-defined workflows with custom templates
 
 ## 3. RUN Mode
-Advanced pipeline execution with intelligent monitoring and optimization:
+Advanced pipeline execution with automated trigger management, real-time monitoring, and comprehensive error handling:
 
-### Execution Framework
-- **Trigger Management**: Handle manual, scheduled, webhook, and event-driven triggers
-- **Execution Orchestration**: Manage stage dependencies, parallel processing
-- **Real-time Monitoring**: Progress tracking, resource utilization, performance metrics
-- **Error Handling**: Automatic retries, fallbacks, notification systems
-- **Quality Gates**: Enforce checkpoints between stages with validation
+### Pipeline Execution Process (from pipeline-run)
+1. **Trigger Management**: Manage pipeline triggers (manual, scheduled, event-driven)
+2. **Execution Orchestration**: Orchestrate the execution of pipeline stages and tasks
+3. **Real-time Monitoring**: Provide real-time monitoring and status updates during execution
+4. **Error Handling & Recovery**: Implement comprehensive error handling and recovery mechanisms
+5. **Post-Execution Reporting**: Generate detailed reports on pipeline execution outcomes
+
+### Implementation Strategy
+- Implement flexible trigger mechanisms to initiate pipeline execution based on various events or schedules
+- Orchestrate the execution of pipeline stages in parallel or sequentially, managing dependencies and retries
+- Provide real-time visibility into pipeline progress, logs, and resource utilization through integrated monitoring
+- Design robust error handling, including automatic retries, fallbacks, and notification systems
+- Generate comprehensive post-execution reports with performance metrics, success/failure status, and detailed logs
+
+### Core Logic (from pipeline-run)
+```yaml
+execution:
+  load: pipeline definition from .claude/pipelines/
+  validate: stage dependencies and prerequisites  
+  initialize: execution context with stage tracking
+  execute: stages in dependency order with parallelization
+  enforce: quality gates between stages
+  monitor: progress, timing, and resource usage
+stage_management:
+  dependencies: resolve and validate stage order
+  parallel: execute independent stages simultaneously
+  gates: enforce quality checkpoints between stages
+  rollback: atomic recovery on stage failures
+monitoring:
+  visibility: real-time stage progress and status
+  metrics: execution time, resource usage, success rates
+  logs: detailed stage execution traces
+  alerts: quality gate failures and error conditions
+```
+
+### Pipeline Format
+```yaml
+name: ci-cd-pipeline
+stages:
+  - name: test
+    command: /test --coverage
+    quality_gate: coverage >= 80%
+    parallel_group: validation
+  - name: security-scan
+    command: /security scan
+    parallel_group: validation
+  - name: build
+    command: /build --optimize
+    depends_on: [test, security-scan]
+  - name: deploy
+    command: /deploy --env staging
+    depends_on: [build]
+    quality_gate: deployment_success
+```
+
+### Error Handling (from pipeline-run)
+- Stage-level checkpoints with atomic rollback
+- Quality gate enforcement with detailed failure reports
+- Parallel execution with coordinated error propagation
+- Comprehensive pipeline status visibility
 
 ### Monitoring and Reporting
-- Stage-by-stage execution tracking
-- Performance metrics and resource usage
-- Error tracking and recovery actions
-- Quality gate validation results
-- Comprehensive execution reports
+- Stage-by-stage execution tracking with real-time status
+- Performance metrics and resource usage monitoring
+- Error tracking and automated recovery actions
+- Quality gate validation results and failure analysis
+- Comprehensive execution reports with timing and logs
 
 ## 4. BUILD Mode
 Sophisticated development build system with optimization and quality assurance:
@@ -386,6 +460,10 @@ Report your pipeline operation with:
       <component>components/workflow/error-handling.md</component>
       <component>components/interaction/progress-reporting.md</component>
       
+      <!-- Components from pipeline-create -->
+      <component>components/integration/cicd-integration.md</component>
+      <component>components/planning/create-step-by-step-plan.md</component>
+      
       <!-- Orchestration and Monitoring -->
       <component>components/orchestration/agent-orchestration.md</component>
       <component>components/workflow/flow-schedule.md</component>
@@ -430,6 +508,14 @@ Report your pipeline operation with:
       <value>pipeline.deployment_target</value>
       <value>pipeline.execution.default_trigger</value>
       <value>pipeline.quality.coverage_threshold</value>
+      
+      <!-- Configuration from pipeline-create -->
+      <value>pipeline.default_template</value>
+      <value>pipeline.deployment_target</value>
+      
+      <!-- Configuration from pipeline-run -->
+      <value>pipeline.execution.default_trigger</value>
+      <value>monitoring.real_time.enabled</value>
       
       <!-- Build Configuration -->
       <value>build.targets.target</value>
