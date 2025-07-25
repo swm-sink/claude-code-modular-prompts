@@ -2,8 +2,23 @@
 description: Advanced development build system with intelligent optimization, parallel processing, and automated quality checks
 argument-hint: "[build_type] [optimization_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation_date: "2025-07-25"
+removal_date: "2025-08-25"
+replacement: "/pipeline build"
 ---
 # /dev build - Advanced Development Build
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/pipeline build`
+
+This standalone command has been consolidated into the unified `/pipeline` command. The new command provides the same functionality with improved consistency and maintainability.
+
+---
+
 Sophisticated development build system with intelligent optimization, parallel processing, and automated quality assurance.
 ## Usage
 ```bash

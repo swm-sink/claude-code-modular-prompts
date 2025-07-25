@@ -2,8 +2,23 @@
 description: Advanced CI execution with intelligent pipeline optimization, parallel processing, and automated quality gates
 argument-hint: "[execution_mode] [optimization_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation_date: "2025-07-25"
+removal_date: "2025-08-25"
+replacement: "/pipeline run"
 ---
 # /deploy ci-run - Advanced CI Execution
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/pipeline run`
+
+This standalone command has been consolidated into the unified `/pipeline` command. The new command provides the same functionality with improved consistency and maintainability.
+
+---
+
 Sophisticated CI execution system with intelligent pipeline optimization, parallel processing, and automated quality gates.
 ## Usage
 ```bash

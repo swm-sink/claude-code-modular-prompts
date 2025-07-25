@@ -2,8 +2,23 @@
 description: Intelligent CI/CD setup with automated pipeline creation, configuration management, and comprehensive integration with version control systems
 argument-hint: "[ci_tool] [repo_url]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation_date: "2025-07-25"
+removal_date: "2025-08-25"
+replacement: "/pipeline setup"
 ---
 # /ci setup - Intelligent CI/CD Setup
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/pipeline setup`
+
+This standalone command has been consolidated into the unified `/pipeline` command. The new command provides the same functionality with improved consistency and maintainability.
+
+---
+
 Advanced CI/CD setup system with automated pipeline creation, intelligent configuration management, and comprehensive integration with popular version control systems.
 ## Usage
 ```bash

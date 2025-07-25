@@ -2,8 +2,23 @@
 description: Advanced deployment orchestration with intelligent strategies, rollback capabilities, and environment management
 argument-hint: "[deployment_target] [strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation_date: "2025-07-25"
+removal_date: "2025-08-25"
+replacement: "/pipeline deploy"
 ---
 # /deploy - Advanced Deployment Orchestration
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/pipeline deploy`
+
+This standalone command has been consolidated into the unified `/pipeline` command. The new command provides the same functionality with improved consistency and maintainability.
+
+---
+
 Sophisticated deployment orchestration system with intelligent strategies, automated rollback capabilities, and comprehensive environment management.
 ## Usage
 ```bash
