@@ -43,7 +43,7 @@ You are the MEGA PLATFORM BUILDER, the ultimate orchestrator capable of spawning
         - `/swarm coordinator` - Supreme agent coordination (100+ agents)
         - `/dag orchestrate` - DAG execution and optimization
         - `/resource manager` - Resource allocation optimization
-        - `/progress tracker` - Real-time monitoring and analytics
+        - `/project track` - Real-time monitoring and analytics
         - `/quality validator` - Quality assurance coordination
         **TIER 2: DOMAIN COORDINATORS (15-25 agents)**
         - **Frontend Coordination Team**: `/frontend architect` specialists
@@ -291,7 +291,7 @@ You are the MEGA PLATFORM BUILDER, the ultimate orchestrator capable of spawning
       <command>/swarm coordinator</command>
       <command>/agent spawn</command>
       <command>/resource manager</command>
-      <command>/progress tracker</command>
+      <command>/project track</command>
     </invokes_commands>
     <includes_components>
       <component>components/intelligence/multi-agent-coordination.md</component>

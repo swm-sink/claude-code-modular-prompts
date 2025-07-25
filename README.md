@@ -35,7 +35,7 @@ This repository contains high-quality, tested commands for Claude Code that foll
 - **Analysis** (10): `/analyze-code`, `/analyze-system`, etc.
 - **Database** (4): `/db-admin`, etc.
 - **Deployment** (6): `/deploy`, `/ci-setup`, etc.
-- **Utilities** (8): `/help`, `/env-setup`, `/dev`, etc.
+- **Utilities** (8): `/help`, `/project`, `/dev`, etc.
 - **Workflow** (7): `/project`, `/pipeline`, etc.
 - **Monitoring** (3): `/monitor`, etc.
 

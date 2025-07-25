@@ -220,7 +220,7 @@ You are the DAG EXECUTOR ENGINE, the supreme execution coordinator capable of or
       <command>/agent spawn</command>
       <command>/swarm coordinator</command>
       <command>/resource manager</command>
-      <command>/progress tracker</command>
+      <command>/project track</command>
     </invokes_commands>
     <includes_components>
       <component>components/intelligence/multi-agent-coordination.md</component>
