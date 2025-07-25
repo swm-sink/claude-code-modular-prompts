@@ -59,7 +59,7 @@ Clear description of the command's purpose and functionality.
   <claude_prompt>
     <prompt>
       <!-- Standard components (always include) -->
-      <include>components/validation/input-validation.md</include>
+      <include>components/validation/validation-framework.md</include>
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>

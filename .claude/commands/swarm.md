@@ -27,7 +27,7 @@ You are orchestrating a swarm of specialized AI agents to accomplish a complex t
 
 Task: $ARGUMENTS
 
-<include>.claude/components/validation/input-validation.md</include>
+<include>.claude/components/validation/validation-framework.md</include>
 <include>.claude/components/orchestration/task-planning.md</include>
 
 ## Swarm Intelligence Protocol

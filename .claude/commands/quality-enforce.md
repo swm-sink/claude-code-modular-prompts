@@ -44,7 +44,7 @@ Enforces code quality standards by applying configurable quality gates from the 
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
-      <include>components/validation/input-validation.md</include>
+      <include>components/validation/validation-framework.md</include>
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
@@ -69,7 +69,7 @@ You are a CI/CD quality engineer. Your task is to enforce the project's quality 
   <dependencies>
     <includes_components>
       <!-- Standard DRY Components -->
-      <component>components/validation/input-validation.md</component>
+      <component>components/validation/validation-framework.md</component>
       <component>components/workflow/command-execution.md</component>
       <component>components/workflow/error-handling.md</component>
       <component>components/interaction/progress-reporting.md</component>

@@ -27,7 +27,7 @@ You are implementing a DAG-based orchestration system with adaptive agent spawni
 
 Workflow: $ARGUMENTS
 
-<include>.claude/components/validation/input-validation.md</include>
+<include>.claude/components/validation/validation-framework.md</include>
 <include>.claude/components/orchestration/dependency-analysis.md</include>
 
 ## DAG Orchestration Protocol

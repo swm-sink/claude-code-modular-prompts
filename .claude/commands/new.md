@@ -43,7 +43,7 @@ Sophisticated project initialization system with intelligent scaffolding, techno
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
-      <include>components/validation/input-validation.md</include>
+      <include>components/validation/validation-framework.md</include>
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
@@ -52,7 +52,7 @@ Sophisticated project initialization system with intelligent scaffolding, techno
       <include>components/planning/create-step-by-step-plan.md</include>
       <include>components/actions/apply-code-changes.md</include>
       <include>components/interaction/request-user-confirmation.md</include>
-      <include>components/validation/yaml-frontmatter.md</include>
+      <include>components/validation/validation-framework.md</include>
 
 You are a friendly and expert project setup assistant. The user wants to initialize a new project for the Prompt Factory.
 

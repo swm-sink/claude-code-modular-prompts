@@ -46,7 +46,7 @@ Advanced pattern analysis system with design pattern detection, anti-pattern ide
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
-      <include>components/validation/input-validation.md</include>
+      <include>components/validation/validation-framework.md</include>
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
@@ -70,7 +70,7 @@ You are a software architect. The user wants you to analyze their codebase for d
   <dependencies>
     <includes_components>
       <!-- Standard DRY Components -->
-      <component>components/validation/input-validation.md</component>
+      <component>components/validation/validation-framework.md</component>
       <component>components/workflow/command-execution.md</component>
       <component>components/workflow/error-handling.md</component>
       <component>components/interaction/progress-reporting.md</component>

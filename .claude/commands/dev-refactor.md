@@ -50,7 +50,7 @@ Sophisticated development refactoring system with intelligent code optimization,
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
-      <include>components/validation/input-validation.md</include>
+      <include>components/validation/validation-framework.md</include>
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
@@ -60,7 +60,7 @@ Sophisticated development refactoring system with intelligent code optimization,
       <include>components/planning/create-step-by-step-plan.md</include>
       <include>components/actions/apply-code-changes.md</include>
       <include>components/quality/anti-pattern-detection.md</include>
-      <include>components/testing/test-unit.md</include>
+      <include>components/testing/testing-framework.md</include>
       
       You are a senior software engineer specializing in code quality. The user wants to refactor a specific part of the codebase.
 

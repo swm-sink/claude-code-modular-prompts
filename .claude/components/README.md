@@ -95,7 +95,7 @@ Components are automatically loaded into the main system through the CLAUDE.md i
 
 ### Intelligence and Learning Frameworks  
 @import ../components/intelligence/cognitive-architecture.md
-@import ../components/learning/meta-learning-framework.md
+@import ../components/learning/meta-learning.md
 ```
 
 ### Command Integration Pattern
@@ -105,7 +105,7 @@ Commands reference framework components to leverage their capabilities:
 <command>reason-react</command>
 <params>
   <!-- Framework Component Reference -->
-  <framework_component>@components/reasoning/react-framework</framework_component>
+  <framework_component>@components/reasoning/react-reasoning</framework_component>
   <constitutional_compliance>true</constitutional_compliance>
   
   <!-- Command-specific configuration -->

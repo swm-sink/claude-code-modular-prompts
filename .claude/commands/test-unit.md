@@ -53,7 +53,7 @@ Advanced unit testing system with automated test case generation, comprehensive 
   <claude_prompt>
     <prompt>
       <!-- Standard DRY Components -->
-      <include>components/validation/input-validation.md</include>
+      <include>components/validation/validation-framework.md</include>
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
@@ -77,7 +77,7 @@ You are an advanced unit testing specialist. The user wants to generate and run 
 - Use code coverage tools to measure line, branch, and function coverage
 - Generate a clear, actionable report with test results, coverage gaps, and suggestions for improvement
 
-<include component="components/testing/test-unit.md" />
+<include component="components/testing/testing-framework.md" />
 <include component="components/analysis/codebase-discovery.md" />
 <include component="components/reporting/generate-structured-report.md" />
     </prompt>
@@ -86,7 +86,7 @@ You are an advanced unit testing specialist. The user wants to generate and run 
   <dependencies>
     <includes_components>
       <!-- Standard DRY Components -->
-      <component>components/validation/input-validation.md</component>
+      <component>components/validation/validation-framework.md</component>
       <component>components/workflow/command-execution.md</component>
       <component>components/workflow/error-handling.md</component>
       <component>components/interaction/progress-reporting.md</component>
@@ -94,7 +94,7 @@ You are an advanced unit testing specialist. The user wants to generate and run 
       <component>components/analysis/dependency-mapping.md</component>
       <component>components/workflow/report-generation.md</component>
       <!-- Command-specific components -->
-      <component>components/testing/test-unit.md</component>
+      <component>components/testing/testing-framework.md</component>
       <component>components/analysis/codebase-discovery.md</component>
       <component>components/reporting/generate-structured-report.md</component>
     </includes_components>

@@ -247,7 +247,7 @@ Automated framework component loading and initialization system for the Claude C
   
   <command_binding_examples>
     <reasoning_command>
-      <reference>@components/reasoning/react-framework</reference>
+      <reference>@components/reasoning/react-reasoning</reference>
       <provides>reasoning_and_acting_capabilities</provides>
       <configuration>inherits_constitutional_and_intelligence_parameters</configuration>
     </reasoning_command>
