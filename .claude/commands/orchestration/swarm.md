@@ -27,8 +27,8 @@ You are orchestrating a swarm of specialized AI agents to accomplish a complex t
 
 Task: $ARGUMENTS
 
-<include>.claude/components/input-validation.md</include>
-<include>.claude/components/task-planning.md</include>
+<include>.claude/components/validation/input-validation.md</include>
+<include>.claude/components/orchestration/task-planning.md</include>
 
 ## Swarm Intelligence Protocol
 
@@ -71,7 +71,7 @@ Use the Task tool to spawn specialized agents for parallel work:
 2. **Coordinated Tasks**: Manage agent dependencies and data flow
 3. **Progress Tracking**: Monitor agent status and results
 
-<include>.claude/components/parallel-execution.md</include>
+<include>.claude/components/actions/parallel-execution.md</include>
 
 ### Phase 4: Swarm Coordination
 As the orchestrator:
@@ -86,8 +86,8 @@ As the orchestrator:
 3. Integrate changes into a cohesive solution
 4. Verify complete task accomplishment
 
-<include>.claude/components/error-handling.md</include>
-<include>.claude/components/progress-tracking.md</include>
+<include>.claude/components/workflow/error-handling.md</include>
+<include>.claude/components/orchestration/progress-tracking.md</include>
 
 ## Quality Gates
 - All agent tasks must complete successfully

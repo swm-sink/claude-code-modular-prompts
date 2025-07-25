@@ -28,7 +28,7 @@ You are implementing a Map-Reduce orchestration pattern. Your role is to divide 
 
 Task: $ARGUMENTS
 
-<include>.claude/components/input-validation.md</include>
+<include>.claude/components/validation/input-validation.md</include>
 <include>.claude/components/chunking-strategies.md</include>
 
 ## Map-Reduce Orchestration Protocol

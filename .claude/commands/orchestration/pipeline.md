@@ -27,7 +27,7 @@ You are implementing a Pipeline Pattern for sequential agent processing. Each st
 
 Pipeline: $ARGUMENTS
 
-<include>.claude/components/input-validation.md</include>
+<include>.claude/components/validation/input-validation.md</include>
 <include>.claude/components/pipeline-validation.md</include>
 
 ## Pipeline Orchestration Protocol

@@ -28,7 +28,7 @@ You are implementing a Hierarchical Orchestration pattern. As the root orchestra
 
 Project: $ARGUMENTS
 
-<include>.claude/components/input-validation.md</include>
+<include>.claude/components/validation/input-validation.md</include>
 <include>.claude/components/hierarchy-planning.md</include>
 
 ## Hierarchical Orchestration Protocol

@@ -27,8 +27,8 @@ You are implementing a DAG-based orchestration system with adaptive agent spawni
 
 Workflow: $ARGUMENTS
 
-<include>.claude/components/input-validation.md</include>
-<include>.claude/components/dependency-analysis.md</include>
+<include>.claude/components/validation/input-validation.md</include>
+<include>.claude/components/orchestration/dependency-analysis.md</include>
 
 ## DAG Orchestration Protocol
 
@@ -96,7 +96,7 @@ Implement the DAG execution with adaptive spawning:
    - **Resource-based**: Adjust based on available resources
    - **Quality-based**: Spawn verification agents if quality drops
 
-<include>.claude/components/task-execution.md</include>
+<include>.claude/components/orchestration/task-execution.md</include>
 
 ### Phase 4: Dynamic Graph Modification
 Support runtime DAG modifications:
