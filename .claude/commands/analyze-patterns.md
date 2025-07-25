@@ -1,8 +1,40 @@
 ---
-description: Advanced pattern analysis with design pattern detection, anti-pattern identification, and architectural insights
+name: /analyze-patterns
+description: [DEPRECATED] Advanced pattern analysis with design pattern detection, anti-pattern identification, and architectural insights - use /analyze-code instead
 argument-hint: "[pattern_type] [analysis_scope]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+test_coverage: 0%
+# DEPRECATION METADATA
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/analyze-code"
+reason: "Superseded by unified /analyze-code command with comprehensive pattern analysis capabilities"
+migration_deadline: "2025-08-25"
 ---
+<command_file>
+
+# ⚠️ DEPRECATED: /analyze-patterns
+
+**This command is deprecated and will be removed on 2025-08-25.**
+
+**Please use `/analyze-code` instead:**
+```
+# Old command:
+/analyze patterns design
+
+# New command:
+/analyze-code --patterns
+```
+
+The new unified `/analyze-code` command provides:
+- ✅ All legacy pattern analysis functionality
+- ✅ Enhanced design pattern detection
+- ✅ Improved anti-pattern identification
+- ✅ Better architectural insights
+- ✅ Consolidated analysis workflows
+
+---
+
 # /analyze patterns - Pattern Analysis Framework
 Advanced pattern analysis system with design pattern detection, anti-pattern identification, and comprehensive architectural insights.
 ## Usage
@@ -76,4 +108,6 @@ You are a software architect. The user wants you to analyze their codebase for d
       <value>paths.source</value>
     </uses_config_values>
   </dependencies>
+</command_file>
+
 </command_file>

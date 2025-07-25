@@ -1,8 +1,40 @@
 ---
-description: Advanced code analysis with intelligent pattern detection, quality assessment, and comprehensive insights
+name: /analyze
+description: [DEPRECATED] Advanced code analysis with intelligent pattern detection, quality assessment, and comprehensive insights - use /analyze-code instead
 argument-hint: "[analysis_scope] [analysis_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+test_coverage: 0%
+# DEPRECATION METADATA
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/analyze-code"
+reason: "Superseded by unified /analyze-code command with comprehensive analysis capabilities"
+migration_deadline: "2025-08-25"
 ---
+<command_file>
+
+# ⚠️ DEPRECATED: /analyze
+
+**This command is deprecated and will be removed on 2025-08-25.**
+
+**Please use `/analyze-code` instead:**
+```
+# Old command:
+/analyze code comprehensive
+
+# New command:
+/analyze-code comprehensive
+```
+
+The new unified `/analyze-code` command provides:
+- ✅ All legacy analyze functionality
+- ✅ Enhanced pattern detection
+- ✅ Improved quality assessment
+- ✅ Better security analysis
+- ✅ Consolidated analysis workflows
+
+---
+
 # /analyze code - Advanced Code Analysis
 Sophisticated code analysis system with intelligent pattern detection, quality assessment, and comprehensive insights generation.
 ## Usage
@@ -88,4 +120,6 @@ You are an advanced code analysis specialist. The user wants to perform comprehe
       <value>security.scan.depth</value>
     </uses_config_values>
   </dependencies>
+</command_file>
+
 </command_file>
