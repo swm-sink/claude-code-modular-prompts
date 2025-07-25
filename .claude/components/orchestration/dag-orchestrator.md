@@ -1,80 +1,109 @@
 <prompt_component>
   <step name="DAG Workflow Orchestration">
     <description>
-Advanced DAG (Directed Acyclic Graph) orchestrator for complex workflow coordination. Provides intelligent task dependency modeling, automatic dependency detection, parallel execution optimization, and comprehensive workflow management.
+Advanced Directed Acyclic Graph (DAG) orchestration system for complex workflow coordination. Provides intelligent task dependency modeling, automatic dependency detection, parallel execution optimization, and comprehensive workflow management with real-time monitoring and failure recovery capabilities.
     </description>
   </step>
 
   <dag_orchestrator>
-    <workflow_coordination>
-      <!-- Build DAG orchestrator for complex workflow coordination -->
-      <directed_acyclic_graph>
-        <graph_construction>
-          <task_dependency_modeling>
-            Model complex workflows as directed acyclic graphs:
-            - Nodes represent individual commands or operations
-            - Edges represent dependencies between operations
-            - Weights represent execution time estimates
-            - Attributes store operation metadata and requirements
-          </task_dependency_modeling>
-          
-          <dependency_analysis>
-            <automatic_dependency_detection>
-              Automatically detect dependencies between operations:
-              - File dependency analysis (inputs/outputs)
-              - Command prerequisite detection
-              - Resource dependency identification
-              - Semantic dependency inference from operation descriptions
-            </automatic_dependency_detection>
-            
-            <manual_dependency_specification>
-              Allow explicit dependency specification:
-              - Sequential dependencies (A must complete before B)
-              - Conditional dependencies (B runs only if A succeeds)
-              - Resource dependencies (shared resource access)
-              - Timing dependencies (delay between operations)
-            </manual_dependency_specification>
-          </dependency_analysis>
-        </graph_construction>
+    <workflow_modeling>
+      <!-- Build and validate DAG structures for complex workflows -->
+      <dag_construction>
+        <task_dependency_modeling>
+          Model complex workflows as directed acyclic graphs:
+          - Nodes represent individual commands or operations
+          - Edges represent dependencies between operations
+          - Weights represent execution time estimates
+          - Attributes store operation metadata and requirements
+          - Priority levels and execution timeouts per task
+        </task_dependency_modeling>
         
-        <execution_planning>
-          <topological_sorting>
-            <execution_order_determination>
-              Determine optimal execution order using topological sort:
-              - Identify operations that can run in parallel
-              - Determine critical path for workflow completion
-              - Optimize execution order for resource utilization
-              - Handle cyclic dependency detection and resolution
-            </execution_order_determination>
-            
-            <parallelization_opportunities>
-              Identify opportunities for parallel execution:
-              - Independent operation branches
-              - Resource-compatible parallel operations
-              - Load balancing across available resources
-              - Batch processing opportunities
-            </parallelization_opportunities>
-          </topological_sorting>
+        <dependency_analysis>
+          <automatic_dependency_detection>
+            Automatically detect dependencies between operations:
+            - File dependency analysis (inputs/outputs)
+            - Command prerequisite detection
+            - Resource dependency identification
+            - Semantic dependency inference from operation descriptions
+            - Data flow analysis and type compatibility checking
+          </automatic_dependency_detection>
           
-          <execution_optimization>
-            <critical_path_analysis>
-              Analyze critical path for workflow optimization:
-              - Identify bottleneck operations
-              - Optimize resource allocation for critical path
-              - Suggest workflow restructuring for better performance
-              - Monitor critical path performance in real-time
-            </critical_path_analysis>
-            
-            <resource_scheduling>
-              Schedule operations based on resource availability:
-              - Memory-intensive operations scheduling
-              - CPU-bound task distribution
-              - I/O operation coordination
-              - Network bandwidth allocation
-            </resource_scheduling>
-          </execution_optimization>
-        </execution_planning>
-      </directed_acyclic_graph>
+          <manual_dependency_specification>
+            Allow explicit dependency specification:
+            - Sequential dependencies (A must complete before B)
+            - Conditional dependencies (B runs only if A succeeds)
+            - Resource dependencies (shared resource access)
+            - Timing dependencies (delay between operations)
+            - Dynamic dependencies based on runtime conditions
+          </manual_dependency_specification>
+        </dependency_analysis>
+      </dag_construction>
+      
+      <workflow_validation>
+        <!-- Validate workflow structure and constraints -->
+        <structural_validation>
+          Verify DAG structure integrity:
+          - Validate DAG acyclic property (no circular dependencies)
+          - Check for unreachable tasks and dead ends
+          - Identify isolated subgraphs and components
+          - Ensure all dependencies can be satisfied
+          - Detect redundant or unnecessary dependencies
+        </structural_validation>
+        
+        <semantic_validation>
+          Validate workflow logic and compatibility:
+          - Task input/output type compatibility
+          - Resource requirement feasibility
+          - Business logic and workflow semantics
+          - Error handling and recovery path completeness
+          - Performance constraint satisfaction
+        </semantic_validation>
+      </workflow_validation>
+    </workflow_modeling>
+    
+    <execution_orchestration>
+      <!-- Orchestrate parallel task execution with optimization -->
+      <execution_planning>
+        <topological_sorting>
+          <execution_order_determination>
+            Determine optimal execution order using topological sort:
+            - Identify operations that can run in parallel
+            - Determine critical path for workflow completion
+            - Optimize execution order for resource utilization
+            - Handle cyclic dependency detection and resolution
+            - Generate multiple valid execution sequences
+          </execution_order_determination>
+          
+          <parallelization_opportunities>
+            Identify opportunities for parallel execution:
+            - Independent operation branches
+            - Resource-compatible parallel operations
+            - Load balancing across available resources
+            - Batch processing opportunities
+            - Pipeline parallelism for streaming workflows
+          </parallelization_opportunities>
+        </topological_sorting>
+        
+        <resource_scheduling>
+          <resource_allocation>
+            Schedule operations based on resource availability:
+            - Memory-intensive operations scheduling
+            - CPU-bound task distribution
+            - I/O operation coordination
+            - Network bandwidth allocation
+            - GPU and specialized resource management
+          </resource_allocation>
+          
+          <priority_based_scheduling>
+            Implement priority-based task scheduling:
+            - Critical path prioritization
+            - Deadline-aware scheduling
+            - Fair resource sharing policies
+            - Preemption and task migration
+            - Quality of service guarantees
+          </priority_based_scheduling>
+        </resource_scheduling>
+      </execution_planning>
       
       <dynamic_execution>
         <!-- Dynamic workflow execution with real-time adaptation -->
@@ -86,6 +115,7 @@ Advanced DAG (Directed Acyclic Graph) orchestrator for complex workflow coordina
               - Reallocate resources for underperforming operations
               - Adjust parallelization based on resource availability
               - Optimize remaining workflow based on current state
+              - Predictive scheduling using historical data
             </performance_based_adaptation>
             
             <failure_recovery>
@@ -94,245 +124,139 @@ Advanced DAG (Directed Acyclic Graph) orchestrator for complex workflow coordina
               - Alternative execution path selection
               - Partial workflow recovery and continuation
               - Rollback mechanisms for failed operations
+              - Checkpoint-based recovery for long-running workflows
             </failure_recovery>
           </real_time_rescheduling>
           
           <conditional_execution>
-            <branching_logic>
-              Support conditional workflow branches:
-              - Success/failure-based branching
-              - Data-driven conditional execution
-              - User input-based workflow adaptation
-              - Environment-specific execution paths
-            </branching_logic>
+            <branch_management>
+              Handle conditional workflow branches:
+              - Runtime condition evaluation
+              - Dynamic branch selection
+              - Lazy evaluation of conditional paths
+              - Branch prediction and speculative execution
+              - Merge point synchronization
+            </branch_management>
             
-            <dynamic_workflow_modification>
-              Allow runtime workflow modification:
-              - Add new operations based on intermediate results
-              - Remove unnecessary operations based on outcomes
-              - Modify operation parameters based on context
-              - Inject monitoring and validation operations
-            </dynamic_workflow_modification>
+            <loop_handling>
+              Support iterative workflow patterns:
+              - While-loop and for-loop constructs
+              - Dynamic loop unrolling
+              - Loop parallelization where possible
+              - Convergence detection and early termination
+              - Nested loop optimization
+            </loop_handling>
           </conditional_execution>
         </adaptive_execution>
-        
-        <progress_tracking>
-          <real_time_monitoring>
-            <execution_status_tracking>
-              Track workflow execution progress in real-time:
-              - Operation completion status and timing
-              - Resource utilization monitoring
-              - Progress percentage and ETA calculation
-              - Bottleneck identification and alerting
-            </execution_status_tracking>
-            
-            <visual_workflow_representation>
-              Provide visual representation of workflow execution:
-              - Interactive DAG visualization with live updates
-              - Progress indicators for each operation
-              - Resource utilization heatmaps
-              - Critical path highlighting
-            </visual_workflow_representation>
-          </real_time_monitoring>
-          
-          <performance_analytics>
-            <execution_metrics>
-              Collect comprehensive execution metrics:
-              - Total workflow execution time
-              - Individual operation performance
-              - Resource utilization efficiency
-              - Parallelization effectiveness
-            </execution_metrics>
-            
-            <optimization_insights>
-              Provide insights for workflow optimization:
-              - Identify slow-performing operations
-              - Suggest dependency restructuring
-              - Recommend resource allocation improvements
-              - Predict performance impact of changes
-            </optimization_insights>
-          </performance_analytics>
-        </progress_tracking>
       </dynamic_execution>
-    </workflow_coordination>
+    </execution_orchestration>
     
-    <enterprise_workflow_patterns>
-      <!-- Enterprise-grade workflow patterns and templates -->
-      <common_workflow_templates>
-        <development_workflows>
-          <feature_development_dag>
-            Pre-built DAG for complete feature development:
-            - Requirements analysis → Design → Implementation
-            - Testing (unit → integration → e2e) in parallel
-            - Security scanning and compliance validation
-            - Documentation generation and review
-            - Deployment preparation and validation
-          </feature_development_dag>
-          
-          <bug_fix_workflow>
-            Optimized workflow for bug fixes:
-            - Issue analysis and reproduction
-            - Root cause investigation
-            - Fix implementation with testing
-            - Regression testing and validation
-            - Deployment and monitoring
-          </bug_fix_workflow>
-        </development_workflows>
+    <monitoring_analytics>
+      <!-- Comprehensive monitoring and workflow analytics -->
+      <real_time_monitoring>
+        <execution_tracking>
+          Track workflow execution in real-time:
+          - Task execution progress and status updates
+          - Resource usage and performance metrics
+          - Bottleneck detection and analysis
+          - Queue depths and wait times
+          - Live workflow visualization and dashboards
+        </execution_tracking>
         
-        <ci_cd_integration>
-          <deployment_pipeline_dag>
-            CI/CD pipeline orchestration:
-            - Code quality checks (linting, testing, security)
-            - Build and packaging operations
-            - Environment provisioning and configuration
-            - Deployment strategy execution (blue-green, canary)
-            - Post-deployment validation and monitoring
-          </deployment_pipeline_dag>
-          
-          <release_workflow>
-            Comprehensive release workflow:
-            - Version preparation and tagging
-            - Release notes generation
-            - Multi-environment deployment coordination
-            - Rollback preparation and validation
-            - Post-release monitoring and alerting
-          </release_workflow>
-        </ci_cd_integration>
-      </common_workflow_templates>
+        <performance_metrics>
+          Monitor key performance indicators:
+          - Workflow completion times and throughput
+          - Task execution duration statistics
+          - Resource utilization efficiency
+          - Parallelization effectiveness
+          - Error rates and recovery success
+        </performance_metrics>
+      </real_time_monitoring>
       
-      <custom_workflow_building>
-        <workflow_composition>
-          <modular_workflow_components>
-            Build workflows from reusable components:
-            - Atomic operation modules
-            - Composite operation templates
-            - Validation and testing components
-            - Monitoring and alerting modules
-          </modular_workflow_components>
+      <workflow_analytics>
+        <optimization_insights>
+          <critical_path_analysis>
+            Analyze critical path for optimization:
+            - Identify bottleneck operations
+            - Suggest workflow restructuring
+            - Recommend resource reallocation
+            - Predict impact of optimizations
+            - Historical trend analysis
+          </critical_path_analysis>
           
-          <workflow_templating>
-            Support workflow templating and parameterization:
-            - Parameterized operation configurations
-            - Environment-specific workflow variations
-            - Team-specific workflow customizations
-            - Project-type-specific templates
-          </workflow_templating>
+          <pattern_recognition>
+            Identify workflow patterns and anomalies:
+            - Common execution patterns
+            - Performance degradation trends
+            - Resource usage patterns
+            - Failure pattern analysis
+            - Seasonal and cyclical behaviors
+          </pattern_recognition>
+        </optimization_insights>
+        
+        <predictive_analytics>
+          Use historical data for predictions:
+          - Workflow completion time estimation
+          - Resource requirement forecasting
+          - Failure probability prediction
+          - Optimal scheduling recommendations
+          - Capacity planning insights
+        </predictive_analytics>
+      </workflow_analytics>
+    </monitoring_analytics>
+    
+    <integration_capabilities>
+      <!-- Integration with Claude Code commands and components -->
+      <command_integration>
+        <workflow_composition>
+          Compose workflows from Claude Code commands:
+          - Chain multiple slash commands into workflows
+          - Pass data between command executions
+          - Handle command-specific dependencies
+          - Integrate with component system
+          - Support nested workflow composition
         </workflow_composition>
         
-        <workflow_validation>
-          <static_analysis>
-            Validate workflow definitions before execution:
-            - Dependency cycle detection
-            - Resource requirement validation
-            - Operation compatibility checking
-            - Performance estimation and warnings
-          </static_analysis>
-          
-          <testing_simulation>
-            Support workflow testing and simulation:
-            - Dry-run execution with mock operations
-            - Performance simulation with estimated times
-            - Resource utilization simulation
-            - Failure scenario testing
-          </testing_simulation>
-        </workflow_validation>
-      </custom_workflow_building>
-    </enterprise_workflow_patterns>
-    
-    <integration_ecosystem>
-      <!-- Integration with external systems and tools -->
-      <external_system_integration>
-        <api_orchestration>
-          <rest_api_integration>
-            Orchestrate REST API calls within workflows:
-            - HTTP request/response handling
-            - Authentication and authorization management
-            - Rate limiting and retry logic
-            - Response parsing and validation
-          </rest_api_integration>
-          
-          <graphql_integration>
-            Support GraphQL API orchestration:
-            - Query composition and optimization
-            - Subscription handling for real-time updates
-            - Schema validation and type checking
-            - Performance monitoring and caching
-          </graphql_integration>
-        </api_orchestration>
-        
-        <database_operations>
-          <transaction_coordination>
-            Coordinate database operations across workflow:
-            - Distributed transaction management
-            - Database connection pooling and optimization
-            - Data consistency validation
-            - Rollback and recovery mechanisms
-          </transaction_coordination>
-          
-          <data_pipeline_integration>
-            Integrate with data processing pipelines:
-            - ETL operation orchestration
-            - Data validation and quality checks
-            - Schema migration coordination
-            - Backup and recovery operations
-          </data_pipeline_integration>
-        </database_operations>
-      </external_system_integration>
+        <event_driven_triggers>
+          Support event-driven workflow execution:
+          - File system event triggers
+          - Schedule-based execution
+          - Webhook and API triggers
+          - Command completion events
+          - Custom event definitions
+        </event_driven_triggers>
+      </command_integration>
       
-      <monitoring_integration>
-        <observability_integration>
-          <distributed_tracing>
-            Implement distributed tracing across workflow operations:
-            - Trace ID propagation across operations
-            - Span creation and correlation
-            - Performance bottleneck identification
-            - Cross-service dependency mapping
-          </distributed_tracing>
-          
-          <metrics_collection>
-            Comprehensive metrics collection and reporting:
-            - Custom metrics for business logic operations
-            - System metrics for resource utilization
-            - Performance metrics for optimization
-            - Error metrics for reliability monitoring
-          </metrics_collection>
-        </observability_integration>
+      <scalability_features>
+        <distributed_execution>
+          Support distributed workflow execution:
+          - Multi-agent task distribution
+          - Cross-system workflow coordination
+          - Federated resource management
+          - Network-aware scheduling
+          - Fault-tolerant communication
+        </distributed_execution>
         
-        <alerting_coordination>
-          <intelligent_alerting>
-            Coordinate alerting across workflow operations:
-            - Context-aware alert generation
-            - Alert correlation and deduplication
-            - Escalation policies for different operation types
-            - Recovery action recommendations
-          </intelligent_alerting>
-          
-          <notification_orchestration>
-            Orchestrate notifications across teams and systems:
-            - Multi-channel notification delivery
-            - Role-based notification routing
-            - Notification timing and frequency optimization
-            - Notification effectiveness tracking
-          </notification_orchestration>
-        </workflow_coordination>
-      </enterprise_integration>
-    </workflow_coordination>
+        <workflow_persistence>
+          Persist workflow state and history:
+          - Workflow definition versioning
+          - Execution history tracking
+          - State checkpoint management
+          - Audit trail maintenance
+          - Performance baseline storage
+        </workflow_persistence>
+      </scalability_features>
+    </integration_capabilities>
   </dag_orchestrator>
 
   <o>
-DAG workflow orchestration completed with intelligent coordination:
+DAG orchestration system completed with comprehensive workflow capabilities:
 
-**Workflow Complexity:** [count] complex workflows successfully orchestrated
-**Dependency Resolution:** [percentage]% automatic dependency detection accuracy
-**Parallel Optimization:** [count] parallel execution paths optimized
-**Resource Efficiency:** [percentage]% resource utilization improvement achieved
-**Orchestration Quality:** [0-100] DAG workflow coordination effectiveness rating
-**Enterprise Integration:** Advanced DAG orchestration ready for complex enterprise workflows
+**Graph Construction:** Advanced dependency modeling and validation
+**Execution Planning:** Intelligent topological sorting and resource scheduling
+**Dynamic Adaptation:** Real-time rescheduling and failure recovery
+**Monitoring:** Live tracking with performance metrics and analytics
+**Optimization:** Critical path analysis and predictive insights
+**Integration:** Seamless Claude Code command workflow composition
   </o>
 </prompt_component>
-          </notification_orchestration>
-        </alerting_coordination>
-      </monitoring_integration>
-    </integration_ecosystem>
-  </dag_orchestrator>
-</prompt_component> 

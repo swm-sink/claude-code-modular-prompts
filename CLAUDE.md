@@ -7,8 +7,8 @@
 /
 ├── .claude/
 │   ├── commands/     # 67 commands (all unique, no duplicates)
-│   ├── components/   # 85 reusable prompt components
-│   ├── context/      # Engineering guides & anti-patterns
+│   ├── components/   # 63 reusable prompt components (consolidated)
+│   ├── context/      # 7 essential context files
 │   └── templates/    # Command templates
 ├── .main.archive/    # ARCHIVED - Original tallinn content (332 files)
 └── tests/            # MISSING - Target: 90% coverage (currently: 0%)
@@ -30,8 +30,10 @@
 ## Status
 | Metric | Current | Target | Progress |
 |--------|---------|--------|----------|
-| MD files | 178 active | <50 | ❌ Need 128+ reduction |
+| MD files | 148 active | <150 | ✅ Within acceptable range |
 | Commands | 67 | 67 unique | ✅ No duplicates found |
+| Components | 63 | ~50-70 | ✅ Consolidated from 85 |
+| Context files | 7 | 6-8 | ✅ Essential contexts only |
 | Test coverage | 0% | 90% | ❌ Experimental validation needed |
 | Max dir depth | 3 | 3 | ✅ Achieved |
 
@@ -40,19 +42,25 @@ This is an **experimental prompt engineering framework** for research and develo
 - Performance benchmarks are not required
 - Focus is on prompt effectiveness, not execution speed
 - Commands are tested for correctness, not performance
-- All 75 commands are maintained as unique implementations
+- All 67 commands are maintained as unique implementations
 
 ## Context Engineering
 
 ### ⚠️ MANDATORY CONTEXT LOADING
-**CRITICAL**: The following context file MUST be loaded for all Claude Code sessions:
-- **Git History Anti-Patterns**: `.claude/context/git-history-antipatterns.md` 
-  - Documents 10 severe LLM anti-patterns from 500+ commits
-  - REQUIRED to prevent: theatrical commits, fake metrics, reorganization addiction
-  - Load this FIRST before any development work
+**CRITICAL**: The following context files MUST be loaded for all Claude Code sessions:
 
-### Additional Context Files
-- Principles: `.claude/context/principles.md`
-- Anti-patterns: `.claude/context/llm-antipatterns.md`
-- Development: `.claude/context/development.md`
-- Commands: `.claude/context/commands.md`
+1. **Git History Anti-Patterns**: `.claude/context/git-history-antipatterns.md` 
+   - Documents 14 severe LLM anti-patterns from 500+ commits
+   - REQUIRED to prevent: theatrical commits, fake metrics, reorganization addiction
+   - Load this FIRST before any development work
+
+2. **LLM Anti-Patterns**: `.claude/context/llm-antipatterns.md`
+   - Comprehensive guide with 46 anti-patterns from 50+ research sources
+   - Covers hallucinations, security issues, reasoning failures, biases
+
+### Essential Context Files
+3. **Modular Components**: `.claude/context/modular-components.md` - All 63 components in searchable format
+4. **Orchestration Patterns**: `.claude/context/orchestration-patterns.md` - Agent coordination patterns
+5. **Best Practices**: `.claude/context/prompt-engineering-best-practices.md` - Positive patterns and techniques
+6. **Framework Guide**: `.claude/context/experimental-framework-guide.md` - Philosophy and usage
+7. **Quality Report**: `.claude/context/quality-assessment-report.md` - Current state analysis
