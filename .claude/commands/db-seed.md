@@ -2,6 +2,11 @@
 description: Populates database with seed data for development and testing environments
 argument-hint: "[environment] [data_type]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation_date: "2025-07-25"
+deprecation_deadline: "2025-08-25"
+deprecation_replacement: "/db-admin seed"
+deprecation_reason: "Consolidated into unified /db-admin command for better maintenance and consistency"
 ---
 # /db seed - Database Seeding Command
 Intelligent database seeding system with environment-specific data sets and validation.
@@ -73,3 +78,18 @@ Intelligent database seeding system with environment-specific data sets and vali
     </includes_components>
   </dependencies>
 </command_file>
+
+---
+
+⚠️ **DEPRECATION NOTICE** ⚠️
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Migration:** Use `/db-admin seed` instead.
+
+**Examples:**
+- `/db seed development` → `/db-admin seed development`
+- `/db seed testing --clean` → `/db-admin seed testing --clean`
+- `/db seed production --confirm` → `/db-admin seed production --confirm`
+
+The new `/db-admin` command provides all the same functionality with improved consistency and maintainability.
