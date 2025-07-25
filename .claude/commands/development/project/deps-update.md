@@ -1,9 +1,32 @@
 ---
-description: Intelligent dependency updates with automated vulnerability scanning, compatibility validation, and rollback safety
+description: [DEPRECATED] Intelligent dependency updates with automated vulnerability scanning, compatibility validation, and rollback safety - use /dev deps instead
 argument-hint: "[update_scope] [validation_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation_date: "2025-07-25"
+replacement: "/dev deps"
+removal_date: "2025-08-25"
 ---
 # /deps update - Intelligent Dependency Updates
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/dev deps`
+
+```bash
+# Old command:
+/deps update security --automated
+
+# New command:
+/dev deps security --automated
+```
+
+This standalone command has been consolidated into the unified `/dev` command. The new command provides the same functionality with improved consistency and maintainability.
+
+---
+
 Advanced dependency management with automated vulnerability scanning, intelligent compatibility validation, and comprehensive rollback safety.
 ## Usage
 ```bash

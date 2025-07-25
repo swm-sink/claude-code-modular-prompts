@@ -1,9 +1,32 @@
 ---
-description: Intelligent code linting with automated issue detection, configurable rules, and comprehensive reporting
+description: [DEPRECATED] Intelligent code linting with automated issue detection, configurable rules, and comprehensive reporting - use /dev lint instead
 argument-hint: "[language] [config_file]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation_date: "2025-07-25"
+replacement: "/dev lint"
+removal_date: "2025-08-25"
 ---
 # /code lint - Intelligent Code Linting
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/dev lint`
+
+```bash
+# Old command:
+/code lint python --config .pylintrc
+
+# New command:
+/dev lint python --config .pylintrc
+```
+
+This standalone command has been consolidated into the unified `/dev` command. The new command provides the same functionality with improved consistency and maintainability.
+
+---
+
 Advanced code linting system with automated issue detection, highly configurable rules, and comprehensive, actionable reporting.
 ## Usage
 ```bash

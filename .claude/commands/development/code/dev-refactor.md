@@ -1,9 +1,32 @@
 ---
-description: Advanced development refactoring with intelligent code optimization, pattern recognition, and architectural improvements
+description: [DEPRECATED] Advanced development refactoring with intelligent code optimization, pattern recognition, and architectural improvements - use /dev refactor instead
 argument-hint: "[refactor_scope] [optimization_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation_date: "2025-07-25"
+replacement: "/dev refactor"
+removal_date: "2025-08-25"
 ---
 # /dev refactor - Advanced Development Refactoring
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/dev refactor`
+
+```bash
+# Old command:
+/dev refactor "src/utils.js" strategy="extract-method"
+
+# New command:
+/dev refactor "src/utils.js" --strategy extract-method
+```
+
+This standalone command has been consolidated into the unified `/dev` command. The new command provides the same functionality with improved consistency and maintainability.
+
+---
+
 Sophisticated development refactoring system with intelligent code optimization, pattern recognition, and comprehensive architectural improvements.
 ## Usage
 ```bash

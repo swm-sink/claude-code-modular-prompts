@@ -1,9 +1,32 @@
 ---
-description: Intelligent code formatting with automated style enforcement, multi-language support, and comprehensive configuration
+description: [DEPRECATED] Intelligent code formatting with automated style enforcement, multi-language support, and comprehensive configuration - use /dev format instead
 argument-hint: "[language] [style_guide]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation_date: "2025-07-25"
+replacement: "/dev format"
+removal_date: "2025-08-25"
 ---
 # /code format - Intelligent Code Formatting
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/dev format`
+
+```bash
+# Old command:
+/code format python --style black
+
+# New command:
+/dev format python --style black
+```
+
+This standalone command has been consolidated into the unified `/dev` command. The new command provides the same functionality with improved consistency and maintainability.
+
+---
+
 Advanced code formatting system with automated style enforcement, multi-language support, and comprehensive, customizable configuration.
 ## Usage
 ```bash

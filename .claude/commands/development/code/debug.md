@@ -1,9 +1,32 @@
 ---
-description: Performs advanced AI-assisted debugging to diagnose and fix issues
+description: [DEPRECATED] Performs advanced AI-assisted debugging to diagnose and fix issues - use /dev debug instead
 argument-hint: "[issue_description] [interactive]"
 allowed-tools: Read, Grep, Edit, Bash
+deprecated: true
+deprecation_date: "2025-07-25"
+replacement: "/dev debug"
+removal_date: "2025-08-25"
 ---
 # /debug - AI-Assisted Debugging
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/dev debug`
+
+```bash
+# Old command:
+/debug "Users can't log in; page just refreshes" interactive=true
+
+# New command:
+/dev debug "Users can't log in; page just refreshes" --interactive
+```
+
+This standalone command has been consolidated into the unified `/dev` command. The new command provides the same functionality with improved consistency and maintainability.
+
+---
+
 Performs an advanced, AI-assisted debugging session to diagnose and fix issues.
 ## Usage
 ```bash

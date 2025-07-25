@@ -1,9 +1,32 @@
 ---
-description: Advanced project initialization with intelligent scaffolding, technology detection, and automated setup
+description: [DEPRECATED] Advanced project initialization with intelligent scaffolding, technology detection, and automated setup - use /dev init instead
 argument-hint: "[project_type] [technology_stack]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation_date: "2025-07-25"
+replacement: "/dev init"
+removal_date: "2025-08-25"
 ---
 # /new - Advanced Project Initialization
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/dev init`
+
+```bash
+# Old command:
+/new webapp --react
+
+# New command:
+/dev init webapp --project_type react
+```
+
+This standalone command has been consolidated into the unified `/dev` command. The new command provides the same functionality with improved consistency and maintainability.
+
+---
+
 Sophisticated project initialization system with intelligent scaffolding, technology detection, and comprehensive automated setup.
 ## Usage
 ```bash

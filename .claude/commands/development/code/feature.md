@@ -1,9 +1,32 @@
 ---
-description: Orchestrates end-to-end development of complete features from requirements to implementation
+description: [DEPRECATED] Orchestrates end-to-end development of complete features from requirements to implementation - use /dev feature instead
 argument-hint: "[feature_description]"
 allowed-tools: Read, Write, Edit, Bash, Grep, Glob
+deprecated: true
+deprecation_date: "2025-07-25"
+replacement: "/dev feature"
+removal_date: "2025-08-25"
 ---
 # /feature - Complete Feature Development
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/dev feature`
+
+```bash
+# Old command:
+/feature "User profile management with avatar upload"
+
+# New command:
+/dev feature "User profile management with avatar upload"
+```
+
+This standalone command has been consolidated into the unified `/dev` command. The new command provides the same functionality with improved consistency and maintainability.
+
+---
+
 Orchestrates the end-to-end development of a complete feature, from requirements to implementation and testing.
 ## Usage
 ```bash

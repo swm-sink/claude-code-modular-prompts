@@ -1,12 +1,36 @@
 ---
-description: Intelligent existing project analysis with auto-configuration, optimization recommendations, and integration setup
+description: [DEPRECATED] Intelligent existing project analysis with auto-configuration, optimization recommendations, and integration setup - use /dev analyze instead
 argument-hint: "[project_path] [analysis_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+deprecated: true
+deprecation_date: "2025-07-25"
+replacement: "/dev analyze"
+removal_date: "2025-08-25"
 ---
+# /existing - Intelligent Project Analysis
+
+## ⚠️ DEPRECATION NOTICE
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Use instead:** `/dev analyze`
+
+```bash
+# Old command:
+/existing .
+
+# New command:
+/dev analyze . --optimization
+```
+
+This standalone command has been consolidated into the unified `/dev` command. The new command provides the same functionality with improved consistency and maintainability.
+
+---
+
 <command_file>
   <metadata>
     <name>/existing</name>
-    <purpose>Intelligent existing project analysis with auto-configuration and optimization recommendations</purpose>
+    <purpose>[DEPRECATED] Intelligent existing project analysis with auto-configuration and optimization recommendations - use /dev analyze instead</purpose>
     <usage>
       <![CDATA[
       /existing [project_path]
