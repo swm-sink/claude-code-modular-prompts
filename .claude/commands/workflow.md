@@ -1,8 +1,37 @@
 ---
-description: Intelligent workflow management with automated task execution, dynamic resource allocation, and comprehensive progress tracking
+description: [DEPRECATED] Intelligent workflow management with automated task execution, dynamic resource allocation, and comprehensive progress tracking - use /project workflow instead
 argument-hint: "[workflow_name] [action]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+test_coverage: 0%
+# DEPRECATION METADATA
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/project workflow"
+reason: "Consolidated into unified /project command for better consistency and cross-mode integration"
+removal_date: "2025-08-25"
 ---
+# ⚠️ DEPRECATED: /workflow
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Please use `/project workflow` instead:**
+```
+# Old command:
+/workflow start "My Development Workflow"
+
+# New command:
+/project workflow start "My Development Workflow"
+```
+
+The new unified `/project` command provides:
+- ✅ All legacy workflow functionality in workflow mode
+- ✅ Enhanced cross-mode integration with setup, provisioning, and tracking
+- ✅ Improved state management and progress reporting
+- ✅ Better error handling and recovery mechanisms
+- ✅ Unified configuration and monitoring across all project operations
+
+---
+
 # /workflow - Intelligent Workflow Management
 Advanced workflow management system with automated task execution, dynamic resource allocation, and comprehensive progress tracking.
 ## Usage

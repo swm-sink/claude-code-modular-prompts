@@ -1,8 +1,37 @@
 ---
-description: Intelligent workflow scheduling with automated trigger management, dynamic resource allocation, and comprehensive dependency resolution
+description: [DEPRECATED] Intelligent workflow scheduling with automated trigger management, dynamic resource allocation, and comprehensive dependency resolution - use /project schedule instead
 argument-hint: "[schedule_type] [workflow_name]"
 allowed-tools: Read, Write, Edit, Bash, Grep
+test_coverage: 0%
+# DEPRECATION METADATA
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/project schedule"
+reason: "Consolidated into unified /project command for better workflow integration and consistency"
+removal_date: "2025-08-25"
 ---
+# ⚠️ DEPRECATED: /flow-schedule
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Please use `/project schedule` instead:**
+```
+# Old command:
+/flow schedule daily "My ETL Workflow"
+
+# New command:
+/project schedule daily "My ETL Workflow"
+```
+
+The new unified `/project` command provides:
+- ✅ All legacy scheduling functionality in schedule mode
+- ✅ Enhanced integration with workflow orchestration and progress tracking
+- ✅ Improved event-based and conditional scheduling capabilities
+- ✅ Better resource optimization and conflict resolution
+- ✅ Unified monitoring and analytics across all project operations
+
+---
+
 # /flow schedule - Intelligent Workflow Scheduling
 Advanced workflow scheduling system with automated trigger management, dynamic resource allocation, and comprehensive dependency resolution for complex flows.
 ## Usage

@@ -1,8 +1,37 @@
 ---
-description: Real-time progress monitoring and analytics for unlimited agent orchestration
+description: [DEPRECATED] Real-time progress monitoring and analytics for unlimited agent orchestration - use /project track instead
 argument-hint: "[tracking_mode] [analytics_level] [reporting_frequency]"
 allowed-tools: Read, Write, Bash
+test_coverage: 0%
+# DEPRECATION METADATA
+deprecated: true
+deprecated_date: "2025-07-25"
+replacement_command: "/project track"
+reason: "Consolidated into unified /project command for integrated progress tracking across all project operations"
+removal_date: "2025-08-25"
 ---
+# ⚠️ DEPRECATED: /progress-tracker
+
+**This command is deprecated as of 2025-07-25 and will be removed on 2025-08-25.**
+
+**Please use `/project track` instead:**
+```
+# Old command:
+/progress tracker --dashboard --analytics
+
+# New command:  
+/project track --dashboard --analytics
+```
+
+The new unified `/project` command provides:
+- ✅ All legacy progress tracking functionality in track mode
+- ✅ Enhanced integration with workflow, scheduling, and provisioning operations
+- ✅ Improved predictive analytics and trend analysis capabilities
+- ✅ Better resource utilization monitoring and optimization insights
+- ✅ Unified executive reporting across all project management domains
+
+---
+
 # /progress tracker - Real-Time Progress Monitor
 Real-time progress monitoring and analytics system for unlimited agent orchestration with comprehensive performance tracking and optimization insights.
 <command_file>
