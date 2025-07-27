@@ -1,4 +1,5 @@
 ---
+name: /auto
 description: Intelligent command router with Claude 4 optimization, adaptive thinking, and advanced parallel execution
 argument-hint: "[your request in natural language]"
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash

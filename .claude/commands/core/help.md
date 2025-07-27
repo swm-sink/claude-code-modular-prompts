@@ -1,4 +1,5 @@
 ---
+name: /help
 description: A helpful guide to the prompt factory, providing information on commands, usage, and best practices
 argument-hint: "[command_name]"
 allowed-tools: Read, Write, Edit, Bash, Grep

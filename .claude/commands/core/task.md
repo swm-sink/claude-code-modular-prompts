@@ -1,4 +1,5 @@
 ---
+name: /task
 description: Execute a focused, integration-first TDD workflow with mutation testing, OWASP compliance, and advanced error handling
 argument-hint: "[task_description]"
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash
