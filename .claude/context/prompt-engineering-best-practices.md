@@ -794,6 +794,101 @@ def robust_command_execution(command, args):
 
 ---
 
+## Factual Documentation Practices
+
+### 34. Document What Is, Not What Impresses
+
+**✅ Core Principle:** Documentation should reflect reality, not aspirations or theater.
+
+**DO:**
+- State concrete changes: "Consolidated 67 commands into 34"
+- Use metrics only when measured: "Test file count: 127"
+- Acknowledge limitations: "Functional testing not performed"
+- Use neutral language: "Updated", "Modified", "Implemented"
+- Report actual counts: "Processed 47 files" (if counted)
+- Label estimates clearly: "Estimated 50-70 commands"
+
+**DON'T:**
+- Invent metrics: "87.3% improvement" (unless measured)
+- Use theatrical language: "Revolutionary", "Exceptional", "Groundbreaking"
+- Claim unverifiable success: "Optimal performance achieved"
+- Create fake validation: Scripts that test nothing
+- Cite specific percentages without data
+- Use superlatives without evidence
+
+**Example - Bad:**
+```markdown
+"Achieved exceptional 91.3% enhancement in system performance through revolutionary optimization delivering groundbreaking improvements with comprehensive validation suite confirming transformational success."
+```
+
+**Example - Good:**
+```markdown
+"Refactored data processing logic. Modified 12 files. Performance impact not measured. Structural validation completed; functional testing requires manual execution."
+```
+
+### 35. Metrics Guidelines
+
+**✅ When to Use Numbers:**
+
+1. **Counted Items**: "Processed 47 files", "34 commands remain"
+2. **Measured Values**: "Response time: 87ms" (with benchmark)
+3. **Verified Coverage**: "Test coverage: 72%" (from coverage tool)
+4. **Actual Errors**: "Fixed 12 linting errors"
+
+**✅ When NOT to Use Numbers:**
+
+1. **Unmeasured Performance**: Avoid "3x faster" without benchmarks
+2. **Subjective Quality**: No "91% quality improvement"
+3. **User Experience**: No metrics without user data
+4. **Complexity Reduction**: No percentages without measurement tools
+
+**✅ Honest Reporting Template:**
+
+```markdown
+## Changes Made
+- Action: [What was done]
+- Files Modified: [Actual count]
+- Tests: [What type, if any]
+- Metrics: [Only if measured]
+- Limitations: [What wasn't done]
+- Next Steps: [If applicable]
+```
+
+### 36. Validation Honesty
+
+**✅ Structural vs Functional:**
+
+**Structural Validation (Can be automated):**
+- File existence checks
+- Syntax validation
+- Import verification
+- Directory structure
+- Pattern matching
+
+**Functional Validation (Requires execution):**
+- Command behavior
+- Performance benchmarks
+- Integration testing
+- User acceptance
+- Error handling
+
+**✅ Accurate Validation Reporting:**
+
+```python
+# GOOD: Honest about what's being tested
+def validate_structure():
+    """Verify file structure only - not functionality"""
+    print("Checking file existence...")
+    # Only structural checks
+    
+# BAD: Claims more than it does
+def validate_everything():
+    """Comprehensive validation suite"""
+    print("✅ 100% VALIDATION SUCCESS")  # Misleading
+```
+
+---
+
 ## Conclusion
 
 Effective prompt engineering requires systematic application of proven techniques, continuous measurement, and iterative improvement. Success depends on:

@@ -1,36 +1,36 @@
 # Claude Code Modular Prompts
 
-A production-ready library of 30 consolidated slash commands for Claude Code, with comprehensive prompt engineering components and anti-pattern prevention.
+An experimental library of consolidated slash commands for Claude Code, with prompt engineering components and documented anti-pattern examples.
 
-## 🚀 Quick Start
+## Quick Start
 
-This repository contains high-quality, tested commands for Claude Code that follow best practices and avoid common LLM anti-patterns. Through systematic consolidation, 67 original commands have been optimized to 30 unified platform commands while enhancing functionality by 150%.
+This repository contains Claude Code commands that have been consolidated from a larger original set. The project includes 67 commands that have been organized into 34 active commands plus 49 archived commands with migration paths.
 
 ## 📁 Structure
 
 ```
 /
 ├── .claude/
-│   ├── commands/     # 30 consolidated platform commands
+│   ├── commands/     # 34 active commands
 │   │   ├── deprecated/   # 49 archived commands with migration paths
 │   │   ├── core/         # Essential commands (task, query, auto)
-│   │   ├── quality/      # Unified testing and quality platforms
-│   │   ├── specialized/  # Security and database platforms
-│   │   └── development/  # Development and project platforms
+│   │   ├── quality/      # Testing and quality commands
+│   │   ├── specialized/  # Security and database commands
+│   │   └── development/  # Development and project commands
 │   ├── components/   # 63 reusable prompt components
 │   ├── context/      # Engineering guides & anti-patterns
 │   └── templates/    # Command templates
-└── tests/            # Test suite (90% coverage target)
+└── tests/            # Test suite (experimental validation)
 ```
 
-## 🎯 Key Features
+## Key Features
 
-- **30 Platform Commands**: Systematically consolidated with enhanced functionality
-- **63 Reusable Components**: DRY prompt engineering patterns
-- **49 Archived Commands**: Zero-disruption migration with clear upgrade paths
-- **Anti-Pattern Prevention**: Documented lessons from 500+ commits
-- **Quality Validated**: All commands pass comprehensive validation
-- **Production Ready**: Clean structure, security-first design
+- **34 Active Commands**: Consolidated from original 67 commands
+- **63 Reusable Components**: Prompt engineering patterns
+- **49 Archived Commands**: Migration paths provided
+- **Anti-Pattern Documentation**: Documented examples and lessons
+- **Structured Organization**: Clear directory hierarchy
+- **Experimental Framework**: Research-focused command design
 
 ## 📋 Command Categories
 
@@ -45,28 +45,29 @@ This repository contains high-quality, tested commands for Claude Code that foll
 - **Workflow** (7): `/project`, `/pipeline`, etc.
 - **Monitoring** (3): `/monitor`, etc.
 
-## 🛡️ Quality Standards
+## Quality Standards
 
 - Maximum 3-level directory nesting
-- Commands execute in <100ms
-- Comprehensive component reuse
-- Anti-pattern prevention built-in
-- Security-first design
+- Component reuse where applicable
+- Anti-pattern documentation included
+- Security considerations documented
 
 ## 📖 Documentation
 
-- **Principles**: `.claude/context/principles.md`
+- **Framework Guide**: `.claude/context/experimental-framework-guide.md`
 - **Anti-patterns**: `.claude/context/llm-antipatterns.md`
 - **Git History Lessons**: `.claude/context/git-history-antipatterns.md`
-- **Development Guide**: `.claude/context/development.md`
-- **Command Reference**: `.claude/context/commands.md`
+- **Best Practices**: `.claude/context/prompt-engineering-best-practices.md`
+- **Components**: `.claude/context/modular-components.md`
+- **Orchestration**: `.claude/context/orchestration-patterns.md`
+- **Quality Report**: `.claude/context/quality-assessment-report.md`
 
-## 🚨 Important Notes
+## Important Notes
 
 - No sensitive data (keys, tokens, passwords) in this repository
-- All commands validated with included validation script
-- Follows Claude Code best practices
-- Includes comprehensive anti-pattern documentation
+- Commands have structural validation only
+- Follows Claude Code structure conventions
+- Includes anti-pattern documentation and examples
 
 ## 🤝 Contributing
 
@@ -78,4 +79,4 @@ See .main.archive/LICENSE for license information.
 
 ---
 
-*Built with lessons learned from 200+ commits of LLM anti-pattern examples.*
+*Experimental prompt engineering framework with documented anti-pattern examples.*
