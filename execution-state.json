@@ -67,7 +67,13 @@
       }
     },
     "validation_timestamp": "2025-07-27T14:15:00Z",
-    "testing_complete": true
+    "testing_complete": true,
+    "commit_info": {
+      "commit_hash": "db7c6f2",
+      "commit_message": "test: implement structural validation framework for command testing",
+      "files_committed": ["tests/TESTING-METHODOLOGY.md", "tests/validate-command.sh", "CLAUDE.md", "execution-state.json"],
+      "commit_timestamp": "2025-07-27T14:20:00Z"
+    }
   },
-  "tasks_completed": ["S1", "S2", "S3", "S4", "S5", "D1", "D2", "D3", "D4", "D5", "D6", "T1", "T2", "T3", "T4", "T5", "T6"]
+  "tasks_completed": ["S1", "S2", "S3", "S4", "S5", "D1", "D2", "D3", "D4", "D5", "D6", "T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8"]
 }
