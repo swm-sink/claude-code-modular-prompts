@@ -1,0 +1,213 @@
+{
+  "timestamp": "2025-07-27T17:18:55.467510",
+  "test_metadata": {
+    "testing_agent": "Integration Testing Agent Beta",
+    "test_type": "Advanced Component Stack Integration",
+    "base_path": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca",
+    "components_analyzed": 10
+  },
+  "dependency_analysis": {
+    "total_components": 10,
+    "dependency_graph": {
+      "dag-orchestrator": [],
+      "task-execution": [],
+      "progress-tracking": [],
+      "validation-framework": [
+        "input-validation"
+      ],
+      "hierarchical-loading": [],
+      "context-optimization": [],
+      "adaptive-thinking": [],
+      "multi-agent-coordination": [],
+      "pattern-extraction": [],
+      "cognitive-architecture": [
+        "cognitive-architecture"
+      ]
+    },
+    "circular_dependencies": [
+      [
+        "cognitive-architecture",
+        "cognitive-architecture"
+      ]
+    ],
+    "isolated_components": [
+      "dag-orchestrator",
+      "task-execution",
+      "progress-tracking",
+      "hierarchical-loading",
+      "context-optimization",
+      "adaptive-thinking",
+      "multi-agent-coordination",
+      "pattern-extraction"
+    ]
+  },
+  "cross_stack_compatibility": [
+    {
+      "stack_combination": "orchestration \u2194 validation",
+      "compatibility_score": 0.5,
+      "performance_impact": 0.12897860973739628,
+      "dependency_conflicts": [],
+      "optimization_opportunities": [
+        "Implement parallel component loading",
+        "Implement component compression for complex components"
+      ],
+      "recommended_load_order": [
+        "progress-tracking",
+        "task-execution",
+        "dag-orchestrator",
+        "validation-framework"
+      ],
+      "interaction_patterns": []
+    },
+    {
+      "stack_combination": "orchestration \u2194 context",
+      "compatibility_score": 0.5,
+      "performance_impact": 0.19956603445688884,
+      "dependency_conflicts": [],
+      "optimization_opportunities": [
+        "Implement shared caching layer across components",
+        "Implement parallel component loading"
+      ],
+      "recommended_load_order": [
+        "progress-tracking",
+        "task-execution",
+        "adaptive-thinking",
+        "context-optimization",
+        "hierarchical-loading",
+        "dag-orchestrator"
+      ],
+      "interaction_patterns": []
+    },
+    {
+      "stack_combination": "orchestration \u2194 intelligence",
+      "compatibility_score": 0.5,
+      "performance_impact": 0.22497053969891867,
+      "dependency_conflicts": [
+        "Circular dependency: cognitive-architecture \u2194 cognitive-architecture"
+      ],
+      "optimization_opportunities": [
+        "Implement parallel component loading",
+        "Implement component compression for complex components"
+      ],
+      "recommended_load_order": [
+        "progress-tracking",
+        "task-execution",
+        "pattern-extraction",
+        "dag-orchestrator",
+        "multi-agent-coordination",
+        "cognitive-architecture"
+      ],
+      "interaction_patterns": []
+    },
+    {
+      "stack_combination": "validation \u2194 context",
+      "compatibility_score": 0.5,
+      "performance_impact": 0.16185763040796916,
+      "dependency_conflicts": [],
+      "optimization_opportunities": [
+        "Implement shared caching layer across components",
+        "Implement component compression for complex components"
+      ],
+      "recommended_load_order": [
+        "adaptive-thinking",
+        "context-optimization",
+        "hierarchical-loading",
+        "validation-framework"
+      ],
+      "interaction_patterns": []
+    },
+    {
+      "stack_combination": "validation \u2194 intelligence",
+      "compatibility_score": 0.5,
+      "performance_impact": 0.18726213564999897,
+      "dependency_conflicts": [
+        "Circular dependency: cognitive-architecture \u2194 cognitive-architecture"
+      ],
+      "optimization_opportunities": [
+        "Implement parallel component loading",
+        "Implement component compression for complex components"
+      ],
+      "recommended_load_order": [
+        "pattern-extraction",
+        "multi-agent-coordination",
+        "validation-framework",
+        "cognitive-architecture"
+      ],
+      "interaction_patterns": []
+    },
+    {
+      "stack_combination": "context \u2194 intelligence",
+      "compatibility_score": 0.5,
+      "performance_impact": 0.2578495603694915,
+      "dependency_conflicts": [
+        "Circular dependency: cognitive-architecture \u2194 cognitive-architecture"
+      ],
+      "optimization_opportunities": [
+        "Implement shared caching layer across components",
+        "Implement parallel component loading",
+        "Implement component compression for complex components"
+      ],
+      "recommended_load_order": [
+        "adaptive-thinking",
+        "pattern-extraction",
+        "context-optimization",
+        "hierarchical-loading",
+        "multi-agent-coordination",
+        "cognitive-architecture"
+      ],
+      "interaction_patterns": []
+    }
+  ],
+  "performance_analysis": {
+    "component_complexity": {
+      "orchestration/dag-orchestrator.md": 6.0359,
+      "orchestration/task-execution.md": 2.1194,
+      "orchestration/progress-tracking.md": 2.0828,
+      "validation/validation-framework.md": 7.5600000000000005,
+      "context/hierarchical-loading.md": 5.8277,
+      "context/context-optimization.md": 5.0548,
+      "context/adaptive-thinking.md": 4.2613,
+      "intelligence/multi-agent-coordination.md": 7.0289,
+      "reasoning/pattern-extraction.md": 4.2812,
+      "intelligence/cognitive-architecture.md": 7.6051
+    },
+    "memory_usage": {
+      "orchestration/dag-orchestrator.md": 0.02451878929138183,
+      "orchestration/task-execution.md": 0.0013778114318847659,
+      "orchestration/progress-tracking.md": 0.0009554672241210939,
+      "validation/validation-framework.md": 0.07053085327148435,
+      "context/hierarchical-loading.md": 0.05708444595336914,
+      "context/context-optimization.md": 0.015414317321777346,
+      "context/adaptive-thinking.md": 0.006659505844116211,
+      "intelligence/multi-agent-coordination.md": 0.05283708572387696,
+      "reasoning/pattern-extraction.md": 0.0619354248046875,
+      "intelligence/cognitive-architecture.md": 0.042937331199645996
+    },
+    "optimization_summary": {
+      "total_opportunities": 13,
+      "optimization_types": {
+        "Implement parallel component loading": 5,
+        "Implement component compression for complex components": 5,
+        "Implement shared caching layer across components": 3
+      },
+      "priority_optimizations": [
+        [
+          "Implement parallel component loading",
+          5
+        ],
+        [
+          "Implement component compression for complex components",
+          5
+        ],
+        [
+          "Implement shared caching layer across components",
+          3
+        ]
+      ]
+    }
+  },
+  "recommendations": [
+    "Consider refactoring components to improve cross-stack compatibility",
+    "Priority optimization: Implement parallel component loading"
+  ]
+}

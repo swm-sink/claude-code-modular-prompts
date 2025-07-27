@@ -1,0 +1,3823 @@
+{
+  "comprehensive_security_assessment": {
+    "overall_security_score": 58.48868778280543,
+    "compliance_status": "NEEDS_IMPROVEMENT",
+    "owasp_llm_score": 48.46153846153846,
+    "constitutional_ai_score": 73.52941176470588,
+    "total_critical_risks": 101,
+    "total_high_risks": 0,
+    "assessment_scope": {
+      "commands_assessed": 35,
+      "components_assessed": 61,
+      "workflows_assessed": 3,
+      "integration_points": 4
+    }
+  },
+  "detailed_assessments": {
+    "owasp_llm_assessment": {
+      "integration_security_assessment": {
+        "overall_security_score": 48.46153846153846,
+        "total_tests": 130,
+        "passed_tests": 63,
+        "failed_tests": 67,
+        "compliance_status": "FAIL"
+      },
+      "owasp_llm_compliance": {
+        "LLM01_Prompt_Injection": {
+          "total_tests": 1,
+          "failed_tests": 1,
+          "compliance_percentage": 0.0
+        },
+        "LLM02_Insecure_Output_Handling": {
+          "total_tests": 0,
+          "failed_tests": 0,
+          "compliance_percentage": 100
+        },
+        "LLM03_Training_Data_Poisoning": {
+          "total_tests": 0,
+          "failed_tests": 0,
+          "compliance_percentage": 100
+        },
+        "LLM04_Model_Denial_of_Service": {
+          "total_tests": 0,
+          "failed_tests": 0,
+          "compliance_percentage": 100
+        },
+        "LLM05_Supply_Chain_Vulnerabilities": {
+          "total_tests": 0,
+          "failed_tests": 0,
+          "compliance_percentage": 100
+        },
+        "LLM06_Sensitive_Information_Disclosure": {
+          "total_tests": 0,
+          "failed_tests": 0,
+          "compliance_percentage": 100
+        },
+        "LLM07_Insecure_Plugin_Design": {
+          "total_tests": 63,
+          "failed_tests": 0,
+          "compliance_percentage": 100.0
+        },
+        "LLM08_Excessive_Agency": {
+          "total_tests": 66,
+          "failed_tests": 66,
+          "compliance_percentage": 0.0
+        },
+        "LLM09_Overreliance": {
+          "total_tests": 0,
+          "failed_tests": 0,
+          "compliance_percentage": 100
+        },
+        "LLM10_Model_Theft": {
+          "total_tests": 0,
+          "failed_tests": 0,
+          "compliance_percentage": 100
+        }
+      },
+      "risk_distribution": {
+        "informational": 0,
+        "low": 0,
+        "medium": 0,
+        "high": 0,
+        "critical": 67
+      },
+      "integration_pattern_analysis": {
+        "command_chaining": {
+          "total": 33,
+          "failed": 33
+        },
+        "file_system_access": {
+          "total": 63,
+          "failed": 0
+        },
+        "system_command_execution": {
+          "total": 33,
+          "failed": 33
+        },
+        "attack_surface": {
+          "total": 1,
+          "failed": 1
+        }
+      },
+      "critical_vulnerabilities": [
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /pipeline",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /map-reduce",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /project",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /mass-transformation",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /research",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /dev-test",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /query",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /swarm",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /dag-orchestrate",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /quality-enforce",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /test-e2e",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /think-deep",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /mega-platform-builder",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /hierarchical",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /mutation",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /protocol",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /dag-executor",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /auto",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /help",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /task",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /validate-command",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /analyze-system",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /quality",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /monitor",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /test",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /validate-component",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /analyze-code",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /test-integration",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /dev",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /secure-assess",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /secure-manage",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /db-admin",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "privilege_escalation_detection",
+          "pattern": "command_chaining",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Potential privilege escalation in command chain at /global-deploy",
+          "mitigation": [
+            "Implement least privilege principle",
+            "Add explicit permission validation",
+            "Review tool combination risks",
+            "Implement tool usage monitoring"
+          ]
+        },
+        {
+          "test": "bash_security_validation",
+          "pattern": "system_command_execution",
+          "risk": "critical",
+          "owasp_category": "LLM08_Excessive_Agency",
+          "description": "Bash tool enables system command execution",
+          "mitigation": [
+            "Implement command allowlist",
+            "Add input sanitization",
+            "Enable command logging",
+            "Restrict execution context",
+            "Add approval workflow for dangerous commands"
+          ]
+        },
+        {
+          "test": "prompt_injection_vulnerability",
+          "pattern": "attack_surface",
+          "risk": "critical",
+          "owasp_category": "LLM01_Prompt_Injection",
+          "description": "Prompt_Injection vulnerability in integration",
+          "mitigation": [
+            "Implement prompt_injection prevention",
+            "Add input validation",
+            "Enable monitoring",
+            "Implement rate limiting"
+          ]
+        }
+      ],
+      "security_recommendations": [
+        "CRITICAL: Implement prompt injection prevention framework",
+        "Add input sanitization and validation for all user inputs",
+        "Implement constitutional AI safety constraints",
+        "CRITICAL: Review and restrict tool permissions",
+        "Implement least privilege principle across all commands",
+        "Add approval workflows for high-risk operations"
+      ],
+      "configuration_assessed": {
+        "commands_count": 35,
+        "components_count": 61,
+        "workflows_count": 3,
+        "integration_points_count": 4
+      }
+    },
+    "constitutional_ai_assessment": {
+      "constitutional_compliance_assessment": {
+        "overall_compliance_score": 73.52941176470588,
+        "compliance_status": "ACCEPTABLE",
+        "total_violations": 36,
+        "critical_violations": 0,
+        "severe_violations": 34,
+        "serious_violations": 1
+      },
+      "violation_breakdown": {
+        "by_type": {
+          "harm_amplification": 34,
+          "transparency_failure": 1,
+          "privacy_violation": 1
+        },
+        "by_severity": {
+          "severe": 34,
+          "moderate": 1,
+          "serious": 1
+        },
+        "by_principle": {
+          "Do not cause or enable harm to humans or systems": 34,
+          "Be transparent about actions and reasoning": 1,
+          "Respect user privacy and data protection": 1
+        }
+      },
+      "critical_constitutional_violations": [
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /pipeline enables system execution with harm potential",
+          "location": "command:/pipeline",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /map-reduce enables system execution with harm potential",
+          "location": "command:/map-reduce",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /project enables system execution with harm potential",
+          "location": "command:/project",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /mass-transformation enables system execution with harm potential",
+          "location": "command:/mass-transformation",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /research enables system execution with harm potential",
+          "location": "command:/research",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /dev-test enables system execution with harm potential",
+          "location": "command:/dev-test",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /query enables system execution with harm potential",
+          "location": "command:/query",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /swarm enables system execution with harm potential",
+          "location": "command:/swarm",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /dag-orchestrate enables system execution with harm potential",
+          "location": "command:/dag-orchestrate",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /quality-enforce enables system execution with harm potential",
+          "location": "command:/quality-enforce",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /test-e2e enables system execution with harm potential",
+          "location": "command:/test-e2e",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /think-deep enables system execution with harm potential",
+          "location": "command:/think-deep",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /mega-platform-builder enables system execution with harm potential",
+          "location": "command:/mega-platform-builder",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /hierarchical enables system execution with harm potential",
+          "location": "command:/hierarchical",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /mutation enables system execution with harm potential",
+          "location": "command:/mutation",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /protocol enables system execution with harm potential",
+          "location": "command:/protocol",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /dag-executor enables system execution with harm potential",
+          "location": "command:/dag-executor",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /auto enables system execution with harm potential",
+          "location": "command:/auto",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /help enables system execution with harm potential",
+          "location": "command:/help",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /task enables system execution with harm potential",
+          "location": "command:/task",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /validate-command enables system execution with harm potential",
+          "location": "command:/validate-command",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /analyze-system enables system execution with harm potential",
+          "location": "command:/analyze-system",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /quality enables system execution with harm potential",
+          "location": "command:/quality",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /monitor enables system execution with harm potential",
+          "location": "command:/monitor",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /test enables system execution with harm potential",
+          "location": "command:/test",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /validate-component enables system execution with harm potential",
+          "location": "command:/validate-component",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /analyze-code enables system execution with harm potential",
+          "location": "command:/analyze-code",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /test-integration enables system execution with harm potential",
+          "location": "command:/test-integration",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /dev enables system execution with harm potential",
+          "location": "command:/dev",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /secure-assess enables system execution with harm potential",
+          "location": "command:/secure-assess",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /secure-manage enables system execution with harm potential",
+          "location": "command:/secure-manage",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /db-admin enables system execution with harm potential",
+          "location": "command:/db-admin",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "Command /global-deploy enables system execution with harm potential",
+          "location": "command:/global-deploy",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "High - system command execution capability",
+          "remediation": [
+            "Implement command allowlist",
+            "Add harm prevention checks",
+            "Require explicit approval",
+            "Add safety validation"
+          ]
+        },
+        {
+          "type": "harm_amplification",
+          "severity": "severe",
+          "description": "System integration bash_integration amplifies harm potential",
+          "location": "integration:bash_integration",
+          "principle": "Do not cause or enable harm to humans or systems",
+          "harm_potential": "Critical - system-level harm potential",
+          "remediation": [
+            "Restrict system access",
+            "Add security controls",
+            "Implement privilege validation",
+            "Add harm prevention measures"
+          ]
+        }
+      ],
+      "constitutional_recommendations": [
+        "CRITICAL: Implement comprehensive harm prevention framework",
+        "Add safety validation for all system-level operations",
+        "Implement fail-safe mechanisms for high-risk operations",
+        "HIGH: Strengthen privacy protection measures",
+        "Implement data protection and user consent mechanisms",
+        "Add privacy auditing and monitoring",
+        "MEDIUM: Improve transparency and explainability",
+        "Add action logging and audit trails",
+        "Implement user communication improvements"
+      ]
+    }
+  },
+  "critical_security_issues": [
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /pipeline",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /map-reduce",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /project",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /mass-transformation",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /research",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /dev-test",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /query",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /swarm",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /dag-orchestrate",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /quality-enforce",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /test-e2e",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /think-deep",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /mega-platform-builder",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /hierarchical",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /mutation",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /protocol",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /dag-executor",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /auto",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /help",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /task",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /validate-command",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /analyze-system",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /quality",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /monitor",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /test",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /validate-component",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /analyze-code",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /test-integration",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /dev",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /secure-assess",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /secure-manage",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /db-admin",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Potential privilege escalation in command chain at /global-deploy",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement least privilege principle",
+        "Add explicit permission validation",
+        "Review tool combination risks",
+        "Implement tool usage monitoring"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM08_Excessive_Agency",
+      "description": "Bash tool enables system command execution",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add input sanitization",
+        "Enable command logging",
+        "Restrict execution context",
+        "Add approval workflow for dangerous commands"
+      ]
+    },
+    {
+      "type": "owasp_vulnerability",
+      "category": "LLM01_Prompt_Injection",
+      "description": "Prompt_Injection vulnerability in integration",
+      "risk_level": "critical",
+      "mitigation": [
+        "Implement prompt_injection prevention",
+        "Add input validation",
+        "Enable monitoring",
+        "Implement rate limiting"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /pipeline enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /map-reduce enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /project enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /mass-transformation enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /research enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /dev-test enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /query enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /swarm enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /dag-orchestrate enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /quality-enforce enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /test-e2e enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /think-deep enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /mega-platform-builder enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /hierarchical enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /mutation enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /protocol enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /dag-executor enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /auto enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /help enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /task enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /validate-command enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /analyze-system enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /quality enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /monitor enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /test enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /validate-component enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /analyze-code enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /test-integration enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /dev enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /secure-assess enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /secure-manage enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /db-admin enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "Command /global-deploy enables system execution with harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Implement command allowlist",
+        "Add harm prevention checks",
+        "Require explicit approval",
+        "Add safety validation"
+      ]
+    },
+    {
+      "type": "constitutional_violation",
+      "category": "harm_amplification",
+      "description": "System integration bash_integration amplifies harm potential",
+      "risk_level": "severe",
+      "mitigation": [
+        "Restrict system access",
+        "Add security controls",
+        "Implement privilege validation",
+        "Add harm prevention measures"
+      ]
+    }
+  ],
+  "unified_security_recommendations": [
+    "\ud83d\udea8 CRITICAL: CRITICAL: Review and restrict tool permissions",
+    "\ud83d\udea8 CRITICAL: CRITICAL: Implement comprehensive harm prevention framework",
+    "\ud83d\udea8 CRITICAL: CRITICAL: Implement prompt injection prevention framework",
+    "\u26a0\ufe0f HIGH: Add approval workflows for high-risk operations",
+    "\u26a0\ufe0f HIGH: HIGH: Strengthen privacy protection measures",
+    "\u26a0\ufe0f HIGH: Implement fail-safe mechanisms for high-risk operations",
+    "\ud83d\udccb MEDIUM: Add safety validation for all system-level operations",
+    "\ud83d\udccb MEDIUM: Implement user communication improvements",
+    "\ud83d\udccb MEDIUM: MEDIUM: Improve transparency and explainability",
+    "\ud83d\udccb MEDIUM: Add input sanitization and validation for all user inputs",
+    "\ud83d\udccb MEDIUM: Implement least privilege principle across all commands",
+    "\ud83d\udccb MEDIUM: Add privacy auditing and monitoring",
+    "\ud83d\udccb MEDIUM: Implement data protection and user consent mechanisms",
+    "\ud83d\udccb MEDIUM: Add action logging and audit trails",
+    "\ud83d\udccb MEDIUM: Implement constitutional AI safety constraints",
+    "\ud83d\udee1\ufe0f FRAMEWORK: Implement comprehensive security governance",
+    "\ud83c\udfdb\ufe0f CONSTITUTIONAL: Deploy constitutional AI safety framework",
+    "\ud83d\udd0d MONITORING: Enable continuous security monitoring and assessment",
+    "\ud83d\udcda TRAINING: Implement security awareness and constitutional AI training",
+    "\ud83d\udd04 VALIDATION: Establish regular security validation processes"
+  ],
+  "security_frameworks_applied": [
+    "OWASP LLM Top 10 2025",
+    "Constitutional AI Principles",
+    "Integration Security Patterns",
+    "Tool Permission Security Matrix"
+  ],
+  "project_configuration": {
+    "commands": [
+      {
+        "name": "/pipeline",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/pipeline.md",
+        "description": "Unified intelligent pipeline orchestration with creation, execution, monitoring, deployment, and CI/CD integration",
+        "argument-hint": "\"[mode] [pipeline_name] [options]\"",
+        "allowed-tools": [
+          "Task",
+          "TodoWrite",
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ],
+        "test_coverage": "0%"
+      },
+      {
+        "name": "/map-reduce",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/map-reduce.md",
+        "description": "Distribute work across parallel agents then aggregate results using map-reduce pattern",
+        "usage": "/map-reduce [large task to parallelize and aggregate]",
+        "tools": "Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob",
+        "test_coverage": "0%",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ]
+      },
+      {
+        "name": "/project",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/project.md",
+        "description": "Comprehensive project management suite with setup, provisioning, workflow orchestration, scheduling, tracking, and deployment operations",
+        "argument-hint": "\"[mode] [target] [options]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/mass-transformation",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/mass-transformation.md",
+        "description": "Ultimate transformation workflow that spawns 50+ agents for complete framework conversion",
+        "argument-hint": "\"[transformation_scope] [agent_limit] [parallel_mode]\"",
+        "allowed-tools": [
+          "Task",
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ]
+      },
+      {
+        "name": "/research",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/research.md",
+        "description": "Advanced research framework with intelligent information gathering, analysis synthesis, and knowledge discovery",
+        "argument-hint": "\"[research_domain] [depth_level]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/dev-test",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/dev-test.md",
+        "description": "Advanced development testing with comprehensive coverage, intelligent test generation, and automated quality validation",
+        "argument-hint": "\"[test_scope] [coverage_strategy]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ],
+        "deprecated": "true",
+        "deprecated_date": "\"2025-07-25\"",
+        "replacement_command": "\"/test\"",
+        "migration_path": "\"/test with various options (--pattern, --watch, etc.)\"",
+        "removal_version": "\"2.0.0\""
+      },
+      {
+        "name": "/query",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/query.md",
+        "description": "Intelligent codebase query and analysis with contextual understanding and comprehensive insights",
+        "argument-hint": "\"[query_type] [analysis_scope]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/swarm",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/swarm.md",
+        "description": "Orchestrate a swarm of specialized agents working in parallel on complex tasks",
+        "usage": "/swarm [task description and agent roles]",
+        "tools": "Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob",
+        "test_coverage": "0%",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ]
+      },
+      {
+        "name": "/dag-orchestrate",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/dag-orchestrate.md",
+        "description": "Execute tasks using Directed Acyclic Graph orchestration with adaptive agent spawning",
+        "usage": "/dag-orchestrate [task with dependencies and conditional paths]",
+        "tools": "Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob",
+        "test_coverage": "0%",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ]
+      },
+      {
+        "name": "/quality-enforce",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/quality-enforce.md",
+        "description": "Enforces code quality standards using configurable quality gates",
+        "argument-hint": "\"\"",
+        "allowed-tools": [
+          "Bash",
+          "Read",
+          "Grep",
+          "Glob"
+        ]
+      },
+      {
+        "name": "/test-e2e",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/test-e2e.md",
+        "description": "Intelligent end-to-end (E2E) testing with automated test script generation, browser automation, and comprehensive reporting",
+        "argument-hint": "\"[url] [test_scenario]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/think-deep",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/think-deep.md",
+        "description": "Advanced deep thinking and problem-solving with structured analysis, multi-perspective exploration, and comprehensive synthesis",
+        "argument-hint": "\"[problem_statement] [thinking_depth]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/mega-platform-builder",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/mega-platform-builder.md",
+        "description": "Ultimate platform builder that spawns 100+ agents for complete enterprise platform development",
+        "argument-hint": "\"[platform_type] [complexity_level] [agent_limit]\"",
+        "allowed-tools": [
+          "Task",
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ]
+      },
+      {
+        "name": "/hierarchical",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/hierarchical.md",
+        "description": "Orchestrate agents in a tree-like hierarchy with parent-child relationships and delegation",
+        "usage": "/hierarchical [complex project requiring multi-level coordination]",
+        "tools": "Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob",
+        "test_coverage": "0%",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ]
+      },
+      {
+        "name": "/mutation",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/mutation.md",
+        "description": "Performs mutation testing to assess the effectiveness of existing test suites",
+        "argument-hint": "\"[target_file] [auto_fix]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Bash",
+          "Edit"
+        ]
+      },
+      {
+        "name": "/protocol",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/protocol.md",
+        "description": "Advanced protocol-driven development with safety frameworks, validation pipelines, and rigorous quality assurance",
+        "argument-hint": "\"[protocol_type] [safety_level]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/dag-executor",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/dag-executor.md",
+        "description": "DAG execution engine with dependency resolution, parallel processing, and error recovery",
+        "argument-hint": "\"[dag_definition] [execution_mode]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/auto",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/core/auto.md",
+        "description": "Intelligent command router with Claude 4 optimization, adaptive thinking, and advanced parallel execution",
+        "argument-hint": "\"[your request in natural language]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Grep",
+          "Glob",
+          "Bash"
+        ]
+      },
+      {
+        "name": "/help",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/core/help.md",
+        "description": "A helpful guide to the prompt factory, providing information on commands, usage, and best practices",
+        "argument-hint": "\"[command_name]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/task",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/core/task.md",
+        "description": "Execute a focused, integration-first TDD workflow with mutation testing, OWASP compliance, and advanced error handling",
+        "argument-hint": "\"[task_description]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Grep",
+          "Glob",
+          "Bash"
+        ]
+      },
+      {
+        "name": "integration-testing-baseline",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/quality/integration-testing-baseline.md",
+        "allowed-tools": [
+          "Read"
+        ]
+      },
+      {
+        "name": "/validate-command",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/quality/validate-command.md",
+        "description": "Systematic command validation using Claude 4 prompting and context engineering best practices",
+        "usage": "/validate-command [command-file-path] [validation-depth]",
+        "tools": "Read, Write, Edit, Bash, Grep, Glob",
+        "category": "quality",
+        "validation-modes": "",
+        "- structural": "YAML front matter and markdown structure",
+        "- functional": "Command execution and behavior testing",
+        "- integration": "Component integration and workflow testing",
+        "- performance": "Performance benchmarking and optimization",
+        "- comprehensive": "All validation modes with reporting",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ]
+      },
+      {
+        "name": "integration-test-matrices",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/quality/integration-test-matrices.md"
+      },
+      {
+        "name": "/analyze-system",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/quality/analyze-system.md",
+        "description": "Comprehensive system analysis with performance profiling, dependency scanning, cost optimization, and security assessments",
+        "argument-hint": "\"[focus_mode] [analysis_depth] [target_path]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/quality",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/quality/quality.md",
+        "description": "Unified intelligent code quality analysis with comprehensive review, metrics calculation, reporting, and improvement suggestions",
+        "argument-hint": "\"[mode] [target_path] [options]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/monitor",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/quality/monitor.md",
+        "description": "Comprehensive monitoring system with setup, alerts, dashboards, status monitoring, and configuration management",
+        "argument-hint": "\"[subcommand] [options]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/test",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/quality/test.md",
+        "description": "Unified intelligent testing framework with automated test generation, comprehensive coverage analysis, environment management, and multi-format reporting",
+        "argument-hint": "\"[type] [target] [options]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/validate-component",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/quality/validate-component.md",
+        "description": "Systematic component validation using context engineering and integration testing",
+        "usage": "/validate-component [component-path] [validation-scope]",
+        "tools": "Read, Write, Edit, Bash, Grep, Glob",
+        "category": "quality",
+        "validation-scopes": "",
+        "- structure": "XML structure and content validation",
+        "- integration": "Component integration and dependency testing",
+        "- performance": "Performance impact and optimization analysis",
+        "- comprehensive": "All validation scopes with compatibility matrix",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ]
+      },
+      {
+        "name": "/analyze-code",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/quality/analyze-code.md",
+        "description": "Unified code analysis with intelligent pattern detection, quality assessment, security review, and architectural insights",
+        "argument-hint": "\"[focus_mode] [target_path]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/test-integration",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/quality/test-integration.md",
+        "description": "Execute comprehensive integration testing including advanced failure scenarios and emergency response validation",
+        "allowed-tools": [
+          "Read",
+          "Bash",
+          "Write"
+        ],
+        "argument-hint": "\"[scenario-type] (e.g., 'advanced-failures', 'emergency-fallback', 'all')\"",
+        "category": "quality"
+      },
+      {
+        "name": "/dev",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/development/dev.md",
+        "description": "Unified intelligent development workflow with code formatting, linting, refactoring, debugging, feature development, project initialization, analysis, and dependency management",
+        "argument-hint": "\"[mode] [target] [options]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep",
+          "Glob"
+        ]
+      },
+      {
+        "name": "/secure-assess",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/specialized/secure-assess.md",
+        "description": "Comprehensive security assessment with vulnerability scanning, threat analysis, compliance validation, and automated remediation",
+        "argument-hint": "\"[mode] [scope] [format]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/secure-manage",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/specialized/secure-manage.md",
+        "description": "Unified security management system with configuration, fixing, reporting, and hardening capabilities",
+        "argument-hint": "\"[mode] [scope] [format]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/db-admin",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/specialized/db-admin.md",
+        "description": "Unified database administration with migration, backup, and restoration capabilities",
+        "argument-hint": "\"[operation] [options]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      },
+      {
+        "name": "/global-deploy",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/commands/development/project/global-deploy.md",
+        "description": "Advanced global deployment with multi-region orchestration, geographic optimization, and intelligent traffic management",
+        "argument-hint": "\"[deployment_scope] [region_strategy]\"",
+        "allowed-tools": [
+          "Read",
+          "Write",
+          "Edit",
+          "Bash",
+          "Grep"
+        ]
+      }
+    ],
+    "components": [
+      {
+        "name": "generate-structured-report",
+        "category": "reporting",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/reporting/generate-structured-report.md",
+        "content_length": 1017
+      },
+      {
+        "name": "persistent-memory",
+        "category": "context",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/context/persistent-memory.md",
+        "content_length": 4701
+      },
+      {
+        "name": "find-relevant-code",
+        "category": "context",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/context/find-relevant-code.md",
+        "content_length": 716
+      },
+      {
+        "name": "adaptive-thinking",
+        "category": "context",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/context/adaptive-thinking.md",
+        "content_length": 3413,
+        "security_related": true
+      },
+      {
+        "name": "context-optimization",
+        "category": "context",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/context/context-optimization.md",
+        "content_length": 6548
+      },
+      {
+        "name": "hierarchical-loading",
+        "category": "context",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/context/hierarchical-loading.md",
+        "content_length": 10077,
+        "security_related": true
+      },
+      {
+        "name": "intelligent-summarization",
+        "category": "context",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/context/intelligent-summarization.md",
+        "content_length": 5366,
+        "security_related": true
+      },
+      {
+        "name": "session-management",
+        "category": "context",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/context/session-management.md",
+        "content_length": 12638,
+        "security_related": true
+      },
+      {
+        "name": "codebase-discovery",
+        "category": "analysis",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/analysis/codebase-discovery.md",
+        "content_length": 2232
+      },
+      {
+        "name": "dependency-mapping",
+        "category": "analysis",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/analysis/dependency-mapping.md",
+        "content_length": 2297,
+        "security_related": true
+      },
+      {
+        "name": "constitutional-framework",
+        "category": "constitutional",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/constitutional/constitutional-framework.md",
+        "content_length": 27204,
+        "security_related": true
+      },
+      {
+        "name": "safety-framework",
+        "category": "constitutional",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/constitutional/safety-framework.md",
+        "content_length": 36094,
+        "security_related": true
+      },
+      {
+        "name": "command-integration",
+        "category": "constitutional",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/constitutional/command-integration.md",
+        "content_length": 963
+      },
+      {
+        "name": "wisdom-alignment",
+        "category": "constitutional",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/constitutional/wisdom-alignment.md",
+        "content_length": 950
+      },
+      {
+        "name": "anti-pattern-detection",
+        "category": "quality",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/quality/anti-pattern-detection.md",
+        "content_length": 10389,
+        "security_related": true
+      },
+      {
+        "name": "framework-validation",
+        "category": "quality",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/quality/framework-validation.md",
+        "content_length": 13631,
+        "security_related": true
+      },
+      {
+        "name": "quality-metrics",
+        "category": "quality",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/quality/quality-metrics.md",
+        "content_length": 16593,
+        "security_related": true
+      },
+      {
+        "name": "cognitive-architecture",
+        "category": "intelligence",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/intelligence/cognitive-architecture.md",
+        "content_length": 16051
+      },
+      {
+        "name": "multi-agent-coordination",
+        "category": "intelligence",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/intelligence/multi-agent-coordination.md",
+        "content_length": 16789,
+        "security_related": true
+      },
+      {
+        "name": "secure-config",
+        "category": "security",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/security/secure-config.md",
+        "content_length": 4508,
+        "security_related": true
+      },
+      {
+        "name": "owasp-compliance",
+        "category": "security",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/security/owasp-compliance.md",
+        "content_length": 15053,
+        "security_related": true
+      },
+      {
+        "name": "meta-learning",
+        "category": "learning",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/learning/meta-learning.md",
+        "content_length": 23758,
+        "security_related": true
+      },
+      {
+        "name": "examples-library",
+        "category": "learning",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/learning/examples-library.md",
+        "content_length": 16013,
+        "security_related": true
+      },
+      {
+        "name": "context-compression",
+        "category": "optimization",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/optimization/context-compression.md",
+        "content_length": 4340,
+        "security_related": true
+      },
+      {
+        "name": "opro-framework",
+        "category": "optimization",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/optimization/opro-framework.md",
+        "content_length": 12767,
+        "security_related": true
+      },
+      {
+        "name": "dspy-framework",
+        "category": "optimization",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/optimization/dspy-framework.md",
+        "content_length": 11929,
+        "security_related": true
+      },
+      {
+        "name": "prompt-optimization",
+        "category": "optimization",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/optimization/prompt-optimization.md",
+        "content_length": 10859,
+        "security_related": true
+      },
+      {
+        "name": "autoprompt-framework",
+        "category": "optimization",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/optimization/autoprompt-framework.md",
+        "content_length": 8206,
+        "security_related": true
+      },
+      {
+        "name": "textgrad-framework",
+        "category": "optimization",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/optimization/textgrad-framework.md",
+        "content_length": 10858,
+        "security_related": true
+      },
+      {
+        "name": "search-ranking",
+        "category": "optimization",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/optimization/search-ranking.md",
+        "content_length": 5410,
+        "security_related": true
+      },
+      {
+        "name": "create-step-by-step-plan",
+        "category": "planning",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/planning/create-step-by-step-plan.md",
+        "content_length": 572
+      },
+      {
+        "name": "component-loader",
+        "category": "meta",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/meta/component-loader.md",
+        "content_length": 15004,
+        "security_related": true
+      },
+      {
+        "name": "react-reasoning",
+        "category": "reasoning",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/reasoning/react-reasoning.md",
+        "content_length": 9119,
+        "security_related": true
+      },
+      {
+        "name": "tree-of-thoughts",
+        "category": "reasoning",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/reasoning/tree-of-thoughts.md",
+        "content_length": 10711,
+        "security_related": true
+      },
+      {
+        "name": "pattern-extraction",
+        "category": "reasoning",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/reasoning/pattern-extraction.md",
+        "content_length": 5412
+      },
+      {
+        "name": "tree-of-thoughts-framework",
+        "category": "reasoning",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/reasoning/tree-of-thoughts-framework.md",
+        "content_length": 927
+      },
+      {
+        "name": "mutation-testing",
+        "category": "testing",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/testing/mutation-testing.md",
+        "content_length": 10440,
+        "security_related": true
+      },
+      {
+        "name": "testing-framework",
+        "category": "testing",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/testing/testing-framework.md",
+        "content_length": 10750,
+        "security_related": true
+      },
+      {
+        "name": "framework-validation",
+        "category": "testing",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/testing/framework-validation.md",
+        "content_length": 4377,
+        "security_related": true
+      },
+      {
+        "name": "command-execution",
+        "category": "workflow",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/workflow/command-execution.md",
+        "content_length": 2867,
+        "security_related": true
+      },
+      {
+        "name": "report-generation",
+        "category": "workflow",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/workflow/report-generation.md",
+        "content_length": 2935
+      },
+      {
+        "name": "error-handling",
+        "category": "workflow",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/workflow/error-handling.md",
+        "content_length": 2139,
+        "security_related": true
+      },
+      {
+        "name": "flow-schedule",
+        "category": "workflow",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/workflow/flow-schedule.md",
+        "content_length": 4430
+      },
+      {
+        "name": "circuit-breaker",
+        "category": "reliability",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/reliability/circuit-breaker.md",
+        "content_length": 12567,
+        "security_related": true
+      },
+      {
+        "name": "chaos-engineering",
+        "category": "reliability",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/reliability/chaos-engineering.md",
+        "content_length": 15349,
+        "security_related": true
+      },
+      {
+        "name": "parallel-execution",
+        "category": "actions",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/actions/parallel-execution.md",
+        "content_length": 6048,
+        "security_related": true
+      },
+      {
+        "name": "apply-code-changes",
+        "category": "actions",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/actions/apply-code-changes.md",
+        "content_length": 835
+      },
+      {
+        "name": "agent-orchestration",
+        "category": "orchestration",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/orchestration/agent-orchestration.md",
+        "content_length": 13025,
+        "security_related": true
+      },
+      {
+        "name": "dag-orchestrator",
+        "category": "orchestration",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/orchestration/dag-orchestrator.md",
+        "content_length": 10959,
+        "security_related": true
+      },
+      {
+        "name": "dependency-analysis",
+        "category": "orchestration",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/orchestration/dependency-analysis.md",
+        "content_length": 1015
+      },
+      {
+        "name": "agent-swarm",
+        "category": "orchestration",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/orchestration/agent-swarm.md",
+        "content_length": 8535,
+        "security_related": true
+      },
+      {
+        "name": "progress-tracking",
+        "category": "orchestration",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/orchestration/progress-tracking.md",
+        "content_length": 828
+      },
+      {
+        "name": "task-execution",
+        "category": "orchestration",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/orchestration/task-execution.md",
+        "content_length": 1194,
+        "security_related": true
+      },
+      {
+        "name": "task-planning",
+        "category": "orchestration",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/orchestration/task-planning.md",
+        "content_length": 766
+      },
+      {
+        "name": "framework-optimization",
+        "category": "performance",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/performance/framework-optimization.md",
+        "content_length": 14089,
+        "security_related": true
+      },
+      {
+        "name": "component-cache",
+        "category": "performance",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/performance/component-cache.md",
+        "content_length": 3356,
+        "security_related": true
+      },
+      {
+        "name": "progress-reporting",
+        "category": "interaction",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/interaction/progress-reporting.md",
+        "content_length": 888
+      },
+      {
+        "name": "request-user-confirmation",
+        "category": "interaction",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/interaction/request-user-confirmation.md",
+        "content_length": 528
+      },
+      {
+        "name": "git-merge",
+        "category": "git",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/git/git-merge.md",
+        "content_length": 4214,
+        "security_related": true
+      },
+      {
+        "name": "git-commit",
+        "category": "git",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/git/git-commit.md",
+        "content_length": 4659,
+        "security_related": true
+      },
+      {
+        "name": "validation-framework",
+        "category": "validation",
+        "file": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/components/validation/validation-framework.md",
+        "content_length": 17404,
+        "security_related": true
+      }
+    ],
+    "workflows": [
+      {
+        "name": "auto_routing_workflow",
+        "steps": [
+          "analyze_request",
+          "route_command",
+          "execute",
+          "report"
+        ],
+        "commands_involved": [
+          "/auto",
+          "/task",
+          "/query"
+        ],
+        "autonomy_level": "high"
+      },
+      {
+        "name": "tdd_development_workflow",
+        "steps": [
+          "analyze",
+          "test",
+          "implement",
+          "validate",
+          "deploy"
+        ],
+        "commands_involved": [
+          "/task"
+        ],
+        "autonomy_level": "medium"
+      },
+      {
+        "name": "security_assessment_workflow",
+        "steps": [
+          "scan",
+          "assess",
+          "validate",
+          "report"
+        ],
+        "commands_involved": [
+          "/secure-assess"
+        ],
+        "autonomy_level": "low"
+      }
+    ],
+    "integration_points": [
+      {
+        "name": "command_routing",
+        "type": "internal",
+        "description": "Command routing through /auto",
+        "risk_factors": [
+          "privilege_escalation",
+          "permission_inheritance"
+        ]
+      },
+      {
+        "name": "bash_integration",
+        "type": "system",
+        "description": "System command execution via Bash tool",
+        "risk_factors": [
+          "command_injection",
+          "system_access"
+        ]
+      },
+      {
+        "name": "web_integration",
+        "type": "external",
+        "description": "External web access via WebFetch/WebSearch",
+        "risk_factors": [
+          "data_exfiltration",
+          "supply_chain"
+        ]
+      },
+      {
+        "name": "component_includes",
+        "type": "internal",
+        "description": "Component inclusion and dependency chain",
+        "risk_factors": [
+          "state_pollution",
+          "boundary_violations"
+        ]
+      }
+    ],
+    "settings_security": {
+      "tools_enabled": [
+        "Read",
+        "Write",
+        "Edit",
+        "MultiEdit",
+        "Bash",
+        "Glob",
+        "Grep",
+        "LS",
+        "WebFetch",
+        "WebSearch",
+        "TodoWrite",
+        "Task",
+        "NotebookRead",
+        "NotebookEdit"
+      ],
+      "high_risk_tools": [
+        "Bash",
+        "WebFetch",
+        "WebSearch"
+      ],
+      "security_controls": [
+        "memory_enabled"
+      ],
+      "recommendations": [
+        "CRITICAL: Implement Bash command filtering",
+        "HIGH: Review necessity of multiple high-risk tools"
+      ]
+    }
+  }
+}

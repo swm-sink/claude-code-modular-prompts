@@ -1,0 +1,2773 @@
+{
+  "timestamp": "2025-07-27T17:29:21.582853",
+  "total_tests": 85,
+  "passed_tests": 60,
+  "failed_tests": 25,
+  "test_results": {
+    "pipeline.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/pipeline",
+        "description": "Unified intelligent pipeline orchestration with creation, execution, monitoring, deployment, and CI/CD integration",
+        "usage": "",
+        "tools": "",
+        "content_length": 24681,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "map-reduce.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 10,
+        "max_score": 10,
+        "percentage": 100.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 8,
+        "max_score": 8,
+        "percentage": 100.0,
+        "issues": [],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/map-reduce",
+        "description": "Distribute work across parallel agents then aggregate results using map-reduce pattern",
+        "usage": "/map-reduce [large task to parallelize and aggregate]",
+        "tools": "Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob",
+        "content_length": 5879,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 1,
+        "xml_structure": true
+      }
+    },
+    "project.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/project",
+        "description": "Comprehensive project management suite with setup, provisioning, workflow orchestration, scheduling, tracking, and deployment operations",
+        "usage": "",
+        "tools": "",
+        "content_length": 20941,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 15,
+        "xml_structure": true
+      }
+    },
+    "mass-transformation.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/mass-transformation",
+        "description": "Ultimate transformation workflow that spawns 50+ agents for complete framework conversion",
+        "usage": "",
+        "tools": "",
+        "content_length": 10920,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "research.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/research",
+        "description": "Advanced research framework with intelligent information gathering, analysis synthesis, and knowledge discovery",
+        "usage": "",
+        "tools": "",
+        "content_length": 5735,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 8,
+        "xml_structure": true
+      }
+    },
+    "dev-test.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/dev-test",
+        "description": "Advanced development testing with comprehensive coverage, intelligent test generation, and automated quality validation",
+        "usage": "",
+        "tools": "",
+        "content_length": 3879,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 5,
+        "xml_structure": true
+      }
+    },
+    "query.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/query",
+        "description": "Intelligent codebase query and analysis with contextual understanding and comprehensive insights",
+        "usage": "",
+        "tools": "",
+        "content_length": 2805,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 9,
+        "xml_structure": true
+      }
+    },
+    "swarm.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [
+          "Missing clear instructions"
+        ],
+        "passed": true
+      },
+      "compliance": {
+        "score": 8,
+        "max_score": 8,
+        "percentage": 100.0,
+        "issues": [],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/swarm",
+        "description": "Orchestrate a swarm of specialized agents working in parallel on complex tasks",
+        "usage": "/swarm [task description and agent roles]",
+        "tools": "Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob",
+        "content_length": 3511,
+        "has_examples": true,
+        "has_instructions": false,
+        "has_security_considerations": true,
+        "component_includes": 5,
+        "xml_structure": true
+      }
+    },
+    "dag-orchestrate.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 8,
+        "max_score": 8,
+        "percentage": 100.0,
+        "issues": [],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/dag-orchestrate",
+        "description": "Execute tasks using Directed Acyclic Graph orchestration with adaptive agent spawning",
+        "usage": "/dag-orchestrate [task with dependencies and conditional paths]",
+        "tools": "Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob",
+        "content_length": 4694,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 3,
+        "xml_structure": true
+      }
+    },
+    "quality-enforce.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [
+          "Missing clear instructions"
+        ],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/quality-enforce",
+        "description": "Enforces code quality standards using configurable quality gates",
+        "usage": "",
+        "tools": "",
+        "content_length": 3546,
+        "has_examples": true,
+        "has_instructions": false,
+        "has_security_considerations": true,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "test-e2e.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/test-e2e",
+        "description": "Intelligent end-to-end (E2E) testing with automated test script generation, browser automation, and comprehensive reporting",
+        "usage": "",
+        "tools": "",
+        "content_length": 4944,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "think-deep.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/think-deep",
+        "description": "Advanced deep thinking and problem-solving with structured analysis, multi-perspective exploration, and comprehensive synthesis",
+        "usage": "",
+        "tools": "",
+        "content_length": 4031,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "mega-platform-builder.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/mega-platform-builder",
+        "description": "Ultimate platform builder that spawns 100+ agents for complete enterprise platform development",
+        "usage": "",
+        "tools": "",
+        "content_length": 14002,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "hierarchical.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 8,
+        "max_score": 8,
+        "percentage": 100.0,
+        "issues": [],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/hierarchical",
+        "description": "Orchestrate agents in a tree-like hierarchy with parent-child relationships and delegation",
+        "usage": "/hierarchical [complex project requiring multi-level coordination]",
+        "tools": "Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob",
+        "content_length": 6884,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 1,
+        "xml_structure": true
+      }
+    },
+    "mutation.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 7,
+        "max_score": 10,
+        "percentage": 70.0,
+        "issues": [
+          "Missing clear instructions"
+        ],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/mutation",
+        "description": "Performs mutation testing to assess the effectiveness of existing test suites",
+        "usage": "",
+        "tools": "",
+        "content_length": 4969,
+        "has_examples": true,
+        "has_instructions": false,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "protocol.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/protocol",
+        "description": "Advanced protocol-driven development with safety frameworks, validation pipelines, and rigorous quality assurance",
+        "usage": "",
+        "tools": "",
+        "content_length": 2840,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 9,
+        "xml_structure": true
+      }
+    },
+    "dag-executor.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/dag-executor",
+        "description": "DAG execution engine with dependency resolution, parallel processing, and error recovery",
+        "usage": "",
+        "tools": "",
+        "content_length": 11251,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "core/auto.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/auto",
+        "description": "Intelligent command router with Claude 4 optimization, adaptive thinking, and advanced parallel execution",
+        "usage": "",
+        "tools": "",
+        "content_length": 8718,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 8,
+        "xml_structure": true
+      }
+    },
+    "core/help.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/help",
+        "description": "A helpful guide to the prompt factory, providing information on commands, usage, and best practices",
+        "usage": "",
+        "tools": "",
+        "content_length": 3051,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "core/task.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/task",
+        "description": "Execute a focused, integration-first TDD workflow with mutation testing, OWASP compliance, and advanced error handling",
+        "usage": "",
+        "tools": "",
+        "content_length": 12355,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 14,
+        "xml_structure": true
+      }
+    },
+    "quality/integration-testing-baseline.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [
+          "Missing clear instructions"
+        ],
+        "passed": true
+      },
+      "compliance": {
+        "score": 2,
+        "max_score": 8,
+        "percentage": 25.0,
+        "issues": [
+          "No tools specified",
+          "No XML structure found",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/integration-testing-baseline",
+        "description": "Integration Testing Baseline Report",
+        "usage": "",
+        "tools": "",
+        "content_length": 6033,
+        "has_examples": true,
+        "has_instructions": false,
+        "has_security_considerations": true,
+        "component_includes": 0,
+        "xml_structure": false
+      }
+    },
+    "quality/validate-command.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 8,
+        "max_score": 8,
+        "percentage": 100.0,
+        "issues": [],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/validate-command",
+        "description": "Systematic command validation using Claude 4 prompting and context engineering best practices",
+        "usage": "/validate-command [command-file-path] [validation-depth]",
+        "tools": "Read, Write, Edit, Bash, Grep, Glob",
+        "content_length": 12254,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 9,
+        "xml_structure": true
+      }
+    },
+    "quality/integration-test-matrices.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 2,
+        "max_score": 8,
+        "percentage": 25.0,
+        "issues": [
+          "No tools specified",
+          "No XML structure found",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/integration-test-matrices",
+        "description": "Integration Test Matrices for Phase 2",
+        "usage": "",
+        "tools": "",
+        "content_length": 12122,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 0,
+        "xml_structure": false
+      }
+    },
+    "quality/analyze-system.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/analyze-system",
+        "description": "Comprehensive system analysis with performance profiling, dependency scanning, cost optimization, and security assessments",
+        "usage": "",
+        "tools": "",
+        "content_length": 9431,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "quality/PERFORMANCE-INTEGRATION-REPORT.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [
+          "Missing examples"
+        ],
+        "passed": true
+      },
+      "compliance": {
+        "score": 2,
+        "max_score": 8,
+        "percentage": 25.0,
+        "issues": [
+          "No tools specified",
+          "No XML structure found",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/performance-integration-report",
+        "description": "Performance Integration Benchmarking Report",
+        "usage": "",
+        "tools": "",
+        "content_length": 9635,
+        "has_examples": false,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 0,
+        "xml_structure": false
+      }
+    },
+    "quality/quality.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/quality",
+        "description": "Unified intelligent code quality analysis with comprehensive review, metrics calculation, reporting, and improvement suggestions",
+        "usage": "",
+        "tools": "",
+        "content_length": 11406,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 11,
+        "xml_structure": true
+      }
+    },
+    "quality/monitor.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/monitor",
+        "description": "Comprehensive monitoring system with setup, alerts, dashboards, status monitoring, and configuration management",
+        "usage": "",
+        "tools": "",
+        "content_length": 9412,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "quality/test.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/test",
+        "description": "Unified intelligent testing framework with automated test generation, comprehensive coverage analysis, environment management, and multi-format reporting",
+        "usage": "",
+        "tools": "",
+        "content_length": 10435,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 9,
+        "xml_structure": true
+      }
+    },
+    "quality/validate-component.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 10,
+        "max_score": 10,
+        "percentage": 100.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 8,
+        "max_score": 8,
+        "percentage": 100.0,
+        "issues": [],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/validate-component",
+        "description": "Systematic component validation using context engineering and integration testing",
+        "usage": "/validate-component [component-path] [validation-scope]",
+        "tools": "Read, Write, Edit, Bash, Grep, Glob",
+        "content_length": 14246,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 10,
+        "xml_structure": true
+      }
+    },
+    "quality/analyze-code.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/analyze-code",
+        "description": "Unified code analysis with intelligent pattern detection, quality assessment, security review, and architectural insights",
+        "usage": "",
+        "tools": "",
+        "content_length": 8707,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "quality/test-integration.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 2,
+        "max_score": 8,
+        "percentage": 25.0,
+        "issues": [
+          "No tools specified",
+          "No XML structure found",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/test-integration",
+        "description": "Execute comprehensive integration testing including advanced failure scenarios and emergency response validation",
+        "usage": "",
+        "tools": "",
+        "content_length": 6264,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 0,
+        "xml_structure": false
+      }
+    },
+    "development/dev.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/dev",
+        "description": "Unified intelligent development workflow with code formatting, linting, refactoring, debugging, feature development, project initialization, analysis, and dependency management",
+        "usage": "",
+        "tools": "",
+        "content_length": 27363,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 18,
+        "xml_structure": true
+      }
+    },
+    "development/project/global-deploy.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/global-deploy",
+        "description": "Advanced global deployment with multi-region orchestration, geographic optimization, and intelligent traffic management",
+        "usage": "",
+        "tools": "",
+        "content_length": 12526,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 8,
+        "xml_structure": true
+      }
+    },
+    "specialized/secure-assess.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/secure-assess",
+        "description": "Comprehensive security assessment with vulnerability scanning, threat analysis, compliance validation, and automated remediation",
+        "usage": "",
+        "tools": "",
+        "content_length": 7291,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 11,
+        "xml_structure": true
+      }
+    },
+    "specialized/secure-manage.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/secure-manage",
+        "description": "Unified security management system with configuration, fixing, reporting, and hardening capabilities",
+        "usage": "",
+        "tools": "",
+        "content_length": 10056,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 14,
+        "xml_structure": true
+      }
+    },
+    "specialized/db-admin.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/db-admin",
+        "description": "Unified database administration with migration, backup, and restoration capabilities",
+        "usage": "",
+        "tools": "",
+        "content_length": 13420,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 8,
+        "xml_structure": true
+      }
+    },
+    "deprecated/secure-audit.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/secure-audit",
+        "description": "Advanced security audit with comprehensive vulnerability assessment, compliance validation, and threat modeling",
+        "usage": "",
+        "tools": "",
+        "content_length": 4113,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/db-backup.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/db-backup",
+        "description": "Automated database backup with integrity validation, compression, and secure storage",
+        "usage": "",
+        "tools": "",
+        "content_length": 3814,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/analyze-performance.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 7,
+        "max_score": 10,
+        "percentage": 70.0,
+        "issues": [
+          "Missing clear instructions"
+        ],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/analyze-performance",
+        "description": "[DEPRECATED] Performance analysis with bottleneck detection, optimization recommendations, and benchmarking - use /analyze-system performance instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 5283,
+        "has_examples": true,
+        "has_instructions": false,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/secure-config.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/secure-config",
+        "description": "Security configuration validation and hardening recommendations",
+        "usage": "",
+        "tools": "",
+        "content_length": 3794,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/quality-review.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [
+          "Missing clear instructions"
+        ],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/quality-review",
+        "description": "Comprehensive quality review with automated code review, best practices validation, and improvement recommendations",
+        "usage": "",
+        "tools": "",
+        "content_length": 5526,
+        "has_examples": true,
+        "has_instructions": false,
+        "has_security_considerations": true,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/monitor-setup.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/monitor-setup",
+        "description": "Advanced monitoring setup with intelligent alerting, comprehensive dashboards, and predictive analytics",
+        "usage": "",
+        "tools": "",
+        "content_length": 4077,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "deprecated/pipeline-create.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/pipeline-create",
+        "description": "Intelligent pipeline creation with automated definition, modular component integration, and comprehensive validation",
+        "usage": "",
+        "tools": "",
+        "content_length": 4549,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "deprecated/pipeline-legacy.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 10,
+        "max_score": 10,
+        "percentage": 100.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 8,
+        "max_score": 8,
+        "percentage": 100.0,
+        "issues": [],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/pipeline-legacy",
+        "description": "[DEPRECATED] Legacy sequential processing pipeline - use /pipeline orchestrate instead",
+        "usage": "/pipeline-legacy [multi-stage workflow description]",
+        "tools": "Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob",
+        "content_length": 5968,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 1,
+        "xml_structure": true
+      }
+    },
+    "deprecated/db-seed.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 7,
+        "max_score": 10,
+        "percentage": 70.0,
+        "issues": [
+          "Missing clear instructions"
+        ],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/db-seed",
+        "description": "Populates database with seed data for development and testing environments",
+        "usage": "",
+        "tools": "",
+        "content_length": 4112,
+        "has_examples": true,
+        "has_instructions": false,
+        "has_security_considerations": false,
+        "component_includes": 5,
+        "xml_structure": true
+      }
+    },
+    "deprecated/analyze.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/analyze",
+        "description": "[DEPRECATED] Advanced code analysis with intelligent pattern detection, quality assessment, and comprehensive insights - use /analyze-code instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 5195,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/test-unit.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/test-unit",
+        "description": "Intelligent unit testing with automated test generation, comprehensive coverage analysis, and detailed reporting",
+        "usage": "",
+        "tools": "",
+        "content_length": 5413,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/secure-fix.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [
+          "Missing clear instructions"
+        ],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/secure-fix",
+        "description": "Automated security issue remediation with validation and rollback capabilities",
+        "usage": "",
+        "tools": "",
+        "content_length": 3965,
+        "has_examples": true,
+        "has_instructions": false,
+        "has_security_considerations": true,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/test-coverage.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/test-coverage",
+        "description": "Advanced test coverage analysis with intelligent gap detection, quality metrics, and comprehensive coverage optimization",
+        "usage": "",
+        "tools": "",
+        "content_length": 4760,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/workflow.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/workflow",
+        "description": "[DEPRECATED] Intelligent workflow management with automated task execution, dynamic resource allocation, and comprehensive progress tracking - use /project workflow instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 11543,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "deprecated/monitor-alerts.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/monitor-alerts",
+        "description": "Intelligent alert monitoring with automated correlation, root cause analysis, and comprehensive incident management",
+        "usage": "",
+        "tools": "",
+        "content_length": 4296,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "deprecated/DEPRECATED-INDEX.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 2,
+        "max_score": 8,
+        "percentage": 25.0,
+        "issues": [
+          "No tools specified",
+          "No XML structure found",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/DEPRECATED-INDEX",
+        "description": "Deprecated Commands Archive Index",
+        "usage": "",
+        "tools": "",
+        "content_length": 10664,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 0,
+        "xml_structure": false
+      }
+    },
+    "deprecated/progress-tracker.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/progress-tracker",
+        "description": "[DEPRECATED] Real-time progress monitoring and analytics for unlimited agent orchestration - use /project track instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 4823,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "deprecated/db-migrate.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/db-migrate",
+        "description": "Safe database migration with rollback capabilities, validation, and change tracking",
+        "usage": "",
+        "tools": "",
+        "content_length": 4733,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 5,
+        "xml_structure": true
+      }
+    },
+    "deprecated/db-restore.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/db-restore",
+        "description": "Advanced database restoration with intelligent recovery, point-in-time restoration, and comprehensive data integrity validation",
+        "usage": "",
+        "tools": "",
+        "content_length": 4503,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/secure-scan.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/secure-scan",
+        "description": "Automated security scanning with vulnerability detection and compliance reporting",
+        "usage": "",
+        "tools": "",
+        "content_length": 3672,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 5,
+        "xml_structure": true
+      }
+    },
+    "deprecated/quality-report.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/quality-report",
+        "description": "Advanced quality reporting with intelligent metrics, trend analysis, and automated improvement recommendations",
+        "usage": "",
+        "tools": "",
+        "content_length": 6888,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/pipeline-run.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/pipeline-run",
+        "description": "Intelligent pipeline execution with automated trigger management, real-time monitoring, and comprehensive error handling",
+        "usage": "",
+        "tools": "",
+        "content_length": 6483,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "deprecated/cost-analyze.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/cost-analyze",
+        "description": "[DEPRECATED] Intelligent cost analysis with automated resource tracking, comprehensive spending reports, and actionable optimization recommendations - use /analyze-system cost instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 5009,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "deprecated/quality-suggest.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [
+          "Missing clear instructions"
+        ],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/quality-suggest",
+        "description": "Advanced quality suggestions with intelligent recommendations, automated improvements, and best practice guidance",
+        "usage": "",
+        "tools": "",
+        "content_length": 6770,
+        "has_examples": true,
+        "has_instructions": false,
+        "has_security_considerations": true,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/monitor-dashboard.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/monitor-dashboard",
+        "description": "Intelligent monitoring dashboards with automated visualization, customizable widgets, and comprehensive data integration",
+        "usage": "",
+        "tools": "",
+        "content_length": 4230,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "deprecated/test-report.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/test-report",
+        "description": "Intelligent test reporting with automated data aggregation, comprehensive visualization, and actionable insights",
+        "usage": "",
+        "tools": "",
+        "content_length": 7525,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/secure-report.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [
+          "Missing clear instructions"
+        ],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/secure-report",
+        "description": "Comprehensive security reporting with metrics, compliance status, and remediation tracking",
+        "usage": "",
+        "tools": "",
+        "content_length": 3628,
+        "has_examples": true,
+        "has_instructions": false,
+        "has_security_considerations": true,
+        "component_includes": 5,
+        "xml_structure": true
+      }
+    },
+    "deprecated/quality-metrics.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 7,
+        "max_score": 10,
+        "percentage": 70.0,
+        "issues": [
+          "Missing clear instructions"
+        ],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/quality-metrics",
+        "description": "Quality metrics collection with comprehensive scoring, trend analysis, and benchmark comparison",
+        "usage": "",
+        "tools": "",
+        "content_length": 5855,
+        "has_examples": true,
+        "has_instructions": false,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/analyze-patterns.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 7,
+        "max_score": 10,
+        "percentage": 70.0,
+        "issues": [
+          "Missing clear instructions"
+        ],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/analyze-patterns",
+        "description": "[DEPRECATED] Advanced pattern analysis with design pattern detection, anti-pattern identification, and architectural insights - use /analyze-code instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 4586,
+        "has_examples": true,
+        "has_instructions": false,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/test-integration.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/test-integration",
+        "description": "Intelligent integration testing with automated environment setup, service dependency management, and comprehensive validation",
+        "usage": "",
+        "tools": "",
+        "content_length": 5871,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/security.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [
+          "Missing clear instructions"
+        ],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/security",
+        "description": "Advanced security analysis with threat detection, vulnerability assessment, and automated compliance checking",
+        "usage": "",
+        "tools": "",
+        "content_length": 4132,
+        "has_examples": true,
+        "has_instructions": false,
+        "has_security_considerations": true,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/flow-schedule.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/flow-schedule",
+        "description": "[DEPRECATED] Intelligent workflow scheduling with automated trigger management, dynamic resource allocation, and comprehensive dependency resolution - use /project schedule instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 4888,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/code/debug.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/debug",
+        "description": "[DEPRECATED] Performs advanced AI-assisted debugging to diagnose and fix issues - use /dev debug instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 4942,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 10,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/code/new.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/new",
+        "description": "[DEPRECATED] Advanced project initialization with intelligent scaffolding, technology detection, and automated setup - use /dev init instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 4318,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 8,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/code/dev-refactor.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/dev-refactor",
+        "description": "[DEPRECATED] Advanced development refactoring with intelligent code optimization, pattern recognition, and architectural improvements - use /dev refactor instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 4605,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 9,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/code/code-format.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/code-format",
+        "description": "[DEPRECATED] Intelligent code formatting with automated style enforcement, multi-language support, and comprehensive configuration - use /dev format instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 4228,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/code/code-lint.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/code-lint",
+        "description": "[DEPRECATED] Intelligent code linting with automated issue detection, configurable rules, and comprehensive reporting - use /dev lint instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 4100,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/code/existing.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/existing",
+        "description": "[DEPRECATED] Intelligent existing project analysis with auto-configuration, optimization recommendations, and integration setup - use /dev analyze instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 3532,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 9,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/code/feature.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/feature",
+        "description": "[DEPRECATED] Orchestrates end-to-end development of complete features from requirements to implementation - use /dev feature instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 5166,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 10,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/project/deps-update.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/deps-update",
+        "description": "[DEPRECATED] Intelligent dependency updates with automated vulnerability scanning, compatibility validation, and rollback safety - use /dev deps instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 6147,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/project/auto-provision.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/auto-provision",
+        "description": "[DEPRECATED] Advanced infrastructure auto-provisioning with intelligent resource optimization, cost management, and scalability - use /project provision instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 19631,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 6,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/project/dev-build.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/dev-build",
+        "description": "Advanced development build system with intelligent optimization, parallel processing, and automated quality checks",
+        "usage": "",
+        "tools": "",
+        "content_length": 3388,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/project/env-setup.md": {
+      "status": "fail",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 4,
+        "max_score": 8,
+        "percentage": 50.0,
+        "issues": [
+          "No tools specified",
+          "No component includes found"
+        ],
+        "passed": false
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/env-setup",
+        "description": "[DEPRECATED] Intelligent environment setup with automated toolchain installation, configuration management, and comprehensive dependency resolution - use /project setup instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 6130,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 0,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/project/cd-rollback.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/cd-rollback",
+        "description": "[DEPRECATED] Advanced CD rollback with intelligent recovery, automated health checks, and zero-downtime restoration - use /project rollback instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 4799,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 6,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/project/deploy.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/deploy",
+        "description": "Advanced deployment orchestration with intelligent strategies, rollback capabilities, and environment management",
+        "usage": "",
+        "tools": "",
+        "content_length": 4151,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/project/analyze-dependencies.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 9,
+        "max_score": 10,
+        "percentage": 90.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/analyze-dependencies",
+        "description": "[DEPRECATED] Advanced dependency analysis with intelligent mapping, vulnerability scanning, and optimization recommendations - use /analyze-system dependencies instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 5491,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": true,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/project/ci-setup.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/ci-setup",
+        "description": "Intelligent CI/CD setup with automated pipeline creation, configuration management, and comprehensive integration with version control systems",
+        "usage": "",
+        "tools": "",
+        "content_length": 4497,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 5,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/project/dev-setup.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/dev-setup",
+        "description": "[DEPRECATED] Advanced development environment setup with intelligent automation, dependency resolution, and platform optimization - use /project setup instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 3557,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    },
+    "deprecated/development/project/ci-run.md": {
+      "status": "pass",
+      "completeness": {
+        "score": 8,
+        "max_score": 10,
+        "percentage": 80.0,
+        "issues": [],
+        "passed": true
+      },
+      "compliance": {
+        "score": 6,
+        "max_score": 8,
+        "percentage": 75.0,
+        "issues": [
+          "No tools specified"
+        ],
+        "passed": true
+      },
+      "analysis": {
+        "has_yaml_frontmatter": true,
+        "command_name": "/ci-run",
+        "description": "[DEPRECATED] Advanced CI execution with intelligent pipeline optimization, parallel processing, and automated quality gates - use /project run instead",
+        "usage": "",
+        "tools": "",
+        "content_length": 3932,
+        "has_examples": true,
+        "has_instructions": true,
+        "has_security_considerations": false,
+        "component_includes": 7,
+        "xml_structure": true
+      }
+    }
+  },
+  "functional_score": 70.58823529411765
+}

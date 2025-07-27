@@ -1,0 +1,136 @@
+{
+  "timestamp": "2025-07-27T16:49:46.805319",
+  "benchmark_config": {
+    "iterations": 100,
+    "target_min_ms": 25,
+    "target_max_ms": 70,
+    "memory_limit_mb": 50
+  },
+  "stack_results": {
+    "orchestration": {
+      "performance": {
+        "min_ms": 0.012999982573091984,
+        "max_ms": 0.23108301684260368,
+        "mean_ms": 0.015422109281644225,
+        "median_ms": 0.013125012628734112,
+        "std_dev_ms": 0.021788772465959404,
+        "p95_ms": 0.013535493053495882,
+        "p99_ms": 0.01839833741542062
+      },
+      "memory": {
+        "baseline_mb": 20.890625,
+        "peak_mb": 20.90625,
+        "net_increase_mb": 0.015625
+      },
+      "cache_hit_rate": 0.99,
+      "meets_target": false,
+      "optimization_score": 90,
+      "recommendations": [
+        "Improve performance consistency - high variance detected"
+      ]
+    },
+    "validation": {
+      "performance": {
+        "min_ms": 0.011999974958598614,
+        "max_ms": 0.20037498325109482,
+        "mean_ms": 0.01416583894751966,
+        "median_ms": 0.01225003506988287,
+        "std_dev_ms": 0.01881022423790641,
+        "p95_ms": 0.012548256199806929,
+        "p99_ms": 0.015822134446353674
+      },
+      "memory": {
+        "baseline_mb": 21.125,
+        "peak_mb": 21.328125,
+        "net_increase_mb": 0.203125
+      },
+      "cache_hit_rate": 0.99,
+      "meets_target": false,
+      "optimization_score": 90,
+      "recommendations": [
+        "Improve performance consistency - high variance detected"
+      ]
+    },
+    "context": {
+      "performance": {
+        "min_ms": 0.012417032849043608,
+        "max_ms": 0.19508402328938246,
+        "mean_ms": 0.014855362242087722,
+        "median_ms": 0.012708012945950031,
+        "std_dev_ms": 0.0182235802082689,
+        "p95_ms": 0.015220523346215487,
+        "p99_ms": 0.018162069609389625
+      },
+      "memory": {
+        "baseline_mb": 21.390625,
+        "peak_mb": 21.390625,
+        "net_increase_mb": 0.0
+      },
+      "cache_hit_rate": 0.99,
+      "meets_target": false,
+      "optimization_score": 90,
+      "recommendations": [
+        "Improve performance consistency - high variance detected"
+      ]
+    },
+    "intelligence": {
+      "performance": {
+        "min_ms": 0.011458003427833319,
+        "max_ms": 0.33116701524704695,
+        "mean_ms": 0.014882179675623775,
+        "median_ms": 0.011625001206994057,
+        "std_dev_ms": 0.03194928915386745,
+        "p95_ms": 0.012166975648142397,
+        "p99_ms": 0.017295382567682992
+      },
+      "memory": {
+        "baseline_mb": 21.390625,
+        "peak_mb": 21.5625,
+        "net_increase_mb": 0.171875
+      },
+      "cache_hit_rate": 0.99,
+      "meets_target": false,
+      "optimization_score": 90,
+      "recommendations": [
+        "Improve performance consistency - high variance detected"
+      ]
+    }
+  },
+  "parallel_analysis": {
+    "orchestration": {
+      "sequential_time_ms": 0.0007500057108700275,
+      "parallel_time_ms": 1.3222499983385205,
+      "speedup": 0.0005672192942427308,
+      "efficiency": 0.0001418048235606827,
+      "recommended": false
+    },
+    "validation": {
+      "sequential_time_ms": 0.00033300602808594704,
+      "parallel_time_ms": 0.1022499636746943,
+      "speedup": 0.0032567838277712978,
+      "efficiency": 0.0008141959569428244,
+      "recommended": false
+    },
+    "context": {
+      "sequential_time_ms": 0.0003750319592654705,
+      "parallel_time_ms": 0.18149998504668474,
+      "speedup": 0.002066291956823061,
+      "efficiency": 0.0005165729892057652,
+      "recommended": false
+    },
+    "intelligence": {
+      "sequential_time_ms": 0.00041601015254855156,
+      "parallel_time_ms": 0.15999999595806003,
+      "speedup": 0.0026000635191115763,
+      "efficiency": 0.0006500158797778941,
+      "recommended": false
+    }
+  },
+  "overall_analysis": {
+    "avg_median_time_ms": 0.012427015462890267,
+    "total_memory_mb": 0.390625,
+    "stacks_meeting_targets": 0,
+    "avg_optimization_score": 90,
+    "performance_rating": "Fair"
+  }
+}
