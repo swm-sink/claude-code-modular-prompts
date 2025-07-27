@@ -1,0 +1,12 @@
+timestamp,phase,status,message
+20250727_145228,structural,FAIL,pipeline.md
+20250727_145228,structural,PASS,map-reduce.md
+20250727_145228,structural,FAIL,auto.md
+20250727_145228,structural,FAIL,help.md
+20250727_145228,structural,FAIL,task.md
+20250727_145228,structural,FAIL,analyze-system.md
+20250727_145228,structural,FAIL,quality.md
+20250727_145228,structural,FAIL,monitor.md
+20250727_145228,structural,FAIL,test.md
+20250727_145228,structural,FAIL,analyze-code.md
+20250727_145228,structural,FAIL,dev.md
