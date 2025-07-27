@@ -1,0 +1,37 @@
+{
+  "tools": {
+    "Read": "allow",
+    "Write": "allow", 
+    "Edit": "allow",
+    "MultiEdit": "allow",
+    "Bash": "allow",
+    "Glob": "allow",
+    "Grep": "allow",
+    "LS": "allow",
+    "WebFetch": "allow",
+    "WebSearch": "allow",
+    "TodoWrite": "allow",
+    "Task": "allow",
+    "NotebookRead": "allow",
+    "NotebookEdit": "allow"
+  },
+  "memory": {
+    "enabled": true,
+    "maxTokens": 50000
+  },
+  "hooks": {
+    "enabled": false
+  },
+  "context": {
+    "loadPattern": "*.md",
+    "excludePaths": [
+      "*.tmp",
+      "*.bak", 
+      "temp/*"
+    ]
+  },
+  "experimental": {
+    "promptEngineering": true,
+    "multiAgentOrchestration": true
+  }
+}
