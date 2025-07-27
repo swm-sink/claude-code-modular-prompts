@@ -1,12 +1,12 @@
 # Claude Code Modular Prompts
 
-**Experimental** Claude Code library with 67 slash commands and comprehensive agent orchestration for prompt engineering research.
+**Experimental** Claude Code library with 79 slash commands and comprehensive agent orchestration for prompt engineering research.
 
 ## Current Structure
 ```
 /
 ├── .claude/
-│   ├── commands/     # 67 commands (all unique, no duplicates)
+│   ├── commands/     # 79 commands: 30 active + 49 deprecated
 │   ├── components/   # 63 reusable prompt components (consolidated)
 │   ├── context/      # 7 essential context files
 │   └── templates/    # Command templates
@@ -31,7 +31,7 @@
 | Metric | Current | Target | Progress |
 |--------|---------|--------|----------|
 | MD files | 148 active | <150 | ✅ Within acceptable range |
-| Commands | 67 | 67 unique | ✅ No duplicates found |
+| Commands | 79 total (30 active) | 79 unique | ✅ No duplicates found |
 | Components | 63 | ~50-70 | ✅ Consolidated from 85 |
 | Context files | 7 | 6-8 | ✅ Essential contexts only |
 | Test coverage | 0% | 90% | ❌ Experimental validation needed |
@@ -42,7 +42,7 @@ This is an **experimental prompt engineering framework** for research and develo
 - Performance benchmarks are not required
 - Focus is on prompt effectiveness, not execution speed
 - Commands are tested for correctness, not performance
-- All 67 commands are maintained as unique implementations
+- All 79 commands are maintained as unique implementations
 
 ## Context Engineering
 

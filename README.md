@@ -4,14 +4,14 @@ An experimental library of consolidated slash commands for Claude Code, with pro
 
 ## Quick Start
 
-This repository contains Claude Code commands that have been consolidated from a larger original set. The project includes 67 commands that have been organized into 34 active commands plus 49 archived commands with migration paths.
+This repository contains Claude Code commands that have been consolidated from a larger original set. The project includes 79 commands that have been organized into 30 active commands plus 49 deprecated commands with migration paths.
 
 ## 📁 Structure
 
 ```
 /
 ├── .claude/
-│   ├── commands/     # 34 active commands
+│   ├── commands/     # 30 active commands
 │   │   ├── deprecated/   # 49 archived commands with migration paths
 │   │   ├── core/         # Essential commands (task, query, auto)
 │   │   ├── quality/      # Testing and quality commands
@@ -25,9 +25,9 @@ This repository contains Claude Code commands that have been consolidated from a
 
 ## Key Features
 
-- **34 Active Commands**: Consolidated from original 67 commands
+- **30 Active Commands**: Consolidated from original 79 commands
 - **63 Reusable Components**: Prompt engineering patterns
-- **49 Archived Commands**: Migration paths provided
+- **49 Deprecated Commands**: Migration paths provided
 - **Anti-Pattern Documentation**: Documented examples and lessons
 - **Structured Organization**: Clear directory hierarchy
 - **Experimental Framework**: Research-focused command design
