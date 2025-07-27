@@ -1,4 +1,5 @@
 ---
+name: /dev-build
 description: Advanced development build system with intelligent optimization, parallel processing, and automated quality checks
 argument-hint: "[build_type] [optimization_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep

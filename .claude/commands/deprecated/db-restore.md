@@ -1,4 +1,5 @@
 ---
+name: /db-restore
 description: Advanced database restoration with intelligent recovery, point-in-time restoration, and comprehensive data integrity validation
 argument-hint: "[restore_strategy] [recovery_point]"
 allowed-tools: Read, Write, Edit, Bash, Grep

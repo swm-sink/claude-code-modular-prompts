@@ -1,4 +1,5 @@
 ---
+name: /quality
 description: Unified intelligent code quality analysis with comprehensive review, metrics calculation, reporting, and improvement suggestions
 argument-hint: "[mode] [target_path] [options]"
 allowed-tools: Read, Write, Edit, Bash, Grep
@@ -34,7 +35,7 @@ Comprehensive quality analysis solution combining code review, metrics calculati
 ```
 <command_file>
   <metadata>
-    <n>/quality</n>
+    <name>/quality</name>
     <purpose>Unified intelligent code quality analysis with comprehensive review, metrics calculation, reporting, and improvement suggestions</purpose>
     <usage>
       <![CDATA[

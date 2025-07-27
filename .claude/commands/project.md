@@ -1,4 +1,5 @@
 ---
+name: /project
 description: Comprehensive project management suite with setup, provisioning, workflow orchestration, scheduling, tracking, and deployment operations
 argument-hint: "[mode] [target] [options]"
 allowed-tools: Read, Write, Edit, Bash, Grep

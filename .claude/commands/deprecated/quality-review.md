@@ -1,4 +1,5 @@
 ---
+name: /quality-review
 description: Comprehensive quality review with automated code review, best practices validation, and improvement recommendations
 argument-hint: "[review_scope] [quality_standard]"
 allowed-tools: Read, Write, Edit, Bash, Grep

@@ -1,4 +1,5 @@
 ---
+name: /secure-assess
 description: Comprehensive security assessment with vulnerability scanning, threat analysis, compliance validation, and automated remediation
 argument-hint: "[mode] [scope] [format]"
 allowed-tools: Read, Write, Edit, Bash, Grep

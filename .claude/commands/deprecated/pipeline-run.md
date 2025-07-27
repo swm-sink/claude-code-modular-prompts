@@ -1,4 +1,5 @@
 ---
+name: /pipeline-run
 description: Intelligent pipeline execution with automated trigger management, real-time monitoring, and comprehensive error handling
 argument-hint: "[pipeline_name] [trigger_type]"
 allowed-tools: Read, Write, Edit, Bash, Grep

@@ -1,4 +1,5 @@
 ---
+name: /dag-executor
 description: DAG execution engine with dependency resolution, parallel processing, and error recovery
 argument-hint: "[dag_definition] [execution_mode]"
 allowed-tools: Read, Write, Edit, Bash, Grep

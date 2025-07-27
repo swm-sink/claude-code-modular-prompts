@@ -1,4 +1,5 @@
 ---
+name: /dev-test
 description: Advanced development testing with comprehensive coverage, intelligent test generation, and automated quality validation
 argument-hint: "[test_scope] [coverage_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep

@@ -1,4 +1,5 @@
 ---
+name: /secure-report
 description: Comprehensive security reporting with metrics, compliance status, and remediation tracking
 argument-hint: "[report_type] [format]"
 allowed-tools: Read, Write, Edit, Bash, Grep

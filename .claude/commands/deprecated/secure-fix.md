@@ -1,4 +1,5 @@
 ---
+name: /secure-fix
 description: Automated security issue remediation with validation and rollback capabilities
 argument-hint: "[issue_type] [fix_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep

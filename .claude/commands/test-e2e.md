@@ -1,4 +1,5 @@
 ---
+name: /test-e2e
 description: Intelligent end-to-end (E2E) testing with automated test script generation, browser automation, and comprehensive reporting
 argument-hint: "[url] [test_scenario]"
 allowed-tools: Read, Write, Edit, Bash, Grep

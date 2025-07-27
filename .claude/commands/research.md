@@ -1,4 +1,5 @@
 ---
+name: /research
 description: Advanced research framework with intelligent information gathering, analysis synthesis, and knowledge discovery
 argument-hint: "[research_domain] [depth_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep

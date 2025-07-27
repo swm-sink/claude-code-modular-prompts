@@ -1,4 +1,5 @@
 ---
+name: /deploy
 description: Advanced deployment orchestration with intelligent strategies, rollback capabilities, and environment management
 argument-hint: "[deployment_target] [strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep

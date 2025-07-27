@@ -1,4 +1,5 @@
 ---
+name: /dev-refactor
 description: [DEPRECATED] Advanced development refactoring with intelligent code optimization, pattern recognition, and architectural improvements - use /dev refactor instead
 argument-hint: "[refactor_scope] [optimization_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep

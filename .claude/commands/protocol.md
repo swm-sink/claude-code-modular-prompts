@@ -1,4 +1,5 @@
 ---
+name: /protocol
 description: Advanced protocol-driven development with safety frameworks, validation pipelines, and rigorous quality assurance
 argument-hint: "[protocol_type] [safety_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep

@@ -1,4 +1,5 @@
 ---
+name: /quality-metrics
 description: Quality metrics collection with comprehensive scoring, trend analysis, and benchmark comparison
 argument-hint: "[metrics_scope] [time_period]"
 allowed-tools: Read, Write, Edit, Bash, Grep

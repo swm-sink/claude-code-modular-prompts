@@ -1,4 +1,5 @@
 ---
+name: /monitor-dashboard
 description: Intelligent monitoring dashboards with automated visualization, customizable widgets, and comprehensive data integration
 argument-hint: "[dashboard_type] [data_source]"
 allowed-tools: Read, Write, Edit, Bash, Grep

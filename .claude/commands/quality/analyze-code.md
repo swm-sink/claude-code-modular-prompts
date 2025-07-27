@@ -1,4 +1,5 @@
 ---
+name: /analyze-code
 description: Unified code analysis with intelligent pattern detection, quality assessment, security review, and architectural insights
 argument-hint: "[focus_mode] [target_path]"
 allowed-tools: Read, Write, Edit, Bash, Grep

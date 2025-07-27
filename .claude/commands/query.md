@@ -1,4 +1,5 @@
 ---
+name: /query
 description: Intelligent codebase query and analysis with contextual understanding and comprehensive insights
 argument-hint: "[query_type] [analysis_scope]"
 allowed-tools: Read, Write, Edit, Bash, Grep

@@ -1,4 +1,5 @@
 ---
+name: /test-report
 description: Intelligent test reporting with automated data aggregation, comprehensive visualization, and actionable insights
 argument-hint: "[report_type] [data_source]"
 allowed-tools: Read, Write, Edit, Bash, Grep

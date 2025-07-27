@@ -1,4 +1,5 @@
 ---
+name: /mega-platform-builder
 description: Ultimate platform builder that spawns 100+ agents for complete enterprise platform development
 argument-hint: "[platform_type] [complexity_level] [agent_limit]"
 allowed-tools: Task, Read, Write, Edit, Bash, Grep, Glob

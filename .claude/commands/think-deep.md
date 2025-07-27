@@ -1,4 +1,5 @@
 ---
+name: /think-deep
 description: Advanced deep thinking and problem-solving with structured analysis, multi-perspective exploration, and comprehensive synthesis
 argument-hint: "[problem_statement] [thinking_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep

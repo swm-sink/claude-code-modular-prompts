@@ -1,4 +1,5 @@
 ---
+name: /ci-setup
 description: Intelligent CI/CD setup with automated pipeline creation, configuration management, and comprehensive integration with version control systems
 argument-hint: "[ci_tool] [repo_url]"
 allowed-tools: Read, Write, Edit, Bash, Grep

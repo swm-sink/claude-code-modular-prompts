@@ -1,4 +1,5 @@
 ---
+name: /progress-tracker
 description: [DEPRECATED] Real-time progress monitoring and analytics for unlimited agent orchestration - use /project track instead
 argument-hint: "[tracking_mode] [analytics_level] [reporting_frequency]"
 allowed-tools: Read, Write, Bash

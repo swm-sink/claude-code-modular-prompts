@@ -1,4 +1,5 @@
 ---
+name: /secure-config
 description: Security configuration validation and hardening recommendations
 argument-hint: "[config_type] [environment]"
 allowed-tools: Read, Write, Edit, Bash, Grep

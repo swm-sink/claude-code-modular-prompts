@@ -1,4 +1,5 @@
 ---
+name: /quality-suggest
 description: Advanced quality suggestions with intelligent recommendations, automated improvements, and best practice guidance
 argument-hint: "[suggestion_scope] [improvement_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep

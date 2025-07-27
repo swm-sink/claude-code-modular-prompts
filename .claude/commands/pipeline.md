@@ -1,4 +1,5 @@
 ---
+name: /pipeline
 description: Unified intelligent pipeline orchestration with creation, execution, monitoring, deployment, and CI/CD integration
 argument-hint: "[mode] [pipeline_name] [options]"
 allowed-tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob

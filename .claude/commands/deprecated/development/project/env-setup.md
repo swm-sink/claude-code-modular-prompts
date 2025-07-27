@@ -1,4 +1,5 @@
 ---
+name: /env-setup
 description: [DEPRECATED] Intelligent environment setup with automated toolchain installation, configuration management, and comprehensive dependency resolution - use /project setup instead
 argument-hint: "[environment_type] [automation_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep

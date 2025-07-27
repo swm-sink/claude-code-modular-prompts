@@ -1,4 +1,5 @@
 ---
+name: /dev-setup
 description: [DEPRECATED] Advanced development environment setup with intelligent automation, dependency resolution, and platform optimization - use /project setup instead
 argument-hint: "[environment_type] [automation_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep

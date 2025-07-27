@@ -1,4 +1,5 @@
 ---
+name: /new
 description: [DEPRECATED] Advanced project initialization with intelligent scaffolding, technology detection, and automated setup - use /dev init instead
 argument-hint: "[project_type] [technology_stack]"
 allowed-tools: Read, Write, Edit, Bash, Grep

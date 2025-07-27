@@ -1,4 +1,5 @@
 ---
+name: /analyze-system
 description: Comprehensive system analysis with performance profiling, dependency scanning, cost optimization, and security assessments
 argument-hint: "[focus_mode] [analysis_depth] [target_path]"
 allowed-tools: Read, Write, Edit, Bash, Grep

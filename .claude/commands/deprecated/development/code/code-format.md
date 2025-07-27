@@ -1,4 +1,5 @@
 ---
+name: /code-format
 description: [DEPRECATED] Intelligent code formatting with automated style enforcement, multi-language support, and comprehensive configuration - use /dev format instead
 argument-hint: "[language] [style_guide]"
 allowed-tools: Read, Write, Edit, Bash, Grep

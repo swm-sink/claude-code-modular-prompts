@@ -1,4 +1,5 @@
 ---
+name: /workflow
 description: [DEPRECATED] Intelligent workflow management with automated task execution, dynamic resource allocation, and comprehensive progress tracking - use /project workflow instead
 argument-hint: "[workflow_name] [action]"
 allowed-tools: Read, Write, Edit, Bash, Grep

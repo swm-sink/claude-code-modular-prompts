@@ -1,4 +1,5 @@
 ---
+name: /test
 description: Unified intelligent testing framework with automated test generation, comprehensive coverage analysis, environment management, and multi-format reporting
 argument-hint: "[type] [target] [options]"
 allowed-tools: Read, Write, Edit, Bash, Grep
@@ -34,7 +35,7 @@ Comprehensive testing solution combining unit, integration, and coverage analysi
 ```
 <command_file>
   <metadata>
-    <n>/test</n>
+    <name>/test</name>
     <purpose>Unified intelligent testing framework with automated test generation, comprehensive coverage analysis, environment management, and multi-format reporting</purpose>
     <usage>
       <![CDATA[

@@ -1,4 +1,5 @@
 ---
+name: /monitor-alerts
 description: Intelligent alert monitoring with automated correlation, root cause analysis, and comprehensive incident management
 argument-hint: "[alert_source] [analysis_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep

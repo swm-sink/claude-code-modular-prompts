@@ -1,4 +1,5 @@
 ---
+name: /code-lint
 description: [DEPRECATED] Intelligent code linting with automated issue detection, configurable rules, and comprehensive reporting - use /dev lint instead
 argument-hint: "[language] [config_file]"
 allowed-tools: Read, Write, Edit, Bash, Grep

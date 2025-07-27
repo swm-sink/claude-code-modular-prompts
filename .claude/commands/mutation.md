@@ -1,4 +1,5 @@
 ---
+name: /mutation
 description: Performs mutation testing to assess the effectiveness of existing test suites
 argument-hint: "[target_file] [auto_fix]"
 allowed-tools: Read, Write, Bash, Edit

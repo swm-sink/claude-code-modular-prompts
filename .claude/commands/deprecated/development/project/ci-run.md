@@ -1,4 +1,5 @@
 ---
+name: /ci-run
 description: [DEPRECATED] Advanced CI execution with intelligent pipeline optimization, parallel processing, and automated quality gates - use /project run instead
 argument-hint: "[execution_mode] [optimization_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep

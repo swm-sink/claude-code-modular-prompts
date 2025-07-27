@@ -1,4 +1,5 @@
 ---
+name: /debug
 description: [DEPRECATED] Performs advanced AI-assisted debugging to diagnose and fix issues - use /dev debug instead
 argument-hint: "[issue_description] [interactive]"
 allowed-tools: Read, Grep, Edit, Bash

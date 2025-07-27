@@ -1,4 +1,5 @@
 ---
+name: /dev
 description: Unified intelligent development workflow with code formatting, linting, refactoring, debugging, feature development, project initialization, analysis, and dependency management
 argument-hint: "[mode] [target] [options]"
 allowed-tools: Read, Write, Edit, Bash, Grep, Glob

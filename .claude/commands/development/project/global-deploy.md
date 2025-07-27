@@ -1,4 +1,5 @@
 ---
+name: /global-deploy
 description: Advanced global deployment with multi-region orchestration, geographic optimization, and intelligent traffic management
 argument-hint: "[deployment_scope] [region_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep
@@ -14,7 +15,7 @@ Sophisticated global deployment system with multi-region orchestration, geograph
 ```
 <command_file>
   <metadata>
-    <n>/global-deploy</n>
+    <name>/global-deploy</name>
     <purpose>Execute intelligent global deployment with multi-region optimization, localization, and cultural adaptation using Claude's native understanding.</purpose>
     <usage>
       <![CDATA[

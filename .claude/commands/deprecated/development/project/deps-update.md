@@ -1,4 +1,5 @@
 ---
+name: /deps-update
 description: [DEPRECATED] Intelligent dependency updates with automated vulnerability scanning, compatibility validation, and rollback safety - use /dev deps instead
 argument-hint: "[update_scope] [validation_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep

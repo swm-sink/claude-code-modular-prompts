@@ -1,4 +1,5 @@
 ---
+name: /auto-provision
 description: [DEPRECATED] Advanced infrastructure auto-provisioning with intelligent resource optimization, cost management, and scalability - use /project provision instead
 argument-hint: "[infrastructure_type] [provisioning_strategy]"
 allowed-tools: Read, Write, Edit, Bash, Grep

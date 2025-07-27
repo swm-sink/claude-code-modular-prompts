@@ -1,4 +1,5 @@
 ---
+name: /quality-report
 description: Advanced quality reporting with intelligent metrics, trend analysis, and automated improvement recommendations
 argument-hint: "[report_scope] [metrics_focus]"
 allowed-tools: Read, Write, Edit, Bash, Grep

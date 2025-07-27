@@ -1,4 +1,5 @@
 ---
+name: /test-coverage
 description: Advanced test coverage analysis with intelligent gap detection, quality metrics, and comprehensive coverage optimization
 argument-hint: "[coverage_scope] [analysis_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep

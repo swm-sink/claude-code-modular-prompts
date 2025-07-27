@@ -1,4 +1,5 @@
 ---
+name: /feature
 description: [DEPRECATED] Orchestrates end-to-end development of complete features from requirements to implementation - use /dev feature instead
 argument-hint: "[feature_description]"
 allowed-tools: Read, Write, Edit, Bash, Grep, Glob

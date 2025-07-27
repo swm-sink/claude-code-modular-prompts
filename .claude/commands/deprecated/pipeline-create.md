@@ -1,4 +1,5 @@
 ---
+name: /pipeline-create
 description: Intelligent pipeline creation with automated definition, modular component integration, and comprehensive validation
 argument-hint: "[pipeline_type] [config_file]"
 allowed-tools: Read, Write, Edit, Bash, Grep

@@ -1,4 +1,5 @@
 ---
+name: /security
 description: Advanced security analysis with threat detection, vulnerability assessment, and automated compliance checking
 argument-hint: "[security_scope] [analysis_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep

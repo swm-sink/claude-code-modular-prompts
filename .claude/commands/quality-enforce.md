@@ -1,4 +1,5 @@
 ---
+name: /quality-enforce
 description: Enforces code quality standards using configurable quality gates
 argument-hint: ""
 allowed-tools: Bash, Read, Grep, Glob

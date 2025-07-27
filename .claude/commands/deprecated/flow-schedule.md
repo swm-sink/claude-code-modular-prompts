@@ -1,4 +1,5 @@
 ---
+name: /flow-schedule
 description: [DEPRECATED] Intelligent workflow scheduling with automated trigger management, dynamic resource allocation, and comprehensive dependency resolution - use /project schedule instead
 argument-hint: "[schedule_type] [workflow_name]"
 allowed-tools: Read, Write, Edit, Bash, Grep

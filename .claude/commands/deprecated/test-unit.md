@@ -1,4 +1,5 @@
 ---
+name: /test-unit
 description: Intelligent unit testing with automated test generation, comprehensive coverage analysis, and detailed reporting
 argument-hint: "[file_path] [coverage_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep

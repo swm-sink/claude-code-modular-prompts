@@ -1,4 +1,5 @@
 ---
+name: /monitor
 description: Comprehensive monitoring system with setup, alerts, dashboards, status monitoring, and configuration management
 argument-hint: "[subcommand] [options]"
 allowed-tools: Read, Write, Edit, Bash, Grep
@@ -39,7 +40,7 @@ Advanced monitoring system with intelligent alerting, comprehensive dashboards, 
 
 <command_file>
   <metadata>
-    <n>/monitor</n>
+    <name>/monitor</name>
     <purpose>Comprehensive monitoring system with setup, alerts, dashboards, status monitoring, and configuration management</purpose>
     <usage>
       <![CDATA[

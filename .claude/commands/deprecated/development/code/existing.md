@@ -1,4 +1,5 @@
 ---
+name: /existing
 description: [DEPRECATED] Intelligent existing project analysis with auto-configuration, optimization recommendations, and integration setup - use /dev analyze instead
 argument-hint: "[project_path] [analysis_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep

@@ -1,4 +1,5 @@
 ---
+name: /secure-audit
 description: Advanced security audit with comprehensive vulnerability assessment, compliance validation, and threat modeling
 argument-hint: "[audit_scope] [compliance_framework]"
 allowed-tools: Read, Write, Edit, Bash, Grep

@@ -1,4 +1,5 @@
 ---
+name: /db-backup
 description: Automated database backup with integrity validation, compression, and secure storage
 argument-hint: "[backup_type] [storage_location]"
 allowed-tools: Read, Write, Edit, Bash, Grep

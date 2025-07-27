@@ -1,4 +1,5 @@
 ---
+name: /mass-transformation
 description: Ultimate transformation workflow that spawns 50+ agents for complete framework conversion
 argument-hint: "[transformation_scope] [agent_limit] [parallel_mode]"
 allowed-tools: Task, Read, Write, Edit, Bash, Grep, Glob

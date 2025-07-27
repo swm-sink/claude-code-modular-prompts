@@ -1,4 +1,5 @@
 ---
+name: /cd-rollback
 description: [DEPRECATED] Advanced CD rollback with intelligent recovery, automated health checks, and zero-downtime restoration - use /project rollback instead
 argument-hint: "[rollback_strategy] [recovery_scope]"
 allowed-tools: Read, Write, Edit, Bash, Grep

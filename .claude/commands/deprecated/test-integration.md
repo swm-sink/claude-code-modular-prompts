@@ -1,4 +1,5 @@
 ---
+name: /test-integration
 description: Intelligent integration testing with automated environment setup, service dependency management, and comprehensive validation
 argument-hint: "[test_suite] [environment_config]"
 allowed-tools: Read, Write, Edit, Bash, Grep

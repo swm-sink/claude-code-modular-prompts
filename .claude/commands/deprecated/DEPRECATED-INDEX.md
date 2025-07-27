@@ -1,3 +1,8 @@
+---
+name: /DEPRECATED-INDEX
+description: Deprecated Commands Archive Index
+---
+
 # Deprecated Commands Archive Index
 
 This directory contains all deprecated commands that have been consolidated into unified commands as part of the command consolidation effort completed on 2025-07-25.

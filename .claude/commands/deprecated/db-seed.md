@@ -1,4 +1,5 @@
 ---
+name: /db-seed
 description: Populates database with seed data for development and testing environments
 argument-hint: "[environment] [data_type]"
 allowed-tools: Read, Write, Edit, Bash, Grep

@@ -1,4 +1,5 @@
 ---
+name: /secure-scan
 description: Automated security scanning with vulnerability detection and compliance reporting
 argument-hint: "[scan_type] [output_format]"
 allowed-tools: Read, Write, Edit, Bash, Grep

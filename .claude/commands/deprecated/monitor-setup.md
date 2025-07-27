@@ -1,4 +1,5 @@
 ---
+name: /monitor-setup
 description: Advanced monitoring setup with intelligent alerting, comprehensive dashboards, and predictive analytics
 argument-hint: "[monitoring_scope] [analytics_level]"
 allowed-tools: Read, Write, Edit, Bash, Grep

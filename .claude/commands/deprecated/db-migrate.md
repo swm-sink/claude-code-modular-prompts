@@ -1,4 +1,5 @@
 ---
+name: /db-migrate
 description: Safe database migration with rollback capabilities, validation, and change tracking
 argument-hint: "[migration_direction] [target_version]"
 allowed-tools: Read, Write, Edit, Bash, Grep

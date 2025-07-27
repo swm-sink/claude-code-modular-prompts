@@ -1,4 +1,5 @@
 ---
+name: /db-admin
 description: Unified database administration with migration, backup, and restoration capabilities
 argument-hint: "[operation] [options]"
 allowed-tools: Read, Write, Edit, Bash, Grep
