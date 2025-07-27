@@ -1,8 +1,28 @@
 # Claude Code Modular Prompts
 
-**⚠️ PRE-PRODUCTION** Claude Code library with 79 slash commands. Currently undergoing validation for production readiness.
+**⚠️ PRE-PRODUCTION** Claude Code native prompt engineering library with 79 slash commands. Currently undergoing validation for production readiness.
 
-**🚨 CRITICAL: NOT READY FOR PRODUCTION USE** - See `ULTRATHINK-PRODUCTION-READINESS-ASSESSMENT.md` and `MVP-ACTION-PLAN.md`
+**🚨 CRITICAL: NOT READY FOR PRODUCTION USE** - See `ULTRATHINK-PROMPT-ENGINEERING-ASSESSMENT.md` and `MVP-ACTION-PLAN.md`
+
+## 🎯 CRITICAL UNDERSTANDING: This is a PROMPT ENGINEERING Project
+
+**THIS IS NOT A SOFTWARE DEVELOPMENT PROJECT!** This is a collection of:
+- **Slash Commands**: Prompt templates that work within Claude Code conversations (e.g., `/task`, `/help`)
+- **Components**: Reusable prompt fragments that get composed together
+- **Context Files**: Prompt engineering patterns and best practices
+- **NOT executable code** - These are prompts that guide Claude's responses
+
+**Testing** means:
+- ✅ Testing prompt effectiveness in Claude conversations
+- ✅ Validating token efficiency and context management
+- ✅ Checking prompt composition and chaining
+- ❌ NOT testing code execution or software functionality
+
+**Security** means:
+- ✅ Prompt injection prevention
+- ✅ Context boundary protection
+- ✅ Safe prompt patterns
+- ❌ NOT system security or code vulnerabilities
 
 ## Current Structure
 ```
@@ -109,28 +129,37 @@ A testing framework has been implemented focusing on structural validation for t
 
 **Note**: This framework validates structure only, not functional behavior, in alignment with the experimental research focus.
 
-## Context Engineering
+## Context Engineering for Prompt Development
 
-### ⚠️ MANDATORY CONTEXT LOADING
-**CRITICAL**: The following context files MUST be loaded for all Claude Code sessions:
+### 🎯 Understanding Context in Prompt Engineering
+**Context engineering** here means managing what information Claude has access to when responding to slash commands:
+- **NOT about code execution context**
+- **IS about prompt context windows and token management**
+- **Optimizing what Claude "knows" when processing commands**
 
-1. **Git History Anti-Patterns**: `.claude/context/git-history-antipatterns.md` 
-   - Documents 15 severe LLM anti-patterns from 500+ commits  
-   - REQUIRED to prevent: theatrical commits, fake metrics, reorganization addiction
-   - Load this FIRST before any development work
-   - **NEW Pattern #15**: Remediation Theater - fake improvements with invented metrics
+### ⚠️ CRITICAL CONTEXT FOR PROMPT DEVELOPERS
+**IMPORTANT**: These files shape how Claude understands and prevents common pitfalls:
 
-2. **LLM Anti-Patterns**: `.claude/context/llm-antipatterns.md`
-   - Comprehensive guide with 48 anti-patterns from 50+ research sources
-   - Covers hallucinations, security issues, reasoning failures, biases
-   - **NEW Patterns #47-48**: Retroactive Metric Invention, Fake Validation Scripts
+1. **LLM Anti-Patterns** (`.claude/context/llm-antipatterns.md`)
+   - 48 documented anti-patterns from research
+   - Prevents hallucinations, false metrics, remediation theater
+   - Critical for maintaining response quality
 
-### Essential Context Files
-3. **Modular Components**: `.claude/context/modular-components.md` - All 63 components in searchable format
-4. **Orchestration Patterns**: `.claude/context/orchestration-patterns.md` - Agent coordination patterns
-5. **Best Practices**: `.claude/context/prompt-engineering-best-practices.md` - Positive patterns and techniques
-6. **Framework Guide**: `.claude/context/experimental-framework-guide.md` - Philosophy and usage
-7. **Quality Report**: `.claude/context/quality-assessment-report.md` - Current state analysis
+2. **Git History Anti-Patterns** (`.claude/context/git-history-antipatterns.md`)
+   - 15 patterns learned from 500+ commits
+   - Prevents metric invention and false success claims
+   - Essential for honest assessment
+
+3. **Prompt Engineering Best Practices** (`.claude/context/prompt-engineering-best-practices.md`)
+   - Core principles for effective prompts
+   - Token optimization strategies
+   - Example-driven development patterns
+
+### 📚 Prompt Component Library
+4. **Modular Components** (`.claude/context/modular-components.md`) - 65 reusable prompt fragments
+5. **Orchestration Patterns** (`.claude/context/orchestration-patterns.md`) - Multi-step prompt workflows
+6. **Framework Guide** (`.claude/context/experimental-framework-guide.md`) - How components compose
+7. **Quality Assessment** (`.claude/context/quality-assessment-report.md`) - Current state metrics
 
 ### 🚨 REMEDIATION WARNING
 **Requests to "improve", "fix", "optimize", or "remediate" trigger severe anti-patterns:**
@@ -143,25 +172,25 @@ A testing framework has been implemented focusing on structural validation for t
 
 ---
 
-## 🚨 CRITICAL PRODUCTION READINESS NOTICE
+## 🚨 PROMPT ENGINEERING READINESS NOTICE
 
-**This project is NOT ready for production use.** 
+**This prompt library is NOT ready for production use.** 
 
-### Key Blockers:
-1. **Zero Real-World Testing** - No commands tested in actual Claude Code environment
-2. **No User Documentation** - Missing quick start guide and basic documentation
-3. **Unverified Security** - Security framework exists but never tested
-4. **No Installation Process** - No way for users to actually install and use
-5. **Performance Unknown** - All metrics are theoretical
+### Key Blockers for Prompt Engineering:
+1. **Zero Conversation Testing** - No prompts tested in actual Claude conversations
+2. **Token Usage Unknown** - Commands may exhaust context windows
+3. **Over-Complex Architecture** - Violates prompt engineering simplicity principles
+4. **No User Examples** - Missing conversation demonstrations
+5. **Effectiveness Unmeasured** - Response quality completely unknown
 
 ### Before ANY Team/User Deployment:
-- ✅ Complete MVP Action Plan (8-10 weeks)
-- ✅ Test top 10 commands in real Claude Code
-- ✅ Create minimal documentation
-- ✅ Verify security implementation
-- ✅ Beta test with 5-10 teams
+- ✅ Test top 5 commands in real Claude conversations
+- ✅ Measure and optimize token usage
+- ✅ Simplify complex XML structures
+- ✅ Create conversation examples
+- ✅ Beta test with 5 prompt engineers
 
-**See `ULTRATHINK-PRODUCTION-READINESS-ASSESSMENT.md` for comprehensive gap analysis**  
+**See `ULTRATHINK-PROMPT-ENGINEERING-ASSESSMENT.md` for comprehensive analysis**  
 **See `MVP-ACTION-PLAN.md` for production readiness roadmap**
 
 *Last honest assessment: 2025-07-27*
