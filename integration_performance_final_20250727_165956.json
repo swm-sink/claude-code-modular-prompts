@@ -1,0 +1,139 @@
+{
+  "test_type": "integration_performance_final",
+  "total_tests": 9,
+  "memory_profiles": [
+    {
+      "test_name": "command_loading",
+      "baseline_memory_mb": 20.546875,
+      "peak_memory_mb": 20.625,
+      "memory_growth_mb": 0.040625,
+      "memory_efficiency_score": 96.0960960960961,
+      "garbage_collection_impact": 0.0375
+    },
+    {
+      "test_name": "component_loading",
+      "baseline_memory_mb": 20.546875,
+      "peak_memory_mb": 20.6875,
+      "memory_growth_mb": 0.0375,
+      "memory_efficiency_score": 96.38554216867469,
+      "garbage_collection_impact": 0.103125
+    },
+    {
+      "test_name": "stack_loading",
+      "baseline_memory_mb": 20.546875,
+      "peak_memory_mb": 20.578125,
+      "memory_growth_mb": 0.009375,
+      "memory_efficiency_score": 99.07120743034056,
+      "garbage_collection_impact": 0.021875
+    }
+  ],
+  "load_test_results": [
+    {
+      "concurrent_operations": 1,
+      "avg_response_time_ms": 0.26245799381285906,
+      "max_response_time_ms": 0.26245799381285906,
+      "min_response_time_ms": 0.26245799381285906,
+      "throughput_ops_per_second": 536.8888306647234,
+      "error_rate_percent": 0.0,
+      "memory_pressure_mb": 0.40625
+    },
+    {
+      "concurrent_operations": 2,
+      "avg_response_time_ms": 0.407874962547794,
+      "max_response_time_ms": 0.4272079677321017,
+      "min_response_time_ms": 0.3885419573634863,
+      "throughput_ops_per_second": 3035.094596827984,
+      "error_rate_percent": 0.0,
+      "memory_pressure_mb": 0.171875
+    },
+    {
+      "concurrent_operations": 4,
+      "avg_response_time_ms": 0.5465622816700488,
+      "max_response_time_ms": 0.6662910454906523,
+      "min_response_time_ms": 0.4353750264272094,
+      "throughput_ops_per_second": 3712.2969929355077,
+      "error_rate_percent": 0.0,
+      "memory_pressure_mb": 0.421875
+    },
+    {
+      "concurrent_operations": 8,
+      "avg_response_time_ms": 0.5514948788913898,
+      "max_response_time_ms": 0.8825419936329126,
+      "min_response_time_ms": 0.2993750385940075,
+      "throughput_ops_per_second": 5290.714889118182,
+      "error_rate_percent": 0.0,
+      "memory_pressure_mb": 0.09375
+    },
+    {
+      "concurrent_operations": 16,
+      "avg_response_time_ms": 0.7826509972801432,
+      "max_response_time_ms": 1.4160830178298056,
+      "min_response_time_ms": 0.5075840163044631,
+      "throughput_ops_per_second": 5809.9063746580305,
+      "error_rate_percent": 0.0,
+      "memory_pressure_mb": 0.1875
+    },
+    {
+      "concurrent_operations": 32,
+      "avg_response_time_ms": 2.2736718783562537,
+      "max_response_time_ms": 4.681374994106591,
+      "min_response_time_ms": 1.0594589984975755,
+      "throughput_ops_per_second": 3106.6576593553436,
+      "error_rate_percent": 0.0,
+      "memory_pressure_mb": 0.390625
+    }
+  ],
+  "scaling_analysis": {
+    "response_time_scaling": {
+      "1": 0.26245799381285906,
+      "2": 0.407874962547794,
+      "4": 0.5465622816700488,
+      "8": 0.5514948788913898,
+      "16": 0.7826509972801432,
+      "32": 2.2736718783562537
+    },
+    "throughput_scaling": {
+      "1": 536.8888306647234,
+      "2": 3035.094596827984,
+      "4": 3712.2969929355077,
+      "8": 5290.714889118182,
+      "16": 5809.9063746580305,
+      "32": 3106.6576593553436
+    },
+    "memory_scaling": {
+      "1": 0.40625,
+      "2": 0.171875,
+      "4": 0.421875,
+      "8": 0.09375,
+      "16": 0.1875,
+      "32": 0.390625
+    },
+    "error_scaling": {
+      "1": 0.0,
+      "2": 0.0,
+      "4": 0.0,
+      "8": 0.0,
+      "16": 0.0,
+      "32": 0.0
+    },
+    "performance_degradation_points": [
+      {
+        "concurrent_ops": 2,
+        "response_time_increase": 1.554058067054425,
+        "throughput_decrease": 0.17689360694913192
+      },
+      {
+        "concurrent_ops": 32,
+        "response_time_increase": 2.9050903739440486,
+        "throughput_decrease": 1.8701469591160658
+      }
+    ]
+  },
+  "optimization_recommendations": [
+    "Performance degrades significantly at 2 concurrent operations",
+    "Consider implementing connection pooling and resource limiting",
+    "Implement component lazy loading to reduce initial memory footprint",
+    "Add performance monitoring and alerting for production deployments",
+    "Consider implementing caching strategies for frequently accessed components"
+  ]
+}

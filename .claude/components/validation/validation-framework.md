@@ -427,7 +427,7 @@ Unified validation framework that ensures data integrity, format compliance, and
       <!-- How to integrate validation into commands -->
       <command_integration>
         ```xml
-        <include>components/validation/validation-framework.md</include>
+        <include>components/validation/input-validation.md</include>
         
         <arguments>
           <argument name="feature_name" type="string" required="true">
