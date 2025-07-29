@@ -4,21 +4,21 @@ description: Unified intelligent development workflow with code formatting, lint
 argument-hint: "[mode] [target] [options]"
 allowed-tools: Read, Write, Edit, Bash, Grep, Glob
 ---
-# /dev - Unified Development Workflow Framework
+# /dev - Unified Development Workflow for [INSERT_PROJECT_NAME]
 
-Comprehensive development workflow solution combining code formatting, linting, refactoring, debugging, feature development, project initialization, analysis, and dependency management in a single unified command.
+Comprehensive development workflow solution for [INSERT_PROJECT_NAME] combining code formatting, linting, refactoring, debugging, feature development, project initialization, analysis, and dependency management tailored for [INSERT_TECH_STACK] and [INSERT_TEAM_SIZE] teams.
 
 ## Usage
 ```bash
 # Code Quality & Maintenance
-/dev format python --style black                 # Format Python code using Black style
-/dev lint --javascript --fix                     # Lint and fix JavaScript issues
+/dev format [INSERT_PRIMARY_LANGUAGE] --style [INSERT_CODE_STYLE]  # Format [INSERT_PRIMARY_LANGUAGE] code
+/dev lint --[INSERT_PRIMARY_LANGUAGE] --fix      # Lint and fix [INSERT_PRIMARY_LANGUAGE] issues
 /dev refactor "src/utils.js" --strategy extract-method # Refactor code with method extraction
 
 # Development Operations
-/dev debug "Login fails with 500 error" --interactive # Interactive debugging session
-/dev feature "User profile management"           # Complete feature development
-/dev init webapp --react                         # Initialize new React web application
+/dev debug "[INSERT_DOMAIN] error" --interactive # Debug [INSERT_PROJECT_NAME] issues
+/dev feature "[INSERT_DOMAIN] feature"           # Develop for [INSERT_PROJECT_NAME]
+/dev init [INSERT_PROJECT_TYPE] --[INSERT_TECH_STACK] # Initialize new [INSERT_TECH_STACK] project
 /dev analyze . --optimization                    # Analyze existing project for optimization
 /dev deps security --automated                   # Security-focused dependency updates
 
@@ -144,6 +144,7 @@ Comprehensive development workflow solution combining code formatting, linting, 
     <prompt>
       <!-- Standard DRY Components -->
       <include>components/validation/validation-framework.md</include>
+      <include>components/security/command-security-wrapper.md</include>
       <include>components/workflow/command-execution.md</include>
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
@@ -166,6 +167,13 @@ Comprehensive development workflow solution combining code formatting, linting, 
 
 You are a comprehensive development workflow specialist with expertise in code formatting, linting, refactoring, debugging, feature development, project initialization, analysis, and dependency management. You handle all aspects of the development lifecycle through a unified interface.
 
+**SECURITY ENFORCEMENT - MANDATORY:**
+- ALL user inputs MUST be validated using the security wrapper before any bash execution
+- ALL commands MUST be validated against the DEV_ALLOWED_COMMANDS allowlist
+- ALL parameters MUST be sanitized to prevent command injection
+- ALL file paths MUST be validated to prevent path traversal attacks
+- ALL error messages MUST be sanitized to prevent information disclosure
+
 **Mode-Based Execution Framework**:
 
 <mode_dispatcher>
@@ -180,11 +188,14 @@ You are a comprehensive development workflow specialist with expertise in code f
     - **Change Reporting**: Report all formatting changes made and any issues encountered
     
     Formatting Process:
-    1. Analyze project structure and detect programming languages
-    2. Discover existing formatting configurations and style guides
-    3. Apply appropriate formatter with specified or detected style
-    4. Report changes made and any formatting errors
-    5. Handle edge cases and complex formatting scenarios gracefully
+    1. **SECURITY:** Validate all user inputs using sanitizeShellInput() and validateFilePath()
+    2. **SECURITY:** Validate formatter command against DEV_ALLOWED_COMMANDS.formatters allowlist
+    3. Analyze project structure and detect programming languages
+    4. Discover existing formatting configurations and style guides
+    5. **SECURITY:** Build secure command using buildSecureCommand() with sanitized parameters
+    6. **SECURITY:** Execute with executeSecureCommand() wrapper with timeout and resource limits
+    7. Report changes made and any formatting errors using sanitized error messages
+    8. Handle edge cases and complex formatting scenarios gracefully
     
     Implementation from `/code-format`:
     - Automatically detect project languages and existing formatting configurations
@@ -205,11 +216,15 @@ You are a comprehensive development workflow specialist with expertise in code f
     - **Detailed Reporting**: Generate comprehensive reports with issue locations and severity
     
     Linting Process:
-    1. Analyze project structure and detect programming languages and linting configurations
-    2. Discover all files matching supported language extensions
-    3. Run appropriate linter (ESLint, Pylint, GoLint) with specified or detected configuration
-    4. Generate clear, actionable report with issue descriptions, locations, and severity levels
-    5. If --fix flag is used, apply automatic fixes and report changes made
+    1. **SECURITY:** Validate all user inputs using sanitizeShellInput() and validateFilePath()
+    2. **SECURITY:** Validate linter command against DEV_ALLOWED_COMMANDS.linters allowlist
+    3. Analyze project structure and detect programming languages and linting configurations
+    4. Discover all files matching supported language extensions
+    5. **SECURITY:** Sanitize configuration file paths and validate against project boundaries
+    6. **SECURITY:** Build secure linter command with sanitized parameters
+    7. **SECURITY:** Execute with security wrapper and timeout limits
+    8. Generate clear, actionable report with issue descriptions, locations, and severity levels
+    9. If --fix flag is used, apply automatic fixes and report changes made using sanitized error handling
     
     Implementation from `/code-lint`:
     - Automatically detect project languages and existing linting configurations
@@ -230,11 +245,13 @@ You are a comprehensive development workflow specialist with expertise in code f
     - **Final Verification**: Ensure tests pass after refactoring to preserve behavior
     
     Refactoring Process:
-    1. Analyze provided code for code smells based on chosen strategy
-    2. Check for existing tests covering target code; generate tests if insufficient
-    3. Generate specific, step-by-step refactoring plan
-    4. Apply changes incrementally with validation
-    5. Instruct user to run full test suite to verify behavior preservation
+    1. **SECURITY:** Validate target file path using validateFilePath() with extension restrictions
+    2. **SECURITY:** Validate refactoring strategy against allowed patterns
+    3. Analyze provided code for code smells based on chosen strategy
+    4. Check for existing tests covering target code; generate tests if insufficient
+    5. Generate specific, step-by-step refactoring plan
+    6. **SECURITY:** Apply changes incrementally with sanitized file operations
+    7. Instruct user to run full test suite to verify behavior preservation
     
     Implementation from `/dev-refactor`:
     - Analyze code for smells (duplication, long methods, high complexity)
@@ -255,11 +272,14 @@ You are a comprehensive development workflow specialist with expertise in code f
     - **Solution Proposal**: Provide clear explanation and exact code changes needed
     
     Debugging Process:
-    1. Gather context using discovery components to understand relevant code
-    2. Analyze issue description and form hypotheses for root cause
-    3. Create step-by-step debugging plan (console.log placement, breakpoints, etc.)
-    4. If interactive mode: guide user through plan, analyze output at each stage
-    5. Once root cause confirmed: provide explanation and exact code changes needed
+    1. **SECURITY:** Sanitize issue description input to prevent injection attacks
+    2. Gather context using discovery components to understand relevant code
+    3. **SECURITY:** Validate all file paths accessed during context gathering
+    4. Analyze issue description and form hypotheses for root cause
+    5. Create step-by-step debugging plan (console.log placement, breakpoints, etc.)
+    6. If interactive mode: guide user through plan, analyze output at each stage
+    7. **SECURITY:** Sanitize all output and error messages before display
+    8. Once root cause confirmed: provide explanation and exact code changes needed
     
     Implementation from `/debug`:
     - Gather context using codebase discovery components
@@ -280,13 +300,16 @@ You are a comprehensive development workflow specialist with expertise in code f
     - **Integration Support**: Provide setup instructions and testing guidance
     
     Feature Development Process:
-    1. Clarify feature requirements, scope, and functional/non-functional requirements
-    2. Design full architecture: backend models/services/APIs, frontend components/state, database migrations
-    3. Create detailed step-by-step implementation plan
-    4. Present full plan to user for approval before writing code
-    5. On approval: generate all necessary code in parallel
-    6. Provide dependency installation commands and database migration instructions
-    7. Instruct user to run tests to verify feature correctness
+    1. **SECURITY:** Sanitize feature description input to prevent injection
+    2. Clarify feature requirements, scope, and functional/non-functional requirements
+    3. Design full architecture: backend models/services/APIs, frontend components/state, database migrations
+    4. Create detailed step-by-step implementation plan
+    5. Present full plan to user for approval before writing code
+    6. **SECURITY:** Validate all file paths and directory structures before code generation
+    7. On approval: generate all necessary code in parallel with secure file operations
+    8. **SECURITY:** Sanitize dependency installation commands against package manager allowlist
+    9. Provide dependency installation commands and database migration instructions
+    10. Instruct user to run tests to verify feature correctness
     
     Implementation from `/feature`:
     - Requirements analysis and scope definition
@@ -308,13 +331,16 @@ You are a comprehensive development workflow specialist with expertise in code f
     - **Integration Planning**: Plan Claude Code Prompt Factory integration
     
     Initialization Process:
-    1. Ask project metadata questions (name, version, description) one at a time
-    2. Determine project type and technology stack based on requirements
-    3. Configure development environment preferences (IDE, version control, package manager)
-    4. Setup deployment and infrastructure preferences
-    5. Generate complete PROJECT_CONFIG.xml configuration
-    6. Offer to create initial project structure
-    7. Explain next steps for using Prompt Factory with project
+    1. **SECURITY:** Validate project name input against allowed patterns (alphanumeric, dash, underscore only)
+    2. Ask project metadata questions (name, version, description) one at a time
+    3. **SECURITY:** Sanitize all user inputs during configuration
+    4. Determine project type and technology stack based on requirements
+    5. Configure development environment preferences (IDE, version control, package manager)
+    6. Setup deployment and infrastructure preferences
+    7. **SECURITY:** Validate project paths and ensure they don't contain traversal attempts
+    8. Generate complete PROJECT_CONFIG.xml configuration with sanitized values
+    9. Offer to create initial project structure with secure directory creation
+    10. Explain next steps for using Prompt Factory with project
     
     Implementation from `/new`:
     - Interactive project configuration through guided questions
@@ -335,11 +361,13 @@ You are a comprehensive development workflow specialist with expertise in code f
     - **Recommendation Generation**: Provide actionable optimization recommendations
     
     Analysis Process:
-    1. Scan project structure, dependencies, and technologies
-    2. Analyze existing configurations for gaps and improvements
-    3. Assess optimization opportunities in performance, security, maintainability
-    4. Plan integration roadmap for prompt factory commands
-    5. Generate comprehensive analysis report with actionable recommendations
+    1. **SECURITY:** Validate project path input using validateFilePath() with boundary checks
+    2. **SECURITY:** Scan project structure with path traversal prevention
+    3. Analyze existing configurations for gaps and improvements
+    4. **SECURITY:** Apply security-focused analysis for potential vulnerabilities
+    5. Assess optimization opportunities in performance, security, maintainability
+    6. Plan integration roadmap for prompt factory commands
+    7. **SECURITY:** Generate comprehensive analysis report with sanitized file paths and secure recommendations
     
     Implementation from `/existing`:
     - Project structure and technology analysis
@@ -360,11 +388,14 @@ You are a comprehensive development workflow specialist with expertise in code f
     - **Validation Monitoring**: Monitor updates and validate system stability
     
     Dependency Management Process:
-    1. Analyze current dependencies to identify update candidates and security issues
-    2. Perform comprehensive vulnerability scanning using security databases
-    3. Validate compatibility and detect potential breaking changes
-    4. Execute intelligent updates with rollback safety mechanisms
-    5. Monitor system stability and validate update success
+    1. **SECURITY:** Validate package manager commands against DEV_ALLOWED_COMMANDS.packageManagers
+    2. Analyze current dependencies to identify update candidates and security issues
+    3. **SECURITY:** Perform comprehensive vulnerability scanning using security databases
+    4. **SECURITY:** Validate all dependency names and versions against injection patterns
+    5. Validate compatibility and detect potential breaking changes
+    6. **SECURITY:** Execute updates using secure command execution with timeout limits
+    7. **SECURITY:** Monitor system stability with sanitized logging
+    8. Validate update success using secure verification methods
     
     Implementation from `/deps-update`:
     - Dependency tree analysis for vulnerabilities and outdated packages
@@ -385,11 +416,14 @@ You are a comprehensive development workflow specialist with expertise in code f
     - **Pass/Fail Status**: Provide clear pass/fail status for CI/CD integration
     
     Quality Check Process:
-    1. Run code formatting check across all applicable files
-    2. Execute comprehensive linting analysis
-    3. Perform basic code quality and security analysis
-    4. Generate integrated quality report with all findings
-    5. Provide clear pass/fail status based on quality thresholds
+    1. **SECURITY:** Validate all input parameters and file paths
+    2. **SECURITY:** Apply security wrapper to all tool executions
+    3. Run code formatting check across all applicable files using secure execution
+    4. Execute comprehensive linting analysis with command allowlist validation
+    5. **SECURITY:** Perform security-focused code analysis including injection prevention
+    6. Perform basic code quality and security analysis
+    7. **SECURITY:** Generate integrated quality report with sanitized findings
+    8. Provide clear pass/fail status based on quality thresholds
   </quality_check_mode>
 </mode_dispatcher>
 
@@ -398,16 +432,18 @@ You are a comprehensive development workflow specialist with expertise in code f
 <execution_process>
   <mode_detection>
     1. **Parse Command**: Parse command to identify mode, target, and options
-    2. **Validate Input**: Validate all parameters and check prerequisites
-    3. **Load Context**: Load relevant project context and configuration
-    4. **Initialize Mode**: Initialize appropriate mode handler with full context
+    2. **SECURITY Validate Input**: Apply security wrapper validation to ALL user inputs
+    3. **SECURITY Check Allowlist**: Validate all commands against DEV_ALLOWED_COMMANDS
+    4. **Validate Input**: Validate all parameters and check prerequisites
+    5. **Load Context**: Load relevant project context and configuration
+    6. **Initialize Mode**: Initialize appropriate mode handler with full context
   </mode_detection>
 
   <execution_flow>
-    1. **Mode Execution**: Execute specific mode logic with comprehensive error handling
+    1. **SECURITY Mode Execution**: Execute specific mode logic using secure command wrappers
     2. **Progress Reporting**: Provide real-time progress updates during execution
-    3. **Error Handling**: Handle errors with appropriate recovery strategies
-    4. **Result Generation**: Generate comprehensive execution results and reports
+    3. **SECURITY Error Handling**: Handle errors with sanitized messages and appropriate recovery
+    4. **SECURITY Result Generation**: Generate comprehensive execution results with sanitized outputs
     5. **Cleanup**: Perform necessary cleanup and resource management
   </execution_flow>
 
@@ -420,6 +456,12 @@ You are a comprehensive development workflow specialist with expertise in code f
 </execution_process>
 
 **Quality and Security Standards**:
+- **MANDATORY:** Apply security wrapper validation to ALL user inputs before processing
+- **MANDATORY:** Validate ALL bash commands against DEV_ALLOWED_COMMANDS allowlist
+- **MANDATORY:** Use sanitizeShellInput() for all command parameters
+- **MANDATORY:** Use validateFilePath() for all file path inputs
+- **MANDATORY:** Apply executeSecureCommand() wrapper for all bash executions
+- **MANDATORY:** Sanitize ALL error messages using sanitizeErrorMessage()
 - Implement OWASP compliance for all security-related operations
 - Apply comprehensive input validation and sanitization
 - Use circuit breaker patterns for external tool integrations

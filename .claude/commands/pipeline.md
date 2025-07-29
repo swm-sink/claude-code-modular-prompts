@@ -5,8 +5,8 @@ argument-hint: "[mode] [pipeline_name] [options]"
 allowed-tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob
 test_coverage: 0%
 ---
-# /pipeline - Unified Pipeline Orchestration Framework
-Comprehensive pipeline orchestration solution combining creation, execution, monitoring, deployment, CI/CD setup, and build automation in a single unified command.
+# /pipeline - Unified Pipeline Orchestration for [INSERT_PROJECT_NAME]
+Comprehensive pipeline orchestration for [INSERT_PROJECT_NAME] combining creation, execution, monitoring, deployment, [INSERT_CI_CD_PLATFORM] setup, and build automation optimized for [INSERT_TECH_STACK] and [INSERT_TEAM_SIZE] teams.
 
 ## Usage
 ```bash
@@ -32,10 +32,10 @@ Comprehensive pipeline orchestration solution combining creation, execution, mon
 /pipeline build --parallel --watch                  # Parallel build with monitoring
 /pipeline build --target frontend                   # Targeted build execution
 
-# Deployment Mode
-/pipeline deploy production --blue-green            # Blue-green deployment
-/pipeline deploy --canary --rollback-ready          # Canary deployment with rollback
-/pipeline deploy --zero-downtime --health-check     # Zero-downtime deployment
+# Deployment Mode to [INSERT_DEPLOYMENT_TARGET]
+/pipeline deploy production --blue-green            # Blue-green to [INSERT_DEPLOYMENT_TARGET]
+/pipeline deploy --canary --rollback-ready          # Canary for [INSERT_USER_BASE] users
+/pipeline deploy --zero-downtime --health-check     # Zero-downtime for [INSERT_PERFORMANCE_PRIORITY]
 
 # Rollback Mode
 /pipeline rollback "v1.2.3" --immediate           # Immediate rollback to specific version
@@ -43,10 +43,10 @@ Comprehensive pipeline orchestration solution combining creation, execution, mon
 /pipeline rollback --zero-downtime                  # Zero-downtime rollback strategy
 /pipeline rollback --comprehensive                  # Comprehensive recovery protocol
 
-# CI/CD Setup Mode
-/pipeline setup github-actions --repo "my-repo"     # Setup GitHub Actions
-/pipeline setup gitlab-ci --template nodejs         # Setup GitLab CI with template
-/pipeline setup jenkins --custom-config config.xml # Setup Jenkins with custom config
+# CI/CD Setup Mode for [INSERT_CI_CD_PLATFORM]
+/pipeline setup [INSERT_CI_CD_PLATFORM] --repo "[INSERT_PROJECT_NAME]"  # Setup [INSERT_CI_CD_PLATFORM]
+/pipeline setup [INSERT_CI_CD_PLATFORM] --template [INSERT_PRIMARY_LANGUAGE]  # With language template
+/pipeline setup [INSERT_CI_CD_PLATFORM] --custom-config config.xml  # Custom configuration
 
 # Combined Operations
 /pipeline all --comprehensive                       # Full pipeline lifecycle
@@ -149,7 +149,20 @@ Comprehensive pipeline orchestration solution combining creation, execution, mon
   
   <claude_prompt>
     <prompt>
+<!-- Include Security Wrapper for Command Injection Prevention -->
+<include>components/security/command-security-wrapper.md</include>
+
 You are a master pipeline orchestration specialist capable of handling all aspects of pipeline management from creation to deployment. Based on the specified mode, you will execute comprehensive pipeline operations.
+
+**CRITICAL SECURITY ENFORCEMENT - NO EXCEPTIONS:**
+- ALL user inputs MUST be validated using security wrapper functions before any bash execution
+- ALL pipeline commands MUST be validated against PIPELINE_ALLOWED_COMMANDS allowlist
+- ALL repository URLs MUST be validated using validateRepositoryURL()
+- ALL version numbers MUST be validated using validateVersionNumber()
+- ALL environment names MUST be validated using validateEnvironmentName()
+- ALL file paths MUST be validated using validateFilePath() to prevent path traversal
+- ALL bash executions MUST use executeSecureCommand() wrapper
+- ALL error messages MUST be sanitized using sanitizeErrorMessage()
 
 **Pipeline Modes and Strategies:**
 
@@ -159,13 +172,13 @@ Execute sequential processing pipeline with specialized agents at each stage:
 ### Pipeline Definition Framework
 ```json
 {
-  "pipeline_id": "unique_identifier",
+  "pipeline_id": "unique_identifier", // SECURITY: Validate against alphanumeric pattern
   "stages": [
     {
-      "stage_id": "stage_name",
+      "stage_id": "stage_name", // SECURITY: Sanitize stage names
       "agent_role": "specialized_agent_type",
       "input_schema": {
-        "required": ["field1", "field2"],
+        "required": ["field1", "field2"], // SECURITY: Validate all field names
         "optional": ["field3"]
       },
       "output_schema": {
@@ -203,12 +216,17 @@ Execute sequential processing pipeline with specialized agents at each stage:
 ## 2. CREATE Mode
 Intelligent pipeline creation with automated definition, modular component integration, and comprehensive validation:
 
-### Creation Process (from pipeline-create)
-1. **Requirement Analysis**: Analyze pipeline requirements, type, and components
-2. **Automated Definition**: Automatically define the pipeline structure and stages
-3. **Component Integration**: Integrate modular components and tasks into the pipeline
-4. **Validation**: Validate the pipeline configuration and dependencies
-5. **Deployment & Activation**: Deploy and activate the created pipeline
+### Creation Process (from pipeline-create) - SECURITY ENHANCED
+1. **SECURITY INPUT VALIDATION**: Validate ALL user inputs using sanitizeShellInput()
+2. **Requirement Analysis**: Analyze pipeline requirements, type, and components
+3. **SECURITY COMMAND VALIDATION**: Validate pipeline type against allowed templates
+4. **Automated Definition**: Automatically define the pipeline structure and stages
+5. **SECURITY PATH VALIDATION**: Validate all configuration file paths using validateFilePath()
+6. **Component Integration**: Integrate modular components and tasks into the pipeline
+7. **SECURITY CONFIGURATION VALIDATION**: Validate pipeline configuration against security policies
+8. **Validation**: Validate the pipeline configuration and dependencies
+9. **SECURITY DEPLOYMENT VALIDATION**: Apply security checks before deployment
+10. **Deployment & Activation**: Deploy and activate the created pipeline using secure execution
 
 ### Implementation Strategy
 - Analyze pipeline requirements to determine optimal structure and orchestration
@@ -226,12 +244,17 @@ Intelligent pipeline creation with automated definition, modular component integ
 ## 3. RUN Mode
 Advanced pipeline execution with automated trigger management, real-time monitoring, and comprehensive error handling:
 
-### Pipeline Execution Process (from pipeline-run)
-1. **Trigger Management**: Manage pipeline triggers (manual, scheduled, event-driven)
-2. **Execution Orchestration**: Orchestrate the execution of pipeline stages and tasks
-3. **Real-time Monitoring**: Provide real-time monitoring and status updates during execution
-4. **Error Handling & Recovery**: Implement comprehensive error handling and recovery mechanisms
-5. **Post-Execution Reporting**: Generate detailed reports on pipeline execution outcomes
+### Pipeline Execution Process (from pipeline-run) - SECURITY ENHANCED
+1. **SECURITY VALIDATION**: Validate pipeline name and all parameters using security wrapper
+2. **SECURITY COMMAND ALLOWLIST**: Validate ALL commands against PIPELINE_ALLOWED_COMMANDS
+3. **Trigger Management**: Manage pipeline triggers (manual, scheduled, event-driven)
+4. **SECURITY PARAMETER SANITIZATION**: Sanitize all execution parameters
+5. **Execution Orchestration**: Orchestrate execution using secure command wrappers
+6. **Real-time Monitoring**: Provide real-time monitoring with sanitized status updates
+7. **SECURITY ERROR HANDLING**: Implement secure error handling with sanitized messages
+8. **Error Handling & Recovery**: Implement comprehensive error handling and recovery mechanisms
+9. **SECURITY AUDIT LOGGING**: Log all security-relevant events for audit
+10. **Post-Execution Reporting**: Generate detailed reports with sanitized execution outcomes
 
 ### Implementation Strategy
 - Implement flexible trigger mechanisms to initiate pipeline execution based on various events or schedules
@@ -297,12 +320,16 @@ stages:
 ## 4. BUILD Mode
 Sophisticated development build system with optimization and quality assurance:
 
-### Build Process
-1. **Configuration Reading**: Parse PROJECT_CONFIG.xml and build specifications
-2. **Build Planning**: Generate optimized build execution plan
-3. **Parallel Processing**: Execute independent build tasks simultaneously
-4. **Quality Checks**: Run automated quality assurance during build
-5. **Artifact Management**: Package, validate, and prepare build outputs
+### Build Process - SECURITY ENHANCED
+1. **SECURITY CONFIGURATION VALIDATION**: Validate PROJECT_CONFIG.xml against security schema
+2. **Configuration Reading**: Parse PROJECT_CONFIG.xml and build specifications with path validation
+3. **SECURITY BUILD PARAMETER VALIDATION**: Validate all build parameters using sanitizeShellInput()
+4. **Build Planning**: Generate optimized build execution plan with security constraints
+5. **SECURITY COMMAND VALIDATION**: Validate all build commands against PIPELINE_ALLOWED_COMMANDS
+6. **Parallel Processing**: Execute independent build tasks using secure command wrappers
+7. **Quality Checks**: Run automated quality assurance during build with security scanning
+8. **SECURITY ARTIFACT VALIDATION**: Validate all artifacts before packaging
+9. **Artifact Management**: Package, validate, and prepare build outputs with secure operations
 
 ### Build Targets
 - **Full Build**: Complete project compilation and packaging
@@ -320,22 +347,32 @@ Advanced deployment orchestration with intelligent strategies and rollback:
 - **Rolling**: Sequential instance updates with health checking
 - **A/B Testing**: Feature flag-based deployments for testing
 
-### Deployment Process
-1. **Environment Validation**: Verify target environment readiness
-2. **Pre-deployment Checks**: Health checks, dependency validation
-3. **Deployment Execution**: Strategy-specific deployment steps
-4. **Health Monitoring**: Real-time application and infrastructure monitoring
-5. **Rollback Planning**: Automated rollback triggers and execution
+### Deployment Process - SECURITY ENHANCED
+1. **SECURITY ENVIRONMENT VALIDATION**: Validate environment name using validateEnvironmentName()
+2. **Environment Validation**: Verify target environment readiness with security checks
+3. **SECURITY CREDENTIAL VALIDATION**: Validate deployment credentials and permissions
+4. **Pre-deployment Checks**: Health checks, dependency validation with security scanning
+5. **SECURITY DEPLOYMENT COMMAND VALIDATION**: Validate all deployment commands against allowlist
+6. **Deployment Execution**: Strategy-specific deployment steps using secure command wrappers
+7. **SECURITY MONITORING**: Real-time monitoring with sanitized logging
+8. **Health Monitoring**: Real-time application and infrastructure monitoring
+9. **SECURITY ROLLBACK VALIDATION**: Validate rollback mechanisms and triggers
+10. **Rollback Planning**: Automated rollback triggers and execution with security auditing
 
 ## 6. SETUP Mode
 Comprehensive CI/CD setup with automated configuration and integration:
 
-### Setup Process
-1. **Project Analysis**: Understand structure, language, deployment targets
-2. **Tool Configuration**: Generate CI/CD configuration files
-3. **VCS Integration**: Setup webhooks, access tokens, repository integration
-4. **Pipeline Validation**: Trigger initial builds to validate setup
-5. **Documentation**: Provide customization guidance and best practices
+### Setup Process - SECURITY ENHANCED
+1. **SECURITY PROJECT PATH VALIDATION**: Validate project paths using validateFilePath()
+2. **Project Analysis**: Understand structure, language, deployment targets with security scanning
+3. **SECURITY CONFIGURATION VALIDATION**: Validate all configuration parameters
+4. **Tool Configuration**: Generate CI/CD configuration files with secure templates
+5. **SECURITY REPOSITORY URL VALIDATION**: Validate repository URLs using validateRepositoryURL()
+6. **VCS Integration**: Setup webhooks, access tokens, repository integration with credential protection
+7. **SECURITY PIPELINE VALIDATION**: Validate pipeline configuration against security policies
+8. **Pipeline Validation**: Trigger initial builds to validate setup with security scanning
+9. **SECURITY DOCUMENTATION**: Generate security-focused customization guidance
+10. **Documentation**: Provide customization guidance and best practices
 
 ### Supported CI/CD Tools
 - **GitHub Actions**: Workflow files, secrets management, marketplace actions
@@ -352,14 +389,18 @@ Advanced deployment rollback with intelligent recovery, automated health checks,
 - **Zero-Downtime**: Rolling rollback maintaining service availability
 - **Comprehensive**: Full recovery protocol with data integrity checks
 
-### Rollback Process
-1. **Risk Assessment**: Present severe warnings about rollback operations
-2. **User Confirmation**: Require explicit confirmation for high-risk operations
-3. **Target Validation**: Verify rollback version is valid and available
-4. **Pre-rollback Backup**: Automated database and configuration backup
-5. **Platform-Specific Rollback**: Execute deployment platform rollback commands
-6. **Health Verification**: Post-rollback health checks and validation
-7. **Incident Reporting**: Generate comprehensive post-mortem reports
+### Rollback Process - SECURITY ENHANCED
+1. **SECURITY VERSION VALIDATION**: Validate rollback version using validateVersionNumber()
+2. **Risk Assessment**: Present severe warnings about rollback operations
+3. **User Confirmation**: Require explicit confirmation for high-risk operations
+4. **SECURITY TARGET VALIDATION**: Verify rollback version with additional security checks
+5. **Target Validation**: Verify rollback version is valid and available
+6. **Pre-rollback Backup**: Automated database and configuration backup
+7. **SECURITY COMMAND VALIDATION**: Validate rollback commands against allowlist
+8. **Platform-Specific Rollback**: Execute deployment platform rollback commands using secure wrapper
+9. **Health Verification**: Post-rollback health checks and validation
+10. **SECURITY AUDIT TRAIL**: Create detailed security audit trail
+11. **Incident Reporting**: Generate comprehensive post-mortem reports with sanitized data
 
 ### Platform Support
 - **Kubernetes**: kubectl rollout undo and deployment management
@@ -384,11 +425,16 @@ def detect_and_validate_mode(mode, arguments):
     return mode_strategies.get(mode, mode_strategies['orchestrate'])
 ```
 
-### Phase 2: Context Preparation
-- Load relevant configuration files and templates
-- Validate input parameters and dependencies
-- Prepare execution environment and tools
-- Initialize monitoring and logging systems
+### Phase 2: Context Preparation - SECURITY ENHANCED
+- **SECURITY VALIDATION**: Apply security wrapper to ALL user inputs before processing
+- **SECURITY FILE VALIDATION**: Validate all configuration file paths using validateFilePath()
+- Load relevant configuration files and templates with path traversal prevention
+- **SECURITY PARAMETER VALIDATION**: Validate input parameters using appropriate security functions
+- Validate input parameters and dependencies against security policies
+- **SECURITY ENVIRONMENT PREPARATION**: Prepare execution environment with security constraints
+- Prepare execution environment and tools with command allowlist validation
+- **SECURITY AUDIT INITIALIZATION**: Initialize security audit logging and monitoring
+- Initialize monitoring and logging systems with sanitized output handling
 
 ### Phase 3: Mode-Specific Execution
 Execute the selected mode with comprehensive error handling, progress tracking, and quality validation.
@@ -403,38 +449,55 @@ When mode is 'rollback', execute advanced deployment rollback protocol:
 4. **Target Validation**: Verify specified version is valid and available rollback target
 5. **Pre-rollback Backup**: Initiate database backup via `/db backup` command chain
 6. **Platform-Specific Rollback**: Execute appropriate rollback commands:
-   - Kubernetes: `kubectl rollout undo deployment/app --to-revision=N`
-   - Docker Swarm: `docker service update --rollback service-name`
-   - Serverless: Platform-specific version rollback commands
+   - Kubernetes: SECURITY VALIDATED: `kubectl rollout undo deployment/app --to-revision=N` (N validated)
+   - Docker Swarm: SECURITY VALIDATED: `docker service update --rollback service-name` (service-name validated)
+   - Serverless: Platform-specific version rollback commands (ALL COMMANDS VALIDATED AGAINST ALLOWLIST)
 7. **Health Verification**: Execute comprehensive post-rollback health checks
 8. **Incident Documentation**: Generate detailed post-mortem incident report
 
-#### Rollback Strategy Implementation
+#### Rollback Strategy Implementation - SECURITY ENHANCED
 ```python
 def execute_rollback(version, strategy):
+    # SECURITY: Validate version number format
+    validated_version = validateVersionNumber(version)
+    
+    # SECURITY: Validate strategy against allowed options
+    allowed_strategies = ['immediate', 'health-check', 'zero-downtime', 'comprehensive']
+    if strategy not in allowed_strategies:
+        raise SecurityError(f'Invalid rollback strategy: {strategy}')
+    
     strategies = {
-        'immediate': immediate_rollback(version),
-        'health-check': health_driven_rollback(version),
-        'zero-downtime': zero_downtime_rollback(version),
-        'comprehensive': comprehensive_recovery(version)
+        'immediate': immediate_rollback(validated_version),
+        'health-check': health_driven_rollback(validated_version),
+        'zero-downtime': zero_downtime_rollback(validated_version),
+        'comprehensive': comprehensive_recovery(validated_version)
     }
-    return strategies.get(strategy, strategies['immediate'])
+    
+    # SECURITY: Execute with secure wrapper and audit logging
+    return executeSecureCommand(strategies.get(strategy, strategies['immediate']))
 ```
 
-### Phase 4: Unified Reporting
+### Phase 4: Unified Reporting - SECURITY ENHANCED
 Generate comprehensive reports covering:
-- Execution summary with timing and resource usage
-- Quality metrics and gate validation results
-- Error analysis and recovery actions taken
+- **SECURITY AUDIT SUMMARY**: Complete security audit trail with all validation results
+- Execution summary with timing and resource usage (sanitized)
+- **SECURITY METRICS**: Security validation metrics and compliance status
+- Quality metrics and gate validation results with security context
+- **SECURITY ERROR ANALYSIS**: Sanitized error analysis and recovery actions taken
+- Error analysis and recovery actions taken with information disclosure prevention
 - Performance benchmarks and optimization suggestions
-- Next steps and maintenance recommendations
+- **SECURITY RECOMMENDATIONS**: Security-focused maintenance and improvement recommendations
+- Next steps and maintenance recommendations with security considerations
 
-## Error Handling and Recovery
-- **Fail Fast**: Immediate pipeline termination on critical errors
-- **Fail Safe**: Graceful degradation with default values
-- **Retry Logic**: Exponential backoff for transient failures
-- **Circuit Breaker**: Skip stages after repeated failures
-- **Rollback Automation**: Automatic rollback triggers and execution
+## Error Handling and Recovery - SECURITY ENHANCED
+- **SECURITY ERROR SANITIZATION**: All error messages sanitized to prevent information disclosure
+- **Fail Fast**: Immediate pipeline termination on critical errors with secure cleanup
+- **Fail Safe**: Graceful degradation with default values (validated against security policies)
+- **SECURITY AUDIT LOGGING**: All failures logged with security context
+- **Retry Logic**: Exponential backoff for transient failures (with security validation on retry)
+- **Circuit Breaker**: Skip stages after repeated failures with security state preservation
+- **SECURITY ROLLBACK VALIDATION**: Validate all rollback operations against security policies
+- **Rollback Automation**: Automatic rollback triggers and execution using secure wrappers
 
 ## Quality Gates and Validation
 - Input/output schema validation at each stage
@@ -444,11 +507,27 @@ Generate comprehensive reports covering:
 - Deployment health and availability validation
 
 Report your pipeline operation with:
-- Comprehensive execution summary with all stages and timing
-- Quality metrics and validation results
-- Performance analysis and resource utilization
-- Error tracking and recovery actions
-- Recommendations for optimization and improvement
+- **SECURITY COMPLIANCE VERIFICATION**: Confirm all security validations passed
+- Comprehensive execution summary with all stages and timing (sanitized)
+- **SECURITY AUDIT RESULTS**: Complete security audit trail and compliance status
+- Quality metrics and validation results with security context
+- Performance analysis and resource utilization (with sensitive data filtered)
+- **SECURITY INCIDENT TRACKING**: Sanitized error tracking and recovery actions
+- Error tracking and recovery actions with information disclosure prevention
+- **SECURITY RECOMMENDATIONS**: Security-focused optimization and improvement recommendations
+- Recommendations for optimization and improvement with security considerations
+
+**MANDATORY SECURITY EXECUTION CHECKLIST:**
+✓ All user inputs validated using security wrapper functions
+✓ All commands validated against PIPELINE_ALLOWED_COMMANDS allowlist
+✓ All file paths validated using validateFilePath()
+✓ All repository URLs validated using validateRepositoryURL()
+✓ All version numbers validated using validateVersionNumber()
+✓ All environment names validated using validateEnvironmentName()
+✓ All bash executions use executeSecureCommand() wrapper
+✓ All error messages sanitized using sanitizeErrorMessage()
+✓ Complete security audit trail maintained
+✓ No information disclosure in outputs or error messages
     </prompt>
   </claude_prompt>
   
