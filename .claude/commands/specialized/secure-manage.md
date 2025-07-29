@@ -1,8 +1,8 @@
 ---
 name: /secure-manage
 description: "Unified security management system with configuration, fixing, reporting, and hardening capabilities"
-argument-hint: "[mode] [scope] [format]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+usage: "[mode] [scope] [format]"
+tools: Read, Write, Edit, Bash, Grep
 ---
 
 # /secure-manage - Unified Security Management

@@ -1,8 +1,8 @@
 ---
 name: /monitor
 description: "Comprehensive monitoring system with setup, alerts, dashboards, status monitoring, and configuration management"
-argument-hint: "[subcommand] [options]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+usage: "[subcommand] [options]"
+tools: Read, Write, Edit, Bash, Grep
 ---
 # /monitor - Comprehensive Monitoring System
 Advanced monitoring system with intelligent alerting, comprehensive dashboards, predictive analytics, and unified management capabilities.

@@ -1,8 +1,8 @@
 ---
 name: /test
 description: "Unified intelligent testing framework with automated test generation, comprehensive coverage analysis, environment management, and multi-format reporting"
-argument-hint: "[type] [target] [options]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+usage: "[type] [target] [options]"
+tools: Read, Write, Edit, Bash, Grep
 ---
 # /test - Unified Intelligent Testing Framework for [INSERT_PROJECT_NAME]
 Comprehensive testing solution for [INSERT_TECH_STACK] applications, combining unit, integration, and coverage analysis with automated test generation, environment management, and advanced reporting capabilities tailored for [INSERT_DOMAIN] projects.

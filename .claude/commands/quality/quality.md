@@ -1,8 +1,8 @@
 ---
 name: /quality
 description: "Unified intelligent code quality analysis with comprehensive review, metrics calculation, reporting, and improvement suggestions"
-argument-hint: "[mode] [target_path] [options]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+usage: "[mode] [target_path] [options]"
+tools: Read, Write, Edit, Bash, Grep
 security: input-validation-framework.md
 ---
 

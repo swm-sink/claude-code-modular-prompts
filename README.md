@@ -1,249 +1,172 @@
-# Claude Code Prompt Templates Library
+# Claude Code Prompt Templates
 
-**📚 102 Curated Prompt Templates for Claude Code** - A comprehensive collection of battle-tested Claude Code command templates (64 active, 38 deprecated) with guided manual customization for your specific project.
+**Ready-to-use Claude Code command templates** - Copy templates, adapt to your project automatically, and start using powerful Claude Code commands immediately.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Status: Stable](https://img.shields.io/badge/Status-Stable-green.svg)](https://github.com/swm-sink/claude-code-modular-prompts/releases)
-[![Templates: 102](https://img.shields.io/badge/Templates-102-blue.svg)](https://github.com/swm-sink/claude-code-modular-prompts/tree/main/.claude/commands)
-[![Last Updated: 2025-07-29](https://img.shields.io/badge/Updated-2025--07--29-brightgreen.svg)](https://github.com/swm-sink/claude-code-modular-prompts/commits/main)
 
-## What This Actually Is
+## Quick Start (2 Commands)
 
-**A template library with manual customization guides:**
-- 📋 **Step-by-step checklists** for customizing each template
-- 📝 **102 command templates** (64 active, 38 deprecated) with [INSERT_XXX] placeholders
-- 🔍 **Manual validation tools** to check your progress
-- 📁 **Dual folder structure** - working copy + reference copy
-- ✍️ **Find & Replace guides** for updating placeholders
-
-## What This Is NOT
-- ❌ **Not an automation engine** - requires manual work (30-60 minutes)
-- ❌ **Not self-adapting** - you customize it yourself using Find & Replace
-- ❌ **Not a 5-minute setup** - realistic timeline is 1-2 hours including customization
-- ❌ **Not magic** - it's proven templates + step-by-step guides
-
-## The Value: Skip the Learning Curve
-
-What these templates help you avoid:
-- ❌ **Common Claude Code mistakes** documented in 48+ anti-patterns
-- ❌ **Inefficient prompt structures** that waste tokens
-- ❌ **Reinventing patterns** that already work well
-- ❌ **Security vulnerabilities** in command design
-- ❌ **Performance pitfalls** in context management
-
-**You get proven patterns, but YOU must customize them manually.**
-
-## The Manual Process (Realistic Timeline)
-
-```
-┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
-│  Install        │     │  Get Guidance    │     │  Manual Work    │
-│  Templates      │ --> │  & Checklists    │ --> │  45-90 mins     │
-│  (5 minutes)    │     │ /adapt-to-project│     │  Find & Replace │
-└─────────────────┘     └──────────────────┘     └─────────────────┘
-         │                        │                        │
-         ▼                        ▼                        ▼
-   102 Templates         ┌──────────────┐          ┌─────────────┐
-    70 Components         │ Replacement  │          │ Customized  │
-    48 Anti-patterns      │ Checklist    │          │  Templates  │
-    Testing Framework     │  Generated   │          │    Ready    │
-                          └──────────────┘          └─────────────┘
-```
-
-## Quick Start: Intelligent Adaptation
-
-### Step 1: Install Templates (5 minutes)
 ```bash
-# Method 1: Git Submodule (Recommended - enables updates)
-git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-framework
-cd .claude-framework && ./setup.sh
+# 1. Copy templates to your project
+./setup.sh /path/to/your/project
 
-# Method 2: Direct Integration
-git clone https://github.com/swm-sink/claude-code-modular-prompts
-cd claude-code-modular-prompts && ./setup.sh ../your-project
-```
-
-### Step 2: Get Your Customization Guide (10 minutes)
-```bash
-# Start Claude Code and run:
+# 2. Auto-adapt to your project (in Claude Code)
 /adapt-to-project
-
-# Answer questions about your project
-# Get a complete replacement guide listing:
-# - All files that need updates
-# - Exact placeholders to replace
-# - Validation checklist
 ```
 
-### Step 3: Manual Customization Work (45-90 minutes)
-You will need to:
-- 📋 **Answer questions** about your tech stack, domain, and team size
-- 🔍 **Use Find & Replace** in your editor to update 15 standard placeholders
-- ✍️ **Review and customize** 64 active commands for your project
-- 🗑️ **Remove unused commands** from the 38 deprecated ones
-- ✅ **Run validation** commands to verify completeness
-- 📝 **Document** your choices for team reference and future updates
+That's it! Your templates are now customized and ready to use.
 
-## What You Get: Dual Structure
+## What You Get
 
-```
-your-project/
-├── .claude/                    # YOUR customized commands (64 active)
-│   ├── commands/              # Adapted with your project details
-│   │   ├── core/             # help, task, auto, query - customized
-│   │   ├── development/      # dev, api-design - your tech stack
-│   │   ├── database/         # db-migrate, db-backup - your database
-│   │   ├── security/         # secure-audit, secure-scan - your compliance
-│   │   ├── testing/          # test-unit, test-integration - your framework
-│   │   ├── devops/           # deploy, ci-setup - your pipeline
-│   │   ├── quality/          # quality checks - your standards
-│   │   ├── monitoring/       # alerts and setup - your tools
-│   │   └── deprecated/       # 38 deprecated commands (remove if unused)
-│   ├── components/           # 70 prompt components adapted
-│   ├── context/              # Anti-patterns and best practices
-│   ├── docs/                 # Project documentation
-│   └── config/
-│       └── project-config.yaml # YOUR configuration
-│
-├── .claude-framework/         # Reference library (read-only)
-│   └── [original templates]   # Preserved for updates
-│
-└── CLAUDE.md                  # Your project memory
-```
+**Proven Claude Code commands for:**
+- Core development workflows (`/task`, `/help`, `/query`)
+- API design and testing (`/api-design`, `/test-integration`)
+- Database operations (`/db-migrate`, `/db-backup`)
+- Security and quality checks (`/secure-audit`, `/quality-check`)
+- DevOps and deployment (`/deploy`, `/ci-setup`)
 
-## Adaptation Examples
+**Plus supporting files:**
+- Anti-pattern documentation to avoid common mistakes
+- Best practices guides for Claude Code usage
+- Reusable prompt components
+- Configuration templates
 
-### Before Adaptation (Generic Placeholder)
+## How It Works
+
+1. **Setup copies templates** to your `.claude/` directory
+2. **Adapt-to-project analyzes** your codebase and auto-customizes templates
+3. **Start using commands** immediately in Claude Code conversations
+
+## Example: Before & After
+
+**Before (generic template):**
 ```markdown
 # Deploy [INSERT_PROJECT_NAME] to [INSERT_DEPLOYMENT_TARGET]
 Using [INSERT_CI_CD_PLATFORM] for [INSERT_TECH_STACK]...
 ```
 
-### After Adaptation (Your Project)
+**After auto-adaptation:**
 ```markdown
-# Deploy AwesomeApp to AWS ECS
+# Deploy MyApp to AWS ECS
 Using GitHub Actions for React+Node.js...
 ```
 
-## Guide Commands: Manual Customization Helpers
+## Installation Options
 
-- **`/adapt-to-project`** - Get customization checklist and replacement guide
-- **`/validate-adaptation`** - Get validation checklist to verify your work
-- **`/replace-placeholders`** - Get list of all replacements needed
-- **`/sync-from-reference`** - Get instructions for manual sync
-- **`/share-adaptation`** - Create documentation of your customizations
-- **`/undo-adaptation`** - Get recovery instructions if something goes wrong
+### Option 1: Direct Setup
+```bash
+git clone https://github.com/swm-sink/claude-code-modular-prompts
+cd claude-code-modular-prompts
+./setup.sh /path/to/your/project
+```
 
-## Supported Domains & Stacks
+### Option 2: As Submodule (for updates)
+```bash
+git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-templates
+cd .claude-templates
+./setup.sh ../
+```
 
-The engine adapts for:
-- **Web Development**: React, Vue, Angular, Next.js, Node.js, Django, Rails
-- **Data Science**: Jupyter, pandas, scikit-learn, TensorFlow, PyTorch
-- **DevOps**: Docker, Kubernetes, Terraform, AWS, Azure, GCP
-- **Mobile**: React Native, Flutter, Swift, Kotlin
-- **Enterprise**: Java Spring, .NET, microservices, SOA
+## Available Commands
 
-## Why Use This?
+### Core Commands
+- `/help` - Get help for any topic
+- `/task` - Break down and execute complex tasks
+- `/query` - Search and analyze your codebase
+- `/auto` - Automated code generation
 
-**Without this library**: Start from scratch, learn all the anti-patterns the hard way, spend months building your command library.
+### Development Commands
+- `/dev` - Development workflow assistance
+- `/api-design` - Design and document APIs
+- `/refactor` - Code refactoring guidance
+- `/debug` - Debug assistance and troubleshooting
 
-**With this library**: Start with 102 proven templates, avoid documented pitfalls, customize in an afternoon with clear guidance.
+### Quality & Security
+- `/test-unit` - Unit testing guidance
+- `/test-integration` - Integration testing setup
+- `/secure-audit` - Security audit workflows
+- `/quality-check` - Code quality assessment
 
-The value isn't automation - it's having curated, tested patterns you can adapt.
+### DevOps & Deployment
+- `/deploy` - Deployment assistance
+- `/ci-setup` - CI/CD pipeline setup
+- `/monitor` - Monitoring and alerting setup
+- `/backup` - Backup and recovery procedures
+
+## Supported Tech Stacks
+
+Auto-adapts for:
+- **Frontend**: React, Vue, Angular, Next.js, Svelte
+- **Backend**: Node.js, Python, Java, Go, Ruby
+- **Mobile**: React Native, Flutter
+- **Data**: Jupyter, pandas, SQL databases
+- **Cloud**: AWS, Azure, GCP, Docker, Kubernetes
+
+## Adaptation Process
+
+The `/adapt-to-project` command:
+1. Analyzes your project structure and dependencies
+2. Identifies your tech stack and frameworks
+3. Customizes all templates with your project details
+4. Removes unused templates for your stack
+5. Validates the adaptation completed successfully
 
 ## Requirements
 
-- **Claude Code** (Desktop application or API access)
-- **Git** (for submodule approach and updates)
-- **Bash shell** (for setup and validation scripts)
-- **Text editor** with Find & Replace (VS Code, IntelliJ, Sublime, etc.)
-- **1-2 hours** of focused customization time
-- **Basic understanding** of your project's tech stack and requirements
+- Claude Code desktop application
+- Git (for cloning and submodule support)
+- Basic project structure (package.json, requirements.txt, etc.)
 
-## Advanced Features
+## Commands for Managing Templates
 
-### Partial Adaptation
-Choose only what you need:
-```bash
-/adapt-to-project --components "api,database,testing"
+- `/adapt-to-project` - Auto-adapt all templates to your project
+- `/validate-adaptation` - Check that adaptation completed successfully
+- `/sync-templates` - Update templates from reference library
+- `/reset-templates` - Reset to original state if needed
+
+## Project Structure After Setup
+
+```
+your-project/
+├── .claude/
+│   ├── commands/          # Customized commands ready to use
+│   ├── components/        # Reusable prompt components
+│   ├── context/           # Best practices and anti-patterns
+│   └── config/            # Project configuration
+└── ...your project files
 ```
 
-### Domain-Specific Patterns
-```bash
-/adapt-to-project --domain "e-commerce" 
-# Adds: checkout flows, payment integration, inventory patterns
-```
+## Why This Saves Time
 
-### Team Configurations
-```bash
-/adapt-to-project --team-size "large" --workflow "agile"
-# Adapts: PR workflows, code review patterns, standup tools
-```
+**Without templates**: Write Claude Code commands from scratch, learn through trial and error, repeat common patterns.
 
-## 📚 Documentation & Support
+**With templates**: Start with proven patterns, auto-adapt to your project, use immediately.
 
-### Complete Guides
-- **[Quick Start](QUICKSTART.md)**: Get running in 10 minutes
-- **[Installation Guide](INSTALLATION.md)**: Comprehensive setup with troubleshooting
-- **[Setup Guide](SETUP.md)**: Technical details and customization
-- **[FAQ](FAQ.md)**: 90% of questions answered
-- **[Examples](EXAMPLES.md)**: Real-world customization patterns
-- **[Project Status](PROJECT-STATUS.md)**: Current state and roadmap
+## FAQ
 
-### Community & Updates
-- 🔄 **Regular Updates**: Monthly releases via git submodule
-- 🤝 **Share Adaptations**: Export your patterns with `/share-adaptation`
-- 📣 **Discussions**: GitHub Discussions for Q&A and best practices
-- 🐛 **Issues**: Report bugs or request features
-- 🌟 **Star Us**: If this saves you months of prompt engineering work!
+**How long does setup take?**
+5 minutes to copy templates, 2 minutes for auto-adaptation.
 
-## ❓ Quick FAQ
+**Do I need all the templates?**
+No - unused templates are automatically removed during adaptation.
 
-**Q: How long does this actually take?**  
-A: 10 minutes for basic functionality, 1-2 hours for complete professional setup.
+**What if my project changes?**
+Run `/adapt-to-project` again to re-customize templates.
 
-**Q: Is this just templates?**  
-A: It's 102 battle-tested templates + 70 components + 48 anti-patterns + comprehensive guides + validation framework.
+**Can I modify the templates?**
+Yes - they're copied to your project and fully customizable.
 
-**Q: Do I need all 102 commands?**  
-A: No! Start with 6 core commands, add others gradually. Archive the rest.
+## Getting Help
 
-**Q: What if it doesn't fit my project?**  
-A: Templates are designed to be customized. Use Find & Replace, remove unused commands, add project-specific ones.
-
-**Q: Will updates break my work?**  
-A: No! Dual structure keeps your customizations separate. Updates never overwrite your changes.
-
-**→ [Complete FAQ with Advanced Troubleshooting](FAQ.md)**
-
-## 🚀 Get Started Now
-
-**Three ways to get started:**
-
-### ⚡ Quick Start (10 minutes)
-```bash
-git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-framework
-cd .claude-framework && ./setup.sh && cd ..
-# Then: /adapt-to-project in Claude Code
-```
-**→ [Complete Quick Start Guide](QUICKSTART.md)**
-
-### 📖 Full Setup (1-2 hours)
-**→ [Comprehensive Installation Guide](INSTALLATION.md)**
-
-### 🛠️ Detailed Technical Setup
-**→ [Technical Setup Guide](SETUP.md)**
-
----
-
-*Built by the community, for the community. Star ⭐ if this saves you months of work!*
+- Start with `/help` command in Claude Code
+- Check the `/docs` folder for detailed guides
+- Review anti-patterns in `/context` folder to avoid common mistakes
 
 ## License
 
-MIT - Use freely in your projects
+MIT - Use freely in your projects.
 
-## Contributing
+---
 
-We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-Special thanks to all contributors who've shared their patterns and adaptations.
+*Get started in 2 commands. No complexity, no manual work - just copy and adapt.*

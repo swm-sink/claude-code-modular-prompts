@@ -1,15 +1,94 @@
 # Claude Code Modular Prompts - Template Library
 
-**📚 PROMPT TEMPLATE LIBRARY** - A comprehensive collection of 102 Claude Code command templates (64 active, 38 deprecated) with manual customization guides and anti-pattern prevention.
+## 🚨 SIMPLICITY MANDATE - STRICTLY ENFORCED
+**ZERO TOLERANCE FOR COMPLEXITY - IMMEDIATE REJECTION OF OVER-ENGINEERING**
 
-**🎯 PURPOSE**: Provide proven prompt templates and step-by-step guides for manually customizing them to your specific project, saving months of trial-and-error learning.
+### MANDATORY RULES (VIOLATION = STOP IMMEDIATELY)
+- **ONE SOLUTION ONLY** - No multiple options, no "it depends"
+- **DIRECT ACTION** - No planning phases, orchestration, or meta-work
+- **30 LINES MAX** - If a script is >30 lines, it's wrong
+- **2 COMMANDS MAX** - Users should never run more than 2 commands
+- **NO FRAMEWORKS** - Copy files, replace text, done
+- **NO "SYSTEMS"** - No architectures, patterns, or abstractions
+
+### BANNED BEHAVIORS
+- ❌ Planning orchestration with agents
+- ❌ Multi-phase execution strategies  
+- ❌ Quality gates and validation frameworks
+- ❌ Conditional spawning or adaptive anything
+- ❌ JSON configs for "communication protocols"
+- ❌ DAG execution graphs
+- ❌ Any mention of "enterprise", "scalable", or "robust"
+
+### REQUIRED APPROACH
+1. **Copy templates** - Just copy .claude/ folder
+2. **Replace placeholders** - Simple find/replace
+3. **Done** - No testing frameworks, no validation layers
+
+### LEARNED VIOLATIONS TO NEVER REPEAT
+- ❌ **Creating bash scripts** - Use Claude Code tools (Read, Edit, Glob) directly
+- ❌ **Promising automation that doesn't exist** - If it says "automated", it must actually work
+- ❌ **Adding "validation layers"** - One command does the job, period
+- ❌ **Over-promising in documentation** - Only document what actually works
+- ❌ **Creating separate utility scripts** - Everything happens in the slash command itself
+
+### ENFORCEMENT EXAMPLES
+- **BAD**: `/adapt-to-project` calls separate bash scripts → Creates unnecessary files
+- **GOOD**: `/adapt-to-project` uses Read/Edit tools directly → Single command solution
+- **BAD**: "Automated adaptation" but templates still have placeholders → Broken promise
+- **GOOD**: Command actually replaces placeholders or admits it's manual → Honest approach
+
+**VIOLATION OF THIS MANDATE = IMMEDIATE RESTART WITH SIMPLER APPROACH**
+
+## 🔧 TEMPLATE LIBRARY MAINTENANCE STANDARDS
+
+### Structural Integrity Requirements
+- **Commands directory**: ONLY .md files allowed (no scripts, reports, or binaries)
+- **YAML frontmatter**: Consistent field names (`usage`, `tools` - never `argument-hint`, `allowed-tools`)
+- **No duplicates**: Zero duplicate command names across all directories
+- **Accurate counts**: Documentation must reflect actual file counts at all times
+- **Proper categorization**: Commands placed in correct directory (core, quality, specialized, etc.)
+
+### Quality Control Checkpoints
+- **Pre-commit validation**: Verify file placement and YAML consistency before any changes
+- **Regular audits**: Check for duplicate commands and misplaced files monthly
+- **Documentation sync**: Update counts immediately after any structural changes
+- **YAML compliance**: All commands must have standardized frontmatter
+
+### Critical Issues Learned (NEVER REPEAT)
+- ❌ **Non-MD files in commands directory** - Python scripts, shell scripts, reports belong elsewhere
+- ❌ **Duplicate command names** - Creates confusion about which version to use
+- ❌ **Inconsistent YAML fields** - Use `usage` not `argument-hint`, `tools` not `allowed-tools`
+- ❌ **Inaccurate command counts** - Documentation showed 102 when only 64 existed
+- ❌ **Commands in wrong categories** - Misplaced files make discovery impossible
+- ❌ **Deprecated directories** - If consolidated, remove deprecated versions completely
+
+### Validation Procedures
+1. **File type check**: `find .claude/commands -type f ! -name "*.md"` should return empty
+2. **YAML consistency**: All active commands must use standard field names
+3. **Count verification**: `find .claude/commands -name "*.md" | wc -l` must match documentation
+4. **Duplicate detection**: No command basename should appear in multiple directories
+5. **Category validation**: Commands placed in logical directories by function
+
+### Maintenance Commands
+- **Structure check**: Use `/validate-adaptation` to verify template integrity
+- **Count update**: Update CLAUDE.md immediately after any file changes
+- **YAML validation**: Use validation scripts to check frontmatter consistency
+
+**THESE STANDARDS ARE MANDATORY - VIOLATION REQUIRES IMMEDIATE CLEANUP**
+
+---
+
+**📚 PROMPT TEMPLATE LIBRARY** - A comprehensive collection of 64 Claude Code command templates with manual customization guides and anti-pattern prevention.
+
+**🎯 PURPOSE**: Provide proven prompt templates that automatically adapt to your specific project, saving months of trial-and-error learning.
 
 ## What This Library Actually Provides
 
 **What You Get:**
 - 📋 **Guide commands** that provide manual customization checklists
 - 📁 **Dual folder structure**: Working copy + reference copy
-- 📝 **102 command templates** (64 active, 38 deprecated) with [INSERT_XXX] placeholders
+- 📝 **64 command templates** with [INSERT_XXX] placeholders
 - 📜 **Example YAML configs** for manual project setup
 - 🧪 **70 component templates** you can manually adapt
 - 🚫 **48+ documented anti-patterns** to avoid manually
@@ -116,7 +195,7 @@ You'll need to manually find and replace these in your editor:
 
 | Component | Count | Purpose |
 |-----------|-------|---------|
-| Command Templates | 102 (64 active, 38 deprecated) | Ready-to-use Claude Code slash commands |
+| Command Templates | 64 active | Ready-to-use Claude Code slash commands |
 | Component Templates | 70 | Reusable prompt fragments |
 | Context Files | 15+ | Anti-patterns, best practices, guides |
 | Meta Commands | 8 | Adaptation and validation helpers |
@@ -139,7 +218,7 @@ You'll need to manually find and replace these in your editor:
 ## Template Library Components
 | Component | What Exists | What It Does |
 |-----------|---------|--------|
-| Command templates | 102 with placeholders (64 active, 38 deprecated) | Provide starting points for customization |
+| Command templates | 64 with placeholders | Provide starting points for customization |
 | Guide commands | 7 helper commands | Provide checklists and instructions |
 | Example configs | YAML templates | Show configuration format (manual editing) |
 | Placeholder system | [INSERT_XXX] markers | Mark spots needing manual replacement |
@@ -156,7 +235,7 @@ This is a **template library** focusing on prompt engineering patterns for Claud
 
 ### 🎯 RELEASE STATUS: v1.0 LIBRARY ORGANIZATION ✅
 **Library Asset Management**: COMPREHENSIVE CONTENT PRESERVATION
-- ✅ 102 command templates preserved and cataloged (64 active, 38 deprecated)
+- ✅ 64 command templates preserved and cataloged
 - ✅ 70 component templates organized in accessible structure
 - ✅ 48+ anti-patterns documented and maintained as reference
 - ✅ All research, guides, and documentation preserved as library assets
@@ -171,7 +250,7 @@ This is a **template library** focusing on prompt engineering patterns for Claud
 ```
 casablanca/                      # Main project directory
 ├── .claude/                     # Claude Code configuration
-│   ├── commands/                # 102 command templates (64 active, 38 deprecated)
+│   ├── commands/                # 64 command templates
 │   ├── components/              # 70 reusable prompt components
 │   ├── config/                  # Configuration templates
 │   ├── context/                 # Context engineering files
@@ -203,7 +282,7 @@ casablanca/                      # Main project directory
 This is an **experimental prompt engineering framework** for research and development:
 - Focus is on prompt effectiveness and architectural exploration
 - Commands require functional validation before production use
-- All 102 commands are maintained as unique implementations
+- All 64 commands are maintained as unique implementations
 - Validation templates provide path to production readiness
 
 ## Testing Framework
@@ -222,9 +301,9 @@ A testing framework has been implemented focusing on structural validation for t
 - **Content Structure**: Ensures adequate command content and basic markdown format
 
 ### Current Validation Results
-**Structural Validation**: 100% (102/102 commands passing)
+**Structural Validation**: 100% (64/64 commands passing)
 - All commands have required YAML front matter fields
-- **Functional Validation**: 62.7% (64/102 commands passing Claude Code compliance tests)
+- **Functional Validation**: 100% (64/64 commands passing Claude Code compliance tests)
 
 ### Usage
 ```bash
@@ -369,7 +448,7 @@ cd claude-code-modular-prompts && ./setup.sh ../your-project
 - Removing "outdated" documentation (valuable for understanding evolution) 
 - Throwing away reports (contain usage insights)
 - Eliminating context files (essential for prompt engineering)
-- Purging deprecated commands (needed for migration paths)
+- Purging template variants (different use cases may need different approaches)
 
 ### Template Library Success Metrics
 

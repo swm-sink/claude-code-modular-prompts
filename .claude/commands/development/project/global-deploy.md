@@ -1,8 +1,8 @@
 ---
 name: /global-deploy
 description: "Advanced global deployment with multi-region orchestration, geographic optimization, and intelligent traffic management"
-argument-hint: "[deployment_scope] [region_strategy]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+usage: "[deployment_scope] [region_strategy]"
+tools: Read, Write, Edit, Bash, Grep
 ---
 # /deploy global - Advanced Global Deployment
 Sophisticated global deployment system with multi-region orchestration, geographic optimization, and intelligent traffic management.

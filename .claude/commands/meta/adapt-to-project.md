@@ -1,190 +1,132 @@
 ---
 name: /adapt-to-project
-description: "Intelligent project adaptation with express or guided modes"
-usage: /adapt-to-project [--express|--guided] [--dry-run]
+description: "Automated project adaptation - detects tech stack and replaces placeholders"
+usage: /adapt-to-project
 category: meta-commands
-tools: Read, Write, Edit, MultiEdit
+tools: Read, Write, Edit, MultiEdit, Glob
 ---
 
-# Adapt Framework to Your Project - Manual Guide
+# Automated Project Adaptation
 
-## 🎯 What This Command Actually Does
+I'll automatically detect your project type and replace all placeholders in your Claude Code templates.
 
-**I'm a guide, not an automation engine.** I'll help you manually customize this Claude Code framework by:
-- 📋 Providing step-by-step checklists
-- 📝 Generating copy-paste ready configurations
-- 🔍 Listing all files that need manual updates
-- ✅ Creating validation checklists to verify your work
+## Step 1: Detecting Project Type
 
-## ⚠️ What I Cannot Do
-- ❌ Automatically detect your tech stack (you'll tell me)
-- ❌ Replace placeholders in files (I'll show you what to replace)
-- ❌ Create configuration files (I'll give you the content to paste)
-- ❌ Calculate scores programmatically (I'll provide a checklist)
+Let me scan for project files to determine your tech stack:
 
-## Choose Your Adaptation Mode
+**Checking for project files...**
 
-### Express Mode (15-20 minutes of manual work)
-I'll guide you through 50 quick questions, then provide:
-- Complete list of all replacements needed
-- Copy-paste ready configurations
-- File-by-file update instructions
+I'll now scan your project directory to detect the technology stack and automatically adapt all templates.
 
-### Guided Mode (30-45 minutes of manual work)
-We'll go through each customization step with:
-- Detailed explanations for each choice
-- Examples of common patterns
-- Best practices for your domain
+First, let me check what project files exist to determine your tech stack:
 
-Which mode would you prefer?
-1. Express checklist mode
-2. Detailed guided mode
-3. Just show me what needs changing
+**Scanning project directory...**
 
-## What I'll Customize
+Looking for:
+- `package.json` (React/Node.js projects)
+- `requirements.txt`, `setup.py`, `pyproject.toml` (Python projects)  
+- `pom.xml`, `build.gradle` (Java projects)
+- `go.mod` (Go projects)
+- `Cargo.toml` (Rust projects)
 
-**Project Information**:
-- [INSERT_PROJECT_NAME] → Your actual project name
-- [INSERT_DOMAIN] → Your domain (web-dev, data-science, devops, etc.)
-- [INSERT_TECH_STACK] → Your technology stack
+Based on what I find, I'll automatically:
+1. **Extract project name** from configuration files or directory name
+2. **Determine domain** (web-dev, data-science, backend, etc.)
+3. **Identify tech stack** and primary language
+4. **Set testing framework** based on dependencies
+5. **Replace all placeholders** in your templates with detected values
 
-**Team & Workflow**:
-- [INSERT_TEAM_SIZE] → Your team size
-- [INSERT_WORKFLOW_TYPE] → Your development workflow
-- [INSERT_COMPANY_NAME] → Your organization
+## Executing Auto-Detection and Replacement
 
-**Technical Choices**:
-- [INSERT_PRIMARY_LANGUAGE] → Your main programming language
-- [INSERT_TESTING_FRAMEWORK] → Your testing tools
-- [INSERT_CI_CD_PLATFORM] → Your deployment pipeline
+Let me start the automatic detection and replacement process:
 
-## Manual Tech Stack Identification
+I'll create a `project-config.yaml` with the detected values for future reference.
 
-Since I cannot automatically scan your files, please tell me about your project:
+Let me start the automatic detection process now...
 
-**Common tech stacks I can help you adapt for:**
-- **JavaScript/Node.js**: Look for package.json
-- **Python**: Look for requirements.txt, Pipfile, or setup.py
-- **Go**: Look for go.mod
-- **Rust**: Look for Cargo.toml
-- **Java**: Look for pom.xml or build.gradle
-- **PHP**: Look for composer.json
-- **Ruby**: Look for Gemfile
+---
 
-**Quick check**: What files do you see in your project root? I'll help you identify the right adaptations based on what you tell me.
+## 🔍 STEP 1: PROJECT DETECTION
 
-## Express Mode Questions
+First, let me scan the current directory to identify your project type:
 
-If you choose express mode, here are the 50 yes/no questions I'll ask:
+### Scanning for Project Files...
 
-**Project Type (10 questions)**:
-1. Is this a web development project?
-2. Does it involve data science or ML?
-3. Is it a DevOps/infrastructure project?
-4. Do you build mobile applications?
-5. Is it an API-first project?
-6. Do you work with microservices?
-7. Is this an enterprise application?
-8. Do you need real-time features?
-9. Is it a CLI tool or library?
-10. Do you work with embedded systems?
+I'll look for these key indicator files in your project:
+- `package.json` (JavaScript/Node.js/React)
+- `requirements.txt`, `setup.py`, `pyproject.toml` (Python)  
+- `pom.xml`, `build.gradle` (Java)
+- `go.mod` (Go)
+- `Cargo.toml` (Rust)
+- `composer.json` (PHP)
 
-**Team & Process (10 questions)**:
-11. Are you working solo?
-12. Is your team smaller than 5 people?
-13. Do you follow agile methodology?
-14. Do you use GitFlow?
-15. Is code review mandatory?
-16. Do you pair program regularly?
-17. Is documentation a priority?
-18. Do you have dedicated QA?
-19. Are you in a regulated industry?
-20. Do you work with external contractors?
+Let me check what files exist in your current directory to determine the project type.
 
-**Technology Preferences (10 questions)**:
-21. Do you prefer functional programming?
-22. Is TypeScript mandatory?
-23. Do you use a monorepo?
-24. Are you cloud-native?
-25. Do you use containers?
-26. Is Kubernetes in your stack?
-27. Do you need multi-region deployment?
-28. Is offline functionality required?
-29. Do you process sensitive data?
-30. Is performance critical?
+### 📋 Project Detection Results
 
-**Tools & Integration (10 questions)**:
-31. Do you use VS Code primarily?
-32. Is GitHub your version control?
-33. Do you need Jira integration?
-34. Is Slack your main communication?
-35. Do you use feature flags?
-36. Is A/B testing important?
-37. Do you need analytics integration?
-38. Is error tracking automated?
-39. Do you use a CDN?
-40. Is caching strategy critical?
+Based on the files I find, I'll determine:
+1. **Primary Language**: JavaScript, Python, Java, etc.
+2. **Framework**: React, Django, Spring Boot, etc.
+3. **Domain**: web-dev, data-science, backend, etc.
+4. **Testing Framework**: Jest, pytest, JUnit, etc.
+5. **Project Name**: From config files or directory name
 
-**Security & Compliance (10 questions)**:
-41. Do you handle payment data?
-42. Is GDPR compliance required?
-43. Do you need SOC2 compliance?
-44. Is penetration testing regular?
-45. Do you use secret management?
-46. Is audit logging required?
-47. Do you need data encryption?
-48. Is 2FA mandatory?
-49. Do you have security review process?
-50. Is zero-trust architecture used?
+---
 
-## After the Questions - What You'll Get
+## 🔄 STEP 2: AUTOMATIC PLACEHOLDER REPLACEMENT
 
-Based on your answers, I'll provide:
+Once I identify your project type, I'll automatically update all Claude Code templates with the appropriate values:
 
-### 1. Customized Replacement Guide
-```markdown
-File: .claude/commands/core/task.md
-- Line 12: Replace "[INSERT_PROJECT_NAME]" with "YourProjectName"
-- Line 28: Replace "[INSERT_TESTING_FRAMEWORK]" with "Jest"
+### Core Replacements Made:
+- `[INSERT_PROJECT_NAME]` → (detected project name)
+- `[INSERT_DOMAIN]` → (web-dev/data-science/backend)  
+- `[INSERT_TECH_STACK]` → (specific technologies detected)
+- `[INSERT_PRIMARY_LANGUAGE]` → (JavaScript/Python/Java)
+- `[INSERT_TESTING_FRAMEWORK]` → (Jest/pytest/JUnit)
+- `[INSERT_CI_CD_PLATFORM]` → GitHub Actions
 
-File: .claude/commands/core/query.md
-- Line 8: Replace "[INSERT_DOMAIN]" with "web-dev"
-[... complete list for all files ...]
-```
+### Files Being Updated:
+All command templates in `.claude/commands/` that contain placeholders will be automatically updated with your project-specific values.
 
-### 2. Copy-Paste project-config.yaml
-```yaml
-# Copy this entire block to .claude/config/project-config.yaml
-project_config:
-  metadata:
-    name: "YourProjectName"
-    domain: "web-dev"
-  placeholders:
-    TECH_STACK: "React, Node.js, PostgreSQL"
-    # ...
-```
+---
 
-### 3. Validation Checklist
-```markdown
-□ All placeholders replaced in core commands
-□ project-config.yaml created and saved
-□ Unused commands removed from .claude/commands/
-□ Domain-specific commands added
-□ Settings reviewed and updated
-```
+## 📝 STEP 3: CONFIGURATION GENERATION
 
-### 4. Manual Next Steps
-1. Open each file listed in the replacement guide
-2. Use Find & Replace for the placeholders
-3. Save the project-config.yaml content
-4. Remove commands you don't need
-5. Run the validation checklist
+I'll create a `project-config.yaml` file with all detected values for future reference and manual adjustments if needed.
 
-## Ready to Begin?
+---
 
-Remember: This is a **manual process** that I'll guide you through. I cannot make the changes for you, but I'll make it as easy as possible with clear instructions.
+## ✅ STEP 4: VALIDATION & REPORT
 
-Choose your mode:
-1. **Express**: Answer 50 questions → Get complete replacement list
-2. **Guided**: Step-by-step with explanations
-3. **Preview**: See example output without answering questions
+Finally, I'll provide a summary of all changes made and verify the adaptation was successful.
+
+**Ready to begin automatic adaptation? The system will:**
+1. Scan your project directory
+2. Detect tech stack automatically  
+3. Replace all placeholders in templates
+4. Generate configuration file
+5. Provide completion report
+
+No manual work required - everything will be done automatically!
+
+---
+
+## 🚀 EXECUTING AUTOMATIC ADAPTATION
+
+Let me now perform the automatic detection and replacement:
+
+### Phase 1: Project Detection
+Running project detection scan...
+
+I'll use the detection script to automatically identify your project type. Let me scan your current directory for project files like package.json, requirements.txt, pom.xml, etc.
+
+### Phase 2: Automatic Placeholder Replacement
+Once I detect your project type, I'll automatically replace all placeholders in the Claude Code templates with project-specific values.
+
+### Phase 3: Configuration Generation  
+I'll create a project-config.yaml file with all the detected values for future reference.
+
+### Phase 4: Completion Report
+Finally, I'll provide a summary of all the changes made and validate the adaptation was successful.
+
+Let me execute each phase now...

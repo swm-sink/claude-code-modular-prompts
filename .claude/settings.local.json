@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(chmod:*)",
+      "Bash(/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/scripts/detect-project.sh:*)",
+      "Bash(/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/scripts/replace-placeholders.sh:*)",
+      "Bash(/Users/smenssink/conductor/repo/claude-code-modular-prompts/casablanca/.claude/scripts/generate-config.sh:*)",
+      "Bash(rm:*)",
+      "Bash(mkdir:*)",
+      "Bash(./setup.sh:*)",
+      "Bash(grep:*)",
+      "Bash(mv:*)",
+      "Bash(echo:*)",
+      "Bash(python3:*)",
+      "Bash(for:*)",
+      "Bash(do echo \"--- $file ---\")",
+      "Bash(head:*)",
+      "Bash(done)",
+      "Bash(sed:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": []
+  }
+}

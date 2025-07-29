@@ -134,14 +134,7 @@ File: .claude/commands/core/query.md
 
 ## Comprehensive Placeholder Reference
 
-For a complete list of all 31 placeholder types used across 102 commands, see:
-**📖 `.claude/docs/development/PLACEHOLDER-REFERENCE.md`**
-
-This reference includes:
-- All 674 placeholder instances with usage counts
-- Domain-specific value examples
-- Replacement guidelines and best practices
-- Common mistakes to avoid
+The comprehensive placeholder reference is provided above with accurate counts for the current template library.
 
 ## Ready to Generate Your Guide?
 
