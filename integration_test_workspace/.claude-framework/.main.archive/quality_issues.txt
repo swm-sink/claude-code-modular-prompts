@@ -1,0 +1,99 @@
+Quality Assurance Issues
+======================
+
+1. Template non-compliance: claude_prompt_factory/commands/CLAUDE.md
+2. Template non-compliance: claude_prompt_factory/commands/research/academic-bridge.md
+3. Template non-compliance: claude_prompt_factory/commands/innovation/emerging-tech.md
+4. Template non-compliance: claude_prompt_factory/commands/ecosystem/marketplace-grow.md
+5. Template non-compliance: claude_prompt_factory/commands/database/db-backup.md
+6. Template non-compliance: claude_prompt_factory/commands/database/db-migrate.md
+7. Template non-compliance: claude_prompt_factory/commands/database/db-restore.md
+8. Template non-compliance: claude_prompt_factory/commands/documentation/docs-check.md
+9. Template non-compliance: claude_prompt_factory/commands/documentation/docs-update.md
+10. Template non-compliance: claude_prompt_factory/commands/context/prime.md
+11. Template non-compliance: claude_prompt_factory/commands/core/new.md
+12. Template non-compliance: claude_prompt_factory/commands/core/research.md
+13. Template non-compliance: claude_prompt_factory/commands/analysis/quality-report.md
+14. Template non-compliance: claude_prompt_factory/commands/analysis/quality-suggest.md
+15. Template non-compliance: claude_prompt_factory/commands/analysis/security.md
+16. Template non-compliance: claude_prompt_factory/commands/development/dev-refactor.md
+17. Template non-compliance: claude_prompt_factory/commands/development/dev-build.md
+18. Template non-compliance: claude_prompt_factory/commands/development/dev-test.md
+19. Template non-compliance: claude_prompt_factory/commands/development/dev-setup.md
+20. Template non-compliance: claude_prompt_factory/commands/meta/meta-improve.md
+21. Template non-compliance: claude_prompt_factory/commands/agents/dag-orchestrator.md
+22. Template non-compliance: claude_prompt_factory/commands/agents/researcher.md
+23. Template non-compliance: claude_prompt_factory/commands/agents/refactorer.md
+24. Template non-compliance: claude_prompt_factory/commands/agents/swarm.md
+25. Template non-compliance: claude_prompt_factory/commands/agentic/meta-learn.md
+26. Template non-compliance: claude_prompt_factory/commands/agentic/reason-tot.md
+27. Template non-compliance: claude_prompt_factory/commands/agentic/workflow-orchestrate.md
+28. Template non-compliance: claude_prompt_factory/commands/agentic/reason-react.md
+29. Template non-compliance: claude_prompt_factory/commands/agentic/auto-improve.md
+30. Template non-compliance: claude_prompt_factory/commands/agentic/constitutional-ai-framework.md
+31. Template non-compliance: claude_prompt_factory/commands/agentic/orchestrate-agents.md
+32. Template non-compliance: claude_prompt_factory/commands/agentic/optimize-prompt.md
+33. Template non-compliance: claude_prompt_factory/commands/utilities/deps-update.md
+34. Template non-compliance: claude_prompt_factory/commands/utilities/cache-clear.md
+35. Template non-compliance: claude_prompt_factory/commands/utilities/monitor-setup.md
+36. Template non-compliance: claude_prompt_factory/commands/utilities/code-clean.md
+37. Template non-compliance: claude_prompt_factory/commands/utilities/monitor-health.md
+38. Template non-compliance: claude_prompt_factory/commands/utilities/env-setup.md
+39. Template non-compliance: claude_prompt_factory/commands/utilities/ai-generate.md
+40. Template non-compliance: claude_prompt_factory/commands/utilities/ai-refactor.md
+41. Template non-compliance: claude_prompt_factory/commands/utilities/ai-explain.md
+42. Template non-compliance: claude_prompt_factory/commands/utilities/backup-create.md
+43. Template non-compliance: claude_prompt_factory/commands/utilities/ai-review.md
+44. Template non-compliance: claude_prompt_factory/commands/utilities/monitor-alerts.md
+45. Template non-compliance: claude_prompt_factory/commands/utilities/help.md
+46. Template non-compliance: claude_prompt_factory/commands/utilities/cloud-provision.md
+47. Template non-compliance: claude_prompt_factory/commands/utilities/enterprise-examples.md
+48. Template non-compliance: claude_prompt_factory/commands/utilities/ai-suggest.md
+49. Template non-compliance: claude_prompt_factory/commands/utilities/monitor-logs.md
+50. Template non-compliance: claude_prompt_factory/commands/utilities/code-format.md
+51. Template non-compliance: claude_prompt_factory/commands/utilities/code-lint.md
+52. Template non-compliance: claude_prompt_factory/commands/utilities/cost-analyze.md
+53. Template non-compliance: claude_prompt_factory/commands/utilities/monitor-dashboard.md
+54. Template non-compliance: claude_prompt_factory/commands/utilities/think-deep.md
+55. Template non-compliance: claude_prompt_factory/commands/testing/test-coverage.md
+56. Template non-compliance: claude_prompt_factory/commands/testing/test-report.md
+57. Template non-compliance: claude_prompt_factory/commands/deployment/auto-provision.md
+58. Template non-compliance: claude_prompt_factory/commands/deployment/cd-rollback.md
+59. Template non-compliance: claude_prompt_factory/commands/deployment/deploy.md
+60. Template non-compliance: claude_prompt_factory/commands/deployment/ci-setup.md
+61. Template non-compliance: claude_prompt_factory/commands/deployment/global-deploy.md
+62. Template non-compliance: claude_prompt_factory/commands/deployment/ci-run.md
+63. Template non-compliance: claude_prompt_factory/commands/workflow/pipeline-create.md
+64. Template non-compliance: claude_prompt_factory/commands/workflow/workflow.md
+65. Template non-compliance: claude_prompt_factory/commands/workflow/pipeline-run.md
+66. Template non-compliance: claude_prompt_factory/commands/workflow/flow-schedule.md
+67. Template non-compliance: claude_prompt_factory/commands/industry/industry-adapt.md
+68. Template non-compliance: claude_prompt_factory/commands/api/api-test.md
+69. Template non-compliance: claude_prompt_factory/commands/performance/optimize-framework.md
+70. Template non-compliance: claude_prompt_factory/commands/git/git-merge.md
+71. Template non-compliance: claude_prompt_factory/commands/git/git-commit.md
+72. Template non-compliance: claude_prompt_factory/commands/git/git-pr.md
+73. Template non-compliance: claude_prompt_factory/commands/git/git-history.md
+74. Template non-compliance: claude_prompt_factory/commands/session/session-save.md
+75. Template non-compliance: claude_prompt_factory/commands/session/session-compact.md
+76. Template non-compliance: claude_prompt_factory/commands/session/session-list.md
+77. Template non-compliance: claude_prompt_factory/commands/session/session-create.md
+78. Template non-compliance: claude_prompt_factory/commands/session/session-load.md
+79. Component structure issue: claude_prompt_factory/components/ecosystem/api-marketplace.md
+80. Component structure issue: claude_prompt_factory/components/quality/framework-validation.md
+81. Component structure issue: claude_prompt_factory/components/intelligence/cognitive-architecture.md
+82. Component structure issue: claude_prompt_factory/components/learning/meta-learning.md
+83. Component structure issue: claude_prompt_factory/components/learning/meta-learning-framework.md
+84. Component structure issue: claude_prompt_factory/components/optimization/opro-framework.md
+85. Component structure issue: claude_prompt_factory/components/optimization/dspy-framework.md
+86. Component structure issue: claude_prompt_factory/components/optimization/prompt-optimization.md
+87. Component structure issue: claude_prompt_factory/components/optimization/autoprompt-framework.md
+88. Component structure issue: claude_prompt_factory/components/optimization/textgrad-framework.md
+89. Component structure issue: claude_prompt_factory/components/meta/component-loader.md
+90. Component structure issue: claude_prompt_factory/components/reasoning/react-reasoning.md
+91. Component structure issue: claude_prompt_factory/components/reasoning/tree-of-thoughts.md
+92. Component structure issue: claude_prompt_factory/components/orchestration/agent-orchestration.md
+93. Component structure issue: claude_prompt_factory/components/orchestration/agent-swarm.md
+94. Component structure issue: claude_prompt_factory/components/performance/framework-optimization.md
+95. Component structure issue: claude_prompt_factory/components/performance/auto-scaling.md
+96. Missing README: claude_prompt_factory/commands/deployment

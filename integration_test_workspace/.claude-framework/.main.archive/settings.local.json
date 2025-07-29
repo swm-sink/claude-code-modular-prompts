@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.claudecode.io)",
+      "WebFetch(domain:cloudartisan.com)",
+      "Bash(sed:*)"
+    ],
+    "deny": []
+  }
+}

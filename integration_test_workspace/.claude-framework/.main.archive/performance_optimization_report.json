@@ -1,0 +1,33 @@
+{
+  "timestamp": "2025-01-27",
+  "framework_analysis": {
+    "total_commands": 162,
+    "total_components": 57,
+    "component_includes": 192,
+    "unique_components_used": 27
+  },
+  "hot_components": {
+    "components/reporting/generate-structured-report.md": 42
+  },
+  "caching_strategy": {
+    "cache_candidates": 1,
+    "estimated_cache_size": 0.9931640625,
+    "cache_hit_ratio_estimate": 0.75
+  },
+  "loading_optimization": {
+    "parallel_load_count": 0,
+    "lazy_load_count": 6,
+    "estimated_load_time_reduction": "40-60%"
+  },
+  "memory_optimization": {
+    "optimization_candidates": 5,
+    "potential_memory_savings": 80.7646484375
+  },
+  "recommendations": [
+    "Implement lazy loading for single-use components",
+    "Cache top 5 hot components for instant access",
+    "Parallelize loading of independent components",
+    "Consider component splitting for large, multi-purpose components",
+    "Implement intelligent preloading based on usage patterns"
+  ]
+}
