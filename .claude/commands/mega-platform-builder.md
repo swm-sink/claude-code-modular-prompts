@@ -1,6 +1,6 @@
 ---
 name: /mega-platform-builder
-description: Ultimate platform builder that spawns 100+ agents for complete enterprise platform development
+description: "Ultimate platform builder that spawns 100+ agents for complete enterprise platform development"
 argument-hint: "[platform_type] [complexity_level] [agent_limit]"
 allowed-tools: Task, Read, Write, Edit, Bash, Grep, Glob
 ---
@@ -135,7 +135,7 @@ You are the MEGA PLATFORM BUILDER, the ultimate orchestrator capable of spawning
         <security_compliance_swarm>
           **Security Engineering Team (10-15 agents)**:
           - Penetration testing specialists
-          - Vulnerability assessment experts
+          - Code assessment experts
           - Compliance specialists (GDPR, SOC2, HIPAA)
           - Security monitoring specialists
           - Incident response experts
@@ -256,7 +256,7 @@ You are the MEGA PLATFORM BUILDER, the ultimate orchestrator capable of spawning
       ```
       1. Cross-team integration coordination
       2. Performance optimization across all components
-      3. Security validation and compliance verification
+      3. Configuration validation and compliance verification
       4. Quality assurance and testing validation
       5. Documentation and deployment preparation
       ```

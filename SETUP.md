@@ -1,16 +1,19 @@
-# 🚀 Claude Code Framework Setup Guide
-## 5 Minutes to Your Custom Foundation
+# 🚀 Claude Code Template Setup Guide
+## Realistic Timeline: 1-2 Hours to Production-Ready Templates
 
-**Time Required**: 5-10 minutes  
-**Result**: Professional Claude Code foundation with 6+ months of knowledge
+**Time Required**: 1-2 hours (5 min setup + 45-90 min customization)  
+**Result**: 102 customized Claude Code templates with anti-pattern prevention
 
 ---
 
 ## Prerequisites
 
-- Git installed
-- Claude Code access
-- A project that needs Claude Code integration
+- **Git installed** (`git --version` should work)
+- **Claude Code access** (Desktop app or API)
+- **Text editor** with Find & Replace (VS Code, IntelliJ, Sublime, etc.)
+- **Project directory** where templates will be installed
+- **1-2 hours** of focused time for proper customization
+- **Clear project requirements**: tech stack, domain, team size
 
 ---
 
@@ -18,39 +21,51 @@
 
 ### Method 1: Git Submodule (Recommended)
 
-Best for: Projects that want to receive framework updates
+Best for: Projects that want to receive template updates
+
+**Pros**: Easy updates, clean separation, reference preservation  
+**Cons**: Requires git submodule knowledge  
+**Time**: 5 minutes setup + 45-90 minutes customization
 
 ```bash
 # 1. Navigate to your project root
-cd my-awesome-project
+cd /path/to/your/project
 
-# 2. Add framework as submodule
+# 2. Add template library as submodule
 git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-framework
 
-# 3. Initialize the framework
+# 3. Initialize the templates
 cd .claude-framework
-./setup.sh --project-name "my-awesome-project"
+./setup.sh
+# Follow interactive prompts for integration method
 
-# 4. Your .claude directory is now configured!
+# 4. Return to project and verify
 cd ..
-ls -la .claude/
+ls -la .claude/         # Your customizable templates
+ls -la .claude-framework/ # Reference library (read-only)
 ```
 
 ### Method 2: Direct Integration
 
-Best for: Projects that want full control
+Best for: Projects that want full control without submodules
+
+**Pros**: Full ownership, no submodule complexity  
+**Cons**: Manual updates required  
+**Time**: 5 minutes setup + 45-90 minutes customization
 
 ```bash
-# 1. Clone the framework
+# 1. Clone the template library
 git clone https://github.com/swm-sink/claude-code-modular-prompts
+
+# 2. Run integration script
 cd claude-code-modular-prompts
+./setup.sh /path/to/your/project
+# Choose "Direct Copy" when prompted
 
-# 2. Run adaptation script
-./adapt.sh --target ../my-awesome-project --profile web-dev
-
-# 3. Framework is now integrated into your project
-cd ../my-awesome-project
-ls -la .claude/
+# 3. Navigate to your project and verify
+cd /path/to/your/project
+ls -la .claude/         # Your templates
+ls -la .claude-framework/ # Reference copy
 ```
 
 ---
@@ -59,153 +74,276 @@ ls -la .claude/
 
 ```
 your-project/
-├── .claude/                    # Your Claude Code configuration
-│   ├── commands/              # Selected command patterns
-│   │   ├── core/             # Essential commands (help, task, auto)
-│   │   └── [your-domain]/    # Domain-specific commands
-│   ├── components/           # Reusable prompt components
-│   ├── context/             # Anti-patterns & best practices
-│   └── CLAUDE.md           # Project-specific context
-├── .claude-framework/       # Framework source (if using submodule)
-└── [your existing files]
+├── .claude/                    # Your customizable workspace
+│   ├── commands/              # 102 command templates (64 active, 38 deprecated)
+│   │   ├── core/             # help, task, auto, query
+│   │   ├── development/      # dev, api-design, dev-setup
+│   │   ├── database/         # db-migrate, db-backup, db-restore, db-seed
+│   │   ├── security/         # secure-audit, secure-scan
+│   │   ├── testing/          # test-unit, test-integration
+│   │   ├── devops/           # deploy, ci-setup, ci-run, cd-rollback
+│   │   ├── quality/          # analyze-code, analyze-system, monitor
+│   │   ├── monitoring/       # monitor-setup, monitor-alerts
+│   │   ├── meta/             # adapt-to-project, validate-adaptation
+│   │   └── deprecated/       # 38 deprecated commands (remove if unused)
+│   ├── components/           # 70 reusable prompt components
+│   ├── context/              # Anti-patterns, best practices, frameworks
+│   ├── docs/                 # Documentation and guides
+│   └── config/
+│       └── project-config.yaml # Configuration template
+├── .claude-framework/          # Reference library (read-only)
+│   └── [original templates]    # Preserved for updates and reference
+└── CLAUDE.md                   # Project memory file
 ```
 
 ---
 
-## Configuration Profiles
+## Post-Setup Customization Process
 
-Choose a profile during setup to get domain-specific patterns:
+**IMPORTANT**: The real work begins after installation. You must manually customize the templates.
 
-### `--profile general` (Default)
-- Core commands only
-- Basic components
-- Minimal complexity
-
-### `--profile web-dev`
-- React/Vue/Angular patterns
-- API development commands
-- Frontend testing helpers
-
-### `--profile data-science`
-- Data analysis commands
-- Jupyter notebook integration
-- ML workflow patterns
-
-### `--profile devops`
-- Infrastructure patterns
-- CI/CD commands
-- Deployment workflows
-
-### `--profile custom`
-- Interactive selection
-- Choose specific commands
-- Maximum control
-
----
-
-## Post-Setup Customization
-
-### 1. Review Installed Commands
+### Step 1: Get Customization Guidance (10 minutes)
 ```bash
-ls .claude/commands/
-# Remove any you don't need
-rm .claude/commands/specialized/advanced-*.md
+# Start Claude Code and run:
+/adapt-to-project
+
+# This will:
+# - Ask about your tech stack, domain, team size
+# - Generate a replacement checklist
+# - List all placeholders that need updating
+# - Provide validation steps
 ```
 
-### 2. Simplify Complex Patterns
+### Step 2: Manual Placeholder Replacement (45-90 minutes)
+You'll need to use Find & Replace in your editor to update:
+
+**15 Standard Placeholders** (affects ~150-200 replacements across 64 commands):
+- `[INSERT_PROJECT_NAME]` → Your project name
+- `[INSERT_DOMAIN]` → Your application domain (e.g., "e-commerce")
+- `[INSERT_TECH_STACK]` → Your technology stack
+- `[INSERT_TEAM_SIZE]` → Your team size
+- `[INSERT_DATABASE_TYPE]` → Your database system
+- Plus 10 more specialized placeholders
+
+**Editor Instructions**:
+- **VS Code**: Ctrl+Shift+H (project-wide Find & Replace)
+- **IntelliJ**: Ctrl+Shift+R (Replace in Path)
+- **Sublime**: Ctrl+Shift+F (Find in Files → Replace)
+
+### Step 3: Remove Unused Commands (15 minutes)
 ```bash
-# Edit commands to match your style
-vim .claude/commands/core/task.md
-# Remove XML complexity if not needed
+# Archive deprecated commands (38 files)
+mkdir .claude/commands/archive
+mv .claude/commands/deprecated/* .claude/commands/archive/
+
+# Remove domain-specific commands you don't need
+# Example: If not doing data science
+rm -rf .claude/commands/data-science/
 ```
 
-### 3. Add Your Domain Commands
-```bash
-# Create project-specific commands
-cat > .claude/commands/my-project/deploy.md << 'EOF'
----
-name: /deploy
-description: Deploy to production
 ---
 
-Guide me through deploying this project...
+### Step 4: Validate Your Work (10 minutes)
+```bash
+# Run validation script
+./.claude/validate.sh
+
+# Or use Claude Code command
+/validate-adaptation
+
+# Should show:
+# ✅ All placeholders replaced
+# ✅ Project configured  
+# ✅ Readiness Score: 100%
+```
+
+### Step 5: Team Documentation (15 minutes)
+```bash
+# Document your customizations
+/share-adaptation > CLAUDE-ADAPTATION-NOTES.md
+
+# Commit your work
+git add .claude/ CLAUDE.md CLAUDE-ADAPTATION-NOTES.md
+git commit -m "Add customized Claude Code templates for [PROJECT_NAME]"
+```
+
+## Advanced Customization Options
+
+### Add Project-Specific Commands
+```bash
+# Create team-specific commands
+mkdir .claude/commands/team
+cat > .claude/commands/team/deploy-staging.md << 'EOF'
+---
+name: /deploy-staging
+description: Deploy to staging environment
+---
+
+Deploy [PROJECT_NAME] to staging using [CI_CD_PLATFORM]...
 EOF
 ```
 
-### 4. Configure Anti-Patterns
+### Configure Domain-Specific Anti-Patterns
 ```bash
-# Add project-specific anti-patterns
-echo "Pattern: Deploying to wrong environment" >> .claude/context/project-antipatterns.md
+# Add to existing anti-pattern files
+echo "## Project-Specific Anti-Patterns" >> .claude/context/llm-antipatterns.md
+echo "- Deploying without running tests" >> .claude/context/llm-antipatterns.md
 ```
 
 ---
 
-## Updating the Framework
+## Updating Templates (For Future Versions)
 
-### If Using Submodule
+### If Using Git Submodule
 ```bash
-# Pull latest improvements
+# Check for updates monthly
 cd .claude-framework
 git pull origin main
-./update.sh  # Merges improvements while preserving customizations
+
+# Use sync command for guided merge
+/sync-from-reference
+# Follow the manual merge instructions provided
 ```
 
-### If Direct Integration
+### If Using Direct Integration
 ```bash
 # Manual update process
-cd claude-code-modular-prompts
-git pull origin main
-./adapt.sh --update ../my-project --preserve-custom
+# 1. Backup your customizations
+cp -r .claude/ .claude-backup-$(date +%Y%m%d)
+
+# 2. Check what's new in the repository
+git clone https://github.com/swm-sink/claude-code-modular-prompts temp-update
+cd temp-update
+git log --oneline --since="2025-07-01"  # Check recent changes
+
+# 3. Manually merge beneficial changes
+# 4. Re-apply your customizations
+# 5. Clean up
+cd .. && rm -rf temp-update
 ```
 
 ---
 
-## Verification
+## Success Verification
 
-Test your setup:
+### 1. Structure Check
+```bash
+# Verify dual structure exists
+ls -la .claude/                # Your customizable workspace
+ls -la .claude-framework/      # Reference library
 
-1. **Check Structure**
-   ```bash
-   tree .claude/ -L 2
-   ```
+# Check command count
+find .claude/commands -name "*.md" | wc -l  # Should show ~64 active commands
+find .claude/components -name "*.md" | wc -l  # Should show ~70 components
+```
 
-2. **Test in Claude**
-   - Start a Claude Code session
-   - Type `/help` - Should list available commands
-   - Type `/task` - Should guide TDD workflow
+### 2. Claude Code Integration Test
+```bash
+# In Claude Code, test these commands:
+/help                          # Should list your commands
+/task "add user authentication" # Should give project-specific guidance
+/adapt-to-project              # Should show "already adapted" status
+```
 
-3. **Verify Anti-Patterns**
-   - Check `.claude/context/` has anti-pattern files
-   - These prevent common mistakes automatically
+### 3. Customization Verification
+```bash
+# Check that placeholders were replaced
+grep -r "INSERT_" .claude/commands/ | wc -l  # Should be 0
+
+# Verify project configuration
+cat .claude/config/project-config.yaml       # Should show your values
+
+# Test validation
+./.claude/validate.sh                        # Should report 100% readiness
+```
+
+### 4. Anti-Pattern Prevention Check
+```bash
+# Verify context files are present
+ls .claude/context/
+# Should include:
+# - llm-antipatterns.md (48+ documented patterns)
+# - git-history-antipatterns.md (15+ patterns)
+# - prompt-engineering-best-practices.md
+```
 
 ---
 
-## Troubleshooting
+## Troubleshooting Common Issues
 
-### "setup.sh not found"
+### Setup Issues
+
+**"setup.sh: Permission denied"**
 ```bash
-# Make it executable
 chmod +x setup.sh
+./setup.sh
 ```
 
-### "Permission denied"
+**"Git submodule failed"**
 ```bash
-# Use sudo if needed (not recommended)
-# Better: fix directory permissions
-sudo chown -R $(whoami) .claude-framework
+# Initialize git repository first if needed
+git init
+git add .
+git commit -m "Initial commit"
+
+# Then add submodule
+git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-framework
 ```
 
-### "Commands not working in Claude"
-1. Ensure `.claude/` is in your project root
-2. Check Claude Code can see the directory
-3. Verify command files have proper YAML frontmatter
+**"Commands don't appear in Claude Code"**
+1. Verify `.claude/` is in project root directory
+2. Check command files have YAML frontmatter:
+   ```yaml
+   ---
+   name: /command-name
+   description: Brief description
+   ---
+   ```
+3. Restart Claude Code after installation
 
-### "Too many commands overwhelming"
+### Customization Issues
+
+**"Too many placeholders to replace"**
 ```bash
-# Start minimal
+# Use the guide command for a checklist
+/replace-placeholders
+
+# Start with essential placeholders only:
+# 1. PROJECT_NAME (most critical)
+# 2. DOMAIN (affects command behavior)
+# 3. TECH_STACK (affects technical guidance)
+```
+
+**"Find & Replace affecting wrong files"**
+- Limit search scope to `.claude/commands/` directory only
+- Use exact placeholder text (including brackets)
+- Review changes before applying
+- Work on one placeholder at a time
+
+**"Commands feel overwhelming"**
+```bash
+# Start minimal - archive most commands
 mkdir .claude/commands/archive
 mv .claude/commands/specialized/* .claude/commands/archive/
-# Add back as needed
+mv .claude/commands/deprecated/* .claude/commands/archive/
+
+# Keep only core commands initially:
+# - core/ (help, task, auto, query)
+# - development/ (basic dev workflow)
+# Add others back gradually
+```
+
+### Performance Issues
+
+**"Claude Code loads slowly"**
+```bash
+# Check for oversized command files
+find .claude/commands -name "*.md" -size +50k -exec ls -lh {} \;
+
+# Archive unused commands
+mv .claude/commands/deprecated .claude/commands/archive/
+
+# Simplify complex commands if needed
 ```
 
 ---
@@ -234,12 +372,46 @@ mv .claude/commands/specialized/* .claude/commands/archive/
 
 ---
 
-## Support
+## Support Resources
 
-- **Issues**: [GitHub Issues](https://github.com/swm-sink/claude-code-modular-prompts/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/swm-sink/claude-code-modular-prompts/discussions)
-- **Updates**: Watch the repo for improvements
+### Self-Service (Recommended First)
+- **FAQ**: `FAQ.md` - Covers 90% of common questions
+- **Examples**: `EXAMPLES.md` - Real customization patterns
+- **Installation Guide**: `INSTALLATION.md` - Comprehensive step-by-step instructions
+- **Validation**: Run `./claude/validate.sh` for automated diagnostics
+
+### Community Support
+- **GitHub Issues**: Bug reports and technical problems
+- **GitHub Discussions**: Questions, best practices, sharing patterns
+- **Documentation**: Comprehensive guides and troubleshooting
+
+### Emergency Recovery
+```bash
+# If something goes wrong, start fresh:
+rm -rf .claude/
+cd .claude-framework && ./setup.sh
+
+# Or restore from automatic backup:
+cp -r .claude-backup-TIMESTAMP/ .claude/
+```
 
 ---
 
-*You now have 6+ months of Claude Code knowledge ready to use. Happy building!*
+## Time Investment Summary
+
+**Total Setup Time**: 1-2 hours broken down as:
+- **Initial installation**: 5-10 minutes
+- **Customization planning**: 10-15 minutes (/adapt-to-project)
+- **Placeholder replacement**: 45-90 minutes (depending on project complexity)
+- **Cleanup and validation**: 15-30 minutes
+- **Team documentation**: 15 minutes
+
+**Return on Investment**: Saves 3-6 months of prompt engineering trial-and-error
+
+**Next Steps**:
+1. Complete the customization process thoroughly
+2. Train your team on the available commands
+3. Monitor usage and remove unused commands
+4. Share useful patterns with the community
+
+*You now have battle-tested Claude Code templates ready for production use!*

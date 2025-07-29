@@ -1,6 +1,6 @@
 ---
 name: /project
-description: Comprehensive project management suite with setup, provisioning, workflow orchestration, scheduling, tracking, and deployment operations
+description: "Comprehensive project management suite with setup, provisioning, workflow orchestration, scheduling, tracking, and deployment operations"
 argument-hint: "[mode] [target] [options]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
@@ -283,7 +283,7 @@ Unified project management system for [INSERT_DOMAIN] projects, consolidating se
           - `tests`: Test suite execution and validation
           - `deploy`: Deployment pipeline execution
           - `build`: Build process execution and artifact generation
-          - `security`: Security scanning and validation
+          - `analysis`: Code analysis and validation
           - `performance`: Performance testing and benchmarking
           
           Implementation:

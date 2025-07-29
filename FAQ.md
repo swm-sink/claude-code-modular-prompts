@@ -3,7 +3,14 @@
 ## Getting Started
 
 ### Q: How long does setup actually take?
-**A: 2-5 minutes** for basic setup, 10-15 minutes for full customization.
+**A: 1-2 hours total** - 5 minutes for installation, 45-90 minutes for proper customization.
+
+**Realistic Timeline Breakdown:**
+- Installation: 5-10 minutes
+- Getting guidance (/adapt-to-project): 10 minutes
+- Manual placeholder replacement: 45-90 minutes
+- Removing unused commands: 15 minutes
+- Validation and documentation: 15 minutes
 
 ```bash
 # Basic setup (2 minutes)
@@ -23,7 +30,14 @@ Options when existing .claude detected:
 3. **Cancel** - No changes made
 
 ### Q: Do I need to use all 102 commands?
-**A: No! Start with 5-10 core commands from the 64 active ones.**
+**A: No! Start with core commands, then add gradually based on need.**
+
+**Recommended Starting Set (8-12 commands):**
+- Core: `/help`, `/task`, `/auto`, `/query`
+- Development: `/dev`, `/api-design`
+- Database: `/db-migrate` (if using databases)
+- Testing: `/test-unit` (if writing tests)
+- Archive the rest initially, add back as needed
 
 Profiles available:
 - `general` - Just core commands (help, task, auto, query, dev)
@@ -31,16 +45,27 @@ Profiles available:
 - `data-science` - Analysis and ML workflows
 - `devops` - Infrastructure and CI/CD
 
-### Q: What if the framework doesn't work for my use case?
-**A: Customize or simplify patterns as needed.**
+### Q: What if the templates don't fit my project?
+**A: The templates are designed to be customized - that's the whole point.**
 
+**Customization Options:**
 ```bash
-# Remove complex XML structures
+# 1. Simplify complex patterns
 find .claude/commands -name "*.md" -exec sed -i 's/<[^>]*>//g' {} \;
 
-# Add your own commands
-mkdir .claude/commands/my-project
-# Create custom commands for your domain
+# 2. Add project-specific commands
+mkdir .claude/commands/team
+cat > .claude/commands/team/custom-deploy.md << 'EOF'
+---
+name: /deploy-prod
+description: Deploy to production with safety checks
+---
+Guide me through our production deployment process...
+EOF
+
+# 3. Remove entire categories you don't need
+rm -rf .claude/commands/data-science/  # If not doing ML/analytics
+rm -rf .claude/commands/specialized/   # If not using advanced features
 ```
 
 ## Technical Questions
@@ -84,13 +109,24 @@ The framework:
 ## Usage Questions
 
 ### Q: How do I know if it's working?
-**A: Test with Claude Code after setup.**
+**A: Run comprehensive tests after customization.**
 
+**Verification Checklist:**
 ```bash
-# After setup, in Claude Code conversation:
-/help          # Should list available commands
-/task          # Should start TDD workflow
-/auto "debug this error"  # Should route intelligently
+# 1. Structure verification
+ls -la .claude/commands/core/  # Should show help.md, task.md, auto.md, query.md
+
+# 2. Placeholder verification  
+grep -r "INSERT_" .claude/commands/ | wc -l  # Should be 0 after customization
+
+# 3. Claude Code integration test
+# In Claude Code conversation:
+/help                           # Should list your commands
+/task "implement user login"    # Should provide project-specific guidance
+/validate-adaptation            # Should report 100% completion
+
+# 4. Configuration verification
+cat .claude/config/project-config.yaml  # Should show your project values
 ```
 
 ### Q: Can I use this with teams?
@@ -106,17 +142,34 @@ cd .claude-framework && ./setup.sh
 ```
 
 ### Q: What if I want to simplify the complex patterns?
-**A: Multiple simplification options available.**
+**A: Multiple simplification strategies available.**
 
+**Option 1: Start Minimal**
 ```bash
-# Remove XML complexity
-./adapt.sh --simplify
+# Archive most commands, keep only essentials
+mkdir .claude/commands/archive
+mv .claude/commands/specialized/* .claude/commands/archive/
+mv .claude/commands/deprecated/* .claude/commands/archive/
 
-# Manual simplification
-find .claude -name "*.md" -exec sed -i 's/<include.*>//g' {} \;
+# Keep only:
+# - core/ (help, task, auto, query)
+# - development/ (basic workflow)
+# Add others back gradually
+```
 
-# Start with minimal profile
-./setup.sh --profile general
+**Option 2: Simplify Command Content**
+```bash
+# Remove complex XML/structured patterns
+find .claude/commands -name "*.md" -exec sed -i 's/<[^>]*>//g' {} \;
+
+# Simplify verbose commands manually
+vim .claude/commands/core/task.md  # Edit to your preferred style
+```
+
+**Option 3: Use Selective Installation**
+```bash
+# During setup, choose "Selective Import"
+# Pick only the command categories you need
 ```
 
 ### Q: How do I add my own commands?
@@ -186,25 +239,72 @@ chmod +x setup.sh
 ```
 
 ### Q: Commands don't show up in Claude Code
-**A: Check .claude directory location and command format.**
+**A: Systematic troubleshooting for command visibility.**
 
-Requirements:
-- ✅ `.claude/` in project root
-- ✅ Commands have proper YAML frontmatter
-- ✅ Command files end in `.md`
-- ✅ YAML includes `name: /command-name`
+**Step-by-Step Debugging:**
+```bash
+# 1. Check directory location
+pwd  # Should be your project root
+ls -la .claude/  # Should exist and contain commands/
+
+# 2. Verify command structure
+ls .claude/commands/core/  # Should show .md files
+head -10 .claude/commands/core/help.md  # Should show YAML frontmatter
+
+# 3. Check YAML format
+grep -A 5 "^---" .claude/commands/core/help.md
+# Should show:
+# ---
+# name: /help
+# description: ...
+# ---
+
+# 4. Restart Claude Code
+# Close and reopen Claude Code completely
+
+# 5. Test with basic command
+# In Claude Code, try: /help
+```
+
+**Common Fixes:**
+- Ensure `.claude/` is in project root (not subdirectory)
+- Check YAML frontmatter is properly formatted
+- Verify files end with `.md` extension
+- Make sure command names start with `/`
+- Restart Claude Code after installation
 
 ### Q: Too many commands, feels overwhelming
-**A: Start minimal and add gradually.**
+**A: Use the "Start Small, Grow Gradually" approach.**
 
+**Phase 1: Minimal Essential Set (Week 1)**
 ```bash
-# Archive most commands
-mkdir .claude/commands/archive
-mv .claude/commands/specialized/* .claude/commands/archive/
+# Archive everything except essentials
+mkdir .claude/commands/{archive,team-approved}
 mv .claude/commands/deprecated/* .claude/commands/archive/
+mv .claude/commands/specialized/* .claude/commands/archive/
 
-# Keep only core
-# Add back one at a time as needed
+# Keep only these 6 commands initially:
+# .claude/commands/core/help.md
+# .claude/commands/core/task.md  
+# .claude/commands/core/auto.md
+# .claude/commands/core/query.md
+# .claude/commands/development/dev.md
+# .claude/commands/meta/adapt-to-project.md
+```
+
+**Phase 2: Add by Need (Weeks 2-4)**
+```bash
+# When team asks "How do I...?", add relevant commands:
+mv .claude/commands/archive/database/db-migrate.md .claude/commands/database/
+mv .claude/commands/archive/testing/test-unit.md .claude/commands/testing/
+# etc.
+```
+
+**Phase 3: Team Customization (Month 2+)**
+```bash
+# Create team-specific commands based on common questions
+mkdir .claude/commands/team
+# Add custom commands for your specific workflows
 ```
 
 ### Q: Setup fails with "directory not found"
@@ -259,15 +359,47 @@ git pull
 ```
 
 ### Q: Can I use this in CI/CD?
-**A: Yes, for automated Claude Code tasks.**
+**A: Yes, but focus on team consistency rather than automation.**
 
+**Team Onboarding in CI/CD:**
 ```yaml
-# Example GitHub Action
-- name: Setup Claude Code Framework
+# .github/workflows/onboard-developer.yml
+name: Developer Onboarding
+on:
+  schedule:
+    - cron: '0 9 * * MON'  # Weekly reminder
+
+jobs:
+  check-claude-setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      
+      - name: Verify Claude Code Templates
+        run: |
+          # Check that templates are properly customized
+          if grep -r "INSERT_" .claude/commands/; then
+            echo "❌ Uncustomized placeholders found"
+            echo "Run /adapt-to-project to complete setup"
+            exit 1
+          fi
+          
+          # Validate structure
+          ./.claude/validate.sh
+          
+          echo "✅ Claude Code templates properly configured"
+```
+
+**Documentation Generation:**
+```yaml
+# Generate team documentation from templates
+- name: Update Claude Code Documentation
   run: |
-    git submodule update --init
-    cd .claude-framework
-    ./setup.sh --profile devops
+    # Create team guide from current templates
+    echo "# Team Claude Code Commands" > CLAUDE-TEAM-GUIDE.md
+    find .claude/commands -name "*.md" -not -path "*/archive/*" -exec basename {} .md \; | sort >> CLAUDE-TEAM-GUIDE.md
 ```
 
 ## Support
@@ -280,32 +412,160 @@ git pull
 - **Documentation** - SETUP.md, ADAPTATION-GUIDE.md
 - **Examples** - EXAMPLES.md with real usage patterns
 
-### Q: How often is the framework updated?
-**A: Regularly, based on community feedback.**
+### Q: How often are templates updated?
+**A: Monthly releases with continuous improvements.**
 
-Updates include:
-- New command patterns
-- Improved existing patterns
-- Bug fixes
-- New domain profiles
-- Community contributions
+**Update Frequency:**
+- **Bug fixes**: As needed (usually within days)
+- **New commands**: Monthly releases
+- **Major improvements**: Quarterly
+- **Community contributions**: Integrated weekly
+
+**What Gets Updated:**
+- **Command improvements**: Better prompts, clearer instructions
+- **New templates**: Community-contributed commands
+- **Anti-pattern additions**: New failure modes discovered
+- **Documentation**: Better examples and troubleshooting
+- **Component library**: New reusable prompt components
+
+**Staying Updated:**
+```bash
+# For git submodule users (recommended monthly):
+cd .claude-framework
+git pull origin main
+/sync-from-reference  # Get guided merge instructions
+
+# For direct installation users:
+# Check releases page quarterly:
+# https://github.com/swm-sink/claude-code-modular-prompts/releases
+```
+
+**Breaking Changes Policy:**
+- No breaking changes to existing command interfaces
+- Deprecated commands are clearly marked
+- Migration guides provided for major updates
+- Your customizations are always preserved
 
 ### Q: What's the roadmap?
-**A: Focus on user success and community growth.**
+**A: Community-driven improvements based on real usage.**
 
-Next priorities:
-1. More domain-specific profiles
-2. Video tutorials
-3. Case studies from users
-4. Integration with Claude ecosystem
-5. Community contribution tools
+**Current Focus (2025 Q3-Q4):**
+1. **Better onboarding experience**
+   - Improved validation and error messages
+   - Video walkthrough of customization process
+   - More detailed troubleshooting guides
+
+2. **Template quality improvements**
+   - Simplify overly complex commands
+   - Add more domain-specific examples
+   - Better anti-pattern documentation
+
+3. **Community features**
+   - Template sharing mechanism (/share-adaptation improvements)
+   - Community-contributed command library
+   - Success stories and case studies
+
+4. **Developer experience**
+   - Better validation tooling
+   - Automated placeholder detection
+   - IDE integration guides
+
+**Long-term Vision:**
+- Industry-specific template collections (fintech, healthcare, etc.)
+- Integration with popular development tools
+- Advanced prompt engineering patterns
+- Educational content and workshops
+
+**Contribution Opportunities:**
+- Share your customized templates with the community
+- Report bugs and suggest improvements  
+- Contribute domain-specific commands
+- Help with documentation and examples
+
+---
+
+## Emergency Troubleshooting
+
+### Q: Everything is broken, how do I start over?
+**A: Complete reset procedure:**
+
+```bash
+# 1. Backup any custom commands you created
+cp -r .claude/commands/team/ ~/claude-backup-$(date +%Y%m%d) 2>/dev/null || true
+cp -r .claude/commands/my-project/ ~/claude-backup-$(date +%Y%m%d) 2>/dev/null || true
+
+# 2. Complete reset
+rm -rf .claude/
+
+# 3. Fresh installation
+cd .claude-framework  # If using submodules
+./setup.sh
+# OR
+git clone https://github.com/swm-sink/claude-code-modular-prompts temp-fresh
+cd temp-fresh
+./setup.sh /path/to/your/project
+
+# 4. Start customization from scratch
+/adapt-to-project
+```
+
+### Q: My team member can't get it working
+**A: Team troubleshooting checklist:**
+
+```bash
+# 1. Verify they're in the right directory
+cd /path/to/your/project
+pwd  # Should show project root with .claude/ directory
+
+# 2. For submodule users
+git submodule update --init --recursive
+cd .claude-framework
+git pull origin main
+
+# 3. Check their Claude Code installation
+# They should be able to see .claude/ directory in Claude Code interface
+
+# 4. Test with minimal command
+# In Claude Code: /help
+# Should show command list
+
+# 5. If still failing, compare with working setup
+diff -r .claude/ /path/to/working-teammate/.claude/
+```
 
 ---
 
 ## Still have questions?
 
-- **[GitHub Discussions](https://github.com/swm-sink/claude-code-modular-prompts/discussions)** - Ask the community
-- **[GitHub Issues](https://github.com/swm-sink/claude-code-modular-prompts/issues)** - Report bugs
-- **[Examples](EXAMPLES.md)** - See real usage patterns *(coming soon)*
+### Self-Service (Try First)
+1. **Check validation**: Run `./.claude/validate.sh` for automated diagnostics
+2. **Review examples**: See `EXAMPLES.md` for real customization patterns
+3. **Check installation**: Review `INSTALLATION.md` for comprehensive setup guide
 
-**Remember**: The goal is to save you time. If something isn't working, let us know and we'll fix it!
+### Community Support
+- **[GitHub Discussions](https://github.com/swm-sink/claude-code-modular-prompts/discussions)** - Ask the community
+- **[GitHub Issues](https://github.com/swm-sink/claude-code-modular-prompts/issues)** - Report bugs and feature requests
+- **Search existing issues** - Your question might already be answered
+
+### Creating Good Support Requests
+
+**For bug reports, include:**
+```bash
+# System information
+uname -a
+git --version
+ls -la .claude/
+
+# Error details
+# Paste the exact error message
+# Include steps to reproduce
+# Show what you expected vs. what happened
+```
+
+**For setup questions, include:**
+- Which installation method you used (submodule/direct/selective)
+- How far you got in the process
+- Output of validation script: `./.claude/validate.sh`
+- Your project type (web app, data science, etc.)
+
+**Remember**: The goal is to save you months of prompt engineering work. If something isn't working, we want to fix it quickly so you can focus on building your project!

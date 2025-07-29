@@ -1,6 +1,6 @@
 ---
 name: /deploy
-description: Deploy [INSERT_PROJECT_NAME] to [INSERT_DEPLOYMENT_TARGET] using [INSERT_CI_CD_PLATFORM]
+description: "Deploy [INSERT_PROJECT_NAME] to [INSERT_DEPLOYMENT_TARGET] using [INSERT_CI_CD_PLATFORM]"
 usage: /deploy [environment] [--strategy blue-green|canary|rolling]
 category: devops
 tools: Bash, Read, Write, Edit
@@ -23,7 +23,7 @@ security_level: CRITICAL
 - Deployment error messages sanitized to prevent credential leakage
 - Real-time feedback when protection activates
 
-I'll help you deploy **[INSERT_PROJECT_NAME]** to **[INSERT_DEPLOYMENT_TARGET]** using your configured **[INSERT_CI_CD_PLATFORM]** pipeline with comprehensive security validation.
+I'll help you deploy **[INSERT_PROJECT_NAME]** to **[INSERT_DEPLOYMENT_TARGET]** using your configured **[INSERT_CI_CD_PLATFORM]** pipeline with proper validation.
 
 ## Deployment Configuration
 
@@ -40,7 +40,7 @@ I'll help you deploy **[INSERT_PROJECT_NAME]** to **[INSERT_DEPLOYMENT_TARGET]**
 Based on your team size and [INSERT_WORKFLOW_TYPE] workflow:
 
 #### Blue-Green Deployment
-Zero-downtime deployment for [INSERT_USER_BASE] (with security validation):
+Zero-downtime deployment for [INSERT_USER_BASE] (with validation):
 ```bash
 /deploy production --strategy blue-green
 # SECURITY: Environment 'production' validated using validateEnvironmentName()
@@ -49,7 +49,7 @@ Zero-downtime deployment for [INSERT_USER_BASE] (with security validation):
 ```
 
 #### Canary Deployment
-Gradual rollout for [INSERT_PERFORMANCE_PRIORITY] systems (with security validation):
+Gradual rollout for [INSERT_PERFORMANCE_PRIORITY] systems (with validation):
 ```bash
 /deploy production --strategy canary --percentage 10
 # SECURITY: Environment validated, strategy validated, percentage value sanitized
@@ -57,26 +57,26 @@ Gradual rollout for [INSERT_PERFORMANCE_PRIORITY] systems (with security validat
 ```
 
 #### Rolling Update
-Standard deployment for [INSERT_DEPLOYMENT_TARGET] (with security validation):
+Standard deployment for [INSERT_DEPLOYMENT_TARGET] (with validation):
 ```bash
 /deploy staging --strategy rolling
 # SECURITY: Environment 'staging' validated using validateEnvironmentName()
 # SECURITY: Rolling update commands validated against DEPLOY_ALLOWED_COMMANDS
 ```
 
-## Pre-Deployment Checks - SECURITY ENHANCED
+## Pre-Deployment Checks
 
-Your [INSERT_SECURITY_LEVEL] security level requires:
-- **MANDATORY**: Input validation using security wrapper functions
-- **MANDATORY**: Environment name validation using validateEnvironmentName()
-- **MANDATORY**: Deployment strategy validation against allowed strategies
-- **MANDATORY**: All deployment commands validated against DEPLOY_ALLOWED_COMMANDS allowlist
-- Security scanning with sanitized results
-- Dependency vulnerability check with secure reporting
-- Configuration validation with path traversal prevention
-- Health check endpoints with sanitized responses
-- **MANDATORY**: Credential protection and masking
-- **MANDATORY**: Error message sanitization
+Your [INSERT_SECURITY_LEVEL] level requires:
+- Input validation
+- Environment name validation
+- Deployment strategy validation
+- Command allowlist validation
+- Code analysis with results
+- Dependency compatibility check with reporting
+- Configuration validation
+- Health check endpoints
+- Credential protection
+- Error message handling
 
 ## Environment-Specific Settings
 
@@ -91,7 +91,7 @@ Your [INSERT_SECURITY_LEVEL] security level requires:
 Your deployment pipeline includes:
 - Build stage for [INSERT_TECH_STACK]
 - Test execution with [INSERT_TESTING_FRAMEWORK]
-- Security scanning
+- Code analysis
 - Deployment automation
 - Post-deployment validation
 
@@ -111,12 +111,12 @@ Post-deployment for [INSERT_PROJECT_NAME]:
 - Performance baselines
 - User experience tracking
 
-**SECURITY EXECUTION PROCESS with Enhanced Credential Protection:**
+**DEPLOYMENT EXECUTION PROCESS:**
 
-1. **Input Validation**: All deployment parameters validated using security wrapper
-2. **Environment Validation**: Environment name validated using validateEnvironmentName()
-3. **Strategy Validation**: Deployment strategy validated against security policies
-4. **Command Validation**: All deployment commands validated against DEPLOY_ALLOWED_COMMANDS
+1. **Input Validation**: All deployment parameters validated
+2. **Environment Validation**: Environment name validated
+3. **Strategy Validation**: Deployment strategy validated against policies
+4. **Command Validation**: All deployment commands validated against allowlist
 5. **ENHANCED CREDENTIAL PROTECTION**: 
    - Pre-execution: Scan all command arguments for credentials (13 patterns)
    - During execution: Protect streaming output from kubectl, docker, helm, terraform

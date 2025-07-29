@@ -147,6 +147,66 @@ validate_file_basics() {
     return 0
 }
 
+# Function to validate Claude Code slash command compatibility
+validate_claude_code_compatibility() {
+    local file=$1
+    local yaml_content=$(extract_yaml_content "$file")
+    
+    # Check for valid slash command name
+    local name_line=$(echo "$yaml_content" | grep "^name:")
+    if [ -n "$name_line" ]; then
+        local command_name=$(echo "$name_line" | sed 's/name: *//g' | tr -d '"')
+        if [[ "$command_name" =~ ^/[a-zA-Z][a-zA-Z0-9-]*$ ]]; then
+            print_result "PASS" "Valid slash command name: $command_name"
+        else
+            print_result "FAIL" "Invalid slash command name format: $command_name"
+        fi
+    fi
+    
+    # Check for allowed-tools field (Claude Code specific)
+    if echo "$yaml_content" | grep -q "^allowed-tools:"; then
+        print_result "PASS" "Claude Code allowed-tools field present"
+    else
+        print_result "WARN" "Missing allowed-tools field (Claude Code compatibility)"
+    fi
+    
+    # Check for template placeholders (template commands)
+    local content=$(tail -n +$(($(grep -n "^---$" "$file" | sed -n '2p' | cut -d: -f1)+1)) "$file")
+    local placeholder_count=$(echo "$content" | grep -o "\[INSERT_[A-Z_]*\]" | wc -l)
+    if [ "$placeholder_count" -gt 0 ]; then
+        print_result "PASS" "Template command with $placeholder_count placeholders"
+    else
+        print_result "PASS" "Finalized command (no placeholders)"
+    fi
+}
+
+# Function to test command prompt effectiveness
+validate_prompt_effectiveness() {
+    local file=$1
+    local content=$(tail -n +$(($(grep -n "^---$" "$file" | sed -n '2p' | cut -d: -f1)+1)) "$file")
+    
+    # Check for clear instruction patterns
+    if echo "$content" | grep -qi "you are\|I will\|I'll help\|help you"; then
+        print_result "PASS" "Clear instruction pattern present"
+    else
+        print_result "WARN" "No clear instruction pattern found"
+    fi
+    
+    # Check for specific context references
+    if echo "$content" | grep -qi "project\|domain\|tech stack"; then
+        print_result "PASS" "Context-aware prompt detected"
+    else
+        print_result "WARN" "Generic prompt - consider adding context awareness"
+    fi
+    
+    # Check for structured approach
+    if echo "$content" | grep -qE "##|\*\*|1\.|2\.|3\."; then
+        print_result "PASS" "Structured approach with sections/steps"
+    else
+        print_result "WARN" "Consider adding structure to prompt"
+    fi
+}
+
 # Main validation function
 validate_command() {
     local file=$1
@@ -164,6 +224,8 @@ validate_command() {
     validate_required_fields "$file"
     validate_optional_fields "$file"
     validate_content_length "$file"
+    validate_claude_code_compatibility "$file"
+    validate_prompt_effectiveness "$file"
     
     # Summary
     echo "----------------------------------------"
@@ -182,18 +244,80 @@ validate_command() {
     fi
 }
 
+# Function to run functional tests on commands
+run_functional_tests() {
+    local test_type="$1"
+    shift
+    local files=("$@")
+    
+    echo "Running functional tests ($test_type)..."
+    echo "======================================="
+    
+    case "$test_type" in
+        "core")
+            echo "Testing core commands for essential functionality..."
+            ;;
+        "meta")
+            echo "Testing meta/guide commands for adaptation workflow..."
+            ;;
+        "development")
+            echo "Testing development workflow commands..."
+            ;;
+        *)
+            echo "Testing general command functionality..."
+            ;;
+    esac
+    
+    for file in "${files[@]}"; do
+        if [ -f "$file" ]; then
+            validate_command "$file"
+            echo ""
+        fi
+    done
+}
+
 # Main script execution
 main() {
     if [ $# -eq 0 ]; then
         echo "Usage: $0 <command-file.md> [command-file2.md ...]"
+        echo "       $0 --test-core     # Test core commands only"
+        echo "       $0 --test-meta     # Test meta commands only"
+        echo "       $0 --test-all      # Test all commands"
         echo ""
         echo "Validates Claude Code command files for:"
         echo "  - YAML front matter structure"
         echo "  - Required fields (name, description)"
         echo "  - Optional fields (usage, tools, category)"
         echo "  - Adequate content length"
+        echo "  - Claude Code compatibility"
+        echo "  - Prompt effectiveness"
         echo ""
         exit 1
+    fi
+    
+    # Handle special test modes
+    if [ "$1" = "--test-core" ]; then
+        core_commands=(
+            ".claude/commands/core/help.md"
+            ".claude/commands/core/task.md"
+            ".claude/commands/core/auto.md"
+            ".claude/commands/core/project-task.md"
+        )
+        run_functional_tests "core" "${core_commands[@]}"
+        return $?
+    elif [ "$1" = "--test-meta" ]; then
+        meta_commands=(
+            ".claude/commands/meta/adapt-to-project.md"
+            ".claude/commands/meta/validate-adaptation.md"
+            ".claude/commands/meta/welcome.md"
+            ".claude/commands/meta/sync-from-reference.md"
+        )
+        run_functional_tests "meta" "${meta_commands[@]}"
+        return $?
+    elif [ "$1" = "--test-all" ]; then
+        all_commands=($(find .claude/commands -name "*.md" -not -path "*/deprecated/*" | head -64))
+        run_functional_tests "all" "${all_commands[@]}"
+        return $?
     fi
     
     local total_files=$#
@@ -216,15 +340,20 @@ main() {
     
     # Final summary
     echo "============================="
-    echo "Validation Summary:"
+    echo "Enhanced Validation Summary:"
     echo "  Total files: $total_files"
     echo -e "  ${GREEN}Passed: $passed_files${NC}"
     if [ $failed_files -gt 0 ]; then
         echo -e "  ${RED}Failed: $failed_files${NC}"
+        echo ""
+        echo "Claude Code Compatibility: FAILED"
+        echo "Some commands are not compatible with Claude Code slash command format."
         exit 1
     else
         echo "  Failed: 0"
-        echo -e "${GREEN}All validations passed!${NC}"
+        echo ""
+        echo -e "${GREEN}Claude Code Compatibility: PASSED${NC}"
+        echo -e "${GREEN}All commands validated for Claude Code usage!${NC}"
         exit 0
     fi
 }

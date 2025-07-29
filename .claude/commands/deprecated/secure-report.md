@@ -1,6 +1,6 @@
 ---
 name: /secure-report
-description: Comprehensive security reporting with metrics, compliance status, and remediation tracking
+description: "Project analysis reporting with metrics, status tracking, and improvement recommendations"
 argument-hint: "[report_type] [format]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 deprecated: true
@@ -8,7 +8,7 @@ deprecation-date: 2025-07-25
 removal-date: 2025-08-25
 replacement: "/secure-manage report"
 ---
-# /secure report - Security Reporting System
+# /secure report - Project Analysis Reporting
 
 ⚠️ **DEPRECATED COMMAND** ⚠️
 
@@ -20,17 +20,17 @@ This command has been consolidated into the new `/secure-manage` command with `r
 
 ---
 
-Advanced security reporting with comprehensive metrics, compliance tracking, and executive summaries.
+Project analysis reporting with comprehensive metrics, status tracking, and summary reports.
 ## Usage
 ```bash
-/secure report compliance            # Compliance status report
-/secure report vulnerabilities      # Vulnerability assessment report  
+/secure report compliance            # Configuration compliance report
+/secure report patterns             # Code pattern analysis report  
 /secure report executive --format pdf # Executive summary in PDF
 ```
 <command_file>
   <metadata>
     <name>/secure report</name>
-    <purpose>Generates comprehensive security reports with trends, remediation status, and compliance insights.</purpose>
+    <purpose>Generates comprehensive project analysis reports with trends, improvement status, and configuration insights.</purpose>
     <usage>
       <![CDATA[
       /secure report <timeframe="30d">
@@ -61,24 +61,24 @@ Advanced security reporting with comprehensive metrics, compliance tracking, and
       <include>components/interaction/progress-reporting.md</include>
       <!-- Command-specific components -->
       <include>components/reporting/generate-structured-report.md</include>
-      You are a security analyst. The user wants a comprehensive report on the project's security posture.
-      1.  **Read Configuration**: Read `PROJECT_CONFIG.xml` to get the configured security scanning and monitoring service integrations.
-      2.  **Gather Security Data**:
-          *   Fetch vulnerability and compliance data from the configured services for the specified `timeframe`.
-          *   Incorporate results from recent `/secure scan` and `/secure audit` runs.
+      You are a project analyst. The user wants a comprehensive report on the project's configuration and code quality.
+      1.  **Read Configuration**: Read `project-config.yaml` to get the configured analysis and monitoring service integrations.
+      2.  **Gather Analysis Data**:
+          *   Fetch configuration and code quality data from the configured services for the specified `timeframe`.
+          *   Incorporate results from recent analysis and audit runs.
       3.  **Analyze and Synthesize**:
-          *   Analyze the data to identify security trends (e.g., new vs. fixed vulnerabilities).
-          *   Calculate key metrics like risk scores, time-to-remediate, and compliance status.
-          *   Identify the highest-risk vulnerabilities that need immediate attention.
+          *   Analyze the data to identify improvement trends (e.g., new vs. resolved issues).
+          *   Calculate key metrics like quality scores, time-to-resolve, and configuration compliance.
+          *   Identify the highest-priority issues that need immediate attention.
       4.  **Generate Report**:
-          *   Create a detailed security report with clear visualizations.
+          *   Create a detailed analysis report with clear visualizations.
           *   Include a prioritized list of actionable recommendations.
     </prompt>
   </claude_prompt>
   <dependencies>
     <uses_config_values>
-      <value>security.scanning_service</value>
-      <value>security.monitoring_service</value>
+      <value>analysis.scanning_service</value>
+      <value>analysis.monitoring_service</value>
     </uses_config_values>
     <includes_components>
       <component>components/reporting/generate-structured-report.md</component>

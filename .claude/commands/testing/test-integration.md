@@ -1,6 +1,6 @@
 ---
 name: /test-integration
-description: Run integration tests for [INSERT_PROJECT_NAME] with [INSERT_API_STYLE] APIs and [INSERT_DATABASE_TYPE]
+description: "Run integration tests for [INSERT_PROJECT_NAME] with [INSERT_API_STYLE] APIs and [INSERT_DATABASE_TYPE]"
 usage: /test-integration [test-suite] [--environment staging|production] [--parallel] [--verbose]
 category: testing
 tools: Bash, Read, Write
@@ -11,7 +11,7 @@ security: input-validation-framework.md
 
 ## Input Validation
 
-Before processing, I'll validate all inputs for security:
+Before processing, I'll validate all inputs:
 
 **Validating inputs...**
 
@@ -24,7 +24,7 @@ Before processing, I'll validate all inputs for security:
 # Test suite validation
 test_suite = args[0] if args and not args[0].startswith("--") else "all"
 if not re.match(r'^[a-zA-Z0-9_-]+$', test_suite) or len(test_suite) > 50:
-    raise SecurityError(f"Invalid test suite name: {test_suite}")
+    raise ValueError(f"Invalid test suite name: {test_suite}")
 
 # Environment validation
 test_env = "staging"  # default
@@ -34,7 +34,7 @@ if "--environment" in args:
         test_env = args[env_index]
         env_validation = validate_environment_name(test_env)
         if not env_validation["valid"]:
-            raise SecurityError(f"Invalid test environment: {test_env}")
+            raise ValueError(f"Invalid test environment: {test_env}")
 
 # Test configuration paths validation
 test_paths = [
@@ -153,7 +153,7 @@ Full-scale validation:
 - Production configs
 - Real-world data volumes
 - Performance testing
-- Security validation
+- Configuration validation
 
 ## Test Execution
 
@@ -284,7 +284,7 @@ Find breaking points:
 - Recovery testing
 - Capacity planning
 
-## Security Validation
+## Input Validation
 
 For [INSERT_SECURITY_LEVEL]:
 - Authentication tests

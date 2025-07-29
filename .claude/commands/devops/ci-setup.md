@@ -1,6 +1,6 @@
 ---
 name: /ci-setup
-description: Configure [INSERT_CI_CD_PLATFORM] pipelines for [INSERT_PROJECT_NAME]
+description: "Configure [INSERT_CI_CD_PLATFORM] pipelines for [INSERT_PROJECT_NAME]"
 usage: /ci-setup [--template basic|standard|advanced] [--branch main|develop|feature/*]
 category: devops
 tools: Write, Read, Edit, Bash
@@ -11,13 +11,13 @@ security: input-validation-framework.md
 
 ## Input Validation
 
-Before processing, I'll validate all inputs for security:
+Before processing, I'll validate all inputs:
 
 **Validating inputs...**
 
 1. **Template Validation**: Checking if template type is valid
 2. **Branch Pattern Validation**: Validating branch name patterns
-3. **Configuration Validation**: Checking CI/CD platform configurations for credentials
+3. **Configuration Validation**: Checking CI/CD platform configurations
 4. **URL Validation**: Validating repository URLs and webhook endpoints
 
 ```python
@@ -29,7 +29,7 @@ if "--template" in args:
         template = args[template_index]
         valid_templates = ["basic", "standard", "advanced"]
         if template not in valid_templates:
-            raise SecurityError(f"Invalid template: {template}. Must be one of: {', '.join(valid_templates)}")
+            raise ValueError(f"Invalid template: {template}. Must be one of: {', '.join(valid_templates)}")
 
 # Branch pattern validation
 branch_pattern = "main"  # default
@@ -39,7 +39,7 @@ if "--branch" in args:
         branch_pattern = args[branch_index]
         # Validate branch pattern safety
         if not re.match(r'^[a-zA-Z0-9/_-]+[*]?$', branch_pattern):
-            raise SecurityError(f"Invalid branch pattern: {branch_pattern}")
+            raise ValueError(f"Invalid branch pattern: {branch_pattern}")
 
 # CI/CD configuration validation
 ci_config = {
@@ -62,15 +62,15 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 ```
 
 **Validation Result:**
-✅ **SECURE**: All inputs validated successfully
+✅ **VALID**: All inputs validated successfully
 - Template: `{template}` (validated)
 - Branch pattern: `{branch_pattern}` (validated)
 - CI configurations: `{len(protected_configs)}` (validated)
 - Credentials protected: `{credentials_protected}` masked
 - Performance: `{total_validation_time}ms` (under 50ms requirement)
-- Security status: All inputs safe
+- Validation status: All inputs valid
 
-🔒 **SECURITY NOTICE**: {credentials_protected} CI/CD credential(s) detected and masked for protection
+🔒 **NOTICE**: {credentials_protected} CI/CD credential(s) detected and masked for protection
 
 Proceeding with validated inputs...
 
@@ -101,7 +101,7 @@ Comprehensive CI/CD:
 ```
 - Multi-stage builds
 - Full test suites
-- Security scanning
+- Code analysis
 - Deployment automation
 
 ### Advanced Pipeline

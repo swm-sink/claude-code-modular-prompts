@@ -1,6 +1,6 @@
 ---
 name: /secure-config
-description: Security configuration validation and hardening recommendations
+description: "Configuration validation and best practice recommendations"
 argument-hint: "[config_type] [environment]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 deprecated: true
@@ -8,7 +8,7 @@ deprecation-date: 2025-07-25
 removal-date: 2025-08-25
 replacement: "/secure-manage config"
 ---
-# /secure config - Security Configuration Validator
+# /secure config - Configuration Validator
 
 ⚠️ **DEPRECATED COMMAND** ⚠️
 
@@ -20,17 +20,17 @@ This command has been consolidated into the new `/secure-manage` command with `c
 
 ---
 
-Advanced configuration security validator with environment-specific hardening and compliance checking.
+Advanced configuration validator with environment-specific best practices and compliance checking.
 ## Usage
 ```bash
-/secure config server               # Server configuration security check
-/secure config database            # Database security configuration
+/secure config server               # Server configuration validation
+/secure config database            # Database configuration review
 /secure config web --env production # Web server config for production
 ```
 <command_file>
   <metadata>
     <name>/secure config</name>
-    <purpose>Configures comprehensive security settings for applications to prevent vulnerabilities.</purpose>
+    <purpose>Validates and configures comprehensive settings for applications following best practices.</purpose>
     <usage>
       <![CDATA[
       /secure config <compliance_standard="none">
@@ -44,11 +44,11 @@ Advanced configuration security validator with environment-specific hardening an
   </arguments>
   <examples>
     <example>
-      <description>Review and suggest baseline security configurations.</description>
+      <description>Review and suggest baseline configuration improvements.</description>
       <usage>/secure config</usage>
     </example>
     <example>
-      <description>Apply strict security configurations required for HIPAA compliance.</description>
+      <description>Apply strict configurations required for HIPAA compliance.</description>
       <usage>/secure config compliance="hipaa"</usage>
     </example>
   </examples>
@@ -63,16 +63,16 @@ Advanced configuration security validator with environment-specific hardening an
       <include>components/planning/create-step-by-step-plan.md</include>
       <include>components/interaction/request-user-confirmation.md</include>
       <include>components/actions/apply-code-changes.md</include>
-      You are a security architect. The user wants to apply security best-practice configurations to their project.
-      1.  **Analyze Current Configuration**: Scan the project's configuration files (e.g., framework settings, web server configs) to assess the current security posture.
-      2.  **Generate Hardening Plan**:
-          *   Based on security best practices and the specified `compliance` standard, create a plan to harden the configuration.
+      You are a configuration architect. The user wants to apply best-practice configurations to their project.
+      1.  **Analyze Current Configuration**: Review the project's configuration files (e.g., framework settings, web server configs) to assess the current setup.
+      2.  **Generate Improvement Plan**:
+          *   Based on best practices and the specified `compliance` standard, create a plan to improve the configuration.
           *   This should include recommendations for:
               *   Authentication (e.g., password policies, MFA).
-              *   Security Headers (e.g., CSP, HSTS).
+              *   Headers (e.g., CSP, HSTS).
               *   Encryption settings.
               *   Secrets management.
-              *   Secure cookie settings.
+              *   Cookie settings.
       3.  **Propose Changes**:
           *   Generate the necessary configuration changes and present them for user approval.
       4.  **Apply and Verify**:

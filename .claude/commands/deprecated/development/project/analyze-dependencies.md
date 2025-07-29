@@ -1,6 +1,6 @@
 ---
 name: /analyze-dependencies
-description: [DEPRECATED] Advanced dependency analysis with intelligent mapping, vulnerability scanning, and optimization recommendations - use /analyze-system dependencies instead
+description: "[DEPRECATED] Advanced dependency analysis with intelligent mapping, compatibility assessment, and optimization recommendations - use /analyze-system dependencies instead"
 argument-hint: "[analysis_type] [scan_depth]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 test_coverage: 0%
@@ -28,7 +28,7 @@ migration_deadline: "2025-08-25"
 
 The new unified `/analyze-system` command provides:
 - ✅ All legacy dependency analysis functionality in dependencies mode
-- ✅ Enhanced vulnerability scanning with latest CVE databases
+- ✅ Enhanced compatibility assessment with latest dependency data
 - ✅ Intelligent dependency mapping with visualization
 - ✅ Advanced conflict resolution strategies
 - ✅ Better integration with security and performance analysis
@@ -36,10 +36,10 @@ The new unified `/analyze-system` command provides:
 ---
 
 # /analyze dependencies - Advanced Dependency Analysis
-Sophisticated dependency analysis system with intelligent mapping, vulnerability scanning, and comprehensive optimization recommendations.
+Sophisticated dependency analysis system with intelligent mapping, compatibility assessment, and comprehensive optimization recommendations.
 ## Usage
 ```bash
-/analyze dependencies security               # Security vulnerability analysis
+/analyze dependencies compatibility         # Dependency compatibility analysis
 /analyze dependencies --outdated             # Outdated package detection
 /analyze dependencies --conflicts            # Dependency conflict resolution
 /analyze dependencies --optimization         # Optimization recommendations
@@ -47,7 +47,7 @@ Sophisticated dependency analysis system with intelligent mapping, vulnerability
 <command_file>
   <metadata>
     <n>/analyze dependencies</n>
-    <purpose>Advanced dependency analysis with intelligent mapping, vulnerability scanning, and optimization recommendations</purpose>
+    <purpose>Advanced dependency analysis with intelligent mapping, compatibility assessment, and optimization recommendations</purpose>
     <usage>
       <![CDATA[
       /analyze dependencies [analysis_type]
@@ -64,8 +64,8 @@ Sophisticated dependency analysis system with intelligent mapping, vulnerability
   </arguments>
   <examples>
     <example>
-      <description>Security vulnerability analysis</description>
-      <usage>/analyze dependencies security</usage>
+      <description>Dependency compatibility analysis</description>
+      <usage>/analyze dependencies compatibility</usage>
     </example>
     <example>
       <description>Outdated package detection</description>
@@ -82,16 +82,16 @@ Sophisticated dependency analysis system with intelligent mapping, vulnerability
       <include>components/analysis/codebase-discovery.md</include>
       <include>components/analysis/dependency-mapping.md</include>
       <include>components/workflow/report-generation.md</include>
-You are an advanced dependency analysis specialist. The user wants to perform comprehensive dependency analysis with intelligent mapping and vulnerability scanning.
+You are an advanced dependency analysis specialist. The user wants to perform comprehensive dependency analysis with intelligent mapping and compatibility assessment.
 **Analysis Process:**
 1. **Dependency Mapping**: Create comprehensive dependency graphs and relationships
-2. **Vulnerability Scanning**: Scan for known security vulnerabilities and CVEs
+2. **Compatibility Assessment**: Analyze compatibility and potential issues
 3. **Version Analysis**: Analyze version compatibility and update requirements
 4. **Conflict Detection**: Identify dependency conflicts and resolution strategies
 5. **Optimization Assessment**: Recommend optimization and cleanup opportunities
 **Implementation Strategy:**
 - Generate detailed dependency trees and impact analysis
-- Perform security vulnerability scanning with CVE databases
+- Perform thorough compatibility analysis with dependency databases
 - Analyze license compatibility and compliance issues
 - Identify circular dependencies and resolution strategies
 - Create prioritized update and optimization roadmaps

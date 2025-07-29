@@ -1,6 +1,6 @@
 ---
 name: /secure-audit
-description: Advanced security audit with comprehensive vulnerability assessment, compliance validation, and threat modeling
+description: "Advanced code audit with comprehensive quality assessment, compliance validation, and risk analysis"
 argument-hint: "[audit_scope] [compliance_framework]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 deprecated: true
@@ -8,7 +8,7 @@ deprecation-date: 2025-07-25
 removal-date: 2025-08-25
 replacement: "/secure-assess audit"
 ---
-# /secure audit - Advanced Security Audit
+# /secure audit - Advanced Code Audit
 
 ⚠️ **DEPRECATED COMMAND** ⚠️
 
@@ -20,18 +20,18 @@ This command has been consolidated into the new `/secure-assess` command with `a
 
 ---
 
-Sophisticated security audit system with comprehensive vulnerability assessment, compliance validation, and intelligent threat modeling.
+Sophisticated code audit system with comprehensive quality assessment, compliance validation, and intelligent risk analysis.
 ## Usage
 ```bash
-/secure audit comprehensive                  # Comprehensive security audit
-/secure audit --owasp                        # OWASP-focused security audit
+/secure audit comprehensive                  # Comprehensive code audit
+/secure audit --standards                    # Standards-focused code audit
 /secure audit --compliance                   # Compliance framework audit
-/secure audit --penetration                  # Penetration testing audit
+/secure audit --analysis                     # Deep code analysis audit
 ```
 <command_file>
   <metadata>
     <n>/secure audit</n>
-    <purpose>Advanced security audit with comprehensive vulnerability assessment, compliance validation, and threat modeling</purpose>
+    <purpose>Advanced code audit with comprehensive quality assessment, compliance validation, and risk analysis</purpose>
     <usage>
       <![CDATA[
       /secure audit [audit_scope]
@@ -40,7 +40,7 @@ Sophisticated security audit system with comprehensive vulnerability assessment,
   </metadata>
   <arguments>
     <argument name="audit_scope" type="string" required="false" default="comprehensive">
-      <description>Scope of security audit to perform</description>
+      <description>Scope of code audit to perform</description>
     </argument>
     <argument name="compliance_framework" type="string" required="false" default="owasp">
       <description>Compliance framework to apply</description>
@@ -48,12 +48,12 @@ Sophisticated security audit system with comprehensive vulnerability assessment,
   </arguments>
   <examples>
     <example>
-      <description>Comprehensive security audit</description>
+      <description>Comprehensive code audit</description>
       <usage>/secure audit comprehensive</usage>
     </example>
     <example>
-      <description>OWASP-focused security audit</description>
-      <usage>/secure audit --owasp</usage>
+      <description>Standards-focused code audit</description>
+      <usage>/secure audit --standards</usage>
     </example>
   </examples>
   <claude_prompt>
@@ -67,19 +67,19 @@ Sophisticated security audit system with comprehensive vulnerability assessment,
       <include>components/security/owasp-compliance.md</include>
       <include>components/constitutional/safety-framework.md</include>
       <include>components/reporting/generate-structured-report.md</include>
-You are an advanced security audit specialist. The user wants to perform comprehensive security auditing with vulnerability assessment and compliance validation.
+You are an advanced code audit specialist. The user wants to perform comprehensive code auditing with quality assessment and compliance validation.
 **Audit Process:**
-1. **Security Assessment**: Analyze current security posture and vulnerabilities
-2. **Vulnerability Scanning**: Comprehensive vulnerability detection and analysis
-3. **Compliance Validation**: Validate against security frameworks and standards
-4. **Threat Modeling**: Model potential threats and attack vectors
-5. **Remediation Planning**: Create prioritized remediation and improvement plans
+1. **Quality Assessment**: Analyze current code quality and potential issues
+2. **Pattern Analysis**: Comprehensive pattern detection and code analysis
+3. **Compliance Validation**: Validate against coding frameworks and standards
+4. **Risk Modeling**: Model potential risks and failure points
+5. **Improvement Planning**: Create prioritized improvement and enhancement plans
 **Implementation Strategy:**
-- Perform automated and manual security vulnerability scanning
-- Apply OWASP Top 10 and industry security frameworks
-- Conduct penetration testing and security assessments
+- Perform automated and manual code quality analysis
+- Apply coding standards and industry best practices
+- Conduct thorough code review and assessments
 - Validate compliance with regulatory requirements
-- Generate comprehensive security reports with prioritized recommendations
+- Generate comprehensive audit reports with prioritized recommendations
     </prompt>
   </claude_prompt>
   <dependencies>
@@ -89,7 +89,7 @@ You are an advanced security audit specialist. The user wants to perform compreh
       <component>components/reporting/generate-structured-report.md</component>
     </includes_components>
     <uses_config_values>
-      <value>security.audit.depth</value>
+      <value>audit.depth</value>
       <value>compliance.frameworks.required</value>
     </uses_config_values>
   </dependencies>

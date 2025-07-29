@@ -1,28 +1,28 @@
 ---
 name: /analyze-system
-description: Comprehensive system analysis with performance profiling, dependency scanning, cost optimization, and security assessments
+description: "Comprehensive system analysis with performance profiling, dependency analysis, cost optimization, and quality assessments"
 argument-hint: "[focus_mode] [analysis_depth] [target_path]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 # /analyze-system - Unified System Analysis Framework for [INSERT_PROJECT_NAME]
 
-Comprehensive system-level analysis for [INSERT_TECH_STACK] applications, combining performance profiling, dependency management, cost optimization, and security assessments in a single unified command tailored for [INSERT_DOMAIN] systems on [INSERT_CLOUD_PROVIDER].
+Comprehensive system-level analysis for [INSERT_TECH_STACK] applications, combining performance profiling, dependency management, cost optimization, and quality assessments in a single unified command tailored for [INSERT_DOMAIN] systems on [INSERT_CLOUD_PROVIDER].
 
 ## Usage
 ```bash
 /analyze-system                                 # Comprehensive analysis of entire system
 /analyze-system performance                     # Focus on performance bottlenecks
-/analyze-system dependencies                    # Focus on dependency analysis and CVE scanning
+/analyze-system dependencies                    # Focus on dependency analysis and compatibility
 /analyze-system cost                           # Focus on cost optimization
 /analyze-system performance --deep             # Deep performance analysis with profiling
-/analyze-system dependencies --security        # Security-focused dependency scan
+/analyze-system dependencies --compatibility   # Compatibility-focused dependency analysis
 /analyze-system cost --optimization           # Cost optimization recommendations
 ```
 
 <command_file>
   <metadata>
     <name>/analyze-system</name>
-    <purpose>Comprehensive system analysis combining performance profiling, dependency scanning, cost optimization, and security assessments</purpose>
+    <purpose>Comprehensive system analysis combining performance profiling, dependency analysis, cost optimization, and quality assessments</purpose>
     <usage>
       <![CDATA[
       /analyze-system [focus_mode] [analysis_depth] [target_path]
@@ -31,7 +31,7 @@ Comprehensive system-level analysis for [INSERT_TECH_STACK] applications, combin
   </metadata>
   <arguments>
     <argument name="focus_mode" type="string" required="false" default="comprehensive">
-      <description>Analysis focus: comprehensive|performance|dependencies|cost|security</description>
+      <description>Analysis focus: comprehensive|performance|dependencies|cost|quality</description>
     </argument>
     <argument name="analysis_depth" type="string" required="false" default="standard">
       <description>Analysis depth: shallow|standard|deep|exhaustive</description>
@@ -56,8 +56,8 @@ Comprehensive system-level analysis for [INSERT_TECH_STACK] applications, combin
       <usage>/analyze-system performance --deep</usage>
     </example>
     <example>
-      <description>Security-focused dependency vulnerability scan</description>
-      <usage>/analyze-system dependencies --security</usage>
+      <description>Compatibility-focused dependency analysis</description>
+      <usage>/analyze-system dependencies --compatibility</usage>
     </example>
     <example>
       <description>Cost optimization analysis for AWS</description>
@@ -96,7 +96,7 @@ Based on the focus_mode parameter, execute the appropriate analysis strategy:
 
 **3. DEPENDENCIES MODE:**
 - **Dependency Mapping**: Comprehensive dependency graphs and relationships
-- **Vulnerability Scanning**: CVE database scanning with severity scoring
+- **Compatibility Analysis**: Dependency compatibility analysis with impact scoring
 - **Version Analysis**: Compatibility and update requirements
 - **Conflict Detection**: Dependency conflicts and resolution strategies
 - **License Compliance**: License compatibility and compliance issues
@@ -109,11 +109,11 @@ Based on the focus_mode parameter, execute the appropriate analysis strategy:
 - **Waste Identification**: Idle resources and optimization opportunities
 - **Optimization Recommendations**: Rightsizing, reserved instances, cleanup strategies
 
-**5. SECURITY MODE:**
-- **Vulnerability Assessment**: Security vulnerability scanning
-- **OWASP Compliance**: Security best practices validation
-- **Configuration Review**: Security configuration analysis
-- **Risk Assessment**: Security risk scoring and prioritization
+**5. QUALITY MODE:**
+- **Quality Assessment**: Code quality and pattern analysis
+- **OWASP Compliance**: Best practices validation
+- **Configuration Review**: Configuration analysis
+- **Risk Assessment**: Code risk scoring and prioritization
 
 **Implementation Strategy:**
 
@@ -124,7 +124,7 @@ Based on the focus_mode parameter, execute the appropriate analysis strategy:
 
 2. **Analysis Phase**:
    - Execute focused analysis based on mode
-   - Collect performance, security, and cost data
+   - Collect performance, quality, and cost data
    - Cross-reference findings across domains
 
 3. **Assessment Phase**:

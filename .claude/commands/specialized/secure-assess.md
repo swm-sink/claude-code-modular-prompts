@@ -1,27 +1,27 @@
 ---
 name: /secure-assess
-description: Comprehensive security assessment with vulnerability scanning, threat analysis, compliance validation, and automated remediation
+description: "Comprehensive code assessment with pattern analysis, risk analysis, compliance validation, and automated improvements"
 argument-hint: "[mode] [scope] [format]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /secure-assess - Comprehensive Security Assessment for [INSERT_PROJECT_NAME]
+# /secure-assess - Comprehensive Code Assessment for [INSERT_PROJECT_NAME]
 
-Unified security assessment system for [INSERT_DOMAIN] applications built with [INSERT_TECH_STACK], combining vulnerability scanning, threat modeling, compliance validation, and security auditing capabilities tailored to [INSERT_COMPLIANCE_REQUIREMENTS] requirements.
+Unified code assessment system for [INSERT_DOMAIN] applications built with [INSERT_TECH_STACK], combining pattern analysis, risk modeling, compliance validation, and code auditing capabilities tailored to [INSERT_COMPLIANCE_REQUIREMENTS] requirements.
 
 ## Usage
 ```bash
 /secure-assess                           # Full comprehensive assessment (default)
-/secure-assess scan                      # Quick vulnerability scan
-/secure-assess audit                     # Deep security audit
+/secure-assess scan                      # Quick pattern analysis
+/secure-assess audit                     # Deep code audit
 /secure-assess compliance               # Compliance framework validation
-/secure-assess threats                  # Threat modeling and analysis
+/secure-assess risks                    # Risk modeling and analysis
 ```
 
 <command_file>
   <metadata>
     <name>/secure-assess</name>
-    <purpose>Comprehensive security assessment with vulnerability scanning, threat analysis, compliance validation, and automated remediation</purpose>
+    <purpose>Comprehensive code assessment with pattern analysis, risk analysis, compliance validation, and automated improvements</purpose>
     <usage>
       <![CDATA[
       /secure-assess [mode] [scope] [format]
@@ -30,7 +30,7 @@ Unified security assessment system for [INSERT_DOMAIN] applications built with [
   </metadata>
   <arguments>
     <argument name="mode" type="string" required="false" default="full">
-      <description>Assessment mode: full, scan, audit, compliance, threats</description>
+      <description>Assessment mode: full, scan, audit, compliance, risks</description>
     </argument>
     <argument name="scope" type="string" required="false" default="all">
       <description>Assessment scope: all, code, dependencies, secrets, infrastructure</description>
@@ -41,15 +41,15 @@ Unified security assessment system for [INSERT_DOMAIN] applications built with [
   </arguments>
   <examples>
     <example>
-      <description>Comprehensive security assessment</description>
+      <description>Comprehensive code assessment</description>
       <usage>/secure-assess</usage>
     </example>
     <example>
-      <description>Quick vulnerability scan</description>
+      <description>Quick pattern analysis</description>
       <usage>/secure-assess scan</usage>
     </example>
     <example>
-      <description>Deep security audit with OWASP compliance</description>
+      <description>Deep code audit with OWASP patterns</description>
       <usage>/secure-assess audit owasp</usage>
     </example>
     <example>
@@ -57,7 +57,7 @@ Unified security assessment system for [INSERT_DOMAIN] applications built with [
       <usage>/secure-assess compliance all compliance-report</usage>
     </example>
     <example>
-      <description>Threat modeling for infrastructure</description>
+      <description>Risk modeling for infrastructure</description>
       <usage>/secure-assess threats infrastructure</usage>
     </example>
   </examples>
@@ -80,49 +80,49 @@ Unified security assessment system for [INSERT_DOMAIN] applications built with [
       <include>components/reporting/generate-structured-report.md</include>
       <include>components/context/find-relevant-code.md</include>
 
-You are an expert security assessment specialist for [INSERT_PROJECT_NAME] with deep knowledge of [INSERT_TECH_STACK] security best practices and [INSERT_COMPLIANCE_REQUIREMENTS] compliance requirements. The user wants to perform comprehensive security assessment for their [INSERT_DOMAIN] application with mode-based analysis.
+You are an expert code assessment specialist for [INSERT_PROJECT_NAME] with deep knowledge of [INSERT_TECH_STACK] best practices and [INSERT_COMPLIANCE_REQUIREMENTS] compliance requirements. The user wants to perform comprehensive code assessment for their [INSERT_DOMAIN] application with mode-based analysis.
 
 **Assessment Modes:**
 
 **1. FULL MODE (default):**
-- Complete security posture assessment
-- Vulnerability scanning (code, dependencies, secrets)
-- Threat modeling and attack vector analysis
-- Compliance validation against security frameworks
-- Penetration testing simulation
-- Remediation planning with prioritized recommendations
+- Complete code quality assessment
+- Pattern analysis (code, dependencies, hardcoded values)
+- Risk modeling and issue analysis
+- Compliance validation against coding frameworks
+- Behavior testing simulation
+- Improvement planning with prioritized recommendations
 
 **2. SCAN MODE:**
-- Automated vulnerability detection
+- Automated pattern detection
 - Static code analysis (SAST)
-- Dependency vulnerability scanning
-- Secret scanning and exposure detection
-- Quick security hygiene checks
+- Dependency compatibility scanning
+- Hardcoded value detection
+- Quick code hygiene checks
 - Immediate actionable findings
 
 **3. AUDIT MODE:**
-- Deep security architecture review
-- Manual security assessment
-- Advanced threat modeling
+- Deep code architecture review
+- Manual code assessment
+- Advanced risk modeling
 - Compliance framework validation (OWASP, NIST, ISO 27001)
-- Security control effectiveness evaluation
+- Code control effectiveness evaluation
 - Risk assessment and mitigation strategies
 
 **4. COMPLIANCE MODE:**
 - Regulatory framework validation
-- Security standard compliance checking
+- Coding standard compliance checking
 - Policy adherence verification
 - Audit trail and documentation review
 - Compliance gap analysis
 - Certification readiness assessment
 
-**5. THREATS MODE:**
-- Advanced threat modeling
-- Attack surface analysis
-- Threat actor profiling
-- Attack chain simulation
-- Security incident scenario planning
-- Threat intelligence integration
+**5. RISKS MODE:**
+- Advanced risk modeling
+- Risk surface analysis
+- Risk factor profiling
+- Risk chain simulation
+- Failure scenario planning
+- Risk intelligence integration
 
 **Implementation Strategy:**
 
