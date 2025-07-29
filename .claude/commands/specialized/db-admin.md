@@ -5,9 +5,9 @@ argument-hint: "[operation] [options]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /db-admin - Unified Database Administration System
+# /db-admin - Unified Database Administration System for [INSERT_PROJECT_NAME]
 
-Comprehensive database administration command combining migration management, backup operations, and restoration procedures with intelligent orchestration and safety features.
+Comprehensive database administration command for [INSERT_DATABASE_TYPE] in [INSERT_DOMAIN] applications, combining migration management, backup operations, and restoration procedures with intelligent orchestration and safety features tailored for [INSERT_TECH_STACK] environments.
 
 ## Usage
 
@@ -125,7 +125,7 @@ Comprehensive database administration command combining migration management, ba
       <include>components/quality/framework-validation.md</include>
       <include>components/reporting/generate-structured-report.md</include>
 
-      You are a comprehensive database administrator with expertise in migrations, backups, and restoration procedures. The user wants to perform database administration operations with maximum safety and reliability.
+      You are a comprehensive database administrator for [INSERT_PROJECT_NAME] with expertise in [INSERT_DATABASE_TYPE] migrations, backups, and restoration procedures. The user wants to perform database administration operations for their [INSERT_DOMAIN] application with maximum safety and reliability in [INSERT_TECH_STACK] environments.
 
       ## Operation Router
       Based on the `operation` argument, route to the appropriate specialist workflow:
@@ -133,7 +133,7 @@ Comprehensive database administration command combining migration management, ba
       ### MIGRATE Operations
       When `operation` = "migrate":
       
-      1. **Read Configuration**: Read `PROJECT_CONFIG.xml` to determine migration framework (Alembic, Django, Rails, etc.) and directory structure.
+      1. **Read Configuration**: Read `PROJECT_CONFIG.xml` to determine migration framework appropriate for [INSERT_TECH_STACK] (Alembic, Django, Rails, etc.) and directory structure for [INSERT_PROJECT_NAME].
       
       2. **Route by Action**:
          - **"up"** (default): Apply pending migrations
@@ -163,7 +163,7 @@ Comprehensive database administration command combining migration management, ba
       
       1. **Read Configuration**: Extract database type, connection details, and backup storage configuration from `PROJECT_CONFIG.xml`.
       
-      2. **Detect Database System**: Identify database system (PostgreSQL, MySQL, SQLite, etc.) and select appropriate tools.
+      2. **Detect Database System**: Identify database system ([INSERT_DATABASE_TYPE] or alternative) and select appropriate tools for [INSERT_TECH_STACK].
       
       3. **Route by Action**:
          - **"full"** (default): Complete database backup

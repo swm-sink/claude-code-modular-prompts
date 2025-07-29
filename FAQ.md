@@ -22,8 +22,8 @@ Options when existing .claude detected:
 2. **Backup & Replace** - Saves your .claude to .claude.backup, fresh install
 3. **Cancel** - No changes made
 
-### Q: Do I need to use all 79 commands?
-**A: No! Start with 5-10 core commands.**
+### Q: Do I need to use all 102 commands?
+**A: No! Start with 5-10 core commands from the 64 active ones.**
 
 Profiles available:
 - `general` - Just core commands (help, task, auto, query, dev)

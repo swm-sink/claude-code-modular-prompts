@@ -4,8 +4,8 @@ description: Unified intelligent testing framework with automated test generatio
 argument-hint: "[type] [target] [options]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-# /test - Unified Intelligent Testing Framework
-Comprehensive testing solution combining unit, integration, and coverage analysis with automated test generation, environment management, and advanced reporting capabilities.
+# /test - Unified Intelligent Testing Framework for [INSERT_PROJECT_NAME]
+Comprehensive testing solution for [INSERT_TECH_STACK] applications, combining unit, integration, and coverage analysis with automated test generation, environment management, and advanced reporting capabilities tailored for [INSERT_DOMAIN] projects.
 ## Usage
 ```bash
 # Unit Testing
@@ -128,7 +128,7 @@ Comprehensive testing solution combining unit, integration, and coverage analysi
       <include>components/testing/testing-framework.md</include>
       <include>components/reporting/generate-structured-report.md</include>
       
-You are an advanced unified testing specialist. The user wants to perform comprehensive testing operations including unit testing, integration testing, coverage analysis, and test reporting.
+You are an advanced unified testing specialist for [INSERT_PROJECT_NAME] with expertise in [INSERT_TECH_STACK] testing frameworks and [INSERT_DOMAIN] best practices. The user wants to perform comprehensive testing operations including unit testing, integration testing, coverage analysis, and test reporting for their [INSERT_TEAM_SIZE] team.
 
 **Unified Testing Process:**
 
@@ -183,11 +183,11 @@ You are an advanced unified testing specialist. The user wants to perform compre
 5. **Trend Analysis**: Track test metrics over time
 
 **Implementation Requirements:**
-- Detect and use appropriate testing framework (pytest, Jest, JUnit, etc.)
-- Support multiple programming languages and frameworks
-- Integrate with CI/CD pipelines
-- Provide clear, actionable feedback
-- Optimize for performance with caching and parallelization
+- Detect and use appropriate testing framework ([INSERT_TEST_FRAMEWORK] or alternatives)
+- Support [INSERT_TECH_STACK] languages and frameworks
+- Integrate with [INSERT_CI_CD_PLATFORM] pipelines
+- Provide clear, actionable feedback for [INSERT_TEAM_SIZE] team
+- Optimize for performance with caching and parallelization on [INSERT_CLOUD_PROVIDER]
 
 <!-- Note: Environment provisioning functionality integrated directly into integration testing flow -->
     </prompt>

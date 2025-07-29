@@ -1,113 +1,146 @@
 ---
 name: /research
-description: Advanced research framework with intelligent information gathering, analysis synthesis, and knowledge discovery
-argument-hint: "[research_domain] [depth_level]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+description: Advanced research framework for [INSERT_DOMAIN] topics relevant to [INSERT_PROJECT_NAME]
+usage: /research [topic] [--depth shallow|standard|comprehensive] [--focus technical|business|competitive]
+category: core
+tools: Read, Write, Grep, WebSearch
 ---
-# /research - Advanced Research Framework
-Sophisticated research system with intelligent information gathering, comprehensive analysis synthesis, and automated knowledge discovery.
-## Usage
+
+# Research Framework for [INSERT_PROJECT_NAME]
+
+I'll conduct advanced research tailored to **[INSERT_PROJECT_NAME]** in the **[INSERT_DOMAIN]** domain, considering your **[INSERT_TECH_STACK]** and **[INSERT_USER_BASE]** requirements.
+
+## Research Capabilities
+
+### Technical Research
+For [INSERT_TECH_STACK] technologies:
 ```bash
-/research technology                         # Technology research and analysis
-/research --academic                         # Academic research methodology
-/research --market                           # Market research and trends
-/research --comprehensive                    # Comprehensive multi-domain research
+/research "microservices patterns"
+/research "[INSERT_PRIMARY_LANGUAGE] best practices"
+/research "[INSERT_DATABASE_TYPE] optimization"
 ```
-<command_file>
-  <metadata>
-    <n>/research</n>
-    <purpose>Advanced research framework with intelligent information gathering, analysis synthesis, and knowledge discovery</purpose>
-    <usage>
-      <![CDATA[
-      /research [research_domain]
-      ]]>
-    </usage>
-  </metadata>
-  <arguments>
-    <argument name="research_domain" type="string" required="false" default="technology">
-      <description>Domain of research to conduct</description>
-    </argument>
-    <argument name="depth_level" type="string" required="false" default="comprehensive">
-      <description>Depth level of research analysis</description>
-    </argument>
-  </arguments>
-  <examples>
-    <example>
-      <description>Technology research and analysis</description>
-      <usage>/research technology</usage>
-    </example>
-    <example>
-      <description>Academic research methodology</description>
-      <usage>/research --academic</usage>
-    </example>
-  </examples>
-  <claude_prompt>
-    <prompt>
-      <!-- Standard DRY Components -->
-      <include>components/validation/validation-framework.md</include>
-      <include>components/workflow/command-execution.md</include>
-      <include>components/workflow/error-handling.md</include>
-      <include>components/interaction/progress-reporting.md</include>
-      <!-- Command-specific components -->
-      <include>components/reasoning/tree-of-thoughts.md</include>
-      <include>components/reporting/generate-structured-report.md</include>
-      <include>components/context/intelligent-summarization.md</include>
-      <include>components/reasoning/pattern-extraction.md</include>
-You are an advanced research specialist. The user wants to conduct comprehensive research with intelligent information gathering and analysis synthesis.
-**Research Process:**
-1. **Domain Analysis**: Analyze the research domain and define scope
-2. **Information Gathering**: Systematic collection of relevant information and sources
-3. **Analysis Synthesis**: Synthesize findings into coherent insights
-4. **Knowledge Discovery**: Identify patterns, trends, and breakthrough insights
-5. **Report Generation**: Create comprehensive research reports and recommendations
-**Implementation Strategy:**
-- Conduct systematic literature reviews and source analysis
-- Apply advanced research methodologies and frameworks
-- Synthesize information from multiple sources and perspectives
-- Generate actionable insights and recommendations
-- Create comprehensive documentation and knowledge bases
-    </prompt>
-  </claude_prompt>
-  <dependencies>
-    <includes_components>
-      <component>components/analytics/business-intelligence.md</component>
-      <component>components/reasoning/tree-of-thoughts.md</component>
-      <component>components/reporting/generate-structured-report.md</component>
-    </includes_components>
-    <uses_config_values>
-      <value>research.domains.preferred</value>
-      <value>analysis.depth.default</value>
-    </uses_config_values>
-  </dependencies>
-</command_file>
-## Workflow
-The `/init research` command follows a systematic process to set up the Prompt Factory for a research project.
-```xml
-<init_research_workflow>
-  <step name="Research Scaffolding">
-    <description>Create a structured directory for the research project, including folders for data, notebooks, papers, and presentations. I will also create a `README.md` file with a template for documenting the research project.</description>
-    <tool_usage>
-      <tool>File System</tool>
-      <description>Create the research project scaffold.</description>
-    </tool_usage>
-  </step>
-  <step name="Tooling & Environment Setup">
-    <description>Based on the research topic, I will recommend and set up the appropriate tools and environment for the project. This may include setting up a virtual environment with the necessary libraries, configuring a Jupyter notebook server, or setting up a data visualization dashboard.</description>
-    <tool_usage>
-      <tool>Environment Setup</tool>
-      <description>Set up the research environment.</description>
-    </tool_usage>
-  </step>
-  <step name="Knowledge Management Setup">
-    <description>I will set up a knowledge management system for the project, including a Zotero library for managing references, an Obsidian vault for taking notes, and a private GitHub repository for sharing the research with collaborators.</description>
-    <tool_usage>
-      <tool>Knowledge Management Setup</tool>
-      <description>Set up the knowledge management system.</description>
-    </tool_usage>
-  </step>
-</init_research_workflow>
+
+### Domain Research
+[INSERT_DOMAIN] specific insights:
+```bash
+/research "[INSERT_DOMAIN] trends 2025"
+/research "compliance requirements"
+/research "industry standards"
 ```
-## Use Cases
-*   **Academic Research**: Set up a structured environment for a new academic research project.
-*   **Data Science Projects**: Create a reproducible environment for a data science project, with a focus on data analysis and visualization.
-*   **Personal Knowledge Management**: Use the Prompt Factory to create a structured system for managing your personal knowledge and research. 
+
+### Competitive Analysis
+For [INSERT_USER_BASE] market:
+```bash
+/research --competitive "similar solutions"
+/research --market "user expectations"
+/research --pricing "business models"
+```
+
+## Research Depth Levels
+
+### Shallow (Quick Overview)
+5-minute research summary:
+- Key concepts
+- Main players
+- Basic insights
+- Quick recommendations
+
+### Standard (Balanced Analysis)
+15-minute comprehensive review:
+- Detailed analysis
+- Pros and cons
+- Implementation considerations
+- [INSERT_TEAM_SIZE] team implications
+
+### Comprehensive (Deep Dive)
+30+ minute exhaustive research:
+- Complete landscape analysis
+- Technical deep-dive
+- [INSERT_SECURITY_LEVEL] security implications
+- [INSERT_PERFORMANCE_PRIORITY] performance impacts
+- ROI analysis
+
+## Focus Areas
+
+### Technical Focus
+For [INSERT_TECH_STACK] stack:
+- Architecture patterns
+- Performance optimization
+- Security considerations
+- Integration approaches
+- Scalability strategies
+
+### Business Focus
+For [INSERT_WORKFLOW_TYPE] workflows:
+- Cost implications
+- Time-to-market
+- Team requirements
+- Maintenance burden
+- Business value
+
+### Competitive Focus
+In [INSERT_DOMAIN] market:
+- Feature comparison
+- Pricing analysis
+- Market positioning
+- Differentiators
+- Gap analysis
+
+## Integration Research
+
+### With [INSERT_CI_CD_PLATFORM]
+- Automation possibilities
+- Pipeline optimization
+- Deployment strategies
+- Testing approaches
+
+### With [INSERT_API_STYLE]
+- API design patterns
+- Integration methods
+- Performance considerations
+- Security requirements
+
+### With [INSERT_DATABASE_TYPE]
+- Data modeling approaches
+- Query optimization
+- Scaling strategies
+- Migration paths
+
+## Output Format
+
+Research delivered as:
+1. **Executive Summary** - Key findings
+2. **Detailed Analysis** - Deep insights
+3. **Recommendations** - Actionable next steps
+4. **References** - Sources and further reading
+5. **Implementation Guide** - How to apply findings
+
+## Research Templates
+
+### New Technology Adoption
+```bash
+/research "[NEW_TECH] for [INSERT_TECH_STACK]" --depth comprehensive
+```
+Evaluates fit for your stack
+
+### Problem Solution Research
+```bash
+/research "solving [PROBLEM] in [INSERT_DOMAIN]" --focus technical
+```
+Finds proven solutions
+
+### Best Practices Research
+```bash
+/research "[INSERT_PRIMARY_LANGUAGE] best practices for [INSERT_TEAM_SIZE] teams"
+```
+Team-appropriate practices
+
+## Quality Filters
+
+Research filtered for:
+- **Relevance**: [INSERT_DOMAIN] specific
+- **Recency**: Latest information
+- **Reliability**: Trusted sources
+- **Practicality**: [INSERT_TEAM_SIZE] team feasible
+
+What would you like to research for [INSERT_PROJECT_NAME]?

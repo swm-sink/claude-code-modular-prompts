@@ -1,396 +1,359 @@
-# Before & After Examples
+# Claude Code Template Library - Real Examples
 
-Real examples showing how the Claude Code Starter Framework transforms projects from empty to professional in minutes.
+This document shows **real before/after examples** of how to manually customize the Claude Code templates for your specific project. Each example demonstrates the manual Find & Replace process you'll need to perform.
 
-## Example 1: Web Development Project
+## 📋 Table of Contents
+1. [Quick Reference: Standard Placeholders](#quick-reference-standard-placeholders)
+2. [Example 1: Web Application Project](#example-1-web-application-project)
+3. [Example 2: Data Science Project](#example-2-data-science-project)
+4. [Example 3: Enterprise Java Project](#example-3-enterprise-java-project)
+5. [Example 4: Mobile App Backend](#example-4-mobile-app-backend)
+6. [Example 5: DevOps Platform](#example-5-devops-platform)
 
-### Before Framework (Week 1 of a 6-month journey)
+## Quick Reference: Standard Placeholders
 
-```
-my-react-app/
-├── package.json
-├── src/
-│   └── App.js
-└── README.md
+These are the 15 standard placeholders you'll need to replace manually:
 
-# Developer starts with:
-# - No Claude Code knowledge
-# - No prompt patterns
-# - No anti-pattern awareness
-# - Everything built from scratch
-```
+| Placeholder | Description | Example Value |
+|-------------|-------------|---------------|
+| `[INSERT_PROJECT_NAME]` | Your project's name | "EcommerceAPI" |
+| `[INSERT_DOMAIN]` | Your application domain | "e-commerce" |
+| `[INSERT_TECH_STACK]` | Primary technology stack | "Node.js/Express/PostgreSQL" |
+| `[INSERT_TEAM_SIZE]` | Your team size | "5-person" |
+| `[INSERT_COMPANY_NAME]` | Your organization | "TechStartup Inc" |
+| `[INSERT_CLOUD_PROVIDER]` | Your cloud platform | "AWS" |
+| `[INSERT_CI_CD_PLATFORM]` | Your CI/CD tool | "GitHub Actions" |
+| `[INSERT_TEST_FRAMEWORK]` | Your testing framework | "Jest" |
+| `[INSERT_DATABASE_TYPE]` | Your database system | "PostgreSQL" |
+| `[INSERT_MONITORING_PLATFORM]` | Your monitoring tool | "DataDog" |
+| `[INSERT_DEPLOYMENT_SCHEDULE]` | Your deployment cycle | "weekly" |
+| `[INSERT_COMPLIANCE_REQUIREMENTS]` | Compliance needs | "PCI-DSS" |
+| `[INSERT_VERSION_CONTROL]` | VCS system | "GitHub" |
+| `[INSERT_DOCUMENTATION_TOOL]` | Docs platform | "Docusaurus" |
+| `[INSERT_CONTAINER_PLATFORM]` | Container system | "Docker/Kubernetes" |
 
-**Conversation with Claude (typical struggle):**
-```
-User: Help me build a login component
+---
 
-Claude: I'll help you create a login component. What framework are you using?
+## Example 1: Web Application Project
 
-User: React. I need it to be secure and follow best practices.
+**Project**: E-commerce REST API  
+**Stack**: Node.js, Express, PostgreSQL, React frontend  
+**Team**: 5 developers  
+**Domain**: Online retail
 
-Claude: Here's a basic login component... [gives generic advice]
+### Before (Template with Placeholders)
 
-User: How do I test this? What about security? What patterns should I follow?
-[Developer spends hours researching, may implement wrong patterns]
-```
+#### `/task.md` command:
+```markdown
+---
+name: /task
+description: Break down complex [INSERT_DOMAIN] tasks for [INSERT_PROJECT_NAME]
+---
 
-### After Framework (5 minutes later)
-
-```bash
-# Quick setup
-git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-framework
-cd .claude-framework
-./setup.sh --project-name "my-react-app" --profile web-dev
-```
-
-```
-my-react-app/
-├── .claude/                     # ← Professional foundation added
-│   ├── commands/
-│   │   ├── core/               # help, task, auto, query
-│   │   ├── development/        # component-gen, refactor, debug
-│   │   └── quality/           # test, validate, secure-assess
-│   ├── components/            # 65 reusable patterns
-│   └── context/              # Anti-patterns prevented
-├── .claude-framework/          # Framework source
-├── package.json
-├── src/
-│   └── App.js
-└── README.md
+You are an expert [INSERT_TECH_STACK] developer working on [INSERT_PROJECT_NAME]. 
+Help the user break down their [INSERT_DOMAIN] task into manageable subtasks...
 ```
 
-**Conversation with Claude (professional patterns):**
-```
-User: /task "build secure login component"
+#### `/db-migrate.md` command:
+```markdown
+---
+name: /db-migrate
+description: Database migration for [INSERT_DATABASE_TYPE]
+---
 
-Claude: I'll guide you through building a secure login component using TDD:
-
-1. FIRST: Write tests for login functionality
-   - Test successful login
-   - Test validation errors
-   - Test security edge cases
-
-2. THEN: Implement component
-   - Secure input handling
-   - Proper validation
-   - OWASP compliance
-
-3. VALIDATE: Security review
-   - Run /secure-assess on component
-   - Check for XSS vulnerabilities
-   - Validate authentication flow
-
-Let's start with the test file...
+Execute database migrations for the [INSERT_PROJECT_NAME] [INSERT_DATABASE_TYPE] database.
+Ensure compatibility with [INSERT_TECH_STACK] migration tools...
 ```
 
-**Result**: Professional development with security built-in from day one.
+### After (Manually Customized)
+
+#### `/task.md` command:
+```markdown
+---
+name: /task
+description: Break down complex e-commerce tasks for EcommerceAPI
+---
+
+You are an expert Node.js/Express/PostgreSQL developer working on EcommerceAPI. 
+Help the user break down their e-commerce task into manageable subtasks...
+```
+
+#### `/db-migrate.md` command:
+```markdown
+---
+name: /db-migrate  
+description: Database migration for PostgreSQL
+---
+
+Execute database migrations for the EcommerceAPI PostgreSQL database.
+Ensure compatibility with Node.js/Express/PostgreSQL migration tools...
+```
+
+### Manual Replacement Process
+1. Open each file in your editor
+2. Use Find & Replace (Ctrl+F / Cmd+F)
+3. Replace each placeholder:
+   - Find: `[INSERT_PROJECT_NAME]` → Replace: `EcommerceAPI`
+   - Find: `[INSERT_DOMAIN]` → Replace: `e-commerce`
+   - Find: `[INSERT_TECH_STACK]` → Replace: `Node.js/Express/PostgreSQL`
+   - Find: `[INSERT_DATABASE_TYPE]` → Replace: `PostgreSQL`
+   - And so on...
 
 ---
 
 ## Example 2: Data Science Project
 
-### Before Framework (Month 2 of learning curve)
+**Project**: Customer Analytics Platform  
+**Stack**: Python, Pandas, Scikit-learn, Jupyter  
+**Team**: 3 data scientists  
+**Domain**: Business intelligence
 
-```
-ml-analysis/
-├── requirements.txt
-├── data/
-│   └── dataset.csv
-└── notebook.ipynb
+### Before (Template with Placeholders)
 
-# Data scientist struggles with:
-# - No structured approach to analysis
-# - Reinventing Claude prompts for each task
-# - No quality checks or validation
-# - Manual, ad-hoc processes
-```
-
-**Typical workflow chaos:**
-```
-User: Analyze this dataset for patterns
-
-Claude: I'll help analyze your dataset. Can you describe the columns?
-
-User: [Describes 20 columns manually]
-
-Claude: [Generic analysis suggestions]
-
-User: How do I validate these results? What about bias? How do I document this?
-[Hours of back-and-forth without structured approach]
-```
-
-### After Framework (Data Science Profile)
-
-```bash
-./setup.sh --profile data-science
-```
-
-```
-ml-analysis/
-├── .claude/
-│   ├── commands/
-│   │   ├── core/              # help, task, auto, query
-│   │   ├── analysis/          # analyze-data, explore-patterns
-│   │   ├── quality/           # validate-model, bias-check
-│   │   └── ml/               # model-eval, feature-engineering
-│   └── context/              # ML anti-patterns, bias prevention
-├── requirements.txt
-├── data/
-│   └── dataset.csv
-└── notebook.ipynb
-```
-
-**Structured workflow:**
-```
-User: /auto "analyze customer churn dataset"
-
-Claude: I'll route this to our data analysis workflow:
-
-🔍 ANALYSIS PLAN:
-1. /explore-data - Understand structure and quality
-2. /analyze-patterns - Statistical analysis and visualization  
-3. /validate-model - Check for bias and reliability
-4. /document-findings - Professional documentation
-
-Starting with data exploration...
-
-DATASET OVERVIEW:
-- 20 columns detected
-- 10,000 rows
-- Missing values: columns X, Y, Z
-- Potential bias indicators: demographic skew
-
-ANTI-PATTERN PREVENTION:
-✅ Checking for sampling bias
-✅ Validating statistical assumptions
-✅ Documenting methodology
-
-Next: /analyze-patterns for statistical analysis?
-```
-
-**Result**: Professional data science with bias prevention and documentation built-in.
-
+#### `/notebook-run.md` command:
+```markdown
+---
+name: /notebook-run
+description: Execute [INSERT_DOMAIN] notebooks in [INSERT_PROJECT_NAME]
 ---
 
-## Example 3: DevOps Infrastructure
-
-### Before Framework (Month 3 of trial and error)
-
-```
-infra-project/
-├── docker-compose.yml
-├── terraform/
-│   └── main.tf
-└── scripts/
-    └── deploy.sh
-
-# DevOps engineer learning:
-# - How to structure Claude conversations for infrastructure
-# - Security best practices through mistakes
-# - Monitoring and debugging patterns
-# - Professional documentation standards
+Run Jupyter notebooks for [INSERT_PROJECT_NAME] using [INSERT_TECH_STACK].
+Process [INSERT_DOMAIN] data and generate insights for [INSERT_TEAM_SIZE] team...
 ```
 
-**Painful learning process:**
-```
-User: Help me deploy this to production safely
-
-Claude: I can help with deployment. What's your current setup?
-
-User: [Explains complex infrastructure]
-
-Claude: Here are some deployment steps... [generic advice]
-
-User: What about rollback? Security scanning? Monitoring? 
-[Multiple conversations, learning through failures]
+#### `project-config.xml`:
+```xml
+<project>
+  <name>[INSERT_PROJECT_NAME]</name>
+  <domain>[INSERT_DOMAIN]</domain>
+  <tech-stack>[INSERT_TECH_STACK]</tech-stack>
+  <team-size>[INSERT_TEAM_SIZE]</team-size>
+</project>
 ```
 
-### After Framework (DevOps Profile)
+### After (Manually Customized)
 
-```bash
-./setup.sh --profile devops  
-```
-
-```
-infra-project/
-├── .claude/
-│   ├── commands/
-│   │   ├── core/              # help, task, auto, query
-│   │   ├── infrastructure/    # terraform-plan, deploy-safe
-│   │   ├── monitoring/        # setup-alerts, debug-issues
-│   │   └── security/          # scan-vulnerabilities, audit-config
-├── docker-compose.yml
-├── terraform/
-│   └── main.tf
-└── scripts/
-    └── deploy.sh
-```
-
-**Professional deployment workflow:**
-```
-User: /pipeline "deploy to production"
-
-Claude: Initiating SAFE PRODUCTION DEPLOYMENT pipeline:
-
-🔒 SECURITY CHECKS:
-✅ /secure-scan - Vulnerability scanning
-✅ /audit-config - Configuration review
-✅ Secrets validation
-
-🚀 DEPLOYMENT PHASES:
-1. /terraform-plan - Review infrastructure changes
-2. /deploy-safe - Blue-green deployment with rollback
-3. /monitor-deploy - Real-time health checking
-4. /validate-prod - Post-deployment verification
-
-🔔 MONITORING SETUP:
-- Automated alerting configured
-- Health checks enabled
-- Rollback triggers ready
-
-ANTI-PATTERNS PREVENTED:
-❌ Direct production deployment
-❌ Missing rollback strategy  
-❌ No health monitoring
-❌ Unvalidated configuration
-
-Starting security scan...
-```
-
-**Result**: Enterprise-grade deployment with safety nets and monitoring.
-
+#### `/notebook-run.md` command:
+```markdown
+---
+name: /notebook-run
+description: Execute business intelligence notebooks in Customer Analytics Platform
 ---
 
-## Example 4: Team Collaboration
-
-### Before Framework (Month 4 of inconsistency)
-
-**Team Member A:**
-```
-User: Help me refactor this component
-Claude: [Response A]
+Run Jupyter notebooks for Customer Analytics Platform using Python/Pandas/Scikit-learn.
+Process business intelligence data and generate insights for 3-person team...
 ```
 
-**Team Member B:**
-```  
-User: Help me refactor this component
-Claude: [Different Response B]
-```
-
-**Problems:**
-- Inconsistent approaches across team
-- No shared patterns or standards
-- Everyone learns anti-patterns separately
-- Code quality varies by person
-
-### After Framework (Team Consistency)
-
-**Setup for team:**
-```bash
-# In shared repository
-git submodule add [framework-url] .claude-framework
-
-# Each team member:
-git submodule update --init
-cd .claude-framework && ./setup.sh
-```
-
-**Now everyone gets:**
-```
-User: /task "refactor component for better performance"
-
-Claude: I'll guide you through our team's standard refactoring workflow:
-
-🏗️ REFACTORING CHECKLIST:
-1. Write tests first (preserve behavior)
-2. Identify performance bottlenecks
-3. Apply team patterns:
-   - Component composition standards
-   - State management patterns
-   - Performance optimizations
-4. Validate with /test and /secure-assess
-5. Document changes
-
-TEAM ANTI-PATTERNS PREVENTED:
-❌ Refactoring without tests
-❌ Breaking existing APIs
-❌ Inconsistent patterns
-❌ Performance regressions
-
-Starting with test coverage analysis...
-```
-
-**Result**: Consistent, high-quality work across entire team.
-
----
-
-## Example 5: Project Evolution
-
-### Month 1: Simple Start
-```bash
-./setup.sh --profile general  # Just core commands
-```
-
-### Month 2: Add Domain Patterns
-```bash
-# Add web development patterns
-cp .claude-framework/.claude/commands/development/* .claude/commands/
-```
-
-### Month 3: Team-Specific Commands
-```bash
-# Add project-specific patterns
-mkdir .claude/commands/our-app
-# Create custom deployment, testing, monitoring commands
-```
-
-### Month 6: Framework Contribution
-```bash
-# Contribute improvements back
-# Your patterns help other teams
-# Framework grows with community knowledge
+#### `project-config.xml`:
+```xml
+<project>
+  <name>Customer Analytics Platform</name>
+  <domain>business intelligence</domain>
+  <tech-stack>Python/Pandas/Scikit-learn</tech-stack>
+  <team-size>3-person</team-size>
+</project>
 ```
 
 ---
 
-## Time Savings Summary
+## Example 3: Enterprise Java Project
 
-| Task | Without Framework | With Framework | Time Saved |
-|------|------------------|----------------|------------|
-| **Setup Claude Code patterns** | 2-4 weeks | 5 minutes | 99% |
-| **Learn anti-patterns** | 2-6 months (through pain) | Immediate | 100% |
-| **Build component library** | 1-3 months | Ready | 100% |
-| **Establish team consistency** | 3-6 months | 1 week | 95% |
-| **Professional architecture** | 6+ months | Day 1 | 99% |
+**Project**: FinanceCore  
+**Stack**: Java Spring Boot, Oracle DB, Kubernetes  
+**Team**: 20 developers  
+**Domain**: Financial services
 
+### Before (Template with Placeholders)
+
+#### `/secure-assess.md` command:
+```markdown
+---
+name: /secure-assess
+description: Security assessment for [INSERT_PROJECT_NAME]
 ---
 
-## User Success Stories
-
-### "Frontend Team, Series A Startup"
-> *"Setup took 3 minutes. Saved us literally months of prompt engineering trial and error. The anti-patterns alone prevented 5+ major mistakes we see other teams make."*
-
-### "ML Engineering Team, Fortune 500"  
-> *"Deployed to 12 data science projects in one day. Consistent analysis patterns across all our research. Bias prevention built-in saved us from publication embarrassment."*
-
-### "Platform Engineering Team"
-> *"Our entire infrastructure as code process now has safety nets. No more 3am rollbacks because someone forgot a deployment step. Framework patterns are now company standard."*
-
----
-
-## What You Get Immediately
-
-✅ **Professional Claude Code setup** - Not amateur trial-and-error  
-✅ **Team consistency** - Everyone uses same patterns  
-✅ **Anti-pattern prevention** - Avoid months of painful mistakes  
-✅ **Extensible foundation** - Build on proven architecture  
-✅ **Continuous improvement** - Framework updates benefit everyone  
-
-## Ready to Save 6+ Months?
-
-```bash
-git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-framework
-cd .claude-framework && ./setup.sh
+Perform comprehensive security assessment for [INSERT_DOMAIN] applications 
+built with [INSERT_TECH_STACK], ensuring [INSERT_COMPLIANCE_REQUIREMENTS] compliance...
 ```
 
-**Your future self will thank you.**
+### After (Manually Customized)
+
+#### `/secure-assess.md` command:
+```markdown
+---
+name: /secure-assess
+description: Security assessment for FinanceCore
+---
+
+Perform comprehensive security assessment for financial services applications 
+built with Java Spring Boot, ensuring SOC2 and PCI-DSS compliance...
+```
+
+---
+
+## Example 4: Mobile App Backend
+
+**Project**: FoodDeliveryAPI  
+**Stack**: Ruby on Rails, Redis, PostgreSQL  
+**Team**: 8 developers  
+**Domain**: Food delivery
+
+### Before (Template with Placeholders)
+
+#### `/deploy.md` command:
+```markdown
+---
+name: /deploy
+description: Deploy [INSERT_PROJECT_NAME] to [INSERT_CLOUD_PROVIDER]
+---
+
+Deploy [INSERT_PROJECT_NAME] using [INSERT_CI_CD_PLATFORM] to [INSERT_CLOUD_PROVIDER].
+Follow [INSERT_DEPLOYMENT_SCHEDULE] deployment schedule for [INSERT_DOMAIN] services...
+```
+
+### After (Manually Customized)
+
+#### `/deploy.md` command:
+```markdown
+---
+name: /deploy
+description: Deploy FoodDeliveryAPI to AWS
+---
+
+Deploy FoodDeliveryAPI using CircleCI to AWS.
+Follow daily deployment schedule for food delivery services...
+```
+
+---
+
+## Example 5: DevOps Platform
+
+**Project**: InfraManager  
+**Stack**: Go, Terraform, Prometheus  
+**Team**: 12 engineers  
+**Domain**: Infrastructure automation
+
+### Before (Template with Placeholders)
+
+#### `/monitor-setup.md` command:
+```markdown
+---
+name: /monitor-setup
+description: Setup monitoring for [INSERT_PROJECT_NAME]
+---
+
+Configure [INSERT_MONITORING_PLATFORM] monitoring for [INSERT_TECH_STACK] applications.
+Track [INSERT_DOMAIN] metrics for [INSERT_TEAM_SIZE] engineering team...
+```
+
+### After (Manually Customized)
+
+#### `/monitor-setup.md` command:
+```markdown
+---
+name: /monitor-setup
+description: Setup monitoring for InfraManager
+---
+
+Configure Prometheus monitoring for Go/Terraform applications.
+Track infrastructure automation metrics for 12-person engineering team...
+```
+
+---
+
+## 🎯 Tips for Manual Customization
+
+### 1. Use Your Editor's Find & Replace
+Most editors support project-wide Find & Replace:
+- **VS Code**: Ctrl+Shift+H (Cmd+Shift+H on Mac)
+- **IntelliJ**: Ctrl+Shift+R (Cmd+Shift+R on Mac)
+- **Sublime**: Ctrl+Shift+F (Cmd+Shift+F on Mac)
+
+### 2. Order of Replacement Matters
+Replace in this order to avoid partial replacements:
+1. Longer, more specific placeholders first
+2. Shorter, general placeholders last
+
+### 3. Validate After Replacement
+Use the validation command to check:
+```bash
+/validate-adaptation
+```
+
+### 4. Keep Reference Copy
+The `.claude-framework/` directory maintains clean templates for reference.
+
+### 5. Document Your Choices
+Create a `ADAPTATION-NOTES.md` file documenting:
+- Which placeholders you replaced
+- What values you used
+- Any commands you removed or modified
+- Custom configurations you added
+
+---
+
+## 📚 Advanced Customization Patterns
+
+### Pattern 1: Domain-Specific Language
+For specialized domains, you might need additional replacements:
+```
+[INSERT_DOMAIN_ENTITY] → "Order" (for e-commerce)
+[INSERT_DOMAIN_ACTION] → "Process Payment" (for fintech)
+```
+
+### Pattern 2: Multi-Environment Setup
+For projects with multiple environments:
+```
+[INSERT_DEV_ENVIRONMENT] → "development.myapp.local"
+[INSERT_STAGING_ENVIRONMENT] → "staging.myapp.com"
+[INSERT_PROD_ENVIRONMENT] → "api.myapp.com"
+```
+
+### Pattern 3: Team-Specific Workflows
+For specific team processes:
+```
+[INSERT_CODE_REVIEW_TOOL] → "GitHub PRs"
+[INSERT_COMMUNICATION_PLATFORM] → "Slack"
+[INSERT_PROJECT_MANAGEMENT_TOOL] → "Jira"
+```
+
+---
+
+## 🔄 Keeping Templates Updated
+
+When new versions of the template library are released:
+
+1. **Check for Updates**:
+   ```bash
+   cd .claude-framework
+   git pull origin main
+   ```
+
+2. **Review Changes**:
+   ```bash
+   git diff HEAD~1
+   ```
+
+3. **Manually Apply Updates**:
+   - Compare your customized files with new templates
+   - Manually merge beneficial changes
+   - Re-apply your placeholder replacements
+
+4. **Use Sync Guide**:
+   ```bash
+   /sync-from-reference
+   ```
+
+---
+
+## 🤝 Share Your Examples
+
+Have a great customization example? Share it with the community:
+
+1. Document your adaptation pattern
+2. Use `/share-adaptation` to generate a shareable format
+3. Submit via GitHub Issues with tag `adaptation-example`
+
+---
+
+*Remember: This is a manual process. Take your time, be thorough, and validate your work!*

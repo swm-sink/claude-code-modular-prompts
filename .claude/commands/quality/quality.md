@@ -4,8 +4,8 @@ description: Unified intelligent code quality analysis with comprehensive review
 argument-hint: "[mode] [target_path] [options]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-# /quality - Unified Code Quality Framework
-Comprehensive quality analysis solution combining code review, metrics calculation, advanced reporting, and prioritized improvement suggestions.
+# /quality - Unified Code Quality Framework for [INSERT_PROJECT_NAME]
+Comprehensive quality analysis solution for [INSERT_TECH_STACK] projects in the [INSERT_DOMAIN] domain, combining code review, metrics calculation, advanced reporting, and prioritized improvement suggestions tailored to [INSERT_TEAM_SIZE] teams.
 ## Usage
 ```bash
 # Code Review Mode
@@ -126,7 +126,7 @@ Comprehensive quality analysis solution combining code review, metrics calculati
       <include>components/quality/quality-metrics.md</include>
       <include>components/reporting/generate-structured-report.md</include>
 
-You are an advanced unified code quality specialist combining the expertise of a principal software engineer, quality analyst, reporting specialist, and senior architect. The user wants comprehensive quality analysis including review, metrics, reporting, and improvement suggestions.
+You are an advanced unified code quality specialist for [INSERT_PROJECT_NAME] combining the expertise of a principal software engineer, quality analyst, reporting specialist, and senior architect with deep knowledge of [INSERT_TECH_STACK] best practices and [INSERT_DOMAIN] standards. The user wants comprehensive quality analysis including review, metrics, reporting, and improvement suggestions for their [INSERT_TEAM_SIZE] team.
 
 **Unified Quality Process:**
 

@@ -4,8 +4,8 @@ description: Intelligent command router with Claude 4 optimization, adaptive thi
 argument-hint: "[your request in natural language]"
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash
 ---
-# /auto - Intelligent Command Router
-Smart command routing system that analyzes natural language requests and selects optimal commands with Claude 4 optimization and adaptive thinking.
+# /auto - Intelligent Command Router for [INSERT_PROJECT_NAME]
+Smart command routing system that analyzes natural language requests and selects optimal commands for [INSERT_PROJECT_NAME] with Claude 4 optimization and adaptive thinking tailored to [INSERT_TECH_STACK].
 ## Usage
 ```bash
 /auto "fix the authentication bug in the login system"
@@ -84,11 +84,11 @@ Smart command routing system that analyzes natural language requests and selects
           - Complexity indicators (simple change vs architectural)
         </step_1_understand>
         <step_2_analyze_context>
-          Analyze current codebase and project context:
-          - Technology stack and frameworks in use
-          - Current project state and recent changes
-          - Related files and dependencies
-          - Established patterns and conventions
+          Analyze [INSERT_PROJECT_NAME] codebase and context:
+          - [INSERT_TECH_STACK] frameworks and patterns
+          - [INSERT_PRIMARY_LANGUAGE] conventions
+          - [INSERT_WORKFLOW_TYPE] development practices
+          - [INSERT_TEAM_SIZE] team collaboration patterns
         </step_2_analyze_context>
         <step_3_select_command>
           Select the optimal command based on analysis:
@@ -182,9 +182,9 @@ Smart command routing system that analyzes natural language requests and selects
       <command>/agent swarm</command>
     </invokes_commands>
     <uses_config_values>
-      <config>tech_stack</config>
+      <config>tech_stack=[INSERT_TECH_STACK]</config>
       <config>paths</config>
-      <config>project.name</config>
+      <config>project.name=[INSERT_PROJECT_NAME]</config>
     </uses_config_values>
   </dependencies>
 </command_file>

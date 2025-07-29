@@ -4,8 +4,8 @@ description: Execute a focused, integration-first TDD workflow with mutation tes
 argument-hint: "[task_description]"
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash
 ---
-# /task - Focused TDD Development Workflow
-Integration-first test-driven development workflow with advanced quality assurance, security compliance, and comprehensive error handling.
+# /task - Focused TDD Development Workflow for [INSERT_PROJECT_NAME]
+Integration-first test-driven development workflow with advanced quality assurance, [INSERT_SECURITY_LEVEL] security compliance, and comprehensive error handling tailored for [INSERT_TECH_STACK].
 ## Usage
 ```bash
 /task "create email validation utility function"
@@ -131,25 +131,25 @@ Integration-first test-driven development workflow with advanced quality assuran
         </phase_3_secure_implementation>
         <phase_4_comprehensive_validation>
           <mutation_testing_execution>
-            Validate test quality through mutation testing:
-            - Generate relevant mutations for the code domain
+            Validate test quality through mutation testing with [INSERT_TESTING_FRAMEWORK]:
+            - Generate relevant mutations for [INSERT_PRIMARY_LANGUAGE] code
             - Execute mutation testing to verify test effectiveness
             - Achieve 80%+ mutation score for critical code paths
             - Improve tests based on surviving mutations
           </mutation_testing_execution>
           <security_validation>
-            Perform comprehensive security validation:
-            - Static code analysis for security vulnerabilities
-            - Dependency vulnerability scanning
-            - OWASP compliance verification
-            - Penetration testing for critical functionality
+            Perform [INSERT_SECURITY_LEVEL] security validation:
+            - Static code analysis for [INSERT_TECH_STACK] vulnerabilities
+            - Dependency vulnerability scanning for [INSERT_PRIMARY_LANGUAGE]
+            - Security compliance verification for [INSERT_DOMAIN]
+            - Testing appropriate for [INSERT_USER_BASE] requirements
           </security_validation>
           <integration_validation>
-            Verify integration points and contracts:
-            - End-to-end integration testing
-            - External API contract validation
-            - Performance testing under realistic load
-            - Error propagation and recovery testing
+            Verify integration points and contracts for [INSERT_API_STYLE]:
+            - End-to-end integration testing with [INSERT_TESTING_FRAMEWORK]
+            - [INSERT_API_STYLE] contract validation
+            - Performance testing for [INSERT_PERFORMANCE_PRIORITY] requirements
+            - Error propagation testing for [INSERT_DEPLOYMENT_TARGET]
           </integration_validation>
         </phase_4_comprehensive_validation>
         <phase_5_resilience_and_monitoring>
@@ -234,11 +234,11 @@ Integration-first test-driven development workflow with advanced quality assuran
       <component>components/error/circuit-breaker.md</component>
     </includes_components>
     <uses_config_values>
-      <config>tech_stack</config>
+      <config>tech_stack=[INSERT_TECH_STACK]</config>
       <config>paths.source</config>
       <config>paths.tests</config>
       <config>tools.linter</config>
-      <config>tools.test_runner</config>
+      <config>tools.test_runner=[INSERT_TESTING_FRAMEWORK]</config>
     </uses_config_values>
   </dependencies>
 </command_file>

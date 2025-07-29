@@ -1,6 +1,6 @@
 # Claude Code Modular Prompts - Template Library
 
-**📚 PROMPT TEMPLATE LIBRARY** - A comprehensive collection of 79+ Claude Code command templates with manual customization guides and anti-pattern prevention.
+**📚 PROMPT TEMPLATE LIBRARY** - A comprehensive collection of 102 Claude Code command templates (64 active, 38 deprecated) with manual customization guides and anti-pattern prevention.
 
 **🎯 PURPOSE**: Provide proven prompt templates and step-by-step guides for manually customizing them to your specific project, saving months of trial-and-error learning.
 
@@ -9,9 +9,9 @@
 **What You Get:**
 - 📋 **Guide commands** that provide manual customization checklists
 - 📁 **Dual folder structure**: Working copy + reference copy
-- 📝 **79 command templates** with [INSERT_XXX] placeholders
+- 📝 **102 command templates** (64 active, 38 deprecated) with [INSERT_XXX] placeholders
 - 📜 **Example XML configs** for manual project setup
-- 🧪 **65 component templates** you can manually adapt
+- 🧪 **71 component templates** you can manually adapt
 - 🚫 **48+ documented anti-patterns** to avoid manually
 - 🔧 **Setup script** that copies files (no automation)
 
@@ -116,8 +116,8 @@ You'll need to manually find and replace these in your editor:
 **Framework (Reference)**:
 ```
 .claude-framework/    # Git submodule reference library
-├── commands/         # 79 template commands with placeholders
-├── components/       # 65 reusable prompt components
+├── commands/         # 102 template commands with placeholders (64 active, 38 deprecated)
+├── components/       # 71 reusable prompt components
 ├── context/          # Essential context files
 ├── commands/meta/    # Guide commands (/adapt-to-project, etc.)
 ├── config/           # Project configuration templates
@@ -154,14 +154,14 @@ your-project/
 ## Template Library Components
 | Component | What Exists | What It Does |
 |-----------|---------|--------|
-| Command templates | 79 with placeholders | Provide starting points for customization |
+| Command templates | 102 with placeholders (64 active, 38 deprecated) | Provide starting points for customization |
 | Guide commands | 7 helper commands | Provide checklists and instructions |
 | Example configs | XML templates | Show configuration format (manual editing) |
 | Placeholder system | [INSERT_XXX] markers | Mark spots needing manual replacement |
 | Dual folder setup | Created by setup.sh | Keeps reference + working copies |
 | Integration script | setup.sh | Copies files to your project |
 | Documentation | Guides and anti-patterns | Help avoid common mistakes |
-| Component library | 65 prompt fragments | Reusable pieces for commands |
+| Component library | 71 prompt fragments | Reusable pieces for commands |
 | Context files | Best practices docs | Background knowledge |
 | Pure prompt templates | 100% markdown | No executable code |
 
@@ -195,7 +195,7 @@ See `MVP-ACTION-PLAN.md` for 8-10 week production readiness roadmap:
 This is an **experimental prompt engineering framework** for research and development:
 - Focus is on prompt effectiveness and architectural exploration
 - Commands require functional validation before production use
-- All 79 commands are maintained as unique implementations
+- All 102 commands are maintained as unique implementations
 - Validation templates provide path to production readiness
 
 ## Testing Framework
@@ -214,9 +214,9 @@ A testing framework has been implemented focusing on structural validation for t
 - **Content Structure**: Ensures adequate command content and basic markdown format
 
 ### Current Validation Results (Post-Improvements)
-**Structural Validation**: 100% (85/85 commands passing)
+**Structural Validation**: 100% (102/102 commands passing)
 - **Fixed**: All commands now have required `name` field in YAML front matter
-- **Functional Validation**: 70.6% (60/85 commands passing Claude Code compliance tests)
+- **Functional Validation**: 62.7% (64/102 commands passing Claude Code compliance tests)
 - **Security**: ✅ **FUNCTIONAL CREDENTIAL PROTECTION IMPLEMENTED** (2025-07-29)
 - **Performance**: Theoretical frameworks created, actual benchmarks pending
 
@@ -294,7 +294,7 @@ A testing framework has been implemented focusing on structural validation for t
    - Example-driven development patterns
 
 ### 📚 Prompt Component Library
-4. **Modular Components** (`.claude/context/modular-components.md`) - 65 reusable prompt fragments
+4. **Modular Components** (`.claude/context/modular-components.md`) - 71 reusable prompt fragments
 5. **Orchestration Patterns** (`.claude/context/orchestration-patterns.md`) - Multi-step prompt workflows
 6. **Framework Guide** (`.claude/context/experimental-framework-guide.md`) - How components compose
 7. **Quality Assessment** (`.claude/context/quality-assessment-report.md`) - Current state metrics

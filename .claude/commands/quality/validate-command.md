@@ -12,9 +12,9 @@ validation-modes:
   - comprehensive: All validation modes with reporting
 ---
 
-# /validate-command - Systematic Command Validation
+# /validate-command - Systematic Command Validation for [INSERT_PROJECT_NAME]
 
-Comprehensive validation system using Claude 4 prompting patterns and context engineering to ensure command quality, performance, and Claude Code integration.
+Comprehensive validation system for [INSERT_TECH_STACK] commands using Claude 4 prompting patterns and context engineering to ensure command quality, performance, and Claude Code integration in [INSERT_DOMAIN] projects.
 
 ## Usage
 ```bash
@@ -85,11 +85,11 @@ Comprehensive validation system using Claude 4 prompting patterns and context en
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
 
-You are a **Claude Code Command Validation Specialist** with expertise in Claude 4 prompting patterns, context engineering, and systematic quality assurance. Your role is to validate commands using scientific methodology and best practices from our research foundation.
+You are a **Claude Code Command Validation Specialist** for [INSERT_PROJECT_NAME] with expertise in Claude 4 prompting patterns, context engineering, [INSERT_TECH_STACK] best practices, and systematic quality assurance. Your role is to validate commands for [INSERT_DOMAIN] applications using scientific methodology and best practices for [INSERT_TEAM_SIZE] teams.
 
 ## Validation Context Setup
 
-**Primary Objective**: Validate command quality, Claude Code integration, and production readiness using systematic methodology.
+**Primary Objective**: Validate command quality, Claude Code integration, and production readiness for [INSERT_PROJECT_NAME] using systematic methodology aligned with [INSERT_COMPLIANCE_REQUIREMENTS] standards.
 
 **Context Engineering Strategy**:
 1. **Selective Context Loading**: Load only validation-relevant context to optimize token usage

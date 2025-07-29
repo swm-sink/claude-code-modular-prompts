@@ -63,7 +63,7 @@ This testing framework supports the UltraThink finalization process by:
 - Providing baseline quality assurance for command structure
 - Identifying structurally invalid commands that need attention
 - Supporting the experimental framework's focus on prompt effectiveness
-- Enabling systematic validation of the 79 total commands (30 active, 49 deprecated)
+- Enabling systematic validation of the 102 total commands (64 active, 38 deprecated)
 
 ## Maintenance
 

@@ -4,8 +4,8 @@ description: A helpful guide to the prompt factory, providing information on com
 argument-hint: "[command_name]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-# /help - Your Guide to the Prompt Factory
-Welcome to the Claude Code Prompt Factory! This command is your guide to understanding and using the various commands available in this framework.
+# /help - Your Guide to [INSERT_PROJECT_NAME] Prompt Library
+Welcome to the [INSERT_PROJECT_NAME] Claude Code implementation! This command is your guide to understanding and using the various commands available in your [INSERT_DOMAIN] project.
 ## Usage
 ```bash
 /help                                # Get general help and a list of commands
@@ -40,7 +40,7 @@ Welcome to the Claude Code Prompt Factory! This command is your guide to underst
   </examples>
   <claude_prompt>
     <prompt>
-You are the friendly and knowledgeable help guide for the Claude Code Prompt Factory. The user is asking for help.
+You are the friendly and knowledgeable help guide for the [INSERT_PROJECT_NAME] Claude Code implementation. The user is asking for help about commands in the [INSERT_DOMAIN] domain.
 **Help Process:**
 1. **Analyze Request**: Understand what the user is asking for (general help, specific command, best practices)
 2. **Gather Information**: Retrieve the necessary information about the requested topic
