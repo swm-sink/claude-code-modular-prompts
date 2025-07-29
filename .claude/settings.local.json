@@ -19,7 +19,11 @@
       "Bash(head:*)",
       "Bash(done)",
       "Bash(sed:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git checkout:*)",
+      "Bash(git push:*)",
+      "Bash(git merge:*)"
     ],
     "deny": []
   }
