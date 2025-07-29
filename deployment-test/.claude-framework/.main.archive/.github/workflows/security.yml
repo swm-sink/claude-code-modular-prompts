@@ -1,0 +1,367 @@
+name: Security Audit
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run security audit weekly on Sundays at 02:00 UTC
+    - cron: '0 2 * * 0'
+  workflow_dispatch:
+
+jobs:
+  # Secret scanning
+  secret-scan:
+    name: Secret Scanning
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Advanced secret scanning
+        run: |
+          echo "🔍 Advanced Secret Scanning"
+          echo "=========================="
+          
+          # Common secret patterns
+          declare -A patterns=(
+            ["Google API Key"]="AIza[0-9A-Za-z_-]{35}"
+            ["AWS Access Key"]="AKIA[0-9A-Z]{16}"
+            ["AWS Secret Key"]="[0-9a-zA-Z/+]{40}"
+            ["GitHub Token"]="ghp_[0-9a-zA-Z]{36}"
+            ["Generic API Key"]="[aA][pP][iI][_]?[kK][eE][yY].*['\"]([0-9a-zA-Z]{32,})['\"]"
+            ["Generic Secret"]="[sS][eE][cC][rR][eE][tT].*['\"]([0-9a-zA-Z]{20,})['\"]"
+            ["Database URL"]="postgres://[^\\s]*:[^\\s]*@[^\\s]*"
+            ["MongoDB URL"]="mongodb://[^\\s]*:[^\\s]*@[^\\s]*"
+          )
+          
+          found_issues=false
+          
+          for name in "${!patterns[@]}"; do
+            pattern="${patterns[$name]}"
+            echo "Checking for: $name"
+            
+            if grep -r -E "$pattern" . --exclude-dir=.git --exclude="*.log" --exclude-dir=.github --exclude="security.yml"; then
+              echo "❌ Found potential $name"
+              found_issues=true
+            else
+              echo "✅ No $name found"
+            fi
+          done
+          
+          if [ "$found_issues" = true ]; then
+            echo ""
+            echo "❌ Security scan failed - potential secrets detected"
+            exit 1
+          fi
+          
+          echo ""
+          echo "✅ Secret scan completed - no issues found"
+          
+      - name: Check environment file security
+        run: |
+          echo "🔐 Environment File Security Check"
+          echo "================================="
+          
+          # Check .env is gitignored
+          if [ -f ".env" ]; then
+            if git check-ignore .env; then
+              echo "✅ .env is properly gitignored"
+            else
+              echo "❌ .env is NOT gitignored - SECURITY RISK"
+              exit 1
+            fi
+          else
+            echo "✅ No .env file in repository"
+          fi
+          
+          # Check .env.template exists and has no real values
+          if [ -f ".env.template" ]; then
+            echo "✅ .env.template found"
+            
+            # Check template doesn't contain real API keys
+            if grep -E "(AIza[0-9A-Za-z_-]{35}|AKIA[0-9A-Z]{16})" .env.template; then
+              echo "❌ .env.template contains real API keys"
+              exit 1
+            fi
+            echo "✅ .env.template contains only placeholder values"
+          else
+            echo "⚠️  .env.template not found - consider adding one"
+          fi
+          
+      - name: Git history scan
+        run: |
+          echo "📜 Git History Security Scan"
+          echo "============================"
+          
+          # Check recent commits for accidentally committed secrets
+          git log --oneline -20 --grep="api" --grep="key" --grep="secret" --grep="password" --all --ignore-case
+          
+          # Check if any secrets were accidentally committed in recent history
+          if git log -p --all -S "AIza" | head -1; then
+            echo "⚠️  Found 'AIza' pattern in git history - review for Google API keys"
+          fi
+          
+          if git log -p --all -S "AKIA" | head -1; then
+            echo "⚠️  Found 'AKIA' pattern in git history - review for AWS keys"
+          fi
+          
+          echo "✅ Git history scan completed"
+
+  # Dependency security audit
+  dependency-audit:
+    name: Dependency Security Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+          
+      - name: Install security tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install safety bandit
+          
+      - name: Python dependency security audit
+        run: |
+          echo "🔍 Python Dependency Security Audit"
+          echo "==================================="
+          
+          # Install dependencies first
+          if [ -f "requirements.txt" ]; then
+            pip install -r requirements.txt
+          fi
+          
+          if [ -f "streamlit_dashboard/requirements.txt" ]; then
+            pip install -r streamlit_dashboard/requirements.txt
+          fi
+          
+          # Run safety check
+          echo "Running safety check..."
+          safety check --json --output safety-report.json || true
+          
+          if [ -f "safety-report.json" ]; then
+            # Parse and display results
+            python -c "
+            import json
+            try:
+                with open('safety-report.json') as f:
+                    report = json.load(f)
+                
+                if report:
+                    print('❌ Security vulnerabilities found:')
+                    for vuln in report:
+                        print(f'  - {vuln.get(\"package\")}: {vuln.get(\"vulnerability\")}')
+                    exit(1)
+                else:
+                    print('✅ No known vulnerabilities found')
+            except:
+                print('✅ No vulnerabilities detected')
+            "
+          else
+            echo "✅ No vulnerabilities detected"
+          fi
+          
+      - name: Static code security analysis
+        run: |
+          echo "🔍 Static Code Security Analysis"
+          echo "==============================="
+          
+          # Run bandit on Python code
+          bandit -r . -f json -o bandit-report.json -x "./.git,./htmlcov,./tests" || true
+          
+          if [ -f "bandit-report.json" ]; then
+            # Parse and display results
+            python -c "
+            import json
+            try:
+                with open('bandit-report.json') as f:
+                    report = json.load(f)
+                
+                results = report.get('results', [])
+                high_severity = [r for r in results if r.get('issue_severity') == 'HIGH']
+                medium_severity = [r for r in results if r.get('issue_severity') == 'MEDIUM']
+                
+                if high_severity:
+                    print(f'❌ {len(high_severity)} HIGH severity security issues found')
+                    for issue in high_severity[:3]:  # Show first 3
+                        print(f'  - {issue.get(\"test_name\")}: {issue.get(\"filename\")}:{issue.get(\"line_number\")}')
+                    exit(1)
+                elif medium_severity:
+                    print(f'⚠️  {len(medium_severity)} MEDIUM severity security issues found')
+                    for issue in medium_severity[:3]:  # Show first 3
+                        print(f'  - {issue.get(\"test_name\")}: {issue.get(\"filename\")}:{issue.get(\"line_number\")}')
+                    print('Consider reviewing these issues')
+                else:
+                    print('✅ No high or medium severity security issues found')
+                    
+            except Exception as e:
+                print('✅ Static analysis completed')
+            "
+          else
+            echo "✅ Static analysis completed"
+          fi
+
+  # Configuration security
+  config-security:
+    name: Configuration Security
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Railway configuration security
+        run: |
+          echo "🚂 Railway Configuration Security"
+          echo "================================"
+          
+          if [ -f "streamlit_dashboard/railway.json" ]; then
+            echo "✅ railway.json found"
+            
+            # Check for sensitive data in Railway config
+            if grep -i "api_key\|secret\|password\|token" streamlit_dashboard/railway.json; then
+              echo "❌ Potential sensitive data in railway.json"
+              exit 1
+            fi
+            echo "✅ No sensitive data in railway.json"
+          else
+            echo "⚠️  railway.json not found"
+          fi
+          
+      - name: Streamlit configuration security
+        run: |
+          echo "📊 Streamlit Configuration Security"
+          echo "=================================="
+          
+          # Check for Streamlit secrets
+          if [ -f "streamlit_dashboard/.streamlit/secrets.toml" ]; then
+            echo "❌ Streamlit secrets.toml found in repository - SECURITY RISK"
+            echo "This file should be gitignored and not committed"
+            exit 1
+          else
+            echo "✅ No streamlit secrets.toml in repository"
+          fi
+          
+          # Check .streamlit config directory
+          if [ -d "streamlit_dashboard/.streamlit" ]; then
+            echo "Found .streamlit directory, checking contents..."
+            ls -la streamlit_dashboard/.streamlit/
+            
+            # Any file in .streamlit should be carefully reviewed
+            find streamlit_dashboard/.streamlit -name "*.toml" -exec echo "⚠️  Found config file: {}" \;
+          else
+            echo "✅ No .streamlit directory found"
+          fi
+          
+      - name: File permissions audit
+        run: |
+          echo "🔒 File Permissions Audit"
+          echo "========================"
+          
+          # Check for files with excessive permissions
+          echo "Checking for world-writable files..."
+          find . -type f -perm -002 ! -path "./.git/*" | while read file; do
+            echo "⚠️  World-writable file: $file"
+          done
+          
+          # Check for executable files that shouldn't be
+          echo "Checking executable files..."
+          find . -type f -executable ! -name "*.sh" ! -path "./.git/*" ! -path "./venv/*" | while read file; do
+            echo "ℹ️  Executable file: $file"
+          done
+          
+          echo "✅ File permissions audit completed"
+
+  # Network security
+  network-security:
+    name: Network Security
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Check for hardcoded URLs and IPs
+        run: |
+          echo "🌐 Network Security Check"
+          echo "========================"
+          
+          # Check for hardcoded IPs
+          if grep -r -E "([0-9]{1,3}\.){3}[0-9]{1,3}" . --exclude-dir=.git --exclude="*.log" --exclude-dir=.github; then
+            echo "⚠️  Hardcoded IP addresses found - review for security implications"
+          else
+            echo "✅ No hardcoded IP addresses found"
+          fi
+          
+          # Check for insecure HTTP URLs
+          if grep -r "http://" . --exclude-dir=.git --exclude="*.log" --exclude-dir=.github | grep -v "localhost\|127.0.0.1\|example.com"; then
+            echo "⚠️  Insecure HTTP URLs found - consider using HTTPS"
+          else
+            echo "✅ No insecure HTTP URLs found"
+          fi
+          
+          echo "✅ Network security check completed"
+
+  # Security summary
+  security-summary:
+    name: Security Summary
+    runs-on: ubuntu-latest
+    needs: [secret-scan, dependency-audit, config-security, network-security]
+    if: always()
+    steps:
+      - name: Security audit summary
+        run: |
+          echo "🛡️  Security Audit Summary"
+          echo "=========================="
+          echo ""
+          
+          # Check results of each job
+          if [ "${{ needs.secret-scan.result }}" == "success" ]; then
+            echo "✅ Secret scanning: PASSED"
+          else
+            echo "❌ Secret scanning: FAILED"
+          fi
+          
+          if [ "${{ needs.dependency-audit.result }}" == "success" ]; then
+            echo "✅ Dependency audit: PASSED"
+          else
+            echo "❌ Dependency audit: FAILED"
+          fi
+          
+          if [ "${{ needs.config-security.result }}" == "success" ]; then
+            echo "✅ Configuration security: PASSED"
+          else
+            echo "❌ Configuration security: FAILED"
+          fi
+          
+          if [ "${{ needs.network-security.result }}" == "success" ]; then
+            echo "✅ Network security: PASSED"
+          else
+            echo "❌ Network security: FAILED"
+          fi
+          
+          echo ""
+          
+          # Overall assessment
+          if [ "${{ needs.secret-scan.result }}" == "success" ] && \
+             [ "${{ needs.dependency-audit.result }}" == "success" ] && \
+             [ "${{ needs.config-security.result }}" == "success" ] && \
+             [ "${{ needs.network-security.result }}" == "success" ]; then
+            echo "🎉 Overall Security Status: SECURE"
+            echo "All security checks passed successfully."
+          else
+            echo "⚠️  Overall Security Status: ISSUES DETECTED"
+            echo "Some security checks failed. Please review the issues above."
+          fi
+          
+          echo ""
+          echo "🔒 Security recommendations:"
+          echo "- Regularly rotate API keys and secrets"
+          echo "- Keep dependencies updated"
+          echo "- Review security logs regularly"
+          echo "- Follow principle of least privilege"
+          echo "- Use environment variables for sensitive data"

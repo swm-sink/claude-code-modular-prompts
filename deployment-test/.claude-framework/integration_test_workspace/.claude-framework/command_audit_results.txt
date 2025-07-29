@@ -1,0 +1,1406 @@
+Claude Code Command Validator
+=============================
+Validating 102 file(s)...
+
+Validating: .claude/commands/database/db-backup.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     114 lines,     3127 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/database/db-seed.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     177 lines,     4428 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/database/db-migrate.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (      85 lines,     3067 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/database/db-restore.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     155 lines,     4706 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/pipeline.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      72 lines,     3806 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/map-reduce.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     195 lines,     5614 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 1[0m
+
+Validating: .claude/commands/devops/cd-rollback.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     130 lines,     2498 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/devops/deploy.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     130 lines,     5655 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/devops/ci-setup.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     178 lines,     4780 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/devops/ci-run.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     197 lines,     4889 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/core/auto.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      27 lines,     1009 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/core/project-task.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (      98 lines,     3129 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/core/help.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      28 lines,     1302 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/core/task.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      22 lines,      885 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/quality/integration-testing-baseline.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     192 lines,     6070 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/quality/validate-command.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     278 lines,    11956 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/quality/integration-test-matrices.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     322 lines,    12650 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/quality/analyze-system.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     201 lines,     9352 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/quality/PERFORMANCE-INTEGRATION-REPORT.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     242 lines,     9613 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/quality/quality.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      77 lines,     3765 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/quality/monitor.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     182 lines,     9179 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/quality/test.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     210 lines,    10500 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/quality/validate-component.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (      41 lines,     2088 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/quality/analyze-code.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      47 lines,     3089 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/quality/test-integration.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     172 lines,     5987 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 2[0m
+
+Validating: .claude/commands/data-science/notebook-run.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     255 lines,     5925 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/security/secure-audit.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     159 lines,     3116 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/security/secure-scan.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (      85 lines,     1896 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/development/env-setup.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     186 lines,     4991 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/development/api-design.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (      69 lines,     1757 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/development/dev.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      83 lines,     4028 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/development/project/global-deploy.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     205 lines,    12265 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/development/dev-setup.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     122 lines,     2477 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/project.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     412 lines,    21183 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/mass-transformation.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     207 lines,    10655 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/meta/sync-from-reference.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     185 lines,     4527 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/meta/adapt-to-project.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     182 lines,     5948 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/meta/replace-placeholders.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     147 lines,     5044 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/meta/import-pattern.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     241 lines,     4896 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/meta/welcome.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     191 lines,     5437 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/meta/validate-adaptation.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     159 lines,     4026 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/meta/undo-adaptation.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     234 lines,     5401 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/meta/share-adaptation.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     197 lines,     4622 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/specialized/secure-assess.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     183 lines,     8536 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/specialized/secure-manage.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     220 lines,     9827 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/specialized/db-admin.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     289 lines,    13565 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/testing/test-unit.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     106 lines,     4204 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/testing/test-integration.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     309 lines,     6986 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/web-dev/component-gen.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     169 lines,     3387 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/research.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (      28 lines,     1107 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/dev-test.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      91 lines,     3459 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/query.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (      91 lines,     2649 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/swarm.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      79 lines,     3271 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 1[0m
+
+Validating: .claude/commands/dag-orchestrate.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     114 lines,     4423 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 1[0m
+
+Validating: .claude/commands/quality-enforce.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      69 lines,     3381 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/monitoring/monitor-setup.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     201 lines,     5247 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/monitoring/monitor-alerts.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[0;32m✅ PASS[0m: Optional field 'category' present
+[0;32m✅ PASS[0m: Content length adequate (     224 lines,     5886 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+
+Validating: .claude/commands/test-e2e.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      85 lines,     4699 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/think-deep.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      68 lines,     3765 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/mega-platform-builder.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     301 lines,    13740 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/hierarchical.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[0;32m✅ PASS[0m: Optional field 'usage' present
+[0;32m✅ PASS[0m: Optional field 'tools' present
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     228 lines,     6600 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 1[0m
+
+Validating: .claude/commands/mutation.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      96 lines,     4773 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/protocol.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      56 lines,     2596 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/dag-executor.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     229 lines,    11030 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/secure-audit.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      86 lines,     3762 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/db-backup.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      73 lines,     3382 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/analyze-performance.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     104 lines,     4732 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/secure-config.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      78 lines,     3498 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/quality-review.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     110 lines,     5048 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/monitor-setup.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      79 lines,     3654 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/pipeline-create.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      86 lines,     4197 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/code/debug.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      99 lines,     4617 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/code/new.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      91 lines,     3955 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/code/dev-refactor.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      92 lines,     4199 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/code/code-format.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      88 lines,     3846 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/code/code-lint.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      88 lines,     3737 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/code/existing.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      76 lines,     3148 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/code/feature.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     103 lines,     4808 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/project/deps-update.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     123 lines,     5762 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/project/auto-provision.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     317 lines,    19057 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/project/dev-build.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      71 lines,     3038 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/project/env-setup.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     121 lines,     5567 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/project/cd-rollback.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     109 lines,     4262 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/project/deploy.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      78 lines,     3808 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/project/analyze-dependencies.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     111 lines,     4929 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/project/ci-setup.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      84 lines,     4132 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/project/dev-setup.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      77 lines,     3000 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/development/project/ci-run.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      83 lines,     3406 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/db-seed.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      84 lines,     3698 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/test-unit.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     102 lines,     5079 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/secure-fix.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      79 lines,     3663 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/test-coverage.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     103 lines,     4352 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/monitor-alerts.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      82 lines,     3864 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/DEPRECATED-INDEX.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     235 lines,    10775 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/db-migrate.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      98 lines,     4293 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/db-restore.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      91 lines,     4021 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/secure-scan.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      81 lines,     3363 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/pipeline-run.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     136 lines,     6134 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/monitor-dashboard.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      80 lines,     3788 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/secure-report.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      76 lines,     3311 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/analyze-patterns.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (      99 lines,     4046 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+Validating: .claude/commands/deprecated/test-integration.md
+----------------------------------------
+[0;32m✅ PASS[0m: File basics valid
+[0;32m✅ PASS[0m: YAML front matter structure valid
+[0;32m✅ PASS[0m: Required field 'name' present
+[0;32m✅ PASS[0m: Required field 'description' present
+[1;33m⚠️  WARN[0m: Optional field 'usage' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'tools' missing (recommended)
+[1;33m⚠️  WARN[0m: Optional field 'category' missing (recommended)
+[0;32m✅ PASS[0m: Content length adequate (     100 lines,     5512 chars)
+----------------------------------------
+[0;32m✅ PASS[0m: File validation completed successfully
+[1;33mWarnings: 3[0m
+
+=============================
+Validation Summary:
+  Total files: 102
+  [0;32mPassed: 102[0m
+  Failed: 0
+[0;32mAll validations passed![0m

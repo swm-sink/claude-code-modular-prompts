@@ -1,0 +1,79 @@
+# Web Startup Quick Start Adaptation Pattern
+# Perfect for small teams building web applications with modern JavaScript
+
+adaptation_pattern:
+  metadata:
+    name: "Web Startup Quick Start"
+    description: "Perfect for small teams building web applications with modern JavaScript"
+    author: "Claude Code Community"
+    version: "1.0"
+    created: "2025-07-28"
+  
+  configuration:
+    placeholders:
+      DOMAIN: "web-dev"
+      TECH_STACK: "React+Node.js+PostgreSQL"
+      TEAM_SIZE: "small"
+      WORKFLOW_TYPE: "agile"
+      PRIMARY_LANGUAGE: "JavaScript"
+      TESTING_FRAMEWORK: "Jest+Cypress"
+      CI_CD_PLATFORM: "GitHub Actions"
+      DEPLOYMENT_TARGET: "Vercel+Railway"
+      DATABASE_TYPE: "PostgreSQL"
+      API_STYLE: "REST"
+      SECURITY_LEVEL: "standard"
+      PERFORMANCE_PRIORITY: "balanced"
+      USER_BASE: "b2c"
+  
+  command_selection:
+    include:
+      categories:
+        - "core"
+        - "development"
+        - "testing"
+        - "database"
+        - "devops"
+      commands:
+        - "/task"
+        - "/dev"
+        - "/test-unit"
+        - "/test-e2e"
+        - "/deploy"
+        - "/db-migrate"
+        - "/api-design"
+        - "/monitor-setup"
+    exclude:
+      commands:
+        - "/secure-audit"
+        - "/pipeline"
+        - "/swarm"
+  
+  customizations:
+    settings:
+      hooks_enabled: true
+      tools:
+        Write:
+          permission: "ask"
+        Edit:
+          permission: "ask"
+        Bash:
+          permission: "ask"
+    
+    workflows:
+      feature_development:
+        steps:
+          - "/task \"create feature\""
+          - "/dev test"
+          - "/deploy staging"
+  
+  success_metrics:
+    setup_time: "5 minutes"
+    commands_adapted: 45
+    readiness_score: "87%"
+    time_saved: "14 months"
+  
+  notes:
+    - "Perfect for MVPs and rapid prototyping"
+    - "Includes monitoring from day one"
+    - "Optimized for Vercel deployment"
+    - "Test-driven development focus"

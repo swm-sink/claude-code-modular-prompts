@@ -1,0 +1,191 @@
+#
+# ┌─────────────────────────────────────────────────────────────────────────┐
+# │  CLAUDE CODE TEMPLATE LIBRARY - PROJECT CONFIGURATION                   │
+# │                                                                         │
+# │  This is your central configuration file for manual customization.      │
+# │  Replace ALL placeholders below with your project-specific values.     │
+# │                                                                         │
+# │  IMPORTANT: This file is for YOUR reference only. Claude Code          │
+# │  commands cannot read or modify this file. It serves as:               │
+# │  1. A checklist of values to replace throughout templates              │
+# │  2. Documentation of your configuration choices                         │
+# │  3. A reference when manually updating commands                         │
+# └─────────────────────────────────────────────────────────────────────────┘
+#
+
+project_config:
+  version: "1.0"
+  
+  # ═══════════════════════════════════════════════════════════════════
+  # PROJECT METADATA
+  # ═══════════════════════════════════════════════════════════════════
+  metadata:
+    # Your project's display name (e.g., "CustomerPortal", "DataPipeline")
+    name: "[INSERT_PROJECT_NAME]"
+    
+    # Your application domain (e.g., "e-commerce", "healthcare", "fintech")
+    domain: "[INSERT_DOMAIN]"
+    
+    # Creation date (auto-filled by setup.sh, or update manually)
+    created: "2025-07-28"
+    
+    # Adaptation progress: not-started | in-progress | completed
+    adaptation_mode: "not-started"
+    
+    # Readiness score: 0-100 (calculate based on replaced placeholders)
+    readiness_score: 0
+    
+  # ═══════════════════════════════════════════════════════════════════
+  # CORE PLACEHOLDERS - Replace these values throughout all templates
+  # ═══════════════════════════════════════════════════════════════════
+  placeholders:
+    # HOW TO USE THIS SECTION:
+    # 1. Replace each [INSERT_XXX] value with your actual project value
+    # 2. Use these exact values when doing Find & Replace in command files
+    # 3. Keep this file updated as your project evolves
+    
+    # Project name used in commands and documentation
+    # Example: "EcommerceAPI", "AnalyticsPlatform", "MobileBackend"
+    PROJECT_NAME: "[INSERT_PROJECT_NAME]"
+    
+    # Primary business/application domain
+    # Examples: "e-commerce", "data-analytics", "social-media", "healthcare"
+    DOMAIN: "[INSERT_DOMAIN]"
+    
+    # Primary technology stack (languages/frameworks/databases)
+    # Examples: 
+    # - "Node.js/Express/PostgreSQL"
+    # - "Python/Django/MySQL"
+    # - "Java Spring Boot/MongoDB"
+    # - "Ruby on Rails/Redis"
+    TECH_STACK: "[INSERT_TECH_STACK]"
+    
+    # Your company or organization name
+    # Example: "Acme Corp", "StartupXYZ", "Personal Project"
+    COMPANY_NAME: "[INSERT_COMPANY_NAME]"
+    
+    # Development team size descriptor
+    # Examples: "solo", "2-person", "5-person", "10-person", "20+ person"
+    TEAM_SIZE: "[INSERT_TEAM_SIZE]"
+    
+    # Primary workflow methodology
+    # Examples: "agile", "scrum", "kanban", "waterfall", "hybrid"
+    WORKFLOW_TYPE: "[INSERT_WORKFLOW_TYPE]"
+    
+    # Main programming language
+    # Examples: "JavaScript", "Python", "Java", "Go", "Ruby"
+    PRIMARY_LANGUAGE: "[INSERT_PRIMARY_LANGUAGE]"
+    
+    # Testing framework/tools
+    # Examples: "Jest", "pytest", "JUnit", "RSpec", "Mocha"
+    TESTING_FRAMEWORK: "[INSERT_TESTING_FRAMEWORK]"
+    
+    # Database system
+    # Examples: "PostgreSQL", "MySQL", "MongoDB", "Redis", "DynamoDB"
+    DATABASE_TYPE: "[INSERT_DATABASE_TYPE]"
+    
+    # Version control system
+    # Examples: "GitHub", "GitLab", "Bitbucket", "Azure DevOps"
+    VERSION_CONTROL: "[INSERT_VERSION_CONTROL]"
+    
+    # CI/CD platform
+    # Examples: "GitHub Actions", "Jenkins", "CircleCI", "GitLab CI"
+    CI_CD_PLATFORM: "[INSERT_CI_CD_PLATFORM]"
+    
+    # Cloud infrastructure provider
+    # Examples: "AWS", "Google Cloud", "Azure", "Heroku", "DigitalOcean"
+    CLOUD_PROVIDER: "[INSERT_CLOUD_PROVIDER]"
+    
+    # Container/orchestration platform
+    # Examples: "Docker", "Kubernetes", "Docker Swarm", "ECS", "none"
+    CONTAINER_PLATFORM: "[INSERT_CONTAINER_PLATFORM]"
+    
+    # Monitoring/observability platform
+    # Examples: "DataDog", "New Relic", "Prometheus/Grafana", "CloudWatch"
+    MONITORING_PLATFORM: "[INSERT_MONITORING_PLATFORM]"
+    
+    # Deployment frequency
+    # Examples: "continuous", "daily", "weekly", "bi-weekly", "monthly"
+    DEPLOYMENT_SCHEDULE: "[INSERT_DEPLOYMENT_SCHEDULE]"
+    
+    # Compliance/security requirements
+    # Examples: "HIPAA", "PCI-DSS", "SOC2", "GDPR", "none"
+    COMPLIANCE_REQUIREMENTS: "[INSERT_COMPLIANCE_REQUIREMENTS]"
+    
+    # Documentation platform/tool
+    # Examples: "Docusaurus", "Sphinx", "MkDocs", "Confluence", "GitHub Wiki"
+    DOCUMENTATION_TOOL: "[INSERT_DOCUMENTATION_TOOL]"
+    
+  # ═══════════════════════════════════════════════════════════════════
+  # ADVANCED CONFIGURATION (Optional - for complex projects)
+  # ═══════════════════════════════════════════════════════════════════
+  advanced_config:
+    # Multi-environment setup (optional)
+    environments:
+      development:
+        url: "[INSERT_DEV_URL]"
+        deploy_branch: "develop"
+      staging:
+        url: "[INSERT_STAGING_URL]"
+        deploy_branch: "staging"
+      production:
+        url: "[INSERT_PROD_URL]"
+        deploy_branch: "main"
+    
+    # Team communication tools (optional)
+    team_tools:
+      # Examples: "Slack", "Microsoft Teams", "Discord"
+      communication: "[INSERT_COMMUNICATION_PLATFORM]"
+      
+      # Examples: "Jira", "Trello", "Asana", "Linear"
+      project_management: "[INSERT_PROJECT_MANAGEMENT_TOOL]"
+      
+      # Examples: "GitHub PRs", "GitLab MRs", "Gerrit"
+      code_review: "[INSERT_CODE_REVIEW_TOOL]"
+    
+    # Custom domain entities (optional - for domain-specific language)
+    domain_entities:
+      # Add your domain-specific terms here
+      # Example for e-commerce:
+      # DOMAIN_ENTITY_1: "Order"
+      # DOMAIN_ENTITY_2: "Product"
+      # DOMAIN_ACTION_1: "Checkout"
+      
+  # ═══════════════════════════════════════════════════════════════════
+  # ADAPTATION TRACKING
+  # ═══════════════════════════════════════════════════════════════════
+  adaptation_history:
+    # Track your customization progress here
+    - date: "2025-07-28"
+      status: "initialized"
+      note: "Framework template library installed. Ready for customization."
+    # Add entries as you make progress:
+    # - date: "YYYY-MM-DD"
+    #   status: "in-progress"
+    #   note: "Replaced core placeholders in 25 commands."
+    
+  # ═══════════════════════════════════════════════════════════════════
+  # NOTES & REMINDERS
+  # ═══════════════════════════════════════════════════════════════════
+  notes: |
+    MANUAL CUSTOMIZATION CHECKLIST:
+    
+    1. [ ] Fill in all placeholder values above
+    2. [ ] Run /replace-placeholders to get Find & Replace guide
+    3. [ ] Open command files in your editor
+    4. [ ] Use Find & Replace (Ctrl+Shift+H) for each placeholder
+    5. [ ] Validate with /validate-adaptation
+    6. [ ] Remove commands you don't need
+    7. [ ] Test commands in Claude Code
+    8. [ ] Document any custom modifications
+    
+    TIPS:
+    - Start with core commands: /task, /help, /auto
+    - Replace longer placeholders first to avoid partial matches
+    - Keep this file updated as your project evolves
+    - Use /share-adaptation to create shareable patterns
+    
+    SUPPORT:
+    - See EXAMPLES.md for detailed examples
+    - Use /help for command guidance
+    - Submit issues at: https://github.com/swm-sink/claude-code-modular-prompts/issues

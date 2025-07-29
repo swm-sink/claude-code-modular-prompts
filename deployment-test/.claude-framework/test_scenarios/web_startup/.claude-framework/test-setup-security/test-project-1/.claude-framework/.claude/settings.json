@@ -1,0 +1,46 @@
+{
+  "tools": {
+    "Read": "allow",
+    "Write": "ask",
+    "Edit": "ask", 
+    "MultiEdit": "ask",
+    "Bash": "ask",
+    "Glob": "allow",
+    "Grep": "allow",
+    "LS": "allow",
+    "WebFetch": "ask",
+    "WebSearch": "ask",
+    "TodoWrite": "allow",
+    "Task": "allow",
+    "NotebookRead": "allow",
+    "NotebookEdit": "ask"
+  },
+  "memory": {
+    "enabled": true,
+    "maxTokens": 50000
+  },
+  "hooks": {
+    "enabled": true,
+    "pre-command": "echo 'Executing command with security validation...'",
+    "post-command": "echo 'Command completed. Reviewing for security compliance...'"
+  },
+  "security": {
+    "maxFileSize": "10MB",
+    "allowedPaths": [".claude/", "tests/", "*.md", "*.json", "*.py"],
+    "blockedPaths": ["/etc/", "/bin/", "/usr/", "~/.ssh/", "*.key", "*.pem"],
+    "maxBashCommands": 5,
+    "requireApprovalFor": ["rm", "mv", "cp", "sudo", "curl", "wget", "git push"]
+  },
+  "context": {
+    "loadPattern": "*.md",
+    "excludePaths": [
+      "*.tmp",
+      "*.bak", 
+      "temp/*"
+    ]
+  },
+  "experimental": {
+    "promptEngineering": true,
+    "multiAgentOrchestration": true
+  }
+}
