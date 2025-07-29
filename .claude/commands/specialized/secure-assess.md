@@ -5,9 +5,9 @@ argument-hint: "[mode] [scope] [format]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
-# /secure-assess - Comprehensive Security Assessment
+# /secure-assess - Comprehensive Security Assessment for [INSERT_PROJECT_NAME]
 
-Unified security assessment system combining vulnerability scanning, threat modeling, compliance validation, and security auditing capabilities.
+Unified security assessment system for [INSERT_DOMAIN] applications built with [INSERT_TECH_STACK], combining vulnerability scanning, threat modeling, compliance validation, and security auditing capabilities tailored to [INSERT_COMPLIANCE_REQUIREMENTS] requirements.
 
 ## Usage
 ```bash
@@ -74,11 +74,13 @@ Unified security assessment system combining vulnerability scanning, threat mode
       
       <!-- Security-specific components -->
       <include>components/security/owasp-compliance.md</include>
+      <include>components/security/credential-protection.md</include>
+      <include>components/security/protection-feedback.md</include>
       <include>components/constitutional/safety-framework.md</include>
       <include>components/reporting/generate-structured-report.md</include>
       <include>components/context/find-relevant-code.md</include>
 
-You are an expert security assessment specialist. The user wants to perform comprehensive security assessment with mode-based analysis.
+You are an expert security assessment specialist for [INSERT_PROJECT_NAME] with deep knowledge of [INSERT_TECH_STACK] security best practices and [INSERT_COMPLIANCE_REQUIREMENTS] compliance requirements. The user wants to perform comprehensive security assessment for their [INSERT_DOMAIN] application with mode-based analysis.
 
 **Assessment Modes:**
 
@@ -131,13 +133,23 @@ You are an expert security assessment specialist. The user wants to perform comp
 5. **Generate Report**: Create comprehensive security assessment report
 6. **Provide Recommendations**: Prioritized remediation and improvement plans
 
-**Security Assessment Process:**
-- Read project configuration and security tools setup
-- Perform automated scanning using configured tools (Snyk, Trivy, Gitleaks, etc.)
-- Conduct manual security review based on OWASP Top 10 and industry standards
-- Validate security patterns: authentication, authorization, input validation, encryption
-- Generate prioritized vulnerability reports with severity ratings
-- Create actionable remediation plans with timeline recommendations
+**Security Assessment Process with Credential Protection:**
+- Read project configuration and security tools setup for [INSERT_PROJECT_NAME]
+- **CREDENTIAL PROTECTION ACTIVE**: All security tool outputs automatically scanned for credentials using 13 detection patterns
+- Perform automated scanning using configured tools appropriate for [INSERT_TECH_STACK] (Snyk, Trivy, Gitleaks, etc.)
+- **AUTOMATED MASKING**: API keys, tokens, passwords, database URLs automatically masked in all outputs
+- Conduct manual security review based on OWASP Top 10 and [INSERT_COMPLIANCE_REQUIREMENTS] standards
+- **ERROR SANITIZATION**: All error messages sanitized to prevent credential exposure
+- Validate security patterns: authentication, authorization, input validation, encryption for [INSERT_DOMAIN] applications
+- **PROTECTED REPORTING**: Generate prioritized vulnerability reports with credentials masked for [INSERT_TEAM_SIZE] team
+- Create actionable remediation plans with timeline recommendations aligned with [INSERT_DEPLOYMENT_SCHEDULE]
+
+**Credential Protection Features:**
+- AWS Access Keys (AKIA*), Secret Keys, API tokens automatically detected and masked
+- Database connection strings (mysql://, postgresql://, etc.) protected
+- JWT tokens, SSH private keys, GitHub tokens masked
+- Environment variables containing secrets protected
+- Real-time feedback: "🔒 SECURITY: X credential(s) masked" when protection is active
 
 **Output Formats:**
 - **structured**: Human-readable comprehensive report
@@ -158,6 +170,7 @@ You are an expert security assessment specialist. The user wants to perform comp
       
       <!-- Security-specific components -->
       <component>components/security/owasp-compliance.md</component>
+      <component>components/security/credential-protection.md</component>
       <component>components/constitutional/safety-framework.md</component>
       <component>components/reporting/generate-structured-report.md</component>
       <component>components/context/find-relevant-code.md</component>

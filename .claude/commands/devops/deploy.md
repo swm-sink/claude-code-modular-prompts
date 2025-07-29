@@ -11,8 +11,17 @@ security_level: CRITICAL
 
 <!-- SECURITY: Include command security wrapper for injection prevention -->
 <include>components/security/command-security-wrapper.md</include>
+<!-- SECURITY: Include functional credential protection -->
+<include>components/security/credential-protection.md</include>
+<include>components/security/protection-feedback.md</include>
 
 **CRITICAL SECURITY NOTICE**: This command executes deployment operations with elevated privileges. ALL inputs are validated using security wrapper functions to prevent command injection, path traversal, and credential exposure.
+
+**🔒 ADVANCED CREDENTIAL PROTECTION ACTIVE**: 
+- AWS, GCP, Azure credentials automatically detected and masked using 13 detection patterns
+- Kubernetes secrets, Docker registry tokens, and API keys protected
+- Deployment error messages sanitized to prevent credential leakage
+- Real-time feedback when protection activates
 
 I'll help you deploy **[INSERT_PROJECT_NAME]** to **[INSERT_DEPLOYMENT_TARGET]** using your configured **[INSERT_CI_CD_PLATFORM]** pipeline with comprehensive security validation.
 
@@ -102,16 +111,26 @@ Post-deployment for [INSERT_PROJECT_NAME]:
 - Performance baselines
 - User experience tracking
 
-**SECURITY EXECUTION PROCESS:**
+**SECURITY EXECUTION PROCESS with Enhanced Credential Protection:**
 
 1. **Input Validation**: All deployment parameters validated using security wrapper
 2. **Environment Validation**: Environment name validated using validateEnvironmentName()
 3. **Strategy Validation**: Deployment strategy validated against security policies
 4. **Command Validation**: All deployment commands validated against DEPLOY_ALLOWED_COMMANDS
-5. **Credential Protection**: All sensitive data masked and protected
-6. **Secure Execution**: Deployment executed using executeSecureCommand() wrapper
-7. **Audit Logging**: Complete security audit trail maintained
-8. **Error Sanitization**: All error messages sanitized to prevent information disclosure
+5. **ENHANCED CREDENTIAL PROTECTION**: 
+   - Pre-execution: Scan all command arguments for credentials (13 patterns)
+   - During execution: Protect streaming output from kubectl, docker, helm, terraform
+   - Post-execution: Mask all sensitive data in results and logs
+6. **Secure Execution**: Deployment executed using executeCommandWithCredentialProtection() wrapper
+7. **Audit Logging**: Complete security audit trail maintained (credentials masked)
+8. **Enhanced Error Sanitization**: All error messages sanitized using credential-aware error handling
+
+**Cloud Provider Credential Protection:**
+- **AWS**: Access keys (AKIA*), secret keys, session tokens automatically masked
+- **GCP**: Service account keys, OAuth tokens, project IDs protected
+- **Azure**: Subscription IDs, client secrets, tenant IDs masked
+- **Kubernetes**: Service account tokens, secrets, config files protected
+- **Docker**: Registry authentication, private registry credentials masked
 
 **ALLOWED ENVIRONMENTS**: development, staging, production, test, dev, stage, prod
 **ALLOWED STRATEGIES**: blue-green, canary, rolling
