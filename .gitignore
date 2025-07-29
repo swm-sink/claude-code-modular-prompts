@@ -30,6 +30,23 @@ htmlcov/
 *.bak
 *~
 
+# Test artifacts and workspaces
+integration_test_workspace/
+*_test_workspace/
+test-*/
+*.test_*
+user_personas/
+etc/
+
+# Generated reports (keep in reports/)
+*_report.md
+*_report.txt
+*_report.json
+*_summary.md
+*_results.txt
+*_audit.txt
+!reports/
+
 # Never ignore .claude directory
 !.claude/
 !.claude/**
