@@ -1,0 +1,110 @@
+{
+  "test_suite": "input_validation_framework",
+  "timestamp": "2025-07-29T02:07:31.171818",
+  "framework_tests": {
+    "file_path_validation": {
+      "malicious_blocked": 5,
+      "legitimate_allowed": 4,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "performance_ms": [
+        0.0007152557373046875,
+        0.00095367431640625,
+        0.0,
+        0.0,
+        0.0,
+        0.00095367431640625,
+        0.0,
+        0.0,
+        0.00095367431640625
+      ],
+      "avg_performance_ms": 0.0003973642985026042,
+      "max_performance_ms": 0.00095367431640625
+    },
+    "configuration_validation": {
+      "credentials_masked": 4,
+      "safe_configs_allowed": 4,
+      "malicious_blocked": 0,
+      "performance_ms": [
+        0.4699230194091797,
+        0.0040531158447265625,
+        0.0030994415283203125,
+        0.00286102294921875,
+        0.0019073486328125,
+        0.030040740966796875,
+        0.0021457672119140625,
+        0.00095367431640625,
+        0.00095367431640625
+      ],
+      "avg_performance_ms": 0.057326422797309026
+    },
+    "user_data_sanitization": {
+      "dangerous_patterns_blocked": 4,
+      "safe_content_allowed": 3,
+      "performance_ms": [
+        0.10180473327636719,
+        0.0069141387939453125,
+        0.0050067901611328125,
+        0.0057220458984375,
+        0.004291534423828125,
+        0.003814697265625,
+        0.0040531158447265625
+      ],
+      "avg_performance_ms": 0.018801007952008928
+    },
+    "placeholder_validation": {
+      "valid_placeholders_accepted": 3,
+      "invalid_placeholders_rejected": 3,
+      "performance_ms": [
+        0.036716461181640625,
+        0.0021457672119140625,
+        0.00095367431640625,
+        0.0011920928955078125,
+        0.00095367431640625,
+        0.00095367431640625
+      ],
+      "avg_performance_ms": 0.007152557373046875
+    }
+  },
+  "command_tests": {
+    "phase_1_high_priority": {
+      "commands_tested": 7,
+      "validation_implemented": 7,
+      "security_patterns_found": 7,
+      "performance_validation_found": 7
+    },
+    "phase_2_medium_priority": {
+      "commands_tested": 6,
+      "validation_implemented": 6,
+      "security_patterns_found": 5,
+      "performance_validation_found": 6
+    },
+    "phase_3_low_priority": {
+      "commands_tested": 5,
+      "validation_implemented": 5,
+      "security_patterns_found": 4,
+      "performance_validation_found": 5
+    }
+  },
+  "performance_tests": {
+    "total_validations_tested": 31,
+    "average_time_ms": 0.022388273669827367,
+    "max_time_ms": 0.4699230194091797,
+    "min_time_ms": 0.0,
+    "under_5ms_requirement": true,
+    "under_50ms_total_requirement": true
+  },
+  "summary": {
+    "total_commands_implemented": 18,
+    "commands_with_validation": 18,
+    "validation_coverage_percentage": 100.0,
+    "malicious_inputs_blocked": 13,
+    "legitimate_inputs_allowed": 14,
+    "functional_protection_active": true,
+    "false_positive_rate": 0,
+    "performance_requirement_met": true,
+    "builds_on_successful_patterns": true,
+    "test_timestamp": "2025-07-29T02:07:31.171818",
+    "overall_success": true
+  }
+}
