@@ -1,33 +1,33 @@
 ---
 name: /api-design
-description: "Design [INSERT_API_STYLE] APIs for [INSERT_PROJECT_NAME] with [INSERT_[INSERT_DOMAIN]_STANDARDS]"
+description: "Design RESTful APIs for lusaka with [INSERT_software-development_STANDARDS]"
 usage: /api-design [endpoint-name] [http-method]
 category: development
 allowed-tools: Write, Edit, Read
 ---
 
-# API Design for [INSERT_PROJECT_NAME]
+# API Design for lusaka
 
-I'll help you design **[INSERT_API_STYLE]** APIs following **[INSERT_[INSERT_DOMAIN]_STANDARDS]** best practices.
+I'll help you design **RESTful** APIs following **[INSERT_software-development_STANDARDS]** best practices.
 
 ## Project API Configuration
-- **API Style**: [INSERT_API_STYLE]
-- **Primary Language**: [INSERT_PRIMARY_LANGUAGE]
-- **Database**: [INSERT_DATABASE_TYPE]
-- **Authentication**: Based on [INSERT_SECURITY_LEVEL] security
-- **Domain Standards**: [INSERT_[INSERT_DOMAIN]_STANDARDS]
+- **API Style**: RESTful
+- **Primary Language**: Python
+- **Database**: PostgreSQL
+- **Authentication**: Based on standard security
+- **Domain Standards**: [INSERT_software-development_STANDARDS]
 
-## [INSERT_API_STYLE] Best Practices
+## RESTful Best Practices
 
-### For [INSERT_DOMAIN] Domain
-Applying [INSERT_[INSERT_DOMAIN]_STANDARDS] which includes:
+### For software-development Domain
+Applying [INSERT_software-development_STANDARDS] which includes:
 - Industry-specific data models
 - Compliance requirements
 - Performance expectations
 - Security protocols
 
-### [INSERT_API_STYLE] Patterns
-Based on your choice of [INSERT_API_STYLE]:
+### RESTful Patterns
+Based on your choice of RESTful:
 - Schema design principles
 - Error handling standards
 - Versioning strategy
@@ -35,38 +35,38 @@ Based on your choice of [INSERT_API_STYLE]:
 
 ## Integration Points
 
-### With [INSERT_TECH_STACK]
+### With Python
 - Framework-specific patterns
 - Library integrations
 - Middleware configuration
 - Performance optimizations
 
-### With [INSERT_DATABASE_TYPE]
+### With PostgreSQL
 - Query optimization
 - Data modeling
 - Transaction handling
 - Caching strategy
 
-## Security Level: [INSERT_SECURITY_LEVEL]
+## Security Level: standard
 
-Your [INSERT_SECURITY_LEVEL] security requirements mandate:
+Your standard security requirements mandate:
 - Authentication methods
 - Authorization patterns
 - Data encryption
 - Audit logging
 - Rate limiting
 
-## Testing with [INSERT_TESTING_FRAMEWORK]
+## Testing with pytest
 
-API tests will use [INSERT_TESTING_FRAMEWORK]:
+API tests will use pytest:
 - Unit test patterns
 - Integration test setup
 - Contract testing
 - Load testing approach
 
-## Deployment to [INSERT_DEPLOYMENT_TARGET]
+## Deployment to Cloud Server
 
-Considering [INSERT_DEPLOYMENT_TARGET] requirements:
+Considering Cloud Server requirements:
 - Scaling configuration
 - Monitoring setup
 - Health checks
@@ -74,4 +74,4 @@ Considering [INSERT_DEPLOYMENT_TARGET] requirements:
 
 ---
 
-What API endpoint would you like to design for [INSERT_PROJECT_NAME]?
+What API endpoint would you like to design for lusaka?

@@ -1,21 +1,21 @@
 ---
 name: /dev-setup
-description: "Setup development environment for [INSERT_PROJECT_NAME] with [INSERT_TECH_STACK]"
+description: "Setup development environment for lusaka with Python"
 usage: /dev-setup [--environment local|docker|cloud] [--tools all|minimal|custom]
 category: development
 allowed-tools: Bash, Write, Read, Edit
 ---
 
-# Development Environment Setup for [INSERT_PROJECT_NAME]
+# Development Environment Setup for lusaka
 
-I'll help you set up a complete development environment for **[INSERT_PROJECT_NAME]** optimized for **[INSERT_TECH_STACK]** and **[INSERT_TEAM_SIZE]** team collaboration.
+I'll help you set up a complete development environment for **lusaka** optimized for **Python** and **1-5 developers** team collaboration.
 
 ## Environment Configuration
 
-- **Project**: [INSERT_PROJECT_NAME]
-- **Tech Stack**: [INSERT_TECH_STACK]
-- **Language**: [INSERT_PRIMARY_LANGUAGE]
-- **Team Size**: [INSERT_TEAM_SIZE]
+- **Project**: lusaka
+- **Tech Stack**: Python
+- **Language**: Python
+- **Team Size**: 1-5 developers
 
 ## Setup Options
 
@@ -51,14 +51,14 @@ Cloud-based IDEs:
 
 ## Tool Installation
 
-### For [INSERT_TECH_STACK]
+### For Python
 Essential development tools:
-- Language runtime ([INSERT_PRIMARY_LANGUAGE])
+- Language runtime (Python)
 - Package managers
 - Build tools
-- Testing frameworks ([INSERT_TESTING_FRAMEWORK])
+- Testing frameworks (pytest)
 
-### For [INSERT_WORKFLOW_TYPE]
+### For devops-focused
 Workflow-specific tools:
 - Version control
 - Code editors/IDEs
@@ -68,28 +68,28 @@ Workflow-specific tools:
 ## Configuration Steps
 
 ### 1. Core Dependencies
-Install [INSERT_PRIMARY_LANGUAGE] ecosystem:
+Install Python ecosystem:
 - Runtime/compiler
 - Package manager
 - Language server
 - Formatter/linter
 
 ### 2. Project Dependencies
-Install [INSERT_PROJECT_NAME] requirements:
+Install lusaka requirements:
 - Framework libraries
 - Development dependencies
 - Testing tools
 - Build systems
 
 ### 3. Database Setup
-Configure [INSERT_DATABASE_TYPE]:
+Configure PostgreSQL:
 - Local instance
 - Connection tools
 - Migration setup
 - Seed data
 
 ### 4. API Development
-Setup for [INSERT_API_STYLE]:
+Setup for RESTful:
 - API testing tools
 - Documentation generators
 - Mock servers
@@ -97,7 +97,7 @@ Setup for [INSERT_API_STYLE]:
 
 ## Team Integration
 
-For [INSERT_TEAM_SIZE] teams:
+For 1-5 developers teams:
 - Shared configurations
 - Code style enforcement
 - Git hooks setup
@@ -105,7 +105,7 @@ For [INSERT_TEAM_SIZE] teams:
 
 ## Security Setup
 
-[INSERT_SECURITY_LEVEL] requirements:
+standard requirements:
 - Credential management
 - VPN configuration
 - Code analysis tools
@@ -113,7 +113,7 @@ For [INSERT_TEAM_SIZE] teams:
 
 ## IDE Configuration
 
-Optimize for [INSERT_TECH_STACK]:
+Optimize for Python:
 - Extensions/plugins
 - Debugger setup
 - Code snippets

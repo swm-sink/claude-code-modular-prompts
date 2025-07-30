@@ -1,13 +1,13 @@
 ---
 name: /project-task
-description: "Create tasks specific to [INSERT_PROJECT_NAME] using [INSERT_WORKFLOW_TYPE] methodology"
+description: "Create tasks specific to lusaka using devops-focused methodology"
 usage: /project-task [feature|bug|refactor] [description]
 category: core
 allowed-tools: TodoWrite, Read, Edit
 security: input-validation-framework.md
 ---
 
-# Task Management for [INSERT_PROJECT_NAME]
+# Task Management for lusaka
 
 ## Input Validation
 
@@ -34,7 +34,7 @@ if sanitized_description["changes_made"]:
     print(f"⚠️ Description sanitized: {len(sanitized_description['blocked_content'])} dangerous patterns removed")
 
 # Placeholder validation
-placeholder_validation = validate_placeholder("[INSERT_PROJECT_NAME]")
+placeholder_validation = validate_placeholder("lusaka")
 if not placeholder_validation["valid"]:
     raise SecurityError("Invalid placeholder format in command template")
 
@@ -52,19 +52,19 @@ total_validation_time = 2.5  # ms (under 5ms requirement)
 
 Proceeding with validated inputs...
 
-I'll help you create and manage tasks for **[INSERT_PROJECT_NAME]** following your **[INSERT_WORKFLOW_TYPE]** workflow.
+I'll help you create and manage tasks for **lusaka** following your **devops-focused** workflow.
 
 ## Project Context
-- **Project**: [INSERT_PROJECT_NAME]
-- **Domain**: [INSERT_DOMAIN]
-- **Tech Stack**: [INSERT_TECH_STACK]
-- **Team Size**: [INSERT_TEAM_SIZE]
-- **Workflow**: [INSERT_WORKFLOW_TYPE]
+- **Project**: lusaka
+- **Domain**: software-development
+- **Tech Stack**: Python
+- **Team Size**: 1-5 developers
+- **Workflow**: devops-focused
 
 ## Task Types
 
 ### Feature Development
-For new features in [INSERT_PROJECT_NAME]:
+For new features in lusaka:
 - Requirements gathering
 - Design documentation
 - Implementation plan
@@ -72,7 +72,7 @@ For new features in [INSERT_PROJECT_NAME]:
 - Deployment checklist
 
 ### Bug Fixes
-For issues in [INSERT_PROJECT_NAME]:
+For issues in lusaka:
 - Bug reproduction steps
 - Root cause analysis
 - Fix implementation
@@ -80,23 +80,23 @@ For issues in [INSERT_PROJECT_NAME]:
 - Verification process
 
 ### Refactoring
-For improving [INSERT_PROJECT_NAME] codebase:
+For improving lusaka codebase:
 - Code quality assessment
 - Refactoring strategy
 - Test coverage maintenance
 - Performance benchmarks
 - Documentation updates
 
-## [INSERT_WORKFLOW_TYPE] Process
+## devops-focused Process
 
-Based on your [INSERT_WORKFLOW_TYPE] methodology:
+Based on your devops-focused methodology:
 - Task estimation and planning
 - Progress tracking
 - Code review requirements
 - Testing standards
 - Deployment procedures
 
-## Integration with [INSERT_CI_CD_PLATFORM]
+## Integration with GitHub Actions
 
 Your tasks will consider:
 - Build pipeline requirements
@@ -104,4 +104,4 @@ Your tasks will consider:
 - Deployment automation
 - Rollback procedures
 
-What type of task would you like to create for [INSERT_PROJECT_NAME]?
+What type of task would you like to create for lusaka?

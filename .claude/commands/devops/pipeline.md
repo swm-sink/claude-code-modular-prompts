@@ -4,8 +4,8 @@ description: "Unified intelligent pipeline orchestration with creation, executio
 usage: "[mode] [pipeline_name] [options]"
 allowed-tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob
 ---
-# /pipeline - Unified Pipeline Orchestration for [INSERT_PROJECT_NAME]
-Comprehensive pipeline orchestration for [INSERT_PROJECT_NAME] combining creation, execution, monitoring, deployment, [INSERT_CI_CD_PLATFORM] setup, and build automation optimized for [INSERT_TECH_STACK] and [INSERT_TEAM_SIZE] teams.
+# /pipeline - Unified Pipeline Orchestration for lusaka
+Comprehensive pipeline orchestration for lusaka combining creation, execution, monitoring, deployment, GitHub Actions setup, and build automation optimized for Python and 1-5 developers teams.
 
 ## Usage
 ```bash
@@ -31,10 +31,10 @@ Comprehensive pipeline orchestration for [INSERT_PROJECT_NAME] combining creatio
 /pipeline build --parallel --watch                  # Parallel build with monitoring
 /pipeline build --target frontend                   # Targeted build execution
 
-# Deployment Mode to [INSERT_DEPLOYMENT_TARGET]
-/pipeline deploy production --blue-green            # Blue-green to [INSERT_DEPLOYMENT_TARGET]
-/pipeline deploy --canary --rollback-ready          # Canary for [INSERT_USER_BASE] users
-/pipeline deploy --zero-downtime --health-check     # Zero-downtime for [INSERT_PERFORMANCE_PRIORITY]
+# Deployment Mode to Cloud Server
+/pipeline deploy production --blue-green            # Blue-green to Cloud Server
+/pipeline deploy --canary --rollback-ready          # Canary for developers users
+/pipeline deploy --zero-downtime --health-check     # Zero-downtime for balanced
 
 # Rollback Mode
 /pipeline rollback "v1.2.3" --immediate           # Immediate rollback to specific version
@@ -42,10 +42,10 @@ Comprehensive pipeline orchestration for [INSERT_PROJECT_NAME] combining creatio
 /pipeline rollback --zero-downtime                  # Zero-downtime rollback strategy
 /pipeline rollback --comprehensive                  # Comprehensive recovery protocol
 
-# CI/CD Setup Mode for [INSERT_CI_CD_PLATFORM]
-/pipeline setup [INSERT_CI_CD_PLATFORM] --repo "[INSERT_PROJECT_NAME]"  # Setup [INSERT_CI_CD_PLATFORM]
-/pipeline setup [INSERT_CI_CD_PLATFORM] --template [INSERT_PRIMARY_LANGUAGE]  # With language template
-/pipeline setup [INSERT_CI_CD_PLATFORM] --custom-config config.xml  # Custom configuration
+# CI/CD Setup Mode for GitHub Actions
+/pipeline setup GitHub Actions --repo "lusaka"  # Setup GitHub Actions
+/pipeline setup GitHub Actions --template Python  # With language template
+/pipeline setup GitHub Actions --custom-config config.xml  # Custom configuration
 
 # Combined Operations
 /pipeline all --comprehensive                       # Full pipeline lifecycle

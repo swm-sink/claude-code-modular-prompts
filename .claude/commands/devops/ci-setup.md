@@ -1,13 +1,13 @@
 ---
 name: /ci-setup
-description: "Configure [INSERT_CI_CD_PLATFORM] pipelines for [INSERT_PROJECT_NAME]"
+description: "Configure GitHub Actions pipelines for lusaka"
 usage: /ci-setup [--template basic|standard|advanced] [--branch main|develop|feature/*]
 category: devops
 allowed-tools: Write, Read, Edit, Bash
 security: input-validation-framework.md
 ---
 
-# CI/CD Setup for [INSERT_PROJECT_NAME]
+# CI/CD Setup for lusaka
 
 ## Input Validation
 
@@ -74,14 +74,14 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 
 Proceeding with validated inputs...
 
-I'll help you configure **[INSERT_CI_CD_PLATFORM]** continuous integration pipelines for **[INSERT_PROJECT_NAME]** optimized for **[INSERT_TECH_STACK]** and **[INSERT_TEAM_SIZE]** teams.
+I'll help you configure **GitHub Actions** continuous integration pipelines for **lusaka** optimized for **Python** and **1-5 developers** teams.
 
 ## Pipeline Configuration
 
-- **Platform**: [INSERT_CI_CD_PLATFORM]
-- **Tech Stack**: [INSERT_TECH_STACK]
-- **Testing**: [INSERT_TESTING_FRAMEWORK]
-- **Deployment**: [INSERT_DEPLOYMENT_TARGET]
+- **Platform**: GitHub Actions
+- **Tech Stack**: Python
+- **Testing**: pytest
+- **Deployment**: Cloud Server
 
 ## Pipeline Templates
 
@@ -114,7 +114,7 @@ Enterprise-grade pipeline:
 - Performance benchmarks
 - Multi-environment deploys
 
-## [INSERT_CI_CD_PLATFORM] Specific Features
+## GitHub Actions Specific Features
 
 Platform-optimized configuration:
 - Native integrations
@@ -124,13 +124,13 @@ Platform-optimized configuration:
 
 ## Testing Integration
 
-### [INSERT_TESTING_FRAMEWORK] Setup
+### pytest Setup
 - Test discovery
 - Coverage reporting
 - Test parallelization
 - Failure notifications
 
-### [INSERT_SECURITY_LEVEL] Security
+### standard Security
 Security gates include:
 - Dependency scanning
 - SAST analysis
@@ -139,7 +139,7 @@ Security gates include:
 
 ## Build Optimization
 
-For [INSERT_TECH_STACK]:
+For Python:
 - Language-specific caching
 - Dependency optimization
 - Build parallelization
@@ -147,13 +147,13 @@ For [INSERT_TECH_STACK]:
 
 ## Deployment Automation
 
-### [INSERT_DEPLOYMENT_TARGET] Integration
+### Cloud Server Integration
 - Environment configuration
 - Deployment strategies
 - Rollback automation
 - Health checks
 
-### [INSERT_WORKFLOW_TYPE] Workflow
+### devops-focused Workflow
 Branch strategies:
 - Feature branches
 - Release branches
@@ -162,7 +162,7 @@ Branch strategies:
 
 ## Team Collaboration
 
-For [INSERT_TEAM_SIZE] teams:
+For 1-5 developers teams:
 - PR validation rules
 - Approval workflows
 - Notification channels
@@ -184,4 +184,4 @@ Generated files for your project:
 - Secret templates
 - Documentation
 
-Which template would you like to use for [INSERT_PROJECT_NAME]?
+Which template would you like to use for lusaka?

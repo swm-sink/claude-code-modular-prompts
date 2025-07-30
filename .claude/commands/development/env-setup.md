@@ -1,13 +1,13 @@
 ---
 name: /env-setup
-description: "Configure environments for [INSERT_PROJECT_NAME] across [INSERT_DEPLOYMENT_TARGET]"
+description: "Configure environments for lusaka across Cloud Server"
 usage: /env-setup [environment-name] [--clone-from existing-env] [--variables key=value]
 category: development
 allowed-tools: Write, Read, Edit, Bash
 security: input-validation-framework.md
 ---
 
-# Environment Configuration for [INSERT_PROJECT_NAME]
+# Environment Configuration for lusaka
 
 ## Input Validation
 
@@ -75,14 +75,14 @@ credential_count = sum(1 for c in config_vars.values() if c.get("credentials_mas
 
 Proceeding with validated inputs...
 
-I'll help you set up and manage environment configurations for **[INSERT_PROJECT_NAME]** across your **[INSERT_DEPLOYMENT_TARGET]** infrastructure.
+I'll help you set up and manage environment configurations for **lusaka** across your **Cloud Server** infrastructure.
 
 ## Environment Strategy
 
-- **Project**: [INSERT_PROJECT_NAME]
-- **Deployment**: [INSERT_DEPLOYMENT_TARGET]
-- **Workflow**: [INSERT_WORKFLOW_TYPE]
-- **Security**: [INSERT_SECURITY_LEVEL]
+- **Project**: lusaka
+- **Deployment**: Cloud Server
+- **Workflow**: devops-focused
+- **Security**: standard
 
 ## Standard Environments
 
@@ -102,8 +102,8 @@ Pre-production environment:
 /env-setup staging
 ```
 - Production-like config
-- [INSERT_DATABASE_TYPE] test instance
-- [INSERT_API_STYLE] endpoints
+- PostgreSQL test instance
+- RESTful endpoints
 - Integration testing ready
 
 ### Production
@@ -112,23 +112,23 @@ Live environment:
 /env-setup production
 ```
 - Optimized settings
-- [INSERT_SECURITY_LEVEL] security
-- [INSERT_PERFORMANCE_PRIORITY] config
-- [INSERT_USER_BASE] scale
+- standard security
+- balanced config
+- developers scale
 
 ## Configuration Management
 
 ### Environment Variables
-For [INSERT_TECH_STACK]:
+For Python:
 ```bash
 /env-setup production --variables \
-  API_URL=https://api.[INSERT_DOMAIN] \
-  DB_HOST=[INSERT_DATABASE_TYPE]-prod \
+  API_URL=https://api.software-development \
+  DB_HOST=PostgreSQL-prod \
   LOG_LEVEL=info
 ```
 
 ### Secret Management
-[INSERT_SECURITY_LEVEL] compliant:
+standard compliant:
 - Encrypted storage
 - Access controls
 - Audit logging
@@ -143,14 +143,14 @@ Generate for your stack:
 
 ## Platform-Specific Setup
 
-### [INSERT_DEPLOYMENT_TARGET] Integration
+### Cloud Server Integration
 Platform-native configuration:
 - Service discovery
 - Load balancing
 - Auto-scaling
 - Health checks
 
-### [INSERT_CI_CD_PLATFORM] Pipeline
+### GitHub Actions Pipeline
 Automated deployment:
 - Environment promotion
 - Variable injection
@@ -159,7 +159,7 @@ Automated deployment:
 
 ## Team Collaboration
 
-For [INSERT_TEAM_SIZE] teams:
+For 1-5 developers teams:
 - Shared configurations
 - Access management
 - Change tracking
@@ -186,7 +186,7 @@ Environment health checks:
 
 ## Best Practices
 
-For [INSERT_WORKFLOW_TYPE]:
+For devops-focused:
 - Environment parity
 - Configuration as code
 - Automated validation

@@ -1,14 +1,14 @@
 ---
 name: /research
-description: "Research framework for [INSERT_DOMAIN] topics relevant to [INSERT_PROJECT_NAME]"
+description: "Research framework for software-development topics relevant to lusaka"
 usage: /research [topic] [--depth shallow|standard|comprehensive] [--focus technical|business|competitive]
 category: core
 allowed-tools: Read, Write, Grep, WebSearch
 ---
 
-# Research Framework for [INSERT_PROJECT_NAME]
+# Research Framework for lusaka
 
-I'll help you research topics relevant to your [INSERT_DOMAIN] project, providing comprehensive analysis and actionable insights for [INSERT_TECH_STACK] implementation.
+I'll help you research topics relevant to your software-development project, providing comprehensive analysis and actionable insights for Python implementation.
 
 ## Usage
 
@@ -24,10 +24,10 @@ I'll help you research topics relevant to your [INSERT_DOMAIN] project, providin
 1. **Topic Analysis**: Break down the research question
 2. **Source Gathering**: Find relevant technical documentation and best practices
 3. **Analysis**: Evaluate options and trade-offs
-4. **Recommendations**: Provide specific guidance for [INSERT_PROJECT_NAME]
+4. **Recommendations**: Provide specific guidance for lusaka
 5. **Implementation Notes**: Connect research to practical next steps
 
-I'll tailor the research to your [INSERT_TECH_STACK] environment and [INSERT_COMPANY_NAME]'s context.
+I'll tailor the research to your Python environment and swm-sink's context.
 
 ## Depth Levels
 

@@ -6,9 +6,9 @@ category: quality
 allowed-tools: Read, Write, Edit, Bash, Grep, Glob
 ---
 
-# /validate-command - Systematic Command Validation for [INSERT_PROJECT_NAME]
+# /validate-command - Systematic Command Validation for lusaka
 
-Comprehensive validation system for [INSERT_TECH_STACK] commands using Claude 4 prompting patterns and context engineering to ensure command quality, performance, and Claude Code integration in [INSERT_DOMAIN] projects.
+Comprehensive validation system for Python commands using Claude 4 prompting patterns and context engineering to ensure command quality, performance, and Claude Code integration in software-development projects.
 
 ## Usage
 ```bash
@@ -79,11 +79,11 @@ Comprehensive validation system for [INSERT_TECH_STACK] commands using Claude 4 
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
 
-You are a **Claude Code Command Validation Specialist** for [INSERT_PROJECT_NAME] with expertise in Claude 4 prompting patterns, context engineering, [INSERT_TECH_STACK] best practices, and systematic quality assurance. Your role is to validate commands for [INSERT_DOMAIN] applications using scientific methodology and best practices for [INSERT_TEAM_SIZE] teams.
+You are a **Claude Code Command Validation Specialist** for lusaka with expertise in Claude 4 prompting patterns, context engineering, Python best practices, and systematic quality assurance. Your role is to validate commands for software-development applications using scientific methodology and best practices for 1-5 developers teams.
 
 ## Validation Context Setup
 
-**Primary Objective**: Validate command quality, Claude Code integration, and production readiness for [INSERT_PROJECT_NAME] using systematic methodology aligned with [INSERT_COMPLIANCE_REQUIREMENTS] standards.
+**Primary Objective**: Validate command quality, Claude Code integration, and production readiness for lusaka using systematic methodology aligned with basic standards.
 
 **Context Engineering Strategy**:
 1. **Selective Context Loading**: Load only validation-relevant context to optimize token usage

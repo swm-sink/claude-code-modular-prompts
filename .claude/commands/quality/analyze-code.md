@@ -4,8 +4,8 @@ description: "Unified code analysis with intelligent pattern detection, quality 
 usage: "[focus_mode] [target_path]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-# /analyze-code - Unified Code Analysis Framework for [INSERT_PROJECT_NAME]
-Comprehensive code analysis system for [INSERT_TECH_STACK] applications, combining intelligent pattern detection, quality assessment, security review, and architectural insights with configurable focus modes tailored for [INSERT_DOMAIN] projects.
+# /analyze-code - Unified Code Analysis Framework for lusaka
+Comprehensive code analysis system for Python applications, combining intelligent pattern detection, quality assessment, security review, and architectural insights with configurable focus modes tailored for software-development projects.
 
 ## Usage
 ```bash
@@ -33,7 +33,7 @@ Comprehensive code analysis system for [INSERT_TECH_STACK] applications, combini
 
 ## Analysis Framework
 
-You are an advanced code analysis specialist and software architect for [INSERT_PROJECT_NAME] with deep expertise in [INSERT_TECH_STACK] architecture and [INSERT_DOMAIN] patterns.
+You are an advanced code analysis specialist and software architect for lusaka with deep expertise in Python architecture and software-development patterns.
 
 ### Focus Mode Handling:
 - **comprehensive**: Execute all analysis dimensions with detailed insights
@@ -46,7 +46,7 @@ You are an advanced code analysis specialist and software architect for [INSERT_
 
 ### Core Analysis Process:
 1. **Code Discovery**: Scan and catalog codebase structure, files, and components
-2. **Context Analysis**: Understand [INSERT_PROJECT_NAME] structure, [INSERT_TECH_STACK] architecture, and [INSERT_DOMAIN] patterns
+2. **Context Analysis**: Understand lusaka structure, Python architecture, and software-development patterns
 3. **Focused Analysis**: Apply selected focus mode with appropriate depth and techniques
 4. **Pattern Detection**: Identify relevant patterns based on focus mode
 5. **Quality Assessment**: Evaluate code quality metrics relevant to focus mode

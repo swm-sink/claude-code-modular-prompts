@@ -4,9 +4,9 @@ description: "Comprehensive system analysis with performance profiling, dependen
 usage: "[focus_mode] [analysis_depth] [target_path]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-# /analyze-system - Unified System Analysis Framework for [INSERT_PROJECT_NAME]
+# /analyze-system - Unified System Analysis Framework for lusaka
 
-Comprehensive system-level analysis for [INSERT_TECH_STACK] applications, combining performance profiling, dependency management, cost optimization, and quality assessments in a single unified command tailored for [INSERT_DOMAIN] systems on [INSERT_CLOUD_PROVIDER].
+Comprehensive system-level analysis for Python applications, combining performance profiling, dependency management, cost optimization, and quality assessments in a single unified command tailored for software-development systems on AWS.
 
 ## Usage
 ```bash
@@ -39,8 +39,8 @@ Comprehensive system-level analysis for [INSERT_TECH_STACK] applications, combin
     <argument name="target_path" type="string" required="false" default=".">
       <description>Target path for analysis (defaults to current directory)</description>
     </argument>
-    <argument name="cloud_provider" type="string" required="false" default="[INSERT_CLOUD_PROVIDER]">
-      <description>Cloud provider for cost analysis: [INSERT_CLOUD_PROVIDER] preferred, aws|gcp|azure supported</description>
+    <argument name="cloud_provider" type="string" required="false" default="AWS">
+      <description>Cloud provider for cost analysis: AWS preferred, aws|gcp|azure supported</description>
     </argument>
     <argument name="time_period" type="string" required="false" default="last_30_days">
       <description>Time period for cost analysis: last_7_days|last_30_days|last_month|custom</description>

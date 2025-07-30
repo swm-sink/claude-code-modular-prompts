@@ -77,12 +77,12 @@ I'll automatically update **all** templates with your project details:
 - `CLAUDE.md` - Project memory
 
 ### Replacements Made:
-- `[INSERT_PROJECT_NAME]` → Your actual project name
-- `[INSERT_DOMAIN]` → web-dev, data-science, etc.
-- `[INSERT_TECH_STACK]` → Your specific technologies
-- `[INSERT_PRIMARY_LANGUAGE]` → JavaScript, Python, etc.
-- `[INSERT_TESTING_FRAMEWORK]` → Jest, pytest, etc.
-- `[INSERT_CI_CD_PLATFORM]` → GitHub Actions (default)
+- `lusaka` → Your actual project name
+- `software-development` → web-dev, data-science, etc.
+- `Python` → Your specific technologies
+- `Python` → JavaScript, Python, etc.
+- `pytest` → Jest, pytest, etc.
+- `GitHub Actions` → GitHub Actions (default)
 
 ---
 

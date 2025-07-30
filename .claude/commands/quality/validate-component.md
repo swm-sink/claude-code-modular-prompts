@@ -8,7 +8,7 @@ allowed-tools: Read, Write, Edit, Bash, Grep, Glob
 
 # /validate-component - Systematic Component Validation
 
-I'll help you validate components systematically using context engineering and integration testing for [INSERT_PROJECT_NAME].
+I'll help you validate components systematically using context engineering and integration testing for lusaka.
 
 # Systematic Component Validation
 

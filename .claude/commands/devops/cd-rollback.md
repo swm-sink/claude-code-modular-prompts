@@ -1,21 +1,21 @@
 ---
 name: /cd-rollback
-description: "Rollback [INSERT_PROJECT_NAME] deployment on [INSERT_DEPLOYMENT_TARGET]"
+description: "Rollback lusaka deployment on Cloud Server"
 usage: /cd-rollback [--version previous-version] [--environment production|staging] [--emergency]
 category: devops
 allowed-tools: Bash, Read, Write, Edit
 ---
 
-# Deployment Rollback for [INSERT_PROJECT_NAME]
+# Deployment Rollback for lusaka
 
-I'll help you safely rollback **[INSERT_PROJECT_NAME]** deployments on **[INSERT_DEPLOYMENT_TARGET]** with protection for your **[INSERT_USER_BASE]** users.
+I'll help you safely rollback **lusaka** deployments on **Cloud Server** with protection for your **developers** users.
 
 ## Rollback Configuration
 
-- **Project**: [INSERT_PROJECT_NAME]
-- **Platform**: [INSERT_DEPLOYMENT_TARGET]
-- **CI/CD**: [INSERT_CI_CD_PLATFORM]
-- **Security**: [INSERT_SECURITY_LEVEL]
+- **Project**: lusaka
+- **Platform**: Cloud Server
+- **CI/CD**: GitHub Actions
+- **Security**: standard
 
 ## Rollback Strategies
 
@@ -49,7 +49,7 @@ Critical situation response:
 ## Environment Options
 
 ### Production Rollback
-For [INSERT_USER_BASE] protection:
+For developers protection:
 ```bash
 /cd-rollback --environment production
 ```
@@ -68,7 +68,7 @@ Testing environment:
 
 ## Rollback Process
 
-### For [INSERT_DEPLOYMENT_TARGET]
+### For Cloud Server
 1. **Pre-Rollback Checks**
    - Current state snapshot
    - Database compatibility
@@ -88,7 +88,7 @@ Testing environment:
 
 ## Database Considerations
 
-For [INSERT_DATABASE_TYPE]:
+For PostgreSQL:
 - Migration reversal
 - Data compatibility
 - Schema rollback
@@ -96,7 +96,7 @@ For [INSERT_DATABASE_TYPE]:
 
 ## Safety Features
 
-Your [INSERT_SECURITY_LEVEL] level ensures:
+Your standard level ensures:
 - Approval requirements
 - Audit logging
 - Backup creation
@@ -104,7 +104,7 @@ Your [INSERT_SECURITY_LEVEL] level ensures:
 
 ## Team Coordination
 
-For [INSERT_TEAM_SIZE] teams:
+For 1-5 developers teams:
 - Incident communication
 - Status updates
 - Task assignment
@@ -127,7 +127,7 @@ After successful rollback:
 4. Plan forward fix
 5. Update runbooks
 
-## Integration with [INSERT_WORKFLOW_TYPE]
+## Integration with devops-focused
 
 Your workflow requires:
 - Change approval

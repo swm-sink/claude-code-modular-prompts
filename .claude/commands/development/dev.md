@@ -4,21 +4,21 @@ description: "Unified intelligent development workflow with code formatting, lin
 usage: "[mode] [target] [options]"
 allowed-tools: Read, Write, Edit, Bash, Grep, Glob
 ---
-# /dev - Unified Development Workflow for [INSERT_PROJECT_NAME]
+# /dev - Unified Development Workflow for lusaka
 
-Comprehensive development workflow solution for [INSERT_PROJECT_NAME] combining code formatting, linting, refactoring, debugging, feature development, project initialization, analysis, and dependency management tailored for [INSERT_TECH_STACK] and [INSERT_TEAM_SIZE] teams.
+Comprehensive development workflow solution for lusaka combining code formatting, linting, refactoring, debugging, feature development, project initialization, analysis, and dependency management tailored for Python and 1-5 developers teams.
 
 ## Usage
 ```bash
 # Code Quality & Maintenance
-/dev format [INSERT_PRIMARY_LANGUAGE] --style [INSERT_CODE_STYLE]  # Format [INSERT_PRIMARY_LANGUAGE] code
-/dev lint --[INSERT_PRIMARY_LANGUAGE] --fix      # Lint and fix [INSERT_PRIMARY_LANGUAGE] issues
+/dev format Python --style PEP8  # Format Python code
+/dev lint --Python --fix      # Lint and fix Python issues
 /dev refactor "src/utils.js" --strategy extract-method # Refactor code with method extraction
 
 # Development Operations
-/dev debug "[INSERT_DOMAIN] error" --interactive # Debug [INSERT_PROJECT_NAME] issues
-/dev feature "[INSERT_DOMAIN] feature"           # Develop for [INSERT_PROJECT_NAME]
-/dev init [INSERT_PROJECT_TYPE] --[INSERT_TECH_STACK] # Initialize new [INSERT_TECH_STACK] project
+/dev debug "software-development error" --interactive # Debug lusaka issues
+/dev feature "software-development feature"           # Develop for lusaka
+/dev init web-application --Python # Initialize new Python project
 /dev analyze . --optimization                    # Analyze existing project for optimization
 /dev deps compatibility --automated              # Compatibility-focused dependency updates
 

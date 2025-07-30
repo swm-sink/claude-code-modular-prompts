@@ -1,13 +1,13 @@
 ---
 name: /ci-run
-description: "Execute [INSERT_CI_CD_PLATFORM] pipelines for [INSERT_PROJECT_NAME]"
+description: "Execute GitHub Actions pipelines for lusaka"
 usage: /ci-run [pipeline-name] [--branch branch-name] [--stage specific-stage]
 category: devops
 allowed-tools: Bash, Read, Write
 security: input-validation-framework.md
 ---
 
-# Run CI/CD Pipeline for [INSERT_PROJECT_NAME]
+# Run CI/CD Pipeline for lusaka
 
 ## Input Validation
 
@@ -78,14 +78,14 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 
 Proceeding with validated inputs...
 
-I'll help you execute and monitor **[INSERT_CI_CD_PLATFORM]** pipelines for **[INSERT_PROJECT_NAME]** with your **[INSERT_WORKFLOW_TYPE]** workflow requirements.
+I'll help you execute and monitor **GitHub Actions** pipelines for **lusaka** with your **devops-focused** workflow requirements.
 
 ## Pipeline Execution
 
-- **Platform**: [INSERT_CI_CD_PLATFORM]
-- **Project**: [INSERT_PROJECT_NAME]
-- **Tech Stack**: [INSERT_TECH_STACK]
-- **Team Process**: [INSERT_WORKFLOW_TYPE]
+- **Platform**: GitHub Actions
+- **Project**: lusaka
+- **Tech Stack**: Python
+- **Team Process**: devops-focused
 
 ## Running Pipelines
 
@@ -112,24 +112,24 @@ Run for specific branch:
 
 ## Pipeline Stages
 
-### For [INSERT_TECH_STACK]
+### For Python
 1. **Build Stage**
    - Dependency installation
    - Code compilation
    - Asset generation
 
 2. **Test Stage**
-   - [INSERT_TESTING_FRAMEWORK] execution
+   - pytest execution
    - Coverage analysis
    - Quality gates
 
 3. **Security Stage**
-   - [INSERT_SECURITY_LEVEL] scans
+   - standard scans
    - Vulnerability checks
    - Compliance validation
 
 4. **Deploy Stage**
-   - [INSERT_DEPLOYMENT_TARGET] deployment
+   - Cloud Server deployment
    - Environment configuration
    - Health checks
 
@@ -169,7 +169,7 @@ Preview without execution:
 - Security findings
 - Performance data
 
-## [INSERT_TEAM_SIZE] Team Features
+## 1-5 developers Team Features
 
 ### Notifications
 - Slack/Email alerts
@@ -178,14 +178,14 @@ Preview without execution:
 - Success celebrations
 
 ### Approval Gates
-For [INSERT_WORKFLOW_TYPE]:
+For devops-focused:
 - Manual approvals
 - Automated checks
 - Rollback triggers
 
 ## Troubleshooting
 
-Common issues for [INSERT_CI_CD_PLATFORM]:
+Common issues for GitHub Actions:
 - Cache problems
 - Timeout issues
 - Permission errors
@@ -193,12 +193,12 @@ Common issues for [INSERT_CI_CD_PLATFORM]:
 
 ## Integration
 
-### With [INSERT_API_STYLE]
+### With RESTful
 - API testing
 - Contract validation
 - Integration tests
 
-### With [INSERT_DATABASE_TYPE]
+### With PostgreSQL
 - Migration runs
 - Backup checks
 - Connection tests

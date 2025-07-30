@@ -50,17 +50,17 @@ composer.json → PHP frameworks
 Based on detection, I'll replace:
 ```javascript
 // From your package.json or project files
-[INSERT_PROJECT_NAME] → "your-actual-project-name"
+lusaka → "your-actual-project-name"
 [INSERT_DESCRIPTION] → "your project description"
 [INSERT_AUTHOR] → "Your Name" (from git config)
 [INSERT_VERSION] → "1.0.0" (from package.json)
 
 // From framework detection
-[INSERT_TECH_STACK] → "React + TypeScript + Node.js"
-[INSERT_PRIMARY_LANGUAGE] → "JavaScript"
+Python → "React + TypeScript + Node.js"
+Python → "JavaScript"
 [INSERT_FRAMEWORK] → "React"
-[INSERT_TESTING_FRAMEWORK] → "Jest" 
-[INSERT_BUILD_TOOL] → "Webpack"
+pytest → "Jest" 
+make → "Webpack"
 
 // From project structure analysis
 [INSERT_SRC_DIR] → "src" (detected from file structure)

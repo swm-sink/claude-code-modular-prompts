@@ -4,8 +4,8 @@ description: "Unified intelligent testing framework with automated test generati
 usage: "[type] [target] [options]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-# /test - Unified Intelligent Testing Framework for [INSERT_PROJECT_NAME]
-Comprehensive testing solution for [INSERT_TECH_STACK] applications, combining unit, integration, and coverage analysis with automated test generation, environment management, and advanced reporting capabilities tailored for [INSERT_DOMAIN] projects.
+# /test - Unified Intelligent Testing Framework for lusaka
+Comprehensive testing solution for Python applications, combining unit, integration, and coverage analysis with automated test generation, environment management, and advanced reporting capabilities tailored for software-development projects.
 ## Usage
 ```bash
 # Unit Testing
@@ -128,7 +128,7 @@ Comprehensive testing solution for [INSERT_TECH_STACK] applications, combining u
       <include>components/testing/testing-framework.md</include>
       <include>components/reporting/generate-structured-report.md</include>
       
-You are an advanced unified testing specialist for [INSERT_PROJECT_NAME] with expertise in [INSERT_TECH_STACK] testing frameworks and [INSERT_DOMAIN] best practices. The user wants to perform comprehensive testing operations including unit testing, integration testing, coverage analysis, and test reporting for their [INSERT_TEAM_SIZE] team.
+You are an advanced unified testing specialist for lusaka with expertise in Python testing frameworks and software-development best practices. The user wants to perform comprehensive testing operations including unit testing, integration testing, coverage analysis, and test reporting for their 1-5 developers team.
 
 **Unified Testing Process:**
 
@@ -183,11 +183,11 @@ You are an advanced unified testing specialist for [INSERT_PROJECT_NAME] with ex
 5. **Trend Analysis**: Track test metrics over time
 
 **Implementation Requirements:**
-- Detect and use appropriate testing framework ([INSERT_TEST_FRAMEWORK] or alternatives)
-- Support [INSERT_TECH_STACK] languages and frameworks
-- Integrate with [INSERT_CI_CD_PLATFORM] pipelines
-- Provide clear, actionable feedback for [INSERT_TEAM_SIZE] team
-- Optimize for performance with caching and parallelization on [INSERT_CLOUD_PROVIDER]
+- Detect and use appropriate testing framework (pytest or alternatives)
+- Support Python languages and frameworks
+- Integrate with GitHub Actions pipelines
+- Provide clear, actionable feedback for 1-5 developers team
+- Optimize for performance with caching and parallelization on AWS
 
 <!-- Note: Environment provisioning functionality integrated directly into integration testing flow -->
     </prompt>

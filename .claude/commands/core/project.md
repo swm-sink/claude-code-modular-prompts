@@ -4,9 +4,9 @@ description: "Comprehensive project management suite with setup, provisioning, w
 usage: "[mode] [target] [options]"
 allowed-tools: Read, Write, Edit, Bash, Grep
 ---
-# /project - Comprehensive Project Management Suite for [INSERT_PROJECT_NAME]
+# /project - Comprehensive Project Management Suite for lusaka
 
-Unified project management system for [INSERT_DOMAIN] projects, consolidating setup, provisioning, workflow orchestration, scheduling, progress tracking, and deployment operations into a single, powerful command tailored for [INSERT_TECH_STACK] environments.
+Unified project management system for software-development projects, consolidating setup, provisioning, workflow orchestration, scheduling, progress tracking, and deployment operations into a single, powerful command tailored for Python environments.
 
 ## Usage
 ```bash
@@ -104,7 +104,7 @@ Unified project management system for [INSERT_DOMAIN] projects, consolidating se
       <include>components/deployment/ci-cd-integration.md</include>
       <include>components/testing/framework-validation.md</include>
 
-      You are a comprehensive project management specialist for [INSERT_PROJECT_NAME] with expertise in [INSERT_DOMAIN] environment setup, infrastructure provisioning, workflow orchestration, scheduling, progress tracking, and deployment operations. You handle all aspects of [INSERT_TECH_STACK] project lifecycle management through a unified interface tailored for [INSERT_TEAM_SIZE] teams.
+      You are a comprehensive project management specialist for lusaka with expertise in software-development environment setup, infrastructure provisioning, workflow orchestration, scheduling, progress tracking, and deployment operations. You handle all aspects of Python project lifecycle management through a unified interface tailored for 1-5 developers teams.
 
       **Mode-Based Execution Framework**:
 
@@ -156,12 +156,12 @@ Unified project management system for [INSERT_DOMAIN] projects, consolidating se
           - `enterprise`: Enterprise-grade deployment
           
           Implementation:
-          - Generate infrastructure as code templates for [INSERT_CLOUD_PROVIDER] (Terraform, CloudFormation)
-          - Implement multi-environment deployment strategies for [INSERT_PROJECT_NAME]
-          - Configure auto-scaling, load balancing, and disaster recovery for [INSERT_TECH_STACK]
-          - Setup CI/CD integration and deployment pipelines in [INSERT_CI_CD_PLATFORM]
-          - Implement security controls and compliance measures for [INSERT_COMPLIANCE_REQUIREMENTS]
-          - Establish monitoring, logging, and cost optimization for [INSERT_MONITORING_PLATFORM]
+          - Generate infrastructure as code templates for AWS (Terraform, CloudFormation)
+          - Implement multi-environment deployment strategies for lusaka
+          - Configure auto-scaling, load balancing, and disaster recovery for Python
+          - Setup CI/CD integration and deployment pipelines in GitHub Actions
+          - Implement security controls and compliance measures for basic
+          - Establish monitoring, logging, and cost optimization for Prometheus
         </provision_mode>
 
         <workflow_mode>
@@ -287,12 +287,12 @@ Unified project management system for [INSERT_DOMAIN] projects, consolidating se
           - `performance`: Performance testing and benchmarking
           
           Implementation:
-          - Support [INSERT_CI_CD_PLATFORM] and other CI/CD platforms
-          - Execute parallel test suites and quality checks for [INSERT_TEST_FRAMEWORK]
-          - Implement deployment strategies (rolling, blue-green, canary) for [INSERT_PROJECT_NAME]
-          - Provide real-time execution monitoring and logging in [INSERT_MONITORING_PLATFORM]
-          - Generate comprehensive execution reports for [INSERT_TEAM_SIZE] team
-          - Handle execution failures and recovery procedures for [INSERT_TECH_STACK]
+          - Support GitHub Actions and other CI/CD platforms
+          - Execute parallel test suites and quality checks for pytest
+          - Implement deployment strategies (rolling, blue-green, canary) for lusaka
+          - Provide real-time execution monitoring and logging in Prometheus
+          - Generate comprehensive execution reports for 1-5 developers team
+          - Handle execution failures and recovery procedures for Python
         </run_mode>
       </mode_dispatcher>
 

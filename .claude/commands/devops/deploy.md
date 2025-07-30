@@ -1,12 +1,12 @@
 ---
 name: /deploy
-description: "Deploy [INSERT_PROJECT_NAME] to [INSERT_DEPLOYMENT_TARGET] using [INSERT_CI_CD_PLATFORM]"
+description: "Deploy lusaka to Cloud Server using GitHub Actions"
 usage: /deploy [environment] [--strategy blue-green|canary|rolling]
 category: devops
 allowed-tools: Bash, Read, Write, Edit
 ---
 
-# Deploy [INSERT_PROJECT_NAME]
+# Deploy lusaka
 
 <!-- SECURITY: Include command security wrapper for injection prevention -->
 <include>components/security/command-security-wrapper.md</include>
@@ -22,24 +22,24 @@ allowed-tools: Bash, Read, Write, Edit
 - Deployment error messages sanitized to prevent credential leakage
 - Real-time feedback when protection activates
 
-I'll help you deploy **[INSERT_PROJECT_NAME]** to **[INSERT_DEPLOYMENT_TARGET]** using your configured **[INSERT_CI_CD_PLATFORM]** pipeline with proper validation.
+I'll help you deploy **lusaka** to **Cloud Server** using your configured **GitHub Actions** pipeline with proper validation.
 
 ## Deployment Configuration
 
-- **Project**: [INSERT_PROJECT_NAME]
-- **Tech Stack**: [INSERT_TECH_STACK]
-- **Target**: [INSERT_DEPLOYMENT_TARGET]
-- **CI/CD**: [INSERT_CI_CD_PLATFORM]
-- **Security**: [INSERT_SECURITY_LEVEL]
+- **Project**: lusaka
+- **Tech Stack**: Python
+- **Target**: Cloud Server
+- **CI/CD**: GitHub Actions
+- **Security**: standard
 
 ## Deployment Strategies
 
-### For [INSERT_TEAM_SIZE] Teams
+### For 1-5 developers Teams
 
-Based on your team size and [INSERT_WORKFLOW_TYPE] workflow:
+Based on your team size and devops-focused workflow:
 
 #### Blue-Green Deployment
-Zero-downtime deployment for [INSERT_USER_BASE] (with validation):
+Zero-downtime deployment for developers (with validation):
 ```bash
 /deploy production --strategy blue-green
 # SECURITY: Environment 'production' validated using validateEnvironmentName()
@@ -48,7 +48,7 @@ Zero-downtime deployment for [INSERT_USER_BASE] (with validation):
 ```
 
 #### Canary Deployment
-Gradual rollout for [INSERT_PERFORMANCE_PRIORITY] systems (with validation):
+Gradual rollout for balanced systems (with validation):
 ```bash
 /deploy production --strategy canary --percentage 10
 # SECURITY: Environment validated, strategy validated, percentage value sanitized
@@ -56,7 +56,7 @@ Gradual rollout for [INSERT_PERFORMANCE_PRIORITY] systems (with validation):
 ```
 
 #### Rolling Update
-Standard deployment for [INSERT_DEPLOYMENT_TARGET] (with validation):
+Standard deployment for Cloud Server (with validation):
 ```bash
 /deploy staging --strategy rolling
 # SECURITY: Environment 'staging' validated using validateEnvironmentName()
@@ -65,7 +65,7 @@ Standard deployment for [INSERT_DEPLOYMENT_TARGET] (with validation):
 
 ## Pre-Deployment Checks
 
-Your [INSERT_SECURITY_LEVEL] level requires:
+Your standard level requires:
 - Input validation
 - Environment name validation
 - Deployment strategy validation
@@ -79,24 +79,24 @@ Your [INSERT_SECURITY_LEVEL] level requires:
 
 ## Environment-Specific Settings
 
-### [INSERT_DEPLOYMENT_TARGET] Configuration
+### Cloud Server Configuration
 - Auto-scaling policies
 - Load balancer settings
 - Database connection strings
 - Environment variables
 
-## Integration with [INSERT_CI_CD_PLATFORM]
+## Integration with GitHub Actions
 
 Your deployment pipeline includes:
-- Build stage for [INSERT_TECH_STACK]
-- Test execution with [INSERT_TESTING_FRAMEWORK]
+- Build stage for Python
+- Test execution with pytest
 - Code analysis
 - Deployment automation
 - Post-deployment validation
 
 ## Rollback Strategy
 
-For [INSERT_USER_BASE] protection:
+For developers protection:
 - Automatic rollback triggers
 - Manual rollback command
 - Database migration reversal
@@ -104,7 +104,7 @@ For [INSERT_USER_BASE] protection:
 
 ## Monitoring Integration
 
-Post-deployment for [INSERT_PROJECT_NAME]:
+Post-deployment for lusaka:
 - Application metrics
 - Error rate monitoring
 - Performance baselines
