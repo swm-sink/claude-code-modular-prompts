@@ -1,9 +1,14 @@
 ---
 name: /test-integration-project
-description: "Run integration tests for [INSERT_PROJECT_NAME] with [INSERT_API_STYLE] APIs and [INSERT_DATABASE_TYPE]"
-usage: /test-integration [test-suite] [--environment staging|production] [--parallel] [--verbose]
+description: Run integration tests for [INSERT_PROJECT_NAME] with [INSERT_API_STYLE]
+  APIs and [INSERT_DATABASE_TYPE]
+usage: /test-integration [test-suite] [--environment staging|production] [--parallel]
+  [--verbose]
 category: testing
-allowed-tools: Bash, Read, Write
+allowed-tools:
+- Bash
+- Read
+- Write
 security: input-validation-framework.md
 ---
 

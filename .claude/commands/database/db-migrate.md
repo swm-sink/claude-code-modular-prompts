@@ -1,9 +1,14 @@
 ---
 name: /db-migrate
-description: "Safe database migration for your project's database system"
+description: Safe database migration for your project's database system
 usage: /db-migrate [up|down|status|create] [migration-name]
 category: database
-allowed-tools: Read, Write, Edit, Bash, Grep
+allowed-tools:
+- Read
+- Write
+- Edit
+- Bash
+- Grep
 ---
 
 # Database Migration for [INSERT_PROJECT_NAME]

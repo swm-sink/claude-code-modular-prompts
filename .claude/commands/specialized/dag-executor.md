@@ -1,8 +1,15 @@
 ---
 name: /dag-executor
-description: "DAG execution engine with dependency resolution, parallel processing, and error recovery"
-usage: "[dag_definition] [execution_mode]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+description: DAG execution engine with dependency resolution, parallel processing,
+  and error recovery
+usage: '[dag_definition] [execution_mode]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Bash
+- Grep
+category: specialized
 ---
 # /dag executor - DAG Execution Engine
 Advanced DAG execution system with intelligent dependency resolution, parallel processing, and comprehensive error recovery.

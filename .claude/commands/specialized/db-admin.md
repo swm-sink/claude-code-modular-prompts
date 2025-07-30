@@ -1,8 +1,15 @@
 ---
 name: /db-admin
-description: "Unified database administration with migration, backup, and restoration capabilities"
-usage: "[operation] [options]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+description: Unified database administration with migration, backup, and restoration
+  capabilities
+usage: '[operation] [options]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Bash
+- Grep
+category: specialized
 ---
 
 # /db-admin - Unified Database Administration System for [INSERT_PROJECT_NAME]

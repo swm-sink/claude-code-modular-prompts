@@ -1,9 +1,12 @@
 ---
 name: /query
-description: "Intelligent codebase query and analysis for lusaka with Python understanding"
+description: Intelligent codebase query and analysis for lusaka with Python understanding
 usage: /query "[question about your codebase]"
 category: core
-allowed-tools: Read, Grep, Glob
+allowed-tools:
+- Read
+- Grep
+- Glob
 ---
 
 # Query lusaka Codebase

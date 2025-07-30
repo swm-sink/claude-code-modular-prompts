@@ -1,8 +1,13 @@
 ---
 name: /demo-file-processor
-description: "Demonstrate atomic components in action - File Processing Pattern"
-usage: "[file_pattern] [output_format]"
-allowed-tools: Read, Write, Edit, Grep, Glob
+description: Demonstrate atomic components in action - File Processing Pattern
+usage: '[file_pattern] [output_format]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Grep
+- Glob
 category: examples
 ---
 

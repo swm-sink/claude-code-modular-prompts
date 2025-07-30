@@ -1,9 +1,12 @@
 ---
 name: /test-unit
-description: "Run unit tests for [INSERT_PROJECT_NAME] using [INSERT_TESTING_FRAMEWORK]"
+description: Run unit tests for [INSERT_PROJECT_NAME] using [INSERT_TESTING_FRAMEWORK]
 usage: /test-unit [file-pattern] [--coverage] [--watch]
 category: testing
-allowed-tools: Bash, Read, Write
+allowed-tools:
+- Bash
+- Read
+- Write
 ---
 
 # Unit Testing for [INSERT_PROJECT_NAME]

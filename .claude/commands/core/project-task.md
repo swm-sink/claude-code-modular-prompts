@@ -1,9 +1,12 @@
 ---
 name: /project-task
-description: "Create tasks specific to lusaka using devops-focused methodology"
+description: Create tasks specific to lusaka using devops-focused methodology
 usage: /project-task [feature|bug|refactor] [description]
 category: core
-allowed-tools: TodoWrite, Read, Edit
+allowed-tools:
+- TodoWrite
+- Read
+- Edit
 security: input-validation-framework.md
 ---
 

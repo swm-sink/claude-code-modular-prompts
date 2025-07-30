@@ -1,9 +1,16 @@
 ---
 name: /quality
-description: "Unified intelligent code quality analysis with comprehensive review, metrics calculation, reporting, and improvement suggestions"
-usage: "[mode] [target_path] [options]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+description: Unified intelligent code quality analysis with comprehensive review,
+  metrics calculation, reporting, and improvement suggestions
+usage: '[mode] [target_path] [options]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Bash
+- Grep
 security: input-validation-framework.md
+category: quality
 ---
 
 # /quality - Unified Code Quality Framework for lusaka

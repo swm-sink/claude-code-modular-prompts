@@ -1,8 +1,15 @@
 ---
 name: /analyze-code
-description: "Unified code analysis with intelligent pattern detection, quality assessment, security review, and architectural insights"
-usage: "[focus_mode] [target_path]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+description: Unified code analysis with intelligent pattern detection, quality assessment,
+  security review, and architectural insights
+usage: '[focus_mode] [target_path]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Bash
+- Grep
+category: quality
 ---
 # /analyze-code - Unified Code Analysis Framework for lusaka
 Comprehensive code analysis system for Python applications, combining intelligent pattern detection, quality assessment, security review, and architectural insights with configurable focus modes tailored for software-development projects.

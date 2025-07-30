@@ -1,8 +1,15 @@
 ---
 name: /think-deep
-description: "Advanced deep thinking and problem-solving with structured analysis, multi-perspective exploration, and comprehensive synthesis"
-usage: "[problem_statement] [thinking_depth]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+description: Advanced deep thinking and problem-solving with structured analysis,
+  multi-perspective exploration, and comprehensive synthesis
+usage: '[problem_statement] [thinking_depth]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Bash
+- Grep
+category: specialized
 ---
 # /think deep - Advanced Deep Thinking
 A powerful command for deep thinking and complex problem-solving, utilizing structured analysis, multi-perspective exploration, and comprehensive synthesis.

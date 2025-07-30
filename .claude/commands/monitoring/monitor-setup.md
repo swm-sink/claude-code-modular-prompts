@@ -1,9 +1,14 @@
 ---
 name: /monitor-setup
-description: "Setup monitoring for [INSERT_PROJECT_NAME] on [INSERT_DEPLOYMENT_TARGET]"
-usage: /monitor-setup [--stack prometheus|datadog|newrelic|cloudwatch] [--components all|app|infra|custom]
+description: Setup monitoring for [INSERT_PROJECT_NAME] on [INSERT_DEPLOYMENT_TARGET]
+usage: /monitor-setup [--stack prometheus|datadog|newrelic|cloudwatch] [--components
+  all|app|infra|custom]
 category: monitoring
-allowed-tools: Write, Read, Edit, Bash
+allowed-tools:
+- Write
+- Read
+- Edit
+- Bash
 security: input-validation-framework.md
 ---
 

@@ -1,9 +1,14 @@
 ---
 name: /cd-rollback
-description: "Rollback lusaka deployment on Cloud Server"
-usage: /cd-rollback [--version previous-version] [--environment production|staging] [--emergency]
+description: Rollback lusaka deployment on Cloud Server
+usage: /cd-rollback [--version previous-version] [--environment production|staging]
+  [--emergency]
 category: devops
-allowed-tools: Bash, Read, Write, Edit
+allowed-tools:
+- Bash
+- Read
+- Write
+- Edit
 ---
 
 # Deployment Rollback for lusaka

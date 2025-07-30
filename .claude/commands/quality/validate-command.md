@@ -1,9 +1,16 @@
 ---
 name: /validate-command
-description: "Systematic command validation using Claude 4 prompting and context engineering best practices"
+description: Systematic command validation using Claude 4 prompting and context engineering
+  best practices
 usage: /validate-command [command-file-path] [validation-depth]
 category: quality
-allowed-tools: Read, Write, Edit, Bash, Grep, Glob
+allowed-tools:
+- Read
+- Write
+- Edit
+- Bash
+- Grep
+- Glob
 ---
 
 # /validate-command - Systematic Command Validation for lusaka

@@ -1,8 +1,15 @@
 ---
 name: /test
-description: "Unified intelligent testing framework with automated test generation, comprehensive coverage analysis, environment management, and multi-format reporting"
-usage: "[type] [target] [options]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+description: Unified intelligent testing framework with automated test generation,
+  comprehensive coverage analysis, environment management, and multi-format reporting
+usage: '[type] [target] [options]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Bash
+- Grep
+category: quality
 ---
 # /test - Unified Intelligent Testing Framework for lusaka
 Comprehensive testing solution for Python applications, combining unit, integration, and coverage analysis with automated test generation, environment management, and advanced reporting capabilities tailored for software-development projects.

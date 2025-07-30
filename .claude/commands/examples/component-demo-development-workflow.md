@@ -1,8 +1,15 @@
 ---
 name: /demo-development-workflow
-description: "Demonstrate development workflow with git operations, testing, and progress tracking"
-usage: "[branch_name] [test_suite]"
-allowed-tools: Read, Write, Edit, Grep, Bash, Glob
+description: Demonstrate development workflow with git operations, testing, and progress
+  tracking
+usage: '[branch_name] [test_suite]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Grep
+- Bash
+- Glob
 category: examples
 ---
 

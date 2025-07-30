@@ -1,8 +1,15 @@
 ---
 name: /project
-description: "Comprehensive project management suite with setup, provisioning, workflow orchestration, scheduling, tracking, and deployment operations"
-usage: "[mode] [target] [options]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+description: Comprehensive project management suite with setup, provisioning, workflow
+  orchestration, scheduling, tracking, and deployment operations
+usage: '[mode] [target] [options]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Bash
+- Grep
+category: core
 ---
 # /project - Comprehensive Project Management Suite for lusaka
 

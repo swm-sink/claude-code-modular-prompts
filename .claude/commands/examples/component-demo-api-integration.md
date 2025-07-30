@@ -1,8 +1,13 @@
 ---
 name: /demo-api-integration
-description: "Demonstrate API integration pattern with validation and transformation"
-usage: "[api_endpoint] [output_format]"
-allowed-tools: Read, Write, Edit, Grep, WebFetch
+description: Demonstrate API integration pattern with validation and transformation
+usage: '[api_endpoint] [output_format]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Grep
+- WebFetch
 category: examples
 ---
 

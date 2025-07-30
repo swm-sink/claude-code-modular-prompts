@@ -1,9 +1,12 @@
 ---
 name: /api-design
-description: "Design RESTful APIs for lusaka with [INSERT_software-development_STANDARDS]"
+description: Design RESTful APIs for lusaka with [INSERT_software-development_STANDARDS]
 usage: /api-design [endpoint-name] [http-method]
 category: development
-allowed-tools: Write, Edit, Read
+allowed-tools:
+- Write
+- Edit
+- Read
 ---
 
 # API Design for lusaka

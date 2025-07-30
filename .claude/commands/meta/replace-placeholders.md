@@ -1,9 +1,13 @@
 ---
 name: /replace-placeholders
-description: "Systematically replace all placeholders in adapted commands"
+description: Systematically replace all placeholders in adapted commands
 usage: /replace-placeholders [--dry-run] [--config-file project-config.yaml]
 category: meta-commands
-allowed-tools: Read, Write, MultiEdit, Grep
+allowed-tools:
+- Read
+- Write
+- MultiEdit
+- Grep
 ---
 
 # Manual Placeholder Replacement Guide

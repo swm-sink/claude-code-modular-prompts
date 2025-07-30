@@ -1,9 +1,13 @@
 ---
 name: /undo-adaptation
-description: "Revert adaptations to previous state with full recovery capability"
+description: Revert adaptations to previous state with full recovery capability
 usage: /undo-adaptation [--last|--to-snapshot snapshot-id] [--preview]
 category: meta-commands
-allowed-tools: Read, Write, MultiEdit, Bash
+allowed-tools:
+- Read
+- Write
+- MultiEdit
+- Bash
 ---
 
 # Manual Recovery Guide for Framework Adaptations

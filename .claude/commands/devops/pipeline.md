@@ -1,8 +1,18 @@
 ---
 name: /pipeline
-description: "Unified intelligent pipeline orchestration with creation, execution, monitoring, deployment, and CI/CD integration"
-usage: "[mode] [pipeline_name] [options]"
-allowed-tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob
+description: Unified intelligent pipeline orchestration with creation, execution,
+  monitoring, deployment, and CI/CD integration
+usage: '[mode] [pipeline_name] [options]'
+allowed-tools:
+- Task
+- TodoWrite
+- Read
+- Write
+- Edit
+- Bash
+- Grep
+- Glob
+category: devops
 ---
 # /pipeline - Unified Pipeline Orchestration for lusaka
 Comprehensive pipeline orchestration for lusaka combining creation, execution, monitoring, deployment, GitHub Actions setup, and build automation optimized for Python and 1-5 developers teams.

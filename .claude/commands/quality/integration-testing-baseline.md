@@ -1,7 +1,11 @@
 ---
 name: /integration-testing-baseline
 description: Integration Testing Baseline Report
-allowed-tools: Read, Grep, Glob
+allowed-tools:
+- Read
+- Grep
+- Glob
+category: quality
 ---
 
 # Integration Testing Baseline Report

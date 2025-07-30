@@ -1,9 +1,13 @@
 ---
 name: /deploy
-description: "Deploy lusaka to Cloud Server using GitHub Actions"
+description: Deploy lusaka to Cloud Server using GitHub Actions
 usage: /deploy [environment] [--strategy blue-green|canary|rolling]
 category: devops
-allowed-tools: Bash, Read, Write, Edit
+allowed-tools:
+- Bash
+- Read
+- Write
+- Edit
 ---
 
 # Deploy lusaka

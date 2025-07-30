@@ -1,10 +1,16 @@
 ---
 name: /notebook-run
-description: "Execute Jupyter notebooks for [INSERT_PROJECT_NAME] with parameter injection and monitoring"
-usage: /notebook-run [notebook-path] [--params key=value] [--kernel python3|R|julia] [--output-dir path]
+description: Execute Jupyter notebooks for [INSERT_PROJECT_NAME] with parameter injection
+  and monitoring
+usage: /notebook-run [notebook-path] [--params key=value] [--kernel python3|R|julia]
+  [--output-dir path]
 category: data-science
-allowed-tools: Bash, Read, Write
-security: [path-validation]
+allowed-tools:
+- Bash
+- Read
+- Write
+security:
+- path-validation
 ---
 
 # Notebook Execution for [INSERT_PROJECT_NAME]

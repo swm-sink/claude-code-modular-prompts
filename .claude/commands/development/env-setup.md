@@ -1,9 +1,13 @@
 ---
 name: /env-setup
-description: "Configure environments for lusaka across Cloud Server"
+description: Configure environments for lusaka across Cloud Server
 usage: /env-setup [environment-name] [--clone-from existing-env] [--variables key=value]
 category: development
-allowed-tools: Write, Read, Edit, Bash
+allowed-tools:
+- Write
+- Read
+- Edit
+- Bash
 security: input-validation-framework.md
 ---
 

@@ -1,7 +1,12 @@
 ---
 name: /performance-integration-report
 description: Performance Integration Benchmarking Report
-allowed-tools: Read, Grep, Glob, Bash
+allowed-tools:
+- Read
+- Grep
+- Glob
+- Bash
+category: quality
 ---
 
 # Performance Integration Benchmarking Report

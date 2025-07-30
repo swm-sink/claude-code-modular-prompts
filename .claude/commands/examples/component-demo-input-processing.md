@@ -1,8 +1,12 @@
 ---
 name: /demo-input-processing
-description: "Demonstrate reliable input processing and parameter validation"
-usage: "[input_data] [processing_options]"
-allowed-tools: Read, Write, Edit, Grep
+description: Demonstrate reliable input processing and parameter validation
+usage: '[input_data] [processing_options]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Grep
 category: examples
 ---
 

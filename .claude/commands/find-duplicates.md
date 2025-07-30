@@ -1,8 +1,12 @@
 ---
 name: /find-duplicates
-description: "Find duplicate files in your project"
-usage: "[file-pattern] [--type extension]"
-allowed-tools: Glob, Read, Grep
+description: Find duplicate files in your project
+usage: '[file-pattern] [--type extension]'
+allowed-tools:
+- Glob
+- Read
+- Grep
+category: find-duplicates.md
 ---
 
 # Find Duplicate Files

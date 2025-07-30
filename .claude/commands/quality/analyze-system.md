@@ -1,8 +1,15 @@
 ---
 name: /analyze-system
-description: "Comprehensive system analysis with performance profiling, dependency analysis, cost optimization, and quality assessments"
-usage: "[focus_mode] [analysis_depth] [target_path]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+description: Comprehensive system analysis with performance profiling, dependency
+  analysis, cost optimization, and quality assessments
+usage: '[focus_mode] [analysis_depth] [target_path]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Bash
+- Grep
+category: quality
 ---
 # /analyze-system - Unified System Analysis Framework for lusaka
 

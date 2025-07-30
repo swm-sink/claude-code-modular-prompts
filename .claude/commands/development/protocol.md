@@ -1,8 +1,15 @@
 ---
 name: /protocol
-description: "Advanced protocol-driven development with safety frameworks, validation pipelines, and rigorous quality assurance"
-usage: "[protocol_type] [safety_level]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+description: Advanced protocol-driven development with safety frameworks, validation
+  pipelines, and rigorous quality assurance
+usage: '[protocol_type] [safety_level]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Bash
+- Grep
+category: development
 ---
 <command_file>
   <metadata>

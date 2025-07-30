@@ -1,9 +1,16 @@
 ---
 name: /spawn-specialist
-description: "Create and launch specialized sub-agents for complex multi-domain tasks"
+description: Create and launch specialized sub-agents for complex multi-domain tasks
 usage: /spawn-specialist <domain> <task-description> [--parallel] [--coordinated]
 category: meta-commands
-allowed-tools: Task, Read, Write, Edit, Bash, Glob, Grep
+allowed-tools:
+- Task
+- Read
+- Write
+- Edit
+- Bash
+- Glob
+- Grep
 ---
 
 # Specialized Sub-Agent Spawning System

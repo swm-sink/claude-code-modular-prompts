@@ -1,8 +1,14 @@
 ---
 name: /smart-adapt-project
-description: "Intelligent project adaptation with 70%+ automated placeholder replacement"
-usage: "[target_directory] [mode:quick|thorough]"
-allowed-tools: Read, Write, Edit, Grep, Glob, Bash
+description: Intelligent project adaptation with 70%+ automated placeholder replacement
+usage: '[target_directory] [mode:quick|thorough]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Grep
+- Glob
+- Bash
 category: meta
 ---
 

@@ -1,9 +1,14 @@
 ---
 name: /monitor-alerts
-description: "Configure alerts for [INSERT_PROJECT_NAME] based on [INSERT_USER_BASE] SLAs"
-usage: /monitor-alerts [--severity critical|warning|info] [--channel email|slack|pagerduty] [--threshold value]
+description: Configure alerts for [INSERT_PROJECT_NAME] based on [INSERT_USER_BASE]
+  SLAs
+usage: /monitor-alerts [--severity critical|warning|info] [--channel email|slack|pagerduty]
+  [--threshold value]
 category: monitoring
-allowed-tools: Read, Write, Edit
+allowed-tools:
+- Read
+- Write
+- Edit
 security: input-validation-framework.md
 ---
 

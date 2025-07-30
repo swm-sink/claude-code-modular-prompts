@@ -1,9 +1,12 @@
 ---
 name: /ci-run
-description: "Execute GitHub Actions pipelines for lusaka"
+description: Execute GitHub Actions pipelines for lusaka
 usage: /ci-run [pipeline-name] [--branch branch-name] [--stage specific-stage]
 category: devops
-allowed-tools: Bash, Read, Write
+allowed-tools:
+- Bash
+- Read
+- Write
 security: input-validation-framework.md
 ---
 

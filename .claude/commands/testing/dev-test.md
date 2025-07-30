@@ -1,8 +1,15 @@
 ---
 name: /dev-test
-description: "Advanced development testing with comprehensive coverage, intelligent test generation, and automated quality validation"
-usage: "[test_scope] [coverage_strategy]"
-allowed-tools: Read, Write, Edit, Bash, Grep
+description: Advanced development testing with comprehensive coverage, intelligent
+  test generation, and automated quality validation
+usage: '[test_scope] [coverage_strategy]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Bash
+- Grep
+category: testing
 ---
 # /dev test - Advanced Development Testing
 

@@ -1,7 +1,11 @@
 ---
 name: /integration-test-matrices
 description: Integration Test Matrices for Phase 2
-allowed-tools: Read, Grep, Glob
+allowed-tools:
+- Read
+- Grep
+- Glob
+category: quality
 ---
 
 # Integration Test Matrices for Phase 2

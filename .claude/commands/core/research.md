@@ -1,9 +1,13 @@
 ---
 name: /research
-description: "Research framework for software-development topics relevant to lusaka"
+description: Research framework for software-development topics relevant to lusaka
 usage: /research [topic] [--depth shallow|standard|comprehensive] [--focus technical|business|competitive]
 category: core
-allowed-tools: Read, Write, Grep, WebSearch
+allowed-tools:
+- Read
+- Write
+- Grep
+- WebSearch
 ---
 
 # Research Framework for lusaka

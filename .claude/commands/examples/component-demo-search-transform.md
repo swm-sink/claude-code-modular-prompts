@@ -1,9 +1,14 @@
 ---
 name: /demo-search-transform
-description: "Demonstrate highest-scoring pattern - Search and Transform"
-usage: "[search_pattern] [target_format]"
-allowed-tools: Read, Write, Edit, Grep, Glob
-category: examples  
+description: Demonstrate highest-scoring pattern - Search and Transform
+usage: '[search_pattern] [target_format]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Grep
+- Glob
+category: examples
 ---
 
 # Search & Transform Demo - Highest Performance Pattern

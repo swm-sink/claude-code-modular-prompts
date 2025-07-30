@@ -1,8 +1,15 @@
 ---
 name: /task
-description: "Execute a focused development task with best practices for lusaka"
-usage: "[task_description]"
-allowed-tools: Read, Write, Edit, Grep, Glob, Bash
+description: Execute a focused development task with best practices for lusaka
+usage: '[task_description]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Grep
+- Glob
+- Bash
+category: core
 ---
 
 # /task - Focused Development Workflow for lusaka

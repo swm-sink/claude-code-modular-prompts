@@ -1,9 +1,15 @@
 ---
 name: /quick-test
-description: "Universal testing assistance - works with any testing framework"
+description: Universal testing assistance - works with any testing framework
 usage: /quick-test [--generate | --run | --fix | --strategy] [test-target]
 category: core
-allowed-tools: Read, Write, Edit, Bash, Grep, Glob
+allowed-tools:
+- Read
+- Write
+- Edit
+- Bash
+- Grep
+- Glob
 ---
 
 # 🧪 Universal Testing Assistance

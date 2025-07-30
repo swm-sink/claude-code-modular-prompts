@@ -1,9 +1,11 @@
 ---
 name: /quick-help
-description: "Quick command guide that works immediately - no customization needed"
+description: Quick command guide that works immediately - no customization needed
 usage: /quick-help [command-name]
 category: core
-allowed-tools: Read, Grep
+allowed-tools:
+- Read
+- Grep
 ---
 
 # 🚀 Quick Command Guide

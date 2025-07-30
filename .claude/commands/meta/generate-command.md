@@ -1,9 +1,16 @@
 ---
 name: /generate-command
-description: "Meta-prompt system to automatically generate new Claude Code slash commands"
+description: Meta-prompt system to automatically generate new Claude Code slash commands
 usage: /generate-command <task-description> [--framework=<framework>]
 category: meta-commands
-allowed-tools: Read, Write, Edit, MultiEdit, Glob, LS, Bash
+allowed-tools:
+- Read
+- Write
+- Edit
+- MultiEdit
+- Glob
+- LS
+- Bash
 ---
 
 # Automated Command Generation System

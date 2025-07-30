@@ -1,8 +1,11 @@
 ---
 name: /help
-description: "Helpful guide to available commands and best practices for lusaka"
-usage: "[command_name]"
-allowed-tools: Read, Grep
+description: Helpful guide to available commands and best practices for lusaka
+usage: '[command_name]'
+allowed-tools:
+- Read
+- Grep
+category: core
 ---
 
 # /help - Command Guide for lusaka

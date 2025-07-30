@@ -1,9 +1,13 @@
 ---
 name: /dev-setup
-description: "Setup development environment for lusaka with Python"
+description: Setup development environment for lusaka with Python
 usage: /dev-setup [--environment local|docker|cloud] [--tools all|minimal|custom]
 category: development
-allowed-tools: Bash, Write, Read, Edit
+allowed-tools:
+- Bash
+- Write
+- Read
+- Edit
 ---
 
 # Development Environment Setup for lusaka

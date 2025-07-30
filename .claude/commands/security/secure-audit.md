@@ -1,9 +1,15 @@
 ---
 name: /secure-audit
-description: "Comprehensive code audit for [INSERT_PROJECT_NAME] with [INSERT_SECURITY_LEVEL] requirements"
-usage: /secure-audit [--scope full|code|infrastructure|compliance] [--report-format detailed|executive|compliance]
+description: Comprehensive code audit for [INSERT_PROJECT_NAME] with [INSERT_SECURITY_LEVEL]
+  requirements
+usage: /secure-audit [--scope full|code|infrastructure|compliance] [--report-format
+  detailed|executive|compliance]
 category: security
-allowed-tools: Bash, Read, Write, Grep
+allowed-tools:
+- Bash
+- Read
+- Write
+- Grep
 ---
 
 # Code Audit for [INSERT_PROJECT_NAME]

@@ -1,8 +1,14 @@
 ---
 name: /demo-workflow-orchestration
-description: "Demonstrate complex workflow management with atomic components"
-usage: "[workflow_name] [parallel_tasks]"
-allowed-tools: Read, Write, Edit, Grep, Glob, Bash
+description: Demonstrate complex workflow management with atomic components
+usage: '[workflow_name] [parallel_tasks]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Grep
+- Glob
+- Bash
 category: examples
 ---
 

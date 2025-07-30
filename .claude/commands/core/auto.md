@@ -1,8 +1,15 @@
 ---
 name: /auto
-description: "Intelligent command router that selects the best command for your request"
-usage: "[your request in natural language]"
-allowed-tools: Read, Write, Edit, Grep, Glob, Bash
+description: Intelligent command router that selects the best command for your request
+usage: '[your request in natural language]'
+allowed-tools:
+- Read
+- Write
+- Edit
+- Grep
+- Glob
+- Bash
+category: core
 ---
 
 # /auto - Intelligent Command Router for lusaka

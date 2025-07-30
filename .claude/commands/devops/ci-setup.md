@@ -1,9 +1,13 @@
 ---
 name: /ci-setup
-description: "Configure GitHub Actions pipelines for lusaka"
+description: Configure GitHub Actions pipelines for lusaka
 usage: /ci-setup [--template basic|standard|advanced] [--branch main|develop|feature/*]
 category: devops
-allowed-tools: Write, Read, Edit, Bash
+allowed-tools:
+- Write
+- Read
+- Edit
+- Bash
 security: input-validation-framework.md
 ---
 

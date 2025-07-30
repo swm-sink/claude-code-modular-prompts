@@ -1,9 +1,13 @@
 ---
 name: /db-restore
-description: "Restore [INSERT_DATABASE_TYPE] database for [INSERT_PROJECT_NAME] from backup"
+description: Restore [INSERT_DATABASE_TYPE] database for [INSERT_PROJECT_NAME] from
+  backup
 usage: /db-restore [backup-file] [--target environment] [--validate]
 category: database
-allowed-tools: Bash, Read, Write
+allowed-tools:
+- Bash
+- Read
+- Write
 security: input-validation-framework.md
 ---
 

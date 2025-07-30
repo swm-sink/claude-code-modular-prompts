@@ -1,9 +1,17 @@
 ---
 name: /validate-automation
-description: "Comprehensive validation and testing framework for template automation system"
+description: Comprehensive validation and testing framework for template automation
+  system
 usage: /validate-automation [--scope=templates|scripts|integration|full] [--fix-issues]
 category: meta-commands
-allowed-tools: Read, Write, Edit, Bash, Glob, Grep, LS
+allowed-tools:
+- Read
+- Write
+- Edit
+- Bash
+- Glob
+- Grep
+- LS
 ---
 
 # Automation System Validation Framework
