@@ -1,44 +1,49 @@
 # Claude Code Modular Prompts - Template Library
 
-## 🚨 SIMPLICITY MANDATE - STRICTLY ENFORCED
-**ZERO TOLERANCE FOR COMPLEXITY - IMMEDIATE REJECTION OF OVER-ENGINEERING**
+## 🔄 DEVELOPMENT APPROACH UPDATE (2025-07-30)
 
-### MANDATORY RULES (VIOLATION = STOP IMMEDIATELY)
-- **ONE SOLUTION ONLY** - No multiple options, no "it depends"
-- **DIRECT ACTION** - No planning phases, orchestration, or meta-work
-- **30 LINES MAX** - If a script is >30 lines, it's wrong
-- **2 COMMANDS MAX** - Users should never run more than 2 commands
-- **NO FRAMEWORKS** - Copy files, replace text, done
-- **NO "SYSTEMS"** - No architectures, patterns, or abstractions
+### Previous Approach: SIMPLICITY MANDATE (2025-07-29)
+The project previously enforced a strict SIMPLICITY MANDATE to prevent over-engineering after multiple failed attempts at complex architectures. This mandate banned:
+- Planning orchestration with agents
+- Multi-phase execution strategies
+- Quality gates and validation frameworks
+- Any architectures, patterns, or abstractions
 
-### BANNED BEHAVIORS
-- ❌ Planning orchestration with agents
-- ❌ Multi-phase execution strategies  
-- ❌ Quality gates and validation frameworks
-- ❌ Conditional spawning or adaptive anything
-- ❌ JSON configs for "communication protocols"
-- ❌ DAG execution graphs
-- ❌ Any mention of "enterprise", "scalable", or "robust"
+**Why it existed**: Previous attempts at complex frameworks resulted in:
+- "We built a prompt engineering framework pretending to be software"
+- "Current completion: 30% of vision"
+- Multiple abandoned orchestration systems
+- Over-promised automation that didn't work
 
-### REQUIRED APPROACH
-1. **Copy templates** - Just copy .claude/ folder
-2. **Replace placeholders** - Simple find/replace
-3. **Done** - No testing frameworks, no validation layers
+### Current Approach: COMPREHENSIVE ENGINEERING (2025-07-30)
+The project now allows comprehensive planning and engineering approaches including:
+- ✅ Multi-branch analysis (ultrathink with 20+ branches)
+- ✅ Detailed planning phases with critique cycles
+- ✅ Quality gates and validation frameworks
+- ✅ Test-driven development (TDD)
+- ✅ Atomic commit strategies
+- ✅ Sub-agent coordination and orchestration
+- ✅ 100+ step implementation plans
 
-### LEARNED VIOLATIONS TO NEVER REPEAT
-- ❌ **Creating bash scripts** - Use Claude Code tools (Read, Edit, Glob) directly
-- ❌ **Promising automation that doesn't exist** - If it says "automated", it must actually work
-- ❌ **Adding "validation layers"** - One command does the job, period
-- ❌ **Over-promising in documentation** - Only document what actually works
-- ❌ **Creating separate utility scripts** - Everything happens in the slash command itself
+### Development Standards
+- **World-class content**: Referenced, verified, no hallucinations
+- **Thorough validation**: Multiple review and edit cycles
+- **Comprehensive testing**: TDD approach for all components
+- **Atomic commits**: Clear, focused changes
+- **Sub-agent coordination**: Detailed prompts and planning
+- **Web research integration**: Fact-checking and best practices
 
-### ENFORCEMENT EXAMPLES
-- **BAD**: `/adapt-to-project` calls separate bash scripts → Creates unnecessary files
-- **GOOD**: `/adapt-to-project` uses Read/Edit tools directly → Single command solution
-- **BAD**: "Automated adaptation" but templates still have placeholders → Broken promise
-- **GOOD**: Command actually replaces placeholders or admits it's manual → Honest approach
+### Historical Context
+**Previous Complex Attempts** (preserved for learning):
+- ULTRATHINK framework assessment
+- Multi-agent orchestration attempts
+- Various abandoned automation systems
 
-**VIOLATION OF THIS MANDATE = IMMEDIATE RESTART WITH SIMPLER APPROACH**
+**What Changed**: Decision to pursue comprehensive engineering despite previous failures, with emphasis on:
+1. Learning from past mistakes
+2. More thorough planning and validation
+3. World-class quality standards
+4. Proper sub-agent coordination
 
 ## 🎯 CLAUDE CODE NATIVE UNDERSTANDING
 
