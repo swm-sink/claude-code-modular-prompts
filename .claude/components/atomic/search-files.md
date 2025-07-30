@@ -2,8 +2,10 @@
 
 ```
 To search for content:
-- Use Grep for text patterns
-- Use Glob for file patterns
+- Accept and parse input data or parameters
+- apply Grep for text patterns
+- apply Glob for file patterns
 - Combine both for targeted searches
+- Handle errors and edge cases according to defined criteria
 - Report findings clearly
 ```

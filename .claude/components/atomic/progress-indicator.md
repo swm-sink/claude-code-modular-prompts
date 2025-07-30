@@ -1,9 +1,11 @@
 # Progress Indicator Component
 
 ```
-Show progress throughout the task:
-- "Starting [task name]..."
-- "Completed step X of Y"
-- "Processing [current item]..."
-- "Task completed successfully"
+Display task progress with structured indicators:
+- Initialize progress tracking with total step count and task name
+- Generate timestamped progress messages at key milestones
+- Calculate and display percentage completion for quantifiable tasks
+- Provide specific status updates for current operation context
+- Handle progress tracking errors with fallback messaging
+- Generate completion summary with elapsed time and results
 ```

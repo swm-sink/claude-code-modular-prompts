@@ -1,9 +1,11 @@
 # File Reader Component
 
 ```
-To read file contents:
-- Use the Read tool with the file path
-- Handle file not found errors gracefully
-- Process content based on file type
-- Report what was read
+Read file contents with error handling:
+- Validate file path format and accessibility permissions
+- Execute Read tool with absolute path and optional line limits
+- Parse file content according to detected file type (text, binary, structured)
+- Handle file not found errors with specific path recommendations
+- Extract and return relevant content sections based on requirements
+- Generate structured report of read operation results and metadata
 ```
