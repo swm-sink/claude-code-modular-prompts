@@ -3,7 +3,7 @@ name: /ci-run
 description: "Execute [INSERT_CI_CD_PLATFORM] pipelines for [INSERT_PROJECT_NAME]"
 usage: /ci-run [pipeline-name] [--branch branch-name] [--stage specific-stage]
 category: devops
-tools: Bash, Read, Write
+allowed-tools: Bash, Read, Write
 security: input-validation-framework.md
 ---
 

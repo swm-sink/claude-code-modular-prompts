@@ -2,8 +2,7 @@
 name: /map-reduce
 description: "Distribute work across parallel agents then aggregate results using map-reduce pattern"
 usage: /map-reduce [large task to parallelize and aggregate]
-tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob
-test_coverage: 0%
+allowed-tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob
 ---
 <command_file>
 <purpose>

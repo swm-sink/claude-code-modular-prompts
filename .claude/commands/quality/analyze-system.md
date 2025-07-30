@@ -2,7 +2,7 @@
 name: /analyze-system
 description: "Comprehensive system analysis with performance profiling, dependency analysis, cost optimization, and quality assessments"
 usage: "[focus_mode] [analysis_depth] [target_path]"
-tools: Read, Write, Edit, Bash, Grep
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 # /analyze-system - Unified System Analysis Framework for [INSERT_PROJECT_NAME]
 

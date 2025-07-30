@@ -2,7 +2,7 @@
 name: /task
 description: "Execute a focused development task with best practices for [INSERT_PROJECT_NAME]"
 usage: "[task_description]"
-tools: Read, Write, Edit, Grep, Glob, Bash
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash
 ---
 
 # /task - Focused Development Workflow for [INSERT_PROJECT_NAME]

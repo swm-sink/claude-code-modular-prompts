@@ -2,7 +2,7 @@
 name: /test-e2e
 description: "Intelligent end-to-end (E2E) testing with automated test script generation, browser automation, and comprehensive reporting"
 usage: "[url] [test_scenario]"
-tools: Read, Write, Edit, Bash, Grep
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 # /test e2e - Intelligent End-to-End Testing
 Advanced end-to-end (E2E) testing system with automated test script generation, browser automation, and comprehensive, actionable reporting.

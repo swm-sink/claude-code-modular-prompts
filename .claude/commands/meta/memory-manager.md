@@ -2,8 +2,8 @@
 name: /memory-manager
 description: "MCP-powered persistent memory and learning system for template automation"
 usage: /memory-manager <action> [--scope=personal|project|team] [--export-path=<path>]
-category: meta-commands  
-tools: Read, Write, Edit, MultiEdit, Bash, LS, Glob
+category: meta-commands
+allowed-tools: Read, Write, Edit, MultiEdit, Bash, LS, Glob
 ---
 
 # MCP Memory Management System

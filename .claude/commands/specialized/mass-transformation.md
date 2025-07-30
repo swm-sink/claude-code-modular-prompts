@@ -2,7 +2,7 @@
 name: /mass-transformation
 description: "Ultimate transformation workflow that spawns 50+ agents for complete framework conversion"
 usage: "[transformation_scope] [agent_limit] [parallel_mode]"
-tools: Task, Read, Write, Edit, Bash, Grep, Glob
+allowed-tools: Task, Read, Write, Edit, Bash, Grep, Glob
 ---
 # /mass transformation - Ultimate Framework Transformation Engine
 Ultimate transformation workflow that spawns 50+ specialized agents to convert all 121 command files to hybrid format, fix XML errors, validate components, and test the complete framework. PUSH CLAUDE CODE TO ITS LIMITS!

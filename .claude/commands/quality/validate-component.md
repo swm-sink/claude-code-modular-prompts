@@ -2,8 +2,8 @@
 name: /validate-component
 description: "Systematic component validation using context engineering and integration testing"
 usage: /validate-component [component-path] [validation-scope]
-tools: Read, Write, Edit, Bash, Grep, Glob
 category: quality
+allowed-tools: Read, Write, Edit, Bash, Grep, Glob
 ---
 
 # /validate-component - Systematic Component Validation

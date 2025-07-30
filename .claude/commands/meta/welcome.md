@@ -3,7 +3,7 @@ name: /welcome
 description: "Interactive onboarding guide for new Claude Code Adaptation Engine users"
 usage: /welcome [--quick|--detailed] [--role developer|lead|architect]
 category: meta-commands
-tools: Read, Write
+allowed-tools: Read, Write
 ---
 
 # 👋 Welcome to Claude Code Prompt Templates!

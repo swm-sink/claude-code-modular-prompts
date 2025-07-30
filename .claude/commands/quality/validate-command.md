@@ -2,14 +2,8 @@
 name: /validate-command
 description: "Systematic command validation using Claude 4 prompting and context engineering best practices"
 usage: /validate-command [command-file-path] [validation-depth]
-tools: Read, Write, Edit, Bash, Grep, Glob
 category: quality
-validation-modes:
-  - structural: YAML front matter and markdown structure
-  - functional: Command execution and behavior testing
-  - integration: Component integration and workflow testing
-  - performance: Performance benchmarking and optimization
-  - comprehensive: All validation modes with reporting
+allowed-tools: Read, Write, Edit, Bash, Grep, Glob
 ---
 
 # /validate-command - Systematic Command Validation for [INSERT_PROJECT_NAME]

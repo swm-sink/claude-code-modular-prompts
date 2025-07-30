@@ -3,7 +3,7 @@ name: /ci-setup
 description: "Configure [INSERT_CI_CD_PLATFORM] pipelines for [INSERT_PROJECT_NAME]"
 usage: /ci-setup [--template basic|standard|advanced] [--branch main|develop|feature/*]
 category: devops
-tools: Write, Read, Edit, Bash
+allowed-tools: Write, Read, Edit, Bash
 security: input-validation-framework.md
 ---
 

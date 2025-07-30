@@ -2,7 +2,7 @@
 name: /help
 description: "Helpful guide to available commands and best practices for [INSERT_PROJECT_NAME]"
 usage: "[command_name]"
-tools: Read, Grep
+allowed-tools: Read, Grep
 ---
 
 # /help - Command Guide for [INSERT_PROJECT_NAME]

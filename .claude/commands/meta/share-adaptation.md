@@ -3,7 +3,7 @@ name: /share-adaptation
 description: "Export your adaptation patterns to share with the community"
 usage: /share-adaptation [--name pattern-name] [--description text] [--anonymize]
 category: meta-commands
-tools: Read, Write, TodoWrite
+allowed-tools: Read, Write, TodoWrite
 ---
 
 # Document Your Adaptation Pattern

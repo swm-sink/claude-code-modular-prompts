@@ -2,7 +2,7 @@
 name: /project
 description: "Comprehensive project management suite with setup, provisioning, workflow orchestration, scheduling, tracking, and deployment operations"
 usage: "[mode] [target] [options]"
-tools: Read, Write, Edit, Bash, Grep
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 # /project - Comprehensive Project Management Suite for [INSERT_PROJECT_NAME]
 

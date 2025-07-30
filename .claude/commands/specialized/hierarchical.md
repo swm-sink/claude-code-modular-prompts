@@ -2,8 +2,7 @@
 name: /hierarchical
 description: "Orchestrate agents in a tree-like hierarchy with parent-child relationships and delegation"
 usage: /hierarchical [complex project requiring multi-level coordination]
-tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob
-test_coverage: 0%
+allowed-tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob
 ---
 <command_file>
 <purpose>

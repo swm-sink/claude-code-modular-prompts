@@ -2,7 +2,7 @@
 name: /secure-assess
 description: "Comprehensive code assessment with pattern analysis, risk analysis, compliance validation, and automated improvements"
 usage: "[mode] [scope] [format]"
-tools: Read, Write, Edit, Bash, Grep
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 
 # /secure-assess - Comprehensive Code Assessment for [INSERT_PROJECT_NAME]

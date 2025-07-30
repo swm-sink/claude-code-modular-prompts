@@ -2,8 +2,8 @@
 name: /quick-dev
 description: "Instant development assistance - works with any codebase"
 usage: /quick-dev [--review | --debug | --optimize | --explain] [file-path]
-category: core  
-tools: Read, Edit, Bash, Grep, Glob
+category: core
+allowed-tools: Read, Edit, Bash, Grep, Glob
 ---
 
 # 🛠️ Instant Development Assistance

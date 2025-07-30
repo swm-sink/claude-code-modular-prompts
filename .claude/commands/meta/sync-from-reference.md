@@ -3,7 +3,7 @@ name: /sync-from-reference
 description: "Pull updates from framework while preserving your customizations"
 usage: /sync-from-reference [--preview] [--approve-all]
 category: meta-commands
-tools: Read, Write, Edit, Grep, Bash
+allowed-tools: Read, Write, Edit, Grep, Bash
 ---
 
 # Manual Sync Guide for Framework Updates

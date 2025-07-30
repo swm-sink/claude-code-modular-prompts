@@ -3,7 +3,7 @@ name: /quick-task
 description: "Universal task execution - works with any project or language"
 usage: /quick-task "description of what you want to accomplish"
 category: core
-tools: Read, Write, Edit, MultiEdit, Bash, Glob, Grep
+allowed-tools: Read, Write, Edit, MultiEdit, Bash, Glob, Grep
 ---
 
 # 🎯 Universal Task Execution

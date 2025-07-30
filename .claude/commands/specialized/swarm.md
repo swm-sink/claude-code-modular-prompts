@@ -2,8 +2,7 @@
 name: /swarm
 description: "Orchestrate a swarm of specialized agents working in parallel on complex tasks"
 usage: /swarm [task description and agent roles]
-tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob
-test_coverage: 0%
+allowed-tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob
 ---
 <command_file>
 <purpose>

@@ -3,7 +3,7 @@ name: /api-design
 description: "Design [INSERT_API_STYLE] APIs for [INSERT_PROJECT_NAME] with [INSERT_[INSERT_DOMAIN]_STANDARDS]"
 usage: /api-design [endpoint-name] [http-method]
 category: development
-tools: Write, Edit, Read
+allowed-tools: Write, Edit, Read
 ---
 
 # API Design for [INSERT_PROJECT_NAME]

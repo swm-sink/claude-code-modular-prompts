@@ -3,7 +3,7 @@ name: /validate-adaptation
 description: "Check adaptation completeness and calculate readiness score"
 usage: /validate-adaptation [--verbose] [--auto-run]
 category: meta-commands
-tools: Read, Grep, TodoWrite
+allowed-tools: Read, Grep, TodoWrite
 ---
 
 # Manual Validation Checklist

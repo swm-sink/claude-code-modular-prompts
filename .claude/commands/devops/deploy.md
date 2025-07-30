@@ -3,8 +3,7 @@ name: /deploy
 description: "Deploy [INSERT_PROJECT_NAME] to [INSERT_DEPLOYMENT_TARGET] using [INSERT_CI_CD_PLATFORM]"
 usage: /deploy [environment] [--strategy blue-green|canary|rolling]
 category: devops
-tools: Bash, Read, Write, Edit
-security_level: CRITICAL
+allowed-tools: Bash, Read, Write, Edit
 ---
 
 # Deploy [INSERT_PROJECT_NAME]

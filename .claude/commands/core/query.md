@@ -3,7 +3,7 @@ name: /query
 description: "Intelligent codebase query and analysis for [INSERT_PROJECT_NAME] with [INSERT_TECH_STACK] understanding"
 usage: /query "[question about your codebase]"
 category: core
-tools: Read, Grep, Glob
+allowed-tools: Read, Grep, Glob
 ---
 
 # Query [INSERT_PROJECT_NAME] Codebase

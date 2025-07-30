@@ -3,7 +3,7 @@ name: /import-pattern
 description: "Import community adaptation patterns for similar projects"
 usage: /import-pattern [pattern-name] [--preview] [--merge|--replace]
 category: meta-commands
-tools: Read, Write, MultiEdit
+allowed-tools: Read, Write, MultiEdit
 ---
 
 # Import Community Adaptation Patterns

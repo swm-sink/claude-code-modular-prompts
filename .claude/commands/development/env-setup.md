@@ -3,7 +3,7 @@ name: /env-setup
 description: "Configure environments for [INSERT_PROJECT_NAME] across [INSERT_DEPLOYMENT_TARGET]"
 usage: /env-setup [environment-name] [--clone-from existing-env] [--variables key=value]
 category: development
-tools: Write, Read, Edit, Bash
+allowed-tools: Write, Read, Edit, Bash
 security: input-validation-framework.md
 ---
 

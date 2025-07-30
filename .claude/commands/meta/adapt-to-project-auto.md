@@ -3,7 +3,7 @@ name: /adapt-to-project-auto
 description: "TRUE automated project adaptation using framework detection and meta-prompting"
 usage: /adapt-to-project-auto [--confirm] [--dry-run]
 category: meta-commands
-tools: Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS
+allowed-tools: Read, Write, Edit, MultiEdit, Bash, Grep, Glob, LS
 ---
 
 # TRUE Automated Project Adaptation

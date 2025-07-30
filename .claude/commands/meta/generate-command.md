@@ -3,7 +3,7 @@ name: /generate-command
 description: "Meta-prompt system to automatically generate new Claude Code slash commands"
 usage: /generate-command <task-description> [--framework=<framework>]
 category: meta-commands
-tools: Read, Write, Edit, MultiEdit, Glob, LS, Bash
+allowed-tools: Read, Write, Edit, MultiEdit, Glob, LS, Bash
 ---
 
 # Automated Command Generation System
@@ -76,7 +76,7 @@ name: /create-component
 description: "Create React component with TypeScript and tests"
 usage: /create-component <ComponentName> [--type=functional|class]
 category: development
-tools: Write, Edit, MultiEdit, LS
+allowed-tools: Write, Edit, MultiEdit, LS
 ---
 
 # React Component Generator

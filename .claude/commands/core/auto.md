@@ -2,7 +2,7 @@
 name: /auto
 description: "Intelligent command router that selects the best command for your request"
 usage: "[your request in natural language]"
-tools: Read, Write, Edit, Grep, Glob, Bash
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash
 ---
 
 # /auto - Intelligent Command Router for [INSERT_PROJECT_NAME]

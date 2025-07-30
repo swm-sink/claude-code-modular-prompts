@@ -3,7 +3,7 @@ name: /research
 description: "Research framework for [INSERT_DOMAIN] topics relevant to [INSERT_PROJECT_NAME]"
 usage: /research [topic] [--depth shallow|standard|comprehensive] [--focus technical|business|competitive]
 category: core
-tools: Read, Write, Grep, WebSearch
+allowed-tools: Read, Write, Grep, WebSearch
 ---
 
 # Research Framework for [INSERT_PROJECT_NAME]

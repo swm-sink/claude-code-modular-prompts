@@ -3,7 +3,7 @@ name: /secure-scan
 description: "Code analysis for [INSERT_PROJECT_NAME] with [INSERT_SECURITY_LEVEL] requirements"
 usage: /secure-scan [--type vulnerability|sast|dast|all] [--severity critical|high|medium|low]
 category: security
-tools: Bash, Read, Write, Grep
+allowed-tools: Bash, Read, Write, Grep
 ---
 
 # Code Analysis for [INSERT_PROJECT_NAME]

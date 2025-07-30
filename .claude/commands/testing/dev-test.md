@@ -2,12 +2,7 @@
 name: /dev-test
 description: "Advanced development testing with comprehensive coverage, intelligent test generation, and automated quality validation"
 usage: "[test_scope] [coverage_strategy]"
-tools: Read, Write, Edit, Bash, Grep
-deprecated: true
-deprecated_date: "2025-07-25"
-replacement_command: "/test"
-migration_path: "/test with various options (--pattern, --watch, etc.)"
-removal_version: "2.0.0"
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 # /dev test - Advanced Development Testing
 

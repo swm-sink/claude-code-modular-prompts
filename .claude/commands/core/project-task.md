@@ -3,7 +3,7 @@ name: /project-task
 description: "Create tasks specific to [INSERT_PROJECT_NAME] using [INSERT_WORKFLOW_TYPE] methodology"
 usage: /project-task [feature|bug|refactor] [description]
 category: core
-tools: TodoWrite, Read, Edit
+allowed-tools: TodoWrite, Read, Edit
 security: input-validation-framework.md
 ---
 

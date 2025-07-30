@@ -2,7 +2,7 @@
 name: /quality-enforce
 description: "Enforces code quality standards using configurable quality gates"
 usage: ""
-tools: Bash, Read, Grep, Glob
+allowed-tools: Bash, Read, Grep, Glob
 ---
 # /quality enforce - Quality Gate Enforcement
 Enforces code quality standards by applying configurable quality gates from the project configuration.

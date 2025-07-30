@@ -3,7 +3,7 @@ name: /quick-quality
 description: "Instant code quality analysis - works with any programming language"
 usage: /quick-quality [--scan | --fix | --report] [file-pattern]
 category: core
-tools: Read, Edit, Bash, Grep, Glob
+allowed-tools: Read, Edit, Bash, Grep, Glob
 ---
 
 # 🎯 Instant Code Quality Analysis

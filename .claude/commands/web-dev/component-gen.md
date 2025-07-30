@@ -3,7 +3,7 @@ name: /component-gen
 description: "Generate [INSERT_TECH_STACK] components for [INSERT_PROJECT_NAME] following team conventions"
 usage: /component-gen [component-name] [--type functional|class|page] [--with-tests] [--with-styles]
 category: web-dev
-tools: Write, Read, Edit
+allowed-tools: Write, Read, Edit
 ---
 
 # Component Generator for [INSERT_PROJECT_NAME]

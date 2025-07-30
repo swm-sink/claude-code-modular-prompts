@@ -3,7 +3,7 @@ name: /db-seed
 description: "Seed [INSERT_DATABASE_TYPE] with test data for [INSERT_PROJECT_NAME]"
 usage: /db-seed [--environment dev|test|staging] [--dataset minimal|standard|full]
 category: database
-tools: Bash, Read, Write, Edit
+allowed-tools: Bash, Read, Write, Edit
 security: input-validation-framework.md
 ---
 

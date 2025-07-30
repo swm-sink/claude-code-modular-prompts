@@ -2,7 +2,7 @@
 name: /protocol
 description: "Advanced protocol-driven development with safety frameworks, validation pipelines, and rigorous quality assurance"
 usage: "[protocol_type] [safety_level]"
-tools: Read, Write, Edit, Bash, Grep
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 <command_file>
   <metadata>

@@ -3,7 +3,7 @@ name: /dev-setup
 description: "Setup development environment for [INSERT_PROJECT_NAME] with [INSERT_TECH_STACK]"
 usage: /dev-setup [--environment local|docker|cloud] [--tools all|minimal|custom]
 category: development
-tools: Bash, Write, Read, Edit
+allowed-tools: Bash, Write, Read, Edit
 ---
 
 # Development Environment Setup for [INSERT_PROJECT_NAME]

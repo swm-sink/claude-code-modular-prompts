@@ -3,7 +3,7 @@ name: /cd-rollback
 description: "Rollback [INSERT_PROJECT_NAME] deployment on [INSERT_DEPLOYMENT_TARGET]"
 usage: /cd-rollback [--version previous-version] [--environment production|staging] [--emergency]
 category: devops
-tools: Bash, Read, Write, Edit
+allowed-tools: Bash, Read, Write, Edit
 ---
 
 # Deployment Rollback for [INSERT_PROJECT_NAME]

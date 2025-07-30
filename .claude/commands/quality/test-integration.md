@@ -1,9 +1,9 @@
 ---
 name: /test-integration
 description: "Execute comprehensive integration testing including advanced failure scenarios and emergency response validation"
-tools: Read, Bash, Write
 usage: "[scenario-type] (e.g., 'advanced-failures', 'emergency-fallback', 'all')"
 category: quality
+allowed-tools: Read, Bash, Write
 ---
 
 # Integration Testing Command

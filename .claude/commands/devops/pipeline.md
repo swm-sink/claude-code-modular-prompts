@@ -2,8 +2,7 @@
 name: /pipeline
 description: "Unified intelligent pipeline orchestration with creation, execution, monitoring, deployment, and CI/CD integration"
 usage: "[mode] [pipeline_name] [options]"
-tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob
-test_coverage: 0%
+allowed-tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob
 ---
 # /pipeline - Unified Pipeline Orchestration for [INSERT_PROJECT_NAME]
 Comprehensive pipeline orchestration for [INSERT_PROJECT_NAME] combining creation, execution, monitoring, deployment, [INSERT_CI_CD_PLATFORM] setup, and build automation optimized for [INSERT_TECH_STACK] and [INSERT_TEAM_SIZE] teams.

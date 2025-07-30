@@ -2,7 +2,7 @@
 name: /analyze-code
 description: "Unified code analysis with intelligent pattern detection, quality assessment, security review, and architectural insights"
 usage: "[focus_mode] [target_path]"
-tools: Read, Write, Edit, Bash, Grep
+allowed-tools: Read, Write, Edit, Bash, Grep
 ---
 # /analyze-code - Unified Code Analysis Framework for [INSERT_PROJECT_NAME]
 Comprehensive code analysis system for [INSERT_TECH_STACK] applications, combining intelligent pattern detection, quality assessment, security review, and architectural insights with configurable focus modes tailored for [INSERT_DOMAIN] projects.

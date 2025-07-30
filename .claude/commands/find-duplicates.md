@@ -1,8 +1,8 @@
 ---
-name: /find-duplicates  
+name: /find-duplicates
 description: "Find duplicate files in your project"
 usage: "[file-pattern] [--type extension]"
-tools: Glob, Read, Grep
+allowed-tools: Glob, Read, Grep
 ---
 
 # Find Duplicate Files

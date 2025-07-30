@@ -3,7 +3,7 @@ name: /db-backup
 description: "Backup [INSERT_DATABASE_TYPE] database for [INSERT_PROJECT_NAME]"
 usage: /db-backup [--full|--incremental] [--destination path]
 category: database
-tools: Bash, Write, Read
+allowed-tools: Bash, Write, Read
 security: input-validation-framework.md
 ---
 

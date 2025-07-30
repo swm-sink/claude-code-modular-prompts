@@ -2,8 +2,7 @@
 name: /dag-orchestrate
 description: "Execute tasks using Directed Acyclic Graph orchestration with adaptive agent spawning"
 usage: /dag-orchestrate [task with dependencies and conditional paths]
-tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob
-test_coverage: 0%
+allowed-tools: Task, TodoWrite, Read, Write, Edit, Bash, Grep, Glob
 ---
 <command_file>
 <purpose>

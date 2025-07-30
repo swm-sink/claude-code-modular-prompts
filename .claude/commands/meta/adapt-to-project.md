@@ -3,7 +3,7 @@ name: /adapt-to-project
 description: "Interactive automated project customization with real-time detection"
 usage: /adapt-to-project
 category: meta-commands
-tools: Bash, Read, Write, Edit, MultiEdit, Glob, LS
+allowed-tools: Bash, Read, Write, Edit, MultiEdit, Glob, LS
 ---
 
 # 🚀 Interactive Automated Project Customization

@@ -3,9 +3,8 @@ name: /notebook-run
 description: "Execute Jupyter notebooks for [INSERT_PROJECT_NAME] with parameter injection and monitoring"
 usage: /notebook-run [notebook-path] [--params key=value] [--kernel python3|R|julia] [--output-dir path]
 category: data-science
-tools: Bash, Read, Write
+allowed-tools: Bash, Read, Write
 security: [path-validation]
-risk_level: high
 ---
 
 # Notebook Execution for [INSERT_PROJECT_NAME]
