@@ -1,167 +1,138 @@
-# Claude Code Prompt Templates
+# Claude Code Essential Commands
 
-**Ready-to-use Claude Code command templates** - Copy templates, adapt to your project automatically, and start using powerful Claude Code commands immediately.
+**7 universal commands that work immediately with any programming language or framework.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Status: Stable](https://img.shields.io/badge/Status-Stable-green.svg)](https://github.com/swm-sink/claude-code-modular-prompts/releases)
 
-## Quick Start (2 Commands)
+## 🚀 Quick Start (30 seconds)
 
 ```bash
-# 1. Copy templates to your project
-./setup.sh /path/to/your/project
+# Install 7 essential commands
+./setup-minimal.sh /path/to/your/project
 
-# 2. Auto-adapt to your project (in Claude Code)
-/adapt-to-project
+# Start using immediately (in Claude Code)
+/help                              # See all commands
+/task "add user authentication"    # Execute any development task
+/analyze "why is my app slow?"     # Analyze code or problems
 ```
 
-That's it! Your templates are now customized and ready to use.
+**That's it. No configuration, no customization, no manual work.**
 
 ## What You Get
 
-**Proven Claude Code commands for:**
-- Core development workflows (`/task`, `/help`, `/query`)
-- API design and testing (`/api-design`, `/test-integration`)
-- Database operations (`/db-migrate`, `/db-backup`)
-- Security and quality checks (`/secure-audit`, `/quality-check`)
-- DevOps and deployment (`/deploy`, `/ci-setup`)
+**7 Universal Commands (Work Immediately):**
+- **`/help`** - Command guide and help system
+- **`/task`** - Execute any development task 
+- **`/analyze`** - Analyze code, architecture, problems
+- **`/review`** - Code review with suggestions
+- **`/debug`** - Debug issues and errors
+- **`/test`** - Generate tests and run test suites
+- **`/docs`** - Create documentation
 
-**Plus supporting files:**
-- Anti-pattern documentation to avoid common mistakes
-- Best practices guides for Claude Code usage
-- Reusable prompt components
-- Configuration templates
+**Works with any programming language or framework** - JavaScript, Python, Java, Go, React, Django, Spring, etc.
 
 ## How It Works
 
-1. **Setup copies templates** to your `.claude/` directory
-2. **Adapt-to-project analyzes** your codebase and auto-customizes templates
-3. **Start using commands** immediately in Claude Code conversations
+1. **Install**: Run `./setup-minimal.sh your-project` (copies 7 commands, 30 seconds)
+2. **Use**: Open Claude Code in your project, try `/task "your goal"`
+3. **Done**: Commands automatically adapt to your tech stack - no configuration needed
 
-## Example: Before & After
+## Usage Examples
 
-**Before (generic template):**
-```markdown
-# Deploy [INSERT_PROJECT_NAME] to [INSERT_DEPLOYMENT_TARGET]
-Using [INSERT_CI_CD_PLATFORM] for [INSERT_TECH_STACK]...
+**Development Tasks:**
+```
+/task "implement JWT authentication"
+/task "optimize database queries" 
+/task "add real-time chat functionality"
 ```
 
-**After auto-adaptation:**
-```markdown
-# Deploy MyApp to AWS ECS
-Using GitHub Actions for React+Node.js...
+**Code Analysis:**
+```
+/analyze "why is my app slow?"
+/analyze src/components/UserDashboard.jsx
+/debug "users can't log in"
 ```
 
-## Installation Options
+**Code Review & Testing:**
+```
+/review src/auth/login.js
+/test --generate src/utils/validation.js
+/docs --api src/controllers/users.js
+```
 
-### Option 1: Direct Setup
+## Installation
+
+**Recommended:**
 ```bash
 git clone https://github.com/swm-sink/claude-code-modular-prompts
 cd claude-code-modular-prompts
-./setup.sh /path/to/your/project
+./setup-minimal.sh /path/to/your/project
 ```
 
-### Option 2: As Submodule (for updates)
+**Or as git submodule:**
 ```bash
 git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-templates
-cd .claude-templates
-./setup.sh ../
+cd .claude-templates && ./setup-minimal.sh ../
 ```
 
-## Available Commands
-
-### Core Commands
-- `/help` - Get help for any topic
-- `/task` - Break down and execute complex tasks
-- `/query` - Search and analyze your codebase
-- `/auto` - Automated code generation
-
-### Development Commands
-- `/dev` - Development workflow assistance
-- `/api-design` - Design and document APIs
-- `/refactor` - Code refactoring guidance
-- `/debug` - Debug assistance and troubleshooting
-
-### Quality & Security
-- `/test-unit` - Unit testing guidance
-- `/test-integration` - Integration testing setup
-- `/secure-audit` - Security audit workflows
-- `/quality-check` - Code quality assessment
-
-### DevOps & Deployment
-- `/deploy` - Deployment assistance
-- `/ci-setup` - CI/CD pipeline setup
-- `/monitor` - Monitoring and alerting setup
-- `/backup` - Backup and recovery procedures
-
-## Supported Tech Stacks
-
-Auto-adapts for:
-- **Frontend**: React, Vue, Angular, Next.js, Svelte
-- **Backend**: Node.js, Python, Java, Go, Ruby
-- **Mobile**: React Native, Flutter
-- **Data**: Jupyter, pandas, SQL databases
-- **Cloud**: AWS, Azure, GCP, Docker, Kubernetes
-
-## Adaptation Process
-
-The `/adapt-to-project` command:
-1. Analyzes your project structure and dependencies
-2. Identifies your tech stack and frameworks
-3. Customizes all templates with your project details
-4. Removes unused templates for your stack
-5. Validates the adaptation completed successfully
-
-## Requirements
-
-- Claude Code desktop application
-- Git (for cloning and submodule support)
-- Basic project structure (package.json, requirements.txt, etc.)
-
-## Commands for Managing Templates
-
-- `/adapt-to-project` - Auto-adapt all templates to your project
-- `/validate-adaptation` - Check that adaptation completed successfully
-- `/sync-templates` - Update templates from reference library
-- `/reset-templates` - Reset to original state if needed
-
-## Project Structure After Setup
+## File Structure After Installation
 
 ```
 your-project/
 ├── .claude/
-│   ├── commands/          # Customized commands ready to use
-│   ├── components/        # Reusable prompt components
-│   ├── context/           # Best practices and anti-patterns
-│   └── config/            # Project configuration
-└── ...your project files
+│   ├── commands/
+│   │   ├── help.md      # /help - Command guide
+│   │   ├── task.md      # /task - Execute any development task
+│   │   ├── analyze.md   # /analyze - Analyze code and problems
+│   │   ├── review.md    # /review - Code review with suggestions  
+│   │   ├── debug.md     # /debug - Debug issues and errors
+│   │   ├── test.md      # /test - Generate and run tests
+│   │   └── docs.md      # /docs - Create documentation
+│   └── settings.json    # Claude Code configuration
+└── CLAUDE.md            # Project memory (optional)
 ```
+
+**Total: 8 files, ~50KB**
+
+## Universal Compatibility
+
+**Works with any programming language or framework:**
+- JavaScript, TypeScript, Python, Java, Go, Rust, C#, PHP, Ruby
+- React, Vue, Angular, Django, Spring, Laravel, Rails, Express
+- Any project type: web apps, APIs, mobile apps, desktop apps, scripts
+
+## Requirements
+
+- Claude Code desktop application
+- Git (for cloning)
 
 ## Why This Saves Time
 
-**Without templates**: Write Claude Code commands from scratch, learn through trial and error, repeat common patterns.
+**Without these commands**: Write Claude Code prompts from scratch, learn through trial and error, repeat common patterns.
 
-**With templates**: Start with proven patterns, auto-adapt to your project, use immediately.
+**With these commands**: Use proven patterns immediately, commands adapt automatically to your project.
 
 ## FAQ
 
-**How long does setup take?**
-5 minutes to copy templates, 2 minutes for auto-adaptation.
+**Do these commands work with my tech stack?**
+Yes - they automatically adapt to any programming language or framework.
 
-**Do I need all the templates?**
-No - unused templates are automatically removed during adaptation.
+**Can I add more commands later?**
+Yes - you can copy additional commands from the full template library if needed.
 
-**What if my project changes?**
-Run `/adapt-to-project` again to re-customize templates.
-
-**Can I modify the templates?**
-Yes - they're copied to your project and fully customizable.
+**What if I need project-specific customization?**
+The commands work universally, but you can modify them in your `.claude/commands/` directory.
 
 ## Getting Help
 
 - Start with `/help` command in Claude Code
-- Check the `/docs` folder for detailed guides
-- Review anti-patterns in `/context` folder to avoid common mistakes
+- Use `/task "what you want to accomplish"` for most development needs
+- Commands provide detailed examples and explanations
+
+## Advanced Usage
+
+**Need more commands?** This repo also contains a comprehensive template library with 64+ additional commands that require manual customization. See `./setup.sh` and `README-MINIMAL.md` for details.
 
 ## License
 
@@ -169,4 +140,4 @@ MIT - Use freely in your projects.
 
 ---
 
-*Get started in 2 commands. No complexity, no manual work - just copy and adapt.*
+*7 essential commands that work immediately with any programming language or framework.*

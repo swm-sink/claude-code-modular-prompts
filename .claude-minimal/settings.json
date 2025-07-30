@@ -1,0 +1,7 @@
+{
+  "commandsPath": "./commands",
+  "defaultTools": ["Read", "Write", "Edit", "MultiEdit", "Bash", "Grep", "Glob", "LS"],
+  "templateVersion": "1.0-minimal",
+  "autoSave": true,
+  "contextFiles": []
+}
