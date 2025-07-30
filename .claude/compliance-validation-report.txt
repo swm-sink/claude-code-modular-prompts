@@ -1,9 +1,10 @@
 🔍 CLAUDE CODE COMPLIANCE VALIDATION REPORT
 ==================================================
-Validation Date: 2025-07-30 13:36:53
-Total Files Processed: 81
-Total Issues Found: 0
+Validation Date: 2025-07-30 13:47:50
+Total Files Processed: 82
+Total Issues Found: 1
 
-🎉 ALL VALIDATIONS PASSED!
-✅ 100% Claude Code Compliance Maintained
+❌ DOCUMENTATION ISSUES (1):
+  🟡 CLAUDE.md: Inaccurate command count: 81 (should be 82)
+
 ==================================================
