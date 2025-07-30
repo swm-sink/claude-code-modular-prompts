@@ -132,7 +132,16 @@ The commands work universally, but you can modify them in your `.claude/commands
 
 ## Advanced Usage
 
-**Need more commands?** This repo also contains a comprehensive template library with 64+ additional commands that require manual customization. See `./setup.sh` and `README-MINIMAL.md` for details.
+**Need more commands?** This repo also contains:
+
+1. **Template Library**: 64+ additional command templates that require manual customization. See `./setup.sh` for details.
+
+2. **Atomic Components**: 10 simple building blocks (5-10 lines each) for creating custom commands:
+   - Input validation, output formatting, error handling
+   - File operations, search functionality, progress indicators  
+   - See `.claude/COMPONENT-ASSEMBLY-GUIDE.md` for usage
+
+**Note**: The template library and components require manual work. Only the 7 core commands work immediately without customization.
 
 ## License
 
