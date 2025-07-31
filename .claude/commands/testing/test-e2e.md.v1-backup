@@ -1,41 +1,15 @@
 ---
 name: /test-e2e
-description: Intelligent end-to-end (E2E) testing with automated test script generation, browser automation, and comprehensive reporting (v2.0)
-version: 2.0
-usage: '/test-e2e [url] [test_scenario] [--browser chromium|firefox|webkit] [--video] [--headless]'
+description: Intelligent end-to-end (E2E) testing with automated test script generation,
+  browser automation, and comprehensive reporting
+usage: '[url] [test_scenario]'
 allowed-tools:
 - Read
 - Write
 - Edit
 - Bash
 - Grep
-- WebFetch
-- LS
-dependencies:
-- /test-unit
-- /test-integration-project
-- /quick-test
-validation:
-  pre-execution: Validate URL accessibility and browser availability
-  during-execution: Monitor test execution with screenshot capture
-  post-execution: Generate comprehensive reports with visual artifacts
-progressive-disclosure:
-  layer-integration: Layer 1 simple URL testing, Layer 2 scenario customization, Layer 3 advanced browser options
-  layer-1-experience: Quick E2E test with automatic scenario detection
-  layer-2-experience: Custom scenarios with multiple browser support
-  layer-3-experience: Full control with video recording and debugging
-safety-features:
-  input-validation: URL validation and scenario parsing
-  error-recovery: Automatic retry on network failures
-  security-checks: Secure credential handling for login tests
-performance:
-  optimization: Headless execution for CI/CD pipelines
-  caching: Browser context reuse for multiple tests
-  resource-limits: Memory limits for browser processes
-reporting:
-  visual-artifacts: Screenshots, videos, and trace files
-  test-results: Step-by-step execution logs
-  performance-metrics: Page load times and resource usage
+category: testing
 ---
 # /test e2e - Intelligent End-to-End Testing
 Advanced end-to-end (E2E) testing system with automated test script generation, browser automation, and comprehensive, actionable reporting.

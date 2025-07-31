@@ -1,8 +1,7 @@
 ---
 name: /quick-test
-description: Universal testing assistance - works with any testing framework (v2.0)
-version: 2.0
-usage: '/quick-test [--generate | --run | --fix | --strategy | --analyze] [test-target]'
+description: Universal testing assistance - works with any testing framework
+usage: /quick-test [--generate | --run | --fix | --strategy] [test-target]
 category: core
 allowed-tools:
 - Read
@@ -11,36 +10,6 @@ allowed-tools:
 - Bash
 - Grep
 - Glob
-- LS
-dependencies:
-- /test-unit
-- /test-integration-project
-- /test-e2e
-- /mutation
-validation:
-  pre-execution: Auto-detect testing framework and validate configuration
-  during-execution: Monitor test execution and provide real-time feedback
-  post-execution: Generate comprehensive reports with actionable insights
-progressive-disclosure:
-  layer-integration: Layer 1 entry point for all testing needs
-  layer-1-experience: Simple test commands that work instantly
-  layer-2-experience: Graduates to specialized commands like /test-unit
-  layer-3-experience: Advanced features via /mutation and custom strategies
-safety-features:
-  input-validation: Test target validation and framework detection
-  error-recovery: Intelligent test failure analysis and fixing
-  security-checks: Safe test environment isolation
-performance:
-  optimization: Smart test ordering and parallel execution
-  caching: Framework detection caching
-  resource-limits: Memory limits for test processes
-framework-support:
-  javascript: Jest, Mocha, Cypress, Playwright, Vitest
-  python: pytest, unittest, nose2, Robot Framework
-  java: JUnit, TestNG, Mockito, Spring Test
-  go: go test, Testify, Ginkgo
-  rust: cargo test, quickcheck
-  other: C#, PHP, Ruby frameworks
 ---
 
 # 🧪 Universal Testing Assistance

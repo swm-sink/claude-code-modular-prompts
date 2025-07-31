@@ -1,40 +1,11 @@
 ---
 name: /integration-testing-baseline
-description: Integration Testing Baseline Report (v2.0)
-version: 2.0
-usage: '/integration-testing-baseline [--generate-report] [--update-baselines] [--format html|json|markdown]'
+description: Integration Testing Baseline Report
 allowed-tools:
 - Read
 - Grep
 - Glob
-- Write
-- LS
-dependencies:
-- /test-integration
-- /test-integration-project
-- /test
-validation:
-  pre-execution: Validate baseline configuration and test environment
-  during-execution: Collect integration metrics and performance data
-  post-execution: Generate comprehensive baseline reports
-progressive-disclosure:
-  layer-integration: Layer 3 advanced baseline establishment
-  layer-1-experience: Users typically use /quick-test first
-  layer-2-experience: Progress to /test-integration for scenarios
-  layer-3-experience: Baseline establishment for regression detection
-safety-features:
-  input-validation: Baseline metric validation
-  error-recovery: Safe baseline updates with rollback
-  security-checks: Secure baseline storage
-performance:
-  optimization: Parallel baseline collection
-  caching: Historical baseline comparison
-  resource-limits: Memory limits during collection
-baseline-features:
-  performance-baselines: Command loading, component loading, workflow execution
-  quality-baselines: Success rates, error recovery, context preservation
-  coverage-baselines: Command patterns, component integration, workflows
-  reporting: Comprehensive baseline reports with trends
+category: quality
 ---
 
 # Integration Testing Baseline Report

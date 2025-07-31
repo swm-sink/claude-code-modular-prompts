@@ -1,41 +1,15 @@
 ---
 name: /test-integration-project
-description: Run integration tests for [INSERT_PROJECT_NAME] with [INSERT_API_STYLE] APIs and [INSERT_DATABASE_TYPE] (v2.0)
-version: 2.0
-usage: '/test-integration [test-suite] [--environment staging|production] [--parallel] [--verbose] [--mock-services]'
+description: Run integration tests for [INSERT_PROJECT_NAME] with [INSERT_API_STYLE]
+  APIs and [INSERT_DATABASE_TYPE]
+usage: /test-integration [test-suite] [--environment staging|production] [--parallel]
+  [--verbose]
 category: testing
 allowed-tools:
 - Bash
 - Read
 - Write
-- Grep
-- LS
-- WebFetch
-dependencies:
-- /test-unit
-- /test-e2e
-- /mutation
-validation:
-  pre-execution: Validate test environment configuration and dependencies
-  during-execution: Monitor service health and resource usage during tests
-  post-execution: Aggregate results across all integration points
-progressive-disclosure:
-  layer-integration: Layer 1 basic API tests, Layer 2 with environment selection, Layer 3 with parallel execution and mocking
-  layer-1-experience: Run essential integration tests with one command
-  layer-2-experience: Select environments and configure test scope
-  layer-3-experience: Advanced parallel execution with service mocking
-safety-features:
-  input-validation: Environment names and test suite validation
-  error-recovery: Automatic retry logic for flaky tests
-  security-checks: Credential masking and secure configuration handling
-performance:
-  optimization: Parallel test execution across services
-  caching: Service response caching for repeated tests
-  resource-limits: Connection pooling and timeout management
-monitoring:
-  test-metrics: Response times, error rates, throughput
-  service-health: Real-time monitoring during test execution
-  reporting: Comprehensive HTML and JUnit reports
+security: input-validation-framework.md
 ---
 
 # Integration Testing for [INSERT_PROJECT_NAME]

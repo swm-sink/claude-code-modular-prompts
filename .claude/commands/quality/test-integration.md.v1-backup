@@ -1,41 +1,13 @@
 ---
 name: /test-integration
-description: Execute comprehensive integration testing including advanced failure scenarios and emergency response validation (v2.0)
-version: 2.0
-usage: '/test-integration [scenario-type] [--parallel] [--verbose] [--report-format html|json]'
+description: Execute comprehensive integration testing including advanced failure
+  scenarios and emergency response validation
+usage: '[scenario-type] (e.g., ''advanced-failures'', ''emergency-fallback'', ''all'')'
 category: quality
 allowed-tools:
 - Read
 - Bash
 - Write
-- Grep
-- LS
-dependencies:
-- /test-integration-project
-- /test
-- /quick-test
-validation:
-  pre-execution: Validate test environment and scenario configuration
-  during-execution: Monitor failure recovery and emergency response
-  post-execution: Generate comprehensive testing reports
-progressive-disclosure:
-  layer-integration: Layer 3 advanced integration testing scenarios
-  layer-1-experience: Users start with /quick-test for basic testing
-  layer-2-experience: Progress to /test-integration-project for API testing
-  layer-3-experience: Advanced failure scenarios and emergency validation
-safety-features:
-  input-validation: Scenario type validation
-  error-recovery: Emergency fallback mechanism testing
-  security-checks: Security validation during failure scenarios
-performance:
-  optimization: Parallel scenario execution
-  caching: Test result caching
-  resource-limits: Memory limits during stress testing
-advanced-features:
-  failure-scenarios: 12 comprehensive failure modes
-  emergency-fallback: 5 emergency response mechanisms
-  performance-baselines: Recovery time metrics and SLAs
-  quality-metrics: Coverage and success rate tracking
 ---
 
 # Integration Testing Command

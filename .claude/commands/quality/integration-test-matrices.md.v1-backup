@@ -1,42 +1,11 @@
 ---
 name: /integration-test-matrices
-description: Integration Test Matrices for Phase 2 (v2.0)
-version: 2.0
-usage: '/integration-test-matrices [--view-matrix command|component|workflow|error] [--execute-tests] [--generate-report]'
+description: Integration Test Matrices for Phase 2
 allowed-tools:
 - Read
 - Grep
 - Glob
-- Write
-- Bash
-- LS
-dependencies:
-- /test-integration
-- /test-integration-project
-- /integration-testing-baseline
-validation:
-  pre-execution: Validate matrix configuration and test readiness
-  during-execution: Execute matrix tests with progress tracking
-  post-execution: Generate comprehensive matrix reports
-progressive-disclosure:
-  layer-integration: Layer 3 advanced test matrix management
-  layer-1-experience: Users start with /quick-test
-  layer-2-experience: Progress to specific test commands
-  layer-3-experience: Advanced matrix-based systematic testing
-safety-features:
-  input-validation: Matrix type and test pattern validation
-  error-recovery: Test failure isolation and recovery
-  security-checks: Secure test execution environment
-performance:
-  optimization: Parallel matrix test execution
-  caching: Test result caching across matrices
-  resource-limits: Memory management during large test runs
-matrix-features:
-  command-patterns: 15 command-to-command integration patterns
-  component-stacks: 8 critical component compatibility stacks
-  workflow-validation: 5 end-to-end user workflows
-  error-scenarios: 12 comprehensive failure modes
-  performance-benchmarks: Command, component, workflow, memory targets
+category: quality
 ---
 
 # Integration Test Matrices for Phase 2

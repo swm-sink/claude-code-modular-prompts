@@ -1,40 +1,14 @@
 ---
 name: /mutation
-description: Performs mutation testing to assess the effectiveness of existing test suites (v2.0)
-version: 2.0
-usage: '/mutation [target_file] [--auto-fix] [--threshold 80] [--operators all|arithmetic|conditional]'
+description: Performs mutation testing to assess the effectiveness of existing test
+  suites
+usage: '[target_file] [auto_fix]'
 allowed-tools:
 - Read
 - Write
 - Bash
 - Edit
-- Grep
-- LS
-dependencies:
-- /test-unit
-- /test-integration-project
-- /quick-test
-validation:
-  pre-execution: Validate target file exists and has corresponding tests
-  during-execution: Track mutation survival rate and test execution
-  post-execution: Generate mutation report with actionable insights
-progressive-disclosure:
-  layer-integration: Layer 1 basic mutation testing, Layer 2 with thresholds, Layer 3 with operator selection
-  layer-1-experience: Simple mutation testing with automatic detection
-  layer-2-experience: Configure mutation thresholds and auto-fix
-  layer-3-experience: Advanced operator selection and custom mutations
-safety-features:
-  input-validation: File path validation and test suite verification
-  error-recovery: Rollback mutations on test framework failures
-  security-checks: Sandboxed mutation execution
-performance:
-  optimization: Parallel mutation testing
-  caching: Cache test results for unchanged code
-  resource-limits: Memory limits for mutation processes
-mutation-features:
-  operators: Arithmetic, conditional, boundary, null checks
-  reporting: Detailed survival analysis with code coverage
-  auto-fix: Generate tests to kill surviving mutants
+category: testing
 ---
 # /test mutation - Mutation Testing
 Performs mutation testing to assess the effectiveness of an existing test suite by introducing deliberate bugs.
