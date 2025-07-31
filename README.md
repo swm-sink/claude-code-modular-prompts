@@ -1,6 +1,6 @@
-# Claude Code Modular Prompts - Template Library
+# Claude Code Modular Prompts - v2.0 Template Library
 
-**Comprehensive collection of 88 Claude Code command templates with 94 reusable components for rapid project customization.**
+**Comprehensive collection of 88 Claude Code v2.0 command templates with orchestration support and 94 reusable components for rapid project customization.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Status: Stable](https://img.shields.io/badge/Status-Stable-green.svg)](https://github.com/swm-sink/claude-code-modular-prompts/releases)
@@ -21,17 +21,20 @@
 
 ## What You Get
 
-**88 Command Templates:**
-- **Core Commands** (12): Essential development workflows
-- **Quality Commands** (12): Testing, validation, analysis tools
-- **Specialized Commands** (11): Advanced workflows and patterns
+**88 v2.0 Command Templates:**
+- **Core Commands** (12): Essential development workflows with orchestration
+- **Quality Commands** (12): Testing, validation, analysis tools with v2.0 features
+- **Specialized Commands** (11): Advanced workflows and patterns with command chaining
 - **Meta Commands** + others (53): Template adaptation, management, and specialized tools
 
 **94 Reusable Components:**
 - **Atomic Components** (21): Simple building blocks
 - **Regular Components** (73): Complex reusable patterns
 
-**Template Library Features:**
+**v2.0 Template Library Features:**
+- **Orchestration Support**: Commands can invoke other commands for complex workflows
+- **Task-Based Prompting**: Clear task descriptions and implementation strategies
+- **Enhanced Context**: Improved Claude understanding and response quality
 - Manual customization guides with placeholder replacement
 - Anti-pattern documentation (48+ documented pitfalls)
 - Multiple integration methods (git submodule, direct copy, selective)
