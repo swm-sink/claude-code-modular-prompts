@@ -1,14 +1,36 @@
 ---
 name: /monitor-alerts
-description: Configure alerts for [INSERT_PROJECT_NAME] based on [INSERT_USER_BASE]
-  SLAs
-usage: /monitor-alerts [--severity critical|warning|info] [--channel email|slack|pagerduty]
-  [--threshold value]
+description: Intelligent alert configuration with fatigue prevention and context-aware routing (v2.0)
+version: 2.0
+usage: '/monitor-alerts [--severity critical|warning|info] [--channel email|slack|pagerduty] [--threshold value] [--smart-routing] [--dedupe-window minutes]'
 category: monitoring
 allowed-tools:
 - Read
 - Write
 - Edit
+- Bash
+- Grep
+dependencies:
+- /monitor-setup
+- /secure-scan
+- /validate-component
+validation:
+  pre-execution: Validate alert configuration and channel connectivity
+  during-execution: Monitor alert delivery and acknowledgment
+  post-execution: Verify alert routing and escalation paths
+progressive-disclosure:
+  layer-integration: Layer 1 auto-configures common alerts, Layer 2 customizes thresholds, Layer 3 enables complex alert logic
+  escalation-path: Basic alerts → smart routing → ML-powered anomaly detection
+  de-escalation: Alert fatigue reduction through intelligent grouping
+safety-measures:
+  - Sanitize all alert payloads
+  - Validate webhook URLs
+  - Encrypt sensitive data in alerts
+  - Rate limit alert notifications
+error-recovery:
+  channel-failure: Fallback to alternative notification channels
+  threshold-breach: Automatic escalation to higher severity
+  config-invalid: Provide clear configuration examples
 security: input-validation-framework.md
 ---
 

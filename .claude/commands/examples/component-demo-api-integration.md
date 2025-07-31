@@ -1,14 +1,35 @@
 ---
 name: /demo-api-integration
-description: Demonstrate API integration pattern with validation and transformation
-usage: '[api_endpoint] [output_format]'
+description: Demonstrate API integration pattern with validation and transformation (v2.0)
+version: 2.0
+usage: '/demo-api-integration [api_endpoint] [output_format]'
+category: examples
 allowed-tools:
 - Read
 - Write
 - Edit
 - Grep
 - WebFetch
-category: examples
+dependencies:
+- /assemble-command
+- /build-command
+validation:
+  pre-execution: Validate API endpoint format and accessibility
+  during-execution: Monitor API response times and data integrity
+  post-execution: Verify transformation accuracy and output format
+progressive-disclosure:
+  layer-integration: Example for Layer 3 component assembly patterns
+  escalation-path: Demo → customization → production implementation
+  de-escalation: Simplify to basic API call examples
+safety-measures:
+  - Validate API endpoints before requests
+  - Sanitize response data
+  - Handle rate limiting gracefully
+  - Protect sensitive credentials
+error-recovery:
+  api-failure: Provide fallback data sources and retry logic
+  transform-error: Log transformation issues with clear debugging info
+  timeout: Implement progressive timeout with user notification
 ---
 
 # API Integration Demo - External Data Processing

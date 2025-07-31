@@ -1,73 +1,43 @@
 ---
 name: /find-commands
-description: Smart command discovery tool with filtering and search capabilities
-usage: '[category] [keyword] [--list-categories]'
+description: Smart command discovery tool with filtering and search capabilities (v2.0)
+version: 2.0
+usage: '/find-commands [category] [keyword] [--list-categories]'
+category: meta
 allowed-tools:  
 - Read
 - LS
 - Grep
-category: meta
+dependencies:
+- /help
+- /welcome
+validation:
+  pre-execution: Validate search parameters and category filters
+  during-execution: Search through command library efficiently
+  post-execution: Present results in organized format
+progressive-disclosure:
+  layer-integration: Command discovery for all system layers
+  escalation-path: Browse categories → keyword search → advanced filtering
+  de-escalation: Simple category listing
+safety-measures:
+  - Validate search patterns
+  - Limit result sets for performance
+  - Handle missing commands gracefully
+  - Cache search results
+error-recovery:
+  no-results: Suggest alternative search terms
+  invalid-category: Show available categories
+  search-error: Fallback to basic listing
 ---
 
 # /find-commands - Smart Command Discovery
 
-Discover commands and templates based on your needs with intelligent filtering and search.
+I'll help you discover available commands with category [CATEGORY], keyword [KEYWORD], or list all categories with --list-categories.
 
-## Usage Patterns
+## Implementation
 
-### Browse by Category
-```
-/find-commands core          # Show core development commands
-/find-commands quality       # Show testing and validation commands  
-/find-commands specialized   # Show advanced workflow commands
-/find-commands meta          # Show template management commands
-```
-
-### Search by Keyword
-```
-/find-commands test          # Find all test-related commands
-/find-commands api           # Find API-related templates
-/find-commands security      # Find security-focused commands
-```
-
-### List All Categories
-```
-/find-commands --list-categories    # Show all available categories
-```
-
-## Available Categories
-
-Based on current template library structure:
-
-- **core** (12 commands): Essential development workflows
-- **quality** (12 commands): Testing, validation, analysis tools
-- **specialized** (11 commands): Advanced workflows and patterns  
-- **meta** (14 commands): Template adaptation and management
-- **development** (6 commands): Development setup and protocols
-- **devops** (5 commands): CI/CD and deployment
-- **testing** (5 commands): Comprehensive testing frameworks
-- **database** (4 commands): Database operations
-- **security** (4 commands): Security analysis and hardening
-- **examples** (6 commands): Example implementations
-
-## Quick Discovery Workflow
-
-1. **Start broad**: `/find-commands --list-categories`
-2. **Narrow down**: `/find-commands [category]` for category overview
-3. **Search specific**: `/find-commands [keyword]` for targeted results
-4. **Explore**: Read command files to understand functionality
-
-## Integration with Customization
-
-After finding relevant commands:
-1. Use `/adapt-to-project` for customization guidance
-2. Use `/replace-placeholders` to understand required changes
-3. Use `/validate-adaptation` to verify customizations
-
-## Pro Tips
-
-- **Multiple keywords**: Use `/find-commands api test` to find API testing commands
-- **Category + keyword**: Use `/find-commands quality performance` for performance testing
-- **Explore examples**: The examples category shows real implementation patterns
-
-This discovery tool helps you navigate the 82 available command templates efficiently.
+I'll search through the available commands and provide:
+- Commands matching your criteria
+- Brief descriptions of each command
+- Usage examples and categories
+- Suggestions for related commands

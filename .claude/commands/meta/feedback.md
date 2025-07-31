@@ -1,11 +1,32 @@
 ---
 name: /feedback
-description: User experience feedback collection and improvement system
-usage: '[rating] [category] [message]'
+description: User experience feedback collection and improvement system (v2.0)
+version: 2.0
+usage: '/feedback [rating] [category] [message]'
+category: meta
 allowed-tools:
 - Write
 - Read
-category: meta
+dependencies:
+- /help
+- /welcome
+validation:
+  pre-execution: Validate rating format and category selection
+  during-execution: Collect comprehensive feedback context
+  post-execution: Generate actionable improvement suggestions
+progressive-disclosure:
+  layer-integration: Feedback mechanism for all system layers
+  escalation-path: Quick rating → detailed feedback → improvement collaboration
+  de-escalation: Simple thumbs up/down option
+safety-measures:
+  - Anonymize sensitive information
+  - Validate feedback categories
+  - Prevent spam submissions
+  - Maintain feedback privacy
+error-recovery:
+  invalid-rating: Show valid rating scale and examples
+  category-error: List available feedback categories
+  submission-failure: Save feedback locally for retry
 ---
 
 # /feedback - User Experience Feedback

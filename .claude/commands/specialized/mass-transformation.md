@@ -1,8 +1,9 @@
 ---
 name: /mass-transformation
-description: Ultimate transformation workflow that spawns 50+ agents for complete
-  framework conversion
+description: Ultimate transformation workflow that spawns 50+ agents for complete (v2.0)
+version: 2.0
 usage: '[transformation_scope] [agent_limit] [parallel_mode]'
+category: specialized
 allowed-tools:
 - Task
 - Read
@@ -11,7 +12,26 @@ allowed-tools:
 - Bash
 - Grep
 - Glob
-category: specialized
+dependencies:
+- /help
+- /welcome
+validation:
+  pre-execution: Validate input parameters and execution context
+  during-execution: Monitor progress and maintain safety checks
+  post-execution: Verify successful completion and cleanup
+progressive-disclosure:
+  layer-integration: Integrated command for specialized workflows
+  escalation-path: Basic usage → advanced options → full customization
+  de-escalation: Simplify to essential functionality
+safety-measures:
+  - Validate all inputs before execution
+  - Create backups when modifying files
+  - Confirm destructive operations
+  - Maintain system integrity
+error-recovery:
+  input-error: Provide clear usage examples and syntax
+  execution-failure: Show detailed context and recovery steps
+  system-error: Fallback to safe mode operation
 ---
 # /mass transformation - Ultimate Framework Transformation Engine
 Ultimate transformation workflow that spawns 50+ specialized agents to convert all 121 command files to hybrid format, fix XML errors, validate components, and test the complete framework. PUSH CLAUDE CODE TO ITS LIMITS!

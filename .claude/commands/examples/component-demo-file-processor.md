@@ -1,14 +1,35 @@
 ---
 name: /demo-file-processor
-description: Demonstrate atomic components in action - File Processing Pattern
-usage: '[file_pattern] [output_format]'
+description: Demonstrate atomic components in action - File Processing Pattern (v2.0)
+version: 2.0
+usage: '/demo-file-processor [file_pattern] [output_format]'
+category: examples
 allowed-tools:
 - Read
 - Write
 - Edit
 - Grep
 - Glob
-category: examples
+dependencies:
+- /assemble-command
+- /quick-command
+validation:
+  pre-execution: Validate file pattern syntax and file existence
+  during-execution: Monitor file processing progress and memory usage
+  post-execution: Verify output format and data integrity
+progressive-disclosure:
+  layer-integration: Demonstrates atomic component usage patterns
+  escalation-path: Simple demo → component customization → production pipeline
+  de-escalation: Focus on single file processing
+safety-measures:
+  - Validate file permissions before processing
+  - Create backups of original files
+  - Check available disk space
+  - Limit memory usage for large files
+error-recovery:
+  file-not-found: Provide clear file path guidance
+  format-error: Show supported formats and conversion tips
+  memory-limit: Suggest file chunking strategies
 ---
 
 # File Processor Demo - Atomic Components in Action

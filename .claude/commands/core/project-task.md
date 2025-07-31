@@ -1,12 +1,36 @@
 ---
 name: /project-task
-description: Create tasks specific to lusaka using devops-focused methodology
-usage: /project-task [feature|bug|refactor] [description]
+description: Create and manage project-specific tasks with integrated workflow tracking (v2.0)
+version: 2.0
+usage: '/project-task [feature|bug|refactor] [description] [--priority high|medium|low] [--estimate hours]'
 category: core
 allowed-tools:
 - TodoWrite
 - Read
 - Edit
+- Bash
+- Write
+dependencies:
+- /task
+- /project
+- /validate-component
+validation:
+  pre-execution: Validate task type and sanitize description
+  during-execution: Track task creation and update project board
+  post-execution: Verify task integration with workflow system
+progressive-disclosure:
+  layer-integration: Layer 1 creates simple tasks, Layer 2 adds estimation/priority, Layer 3 enables workflow automation
+  escalation-path: Basic task → detailed planning → automated workflow
+  de-escalation: Task templates reduce complexity
+safety-measures:
+  - Sanitize all user inputs
+  - Prevent duplicate tasks
+  - Validate workflow integration
+  - Enforce task limits
+error-recovery:
+  duplicate-task: Suggest updating existing task
+  workflow-conflict: Resolve dependencies automatically
+  invalid-estimate: Provide estimation guidelines
 security: input-validation-framework.md
 ---
 

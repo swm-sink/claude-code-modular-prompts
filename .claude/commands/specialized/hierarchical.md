@@ -1,8 +1,9 @@
 ---
 name: /hierarchical
-description: Orchestrate agents in a tree-like hierarchy with parent-child relationships
-  and delegation
-usage: /hierarchical [complex project requiring multi-level coordination]
+description: Orchestrate agents in a tree-like hierarchy with parent-child relationships (v2.0)
+version: 2.0
+usage: '/hierarchical [complex project requiring multi-level coordination]'
+category: specialized
 allowed-tools:
 - Task
 - TodoWrite
@@ -12,7 +13,26 @@ allowed-tools:
 - Bash
 - Grep
 - Glob
-category: specialized
+dependencies:
+- /help
+- /welcome
+validation:
+  pre-execution: Validate input parameters and execution context
+  during-execution: Monitor progress and maintain safety checks
+  post-execution: Verify successful completion and cleanup
+progressive-disclosure:
+  layer-integration: Integrated command for specialized workflows
+  escalation-path: Basic usage → advanced options → full customization
+  de-escalation: Simplify to essential functionality
+safety-measures:
+  - Validate all inputs before execution
+  - Create backups when modifying files
+  - Confirm destructive operations
+  - Maintain system integrity
+error-recovery:
+  input-error: Provide clear usage examples and syntax
+  execution-failure: Show detailed context and recovery steps
+  system-error: Fallback to safe mode operation
 ---
 <command_file>
 <purpose>

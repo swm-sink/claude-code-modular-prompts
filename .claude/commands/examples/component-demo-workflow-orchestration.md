@@ -1,7 +1,9 @@
 ---
 name: /demo-workflow-orchestration
-description: Demonstrate complex workflow management with atomic components
-usage: '[workflow_name] [parallel_tasks]'
+description: Demonstrate complex workflow management with atomic components (v2.0)
+version: 2.0
+usage: '/demo-workflow-orchestration [workflow_name] [parallel_tasks]'
+category: examples
 allowed-tools:
 - Read
 - Write
@@ -9,7 +11,27 @@ allowed-tools:
 - Grep
 - Glob
 - Bash
-category: examples
+dependencies:
+- /assemble-command
+- /dag-orchestrate
+- /swarm
+validation:
+  pre-execution: Validate workflow definition and task dependencies
+  during-execution: Monitor task execution and resource usage
+  post-execution: Verify all tasks completed successfully
+progressive-disclosure:
+  layer-integration: Advanced pattern for Layer 3 professional assembly
+  escalation-path: Single task → sequential workflow → parallel orchestration
+  de-escalation: Simplify to sequential task execution
+safety-measures:
+  - Validate task dependencies before execution
+  - Monitor resource consumption
+  - Implement deadlock detection
+  - Handle partial failures gracefully
+error-recovery:
+  task-failure: Retry logic with exponential backoff
+  dependency-error: Show dependency graph and conflicts
+  resource-limit: Suggest task scheduling optimizations
 ---
 
 # Workflow Orchestration Demo - Complex Multi-Step Process

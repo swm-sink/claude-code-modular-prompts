@@ -1,14 +1,37 @@
 ---
 name: /secure-scan
-description: Code analysis for [INSERT_PROJECT_NAME] with [INSERT_SECURITY_LEVEL]
-  requirements
-usage: /secure-scan [--type vulnerability|sast|dast|all] [--severity critical|high|medium|low]
+description: Automated security scanning with real-time vulnerability detection and fix suggestions (v2.0)
+version: 2.0
+usage: '/secure-scan [--type vulnerability|sast|dast|all] [--severity critical|high|medium|low] [--auto-fix] [--continuous]'
 category: security
 allowed-tools:
 - Bash
 - Read
 - Write
 - Grep
+- Glob
+- Edit
+dependencies:
+- /validate-component
+- /monitor-alerts
+- /quick-command
+validation:
+  pre-execution: Check for security scanning tools and project structure
+  during-execution: Monitor scan progress and validate findings
+  post-execution: Verify all critical vulnerabilities are addressed
+progressive-disclosure:
+  layer-integration: Layer 1 quick scans with auto-fix, Layer 2 detailed analysis, Layer 3 custom security rules
+  escalation-path: Quick scan → targeted analysis → comprehensive audit
+  de-escalation: Auto-fix reduces manual intervention needs
+safety-measures:
+  - Sanitize all scan outputs
+  - Never commit fixes without review
+  - Validate all suggested changes
+  - Maintain backup before auto-fix
+error-recovery:
+  scan-timeout: Gracefully handle long-running scans with progress updates
+  tool-missing: Suggest alternative scanning methods
+  false-positives: Provide filtering and whitelisting options
 ---
 
 # Code Analysis for [INSERT_PROJECT_NAME]

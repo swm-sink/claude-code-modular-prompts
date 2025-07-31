@@ -1,13 +1,36 @@
 ---
 name: /research
-description: Research framework for software-development topics relevant to lusaka
-usage: /research [topic] [--depth shallow|standard|comprehensive] [--focus technical|business|competitive]
+description: Comprehensive research framework with source validation and actionable insights (v2.0)
+version: 2.0
+usage: '/research [topic] [--depth shallow|standard|comprehensive] [--focus technical|business|competitive] [--sources web|codebase|both]'
 category: core
 allowed-tools:
 - Read
 - Write
 - Grep
 - WebSearch
+- WebFetch
+dependencies:
+- /analyze-code
+- /query
+- /validate-component
+validation:
+  pre-execution: Validate topic scope and research parameters
+  during-execution: Verify source credibility and information accuracy
+  post-execution: Ensure actionable recommendations are provided
+progressive-disclosure:
+  layer-integration: Layer 1 quick answers, Layer 2 detailed analysis, Layer 3 comprehensive research reports
+  escalation-path: Quick lookup → detailed research → academic-level analysis
+  de-escalation: Cached results speed up repeated research
+safety-measures:
+  - Verify source credibility
+  - Cross-reference information
+  - Flag outdated content
+  - Highlight biases
+error-recovery:
+  no-results: Broaden search scope and suggest alternatives
+  conflicting-info: Present multiple viewpoints with analysis
+  source-unavailable: Use cached data with freshness warnings
 ---
 
 # Research Framework for lusaka

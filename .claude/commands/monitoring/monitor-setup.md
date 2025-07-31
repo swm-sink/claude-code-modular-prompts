@@ -1,14 +1,36 @@
 ---
 name: /monitor-setup
-description: Setup monitoring for [INSERT_PROJECT_NAME] on [INSERT_DEPLOYMENT_TARGET]
-usage: /monitor-setup [--stack prometheus|datadog|newrelic|cloudwatch] [--components
-  all|app|infra|custom]
+description: Comprehensive monitoring setup with automatic dashboard creation and alert configuration (v2.0)
+version: 2.0
+usage: '/monitor-setup [--stack prometheus|datadog|newrelic|cloudwatch] [--components all|app|infra|custom] [--auto-discover] [--cost-optimize]'
 category: monitoring
 allowed-tools:
 - Write
 - Read
 - Edit
 - Bash
+- Glob
+dependencies:
+- /monitor-alerts
+- /validate-component
+- /quick-command
+validation:
+  pre-execution: Verify monitoring stack compatibility and credentials
+  during-execution: Validate metric collection and dashboard creation
+  post-execution: Confirm all components are monitored with alerts configured
+progressive-disclosure:
+  layer-integration: Layer 1 auto-detects and configures monitoring, Layer 2 customizes dashboards, Layer 3 enables advanced observability
+  escalation-path: Basic monitoring → custom dashboards → distributed tracing
+  de-escalation: Auto-discovery reduces manual configuration
+safety-measures:
+  - Secure credential storage
+  - Rate limit metric collection
+  - Validate endpoint connectivity
+  - Cost threshold monitoring
+error-recovery:
+  stack-unavailable: Suggest alternative monitoring solutions
+  metric-failure: Graceful degradation with partial monitoring
+  cost-exceeded: Automatic metric sampling adjustment
 security: input-validation-framework.md
 ---
 

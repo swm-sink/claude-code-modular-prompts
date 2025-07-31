@@ -1,12 +1,33 @@
 ---
 name: /find-duplicates
-description: Find duplicate files in your project
-usage: '[file-pattern] [--type extension]'
+description: Find duplicate files in your project (v2.0)
+version: 2.0
+usage: '/find-duplicates [file-pattern] [--type extension]'
+category: utility
 allowed-tools:
 - Glob
 - Read
 - Grep
-category: find-duplicates.md
+dependencies:
+- /quick-command
+- /query
+validation:
+  pre-execution: Validate file pattern syntax and extension format
+  during-execution: Monitor file comparison progress
+  post-execution: Verify duplicate detection accuracy
+progressive-disclosure:
+  layer-integration: Utility command for project maintenance
+  escalation-path: Simple duplicates → content-based matching → fuzzy matching
+  de-escalation: Focus on exact filename matches
+safety-measures:
+  - Limit search scope to prevent performance issues
+  - Validate file permissions before reading
+  - Handle binary files appropriately
+  - Respect gitignore patterns
+error-recovery:
+  pattern-error: Provide pattern syntax examples
+  permission-denied: Skip files with clear reporting
+  memory-limit: Use streaming for large file sets
 ---
 
 # Find Duplicate Files

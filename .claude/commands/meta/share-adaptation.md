@@ -1,12 +1,33 @@
 ---
 name: /share-adaptation
-description: Export your adaptation patterns to share with the community
-usage: /share-adaptation [--name pattern-name] [--description text] [--anonymize]
-category: meta-commands
+description: Export your adaptation patterns to share with the community (v2.0)
+version: 2.0
+usage: '/share-adaptation [--name pattern-name] [--description text] [--anonymize]'
+category: meta
 allowed-tools:
 - Read
 - Write
 - TodoWrite
+dependencies:
+- /help
+- /welcome
+validation:
+  pre-execution: Validate input parameters and execution context
+  during-execution: Monitor progress and maintain safety checks
+  post-execution: Verify successful completion and cleanup
+progressive-disclosure:
+  layer-integration: Integrated command for specialized workflows
+  escalation-path: Basic usage → advanced options → full customization
+  de-escalation: Simplify to essential functionality
+safety-measures:
+  - Validate all inputs before execution
+  - Create backups when modifying files
+  - Confirm destructive operations
+  - Maintain system integrity
+error-recovery:
+  input-error: Provide clear usage examples and syntax
+  execution-failure: Show detailed context and recovery steps
+  system-error: Fallback to safe mode operation
 ---
 
 # Document Your Adaptation Pattern

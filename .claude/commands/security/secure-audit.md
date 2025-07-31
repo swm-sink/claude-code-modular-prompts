@@ -1,15 +1,37 @@
 ---
 name: /secure-audit
-description: Comprehensive code audit for [INSERT_PROJECT_NAME] with [INSERT_SECURITY_LEVEL]
-  requirements
-usage: /secure-audit [--scope full|code|infrastructure|compliance] [--report-format
-  detailed|executive|compliance]
+description: Comprehensive code audit with multi-layer security analysis and automated scanning (v2.0)
+version: 2.0
+usage: '/secure-audit [--scope full|code|infrastructure|compliance] [--report-format detailed|executive|compliance] [--severity critical|high|medium|low] [--fix-mode suggest|apply]'
 category: security
 allowed-tools:
 - Bash
 - Read
 - Write
 - Grep
+- Glob
+- Edit
+dependencies:
+- /secure-scan
+- /validate-component
+- /monitor-alerts
+validation:
+  pre-execution: Verify project structure and security tool availability
+  during-execution: Real-time vulnerability detection and classification
+  post-execution: Generate comprehensive security report with remediation plan
+progressive-disclosure:
+  layer-integration: Layer 1 auto-scans common vulnerabilities, Layer 2 offers focused audits, Layer 3 enables custom security rule creation
+  escalation-path: /secure-scan → /secure-audit → custom security framework
+  de-escalation: Automated fixes for common issues reduce need for manual audit
+safety-measures:
+  - Never expose sensitive data in reports
+  - Sanitize all file paths and credentials
+  - Validate all external tool outputs
+  - Maintain audit trail of all actions
+error-recovery:
+  partial-scan-failure: Continue with available tools and note limitations
+  permission-errors: Gracefully handle restricted access with clear reporting
+  tool-unavailability: Fallback to manual inspection methods
 ---
 
 # Code Audit for [INSERT_PROJECT_NAME]

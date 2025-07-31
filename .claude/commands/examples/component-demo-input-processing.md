@@ -1,13 +1,34 @@
 ---
 name: /demo-input-processing
-description: Demonstrate reliable input processing and parameter validation
-usage: '[input_data] [processing_options]'
+description: Demonstrate reliable input processing and parameter validation (v2.0)
+version: 2.0
+usage: '/demo-input-processing [input_data] [processing_options]'
+category: examples
 allowed-tools:
 - Read
 - Write
 - Edit
 - Grep
-category: examples
+dependencies:
+- /validate-command
+- /build-command
+validation:
+  pre-execution: Validate input data format and processing options
+  during-execution: Monitor data processing and validation steps
+  post-execution: Verify output correctness and completeness
+progressive-disclosure:
+  layer-integration: Shows input validation patterns for all layers
+  escalation-path: Basic validation → complex rules → custom validators
+  de-escalation: Focus on simple parameter checking
+safety-measures:
+  - Sanitize all user inputs
+  - Validate data types and ranges
+  - Prevent injection attacks
+  - Handle edge cases gracefully
+error-recovery:
+  invalid-input: Provide clear format examples and requirements
+  type-mismatch: Show type conversion options
+  validation-failure: Detailed error messages with fix suggestions
 ---
 
 # Input Processing Demo - Foundation Pattern

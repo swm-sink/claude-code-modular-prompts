@@ -1,7 +1,8 @@
 ---
 name: /quick-quality
-description: Instant code quality analysis - works with any programming language
-usage: /quick-quality [--scan | --fix | --report] [file-pattern]
+description: Instant code quality analysis - works with any programming language (v2.0)
+version: 2.0
+usage: '/quick-quality [--scan | --fix | --report] [file-pattern]'
 category: core
 allowed-tools:
 - Read
@@ -9,6 +10,27 @@ allowed-tools:
 - Bash
 - Grep
 - Glob
+dependencies:
+- /quality
+- /quality-enforce
+- /analyze-code
+validation:
+  pre-execution: Verify file patterns and options are valid
+  during-execution: Monitor quality analysis progress and provide real-time insights
+  post-execution: Generate actionable recommendations and fix suggestions
+progressive-disclosure:
+  layer-integration: Quick access layer for immediate quality insights
+  escalation-path: Basic scan → targeted fixes → comprehensive reports
+  de-escalation: Simplify to specific file or issue type analysis
+safety-measures:
+  - Confirm before applying automated fixes
+  - Create backups when fixing issues
+  - Validate fix syntax before applying
+  - Preserve existing code functionality
+error-recovery:
+  scan-failure: Provide partial results with clear error context
+  fix-error: Rollback changes and suggest manual intervention
+  invalid-pattern: Suggest correct file pattern syntax
 ---
 
 # 🎯 Instant Code Quality Analysis

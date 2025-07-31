@@ -1,14 +1,35 @@
 ---
 name: /demo-search-transform
-description: Demonstrate highest-scoring pattern - Search and Transform
-usage: '[search_pattern] [target_format]'
+description: Demonstrate highest-scoring pattern - Search and Transform (v2.0)
+version: 2.0
+usage: '/demo-search-transform [search_pattern] [target_format]'
+category: examples
 allowed-tools:
 - Read
 - Write
 - Edit
 - Grep
 - Glob
-category: examples
+dependencies:
+- /quick-command
+- /build-command
+validation:
+  pre-execution: Validate search pattern syntax and target format
+  during-execution: Monitor search progress and transformation accuracy
+  post-execution: Verify all matches transformed correctly
+progressive-disclosure:
+  layer-integration: High-performance pattern for Layer 1 auto-generation
+  escalation-path: Simple search → complex patterns → multi-step transforms
+  de-escalation: Focus on basic find-and-replace
+safety-measures:
+  - Validate regex patterns before execution
+  - Preview changes before applying
+  - Create backups before transformation
+  - Limit scope to prevent over-matching
+error-recovery:
+  pattern-error: Provide regex syntax help and examples
+  no-matches: Suggest alternative search strategies
+  transform-failure: Show partial results and error context
 ---
 
 # Search & Transform Demo - Highest Performance Pattern

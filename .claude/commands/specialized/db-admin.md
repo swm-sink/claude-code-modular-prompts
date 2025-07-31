@@ -1,15 +1,35 @@
 ---
 name: /db-admin
-description: Unified database administration with migration, backup, and restoration
-  capabilities
+description: Unified database administration with migration, backup, and restoration (v2.0)
+version: 2.0
 usage: '[operation] [options]'
+category: specialized
 allowed-tools:
 - Read
 - Write
 - Edit
 - Bash
 - Grep
-category: specialized
+dependencies:
+- /help
+- /welcome
+validation:
+  pre-execution: Validate input parameters and execution context
+  during-execution: Monitor progress and maintain safety checks
+  post-execution: Verify successful completion and cleanup
+progressive-disclosure:
+  layer-integration: Integrated command for specialized workflows
+  escalation-path: Basic usage → advanced options → full customization
+  de-escalation: Simplify to essential functionality
+safety-measures:
+  - Validate all inputs before execution
+  - Create backups when modifying files
+  - Confirm destructive operations
+  - Maintain system integrity
+error-recovery:
+  input-error: Provide clear usage examples and syntax
+  execution-failure: Show detailed context and recovery steps
+  system-error: Fallback to safe mode operation
 ---
 
 # /db-admin - Unified Database Administration System for [INSERT_PROJECT_NAME]

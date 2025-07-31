@@ -1,14 +1,36 @@
 ---
 name: /component-gen
-description: Generate [INSERT_TECH_STACK] components for [INSERT_PROJECT_NAME] following
-  team conventions
-usage: /component-gen [component-name] [--type functional|class|page] [--with-tests]
-  [--with-styles]
+description: Generate modern web components with tests, styles, and framework integration (v2.0)
+version: 2.0
+usage: '/component-gen [component-name] [--type functional|class|page] [--with-tests] [--with-styles] [--framework react|vue|angular] [--accessibility]'
 category: web-dev
 allowed-tools:
 - Write
 - Read
 - Edit
+- Bash
+- Glob
+dependencies:
+- /validate-component
+- /quick-command
+- /test
+validation:
+  pre-execution: Validate component name and check for naming conflicts
+  during-execution: Ensure all generated files follow conventions
+  post-execution: Run tests and verify component integration
+progressive-disclosure:
+  layer-integration: Layer 1 generates basic components, Layer 2 adds testing/styling, Layer 3 enables full framework features
+  escalation-path: Simple component → styled with tests → full feature integration
+  de-escalation: Component templates reduce generation complexity
+safety-measures:
+  - Prevent overwriting existing components
+  - Validate naming conventions
+  - Check import paths
+  - Ensure accessibility compliance
+error-recovery:
+  name-conflict: Suggest alternative names or versioning
+  framework-mismatch: Auto-detect project framework
+  style-conflict: Merge with existing style system
 ---
 
 # Component Generator for [INSERT_PROJECT_NAME]

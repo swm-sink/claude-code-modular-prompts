@@ -1,8 +1,9 @@
 ---
 name: /demo-development-workflow
-description: Demonstrate development workflow with git operations, testing, and progress
-  tracking
-usage: '[branch_name] [test_suite]'
+description: Demonstrate development workflow with git operations, testing, and progress tracking (v2.0)
+version: 2.0
+usage: '/demo-development-workflow [branch_name] [test_suite]'
+category: examples
 allowed-tools:
 - Read
 - Write
@@ -10,7 +11,27 @@ allowed-tools:
 - Grep
 - Bash
 - Glob
-category: examples
+dependencies:
+- /project
+- /quick-test
+- /task
+validation:
+  pre-execution: Verify git repository state and branch availability
+  during-execution: Monitor test execution and code changes
+  post-execution: Validate all tests pass and changes are committed
+progressive-disclosure:
+  layer-integration: Example workflow demonstrating component composition
+  escalation-path: Demo → workflow customization → production CI/CD
+  de-escalation: Focus on individual workflow steps
+safety-measures:
+  - Check for uncommitted changes before branch operations
+  - Validate test suite exists before execution
+  - Ensure branch protection rules are followed
+  - Create backups before major operations
+error-recovery:
+  git-conflict: Provide merge conflict resolution guidance
+  test-failure: Show detailed test output and debugging steps
+  branch-error: Suggest recovery strategies for branch issues
 ---
 
 # Development Workflow Demo - Complete Development Cycle

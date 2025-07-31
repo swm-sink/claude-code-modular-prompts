@@ -1,7 +1,8 @@
 ---
 name: /auto
-description: Intelligent command router that selects the best command for your request
-usage: '[your request in natural language]'
+description: Intelligent command router with context-aware selection and automatic parameter detection (v2.0)
+version: 2.0
+usage: '/auto "[your request in natural language]"'
 allowed-tools:
 - Read
 - Write
@@ -9,6 +10,27 @@ allowed-tools:
 - Grep
 - Glob
 - Bash
+dependencies:
+- /help
+- /quick-command
+- /task
+validation:
+  pre-execution: Parse request and identify intent with confidence scoring
+  during-execution: Monitor command execution and provide fallback options
+  post-execution: Verify request was fulfilled and suggest follow-up commands
+progressive-disclosure:
+  layer-integration: Automatically routes to appropriate layer based on request complexity
+  escalation-path: Simple routing → parameter inference → multi-command orchestration
+  de-escalation: Suggests simpler alternatives when appropriate
+safety-measures:
+  - Confirm destructive operations
+  - Validate command parameters
+  - Prevent infinite routing loops
+  - Show routing decisions transparently
+error-recovery:
+  ambiguous-request: Provide clarification options with examples
+  no-match: Suggest closest commands and ask for refinement
+  execution-failure: Offer alternative approaches
 category: core
 ---
 

@@ -1,14 +1,36 @@
 ---
 name: /notebook-run
-description: Execute Jupyter notebooks for [INSERT_PROJECT_NAME] with parameter injection
-  and monitoring
-usage: /notebook-run [notebook-path] [--params key=value] [--kernel python3|R|julia]
-  [--output-dir path]
+description: Execute Jupyter notebooks with parameter injection, monitoring, and multi-kernel support (v2.0)
+version: 2.0
+usage: '/notebook-run [notebook-path] [--params key=value] [--kernel python3|R|julia] [--output-dir path] [--parallel] [--cache-results]'
 category: data-science
 allowed-tools:
 - Bash
 - Read
 - Write
+- NotebookRead
+- NotebookEdit
+dependencies:
+- /validate-component
+- /monitor-setup
+- /quick-command
+validation:
+  pre-execution: Validate notebook path, kernel availability, and parameter types
+  during-execution: Monitor execution progress and resource usage
+  post-execution: Verify output generation and result integrity
+progressive-disclosure:
+  layer-integration: Layer 1 runs notebooks with defaults, Layer 2 enables parameterization, Layer 3 allows custom kernels and distributed execution
+  escalation-path: Simple execution → parameterized runs → distributed computing
+  de-escalation: Cached results reduce re-execution needs
+safety-measures:
+  - Sandbox notebook execution
+  - Memory and time limits
+  - Output size restrictions
+  - Path traversal prevention
+error-recovery:
+  kernel-crash: Automatic kernel restart with state recovery
+  timeout: Graceful termination with partial results
+  memory-exceeded: Automatic chunking of large datasets
 security:
 - path-validation
 ---

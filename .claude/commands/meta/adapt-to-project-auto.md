@@ -1,8 +1,9 @@
 ---
 name: /adapt-to-project-auto
-description: TRUE automated project adaptation using framework detection and meta-prompting
-usage: /adapt-to-project-auto [--confirm] [--dry-run]
-category: meta-commands
+description: TRUE automated project adaptation using framework detection and meta-prompting (v2.0)
+version: 2.0
+usage: '/adapt-to-project-auto [--confirm] [--dry-run]'
+category: meta
 allowed-tools:
 - Read
 - Write
@@ -12,6 +13,27 @@ allowed-tools:
 - Grep
 - Glob
 - LS
+dependencies:
+- /adapt-to-project
+- /smart-adapt-project
+- /validate-automation
+validation:
+  pre-execution: Detect project type and validate adaptation feasibility
+  during-execution: Monitor file changes and validate replacements
+  post-execution: Verify all placeholders replaced and commands functional
+progressive-disclosure:
+  layer-integration: Advanced automation for experienced users
+  escalation-path: Manual adaptation → guided → fully automated
+  de-escalation: Fall back to manual checklist if automation fails
+safety-measures:
+  - Create backups before making changes
+  - Validate project detection accuracy
+  - Confirm major changes with user
+  - Test adapted commands before finalizing
+error-recovery:
+  detection-failure: Provide manual project type selection
+  replacement-error: Show what failed and offer manual fix
+  validation-failure: Generate report of remaining issues
 ---
 
 # TRUE Automated Project Adaptation

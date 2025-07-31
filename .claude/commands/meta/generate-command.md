@@ -1,8 +1,9 @@
 ---
 name: /generate-command
-description: Meta-prompt system to automatically generate new Claude Code slash commands
-usage: /generate-command <task-description> [--framework=<framework>]
-category: meta-commands
+description: Meta-prompt system to automatically generate new Claude Code slash commands (v2.0)
+version: 2.0
+usage: '/generate-command <task-description> [--framework=<framework>]'
+category: meta
 allowed-tools:
 - Read
 - Write
@@ -11,6 +12,27 @@ allowed-tools:
 - Glob
 - LS
 - Bash
+dependencies:
+- /quick-command
+- /build-command
+- /assemble-command
+validation:
+  pre-execution: Validate task description clarity and framework compatibility
+  during-execution: Monitor command generation quality and completeness
+  post-execution: Verify generated command follows v2.0 standards
+progressive-disclosure:
+  layer-integration: Meta-generation across all Progressive Disclosure layers
+  escalation-path: Simple generation → framework-specific → custom templates
+  de-escalation: Use pre-built templates for common patterns
+safety-measures:
+  - Validate generated YAML syntax
+  - Check for command name conflicts
+  - Ensure proper tool permissions
+  - Test generated commands
+error-recovery:
+  generation-failure: Provide partial result with completion guidance
+  syntax-error: Show YAML validation errors with fixes
+  conflict-error: Suggest alternative command names
 ---
 
 # Automated Command Generation System
