@@ -14,6 +14,7 @@ dependencies:
 - /test-unit
 - /test-integration-project
 - /quick-test
+category: testing
 validation:
   pre-execution: Validate target file exists and has corresponding tests
   during-execution: Track mutation survival rate and test execution

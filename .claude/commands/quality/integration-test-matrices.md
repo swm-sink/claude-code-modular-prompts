@@ -14,6 +14,7 @@ dependencies:
 - /test-integration
 - /test-integration-project
 - /integration-testing-baseline
+category: quality
 validation:
   pre-execution: Validate matrix configuration and test readiness
   during-execution: Execute matrix tests with progress tracking

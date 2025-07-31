@@ -14,6 +14,7 @@ dependencies:
 - /test
 - /test-unit
 - /quick-test
+category: testing
 validation:
   pre-execution: Validate test framework and project configuration
   during-execution: Monitor test progress and coverage metrics

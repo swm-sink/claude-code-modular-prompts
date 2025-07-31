@@ -15,6 +15,7 @@ dependencies:
 - /test-unit
 - /test-integration-project
 - /quick-test
+category: testing
 validation:
   pre-execution: Validate URL accessibility and browser availability
   during-execution: Monitor test execution with screenshot capture

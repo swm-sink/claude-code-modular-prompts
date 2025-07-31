@@ -16,6 +16,7 @@ dependencies:
 - /test-integration-project
 - /test-e2e
 - /quick-test
+category: quality
 validation:
   pre-execution: Validate test framework configuration and dependencies
   during-execution: Monitor test execution with progress tracking

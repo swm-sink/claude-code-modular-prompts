@@ -13,6 +13,7 @@ dependencies:
 - /test-integration
 - /test-integration-project
 - /test
+category: quality
 validation:
   pre-execution: Validate baseline configuration and test environment
   during-execution: Collect integration metrics and performance data
