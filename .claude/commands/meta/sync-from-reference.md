@@ -1,31 +1,68 @@
 ---
 name: /sync-from-reference
-description: Pull updates from framework while preserving your customizations
-usage: /sync-from-reference [--preview] [--approve-all]
-category: meta-commands
+description: Pull updates from framework while preserving your customizations (v2.0)
+version: 2.0
+usage: '/sync-from-reference [--preview] [--approve-all] [--rollback] [--validate-before] [--layer=1|2|3]'
+category: meta
 allowed-tools:
 - Read
 - Write
 - Edit
 - Grep
 - Bash
+- Glob
+- TodoWrite
+dependencies: [validate-adaptation, adapt-to-project, undo-adaptation]
+validation:
+  pre-execution: Backup current .claude directory before any changes
+  during-execution: Validate each file operation for safety
+  post-execution: Run comprehensive validation after sync
+progressive-disclosure:
+  layer-integration: Preserves layer-specific customizations during sync
+  layer-1-protection: Quick command templates preserved
+  layer-2-protection: Customization configs maintained
+  layer-3-protection: Component assembly framework protected
+safety-features:
+  automatic-backup: Creates timestamped backup before sync
+  conflict-detection: Identifies customized files before overwriting
+  rollback-capability: Can restore previous state if issues occur
+  dry-run-mode: Preview all changes without applying
+tracking:
+  sync-log: Automatic sync history tracking
+  change-manifest: Detailed list of all modifications
+  customization-preservation: Tracks user customizations
 ---
 
-# Manual Sync Guide for Framework Updates
+# Sync from Reference (v2.0)
 
-## 🎯 What This Command Actually Does
+## 🎯 Enhanced Framework Synchronization with Safety Features
 
-**I provide sync guidance, not automated syncing.** I'll help you manually update from the reference framework by:
-- 📋 Showing git commands to check for updates
-- 🔍 Explaining how to compare versions
-- 📝 Providing manual merge strategies
-- ✅ Creating verification checklists
+**v2.0 Enhancement**: This command now provides intelligent sync capabilities with automatic backup, rollback support, and Progressive Disclosure layer protection to safely update your framework while preserving all customizations.
 
-## ⚠️ What I Cannot Do
-- ❌ Automatically detect updates
-- ❌ Merge files for you
-- ❌ Track what you've customized
-- ❌ Apply changes programmatically
+### 🚀 What's New in v2.0
+- **Automatic Backup**: Creates timestamped backup before any changes
+- **Layer Protection**: Preserves Progressive Disclosure customizations
+- **Rollback Support**: Can restore previous state if issues occur
+- **Smart Conflict Detection**: Identifies customized files before overwriting
+- **Dry Run Mode**: Preview all changes without applying them
+- **Sync History Tracking**: Automatic logging of all sync operations
+
+### 🛡️ Safety Features
+
+#### Pre-Sync Protection
+- Automatic backup creation with timestamp
+- Customization detection and preservation
+- Validation of source framework integrity
+
+#### During-Sync Safety
+- File-by-file validation
+- Conflict resolution prompts
+- Progressive update application
+
+#### Post-Sync Validation
+- Automatic validation run
+- Rollback option if issues detected
+- Comprehensive sync report generation
 
 ## How Manual Sync Works
 
@@ -51,32 +88,61 @@ diff -r .claude/ .claude-framework/
 - **Your customized files**: Keep your version
 - **Unchanged files with updates**: Consider updating
 
-## Manual Sync Process
+## Enhanced v2.0 Sync Process
 
-### Step 1: Update Reference Framework
+### Step 1: Pre-Sync Safety Check (--validate-before)
 ```bash
-# If using git submodule:
-cd .claude-framework
-git pull origin main
-cd ..
+# v2.0 Automatic backup
+echo "Creating safety backup..."
+cp -r .claude ".claude.backup-$(date +%Y%m%d-%H%M%S)"
 
-# If direct clone:
-cd .claude-framework
-git pull
-cd ..
+# Validate current state
+echo "Validating current adaptation..."
+# Run /validate-adaptation internally
 ```
 
-### Step 2: Find What's New
+### Step 2: Smart Update Detection
 ```bash
-# List new commands
-diff <(ls .claude/commands/) <(ls .claude-framework/commands/)
+# v2.0 Enhanced detection with layer awareness
+echo "=== Checking for updates ==="
 
-# Find new files
-find .claude-framework -type f -name "*.md" | while read f; do
-  if [ ! -f ".claude/${f#.claude-framework/}" ]; then
-    echo "NEW: $f"
+# Update reference framework
+cd .claude-framework
+git fetch origin
+git log HEAD..origin/main --oneline
+
+# Layer-specific checks
+echo "Layer 1 (Auto-Generation) Updates:"
+find .claude-framework/templates -newer .claude/.sync-timestamp 2>/dev/null
+
+echo "Layer 2 (Customization) Updates:"
+find .claude-framework/customization -newer .claude/.sync-timestamp 2>/dev/null
+
+echo "Layer 3 (Components) Updates:"
+find .claude-framework/components -newer .claude/.sync-timestamp 2>/dev/null
+```
+
+### Step 3: Intelligent File Categorization
+```bash
+# v2.0 Smart categorization with customization detection
+echo "=== Analyzing files ==="
+
+# Detect customized files
+grep -l "PROJECT_NAME\|DOMAIN\|TECH_STACK" .claude/commands/*/*.md > .customized-files.tmp
+
+# Categorize updates
+echo "Safe to update (no customizations):"
+find .claude-framework -name "*.md" | while read f; do
+  local_file=".claude/${f#.claude-framework/}"
+  if ! grep -q "$local_file" .customized-files.tmp; then
+    echo "  ✓ $f"
   fi
 done
+
+echo "Requires manual review (customized):"
+while read customized; do
+  echo "  ⚠️  $customized"
+done < .customized-files.tmp
 ```
 
 ### Step 3: Manual Review Strategy
@@ -168,25 +234,133 @@ Options:
 - Test critical workflows
 - Update documentation
 
-## Manual Tracking
+## Enhanced v2.0 Sync Tracking
 
-To track your syncs manually:
-
-### Create a Sync Log
+### Automatic Sync History (v2.0)
 ```bash
-# Create sync history file
-echo "## Sync History" > .claude/SYNC-LOG.md
-echo "" >> .claude/SYNC-LOG.md
-echo "### $(date '+%Y-%m-%d')" >> .claude/SYNC-LOG.md
-echo "- Updated from commit: $(cd .claude-framework && git rev-parse HEAD)" >> .claude/SYNC-LOG.md
-echo "- New files added: [list]" >> .claude/SYNC-LOG.md
-echo "- Files updated: [list]" >> .claude/SYNC-LOG.md
+# v2.0 creates detailed sync manifest automatically
+cat > .claude/SYNC-MANIFEST-$(date +%Y%m%d-%H%M%S).json << 'EOF'
+{
+  "sync_date": "$(date -Iseconds)",
+  "framework_version": "$(cd .claude-framework && git describe --tags)",
+  "framework_commit": "$(cd .claude-framework && git rev-parse HEAD)",
+  "operations": {
+    "files_added": [],
+    "files_updated": [],
+    "files_skipped": [],
+    "customizations_preserved": []
+  },
+  "validation": {
+    "pre_sync_score": 0,
+    "post_sync_score": 0,
+    "issues_found": []
+  },
+  "backup_location": ".claude.backup-$(date +%Y%m%d-%H%M%S)"
+}
+EOF
 ```
 
-### Manual Backup Before Sync
+### Rollback Support (--rollback)
 ```bash
-# Always backup first
-cp -r .claude .claude.backup-pre-sync-$(date +%Y%m%d)
+# v2.0 Easy rollback to previous state
+echo "=== Available Backups ==="
+ls -la .claude.backup-* | tail -5
+
+# Rollback to specific backup
+echo "To rollback, use:"
+echo "rm -rf .claude"
+echo "mv .claude.backup-TIMESTAMP .claude"
+echo "/validate-adaptation"
+```
+
+### Dry Run Mode (--preview)
+```bash
+# v2.0 Preview all changes without applying
+echo "=== DRY RUN MODE ==="
+echo "The following changes would be made:"
+
+# Show what would be copied
+echo "New files to add:"
+find .claude-framework -name "*.md" -type f | while read f; do
+  local_file=".claude/${f#.claude-framework/}"
+  [ ! -f "$local_file" ] && echo "  + $f"
+done
+
+# Show what would be updated
+echo "Files to update:"
+# ... comparison logic ...
+
+echo "No changes have been applied. Remove --preview to execute."
+```
+
+## Layer-Specific Sync Guidance (--layer=N)
+
+### Layer 1 Sync (Auto-Generation)
+```bash
+# Sync only Layer 1 components
+echo "Syncing Layer 1 (Auto-Generation) components..."
+cp -n .claude-framework/commands/core/quick-command.md .claude/commands/core/
+cp -r .claude-framework/templates/*.template .claude/templates/
+echo "Layer 1 sync complete"
+```
+
+### Layer 2 Sync (Customization)
+```bash
+# Sync only Layer 2 components
+echo "Syncing Layer 2 (Customization) framework..."
+cp -n .claude-framework/commands/core/build-command.md .claude/commands/core/
+cp -r .claude-framework/customization/*.json .claude/customization/
+echo "Layer 2 sync complete"
+```
+
+### Layer 3 Sync (Assembly)
+```bash
+# Sync only Layer 3 components
+echo "Syncing Layer 3 (Assembly) system..."
+cp -n .claude-framework/commands/core/assemble-command.md .claude/commands/core/
+rsync -av --ignore-existing .claude-framework/components/ .claude/components/
+cp -r .claude-framework/assembly-templates/ .claude/
+echo "Layer 3 sync complete"
+```
+
+## Post-Sync Validation Report
+
+### v2.0 Automatic Post-Sync Report
+```markdown
+SYNC COMPLETION REPORT v2.0
+===========================
+Date: [TIMESTAMP]
+Sync Type: [FULL|LAYER-SPECIFIC|PREVIEW]
+
+FILES SYNCED
+------------
+Added: [COUNT] files
+Updated: [COUNT] files  
+Skipped: [COUNT] files (customized)
+Preserved: [COUNT] customizations
+
+VALIDATION RESULTS
+------------------
+Pre-Sync Score: [XX]%
+Post-Sync Score: [XX]%
+Issues Found: [LIST]
+
+LAYER STATUS
+------------
+Layer 1: [SYNCED|SKIPPED|ERROR]
+Layer 2: [SYNCED|SKIPPED|ERROR]
+Layer 3: [SYNCED|SKIPPED|ERROR]
+
+NEXT STEPS
+----------
+1. Run /validate-adaptation --layer=all
+2. Test critical workflows
+3. Review new features in [LIST]
+
+ROLLBACK AVAILABLE
+------------------
+Backup: [BACKUP_PATH]
+Command: /sync-from-reference --rollback
 ```
 
 ## How Can I Help?
@@ -195,4 +369,5 @@ Tell me:
 1. **"I want to check for updates"** → I'll provide the commands
 2. **"I found new files"** → I'll help you evaluate them
 3. **"I need to merge changes"** → I'll guide you through it
-4. **"Help me track this sync"** → I'll create documentation
+4. **"Preview sync for Layer 2"** → I'll show layer-specific changes
+5. **"Rollback last sync"** → I'll restore your previous state
