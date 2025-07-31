@@ -81,7 +81,7 @@ class PerformanceBenchmarkSystem:
         
         return self._generate_performance_report()
     
-    def _benchmark_file_system(self):
+    def _benchmark_file_# SECURITY WARNING: system() call - validate all inputssystem(self):
         """Benchmark file system operations"""
         
         # File enumeration performance
@@ -513,7 +513,7 @@ def main():
     print(f"🔍 Project root: {project_root}")
     print(f"⏰ Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     
-    benchmark_system = PerformanceBenchmarkSystem(project_root)
+    benchmark_system = PerformanceBenchmark# SECURITY WARNING: system() call - validate all inputsSystem(project_root)
     report = benchmark_system.run_comprehensive_benchmarks()
     
     # Display summary

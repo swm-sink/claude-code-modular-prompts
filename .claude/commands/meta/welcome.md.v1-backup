@@ -1,0 +1,83 @@
+---
+name: /welcome
+description: Interactive welcome and onboarding system for new users of the template library
+usage: '[beginner|intermediate|advanced]'
+allowed-tools:
+- Read
+- LS
+- Grep
+category: meta
+---
+
+# /welcome - Interactive Template Library Welcome
+
+Welcome to the Claude Code Modular Prompts Template Library! This interactive guide will help you get started based on your experience level.
+
+## Quick Start Based on Your Experience
+
+### 🎯 Tell me about your experience:
+- **Beginner**: New to Claude Code or prompt engineering
+- **Intermediate**: Familiar with Claude Code, new to template libraries
+- **Advanced**: Experienced with Claude Code and template customization
+
+## Beginner Path 🌱
+
+If you're new to Claude Code template libraries:
+
+1. **Start Here**: `/adapt-to-project` - Get a customization checklist
+2. **Learn the Basics**: Check `README.md` for installation methods
+3. **First Steps**: 
+   - Choose Method 1 (Git Submodule) from README.md
+   - Run the setup script
+   - Use `/help` to see available commands
+
+**Key Concept**: This is a template library, not ready-to-use commands. You'll need to customize templates for your project.
+
+## Intermediate Path 🚀  
+
+If you're familiar with Claude Code:
+
+1. **Quick Setup**: Choose your preferred installation method from README.md
+2. **Explore Templates**: Use `/find-commands [category]` to discover templates
+3. **Customize**: Use `/replace-placeholders` to see what needs customization
+4. **Validate**: Use `/validate-adaptation` when done
+
+**Pro Tip**: Focus on the `/adapt-to-project` workflow - it provides comprehensive guidance.
+
+## Advanced Path ⚡
+
+If you're experienced with template customization:
+
+1. **Selective Integration**: Use Method 3 (Selective Copy) from README.md
+2. **Component Assembly**: Explore `.claude/components/atomic/` for building blocks
+3. **Custom Workflows**: Create your own commands using atomic components
+4. **Automation**: Set up hooks and automation based on the security and performance configs
+
+**Advanced Features**: 
+- Atomic components in `.claude/components/atomic/`
+- Security configuration in `.claude/security_config.json`
+- Performance optimizations in `.claude/command_cache.json`
+
+## What's Available
+
+- **88 Command Templates**: Organized in categories (core, quality, specialized, meta)
+- **94 Components**: Including 21 atomic building blocks
+- **Comprehensive Documentation**: Anti-patterns, best practices, setup guides
+- **Testing Framework**: Validation and quality assurance tools
+
+## Next Steps
+
+1. **Choose your path** above based on experience level
+2. **Read the README.md** for detailed installation instructions  
+3. **Start with `/adapt-to-project`** for guided customization
+4. **Explore `/help`** to see all available commands
+
+## Getting Help
+
+- **Stuck?** Use `/help` for command overview
+- **Need guidance?** Use `/adapt-to-project` for step-by-step help
+- **Want examples?** Check the `examples/` directory for real usage patterns
+
+**Remember**: This is a template library designed for customization, not plug-and-play commands.
+
+Welcome aboard! 🎉

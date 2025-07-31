@@ -1,0 +1,25 @@
+{
+  "enabled": true,
+  "metrics": {
+    "command_usage": {
+      "track_frequency": true,
+      "track_success_rate": true,
+      "track_completion_time": true
+    },
+    "template_effectiveness": {
+      "track_customization_success": true,
+      "track_user_satisfaction": true,
+      "track_error_rates": true
+    },
+    "system_performance": {
+      "track_yaml_validation_time": true,
+      "track_command_discovery_time": true,
+      "track_memory_usage": true
+    }
+  },
+  "reporting": {
+    "daily_summary": true,
+    "weekly_analysis": true,
+    "monthly_trends": true
+  }
+}

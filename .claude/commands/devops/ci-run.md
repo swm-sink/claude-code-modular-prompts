@@ -1,16 +1,49 @@
 ---
 name: /ci-run
-description: Execute GitHub Actions pipelines for lusaka
-usage: /ci-run [pipeline-name] [--branch branch-name] [--stage specific-stage]
+description: Execute GitHub Actions pipelines for lusaka (v2.0)
+version: 2.0
+usage: /ci-run [pipeline-name] [--branch branch-name] [--stage specific-stage] [--debug] [--dry-run]
 category: devops
 allowed-tools:
 - Bash
 - Read
 - Write
+- Grep
+- WebSearch
+dependencies:
+- /ci-setup
+- /deploy
+- /pipeline
+- /monitor-alerts
+validation:
+  pre-execution: Validate pipeline configuration and CI/CD credentials
+  during-execution: Monitor pipeline status and catch failures early
+  post-execution: Verify deployment health and rollback capability
+progressive-disclosure:
+  layer-integration: Layer 1 provides simple pipeline triggers, Layer 2 enables stage control, Layer 3 offers full orchestration
+  quick-start: /ci-run (runs default pipeline)
+  advanced-usage: Custom pipelines with stage control and monitoring
+safety-mechanisms:
+  - Automatic rollback on critical failures
+  - Pre-deployment validation gates
+  - Resource limit enforcement
+  - Credential protection and masking
+error-recovery:
+  pipeline-failure: Automatic retry with exponential backoff
+  deployment-failure: Rollback to last known good state
+  resource-exhaustion: Scale down and notify team
+  credential-issues: Clear error messages without exposing secrets
 security: input-validation-framework.md
 ---
 
-# Run CI/CD Pipeline for lusaka
+# Run CI/CD Pipeline for lusaka (v2.0)
+
+## V2.0 Enhanced Features
+- 🚀 **Progressive Disclosure Integration**: Seamlessly works across all layers
+- 🛡️ **Advanced Safety Mechanisms**: Automatic rollback and validation gates
+- 🔄 **Intelligent Error Recovery**: Self-healing pipeline execution
+- 📊 **Real-time Monitoring**: Live pipeline status and resource tracking
+- 🔐 **Enhanced Security**: Credential protection and compliance validation
 
 ## Input Validation
 
@@ -207,3 +240,34 @@ Common issues for GitHub Actions:
 - Connection tests
 
 Which pipeline would you like to run?
+
+## V2.0 Progressive Disclosure Examples
+
+### Layer 1 (Quick Start)
+```bash
+/ci-run  # Runs default pipeline with automatic configuration
+```
+
+### Layer 2 (Guided Customization)
+```bash
+/ci-run deploy-production --branch main --stage deploy
+/ci-run security-scan --dry-run
+```
+
+### Layer 3 (Professional Assembly)
+```bash
+# Complex multi-stage pipeline with custom orchestration
+/ci-run custom-pipeline \
+  --branch feature/complex \
+  --stage build,test,security,deploy \
+  --parallel-jobs 4 \
+  --timeout 3600 \
+  --approval-required \
+  --rollback-on-failure
+```
+
+## Integration with Other Commands
+- Use `/ci-setup` first to configure CI/CD system
+- Follow with `/deploy` for deployment operations
+- Monitor with `/monitor-alerts` for real-time status
+- Rollback with `/cd-rollback` if needed

@@ -9,7 +9,7 @@ After installation, open Claude Code in your project directory and try:
 /task "add user authentication"      # Execute any development task
 ```
 
-## The 7 Commands
+## The 88 Commands
 
 ### `/help` - Command Guide
 Shows all available commands with descriptions and examples.

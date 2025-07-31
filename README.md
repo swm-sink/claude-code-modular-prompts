@@ -1,6 +1,6 @@
-# Claude Code Essential Commands
+# Claude Code Modular Prompts - Template Library
 
-**7 universal commands that work immediately with any programming language or framework.**
+**Comprehensive collection of 88 Claude Code command templates with 94 reusable components for rapid project customization.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Status: Stable](https://img.shields.io/badge/Status-Stable-green.svg)](https://github.com/swm-sink/claude-code-modular-prompts/releases)
@@ -8,8 +8,8 @@
 ## 🚀 Quick Start (30 seconds)
 
 ```bash
-# Install 7 essential commands
-./setup-minimal.sh /path/to/your/project
+# Install template library
+./setup.sh /path/to/your/project
 
 # Start using immediately (in Claude Code)
 /help                              # See all commands
@@ -17,48 +17,71 @@
 /analyze "why is my app slow?"     # Analyze code or problems
 ```
 
-**That's it. No configuration, no customization, no manual work.**
+**Templates require customization - use guide commands for step-by-step help.**
 
 ## What You Get
 
-**7 Universal Commands (Work Immediately):**
-- **`/help`** - Command guide and help system
-- **`/task`** - Execute any development task 
-- **`/analyze`** - Analyze code, architecture, problems
-- **`/review`** - Code review with suggestions
-- **`/debug`** - Debug issues and errors
-- **`/test`** - Generate tests and run test suites
-- **`/docs`** - Create documentation
+**88 Command Templates:**
+- **Core Commands** (12): Essential development workflows
+- **Quality Commands** (12): Testing, validation, analysis tools
+- **Specialized Commands** (11): Advanced workflows and patterns
+- **Meta Commands** + others (53): Template adaptation, management, and specialized tools
 
-**Works with any programming language or framework** - JavaScript, Python, Java, Go, React, Django, Spring, etc.
+**94 Reusable Components:**
+- **Atomic Components** (21): Simple building blocks
+- **Regular Components** (73): Complex reusable patterns
+
+**Template Library Features:**
+- Manual customization guides with placeholder replacement
+- Anti-pattern documentation (48+ documented pitfalls)
+- Multiple integration methods (git submodule, direct copy, selective)
+- Comprehensive testing and validation frameworks
 
 ## How It Works
 
-1. **Install**: Run `./setup-minimal.sh your-project` (copies 7 commands, 30 seconds)
-2. **Use**: Open Claude Code in your project, try `/task "your goal"`
-3. **Done**: Commands automatically adapt to your tech stack - no configuration needed
+1. **Import Templates**: Choose integration method (git submodule recommended)
+2. **Customize**: Use guide commands like `/adapt-to-project` for customization checklists
+3. **Replace Placeholders**: Manual find/replace of [INSERT_XXX] placeholders in your editor
+4. **Validate**: Use `/validate-adaptation` to verify your customizations
+5. **Maintain**: Use `/sync-from-reference` for updates from the template library
+
+## Installation Methods
+
+### Method 1: Git Submodule (Recommended)
+```bash
+git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-framework
+cd .claude-framework && ./setup.sh
+```
+
+### Method 2: Direct Integration
+```bash
+git clone https://github.com/swm-sink/claude-code-modular-prompts
+cd claude-code-modular-prompts && ./setup.sh ../your-project
+```
+
+### Method 3: Selective Copy
+Choose specific commands/components to copy manually.
 
 ## Usage Examples
 
-**Development Tasks:**
+**Template Customization:**
 ```
-/task "implement JWT authentication"
-/task "optimize database queries" 
-/task "add real-time chat functionality"
-```
-
-**Code Analysis:**
-```
-/analyze "why is my app slow?"
-/analyze src/components/UserDashboard.jsx
-/debug "users can't log in"
+/adapt-to-project           # Get customization checklist
+/replace-placeholders       # See all placeholders to replace
+/validate-adaptation        # Verify your customizations
 ```
 
-**Code Review & Testing:**
+**Command Template Usage:**
 ```
-/review src/auth/login.js
-/test --generate src/utils/validation.js
-/docs --api src/controllers/users.js
+/task "implement authentication"    # Use customized task template
+/test "run integration tests"       # Use customized test template  
+/analyze "performance bottlenecks"  # Use customized analysis template
+```
+
+**Component Assembly:**
+```
+# Build custom commands from atomic components
+# Copy from .claude/components/atomic/ into your slash commands
 ```
 
 ## Installation
@@ -134,9 +157,9 @@ The commands work universally, but you can modify them in your `.claude/commands
 
 **Need more commands?** This repo also contains:
 
-1. **Template Library**: 64+ additional command templates that require manual customization. See `./setup.sh` for details.
+1. **Template Library**: 81+ additional command templates that require manual customization. See `./setup.sh` for details.
 
-2. **Atomic Components**: 10 simple building blocks (5-10 lines each) for creating custom commands:
+2. **Atomic Components**: 21 simple building blocks (5-10 lines each) for creating custom commands:
    - Input validation, output formatting, error handling
    - File operations, search functionality, progress indicators  
    - See `.claude/COMPONENT-ASSEMBLY-GUIDE.md` for usage

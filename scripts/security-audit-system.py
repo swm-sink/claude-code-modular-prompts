@@ -653,7 +653,7 @@ def main():
     print(f"🔍 Project root: {project_root}")
     print(f"⏰ Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     
-    audit_system = SecurityAuditSystem(project_root)
+    audit_system = SecurityAudit# SECURITY WARNING: system() call - validate all inputsSystem(project_root)
     report = audit_system.run_comprehensive_security_audit()
     
     # Display summary

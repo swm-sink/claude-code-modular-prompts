@@ -8,13 +8,13 @@
 
 ## 🎉 Initial Production Release
 
-This is the first stable release of the Claude Code Template Library - a comprehensive collection of 102 battle-tested command templates designed to accelerate Claude Code adoption and prevent common prompt engineering pitfalls.
+This is the first stable release of the Claude Code Template Library - a comprehensive collection of 88 battle-tested command templates designed to accelerate Claude Code adoption and prevent common prompt engineering pitfalls.
 
 ## 📦 What's Included
 
 ### Template Library
-- **102 Command Templates** (64 active, 38 deprecated/archived)
-- **70 Reusable Components** for modular prompt construction
+- **88 Command Templates** (all active)
+- **94 Reusable Components** for modular prompt construction
 - **48+ Anti-Pattern Documentation** to prevent common failures
 - **7 Guide Commands** for manual customization assistance
 
@@ -26,7 +26,7 @@ This is the first stable release of the Claude Code Template Library - a compreh
 - **Examples** - Real-world usage patterns
 
 ### Testing Framework
-- **Structural Validation** - 100% coverage (102/102 commands)
+- **Structural Validation** - 100% coverage (88/88 commands)
 - **Functional Testing** - Template effectiveness validation
 - **Security Testing** - Anti-pattern prevention validation
 - **Installation Testing** - Cross-environment compatibility
@@ -58,16 +58,14 @@ Choose specific commands and components to copy manually.
 
 ### Template Distribution
 ```
-Command Categories:
-├── Core (4): Essential workflow commands
-├── Development (8): Dev workflow automation
-├── Testing (4): Test automation commands
-├── Security (2): Security audit tools
-├── DevOps (4): Deployment and CI/CD
-├── Quality (8): Code analysis and monitoring
-├── Database (4): Database management
-├── Meta (8): Framework customization guides
-└── Deprecated (38): Archived reference templates
+88 Total Command Templates organized across:
+├── Core Commands: Essential workflows
+├── Quality Commands: Testing and validation
+├── Specialized Commands: Advanced patterns
+├── Meta Commands: Template management
+├── Development Commands: Dev automation
+├── Database Commands: Data management
+└── Additional specialized categories
 ```
 
 ## 🛠️ Key Features

@@ -213,7 +213,7 @@ curl -O https://raw.githubusercontent.com/swm-sink/claude-code-modular-prompts/v
 - Improved error handling in setup script
 
 ## 🔧 Improvements  
-- Performance optimizations (25% faster template loading)
+- Performance optimizations (improved template loading speed)
 - Enhanced documentation with video guides
 - Improved placeholder validation
 

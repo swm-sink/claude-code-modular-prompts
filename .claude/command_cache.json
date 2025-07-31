@@ -1,0 +1,498 @@
+{
+  "commands": {
+    ".claude/commands/find-duplicates.md": {
+      "category": "commands",
+      "name": "find-duplicates",
+      "path": ".claude/commands/find-duplicates.md",
+      "size": 1652
+    },
+    ".claude/commands/database/db-backup.md": {
+      "category": "database",
+      "name": "db-backup",
+      "path": ".claude/commands/database/db-backup.md",
+      "size": 3388
+    },
+    ".claude/commands/database/db-seed.md": {
+      "category": "database",
+      "name": "db-seed",
+      "path": ".claude/commands/database/db-seed.md",
+      "size": 4719
+    },
+    ".claude/commands/database/db-migrate.md": {
+      "category": "database",
+      "name": "db-migrate",
+      "path": ".claude/commands/database/db-migrate.md",
+      "size": 3295
+    },
+    ".claude/commands/database/db-restore.md": {
+      "category": "database",
+      "name": "db-restore",
+      "path": ".claude/commands/database/db-restore.md",
+      "size": 4990
+    },
+    ".claude/commands/devops/pipeline.md": {
+      "category": "devops",
+      "name": "pipeline",
+      "path": ".claude/commands/devops/pipeline.md",
+      "size": 3904
+    },
+    ".claude/commands/devops/cd-rollback.md": {
+      "category": "devops",
+      "name": "cd-rollback",
+      "path": ".claude/commands/devops/cd-rollback.md",
+      "size": 2576
+    },
+    ".claude/commands/devops/deploy.md": {
+      "category": "devops",
+      "name": "deploy",
+      "path": ".claude/commands/devops/deploy.md",
+      "size": 5092
+    },
+    ".claude/commands/devops/ci-setup.md": {
+      "category": "devops",
+      "name": "ci-setup",
+      "path": ".claude/commands/devops/ci-setup.md",
+      "size": 4796
+    },
+    ".claude/commands/devops/ci-run.md": {
+      "category": "devops",
+      "name": "ci-run",
+      "path": ".claude/commands/devops/ci-run.md",
+      "size": 4943
+    },
+    ".claude/commands/core/quick-dev.md": {
+      "category": "core",
+      "name": "quick-dev",
+      "path": ".claude/commands/core/quick-dev.md",
+      "size": 2868
+    },
+    ".claude/commands/core/auto.md": {
+      "category": "core",
+      "name": "auto",
+      "path": ".claude/commands/core/auto.md",
+      "size": 1167
+    },
+    ".claude/commands/core/project.md": {
+      "category": "core",
+      "name": "project",
+      "path": ".claude/commands/core/project.md",
+      "size": 21227
+    },
+    ".claude/commands/core/project-task.md": {
+      "category": "core",
+      "name": "project-task",
+      "path": ".claude/commands/core/project-task.md",
+      "size": 3216
+    },
+    ".claude/commands/core/help.md": {
+      "category": "core",
+      "name": "help",
+      "path": ".claude/commands/core/help.md",
+      "size": 1420
+    },
+    ".claude/commands/core/quick-help.md": {
+      "category": "core",
+      "name": "quick-help",
+      "path": ".claude/commands/core/quick-help.md",
+      "size": 2191
+    },
+    ".claude/commands/core/research.md": {
+      "category": "core",
+      "name": "research",
+      "path": ".claude/commands/core/research.md",
+      "size": 1321
+    },
+    ".claude/commands/core/query.md": {
+      "category": "core",
+      "name": "query",
+      "path": ".claude/commands/core/query.md",
+      "size": 2594
+    },
+    ".claude/commands/core/quick-task.md": {
+      "category": "core",
+      "name": "quick-task",
+      "path": ".claude/commands/core/quick-task.md",
+      "size": 2026
+    },
+    ".claude/commands/core/task.md": {
+      "category": "core",
+      "name": "task",
+      "path": ".claude/commands/core/task.md",
+      "size": 1029
+    },
+    ".claude/commands/core/quick-test.md": {
+      "category": "core",
+      "name": "quick-test",
+      "path": ".claude/commands/core/quick-test.md",
+      "size": 4591
+    },
+    ".claude/commands/core/quick-quality.md": {
+      "category": "core",
+      "name": "quick-quality",
+      "path": ".claude/commands/core/quick-quality.md",
+      "size": 3920
+    },
+    ".claude/commands/quality/integration-testing-baseline.md": {
+      "category": "quality",
+      "name": "integration-testing-baseline",
+      "path": ".claude/commands/quality/integration-testing-baseline.md",
+      "size": 6217
+    },
+    ".claude/commands/quality/validate-command.md": {
+      "category": "quality",
+      "name": "validate-command",
+      "path": ".claude/commands/quality/validate-command.md",
+      "size": 12145
+    },
+    ".claude/commands/quality/integration-test-matrices.md": {
+      "category": "quality",
+      "name": "integration-test-matrices",
+      "path": ".claude/commands/quality/integration-test-matrices.md",
+      "size": 12796
+    },
+    ".claude/commands/quality/analyze-system.md": {
+      "category": "quality",
+      "name": "analyze-system",
+      "path": ".claude/commands/quality/analyze-system.md",
+      "size": 9547
+    },
+    ".claude/commands/quality/PERFORMANCE-INTEGRATION-REPORT.md": {
+      "category": "quality",
+      "name": "PERFORMANCE-INTEGRATION-REPORT",
+      "path": ".claude/commands/quality/PERFORMANCE-INTEGRATION-REPORT.md",
+      "size": 9777
+    },
+    ".claude/commands/quality/quality.md": {
+      "category": "quality",
+      "name": "quality",
+      "path": ".claude/commands/quality/quality.md",
+      "size": 4008
+    },
+    ".claude/commands/quality/monitor.md": {
+      "category": "quality",
+      "name": "monitor",
+      "path": ".claude/commands/quality/monitor.md",
+      "size": 9430
+    },
+    ".claude/commands/quality/quality-enforce.md": {
+      "category": "quality",
+      "name": "quality-enforce",
+      "path": ".claude/commands/quality/quality-enforce.md",
+      "size": 3561
+    },
+    ".claude/commands/quality/test.md": {
+      "category": "quality",
+      "name": "test",
+      "path": ".claude/commands/quality/test.md",
+      "size": 10680
+    },
+    ".claude/commands/quality/validate-component.md": {
+      "category": "quality",
+      "name": "validate-component",
+      "path": ".claude/commands/quality/validate-component.md",
+      "size": 2343
+    },
+    ".claude/commands/quality/analyze-code.md": {
+      "category": "quality",
+      "name": "analyze-code",
+      "path": ".claude/commands/quality/analyze-code.md",
+      "size": 3290
+    },
+    ".claude/commands/quality/test-integration.md": {
+      "category": "quality",
+      "name": "test-integration",
+      "path": ".claude/commands/quality/test-integration.md",
+      "size": 6290
+    },
+    ".claude/commands/data-science/notebook-run.md": {
+      "category": "data-science",
+      "name": "notebook-run",
+      "path": ".claude/commands/data-science/notebook-run.md",
+      "size": 6240
+    },
+    ".claude/commands/security/secure-audit.md": {
+      "category": "security",
+      "name": "secure-audit",
+      "path": ".claude/commands/security/secure-audit.md",
+      "size": 3410
+    },
+    ".claude/commands/security/secure-scan.md": {
+      "category": "security",
+      "name": "secure-scan",
+      "path": ".claude/commands/security/secure-scan.md",
+      "size": 2169
+    },
+    ".claude/commands/development/env-setup.md": {
+      "category": "development",
+      "name": "env-setup",
+      "path": ".claude/commands/development/env-setup.md",
+      "size": 5045
+    },
+    ".claude/commands/development/api-design.md": {
+      "category": "development",
+      "name": "api-design",
+      "path": ".claude/commands/development/api-design.md",
+      "size": 1746
+    },
+    ".claude/commands/development/dev.md": {
+      "category": "development",
+      "name": "dev",
+      "path": ".claude/commands/development/dev.md",
+      "size": 4162
+    },
+    ".claude/commands/development/dev-setup.md": {
+      "category": "development",
+      "name": "dev-setup",
+      "path": ".claude/commands/development/dev-setup.md",
+      "size": 2471
+    },
+    ".claude/commands/development/protocol.md": {
+      "category": "development",
+      "name": "protocol",
+      "path": ".claude/commands/development/protocol.md",
+      "size": 2862
+    },
+    ".claude/commands/development/project/global-deploy.md": {
+      "category": "project",
+      "name": "global-deploy",
+      "path": ".claude/commands/development/project/global-deploy.md",
+      "size": 12548
+    },
+    ".claude/commands/meta/smart-adapt-project.md": {
+      "category": "meta",
+      "name": "smart-adapt-project",
+      "path": ".claude/commands/meta/smart-adapt-project.md",
+      "size": 4980
+    },
+    ".claude/commands/meta/sync-from-reference.md": {
+      "category": "meta",
+      "name": "sync-from-reference",
+      "path": ".claude/commands/meta/sync-from-reference.md",
+      "size": 4771
+    },
+    ".claude/commands/meta/adapt-to-project.md": {
+      "category": "meta",
+      "name": "adapt-to-project",
+      "path": ".claude/commands/meta/adapt-to-project.md",
+      "size": 3539
+    },
+    ".claude/commands/meta/replace-placeholders.md": {
+      "category": "meta",
+      "name": "replace-placeholders",
+      "path": ".claude/commands/meta/replace-placeholders.md",
+      "size": 5096
+    },
+    ".claude/commands/meta/import-pattern.md": {
+      "category": "meta",
+      "name": "import-pattern",
+      "path": ".claude/commands/meta/import-pattern.md",
+      "size": 5133
+    },
+    ".claude/commands/meta/generate-command.md": {
+      "category": "meta",
+      "name": "generate-command",
+      "path": ".claude/commands/meta/generate-command.md",
+      "size": 5929
+    },
+    ".claude/commands/meta/welcome.md": {
+      "category": "meta",
+      "name": "welcome",
+      "path": ".claude/commands/meta/welcome.md",
+      "size": 5671
+    },
+    ".claude/commands/meta/validate-adaptation.md": {
+      "category": "meta",
+      "name": "validate-adaptation",
+      "path": ".claude/commands/meta/validate-adaptation.md",
+      "size": 4252
+    },
+    ".claude/commands/meta/memory-manager.md": {
+      "category": "meta",
+      "name": "memory-manager",
+      "path": ".claude/commands/meta/memory-manager.md",
+      "size": 8969
+    },
+    ".claude/commands/meta/undo-adaptation.md": {
+      "category": "meta",
+      "name": "undo-adaptation",
+      "path": ".claude/commands/meta/undo-adaptation.md",
+      "size": 5656
+    },
+    ".claude/commands/meta/spawn-specialist.md": {
+      "category": "meta",
+      "name": "spawn-specialist",
+      "path": ".claude/commands/meta/spawn-specialist.md",
+      "size": 9937
+    },
+    ".claude/commands/meta/adapt-to-project-auto.md": {
+      "category": "meta",
+      "name": "adapt-to-project-auto",
+      "path": ".claude/commands/meta/adapt-to-project-auto.md",
+      "size": 6461
+    },
+    ".claude/commands/meta/share-adaptation.md": {
+      "category": "meta",
+      "name": "share-adaptation",
+      "path": ".claude/commands/meta/share-adaptation.md",
+      "size": 4875
+    },
+    ".claude/commands/meta/validate-automation.md": {
+      "category": "meta",
+      "name": "validate-automation",
+      "path": ".claude/commands/meta/validate-automation.md",
+      "size": 11237
+    },
+    ".claude/commands/specialized/map-reduce.md": {
+      "category": "specialized",
+      "name": "map-reduce",
+      "path": ".claude/commands/specialized/map-reduce.md",
+      "size": 5902
+    },
+    ".claude/commands/specialized/mass-transformation.md": {
+      "category": "specialized",
+      "name": "mass-transformation",
+      "path": ".claude/commands/specialized/mass-transformation.md",
+      "size": 10944
+    },
+    ".claude/commands/specialized/secure-assess.md": {
+      "category": "specialized",
+      "name": "secure-assess",
+      "path": ".claude/commands/specialized/secure-assess.md",
+      "size": 8656
+    },
+    ".claude/commands/specialized/swarm.md": {
+      "category": "specialized",
+      "name": "swarm",
+      "path": ".claude/commands/specialized/swarm.md",
+      "size": 3534
+    },
+    ".claude/commands/specialized/dag-orchestrate.md": {
+      "category": "specialized",
+      "name": "dag-orchestrate",
+      "path": ".claude/commands/specialized/dag-orchestrate.md",
+      "size": 4725
+    },
+    ".claude/commands/specialized/secure-manage.md": {
+      "category": "specialized",
+      "name": "secure-manage",
+      "path": ".claude/commands/specialized/secure-manage.md",
+      "size": 10078
+    },
+    ".claude/commands/specialized/think-deep.md": {
+      "category": "specialized",
+      "name": "think-deep",
+      "path": ".claude/commands/specialized/think-deep.md",
+      "size": 4053
+    },
+    ".claude/commands/specialized/mega-platform-builder.md": {
+      "category": "specialized",
+      "name": "mega-platform-builder",
+      "path": ".claude/commands/specialized/mega-platform-builder.md",
+      "size": 14028
+    },
+    ".claude/commands/specialized/hierarchical.md": {
+      "category": "specialized",
+      "name": "hierarchical",
+      "path": ".claude/commands/specialized/hierarchical.md",
+      "size": 6907
+    },
+    ".claude/commands/specialized/db-admin.md": {
+      "category": "specialized",
+      "name": "db-admin",
+      "path": ".claude/commands/specialized/db-admin.md",
+      "size": 13793
+    },
+    ".claude/commands/specialized/dag-executor.md": {
+      "category": "specialized",
+      "name": "dag-executor",
+      "path": ".claude/commands/specialized/dag-executor.md",
+      "size": 11278
+    },
+    ".claude/commands/testing/test-unit.md": {
+      "category": "testing",
+      "name": "test-unit",
+      "path": ".claude/commands/testing/test-unit.md",
+      "size": 3788
+    },
+    ".claude/commands/testing/dev-test.md": {
+      "category": "testing",
+      "name": "dev-test",
+      "path": ".claude/commands/testing/dev-test.md",
+      "size": 3729
+    },
+    ".claude/commands/testing/test-e2e.md": {
+      "category": "testing",
+      "name": "test-e2e",
+      "path": ".claude/commands/testing/test-e2e.md",
+      "size": 4962
+    },
+    ".claude/commands/testing/mutation.md": {
+      "category": "testing",
+      "name": "mutation",
+      "path": ".claude/commands/testing/mutation.md",
+      "size": 4986
+    },
+    ".claude/commands/testing/test-integration.md": {
+      "category": "testing",
+      "name": "test-integration",
+      "path": ".claude/commands/testing/test-integration.md",
+      "size": 7323
+    },
+    ".claude/commands/web-dev/component-gen.md": {
+      "category": "web-dev",
+      "name": "component-gen",
+      "path": ".claude/commands/web-dev/component-gen.md",
+      "size": 3682
+    },
+    ".claude/commands/examples/component-demo-api-integration.md": {
+      "category": "examples",
+      "name": "component-demo-api-integration",
+      "path": ".claude/commands/examples/component-demo-api-integration.md",
+      "size": 1799
+    },
+    ".claude/commands/examples/component-demo-input-processing.md": {
+      "category": "examples",
+      "name": "component-demo-input-processing",
+      "path": ".claude/commands/examples/component-demo-input-processing.md",
+      "size": 1388
+    },
+    ".claude/commands/examples/component-demo-development-workflow.md": {
+      "category": "examples",
+      "name": "component-demo-development-workflow",
+      "path": ".claude/commands/examples/component-demo-development-workflow.md",
+      "size": 2535
+    },
+    ".claude/commands/examples/component-demo-search-transform.md": {
+      "category": "examples",
+      "name": "component-demo-search-transform",
+      "path": ".claude/commands/examples/component-demo-search-transform.md",
+      "size": 1740
+    },
+    ".claude/commands/examples/component-demo-file-processor.md": {
+      "category": "examples",
+      "name": "component-demo-file-processor",
+      "path": ".claude/commands/examples/component-demo-file-processor.md",
+      "size": 2018
+    },
+    ".claude/commands/examples/component-demo-workflow-orchestration.md": {
+      "category": "examples",
+      "name": "component-demo-workflow-orchestration",
+      "path": ".claude/commands/examples/component-demo-workflow-orchestration.md",
+      "size": 1812
+    },
+    ".claude/commands/monitoring/monitor-setup.md": {
+      "category": "monitoring",
+      "name": "monitor-setup",
+      "path": ".claude/commands/monitoring/monitor-setup.md",
+      "size": 5576
+    },
+    ".claude/commands/monitoring/monitor-alerts.md": {
+      "category": "monitoring",
+      "name": "monitor-alerts",
+      "path": ".claude/commands/monitoring/monitor-alerts.md",
+      "size": 6219
+    }
+  },
+  "last_updated": 1753909205.731636,
+  "discovery_time": 1.604165998287499
+}

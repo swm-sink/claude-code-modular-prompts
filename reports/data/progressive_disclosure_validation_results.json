@@ -1,0 +1,167 @@
+{
+  "timestamp": "2025-07-31",
+  "overall_score": 94.4,
+  "grade": "A",
+  "layer_scores": {
+    "layer1": 100.0,
+    "layer2": 92.0,
+    "layer3": 80.0,
+    "integration": 100.0,
+    "upgrade_paths": 100.0
+  },
+  "total_tests": 21,
+  "passed": 20,
+  "failed": 1,
+  "warnings": 0,
+  "critical_failures": 1,
+  "system_status": "NEEDS WORK",
+  "test_details": [
+    {
+      "layer": "layer1",
+      "test_name": "File Existence",
+      "result": "PASS",
+      "details": "Layer file quick-command.md found",
+      "score": 100.0
+    },
+    {
+      "layer": "layer1",
+      "test_name": "YAML Compliance",
+      "result": "PASS",
+      "details": "All required YAML fields present",
+      "score": 100.0
+    },
+    {
+      "layer": "layer1",
+      "test_name": "Feature Completeness",
+      "result": "PASS",
+      "details": "Found 5/5 expected features",
+      "score": 100.0
+    },
+    {
+      "layer": "layer1",
+      "test_name": "Command Type Coverage",
+      "result": "PASS",
+      "details": "Documents 5/5 command types",
+      "score": 100.0
+    },
+    {
+      "layer": "layer1",
+      "test_name": "Intelligence Documentation",
+      "result": "PASS",
+      "details": "Found 4 intelligence examples",
+      "score": 100.0
+    },
+    {
+      "layer": "layer1",
+      "test_name": "Usage Examples",
+      "result": "PASS",
+      "details": "Found 6 usage examples",
+      "score": 100.0
+    },
+    {
+      "layer": "layer2",
+      "test_name": "File Existence",
+      "result": "PASS",
+      "details": "Layer file build-command.md found",
+      "score": 100.0
+    },
+    {
+      "layer": "layer2",
+      "test_name": "YAML Compliance",
+      "result": "PASS",
+      "details": "All required YAML fields present",
+      "score": 100.0
+    },
+    {
+      "layer": "layer2",
+      "test_name": "Feature Completeness",
+      "result": "PASS",
+      "details": "Found 4/5 expected features",
+      "score": 80.0
+    },
+    {
+      "layer": "layer2",
+      "test_name": "Customization Features",
+      "result": "PASS",
+      "details": "Found 4/5 customization features",
+      "score": 80.0
+    },
+    {
+      "layer": "layer2",
+      "test_name": "Configuration Support",
+      "result": "PASS",
+      "details": "Configuration system documented",
+      "score": 100.0
+    },
+    {
+      "layer": "layer3",
+      "test_name": "File Existence",
+      "result": "PASS",
+      "details": "Layer file assemble-command.md found",
+      "score": 100.0
+    },
+    {
+      "layer": "layer3",
+      "test_name": "YAML Compliance",
+      "result": "PASS",
+      "details": "All required YAML fields present",
+      "score": 100.0
+    },
+    {
+      "layer": "layer3",
+      "test_name": "Feature Completeness",
+      "result": "FAIL",
+      "details": "Only found 2/5 expected features",
+      "score": 40.0
+    },
+    {
+      "layer": "layer3",
+      "test_name": "Component Library Features",
+      "result": "PASS",
+      "details": "Found 3/5 component library features",
+      "score": 60.0
+    },
+    {
+      "layer": "layer3",
+      "test_name": "Assembly Documentation",
+      "result": "PASS",
+      "details": "Assembly patterns documented",
+      "score": 100.0
+    },
+    {
+      "layer": "integration",
+      "test_name": "Layer Upgrade Paths",
+      "result": "PASS",
+      "details": "Found 3 upgrade path references",
+      "score": 100.0
+    },
+    {
+      "layer": "upgrade_paths",
+      "test_name": "Upgrade Syntax - --customize",
+      "result": "PASS",
+      "details": "Found build command customization flag in 3 files",
+      "score": 100.0
+    },
+    {
+      "layer": "upgrade_paths",
+      "test_name": "Upgrade Syntax - --interactive",
+      "result": "PASS",
+      "details": "Found assemble command interactive flag in 4 files",
+      "score": 100.0
+    },
+    {
+      "layer": "upgrade_paths",
+      "test_name": "Upgrade Syntax - /build-command",
+      "result": "PASS",
+      "details": "Found layer 2 command reference in 3 files",
+      "score": 100.0
+    },
+    {
+      "layer": "upgrade_paths",
+      "test_name": "Upgrade Syntax - /assemble-command",
+      "result": "PASS",
+      "details": "Found layer 3 command reference in 3 files",
+      "score": 100.0
+    }
+  ]
+}

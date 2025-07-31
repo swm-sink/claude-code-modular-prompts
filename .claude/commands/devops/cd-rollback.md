@@ -1,17 +1,49 @@
 ---
 name: /cd-rollback
-description: Rollback lusaka deployment on Cloud Server
-usage: /cd-rollback [--version previous-version] [--environment production|staging]
-  [--emergency]
+description: Rollback lusaka deployment on Cloud Server (v2.0)
+version: 2.0
+usage: /cd-rollback [--version previous-version] [--environment production|staging] [--emergency] [--dry-run] [--health-check]
 category: devops
 allowed-tools:
 - Bash
 - Read
 - Write
 - Edit
+- MultiEdit
+- Grep
+dependencies:
+- /deploy
+- /ci-run
+- /monitor-alerts
+- /pipeline
+validation:
+  pre-execution: Verify rollback target exists and is healthy
+  during-execution: Monitor rollback progress and system health
+  post-execution: Validate restored version functionality
+progressive-disclosure:
+  layer-integration: Layer 1 provides instant rollback, Layer 2 offers version selection, Layer 3 enables complex recovery strategies
+  quick-start: /cd-rollback (immediate rollback to last known good)
+  advanced-usage: Multi-stage rollback with traffic management and data migration
+safety-mechanisms:
+  - Automatic backup before rollback
+  - Health check validation of target version
+  - Traffic gradual shift during rollback
+  - Data integrity verification
+error-recovery:
+  rollback-failure: Attempt alternate recovery strategies
+  data-incompatibility: Provide migration path guidance
+  service-unavailable: Emergency mode with bypass options
+  partial-failure: Component-level recovery options
 ---
 
-# Deployment Rollback for lusaka
+# Deployment Rollback for lusaka (v2.0)
+
+## V2.0 Enhanced Features
+- ⚡ **Instant Recovery**: One-click rollback to last known good version
+- 🎯 **Smart Version Selection**: Automatic health validation of target versions
+- 🔄 **Zero-Downtime Rollback**: Gradual traffic shifting during recovery
+- 📊 **Real-time Monitoring**: Live rollback progress and health metrics
+- 🛡️ **Data Protection**: Automatic backups and integrity verification
 
 I'll help you safely rollback **lusaka** deployments on **Cloud Server** with protection for your **developers** users.
 
@@ -141,3 +173,37 @@ Your workflow requires:
 - Team sign-off
 
 What type of rollback do you need to perform?
+
+## V2.0 Progressive Disclosure Examples
+
+### Layer 1 (Instant Rollback)
+```bash
+/cd-rollback  # Immediate rollback to last stable version
+```
+
+### Layer 2 (Version Selection)
+```bash
+/cd-rollback --version v2.3.1 --environment production
+/cd-rollback --emergency --skip-checks
+/cd-rollback --dry-run --health-check
+```
+
+### Layer 3 (Advanced Recovery)
+```bash
+# Complex rollback with traffic management
+/cd-rollback --version v2.2.0 \
+  --environment production \
+  --strategy canary \
+  --traffic-shift "10,25,50,100" \
+  --health-check-interval 30s \
+  --data-migration backward \
+  --backup-first \
+  --notify "slack,pagerduty" \
+  --approval-required
+```
+
+## Integration with Other Commands
+- Deploy with `/deploy` for forward deployments
+- Monitor with `/monitor-alerts` during rollback
+- Run pipelines with `/ci-run` for validation
+- Orchestrate with `/pipeline` for complex scenarios

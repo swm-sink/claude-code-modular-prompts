@@ -167,7 +167,7 @@ describe('LoginForm', () => {
     await waitFor(() => {
       expect(mockLogin).toHaveBeenCalledWith({
         email: 'test@example.com',
-        password: 'password123'
+        password: '[EXAMPLE_PASSWORD]'
       });
     });
   });

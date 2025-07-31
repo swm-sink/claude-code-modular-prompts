@@ -1,16 +1,53 @@
 ---
 name: /deploy
-description: Deploy lusaka to Cloud Server using GitHub Actions
-usage: /deploy [environment] [--strategy blue-green|canary|rolling]
+description: Deploy lusaka to Cloud Server using GitHub Actions (v2.0)
+version: 2.0
+usage: /deploy [environment] [--strategy blue-green|canary|rolling] [--health-check] [--rollback-on-failure]
 category: devops
 allowed-tools:
 - Bash
 - Read
 - Write
 - Edit
+- MultiEdit
+- WebSearch
+dependencies:
+- /ci-setup
+- /ci-run
+- /cd-rollback
+- /monitor-alerts
+validation:
+  pre-execution: Validate environment access and deployment readiness
+  during-execution: Monitor deployment progress and health checks
+  post-execution: Verify application health and rollback capability
+progressive-disclosure:
+  layer-integration: Layer 1 offers one-click deploy, Layer 2 provides strategy selection, Layer 3 enables full orchestration control
+  quick-start: /deploy (deploys to default environment with safe defaults)
+  advanced-usage: Multi-stage deployments with custom health checks and rollback policies
+safety-mechanisms:
+  - Pre-deployment validation suite
+  - Automated health checks during deployment
+  - Instant rollback on failure detection
+  - Zero-downtime deployment strategies
+error-recovery:
+  deployment-failure: Automatic rollback to previous version
+  health-check-failure: Pause deployment and alert team
+  resource-issues: Scale resources and retry
+  network-issues: Retry with exponential backoff
+security: 
+  - input-validation-framework.md
+  - command-security-wrapper.md
+  - credential-protection.md
 ---
 
-# Deploy lusaka
+# Deploy lusaka (v2.0)
+
+## V2.0 Enhanced Features
+- 🚀 **One-Click Deployment**: Smart defaults for instant deployment
+- 🛡️ **Zero-Downtime Strategies**: Blue-green, canary, and rolling updates
+- 🔄 **Automatic Rollback**: Instant recovery from deployment failures
+- 📊 **Real-time Health Monitoring**: Continuous health checks during deployment
+- 🔐 **Enhanced Security**: Multi-layer credential and secret protection
 
 <!-- SECURITY: Include command security wrapper for injection prevention -->
 <include>components/security/command-security-wrapper.md</include>
@@ -140,3 +177,38 @@ Post-deployment for lusaka:
 **ALLOWED COMMANDS**: docker, kubectl, helm, systemctl, aws, gcloud, az, terraform
 
 Which environment would you like to deploy to? (Environment will be validated for security compliance)
+
+## V2.0 Progressive Disclosure Examples
+
+### Layer 1 (One-Click Deploy)
+```bash
+/deploy  # Auto-detects environment, uses safe rolling deployment
+```
+
+### Layer 2 (Strategy Selection)
+```bash
+/deploy production --strategy blue-green
+/deploy staging --strategy canary --percentage 20
+/deploy development --strategy rolling --health-check
+```
+
+### Layer 3 (Full Orchestration Control)
+```bash
+# Complex multi-region deployment with custom policies
+/deploy production \
+  --strategy canary \
+  --percentage 10 \
+  --increment 20 \
+  --health-check-interval 30s \
+  --success-threshold 95% \
+  --rollback-on-failure \
+  --regions "us-east-1,eu-west-1,ap-south-1" \
+  --approval-required \
+  --notification-channels "slack,pagerduty"
+```
+
+## Integration with Other Commands
+- Configure with `/ci-setup` before first deployment
+- Run pipelines with `/ci-run` for build and test
+- Monitor with `/monitor-alerts` during deployment
+- Rollback with `/cd-rollback` if issues arise

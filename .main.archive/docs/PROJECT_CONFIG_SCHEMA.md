@@ -97,11 +97,11 @@ Allows for fine-grained control over the behavior of specific commands.
 ```xml
 <command_settings>
   <command name="/protocol">
-    <setting key="epiccc.check.run_security_scan" value="true" />
-    <setting key="epiccc.check.request_peer_review" value="false" />
+    <setting key="[EXAMPLE_KEY_SANITIZED]""true" />
+    <setting key="[EXAMPLE_KEY_SANITIZED]""false" />
   </command>
   <command name="/query">
-    <setting key="max_results" value="100" />
+    <setting key="[EXAMPLE_KEY_SANITIZED]""100" />
   </command>
 </command_settings>
 ```

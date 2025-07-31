@@ -1,17 +1,50 @@
 ---
 name: /ci-setup
-description: Configure GitHub Actions pipelines for lusaka
-usage: /ci-setup [--template basic|standard|advanced] [--branch main|develop|feature/*]
+description: Configure GitHub Actions pipelines for lusaka (v2.0)
+version: 2.0
+usage: /ci-setup [--template basic|standard|advanced] [--branch main|develop|feature/*] [--monitoring] [--security enhanced]
 category: devops
 allowed-tools:
 - Write
 - Read
 - Edit
 - Bash
+- MultiEdit
+- Grep
+dependencies:
+- /ci-run
+- /deploy
+- /pipeline
+- /monitor-setup
+validation:
+  pre-execution: Validate CI platform credentials and repository access
+  during-execution: Verify configuration syntax and dependencies
+  post-execution: Test pipeline execution and validate workflows
+progressive-disclosure:
+  layer-integration: Layer 1 auto-detects project needs, Layer 2 offers template selection, Layer 3 enables custom pipeline creation
+  quick-start: /ci-setup (auto-configures based on project detection)
+  advanced-usage: Custom pipeline templates with matrix builds and parallel execution
+safety-mechanisms:
+  - Configuration backup before changes
+  - Syntax validation for all generated files
+  - Test pipeline runs before activation
+  - Rollback capability for failed setups
+error-recovery:
+  invalid-config: Provides clear error messages and example fixes
+  missing-permissions: Guides through permission setup
+  platform-issues: Fallback to alternative CI platforms
+  credential-problems: Secure credential setup guidance
 security: input-validation-framework.md
 ---
 
-# CI/CD Setup for lusaka
+# CI/CD Setup for lusaka (v2.0)
+
+## V2.0 Enhanced Features
+- 🎯 **Auto-Detection**: Automatically identifies project type and optimal CI configuration
+- 🔄 **Progressive Templates**: From basic to advanced with smooth transitions
+- 🛡️ **Configuration Safety**: Backup, validate, test before activation
+- 📊 **Integrated Monitoring**: Built-in pipeline analytics and alerts
+- 🔐 **Enhanced Security**: Credential management and compliance templates
 
 ## Input Validation
 
@@ -189,3 +222,34 @@ Generated files for your project:
 - Documentation
 
 Which template would you like to use for lusaka?
+
+## V2.0 Progressive Disclosure Examples
+
+### Layer 1 (Auto-Configuration)
+```bash
+/ci-setup  # Detects Python project, configures standard pipeline automatically
+```
+
+### Layer 2 (Template Selection)
+```bash
+/ci-setup --template standard --branch main
+/ci-setup --template advanced --monitoring --security enhanced
+```
+
+### Layer 3 (Custom Pipeline Creation)
+```bash
+# Full custom pipeline with matrix builds
+/ci-setup --template custom \
+  --matrix "python:[3.8,3.9,3.10,3.11]" \
+  --parallel-jobs 4 \
+  --cache aggressive \
+  --artifacts "dist/,coverage/" \
+  --deploy-environments "dev,staging,prod" \
+  --approval-gates "staging,prod"
+```
+
+## Integration with Other Commands
+- Follow with `/ci-run` to execute pipelines
+- Use `/monitor-setup` for pipeline monitoring
+- Configure deployments with `/deploy`
+- Manage complex workflows with `/pipeline`

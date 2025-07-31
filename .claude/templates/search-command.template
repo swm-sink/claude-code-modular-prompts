@@ -1,0 +1,76 @@
+# Search Command Template
+# Used by /quick-command for search-type requests
+
+## Template Variables
+# {{COMMAND_NAME}} - Generated command name
+# {{DESCRIPTION}} - User's description
+# {{SEARCH_PATTERN}} - Extracted search pattern
+# {{FILE_PATTERN}} - Detected file pattern (*.js, *.py, etc.)
+# {{SEARCH_TOOLS}} - Appropriate tools (Grep, Glob, Read)
+
+---
+name: /{{COMMAND_NAME}}
+description: {{DESCRIPTION}}
+usage: '[search-term] [--path directory] [--type extension]'
+allowed-tools:
+{{SEARCH_TOOLS}}
+category: generated
+---
+
+# {{COMMAND_TITLE}}
+
+I'll search for "{{SEARCH_PATTERN}}" in your project files.
+
+## Input Validation
+First, I'll validate the search parameters:
+- Check if search term is provided and non-empty
+- Validate path exists if specified
+- Ensure file type filter is valid if provided
+
+## Search Process
+I'll search systematically:
+- Use Grep to find pattern matches in files
+- Apply file type filters ({{FILE_PATTERN}})
+- Search in specified path or current directory
+- Handle binary files and encoding issues
+
+## Results Processing
+For each match found:
+- Show file path and line number
+- Display matching line with context
+- Highlight the search pattern
+- Group results by file for clarity
+
+## Error Handling
+If issues occur:
+- File permission errors → Skip file and continue
+- Binary file detection → Skip with notification
+- No matches found → Clear "no results" message
+- Invalid search pattern → Suggest corrections
+
+## Output Formatting
+Present results as:
+```
+# Search Results for "{{SEARCH_PATTERN}}"
+
+## Found in X files:
+
+### filepath1.ext
+- Line 15: matching content here
+- Line 23: another match here
+
+### filepath2.ext  
+- Line 8: match content here
+
+## Summary
+- Total matches: X
+- Files searched: Y
+- Search completed successfully
+```
+
+## Examples
+```
+{{COMMAND_NAME}} "TODO"
+{{COMMAND_NAME}} "function.*error" --type js
+{{COMMAND_NAME}} "import" --path src/
+```

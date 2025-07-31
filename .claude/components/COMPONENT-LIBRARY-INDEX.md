@@ -1,7 +1,7 @@
 # Component Library Index
 
 ## Overview
-This document provides a complete index of the 72 reusable components organized by functional domain.
+This document provides a complete index of the 94 reusable components organized by functional domain.
 
 ## Component Organization
 
@@ -14,6 +14,30 @@ This document provides a complete index of the 72 reusable components organized 
 **Purpose**: Analyze codebase structure and relationships
 - `codebase-discovery.md` - Discover and map codebase structure
 - `dependency-mapping.md` - Analyze and visualize dependencies
+
+### Atomic (21 components)
+**Purpose**: Simple, single-purpose building blocks for command assembly
+- `api-caller.md` - Make API calls with error handling
+- `completion-tracker.md` - Track workflow completion status
+- `content-sanitizer.md` - Sanitize input content for security
+- `data-transformer.md` - Transform data between different formats
+- `dependency-resolver.md` - Resolve component dependencies
+- `error-handler.md` - Handle errors gracefully
+- `file-reader.md` - Read file contents with error handling
+- `file-writer.md` - Write/update files safely
+- `format-converter.md` - Convert between file formats
+- `git-operations.md` - Handle git operations
+- `input-validation.md` - Validate user input
+- `output-formatter.md` - Format response output
+- `parameter-parser.md` - Parse command arguments
+- `progress-indicator.md` - Show task progress
+- `response-validator.md` - Validate AI responses
+- `search-files.md` - Search for patterns in files
+- `state-manager.md` - Manage workflow state
+- `task-summary.md` - Summarize completed work
+- `test-runner.md` - Execute test suites
+- `user-confirmation.md` - Confirm before actions
+- `workflow-coordinator.md` - Coordinate multi-step workflows
 
 ### Constitutional (5 components)
 **Purpose**: Ensure AI safety and alignment principles
@@ -149,6 +173,7 @@ Components used within specific functional domains:
 
 ### Cross-Cutting Components
 Components used across multiple domains:
+- **Atomic**: All 21 atomic components (building blocks for all workflows)
 - **Security**: All 10 security components
 - **Context**: All 7 context components
 - **Orchestration**: All 7 orchestration components
@@ -165,6 +190,9 @@ Components that provide core system structure:
 
 ### High-Usage Components
 Components frequently composed together:
+- `input-validation.md` + `parameter-parser.md` + `error-handler.md`
+- `file-reader.md` + `data-transformer.md` + `output-formatter.md`
+- `workflow-coordinator.md` + `progress-indicator.md` + `completion-tracker.md`
 - `context-optimization.md` + `hierarchical-loading.md`
 - `input-validation-framework.md` + `path-validation.md`
 - `task-planning.md` + `task-execution.md`
@@ -172,6 +200,9 @@ Components frequently composed together:
 
 ### Framework Stacks
 Common component combinations:
+- **Atomic Pipeline Stack**: `input-validation.md` + `file-reader.md` + `data-transformer.md` + `output-formatter.md`
+- **Atomic Workflow Stack**: `parameter-parser.md` + `workflow-coordinator.md` + `progress-indicator.md` + `task-summary.md`
+- **Atomic Error Stack**: `error-handler.md` + `user-confirmation.md` + `response-validator.md`
 - **Security Stack**: `input-validation-framework.md` + `path-validation.md` + `prompt-injection-prevention.md`
 - **Context Stack**: `context-optimization.md` + `hierarchical-loading.md` + `session-management.md`
 - **Orchestration Stack**: `task-planning.md` + `dag-orchestrator.md` + `progress-tracking.md`
@@ -179,29 +210,30 @@ Common component combinations:
 ## Component Statistics
 
 ### By Category
-- **Security**: 10 components (13.9%)
-- **Optimization**: 8 components (11.1%)
-- **Orchestration**: 7 components (9.7%)
-- **Context**: 7 components (9.7%)
-- **Constitutional**: 5 components (6.9%)
-- **Reasoning**: 4 components (5.6%)
-- **Workflow**: 4 components (5.6%)
-- **Testing**: 3 components (4.2%)
-- **Quality**: 3 components (4.2%)
-- **Actions**: 2 components (2.8%)
-- **Analysis**: 2 components (2.8%)
-- **Git**: 2 components (2.8%)
-- **Intelligence**: 2 components (2.8%)
-- **Interaction**: 2 components (2.8%)
-- **Learning**: 2 components (2.8%)
-- **Performance**: 2 components (2.8%)
-- **Reliability**: 2 components (2.8%)
-- **Meta**: 1 component (1.4%)
-- **Planning**: 1 component (1.4%)
-- **Reporting**: 1 component (1.4%)
-- **Validation**: 1 component (1.4%)
+- **Atomic**: 21 components (22.3%) - **NEW CATEGORY**
+- **Security**: 10 components (10.6%)
+- **Optimization**: 8 components (8.5%)
+- **Orchestration**: 7 components (7.4%)
+- **Context**: 7 components (7.4%)
+- **Constitutional**: 5 components (5.3%)
+- **Reasoning**: 4 components (4.3%)
+- **Workflow**: 4 components (4.3%)
+- **Testing**: 3 components (3.2%)
+- **Quality**: 3 components (3.2%)
+- **Actions**: 2 components (2.1%)
+- **Analysis**: 2 components (2.1%)
+- **Git**: 2 components (2.1%)
+- **Intelligence**: 2 components (2.1%)
+- **Interaction**: 2 components (2.1%)
+- **Learning**: 2 components (2.1%)
+- **Performance**: 2 components (2.1%)
+- **Reliability**: 2 components (2.1%)
+- **Meta**: 1 component (1.1%)
+- **Planning**: 1 component (1.1%)
+- **Reporting**: 1 component (1.1%)
+- **Validation**: 1 component (1.1%)
 
-### Total: 72 components
+### Total: 94 components
 
 ## Component Quality Standards
 
@@ -239,6 +271,6 @@ Common component combinations:
 4. Archive after transition period
 
 ---
-*Component Library Version: 1.0*
-*Total Components: 72*
-*Last Updated: 2025-07-29*
+*Component Library Version: 1.1*
+*Total Components: 94 (72 existing + 22 atomic)*
+*Last Updated: 2025-07-31*

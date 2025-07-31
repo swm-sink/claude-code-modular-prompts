@@ -1,0 +1,92 @@
+{
+  "timestamp": "2025-07-31",
+  "overall_score": 71.0,
+  "grade": "C",
+  "category_scores": {
+    "library": 75.0,
+    "atomic": 100.0,
+    "quality": 35.0,
+    "assembly": 70.0,
+    "compatibility": 75.0
+  },
+  "total_tests": 10,
+  "passed": 6,
+  "failed": 2,
+  "warnings": 2,
+  "critical_failures": 2,
+  "system_status": "NEEDS WORK",
+  "expected_components": 94,
+  "expected_atomic": 21,
+  "test_details": [
+    {
+      "category": "library",
+      "test_name": "Total Component Count",
+      "result": "PASS",
+      "details": "Exactly 94 components found",
+      "score": 100.0
+    },
+    {
+      "category": "library",
+      "test_name": "Component Categories",
+      "result": "WARNING",
+      "details": "Only found 3/6 expected categories",
+      "score": 50.0
+    },
+    {
+      "category": "atomic",
+      "test_name": "Atomic Component Count",
+      "result": "PASS",
+      "details": "Found 21 atomic components",
+      "score": 100.0
+    },
+    {
+      "category": "atomic",
+      "test_name": "Key Atomic Components",
+      "result": "PASS",
+      "details": "Found 10/10 key atomic components",
+      "score": 100.0
+    },
+    {
+      "category": "atomic",
+      "test_name": "Atomic Component Structure",
+      "result": "PASS",
+      "details": "Atomic components properly structured (5/5 tested)",
+      "score": 100.0
+    },
+    {
+      "category": "quality",
+      "test_name": "Component Content Quality",
+      "result": "FAIL",
+      "details": "Average component quality: 35.0% (needs improvement)",
+      "score": 35.0
+    },
+    {
+      "category": "assembly",
+      "test_name": "Component Library References",
+      "result": "FAIL",
+      "details": "Assemble command only references 2/5 component features",
+      "score": 40.0
+    },
+    {
+      "category": "assembly",
+      "test_name": "Assembly Examples",
+      "result": "PASS",
+      "details": "Assembly examples or patterns documented",
+      "score": 100.0
+    },
+    {
+      "category": "compatibility",
+      "test_name": "Compatibility Matrix Documentation",
+      "result": "WARNING",
+      "details": "No dedicated compatibility matrix documentation found",
+      "score": 50.0
+    },
+    {
+      "category": "compatibility",
+      "test_name": "Assembly Pattern Documentation",
+      "result": "PASS",
+      "details": "Found assembly references in 32 components",
+      "score": 100
+    }
+  ]
+}

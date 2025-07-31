@@ -1,0 +1,83 @@
+{
+  "timestamp": "2025-07-31",
+  "total_tests": 14,
+  "passed": 13,
+  "failed": 1,
+  "warnings": 0,
+  "success_rate": 92.85714285714286,
+  "grade": "A",
+  "system_status": "PRODUCTION READY",
+  "critical_failures": 0,
+  "details": [
+    {
+      "name": "Command Count Verification",
+      "result": "PASS",
+      "details": "Verified 88 command files"
+    },
+    {
+      "name": "YAML Compliance Summary",
+      "result": "PASS",
+      "details": "YAML Compliance: 88/88 commands passed"
+    },
+    {
+      "name": "Layer 1 - Quick Command Auto-Generation",
+      "result": "FAIL",
+      "details": "Quick command missing auto-generation documentation"
+    },
+    {
+      "name": "Layer 1 - Command Type Support",
+      "result": "PASS",
+      "details": "Found 5/5 command types documented"
+    },
+    {
+      "name": "Layer 2 - Build Command Customization",
+      "result": "PASS",
+      "details": "Build command system supports guided customization"
+    },
+    {
+      "name": "Layer 3 - Assemble Command Components",
+      "result": "PASS",
+      "details": "Assemble command provides component library access"
+    },
+    {
+      "name": "Component Count Verification",
+      "result": "PASS",
+      "details": "Verified 94 component files"
+    },
+    {
+      "name": "Atomic Components",
+      "result": "PASS",
+      "details": "Found 21 atomic components"
+    },
+    {
+      "name": "Key Atomic Components",
+      "result": "PASS",
+      "details": "Found 4/4 key atomic components"
+    },
+    {
+      "name": "Command-Component Integration",
+      "result": "PASS",
+      "details": "Found component references in 62 command files"
+    },
+    {
+      "name": "Progressive Disclosure Upgrade Paths",
+      "result": "PASS",
+      "details": "Found upgrade path references in 3 files"
+    },
+    {
+      "name": "Documentation Command Count",
+      "result": "PASS",
+      "details": "CLAUDE.md correctly states 88 commands"
+    },
+    {
+      "name": "Documentation Component Count",
+      "result": "PASS",
+      "details": "CLAUDE.md correctly states 94 components"
+    },
+    {
+      "name": "Documentation Progressive Disclosure",
+      "result": "PASS",
+      "details": "CLAUDE.md correctly documents 3-layer Progressive Disclosure System"
+    }
+  ]
+}

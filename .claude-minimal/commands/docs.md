@@ -114,14 +114,7 @@ const result = await validateToken(userToken);
 if (result.valid) {
   console.log('User:', result.user);
 } else {
-  console.log('Invalid token:', result.error);
-}
-```
-
-**With Options:**
-```javascript
-const result = await validateToken(token, {
-  issuer: 'myapp.com',
+  console.log('Invalid token: '[EXAMPLE_TOKEN]'myapp.com',
   audience: 'api.myapp.com'
 });
 ```

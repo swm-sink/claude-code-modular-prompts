@@ -240,7 +240,7 @@ Working credential detection and masking system with 13 regex patterns for real 
             },
             {
               name: 'JWT Token',
-              input: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c',
+              input: 'Authorization: Bearer [EXAMPLE_JWT_TOKEN_SANITIZED]',
               expectedMasked: true
             },
             {

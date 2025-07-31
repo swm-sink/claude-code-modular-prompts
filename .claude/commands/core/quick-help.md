@@ -1,76 +1,130 @@
 ---
-name: /quick-help
-description: Quick command guide that works immediately - no customization needed
-usage: /quick-help [command-name]
+command: quick-help
+description: Streamlined command guide for immediate productivity - zero setup required with v2.0 Progressive Disclosure System
 category: core
+parameters: 
+  - name: COMMAND_NAME
+    type: string
+    required: false
+    description: Specific command name for detailed quick help (optional)
+usage_examples:
+  - "/quick-help - Get essential commands overview"
+  - "/quick-help task - Quick help for task command"
+  - "/quick-help /quick-command - Learn about auto-generation layer"
+prerequisites: 
+  - "Claude Code environment active"
+output_format: structured
+tags: [quick-start, help, essential-commands, progressive-disclosure, v2-enhanced]
+version: "2.0"
+author: "lusaka-template-library"
+last_updated: "2025-07-31"
 allowed-tools:
 - Read
 - Grep
 ---
 
-# 🚀 Quick Command Guide
+# 🚀 Quick Command Guide v2.0
 
-**Ready-to-use commands - no setup required!**
+<context type="project">
+Streamlined help system for lusaka template library featuring 88 commands with v2.0 Progressive Disclosure System. Provides immediate productivity with zero setup through 3-layer complexity management: auto-generation, guided customization, and component assembly.
+</context>
 
-## 🎯 5 Commands That Work Right Now
+<instructions>
+Provide quick start guidance for essential commands and Progressive Disclosure System navigation. Process $COMMAND_NAME for specific command help, or default to essential commands overview with immediate productivity focus.
+</instructions>
 
-### 1. `/adapt-to-project` 
-**Automatically customize all templates for your project**
-- Detects your tech stack
-- Replaces all placeholders
-- 2-5 minute interactive setup
+## Usage Examples
 
-### 2. `/task` 
-**Break down and execute any development task**
-- Handles complex multi-step work
-- Works with any programming language
-- Example: `/task "add user authentication"`
+<examples>
+<example>
+<input>/quick-help</input>
+<expected_output>Essential commands overview with Progressive Disclosure System layers and immediate next steps</expected_output>
+</example>
+<example>
+<input>/quick-help task</input>
+<expected_output>Quick help for task command with v2.0 features and usage patterns</expected_output>
+</example>
+<example>
+<input>/quick-help /quick-command</input>
+<expected_output>Progressive Disclosure Layer 1 explanation with auto-generation capabilities</expected_output>
+</example>
+</examples>
 
-### 3. `/dev`
-**General development assistance** 
-- Code review and suggestions
-- Architecture guidance
-- Debugging help
+## Quick Start Workflow
 
-### 4. `/quality` 
-**Code quality analysis and improvement**
-- Code review
-- Best practices check
-- Performance suggestions
+<workflow type="parallel">
+<task priority="high">
+**Progressive Disclosure Navigation**: Choose your complexity level
+- **New Users**: Layer 1 - `/quick-command` for 30-second auto-generation
+- **Intermediate**: Layer 2 - `/build-command` for 5-minute guided customization
+- **Advanced**: Layer 3 - `/assemble-command` for professional 30-minute assembly
+</task>
 
-### 5. `/test`
-**Testing guidance and automation**
-- Generate test cases
-- Test strategy advice
-- Framework-agnostic testing help
+<task priority="high">
+**Essential Commands**: Core functionality available immediately
+- `/help` - Comprehensive guidance system with v2.0 features
+- `/task` - Enhanced development task execution with XML workflow
+- `/project` - Complete project management with 7 operational modes
+- `/query` - Intelligent codebase analysis with pattern recognition
+</task>
 
-## 🔧 Getting Customized Commands
+<task priority="medium">
+**Command Discovery**: Navigate the full command library
+- Use `/help --all` for complete 88-command overview
+- Explore categories: Core (15), Quality (12), Meta (17), Specialized (11)
+- Access Progressive Disclosure layers for appropriate complexity level
+</task>
+</workflow>
 
-Run `/adapt-to-project` to unlock 60+ additional commands customized for your specific project and tech stack.
+## 🎯 Progressive Disclosure System (v2.0)
 
-**Before customization**: 5 generic commands
-**After customization**: 64 project-specific commands
+### **Layer 1: Auto-Generation** (80% of users)
+- **`/quick-command`** - 30-second command creation, zero learning curve
+- **Perfect for**: Quick tasks, immediate results, newcomers
+- **Success rate**: 30-second productivity
 
-## 💡 Usage Tips
+### **Layer 2: Guided Customization** (15% of users)  
+- **`/build-command`** - 5-minute guided setup with smart options
+- **Perfect for**: Specific needs, controlled complexity, targeted solutions
+- **Success rate**: 5-minute customized results
 
-- **New to the project?** Start with `/adapt-to-project`
-- **Need help with anything?** Try `/task "your specific need"`  
-- **Want project-specific commands?** Customize first with `/adapt-to-project`
-- **Debugging issues?** Use `/dev` for general assistance
+### **Layer 3: Component Assembly** (5% of users)
+- **`/assemble-command`** - Professional assembly with 94 components
+- **Perfect for**: Complex workflows, enterprise needs, maximum control
+- **Success rate**: 15-30 minute professional solutions
 
-## 📚 Command Categories (after customization)
+## 🚀 Essential Commands (Work Immediately)
 
-- **Core** (7): Essential workflow commands
-- **Development** (8): Coding and architecture
-- **Testing** (5): All testing approaches  
-- **Quality** (9): Code quality and analysis
-- **DevOps** (5): Deployment and CI/CD
-- **Security** (2): Security scanning and audits
-- **Database** (4): Database operations
-- **Meta** (8): Template management
-- **Specialized** (12): Advanced workflows
-- **Web Dev** (1): Frontend-specific
-- **Data Science** (1): Analytics and ML
-- **Monitoring** (2): System monitoring
+### **Most Popular:**
+- **`/help`** - Comprehensive guidance with v2.0 feature showcase
+- **`/task`** - Enhanced task execution with XML workflow structure
+- **`/welcome`** - Interactive onboarding with Progressive Disclosure navigation
 
-Ready to get started? Run `/adapt-to-project` for full customization!
+### **Quick Development:**
+- **`/quick-dev`** - Instant development assistance (already v2.0 enhanced)
+- **`/query`** - Intelligent codebase analysis with architectural insights
+- **`/project`** - Complete project management with 7 operational modes
+
+### **Quality & Testing:**
+- **`/quick-test`** - Streamlined testing guidance
+- **`/quick-quality`** - Fast quality assessment
+
+## 📊 Command Library Overview (88 Total)
+
+**By Category:**
+- **Core (15)**: Essential workflow and development commands
+- **Quality (12)**: Testing, validation, and analysis tools
+- **Meta (17)**: System management and adaptation commands
+- **Specialized (11)**: Advanced orchestration and complex workflows
+- **DevOps (5)**: Deployment, CI/CD, and infrastructure
+- **Testing (5)**: Comprehensive testing framework commands
+- **Database (4)**: Data management and migration tools
+- **Development (6)**: Environment setup and API design
+- **Others (13)**: Security, monitoring, examples, and utilities
+
+<automation trigger="completion">
+- Provide clear next steps based on user experience level
+- Suggest appropriate Progressive Disclosure layer for user needs
+- Offer related commands and workflow recommendations
+- Track usage patterns for system optimization
+</automation>

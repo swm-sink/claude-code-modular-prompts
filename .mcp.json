@@ -1,0 +1,62 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka"],
+      "env": {
+        "NODE_OPTIONS": "--max-old-space-size=4096"
+      }
+    },
+    "git": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka"],
+      "env": {}
+    },
+    "template-validator": {
+      "command": "python",
+      "args": ["/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/scripts/mcp_template_validator.py"],
+      "env": {
+        "PYTHONPATH": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka"
+      }
+    }
+  },
+  "tools": {
+    "filesystem": {
+      "read_file": "Enable reading template files and configurations",
+      "write_file": "Enable creating new templates with validation", 
+      "list_directory": "Browse template library structure"
+    },
+    "git": {
+      "git_log": "Track template evolution and changes",
+      "git_diff": "Compare template versions",
+      "git_status": "Check template library status"
+    },
+    "template-validator": {
+      "validate_command": "Validate slash command metadata and structure",
+      "check_compatibility": "Verify Claude Code compatibility",
+      "suggest_improvements": "Recommend template enhancements"
+    }
+  },
+  "security": {
+    "allowed_paths": [
+      "/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/",
+      "/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/docs/",
+      "/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/scripts/",
+      "/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/tests/"
+    ],
+    "blocked_operations": [
+      "system_commands",
+      "network_access",
+      "process_spawn"
+    ],
+    "max_file_size": "10MB",
+    "timeout": 30000
+  },
+  "integration": {
+    "claude_code_version": ">=1.0.0",
+    "template_library_version": "2.0",
+    "compatibility_mode": "enhanced",
+    "auto_discovery": true,
+    "performance_monitoring": true
+  }
+}

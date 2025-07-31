@@ -1,0 +1,141 @@
+# Validate Command Template
+# Used by /quick-command for validate-type requests
+
+## Template Variables  
+# {{COMMAND_NAME}} - Generated command name
+# {{DESCRIPTION}} - User's description
+# {{VALIDATION_TYPE}} - Type of validation  
+# {{TARGET_PATTERN}} - Files/data to validate
+# {{VALIDATION_TOOLS}} - Required tools
+
+---
+name: /{{COMMAND_NAME}}
+description: {{DESCRIPTION}}
+usage: '[--path directory] [--type extension] [--strict] [--fix]'
+allowed-tools:
+{{VALIDATION_TOOLS}}
+category: generated
+---
+
+# {{COMMAND_TITLE}}
+
+I'll validate {{VALIDATION_TYPE}} in your project.
+
+## Input Validation
+I'll check validation parameters:
+- Verify target path exists and is accessible
+- Validate file type filters are appropriate
+- Check if strict mode requirements are met
+- Ensure fix mode has necessary permissions
+
+## Target Discovery  
+I'll find items to validate:
+- Use Glob to discover files matching {{TARGET_PATTERN}}
+- Apply file type filters if specified
+- Exclude irrelevant files (.git, node_modules, etc.)
+- Report total items found for validation
+
+## Validation Process
+For each target, I'll check:
+- {{VALIDATION_SPECIFIC_RULES}}
+- Required format compliance
+- Data integrity and consistency  
+- Standard conventions adherence
+- Security best practices
+
+## Issue Classification
+I'll categorize findings as:
+- **Critical**: Must fix (breaks functionality)
+- **Warning**: Should fix (best practices)
+- **Info**: Could improve (suggestions)
+- **Pass**: Meets all requirements
+
+## Error Detection
+I'll identify common issues:
+- Format violations and syntax errors
+- Missing required elements
+- Inconsistent conventions
+- Security vulnerabilities
+- Performance concerns
+
+## Fix Recommendations
+For each issue found:
+- Explain what's wrong and why
+- Provide specific fix instructions
+- Show before/after examples
+- Suggest prevention strategies
+
+## Auto-Fix Capability
+If --fix mode enabled:
+- Apply safe automatic fixes
+- Create backups before changes
+- Report what was fixed
+- List issues requiring manual attention
+
+## Validation Report
+I'll generate a comprehensive report:
+```
+# {{VALIDATION_TYPE}} Validation Report
+
+## Summary
+- Items validated: X
+- Issues found: Y (Critical: A, Warning: B, Info: C)
+- Overall score: Z/100
+- Compliance level: [Pass/Warning/Fail]
+
+## Critical Issues (Must Fix)
+1. Issue description (file:location)
+   → Fix: Specific correction needed
+   
+2. Another critical issue (file:location)  
+   → Fix: Another specific correction
+
+## Warnings (Should Fix)
+1. Warning description (file:location)
+   → Suggestion: Improvement recommendation
+
+## Detailed Results by File
+### file1.ext ✅ PASS
+- All validations passed
+- Score: 100/100
+
+### file2.ext ⚠️ WARNING  
+- Issue 1: Description (line 15)
+- Issue 2: Description (line 23)
+- Score: 75/100
+
+### file3.ext ❌ FAIL
+- Critical issue: Description (line 8)
+- Score: 45/100
+
+## Next Steps
+1. Fix critical issues immediately
+2. Address warnings for best practices
+3. Re-run validation to verify fixes
+4. Consider automated checks in CI/CD
+```
+
+## Auto-Fix Results
+If fixes were applied:
+```
+## Auto-Fix Summary
+✅ Fixed 5 issues automatically
+⚠️  3 issues require manual attention
+📁 Backups created in .validation-backups/
+
+## Files Modified
+- file1.ext: Fixed formatting issues
+- file2.ext: Corrected syntax errors  
+- file3.ext: Updated conventions
+
+## Manual Fixes Needed
+- file4.ext: Complex logic issue (line 42)
+- file5.ext: Security concern (line 15)
+```
+
+## Examples  
+```
+{{COMMAND_NAME}} --path src/ --type js
+{{COMMAND_NAME}} --strict --fix
+{{COMMAND_NAME}} --type json --path config/
+```

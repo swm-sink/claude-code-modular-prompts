@@ -1,7 +1,25 @@
 ---
-name: /task
-description: Execute a focused development task with best practices for lusaka
-usage: '[task_description]'
+command: task
+description: Execute a focused development task with best practices and quality standards
+category: workflow
+parameters: 
+  - name: TASK_DESCRIPTION
+    type: string
+    required: true
+    description: Detailed description of the development task to be implemented
+usage_examples:
+  - "/task create email validation utility function"
+  - "/task implement user authentication middleware"
+  - "/task add pagination to the user listing component"
+prerequisites: 
+  - "Git repository initialized"
+  - "Project dependencies installed"
+  - "Development environment configured"
+output_format: structured
+tags: [development, implementation, testing, documentation, quality]
+version: "2.0"
+author: "lusaka-template-library"
+last_updated: "2025-07-31"
 allowed-tools:
 - Read
 - Write
@@ -9,27 +27,76 @@ allowed-tools:
 - Grep
 - Glob
 - Bash
-category: core
 ---
 
-# /task - Focused Development Workflow for lusaka
+# /task - Focused Development Workflow
 
-I'll help you implement a specific development task using best practices for Python projects, with appropriate testing and quality standards for your software-development domain.
+<context type="project">
+lusaka template library specializing in Claude Code command development with Python-focused implementation patterns, automated testing integration, and comprehensive documentation standards.
+</context>
 
-## Usage
-```bash
-/task "create email validation utility function"
-/task "implement user authentication middleware"
-/task "add pagination to the user listing component"
-/task "create secure API endpoint for user data"
-```
+<instructions>
+Execute a focused development task using industry best practices, quality standards, and systematic approach. Process $TASK_DESCRIPTION with comprehensive analysis, implementation, testing, and documentation.
+</instructions>
 
-## Approach
+## Usage Examples
 
-1. **Analysis**: Understand the task requirements and context
-2. **Design**: Plan the implementation approach
-3. **Implementation**: Write clean, maintainable code
-4. **Testing**: Add appropriate tests for the functionality
-5. **Documentation**: Update relevant documentation
+<examples>
+<example>
+<input>/task "create email validation utility function"</input>
+<expected_output>Complete utility function with regex validation, error handling, unit tests, and documentation</expected_output>
+</example>
+<example>
+<input>/task "implement user authentication middleware"</input>
+<expected_output>Middleware with JWT handling, error responses, security headers, and integration tests</expected_output>
+</example>
+<example>
+<input>/task "add pagination to user listing component"</input>
+<expected_output>Component with page controls, data fetching, loading states, and unit tests</expected_output>
+</example>
+</examples>
 
-I'll follow swm-sink's coding standards and use pytest for testing when appropriate.
+## Implementation Workflow
+
+<workflow type="sequential">
+<task priority="high">
+**Analysis Phase**: Understand requirements, dependencies, and context
+- Parse $TASK_DESCRIPTION for technical requirements
+- Identify affected files and components  
+- Determine testing strategy and documentation needs
+</task>
+
+<task priority="high">
+**Design Phase**: Plan implementation approach and architecture
+- Design API interfaces and data structures
+- Plan error handling and edge cases
+- Consider performance and security implications
+</task>
+
+<task priority="high">
+**Implementation Phase**: Write clean, maintainable code
+- Follow established coding standards and patterns
+- Implement core functionality with proper error handling
+- Add logging and monitoring where appropriate
+</task>
+
+<task priority="medium">
+**Testing Phase**: Comprehensive test coverage
+- Unit tests for individual functions/methods
+- Integration tests for component interactions
+- End-to-end tests for complete workflows
+</task>
+
+<task priority="medium">
+**Documentation Phase**: Update relevant documentation
+- Code comments and docstrings
+- README updates for new features
+- API documentation where applicable
+</task>
+</workflow>
+
+<automation trigger="completion">
+- Run test suite to verify functionality
+- Check code quality and standards compliance
+- Update project documentation and examples
+</automation>
