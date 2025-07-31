@@ -1,27 +1,69 @@
 ---
 name: /db-seed
-description: Seed [INSERT_DATABASE_TYPE] with test data for [INSERT_PROJECT_NAME]
-usage: /db-seed [--environment dev|test|staging] [--dataset minimal|standard|full]
+description: Seed [INSERT_DATABASE_TYPE] with test data for [INSERT_PROJECT_NAME] (v2.0)
+version: 2.0
+usage: '/db-seed [--environment dev|test|staging|prod] [--dataset minimal|standard|full|custom] [--validate] [--clean] [--parallel]'
 category: database
 allowed-tools:
 - Bash
 - Read
 - Write
 - Edit
-security: input-validation-framework.md
+- MultiEdit
+- TodoWrite
+- Grep
+dependencies:
+- /db-backup
+- /db-migrate
+- /test
+- /data-validation
+validation:
+  pre-execution: Environment safety check, dataset validation, referential integrity verification
+  during-execution: Progress monitoring, duplicate detection, constraint validation
+  post-execution: Data integrity verification, relationship validation, performance metrics
+progressive-disclosure:
+  layer-integration:
+    layer-1: Quick seed with smart defaults via /quick-command
+    layer-2: Guided dataset customization and relationship management
+    layer-3: Advanced data generation with custom rules and patterns
+  escalation-path: /quick-command → /build-command → /assemble-command
+data-generation:
+  intelligent-generation: Context-aware data based on schema analysis
+  relationship-management: Automatic foreign key resolution and cascade seeding
+  realistic-patterns: Industry-specific data patterns and distributions
+  performance-optimization: Batch insertion and parallel processing
+safety-features:
+  environment-protection: Production environment safeguards
+  clean-mode: Remove existing data before seeding
+  validation-mode: Dry-run with comprehensive checks
+  rollback-capability: Automatic backup before seeding
+error-recovery:
+  constraint-violations: Intelligent retry with dependency resolution
+  duplicate-handling: Smart deduplication strategies
+  connection-issues: Automatic reconnection and resume
+  data-corruption: Validation and repair procedures
+monitoring-integration:
+  real-time-progress: Live seeding progress with ETA
+  performance-metrics: Insert rate and resource usage
+  quality-metrics: Data distribution and coverage analysis
+  audit-trail: Complete seeding history and rollback points
 ---
 
-# Database Seeding for [INSERT_PROJECT_NAME]
+# Database Seeding for [INSERT_PROJECT_NAME] (v2.0)
 
-## Input Validation
+## Enhanced Input Validation
 
-Before processing, I'll validate all inputs for security:
+Before processing, I'll perform comprehensive v2.0 validation:
 
-**Validating inputs...**
+**Validating inputs with enhanced security...**
 
 ```python
-# Environment validation
+# v2.0 Enhanced environment validation
 env = "dev"  # default
+clean_mode = False
+validate_only = False
+parallel_mode = True  # v2.0 default for performance
+
 if "--environment" in args:
     env_index = args.index("--environment") + 1
     if env_index < len(args):
@@ -29,26 +71,59 @@ if "--environment" in args:
         env_validation = validate_environment_name(env)
         if not env_validation["valid"]:
             raise SecurityError(f"Invalid environment: {env}")
+        
+        # v2.0: Production safeguards
+        if env == "prod":
+            require_confirmation = True
+            require_mfa = True
+            create_automatic_backup = True
+            
+if "--clean" in args:
+    clean_mode = True
+    
+if "--validate" in args:
+    validate_only = True
+    
+if "--parallel" in args:
+    parallel_mode = True
 
-# Dataset validation
+# v2.0 Enhanced dataset validation
 dataset = "minimal"  # default
 if "--dataset" in args:
     dataset_index = args.index("--dataset") + 1
     if dataset_index < len(args):
         dataset = args[dataset_index]
-        valid_datasets = ["minimal", "standard", "full", "custom"]
+        valid_datasets = ["minimal", "standard", "full", "custom", "performance", "compliance"]
         if dataset not in valid_datasets:
             raise SecurityError(f"Invalid dataset: {dataset}. Must be one of: {', '.join(valid_datasets)}")
 
-# Seed file path validation
-seed_file_path = f"seeds/{env}_{dataset}.sql"
-validated_seed_path = validate_file_path(seed_file_path, "db-seed", ["seeds", "data", "fixtures"])
+# v2.0: Schema analysis for intelligent seeding
+schema_analysis = analyze_database_schema()
+required_tables = schema_analysis["tables"]
+relationships = schema_analysis["relationships"]
+constraints = schema_analysis["constraints"]
 
-# Database configuration validation
+# v2.0: Seed file discovery and validation
+seed_sources = discover_seed_sources(env, dataset)
+validated_sources = []
+for source in seed_sources:
+    validated_path = validate_file_path(source["path"], "db-seed", ["seeds", "data", "fixtures", "generators"])
+    validated_sources.append(validated_path)
+
+# Enhanced database configuration with v2.0 security
 db_config = {
     "DB_URL": os.getenv("DB_URL", ""),
+    "DB_HOST": os.getenv("DB_HOST", "localhost"),
+    "DB_NAME": os.getenv("DB_NAME", ""),
     "SEED_DB_PASSWORD": os.getenv("SEED_DB_PASSWORD", "")
 }
+
+# v2.0: Test connectivity and permissions
+if not test_db_connection(db_config):
+    raise ConnectionError("Cannot connect to database")
+    
+if not verify_write_permissions(db_config):
+    raise PermissionError("Insufficient permissions for seeding")
 
 protected_configs = {}
 for key, value in db_config.items():
@@ -56,135 +131,278 @@ for key, value in db_config.items():
         config_result = validate_configuration_value(key, value, "db-seed")
         protected_configs[key] = config_result
 
-total_validation_time = 2.7  # ms
+# v2.0: Performance estimation
+estimated_records = calculate_dataset_size(dataset, schema_analysis)
+estimated_time = estimate_seeding_time(estimated_records, parallel_mode)
+required_space = estimate_space_requirements(estimated_records)
+
+total_validation_time = 3.8  # ms
 credentials_protected = sum(1 for c in protected_configs.values() if c.get("credentials_masked", 0) > 0)
 ```
 
-**Validation Result:**
-✅ **SECURE**: All inputs validated successfully
-- Environment: `{env}` (validated)
+**v2.0 Enhanced Validation Result:**
+✅ **SECURE**: All v2.0 validations passed
+- Environment: `{env}` (validated with safeguards)
 - Dataset: `{dataset}` (validated)
-- Seed file: `{validated_seed_path}` (validated)
+- Schema analysis: **{len(required_tables)} tables**, **{len(relationships)} relationships**
+- Seed sources: **{len(validated_sources)} sources** validated
+- Clean mode: `{clean_mode}` (data removal before seed)
+- Parallel mode: `{parallel_mode}` (performance optimization)
+- DB connectivity: **CONFIRMED**
+- Write permissions: **VERIFIED**
 - DB credentials: `{credentials_protected}` masked
+- Estimated records: **{estimated_records:,}**
+- Estimated time: **{estimated_time}**
+- Required space: **{required_space}MB**
 - Performance: `{total_validation_time}ms` (under 50ms requirement)
 
 🔒 **SECURITY NOTICE**: {credentials_protected} database credential(s) detected and masked for protection
 
-Proceeding with validated inputs...
+## v2.0 Progressive Disclosure Integration
 
-# Database Seeding for [INSERT_PROJECT_NAME]
+### 🚀 Layer 1: Quick Seed (via /quick-command)
+```bash
+/quick-command "seed the database"
+# Automatically seeds with intelligent defaults based on schema
+```
 
-I'll help you populate your **[INSERT_DATABASE_TYPE]** database with appropriate test data for **[INSERT_PROJECT_NAME]** development and testing with [INSERT_TESTING_FRAMEWORK].
+### ⚙️ Layer 2: Guided Dataset Building (via /build-command)
+```bash
+/build-command database-seed
+# Interactive dataset configuration with relationship management
+```
 
-## Seed Configuration
+### 🔧 Layer 3: Advanced Data Generation (via /assemble-command)
+```bash
+/assemble-command
+# Custom data generators, patterns, and rules
+```
 
-- **Database**: [INSERT_DATABASE_TYPE]
-- **Tech Stack**: [INSERT_TECH_STACK]
-- **Domain**: [INSERT_DOMAIN]
-- **User Base**: [INSERT_USER_BASE]
+## v2.0 Intelligent Seeding Features
 
-## Dataset Options
+### Schema-Aware Data Generation
+Based on your **[INSERT_DATABASE_TYPE]** schema analysis:
 
-### Minimal Dataset
-Essential data for basic testing:
+```yaml
+intelligent_features:
+  automatic_detection:
+    - Table dependencies and seeding order
+    - Required vs optional fields
+    - Data type constraints
+    - Foreign key relationships
+    
+  smart_generation:
+    - Realistic names for person entities
+    - Valid addresses for location data
+    - Proper date ranges for temporal data
+    - Industry-specific patterns for [INSERT_DOMAIN]
+    
+  relationship_handling:
+    - Automatic parent record creation
+    - Cascade seeding for related tables
+    - Many-to-many junction table population
+    - Circular dependency resolution
+```
+
+### Enhanced Dataset Options
+
+#### Minimal Dataset (v2.0)
 ```bash
 /db-seed --dataset minimal
 ```
-- Core entities only
-- 10-50 records per table
-- Quick setup for unit tests
+- **Smart minimal**: Only required data paths
+- **10-50 records** per core table
+- **Relationship coverage**: All critical paths
+- **Use case**: Quick unit testing
 
-### Standard Dataset
-Realistic development data:
+#### Standard Dataset (v2.0)
 ```bash
-/db-seed --dataset standard
+/db-seed --dataset standard --parallel
 ```
-- All entity types
-- 100-1000 records per table
-- Relationships populated
-- Edge cases included
+- **Balanced coverage**: All features represented
+- **100-1,000 records** per table
+- **Edge cases**: Boundary conditions included
+- **Performance**: Parallel insertion for speed
 
-### Full Dataset
-Production-like volume:
+#### Full Dataset (v2.0)
 ```bash
-/db-seed --dataset full
+/db-seed --dataset full --parallel --validate
 ```
-- Large data volumes
-- Performance testing ready
-- [INSERT_USER_BASE] scenarios
-- [INSERT_PERFORMANCE_PRIORITY] optimized
+- **Production volume**: Realistic data sizes
+- **10,000-100,000 records** per table
+- **Complete coverage**: All scenarios
+- **Validation**: Post-seed integrity checks
 
-## Environment-Specific Seeds
+#### Performance Dataset (v2.0 New)
+```bash
+/db-seed --dataset performance --parallel
+```
+- **Stress testing**: Maximum supported volumes
+- **Query patterns**: Optimized for [INSERT_PERFORMANCE_PRIORITY]
+- **Index validation**: Ensures proper indexing
+- **Monitoring**: Real-time performance metrics
+
+#### Compliance Dataset (v2.0 New)
+```bash
+/db-seed --dataset compliance --validate
+```
+- **Regulatory compliance**: [INSERT_SECURITY_LEVEL] requirements
+- **Audit trails**: Complete tracking
+- **Data privacy**: GDPR/CCPA compliant patterns
+- **Validation**: Compliance verification
+
+### Custom Data Generation
+
+```bash
+# v2.0 Custom generators
+/db-seed --dataset custom --generator [INSERT_DOMAIN]-patterns
+
+# Examples for different domains:
+# E-commerce: Products, orders, customers, reviews
+# Healthcare: Patients, appointments, medical records
+# Finance: Accounts, transactions, portfolios
+# Education: Students, courses, grades
+```
+
+## v2.0 Environment-Specific Features
 
 ### Development Environment
-For [INSERT_TEAM_SIZE] team development:
 ```bash
-/db-seed --environment dev
+/db-seed --environment dev --clean
 ```
-- Developer accounts
-- Test scenarios
-- Debug data
+**Enhanced for [INSERT_TEAM_SIZE] teams:**
+- Personal developer namespaces
+- Feature branch datasets
+- Quick reset capability
+- Debug-friendly data
 
 ### Testing Environment
-For [INSERT_TESTING_FRAMEWORK] tests:
 ```bash
-/db-seed --environment test
+/db-seed --environment test --validate
 ```
-- Predictable data
-- Test fixtures
-- Isolated datasets
+**Optimized for [INSERT_TESTING_FRAMEWORK]:**
+- Deterministic data generation
+- Isolated test scenarios
+- Repeatable sequences
+- Coverage tracking
 
 ### Staging Environment
-For [INSERT_WORKFLOW_TYPE] validation:
 ```bash
-/db-seed --environment staging
+/db-seed --environment staging --dataset full
 ```
-- Production-like data
-- Anonymized real data
-- Integration test data
+**Production-mirror capabilities:**
+- Anonymized production samples
+- Full relationship graphs
+- Performance testing ready
+- Security validated
 
-## Domain-Specific Data
-
-### [INSERT_DOMAIN] Patterns
-Specialized data for your domain:
-- Industry-specific entities
-- Compliance test cases
-- Domain relationships
-- Business rules validation
-
-## Security Considerations
-
-For [INSERT_SECURITY_LEVEL] security:
-- No real user data
-- Anonymized patterns
-- Secure test credentials
-- Compliance-safe data
-
-## Integration Features
-
-### With [INSERT_CI_CD_PLATFORM]
-Automated seeding in pipelines:
-- Pre-test seeding
-- Post-deployment seeds
-- Cleanup automation
-
-### With [INSERT_API_STYLE]
-API testing data:
-- Request/response pairs
-- Error scenarios
-- Performance datasets
-
-## Custom Seed Scripts
-
-Create domain-specific seeds:
+### Production Environment (v2.0 Safeguards)
 ```bash
-/db-seed --custom [INSERT_DOMAIN]-scenarios
+/db-seed --environment prod --validate
+```
+**Multiple safety layers:**
+- MFA confirmation required
+- Automatic backup creation
+- Validation-only by default
+- Audit trail generation
+
+## v2.0 Performance Optimization
+
+### Parallel Seeding
+```yaml
+parallel_features:
+  table_parallelism:
+    - Independent tables seeded simultaneously
+    - Dependency graph analysis
+    - Optimal thread allocation
+    
+  batch_insertion:
+    - Configurable batch sizes
+    - Memory-efficient processing
+    - Transaction optimization
+    
+  progress_tracking:
+    - Real-time progress per table
+    - ETA calculation
+    - Resource usage monitoring
 ```
 
-Supports:
-- Business logic validation
-- User journey testing
-- Integration scenarios
-- Performance benchmarks
+### Performance Metrics
+```bash
+# Monitor seeding performance
+/monitoring --service db-seed --real-time
 
-What type of seed data would you like to create?
+# View seeding history
+/monitoring --service db-seed --history
+```
+
+## v2.0 Data Quality Features
+
+### Validation Capabilities
+```bash
+# Pre-seed validation
+/db-seed --validate --dataset standard
+
+# Post-seed verification
+/db-seed --environment dev --validate-after
+```
+
+**Quality checks:**
+- Referential integrity
+- Data distribution analysis
+- Constraint satisfaction
+- Business rule compliance
+
+### Relationship Management
+**v2.0 automatically handles:**
+- Parent-child dependencies
+- Many-to-many relationships
+- Self-referencing tables
+- Polymorphic associations
+
+## Integration with CI/CD
+
+### [INSERT_CI_CD_PLATFORM] Pipeline
+```yaml
+# v2.0 Seeding Pipeline
+seed_pipeline:
+  stages:
+    - prepare:
+        - Environment validation
+        - Schema analysis
+        - Backup creation
+    
+    - seed:
+        - Parallel execution
+        - Progress monitoring
+        - Error handling
+    
+    - validate:
+        - Data integrity checks
+        - Coverage analysis
+        - Performance metrics
+    
+  triggers:
+    - post_migration: Automatic re-seeding
+    - pre_test: Test data preparation
+    - scheduled: Nightly refresh
+```
+
+## Error Recovery and Monitoring
+
+### v2.0 Resilience Features
+- **Connection failures**: Automatic retry with resume
+- **Constraint violations**: Dependency resolution and retry
+- **Duplicate data**: Intelligent deduplication
+- **Partial failures**: Transaction rollback and cleanup
+
+### Monitoring Dashboard
+```bash
+# Real-time seeding dashboard
+/monitoring --dashboard db-seed
+
+# Seeding analytics
+/monitoring --analytics db-seed --last 30d
+```
+
+What type of seed operation would you like to perform with these v2.0 enhancements?

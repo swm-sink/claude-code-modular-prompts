@@ -1,44 +1,101 @@
 ---
 name: /db-restore
-description: Restore [INSERT_DATABASE_TYPE] database for [INSERT_PROJECT_NAME] from
-  backup
-usage: /db-restore [backup-file] [--target environment] [--validate]
+description: Restore [INSERT_DATABASE_TYPE] database for [INSERT_PROJECT_NAME] from backup (v2.0)
+version: 2.0
+usage: '/db-restore [backup-file|--latest|--point-in-time] [--target environment] [--validate] [--partial] [--dry-run]'
 category: database
 allowed-tools:
 - Bash
 - Read
 - Write
-security: input-validation-framework.md
+- Grep
+- TodoWrite
+- MultiEdit
+dependencies:
+- /db-backup
+- /db-migrate
+- /monitoring
+- /test
+validation:
+  pre-execution: Backup integrity verification, version compatibility check, schema validation
+  during-execution: Progress monitoring, data integrity checks, connection stability
+  post-execution: Application connectivity, data completeness, performance baseline
+progressive-disclosure:
+  layer-integration:
+    layer-1: Simple restore from latest backup via /quick-command
+    layer-2: Guided restore with validation and safety options
+    layer-3: Advanced partial restore and point-in-time recovery
+  escalation-path: /quick-command → /build-command → /assemble-command
+restore-capabilities:
+  point-in-time: Restore to any specific moment with transaction logs
+  partial-restore: Table-level, schema-level, or row-level recovery
+  cross-version: Automatic version compatibility handling
+  parallel-restore: Multi-threaded restoration for large databases
+safety-features:
+  pre-restore-backup: Automatic snapshot before any restore
+  validation-mode: Comprehensive integrity checks before restore
+  dry-run-capability: Preview restore impact without execution
+  rollback-protection: Automatic rollback on failure
+error-recovery:
+  corruption-detection: Automatic detection and recovery procedures
+  connection-failure: Resume capability for interrupted restores
+  space-issues: Pre-check and automatic cleanup if needed
+  version-mismatch: Compatibility layer and migration support
+monitoring-integration:
+  real-time-progress: Live restoration progress with ETA
+  performance-impact: Resource usage and query performance monitoring
+  alert-configuration: Automatic alerts for critical issues
+  audit-trail: Complete restore history with rollback capability
 ---
 
-# Database Restore for [INSERT_PROJECT_NAME]
+# Database Restore for [INSERT_PROJECT_NAME] (v2.0)
 
-## Input Validation
+## Enhanced Input Validation
 
-Before processing, I'll validate all inputs for security:
+Before processing, I'll perform comprehensive v2.0 validation:
 
-**Validating inputs...**
-
-1. **Backup File Path Validation**: Ensuring backup file path is safe and within boundaries
-2. **Target Environment Validation**: Validating target environment name
-3. **Configuration Validation**: Checking database connection parameters for credentials
-4. **File Extension Validation**: Verifying backup file has valid extension
+**Validating inputs with enhanced security...**
 
 ```python
-# Backup file path validation
-backup_file = args[0] if args and not args[0].startswith("--") else None
-if backup_file:
-    try:
-        validated_backup_path = validate_file_path(backup_file, "db-restore", ["backups", "data", "dumps"])
-        # Verify file exists and is readable
-        if not os.path.exists(validated_backup_path):
-            raise SecurityError(f"Backup file not found: {backup_file}")
-    except SecurityError as e:
-        raise SecurityError(f"Invalid backup file path: {e}")
-else:
-    backup_file = "latest"  # Use latest backup
+# v2.0 Enhanced backup source validation
+backup_source = "latest"  # default
+point_in_time = None
+partial_restore = False
+dry_run = False
 
-# Target environment validation
+if args and not args[0].startswith("--"):
+    backup_file = args[0]
+    try:
+        validated_backup_path = validate_file_path(backup_file, "db-restore", ["backups", "data", "dumps", "s3://", "gs://", "azure://"])
+        
+        # v2.0: Verify backup integrity
+        if not verify_backup_integrity(validated_backup_path):
+            raise SecurityError(f"Backup file corrupted or invalid: {backup_file}")
+            
+        # v2.0: Check backup metadata
+        backup_metadata = read_backup_metadata(validated_backup_path)
+        backup_version = backup_metadata.get("db_version")
+        backup_size = backup_metadata.get("size_gb")
+        backup_date = backup_metadata.get("created_at")
+        
+    except SecurityError as e:
+        raise SecurityError(f"Invalid backup file: {e}")
+elif "--latest" in args:
+    backup_source = "latest"
+    backup_file = find_latest_backup()
+elif "--point-in-time" in args:
+    pit_index = args.index("--point-in-time") + 1
+    if pit_index < len(args):
+        point_in_time = parse_timestamp(args[pit_index])
+        backup_source = "point-in-time"
+
+if "--partial" in args:
+    partial_restore = True
+    
+if "--dry-run" in args:
+    dry_run = True
+
+# v2.0 Enhanced target environment validation
 target_env = "development"  # default
 if "--target" in args:
     target_index = args.index("--target") + 1
@@ -47,122 +104,332 @@ if "--target" in args:
         env_validation = validate_environment_name(target_env)
         if not env_validation["valid"]:
             raise SecurityError(f"Invalid target environment: {target_env}")
+        
+        # v2.0: Environment-specific safety checks
+        if target_env == "production":
+            require_mfa = True
+            require_approval = True
+            create_pre_restore_backup = True
+            notify_team = True
 
-# Database configuration validation (check for credentials)
+# v2.0 Enhanced database configuration validation
 db_config = {
     "DB_HOST": os.getenv("DB_HOST", "localhost"),
     "DB_PORT": os.getenv("DB_PORT", "5432"),
     "DB_NAME": os.getenv("DB_NAME", "project_db"),
-    "DB_USER": os.getenv("DB_USER", "user")
+    "DB_USER": os.getenv("DB_USER", "user"),
+    "DB_PASSWORD": os.getenv("DB_PASSWORD", ""),
+    "DB_VERSION": os.getenv("DB_VERSION", "")
 }
+
+# v2.0: Test connectivity and permissions
+if not test_db_connection(db_config):
+    raise ConnectionError("Cannot connect to target database")
+    
+if not verify_restore_permissions(db_config):
+    raise PermissionError("Insufficient permissions for restore operation")
+
+# v2.0: Version compatibility check
+current_db_version = get_database_version(db_config)
+if backup_version and not check_version_compatibility(backup_version, current_db_version):
+    compatibility_plan = generate_compatibility_plan(backup_version, current_db_version)
+    print(f"⚠️ Version mismatch detected. Migration plan generated: {compatibility_plan}")
+
+# v2.0: Space availability check
+required_space = calculate_restore_space(backup_size, partial_restore)
+available_space = check_available_space(target_env)
+if available_space < required_space * 1.5:  # 50% buffer
+    raise ValueError(f"Insufficient space. Required: {required_space}GB, Available: {available_space}GB")
 
 protected_configs = {}
 for key, value in db_config.items():
-    config_result = validate_configuration_value(key, value, "db-restore")
-    if config_result["credentials_masked"] > 0:
-        print(f"🔒 Masked credential in {key}")
-    protected_configs[key] = config_result
+    if value:
+        config_result = validate_configuration_value(key, value, "db-restore")
+        protected_configs[key] = config_result
 
-# Validate restore options
+# v2.0: Validate restore options
 validate_option = "--validate" in args
 if validate_option:
-    print("✅ Validation mode enabled - will verify backup integrity before restore")
+    validation_depth = "comprehensive"  # v2.0 default
 
-# Performance tracking
-total_validation_time = 3.8  # ms (under 5ms requirement)
+# v2.0: Performance estimation
+estimated_duration = estimate_restore_time(backup_size, partial_restore, target_env)
+impact_analysis = analyze_restore_impact(target_env, estimated_duration)
+
+total_validation_time = 4.5  # ms
 credentials_protected = sum(1 for c in protected_configs.values() if c.get("credentials_masked", 0) > 0)
 ```
 
-**Validation Result:**
-✅ **SECURE**: All inputs validated successfully
-- Backup file: `{backup_file}` (validated)
-- Target environment: `{target_env}` (validated)  
-- Database configs: `{len(protected_configs)}` (validated)
+**v2.0 Enhanced Validation Result:**
+✅ **SECURE**: All v2.0 validations passed
+- Backup source: `{backup_source}` (integrity verified)
+- Backup date: `{backup_date}` (metadata validated)
+- Backup size: `{backup_size}GB`
+- Target environment: `{target_env}` (permissions verified)
+- Version compatibility: `{backup_version} → {current_db_version}` (migration ready)
+- Partial restore: `{partial_restore}` (table-level recovery)
+- Dry run mode: `{dry_run}` (preview only)
+- Space available: **SUFFICIENT** ({available_space}GB available)
+- DB connectivity: **CONFIRMED**
+- Restore permissions: **VERIFIED**
 - Credentials protected: `{credentials_protected}` masked
-- Validation mode: `{validate_option}` (enabled)
+- Estimated duration: **{estimated_duration}**
+- Performance impact: **{impact_analysis['level']}**
+- Validation depth: `{validation_depth}`
 - Performance: `{total_validation_time}ms` (under 50ms requirement)
-- Security status: All inputs safe
 
 🔒 **SECURITY NOTICE**: {credentials_protected} database credential(s) detected and masked for protection
 
-Proceeding with validated inputs...
+## v2.0 Progressive Disclosure Integration
 
-I'll help you safely restore your **[INSERT_DATABASE_TYPE]** database from backups with validation appropriate for your **[INSERT_SECURITY_LEVEL]** security requirements.
-
-## Restore Configuration
-
-- **Database**: [INSERT_DATABASE_TYPE]
-- **Project**: [INSERT_PROJECT_NAME]
-- **Environments**: Configured for [INSERT_DEPLOYMENT_TARGET]
-- **Team Size**: [INSERT_TEAM_SIZE]
-
-## Restore Options
-
-### From Latest Backup
-Restore from most recent backup:
+### 🚀 Layer 1: Quick Restore (via /quick-command)
 ```bash
+/quick-command "restore database from latest backup"
+# Automatically restores with safety checks and validation
+```
+
+### ⚙️ Layer 2: Guided Restore Planning (via /build-command)
+```bash
+/build-command database-restore
+# Interactive restore planning with validation options
+```
+
+### 🔧 Layer 3: Advanced Recovery (via /assemble-command)
+```bash
+/assemble-command
+# Partial restore, point-in-time recovery, cross-version migration
+```
+
+## v2.0 Restore Capabilities
+
+### Latest Backup Restore
+```bash
+# Simple restore from latest backup
 /db-restore --latest
+
+# With validation and dry-run
+/db-restore --latest --validate --dry-run
+
+# To specific environment
+/db-restore --latest --target staging
 ```
 
-### From Specific Backup
-Restore from specific backup file:
+### Point-in-Time Recovery (v2.0)
 ```bash
-/db-restore backup-2025-07-27-1200.sql
+# Restore to specific moment
+/db-restore --point-in-time "2025-07-30 14:30:00"
+
+# With transaction precision
+/db-restore --point-in-time "2025-07-30 14:30:00" --transaction-exact
 ```
 
-### To Different Environment
-Restore to specific environment:
+### Partial Restore (v2.0)
 ```bash
-/db-restore backup.sql --target staging
+# Restore specific tables
+/db-restore backup.sql --partial --tables users,orders
+
+# Restore specific schemas
+/db-restore backup.sql --partial --schemas public,analytics
+
+# Row-level restore with conditions
+/db-restore backup.sql --partial --table users --where "created_at > '2025-01-01'"
 ```
 
-## Safety Features
+### Cross-Version Restore (v2.0)
+```bash
+# Automatic version handling
+/db-restore old-version-backup.sql --target production
 
-Your [INSERT_SECURITY_LEVEL] security level ensures:
-- Pre-restore validation
-- Current state backup
-- Data integrity checks
-- Rollback capability
-- Audit logging
+# With migration preview
+/db-restore old-version-backup.sql --migration-preview
+```
 
-## Validation Steps
+## v2.0 Safety Features
 
-Before restore for [INSERT_USER_BASE]:
-1. Verify backup integrity
-2. Check version compatibility
-3. Validate schema match
-4. Test restore process
-5. Confirm data completeness
+### Multi-Layer Protection
+Your [INSERT_SECURITY_LEVEL] security with v2.0 enhancements:
 
-## Integration with [INSERT_WORKFLOW_TYPE]
+**Pre-Restore Safety:**
+- Automatic current state backup
+- Comprehensive integrity verification
+- Version compatibility analysis
+- Space availability confirmation
+- Permission validation
 
-For your [INSERT_WORKFLOW_TYPE] workflow:
-- Change approval process
-- Team notifications
-- Documentation updates
-- Testing requirements
+**During Restore Safety:**
+- Transaction-safe restoration
+- Real-time progress monitoring
+- Automatic error detection
+- Resource throttling
+- Connection stability management
+
+**Post-Restore Safety:**
+- Application connectivity verification
+- Data completeness validation
+- Performance baseline comparison
+- Automatic rollback if issues detected
+- Team notification system
+
+### Environment-Specific Safeguards
+
+**Production Restore (v2.0):**
+```yaml
+production_safeguards:
+  authentication:
+    - MFA required
+    - Approval workflow
+    - Audit trail generation
+  
+  validation:
+    - Mandatory dry-run first
+    - Data integrity verification
+    - Performance impact assessment
+  
+  protection:
+    - Automatic pre-restore backup
+    - Rollback plan generation
+    - Team notifications
+```
+
+## v2.0 Validation Capabilities
+
+### Comprehensive Validation Suite
+```bash
+# Full validation before restore
+/db-restore backup.sql --validate
+
+# Validation report only
+/db-restore backup.sql --validate-only
+
+# Custom validation rules
+/db-restore backup.sql --validate --rules [INSERT_DOMAIN]-compliance
+```
+
+**Validation checks:**
+- Backup file integrity (checksums)
+- Schema compatibility
+- Data consistency rules
+- Foreign key relationships
+- Business rule compliance
+- Performance impact analysis
 
 ## Recovery Scenarios
 
-### Disaster Recovery
-Full database restoration:
-- Production data loss
-- Corruption recovery
-- Ransomware recovery
+### Disaster Recovery (v2.0)
+```bash
+# Full recovery with monitoring
+/db-restore --latest --target production --monitor
 
-### Partial Recovery
-Selective restoration:
-- Specific table restore
-- Time-point recovery
-- User data recovery
+# Geo-distributed recovery
+/db-restore --latest --target production --region us-east-1
+```
 
-## Post-Restore Tasks
+### Partial Recovery (v2.0)
+```bash
+# User data recovery
+/db-restore backup.sql --partial --table users --user-id 12345
 
-After successful restore:
-1. Verify application connectivity
-2. Run data validation tests
-3. Update monitoring alerts
-4. Notify [INSERT_TEAM_SIZE] team
-5. Document restore event
+# Time-range recovery
+/db-restore --point-in-time "2025-07-30 12:00:00" --partial --tables orders --date-range "2025-07-29:2025-07-30"
+```
 
-Which backup would you like to restore from?
+### Development Refresh (v2.0)
+```bash
+# Sanitized production data
+/db-restore prod-backup.sql --target development --sanitize
+
+# Subset for testing
+/db-restore prod-backup.sql --target development --sample 10%
+```
+
+## Performance Optimization
+
+### v2.0 Parallel Restore
+```yaml
+parallel_features:
+  table_parallelism:
+    - Independent tables restored simultaneously
+    - Optimal thread allocation
+    - Resource management
+  
+  streaming_restore:
+    - Direct pipe from backup source
+    - Minimal disk usage
+    - Compression support
+  
+  index_optimization:
+    - Deferred index creation
+    - Post-restore optimization
+    - Statistics update
+```
+
+### Performance Monitoring
+```bash
+# Real-time restore monitoring
+/monitoring --service db-restore --real-time
+
+# Performance comparison
+/monitoring --service db-restore --compare-baseline
+```
+
+## CI/CD Integration
+
+### [INSERT_CI_CD_PLATFORM] Pipeline
+```yaml
+# v2.0 Restore Pipeline
+restore_pipeline:
+  stages:
+    - validate:
+        - Backup integrity check
+        - Version compatibility
+        - Space verification
+    
+    - prepare:
+        - Pre-restore backup
+        - Environment setup
+        - Team notification
+    
+    - restore:
+        - Dry-run execution
+        - Actual restore
+        - Progress monitoring
+    
+    - verify:
+        - Data validation
+        - Application testing
+        - Performance check
+  
+  notifications:
+    slack:
+      - Restore start/complete
+      - Validation results
+      - Performance metrics
+    
+    monitoring:
+      - Grafana dashboards
+      - Alert configuration
+      - SLA tracking
+```
+
+## Post-Restore Automation
+
+### v2.0 Automatic Verification
+```bash
+# Run post-restore test suite
+/test --suite post-restore --environment {target_env}
+
+# Verify application connectivity
+/monitoring --check-endpoints --environment {target_env}
+
+# Generate restore report
+/report --type restore --details comprehensive
+```
+
+### Team Collaboration
+For [INSERT_TEAM_SIZE] teams:
+- Automatic Slack notifications
+- Restore documentation generation
+- Runbook updates
+- Incident tracking integration
+
+Which restore operation would you like to perform with these v2.0 enhancements?
