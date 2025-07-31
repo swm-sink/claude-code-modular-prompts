@@ -1,9 +1,9 @@
 ---
 name: /dev
-description: Unified intelligent development workflow with code formatting, linting,
-  refactoring, debugging, feature development, project initialization, analysis, and
-  dependency management
-usage: '[mode] [target] [options]'
+description: Unified intelligent development workflow with automated quality checks and AI-assisted features (v2.0)
+version: 2.0
+usage: '/dev [mode] [target] [options] [--auto-chain]'
+category: development
 allowed-tools:
 - Read
 - Write
@@ -11,89 +11,283 @@ allowed-tools:
 - Bash
 - Grep
 - Glob
-category: development
+- WebSearch
+dependencies:
+- /dev-setup
+- /test
+- /pipeline
+- /quality
+validation:
+  pre-execution: "Validate mode selection and target existence"
+  during-execution: "Monitor operation progress and quality metrics"
+  post-execution: "Verify changes maintain code integrity"
+progressive-disclosure:
+  layer-integration: "Layer 1: Single operations, Layer 2: Chained workflows, Layer 3: Full development orchestration"
+  options:
+    - name: quick
+      description: "Fast single operations (format, lint, debug)"
+    - name: workflow
+      description: "Chained operations (format + lint + test)"
+    - name: orchestrated
+      description: "Full feature development with all modes"
+safety-checks:
+  - "Backup before refactoring"
+  - "Test suite validation"
+  - "Dependency compatibility checks"
+  - "Code quality thresholds"
+error-recovery:
+  - "Rollback on test failure"
+  - "Incremental change application"
+  - "Manual intervention prompts"
+performance:
+  - "Parallel file processing"
+  - "Incremental analysis"
+  - "Smart caching of results"
+ai-features:
+  - "Intelligent code suggestions"
+  - "Automated bug hypothesis"
+  - "Feature architecture planning"
 ---
-# /dev - Unified Development Workflow for lusaka
 
-Comprehensive development workflow solution for lusaka combining code formatting, linting, refactoring, debugging, feature development, project initialization, analysis, and dependency management tailored for Python and 1-5 developers teams.
+# /dev - Unified Development Workflow for lusaka (v2.0)
 
-## Usage
+Comprehensive development workflow solution combining AI-assisted code formatting, linting, refactoring, debugging, feature development, project initialization, analysis, and dependency management.
+
+## 🚀 Progressive Disclosure Usage
+
+### Layer 1: Quick Operations (30 seconds)
 ```bash
-# Code Quality & Maintenance
-/dev format Python --style PEP8  # Format Python code
-/dev lint --Python --fix      # Lint and fix Python issues
-/dev refactor "src/utils.js" --strategy extract-method # Refactor code with method extraction
-
-# Development Operations
-/dev debug "software-development error" --interactive # Debug lusaka issues
-/dev feature "software-development feature"           # Develop for lusaka
-/dev init web-application --Python # Initialize new Python project
-/dev analyze . --optimization                    # Analyze existing project for optimization
-/dev deps compatibility --automated              # Compatibility-focused dependency updates
-
-# Combined Operations
-/dev format --all && /dev lint --all            # Format then lint all files
-/dev --quality-check                             # Run format, lint, and basic quality checks
+/dev format            # Auto-detect and format all files
+/dev lint --fix        # Find and fix all linting issues
+/dev debug "error msg" # AI-assisted debugging
 ```
 
-## Mode-Based Execution
+### Layer 2: Workflow Chains (5 minutes)
+```bash
+/dev format --then lint --then test  # Quality workflow
+/dev refactor --extract-method --with-tests  # Safe refactoring
+/dev feature "user auth" --scaffold  # Feature scaffolding
+```
 
-You are a comprehensive development workflow specialist with expertise in code formatting, linting, refactoring, debugging, feature development, project initialization, analysis, and dependency management. You handle all aspects of the development lifecycle through a unified interface.
+### Layer 3: Full Orchestration (15+ minutes)
+```bash
+/dev feature "payment system" --full-stack --with-api --with-tests
+/dev analyze --deep --optimize --refactor
+/dev init enterprise-app --with-ci --with-monitoring
+```
 
-## Mode Reference
+## 🧠 AI-Powered Development Modes
 
-### Format Mode
-- **Purpose**: Intelligent code formatting with style enforcement
-- **Replaces**: `/code-format`
-- **Key Features**: Multi-language support, style guide detection, automated formatting
+### Format Mode 
+**Intelligent code formatting with style learning**
+```bash
+/dev format              # Auto-detect language and style
+/dev format --style team # Use team conventions
+/dev format src/ --parallel --report
+```
 
-### Lint Mode  
-- **Purpose**: Code linting with automated issue detection and fixes
-- **Replaces**: `/code-lint`
-- **Key Features**: Configurable rules, auto-fix capabilities, comprehensive reporting
+**Features:**
+- 🤖 AI learns your team's style preferences
+- 🔍 Multi-language auto-detection
+- ⚡ Parallel processing for large codebases
+- 📊 Formatting impact reports
+
+### Lint Mode
+**Smart linting with automated fixes**
+```bash
+/dev lint                    # Full codebase scan
+/dev lint --fix --safe       # Auto-fix safe issues
+/dev lint --strict --no-warn # Errors only
+```
+
+**Features:**
+- 🛠️ Automated safe fixes
+- 📈 Progressive rule enforcement
+- 🎯 Context-aware suggestions
+- 🔗 Integration with pre-commit
 
 ### Refactor Mode
-- **Purpose**: Advanced code refactoring with optimization strategies
-- **Replaces**: `/dev-refactor`
-- **Key Features**: Test-driven refactoring, multiple strategies, incremental changes
+**AI-assisted code refactoring**
+```bash
+/dev refactor "extract LoginService from auth.py"
+/dev refactor --modernize  # Update to latest patterns
+/dev refactor --performance # Optimize hot paths
+```
+
+**Strategies:**
+- Extract method/class/module
+- Rename with usage updates
+- Modernize legacy patterns
+- Performance optimization
+- Dependency injection
+- Design pattern application
 
 ### Debug Mode
-- **Purpose**: AI-assisted debugging and issue diagnosis
-- **Replaces**: `/debug`
-- **Key Features**: Interactive debugging, hypothesis formation, solution proposals
+**AI-powered debugging assistant**
+```bash
+/dev debug "TypeError in user.py line 45"
+/dev debug --interactive  # Step-by-step debugging
+/dev debug --trace        # Full execution trace
+```
+
+**Capabilities:**
+- 🔍 Automated hypothesis generation
+- 🧪 Test case creation for bugs
+- 📊 Root cause analysis
+- 💡 Solution suggestions with examples
 
 ### Feature Mode
-- **Purpose**: Complete feature development orchestration
-- **Replaces**: `/feature`
-- **Key Features**: End-to-end development, architecture planning, parallel implementation
+**End-to-end feature development**
+```bash
+/dev feature "user notifications"
+/dev feature "payment gateway" --with-api --with-ui
+/dev feature --list-in-progress
+```
+
+**Workflow:**
+1. Architecture planning
+2. API design & implementation
+3. Database schema updates
+4. Frontend components
+5. Test suite generation
+6. Documentation updates
 
 ### Init Mode
-- **Purpose**: Advanced project initialization and scaffolding
-- **Replaces**: `/new`
-- **Key Features**: Interactive setup, technology detection, automated configuration
+**Smart project initialization**
+```bash
+/dev init                  # Interactive setup
+/dev init api-service      # REST API template
+/dev init ml-pipeline      # ML project structure
+```
+
+**Templates:**
+- Web applications
+- REST APIs
+- Microservices
+- CLI tools
+- ML pipelines
+- Libraries
 
 ### Analyze Mode
-- **Purpose**: Existing project analysis and optimization
-- **Replaces**: `/existing`
-- **Key Features**: Structure analysis, optimization recommendations, integration planning
+**Deep codebase analysis**
+```bash
+/dev analyze              # Full analysis report
+/dev analyze --security   # Security audit
+/dev analyze --performance --suggest-fixes
+```
+
+**Analysis Types:**
+- Code quality metrics
+- Security vulnerabilities
+- Performance bottlenecks
+- Dependency health
+- Technical debt
+- Architecture patterns
 
 ### Deps Mode
-- **Purpose**: Intelligent dependency management and updates
-- **Replaces**: `/deps-update`
-- **Key Features**: Compatibility analysis, validation, automated updates
+**Intelligent dependency management**
+```bash
+/dev deps update          # Safe updates only
+/dev deps audit           # Security scan
+/dev deps optimize        # Remove unused
+```
 
-## Integration Notes
+**Features:**
+- 🔒 Security vulnerability scanning
+- 📦 Smart version resolution
+- 🧪 Automated testing of updates
+- 📊 Dependency graph visualization
 
-This command integrates with existing systems:
-- **Project System**: Works with `/project` for environment setup
-- **Pipeline System**: Integrates with `/pipeline` for CI/CD operations
-- **Quality System**: Works with `/quality` for comprehensive analysis
-- **Testing System**: Chains with `/test` commands for validation
+## 🔗 Workflow Automation
 
-## Consolidation Benefits
+### Chained Operations
+```bash
+# Quality enforcement chain
+/dev format --then lint --then test --fail-fast
 
-1. **Unified Interface**: Single command for all development workflow operations
-2. **Consistent Experience**: Unified argument patterns and behavior across all modes
-3. **Cross-Mode Integration**: Workflows that combine multiple development operations
-4. **Reduced Complexity**: Fewer commands to learn and maintain
-5. **Enhanced Functionality**: Combined capabilities exceed individual command limitations
+# Safe refactoring chain
+/dev analyze --then refactor --then test --rollback-on-fail
+
+# Feature development chain
+/dev feature "auth" --then format --then lint --then test
+```
+
+### Custom Workflows
+```yaml
+# .dev-workflows.yml
+workflows:
+  pre-commit:
+    - format: { paths: staged }
+    - lint: { fix: true }
+    - test: { scope: affected }
+    
+  release:
+    - deps: { audit: true }
+    - test: { coverage: 90 }
+    - analyze: { strict: true }
+```
+
+## 🛡️ Safety Features
+
+### Automatic Backups
+- Pre-refactor snapshots
+- Rollback capabilities
+- Git integration
+
+### Quality Gates
+- Test suite must pass
+- Coverage thresholds
+- Linting standards
+- Security checks
+
+### Progressive Enhancement
+```bash
+/dev --safe-mode         # Conservative changes only
+/dev --aggressive        # Maximum optimization
+/dev --interactive       # Confirm each change
+```
+
+## 📊 Reporting & Analytics
+
+### Development Metrics
+```bash
+/dev --report            # Generate activity report
+/dev --metrics           # Code quality trends
+/dev --leaderboard       # Team contributions
+```
+
+### Integration Points
+- **CI/CD**: Jenkins, GitHub Actions, GitLab CI
+- **IDEs**: VS Code, IntelliJ, Vim
+- **Tools**: Git hooks, Docker, K8s
+- **Monitoring**: Sentry, DataDog, New Relic
+
+## 🎯 Quick Start Examples
+
+### Daily Development
+```bash
+/dev format && /dev lint --fix  # Morning cleanup
+/dev debug "failing test"        # Debug issue
+/dev feature "quick fix"         # Small feature
+```
+
+### Code Review Prep
+```bash
+/dev analyze --pr-review
+/dev format --staged
+/dev lint --changed-only
+```
+
+### Major Refactoring
+```bash
+/dev analyze --technical-debt
+/dev refactor --plan
+/dev refactor --execute --with-tests
+```
+
+---
+
+Ready to streamline your development workflow? Start with:
+- 🚀 **Quick**: `/dev format` for instant cleanup
+- 🧠 **Smart**: `/dev debug` for AI-assisted debugging
+- 🏗️ **Full**: `/dev feature` for complete development
