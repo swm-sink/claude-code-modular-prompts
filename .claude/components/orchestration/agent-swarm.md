@@ -22,7 +22,6 @@
   
   <assembly_compatibility>
     <compatible_components>
-      <component ref="agent-orchestration" strength="strong"/>
       <component ref="task-planning" strength="strong"/>
       <component ref="dependency-analysis" strength="medium"/>
       <component ref="progress-tracking" strength="medium"/>
@@ -56,12 +55,10 @@
       <file type="algorithm" ref="ant_colony_optimization" relation="algorithmic_basis"/>
     </upstream_dependencies>
     <downstream_consumers>
-      <file type="component" ref="agent-orchestration" relation="hybrid_orchestration_swarm"/>
       <file type="command" ref="prompt-optimization" relation="swarm_based_evolution"/>
       <file type="command" ref="research-advanced" relation="distributed_discovery"/>
     </downstream_consumers>
     <peer_alternatives>
-      <file type="component" ref="agent-orchestration" similarity="0.80"/>
     </peer_alternatives>
   </relationship_map>
   
@@ -97,7 +94,6 @@
   
   <knowledge_dependencies>
     <required_context>
-      <context_file ref="../orchestration/agent-orchestration.md" importance="critical"/>
     </required_context>
     <helpful_context>
       <context_file ref="../context/comprehensive-project-learnings.md" importance="high"/>
