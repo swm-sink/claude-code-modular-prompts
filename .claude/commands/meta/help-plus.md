@@ -30,6 +30,145 @@ error-recovery:
   system-error: Fallback to safe mode operation
 ---
 
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>command</document_type>
+  <ai_consumption_priority>high</ai_consumption_priority>
+  <content_structure>yaml_frontmatter</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/meta/help-plus.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<command_metadata>
+  <command_id>help-plus</command_id>
+  <command_count>88</command_count>
+  <progressive_disclosure_layer>N/A</progressive_disclosure_layer>
+  
+  <component_dependencies>
+    <required_components>
+      <component ref="parameter-parser" role="help_request_processing"/>
+      <component ref="file-reader" role="documentation_access"/>
+      <component ref="search-files" role="command_discovery"/>
+      <component ref="error-handler" role="troubleshooting_guidance"/>
+      <component ref="user-confirmation" role="interactive_help"/>
+    </required_components>
+    <optional_components>
+      <component ref="examples-library" benefit="contextual_usage_examples"/>
+      <component ref="progress-indicator" benefit="troubleshooting_progress"/>
+      <component ref="context-optimization" benefit="personalized_help"/>
+    </optional_components>
+  </component_dependencies>
+  
+  <orchestration_capability>
+    <can_invoke_commands>true</can_invoke_commands>
+    <invokable_commands>
+      <command ref="help" context="basic_help_integration"/>
+      <command ref="welcome" context="onboarding_guidance"/>
+      <command ref="validate-adaptation" context="diagnostic_validation"/>
+      <command ref="replace-placeholders" context="placeholder_troubleshooting"/>
+    </invokable_commands>
+    <orchestration_patterns>diagnostic|interactive|contextual|escalation</orchestration_patterns>
+  </orchestration_capability>
+  
+  <v2_features>
+    <task_description>Enhanced help system with error handling, troubleshooting guides, and contextual user guidance</task_description>
+    <implementation_strategy>parameter_analysis|contextual_help_provision|error_diagnosis|troubleshooting_guidance|interactive_support</implementation_strategy>
+    <command_chaining_enabled>true</command_chaining_enabled>
+  </v2_features>
+</command_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>enhanced_help_and_support</primary_discovery_path>
+    <alternative_paths>
+      <path>troubleshooting_system</path>
+      <path>error_handling_guide</path>
+      <path>user_support_interface</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="command" ref="help" relation="basic_help_foundation"/>
+      <file type="command" ref="welcome" relation="onboarding_integration"/>
+      <file type="context" ref=".claude/context/troubleshooting-guide.md" relation="troubleshooting_knowledge"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="command" ref="validate-adaptation" relation="diagnostic_workflow"/>
+      <file type="command" ref="replace-placeholders" relation="error_resolution"/>
+      <file type="context" ref=".claude/context/user-support-patterns.md" relation="support_documentation"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="command" ref="help" similarity="0.85"/>
+      <file type="command" ref="welcome" similarity="0.50"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>troubleshooting_command_issues</scenario>
+      <scenario>error_diagnosis_and_resolution</scenario>
+      <scenario>enhanced_help_requirements</scenario>
+      <scenario>user_guidance_and_support</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>basic_command_reference_lookup</scenario>
+      <scenario>initial_onboarding_process</scenario>
+      <scenario>automated_workflows</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>help enhanced troubleshooting error handling user support guidance</keywords>
+    <semantic_tags>enhanced_help troubleshooting_system error_diagnosis user_support</semantic_tags>
+    <functionality_vectors>[0.8, 0.9, 0.7, 1.0, 0.8]</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>global</scope_level>
+    <context_retention>session</context_retention>
+    <memory_priority>7</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <critical_context>
+      <context_file ref=".claude/context/troubleshooting-guide.md" importance="critical"/>
+      <context_file ref=".claude/context/error-patterns.md" importance="critical"/>
+      <context_file ref=".claude/context/user-support-patterns.md" importance="critical"/>
+    </critical_context>
+    <helpful_context>
+      <context_file ref=".claude/context/command-usage-patterns.md" importance="high"/>
+      <context_file ref=".claude/context/common-issues-solutions.md" importance="high"/>
+      <context_file ref=".claude/context/comprehensive-project-learnings.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>support_and_troubleshooting</workflow_stage>
+    <integration_patterns>
+      <pattern>contextual_help_provision</pattern>
+      <pattern>error_diagnosis_and_resolution</pattern>
+      <pattern>interactive_troubleshooting</pattern>
+      <pattern>escalation_to_appropriate_resources</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>enhanced_help_system</concept_introduction>
+    <skill_progression>all_levels</skill_progression>
+    <mastery_indicators>
+      <indicator>effective_error_diagnosis</indicator>
+      <indicator>contextual_help_provision</indicator>
+      <indicator>successful_troubleshooting_guidance</indicator>
+      <indicator>appropriate_resource_escalation</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 # /help-plus - Enhanced Help & Troubleshooting
 
 Enhanced help system with error handling, troubleshooting guides, and user guidance for the template library.

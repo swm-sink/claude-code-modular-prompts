@@ -34,6 +34,146 @@ enhancement:
   batch-processing: "Efficient batch replacement with progress tracking"
 ---
 
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>command</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>yaml_frontmatter</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/meta/replace-placeholders.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<command_metadata>
+  <command_id>replace-placeholders</command_id>
+  <command_count>88</command_count>
+  <progressive_disclosure_layer>2</progressive_disclosure_layer>
+  
+  <component_dependencies>
+    <required_components>
+      <component ref="file-reader" role="placeholder_detection"/>
+      <component ref="search-files" role="systematic_placeholder_scanning"/>
+      <component ref="parameter-parser" role="replacement_mode_processing"/>
+      <component ref="progress-indicator" role="replacement_progress_tracking"/>
+      <component ref="user-confirmation" role="safety_verification"/>
+      <component ref="task-summary" role="replacement_completion_reporting"/>
+    </required_components>
+    <optional_components>
+      <component ref="input-validation" benefit="replacement_value_validation"/>
+      <component ref="error-handler" benefit="rollback_and_recovery"/>
+      <component ref="completion-tracker" benefit="comprehensive_progress_tracking"/>
+      <component ref="git-operations" benefit="backup_verification"/>
+    </optional_components>
+  </component_dependencies>
+  
+  <orchestration_capability>
+    <can_invoke_commands>true</can_invoke_commands>
+    <invokable_commands>
+      <command ref="adapt-to-project" context="integration_workflow"/>
+      <command ref="validate-adaptation" context="post_replacement_validation"/>
+      <command ref="welcome" context="onboarding_integration"/>
+    </invokable_commands>
+    <orchestration_patterns>guided|batch_processing|validation_checkpoints|safety_first</orchestration_patterns>
+  </orchestration_capability>
+  
+  <v2_features>
+    <task_description>Enhanced placeholder replacement with validation, safety measures, and guided workflows for manual template customization</task_description>
+    <implementation_strategy>smart_detection|guided_workflow|validation_checkpoints|progress_tracking|safety_verification</implementation_strategy>
+    <command_chaining_enabled>true</command_chaining_enabled>
+  </v2_features>
+</command_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>placeholder_management_system</primary_discovery_path>
+    <alternative_paths>
+      <path>template_customization</path>
+      <path>guided_replacement_workflow</path>
+      <path>manual_template_adaptation</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="command" ref="adapt-to-project" relation="customization_source"/>
+      <file type="context" ref=".claude/context/placeholder-patterns.md" relation="detection_methodology"/>
+      <file type="context" ref=".claude/context/replacement-validation-patterns.md" relation="validation_framework"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="command" ref="validate-adaptation" relation="validation_workflow"/>
+      <file type="command" ref="build-command" relation="layer_2_integration"/>
+      <file type="context" ref=".claude/context/template-customization-guide.md" relation="guidance_documentation"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="command" ref="adapt-to-project" similarity="0.80"/>
+      <file type="command" ref="sync-from-reference" similarity="0.55"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>systematic_placeholder_replacement</scenario>
+      <scenario>manual_template_customization</scenario>
+      <scenario>guided_adaptation_workflow</scenario>
+      <scenario>layer_2_customization_process</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>fully_automated_replacement_needed</scenario>
+      <scenario>validation_only_requirements</scenario>
+      <scenario>initial_project_detection_phase</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>replace placeholders template customization guided workflow validation safety</keywords>
+    <semantic_tags>placeholder_replacement manual_customization guided_workflow validation_safety</semantic_tags>
+    <functionality_vectors>[0.9, 0.8, 1.0, 0.9, 0.8]</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>session</context_retention>
+    <memory_priority>8</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <critical_context>
+      <context_file ref=".claude/context/placeholder-patterns.md" importance="critical"/>
+      <context_file ref=".claude/context/replacement-validation-patterns.md" importance="critical"/>
+      <context_file ref=".claude/context/template-customization-guide.md" importance="critical"/>
+    </critical_context>
+    <helpful_context>
+      <context_file ref=".claude/context/progressive-disclosure-guide.md" importance="high"/>
+      <context_file ref=".claude/context/safety-procedures.md" importance="high"/>
+      <context_file ref=".claude/context/comprehensive-project-learnings.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>template_customization</workflow_stage>
+    <integration_patterns>
+      <pattern>guided_manual_replacement</pattern>
+      <pattern>validation_checkpoint_system</pattern>
+      <pattern>safety_first_approach</pattern>
+      <pattern>progress_tracking_workflow</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>enhanced_placeholder_management</concept_introduction>
+    <skill_progression>intermediate</skill_progression>
+    <mastery_indicators>
+      <indicator>comprehensive_placeholder_detection</indicator>
+      <indicator>systematic_guided_replacement</indicator>
+      <indicator>validation_checkpoint_execution</indicator>
+      <indicator>safe_rollback_capability</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 # Enhanced Placeholder Replacement Guide (v2.0)
 
 **Enhanced manual replacement with validation, safety, and guided workflows**
@@ -104,7 +244,7 @@ The v2.0 approach enhances the manual process with **validation, safety, and gui
 
 #### v2.0 Enhanced File Coverage:
 - **📁 `.claude/commands/**/*.md`** - 88 command files with validation
-- **📁 `.claude/components/**/*.md`** - 94+ component files with compatibility checking
+- **📁 `.claude/components/**/*.md`** - 91 component files with compatibility checking
 - **📁 `.claude/assembly-templates/`** - Professional workflow templates
 - **📁 `.claude/assembly-config/`** - Component compatibility configurations
 - **📁 `.claude/context/*.md`** - Context files with validation
@@ -203,7 +343,7 @@ For complex placeholders like `[INSERT_[INSERT_DOMAIN]_CONFIG]`:
 /replace-placeholders validate    # Comprehensive system validation
 # ✅ Backup verification: .claude.backup/ exists and complete
 # ✅ Git status: Clean working directory 
-# ✅ File integrity: All 88 commands + 94+ components verified
+# ✅ File integrity: All 88 commands + 91 components verified
 # ✅ Placeholder inventory: 200+ placeholders catalogued with locations
 ```
 
@@ -220,7 +360,7 @@ I'll collect your project details with smart validation and pre-filled defaults 
 ```markdown
 v2.0 PLACEHOLDER REPLACEMENT GUIDE
 ===================================
-📊 Total Files: 88 commands + 94 components + configs
+📊 Total Files: 88 commands + 91 components + configs
 📋 Total Replacements: 247 placeholders detected
 🎯 Estimated Time: 15-25 minutes (with validation)
 🛡️ Safety: Backups verified, rollback ready
@@ -274,7 +414,7 @@ File: .claude/commands/core/query.md (✅ backup verified)
 
 🔍 VALIDATION CHECKPOINTS:
 □ YAML header integrity: All 88 commands validated
-□ Component compatibility: 94+ components cross-validated
+□ Component compatibility: 91 components cross-validated
 □ Progressive Disclosure: Layer configurations validated
 □ Command functionality: Sample commands tested
 □ No orphaned placeholders: Full scan completed

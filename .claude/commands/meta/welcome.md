@@ -23,6 +23,140 @@ progressive-disclosure:
   layer-3: advanced customization
 ---
 
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>command</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>yaml_frontmatter</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/meta/welcome.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<command_metadata>
+  <command_id>welcome</command_id>
+  <command_count>88</command_count>
+  <progressive_disclosure_layer>N/A</progressive_disclosure_layer>
+  
+  <component_dependencies>
+    <required_components>
+      <component ref="parameter-parser" role="experience_level_processing"/>
+      <component ref="user-confirmation" role="path_selection"/>
+      <component ref="progress-indicator" role="onboarding_progress"/>
+      <component ref="hierarchical-loading" role="progressive_guidance"/>
+    </required_components>
+    <optional_components>
+      <component ref="context-optimization" benefit="personalized_guidance"/>
+      <component ref="examples-library" benefit="usage_examples"/>
+      <component ref="progress-tracking" benefit="onboarding_completion"/>
+    </optional_components>
+  </component_dependencies>
+  
+  <orchestration_capability>
+    <can_invoke_commands>true</can_invoke_commands>
+    <invokable_commands>
+      <command ref="help" context="command_discovery"/>
+      <command ref="adapt-to-project" context="project_customization"/>
+      <command ref="validate-adaptation" context="setup_validation"/>
+      <command ref="quick-command" context="beginner_first_command"/>
+    </invokable_commands>
+    <orchestration_patterns>conditional|progressive|interactive</orchestration_patterns>
+  </orchestration_capability>
+  
+  <v2_features>
+    <task_description>Interactive onboarding system with experience-level adaptation and Progressive Disclosure System integration</task_description>
+    <implementation_strategy>assess_user_level|provide_contextual_guidance|demonstrate_capabilities|validate_setup|enable_next_steps</implementation_strategy>
+    <command_chaining_enabled>true</command_chaining_enabled>
+  </v2_features>
+</command_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>user_onboarding_system</primary_discovery_path>
+    <alternative_paths>
+      <path>new_user_entry_point</path>
+      <path>getting_started_guide</path>
+      <path>interactive_introduction</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="context" ref=".claude/context/user-experience-patterns.md" relation="onboarding_guidance"/>
+      <file type="context" ref=".claude/context/progressive-disclosure-guide.md" relation="layer_integration"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="command" ref="help" relation="discovery_path"/>
+      <file type="command" ref="adapt-to-project" relation="customization_path"/>
+      <file type="command" ref="quick-command" relation="first_usage_path"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="command" ref="help" similarity="0.70"/>
+      <file type="command" ref="help-plus" similarity="0.65"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>first_time_template_library_user</scenario>
+      <scenario>returning_user_needing_refresher</scenario>
+      <scenario>validating_current_setup_status</scenario>
+      <scenario>exploring_progressive_disclosure_options</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>experienced_user_with_specific_task</scenario>
+      <scenario>automated_workflows</scenario>
+      <scenario>emergency_troubleshooting</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>welcome onboarding getting started beginner guide progressive disclosure user experience</keywords>
+    <semantic_tags>user_onboarding interactive_guide experience_level_adaptation getting_started</semantic_tags>
+    <functionality_vectors>[1.0, 0.3, 0.2, 0.9, 0.8]</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>global</scope_level>
+    <context_retention>session</context_retention>
+    <memory_priority>9</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref=".claude/context/user-experience-patterns.md" importance="critical"/>
+      <context_file ref=".claude/context/progressive-disclosure-guide.md" importance="critical"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref=".claude/context/onboarding-best-practices.md" importance="high"/>
+      <context_file ref=".claude/context/comprehensive-project-learnings.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>entry_point</workflow_stage>
+    <integration_patterns>
+      <pattern>experience_level_assessment</pattern>
+      <pattern>progressive_guidance_delivery</pattern>
+      <pattern>interactive_path_selection</pattern>
+      <pattern>setup_validation</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>template_library_onboarding</concept_introduction>
+    <skill_progression>all_levels</skill_progression>
+    <mastery_indicators>
+      <indicator>successful_experience_level_identification</indicator>
+      <indicator>appropriate_guidance_path_selection</indicator>
+      <indicator>smooth_transition_to_productive_usage</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 # /welcome - Interactive Template Library Welcome (v2.0)
 
 Welcome to the Claude Code Modular Prompts Template Library! This enhanced interactive guide will help you get started based on your experience level with built-in validation and progressive disclosure.
@@ -112,13 +246,13 @@ If you're experienced with template customization:
 
 ### Professional Assembly Workflow:
 1. **Strategic Integration**: `/assemble-command` with professional assembly system (15-30 minute success target)  
-2. **Component Architecture**: Full access to 94 components across 6 professional categories
+2. **Component Architecture**: Full access to 91 components across 6 professional categories
 3. **Enterprise Workflows**: Assembly templates for complex workflows (security-audit, data-pipeline)
 4. **Advanced Automation**: Complete hooks and automation with performance monitoring
 5. **Validation Framework**: Comprehensive compatibility matrix and component interaction validation
 
 ### v2.0 Enhanced Architecture:
-- **94 Component Library**: Professional-grade building blocks across 6 categories
+- **91 Component Library**: Professional-grade building blocks across 6 categories
   - 21 Atomic Components (I/O, data processing, workflow control)
   - 15+ Analysis Components (codebase discovery, quality metrics)
   - 10+ Orchestration Components (agent orchestration, task planning)
@@ -151,7 +285,7 @@ If you're experienced with template customization:
 ### Enhanced Template Library:
 - **88 Command Templates**: 100% Claude Code compliant, organized in categories (core, quality, specialized, meta)
 - **3-Layer Progressive Disclosure System**: From 30-second auto-generation to professional assembly
-- **94+ Components**: Professional-grade building blocks across 6 categories with compatibility validation
+- **91 Components**: Professional-grade building blocks across 6 categories with compatibility validation
 - **Enterprise Assembly System**: Templates + validation framework for complex workflows
 
 ### v2.0 New Features:
