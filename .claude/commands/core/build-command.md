@@ -68,7 +68,6 @@ allowed-tools:
   <orchestration_capability>
     <can_invoke_commands>true</can_invoke_commands>
     <invokable_commands>
-      <command ref="quick-command" context="layer_1_fallback"/>
       <command ref="assemble-command" context="layer_3_escalation"/>
       <command ref="validate-command" context="quality_check"/>
       <command ref="preview-command" context="output_preview"/>
@@ -95,7 +94,6 @@ allowed-tools:
   
   <relationship_map>
     <upstream_dependencies>
-      <file type="command" ref="quick-command" layer="1"/>
       <file type="context" ref=".claude/context/customization-patterns.md"/>
       <file type="component" ref=".claude/components/atomic/option-filter.md"/>
     </upstream_dependencies>
@@ -206,7 +204,7 @@ Generate customized commands from $TYPE and $DESCRIPTION using guided customizat
 <workflow type="sequential">
 <task priority="high">
 **Auto-Generation Foundation**: Create working baseline command
-- Generate functional command using Layer 1 intelligence from quick-command
+- Generate functional command using intelligent template analysis
 - Establish baseline functionality that works immediately
 - Identify customization opportunities based on command type and description
 - Prepare smart option filtering for relevant customization categories
@@ -323,10 +321,9 @@ Choose options to customize (1,2,3) or press Enter for current settings:
 
 ### **Layer Transitions:**
 
-#### **From Layer 1** (Auto-Generation Discovery):
+#### **Progressive Discovery Path**:
 ```
-/quick-command search "find API calls"
-→ "Want more control? Try: /build-command search 'find API calls' --customize"
+"Need customization options? Use: /build-command search 'find API calls' --customize"
 ```
 
 #### **To Layer 3** (Professional Assembly Escalation):
