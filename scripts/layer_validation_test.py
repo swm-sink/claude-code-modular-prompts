@@ -79,7 +79,7 @@ class ProgressiveDisclosureLayerTester:
                     "component library",
                     "assembly",
                     "compatibility matrix",
-                    "94 components",
+                    "91 components",
                     "interactive"
                 ]
             }
@@ -337,7 +337,7 @@ class ProgressiveDisclosureLayerTester:
         component_keywords = [
             "component library",
             "assembly",
-            "94 components",
+            "91 components",
             "compatibility",
             "interactive"
         ]

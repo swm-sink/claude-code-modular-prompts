@@ -9,7 +9,7 @@ and ensuring the Claude Code Modular Prompts project works as documented.
 Test Coverage:
 - 88 Claude Code commands with YAML compliance
 - 3-layer Progressive Disclosure System functionality
-- 94 component library integration
+- 91 component library integration
 - Documentation accuracy verification
 - End-to-end workflow validation
 
@@ -309,7 +309,7 @@ class ComprehensiveSystemTester:
         print("    ✅ Progressive Disclosure System structure validated")
     
     def test_component_library(self):
-        """Test the 94-component library"""
+        """Test the 91-component library"""
         print("  Testing component library integration...")
         
         # Count actual components
