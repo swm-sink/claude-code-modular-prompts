@@ -42,7 +42,7 @@
     {
       "name": "Component Count Verification",
       "result": "PASS",
-      "details": "Verified 94 component files"
+      "details": "Verified 91 component files"
     },
     {
       "name": "Atomic Components",
@@ -72,7 +72,7 @@
     {
       "name": "Documentation Component Count",
       "result": "PASS",
-      "details": "CLAUDE.md correctly states 94 components"
+      "details": "CLAUDE.md correctly states 91 components"
     },
     {
       "name": "Documentation Progressive Disclosure",
