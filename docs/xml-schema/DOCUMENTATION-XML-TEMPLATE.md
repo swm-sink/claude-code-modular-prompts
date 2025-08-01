@@ -7,54 +7,54 @@ This template provides a simplified XML metadata structure for documentation, re
 ```xml
 <!-- AI_METADATA_START -->
 <ai_document_metadata>
-  <document_type>[documentation|report|analysis]</document_type>
-  <ai_consumption_priority>[high|medium|low]</ai_consumption_priority>
-  <content_structure>[markdown_body|structured_report|analysis_data]</content_structure>
-  <file_path>[FULL_FILE_PATH]</file_path>
+  <document_type>{{documentation|report|analysis}}</document_type>
+  <ai_consumption_priority>{{high|medium|low}}</ai_consumption_priority>
+  <content_structure>{{markdown_body|structured_report|analysis_data}}</content_structure>
+  <file_path>{{FULL_FILE_PATH}}</file_path>
   <last_modified>2025-07-31T12:00:00Z</last_modified>
   <ai_index_version>1.0</ai_index_version>
 </ai_document_metadata>
 
 <document_metadata>
-  <document_purpose>[PURPOSE_DESCRIPTION]</document_purpose>
-  <target_audience>[USER_TYPE]</target_audience>
-  <content_category>[CATEGORY_NAME]</content_category>
-  <information_type>[instructional|reference|analysis|status]</information_type>
+  <document_purpose>{{PURPOSE_DESCRIPTION}}</document_purpose>
+  <target_audience>{{USER_TYPE}}</target_audience>
+  <content_category>{{CATEGORY_NAME}}</content_category>
+  <information_type>{{instructional|reference|analysis|status}}</information_type>
 </document_metadata>
 
 <ai_navigation>
   <discovery_metadata>
-    <primary_discovery_path>[DISCOVERY_PATH]</primary_discovery_path>
-    <document_role>[user_guide|technical_reference|project_status|analysis_report]</document_role>
+    <primary_discovery_path>{{DISCOVERY_PATH}}</primary_discovery_path>
+    <document_role>{{user_guide|technical_reference|project_status|analysis_report}}</document_role>
   </discovery_metadata>
   
   <relationship_map>
     <related_documentation>
-      <file type="[TYPE]" ref="[FILE_REFERENCE]" relation="[RELATIONSHIP]"/>
+      <file type="{{TYPE}}" ref="{{FILE_REFERENCE}}" relation="{{RELATIONSHIP}}"/>
     </related_documentation>
     <covers_topics>
-      <topic>[TOPIC_NAME]</topic>
+      <topic>{{TOPIC_NAME}}</topic>
     </covers_topics>
   </relationship_map>
   
   <ai_search_optimization>
-    <keywords>[KEYWORD_LIST]</keywords>
-    <semantic_tags>[SEMANTIC_TAG_LIST]</semantic_tags>
+    <keywords>{{KEYWORD_LIST}}</keywords>
+    <semantic_tags>{{SEMANTIC_TAG_LIST}}</semantic_tags>
   </ai_search_optimization>
 </ai_navigation>
 
 <context_engineering>
   <ai_understanding_scope>
-    <scope_level>[local|project|global]</scope_level>
-    <context_retention>[temporary|session|persistent]</context_retention>
-    <memory_priority>[1-10]</memory_priority>
+    <scope_level>{{local|project|global}}</scope_level>
+    <context_retention>{{temporary|session|persistent}}</context_retention>
+    <memory_priority>{{1-10}}</memory_priority>
   </ai_understanding_scope>
   
   <usage_guidance>
     <when_to_reference>
-      <scenario>[SCENARIO_DESCRIPTION]</scenario>
+      <scenario>{{SCENARIO_DESCRIPTION}}</scenario>
     </when_to_reference>
-    <information_value>[INFORMATION_VALUE]</information_value>
+    <information_value>{{INFORMATION_VALUE}}</information_value>
   </usage_guidance>
 </context_engineering>
 <!-- AI_METADATA_END -->
@@ -98,7 +98,7 @@ For simple analysis reports and status files, use this minimal template:
   <document_type>report</document_type>
   <ai_consumption_priority>low</ai_consumption_priority>
   <content_structure>structured_report</content_structure>
-  <file_path>[FULL_FILE_PATH]</file_path>
+  <file_path>{{FULL_FILE_PATH}}</file_path>
   <last_modified>2025-07-31T12:00:00Z</last_modified>
   <ai_index_version>1.0</ai_index_version>
 </ai_document_metadata>
@@ -114,8 +114,8 @@ For simple analysis reports and status files, use this minimal template:
   </discovery_metadata>
   
   <ai_search_optimization>
-    <keywords>[KEYWORD_LIST]</keywords>
-    <semantic_tags>[SEMANTIC_TAG_LIST]</semantic_tags>
+    <keywords>{{KEYWORD_LIST}}</keywords>
+    <semantic_tags>{{SEMANTIC_TAG_LIST}}</semantic_tags>
   </ai_search_optimization>
 </ai_navigation>
 <!-- AI_METADATA_END -->
