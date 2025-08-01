@@ -70,7 +70,6 @@ error-recovery:
       <command ref="help" context="analysis_guidance"/>
       <command ref="welcome" context="onboarding_integration"/>
       <command ref="test" context="testing_integration"/>
-      <command ref="quality" context="quality_assessment"/>
     </invokable_commands>
     <orchestration_patterns>focus_mode_selection|comprehensive_analysis|iterative_refinement|multi_dimensional</orchestration_patterns>
   </orchestration_capability>
@@ -100,12 +99,10 @@ error-recovery:
       <file type="component" ref="anti-pattern-detection" relation="quality_detection"/>
     </upstream_dependencies>
     <downstream_consumers>
-      <file type="command" ref="quality" relation="quality_workflow_integration"/>
       <file type="command" ref="test" relation="testing_workflow"/>
       <file type="context" ref=".claude/context/analysis-reports.md" relation="report_documentation"/>
     </downstream_consumers>
     <peer_alternatives>
-      <file type="command" ref="quality" similarity="0.75"/>
       <file type="command" ref="analyze-system" similarity="0.70"/>
     </peer_alternatives>
   </relationship_map>
