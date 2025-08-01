@@ -1,3 +1,125 @@
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>component</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/components/security/harm-prevention-framework.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<component_metadata>
+  <component_id>harm-prevention-framework</component_id>
+  <component_count>91</component_count>
+  <category>security</category>
+  <subcategory>constitutional</subcategory>
+  
+  <complexity_metrics>
+    <usage_complexity>high</usage_complexity>
+    <implementation_effort>hours_1</implementation_effort>
+    <prerequisite_knowledge>advanced</prerequisite_knowledge>
+  </complexity_metrics>
+  
+  <assembly_compatibility>
+    <compatible_components>
+      <component ref="prompt-injection-prevention" strength="strong"/>
+      <component ref="command-security-wrapper" strength="strong"/>
+      <component ref="input-validation-framework" strength="medium"/>
+      <component ref="owasp-compliance" strength="medium"/>
+    </compatible_components>
+    <incompatible_components>
+      <component ref="quick-command" reason="safety_complexity_mismatch"/>
+    </incompatible_components>
+  </assembly_compatibility>
+  
+  <usage_patterns>
+    <common_workflow>ai_safety</common_workflow>
+    <typical_position>safety_foundation</typical_position>
+  </usage_patterns>
+</component_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>ai_safety</primary_discovery_path>
+    <alternative_paths>
+      <path>constitutional_ai</path>
+      <path>harm_prevention</path>
+      <path>safety_constraints</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="framework" ref="constitutional_ai_principles" relation="safety_framework"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="component" ref="command-security-wrapper" relation="safety_integration"/>
+      <file type="component" ref="prompt-injection-prevention" relation="safety_integration"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="component" ref="owasp-compliance" similarity="0.65"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>AI systems with command execution capabilities</scenario>
+      <scenario>Systems requiring constitutional AI safety constraints</scenario>
+      <scenario>Applications with user-facing AI interactions</scenario>
+      <scenario>High-risk operations requiring approval workflows</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>Simple read-only data processing</scenario>
+      <scenario>Offline analysis tools without AI interaction</scenario>
+      <scenario>Static documentation generation</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>harm prevention constitutional ai safety framework claude code command safety ai constraints</keywords>
+    <semantic_tags>ai_safety constitutional_ai harm_prevention</semantic_tags>
+    <functionality_vectors>safety_enforcement constitutional_constraints harm_prevention</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>10</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref="../context/llm-antipatterns.md" importance="critical"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref="../security/prompt-injection-prevention.md" importance="high"/>
+      <context_file ref="../security/command-security-wrapper.md" importance="high"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>safety_foundation</workflow_stage>
+    <integration_patterns>
+      <pattern>constitutional_ai</pattern>
+      <pattern>harm_prevention</pattern>
+      <pattern>safety_validation</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>ai_safety_framework</concept_introduction>
+    <skill_progression>advanced</skill_progression>
+    <mastery_indicators>
+      <indicator>Constitutional AI safety constraints implementation</indicator>
+      <indicator>Comprehensive harm prevention with approval workflows</indicator>
+      <indicator>Least privilege enforcement and monitoring systems</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 # Harm Prevention Framework
 *Comprehensive safety system for Claude Code command execution*
 

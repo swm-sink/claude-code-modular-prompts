@@ -1,3 +1,129 @@
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>component</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/components/security/owasp-compliance.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<component_metadata>
+  <component_id>owasp-compliance</component_id>
+  <component_count>91</component_count>
+  <category>security</category>
+  <subcategory>compliance</subcategory>
+  
+  <complexity_metrics>
+    <usage_complexity>high</usage_complexity>
+    <implementation_effort>days_1</implementation_effort>
+    <prerequisite_knowledge>expert</prerequisite_knowledge>
+  </complexity_metrics>
+  
+  <assembly_compatibility>
+    <compatible_components>
+      <component ref="input-validation-framework" strength="strong"/>
+      <component ref="credential-protection" strength="strong"/>
+      <component ref="prompt-injection-prevention" strength="strong"/>
+      <component ref="path-validation" strength="strong"/>
+      <component ref="error-handler" strength="medium"/>
+      <component ref="response-validator" strength="medium"/>
+    </compatible_components>
+    <incompatible_components>
+      <component ref="quick-command" reason="security_complexity_mismatch"/>
+    </incompatible_components>
+  </assembly_compatibility>
+  
+  <usage_patterns>
+    <common_workflow>enterprise_security</common_workflow>
+    <typical_position>security_foundation</typical_position>
+  </usage_patterns>
+</component_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>enterprise_security</primary_discovery_path>
+    <alternative_paths>
+      <path>compliance_framework</path>
+      <path>owasp_standards</path>
+      <path>security_governance</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="standard" ref="OWASP_Top_10_2025" relation="compliance_standard"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="component" ref="input-validation-framework" relation="security_implementation"/>
+      <file type="component" ref="credential-protection" relation="security_implementation"/>
+      <file type="component" ref="prompt-injection-prevention" relation="security_implementation"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="component" ref="security-audit" similarity="0.75"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>Enterprise applications requiring security compliance</scenario>
+      <scenario>Applications handling sensitive or regulated data</scenario>
+      <scenario>Security-first development methodologies</scenario>
+      <scenario>Compliance audit and certification requirements</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>Simple prototype or proof-of-concept applications</scenario>
+      <scenario>Internal tools with no external access or sensitive data</scenario>
+      <scenario>Learning or educational projects without compliance requirements</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>owasp compliance security standards enterprise governance top 10 2025 security framework</keywords>
+    <semantic_tags>security_compliance enterprise_standards owasp_framework</semantic_tags>
+    <functionality_vectors>compliance_checking security_governance standards_implementation</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>10</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref="../context/llm-antipatterns.md" importance="critical"/>
+      <context_file ref="../context/comprehensive-project-learnings.md" importance="high"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref="../security/credential-protection.md" importance="high"/>
+      <context_file ref="../security/input-validation-framework.md" importance="high"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>security_foundation</workflow_stage>
+    <integration_patterns>
+      <pattern>enterprise_compliance</pattern>
+      <pattern>security_governance</pattern>
+      <pattern>standards_implementation</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>enterprise_security_compliance</concept_introduction>
+    <skill_progression>expert</skill_progression>
+    <mastery_indicators>
+      <indicator>Comprehensive OWASP Top 10 2025 compliance framework</indicator>
+      <indicator>Enterprise-grade security standards implementation</indicator>
+      <indicator>Automated security validation and compliance reporting</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 <prompt_component>
   <step name="OWASP Security Compliance Framework">
     <description>

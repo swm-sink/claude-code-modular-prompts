@@ -1,3 +1,128 @@
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>component</document_type>
+  <ai_consumption_priority>high</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/components/security/protection-feedback.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<component_metadata>
+  <component_id>protection-feedback</component_id>
+  <component_count>91</component_count>
+  <category>security</category>
+  <subcategory>monitoring</subcategory>
+  
+  <complexity_metrics>
+    <usage_complexity>moderate</usage_complexity>
+    <implementation_effort>hours_1</implementation_effort>
+    <prerequisite_knowledge>intermediate</prerequisite_knowledge>
+  </complexity_metrics>
+  
+  <assembly_compatibility>
+    <compatible_components>
+      <component ref="credential-protection" strength="strong"/>
+      <component ref="command-security-wrapper" strength="strong"/>
+      <component ref="harm-prevention-framework" strength="medium"/>
+      <component ref="progress-indicator" strength="medium"/>
+      <component ref="task-summary" strength="medium"/>
+    </compatible_components>
+    <incompatible_components>
+      <component ref="quick-command" reason="complexity_mismatch"/>
+    </incompatible_components>
+  </assembly_compatibility>
+  
+  <usage_patterns>
+    <common_workflow>security_feedback</common_workflow>
+    <typical_position>user_interface</typical_position>
+  </usage_patterns>
+</component_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>security_feedback</primary_discovery_path>
+    <alternative_paths>
+      <path>user_security_awareness</path>
+      <path>protection_reporting</path>
+      <path>security_metrics</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="component" ref="credential-protection" relation="protection_reporting"/>
+      <file type="component" ref="command-security-wrapper" relation="security_events"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="command" ref="secure-assess" relation="protection_feedback"/>
+      <file type="command" ref="db-migrate" relation="protection_feedback"/>
+      <file type="command" ref="deploy" relation="protection_feedback"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="component" ref="progress-indicator" similarity="0.60"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>Commands with active credential protection</scenario>
+      <scenario>User needs visibility into security measures</scenario>
+      <scenario>Security compliance reporting requirements</scenario>
+      <scenario>Commands handling sensitive data processing</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>Commands with no security implications</scenario>
+      <scenario>Internal processing without user interaction</scenario>
+      <scenario>Read-only documentation commands</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>security feedback protection notification user awareness credential masking security reporting</keywords>
+    <semantic_tags>security_feedback protection_reporting user_awareness</semantic_tags>
+    <functionality_vectors>security_notification protection_visibility user_feedback</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>local</scope_level>
+    <context_retention>session</context_retention>
+    <memory_priority>7</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref="../security/credential-protection.md" importance="critical"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref="../security/command-security-wrapper.md" importance="high"/>
+      <context_file ref="../atomic/progress-indicator.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>user_feedback</workflow_stage>
+    <integration_patterns>
+      <pattern>security_notification</pattern>
+      <pattern>protection_reporting</pattern>
+      <pattern>user_awareness</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>security_feedback_systems</concept_introduction>
+    <skill_progression>intermediate</skill_progression>
+    <mastery_indicators>
+      <indicator>Real-time security protection notifications</indicator>
+      <indicator>Command-specific protection feedback and reporting</indicator>
+      <indicator>Security metrics and user awareness systems</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 <prompt_component>
   <step name="Security Protection User Feedback">
     <description>

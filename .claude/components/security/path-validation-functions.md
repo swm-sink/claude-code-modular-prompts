@@ -1,3 +1,128 @@
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>component</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/components/security/path-validation-functions.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<component_metadata>
+  <component_id>path-validation-functions</component_id>
+  <component_count>91</component_count>
+  <category>security</category>
+  <subcategory>validation</subcategory>
+  
+  <complexity_metrics>
+    <usage_complexity>moderate</usage_complexity>
+    <implementation_effort>hours_1</implementation_effort>
+    <prerequisite_knowledge>intermediate</prerequisite_knowledge>
+  </complexity_metrics>
+  
+  <assembly_compatibility>
+    <compatible_components>
+      <component ref="path-validation" strength="strong"/>
+      <component ref="input-validation-framework" strength="strong"/>
+      <component ref="file-reader" strength="strong"/>
+      <component ref="file-writer" strength="strong"/>
+      <component ref="command-security-wrapper" strength="medium"/>
+    </compatible_components>
+    <incompatible_components>
+      <component ref="user-confirmation" reason="security_bypass_risk"/>
+    </incompatible_components>
+  </assembly_compatibility>
+  
+  <usage_patterns>
+    <common_workflow>file_security_implementation</common_workflow>
+    <typical_position>security_function</typical_position>
+  </usage_patterns>
+</component_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>functional_security</primary_discovery_path>
+    <alternative_paths>
+      <path>path_security_implementation</path>
+      <path>traversal_protection_functions</path>
+      <path>file_boundary_checking</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="component" ref="path-validation" relation="specification_implementation"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="component" ref="file-reader" relation="secure_file_access"/>
+      <file type="component" ref="file-writer" relation="secure_file_operations"/>
+      <file type="command" ref="component-gen" relation="secure_file_operations"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="component" ref="input-validation" similarity="0.70"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>Commands requiring actual path validation implementation</scenario>
+      <scenario>File operations needing functional security protection</scenario>
+      <scenario>Path traversal prevention in active file processing</scenario>
+      <scenario>Boundary enforcement for project directory access</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>High-level security specification (use path-validation.md instead)</scenario>
+      <scenario>Commands without file system interaction</scenario>
+      <scenario>Read-only documentation or analysis operations</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>path validation functions implementation traversal protection boundary checking file security python functions</keywords>
+    <semantic_tags>path_security_implementation functional_validation traversal_protection</semantic_tags>
+    <functionality_vectors>path_validation_functions security_implementation boundary_enforcement</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>local</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>8</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref="../security/path-validation.md" importance="critical"/>
+      <context_file ref="../context/llm-antipatterns.md" importance="high"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref="../security/input-validation-framework.md" importance="medium"/>
+      <context_file ref="../atomic/file-reader.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>security_implementation</workflow_stage>
+    <integration_patterns>
+      <pattern>functional_implementation</pattern>
+      <pattern>path_validation_execution</pattern>
+      <pattern>boundary_enforcement</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>functional_path_security</concept_introduction>
+    <skill_progression>intermediate</skill_progression>
+    <mastery_indicators>
+      <indicator>Functional path traversal protection (tested and verified)</indicator>
+      <indicator>Project boundary enforcement with real-time validation</indicator>
+      <indicator>Performance-optimized security functions (&lt;5ms per validation)</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 # Functional Path Validation Implementation
 
 ## Core Security Functions

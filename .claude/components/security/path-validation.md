@@ -1,5 +1,123 @@
 # Path Validation Security Component
 
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>component</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/components/security/path-validation.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<component_metadata>
+  <component_id>path-validation</component_id>
+  <component_count>91</component_count>
+  <category>security</category>
+  <subcategory>validation</subcategory>
+  
+  <complexity_metrics>
+    <usage_complexity>moderate</usage_complexity>
+    <implementation_effort>hours_1</implementation_effort>
+    <prerequisite_knowledge>intermediate</prerequisite_knowledge>
+  </complexity_metrics>
+  
+  <assembly_compatibility>
+    <compatible_components>
+      <component ref="input-validation-framework" strength="strong"/>
+      <component ref="file-reader" strength="strong"/>
+      <component ref="file-writer" strength="strong"/>
+      <component ref="credential-protection" strength="medium"/>
+      <component ref="owasp-compliance" strength="medium"/>
+    </compatible_components>
+    <incompatible_components>
+      <component ref="user-confirmation" reason="path_security_bypass_risk"/>
+    </incompatible_components>
+  </assembly_compatibility>
+  
+  <usage_patterns>
+    <common_workflow>file_security</common_workflow>
+    <typical_position>entry_point</typical_position>
+  </usage_patterns>
+</component_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>security_validation</primary_discovery_path>
+    <alternative_paths>
+      <path>file_security</path>
+      <path>path_traversal_protection</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="component" ref="input-validation-framework" relation="validation_pipeline"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="component" ref="file-reader" relation="secure_file_access"/>
+      <file type="component" ref="file-writer" relation="secure_file_operations"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="component" ref="input-validation" similarity="0.65"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>Any file operations involving user-provided paths</scenario>
+      <scenario>Commands accepting file path parameters</scenario>
+      <scenario>Directory traversal and file access operations</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>Operations with hardcoded, trusted paths only</scenario>
+      <scenario>Non-file-related operations</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>path validation security path traversal protection file security directory validation</keywords>
+    <semantic_tags>path_security file_protection traversal_prevention</semantic_tags>
+    <functionality_vectors>path_validation security_checking file_protection</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>local</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>9</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref="../security/owasp-compliance.md" importance="high"/>
+      <context_file ref="../context/llm-antipatterns.md" importance="high"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref="../context/comprehensive-project-learnings.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>security_validation</workflow_stage>
+    <integration_patterns>
+      <pattern>path_sanitization</pattern>
+      <pattern>traversal_prevention</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>path_security</concept_introduction>
+    <skill_progression>intermediate</skill_progression>
+    <mastery_indicators>
+      <indicator>Can prevent path traversal attacks (100% success rate documented)</indicator>
+      <indicator>Provides functional path validation for Claude Code commands</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 This component provides functional path traversal protection for Claude Code commands.
 
 ## Usage in Commands

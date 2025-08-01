@@ -1,3 +1,121 @@
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>component</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/components/security/credential-protection.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<component_metadata>
+  <component_id>credential-protection</component_id>
+  <component_count>91</component_count>
+  <category>security</category>
+  <subcategory>protection</subcategory>
+  
+  <complexity_metrics>
+    <usage_complexity>moderate</usage_complexity>
+    <implementation_effort>hours_1</implementation_effort>
+    <prerequisite_knowledge>intermediate</prerequisite_knowledge>
+  </complexity_metrics>
+  
+  <assembly_compatibility>
+    <compatible_components>
+      <component ref="input-validation-framework" strength="strong"/>
+      <component ref="secure-config" strength="strong"/>
+      <component ref="command-security-wrapper" strength="strong"/>
+      <component ref="error-handler" strength="medium"/>
+      <component ref="content-sanitizer" strength="medium"/>
+    </compatible_components>
+    <incompatible_components>
+      <component ref="file-writer" reason="credential_exposure_risk"/>
+    </incompatible_components>
+  </assembly_compatibility>
+  
+  <usage_patterns>
+    <common_workflow>security_validation</common_workflow>
+    <typical_position>entry_point</typical_position>
+  </usage_patterns>
+</component_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>security_protection</primary_discovery_path>
+    <alternative_paths>
+      <path>credential_management</path>
+      <path>data_protection</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="component" ref="input-validation-framework" relation="validation_pipeline"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="component" ref="secure-config" relation="configuration_security"/>
+      <file type="component" ref="command-security-wrapper" relation="execution_protection"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="component" ref="path-validation" similarity="0.60"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>Any operation handling credentials, API keys, or sensitive data</scenario>
+      <scenario>Processing user input that might contain credentials</scenario>
+      <scenario>Command execution with potential credential exposure</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>Operations with no credential handling requirements</scenario>
+      <scenario>Internal utility functions without user input</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>credential protection security masking detection prevention data protection</keywords>
+    <semantic_tags>security_protection credential_security data_protection</semantic_tags>
+    <functionality_vectors>credential_detection security_masking data_protection</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>10</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref="../context/llm-antipatterns.md" importance="critical"/>
+      <context_file ref="../context/comprehensive-project-learnings.md" importance="high"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref="../security/owasp-compliance.md" importance="high"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>security_validation</workflow_stage>
+    <integration_patterns>
+      <pattern>security_first_validation</pattern>
+      <pattern>credential_sanitization</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>credential_protection</concept_introduction>
+    <skill_progression>intermediate</skill_progression>
+    <mastery_indicators>
+      <indicator>Can detect and mask 13+ credential formats with regex patterns</indicator>
+      <indicator>Provides comprehensive protection during command execution</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 <prompt_component>
   <step name="Functional Credential Protection">
     <description>
