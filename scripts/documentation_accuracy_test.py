@@ -191,7 +191,7 @@ class DocumentationAccuracyTester:
         features_to_verify = {
             "Progressive Disclosure System": ["3-layer", "layer 1", "layer 2", "layer 3"],
             "Quick Command Auto-Generation": ["30-second", "auto-generate", "intelligence"],
-            "Component Library": ["94 component", "atomic component", "assembly"],
+            "Component Library": ["91 component", "atomic component", "assembly"],
             "YAML Compliance": ["100%", "claude code", "allowed-tools"],
             "Template Adaptation": ["placeholder", "customization", "manual"]
         }

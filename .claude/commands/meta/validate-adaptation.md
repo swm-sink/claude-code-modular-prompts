@@ -30,6 +30,148 @@ export-formats:
   checklist: Interactive TODO format
 ---
 
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>command</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>yaml_frontmatter</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/meta/validate-adaptation.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<command_metadata>
+  <command_id>validate-adaptation</command_id>
+  <command_count>88</command_count>
+  <progressive_disclosure_layer>all</progressive_disclosure_layer>
+  
+  <component_dependencies>
+    <required_components>
+      <component ref="file-reader" role="adaptation_status_scanning"/>
+      <component ref="parameter-parser" role="validation_options_processing"/>
+      <component ref="search-files" role="placeholder_detection"/>
+      <component ref="response-validator" role="validation_result_assessment"/>
+      <component ref="progress-indicator" role="validation_progress_tracking"/>
+      <component ref="task-summary" role="validation_report_generation"/>
+    </required_components>
+    <optional_components>
+      <component ref="output-formatter" benefit="multiple_export_formats"/>
+      <component ref="error-handler" benefit="validation_failure_recovery"/>
+      <component ref="performance-monitoring" benefit="validation_performance_tracking"/>
+      <component ref="completion-tracker" benefit="readiness_score_calculation"/>
+    </optional_components>
+  </component_dependencies>
+  
+  <orchestration_capability>
+    <can_invoke_commands>true</can_invoke_commands>
+    <invokable_commands>
+      <command ref="adapt-to-project" context="remediation_workflow"/>
+      <command ref="replace-placeholders" context="placeholder_fixing"/>
+      <command ref="quick-command" context="layer_1_validation"/>
+      <command ref="build-command" context="layer_2_validation"/>
+      <command ref="assemble-command" context="layer_3_validation"/>
+    </invokable_commands>
+    <orchestration_patterns>conditional|diagnostic|remediation|layer_aware</orchestration_patterns>
+  </orchestration_capability>
+  
+  <v2_features>
+    <task_description>Comprehensive adaptation validation with layer-aware assessment, automated scanning, and readiness scoring</task_description>
+    <implementation_strategy>systematic_scanning|layer_specific_validation|readiness_assessment|remediation_guidance|export_reporting</implementation_strategy>
+    <command_chaining_enabled>true</command_chaining_enabled>
+  </v2_features>
+</command_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>validation_and_quality_assurance</primary_discovery_path>
+    <alternative_paths>
+      <path>adaptation_verification</path>
+      <path>template_readiness_assessment</path>
+      <path>progressive_disclosure_validation</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="command" ref="adapt-to-project" relation="adaptation_source"/>
+      <file type="command" ref="replace-placeholders" relation="placeholder_management"/>
+      <file type="context" ref=".claude/context/validation-patterns.md" relation="validation_methodology"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="command" ref="welcome" relation="onboarding_validation"/>
+      <file type="command" ref="help-plus" relation="diagnostic_integration"/>
+      <file type="context" ref=".claude/context/quality-assessment-report.md" relation="quality_reporting"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="command" ref="validate-automation" similarity="0.70"/>
+      <file type="command" ref="help-plus" similarity="0.45"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>post_adaptation_verification</scenario>
+      <scenario>readiness_assessment_before_productive_use</scenario>
+      <scenario>troubleshooting_adaptation_issues</scenario>
+      <scenario>progressive_disclosure_layer_verification</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>during_active_adaptation_process</scenario>
+      <scenario>pre_adaptation_environment_checking</scenario>
+      <scenario>routine_template_usage</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>validate adaptation verification readiness assessment quality assurance validation</keywords>
+    <semantic_tags>validation_framework adaptation_verification readiness_scoring quality_assurance</semantic_tags>
+    <functionality_vectors>[0.9, 1.0, 0.8, 0.9, 0.7]</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>session</context_retention>
+    <memory_priority>9</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <critical_context>
+      <context_file ref=".claude/context/validation-patterns.md" importance="critical"/>
+      <context_file ref=".claude/context/progressive-disclosure-guide.md" importance="critical"/>
+      <context_file ref=".claude/context/quality-assessment-framework.md" importance="critical"/>
+    </critical_context>
+    <helpful_context>
+      <context_file ref=".claude/context/adaptation-troubleshooting.md" importance="high"/>
+      <context_file ref=".claude/context/template-library-standards.md" importance="high"/>
+      <context_file ref=".claude/context/comprehensive-project-learnings.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>validation_and_qa</workflow_stage>
+    <integration_patterns>
+      <pattern>systematic_validation_scanning</pattern>
+      <pattern>layer_aware_quality_assessment</pattern>
+      <pattern>automated_readiness_scoring</pattern>
+      <pattern>remediation_guidance_generation</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>adaptation_validation_framework</concept_introduction>
+    <skill_progression>all_levels</skill_progression>
+    <mastery_indicators>
+      <indicator>comprehensive_placeholder_detection</indicator>
+      <indicator>layer_specific_validation_execution</indicator>
+      <indicator>accurate_readiness_score_calculation</indicator>
+      <indicator>effective_remediation_guidance_provision</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 # Validate Adaptation (v2.0)
 
 ## 🎯 Enhanced Validation with Progressive Disclosure Support

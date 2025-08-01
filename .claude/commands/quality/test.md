@@ -40,6 +40,153 @@ test-features:
   environment-management: Docker and service orchestration
   multi-format-reporting: HTML, PDF, JSON, JUnit formats
 ---
+
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>command</document_type>
+  <ai_consumption_priority>high</ai_consumption_priority>
+  <content_structure>yaml_frontmatter</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/quality/test.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<command_metadata>
+  <command_id>test</command_id>
+  <command_count>88</command_count>
+  <progressive_disclosure_layer>2</progressive_disclosure_layer>
+  
+  <component_dependencies>
+    <required_components>
+      <component ref="file-reader" role="test_discovery"/>
+      <component ref="parameter-parser" role="test_configuration"/>
+      <component ref="test-runner" role="test_execution"/>
+      <component ref="api-caller" role="test_framework_integration"/>
+      <component ref="progress-indicator" role="test_progress_tracking"/>
+      <component ref="task-summary" role="test_report_generation"/>
+    </required_components>
+    <optional_components>
+      <component ref="performance-monitoring" benefit="test_performance_analysis"/>
+      <component ref="git-operations" benefit="version_control_integration"/>
+      <component ref="error-handler" benefit="test_failure_recovery"/>
+      <component ref="output-formatter" benefit="multi_format_reporting"/>
+    </optional_components>
+  </component_dependencies>
+  
+  <orchestration_capability>
+    <can_invoke_commands>true</can_invoke_commands>
+    <invokable_commands>
+      <command ref="test-unit" context="unit_testing"/>
+      <command ref="test-integration-project" context="integration_testing"/>
+      <command ref="test-e2e" context="end_to_end_testing"/>
+      <command ref="quick-test" context="rapid_testing"/>
+      <command ref="analyze-code" context="code_quality_integration"/>
+    </invokable_commands>
+    <orchestration_patterns>unified_testing|parallel_execution|coverage_analysis|automated_generation</orchestration_patterns>
+  </orchestration_capability>
+  
+  <v2_features>
+    <task_description>Unified intelligent testing framework with automated test generation, comprehensive coverage analysis, and multi-format reporting</task_description>
+    <implementation_strategy>test_type_selection|target_validation|test_execution|coverage_analysis|report_generation|environment_management</implementation_strategy>
+    <command_chaining_enabled>true</command_chaining_enabled>
+  </v2_features>
+</command_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>testing_framework_hub</primary_discovery_path>
+    <alternative_paths>
+      <path>automated_test_generation</path>
+      <path>coverage_analysis</path>
+      <path>test_environment_management</path>
+      <path>test_reporting_and_analytics</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="command" ref="test-unit" relation="unit_testing_foundation"/>
+      <file type="command" ref="test-integration-project" relation="integration_testing"/>
+      <file type="command" ref="test-e2e" relation="end_to_end_testing"/>
+      <file type="context" ref=".claude/context/testing-frameworks.md" relation="testing_methodology"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="command" ref="analyze-code" relation="quality_integration"/>
+      <file type="command" ref="quality" relation="quality_assurance_workflow"/>
+      <file type="context" ref=".claude/context/test-reports.md" relation="reporting_documentation"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="command" ref="quick-test" similarity="0.80"/>
+      <file type="command" ref="test-integration" similarity="0.75"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>comprehensive_testing_requirements</scenario>
+      <scenario>automated_test_generation</scenario>
+      <scenario>coverage_analysis</scenario>
+      <scenario>test_environment_management</scenario>
+      <scenario>unified_testing_workflow</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>simple_single_test_execution</scenario>
+      <scenario>basic_syntax_validation</scenario>
+      <scenario>non_testing_code_analysis</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>test testing framework unit integration coverage automated generation reporting</keywords>
+    <semantic_tags>testing_framework automated_testing coverage_analysis test_generation unified_testing</semantic_tags>
+    <functionality_vectors>[1.0, 0.9, 0.9, 0.8, 0.8]</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>session</context_retention>
+    <memory_priority>9</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <critical_context>
+      <context_file ref=".claude/context/testing-frameworks.md" importance="critical"/>
+      <context_file ref=".claude/context/test-automation-patterns.md" importance="critical"/>
+      <context_file ref=".claude/context/coverage-analysis-guide.md" importance="critical"/>
+    </critical_context>
+    <helpful_context>
+      <context_file ref=".claude/context/test-environment-setup.md" importance="high"/>
+      <context_file ref=".claude/context/test-reporting-standards.md" importance="high"/>
+      <context_file ref=".claude/context/performance-testing-patterns.md" importance="medium"/>
+      <context_file ref=".claude/context/comprehensive-project-learnings.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>testing_and_validation</workflow_stage>
+    <integration_patterns>
+      <pattern>unified_testing_orchestration</pattern>
+      <pattern>automated_test_generation</pattern>
+      <pattern>comprehensive_coverage_analysis</pattern>
+      <pattern>multi_format_reporting</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>unified_testing_framework</concept_introduction>
+    <skill_progression>intermediate_to_advanced</skill_progression>
+    <mastery_indicators>
+      <indicator>effective_test_type_selection</indicator>
+      <indicator>successful_automated_test_generation</indicator>
+      <indicator>comprehensive_coverage_analysis</indicator>
+      <indicator>professional_test_reporting</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 # /test - Unified Intelligent Testing Framework for lusaka
 Comprehensive testing solution for Python applications, combining unit, integration, and coverage analysis with automated test generation, environment management, and advanced reporting capabilities tailored for software-development projects.
 ## Usage

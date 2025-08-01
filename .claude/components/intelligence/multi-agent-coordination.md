@@ -1,3 +1,133 @@
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>component</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/components/intelligence/multi-agent-coordination.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<component_metadata>
+  <component_id>multi-agent-coordination</component_id>
+  <component_count>91</component_count>
+  <category>intelligence</category>
+  <subcategory>coordination_systems</subcategory>
+  
+  <complexity_metrics>
+    <usage_complexity>very_high</usage_complexity>
+    <implementation_effort>weeks_1</implementation_effort>
+    <prerequisite_knowledge>expert</prerequisite_knowledge>
+  </complexity_metrics>
+  
+  <assembly_compatibility>
+    <compatible_components>
+      <component ref="cognitive-architecture" strength="strong"/>
+      <component ref="agent-orchestration" strength="strong"/>
+      <component ref="agent-swarm" strength="strong"/>
+      <component ref="dag-orchestrator" strength="medium"/>
+      <component ref="task-planning" strength="medium"/>
+    </compatible_components>
+    <incompatible_components>
+      <component ref="quick-command" reason="coordination_complexity_mismatch"/>
+      <component ref="user-confirmation" reason="automation_autonomy_conflict"/>
+    </incompatible_components>
+  </assembly_compatibility>
+  
+  <usage_patterns>
+    <common_workflow>intelligent_multi_agent_systems</common_workflow>
+    <typical_position>coordination_foundation</typical_position>
+  </usage_patterns>
+</component_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>intelligent_coordination</primary_discovery_path>
+    <alternative_paths>
+      <path>swarm_intelligence_coordination</path>
+      <path>enterprise_agent_systems</path>
+      <path>collective_intelligence</path>
+      <path>distributed_ai_systems</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="theory" ref="swarm_intelligence_theory" relation="coordination_theory"/>
+      <file type="theory" ref="distributed_ai_systems" relation="system_architecture"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="component" ref="agent-orchestration" relation="orchestration_intelligence"/>
+      <file type="component" ref="agent-swarm" relation="swarm_coordination"/>
+      <file type="application" ref="enterprise_systems" relation="scalable_coordination"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="component" ref="cognitive-architecture" similarity="0.85"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>Complex development tasks requiring specialized agent coordination</scenario>
+      <scenario>Enterprise-grade systems needing scalable multi-agent architectures</scenario>
+      <scenario>Distributed problem-solving with collective intelligence requirements</scenario>
+      <scenario>Advanced workflow orchestration with intelligent adaptation</scenario>
+      <scenario>Research and innovation systems requiring collaborative AI</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>Simple single-agent tasks</scenario>
+      <scenario>Resource-constrained environments without coordination needs</scenario>
+      <scenario>Sequential workflows without parallel coordination requirements</scenario>
+      <scenario>Systems without advanced AI or intelligence requirements</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>multi agent coordination swarm intelligence collective intelligence distributed ai enterprise agents specialized coordination</keywords>
+    <semantic_tags>multi_agent_coordination swarm_intelligence collective_systems</semantic_tags>
+    <functionality_vectors>agent_coordination collective_intelligence distributed_problem_solving</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>10</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref="../intelligence/cognitive-architecture.md" importance="critical"/>
+      <context_file ref="../context/comprehensive-project-learnings.md" importance="high"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref="../orchestration/agent-orchestration.md" importance="high"/>
+      <context_file ref="../orchestration/agent-swarm.md" importance="high"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>coordination_foundation</workflow_stage>
+    <integration_patterns>
+      <pattern>intelligent_coordination</pattern>
+      <pattern>collective_intelligence</pattern>
+      <pattern>distributed_problem_solving</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>intelligent_multi_agent_coordination</concept_introduction>
+    <skill_progression>expert</skill_progression>
+    <mastery_indicators>
+      <indicator>Advanced multi-agent coordination with specialized agents</indicator>
+      <indicator>Collective intelligence and swarm optimization systems</indicator>
+      <indicator>Enterprise-grade scalable coordination with fault tolerance</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 <prompt_component>
   <step name="Multi-Agent Coordination and Swarm Intelligence">
     <description>

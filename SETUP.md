@@ -21,7 +21,7 @@ Choose specific commands/components to copy manually.
 
 After setup, you'll have:
 - Customized `.claude/` directory with 88 command templates
-- Working copy of 94 reusable components
+- Working copy of 91 reusable components
 - Guide commands for customization assistance
 
 ## Next Steps

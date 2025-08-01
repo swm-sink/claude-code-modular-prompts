@@ -1,6 +1,6 @@
 ---
 command: assemble-command
-description: Layer 3 Progressive Disclosure - Advanced component assembly for professional workflows with 94 components and enterprise capabilities
+description: Layer 3 Progressive Disclosure - Advanced component assembly for professional workflows with 91 components and enterprise capabilities
 category: core
 parameters: 
   - name: WORKFLOW_TYPE
@@ -42,10 +42,146 @@ allowed-tools:
 - MultiEdit
 ---
 
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>command</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>yaml_frontmatter</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/core/assemble-command.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<command_metadata>
+  <command_id>assemble-command</command_id>
+  <command_count>88</command_count>
+  <progressive_disclosure_layer>3</progressive_disclosure_layer>
+  
+  <component_dependencies>
+    <required_components>
+      <component ref="component-loader" role="component_discovery"/>
+      <component ref="dependency-resolver" role="compatibility_analysis"/>
+      <component ref="workflow-coordinator" role="assembly_orchestration"/>
+      <component ref="validation-framework" role="professional_validation"/>
+    </required_components>
+    <optional_components>
+      <component ref="performance-analysis" benefit="optimization_suggestions"/>
+      <component ref="security-validation" benefit="enterprise_compliance"/>
+      <component ref="documentation-generator" benefit="professional_documentation"/>
+    </optional_components>
+  </component_dependencies>
+  
+  <orchestration_capability>
+    <can_invoke_commands>true</can_invoke_commands>
+    <invokable_commands>
+      <command ref="build-command" context="layer_2_fallback"/>
+      <command ref="quick-command" context="layer_1_fallback"/>
+      <command ref="validate-component" context="component_validation"/>
+      <command ref="analyze-system" context="performance_analysis"/>
+    </invokable_commands>
+    <orchestration_patterns>interactive|template_based|component_driven|workflow_patterns</orchestration_patterns>
+  </orchestration_capability>
+  
+  <v2_features>
+    <task_description>Professional component assembly with 91 components, enterprise validation, and advanced workflow orchestration</task_description>
+    <implementation_strategy>component_discovery|compatibility_analysis|workflow_design|assembly_execution|professional_validation|documentation_generation</implementation_strategy>
+    <command_chaining_enabled>true</command_chaining_enabled>
+  </v2_features>
+</command_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>progressive_disclosure_layer_3</primary_discovery_path>
+    <alternative_paths>
+      <path>professional_assembly_entry_point</path>
+      <path>enterprise_component_composition</path>
+      <path>advanced_workflow_creation</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="command" ref="build-command" relation="layer_2_escalation_source"/>
+      <file type="component" ref=".claude/components/COMPONENT-LIBRARY-INDEX.md" relation="component_catalog"/>
+      <file type="context" ref=".claude/context/component-assembly-patterns.md" relation="assembly_guidance"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="workflow" ref="professional_workflows" relation="generates"/>
+      <file type="validation" ref="enterprise_validation_reports" relation="produces"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="command" ref="build-command" similarity="0.70"/>
+      <file type="command" ref="quick-command" similarity="0.40"/>
+      <file type="command" ref="component-gen" similarity="0.60"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>enterprise_workflow_requirements</scenario>
+      <scenario>complex_multi_component_assembly</scenario>
+      <scenario>professional_quality_standards_needed</scenario>
+      <scenario>maximum_customization_and_control</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>simple_standard_use_cases</scenario>
+      <scenario>time_critical_30_second_needs</scenario>
+      <scenario>beginner_users_without_component_knowledge</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>assemble command component assembly professional enterprise layer 3 workflow advanced</keywords>
+    <semantic_tags>professional_assembly enterprise_grade maximum_control component_orchestration</semantic_tags>
+    <functionality_vectors>[0.3, 0.5, 1.0, 0.9, 0.7]</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>session</context_retention>
+    <memory_priority>9</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref=".claude/context/progressive-disclosure-guide.md" importance="critical"/>
+      <context_file ref=".claude/components/COMPONENT-LIBRARY-INDEX.md" importance="critical"/>
+      <context_file ref=".claude/context/component-assembly-patterns.md" importance="high"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref=".claude/context/enterprise-patterns.md" importance="medium"/>
+      <context_file ref=".claude/context/performance-optimization.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>professional_assembly</workflow_stage>
+    <integration_patterns>
+      <pattern>component_discovery_and_selection</pattern>
+      <pattern>compatibility_validation</pattern>
+      <pattern>workflow_design_and_optimization</pattern>
+      <pattern>enterprise_quality_assurance</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>professional_component_assembly</concept_introduction>
+    <skill_progression>advanced</skill_progression>
+    <mastery_indicators>
+      <indicator>successful_complex_workflow_assembly</indicator>
+      <indicator>enterprise_validation_compliance</indicator>
+      <indicator>performance_optimized_output</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 # 🔧 Layer 3: Professional Assembly v2.0
 
 <context type="project">
-Progressive Disclosure System Layer 3 for lusaka template library providing enterprise-grade component assembly with 94 components across 6 professional categories. Designed for power users (5% of users) requiring maximum flexibility, complex workflow orchestration, and 15-30 minute professional assembly processes.
+Progressive Disclosure System Layer 3 for lusaka template library providing enterprise-grade component assembly with 91 components across 6 professional categories. Designed for power users (5% of users) requiring maximum flexibility, complex workflow orchestration, and 15-30 minute professional assembly processes.
 </context>
 
 <instructions>
@@ -77,7 +213,7 @@ Execute advanced component assembly using $WORKFLOW_TYPE, $MODE, $TEMPLATE_NAME,
 
 <workflow type="sequential">
 <task priority="high">
-**Discovery & Component Exploration**: Navigate 94-component library
+**Discovery & Component Exploration**: Navigate 91-component library
 - **Interactive Component Browser**: Search, filter, and explore 6 professional categories
 - **Dependency Mapping**: Understand component relationships and integration patterns
 - **Preview Functionality**: Examine component capabilities and requirements
@@ -139,7 +275,7 @@ Execute advanced component assembly using $WORKFLOW_TYPE, $MODE, $TEMPLATE_NAME,
 - **Code-migration workflows** with transformation and validation patterns
 - **Custom workflow types** with pattern recognition and suggestion engines
 
-## 🧩 Professional Component Library (94 Components)
+## 🧩 Professional Component Library (91 Components)
 
 ### **Atomic Components** (21 components) - Building Blocks
 **Single-purpose, highly reliable components:**
@@ -204,7 +340,7 @@ Execute advanced component assembly using $WORKFLOW_TYPE, $MODE, $TEMPLATE_NAME,
 ### **Professional Assembly Targets:**
 - **5% of users** require this level of control and complexity  
 - **15-30 minute assembly time** acceptable for professional workflows
-- **Unlimited customization** with full 94-component library access
+- **Unlimited customization** with full 91-component library access
 - **Enterprise-grade validation** with comprehensive quality assurance
 - **High reusability** of assembled professional commands
 

@@ -6,7 +6,7 @@ Comprehensive Integration Testing Suite for Progressive Disclosure System
 Tests all aspects of the Progressive Disclosure System to validate:
 1. Layer 1 (Auto-generation) → Layer 2 (Guided) → Layer 3 (Assembly) upgrade paths
 2. Complete user workflows from beginner to expert
-3. Cross-component integration with 94 components
+3. Cross-component integration with 91 components
 4. Performance targets and system integration
 5. Documentation-reality alignment
 
@@ -50,7 +50,7 @@ class ProgressiveDisclosureIntegrationTester:
         self.test_user_workflows()
         
         # Test 3: Component Cross-Integration
-        print("\n🧩 TEST 3: 94-Component Integration Matrix")
+        print("\n🧩 TEST 3: 91-Component Integration Matrix")
         self.test_component_integration()
         
         # Test 4: Performance Integration
@@ -282,7 +282,7 @@ class ProgressiveDisclosureIntegrationTester:
         return mixed_tests
         
     def test_component_integration(self):
-        """Test 94-component cross-integration and compatibility."""
+        """Test 91-component cross-integration and compatibility."""
         print("Testing component integration matrix...")
         
         # Count actual components
@@ -307,7 +307,7 @@ class ProgressiveDisclosureIntegrationTester:
         component_tests = {
             "total_components_found": total_components,
             "component_categories": component_categories,
-            "claimed_94_components": total_components >= 90,  # Allow some tolerance
+            "claimed_91_components": total_components >= 90,  # Allow some tolerance
             "compatibility_matrix_exists": compatibility_exists,
             "proven_workflow_patterns": proven_patterns,
             "atomic_components_count": component_categories.get("atomic", 0),
@@ -371,7 +371,7 @@ class ProgressiveDisclosureIntegrationTester:
         """Check system scalability claims."""
         return {
             "handles_88_commands": True,  # Based on file counts
-            "supports_94_components": True,
+            "supports_91_components": True,
             "concurrent_access": True  # Would need load testing
         }
         
@@ -434,7 +434,7 @@ class ProgressiveDisclosureIntegrationTester:
         if claude_md.exists():
             content = claude_md.read_text()
             claims["claims_91_components"] = "91" in content and "component" in content
-            claims["claims_94_components"] = "94" in content and "component" in content
+            claims["claims_91_components"] = "91" in content and "component" in content
             
         return {
             "actual_component_count": actual_count,
@@ -651,7 +651,7 @@ class ProgressiveDisclosureIntegrationTester:
         
         # Key metrics for component integration
         total_components = component_data.get("total_components_found", 0)
-        claimed_components = component_data.get("claimed_94_components", False)
+        claimed_components = component_data.get("claimed_91_components", False)
         compatibility_matrix = component_data.get("compatibility_matrix_exists", False)
         atomic_components = component_data.get("atomic_components_count", 0)
         

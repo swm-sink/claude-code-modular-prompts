@@ -1,7 +1,7 @@
 # Component Library Index
 
 ## Overview
-This document provides a complete index of the 94 reusable components organized by functional domain.
+This document provides a complete index of the 91 reusable components organized by functional domain.
 
 ## Component Organization
 
@@ -233,7 +233,7 @@ Common component combinations:
 - **Reporting**: 1 component (1.1%)
 - **Validation**: 1 component (1.1%)
 
-### Total: 94 components
+### Total: 91 components
 
 ## Component Quality Standards
 
@@ -272,5 +272,5 @@ Common component combinations:
 
 ---
 *Component Library Version: 1.1*
-*Total Components: 94 (72 existing + 22 atomic)*
+*Total Components: 91*
 *Last Updated: 2025-07-31*

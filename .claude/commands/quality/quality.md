@@ -32,6 +32,150 @@ error-recovery:
   system-error: Fallback to safe mode operation
 ---
 
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>command</document_type>
+  <ai_consumption_priority>high</ai_consumption_priority>
+  <content_structure>yaml_frontmatter</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/quality/quality.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<command_metadata>
+  <command_id>quality</command_id>
+  <command_count>88</command_count>
+  <progressive_disclosure_layer>N/A</progressive_disclosure_layer>
+  
+  <component_dependencies>
+    <required_components>
+      <component ref="file-reader" role="codebase_analysis"/>
+      <component ref="parameter-parser" role="quality_mode_processing"/>
+      <component ref="quality-metrics" role="metrics_calculation"/>
+      <component ref="anti-pattern-detection" role="quality_assessment"/>
+      <component ref="output-formatter" role="report_generation"/>
+      <component ref="task-summary" role="improvement_suggestions"/>
+    </required_components>
+    <optional_components>
+      <component ref="performance-monitoring" benefit="performance_quality_analysis"/>
+      <component ref="owasp-compliance" benefit="security_quality_assessment"/>
+      <component ref="dependency-mapping" benefit="architectural_quality_insights"/>
+      <component ref="context-compression" benefit="optimized_quality_reporting"/>
+    </optional_components>
+  </component_dependencies>
+  
+  <orchestration_capability>
+    <can_invoke_commands>true</can_invoke_commands>
+    <invokable_commands>
+      <command ref="analyze-code" context="detailed_code_analysis"/>
+      <command ref="test" context="testing_quality_integration"/>
+      <command ref="help" context="quality_guidance"/>
+      <command ref="welcome" context="onboarding_integration"/>
+    </invokable_commands>
+    <orchestration_patterns>unified_quality|multi_mode_analysis|comprehensive_reporting|prioritized_suggestions</orchestration_patterns>
+  </orchestration_capability>
+  
+  <v2_features>
+    <task_description>Unified intelligent code quality analysis with comprehensive review, metrics calculation, and prioritized improvement suggestions</task_description>
+    <implementation_strategy>quality_mode_selection|comprehensive_analysis|metrics_calculation|report_generation|improvement_prioritization</implementation_strategy>
+    <command_chaining_enabled>true</command_chaining_enabled>
+  </v2_features>
+</command_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>unified_quality_framework</primary_discovery_path>
+    <alternative_paths>
+      <path>code_review_and_analysis</path>
+      <path>quality_metrics_and_reporting</path>
+      <path>improvement_suggestions</path>
+      <path>continuous_quality_monitoring</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="command" ref="analyze-code" relation="detailed_analysis_foundation"/>
+      <file type="context" ref=".claude/context/quality-standards.md" relation="quality_framework"/>
+      <file type="context" ref=".claude/context/anti-pattern-detection.md" relation="quality_detection"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="command" ref="test" relation="testing_quality_integration"/>
+      <file type="context" ref=".claude/context/quality-reports.md" relation="reporting_documentation"/>
+      <file type="context" ref=".claude/context/improvement-tracking.md" relation="improvement_workflow"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="command" ref="analyze-code" similarity="0.85"/>
+      <file type="command" ref="quality-enforce" similarity="0.70"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>comprehensive_quality_assessment</scenario>
+      <scenario>quality_metrics_calculation</scenario>
+      <scenario>code_review_and_improvement</scenario>
+      <scenario>quality_reporting_and_dashboards</scenario>
+      <scenario>continuous_quality_monitoring</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>simple_syntax_checking</scenario>
+      <scenario>basic_code_formatting</scenario>
+      <scenario>specific_testing_tasks</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>quality analysis review metrics reporting improvement suggestions comprehensive</keywords>
+    <semantic_tags>quality_framework comprehensive_analysis metrics_calculation quality_reporting improvement_suggestions</semantic_tags>
+    <functionality_vectors>[1.0, 0.9, 0.9, 0.8, 0.9]</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>session</context_retention>
+    <memory_priority>9</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <critical_context>
+      <context_file ref=".claude/context/quality-standards.md" importance="critical"/>
+      <context_file ref=".claude/context/quality-metrics-framework.md" importance="critical"/>
+      <context_file ref=".claude/context/anti-pattern-detection.md" importance="critical"/>
+    </critical_context>
+    <helpful_context>
+      <context_file ref=".claude/context/code-review-guidelines.md" importance="high"/>
+      <context_file ref=".claude/context/improvement-prioritization.md" importance="high"/>
+      <context_file ref=".claude/context/quality-reporting-standards.md" importance="high"/>
+      <context_file ref=".claude/context/comprehensive-project-learnings.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>quality_assurance</workflow_stage>
+    <integration_patterns>
+      <pattern>unified_quality_analysis</pattern>
+      <pattern>multi_mode_quality_assessment</pattern>
+      <pattern>comprehensive_quality_reporting</pattern>
+      <pattern>prioritized_improvement_suggestions</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>unified_quality_framework</concept_introduction>
+    <skill_progression>intermediate_to_advanced</skill_progression>
+    <mastery_indicators>
+      <indicator>effective_quality_mode_selection</indicator>
+      <indicator>comprehensive_quality_analysis</indicator>
+      <indicator>accurate_metrics_calculation</indicator>
+      <indicator>actionable_improvement_suggestions</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 # /quality - Unified Code Quality Framework for lusaka
 
 I'll help you perform comprehensive quality analysis for lusaka using Python in the software-development domain.

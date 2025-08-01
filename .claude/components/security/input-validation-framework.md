@@ -1,5 +1,125 @@
 # Input Validation Framework
 
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>component</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/components/security/input-validation-framework.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<component_metadata>
+  <component_id>input-validation-framework</component_id>
+  <component_count>91</component_count>
+  <category>security</category>
+  <subcategory>validation</subcategory>
+  
+  <complexity_metrics>
+    <usage_complexity>complex</usage_complexity>
+    <implementation_effort>hours_3</implementation_effort>
+    <prerequisite_knowledge>advanced</prerequisite_knowledge>
+  </complexity_metrics>
+  
+  <assembly_compatibility>
+    <compatible_components>
+      <component ref="credential-protection" strength="strong"/>
+      <component ref="prompt-injection-prevention" strength="strong"/>
+      <component ref="path-validation" strength="strong"/>
+      <component ref="input-validation" strength="strong"/>
+      <component ref="owasp-compliance" strength="medium"/>
+    </compatible_components>
+    <incompatible_components>
+      <component ref="user-confirmation" reason="bypasses_validation_pipeline"/>
+    </incompatible_components>
+  </assembly_compatibility>
+  
+  <usage_patterns>
+    <common_workflow>security_validation</common_workflow>
+    <typical_position>entry_point</typical_position>
+  </usage_patterns>
+</component_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>security_validation</primary_discovery_path>
+    <alternative_paths>
+      <path>input_security</path>
+      <path>framework_architecture</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="raw_input" ref="user_input" relation="validation_source"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="component" ref="credential-protection" relation="credential_validation"/>
+      <file type="component" ref="prompt-injection-prevention" relation="injection_prevention"/>
+      <file type="component" ref="path-validation" relation="path_security"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="component" ref="owasp-compliance" similarity="0.70"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>Comprehensive input validation across all 18 commands requiring user input</scenario>
+      <scenario>Security-critical applications requiring multi-layer validation</scenario>
+      <scenario>Enterprise deployments with strict security requirements</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>Simple, internal operations without user input</scenario>
+      <scenario>Trusted environments with minimal security requirements</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>input validation framework security validation modular architecture comprehensive protection</keywords>
+    <semantic_tags>security_framework input_validation comprehensive_protection</semantic_tags>
+    <functionality_vectors>validation_framework security_architecture input_protection</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>10</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref="../security/owasp-compliance.md" importance="critical"/>
+      <context_file ref="../context/llm-antipatterns.md" importance="critical"/>
+      <context_file ref="../context/comprehensive-project-learnings.md" importance="high"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref="../security/credential-protection.md" importance="high"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>security_validation</workflow_stage>
+    <integration_patterns>
+      <pattern>multi_layer_validation</pattern>
+      <pattern>security_first_architecture</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>security_framework_architecture</concept_introduction>
+    <skill_progression>advanced</skill_progression>
+    <mastery_indicators>
+      <indicator>Can implement comprehensive validation across 18+ commands</indicator>
+      <indicator>Integrates multiple security patterns (88-100% success rates)</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 ## Overview
 
 Modular input validation framework extending successful patterns from security-critical-2 (88% success with credential protection) and security-critical-3 (100% success with path traversal protection) to provide comprehensive input validation across all 18 commands requiring user input processing.

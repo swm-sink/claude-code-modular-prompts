@@ -3,9 +3,9 @@
 Component Library Integration Test
 =================================
 
-Comprehensive testing for the 94-component library integration with
+Comprehensive testing for the 91-component library integration with
 the Progressive Disclosure System, focusing on:
-- All 94 components accessibility
+- All 91 components accessibility
 - Atomic component functionality (21 components)
 - Component assembly patterns
 - Integration with Layer 3 (Assemble Command)
@@ -41,7 +41,7 @@ class ComponentTest:
 
 
 class ComponentLibraryIntegrationTester:
-    """Test the 94-component library and its integration"""
+    """Test the 91-component library and its integration"""
     
     def __init__(self, project_root: str = "."):
         self.project_root = Path(project_root)
@@ -394,7 +394,7 @@ class ComponentLibraryIntegrationTester:
         # Test references to component library
         component_references = 0
         component_keywords = [
-            "94 components",
+            "91 components",
             "component library",
             "assembly",
             "atomic components",

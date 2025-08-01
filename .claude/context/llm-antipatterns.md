@@ -1,5 +1,92 @@
 # LLM Anti-Patterns - Comprehensive Research Compilation
 
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>context</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/context/llm-antipatterns.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<context_metadata>
+  <context_type>anti_pattern_documentation</context_type>
+  <anti_pattern_count>48</anti_pattern_count>
+  <categories>14</categories>
+  <research_sources>multiple</research_sources>
+  <project_validation>true</project_validation>
+</context_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>critical_context_anti_patterns</primary_discovery_path>
+    <usage_priority>must_read_before_generation</usage_priority>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <related_contexts>
+      <file type="context" ref="git-history-antipatterns.md" relation="project_specific_validation"/>
+      <file type="context" ref="comprehensive-project-learnings.md" relation="real_world_examples"/>
+      <file type="documentation" ref="CLAUDE.md" relation="project_memory"/>
+    </related_contexts>
+    <prevents_issues_in>
+      <file type="command" ref="all_commands" scope="global"/>
+      <file type="component" ref="all_components" scope="global"/>
+    </prevents_issues_in>
+  </relationship_map>
+  
+  <ai_search_optimization>
+    <keywords>anti-patterns llm hallucination reliability security prompt injection cognitive bias</keywords>
+    <semantic_tags>quality_assurance error_prevention best_practices critical_knowledge</semantic_tags>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>global</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>10</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <enforces_standards_for>
+      <standard type="documentation">prevents_documentation_explosion</standard>
+      <standard type="architecture">prevents_over_engineering</standard>
+      <standard type="metrics">prevents_fabricated_numbers</standard>
+      <standard type="remediation">prevents_theatrical_responses</standard>
+    </enforces_standards_for>
+  </knowledge_dependencies>
+  
+  <anti_pattern_categories>
+    <category name="project_specific" count="5" severity="critical"/>
+    <category name="prompt_engineering" count="5" severity="high"/>
+    <category name="hallucination" count="4" severity="critical"/>
+    <category name="security" count="4" severity="critical"/>
+    <category name="prompt_injection" count="4" severity="high"/>
+    <category name="cognitive_biases" count="5" severity="medium"/>
+    <category name="overconfidence" count="3" severity="high"/>
+    <category name="multi_agent" count="3" severity="medium"/>
+    <category name="context_window" count="3" severity="high"/>
+    <category name="consistency" count="3" severity="medium"/>
+    <category name="training_contamination" count="2" severity="low"/>
+    <category name="reasoning_failures" count="4" severity="high"/>
+    <category name="prevention_strategies" count="multiple" severity="solution"/>
+    <category name="remediation_specific" count="3" severity="critical"/>
+  </anti_pattern_categories>
+  
+  <ai_learning_markers>
+    <concept_introduction>anti_pattern_awareness</concept_introduction>
+    <skill_progression>expert</skill_progression>
+    <mastery_indicators>
+      <indicator>avoids_all_documented_patterns</indicator>
+      <indicator>recognizes_emerging_patterns</indicator>
+      <indicator>applies_prevention_strategies</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 ## Table of Contents
 1. [Project-Specific Anti-Patterns](#project-specific-anti-patterns)
 2. [Prompt Engineering Anti-Patterns](#prompt-engineering-anti-patterns)

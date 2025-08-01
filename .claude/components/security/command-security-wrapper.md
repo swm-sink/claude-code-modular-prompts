@@ -1,3 +1,129 @@
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>component</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/components/security/command-security-wrapper.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<component_metadata>
+  <component_id>command-security-wrapper</component_id>
+  <component_count>91</component_count>
+  <category>security</category>
+  <subcategory>protection</subcategory>
+  
+  <complexity_metrics>
+    <usage_complexity>high</usage_complexity>
+    <implementation_effort>hours_2</implementation_effort>
+    <prerequisite_knowledge>advanced</prerequisite_knowledge>
+  </complexity_metrics>
+  
+  <assembly_compatibility>
+    <compatible_components>
+      <component ref="input-validation-framework" strength="strong"/>
+      <component ref="path-validation" strength="strong"/>
+      <component ref="credential-protection" strength="strong"/>
+      <component ref="owasp-compliance" strength="strong"/>
+      <component ref="error-handler" strength="medium"/>
+    </compatible_components>
+    <incompatible_components>
+      <component ref="user-confirmation" reason="security_bypass_risk"/>
+    </incompatible_components>
+  </assembly_compatibility>
+  
+  <usage_patterns>
+    <common_workflow>command_execution_security</common_workflow>
+    <typical_position>security_wrapper</typical_position>
+  </usage_patterns>
+</component_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>command_security</primary_discovery_path>
+    <alternative_paths>
+      <path>injection_prevention</path>
+      <path>execution_security</path>
+      <path>bash_protection</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="component" ref="input-validation-framework" relation="validation_pipeline"/>
+      <file type="component" ref="path-validation" relation="path_security"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="command" ref="dev-setup" relation="secure_execution"/>
+      <file type="command" ref="pipeline-deploy" relation="secure_execution"/>
+      <file type="command" ref="test-unit" relation="secure_execution"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="component" ref="harm-prevention-framework" similarity="0.80"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>Commands that execute bash operations</scenario>
+      <scenario>User input that becomes command parameters</scenario>
+      <scenario>Commands with deployment or system access needs</scenario>
+      <scenario>Multi-layer security protection requirements</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>Read-only operations with no command execution</scenario>
+      <scenario>Pure documentation or analysis commands</scenario>
+      <scenario>Commands with only internal data processing</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>command security wrapper injection prevention bash protection execution security allowlist validation</keywords>
+    <semantic_tags>command_security injection_prevention bash_protection</semantic_tags>
+    <functionality_vectors>security_wrapper command_validation execution_protection</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>9</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref="../context/llm-antipatterns.md" importance="critical"/>
+      <context_file ref="../security/owasp-compliance.md" importance="high"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref="../security/input-validation-framework.md" importance="high"/>
+      <context_file ref="../security/path-validation.md" importance="high"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>security_execution</workflow_stage>
+    <integration_patterns>
+      <pattern>security_wrapper</pattern>
+      <pattern>command_validation</pattern>
+      <pattern>injection_prevention</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>comprehensive_command_security</concept_introduction>
+    <skill_progression>advanced</skill_progression>
+    <mastery_indicators>
+      <indicator>Multi-layer security protection for command execution</indicator>
+      <indicator>Command injection prevention through input validation and allowlists</indicator>
+      <indicator>Secure execution patterns with audit logging and error handling</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 <prompt_component>
   <step name="Command Security Wrapper">
     <description>

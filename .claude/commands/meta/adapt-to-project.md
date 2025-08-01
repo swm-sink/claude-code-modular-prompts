@@ -32,6 +32,152 @@ performance:
   batch-processing: "Optimized for large template libraries"
 ---
 
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>command</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>yaml_frontmatter</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/meta/adapt-to-project.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<command_metadata>
+  <command_id>adapt-to-project</command_id>
+  <command_count>88</command_count>
+  <progressive_disclosure_layer>all</progressive_disclosure_layer>
+  
+  <component_dependencies>
+    <required_components>
+      <component ref="file-reader" role="project_structure_analysis"/>
+      <component ref="parameter-parser" role="mode_selection"/>
+      <component ref="data-transformer" role="configuration_processing"/>
+      <component ref="dependency-resolver" role="technology_stack_detection"/>
+      <component ref="workflow-coordinator" role="multi_phase_orchestration"/>
+      <component ref="progress-indicator" role="adaptation_progress_tracking"/>
+      <component ref="user-confirmation" role="validation_prompts"/>
+    </required_components>
+    <optional_components>
+      <component ref="framework-validation" benefit="technology_stack_validation"/>
+      <component ref="performance-monitoring" benefit="adaptation_performance_tracking"/>
+      <component ref="error-handler" benefit="rollback_and_recovery"/>
+      <component ref="context-compression" benefit="optimized_template_processing"/>
+    </optional_components>
+  </component_dependencies>
+  
+  <orchestration_capability>
+    <can_invoke_commands>true</can_invoke_commands>
+    <invokable_commands>
+      <command ref="welcome" context="user_onboarding"/>
+      <command ref="validate-adaptation" context="post_adaptation_validation"/>
+      <command ref="replace-placeholders" context="placeholder_management"/>
+      <command ref="quick-command" context="layer_1_integration"/>
+      <command ref="build-command" context="layer_2_integration"/>
+      <command ref="assemble-command" context="layer_3_integration"/>
+    </invokable_commands>
+    <orchestration_patterns>conditional|progressive|batch_processing|error_recovery</orchestration_patterns>
+  </orchestration_capability>
+  
+  <v2_features>
+    <task_description>Intelligent automated project customization with real-time detection, progressive disclosure integration, and comprehensive validation</task_description>
+    <implementation_strategy>auto_detect_project|interactive_questions|validated_replacement|progressive_integration|comprehensive_validation</implementation_strategy>
+    <command_chaining_enabled>true</command_chaining_enabled>
+  </v2_features>
+</command_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>project_customization_automation</primary_discovery_path>
+    <alternative_paths>
+      <path>template_library_adaptation</path>
+      <path>automated_project_setup</path>
+      <path>intelligent_customization</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="context" ref=".claude/context/project-detection-patterns.md" relation="detection_methodology"/>
+      <file type="context" ref=".claude/context/progressive-disclosure-guide.md" relation="layer_integration"/>
+      <file type="context" ref=".claude/context/replacement-validation-patterns.md" relation="validation_framework"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="command" ref="validate-adaptation" relation="validation_workflow"/>
+      <file type="command" ref="replace-placeholders" relation="replacement_execution"/>
+      <file type="command" ref="quick-command" relation="layer_1_path"/>
+      <file type="command" ref="build-command" relation="layer_2_path"/>
+      <file type="command" ref="assemble-command" relation="layer_3_path"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="command" ref="replace-placeholders" similarity="0.75"/>
+      <file type="command" ref="sync-from-reference" similarity="0.60"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>first_time_template_library_setup</scenario>
+      <scenario>new_project_template_adaptation</scenario>
+      <scenario>comprehensive_project_customization</scenario>
+      <scenario>progressive_disclosure_layer_integration</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>minor_template_adjustments</scenario>
+      <scenario>single_placeholder_replacement</scenario>
+      <scenario>validation_only_requirements</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>adapt project customize automation detection progressive disclosure validation</keywords>
+    <semantic_tags>project_adaptation automated_customization intelligent_detection progressive_integration</semantic_tags>
+    <functionality_vectors>[1.0, 0.9, 0.8, 0.9, 0.7]</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>session</context_retention>
+    <memory_priority>10</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <critical_context>
+      <context_file ref=".claude/context/project-detection-patterns.md" importance="critical"/>
+      <context_file ref=".claude/context/progressive-disclosure-guide.md" importance="critical"/>
+      <context_file ref=".claude/context/replacement-validation-patterns.md" importance="critical"/>
+    </critical_context>
+    <helpful_context>
+      <context_file ref=".claude/context/technology-stack-patterns.md" importance="high"/>
+      <context_file ref=".claude/context/framework-detection-guide.md" importance="high"/>
+      <context_file ref=".claude/context/comprehensive-project-learnings.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>project_setup</workflow_stage>
+    <integration_patterns>
+      <pattern>intelligent_project_detection</pattern>
+      <pattern>progressive_layer_integration</pattern>
+      <pattern>automated_replacement_with_validation</pattern>
+      <pattern>comprehensive_quality_assurance</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>automated_project_adaptation</concept_introduction>
+    <skill_progression>beginner_to_advanced</skill_progression>
+    <mastery_indicators>
+      <indicator>successful_project_type_detection</indicator>
+      <indicator>appropriate_progressive_disclosure_layer_selection</indicator>
+      <indicator>validated_template_customization</indicator>
+      <indicator>error_free_adaptation_with_rollback_capability</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 # 🚀 Interactive Automated Project Customization (v2.0)
 
 **Enhanced intelligent project detection with progressive disclosure integration and comprehensive validation. No manual work required!**
@@ -161,7 +307,7 @@ I'll automatically update **all** templates with comprehensive validation at eac
 
 ### 📁 Enhanced File Coverage:
 - **`.claude/commands/**/*.md`** - 88 command templates with validation
-- **`.claude/components/**/*.md`** - 94+ component templates with compatibility checking
+- **`.claude/components/**/*.md`** - 91 component templates with compatibility checking
 - **`.claude/assembly-templates/`** - Professional workflow templates
 - **`.claude/assembly-config/`** - Component compatibility configurations
 - **`.claude/context/*.md`** - Context files with project-specific learning
@@ -209,7 +355,7 @@ I'll perform comprehensive validation with detailed reporting and actionable ins
 
 #### Multi-Layer Validation:
 - **Structural Validation**: YAML compliance across all 88 commands
-- **Component Compatibility**: Validate 94+ components for interaction compatibility
+- **Component Compatibility**: Validate 91 components for interaction compatibility
 - **Progressive Disclosure**: Verify all three layers function correctly
 - **Performance Validation**: Ensure optimizations don't break functionality
 - **Integration Testing**: Test cross-command functionality and workflows
@@ -226,7 +372,7 @@ I'll perform comprehensive validation with detailed reporting and actionable ins
 - **📊 Replacement Summary**: Detailed breakdown of all 200+ replacements made
 - **🎯 Layer Integration**: Progressive Disclosure configuration status
 - **📋 Command Inventory**: 88 customized commands organized by category and complexity
-- **🧩 Component Status**: 94+ components with compatibility matrix
+- **🧩 Component Status**: 91 components with compatibility matrix
 - **⚡ Performance Report**: Optimization results and success metrics
 - **🔧 Configuration Status**: All JSON configs and their validation status
 
@@ -296,7 +442,7 @@ I'll perform comprehensive validation with detailed reporting and actionable ins
 🤖 Progressive Disclosure: Recommending Layer 2 (Guided Customization)
 🤖 Team size? [default: small] 
 👤 [Enter]
-🤖 ✅ 88 templates + 94 components customized! Layer 2 ready.
+🤖 ✅ 88 templates + 91 components customized! Layer 2 ready.
 🤖 📊 Validation: 100% success | Performance: Optimized | Ready in 2.3 minutes
 🤖 🎯 Start with: /welcome intermediate
 ```
@@ -318,7 +464,7 @@ I'll perform comprehensive validation with detailed reporting and actionable ins
 🤖 Database strategy? [PostgreSQL + Redis] 
 👤 confirmed
 🤖 ✅ Enterprise templates configured with full component assembly
-🤖 📊 94+ components active | All layers configured | Ready for /assemble-command
+🤖 📊 91 components active | All layers configured | Ready for /assemble-command
 ```
 
 ### 🚀 v2.0 Benefits:

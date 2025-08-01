@@ -1,5 +1,77 @@
 # Claude Code Modular Prompts - Template Library
 
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>documentation</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/CLAUDE.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<project_metadata>
+  <project_name>Claude Code Modular Prompts</project_name>
+  <project_type>prompt_engineering_template_library</project_type>
+  <total_commands>88</total_commands>
+  <total_components>91</total_components>
+  <progressive_disclosure_layers>3</progressive_disclosure_layers>
+  <v2_compliant>true</v2_compliant>
+  <orchestration_enabled>true</orchestration_enabled>
+</project_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>project_overview</primary_discovery_path>
+    <key_sections>
+      <section ref="development_approach">Current engineering standards</section>
+      <section ref="v2_conversion">Complete v2.0 compliance status</section>
+      <section ref="progressive_disclosure">3-layer system implementation</section>
+      <section ref="component_library">91 components across 6 categories</section>
+      <section ref="installation">Setup and usage instructions</section>
+    </key_sections>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <key_files>
+      <file type="documentation" ref="README.md" relation="user_facing_overview"/>
+      <file type="documentation" ref="SETUP.md" relation="detailed_installation"/>
+      <file type="documentation" ref="ADAPTATION-GUIDE.md" relation="customization_guide"/>
+      <file type="context" ref=".claude/context/comprehensive-project-learnings.md" relation="critical_insights"/>
+      <file type="component_index" ref=".claude/components/COMPONENT-LIBRARY-INDEX.md" relation="component_reference"/>
+    </key_files>
+  </relationship_map>
+  
+  <ai_search_optimization>
+    <keywords>template library prompt engineering claude code modular v2.0 orchestration progressive disclosure components commands</keywords>
+    <semantic_tags>project_memory context_engineering anti_patterns validation automation</semantic_tags>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>10</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <critical_context>
+      <context_file ref=".claude/context/llm-antipatterns.md" importance="critical"/>
+      <context_file ref=".claude/context/git-history-antipatterns.md" importance="critical"/>
+      <context_file ref=".claude/context/comprehensive-project-learnings.md" importance="critical"/>
+    </critical_context>
+  </knowledge_dependencies>
+  
+  <project_evolution>
+    <phase name="simplicity_mandate" date="2025-07-29" status="deprecated"/>
+    <phase name="comprehensive_engineering" date="2025-07-30" status="active"/>
+    <phase name="v2_conversion" date="2025-07-31" status="completed"/>
+    <phase name="xml_enhancement" date="2025-07-31" status="in_progress"/>
+  </project_evolution>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 ## 🔄 DEVELOPMENT APPROACH UPDATE (2025-07-30)
 
 ### Previous Approach: SIMPLICITY MANDATE (2025-07-29)
@@ -157,7 +229,7 @@ User Journey: Complete escalation/de-escalation paths validated
 **Comprehensive component library supporting all Progressive Disclosure layers**
 
 #### Component Library Achievements:
-- **94 Total Components**: Complete library across all categories
+- **91 Total Components**: Complete library across all categories
 - **21 Atomic Components**: Simple building blocks for Layer 3 assembly
 - **6 Component Categories**: Organized by function (atomic, analysis, orchestration, security, performance, intelligence)
 - **Professional Documentation**: Complete component reference and assembly guides
@@ -250,7 +322,7 @@ Based on 50+ research sources, these are proven automation patterns:
 - 📁 **Complete v2.0 command library**: 88 fully compliant Claude Code v2.0 commands with orchestration
 - 📝 **Auto-generation templates** for instant command creation (/quick-command)
 - ⚙️ **Guided customization** with smart option filtering (/build-command)
-- 🔧 **Component assembly system** with 94 components (/assemble-command)
+- 🔧 **Component assembly system** with 91 components (/assemble-command)
 - 🔄 **v2.0 Orchestration**: Commands can invoke other commands for complex workflows
 - 🚫 **48+ documented anti-patterns** and comprehensive validation
 - 📚 **Professional documentation** and assembly guides
@@ -444,7 +516,7 @@ The template library now supports advanced team collaboration through hierarchic
 |-----------|---------|--------|
 | Progressive Disclosure System | 3 complete layers | Auto-generation, guided customization, assembly |
 | Command templates | 88 compliant commands | 100% Claude Code compatible |
-| Component library | 94 components | Professional-grade building blocks |
+| Component library | 91 components | Professional-grade building blocks |
 | Assembly system | Templates + validation | Enterprise component assembly |
 | Auto-generation | 5 intelligent templates | 30-second command creation |
 | Guided customization | Smart option filtering | 5-minute targeted customization |
@@ -462,7 +534,7 @@ This is a **template library** focusing on prompt engineering patterns for Claud
 - ✅ 88 command templates with 100% Claude Code v2.0 compliance
 - ✅ Advanced orchestration capabilities - commands can invoke other commands
 - ✅ Task-based prompting with clear implementation strategies
-- ✅ 94 component templates organized across 6 professional categories
+- ✅ 91 component templates organized across 6 professional categories
 - ✅ 3-layer Progressive Disclosure System completely implemented
 - ✅ Professional assembly system with validation and compatibility matrix
 - ✅ 48+ anti-patterns documented with comprehensive guidance
@@ -477,7 +549,7 @@ This is a **template library** focusing on prompt engineering patterns for Claud
 lusaka/                          # Main project directory
 ├── .claude/                     # Claude Code configuration
 │   ├── commands/                # 88 command templates (100% compliant)
-│   ├── components/              # 94 reusable prompt components across 6 categories
+│   ├── components/              # 91 reusable prompt components across 6 categories
 │   ├── config/                  # Configuration templates
 │   ├── context/                 # Context engineering files
 │   ├── docs/                    # Claude-specific documentation
@@ -671,7 +743,7 @@ cd claude-code-modular-prompts && ./setup.sh ../your-project
 
 **✅ LIBRARY ORGANIZATION** (What We Do):
 - Catalog and categorize all 88 command templates
-- Make 94 components easily discoverable  
+- Make 91 components easily discoverable  
 - Organize documentation by access patterns
 - Create clear navigation paths to content
 - Preserve all research and learning materials
@@ -699,7 +771,7 @@ cd claude-code-modular-prompts && ./setup.sh ../your-project
 ### Complete Component System
 The Progressive Disclosure System is supported by a comprehensive component library organized into 6 professional categories:
 
-**Location**: `.claude/components/` - 94 total components
+**Location**: `.claude/components/` - 91 total components
 
 ### Component Categories
 
@@ -746,7 +818,7 @@ Uses intelligent templates that automatically select and configure appropriate c
 Provides smart option filtering to show only relevant component configurations (3-5 options maximum).
 
 #### Layer 3 (Component Assembly)
-Gives power users full access to all 94 components with professional assembly tools:
+Gives power users full access to all 91 components with professional assembly tools:
 - Interactive component browser and search
 - Compatibility matrix validation
 - Assembly templates for common workflows
@@ -812,7 +884,7 @@ A systematic 20-step final review process was conducted to ensure project consis
 #### Medium Priority Scalability Concerns:
 4. **Help System Explosion** - Current system won't scale beyond 150 commands
 5. **Placeholder Management Complexity** - Manual approach breaks down with 20+ placeholders
-6. **Component Validation Complexity** - 94 components create exponential validation challenges
+6. **Component Validation Complexity** - 91 components create exponential validation challenges
 
 #### Recommendations by Timeline:
 - **Immediate**: Replace hardcoded numbers, create Windows-compatible scripts
@@ -846,7 +918,7 @@ A systematic 20-step final review process was conducted to ensure project consis
 
 **Current State**: v1.0 Production Ready with identified scaling considerations
 - ✅ 88 command templates (100% Claude Code compliant)
-- ✅ 94 component templates across 6 professional categories  
+- ✅ 91 component templates across 6 professional categories  
 - ✅ 3-layer Progressive Disclosure System fully implemented
 - ✅ Enterprise-grade quality assurance and validation
 - ✅ Complete documentation with comprehensive review validation
