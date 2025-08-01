@@ -36,6 +36,140 @@ allowed-tools:
 - Edit
 ---
 
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>command</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>yaml_frontmatter</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/core/build-command.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<command_metadata>
+  <command_id>build-command</command_id>
+  <command_count>88</command_count>
+  <progressive_disclosure_layer>2</progressive_disclosure_layer>
+  
+  <component_dependencies>
+    <required_components>
+      <component ref="parameter-parser" role="input_handling"/>
+      <component ref="option-filter" role="smart_filtering"/>
+      <component ref="customization-engine" role="guided_customization"/>
+      <component ref="command-generator" role="output_creation"/>
+    </required_components>
+    <optional_components>
+      <component ref="interactive-prompt" benefit="user_interaction"/>
+      <component ref="validation-framework" benefit="quality_assurance"/>
+      <component ref="preview-generator" benefit="user_confirmation"/>
+    </optional_components>
+  </component_dependencies>
+  
+  <orchestration_capability>
+    <can_invoke_commands>true</can_invoke_commands>
+    <invokable_commands>
+      <command ref="quick-command" context="layer_1_fallback"/>
+      <command ref="assemble-command" context="layer_3_escalation"/>
+      <command ref="validate-command" context="quality_check"/>
+      <command ref="preview-command" context="output_preview"/>
+    </invokable_commands>
+    <orchestration_patterns>sequential|conditional|interactive</orchestration_patterns>
+  </orchestration_capability>
+  
+  <v2_features>
+    <task_description>Generate customized commands with guided option selection</task_description>
+    <implementation_strategy>parse_input|analyze_context|filter_options|guide_customization|generate_command|validate_output</implementation_strategy>
+    <command_chaining_enabled>true</command_chaining_enabled>
+  </v2_features>
+</command_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>progressive_disclosure_layer_2</primary_discovery_path>
+    <alternative_paths>
+      <path>guided_customization_entry_point</path>
+      <path>intermediate_command_creation</path>
+      <path>5_minute_success_path</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="command" ref="quick-command" layer="1"/>
+      <file type="context" ref=".claude/context/customization-patterns.md"/>
+      <file type="component" ref=".claude/components/atomic/option-filter.md"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="command" ref="assemble-command" layer="3"/>
+      <file type="workflow" ref="customization-workflow"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="command" ref="customize-command" similarity="0.80"/>
+      <file type="command" ref="interactive-build" similarity="0.75"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>user_needs_customization_guidance</scenario>
+      <scenario>intermediate_user_with_specific_needs</scenario>
+      <scenario>5_minute_customization_window</scenario>
+      <scenario>smart_option_filtering_required</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>simple_standard_use_case</scenario>
+      <scenario>expert_needing_full_control</scenario>
+      <scenario>time_critical_30_second_need</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>build command customize guided layer 2 progressive disclosure 5 minute options</keywords>
+    <semantic_tags>guided_customization smart_filtering intermediate_complexity option_selection</semantic_tags>
+    <functionality_vectors>[0.5, 0.7, 0.6, 0.8, 0.7]</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>local</scope_level>
+    <context_retention>session</context_retention>
+    <memory_priority>9</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref=".claude/context/progressive-disclosure-guide.md" importance="critical"/>
+      <context_file ref=".claude/context/customization-patterns.md" importance="high"/>
+      <context_file ref=".claude/context/option-filtering-rules.md" importance="high"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref=".claude/context/user-experience-patterns.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>customization</workflow_stage>
+    <integration_patterns>
+      <pattern>option_analysis</pattern>
+      <pattern>smart_filtering</pattern>
+      <pattern>guided_selection</pattern>
+      <pattern>command_generation</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>progressive_disclosure_layer_2</concept_introduction>
+    <skill_progression>intermediate</skill_progression>
+    <mastery_indicators>
+      <indicator>successful_guided_customization</indicator>
+      <indicator>5_minute_completion</indicator>
+      <indicator>appropriate_option_selection</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 # 🛠️ Layer 2: Guided Customization v2.0
 
 <context type="project">

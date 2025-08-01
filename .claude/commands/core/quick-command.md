@@ -32,6 +32,132 @@ allowed-tools:
 - Edit
 ---
 
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>command</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>yaml_frontmatter</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/core/quick-command.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<command_metadata>
+  <command_id>quick-command</command_id>
+  <command_count>88</command_count>
+  <progressive_disclosure_layer>1</progressive_disclosure_layer>
+  
+  <component_dependencies>
+    <required_components>
+      <component ref="parameter-parser" role="input_handling"/>
+      <component ref="template-selector" role="type_matching"/>
+      <component ref="command-generator" role="output_creation"/>
+    </required_components>
+    <optional_components>
+      <component ref="validation-framework" benefit="quality_assurance"/>
+      <component ref="usage-example-generator" benefit="user_guidance"/>
+    </optional_components>
+  </component_dependencies>
+  
+  <orchestration_capability>
+    <can_invoke_commands>true</can_invoke_commands>
+    <invokable_commands>
+      <command ref="build-command" context="layer_2_escalation"/>
+      <command ref="assemble-command" context="layer_3_escalation"/>
+      <command ref="validate-command" context="quality_check"/>
+    </invokable_commands>
+    <orchestration_patterns>sequential|conditional</orchestration_patterns>
+  </orchestration_capability>
+  
+  <v2_features>
+    <task_description>Auto-generate complete working commands from user descriptions</task_description>
+    <implementation_strategy>parse_input|select_template|assemble_components|generate_command|validate_output</implementation_strategy>
+    <command_chaining_enabled>true</command_chaining_enabled>
+  </v2_features>
+</command_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>progressive_disclosure_layer_1</primary_discovery_path>
+    <alternative_paths>
+      <path>auto_generation_entry_point</path>
+      <path>beginner_friendly_command_creation</path>
+      <path>30_second_success_path</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="context" ref=".claude/context/prompt-engineering-best-practices.md"/>
+      <file type="component" ref=".claude/components/atomic/template-selector.md"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="command" ref="build-command" layer="2"/>
+      <file type="command" ref="assemble-command" layer="3"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="command" ref="quick-task" similarity="0.90"/>
+      <file type="command" ref="quick-dev" similarity="0.85"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>user_needs_command_in_30_seconds</scenario>
+      <scenario>beginner_with_no_customization_knowledge</scenario>
+      <scenario>standard_use_case_matching_templates</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>complex_multi_step_workflows</scenario>
+      <scenario>highly_customized_requirements</scenario>
+      <scenario>needs_specific_component_control</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>quick command auto generate template layer 1 progressive disclosure 30 second</keywords>
+    <semantic_tags>auto_generation beginner_friendly instant_command zero_learning_curve</semantic_tags>
+    <functionality_vectors>[1.0, 0.2, 0.1, 0.8, 0.9]</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>local</scope_level>
+    <context_retention>session</context_retention>
+    <memory_priority>10</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref=".claude/context/progressive-disclosure-guide.md" importance="critical"/>
+      <context_file ref=".claude/context/command-templates.md" importance="high"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref=".claude/context/llm-antipatterns.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>entry_point</workflow_stage>
+    <integration_patterns>
+      <pattern>template_selection</pattern>
+      <pattern>component_auto_assembly</pattern>
+      <pattern>command_generation</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>progressive_disclosure_layer_1</concept_introduction>
+    <skill_progression>beginner</skill_progression>
+    <mastery_indicators>
+      <indicator>successful_auto_generation</indicator>
+      <indicator>30_second_completion</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 # 🚀 Layer 1: Auto-Generation v2.0 
 
 <context type="project">
