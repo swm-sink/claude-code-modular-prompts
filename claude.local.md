@@ -19,7 +19,7 @@
 
 ### Documentation Accuracy Fixes
 - **Command counts** corrected (85/102 → 88 actual)
-- **Component counts** verified (94 confirmed)
+- **Component counts** verified (91 confirmed)
 - **Fabricated metrics** removed (92.5%, 97.2%, 99.4% → qualitative assessments)
 - **Missing referenced files** created (SETUP.md, ADAPTATION-GUIDE.md, ULTRATHINK-FRAMEWORK-ASSESSMENT.md)
 
@@ -37,7 +37,7 @@
 
 This is a **prompt engineering template library** for Claude Code with:
 - **88 command templates** (100% Claude Code compliant)
-- **94 component templates** (mix of detailed and basic)
+- **91 component templates** (mix of detailed and basic)
 - **Manual customization approach** with guide commands
 - **Anti-pattern documentation** (48+ documented pitfalls)
 

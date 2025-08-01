@@ -1,6 +1,74 @@
 # Claude Code Modular Prompts - v2.0 Template Library
 
-**Comprehensive collection of 88 Claude Code v2.0 command templates with orchestration support and 94 reusable components for rapid project customization.**
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>documentation</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/README.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<project_overview_metadata>
+  <project_type>template_library</project_type>
+  <version>2.0</version>
+  <command_count>88</command_count>
+  <component_count>91</component_count>
+  <progressive_disclosure_support>true</progressive_disclosure_support>
+  <orchestration_enabled>true</orchestration_enabled>
+  <target_audience>claude_code_developers</target_audience>
+</project_overview_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>user_documentation</primary_discovery_path>
+    <quick_access_sections>
+      <section ref="quick_start">30-second installation</section>
+      <section ref="what_you_get">Template inventory</section>
+      <section ref="progressive_disclosure">3-layer system</section>
+      <section ref="installation">Setup instructions</section>
+    </quick_access_sections>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <related_documentation>
+      <file type="project_memory" ref="CLAUDE.md" relation="detailed_context"/>
+      <file type="guide" ref="SETUP.md" relation="installation_details"/>
+      <file type="guide" ref="ADAPTATION-GUIDE.md" relation="customization_help"/>
+      <file type="assessment" ref="ULTRATHINK-FRAMEWORK-ASSESSMENT.md" relation="value_proposition"/>
+    </related_documentation>
+    <key_commands>
+      <command ref="quick-command" layer="1"/>
+      <command ref="build-command" layer="2"/>
+      <command ref="assemble-command" layer="3"/>
+    </key_commands>
+  </relationship_map>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>session</context_retention>
+    <memory_priority>9</memory_priority>
+  </ai_understanding_scope>
+  
+  <user_journey_metadata>
+    <entry_points>
+      <point type="installation">setup.sh script</point>
+      <point type="discovery">/help command</point>
+      <point type="immediate_use">quick-command templates</point>
+    </entry_points>
+    <learning_progression>
+      <stage level="1">Use auto-generation templates</stage>
+      <stage level="2">Customize with guided options</stage>
+      <stage level="3">Assemble custom components</stage>
+    </learning_progression>
+  </user_journey_metadata>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
+**Comprehensive collection of 88 Claude Code v2.0 command templates with orchestration support and 91 reusable components for rapid project customization.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Status: Stable](https://img.shields.io/badge/Status-Stable-green.svg)](https://github.com/swm-sink/claude-code-modular-prompts/releases)
@@ -27,9 +95,9 @@
 - **Specialized Commands** (11): Advanced workflows and patterns with command chaining
 - **Meta Commands** + others (53): Template adaptation, management, and specialized tools
 
-**94 Reusable Components:**
+**91 Reusable Components:**
 - **Atomic Components** (21): Simple building blocks
-- **Regular Components** (73): Complex reusable patterns
+- **Regular Components** (70): Complex reusable patterns
 
 **v2.0 Template Library Features:**
 - **Orchestration Support**: Commands can invoke other commands for complex workflows

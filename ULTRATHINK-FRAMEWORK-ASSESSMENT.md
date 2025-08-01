@@ -6,7 +6,7 @@
 
 **Immediate Value:**
 - **88 Claude Code command templates** - Skip trial-and-error prompt development
-- **94 reusable components** - Building blocks for custom commands
+- **91 reusable components** - Building blocks for custom commands
 - **Anti-pattern prevention** - Avoid 48+ documented pitfalls
 - **Manual customization guides** - Step-by-step adaptation process
 
