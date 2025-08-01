@@ -22,7 +22,6 @@
   
   <assembly_compatibility>
     <compatible_components>
-      <component ref="input-validation-framework" strength="strong"/>
       <component ref="secure-config" strength="strong"/>
       <component ref="command-security-wrapper" strength="strong"/>
       <component ref="error-handler" strength="medium"/>
@@ -50,7 +49,6 @@
   
   <relationship_map>
     <upstream_dependencies>
-      <file type="component" ref="input-validation-framework" relation="validation_pipeline"/>
     </upstream_dependencies>
     <downstream_consumers>
       <file type="component" ref="secure-config" relation="configuration_security"/>
