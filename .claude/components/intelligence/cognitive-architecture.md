@@ -1,3 +1,132 @@
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>component</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/components/intelligence/cognitive-architecture.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<component_metadata>
+  <component_id>cognitive-architecture</component_id>
+  <component_count>91</component_count>
+  <category>intelligence</category>
+  <subcategory>cognitive_systems</subcategory>
+  
+  <complexity_metrics>
+    <usage_complexity>very_high</usage_complexity>
+    <implementation_effort>weeks_2</implementation_effort>
+    <prerequisite_knowledge>expert</prerequisite_knowledge>
+  </complexity_metrics>
+  
+  <assembly_compatibility>
+    <compatible_components>
+      <component ref="multi-agent-coordination" strength="strong"/>
+      <component ref="agent-orchestration" strength="strong"/>
+      <component ref="agent-swarm" strength="medium"/>
+      <component ref="task-planning" strength="medium"/>
+    </compatible_components>
+    <incompatible_components>
+      <component ref="quick-command" reason="cognitive_complexity_mismatch"/>
+      <component ref="file-reader" reason="architectural_scope_mismatch"/>
+    </incompatible_components>
+  </assembly_compatibility>
+  
+  <usage_patterns>
+    <common_workflow>advanced_cognitive_systems</common_workflow>
+    <typical_position>intelligence_foundation</typical_position>
+  </usage_patterns>
+</component_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>cognitive_systems</primary_discovery_path>
+    <alternative_paths>
+      <path>hybrid_intelligence</path>
+      <path>human_like_reasoning</path>
+      <path>cognitive_modeling</path>
+      <path>advanced_ai_architecture</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="theory" ref="act_r_architecture" relation="cognitive_theory"/>
+      <file type="theory" ref="soar_architecture" relation="cognitive_theory"/>
+      <file type="theory" ref="clarion_architecture" relation="cognitive_theory"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="component" ref="multi-agent-coordination" relation="intelligent_coordination"/>
+      <file type="application" ref="educational_systems" relation="cognitive_modeling"/>
+      <file type="application" ref="hci_systems" relation="user_modeling"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="component" ref="multi-agent-coordination" similarity="0.70"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>Systems requiring human-like reasoning and decision-making</scenario>
+      <scenario>Educational applications needing cognitive modeling</scenario>
+      <scenario>Human-computer interaction requiring user modeling</scenario>
+      <scenario>Research applications in cognitive science and AI</scenario>
+      <scenario>Explainable AI systems with interpretable reasoning</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>Simple automation tasks without cognitive requirements</scenario>
+      <scenario>Resource-constrained environments</scenario>
+      <scenario>Applications requiring immediate response times</scenario>
+      <scenario>Systems without human-like reasoning needs</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>cognitive architecture act-r soar clarion hybrid cognitive systems human-like reasoning memory systems metacognition</keywords>
+    <semantic_tags>cognitive_architecture hybrid_intelligence human_reasoning</semantic_tags>
+    <functionality_vectors>cognitive_modeling human_simulation intelligent_reasoning</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>10</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref="../context/comprehensive-project-learnings.md" importance="critical"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref="../intelligence/multi-agent-coordination.md" importance="high"/>
+      <context_file ref="../orchestration/agent-orchestration.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>intelligence_foundation</workflow_stage>
+    <integration_patterns>
+      <pattern>cognitive_modeling</pattern>
+      <pattern>hybrid_intelligence</pattern>
+      <pattern>human_simulation</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>advanced_cognitive_architecture</concept_introduction>
+    <skill_progression>expert</skill_progression>
+    <mastery_indicators>
+      <indicator>Hybrid cognitive systems with ACT-R, SOAR, and CLARION integration</indicator>
+      <indicator>Human-like reasoning with memory, attention, and learning systems</indicator>
+      <indicator>Explainable AI with cognitive modeling and metacognition</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 <prompt_component>
   <step name="Cognitive Architecture Framework">
     <description>
