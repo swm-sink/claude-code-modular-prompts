@@ -1,3 +1,133 @@
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>component</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/components/orchestration/dag-orchestrator.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<component_metadata>
+  <component_id>dag-orchestrator</component_id>
+  <component_count>91</component_count>
+  <category>orchestration</category>
+  <subcategory>workflow_management</subcategory>
+  
+  <complexity_metrics>
+    <usage_complexity>very_high</usage_complexity>
+    <implementation_effort>days_2</implementation_effort>
+    <prerequisite_knowledge>expert</prerequisite_knowledge>
+  </complexity_metrics>
+  
+  <assembly_compatibility>
+    <compatible_components>
+      <component ref="task-planning" strength="strong"/>
+      <component ref="dependency-analysis" strength="strong"/>
+      <component ref="task-execution" strength="strong"/>
+      <component ref="progress-tracking" strength="strong"/>
+      <component ref="workflow-coordinator" strength="medium"/>
+    </compatible_components>
+    <incompatible_components>
+      <component ref="quick-command" reason="complexity_mismatch"/>
+      <component ref="user-confirmation" reason="automation_conflict"/>
+    </incompatible_components>
+  </assembly_compatibility>
+  
+  <usage_patterns>
+    <common_workflow>complex_workflow_orchestration</common_workflow>
+    <typical_position>workflow_foundation</typical_position>
+  </usage_patterns>
+</component_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>workflow_orchestration</primary_discovery_path>
+    <alternative_paths>
+      <path>dag_workflow</path>
+      <path>dependency_management</path>
+      <path>parallel_execution</path>
+      <path>workflow_automation</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="algorithm" ref="topological_sorting" relation="execution_ordering"/>
+      <file type="theory" ref="graph_theory" relation="dag_validation"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="component" ref="task-execution" relation="orchestrated_execution"/>
+      <file type="component" ref="progress-tracking" relation="workflow_monitoring"/>
+      <file type="command" ref="pipeline-deploy" relation="deployment_orchestration"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="component" ref="agent-orchestration" similarity="0.75"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>Complex workflows with intricate dependencies</scenario>
+      <scenario>CI/CD pipelines requiring parallel execution optimization</scenario>
+      <scenario>Data processing workflows with dependency management</scenario>
+      <scenario>Multi-command workflows needing orchestration</scenario>
+      <scenario>Resource-intensive operations requiring scheduling</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>Simple sequential workflows</scenario>
+      <scenario>Single-command operations</scenario>
+      <scenario>Interactive workflows requiring user input</scenario>
+      <scenario>Ad-hoc tasks without complex dependencies</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>dag orchestrator workflow management dependency analysis topological sorting parallel execution workflow automation</keywords>
+    <semantic_tags>workflow_orchestration dag_management dependency_coordination</semantic_tags>
+    <functionality_vectors>workflow_coordination dependency_management parallel_optimization</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>9</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref="../orchestration/task-planning.md" importance="critical"/>
+      <context_file ref="../orchestration/dependency-analysis.md" importance="critical"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref="../context/comprehensive-project-learnings.md" importance="high"/>
+      <context_file ref="../orchestration/task-execution.md" importance="high"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>workflow_foundation</workflow_stage>
+    <integration_patterns>
+      <pattern>dag_orchestration</pattern>
+      <pattern>dependency_management</pattern>
+      <pattern>parallel_optimization</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>advanced_workflow_orchestration</concept_introduction>
+    <skill_progression>expert</skill_progression>
+    <mastery_indicators>
+      <indicator>Advanced DAG workflow coordination with intelligent dependency modeling</indicator>
+      <indicator>Parallel execution optimization with resource scheduling</indicator>
+      <indicator>Real-time workflow monitoring and predictive analytics</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 <prompt_component>
   <step name="DAG Workflow Orchestration">
     <description>

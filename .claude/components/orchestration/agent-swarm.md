@@ -1,3 +1,131 @@
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>component</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/components/orchestration/agent-swarm.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<component_metadata>
+  <component_id>agent-swarm</component_id>
+  <component_count>91</component_count>
+  <category>orchestration</category>
+  <subcategory>swarm_intelligence</subcategory>
+  
+  <complexity_metrics>
+    <usage_complexity>very_high</usage_complexity>
+    <implementation_effort>days_2</implementation_effort>
+    <prerequisite_knowledge>expert</prerequisite_knowledge>
+  </complexity_metrics>
+  
+  <assembly_compatibility>
+    <compatible_components>
+      <component ref="agent-orchestration" strength="strong"/>
+      <component ref="task-planning" strength="strong"/>
+      <component ref="dependency-analysis" strength="medium"/>
+      <component ref="progress-tracking" strength="medium"/>
+    </compatible_components>
+    <incompatible_components>
+      <component ref="quick-command" reason="complexity_mismatch"/>
+      <component ref="user-confirmation" reason="autonomy_conflict"/>
+    </incompatible_components>
+  </assembly_compatibility>
+  
+  <usage_patterns>
+    <common_workflow>swarm_problem_solving</common_workflow>
+    <typical_position>autonomous_coordination</typical_position>
+  </usage_patterns>
+</component_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>swarm_intelligence</primary_discovery_path>
+    <alternative_paths>
+      <path>emergent_behavior</path>
+      <path>collective_intelligence</path>
+      <path>decentralized_coordination</path>
+      <path>autonomous_agents</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="theory" ref="swarm_intelligence_theory" relation="theoretical_foundation"/>
+      <file type="algorithm" ref="ant_colony_optimization" relation="algorithmic_basis"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="component" ref="agent-orchestration" relation="hybrid_orchestration_swarm"/>
+      <file type="command" ref="prompt-optimization" relation="swarm_based_evolution"/>
+      <file type="command" ref="research-advanced" relation="distributed_discovery"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="component" ref="agent-orchestration" similarity="0.80"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>Complex problem decomposition requiring diverse perspectives</scenario>
+      <scenario>Research and knowledge discovery with emergent insights</scenario>
+      <scenario>Code quality optimization across multiple dimensions</scenario>
+      <scenario>Large-scale system architecture design</scenario>
+      <scenario>Problems benefiting from collective intelligence</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>Simple linear workflows</scenario>
+      <scenario>Tasks requiring strict hierarchical control</scenario>
+      <scenario>Resource-constrained environments</scenario>
+      <scenario>Time-critical tasks requiring immediate response</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>agent swarm swarm intelligence collective intelligence emergent behavior stigmergy self organization autonomous coordination</keywords>
+    <semantic_tags>swarm_intelligence emergent_behavior collective_coordination</semantic_tags>
+    <functionality_vectors>swarm_coordination emergent_solutions collective_intelligence</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>9</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref="../orchestration/agent-orchestration.md" importance="critical"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref="../context/comprehensive-project-learnings.md" importance="high"/>
+      <context_file ref="../orchestration/task-planning.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>autonomous_coordination</workflow_stage>
+    <integration_patterns>
+      <pattern>swarm_intelligence</pattern>
+      <pattern>emergent_behavior</pattern>
+      <pattern>collective_problem_solving</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>swarm_intelligence_coordination</concept_introduction>
+    <skill_progression>expert</skill_progression>
+    <mastery_indicators>
+      <indicator>Advanced swarm coordination with emergent behavior patterns</indicator>
+      <indicator>Decentralized decision-making and self-organization</indicator>
+      <indicator>Collective intelligence with scalable coordination</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 <prompt_component>
   <step name="Agent Swarm Intelligence Coordination">
     <description>

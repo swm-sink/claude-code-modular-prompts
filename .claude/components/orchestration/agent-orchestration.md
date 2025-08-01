@@ -1,3 +1,133 @@
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>component</document_type>
+  <ai_consumption_priority>critical</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/components/orchestration/agent-orchestration.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<component_metadata>
+  <component_id>agent-orchestration</component_id>
+  <component_count>91</component_count>
+  <category>orchestration</category>
+  <subcategory>multi_agent</subcategory>
+  
+  <complexity_metrics>
+    <usage_complexity>very_high</usage_complexity>
+    <implementation_effort>days_3</implementation_effort>
+    <prerequisite_knowledge>expert</prerequisite_knowledge>
+  </complexity_metrics>
+  
+  <assembly_compatibility>
+    <compatible_components>
+      <component ref="agent-swarm" strength="strong"/>
+      <component ref="task-planning" strength="strong"/>
+      <component ref="dag-orchestrator" strength="strong"/>
+      <component ref="workflow-coordinator" strength="medium"/>
+      <component ref="task-execution" strength="medium"/>
+    </compatible_components>
+    <incompatible_components>
+      <component ref="quick-command" reason="complexity_mismatch"/>
+      <component ref="file-reader" reason="scope_mismatch"/>
+    </incompatible_components>
+  </assembly_compatibility>
+  
+  <usage_patterns>
+    <common_workflow>complex_multi_agent_coordination</common_workflow>
+    <typical_position>orchestration_foundation</typical_position>
+  </usage_patterns>
+</component_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>advanced_orchestration</primary_discovery_path>
+    <alternative_paths>
+      <path>multi_agent_systems</path>
+      <path>distributed_coordination</path>
+      <path>hierarchical_coordination</path>
+      <path>enterprise_orchestration</path>
+    </alternative_paths>
+  </discovery_metadata>
+  
+  <relationship_map>
+    <upstream_dependencies>
+      <file type="theory" ref="distributed_systems_consensus" relation="theoretical_foundation"/>
+      <file type="framework" ref="multi_agent_coordination" relation="architectural_basis"/>
+    </upstream_dependencies>
+    <downstream_consumers>
+      <file type="component" ref="agent-swarm" relation="swarm_orchestration_hybrid"/>
+      <file type="component" ref="task-planning" relation="coordinated_planning"/>
+      <file type="command" ref="research-advanced" relation="collaborative_research"/>
+    </downstream_consumers>
+    <peer_alternatives>
+      <file type="component" ref="dag-orchestrator" similarity="0.75"/>
+    </peer_alternatives>
+  </relationship_map>
+  
+  <usage_context>
+    <when_to_use>
+      <scenario>Complex distributed systems requiring sophisticated coordination</scenario>
+      <scenario>Large-scale software development with multiple specialized agents</scenario>
+      <scenario>Multi-disciplinary research projects needing expert coordination</scenario>
+      <scenario>Enterprise systems requiring hierarchical decision-making</scenario>
+      <scenario>Real-time coordination with fault tolerance requirements</scenario>
+    </when_to_use>
+    <when_not_to_use>
+      <scenario>Simple single-agent tasks</scenario>
+      <scenario>Sequential workflows without coordination needs</scenario>
+      <scenario>Resource-constrained environments</scenario>
+      <scenario>Projects without complex coordination requirements</scenario>
+    </when_not_to_use>
+  </usage_context>
+  
+  <ai_search_optimization>
+    <keywords>agent orchestration multi agent coordination distributed systems hierarchical coordination consensus algorithms fault tolerance</keywords>
+    <semantic_tags>multi_agent_orchestration distributed_coordination hierarchical_systems</semantic_tags>
+    <functionality_vectors>agent_coordination distributed_consensus hierarchical_planning</functionality_vectors>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>10</memory_priority>
+  </ai_understanding_scope>
+  
+  <knowledge_dependencies>
+    <required_context>
+      <context_file ref="../context/comprehensive-project-learnings.md" importance="critical"/>
+    </required_context>
+    <helpful_context>
+      <context_file ref="../orchestration/agent-swarm.md" importance="high"/>
+      <context_file ref="../orchestration/task-planning.md" importance="high"/>
+      <context_file ref="../context/llm-antipatterns.md" importance="medium"/>
+    </helpful_context>
+  </knowledge_dependencies>
+  
+  <workflow_integration>
+    <workflow_stage>orchestration_foundation</workflow_stage>
+    <integration_patterns>
+      <pattern>hierarchical_coordination</pattern>
+      <pattern>distributed_consensus</pattern>
+      <pattern>multi_agent_communication</pattern>
+    </integration_patterns>
+  </workflow_integration>
+  
+  <ai_learning_markers>
+    <concept_introduction>advanced_multi_agent_orchestration</concept_introduction>
+    <skill_progression>expert</skill_progression>
+    <mastery_indicators>
+      <indicator>Sophisticated multi-agent coordination with hierarchical patterns</indicator>
+      <indicator>Distributed consensus algorithms and fault tolerance implementation</indicator>
+      <indicator>Enterprise-grade orchestration with adaptive role allocation</indicator>
+    </mastery_indicators>
+  </ai_learning_markers>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 <prompt_component>
   <step name="Advanced Multi-Agent Orchestration">
     <description>
