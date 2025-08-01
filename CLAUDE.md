@@ -34,7 +34,6 @@
   
   <relationship_map>
     <key_files>
-      <file type="documentation" ref="README.md" relation="user_facing_overview"/>
       <file type="documentation" ref="SETUP.md" relation="detailed_installation"/>
       <file type="documentation" ref="ADAPTATION-GUIDE.md" relation="customization_guide"/>
       <file type="context" ref=".claude/context/comprehensive-project-learnings.md" relation="critical_insights"/>

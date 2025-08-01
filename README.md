@@ -33,7 +33,6 @@
   
   <relationship_map>
     <related_documentation>
-      <file type="project_memory" ref="CLAUDE.md" relation="detailed_context"/>
       <file type="guide" ref="SETUP.md" relation="installation_details"/>
       <file type="guide" ref="ADAPTATION-GUIDE.md" relation="customization_help"/>
       <file type="assessment" ref="ULTRATHINK-FRAMEWORK-ASSESSMENT.md" relation="value_proposition"/>
