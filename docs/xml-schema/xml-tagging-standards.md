@@ -1,5 +1,43 @@
 # XML Tagging Standards for AI Consumption
 
+<!-- AI_METADATA_START -->
+<ai_document_metadata>
+  <document_type>documentation</document_type>
+  <ai_consumption_priority>high</ai_consumption_priority>
+  <content_structure>markdown_body</content_structure>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/raleigh/docs/xml-schema/xml-tagging-standards.md</file_path>
+  <last_modified>2025-07-31T12:00:00Z</last_modified>
+  <ai_index_version>1.0</ai_index_version>
+</ai_document_metadata>
+
+<document_metadata>
+  <document_purpose>XML tagging standards and implementation guidelines</document_purpose>
+  <target_audience>developers</target_audience>
+  <content_category>technical_reference</content_category>
+  <information_type>reference</information_type>
+</document_metadata>
+
+<ai_navigation>
+  <discovery_metadata>
+    <primary_discovery_path>xml_schema_documentation</primary_discovery_path>
+    <document_role>technical_reference</document_role>
+  </discovery_metadata>
+  
+  <ai_search_optimization>
+    <keywords>xml_tagging xml_standards ai_metadata xml_implementation</keywords>
+    <semantic_tags>xml_schema technical_standards implementation_guide</semantic_tags>
+  </ai_search_optimization>
+</ai_navigation>
+
+<context_engineering>
+  <ai_understanding_scope>
+    <scope_level>project</scope_level>
+    <context_retention>persistent</context_retention>
+    <memory_priority>8</memory_priority>
+  </ai_understanding_scope>
+</context_engineering>
+<!-- AI_METADATA_END -->
+
 ## Purpose
 
 This document establishes consistent implementation guidelines for applying XML tags across the Claude Code Modular Prompts template library. These standards ensure uniform AI consumption patterns and maintainable metadata infrastructure.

@@ -32,7 +32,7 @@
     </compatible_components>
     <incompatible_components>
       <component ref="user-confirmation" reason="conflicting_user_interface_patterns"/>
-    </compatible_components>
+    </incompatible_components>
   </assembly_compatibility>
   
   <usage_patterns>

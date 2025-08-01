@@ -60,7 +60,7 @@ This template provides the standardized XML metadata structure for all command f
       <file type="{{TYPE}}" ref="{{FILE_REFERENCE}}" relation="{{RELATIONSHIP}}"/>
     </downstream_consumers>
     <peer_alternatives>
-      <file type="[TYPE]" ref="[FILE_REFERENCE]" similarity="[0.00-1.00]"/>
+      <file type="{{TYPE}}" ref="{{FILE_REFERENCE}}" similarity="{{0.00-1.00}}"/>
     </peer_alternatives>
   </relationship_map>
   

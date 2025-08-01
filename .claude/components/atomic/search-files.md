@@ -65,7 +65,7 @@
     <when_not_to_use>
       <scenario>Reading specific known files</scenario>
       <scenario>Complex database-style queries</scenario>
-    </when_to_use>
+    </when_not_to_use>
   </usage_context>
   
   <ai_search_optimization>
