@@ -66,7 +66,7 @@ This directory contains release artifacts, version management, and distribution 
 
 ### Current Stable Release: v1.0
 - **88 command templates** with 100% Claude Code compliance
-- **94 reusable components** across 6 categories
+- **91 reusable components** across 6 categories
 - **Complete documentation** with setup guides
 - **Production-ready** with comprehensive testing
 

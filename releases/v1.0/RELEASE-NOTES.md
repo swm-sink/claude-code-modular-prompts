@@ -14,7 +14,7 @@ This is the first stable release of the Claude Code Template Library - a compreh
 
 ### Template Library
 - **88 Command Templates** (all active)
-- **94 Reusable Components** for modular prompt construction
+- **91 Reusable Components** for modular prompt construction
 - **48+ Anti-Pattern Documentation** to prevent common failures
 - **7 Guide Commands** for manual customization assistance
 
