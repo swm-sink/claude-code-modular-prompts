@@ -12,7 +12,6 @@ allowed-tools:
 category: meta
 dependencies:
 - adapt-to-project
-- help
 - validate-adaptation
 validation:
   pre-execution: check_claude_code_environment
@@ -55,7 +54,6 @@ progressive-disclosure:
   <orchestration_capability>
     <can_invoke_commands>true</can_invoke_commands>
     <invokable_commands>
-      <command ref="help" context="command_discovery"/>
       <command ref="adapt-to-project" context="project_customization"/>
       <command ref="validate-adaptation" context="setup_validation"/>
       <command ref="quick-command" context="beginner_first_command"/>
@@ -86,12 +84,10 @@ progressive-disclosure:
       <file type="context" ref=".claude/context/progressive-disclosure-guide.md" relation="layer_integration"/>
     </upstream_dependencies>
     <downstream_consumers>
-      <file type="command" ref="help" relation="discovery_path"/>
       <file type="command" ref="adapt-to-project" relation="customization_path"/>
       <file type="command" ref="quick-command" relation="first_usage_path"/>
     </downstream_consumers>
     <peer_alternatives>
-      <file type="command" ref="help" similarity="0.70"/>
       <file type="command" ref="help-plus" similarity="0.65"/>
     </peer_alternatives>
   </relationship_map>
@@ -198,7 +194,7 @@ If you're new to Claude Code template libraries:
 4. **First Steps with Validation**: 
    - Automated Method 1 (Git Submodule) detection and setup
    - Built-in setup script validation and error recovery
-   - Interactive `/help` exploration with usage examples
+   - Interactive command exploration with usage examples
 5. **Progress Tracking**: Automatic todo list creation for your onboarding journey
 
 ### Enhanced Features:
@@ -317,7 +313,7 @@ If you're experienced with template customization:
 
 ### Progressive Learning Path:
 4. **Read Enhanced Documentation**: README.md includes v2.0 installation and Progressive Disclosure guides
-5. **Explore with Validation**: `/help` now includes validation options for each command
+5. **Explore with Validation**: Template library includes validation options for each command
 6. **Advanced Assembly**: Use `/assemble-command` for professional-grade customization
 
 ## v2.0 Enhanced Help System
