@@ -10,7 +10,7 @@ allowed-tools:
 - TodoWrite
 - Bash
 - Glob
-dependencies: [adapt-to-project, replace-placeholders, quick-command, build-command, assemble-command]
+dependencies: [replace-placeholders, quick-command, build-command, assemble-command]
 validation:
   pre-execution: Check for .claude/ directory existence
   during-execution: Validate each checklist item systematically
@@ -65,7 +65,6 @@ export-formats:
   <orchestration_capability>
     <can_invoke_commands>true</can_invoke_commands>
     <invokable_commands>
-      <command ref="adapt-to-project" context="remediation_workflow"/>
       <command ref="replace-placeholders" context="placeholder_fixing"/>
       <command ref="quick-command" context="layer_1_validation"/>
       <command ref="build-command" context="layer_2_validation"/>
@@ -93,7 +92,6 @@ export-formats:
   
   <relationship_map>
     <upstream_dependencies>
-      <file type="command" ref="adapt-to-project" relation="adaptation_source"/>
       <file type="command" ref="replace-placeholders" relation="placeholder_management"/>
       <file type="context" ref=".claude/context/validation-patterns.md" relation="validation_methodology"/>
     </upstream_dependencies>
@@ -366,7 +364,7 @@ find .claude/components -type f -name "*.md" | head -10
 
 ### If configuration is missing:
 1. Create `.claude/config/project-config.yaml`
-2. Copy the template from `/adapt-to-project`
+2. Copy the template from project configuration documentation
 3. Fill in your project values
 
 ### If using all defaults:
