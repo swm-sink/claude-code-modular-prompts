@@ -22,7 +22,6 @@
   
   <assembly_compatibility>
     <compatible_components>
-      <component ref="dag-orchestrator" strength="strong"/>
       <component ref="agent-orchestration" strength="strong"/>
       <component ref="dependency-analysis" strength="strong"/>
       <component ref="task-execution" strength="strong"/>
@@ -54,7 +53,6 @@
       <file type="algorithm" ref="task_decomposition_algorithms" relation="planning_methodology"/>
     </upstream_dependencies>
     <downstream_consumers>
-      <file type="component" ref="dag-orchestrator" relation="orchestration_planning"/>
       <file type="component" ref="task-execution" relation="execution_planning"/>
       <file type="component" ref="agent-orchestration" relation="coordination_planning"/>
     </downstream_consumers>
@@ -93,7 +91,6 @@
   
   <knowledge_dependencies>
     <required_context>
-      <context_file ref="../orchestration/dag-orchestrator.md" importance="critical"/>
       <context_file ref="../orchestration/dependency-analysis.md" importance="critical"/>
     </required_context>
     <helpful_context>
