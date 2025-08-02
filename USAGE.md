@@ -20,7 +20,7 @@ Shows all available commands with descriptions and examples.
 ```
 
 ### `/task` - Execute Development Tasks
-Handles any development work - automatically adapts to your programming language and framework.
+Handles development work with customizable templates for your programming language and framework.
 
 ```
 /task "implement JWT authentication"
@@ -82,7 +82,7 @@ Creates and maintains documentation for your code.
 
 ## Language & Framework Support
 
-Commands automatically adapt to your tech stack:
+Commands can be customized for your tech stack:
 
 **Languages**: JavaScript, TypeScript, Python, Java, Go, Rust, C#, PHP, Ruby, Swift
 **Frameworks**: React, Vue, Angular, Django, Spring, Laravel, Rails, Express, Next.js, Flask

@@ -14,7 +14,7 @@ A: The setup script will back up your existing .claude to .claude.backup before 
 ## Usage
 
 **Q: Do these commands work with my tech stack?**
-A: Yes. Commands automatically adapt to any programming language, framework, or project type.
+A: Yes. Commands are customizable templates that can be adapted to any programming language, framework, or project type with manual configuration.
 
 **Q: Which command should I try first?**
 A: Start with `/help` to see all commands, then try `/task "your development goal"`.

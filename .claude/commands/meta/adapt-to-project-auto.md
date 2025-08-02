@@ -1,7 +1,7 @@
 ---
 name: /adapt-to-project-auto
-description: TRUE automated project adaptation using framework detection and meta-prompting (v2.0)
-version: 2.0
+description: Guide for project adaptation with framework detection assistance
+version: "1.0"
 usage: '/adapt-to-project-auto [--confirm] [--dry-run]'
 category: meta
 allowed-tools:
@@ -36,26 +36,26 @@ error-recovery:
   validation-failure: Generate report of remaining issues
 ---
 
-# TRUE Automated Project Adaptation
+# Project Adaptation Guide with Framework Detection
 
-**This command actually performs automation - no manual work required.**
+**This command provides intelligent guidance for adapting templates to your project.**
 
-## What This Does (REAL AUTOMATION)
+## What This Does
 
-I will automatically:
-1. **Scan your project** using framework detection
-2. **Analyze file structure** and dependencies  
-3. **Replace ALL placeholders** with detected values
-4. **Remove irrelevant commands** for your tech stack
-5. **Generate missing commands** using meta-prompting
-6. **Validate everything works** with your project
+I will help you by:
+1. **Analyzing your project** structure and suggesting appropriate values
+2. **Identifying framework patterns** in your codebase
+3. **Providing a checklist** of placeholders to replace manually
+4. **Suggesting which commands** are most relevant for your tech stack
+5. **Offering customization advice** based on detected patterns
+6. **Creating a validation checklist** to verify your manual changes
 
-**Time: 2-5 minutes. No manual editing required.**
+**Time: 5-10 minutes for analysis, plus manual customization time.**
 
-## Automated Detection & Replacement
+## Framework Detection Assistance
 
-### Framework Detection
-I'll automatically scan for and detect:
+### What I Can Help Detect
+I'll analyze your project files to identify:
 ```bash
 # JavaScript/Node.js Projects
 package.json → Extract name, dependencies, scripts
@@ -76,7 +76,7 @@ Cargo.toml → Rust projects
 composer.json → PHP frameworks
 ```
 
-### Automatic Placeholder Replacement
+### Placeholder Replacement Guide
 Based on detection, I'll replace:
 ```javascript
 // From your package.json or project files
