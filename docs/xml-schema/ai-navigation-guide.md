@@ -204,7 +204,7 @@ AI should recognize and suggest common assembly patterns:
 
 ### 5.1 Command Chaining Logic
 
-AI should understand v2.0 orchestration capabilities:
+AI should understand v1.0 orchestration capabilities:
 
 ```xml
 <orchestration_rules>

@@ -454,7 +454,7 @@ cp -r .claude-backup/ .claude/
 - **v1.2.0** (Q1 2026): Bulk operations, advanced guide commands
 - **v1.3.0** (Q2 2026): Integration with external tools, API endpoints
 
-### v2.0 Planning (2026)
+### v1.0 Planning (2026)
 **Potential Breaking Changes** (Under consideration):
 - Template structure modernization
 - Enhanced placeholder system

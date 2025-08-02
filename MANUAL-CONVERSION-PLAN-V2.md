@@ -1,4 +1,4 @@
-# Manual Conversion Plan - Claude Code File Format Converter v2.0
+# Manual Conversion Plan - Claude Code File Format Converter v1.0
 
 ## 🎯 MANUAL CONVERSION STRATEGY
 
@@ -24,7 +24,7 @@
 ```yaml
 ---
 command: [extract from name field, remove /]
-description: [enhance original description with v2.0 capabilities]
+description: [enhance original description with v1.0 capabilities]
 category: [determine from file location/purpose]
 parameters: 
   - name: [PARAMETER_NAME]
@@ -40,7 +40,7 @@ prerequisites:
   - [environment requirements]
 output_format: structured/text/code/json
 tags: [relevant, categorization, tags]
-version: "2.0"
+version: "1.0"
 author: "lusaka-template-library"
 last_updated: "2025-07-31"
 allowed-tools: [preserve from original]
@@ -97,7 +97,7 @@ allowed-tools: [preserve from original]
 **Files**: `help.md`, `project.md`, `query.md`
 **Why Critical**: Most frequently used, user-facing commands
 **Special Considerations**:
-- `help.md`: Needs comprehensive examples of v2.0 features
+- `help.md`: Needs comprehensive examples of v1.0 features
 - `project.md`: Should showcase project analysis capabilities
 - `query.md`: Requires flexible parameter handling
 
@@ -111,8 +111,8 @@ allowed-tools: [preserve from original]
 ### Batch 3: Progressive Disclosure Commands (HIGH PRIORITY)
 **Files**: `quick-command.md`, `build-command.md`, `assemble-command.md`
 **Special Considerations**: 
-- These are the core of the v2.0 system
-- Need to showcase full v2.0 capabilities
+- These are the core of the v1.0 system
+- Need to showcase full v1.0 capabilities
 - Complex parameter handling and examples
 
 ### Batch 4: User-Facing Meta Commands (HIGH PRIORITY)
@@ -132,7 +132,7 @@ allowed-tools: [preserve from original]
 ## 📊 MANUAL CONVERSION TRACKING
 
 ### Conversion Metrics to Track:
-- **Metadata Enhancement**: Count of v2.0 fields added
+- **Metadata Enhancement**: Count of v1.0 fields added
 - **XML Structure**: Number of semantic tags added  
 - **Examples Added**: Quality and relevance of usage examples
 - **Workflow Complexity**: Phases and task organization
@@ -170,7 +170,7 @@ allowed-tools: [preserve from original]
 ## 📈 SUCCESS CRITERIA
 
 ### Each Converted Command Must Have:
-- ✅ Enhanced v2.0 metadata (8+ new fields)
+- ✅ Enhanced v1.0 metadata (8+ new fields)
 - ✅ Semantic XML structure (5+ XML tags)
 - ✅ Context-aware parameter handling
 - ✅ Realistic usage examples (3+)
@@ -180,7 +180,7 @@ allowed-tools: [preserve from original]
 
 ### Overall Success:
 - ✅ All 87 commands manually converted
-- ✅ Consistent application of v2.0 enhancements
+- ✅ Consistent application of v1.0 enhancements
 - ✅ No loss of original functionality
 - ✅ Comprehensive validation passing
 - ✅ Team collaboration features integrated

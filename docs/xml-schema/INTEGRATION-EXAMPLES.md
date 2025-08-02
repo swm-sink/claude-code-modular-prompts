@@ -124,7 +124,7 @@ allowed-tools:
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# 🚀 Layer 1: Auto-Generation v2.0
+# 🚀 Layer 1: Auto-Generation v1.0
 
 [Regular command content continues...]
 ```
@@ -209,7 +209,7 @@ allowed-tools:
 </ai_navigation>
 <!-- AI_METADATA_END -->
 
-# 🔧 Layer 3: Professional Assembly v2.0
+# 🔧 Layer 3: Professional Assembly v1.0
 
 [Regular command content continues...]
 ```

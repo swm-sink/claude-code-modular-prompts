@@ -10,7 +10,7 @@ Comprehensive API versioning system with backward compatibility, migration strat
 
 ## Usage
 ```bash
-/api version create v2.0                     # Create new API version
+/api version create v1.0                     # Create new API version
 /api version migrate                         # Generate migration guide
 /api version deprecate v1.0                  # Manage version deprecation
 /api version --strategy semantic            # Implement semantic versioning

@@ -101,7 +101,7 @@ This project follows [Semantic Versioning](https://semver.org/):
 ### Planned Releases
 - **v1.1.0**: Additional template categories, enhanced guide commands
 - **v1.2.0**: Advanced customization tools, bulk operations
-- **v2.0.0**: Major architectural improvements (TBD)
+- **v1.0.0**: Major architectural improvements (TBD)
 
 ## Deprecation Policy
 

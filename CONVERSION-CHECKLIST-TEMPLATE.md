@@ -1,4 +1,4 @@
-# Manual Conversion Checklist Template - v2.0
+# Manual Conversion Checklist Template - v1.0
 
 ## 📋 PRE-CONVERSION ANALYSIS
 
@@ -20,7 +20,7 @@
 ```yaml
 ---
 command: ________________________
-description: ________________________ (enhanced with v2.0 capabilities)
+description: ________________________ (enhanced with v1.0 capabilities)
 category: ________________________
 parameters: 
   - name: ________________________
@@ -36,7 +36,7 @@ prerequisites:
   - "________________________"
 output_format: structured/text/code/json
 tags: [________________________, ________________________, v2-enhanced]
-version: "2.0"
+version: "1.0"
 author: "lusaka-template-library"
 last_updated: "2025-07-31"
 allowed-tools: [________________________]
@@ -45,7 +45,7 @@ allowed-tools: [________________________]
 
 ### Metadata Conversion Checklist:
 - [ ] `command`: Extracted from original name field (removed leading /)
-- [ ] `description`: Enhanced original description with v2.0 mention
+- [ ] `description`: Enhanced original description with v1.0 mention
 - [ ] `category`: Determined from file location and purpose
 - [ ] `parameters`: At least 1 parameter defined with type and description
 - [ ] `usage_examples`: Minimum 3 realistic examples
@@ -143,7 +143,7 @@ allowed-tools: [________________________]
 
 ### Quality Checks:
 - [ ] YAML frontmatter syntax is valid
-- [ ] All required v2.0 metadata fields present
+- [ ] All required v1.0 metadata fields present
 - [ ] Parameters are referenced in instructions ($PARAM_NAME)
 - [ ] Usage examples are realistic and varied
 - [ ] XML structure is semantically meaningful
@@ -174,7 +174,7 @@ python scripts/mcp_template_validator.py validate_command [file_path]
 
 **Time Spent**: _______ minutes  
 **Complexity Level**: Simple/Medium/Complex  
-**Enhancements Added**: _____ v2.0 fields  
+**Enhancements Added**: _____ v1.0 fields  
 **XML Tags Added**: _____ semantic tags  
 **Examples Created**: _____ usage examples  
 **Issues Encountered**: _____________________  
@@ -208,5 +208,5 @@ python scripts/mcp_template_validator.py validate_command [file_path]
 
 ---
 
-*Conversion Checklist Template v2.0*  
+*Conversion Checklist Template v1.0*  
 *Use this template for every manual conversion to ensure consistency*

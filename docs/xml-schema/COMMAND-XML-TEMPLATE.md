@@ -121,7 +121,7 @@ This template provides the standardized XML metadata structure for all command f
 - `progressive_disclosure_layer`: 1=Auto-generation, 2=Guided, 3=Assembly, N/A=Other
 - `component_dependencies`: Required and optional components
 - `orchestration_capability`: Commands this command can invoke
-- `v2_features`: Enhanced v2.0 capabilities
+- `v2_features`: Enhanced v1.0 capabilities
 
 ### Usage Notes
 - All commands should have `command_count: 88`
