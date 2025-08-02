@@ -1,6 +1,6 @@
 ---
-command: quick-help
-description: Streamlined command guide for immediate productivity - zero setup required with v2.0 Progressive Disclosure System
+name: quick-help
+description: Streamlined command guide for immediate productivity - zero setup required with v1.0 Progressive Disclosure System
 category: core
 parameters: 
   - name: COMMAND_NAME
@@ -15,7 +15,7 @@ prerequisites:
   - "Claude Code environment active"
 output_format: structured
 tags: [quick-start, help, essential-commands, progressive-disclosure, v2-enhanced]
-version: "2.0"
+version: "1.0"
 author: "lusaka-template-library"
 last_updated: "2025-07-31"
 allowed-tools:
@@ -23,10 +23,10 @@ allowed-tools:
 - Grep
 ---
 
-# 🚀 Quick Command Guide v2.0
+# 🚀 Quick Command Guide v1.0
 
 <context type="project">
-Streamlined help system for lusaka template library featuring 88 commands with v2.0 Progressive Disclosure System. Provides immediate productivity with zero setup through 3-layer complexity management: auto-generation, guided customization, and component assembly.
+Streamlined help system for lusaka template library featuring 88 commands with v1.0 Progressive Disclosure System. Provides immediate productivity with zero setup through 3-layer complexity management: auto-generation, guided customization, and component assembly.
 </context>
 
 <instructions>
@@ -42,7 +42,7 @@ Provide quick start guidance for essential commands and Progressive Disclosure S
 </example>
 <example>
 <input>/quick-help task</input>
-<expected_output>Quick help for task command with v2.0 features and usage patterns</expected_output>
+<expected_output>Quick help for task command with v1.0 features and usage patterns</expected_output>
 </example>
 <example>
 <input>/quick-help /quick-command</input>
@@ -62,7 +62,7 @@ Provide quick start guidance for essential commands and Progressive Disclosure S
 
 <task priority="high">
 **Essential Commands**: Core functionality available immediately
-- `/help` - Comprehensive guidance system with v2.0 features
+- `/help` - Comprehensive guidance system with v1.0 features
 - `/task` - Enhanced development task execution with XML workflow
 - `/project` - Complete project management with 7 operational modes
 - `/query` - Intelligent codebase analysis with pattern recognition
@@ -76,7 +76,7 @@ Provide quick start guidance for essential commands and Progressive Disclosure S
 </task>
 </workflow>
 
-## 🎯 Progressive Disclosure System (v2.0)
+## 🎯 Progressive Disclosure System (v1.0)
 
 ### **Layer 1: Auto-Generation** (80% of users)
 - **`/quick-command`** - 30-second command creation, zero learning curve
@@ -96,12 +96,12 @@ Provide quick start guidance for essential commands and Progressive Disclosure S
 ## 🚀 Essential Commands (Work Immediately)
 
 ### **Most Popular:**
-- **`/help`** - Comprehensive guidance with v2.0 feature showcase
+- **`/help`** - Comprehensive guidance with v1.0 feature showcase
 - **`/task`** - Enhanced task execution with XML workflow structure
 - **`/welcome`** - Interactive onboarding with Progressive Disclosure navigation
 
 ### **Quick Development:**
-- **`/quick-dev`** - Instant development assistance (already v2.0 enhanced)
+- **`/quick-dev`** - Instant development assistance (already v1.0 enhanced)
 - **`/query`** - Intelligent codebase analysis with architectural insights
 - **`/project`** - Complete project management with 7 operational modes
 

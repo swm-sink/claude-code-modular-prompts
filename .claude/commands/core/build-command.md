@@ -1,5 +1,5 @@
 ---
-command: build-command
+name: build-command
 description: Layer 2 Progressive Disclosure - Generate commands with intelligent guided customization options and 5-minute success guarantee
 category: core
 parameters: 
@@ -25,7 +25,7 @@ prerequisites:
   - "Basic familiarity with customization needs"
 output_format: structured
 tags: [guided-customization, progressive-disclosure, layer-2, smart-options, v2-enhanced]
-version: "2.0"
+version: "1.0"
 author: "lusaka-template-library"
 last_updated: "2025-07-31"
 allowed-tools:
@@ -168,7 +168,7 @@ allowed-tools:
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# 🛠️ Layer 2: Guided Customization v2.0
+# 🛠️ Layer 2: Guided Customization v1.0
 
 <context type="project">
 Progressive Disclosure System Layer 2 for lusaka template library providing intelligent guided customization with smart option filtering. Bridges the gap between Layer 1 auto-generation and Layer 3 professional assembly with 5-minute success guarantee and maximum 5 customization options.
@@ -229,7 +229,7 @@ Generate customized commands from $TYPE and $DESCRIPTION using guided customizat
 <task priority="medium">
 **Command Generation & Validation**: Create customized command
 - Apply selected customizations to baseline command
-- Generate complete YAML frontmatter with v2.0 enhancements
+- Generate complete YAML frontmatter with v1.0 enhancements
 - Include comprehensive error handling and validation
 - Provide usage examples and integration guidance
 </task>

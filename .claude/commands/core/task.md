@@ -1,5 +1,5 @@
 ---
-command: task
+name: task
 description: Execute a focused development task with best practices and quality standards
 category: workflow
 parameters: 
@@ -17,7 +17,7 @@ prerequisites:
   - "Development environment configured"
 output_format: structured
 tags: [development, implementation, testing, documentation, quality]
-version: "2.0"
+version: "1.0"
 author: "lusaka-template-library"
 last_updated: "2025-07-31"
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-command: quick-dev
+name: quick-dev
 description: Universal development assistance with instant analysis - works with any codebase and technology stack
 category: core
 parameters: 
@@ -21,7 +21,7 @@ prerequisites:
   - "Target files readable"
 output_format: structured
 tags: [development, code-review, debugging, optimization, universal, v2-enhanced]
-version: "2.0"
+version: "1.0"
 author: "lusaka-template-library"
 last_updated: "2025-07-31"
 allowed-tools:
@@ -32,7 +32,7 @@ allowed-tools:
 - Glob
 ---
 
-# 🛠️ Universal Development Assistance v2.0
+# 🛠️ Universal Development Assistance v1.0
 
 <context type="project">
 Instant development assistance system for lusaka template library with universal language support and multi-mode analysis. Supports code review, debugging, optimization, and explanation across all technology stacks with smart context detection and framework-specific guidance.

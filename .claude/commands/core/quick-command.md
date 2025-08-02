@@ -1,5 +1,5 @@
 ---
-command: quick-command
+name: quick-command
 description: Layer 1 Progressive Disclosure - Auto-generate complete commands from simple descriptions with 30-second success guarantee
 category: core
 parameters: 
@@ -21,7 +21,7 @@ prerequisites:
   - "Basic description of target files or operations"
 output_format: structured
 tags: [auto-generation, progressive-disclosure, layer-1, zero-setup, v2-enhanced]
-version: "2.0"
+version: "1.0"
 author: "lusaka-template-library"
 last_updated: "2025-07-31"
 allowed-tools:
@@ -158,7 +158,7 @@ allowed-tools:
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# 🚀 Layer 1: Auto-Generation v2.0 
+# 🚀 Layer 1: Auto-Generation v1.0 
 
 <context type="project">
 Progressive Disclosure System Layer 1 for lusaka template library providing 30-second command auto-generation with zero learning curve. Supports 5 command types (search, analyze, transform, validate, report) with intelligent template selection and automatic component assembly.
@@ -220,7 +220,7 @@ Auto-generate complete, working commands from $TYPE and $DESCRIPTION using intel
 
 <task priority="medium">
 **Command Generation & Validation**: Production-ready output
-- Generate complete YAML frontmatter with v2.0 metadata
+- Generate complete YAML frontmatter with v1.0 metadata
 - Implement functional command logic with best practices
 - Include comprehensive error handling and edge cases
 - Add usage examples and documentation
@@ -300,7 +300,7 @@ Auto-generate complete, working commands from $TYPE and $DESCRIPTION using intel
 - **User experience**: Full component library access with organized tools
 
 <automation trigger="completion">
-- Generate complete, functional command with proper YAML frontmatter and v2.0 enhancements
+- Generate complete, functional command with proper YAML frontmatter and v1.0 enhancements
 - Validate command syntax and logic for immediate usability
 - Provide clear usage instructions and escalation paths to Layer 2/3
 - Update auto-generation intelligence based on successful command patterns

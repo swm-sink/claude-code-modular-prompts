@@ -1,5 +1,5 @@
 ---
-command: assemble-command
+name: assemble-command
 description: Layer 3 Progressive Disclosure - Advanced component assembly for professional workflows with 91 components and enterprise capabilities
 category: core
 parameters: 
@@ -30,7 +30,7 @@ prerequisites:
   - "Need for complex, reusable workflows"
 output_format: structured
 tags: [professional-assembly, progressive-disclosure, layer-3, enterprise-grade, component-library, v2-enhanced]
-version: "2.0"
+version: "1.0"
 author: "lusaka-template-library"
 last_updated: "2025-07-31"
 allowed-tools:
@@ -178,7 +178,7 @@ allowed-tools:
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# 🔧 Layer 3: Professional Assembly v2.0
+# 🔧 Layer 3: Professional Assembly v1.0
 
 <context type="project">
 Progressive Disclosure System Layer 3 for lusaka template library providing enterprise-grade component assembly with 91 components across 6 professional categories. Designed for power users (5% of users) requiring maximum flexibility, complex workflow orchestration, and 15-30 minute professional assembly processes.

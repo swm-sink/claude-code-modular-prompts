@@ -1,5 +1,5 @@
 ---
-command: project
+name: project
 description: Comprehensive project management suite with setup, provisioning, workflow orchestration, scheduling, tracking, and deployment operations
 category: core
 parameters: 
@@ -26,7 +26,7 @@ prerequisites:
   - "Development environment dependencies available"
 output_format: structured
 tags: [project-management, infrastructure, deployment, workflow, orchestration, v2-enhanced]
-version: "2.0"
+version: "1.0"
 author: "lusaka-template-library"
 last_updated: "2025-07-31"
 allowed-tools:
@@ -174,7 +174,7 @@ allowed-tools:
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# /project - Comprehensive Project Management Suite v2.0
+# /project - Comprehensive Project Management Suite v1.0
 
 <context type="project">
 Unified project management system for lusaka template library supporting 7 operational modes: setup, provision, workflow, schedule, track, rollback, and run. Handles complete project lifecycle from development environment setup through production deployment and monitoring.

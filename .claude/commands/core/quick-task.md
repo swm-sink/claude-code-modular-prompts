@@ -1,5 +1,5 @@
 ---
-command: quick-task
+name: quick-task
 description: Universal task execution with intelligent project analysis - works with any project or language without setup
 category: core
 parameters: 
@@ -17,7 +17,7 @@ prerequisites:
   - "Basic project structure identifiable"
 output_format: structured
 tags: [universal-task, language-agnostic, framework-flexible, zero-setup, v2-enhanced]
-version: "2.0"
+version: "1.0"
 author: "lusaka-template-library"
 last_updated: "2025-07-31"
 allowed-tools:
@@ -30,7 +30,7 @@ allowed-tools:
 - Grep
 ---
 
-# 🎯 Universal Task Execution v2.0
+# 🎯 Universal Task Execution v1.0
 
 <context type="project">
 Universal task execution system for lusaka template library with intelligent project analysis, language-agnostic implementation, and framework-flexible approach. Works immediately with any project structure without setup or configuration requirements.
@@ -147,7 +147,7 @@ Execute $TASK_DESCRIPTION using comprehensive project analysis, intelligent tech
 
 **Quick Task Hierarchy:**
 - **`/quick-task`**: Universal execution, zero setup *(this command)*
-- **`/task`**: Enhanced features with v2.0 metadata and XML workflow
+- **`/task`**: Enhanced features with v1.0 metadata and XML workflow
 - **`/project-task`**: Complex multi-file operations with orchestration
 
 **When to Use `/quick-task`:**

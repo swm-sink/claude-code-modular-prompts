@@ -1,6 +1,6 @@
 ---
-command: help
-description: Comprehensive guide to 88 available commands and v2.0 enhanced features for lusaka template library
+name: help
+description: Comprehensive guide to available commands for the template library
 category: core
 parameters: 
   - name: COMMAND_NAME
@@ -14,14 +14,14 @@ parameters:
 usage_examples:
   - "/help - Get general help and command overview"
   - "/help task - Get detailed help for the task command"
-  - "/help --all - Comprehensive list of all 88 commands"
-  - "/help --v2-features - Learn about v2.0 enhancements"
+  - "/help --all - Comprehensive list of all commands"
+  - "/help --features - Learn about template library features"
 prerequisites: 
   - "Claude Code environment configured"
   - "Template library installed"
 output_format: structured
-tags: [help, documentation, guidance, commands, v2-enhanced]
-version: "2.0"
+tags: [help, documentation, guidance, commands]
+version: "1.0"
 author: "lusaka-template-library"
 last_updated: "2025-07-31"
 allowed-tools:
@@ -41,7 +41,7 @@ allowed-tools:
 
 <command_metadata>
   <command_id>help</command_id>
-  <command_count>88</command_count>
+  <command_count>comprehensive</command_count>
   <progressive_disclosure_layer>N/A</progressive_disclosure_layer>
   
   <component_dependencies>
@@ -163,10 +163,10 @@ allowed-tools:
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# /help - Comprehensive Command Guide v2.0
+# /help - Comprehensive Command Guide v1.0
 
 <context type="project">
-Lusaka template library with 88 Claude Code commands featuring v2.0 enhancements: enhanced metadata, XML semantic structure, parameter validation, Progressive Disclosure System, and team collaboration features.
+Lusaka template library with 88 Claude Code commands featuring v1.0 enhancements: enhanced metadata, XML semantic structure, parameter validation, Progressive Disclosure System, and team collaboration features.
 </context>
 
 <instructions>
@@ -182,11 +182,11 @@ Provide comprehensive help and guidance for the template library. Process $COMMA
 </example>
 <example>
 <input>/help task</input>
-<expected_output>Detailed help for the task command including v2.0 features and usage examples</expected_output>
+<expected_output>Detailed help for the task command including v1.0 features and usage examples</expected_output>
 </example>
 <example>
 <input>/help --v2-features</input>
-<expected_output>Comprehensive guide to v2.0 enhancements: metadata, XML structure, team features</expected_output>
+<expected_output>Comprehensive guide to v1.0 enhancements: metadata, XML structure, team features</expected_output>
 </example>
 </examples>
 
@@ -202,7 +202,7 @@ Provide comprehensive help and guidance for the template library. Process $COMMA
 
 <task priority="high">
 **Content Delivery**: Provide targeted help information
-- Command-specific help with v2.0 features explanation
+- Command-specific help with v1.0 features explanation
 - Category overviews with command listings
 - Best practices and usage patterns
 </task>
@@ -219,11 +219,11 @@ Provide comprehensive help and guidance for the template library. Process $COMMA
 
 ### **Most Popular Commands:**
 - **`/help`** - This command - comprehensive guidance system
-- **`/task`** - Enhanced development task execution with v2.0 features
+- **`/task`** - Enhanced development task execution with v1.0 features
 - **`/quick-command`** - 30-second auto-generation (Layer 1 Progressive Disclosure)
 - **`/welcome`** - Interactive onboarding and project setup
 
-### **Progressive Disclosure System (v2.0):**
+### **Progressive Disclosure System (v1.0):**
 1. **Layer 1**: `/quick-command` - Instant generation, zero learning curve
 2. **Layer 2**: `/build-command` - Guided customization with smart options  
 3. **Layer 3**: `/assemble-command` - Professional assembly with 91 components
@@ -239,7 +239,7 @@ Provide comprehensive help and guidance for the template library. Process $COMMA
 - **Development (6)**: Environment setup and API design
 - **Others (13)**: Security, monitoring, examples, and utilities
 
-## 🆕 v2.0 Enhanced Features
+## 🆕 v1.0 Enhanced Features
 
 ### **Enhanced Metadata System:**
 - Parameter validation with type checking
