@@ -1,7 +1,7 @@
 ---
 name: /validate-component
-description: Systematic component validation using context engineering and integration (v2.0)
-version: 2.0
+description: Systematic component validation using context engineering and integration (v1.0)
+version: "1.0"
 usage: '/validate-component [component-path] [validation-scope]'
 category: quality
 allowed-tools:

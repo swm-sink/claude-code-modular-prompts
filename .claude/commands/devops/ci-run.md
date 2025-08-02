@@ -1,7 +1,7 @@
 ---
 name: /ci-run
-description: Execute GitHub Actions pipelines for lusaka (v2.0)
-version: 2.0
+description: Execute GitHub Actions pipelines for lusaka (v1.0)
+version: "1.0"
 usage: /ci-run [pipeline-name] [--branch branch-name] [--stage specific-stage] [--debug] [--dry-run]
 category: devops
 allowed-tools:
@@ -36,9 +36,9 @@ error-recovery:
 security: input-validation-framework.md
 ---
 
-# Run CI/CD Pipeline for lusaka (v2.0)
+# Run CI/CD Pipeline for lusaka (v1.0)
 
-## V2.0 Enhanced Features
+## V1.0 Enhanced Features
 - 🚀 **Progressive Disclosure Integration**: Seamlessly works across all layers
 - 🛡️ **Advanced Safety Mechanisms**: Automatic rollback and validation gates
 - 🔄 **Intelligent Error Recovery**: Self-healing pipeline execution
@@ -143,7 +143,7 @@ Run named pipeline:
 Run for specific branch:
 ```bash
 /ci-run --branch feature/new-feature
-/ci-run --branch release/v2.0
+/ci-run --branch release/v1.0
 ```
 
 ## Pipeline Stages
@@ -241,7 +241,7 @@ Common issues for GitHub Actions:
 
 Which pipeline would you like to run?
 
-## V2.0 Progressive Disclosure Examples
+## V1.0 Progressive Disclosure Examples
 
 ### Layer 1 (Quick Start)
 ```bash

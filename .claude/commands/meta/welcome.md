@@ -1,7 +1,7 @@
 ---
 name: /welcome
-description: Interactive welcome and onboarding system for new users of the template library (v2.0)
-version: 2.0
+description: Interactive welcome and onboarding system for new users of the template library (v1.0)
+version: "1.0"
 usage: '[beginner|intermediate|advanced|validate|quick-start]'
 allowed-tools:
 - Read
@@ -153,7 +153,7 @@ progressive-disclosure:
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# /welcome - Interactive Template Library Welcome (v2.0)
+# /welcome - Interactive Template Library Welcome (v1.0)
 
 Welcome to the Claude Code Modular Prompts Template Library! This enhanced interactive guide will help you get started based on your experience level with built-in validation and progressive disclosure.
 
@@ -177,7 +177,7 @@ Welcome to the Claude Code Modular Prompts Template Library! This enhanced inter
 
 ## Beginner Path 🌱 (Layer 1: Auto-Generation)
 
-**Enhanced for v2.0 with validation and error handling**
+**Enhanced for v1.0 with validation and error handling**
 
 If you're new to Claude Code template libraries:
 
@@ -202,11 +202,11 @@ If you're new to Claude Code template libraries:
 - **Progress Validation**: Each step validates before proceeding to next
 - **Auto-Detection**: Automatically detects your project type and suggests appropriate templates
 
-**Key Concept**: This is a template library with intelligent auto-generation, not ready-to-use commands. The v2.0 system guides you through customization with validation at each step.
+**Key Concept**: This is a template library with intelligent auto-generation, not ready-to-use commands. The v1.0 system guides you through customization with validation at each step.
 
 ## Intermediate Path 🚀 (Layer 2: Guided Customization)
 
-**Enhanced for v2.0 with smart option filtering and validation**
+**Enhanced for v1.0 with smart option filtering and validation**
 
 If you're familiar with Claude Code:
 
@@ -217,7 +217,7 @@ If you're familiar with Claude Code:
 4. **Automated Validation**: `/validate-adaptation` with comprehensive error checking and recovery
 5. **Progress Integration**: Seamless integration with todo tracking and validation workflow
 
-### v2.0 Enhanced Features:
+### v1.0 Enhanced Features:
 - **Smart Option Filtering**: System shows only relevant options based on your project context
 - **Validation at Each Step**: Built-in validation prevents configuration errors
 - **Error Prevention**: Proactive detection of common configuration mistakes
@@ -232,11 +232,11 @@ If you're familiar with Claude Code:
 /validate-adaptation        # Final setup validation
 ```
 
-**Pro Tip**: The v2.0 `/adapt-to-project` workflow now includes intelligent guidance with automatic error detection and recovery suggestions.
+**Pro Tip**: The v1.0 `/adapt-to-project` workflow now includes intelligent guidance with automatic error detection and recovery suggestions.
 
 ## Advanced Path ⚡ (Layer 3: Professional Component Assembly)
 
-**Enhanced for v2.0 with enterprise-grade assembly and validation**
+**Enhanced for v1.0 with enterprise-grade assembly and validation**
 
 If you're experienced with template customization:
 
@@ -247,7 +247,7 @@ If you're experienced with template customization:
 4. **Advanced Automation**: Complete hooks and automation with performance monitoring
 5. **Validation Framework**: Comprehensive compatibility matrix and component interaction validation
 
-### v2.0 Enhanced Architecture:
+### v1.0 Enhanced Architecture:
 - **91 Component Library**: Professional-grade building blocks across 6 categories
   - 21 Atomic Components (I/O, data processing, workflow control)
   - 15+ Analysis Components (codebase discovery, quality metrics)
@@ -276,7 +276,7 @@ If you're experienced with template customization:
 - **Performance Optimizations**: `.claude/command_cache.json` - performance monitoring
 - **Concurrency Management**: `.claude/concurrency_config.json` - advanced parallelization
 
-## What's Available in v2.0
+## What's Available in v1.0
 
 ### Enhanced Template Library:
 - **88 Command Templates**: 100% Claude Code compliant, organized in categories (core, quality, specialized, meta)
@@ -284,7 +284,7 @@ If you're experienced with template customization:
 - **91 Components**: Professional-grade building blocks across 6 categories with compatibility validation
 - **Enterprise Assembly System**: Templates + validation framework for complex workflows
 
-### v2.0 New Features:
+### v1.0 New Features:
 - **Auto-Generation Layer**: `/quick-command` for instant template creation
 - **Guided Customization Layer**: `/build-command` with smart option filtering  
 - **Professional Assembly Layer**: `/assemble-command` with enterprise-grade component system
@@ -295,9 +295,9 @@ If you're experienced with template customization:
 - **Comprehensive Documentation**: Anti-patterns, best practices, progressive disclosure guides
 - **Testing Framework**: Multi-layer validation and quality assurance tools
 - **Assembly Guides**: Professional documentation for component assembly
-- **Migration Support**: Complete v1.0 to v2.0 upgrade guidance
+- **Migration Support**: Complete v1.0 to v1.0 upgrade guidance
 
-## v2.0 Next Steps
+## v1.0 Next Steps
 
 ### Quick Start Options:
 1. **30-Second Start**: `/welcome quick-start` → Auto-generation with zero learning curve
@@ -312,11 +312,11 @@ If you're experienced with template customization:
 ```
 
 ### Progressive Learning Path:
-4. **Read Enhanced Documentation**: README.md includes v2.0 installation and Progressive Disclosure guides
+4. **Read Enhanced Documentation**: README.md includes v1.0 installation and Progressive Disclosure guides
 5. **Explore with Validation**: Template library includes validation options for each command
 6. **Advanced Assembly**: Use `/assemble-command` for professional-grade customization
 
-## v2.0 Enhanced Help System
+## v1.0 Enhanced Help System
 
 ### Getting Help by Layer:
 - **Layer 1 (Auto-Generation)**: `/quick-command help` - instant template help
@@ -325,25 +325,25 @@ If you're experienced with template customization:
 
 ### Support Options:
 - **Environment Issues?** Use `/welcome validate` for comprehensive environment checking
-- **Need guidance?** Use `/adapt-to-project` with enhanced v2.0 validation and error recovery
+- **Need guidance?** Use `/adapt-to-project` with enhanced v1.0 validation and error recovery
 - **Want examples?** Check `examples/` directory and new `assembly-templates/` for workflow patterns
 - **Performance optimization?** Use new performance analysis features in advanced commands
 
 ### Error Recovery:
-- **Built-in Troubleshooting**: All v2.0 commands include error detection and recovery suggestions
+- **Built-in Troubleshooting**: All v1.0 commands include error detection and recovery suggestions
 - **Layer Navigation**: Natural escalation (Layer 1→2→3) and de-escalation (Layer 3→2→1) paths
 - **Validation Integration**: Comprehensive validation at each step prevents configuration errors
 
-## v2.0 Key Benefits
+## v1.0 Key Benefits
 
 **Remember**: This is now an intelligent template library with 3-layer Progressive Disclosure:
 - **Layer 1**: Zero-learning curve auto-generation for 80% of users
 - **Layer 2**: Smart guided customization for 15% of users  
 - **Layer 3**: Professional component assembly for 5% of users
 
-**v2.0 Success Targets**:
+**v1.0 Success Targets**:
 - ✅ 30-second success (Layer 1)
 - ✅ 5-minute success (Layer 2)  
 - ✅ 15-30 minute professional success (Layer 3)
 
-Welcome to v2.0! 🚀✨
+Welcome to v1.0! 🚀✨

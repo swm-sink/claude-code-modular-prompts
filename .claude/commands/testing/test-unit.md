@@ -1,7 +1,7 @@
 ---
 name: /test-unit
-description: Run unit tests for [INSERT_PROJECT_NAME] using [INSERT_TESTING_FRAMEWORK] (v2.0)
-version: 2.0
+description: Run unit tests for [INSERT_PROJECT_NAME] using [INSERT_TESTING_FRAMEWORK] (v1.0)
+version: "1.0"
 usage: '/test-unit [file-pattern] [--coverage] [--watch] [--parallel] [--debug]'
 category: testing
 allowed-tools:

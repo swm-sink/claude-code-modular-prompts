@@ -1,7 +1,7 @@
 ---
 name: /help-plus
-description: Enhanced help system with error handling, troubleshooting, and user guidance (v2.0)
-version: 2.0
+description: Enhanced help system with error handling, troubleshooting, and user guidance (v1.0)
+version: "1.0"
 usage: '[command] [error] [troubleshoot]'
 category: meta
 allowed-tools:

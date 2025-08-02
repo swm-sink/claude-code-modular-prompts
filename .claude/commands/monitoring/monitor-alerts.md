@@ -1,7 +1,7 @@
 ---
 name: /monitor-alerts
-description: Intelligent alert configuration with fatigue prevention and context-aware routing (v2.0)
-version: 2.0
+description: Intelligent alert configuration with fatigue prevention and context-aware routing (v1.0)
+version: "1.0"
 usage: '/monitor-alerts [--severity critical|warning|info] [--channel email|slack|pagerduty] [--threshold value] [--smart-routing] [--dedupe-window minutes]'
 category: monitoring
 allowed-tools:

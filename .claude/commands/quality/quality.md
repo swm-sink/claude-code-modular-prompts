@@ -1,7 +1,7 @@
 ---
 name: /quality
-description: Unified intelligent code quality analysis with comprehensive review, (v2.0)
-version: 2.0
+description: Unified intelligent code quality analysis with comprehensive review, (v1.0)
+version: "1.0"
 usage: '[mode] [target_path] [options]'
 category: quality
 allowed-tools:

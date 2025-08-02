@@ -1,7 +1,7 @@
 ---
 name: /monitor-setup
-description: Comprehensive monitoring setup with automatic dashboard creation and alert configuration (v2.0)
-version: 2.0
+description: Comprehensive monitoring setup with automatic dashboard creation and alert configuration (v1.0)
+version: "1.0"
 usage: '/monitor-setup [--stack prometheus|datadog|newrelic|cloudwatch] [--components all|app|infra|custom] [--auto-discover] [--cost-optimize]'
 category: monitoring
 allowed-tools:

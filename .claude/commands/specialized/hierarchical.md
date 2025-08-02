@@ -1,7 +1,7 @@
 ---
 name: /hierarchical
-description: Orchestrate agents in a tree-like hierarchy with parent-child relationships (v2.0)
-version: 2.0
+description: Orchestrate agents in a tree-like hierarchy with parent-child relationships (v1.0)
+version: "1.0"
 usage: '/hierarchical [complex project requiring multi-level coordination]'
 category: specialized
 allowed-tools:

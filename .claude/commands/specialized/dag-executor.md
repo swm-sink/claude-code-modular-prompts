@@ -1,7 +1,7 @@
 ---
 name: /dag-executor
-description: DAG execution engine with dependency resolution, parallel processing, (v2.0)
-version: 2.0
+description: DAG execution engine with dependency resolution, parallel processing, (v1.0)
+version: "1.0"
 usage: '[dag_definition] [execution_mode]'
 category: specialized
 allowed-tools:

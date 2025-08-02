@@ -1,7 +1,7 @@
 ---
 name: /notebook-run
-description: Execute Jupyter notebooks with parameter injection, monitoring, and multi-kernel support (v2.0)
-version: 2.0
+description: Execute Jupyter notebooks with parameter injection, monitoring, and multi-kernel support (v1.0)
+version: "1.0"
 usage: '/notebook-run [notebook-path] [--params key=value] [--kernel python3|R|julia] [--output-dir path] [--parallel] [--cache-results]'
 category: data-science
 allowed-tools:

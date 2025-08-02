@@ -1,7 +1,7 @@
 ---
 name: /demo-search-transform
-description: Demonstrate highest-scoring pattern - Search and Transform (v2.0)
-version: 2.0
+description: Demonstrate highest-scoring pattern - Search and Transform (v1.0)
+version: "1.0"
 usage: '/demo-search-transform [search_pattern] [target_format]'
 category: examples
 allowed-tools:

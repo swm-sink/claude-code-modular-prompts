@@ -1,7 +1,7 @@
 ---
 name: /dag-orchestrate
-description: Execute tasks using Directed Acyclic Graph orchestration with adaptive (v2.0)
-version: 2.0
+description: Execute tasks using Directed Acyclic Graph orchestration with adaptive (v1.0)
+version: "1.0"
 usage: '/dag-orchestrate [task with dependencies and conditional paths]'
 category: specialized
 allowed-tools:

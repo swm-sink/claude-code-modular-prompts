@@ -1,7 +1,7 @@
 ---
 name: /find-duplicates
-description: Find duplicate files in your project (v2.0)
-version: 2.0
+description: Find duplicate files in your project (v1.0)
+version: "1.0"
 usage: '/find-duplicates [file-pattern] [--type extension]'
 category: utility
 allowed-tools:

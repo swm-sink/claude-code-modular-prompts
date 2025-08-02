@@ -1,7 +1,7 @@
 ---
 name: /research
-description: Comprehensive research framework with source validation and actionable insights (v2.0)
-version: 2.0
+description: Comprehensive research framework with source validation and actionable insights (v1.0)
+version: "1.0"
 usage: '/research [topic] [--depth shallow|standard|comprehensive] [--focus technical|business|competitive] [--sources web|codebase|both]'
 category: core
 allowed-tools:

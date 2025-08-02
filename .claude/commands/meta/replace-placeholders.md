@@ -1,7 +1,7 @@
 ---
 name: /replace-placeholders
-description: Systematically replace all placeholders in adapted commands with enhanced validation (v2.0)
-version: 2.0
+description: Systematically replace all placeholders in adapted commands with enhanced validation (v1.0)
+version: "1.0"
 usage: '/replace-placeholders [validate|guided|batch|rollback] [--dry-run] [--config-file project-config.yaml]'
 category: meta
 allowed-tools:
@@ -174,11 +174,11 @@ enhancement:
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# Enhanced Placeholder Replacement Guide (v2.0)
+# Enhanced Placeholder Replacement Guide (v1.0)
 
 **Enhanced manual replacement with validation, safety, and guided workflows**
 
-## 🎯 v2.0 Enhanced Capabilities
+## 🎯 v1.0 Enhanced Capabilities
 
 ### **Usage Options:**
 - **`/replace-placeholders`** - Standard guided replacement with validation
@@ -187,7 +187,7 @@ enhancement:
 - **`/replace-placeholders batch`** - Batch processing with progress tracking
 - **`/replace-placeholders rollback`** - Rollback to previous state with full recovery
 
-## 🚀 What v2.0 Actually Does
+## 🚀 What v1.0 Actually Does
 
 **Enhanced replacement guide with comprehensive validation and safety.** I'll help you manually replace all `[INSERT_XXX]` placeholders with:
 
@@ -199,9 +199,9 @@ enhancement:
 - 🛡️ **Safety First** - Automatic backup verification and rollback capability
 - 📊 **Progress Tracking** - Todo-based progress tracking with completion status
 
-## 🔧 v2.0 Enhanced vs. Limitations
+## 🔧 v1.0 Enhanced vs. Limitations
 
-### ✅ v2.0 Enhanced Capabilities:
+### ✅ v1.0 Enhanced Capabilities:
 - **Validation & Safety**: Comprehensive validation with backup verification
 - **Guided Workflows**: Step-by-step process with validation checkpoints
 - **Progress Tracking**: Todo-based tracking with completion status
@@ -215,10 +215,10 @@ enhancement:
 - ❌ **Cannot read existing configs** - You provide values during the guided process  
 - ❌ **Cannot create backups automatically** - You create backups (but I verify they exist)
 
-### 🎯 v2.0 Philosophy: **Enhanced Manual Control**
-The v2.0 approach enhances the manual process with **validation, safety, and guidance** while keeping you in full control of file modifications.
+### 🎯 v1.0 Philosophy: **Enhanced Manual Control**
+The v1.0 approach enhances the manual process with **validation, safety, and guidance** while keeping you in full control of file modifications.
 
-## v2.0 Enhanced Manual Workflow
+## v1.0 Enhanced Manual Workflow
 
 ### 🛡️ Phase 1: Safety & Validation Setup
 **Enhanced safety with automatic validation**
@@ -242,7 +242,7 @@ The v2.0 approach enhances the manual process with **validation, safety, and gui
 ### 📁 Phase 3: Enhanced File Coverage
 **Comprehensive file analysis with validation**
 
-#### v2.0 Enhanced File Coverage:
+#### v1.0 Enhanced File Coverage:
 - **📁 `.claude/commands/**/*.md`** - 88 command files with validation
 - **📁 `.claude/components/**/*.md`** - 91 component files with compatibility checking
 - **📁 `.claude/assembly-templates/`** - Professional workflow templates
@@ -262,7 +262,7 @@ The v2.0 approach enhances the manual process with **validation, safety, and gui
 5. **Error Detection** - Real-time detection of replacement issues
 6. **Recovery Options** - Immediate recovery if issues are detected
 
-## 📋 v2.0 Enhanced Placeholder Reference
+## 📋 v1.0 Enhanced Placeholder Reference
 
 ### 🎯 Core Project Placeholders
 **Enhanced with validation and smart defaults**
@@ -294,7 +294,7 @@ The v2.0 approach enhances the manual process with **validation, safety, and gui
 [INSERT_USER_BASE] → internal, b2b, b2c, enterprise (domain-classified)
 ```
 
-### 🧩 v2.0 Progressive Disclosure Placeholders
+### 🧩 v1.0 Progressive Disclosure Placeholders
 **New placeholders for Layer integration**
 
 ```yaml
@@ -304,7 +304,7 @@ The v2.0 approach enhances the manual process with **validation, safety, and gui
 [INSERT_COMPONENT_ASSEMBLY_CONFIG] → basic, professional, enterprise (layer-3 settings)
 ```
 
-### 🔧 v2.0 Enhanced Configuration Placeholders
+### 🔧 v1.0 Enhanced Configuration Placeholders
 **New advanced configuration options**
 
 ```yaml
@@ -314,13 +314,13 @@ The v2.0 approach enhances the manual process with **validation, safety, and gui
 [INSERT_PERFORMANCE_MONITORING] → disabled, basic, advanced (performance-tracking)
 ```
 
-### 🔗 v2.0 Smart Nested Placeholder Handling
+### 🔗 v1.0 Smart Nested Placeholder Handling
 **Enhanced nested placeholder resolution with validation**
 
 #### Intelligent Nested Resolution:
 For complex placeholders like `[INSERT_[INSERT_DOMAIN]_CONFIG]`:
 
-1. **Smart Detection**: v2.0 automatically detects nested patterns
+1. **Smart Detection**: v1.0 automatically detects nested patterns
 2. **Guided Resolution**: Step-by-step resolution with validation:
    ```yaml
    Step 1: [INSERT_DOMAIN] → "web-dev" (validated)
@@ -332,14 +332,14 @@ For complex placeholders like `[INSERT_[INSERT_DOMAIN]_CONFIG]`:
 
 ---
 
-## 🚀 v2.0 Enhanced Manual Replacement Process
+## 🚀 v1.0 Enhanced Manual Replacement Process
 
 ### 🛡️ Step 1: Safety Setup & Validation
 **Enhanced safety protocol with automatic verification**
 
 #### Pre-Replacement Safety Protocol:
 ```bash
-# v2.0 Enhanced Safety Setup:
+# v1.0 Enhanced Safety Setup:
 /replace-placeholders validate    # Comprehensive system validation
 # ✅ Backup verification: .claude.backup/ exists and complete
 # ✅ Git status: Clean working directory 
@@ -353,12 +353,12 @@ For complex placeholders like `[INSERT_[INSERT_DOMAIN]_CONFIG]`:
 #### Guided Value Collection Process:
 I'll collect your project details with smart validation and pre-filled defaults based on your project analysis.
 
-### 📊 Step 3: v2.0 Enhanced Replacement Guide
+### 📊 Step 3: v1.0 Enhanced Replacement Guide
 **Comprehensive guide with validation and progress tracking**
 
 #### Enhanced Guide Format:
 ```markdown
-v2.0 PLACEHOLDER REPLACEMENT GUIDE
+v1.0 PLACEHOLDER REPLACEMENT GUIDE
 ===================================
 📊 Total Files: 88 commands + 91 components + configs
 📋 Total Replacements: 247 placeholders detected
@@ -384,7 +384,7 @@ File: .claude/commands/core/query.md (✅ backup verified)
 🔄 Rollback instructions if issues are detected
 ```
 
-### 🎯 Step 4: v2.0 Enhanced Manual Steps
+### 🎯 Step 4: v1.0 Enhanced Manual Steps
 **Guided workflow with validation checkpoints**
 
 #### Enhanced Manual Workflow:
@@ -395,7 +395,7 @@ File: .claude/commands/core/query.md (✅ backup verified)
 5. **Progress Tracking** - Todo-based progress tracking with completion status
 6. **Real-time Error Detection** - Immediate detection and recovery for any issues
 
-### ✅ Step 5: v2.0 Comprehensive Verification
+### ✅ Step 5: v1.0 Comprehensive Verification
 **Multi-layer validation with automatic error detection**
 
 #### Enhanced Verification Checklist:
@@ -410,7 +410,7 @@ File: .claude/commands/core/query.md (✅ backup verified)
 □ Priority 2 - Components (94+ files): ___/94+ complete  
 □ Priority 3 - Context files (15+ files): ___/15+ complete
 □ Priority 4 - Configuration files: ___/X complete
-□ CLAUDE.md updated with v2.0 structure
+□ CLAUDE.md updated with v1.0 structure
 
 🔍 VALIDATION CHECKPOINTS:
 □ YAML header integrity: All 88 commands validated
@@ -426,7 +426,7 @@ File: .claude/commands/core/query.md (✅ backup verified)
 □ Ready for production: Full system validated
 ```
 
-## 🛡️ v2.0 Enhanced Safety & Recovery
+## 🛡️ v1.0 Enhanced Safety & Recovery
 
 ### 🚀 Enhanced Safety Protocol
 **Comprehensive safety with automatic verification**
@@ -437,13 +437,13 @@ File: .claude/commands/core/query.md (✅ backup verified)
 3. **Systematic Approach** - Priority-ordered file processing with validation
 4. **Real-time Monitoring** - Continuous validation and error detection
 
-#### v2.0 Enhanced Find & Replace Tips:
+#### v1.0 Enhanced Find & Replace Tips:
 - **Editor Detection** - I provide instructions specific to your editor
 - **Batch Processing** - Efficient replacement strategies for large template libraries
 - **Validation Integration** - Built-in validation after each replacement step
 - **Error Recovery** - Automatic detection and recovery procedures
 
-### 🚨 v2.0 Enhanced Error Prevention & Recovery
+### 🚨 v1.0 Enhanced Error Prevention & Recovery
 **Comprehensive error handling with automatic rollback**
 
 #### Advanced Error Prevention:
@@ -459,14 +459,14 @@ File: .claude/commands/core/query.md (✅ backup verified)
 
 ---
 
-## 🚀 Ready for v2.0 Enhanced Replacement?
+## 🚀 Ready for v1.0 Enhanced Replacement?
 
 ### 🎯 Quick Start Options:
 
 #### Option 1: Standard Guided Mode
 ```bash
 /replace-placeholders guided
-# Full v2.0 experience with validation and safety
+# Full v1.0 experience with validation and safety
 ```
 
 #### Option 2: Validation Only
@@ -488,4 +488,4 @@ When you're ready, I'll collect your project details with:
 - **🧩 Progressive Disclosure integration** with layer recommendations
 - **📊 Comprehensive reporting** with actionable insights
 
-**Ready to experience v2.0 enhanced placeholder replacement with comprehensive validation and safety?**
+**Ready to experience v1.0 enhanced placeholder replacement with comprehensive validation and safety?**

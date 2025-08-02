@@ -1,7 +1,7 @@
 ---
 name: /test-e2e
-description: Intelligent end-to-end (E2E) testing with automated test script generation, browser automation, and comprehensive reporting (v2.0)
-version: 2.0
+description: Intelligent end-to-end (E2E) testing with automated test script generation, browser automation, and comprehensive reporting (v1.0)
+version: "1.0"
 usage: '/test-e2e [url] [test_scenario] [--browser chromium|firefox|webkit] [--video] [--headless]'
 allowed-tools:
 - Read

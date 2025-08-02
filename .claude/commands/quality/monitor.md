@@ -1,7 +1,7 @@
 ---
 name: /monitor
-description: Comprehensive monitoring system with setup, alerts, dashboards, status (v2.0)
-version: 2.0
+description: Comprehensive monitoring system with setup, alerts, dashboards, status (v1.0)
+version: "1.0"
 usage: '[subcommand] [options]'
 category: quality
 allowed-tools:

@@ -1,7 +1,7 @@
 ---
 name: /smart-adapt-project
-description: Intelligent project adaptation with 70%+ automated placeholder replacement (v2.0)
-version: 2.0
+description: Intelligent project adaptation with 70%+ automated placeholder replacement (v1.0)
+version: "1.0"
 usage: '[target_directory] [mode:quick|thorough]'
 category: meta
 allowed-tools:

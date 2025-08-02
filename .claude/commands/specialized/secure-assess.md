@@ -1,7 +1,7 @@
 ---
 name: /secure-assess
-description: Comprehensive code assessment with pattern analysis, risk analysis, compliance (v2.0)
-version: 2.0
+description: Comprehensive code assessment with pattern analysis, risk analysis, compliance (v1.0)
+version: "1.0"
 usage: '[mode] [scope] [format]'
 category: specialized
 allowed-tools:

@@ -1,7 +1,7 @@
 ---
 name: /mass-transformation
-description: Ultimate transformation workflow that spawns 50+ agents for complete (v2.0)
-version: 2.0
+description: Ultimate transformation workflow that spawns 50+ agents for complete (v1.0)
+version: "1.0"
 usage: '[transformation_scope] [agent_limit] [parallel_mode]'
 category: specialized
 allowed-tools:

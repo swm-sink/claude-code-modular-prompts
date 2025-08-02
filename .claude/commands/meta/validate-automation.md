@@ -1,7 +1,7 @@
 ---
 name: /validate-automation
-description: Comprehensive validation and testing framework for template automation (v2.0)
-version: 2.0
+description: Comprehensive validation and testing framework for template automation (v1.0)
+version: "1.0"
 usage: '/validate-automation [--scope=templates|scripts|integration|full] [--fix-issues]'
 category: meta
 allowed-tools:

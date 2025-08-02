@@ -1,7 +1,7 @@
 ---
 name: /import-pattern
-description: Import community adaptation patterns for similar projects (v2.0)
-version: 2.0
+description: Import community adaptation patterns for similar projects (v1.0)
+version: "1.0"
 usage: '/import-pattern [pattern-name] [--preview] [--merge|--replace]'
 category: meta
 allowed-tools:

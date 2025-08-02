@@ -1,7 +1,7 @@
 ---
 name: /secure-manage
-description: Unified security management system with configuration, fixing, reporting, (v2.0)
-version: 2.0
+description: Unified security management system with configuration, fixing, reporting, (v1.0)
+version: "1.0"
 usage: '[mode] [scope] [format]'
 category: specialized
 allowed-tools:

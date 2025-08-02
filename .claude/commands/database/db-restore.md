@@ -1,7 +1,7 @@
 ---
 name: /db-restore
-description: Restore [INSERT_DATABASE_TYPE] database for [INSERT_PROJECT_NAME] from backup (v2.0)
-version: 2.0
+description: Restore [INSERT_DATABASE_TYPE] database for [INSERT_PROJECT_NAME] from backup (v1.0)
+version: "1.0"
 usage: '/db-restore [backup-file|--latest|--point-in-time] [--target environment] [--validate] [--partial] [--dry-run]'
 category: database
 allowed-tools:
@@ -48,16 +48,16 @@ monitoring-integration:
   audit-trail: Complete restore history with rollback capability
 ---
 
-# Database Restore for [INSERT_PROJECT_NAME] (v2.0)
+# Database Restore for [INSERT_PROJECT_NAME] (v1.0)
 
 ## Enhanced Input Validation
 
-Before processing, I'll perform comprehensive v2.0 validation:
+Before processing, I'll perform comprehensive v1.0 validation:
 
 **Validating inputs with enhanced security...**
 
 ```python
-# v2.0 Enhanced backup source validation
+# v1.0 Enhanced backup source validation
 backup_source = "latest"  # default
 point_in_time = None
 partial_restore = False
@@ -68,11 +68,11 @@ if args and not args[0].startswith("--"):
     try:
         validated_backup_path = validate_file_path(backup_file, "db-restore", ["backups", "data", "dumps", "s3://", "gs://", "azure://"])
         
-        # v2.0: Verify backup integrity
+        # v1.0: Verify backup integrity
         if not verify_backup_integrity(validated_backup_path):
             raise SecurityError(f"Backup file corrupted or invalid: {backup_file}")
             
-        # v2.0: Check backup metadata
+        # v1.0: Check backup metadata
         backup_metadata = read_backup_metadata(validated_backup_path)
         backup_version = backup_metadata.get("db_version")
         backup_size = backup_metadata.get("size_gb")
@@ -95,7 +95,7 @@ if "--partial" in args:
 if "--dry-run" in args:
     dry_run = True
 
-# v2.0 Enhanced target environment validation
+# v1.0 Enhanced target environment validation
 target_env = "development"  # default
 if "--target" in args:
     target_index = args.index("--target") + 1
@@ -105,14 +105,14 @@ if "--target" in args:
         if not env_validation["valid"]:
             raise SecurityError(f"Invalid target environment: {target_env}")
         
-        # v2.0: Environment-specific safety checks
+        # v1.0: Environment-specific safety checks
         if target_env == "production":
             require_mfa = True
             require_approval = True
             create_pre_restore_backup = True
             notify_team = True
 
-# v2.0 Enhanced database configuration validation
+# v1.0 Enhanced database configuration validation
 db_config = {
     "DB_HOST": os.getenv("DB_HOST", "localhost"),
     "DB_PORT": os.getenv("DB_PORT", "5432"),
@@ -122,20 +122,20 @@ db_config = {
     "DB_VERSION": os.getenv("DB_VERSION", "")
 }
 
-# v2.0: Test connectivity and permissions
+# v1.0: Test connectivity and permissions
 if not test_db_connection(db_config):
     raise ConnectionError("Cannot connect to target database")
     
 if not verify_restore_permissions(db_config):
     raise PermissionError("Insufficient permissions for restore operation")
 
-# v2.0: Version compatibility check
+# v1.0: Version compatibility check
 current_db_version = get_database_version(db_config)
 if backup_version and not check_version_compatibility(backup_version, current_db_version):
     compatibility_plan = generate_compatibility_plan(backup_version, current_db_version)
     print(f"⚠️ Version mismatch detected. Migration plan generated: {compatibility_plan}")
 
-# v2.0: Space availability check
+# v1.0: Space availability check
 required_space = calculate_restore_space(backup_size, partial_restore)
 available_space = check_available_space(target_env)
 if available_space < required_space * 1.5:  # 50% buffer
@@ -147,12 +147,12 @@ for key, value in db_config.items():
         config_result = validate_configuration_value(key, value, "db-restore")
         protected_configs[key] = config_result
 
-# v2.0: Validate restore options
+# v1.0: Validate restore options
 validate_option = "--validate" in args
 if validate_option:
-    validation_depth = "comprehensive"  # v2.0 default
+    validation_depth = "comprehensive"  # v1.0 default
 
-# v2.0: Performance estimation
+# v1.0: Performance estimation
 estimated_duration = estimate_restore_time(backup_size, partial_restore, target_env)
 impact_analysis = analyze_restore_impact(target_env, estimated_duration)
 
@@ -160,8 +160,8 @@ total_validation_time = 4.5  # ms
 credentials_protected = sum(1 for c in protected_configs.values() if c.get("credentials_masked", 0) > 0)
 ```
 
-**v2.0 Enhanced Validation Result:**
-✅ **SECURE**: All v2.0 validations passed
+**v1.0 Enhanced Validation Result:**
+✅ **SECURE**: All v1.0 validations passed
 - Backup source: `{backup_source}` (integrity verified)
 - Backup date: `{backup_date}` (metadata validated)
 - Backup size: `{backup_size}GB`
@@ -180,7 +180,7 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 
 🔒 **SECURITY NOTICE**: {credentials_protected} database credential(s) detected and masked for protection
 
-## v2.0 Progressive Disclosure Integration
+## v1.0 Progressive Disclosure Integration
 
 ### 🚀 Layer 1: Quick Restore (via /quick-command)
 ```bash
@@ -200,7 +200,7 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 # Partial restore, point-in-time recovery, cross-version migration
 ```
 
-## v2.0 Restore Capabilities
+## v1.0 Restore Capabilities
 
 ### Latest Backup Restore
 ```bash
@@ -214,7 +214,7 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 /db-restore --latest --target staging
 ```
 
-### Point-in-Time Recovery (v2.0)
+### Point-in-Time Recovery (v1.0)
 ```bash
 # Restore to specific moment
 /db-restore --point-in-time "2025-07-30 14:30:00"
@@ -223,7 +223,7 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 /db-restore --point-in-time "2025-07-30 14:30:00" --transaction-exact
 ```
 
-### Partial Restore (v2.0)
+### Partial Restore (v1.0)
 ```bash
 # Restore specific tables
 /db-restore backup.sql --partial --tables users,orders
@@ -235,7 +235,7 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 /db-restore backup.sql --partial --table users --where "created_at > '2025-01-01'"
 ```
 
-### Cross-Version Restore (v2.0)
+### Cross-Version Restore (v1.0)
 ```bash
 # Automatic version handling
 /db-restore old-version-backup.sql --target production
@@ -244,10 +244,10 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 /db-restore old-version-backup.sql --migration-preview
 ```
 
-## v2.0 Safety Features
+## v1.0 Safety Features
 
 ### Multi-Layer Protection
-Your [INSERT_SECURITY_LEVEL] security with v2.0 enhancements:
+Your [INSERT_SECURITY_LEVEL] security with v1.0 enhancements:
 
 **Pre-Restore Safety:**
 - Automatic current state backup
@@ -272,7 +272,7 @@ Your [INSERT_SECURITY_LEVEL] security with v2.0 enhancements:
 
 ### Environment-Specific Safeguards
 
-**Production Restore (v2.0):**
+**Production Restore (v1.0):**
 ```yaml
 production_safeguards:
   authentication:
@@ -291,7 +291,7 @@ production_safeguards:
     - Team notifications
 ```
 
-## v2.0 Validation Capabilities
+## v1.0 Validation Capabilities
 
 ### Comprehensive Validation Suite
 ```bash
@@ -315,7 +315,7 @@ production_safeguards:
 
 ## Recovery Scenarios
 
-### Disaster Recovery (v2.0)
+### Disaster Recovery (v1.0)
 ```bash
 # Full recovery with monitoring
 /db-restore --latest --target production --monitor
@@ -324,7 +324,7 @@ production_safeguards:
 /db-restore --latest --target production --region us-east-1
 ```
 
-### Partial Recovery (v2.0)
+### Partial Recovery (v1.0)
 ```bash
 # User data recovery
 /db-restore backup.sql --partial --table users --user-id 12345
@@ -333,7 +333,7 @@ production_safeguards:
 /db-restore --point-in-time "2025-07-30 12:00:00" --partial --tables orders --date-range "2025-07-29:2025-07-30"
 ```
 
-### Development Refresh (v2.0)
+### Development Refresh (v1.0)
 ```bash
 # Sanitized production data
 /db-restore prod-backup.sql --target development --sanitize
@@ -344,7 +344,7 @@ production_safeguards:
 
 ## Performance Optimization
 
-### v2.0 Parallel Restore
+### v1.0 Parallel Restore
 ```yaml
 parallel_features:
   table_parallelism:
@@ -376,7 +376,7 @@ parallel_features:
 
 ### [INSERT_CI_CD_PLATFORM] Pipeline
 ```yaml
-# v2.0 Restore Pipeline
+# v1.0 Restore Pipeline
 restore_pipeline:
   stages:
     - validate:
@@ -413,7 +413,7 @@ restore_pipeline:
 
 ## Post-Restore Automation
 
-### v2.0 Automatic Verification
+### v1.0 Automatic Verification
 ```bash
 # Run post-restore test suite
 /test --suite post-restore --environment {target_env}
@@ -432,4 +432,4 @@ For [INSERT_TEAM_SIZE] teams:
 - Runbook updates
 - Incident tracking integration
 
-Which restore operation would you like to perform with these v2.0 enhancements?
+Which restore operation would you like to perform with these v1.0 enhancements?

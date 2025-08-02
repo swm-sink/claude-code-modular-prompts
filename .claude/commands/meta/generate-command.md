@@ -1,7 +1,7 @@
 ---
 name: /generate-command
-description: Meta-prompt system to automatically generate new Claude Code slash commands (v2.0)
-version: 2.0
+description: Meta-prompt system to automatically generate new Claude Code slash commands (v1.0)
+version: "1.0"
 usage: '/generate-command <task-description> [--framework=<framework>]'
 category: meta
 allowed-tools:
@@ -19,7 +19,7 @@ dependencies:
 validation:
   pre-execution: Validate task description clarity and framework compatibility
   during-execution: Monitor command generation quality and completeness
-  post-execution: Verify generated command follows v2.0 standards
+  post-execution: Verify generated command follows v1.0 standards
 progressive-disclosure:
   layer-integration: Meta-generation across all Progressive Disclosure layers
   escalation-path: Simple generation → framework-specific → custom templates

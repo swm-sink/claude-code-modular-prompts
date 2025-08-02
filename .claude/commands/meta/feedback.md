@@ -1,7 +1,7 @@
 ---
 name: /feedback
-description: User experience feedback collection and improvement system (v2.0)
-version: 2.0
+description: User experience feedback collection and improvement system (v1.0)
+version: "1.0"
 usage: '/feedback [rating] [category] [message]'
 category: meta
 allowed-tools:

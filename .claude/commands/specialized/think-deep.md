@@ -1,7 +1,7 @@
 ---
 name: /think-deep
-description: Advanced deep thinking and problem-solving with structured analysis, (v2.0)
-version: 2.0
+description: Advanced deep thinking and problem-solving with structured analysis, (v1.0)
+version: "1.0"
 usage: '[problem_statement] [thinking_depth]'
 category: specialized
 allowed-tools:

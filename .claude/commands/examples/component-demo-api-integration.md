@@ -1,7 +1,7 @@
 ---
 name: /demo-api-integration
-description: Demonstrate API integration pattern with validation and transformation (v2.0)
-version: 2.0
+description: Demonstrate API integration pattern with validation and transformation (v1.0)
+version: "1.0"
 usage: '/demo-api-integration [api_endpoint] [output_format]'
 category: examples
 allowed-tools:

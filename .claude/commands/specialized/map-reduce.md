@@ -1,7 +1,7 @@
 ---
 name: /map-reduce
-description: Distribute work across parallel agents then aggregate results using map-reduce (v2.0)
-version: 2.0
+description: Distribute work across parallel agents then aggregate results using map-reduce (v1.0)
+version: "1.0"
 usage: '/map-reduce [large task to parallelize and aggregate]'
 category: specialized
 allowed-tools:

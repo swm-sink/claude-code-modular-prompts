@@ -1,7 +1,7 @@
 ---
 name: /analyze-system
-description: Comprehensive system analysis with performance profiling, dependency (v2.0)
-version: 2.0
+description: Comprehensive system analysis with performance profiling, dependency (v1.0)
+version: "1.0"
 usage: '[focus_mode] [analysis_depth] [target_path]'
 category: quality
 allowed-tools:

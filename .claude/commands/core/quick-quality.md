@@ -1,7 +1,7 @@
 ---
 name: /quick-quality
-description: Instant code quality analysis - works with any programming language (v2.0)
-version: 2.0
+description: Instant code quality analysis - works with any programming language (v1.0)
+version: "1.0"
 usage: '/quick-quality [--scan | --fix | --report] [file-pattern]'
 category: core
 allowed-tools:

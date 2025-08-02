@@ -1,7 +1,7 @@
 ---
 name: /test
-description: Unified intelligent testing framework with automated test generation, comprehensive coverage analysis, environment management, and multi-format reporting (v2.0)
-version: 2.0
+description: Unified intelligent testing framework with automated test generation, comprehensive coverage analysis, environment management, and multi-format reporting (v1.0)
+version: "1.0"
 usage: '/test [type] [target] [--coverage high|medium|low] [--parallel] [--watch] [--generate]'
 allowed-tools:
 - Read

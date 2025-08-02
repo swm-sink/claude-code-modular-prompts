@@ -1,7 +1,7 @@
 ---
 name: /integration-testing-baseline
-description: Integration Testing Baseline Report (v2.0)
-version: 2.0
+description: Integration Testing Baseline Report (v1.0)
+version: "1.0"
 usage: '/integration-testing-baseline [--generate-report] [--update-baselines] [--format html|json|markdown]'
 allowed-tools:
 - Read

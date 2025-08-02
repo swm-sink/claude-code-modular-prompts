@@ -1,7 +1,7 @@
 ---
 name: /demo-file-processor
-description: Demonstrate atomic components in action - File Processing Pattern (v2.0)
-version: 2.0
+description: Demonstrate atomic components in action - File Processing Pattern (v1.0)
+version: "1.0"
 usage: '/demo-file-processor [file_pattern] [output_format]'
 category: examples
 allowed-tools:

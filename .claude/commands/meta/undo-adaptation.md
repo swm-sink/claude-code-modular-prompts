@@ -1,7 +1,7 @@
 ---
 name: /undo-adaptation
-description: Revert adaptations to previous state with full recovery capability (v2.0)
-version: 2.0
+description: Revert adaptations to previous state with full recovery capability (v1.0)
+version: "1.0"
 usage: '/undo-adaptation [--last|--to-snapshot snapshot-id] [--preview] [--layer=1|2|3] [--selective]'
 category: meta
 allowed-tools:
@@ -35,13 +35,13 @@ tracking:
   state-comparison: Shows differences between current and backup
 ---
 
-# Undo Adaptation (v2.0)
+# Undo Adaptation (v1.0)
 
 ## 🎯 Enhanced Recovery System with Intelligent Restoration
 
-**v2.0 Enhancement**: This command now provides intelligent recovery capabilities with automatic backup detection, layer-aware restoration, selective recovery options, and comprehensive validation to safely restore your framework to any previous state.
+**v1.0 Enhancement**: This command now provides intelligent recovery capabilities with automatic backup detection, layer-aware restoration, selective recovery options, and comprehensive validation to safely restore your framework to any previous state.
 
-### 🚀 What's New in v2.0
+### 🚀 What's New in v1.0
 - **Automatic Backup Detection**: Finds all available backups and sync points
 - **Layer-Aware Recovery**: Preserves customizations by Progressive Disclosure layer
 - **Selective Recovery**: Choose specific files or directories to restore
@@ -69,11 +69,11 @@ tracking:
 - Mix and match from different backups
 - Cherry-pick individual files
 
-## Enhanced v2.0 Recovery Options
+## Enhanced v1.0 Recovery Options
 
 ### Automatic Backup Detection
 ```bash
-# v2.0 finds all recovery points automatically
+# v1.0 finds all recovery points automatically
 echo "=== Available Recovery Points ==="
 
 # Find all backups
@@ -91,17 +91,17 @@ git log --oneline -10 -- .claude/ 2>/dev/null
 
 ### Layer-Specific Recovery (--layer=N)
 ```bash
-# v2.0 Layer 1 recovery only
+# v1.0 Layer 1 recovery only
 echo "Restoring Layer 1 (Auto-Generation)..."
 cp .claude.backup-latest/commands/core/quick-command.md .claude/commands/core/
 cp -r .claude.backup-latest/templates/ .claude/
 
-# v2.0 Layer 2 recovery only
+# v1.0 Layer 2 recovery only
 echo "Restoring Layer 2 (Customization)..."
 cp .claude.backup-latest/commands/core/build-command.md .claude/commands/core/
 cp -r .claude.backup-latest/customization/ .claude/
 
-# v2.0 Layer 3 recovery only
+# v1.0 Layer 3 recovery only
 echo "Restoring Layer 3 (Assembly)..."
 cp .claude.backup-latest/commands/core/assemble-command.md .claude/commands/core/
 cp -r .claude.backup-latest/components/ .claude/
@@ -110,7 +110,7 @@ cp -r .claude.backup-latest/assembly-templates/ .claude/
 
 ### Selective Recovery (--selective)
 ```bash
-# v2.0 Interactive selection
+# v1.0 Interactive selection
 echo "=== Selective Recovery Mode ==="
 echo "Choose what to restore:"
 echo "1. Commands only"
@@ -122,7 +122,7 @@ echo "5. Individual files"
 
 ### Preview Mode (--preview)
 ```bash
-# v2.0 See what would be restored
+# v1.0 See what would be restored
 echo "=== PREVIEW MODE ==="
 echo "The following would be restored from .claude.backup-20250731:"
 
@@ -314,11 +314,11 @@ cp -r .claude-framework/.claude .
 diff -r .claude.broken .claude
 ```
 
-## Enhanced v2.0 Recovery Tracking
+## Enhanced v1.0 Recovery Tracking
 
 ### Automatic Recovery Log
 ```bash
-# v2.0 creates detailed recovery log
+# v1.0 creates detailed recovery log
 cat > .claude/RECOVERY-LOG-$(date +%Y%m%d-%H%M%S).json << 'EOF'
 {
   "recovery_date": "$(date -Iseconds)",
@@ -345,7 +345,7 @@ EOF
 
 ### Post-Recovery Validation
 ```bash
-# v2.0 Automatic validation after recovery
+# v1.0 Automatic validation after recovery
 echo "=== Post-Recovery Validation ==="
 
 # Check framework integrity
@@ -367,7 +367,7 @@ echo "Running comprehensive validation..."
 
 ### Recovery Comparison Report
 ```markdown
-RECOVERY COMPLETION REPORT v2.0
+RECOVERY COMPLETION REPORT v1.0
 ================================
 Date: [TIMESTAMP]
 Recovery Type: [FULL|LAYER-SPECIFIC|SELECTIVE]
@@ -404,11 +404,11 @@ NEXT STEPS
 4. Test critical workflows
 ```
 
-## Smart Recovery Scenarios (v2.0)
+## Smart Recovery Scenarios (v1.0)
 
 ### Scenario: "I broke Layer 2 customization"
 ```bash
-# v2.0 targeted recovery
+# v1.0 targeted recovery
 /undo-adaptation --layer=2 --preview
 # Shows only Layer 2 files that would be restored
 # Preserves Layer 1 and 3 customizations
@@ -416,14 +416,14 @@ NEXT STEPS
 
 ### Scenario: "I need yesterday's components only"
 ```bash
-# v2.0 selective recovery
+# v1.0 selective recovery
 /undo-adaptation --selective --to-snapshot .claude.backup-20250730
 # Interactive selection of just component files
 ```
 
 ### Scenario: "Show me what changed"
 ```bash
-# v2.0 state comparison
+# v1.0 state comparison
 /undo-adaptation --compare .claude.backup-latest
 # Shows detailed diff between current and backup
 ```

@@ -1,7 +1,7 @@
 ---
 name: /test-integration-project
-description: Run integration tests for [INSERT_PROJECT_NAME] with [INSERT_API_STYLE] APIs and [INSERT_DATABASE_TYPE] (v2.0)
-version: 2.0
+description: Run integration tests for [INSERT_PROJECT_NAME] with [INSERT_API_STYLE] APIs and [INSERT_DATABASE_TYPE] (v1.0)
+version: "1.0"
 usage: '/test-integration [test-suite] [--environment staging|production] [--parallel] [--verbose] [--mock-services]'
 category: testing
 allowed-tools:

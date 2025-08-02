@@ -1,7 +1,7 @@
 ---
 name: /cd-rollback
-description: Rollback lusaka deployment on Cloud Server (v2.0)
-version: 2.0
+description: Rollback lusaka deployment on Cloud Server (v1.0)
+version: "1.0"
 usage: /cd-rollback [--version previous-version] [--environment production|staging] [--emergency] [--dry-run] [--health-check]
 category: devops
 allowed-tools:
@@ -36,9 +36,9 @@ error-recovery:
   partial-failure: Component-level recovery options
 ---
 
-# Deployment Rollback for lusaka (v2.0)
+# Deployment Rollback for lusaka (v1.0)
 
-## V2.0 Enhanced Features
+## V1.0 Enhanced Features
 - ⚡ **Instant Recovery**: One-click rollback to last known good version
 - 🎯 **Smart Version Selection**: Automatic health validation of target versions
 - 🔄 **Zero-Downtime Rollback**: Gradual traffic shifting during recovery
@@ -174,7 +174,7 @@ Your workflow requires:
 
 What type of rollback do you need to perform?
 
-## V2.0 Progressive Disclosure Examples
+## V1.0 Progressive Disclosure Examples
 
 ### Layer 1 (Instant Rollback)
 ```bash

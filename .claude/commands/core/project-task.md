@@ -1,7 +1,7 @@
 ---
 name: /project-task
-description: Create and manage project-specific tasks with integrated workflow tracking (v2.0)
-version: 2.0
+description: Create and manage project-specific tasks with integrated workflow tracking (v1.0)
+version: "1.0"
 usage: '/project-task [feature|bug|refactor] [description] [--priority high|medium|low] [--estimate hours]'
 category: core
 allowed-tools:

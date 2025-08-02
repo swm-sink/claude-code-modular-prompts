@@ -1,7 +1,7 @@
 ---
 name: /db-backup
-description: Backup [INSERT_DATABASE_TYPE] database for [INSERT_PROJECT_NAME] (v2.0)
-version: 2.0
+description: Backup [INSERT_DATABASE_TYPE] database for [INSERT_PROJECT_NAME] (v1.0)
+version: "1.0"
 usage: '/db-backup [--full|--incremental] [--destination path] [--compress] [--encrypt] [--verify]'
 category: database
 allowed-tools:
@@ -39,11 +39,11 @@ security-features:
   credential-protection: Environment variable and secure vault integration
 ---
 
-# Database Backup for [INSERT_PROJECT_NAME] (v2.0)
+# Database Backup for [INSERT_PROJECT_NAME] (v1.0)
 
 ## Enhanced Input Validation
 
-Before processing, I'll perform comprehensive v2.0 validation:
+Before processing, I'll perform comprehensive v1.0 validation:
 
 **Validating inputs with enhanced security...**
 
@@ -52,7 +52,7 @@ Before processing, I'll perform comprehensive v2.0 validation:
 backup_type = "full"  # default
 compression = "fast"  # default
 encryption = False
-verify = True  # v2.0 default
+verify = True  # v1.0 default
 
 if "--incremental" in args:
     backup_type = "incremental"
@@ -70,7 +70,7 @@ if "--encrypt" in args:
 if "--verify" in args:
     verify = True
 
-# Enhanced destination validation with v2.0 safety checks
+# Enhanced destination validation with v1.0 safety checks
 destination = "./backups"  # default
 if "--destination" in args:
     dest_index = args.index("--destination") + 1
@@ -78,13 +78,13 @@ if "--destination" in args:
         destination = args[dest_index]
         validated_destination = validate_file_path(destination, "db-backup", ["backups", "data", "dumps"])
         
-        # v2.0: Check disk space
+        # v1.0: Check disk space
         required_space = estimate_backup_size(db_type, backup_type)
         available_space = check_disk_space(destination)
         if available_space < required_space * 1.2:  # 20% buffer
             raise ValueError(f"Insufficient disk space. Required: {required_space}GB, Available: {available_space}GB")
 
-# Enhanced database configuration with v2.0 security
+# Enhanced database configuration with v1.0 security
 db_config = {
     "DB_HOST": os.getenv("DB_HOST", "localhost"),
     "DB_PASSWORD": os.getenv("DB_PASSWORD", ""),
@@ -93,7 +93,7 @@ db_config = {
     "DB_PORT": os.getenv("DB_PORT", "5432")
 }
 
-# v2.0: Test database connectivity before backup
+# v1.0: Test database connectivity before backup
 if not test_db_connection(db_config):
     raise ConnectionError("Cannot connect to database. Please check credentials.")
 
@@ -108,7 +108,7 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 ```
 
 **Enhanced Validation Result:**
-✅ **SECURE**: All v2.0 validations passed
+✅ **SECURE**: All v1.0 validations passed
 - Backup type: `{backup_type}` (validated)
 - Destination: `{destination}` (validated with space check)
 - Compression: `{compression}` (optimized)
@@ -121,7 +121,7 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 
 🔒 **SECURITY NOTICE**: {credentials_protected} database credential(s) detected and masked for protection
 
-## v2.0 Progressive Disclosure Integration
+## v1.0 Progressive Disclosure Integration
 
 ### 🚀 Layer 1: Quick Backup (via /quick-command)
 ```bash
@@ -143,7 +143,7 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 
 ## Enhanced Backup Execution
 
-### Full Backup with v2.0 Features
+### Full Backup with v1.0 Features
 ```bash
 # Basic full backup
 /db-backup --full
@@ -164,7 +164,7 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 /db-backup --incremental --verify --compress fast
 ```
 
-## v2.0 Backup Strategies
+## v1.0 Backup Strategies
 
 ### Intelligent Scheduling
 For [INSERT_WORKFLOW_TYPE] workflow with [INSERT_TEAM_SIZE] team:
@@ -184,7 +184,7 @@ For [INSERT_WORKFLOW_TYPE] workflow with [INSERT_TEAM_SIZE] team:
 
 ### Storage Optimization
 
-Based on [INSERT_DEPLOYMENT_TARGET] with v2.0 enhancements:
+Based on [INSERT_DEPLOYMENT_TARGET] with v1.0 enhancements:
 
 **Cloud Storage (Recommended):**
 - S3 with lifecycle policies
@@ -196,10 +196,10 @@ Based on [INSERT_DEPLOYMENT_TARGET] with v2.0 enhancements:
 - Cloud archive for long-term retention
 - Automatic tiering based on age
 
-## v2.0 Security Features
+## v1.0 Security Features
 
 ### Enterprise-Grade Protection
-Your [INSERT_SECURITY_LEVEL] security with v2.0 enhancements:
+Your [INSERT_SECURITY_LEVEL] security with v1.0 enhancements:
 
 **Encryption:**
 - AES-256 encryption at rest
@@ -215,7 +215,7 @@ Your [INSERT_SECURITY_LEVEL] security with v2.0 enhancements:
 
 ## Advanced Recovery Features
 
-### v2.0 Recovery Capabilities
+### v1.0 Recovery Capabilities
 - **Point-in-time recovery**: Restore to any moment
 - **Partial restore**: Table-level or row-level recovery
 - **Cross-version compatibility**: Restore across DB versions
@@ -234,7 +234,7 @@ backup_metrics:
 
 ### [INSERT_CI_CD_PLATFORM] Integration
 ```yaml
-# v2.0 Pipeline Integration
+# v1.0 Pipeline Integration
 backup_pipeline:
   triggers:
     - pre_deployment: Full backup with verification
@@ -248,7 +248,7 @@ backup_pipeline:
 
 ## Error Recovery and Monitoring
 
-### v2.0 Automatic Recovery
+### v1.0 Automatic Recovery
 - **Connection failures**: Exponential backoff with 5 retries
 - **Disk space issues**: Automatic cleanup of old backups
 - **Corruption detection**: Checksum validation and re-attempt
@@ -263,4 +263,4 @@ backup_pipeline:
 /monitoring --service db-backup --history --last 7d
 ```
 
-What type of backup would you like to perform with these v2.0 enhancements?
+What type of backup would you like to perform with these v1.0 enhancements?

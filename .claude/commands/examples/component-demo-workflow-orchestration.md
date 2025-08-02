@@ -1,7 +1,7 @@
 ---
 name: /demo-workflow-orchestration
-description: Demonstrate complex workflow management with atomic components (v2.0)
-version: 2.0
+description: Demonstrate complex workflow management with atomic components (v1.0)
+version: "1.0"
 usage: '/demo-workflow-orchestration [workflow_name] [parallel_tasks]'
 category: examples
 allowed-tools:

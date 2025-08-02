@@ -1,7 +1,7 @@
 ---
 name: /dev-test
-description: Advanced development testing with comprehensive coverage, intelligent test generation, and automated quality validation (v2.0)
-version: 2.0
+description: Advanced development testing with comprehensive coverage, intelligent test generation, and automated quality validation (v1.0)
+version: "1.0"
 usage: '/dev-test [test_scope] [--coverage] [--generate] [--parallel] [--watch]'
 allowed-tools:
 - Read
@@ -35,7 +35,7 @@ performance:
 deprecation:
   status: Deprecated since 2025-07-25
   migration-path: Use /test command with appropriate options
-  removal-version: 2.0.0
+  removal-version: "1.0".0
   reason: Functionality consolidated into unified /test command
 ---
 # /dev test - Advanced Development Testing

@@ -1,7 +1,7 @@
 ---
 name: /mega-platform-builder
-description: Ultimate platform builder that spawns 100+ agents for complete enterprise (v2.0)
-version: 2.0
+description: Ultimate platform builder that spawns 100+ agents for complete enterprise (v1.0)
+version: "1.0"
 usage: '[platform_type] [complexity_level] [agent_limit]'
 category: specialized
 allowed-tools:

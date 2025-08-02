@@ -1,7 +1,7 @@
 ---
 name: /performance-integration-report
-description: Performance Integration Benchmarking Report (v2.0)
-version: 2.0
+description: Performance Integration Benchmarking Report (v1.0)
+version: "1.0"
 usage: '/performance-integration-report [options]'
 category: quality
 allowed-tools:

@@ -1,7 +1,7 @@
 ---
 name: /find-commands
-description: Smart command discovery tool with filtering and search capabilities (v2.0)
-version: 2.0
+description: Smart command discovery tool with filtering and search capabilities (v1.0)
+version: "1.0"
 usage: '/find-commands [category] [keyword] [--list-categories]'
 category: meta
 allowed-tools:  

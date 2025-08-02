@@ -1,7 +1,7 @@
 ---
 name: /demo-input-processing
-description: Demonstrate reliable input processing and parameter validation (v2.0)
-version: 2.0
+description: Demonstrate reliable input processing and parameter validation (v1.0)
+version: "1.0"
 usage: '/demo-input-processing [input_data] [processing_options]'
 category: examples
 allowed-tools:

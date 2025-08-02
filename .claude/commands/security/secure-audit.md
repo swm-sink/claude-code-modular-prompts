@@ -1,7 +1,7 @@
 ---
 name: /secure-audit
-description: Comprehensive code audit with multi-layer security analysis and automated scanning (v2.0)
-version: 2.0
+description: Comprehensive code audit with multi-layer security analysis and automated scanning (v1.0)
+version: "1.0"
 usage: '/secure-audit [--scope full|code|infrastructure|compliance] [--report-format detailed|executive|compliance] [--severity critical|high|medium|low] [--fix-mode suggest|apply]'
 category: security
 allowed-tools:

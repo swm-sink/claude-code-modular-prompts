@@ -1,7 +1,7 @@
 ---
 name: /db-seed
-description: Seed [INSERT_DATABASE_TYPE] with test data for [INSERT_PROJECT_NAME] (v2.0)
-version: 2.0
+description: Seed [INSERT_DATABASE_TYPE] with test data for [INSERT_PROJECT_NAME] (v1.0)
+version: "1.0"
 usage: '/db-seed [--environment dev|test|staging|prod] [--dataset minimal|standard|full|custom] [--validate] [--clean] [--parallel]'
 category: database
 allowed-tools:
@@ -49,20 +49,20 @@ monitoring-integration:
   audit-trail: Complete seeding history and rollback points
 ---
 
-# Database Seeding for [INSERT_PROJECT_NAME] (v2.0)
+# Database Seeding for [INSERT_PROJECT_NAME] (v1.0)
 
 ## Enhanced Input Validation
 
-Before processing, I'll perform comprehensive v2.0 validation:
+Before processing, I'll perform comprehensive v1.0 validation:
 
 **Validating inputs with enhanced security...**
 
 ```python
-# v2.0 Enhanced environment validation
+# v1.0 Enhanced environment validation
 env = "dev"  # default
 clean_mode = False
 validate_only = False
-parallel_mode = True  # v2.0 default for performance
+parallel_mode = True  # v1.0 default for performance
 
 if "--environment" in args:
     env_index = args.index("--environment") + 1
@@ -72,7 +72,7 @@ if "--environment" in args:
         if not env_validation["valid"]:
             raise SecurityError(f"Invalid environment: {env}")
         
-        # v2.0: Production safeguards
+        # v1.0: Production safeguards
         if env == "prod":
             require_confirmation = True
             require_mfa = True
@@ -87,7 +87,7 @@ if "--validate" in args:
 if "--parallel" in args:
     parallel_mode = True
 
-# v2.0 Enhanced dataset validation
+# v1.0 Enhanced dataset validation
 dataset = "minimal"  # default
 if "--dataset" in args:
     dataset_index = args.index("--dataset") + 1
@@ -97,20 +97,20 @@ if "--dataset" in args:
         if dataset not in valid_datasets:
             raise SecurityError(f"Invalid dataset: {dataset}. Must be one of: {', '.join(valid_datasets)}")
 
-# v2.0: Schema analysis for intelligent seeding
+# v1.0: Schema analysis for intelligent seeding
 schema_analysis = analyze_database_schema()
 required_tables = schema_analysis["tables"]
 relationships = schema_analysis["relationships"]
 constraints = schema_analysis["constraints"]
 
-# v2.0: Seed file discovery and validation
+# v1.0: Seed file discovery and validation
 seed_sources = discover_seed_sources(env, dataset)
 validated_sources = []
 for source in seed_sources:
     validated_path = validate_file_path(source["path"], "db-seed", ["seeds", "data", "fixtures", "generators"])
     validated_sources.append(validated_path)
 
-# Enhanced database configuration with v2.0 security
+# Enhanced database configuration with v1.0 security
 db_config = {
     "DB_URL": os.getenv("DB_URL", ""),
     "DB_HOST": os.getenv("DB_HOST", "localhost"),
@@ -118,7 +118,7 @@ db_config = {
     "SEED_DB_PASSWORD": os.getenv("SEED_DB_PASSWORD", "")
 }
 
-# v2.0: Test connectivity and permissions
+# v1.0: Test connectivity and permissions
 if not test_db_connection(db_config):
     raise ConnectionError("Cannot connect to database")
     
@@ -131,7 +131,7 @@ for key, value in db_config.items():
         config_result = validate_configuration_value(key, value, "db-seed")
         protected_configs[key] = config_result
 
-# v2.0: Performance estimation
+# v1.0: Performance estimation
 estimated_records = calculate_dataset_size(dataset, schema_analysis)
 estimated_time = estimate_seeding_time(estimated_records, parallel_mode)
 required_space = estimate_space_requirements(estimated_records)
@@ -140,8 +140,8 @@ total_validation_time = 3.8  # ms
 credentials_protected = sum(1 for c in protected_configs.values() if c.get("credentials_masked", 0) > 0)
 ```
 
-**v2.0 Enhanced Validation Result:**
-✅ **SECURE**: All v2.0 validations passed
+**v1.0 Enhanced Validation Result:**
+✅ **SECURE**: All v1.0 validations passed
 - Environment: `{env}` (validated with safeguards)
 - Dataset: `{dataset}` (validated)
 - Schema analysis: **{len(required_tables)} tables**, **{len(relationships)} relationships**
@@ -158,7 +158,7 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 
 🔒 **SECURITY NOTICE**: {credentials_protected} database credential(s) detected and masked for protection
 
-## v2.0 Progressive Disclosure Integration
+## v1.0 Progressive Disclosure Integration
 
 ### 🚀 Layer 1: Quick Seed (via /quick-command)
 ```bash
@@ -178,7 +178,7 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 # Custom data generators, patterns, and rules
 ```
 
-## v2.0 Intelligent Seeding Features
+## v1.0 Intelligent Seeding Features
 
 ### Schema-Aware Data Generation
 Based on your **[INSERT_DATABASE_TYPE]** schema analysis:
@@ -206,7 +206,7 @@ intelligent_features:
 
 ### Enhanced Dataset Options
 
-#### Minimal Dataset (v2.0)
+#### Minimal Dataset (v1.0)
 ```bash
 /db-seed --dataset minimal
 ```
@@ -215,7 +215,7 @@ intelligent_features:
 - **Relationship coverage**: All critical paths
 - **Use case**: Quick unit testing
 
-#### Standard Dataset (v2.0)
+#### Standard Dataset (v1.0)
 ```bash
 /db-seed --dataset standard --parallel
 ```
@@ -224,7 +224,7 @@ intelligent_features:
 - **Edge cases**: Boundary conditions included
 - **Performance**: Parallel insertion for speed
 
-#### Full Dataset (v2.0)
+#### Full Dataset (v1.0)
 ```bash
 /db-seed --dataset full --parallel --validate
 ```
@@ -233,7 +233,7 @@ intelligent_features:
 - **Complete coverage**: All scenarios
 - **Validation**: Post-seed integrity checks
 
-#### Performance Dataset (v2.0 New)
+#### Performance Dataset (v1.0 New)
 ```bash
 /db-seed --dataset performance --parallel
 ```
@@ -242,7 +242,7 @@ intelligent_features:
 - **Index validation**: Ensures proper indexing
 - **Monitoring**: Real-time performance metrics
 
-#### Compliance Dataset (v2.0 New)
+#### Compliance Dataset (v1.0 New)
 ```bash
 /db-seed --dataset compliance --validate
 ```
@@ -254,7 +254,7 @@ intelligent_features:
 ### Custom Data Generation
 
 ```bash
-# v2.0 Custom generators
+# v1.0 Custom generators
 /db-seed --dataset custom --generator [INSERT_DOMAIN]-patterns
 
 # Examples for different domains:
@@ -264,7 +264,7 @@ intelligent_features:
 # Education: Students, courses, grades
 ```
 
-## v2.0 Environment-Specific Features
+## v1.0 Environment-Specific Features
 
 ### Development Environment
 ```bash
@@ -296,7 +296,7 @@ intelligent_features:
 - Performance testing ready
 - Security validated
 
-### Production Environment (v2.0 Safeguards)
+### Production Environment (v1.0 Safeguards)
 ```bash
 /db-seed --environment prod --validate
 ```
@@ -306,7 +306,7 @@ intelligent_features:
 - Validation-only by default
 - Audit trail generation
 
-## v2.0 Performance Optimization
+## v1.0 Performance Optimization
 
 ### Parallel Seeding
 ```yaml
@@ -336,7 +336,7 @@ parallel_features:
 /monitoring --service db-seed --history
 ```
 
-## v2.0 Data Quality Features
+## v1.0 Data Quality Features
 
 ### Validation Capabilities
 ```bash
@@ -354,7 +354,7 @@ parallel_features:
 - Business rule compliance
 
 ### Relationship Management
-**v2.0 automatically handles:**
+**v1.0 automatically handles:**
 - Parent-child dependencies
 - Many-to-many relationships
 - Self-referencing tables
@@ -364,7 +364,7 @@ parallel_features:
 
 ### [INSERT_CI_CD_PLATFORM] Pipeline
 ```yaml
-# v2.0 Seeding Pipeline
+# v1.0 Seeding Pipeline
 seed_pipeline:
   stages:
     - prepare:
@@ -390,7 +390,7 @@ seed_pipeline:
 
 ## Error Recovery and Monitoring
 
-### v2.0 Resilience Features
+### v1.0 Resilience Features
 - **Connection failures**: Automatic retry with resume
 - **Constraint violations**: Dependency resolution and retry
 - **Duplicate data**: Intelligent deduplication
@@ -405,4 +405,4 @@ seed_pipeline:
 /monitoring --analytics db-seed --last 30d
 ```
 
-What type of seed operation would you like to perform with these v2.0 enhancements?
+What type of seed operation would you like to perform with these v1.0 enhancements?

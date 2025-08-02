@@ -1,7 +1,7 @@
 ---
 name: /demo-development-workflow
-description: Demonstrate development workflow with git operations, testing, and progress tracking (v2.0)
-version: 2.0
+description: Demonstrate development workflow with git operations, testing, and progress tracking (v1.0)
+version: "1.0"
 usage: '/demo-development-workflow [branch_name] [test_suite]'
 category: examples
 allowed-tools:

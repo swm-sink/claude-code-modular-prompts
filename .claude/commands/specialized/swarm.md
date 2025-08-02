@@ -1,7 +1,7 @@
 ---
 name: /swarm
-description: Orchestrate a swarm of specialized agents working in parallel on complex (v2.0)
-version: 2.0
+description: Orchestrate a swarm of specialized agents working in parallel on complex (v1.0)
+version: "1.0"
 usage: '/swarm [task description and agent roles]'
 category: specialized
 allowed-tools:

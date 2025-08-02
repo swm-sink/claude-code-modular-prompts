@@ -1,7 +1,7 @@
 ---
 name: /quick-test
-description: Universal testing assistance - works with any testing framework (v2.0)
-version: 2.0
+description: Universal testing assistance - works with any testing framework (v1.0)
+version: "1.0"
 usage: '/quick-test [--generate | --run | --fix | --strategy | --analyze] [test-target]'
 category: core
 allowed-tools:

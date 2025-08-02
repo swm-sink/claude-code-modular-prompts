@@ -1,7 +1,7 @@
 ---
 name: /auto
-description: Intelligent command router with context-aware selection and automatic parameter detection (v2.0)
-version: 2.0
+description: Intelligent command router with context-aware selection and automatic parameter detection (v1.0)
+version: "1.0"
 usage: '/auto "[your request in natural language]"'
 allowed-tools:
 - Read

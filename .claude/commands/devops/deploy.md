@@ -1,7 +1,7 @@
 ---
 name: /deploy
-description: Deploy lusaka to Cloud Server using GitHub Actions (v2.0)
-version: 2.0
+description: Deploy lusaka to Cloud Server using GitHub Actions (v1.0)
+version: "1.0"
 usage: /deploy [environment] [--strategy blue-green|canary|rolling] [--health-check] [--rollback-on-failure]
 category: devops
 allowed-tools:
@@ -40,9 +40,9 @@ security:
   - credential-protection.md
 ---
 
-# Deploy lusaka (v2.0)
+# Deploy lusaka (v1.0)
 
-## V2.0 Enhanced Features
+## V1.0 Enhanced Features
 - 🚀 **One-Click Deployment**: Smart defaults for instant deployment
 - 🛡️ **Zero-Downtime Strategies**: Blue-green, canary, and rolling updates
 - 🔄 **Automatic Rollback**: Instant recovery from deployment failures
@@ -178,7 +178,7 @@ Post-deployment for lusaka:
 
 Which environment would you like to deploy to? (Environment will be validated for security compliance)
 
-## V2.0 Progressive Disclosure Examples
+## V1.0 Progressive Disclosure Examples
 
 ### Layer 1 (One-Click Deploy)
 ```bash

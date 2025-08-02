@@ -1,7 +1,7 @@
 ---
 name: /db-migrate
-description: Safe database migration for your project's database system (v2.0)
-version: 2.0
+description: Safe database migration for your project's database system (v1.0)
+version: "1.0"
 usage: '/db-migrate [up|down|status|create|dry-run|validate|rollback-plan] [migration-name] [--safe] [--force] [--batch-size]'
 category: database
 allowed-tools:
@@ -49,30 +49,30 @@ monitoring-integration:
   audit-trail: Complete migration history and rollback capability
 ---
 
-# Database Migration for [INSERT_PROJECT_NAME] (v2.0)
+# Database Migration for [INSERT_PROJECT_NAME] (v1.0)
 
 <!-- SECURITY: Include enhanced credential protection for database operations -->
 <include>components/security/credential-protection.md</include>
 <include>components/security/protection-feedback.md</include>
 
-**🔒 ENHANCED CREDENTIAL PROTECTION ACTIVE**: All database connection strings, passwords, and credentials are automatically detected and masked with v2.0 security enhancements.
+**🔒 ENHANCED CREDENTIAL PROTECTION ACTIVE**: All database connection strings, passwords, and credentials are automatically detected and masked with v1.0 security enhancements.
 
-## v2.0 Migration Intelligence
+## v1.0 Migration Intelligence
 
 I'll help you manage database migrations for **[INSERT_PROJECT_NAME]** using **[INSERT_DATABASE_TYPE]** with advanced safety features and performance optimization.
 
 ### Pre-Migration Validation
 
-**Performing comprehensive v2.0 pre-flight checks...**
+**Performing comprehensive v1.0 pre-flight checks...**
 
 ```python
 # Enhanced migration validation
 migration_type = "up"  # default
-safe_mode = True  # v2.0 default
+safe_mode = True  # v1.0 default
 force_mode = False
 batch_size = 1000  # default for large data migrations
 
-# Parse v2.0 options
+# Parse v1.0 options
 if "down" in args:
     migration_type = "down"
 elif "status" in args:
@@ -98,7 +98,7 @@ if "--batch-size" in args:
     if batch_idx < len(args):
         batch_size = int(args[batch_idx])
 
-# v2.0: Comprehensive pre-migration checks
+# v1.0: Comprehensive pre-migration checks
 checks = {
     "schema_validation": validate_schema_changes(),
     "dependency_analysis": check_migration_dependencies(),
@@ -115,7 +115,7 @@ risk_score = calculate_migration_risk(checks)
 estimated_duration = estimate_migration_time()
 ```
 
-**v2.0 Pre-Migration Report:**
+**v1.0 Pre-Migration Report:**
 ✅ **READY TO MIGRATE** (Risk Score: {risk_score}/10)
 - Schema validation: **PASSED**
 - Dependencies: **RESOLVED**
@@ -127,7 +127,7 @@ estimated_duration = estimate_migration_time()
 - Replication lag: **ACCEPTABLE** (<2 seconds)
 - Estimated duration: **{estimated_duration}**
 
-## v2.0 Progressive Disclosure Integration
+## v1.0 Progressive Disclosure Integration
 
 ### 🚀 Layer 1: Quick Migration (via /quick-command)
 ```bash
@@ -149,7 +149,7 @@ estimated_duration = estimate_migration_time()
 
 ## Enhanced Migration Commands
 
-### Apply Migrations with v2.0 Safety
+### Apply Migrations with v1.0 Safety
 ```bash
 # Safe mode (default) - includes backup and validation
 /db-migrate up
@@ -188,7 +188,7 @@ estimated_duration = estimate_migration_time()
 /db-migrate status --all-environments
 ```
 
-### Create Migration with v2.0 Templates
+### Create Migration with v1.0 Templates
 ```bash
 # Create with intelligent templates
 /db-migrate create add-[INSERT_DOMAIN]-feature
@@ -200,7 +200,7 @@ estimated_duration = estimate_migration_time()
 /db-migrate create add-indexes --reversible
 ```
 
-## v2.0 Safety Features
+## v1.0 Safety Features
 
 ### Multi-Layer Protection
 Based on your **[INSERT_SECURITY_LEVEL]** security requirements:
@@ -227,7 +227,7 @@ Based on your **[INSERT_SECURITY_LEVEL]** security requirements:
 - Replication consistency checks
 
 ### Enhanced Credential Protection
-**v2.0 Security Enhancements:**
+**v1.0 Security Enhancements:**
 - 🔐 **Connection String Masking**: Advanced regex patterns for all database types
 - 🛡️ **Error Sanitization**: ML-based credential detection in error messages
 - 📊 **Audit Trail**: Encrypted logs with credential stripping
@@ -241,7 +241,7 @@ I'll automatically detect and optimize for your migration framework based on [IN
 
 **Django:**
 ```python
-# v2.0 Django integration
+# v1.0 Django integration
 migration_config = {
     "atomic": True,
     "run_before": ["backup", "validate"],
@@ -252,7 +252,7 @@ migration_config = {
 
 **Rails:**
 ```ruby
-# v2.0 Rails integration
+# v1.0 Rails integration
 migration_options = {
   disable_ddl_transaction: large_table_detection,
   verbose: true,
@@ -263,7 +263,7 @@ migration_options = {
 
 **Node.js (Knex/Sequelize/TypeORM):**
 ```javascript
-// v2.0 Node.js integration
+// v1.0 Node.js integration
 const migrationConfig = {
   transaction: true,
   disableForeignKeys: false,
@@ -275,7 +275,7 @@ const migrationConfig = {
 
 ## Performance Optimization
 
-### v2.0 Migration Performance
+### v1.0 Migration Performance
 ```yaml
 performance_features:
   batch_processing:
@@ -303,7 +303,7 @@ performance_features:
 
 ### [INSERT_CI_CD_PLATFORM] Pipeline Integration
 ```yaml
-# v2.0 Migration Pipeline
+# v1.0 Migration Pipeline
 migration_pipeline:
   stages:
     - validate:
@@ -340,7 +340,7 @@ migration_pipeline:
 
 ## Best Practices for [INSERT_TEAM_SIZE] Teams
 
-### v2.0 Team Collaboration Features
+### v1.0 Team Collaboration Features
 - **Migration Review**: Automated PR checks for schema changes
 - **Testing Protocol**: Mandatory local testing with production data subset
 - **Staging Validation**: Automatic staging deployment before production
@@ -353,4 +353,4 @@ For your [INSERT_TEAM_SIZE] team:
 - **Medium teams**: Use migration windows and announcements
 - **Large teams**: Automated scheduling with blackout periods
 
-What migration operation would you like to perform with these v2.0 enhancements?
+What migration operation would you like to perform with these v1.0 enhancements?

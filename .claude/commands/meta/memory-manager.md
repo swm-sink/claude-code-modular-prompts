@@ -1,7 +1,7 @@
 ---
 name: /memory-manager
-description: MCP-powered persistent memory and learning system for template automation (v2.0)
-version: 2.0
+description: MCP-powered persistent memory and learning system for template automation (v1.0)
+version: "1.0"
 usage: '/memory-manager <action> [--scope=personal|project|team] [--export-path=<path>]'
 category: meta
 allowed-tools:

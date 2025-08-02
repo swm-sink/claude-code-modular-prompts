@@ -1,7 +1,7 @@
 ---
 name: /component-gen
-description: Generate modern web components with tests, styles, and framework integration (v2.0)
-version: 2.0
+description: Generate modern web components with tests, styles, and framework integration (v1.0)
+version: "1.0"
 usage: '/component-gen [component-name] [--type functional|class|page] [--with-tests] [--with-styles] [--framework react|vue|angular] [--accessibility]'
 category: web-dev
 allowed-tools:

@@ -1,7 +1,7 @@
 ---
 name: /spawn-specialist
-description: Create and launch specialized sub-agents for complex multi-domain tasks (v2.0)
-version: 2.0
+description: Create and launch specialized sub-agents for complex multi-domain tasks (v1.0)
+version: "1.0"
 usage: '/spawn-specialist <domain> <task-description> [--parallel] [--coordinated]'
 category: meta
 allowed-tools:

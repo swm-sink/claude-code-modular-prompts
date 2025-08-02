@@ -1,7 +1,7 @@
 ---
 name: /mutation
-description: Performs mutation testing to assess the effectiveness of existing test suites (v2.0)
-version: 2.0
+description: Performs mutation testing to assess the effectiveness of existing test suites (v1.0)
+version: "1.0"
 usage: '/mutation [target_file] [--auto-fix] [--threshold 80] [--operators all|arithmetic|conditional]'
 allowed-tools:
 - Read

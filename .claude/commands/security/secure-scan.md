@@ -1,7 +1,7 @@
 ---
 name: /secure-scan
-description: Automated security scanning with real-time vulnerability detection and fix suggestions (v2.0)
-version: 2.0
+description: Automated security scanning with real-time vulnerability detection and fix suggestions (v1.0)
+version: "1.0"
 usage: '/secure-scan [--type vulnerability|sast|dast|all] [--severity critical|high|medium|low] [--auto-fix] [--continuous]'
 category: security
 allowed-tools:

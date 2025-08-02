@@ -1,7 +1,7 @@
 ---
 name: /integration-test-matrices
-description: Integration Test Matrices for Phase 2 (v2.0)
-version: 2.0
+description: Integration Test Matrices for Phase 2 (v1.0)
+version: "1.0"
 usage: '/integration-test-matrices [--view-matrix command|component|workflow|error] [--execute-tests] [--generate-report]'
 allowed-tools:
 - Read

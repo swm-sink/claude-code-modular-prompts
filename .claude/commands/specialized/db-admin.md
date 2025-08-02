@@ -1,7 +1,7 @@
 ---
 name: /db-admin
-description: Unified database administration with migration, backup, and restoration (v2.0)
-version: 2.0
+description: Unified database administration with migration, backup, and restoration (v1.0)
+version: "1.0"
 usage: '[operation] [options]'
 category: specialized
 allowed-tools:

@@ -1,7 +1,7 @@
 ---
 name: /ci-setup
-description: Configure GitHub Actions pipelines for lusaka (v2.0)
-version: 2.0
+description: Configure GitHub Actions pipelines for lusaka (v1.0)
+version: "1.0"
 usage: /ci-setup [--template basic|standard|advanced] [--branch main|develop|feature/*] [--monitoring] [--security enhanced]
 category: devops
 allowed-tools:
@@ -37,9 +37,9 @@ error-recovery:
 security: input-validation-framework.md
 ---
 
-# CI/CD Setup for lusaka (v2.0)
+# CI/CD Setup for lusaka (v1.0)
 
-## V2.0 Enhanced Features
+## V1.0 Enhanced Features
 - 🎯 **Auto-Detection**: Automatically identifies project type and optimal CI configuration
 - 🔄 **Progressive Templates**: From basic to advanced with smooth transitions
 - 🛡️ **Configuration Safety**: Backup, validate, test before activation
@@ -223,7 +223,7 @@ Generated files for your project:
 
 Which template would you like to use for lusaka?
 
-## V2.0 Progressive Disclosure Examples
+## V1.0 Progressive Disclosure Examples
 
 ### Layer 1 (Auto-Configuration)
 ```bash

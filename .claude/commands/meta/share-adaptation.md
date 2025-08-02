@@ -1,7 +1,7 @@
 ---
 name: /share-adaptation
-description: Export your adaptation patterns to share with the community (v2.0)
-version: 2.0
+description: Export your adaptation patterns to share with the community (v1.0)
+version: "1.0"
 usage: '/share-adaptation [--name pattern-name] [--description text] [--anonymize]'
 category: meta
 allowed-tools:

@@ -1,7 +1,7 @@
 ---
 name: /pipeline
-description: Unified intelligent pipeline orchestration with creation, execution, monitoring, deployment, and CI/CD integration (v2.0)
-version: 2.0
+description: Unified intelligent pipeline orchestration with creation, execution, monitoring, deployment, and CI/CD integration (v1.0)
+version: "1.0"
 usage: /pipeline [mode] [pipeline_name] [options] [--dry-run] [--validate]
 category: devops
 allowed-tools:
@@ -40,9 +40,9 @@ error-recovery:
   dependency-issues: Automatic resolution or clear guidance
   configuration-errors: Validation feedback with examples
 ---
-# /pipeline - Unified Pipeline Orchestration for lusaka (v2.0)
+# /pipeline - Unified Pipeline Orchestration for lusaka (v1.0)
 
-## V2.0 Enhanced Features
+## V1.0 Enhanced Features
 - 🎨 **Multi-Mode Orchestration**: Create, run, build, deploy, and rollback in one command
 - 🚀 **Intelligent Auto-Detection**: Automatically identifies pipeline needs
 - 🔄 **Stage-Level Control**: Granular control over pipeline execution
@@ -122,7 +122,7 @@ Comprehensive CI/CD setup with automated configuration and integration.
 ### ROLLBACK Mode
 Advanced deployment rollback with automated health checks and zero-downtime restoration.
 
-## V2.0 Progressive Disclosure Examples
+## V1.0 Progressive Disclosure Examples
 
 ### Layer 1 (Simple Pipeline)
 ```bash

@@ -1,7 +1,7 @@
 ---
 name: /validate-adaptation
-description: Check adaptation completeness and calculate readiness score (v2.0)
-version: 2.0
+description: Check adaptation completeness and calculate readiness score (v1.0)
+version: "1.0"
 usage: '/validate-adaptation [--verbose] [--auto-run] [--layer=1|2|3] [--export-report]'
 category: meta
 allowed-tools:
@@ -170,13 +170,13 @@ export-formats:
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# Validate Adaptation (v2.0)
+# Validate Adaptation (v1.0)
 
 ## 🎯 Enhanced Validation with Progressive Disclosure Support
 
-**v2.0 Enhancement**: This command now provides layer-aware validation with automated scanning capabilities and comprehensive readiness assessment across all three Progressive Disclosure layers.
+**v1.0 Enhancement**: This command now provides layer-aware validation with automated scanning capabilities and comprehensive readiness assessment across all three Progressive Disclosure layers.
 
-### 🚀 What's New in v2.0
+### 🚀 What's New in v1.0
 - **Layer-Aware Validation**: Specific checks for each Progressive Disclosure layer
 - **Automated Scanning**: Uses Bash and Glob tools for systematic validation
 - **Export Capabilities**: Generate reports in multiple formats
@@ -285,11 +285,11 @@ Using defaults: -10%
 Final score: 45% (Basic adaptation needed)
 ```
 
-## Enhanced v2.0 Validation Suite
+## Enhanced v1.0 Validation Suite
 
 ### Automated Validation Commands
 ```bash
-# v2.0 Enhanced validation with layer support
+# v1.0 Enhanced validation with layer support
 echo "=== Progressive Disclosure Layer Validation ==="
 
 # Layer 1: Auto-Generation Readiness
@@ -318,9 +318,9 @@ for dir in .claude/commands/*/; do
   echo "$(basename "$dir"): $(find "$dir" -name "*.md" 2>/dev/null | wc -l)"
 done
 
-# v2.0 Feature validation
-echo "=== v2.0 Features ==="
-grep -l "version: 2.0" .claude/commands/*/*.md 2>/dev/null | wc -l
+# v1.0 Feature validation
+echo "=== v1.0 Features ==="
+grep -l "version: "1.0"" .claude/commands/*/*.md 2>/dev/null | wc -l
 ```
 
 ### Layer-Specific Validation
@@ -372,17 +372,17 @@ find .claude/components -type f -name "*.md" | head -10
 2. Add domain-specific commands
 3. Customize core commands
 
-## Enhanced v2.0 Validation Report
+## Enhanced v1.0 Validation Report
 
 ### Export Options (--export-report)
 
 #### Markdown Format (Default)
 ```markdown
-ADAPTATION VALIDATION REPORT v2.0
+ADAPTATION VALIDATION REPORT v1.0
 =================================
 Date: [TODAY'S DATE]
 Project: [YOUR PROJECT NAME]
-Framework Version: 2.0
+Framework Version: 1.0
 
 PROGRESSIVE DISCLOSURE READINESS
 --------------------------------
@@ -405,7 +405,7 @@ CORE VALIDATION METRICS
 -----------------------
 Placeholders Found: [NUMBER]
 Configuration Status: [EXISTS/MISSING]
-Command Count: [NUMBER] ([NUMBER] v2.0)
+Command Count: [NUMBER] ([NUMBER] v1.0)
 Customization Level: [BASIC/MODERATE/ADVANCED]
 
 Overall Readiness Score: [XX]%
@@ -470,9 +470,9 @@ cp .claude-framework/commands/core/build-command.md .claude/commands/core/
 cp .claude-framework/commands/core/assemble-command.md .claude/commands/core/
 ```
 
-#### v2.0 Migration Path
+#### v1.0 Migration Path
 ```bash
-# Upgrade existing commands to v2.0
+# Upgrade existing commands to v1.0
 echo "Run these commands to upgrade:"
 echo "/convert-to-v2 --batch=all"
 echo "/validate-adaptation --layer=all"

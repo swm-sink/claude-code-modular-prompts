@@ -1,7 +1,7 @@
 ---
 name: /validate-command
-description: Systematic command validation using Claude 4 prompting and context engineering (v2.0)
-version: 2.0
+description: Systematic command validation using Claude 4 prompting and context engineering (v1.0)
+version: "1.0"
 usage: '/validate-command [command-file-path] [validation-depth]'
 category: quality
 allowed-tools:

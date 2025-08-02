@@ -1,7 +1,7 @@
 ---
 name: /quality-enforce
-description: Enforces code quality standards using configurable quality gates (v2.0)
-version: 2.0
+description: Enforces code quality standards using configurable quality gates (v1.0)
+version: "1.0"
 usage: ''
 category: quality
 allowed-tools:

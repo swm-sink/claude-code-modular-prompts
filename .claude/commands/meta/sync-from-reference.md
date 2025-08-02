@@ -1,7 +1,7 @@
 ---
 name: /sync-from-reference
-description: Pull updates from framework while preserving your customizations (v2.0)
-version: 2.0
+description: Pull updates from framework while preserving your customizations (v1.0)
+version: "1.0"
 usage: '/sync-from-reference [--preview] [--approve-all] [--rollback] [--validate-before] [--layer=1|2|3]'
 category: meta
 allowed-tools:
@@ -33,13 +33,13 @@ tracking:
   customization-preservation: Tracks user customizations
 ---
 
-# Sync from Reference (v2.0)
+# Sync from Reference (v1.0)
 
 ## 🎯 Enhanced Framework Synchronization with Safety Features
 
-**v2.0 Enhancement**: This command now provides intelligent sync capabilities with automatic backup, rollback support, and Progressive Disclosure layer protection to safely update your framework while preserving all customizations.
+**v1.0 Enhancement**: This command now provides intelligent sync capabilities with automatic backup, rollback support, and Progressive Disclosure layer protection to safely update your framework while preserving all customizations.
 
-### 🚀 What's New in v2.0
+### 🚀 What's New in v1.0
 - **Automatic Backup**: Creates timestamped backup before any changes
 - **Layer Protection**: Preserves Progressive Disclosure customizations
 - **Rollback Support**: Can restore previous state if issues occur
@@ -88,11 +88,11 @@ diff -r .claude/ .claude-framework/
 - **Your customized files**: Keep your version
 - **Unchanged files with updates**: Consider updating
 
-## Enhanced v2.0 Sync Process
+## Enhanced v1.0 Sync Process
 
 ### Step 1: Pre-Sync Safety Check (--validate-before)
 ```bash
-# v2.0 Automatic backup
+# v1.0 Automatic backup
 echo "Creating safety backup..."
 cp -r .claude ".claude.backup-$(date +%Y%m%d-%H%M%S)"
 
@@ -103,7 +103,7 @@ echo "Validating current adaptation..."
 
 ### Step 2: Smart Update Detection
 ```bash
-# v2.0 Enhanced detection with layer awareness
+# v1.0 Enhanced detection with layer awareness
 echo "=== Checking for updates ==="
 
 # Update reference framework
@@ -124,7 +124,7 @@ find .claude-framework/components -newer .claude/.sync-timestamp 2>/dev/null
 
 ### Step 3: Intelligent File Categorization
 ```bash
-# v2.0 Smart categorization with customization detection
+# v1.0 Smart categorization with customization detection
 echo "=== Analyzing files ==="
 
 # Detect customized files
@@ -234,11 +234,11 @@ Options:
 - Test critical workflows
 - Update documentation
 
-## Enhanced v2.0 Sync Tracking
+## Enhanced v1.0 Sync Tracking
 
-### Automatic Sync History (v2.0)
+### Automatic Sync History (v1.0)
 ```bash
-# v2.0 creates detailed sync manifest automatically
+# v1.0 creates detailed sync manifest automatically
 cat > .claude/SYNC-MANIFEST-$(date +%Y%m%d-%H%M%S).json << 'EOF'
 {
   "sync_date": "$(date -Iseconds)",
@@ -262,7 +262,7 @@ EOF
 
 ### Rollback Support (--rollback)
 ```bash
-# v2.0 Easy rollback to previous state
+# v1.0 Easy rollback to previous state
 echo "=== Available Backups ==="
 ls -la .claude.backup-* | tail -5
 
@@ -275,7 +275,7 @@ echo "/validate-adaptation"
 
 ### Dry Run Mode (--preview)
 ```bash
-# v2.0 Preview all changes without applying
+# v1.0 Preview all changes without applying
 echo "=== DRY RUN MODE ==="
 echo "The following changes would be made:"
 
@@ -325,9 +325,9 @@ echo "Layer 3 sync complete"
 
 ## Post-Sync Validation Report
 
-### v2.0 Automatic Post-Sync Report
+### v1.0 Automatic Post-Sync Report
 ```markdown
-SYNC COMPLETION REPORT v2.0
+SYNC COMPLETION REPORT v1.0
 ===========================
 Date: [TIMESTAMP]
 Sync Type: [FULL|LAYER-SPECIFIC|PREVIEW]
