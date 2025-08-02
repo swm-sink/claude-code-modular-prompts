@@ -2,21 +2,21 @@
   "mcpServers": {
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka"],
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/smenssink/conductor/repo/claude-code-modular-prompts/raleigh"],
       "env": {
         "NODE_OPTIONS": "--max-old-space-size=4096"
       }
     },
     "git": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka"],
+      "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "/Users/smenssink/conductor/repo/claude-code-modular-prompts/raleigh"],
       "env": {}
     },
     "template-validator": {
       "command": "python",
-      "args": ["/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/scripts/mcp_template_validator.py"],
+      "args": ["/Users/smenssink/conductor/repo/claude-code-modular-prompts/raleigh/scripts/mcp_template_validator.py"],
       "env": {
-        "PYTHONPATH": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka"
+        "PYTHONPATH": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/raleigh"
       }
     }
   },
@@ -39,10 +39,10 @@
   },
   "security": {
     "allowed_paths": [
-      "/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/",
-      "/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/docs/",
-      "/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/scripts/",
-      "/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/tests/"
+      "/Users/smenssink/conductor/repo/claude-code-modular-prompts/raleigh/.claude/",
+      "/Users/smenssink/conductor/repo/claude-code-modular-prompts/raleigh/docs/",
+      "/Users/smenssink/conductor/repo/claude-code-modular-prompts/raleigh/scripts/",
+      "/Users/smenssink/conductor/repo/claude-code-modular-prompts/raleigh/tests/"
     ],
     "blocked_operations": [
       "system_commands",
@@ -54,7 +54,7 @@
   },
   "integration": {
     "claude_code_version": ">=1.0.0",
-    "template_library_version": "2.0",
+    "template_library_version": "1.0",
     "compatibility_mode": "enhanced",
     "auto_discovery": true,
     "performance_monitoring": true

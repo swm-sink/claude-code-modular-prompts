@@ -545,6 +545,65 @@ echo "✅ VALIDATION COMPLETE - 100% SUCCESS"
 
 ---
 
+## Project Maintenance Anti-Patterns (From ULTRATHINK Validation)
+
+### 49. File System Pollution
+- **Problem**: Backup files, cache files, __pycache__ accumulating in repository
+- **Example**: 141 backup files found in validation
+- **Impact**: Repository bloat, confusion about active files
+- **Solution**: Proper .gitignore, regular cleanup, pre-commit hooks
+
+### 50. Directory Depth Violation
+- **Problem**: Excessive nesting beyond practical limits
+- **Example**: 5+ level deep directories when 3 is maximum
+- **Impact**: Navigation difficulty, tooling issues
+- **Solution**: Flatten structure, enforce depth limits
+
+### 51. Hardcoded Path Brittleness
+- **Problem**: Absolute paths in configuration files
+- **Example**: /Users/username/project/... in settings
+- **Impact**: Non-portable project, breaks for other users
+- **Solution**: Always use relative paths or environment variables
+
+### 52. Schema Drift
+- **Problem**: Inconsistent field names across similar files
+- **Example**: 'command:' vs 'name:' in YAML frontmatter
+- **Impact**: Parser failures, maintenance confusion
+- **Solution**: Document and validate schema consistently
+
+### 53. Version Truth Decay
+- **Problem**: Documentation claims features that don't exist
+- **Example**: "v2.0 with orchestration" when it's v1.0 templates
+- **Impact**: User frustration, credibility loss
+- **Solution**: Sync docs with implementation, feature flags
+
+### 54. Hardcoded Count Decay
+- **Problem**: Specific numbers in docs that become outdated
+- **Example**: "88 commands" when actual count changes
+- **Impact**: Documentation lies, maintenance burden
+- **Solution**: Use qualitative terms or dynamic counting
+
+### 55. Reference Rot
+- **Problem**: Documentation links to non-existent files
+- **Example**: README links to missing QUICKSTART.md
+- **Impact**: Broken user experience, confusion
+- **Solution**: Link validation in CI/CD
+
+### 56. Automation Theater
+- **Problem**: Claiming automation for manual processes
+- **Example**: "Automatic adaptation" for template copying
+- **Impact**: False expectations, user disappointment
+- **Solution**: Honest documentation about manual steps
+
+### Prevention Strategies
+1. **Pre-commit Hooks**: Catch issues before they enter repository
+2. **CI/CD Validation**: Automated checks on every commit
+3. **Regular Audits**: Monthly validation sweeps
+4. **Clear Standards**: Document and enforce conventions
+5. **Honest Documentation**: Under-promise, over-deliver
+
+---
+
 ## Conclusion
 
 LLM anti-patterns represent fundamental challenges requiring systematic approaches. Success depends on understanding limitations, implementing layered defenses, and maintaining realistic expectations. The field continues evolving rapidly, demanding continuous learning and adaptation.
