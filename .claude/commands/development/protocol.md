@@ -1,7 +1,7 @@
 ---
 name: /protocol
-description: Advanced protocol-driven development with AI safety frameworks and automated compliance (v2.0)
-version: 2.0
+description: Advanced protocol-driven development with AI safety frameworks and automated compliance (v1.0)
+version: "1.0"
 usage: '/protocol [task] [--safety-level low|medium|high|critical] [--compliance standards]'
 category: development
 allowed-tools:
@@ -48,7 +48,7 @@ ai-safety:
   - "Human oversight integration"
 ---
 
-# Protocol-Driven Development (v2.0)
+# Protocol-Driven Development (v1.0)
 
 Advanced protocol-driven development with AI safety frameworks, automated compliance validation, and enterprise governance integration.
 

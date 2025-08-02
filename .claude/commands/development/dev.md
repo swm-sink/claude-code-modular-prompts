@@ -1,7 +1,7 @@
 ---
 name: /dev
-description: Unified intelligent development workflow with automated quality checks and AI-assisted features (v2.0)
-version: 2.0
+description: Unified intelligent development workflow with automated quality checks and AI-assisted features (v1.0)
+version: "1.0"
 usage: '/dev [mode] [target] [options] [--auto-chain]'
 category: development
 allowed-tools:
@@ -49,7 +49,7 @@ ai-features:
   - "Feature architecture planning"
 ---
 
-# /dev - Unified Development Workflow for lusaka (v2.0)
+# /dev - Unified Development Workflow for lusaka (v1.0)
 
 Comprehensive development workflow solution combining AI-assisted code formatting, linting, refactoring, debugging, feature development, project initialization, analysis, and dependency management.
 

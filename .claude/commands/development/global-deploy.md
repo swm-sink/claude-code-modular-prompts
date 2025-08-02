@@ -1,7 +1,7 @@
 ---
 name: /global-deploy
-description: Advanced global deployment with AI-driven localization and multi-region orchestration (v2.0)
-version: 2.0
+description: Advanced global deployment with AI-driven localization and multi-region orchestration (v1.0)
+version: "1.0"
 usage: '/global-deploy [regions] [--strategy blue-green|canary|rolling] [--localize auto|manual] [--compliance]'
 category: development
 allowed-tools:
@@ -49,7 +49,7 @@ ai-features:
   - "Performance prediction"
 ---
 
-# Global Deployment Orchestrator (v2.0)
+# Global Deployment Orchestrator (v1.0)
 
 Advanced global deployment system with AI-driven localization, cultural intelligence, and multi-region orchestration capabilities.
 

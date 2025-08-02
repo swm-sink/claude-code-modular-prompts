@@ -1,7 +1,7 @@
 ---
 name: /api-design
-description: Design RESTful APIs with enterprise patterns and automated scaffolding (v2.0)
-version: 2.0
+description: Design RESTful APIs with enterprise patterns and automated scaffolding (v1.0)
+version: "1.0"
 usage: '/api-design [endpoint-name] [http-method] [options]'
 category: development
 allowed-tools:
@@ -42,7 +42,7 @@ performance:
   - "Caching strategy implementation"
 ---
 
-# API Design for lusaka (v2.0)
+# API Design for lusaka (v1.0)
 
 I'll help you design **RESTful** APIs with enterprise-grade patterns, automated scaffolding, and comprehensive validation.
 

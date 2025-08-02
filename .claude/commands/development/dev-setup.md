@@ -1,7 +1,7 @@
 ---
 name: /dev-setup
-description: Setup development environment with automated dependency management and team onboarding (v2.0)
-version: 2.0
+description: Setup development environment with automated dependency management and team onboarding (v1.0)
+version: "1.0"
 usage: '/dev-setup [--environment local|docker|cloud] [--tools all|minimal|custom] [--auto-configure]'
 category: development
 allowed-tools:
@@ -46,7 +46,7 @@ team-features:
   - "Environment synchronization"
 ---
 
-# Development Environment Setup for lusaka (v2.0)
+# Development Environment Setup for lusaka (v1.0)
 
 I'll help you set up a complete development environment with automated dependency management, team synchronization, and intelligent configuration detection.
 
@@ -70,7 +70,7 @@ I'll help you set up a complete development environment with automated dependenc
 
 ## 🔍 Intelligent Detection
 
-The v2.0 setup automatically detects:
+The v1.0 setup automatically detects:
 - Operating system and architecture
 - Existing development tools
 - Project requirements from config files

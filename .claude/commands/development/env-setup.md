@@ -1,7 +1,7 @@
 ---
 name: /env-setup
-description: Configure environments with automated secret management and zero-trust security (v2.0)
-version: 2.0
+description: Configure environments with automated secret management and zero-trust security (v1.0)
+version: "1.0"
 usage: '/env-setup [environment-name] [--clone-from existing-env] [--variables key=value] [--auto-detect]'
 category: development
 allowed-tools:
@@ -48,7 +48,7 @@ security-features:
   - "Compliance validation"
 ---
 
-# Environment Configuration for lusaka (v2.0)
+# Environment Configuration for lusaka (v1.0)
 
 I'll help you set up and manage secure environment configurations with automated secret management, zero-trust security, and infrastructure as code integration.
 
