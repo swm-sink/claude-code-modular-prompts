@@ -13,7 +13,7 @@
 | Agent | Status | Location | Progress | Notes |
 |-------|--------|----------|----------|-------|
 | Context Engineer | ✅ Created | `.claude/framework/agents/context-engineer.md` | 100% | Specialized context engineering agent |
-| Command Builder | ⏳ Pending | `.claude/framework/agents/command-builder.md` | 0% | Task 1.4 |
+| Command Builder | ✅ Created | `.claude/framework/agents/command-builder.md` | 100% | Specialized command scaffolding agent |
 | Research Validator | ⏳ Pending | `.claude/framework/agents/research-validator.md` | 0% | Task 1.5 |
 | Quality Guardian | ⏳ Pending | `.claude/framework/agents/quality-guardian.md` | 0% | Task 1.6 |
 | Memory Keeper | ⏳ Pending | `.claude/framework/agents/memory-keeper.md` | 0% | Task 1.7 |
