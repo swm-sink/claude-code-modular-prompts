@@ -35,7 +35,7 @@ error-recovery:
 
 # /validate-component - Systematic Component Validation
 
-I'll help you validate components systematically using context engineering and integration testing for lusaka.
+I'll help you validate components systematically using context engineering and integration testing for your project.
 
 # Systematic Component Validation
 

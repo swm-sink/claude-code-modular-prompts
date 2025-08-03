@@ -49,7 +49,7 @@ ai-features:
   - "Feature architecture planning"
 ---
 
-# /dev - Unified Development Workflow for lusaka (v1.0)
+# /dev - Unified Development Workflow for your project (v1.0)
 
 Comprehensive development workflow solution combining AI-assisted code formatting, linting, refactoring, debugging, feature development, project initialization, analysis, and dependency management.
 

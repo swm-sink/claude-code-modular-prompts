@@ -18,7 +18,7 @@ prerequisites:
 output_format: structured
 tags: [universal-task, language-agnostic, framework-flexible, zero-setup, v2-enhanced]
 version: "1.0"
-author: "lusaka-template-library"
+author: "template-library"
 last_updated: "2025-07-31"
 allowed-tools:
 - Read
@@ -33,7 +33,7 @@ allowed-tools:
 # 🎯 Universal Task Execution v1.0
 
 <context type="project">
-Universal task execution system for lusaka template library with intelligent project analysis, language-agnostic implementation, and framework-flexible approach. Works immediately with any project structure without setup or configuration requirements.
+Universal task execution system for template library with intelligent project analysis, language-agnostic implementation, and framework-flexible approach. Works immediately with any project structure without setup or configuration requirements.
 </context>
 
 <instructions>

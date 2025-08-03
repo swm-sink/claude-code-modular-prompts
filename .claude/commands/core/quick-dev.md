@@ -22,7 +22,7 @@ prerequisites:
 output_format: structured
 tags: [development, code-review, debugging, optimization, universal, v2-enhanced]
 version: "1.0"
-author: "lusaka-template-library"
+author: "template-library"
 last_updated: "2025-07-31"
 allowed-tools:
 - Read
@@ -35,7 +35,7 @@ allowed-tools:
 # 🛠️ Universal Development Assistance v1.0
 
 <context type="project">
-Instant development assistance system for lusaka template library with universal language support and multi-mode analysis. Supports code review, debugging, optimization, and explanation across all technology stacks with smart context detection and framework-specific guidance.
+Instant development assistance system for template library with universal language support and multi-mode analysis. Supports code review, debugging, optimization, and explanation across all technology stacks with smart context detection and framework-specific guidance.
 </context>
 
 <instructions>

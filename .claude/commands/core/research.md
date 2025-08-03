@@ -38,7 +38,7 @@ error-recovery:
   <document_type>command</document_type>
   <ai_consumption_priority>critical</ai_consumption_priority>
   <content_structure>yaml_frontmatter</content_structure>
-  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/core/research.md</file_path>
+  <file_path>/path/to/your/project/.claude/commands/core/research.md</file_path>
   <last_modified>2025-07-31T12:00:00Z</last_modified>
   <ai_index_version>1.0</ai_index_version>
 </ai_document_metadata>
@@ -166,7 +166,7 @@ error-recovery:
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# Research Framework for lusaka
+# Research Framework for your project
 
 I'll help you research topics relevant to your software-development project, providing comprehensive analysis and actionable insights for Python implementation.
 
@@ -184,7 +184,7 @@ I'll help you research topics relevant to your software-development project, pro
 1. **Topic Analysis**: Break down the research question
 2. **Source Gathering**: Find relevant technical documentation and best practices
 3. **Analysis**: Evaluate options and trade-offs
-4. **Recommendations**: Provide specific guidance for lusaka
+4. **Recommendations**: Provide specific guidance for your project
 5. **Implementation Notes**: Connect research to practical next steps
 
 I'll tailor the research to your Python environment and swm-sink's context.

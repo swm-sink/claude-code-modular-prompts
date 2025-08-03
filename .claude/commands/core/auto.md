@@ -39,7 +39,7 @@ category: core
   <document_type>command</document_type>
   <ai_consumption_priority>critical</ai_consumption_priority>
   <content_structure>yaml_frontmatter</content_structure>
-  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/core/auto.md</file_path>
+  <file_path>/path/to/your/project/.claude/commands/core/auto.md</file_path>
   <last_modified>2025-07-31T12:00:00Z</last_modified>
   <ai_index_version>1.0</ai_index_version>
 </ai_document_metadata>
@@ -170,13 +170,13 @@ category: core
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# /auto - Intelligent Command Router for lusaka
+# /auto - Intelligent Command Router for your project
 
 I'll analyze your request and automatically route it to the most appropriate command for your software-development project using Python.
 
 ## How It Works
 
-This command analyzes your natural language request and routes it to the best available command in your lusaka prompt library.
+This command analyzes your natural language request and routes it to the best available command in your prompt library.
 ## Usage
 ```bash
 /auto "fix the authentication bug in the login system"
@@ -195,4 +195,4 @@ This command analyzes your natural language request and routes it to the best av
 - `/auto "analyze performance bottlenecks"`
 - `/auto "research best practices for Python"`
 
-I'll route your request to the most appropriate command and provide you with the best implementation approach for your lusaka project.
+I'll route your request to the most appropriate command and provide you with the best implementation approach for your project.

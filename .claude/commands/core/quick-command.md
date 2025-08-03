@@ -22,7 +22,7 @@ prerequisites:
 output_format: structured
 tags: [auto-generation, progressive-disclosure, layer-1, zero-setup, v2-enhanced]
 version: "1.0"
-author: "lusaka-template-library"
+author: "template-library"
 last_updated: "2025-07-31"
 allowed-tools:
 - Write
@@ -37,7 +37,7 @@ allowed-tools:
   <document_type>command</document_type>
   <ai_consumption_priority>critical</ai_consumption_priority>
   <content_structure>yaml_frontmatter</content_structure>
-  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/core/quick-command.md</file_path>
+  <file_path>/path/to/your/project/.claude/commands/core/quick-command.md</file_path>
   <last_modified>2025-07-31T12:00:00Z</last_modified>
   <ai_index_version>1.0</ai_index_version>
 </ai_document_metadata>
@@ -161,7 +161,7 @@ allowed-tools:
 # 🚀 Layer 1: Auto-Generation v1.0 
 
 <context type="project">
-Progressive Disclosure System Layer 1 for lusaka template library providing 30-second command auto-generation with zero learning curve. Supports 5 command types (search, analyze, transform, validate, report) with intelligent template selection and automatic component assembly.
+Progressive Disclosure System Layer 1 for template library providing 30-second command auto-generation with zero learning curve. Supports 5 command types (search, analyze, transform, validate, report) with intelligent template selection and automatic component assembly.
 </context>
 
 <instructions>

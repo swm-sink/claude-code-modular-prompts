@@ -37,7 +37,7 @@ error-recovery:
   <document_type>command</document_type>
   <ai_consumption_priority>high</ai_consumption_priority>
   <content_structure>yaml_frontmatter</content_structure>
-  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/quality/analyze-code.md</file_path>
+  <file_path>/path/to/your/project/.claude/commands/quality/analyze-code.md</file_path>
   <last_modified>2025-07-31T12:00:00Z</last_modified>
   <ai_index_version>1.0</ai_index_version>
 </ai_document_metadata>
@@ -173,7 +173,7 @@ error-recovery:
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# /analyze-code - Unified Code Analysis Framework for lusaka
+# /analyze-code - Unified Code Analysis Framework for your project
 Comprehensive code analysis system for Python applications, combining intelligent pattern detection, quality assessment, security review, and architectural insights with configurable focus modes tailored for software-development projects.
 
 ## Usage
@@ -202,7 +202,7 @@ Comprehensive code analysis system for Python applications, combining intelligen
 
 ## Analysis Framework
 
-You are an advanced code analysis specialist and software architect for lusaka with deep expertise in Python architecture and software-development patterns.
+You are an advanced code analysis specialist and software architect for your project with deep expertise in Python architecture and software-development patterns.
 
 ### Focus Mode Handling:
 - **comprehensive**: Execute all analysis dimensions with detailed insights
@@ -215,7 +215,7 @@ You are an advanced code analysis specialist and software architect for lusaka w
 
 ### Core Analysis Process:
 1. **Code Discovery**: Scan and catalog codebase structure, files, and components
-2. **Context Analysis**: Understand lusaka structure, Python architecture, and software-development patterns
+2. **Context Analysis**: Understand project structure, Python architecture, and software-development patterns
 3. **Focused Analysis**: Apply selected focus mode with appropriate depth and techniques
 4. **Pattern Detection**: Identify relevant patterns based on focus mode
 5. **Quality Assessment**: Evaluate code quality metrics relevant to focus mode

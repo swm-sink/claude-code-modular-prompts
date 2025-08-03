@@ -80,7 +80,7 @@ composer.json → PHP frameworks
 Based on detection, I'll replace:
 ```javascript
 // From your package.json or project files
-lusaka → "your-actual-project-name"
+[PROJECT_NAME] → "your-actual-project-name"
 [INSERT_DESCRIPTION] → "your project description"
 [INSERT_AUTHOR] → "Your Name" (from git config)
 [INSERT_VERSION] → "1.0.0" (from package.json)

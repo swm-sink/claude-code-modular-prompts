@@ -37,7 +37,7 @@ performance:
   <document_type>command</document_type>
   <ai_consumption_priority>critical</ai_consumption_priority>
   <content_structure>yaml_frontmatter</content_structure>
-  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/meta/adapt-to-project.md</file_path>
+  <file_path>/path/to/your/project/.claude/commands/meta/adapt-to-project.md</file_path>
   <last_modified>2025-07-31T12:00:00Z</last_modified>
   <ai_index_version>1.0</ai_index_version>
 </ai_document_metadata>
@@ -317,7 +317,7 @@ I'll automatically update **all** templates with comprehensive validation at eac
 ### 🎯 v1.0 Smart Replacements:
 
 #### Core Project Identifiers:
-- **`lusaka`** → Your actual project name with validation
+- **`[PROJECT_NAME]`** → Your actual project name with validation
 - **`software-development`** → Intelligent domain classification (web-dev, data-science, DevOps, etc.)
 - **Technology stacks** → Complete ecosystem replacement (React+TypeScript, Django+Postgres, etc.)
 - **Framework versions** → Version-aware replacements with compatibility checking

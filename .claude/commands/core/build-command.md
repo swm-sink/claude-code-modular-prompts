@@ -26,7 +26,7 @@ prerequisites:
 output_format: structured
 tags: [guided-customization, progressive-disclosure, layer-2, smart-options, v2-enhanced]
 version: "1.0"
-author: "lusaka-template-library"
+author: "template-library"
 last_updated: "2025-07-31"
 allowed-tools:
 - Write
@@ -41,7 +41,7 @@ allowed-tools:
   <document_type>command</document_type>
   <ai_consumption_priority>critical</ai_consumption_priority>
   <content_structure>yaml_frontmatter</content_structure>
-  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/core/build-command.md</file_path>
+  <file_path>/path/to/your/project/.claude/commands/core/build-command.md</file_path>
   <last_modified>2025-07-31T12:00:00Z</last_modified>
   <ai_index_version>1.0</ai_index_version>
 </ai_document_metadata>
@@ -171,7 +171,7 @@ allowed-tools:
 # 🛠️ Layer 2: Guided Customization v1.0
 
 <context type="project">
-Progressive Disclosure System Layer 2 for lusaka template library providing intelligent guided customization with smart option filtering. Bridges the gap between Layer 1 auto-generation and Layer 3 professional assembly with 5-minute success guarantee and maximum 5 customization options.
+Progressive Disclosure System Layer 2 for template library providing intelligent guided customization with smart option filtering. Bridges the gap between Layer 1 auto-generation and Layer 3 professional assembly with 5-minute success guarantee and maximum 5 customization options.
 </context>
 
 <instructions>

@@ -40,7 +40,7 @@ error-recovery:
   dependency-issues: Automatic resolution or clear guidance
   configuration-errors: Validation feedback with examples
 ---
-# /pipeline - Unified Pipeline Orchestration for lusaka (v1.0)
+# /pipeline - Unified Pipeline Orchestration for your project (v1.0)
 
 ## V1.0 Enhanced Features
 - 🎨 **Multi-Mode Orchestration**: Create, run, build, deploy, and rollback in one command
@@ -49,7 +49,7 @@ error-recovery:
 - 📊 **Real-time Monitoring**: Live pipeline status and resource tracking
 - 🛡️ **Advanced Error Recovery**: Self-healing pipelines with smart retries
 
-Comprehensive pipeline orchestration for lusaka combining creation, execution, monitoring, deployment, GitHub Actions setup, and build automation optimized for Python and 1-5 developers teams.
+Comprehensive pipeline orchestration for your project combining creation, execution, monitoring, deployment, GitHub Actions setup, and build automation optimized for Python and 1-5 developers teams.
 
 ## Usage
 ```bash
@@ -87,7 +87,7 @@ Comprehensive pipeline orchestration for lusaka combining creation, execution, m
 /pipeline rollback --comprehensive                  # Comprehensive recovery protocol
 
 # CI/CD Setup Mode for GitHub Actions
-/pipeline setup GitHub Actions --repo "lusaka"  # Setup GitHub Actions
+/pipeline setup GitHub Actions --repo "[PROJECT_NAME]"  # Setup GitHub Actions
 /pipeline setup GitHub Actions --template Python  # With language template
 /pipeline setup GitHub Actions --custom-config config.xml  # Custom configuration
 

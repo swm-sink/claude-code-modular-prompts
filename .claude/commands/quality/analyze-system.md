@@ -31,7 +31,7 @@ error-recovery:
   execution-failure: Show detailed context and recovery steps
   system-error: Fallback to safe mode operation
 ---
-# /analyze-system - Unified System Analysis Framework for lusaka
+# /analyze-system - Unified System Analysis Framework for your project
 
 Comprehensive system-level analysis for Python applications, combining performance profiling, dependency management, cost optimization, and quality assessments in a single unified command tailored for software-development systems on AWS.
 

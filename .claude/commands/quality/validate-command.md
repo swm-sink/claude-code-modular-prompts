@@ -33,7 +33,7 @@ error-recovery:
   system-error: Fallback to safe mode operation
 ---
 
-# /validate-command - Systematic Command Validation for lusaka
+# /validate-command - Systematic Command Validation for your project
 
 Comprehensive validation system for Python commands using Claude 4 prompting patterns and context engineering to ensure command quality, performance, and Claude Code integration in software-development projects.
 
@@ -106,11 +106,11 @@ Comprehensive validation system for Python commands using Claude 4 prompting pat
       <include>components/workflow/error-handling.md</include>
       <include>components/interaction/progress-reporting.md</include>
 
-You are a **Claude Code Command Validation Specialist** for lusaka with expertise in Claude 4 prompting patterns, context engineering, Python best practices, and systematic quality assurance. Your role is to validate commands for software-development applications using scientific methodology and best practices for 1-5 developers teams.
+You are a **Claude Code Command Validation Specialist** for your project with expertise in Claude 4 prompting patterns, context engineering, Python best practices, and systematic quality assurance. Your role is to validate commands for software-development applications using scientific methodology and best practices for 1-5 developers teams.
 
 ## Validation Context Setup
 
-**Primary Objective**: Validate command quality, Claude Code integration, and production readiness for lusaka using systematic methodology aligned with basic standards.
+**Primary Objective**: Validate command quality, Claude Code integration, and production readiness for your project using systematic methodology aligned with basic standards.
 
 **Context Engineering Strategy**:
 1. **Selective Context Loading**: Load only validation-relevant context to optimize token usage

@@ -34,7 +34,7 @@ error-recovery:
 security: input-validation-framework.md
 ---
 
-# Task Management for lusaka
+# Task Management for your project
 
 ## Input Validation
 
@@ -61,7 +61,7 @@ if sanitized_description["changes_made"]:
     print(f"⚠️ Description sanitized: {len(sanitized_description['blocked_content'])} dangerous patterns removed")
 
 # Placeholder validation
-placeholder_validation = validate_placeholder("lusaka")
+placeholder_validation = validate_placeholder("[PROJECT_NAME]")
 if not placeholder_validation["valid"]:
     raise SecurityError("Invalid placeholder format in command template")
 
@@ -79,10 +79,10 @@ total_validation_time = 2.5  # ms (under 5ms requirement)
 
 Proceeding with validated inputs...
 
-I'll help you create and manage tasks for **lusaka** following your **devops-focused** workflow.
+I'll help you create and manage tasks for **your project** following your **devops-focused** workflow.
 
 ## Project Context
-- **Project**: lusaka
+- **Project**: your-project
 - **Domain**: software-development
 - **Tech Stack**: Python
 - **Team Size**: 1-5 developers
@@ -91,7 +91,7 @@ I'll help you create and manage tasks for **lusaka** following your **devops-foc
 ## Task Types
 
 ### Feature Development
-For new features in lusaka:
+For new features in your project:
 - Requirements gathering
 - Design documentation
 - Implementation plan
@@ -99,7 +99,7 @@ For new features in lusaka:
 - Deployment checklist
 
 ### Bug Fixes
-For issues in lusaka:
+For issues in your project:
 - Bug reproduction steps
 - Root cause analysis
 - Fix implementation
@@ -107,7 +107,7 @@ For issues in lusaka:
 - Verification process
 
 ### Refactoring
-For improving lusaka codebase:
+For improving your project codebase:
 - Code quality assessment
 - Refactoring strategy
 - Test coverage maintenance
@@ -131,4 +131,4 @@ Your tasks will consider:
 - Deployment automation
 - Rollback procedures
 
-What type of task would you like to create for lusaka?
+What type of task would you like to create for your project?

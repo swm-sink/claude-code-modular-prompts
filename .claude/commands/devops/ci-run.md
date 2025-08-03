@@ -1,6 +1,6 @@
 ---
 name: /ci-run
-description: Execute GitHub Actions pipelines for lusaka (v1.0)
+description: Execute GitHub Actions pipelines for your project (v1.0)
 version: "1.0"
 usage: /ci-run [pipeline-name] [--branch branch-name] [--stage specific-stage] [--debug] [--dry-run]
 category: devops
@@ -36,7 +36,7 @@ error-recovery:
 security: input-validation-framework.md
 ---
 
-# Run CI/CD Pipeline for lusaka (v1.0)
+# Run CI/CD Pipeline for your project (v1.0)
 
 ## V1.0 Enhanced Features
 - 🚀 **Progressive Disclosure Integration**: Seamlessly works across all layers
@@ -114,12 +114,12 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 
 Proceeding with validated inputs...
 
-I'll help you execute and monitor **GitHub Actions** pipelines for **lusaka** with your **devops-focused** workflow requirements.
+I'll help you execute and monitor **GitHub Actions** pipelines for **your project** with your **devops-focused** workflow requirements.
 
 ## Pipeline Execution
 
 - **Platform**: GitHub Actions
-- **Project**: lusaka
+- **Project**: your-project
 - **Tech Stack**: Python
 - **Team Process**: devops-focused
 

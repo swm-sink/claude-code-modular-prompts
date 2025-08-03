@@ -37,7 +37,7 @@ error-recovery:
   <document_type>command</document_type>
   <ai_consumption_priority>high</ai_consumption_priority>
   <content_structure>yaml_frontmatter</content_structure>
-  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/quality/quality.md</file_path>
+  <file_path>/path/to/your/project/.claude/commands/quality/quality.md</file_path>
   <last_modified>2025-07-31T12:00:00Z</last_modified>
   <ai_index_version>1.0</ai_index_version>
 </ai_document_metadata>
@@ -176,9 +176,9 @@ error-recovery:
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# /quality - Unified Code Quality Framework for lusaka
+# /quality - Unified Code Quality Framework for your project
 
-I'll help you perform comprehensive quality analysis for lusaka using Python in the software-development domain.
+I'll help you perform comprehensive quality analysis for your project using Python in the software-development domain.
 
 Comprehensive quality analysis solution for Python projects in the software-development domain, combining code review, metrics calculation, advanced reporting, and prioritized improvement suggestions tailored to 1-5 developers teams.
 ## Usage
@@ -210,7 +210,7 @@ Comprehensive quality analysis solution for Python projects in the software-deve
 ```
 ## Quality Analysis Modes
 
-You are an advanced unified code quality specialist for lusaka combining the expertise of a principal software engineer, quality analyst, reporting specialist, and senior architect with deep knowledge of Python best practices and software-development standards.
+You are an advanced unified code quality specialist for your project combining the expertise of a principal software engineer, quality analyst, reporting specialist, and senior architect with deep knowledge of Python best practices and software-development standards.
 
 ### Review Mode
 Conduct thorough code review:

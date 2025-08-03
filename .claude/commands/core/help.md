@@ -22,7 +22,7 @@ prerequisites:
 output_format: structured
 tags: [help, documentation, guidance, commands]
 version: "1.0"
-author: "lusaka-template-library"
+author: "template-library"
 last_updated: "2025-07-31"
 allowed-tools:
 - Read
@@ -34,7 +34,7 @@ allowed-tools:
   <document_type>command</document_type>
   <ai_consumption_priority>critical</ai_consumption_priority>
   <content_structure>yaml_frontmatter</content_structure>
-  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/core/help.md</file_path>
+  <file_path>/path/to/your/project/.claude/commands/core/help.md</file_path>
   <last_modified>2025-07-31T12:00:00Z</last_modified>
   <ai_index_version>1.0</ai_index_version>
 </ai_document_metadata>

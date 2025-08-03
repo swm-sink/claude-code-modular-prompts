@@ -18,7 +18,7 @@ prerequisites:
 output_format: structured
 tags: [codebase-analysis, architecture, query, patterns, dependencies, v2-enhanced]
 version: "1.0"
-author: "lusaka-template-library"
+author: "template-library"
 last_updated: "2025-07-31"
 allowed-tools:
 - Read
@@ -29,7 +29,7 @@ allowed-tools:
 # /query - Intelligent Codebase Analysis v1.0
 
 <context type="project">
-Advanced codebase query system for lusaka template library with deep Python understanding, architectural analysis capabilities, dependency mapping, and performance insights. Supports comprehensive code exploration and pattern recognition.
+Advanced codebase query system for template library with deep Python understanding, architectural analysis capabilities, dependency mapping, and performance insights. Supports comprehensive code exploration and pattern recognition.
 </context>
 
 <instructions>

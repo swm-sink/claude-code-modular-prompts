@@ -42,7 +42,7 @@ performance:
   - "Caching strategy implementation"
 ---
 
-# API Design for lusaka (v1.0)
+# API Design for your project (v1.0)
 
 I'll help you design **RESTful** APIs with enterprise-grade patterns, automated scaffolding, and comprehensive validation.
 
@@ -186,7 +186,7 @@ def api_endpoint():
 
 ---
 
-What API endpoint would you like to design for lusaka? I can help with:
+What API endpoint would you like to design for your project? I can help with:
 - 🚀 Quick endpoint generation
 - 🔒 Secure API patterns  
 - 📊 Performance optimization

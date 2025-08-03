@@ -16,7 +16,7 @@ prerequisites:
 output_format: structured
 tags: [quick-start, help, essential-commands, progressive-disclosure, v2-enhanced]
 version: "1.0"
-author: "lusaka-template-library"
+author: "template-library"
 last_updated: "2025-07-31"
 allowed-tools:
 - Read
@@ -26,7 +26,7 @@ allowed-tools:
 # 🚀 Quick Command Guide v1.0
 
 <context type="project">
-Streamlined help system for lusaka template library featuring 88 commands with v1.0 Progressive Disclosure System. Provides immediate productivity with zero setup through 3-layer complexity management: auto-generation, guided customization, and component assembly.
+Streamlined help system for template library featuring 88 commands with v1.0 Progressive Disclosure System. Provides immediate productivity with zero setup through 3-layer complexity management: auto-generation, guided customization, and component assembly.
 </context>
 
 <instructions>

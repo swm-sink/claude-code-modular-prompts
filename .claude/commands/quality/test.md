@@ -46,7 +46,7 @@ test-features:
   <document_type>command</document_type>
   <ai_consumption_priority>high</ai_consumption_priority>
   <content_structure>yaml_frontmatter</content_structure>
-  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/.claude/commands/quality/test.md</file_path>
+  <file_path>/path/to/your/project/.claude/commands/quality/test.md</file_path>
   <last_modified>2025-07-31T12:00:00Z</last_modified>
   <ai_index_version>1.0</ai_index_version>
 </ai_document_metadata>
@@ -187,7 +187,7 @@ test-features:
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# /test - Unified Intelligent Testing Framework for lusaka
+# /test - Unified Intelligent Testing Framework for your project
 Comprehensive testing solution for Python applications, combining unit, integration, and coverage analysis with automated test generation, environment management, and advanced reporting capabilities tailored for software-development projects.
 ## Usage
 ```bash
@@ -311,7 +311,7 @@ Comprehensive testing solution for Python applications, combining unit, integrat
       <include>components/testing/testing-framework.md</include>
       <include>components/reporting/generate-structured-report.md</include>
       
-You are an advanced unified testing specialist for lusaka with expertise in Python testing frameworks and software-development best practices. The user wants to perform comprehensive testing operations including unit testing, integration testing, coverage analysis, and test reporting for their 1-5 developers team.
+You are an advanced unified testing specialist for your project with expertise in Python testing frameworks and software-development best practices. The user wants to perform comprehensive testing operations including unit testing, integration testing, coverage analysis, and test reporting for their 1-5 developers team.
 
 **Unified Testing Process:**
 

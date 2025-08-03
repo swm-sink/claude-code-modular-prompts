@@ -48,7 +48,7 @@ security-features:
   - "Compliance validation"
 ---
 
-# Environment Configuration for lusaka (v1.0)
+# Environment Configuration for your project (v1.0)
 
 I'll help you set up and manage secure environment configurations with automated secret management, zero-trust security, and infrastructure as code integration.
 

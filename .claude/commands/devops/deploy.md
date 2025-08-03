@@ -1,6 +1,6 @@
 ---
 name: /deploy
-description: Deploy lusaka to Cloud Server using GitHub Actions (v1.0)
+description: Deploy your project to Cloud Server using GitHub Actions (v1.0)
 version: "1.0"
 usage: /deploy [environment] [--strategy blue-green|canary|rolling] [--health-check] [--rollback-on-failure]
 category: devops
@@ -40,7 +40,7 @@ security:
   - credential-protection.md
 ---
 
-# Deploy lusaka (v1.0)
+# Deploy your project (v1.0)
 
 ## V1.0 Enhanced Features
 - 🚀 **One-Click Deployment**: Smart defaults for instant deployment
@@ -63,11 +63,11 @@ security:
 - Deployment error messages sanitized to prevent credential leakage
 - Real-time feedback when protection activates
 
-I'll help you deploy **lusaka** to **Cloud Server** using your configured **GitHub Actions** pipeline with proper validation.
+I'll help you deploy **your project** to **Cloud Server** using your configured **GitHub Actions** pipeline with proper validation.
 
 ## Deployment Configuration
 
-- **Project**: lusaka
+- **Project**: your-project
 - **Tech Stack**: Python
 - **Target**: Cloud Server
 - **CI/CD**: GitHub Actions
@@ -145,7 +145,7 @@ For developers protection:
 
 ## Monitoring Integration
 
-Post-deployment for lusaka:
+Post-deployment for your project:
 - Application metrics
 - Error rate monitoring
 - Performance baselines

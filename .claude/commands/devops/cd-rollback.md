@@ -1,6 +1,6 @@
 ---
 name: /cd-rollback
-description: Rollback lusaka deployment on Cloud Server (v1.0)
+description: Rollback your project deployment on Cloud Server (v1.0)
 version: "1.0"
 usage: /cd-rollback [--version previous-version] [--environment production|staging] [--emergency] [--dry-run] [--health-check]
 category: devops
@@ -36,7 +36,7 @@ error-recovery:
   partial-failure: Component-level recovery options
 ---
 
-# Deployment Rollback for lusaka (v1.0)
+# Deployment Rollback for your project (v1.0)
 
 ## V1.0 Enhanced Features
 - ⚡ **Instant Recovery**: One-click rollback to last known good version
@@ -45,11 +45,11 @@ error-recovery:
 - 📊 **Real-time Monitoring**: Live rollback progress and health metrics
 - 🛡️ **Data Protection**: Automatic backups and integrity verification
 
-I'll help you safely rollback **lusaka** deployments on **Cloud Server** with protection for your **developers** users.
+I'll help you safely rollback **your project** deployments on **Cloud Server** with protection for your **developers** users.
 
 ## Rollback Configuration
 
-- **Project**: lusaka
+- **Project**: your-project
 - **Platform**: Cloud Server
 - **CI/CD**: GitHub Actions
 - **Security**: standard

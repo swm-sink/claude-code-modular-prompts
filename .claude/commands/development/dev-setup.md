@@ -46,7 +46,7 @@ team-features:
   - "Environment synchronization"
 ---
 
-# Development Environment Setup for lusaka (v1.0)
+# Development Environment Setup for your project (v1.0)
 
 I'll help you set up a complete development environment with automated dependency management, team synchronization, and intelligent configuration detection.
 
