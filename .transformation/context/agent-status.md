@@ -14,7 +14,7 @@
 |-------|--------|----------|----------|-------|
 | Context Engineer | ✅ Created | `.claude/framework/agents/context-engineer.md` | 100% | Specialized context engineering agent |
 | Command Builder | ✅ Created | `.claude/framework/agents/command-builder.md` | 100% | Specialized command scaffolding agent |
-| Research Validator | ⏳ Pending | `.claude/framework/agents/research-validator.md` | 0% | Task 1.5 |
+| Research Validator | ✅ Created | `.claude/framework/agents/research-validator.md` | 100% | Evidence validation specialist agent |
 | Quality Guardian | ⏳ Pending | `.claude/framework/agents/quality-guardian.md` | 0% | Task 1.6 |
 | Memory Keeper | ⏳ Pending | `.claude/framework/agents/memory-keeper.md` | 0% | Task 1.7 |
 
