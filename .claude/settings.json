@@ -1,7 +1,7 @@
 {
   "commandsPath": "./commands",
   "defaultTools": ["Read", "Write", "Edit", "MultiEdit", "Bash", "Grep", "Glob", "LS"],
-  "templateVersion": "2.0-enhanced",
+  "templateVersion": "1.0",
   "autoSave": true,
   "contextFiles": [
     "./context/claude-code-best-practices.md",
