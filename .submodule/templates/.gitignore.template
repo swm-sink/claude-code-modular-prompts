@@ -1,0 +1,14 @@
+# Claude Code Context Engineering
+# Exclude transformation-specific files from submodule
+.transformation/
+.backup_*/
+
+# Include framework files
+!.claude/
+!.submodule/
+
+# Exclude project-specific instance during transformation
+.claude/project/
+
+# Exclude implementation logs
+.transformation-implementation-log.md

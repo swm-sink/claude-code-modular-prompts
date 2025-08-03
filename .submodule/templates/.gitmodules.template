@@ -1,0 +1,5 @@
+[submodule ".claude-context"]
+    path = .claude-context
+    url = https://github.com/USER/claude-code-modular-prompts.git
+    branch = main
+    ignore = dirty
