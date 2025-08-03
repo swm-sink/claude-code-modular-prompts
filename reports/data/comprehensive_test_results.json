@@ -1,13 +1,13 @@
 {
   "timestamp": "2025-07-31",
-  "total_tests": 14,
-  "passed": 13,
-  "failed": 1,
+  "total_tests": 24,
+  "passed": 11,
+  "failed": 13,
   "warnings": 0,
-  "success_rate": 92.85714285714286,
-  "grade": "A",
-  "system_status": "PRODUCTION READY",
-  "critical_failures": 0,
+  "success_rate": 45.83333333333333,
+  "grade": "C",
+  "system_status": "REQUIRES ATTENTION",
+  "critical_failures": 2,
   "details": [
     {
       "name": "Command Count Verification",
@@ -15,9 +15,59 @@
       "details": "Verified 88 command files"
     },
     {
+      "name": "Required Fields - quick-dev.md",
+      "result": "FAIL",
+      "details": "Missing required fields: ['name']"
+    },
+    {
+      "name": "Required Fields - quick-command.md",
+      "result": "FAIL",
+      "details": "Missing required fields: ['name']"
+    },
+    {
+      "name": "Required Fields - project.md",
+      "result": "FAIL",
+      "details": "Missing required fields: ['name']"
+    },
+    {
+      "name": "Required Fields - help.md",
+      "result": "FAIL",
+      "details": "Missing required fields: ['name']"
+    },
+    {
+      "name": "Required Fields - quick-help.md",
+      "result": "FAIL",
+      "details": "Missing required fields: ['name']"
+    },
+    {
+      "name": "Required Fields - query.md",
+      "result": "FAIL",
+      "details": "Missing required fields: ['name']"
+    },
+    {
+      "name": "Required Fields - assemble-command.md",
+      "result": "FAIL",
+      "details": "Missing required fields: ['name']"
+    },
+    {
+      "name": "Required Fields - quick-task.md",
+      "result": "FAIL",
+      "details": "Missing required fields: ['name']"
+    },
+    {
+      "name": "Required Fields - task.md",
+      "result": "FAIL",
+      "details": "Missing required fields: ['name']"
+    },
+    {
+      "name": "Required Fields - build-command.md",
+      "result": "FAIL",
+      "details": "Missing required fields: ['name']"
+    },
+    {
       "name": "YAML Compliance Summary",
-      "result": "PASS",
-      "details": "YAML Compliance: 88/88 commands passed"
+      "result": "FAIL",
+      "details": "YAML Compliance: 78/88 commands passed"
     },
     {
       "name": "Layer 1 - Quick Command Auto-Generation",
@@ -42,7 +92,7 @@
     {
       "name": "Component Count Verification",
       "result": "PASS",
-      "details": "Verified 91 component files"
+      "details": "Verified 94 component files"
     },
     {
       "name": "Atomic Components",
@@ -57,12 +107,12 @@
     {
       "name": "Command-Component Integration",
       "result": "PASS",
-      "details": "Found component references in 62 command files"
+      "details": "Found component references in 71 command files"
     },
     {
       "name": "Progressive Disclosure Upgrade Paths",
       "result": "PASS",
-      "details": "Found upgrade path references in 3 files"
+      "details": "Found upgrade path references in 49 files"
     },
     {
       "name": "Documentation Command Count",
@@ -71,8 +121,8 @@
     },
     {
       "name": "Documentation Component Count",
-      "result": "PASS",
-      "details": "CLAUDE.md correctly states 91 components"
+      "result": "FAIL",
+      "details": "CLAUDE.md component count doesn't match actual 94"
     },
     {
       "name": "Documentation Progressive Disclosure",
