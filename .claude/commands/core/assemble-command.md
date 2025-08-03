@@ -1,6 +1,6 @@
 ---
 name: assemble-command
-description: Layer 3 Progressive Disclosure - Advanced component assembly for professional workflows with 91 components and enterprise capabilities
+description: Layer 3 Progressive Disclosure - Advanced component assembly for professional workflows with 96 components and enterprise capabilities
 category: core
 parameters: 
   - name: WORKFLOW_TYPE
@@ -83,7 +83,7 @@ allowed-tools:
   </orchestration_capability>
   
   <v2_features>
-    <task_description>Professional component assembly with 91 components, enterprise validation, and advanced workflow orchestration</task_description>
+    <task_description>Professional component assembly with 96 components, enterprise validation, and advanced workflow orchestration</task_description>
     <implementation_strategy>component_discovery|compatibility_analysis|workflow_design|assembly_execution|professional_validation|documentation_generation</implementation_strategy>
     <command_chaining_enabled>true</command_chaining_enabled>
   </v2_features>
@@ -181,7 +181,7 @@ allowed-tools:
 # 🔧 Layer 3: Professional Assembly v1.0
 
 <context type="project">
-Progressive Disclosure System Layer 3 for template library providing enterprise-grade component assembly with 91 components across 6 professional categories. Designed for power users (5% of users) requiring maximum flexibility, complex workflow orchestration, and 15-30 minute professional assembly processes.
+Progressive Disclosure System Layer 3 for template library providing enterprise-grade component assembly with 96 components across 6 professional categories. Designed for power users (5% of users) requiring maximum flexibility, complex workflow orchestration, and 15-30 minute professional assembly processes.
 </context>
 
 <instructions>
@@ -213,7 +213,7 @@ Execute advanced component assembly using $WORKFLOW_TYPE, $MODE, $TEMPLATE_NAME,
 
 <workflow type="sequential">
 <task priority="high">
-**Discovery & Component Exploration**: Navigate 91-component library
+**Discovery & Component Exploration**: Navigate 96-component library
 - **Interactive Component Browser**: Search, filter, and explore 6 professional categories
 - **Dependency Mapping**: Understand component relationships and integration patterns
 - **Preview Functionality**: Examine component capabilities and requirements
@@ -275,7 +275,7 @@ Execute advanced component assembly using $WORKFLOW_TYPE, $MODE, $TEMPLATE_NAME,
 - **Code-migration workflows** with transformation and validation patterns
 - **Custom workflow types** with pattern recognition and suggestion engines
 
-## 🧩 Professional Component Library (91 Components)
+## 🧩 Professional Component Library (96 Components)
 
 ### **Atomic Components** (21 components) - Building Blocks
 **Single-purpose, highly reliable components:**
@@ -340,7 +340,7 @@ Execute advanced component assembly using $WORKFLOW_TYPE, $MODE, $TEMPLATE_NAME,
 ### **Professional Assembly Targets:**
 - **5% of users** require this level of control and complexity  
 - **15-30 minute assembly time** acceptable for professional workflows
-- **Unlimited customization** with full 91-component library access
+- **Unlimited customization** with full 96-component library access
 - **Enterprise-grade validation** with comprehensive quality assurance
 - **High reusability** of assembled professional commands
 

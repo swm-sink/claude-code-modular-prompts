@@ -226,7 +226,7 @@ Provide comprehensive help and guidance for the template library. Process $COMMA
 ### **Progressive Disclosure System (v1.0):**
 1. **Layer 1**: `/quick-command` - Instant generation, zero learning curve
 2. **Layer 2**: `/build-command` - Guided customization with smart options  
-3. **Layer 3**: `/assemble-command` - Professional assembly with 91 components
+3. **Layer 3**: `/assemble-command` - Professional assembly with 96 components
 
 ### **Command Categories (88 Total):**
 - **Core (15)**: Essential commands for daily development

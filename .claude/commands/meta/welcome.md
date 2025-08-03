@@ -242,13 +242,13 @@ If you're experienced with template customization:
 
 ### Professional Assembly Workflow:
 1. **Strategic Integration**: `/assemble-command` with professional assembly system (15-30 minute success target)  
-2. **Component Architecture**: Full access to 91 components across 6 professional categories
+2. **Component Architecture**: Full access to 96 components across 6 professional categories
 3. **Enterprise Workflows**: Assembly templates for complex workflows (security-audit, data-pipeline)
 4. **Advanced Automation**: Complete hooks and automation with performance monitoring
 5. **Validation Framework**: Comprehensive compatibility matrix and component interaction validation
 
 ### v1.0 Enhanced Architecture:
-- **91 Component Library**: Professional-grade building blocks across 6 categories
+- **96 Component Library**: Professional-grade building blocks across 6 categories
   - 21 Atomic Components (I/O, data processing, workflow control)
   - 15+ Analysis Components (codebase discovery, quality metrics)
   - 10+ Orchestration Components (agent orchestration, task planning)

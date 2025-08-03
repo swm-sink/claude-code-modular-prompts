@@ -89,7 +89,7 @@ Provide quick start guidance for essential commands and Progressive Disclosure S
 - **Success rate**: 5-minute customized results
 
 ### **Layer 3: Component Assembly** (5% of users)
-- **`/assemble-command`** - Professional assembly with 91 components
+- **`/assemble-command`** - Professional assembly with 96 components
 - **Perfect for**: Complex workflows, enterprise needs, maximum control
 - **Success rate**: 15-30 minute professional solutions
 
