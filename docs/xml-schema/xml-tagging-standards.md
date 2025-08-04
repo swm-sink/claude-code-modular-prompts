@@ -322,4 +322,4 @@ Before committing XML-tagged files:
 
 ---
 
-These standards ensure consistent, maintainable, and effective XML metadata implementation across the Claude Code Modular Prompts template library, optimizing AI consumption and navigation capabilities.
+These standards ensure consistent, maintainable, and effective XML metadata implementation across the Claude Context Architect context engineering system, optimizing AI consumption and navigation capabilities.
