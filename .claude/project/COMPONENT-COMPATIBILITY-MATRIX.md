@@ -1,11 +1,11 @@
-# Component Compatibility Matrix
+# Context Pattern Compatibility Matrix
 
 *Generated from integration test data - Phase 2, Step 34*
 
 ## 🎯 High Compatibility Pairs (62.5%+)
 
 ### ✅ Excellent Combinations
-| Primary Component | Secondary Component | Compatibility | Use Case |
+| Primary Pattern | Secondary Pattern | Compatibility | Use Case |
 |------------------|-------------------|---------------|----------|
 | `file-reader` | `content-sanitizer` | 62.5% | Safe file processing |
 | `data-transformer` | `format-converter` | 62.5% | Data format pipelines |
@@ -15,7 +15,7 @@
 ## ⚠️ Medium Compatibility Pairs (37.5%-50%)
 
 ### 🔶 Usable with Care
-| Primary Component | Secondary Component | Compatibility | Notes |
+| Primary Pattern | Secondary Pattern | Compatibility | Notes |
 |------------------|-------------------|---------------|-------|
 | `api-caller` | `response-validator` | 50.0% | API workflows need validation |
 | `input-validation` | `parameter-parser` | 37.5% | Overlap in validation logic |
@@ -26,7 +26,7 @@
 ## ❌ Low Compatibility Pairs (12.5%)
 
 ### 🔴 Avoid These Combinations
-| Primary Component | Secondary Component | Compatibility | Issue |
+| Primary Pattern | Secondary Pattern | Compatibility | Issue |
 |------------------|-------------------|---------------|-------|
 | `error-handler` | `progress-indicator` | 12.5% | Conflicting UI patterns |
 

@@ -1,4 +1,4 @@
-# Atomic Component Architecture Standards
+# Context Engineering Pattern Standards
 
 *Version: 1.0*  
 *Phase: 2 - Component Expansion*  
@@ -7,27 +7,27 @@
 ## 🎯 DESIGN PRINCIPLES
 
 ### Core Requirements
-1. **Atomic Scope**: Each component handles exactly one specific task
+1. **Pattern Scope**: Each context pattern handles exactly one specific task
 2. **5-10 Line Limit**: Component content must be 5-10 lines maximum
-3. **Copy-Paste Ready**: Direct integration without modification
+3. **Pattern-Ready**: Direct integration without modification
 4. **Self-Documenting**: Clear purpose from component name and content
-5. **Tool Agnostic**: Components work with any Claude Code tool combination
+5. **Tool Agnostic**: Context patterns work with any Claude Code tool combination
 
 ### Quality Standards
-- **Zero Dependencies**: Components work independently
+- **Zero Dependencies**: Context patterns work independently
 - **Clear Interface**: Obvious input/output expectations
 - **Error Resilient**: Graceful handling of edge cases
 - **Performance Optimized**: Minimal token consumption
-- **Test Validated**: Each component verified in isolation
+- **Test Validated**: Each context pattern verified in isolation
 
-## 📋 COMPONENT INTERFACE SPECIFICATION
+## 📋 CONTEXT PATTERN INTERFACE SPECIFICATION
 
 ### Required Structure
 ```markdown
-# [Component Name] Component
+# [Pattern Name] Context Pattern
 
 ```
-[Component prompt content - 5-10 lines maximum]
+[Context pattern content - 5-10 lines maximum]
 - [Action item 1]
 - [Action item 2] 
 - [Action item 3]

@@ -1,6 +1,6 @@
-# Atomic Component Quick-Start Guide
+# Context Engineering Pattern Quick-Start Guide
 
-*Get productive with atomic components in 5 minutes*
+*Get productive with context engineering patterns in 5 minutes*
 
 ## 🚀 Quick Start: Build Your First Command in 3 Steps
 
@@ -20,8 +20,8 @@ Select from our 5 **100% validated** workflow patterns:
 {INPUT-VALIDATION} → {PARAMETER-PARSER} → {FILE-READER}
 ```
 
-### Step 2: Replace Placeholders with Component Code
-Copy component code from `.claude/components/atomic/[component-name].md`:
+### Step 2: Replace Placeholders with Context Pattern Code
+Copy context pattern code from `.claude/components/atomic/[pattern-name].md`:
 
 ```markdown
 ---

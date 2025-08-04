@@ -1,19 +1,19 @@
-# Atomic Component Documentation
+# Context Engineering Pattern Documentation
 
 ## 📖 Overview
 
-This document provides comprehensive usage examples and interface specifications for all 21 atomic components. Each component is designed for copy-paste integration into Claude Code slash commands.
+This document provides comprehensive usage examples and interface specifications for all 21 context engineering patterns. Each context pattern is designed for copy-paste integration into Claude Code slash commands.
 
 ## 🎯 Quick Reference
 
-### Component Categories
+### Context Pattern Categories
 - **Input/Output** (4): data-transformer, response-validator, format-converter, content-sanitizer, output-formatter
 - **Workflow** (4): state-manager, workflow-coordinator, dependency-resolver, completion-tracker  
 - **Operations** (3): git-operations, api-caller, test-runner
 - **User Interaction** (10): input-validation, parameter-parser, file-reader, file-writer, search-files, error-handler, progress-indicator, user-confirmation, task-summary
 
 ### Proven Workflow Patterns
-Based on integration testing, these sequences achieve 100%+ compatibility:
+Based on integration testing, these context pattern sequences achieve 100%+ compatibility:
 1. `input-validation → parameter-parser → file-reader`
 2. `file-reader → content-sanitizer → data-transformer → output-formatter`
 3. `dependency-resolver → state-manager → workflow-coordinator → completion-tracker`
@@ -22,7 +22,7 @@ Based on integration testing, these sequences achieve 100%+ compatibility:
 
 ---
 
-## 📚 Component Specifications
+## 📚 Context Pattern Specifications
 
 ### Input/Output Category
 
