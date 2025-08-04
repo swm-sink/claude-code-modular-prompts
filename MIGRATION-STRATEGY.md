@@ -2,13 +2,13 @@
 
 ## Overview
 
-This document outlines the step-by-step migration process to transform the current Claude Code Modular Prompts structure into the dual-purpose framework that supports both transformation and submodule usage.
+This document outlines the step-by-step migration process to transform the current Claude Context Architect structure into the dual-purpose framework that supports both transformation and submodule usage.
 
 ## Current State Analysis
 
 ### Existing Structure
 ```
-claude-code-modular-prompts/
+claude-context-architect/
 ├── .claude/
 │   ├── commands/         # 88 existing commands
 │   ├── components/       # 96 components
@@ -23,7 +23,7 @@ claude-code-modular-prompts/
 
 ### Target Structure
 ```
-claude-code-modular-prompts/
+claude-context-architect/
 ├── .transformation/      # NEW - Transformation tools
 ├── .claude/             
 │   ├── framework/       # NEW - Submodule components
@@ -485,7 +485,7 @@ cd ../test-project
 git init
 
 # Add as submodule
-git submodule add ../claude-code-modular-prompts .claude-framework
+git submodule add ../claude-context-architect .claude-framework
 cd .claude-framework
 ./.submodule/setup.sh --target=..
 
