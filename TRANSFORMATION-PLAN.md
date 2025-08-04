@@ -2,7 +2,7 @@
 
 ## Project Transformation Overview
 
-**From**: Claude Code Modular Prompts (88 commands + 96 components)  
+**From**: Claude Context Architect Template Library (88 commands + 96 components)  
 **To**: Research-Driven Context Engineering System (35 scaffolding commands + verified patterns)
 
 **Core Innovation**: Every piece of context must be research-verified through web search or come from vetted internal sources. No trust in LLM-generated content.
@@ -14,7 +14,7 @@
 ## Two-Stage Transformation Strategy
 
 ### Stage 1: Transform THIS Project (Weeks 1-6)
-Transform the existing Claude Code Modular Prompts from a prompt library into a context engineering framework using transformation-specific agents and commands.
+Transform the existing Claude Context Architect from a template library into a context engineering framework using transformation-specific agents and commands.
 
 ### Stage 2: Function as Git Submodule (Post-transformation)
 The transformed system serves as a reusable context engineering framework for OTHER projects via git submodule integration.
@@ -24,7 +24,7 @@ The transformed system serves as a reusable context engineering framework for OT
 ## Dual-Purpose Directory Structure
 
 ```
-claude-code-modular-prompts/
+claude-context-architect/
 ├── .transformation/              # Stage 1 only - NOT in submodule
 │   ├── agents/                   # Transformation-specific agents
 │   │   ├── transformation-orchestrator.md

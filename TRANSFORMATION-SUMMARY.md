@@ -2,7 +2,7 @@
 
 ## What We're Building
 
-A **Research-Driven Context Engineering System** that transforms the Claude Code Modular Prompts project from a complex template library (88 commands) into a focused scaffolding toolkit (35 numbered commands) that helps users build evidence-based Claude Code setups.
+A **Research-Driven Context Engineering System** that transforms the Claude Context Architect project from a complex template library (88 commands) into a focused scaffolding toolkit (35 numbered commands) that helps users build evidence-based Claude Code setups.
 
 **Critical Addition**: The system now includes a Claude Code Context Engineering Foundation (Phase -1) that establishes optimal context structure before the main transformation begins.
 
