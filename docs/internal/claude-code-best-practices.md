@@ -1,7 +1,7 @@
 # Claude Code Best Practices & Context
 
 ## Overview
-This document captures research and best practices for Claude Code usage, serving as context for this modular prompts project.
+This document captures research and best practices for Claude Code usage, serving as context for this context engineering project.
 
 ## Core Claude Code Features
 
