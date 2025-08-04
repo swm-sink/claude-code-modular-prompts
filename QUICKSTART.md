@@ -4,8 +4,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/swm-sink/claude-code-modular-prompts.git
-cd claude-code-modular-prompts
+git clone https://github.com/swm-sink/claude-context-architect.git
+cd claude-context-architect
 
 # Run setup script
 ./setup.sh /path/to/your/project
