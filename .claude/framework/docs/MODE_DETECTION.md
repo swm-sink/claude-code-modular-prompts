@@ -9,7 +9,7 @@ The Claude Code Context Engineering framework uses a sophisticated mode detectio
 ### Transformation Mode (Stage 1)
 - **Purpose**: Active during the 6-week transformation of THIS project
 - **Marker**: `.transformation/active` file exists
-- **Scope**: Operates on the Claude Code Modular Prompts project itself
+- **Scope**: Operates on the Claude Context Architect project itself
 - **Context**: Uses `.transformation/context/` for state and progress
 
 ### Framework Mode (Stage 2)
@@ -59,7 +59,7 @@ source "$(dirname "$0")/../../.submodule/detect_mode.sh"
 
 # Use mode-specific logic
 if [[ "$CLAUDE_MODE" == "transformation" ]]; then
-    echo "Transforming the Claude Code Modular Prompts project..."
+    echo "Transforming the Claude Context Architect project..."
     # Work on THIS project's structure
 else
     echo "Operating as framework in parent project..."
