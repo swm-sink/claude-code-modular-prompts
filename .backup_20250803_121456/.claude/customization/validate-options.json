@@ -1,0 +1,329 @@
+{
+  "validate_customization_options": {
+    "validation_scope": {
+      "id": "validation_scope",
+      "name": "📁 Validation Scope",
+      "description": "What files to validate",
+      "default": "all_code_files",
+      "options": [
+        {
+          "id": "all_code_files",
+          "label": "All code files (current)",
+          "description": "JavaScript, Python, Java, etc.",
+          "implementation": "file_types: ['js', 'py', 'java', 'cpp', 'ts', 'jsx', 'tsx']"
+        },
+        {
+          "id": "config_files_only",
+          "label": "Configuration files only",
+          "description": "JSON, YAML, XML, properties files",
+          "implementation": "file_types: ['json', 'yaml', 'yml', 'xml', 'properties', 'toml']"
+        },
+        {
+          "id": "specific_language",
+          "label": "Specific language focus",
+          "description": "Focus on one programming language",
+          "implementation": "language_specific: true"
+        },
+        {
+          "id": "changed_files_only",
+          "label": "Recently changed files",
+          "description": "Validate only git-modified files",
+          "implementation": "scope: 'git_changed'"
+        },
+        {
+          "id": "critical_files_only",
+          "label": "Critical files only",
+          "description": "Main entry points, APIs, core modules",
+          "implementation": "scope: 'critical_paths'"
+        }
+      ]
+    },
+    "validation_strictness": {
+      "id": "validation_strictness",
+      "name": "⚖️ Validation Strictness",
+      "description": "How strict the validation should be",
+      "default": "standard",
+      "options": [
+        {
+          "id": "permissive",
+          "label": "Permissive validation",
+          "description": "Allow minor issues, focus on major problems",
+          "implementation": "strictness: 'low', severity_threshold: 'high'"
+        },
+        {
+          "id": "standard",
+          "label": "Standard validation (current)",
+          "description": "Balanced approach with reasonable rules",
+          "implementation": "strictness: 'medium', severity_threshold: 'medium'"
+        },
+        {
+          "id": "strict",
+          "label": "Strict validation",
+          "description": "Enforce best practices and style guides",
+          "implementation": "strictness: 'high', severity_threshold: 'low'"
+        },
+        {
+          "id": "pedantic",
+          "label": "Pedantic validation",
+          "description": "Maximum strictness, catch everything",
+          "implementation": "strictness: 'maximum', severity_threshold: 'info'"
+        }
+      ]
+    },
+    "validation_types": {
+      "id": "validation_types",
+      "name": "🔍 Validation Types",
+      "description": "What aspects to validate",
+      "default": "syntax_and_style",
+      "options": [
+        {
+          "id": "syntax_only",
+          "label": "Syntax validation only",
+          "description": "Check for syntax errors and basic structure",
+          "implementation": "types: ['syntax', 'parsing']"
+        },
+        {
+          "id": "syntax_and_style",
+          "label": "Syntax and style (current)",
+          "description": "Syntax plus code style conventions",
+          "implementation": "types: ['syntax', 'style', 'formatting']"
+        },
+        {
+          "id": "semantic_validation",
+          "label": "Semantic validation",
+          "description": "Type checking, variable usage, logic flow",
+          "implementation": "types: ['syntax', 'semantic', 'type_checking']"
+        },
+        {
+          "id": "best_practices",
+          "label": "Best practices validation",
+          "description": "Code quality, patterns, maintainability",
+          "implementation": "types: ['quality', 'patterns', 'maintainability']"
+        },
+        {
+          "id": "comprehensive",
+          "label": "Comprehensive validation",
+          "description": "All validation types including security",
+          "implementation": "types: ['syntax', 'style', 'semantic', 'quality', 'security']"
+        }
+      ]
+    },
+    "error_handling": {
+      "id": "error_handling",
+      "name": "⚠️ Error Handling",
+      "description": "How to handle validation failures",
+      "default": "continue_with_summary",
+      "options": [
+        {
+          "id": "fail_fast",
+          "label": "Stop on first error",
+          "description": "Halt validation on first serious issue",
+          "implementation": "on_error: 'stop', early_exit: true"
+        },
+        {
+          "id": "continue_with_summary",
+          "label": "Continue and summarize (current)",
+          "description": "Check all files, provide error summary",
+          "implementation": "on_error: 'continue', summarize: true"
+        },
+        {
+          "id": "skip_problematic",
+          "label": "Skip problematic files",
+          "description": "Skip files that can't be validated",
+          "implementation": "on_error: 'skip', continue_others: true"
+        },
+        {
+          "id": "best_effort",
+          "label": "Best effort validation",
+          "description": "Partial validation when full check fails",
+          "implementation": "on_error: 'partial', best_effort: true"
+        }
+      ]
+    },
+    "auto_fix": {
+      "id": "auto_fix",
+      "name": "🔧 Auto-Fix Options",
+      "description": "Automatically fix issues where possible",
+      "default": "suggest_only",
+      "options": [
+        {
+          "id": "no_auto_fix",
+          "label": "No automatic fixes",
+          "description": "Report issues only, no changes",
+          "implementation": "auto_fix: false"
+        },
+        {
+          "id": "suggest_only",
+          "label": "Suggest fixes only (current)",
+          "description": "Show what could be fixed automatically",
+          "implementation": "auto_fix: 'suggest', show_diffs: true"
+        },
+        {
+          "id": "safe_fixes_only",
+          "label": "Apply safe fixes only",
+          "description": "Auto-fix formatting and obvious issues",
+          "implementation": "auto_fix: 'safe', backup: true"
+        },
+        {
+          "id": "interactive_fixes",
+          "label": "Interactive fix approval",
+          "description": "Ask before applying each fix",
+          "implementation": "auto_fix: 'interactive', confirm_each: true"
+        },
+        {
+          "id": "aggressive_fixes",
+          "label": "Apply all possible fixes",
+          "description": "Auto-fix everything that can be fixed",
+          "implementation": "auto_fix: 'aggressive', backup: true"
+        }
+      ]
+    },
+    "report_format": {
+      "id": "report_format",
+      "name": "📊 Report Format",
+      "description": "How to present validation results",
+      "default": "detailed_summary",
+      "options": [
+        {
+          "id": "minimal_output",
+          "label": "Minimal output",
+          "description": "Show only error counts and critical issues",
+          "implementation": "format: 'minimal', detail_level: 'low'"
+        },
+        {
+          "id": "detailed_summary",
+          "label": "Detailed summary (current)",
+          "description": "Organized report with issue categories",
+          "implementation": "format: 'summary', detail_level: 'medium'"
+        },
+        {
+          "id": "per_file_breakdown",
+          "label": "Per-file breakdown",
+          "description": "Detailed results for each file",
+          "implementation": "format: 'detailed', per_file: true"
+        },
+        {
+          "id": "json_output",
+          "label": "JSON structured output",
+          "description": "Machine-readable validation results",
+          "implementation": "format: 'json', structured: true"
+        },
+        {
+          "id": "dashboard_style",
+          "label": "Dashboard-style report",
+          "description": "Visual report with metrics and trends",
+          "implementation": "format: 'dashboard', visual: true"
+        }
+      ]
+    },
+    "performance_options": {
+      "id": "performance_options",
+      "name": "⚡ Performance Options",
+      "description": "Speed vs thoroughness tradeoffs",
+      "default": "balanced",
+      "options": [
+        {
+          "id": "fast_scan",
+          "label": "Fast scan",
+          "description": "Quick validation, basic checks only",
+          "implementation": "mode: 'fast', parallel: true, cache: true"
+        },
+        {
+          "id": "balanced",
+          "label": "Balanced approach (current)",
+          "description": "Good speed with reasonable thoroughness",
+          "implementation": "mode: 'standard', parallel: true"
+        },
+        {
+          "id": "thorough_check",
+          "label": "Thorough validation",
+          "description": "Complete validation, slower but comprehensive",
+          "implementation": "mode: 'thorough', deep_analysis: true"
+        },
+        {
+          "id": "parallel_processing",
+          "label": "Maximum parallelization",
+          "description": "Use all CPU cores for faster processing",
+          "implementation": "parallel: 'max', workers: 'auto'"
+        }
+      ]
+    }
+  },
+  "intelligence_rules": {
+    "show_options_based_on_description": {
+      "json|yaml|xml": ["validation_scope", "validation_types", "auto_fix"],
+      "javascript|typescript|js|ts": ["validation_scope", "validation_strictness", "validation_types"],
+      "python": ["validation_scope", "validation_strictness", "auto_fix"],
+      "config|configuration": ["validation_scope", "validation_types", "error_handling"],
+      "lint|linting": ["validation_strictness", "auto_fix", "report_format"],
+      "security": ["validation_types", "validation_strictness", "error_handling"],
+      "style|formatting": ["validation_types", "auto_fix", "validation_strictness"],
+      "default": ["validation_scope", "validation_types", "report_format"]
+    },
+    "smart_defaults_based_on_description": {
+      "json|yaml|xml": {
+        "validation_types": "syntax_and_style",
+        "auto_fix": "safe_fixes_only",
+        "validation_strictness": "standard"
+      },
+      "javascript|typescript": {
+        "validation_types": "semantic_validation",
+        "validation_strictness": "strict",
+        "auto_fix": "suggest_only"
+      },
+      "python": {
+        "validation_types": "best_practices",
+        "auto_fix": "interactive_fixes",
+        "validation_strictness": "standard"
+      },
+      "config|configuration": {
+        "validation_scope": "config_files_only",
+        "validation_types": "syntax_and_style",
+        "error_handling": "fail_fast"
+      },
+      "security": {
+        "validation_types": "comprehensive",
+        "validation_strictness": "strict",
+        "error_handling": "continue_with_summary"
+      },
+      "style|formatting": {
+        "validation_types": "syntax_and_style",
+        "auto_fix": "safe_fixes_only",
+        "validation_strictness": "permissive"
+      }
+    }
+  },
+  "validation_rules": {
+    "required_combinations": [
+      ["aggressive_fixes", "backup"]
+    ],
+    "incompatible_combinations": [
+      ["fail_fast", "continue_with_summary"],
+      ["no_auto_fix", "interactive_fixes"],
+      ["minimal_output", "per_file_breakdown"]
+    ],
+    "safety_warnings": {
+      "aggressive_fixes + no_backup": "⚠️ High risk: Aggressive auto-fix without backup",
+      "pedantic + fast_scan": "⚠️ Contradictory: Pedantic validation with fast scan",
+      "comprehensive + maximum_parallelization": "⚠️ May consume significant system resources"
+    }
+  },
+  "validation_categories": {
+    "syntax_validation": {
+      "common_checks": ["parsing errors", "syntax errors", "missing brackets", "invalid tokens"],
+      "recommended_options": ["validation_scope", "error_handling", "report_format"]
+    },
+    "style_validation": {
+      "common_checks": ["formatting", "naming conventions", "indentation", "line length"],
+      "recommended_options": ["auto_fix", "validation_strictness", "performance_options"]
+    },
+    "semantic_validation": {
+      "common_checks": ["type errors", "undefined variables", "dead code", "unreachable code"],
+      "recommended_options": ["validation_types", "error_handling", "report_format"]
+    },
+    "quality_validation": {
+      "common_checks": ["complexity", "maintainability", "test coverage", "documentation"],
+      "recommended_options": ["validation_strictness", "validation_types", "report_format"]
+    }
+  }
+}

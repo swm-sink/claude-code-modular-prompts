@@ -1,0 +1,58 @@
+[
+  {
+    "timestamp": "2025-07-30T12:54:31.877541",
+    "overall_health": 0.0,
+    "unit_pass_rate": 0,
+    "integration_pass_rate": 0,
+    "critical_health": 0.0,
+    "total_components": 21
+  },
+  {
+    "timestamp": "2025-07-30T12:55:40.155708",
+    "overall_health": 20.0,
+    "unit_pass_rate": 0,
+    "integration_pass_rate": 60.0,
+    "critical_health": 0.0,
+    "total_components": 21
+  },
+  {
+    "timestamp": "2025-07-30T12:56:15.911698",
+    "overall_health": 46.666666666666664,
+    "unit_pass_rate": 66.66666666666666,
+    "integration_pass_rate": 60.0,
+    "critical_health": 0.0,
+    "total_components": 21
+  },
+  {
+    "timestamp": "2025-07-30T12:56:33.225133",
+    "overall_health": 46.666666666666664,
+    "unit_pass_rate": 66.66666666666666,
+    "integration_pass_rate": 60.0,
+    "critical_health": 0.0,
+    "total_components": 21
+  },
+  {
+    "timestamp": "2025-07-30T12:56:56.229296",
+    "overall_health": 74.66666666666666,
+    "unit_pass_rate": 66.66666666666666,
+    "integration_pass_rate": 60.0,
+    "critical_health": 100.0,
+    "total_components": 21
+  },
+  {
+    "timestamp": "2025-07-30T13:34:59.506254",
+    "overall_health": 74.66666666666666,
+    "unit_pass_rate": 66.66666666666666,
+    "integration_pass_rate": 60.0,
+    "critical_health": 100.0,
+    "total_components": 21
+  },
+  {
+    "timestamp": "2025-07-30T13:47:51.021032",
+    "overall_health": 74.66666666666666,
+    "unit_pass_rate": 66.66666666666666,
+    "integration_pass_rate": 60.0,
+    "critical_health": 100.0,
+    "total_components": 21
+  }
+]

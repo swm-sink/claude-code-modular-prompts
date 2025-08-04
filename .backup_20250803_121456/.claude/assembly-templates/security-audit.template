@@ -1,0 +1,204 @@
+# Security Audit Assembly Template
+# Template for comprehensive security analysis workflows
+
+name: security-audit
+description: Comprehensive security analysis and vulnerability detection
+category: security
+complexity: high
+estimated_time: "10-15 minutes"
+target_users: "security analysts, compliance teams"
+
+## Core Component Chain
+components:
+  primary_flow:
+    - codebase-discovery
+    - security-scanning  
+    - vulnerability-analysis
+    - compliance-check
+    - report-generation
+  
+  supporting:
+    - input-validation-framework
+    - credential-protection
+    - path-validation
+    - error-handler
+    - progress-indicator
+
+## Component Configurations
+
+### codebase-discovery
+```yaml
+scope: "security_critical_files"
+file_types: ["js", "py", "java", "php", "rb", "go"]
+include_config: true
+scan_patterns:
+  - "auth*"
+  - "login*" 
+  - "password*"
+  - "token*"
+  - "api*"
+  - "config*"
+exclude_patterns:
+  - "test/*"
+  - "mock/*"
+  - "example/*"
+```
+
+### security-scanning
+```yaml
+scan_types:
+  - "credential_detection"
+  - "injection_vulnerabilities"  
+  - "authentication_flaws"
+  - "authorization_issues"
+  - "crypto_weaknesses"
+  - "input_validation_gaps"
+patterns:
+  sql_injection: ["SELECT.*FROM", "INSERT.*INTO", "UPDATE.*SET", "DELETE.*FROM"]
+  xss_patterns: ["innerHTML", "document.write", "eval\\(", "setTimeout\\("]
+  credential_patterns: ["password\\s*=", "api[_-]?key", "secret[_-]?key", "token\\s*="]
+severity_levels: ["critical", "high", "medium", "low", "info"]
+```
+
+### vulnerability-analysis
+```yaml
+analysis_depth: "comprehensive"
+risk_assessment: true
+cvss_scoring: true
+false_positive_filtering: true
+context_analysis: true
+remediation_suggestions: true
+```
+
+### compliance-check
+```yaml
+standards:
+  - "OWASP_TOP_10"
+  - "CWE_TOP_25" 
+  - "SANS_TOP_20"
+  - "PCI_DSS"
+  - "SOX_COMPLIANCE"
+custom_rules: true
+severity_mapping: true
+```
+
+### report-generation
+```yaml
+format: "comprehensive_security_report"
+sections:
+  - "executive_summary"
+  - "vulnerability_details"
+  - "risk_matrix"
+  - "remediation_roadmap"
+  - "compliance_status"
+  - "technical_appendix"
+output_formats: ["markdown", "html", "pdf", "json"]
+include_charts: true
+risk_visualization: true
+```
+
+## Data Flow
+```
+Input Files
+    ↓
+[codebase-discovery] → File inventory with security focus
+    ↓
+[security-scanning] → Raw vulnerability findings  
+    ↓
+[vulnerability-analysis] → Analyzed threats with context
+    ↓
+[compliance-check] → Compliance mapping and gaps
+    ↓
+[report-generation] → Final security report
+```
+
+## Assembly Instructions
+
+### Quick Assembly
+```bash
+/assemble-command --from-template security-audit --quick
+# Uses all default configurations
+```
+
+### Interactive Customization
+```bash
+/assemble-command --from-template security-audit --customize
+# Allows modification of scan types, compliance standards, report format
+```
+
+### Advanced Assembly
+```bash
+/assemble-command --from-template security-audit --interactive
+# Full component-by-component customization
+```
+
+## Customization Points
+
+### 1. Scan Scope Customization
+- **Minimal**: Core application files only
+- **Standard**: Application + configuration files  
+- **Comprehensive**: Everything including dependencies
+- **Custom**: User-defined file patterns
+
+### 2. Vulnerability Focus
+- **Web Application**: XSS, SQL injection, CSRF
+- **API Security**: Authentication, authorization, input validation
+- **Infrastructure**: Configuration, secrets, access controls
+- **Code Quality**: Static analysis, best practices
+
+### 3. Compliance Standards
+- **Web Apps**: OWASP Top 10, SANS Top 20
+- **Financial**: PCI DSS, SOX compliance
+- **Healthcare**: HIPAA security requirements
+- **Custom**: Organization-specific standards
+
+### 4. Report Customization
+- **Executive**: High-level summary for management
+- **Technical**: Detailed findings for developers
+- **Compliance**: Focused on regulatory requirements
+- **Remediation**: Action-oriented improvement plan
+
+## Expected Outcomes
+
+### Deliverables
+1. **Security Analysis Report** (10-50 pages depending on scope)
+2. **Vulnerability Database** (JSON/CSV format)
+3. **Remediation Roadmap** (prioritized action items)
+4. **Compliance Gap Analysis** (standards compliance matrix)
+
+### Metrics
+- **Critical vulnerabilities found**: 0-5 (typical range)
+- **High-risk issues identified**: 2-15 (typical range)  
+- **Compliance score**: 70-95% (typical range)
+- **False positive rate**: <10% (with proper tuning)
+
+### Performance
+- **Small codebase** (<1000 files): 5-8 minutes
+- **Medium codebase** (1000-10000 files): 10-15 minutes
+- **Large codebase** (>10000 files): 15-30 minutes
+
+## Integration Examples
+
+### CI/CD Integration
+```yaml
+# GitHub Actions example
+- name: Security Audit
+  run: claude -p "/assemble-command --from-template security-audit --output security-report.md"
+```
+
+### Manual Execution
+```bash
+# One-time security audit
+/assemble-command --from-template security-audit --customize
+
+# Continuous monitoring  
+/assemble-command --from-template security-audit --schedule weekly
+```
+
+## Success Criteria
+- ✅ **Comprehensive coverage** of security domains
+- ✅ **Actionable findings** with remediation guidance
+- ✅ **Compliance mapping** to relevant standards  
+- ✅ **Low false positive rate** (<10%)
+- ✅ **Professional reporting** suitable for stakeholders
+- ✅ **Reasonable execution time** (<30 minutes for large codebases)

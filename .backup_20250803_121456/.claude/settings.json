@@ -1,0 +1,83 @@
+{
+  "commandsPath": "./commands",
+  "defaultTools": ["Read", "Write", "Edit", "MultiEdit", "Bash", "Grep", "Glob", "LS"],
+  "templateVersion": "1.0",
+  "autoSave": true,
+  "contextFiles": [
+    "./context/claude-code-best-practices.md",
+    "./context/framework-detection.md", 
+    "./context/automation-patterns.md"
+  ],
+  "tools": {
+    "Read": "allow",
+    "Write": "ask",
+    "Edit": "ask", 
+    "MultiEdit": "ask",
+    "Bash": "ask",
+    "Glob": "allow",
+    "Grep": "allow",
+    "LS": "allow",
+    "WebFetch": "ask",
+    "WebSearch": "ask",
+    "TodoWrite": "allow",
+    "Task": "allow",
+    "NotebookRead": "allow",
+    "NotebookEdit": "ask"
+  },
+  "memory": {
+    "enabled": true,
+    "maxTokens": 150000,
+    "persistentMemory": true,
+    "sessionMemory": true
+  },
+  "hooks": [
+    {
+      "event": "PostToolUse",
+      "matcher": {
+        "tool_name": "edit_file",
+        "file_paths": ["*.md"]
+      },
+      "command": "echo 'Template updated: $CLAUDE_FILE_PATHS'",
+      "run_in_background": true
+    },
+    {
+      "event": "PreToolUse", 
+      "matcher": {
+        "tool_name": "write_file",
+        "file_paths": [".claude/commands/*.md"]
+      },
+      "command": "echo 'Creating new command template'",
+      "run_in_background": false
+    }
+  ],
+  "security": {
+    "maxFileSize": "10MB",
+    "allowedPaths": [".claude/", "tests/", "*.md", "*.json", "*.py", "*.sh"],
+    "blockedPaths": ["/etc/", "/bin/", "/usr/", "~/.ssh/", "*.key", "*.pem"],
+    "maxBashCommands": 5,
+    "requireApprovalFor": ["rm", "mv", "cp", "sudo", "curl", "wget", "git push"]
+  },
+  "context": {
+    "loadPattern": "*.md",
+    "excludePaths": [
+      "*.tmp",
+      "*.bak", 
+      "temp/*",
+      "node_modules/*",
+      ".git/*"
+    ],
+    "autoCompact": true,
+    "maxContextWindow": 150000
+  },
+  "automation": {
+    "frameworkDetection": true,
+    "placeholderReplacement": true,
+    "metaPrompting": true
+  },
+  "experimental": {
+    "promptEngineering": true,
+    "multiAgentOrchestration": true,
+    "subAgents": true,
+    "mcpIntegration": true
+  }
+}

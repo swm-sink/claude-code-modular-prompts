@@ -1,0 +1,360 @@
+{
+  "component_compatibility_matrix": {
+    "version": "1.0",
+    "last_updated": "2025-07-30",
+    "total_components": 91,
+    "compatibility_rules": {
+      "atomic_components": {
+        "file-reader": {
+          "compatible_with": [
+            "input-validation", "parameter-parser", "content-sanitizer",
+            "data-transformer", "format-converter", "error-handler",
+            "progress-indicator", "workflow-coordinator"
+          ],
+          "incompatible_with": [],
+          "requires": [],
+          "provides": ["file_content", "file_metadata"],
+          "data_types": ["text", "json", "csv", "xml", "binary"],
+          "performance_impact": "low"
+        },
+        "file-writer": {
+          "compatible_with": [
+            "output-formatter", "response-validator", "data-transformer",
+            "format-converter", "content-sanitizer", "error-handler",
+            "task-summary", "workflow-coordinator"
+          ],
+          "incompatible_with": [],
+          "requires": ["formatted_data"],
+          "provides": ["write_confirmation", "file_path"],
+          "data_types": ["text", "json", "csv", "xml", "binary"],
+          "performance_impact": "low"
+        },
+        "data-transformer": {
+          "compatible_with": [
+            "file-reader", "input-validation", "content-sanitizer",
+            "format-converter", "output-formatter", "response-validator",
+            "error-handler", "progress-indicator"
+          ],
+          "incompatible_with": [],
+          "requires": ["raw_data"],
+          "provides": ["transformed_data", "transformation_metadata"],
+          "data_types": ["json", "csv", "xml", "custom"],
+          "performance_impact": "medium"
+        },
+        "input-validation": {
+          "compatible_with": [
+            "file-reader", "parameter-parser", "data-transformer",
+            "content-sanitizer", "error-handler", "workflow-coordinator"
+          ],
+          "incompatible_with": [],
+          "requires": ["raw_input"],
+          "provides": ["validation_result", "sanitized_input"],
+          "data_types": ["any"],
+          "performance_impact": "low"
+        },
+        "output-formatter": {
+          "compatible_with": [
+            "data-transformer", "format-converter", "response-validator",
+            "file-writer", "task-summary", "workflow-coordinator"
+          ],
+          "incompatible_with": [],
+          "requires": ["processed_data"],
+          "provides": ["formatted_output"],
+          "data_types": ["text", "json", "html", "markdown"],
+          "performance_impact": "low"
+        },
+        "format-converter": {
+          "compatible_with": [
+            "file-reader", "data-transformer", "output-formatter",
+            "response-validator", "content-sanitizer", "error-handler"
+          ],
+          "incompatible_with": [],
+          "requires": ["source_format_data"],
+          "provides": ["target_format_data", "conversion_metadata"],
+          "data_types": ["json", "csv", "xml", "yaml"],
+          "performance_impact": "medium"
+        },
+        "error-handler": {
+          "compatible_with": ["*"],
+          "incompatible_with": [],
+          "requires": ["error_context"],
+          "provides": ["error_report", "recovery_actions"],
+          "data_types": ["error_objects", "exceptions"],
+          "performance_impact": "low"
+        },
+        "progress-indicator": {
+          "compatible_with": ["*"],
+          "incompatible_with": [],
+          "requires": ["progress_data"],
+          "provides": ["progress_display"],
+          "data_types": ["numeric", "status"],
+          "performance_impact": "minimal"
+        },
+        "user-confirmation": {
+          "compatible_with": ["*"],
+          "incompatible_with": [],
+          "requires": ["confirmation_prompt"],
+          "provides": ["user_response"],
+          "data_types": ["boolean", "text"],
+          "performance_impact": "blocking"
+        },
+        "task-summary": {
+          "compatible_with": ["*"],
+          "incompatible_with": [],
+          "requires": ["task_results"],
+          "provides": ["summary_report"],
+          "data_types": ["text", "structured"],
+          "performance_impact": "low"
+        }
+      },
+      "analysis_components": {
+        "codebase-discovery": {
+          "compatible_with": [
+            "dependency-mapping", "quality-metrics", "anti-pattern-detection",
+            "framework-validation", "security-scanning", "error-handler"
+          ],
+          "incompatible_with": [],
+          "requires": ["file_system_access"],
+          "provides": ["file_inventory", "structure_analysis"],
+          "data_types": ["file_metadata", "directory_structure"],
+          "performance_impact": "medium"
+        },
+        "dependency-mapping": {
+          "compatible_with": [
+            "codebase-discovery", "quality-metrics", "framework-validation",
+            "vulnerability-analysis", "report-generation"
+          ],
+          "incompatible_with": [],
+          "requires": ["code_files", "package_files"],
+          "provides": ["dependency_graph", "circular_dependencies"],
+          "data_types": ["graph_data", "relationships"],
+          "performance_impact": "high"
+        },
+        "quality-metrics": {
+          "compatible_with": [
+            "codebase-discovery", "anti-pattern-detection", "framework-validation",
+            "report-generation", "progress-indicator"
+          ],
+          "incompatible_with": [],
+          "requires": ["source_code"],
+          "provides": ["quality_scores", "metric_data"],
+          "data_types": ["numeric", "categorical"],
+          "performance_impact": "high"
+        }
+      },
+      "security_components": {
+        "credential-protection": {
+          "compatible_with": [
+            "input-validation-framework", "path-validation", "command-security-wrapper",
+            "secure-config", "error-handler"
+          ],
+          "incompatible_with": [],
+          "requires": ["sensitive_data"],
+          "provides": ["protected_data", "security_audit"],
+          "data_types": ["encrypted", "secrets"],
+          "performance_impact": "low"
+        },
+        "input-validation-framework": {
+          "compatible_with": [
+            "credential-protection", "prompt-injection-prevention", "path-validation",
+            "owasp-compliance", "error-handler"
+          ],
+          "incompatible_with": [],
+          "requires": ["user_input"],
+          "provides": ["validated_input", "security_report"],
+          "data_types": ["sanitized_data"],
+          "performance_impact": "medium"
+        },
+        "prompt-injection-prevention": {
+          "compatible_with": [
+            "input-validation-framework", "command-security-wrapper",
+            "harm-prevention-framework", "error-handler"
+          ],
+          "incompatible_with": [],
+          "requires": ["ai_prompts"],
+          "provides": ["safe_prompts", "threat_assessment"],
+          "data_types": ["text", "structured_prompts"],
+          "performance_impact": "medium"
+        }
+      },
+      "orchestration_components": {
+        "workflow-coordinator": {
+          "compatible_with": [
+            "task-planning", "dependency-resolver", "state-manager",
+            "progress-tracking", "error-handler", "completion-tracker"
+          ],
+          "incompatible_with": [],
+          "requires": ["workflow_definition"],
+          "provides": ["orchestration_control", "execution_status"],
+          "data_types": ["workflow_state"],
+          "performance_impact": "medium"
+        },
+        "dependency-resolver": {
+          "compatible_with": [
+            "workflow-coordinator", "task-planning", "state-manager",
+            "component-loader", "error-handler"
+          ],
+          "incompatible_with": [],
+          "requires": ["dependency_graph"],
+          "provides": ["execution_order", "resolved_dependencies"],
+          "data_types": ["graph_data", "ordered_lists"],
+          "performance_impact": "low"
+        },
+        "state-manager": {
+          "compatible_with": [
+            "workflow-coordinator", "dependency-resolver", "progress-tracking",
+            "completion-tracker", "error-handler"
+          ],
+          "incompatible_with": [],
+          "requires": ["state_data"],
+          "provides": ["current_state", "state_history"],
+          "data_types": ["key_value", "structured"],
+          "performance_impact": "low"
+        }
+      }
+    },
+    "compatibility_patterns": {
+      "linear_pipeline": {
+        "pattern": "A → B → C → D",
+        "requirements": {
+          "data_flow": "sequential",
+          "dependencies": "chain",
+          "error_handling": "propagate_or_stop"
+        },
+        "examples": [
+          ["file-reader", "data-transformer", "output-formatter", "file-writer"],
+          ["codebase-discovery", "quality-metrics", "report-generation"]
+        ]
+      },
+      "fan_out_fan_in": {
+        "pattern": "A → [B1, B2, B3] → C",
+        "requirements": {
+          "data_flow": "parallel_then_merge",
+          "dependencies": "independent_branches",
+          "error_handling": "collect_results"
+        },
+        "examples": [
+          ["file-reader", ["data-transformer", "format-converter", "content-sanitizer"], "output-formatter"]
+        ]
+      },
+      "conditional_workflow": {
+        "pattern": "A → Decision → [B | C | D]",
+        "requirements": {
+          "data_flow": "conditional",
+          "dependencies": "mutually_exclusive",
+          "error_handling": "path_specific"
+        },
+        "examples": [
+          ["input-validation", "conditional_router", ["json_processor", "csv_processor", "xml_processor"]]
+        ]
+      },
+      "event_driven": {
+        "pattern": "Trigger → [Handler1, Handler2] → Aggregator",
+        "requirements": {
+          "data_flow": "reactive",
+          "dependencies": "event_based",
+          "error_handling": "resilient"
+        },
+        "examples": [
+          ["file_watcher", ["security_scanner", "quality_checker"], "report_aggregator"]
+        ]
+      }
+    },
+    "performance_combinations": {
+      "high_performance": {
+        "recommended": [
+          "file-reader + content-sanitizer + output-formatter",
+          "codebase-discovery + quality-metrics",
+          "input-validation + error-handler"
+        ],
+        "avoid": [
+          "multiple_heavy_analysis_components",
+          "nested_transformation_loops",
+          "synchronous_blocking_operations"
+        ]
+      },
+      "memory_efficient": {
+        "recommended": [
+          "streaming_file_reader + data-transformer + streaming_writer",
+          "incremental_analysis + progress_tracking"
+        ],
+        "avoid": [
+          "load_entire_dataset + complex_transformation",
+          "multiple_concurrent_heavy_operations"
+        ]
+      },
+      "cpu_intensive": {
+        "recommended": [
+          "parallel_processing + progress_indicator",
+          "batch_operations + completion_tracker"
+        ],
+        "monitoring": [
+          "resource_usage",
+          "execution_time",
+          "memory_consumption"
+        ]
+      }
+    },
+    "validation_rules": {
+      "data_type_compatibility": {
+        "rule": "Component output type must match next component input type",
+        "validation": "automatic",
+        "error_level": "error"
+      },
+      "dependency_resolution": {
+        "rule": "All required dependencies must be present in workflow",
+        "validation": "graph_analysis",
+        "error_level": "error"
+      },
+      "circular_dependencies": {
+        "rule": "No circular dependencies allowed in component chain",
+        "validation": "cycle_detection",
+        "error_level": "error"
+      },
+      "performance_warnings": {
+        "rule": "Warn about performance-intensive combinations",
+        "validation": "heuristic",
+        "error_level": "warning"
+      },
+      "security_compliance": {
+        "rule": "Security components required for sensitive operations",
+        "validation": "policy_check",
+        "error_level": "warning"
+      }
+    },
+    "common_incompatibilities": {
+      "blocking_with_async": {
+        "description": "Blocking components cannot be mixed with async workflows",
+        "examples": ["user-confirmation + streaming_processor"],
+        "resolution": "Use non-blocking alternatives or restructure workflow"
+      },
+      "conflicting_data_formats": {
+        "description": "Components expecting different data formats",
+        "examples": ["csv_processor + json_validator"],
+        "resolution": "Add format-converter between components"
+      },
+      "resource_conflicts": {
+        "description": "Components competing for same resources",
+        "examples": ["parallel_file_reader + concurrent_file_writer"],
+        "resolution": "Implement resource coordination or sequential processing"
+      }
+    },
+    "optimization_suggestions": {
+      "batch_processing": {
+        "when": "Processing large datasets",
+        "components": ["file-reader", "data-transformer", "file-writer"],
+        "optimizations": ["enable_batching", "increase_buffer_size", "parallel_processing"]
+      },
+      "streaming_pipeline": {
+        "when": "Real-time or memory-constrained processing",
+        "components": ["streaming_reader", "incremental_transformer", "streaming_writer"],
+        "optimizations": ["reduce_memory_footprint", "pipeline_parallelism"]
+      },
+      "error_resilience": {
+        "when": "Mission-critical workflows",
+        "components": ["error-handler", "retry-logic", "fallback-processor"],
+        "optimizations": ["circuit_breaker", "graceful_degradation", "comprehensive_logging"]
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "enabled": false,
+  "max_workers": 1,
+  "sequential_time": 0.42683398351073265,
+  "concurrent_time": 2.0896249916404486,
+  "speedup_factor": 0.20426343732405736,
+  "recommended_batch_size": 50
+}

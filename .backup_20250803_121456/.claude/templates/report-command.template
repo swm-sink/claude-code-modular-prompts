@@ -1,0 +1,173 @@
+# Report Command Template
+# Used by /quick-command for report-type requests
+
+## Template Variables
+# {{COMMAND_NAME}} - Generated command name
+# {{DESCRIPTION}} - User's description
+# {{REPORT_TYPE}} - Type of report to generate
+# {{DATA_SOURCES}} - What data to include
+# {{REPORT_TOOLS}} - Required tools
+
+---
+name: /{{COMMAND_NAME}}
+description: {{DESCRIPTION}}  
+usage: '[--format html|markdown|json] [--output file] [--include sections]'
+allowed-tools:
+{{REPORT_TOOLS}}
+category: generated
+---
+
+# {{COMMAND_TITLE}}
+
+I'll generate a {{REPORT_TYPE}} report for your project.
+
+## Input Validation
+I'll verify report parameters:
+- Check if data sources are accessible
+- Validate output format is supported
+- Ensure output location is writable
+- Confirm include sections are valid
+
+## Data Collection
+I'll gather information from:
+- {{DATA_SOURCES}}
+- File system analysis (sizes, counts, types)
+- Content analysis (patterns, metrics)
+- Historical data if available
+- Configuration and metadata
+
+## Data Processing
+For collected data, I'll:
+- {{REPORT_SPECIFIC_ANALYSIS}}
+- Calculate relevant metrics and statistics
+- Identify trends and patterns
+- Detect anomalies or issues
+- Aggregate information by categories
+
+## Report Structure
+I'll organize the report with:
+- Executive summary with key findings
+- Detailed sections for each analysis area
+- Supporting data and evidence
+- Actionable recommendations
+- Appendices with raw data
+
+## Content Generation
+Each section will include:
+- Clear headings and organization
+- Visual elements (tables, lists, charts in text)
+- Quantitative metrics with context
+- Qualitative insights and interpretation
+- Cross-references between related findings
+
+## Quality Assurance
+I'll ensure report quality by:
+- Fact-checking all data and calculations
+- Providing source references for claims
+- Using consistent formatting throughout
+- Including confidence levels for estimates
+- Validating all links and references
+
+## Output Formatting
+Based on requested format:
+
+### Markdown Format (Default)
+- Clean, readable structure
+- Proper heading hierarchy
+- Tables and lists for data
+- Code blocks for technical content
+
+### HTML Format  
+- Professional styling
+- Interactive elements where appropriate
+- Responsive design for different screens
+- Print-friendly CSS
+
+### JSON Format
+- Structured data for programmatic use
+- Consistent schema across reports
+- Nested objects for hierarchical data
+- Metadata about report generation
+
+## Report Template
+```
+# {{REPORT_TYPE}} Report
+Generated: {{TIMESTAMP}}
+
+## Executive Summary
+Key findings and recommendations overview
+
+## Data Overview
+- Total items analyzed: X
+- Data sources: [list]
+- Analysis period: [timeframe]
+- Report completeness: Y%
+
+## Detailed Analysis
+
+### Section 1: [Primary Analysis]
+[Detailed findings with supporting data]
+
+### Section 2: [Secondary Analysis]  
+[Additional insights and metrics]
+
+### Section 3: [Trends and Patterns]
+[Historical analysis and projections]
+
+## Key Metrics
+| Metric | Value | Trend | Target |
+|--------|-------|-------|--------|
+| Metric 1 | X | ↑ | Y |
+| Metric 2 | A | → | B |
+| Metric 3 | P | ↓ | Q |
+
+## Recommendations
+1. **High Priority**: Immediate action item
+2. **Medium Priority**: Important improvement
+3. **Low Priority**: Nice-to-have enhancement
+
+## Next Steps
+- Immediate actions (next 1-2 weeks)
+- Short-term goals (next 1-3 months)  
+- Long-term objectives (3+ months)
+
+## Appendices
+### A. Raw Data
+[Detailed data tables and source information]
+
+### B. Methodology
+[How analysis was performed and data collected]
+
+### C. References
+[Sources and additional resources]
+```
+
+## Interactive Elements
+For HTML reports, I'll include:
+- Collapsible sections for detailed data
+- Sortable tables for metrics
+- Hover tooltips for explanations
+- Jump navigation for long reports
+
+## Data Accuracy
+I'll ensure accuracy by:
+- Cross-validating data from multiple sources
+- Providing uncertainty ranges for estimates
+- Noting data collection limitations
+- Including timestamps for all measurements
+
+## Examples
+```
+{{COMMAND_NAME}} --format markdown --output project-report.md
+{{COMMAND_NAME}} --format html --include "summary,metrics,recommendations"
+{{COMMAND_NAME}} --format json --output data/report.json
+```
+
+## Report Sections Available
+- **summary**: Executive overview
+- **metrics**: Key performance indicators  
+- **analysis**: Detailed findings
+- **trends**: Historical patterns
+- **recommendations**: Action items
+- **data**: Raw information
+- **methodology**: Analysis approach

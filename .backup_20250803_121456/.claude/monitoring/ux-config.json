@@ -1,0 +1,19 @@
+{
+  "enabled": true,
+  "user_experience_metrics": {
+    "onboarding_completion": true,
+    "command_discovery_success": true,
+    "customization_difficulty": true,
+    "error_recovery_rate": true
+  },
+  "feedback_collection": {
+    "automatic_prompts": true,
+    "satisfaction_surveys": true,
+    "usage_analytics": true
+  },
+  "success_indicators": {
+    "time_to_first_success": true,
+    "template_adoption_rate": true,
+    "user_retention": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "security_checks": {
+    "credential_exposure": {
+      "scan_frequency": "daily",
+      "alert_threshold": "any"
+    },
+    "placeholder_injection": {
+      "scan_frequency": "on_use",
+      "alert_threshold": "medium"
+    },
+    "file_permissions": {
+      "scan_frequency": "weekly",
+      "alert_threshold": "high"
+    }
+  },
+  "compliance_monitoring": {
+    "yaml_validation": true,
+    "command_structure": true,
+    "documentation_accuracy": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "security_policy": {
+    "credential_patterns": [
+      "password",
+      "token",
+      "key",
+      "secret",
+      "bearer",
+      "api_key",
+      "auth",
+      "jwt",
+      "certificate"
+    ],
+    "injection_patterns": [
+      "exec(",
+      "eval(",
+      "system(",
+      "shell_exec",
+      "subprocess.call",
+      "os.system"
+    ],
+    "file_restrictions": {
+      "max_file_size_mb": 10,
+      "allowed_extensions": [
+        ".md",
+        ".py",
+        ".json",
+        ".yaml",
+        ".txt"
+      ],
+      "blocked_paths": [
+        "/etc/",
+        "/bin/",
+        "/usr/",
+        "~/.ssh/"
+      ]
+    },
+    "validation_rules": {
+      "sanitize_user_input": true,
+      "validate_file_paths": true,
+      "escape_shell_commands": true,
+      "require_authentication": false
+    }
+  },
+  "monitoring": {
+    "log_security_events": true,
+    "alert_on_violations": true,
+    "audit_trail": true
+  },
+  "last_updated": 1753909329.267128
+}
