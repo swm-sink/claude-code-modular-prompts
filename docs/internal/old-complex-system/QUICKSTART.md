@@ -1,25 +1,25 @@
 # ⚡ Quick Start Guide - Get Running in 2 Minutes
 
-**Goal**: Get Claude Code templates installed and automatically customized with minimal effort.  
-**Time**: 2 minutes to fully functional, project-specific commands.
+**Goal**: Get Claude Context Architect installed and context engineering system configured with minimal effort.  
+**Time**: 2 minutes to fully functional, context-aware commands.
 
 ---
 
 ## 🎯 2-Minute Automated Setup
 
-### Step 1: Install Templates (1 minute)
+### Step 1: Install Context Engineering System (1 minute)
 ```bash
 # Navigate to your project
 cd /path/to/your/project
 
-# Add templates as git submodule
+# Add context engineering system as git submodule
 git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-framework
 
 # Run automated setup
 cd .claude-framework && ./setup.sh && cd ..
 ```
 
-### Step 2: Auto-Configure for Your Project (1 minute)
+### Step 2: Configure Context Engineering for Your Project (1 minute)
 ```bash
 # Start Claude Code and run the auto-configuration command:
 /adapt-to-project
@@ -30,27 +30,27 @@ cd .claude-framework && ./setup.sh && cd ..
 # - Tech stack?
 # - Team size?
 
-# The system automatically customizes all templates for your project
+# The system configures context engineering patterns for your project
 ```
 
-**Result**: Fully customized Claude Code templates working with your specific project context in 2 minutes.
+**Result**: Fully configured Claude Context Architect working with your specific project context in 2 minutes.
 
 ## ✅ Verify Your Setup
 
-After the 2-minute setup, test your customized commands:
+After the 2-minute setup, test your context-aware commands:
 
 ```bash
 # Verify installation
-ls -la .claude/commands/core/  # Should show customized commands
+ls -la .claude/commands/core/  # Should show context-aware commands
 
 # Test core functionality in Claude Code:
-/help        # Shows your project-specific command list
+/help        # Shows your context-aware command list
 /task        # Provides task breakdown using your tech stack
 /auto        # Smart routing based on your project domain
 /query       # Project-aware Q&A
 ```
 
-**Success**: Commands now reference your project name, tech stack, and domain-specific patterns.
+**Success**: Commands now use context engineering patterns with your project name, tech stack, and domain-specific knowledge.
 
 ---
 
@@ -58,7 +58,7 @@ ls -la .claude/commands/core/  # Should show customized commands
 
 ### Core Workflow Commands
 ```bash
-/help               # List all your customized commands
+/help               # List all your context-aware commands
 /task "user login"  # Break down complex tasks with your tech stack
 /auto "debug error" # Smart routing to appropriate helpers
 /query "how to..."  # Project-specific Q&A
@@ -134,9 +134,9 @@ git submodule update --init --recursive
 ## 🎯 Success Criteria
 
 ### After 2 Minutes
-- [ ] `/help` shows your project-specific command list
+- [ ] `/help` shows your context-aware command list
 - [ ] `/task` provides guidance using your tech stack
-- [ ] Commands reference your project name and domain
+- [ ] Commands use context engineering patterns with your project name and domain
 - [ ] No manual placeholder replacement needed
 
 ### After 1 Week
@@ -169,10 +169,10 @@ git submodule update --init --recursive
 ## 🎉 Immediate Benefits
 
 ### What You Get in 2 Minutes
-- **Project-Specific Commands**: All templates automatically customized for your tech stack
+- **Context-Aware Commands**: All patterns automatically configured for your tech stack
 - **Smart Task Breakdown**: `/task` understands your project domain and tools
-- **Context-Aware Guidance**: Commands reference your actual project name and setup
-- **Zero Manual Work**: No find-and-replace, no placeholder hunting
+- **Context Engineering Guidance**: Commands use deep context understanding of your actual project
+- **Context Engineering Setup**: Automated context configuration with minimal manual work
 
 ### Why This Matters
 - **Skip the Learning Curve**: Months of prompt engineering trial-and-error eliminated
