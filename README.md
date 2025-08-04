@@ -1,21 +1,21 @@
-# Claude Code Modular Prompts - Template Library
+# Claude Context Architect - THE Definitive Claude Code Setup Tool
 
 <!-- AI_METADATA_START -->
 <ai_document_metadata>
   <document_type>documentation</document_type>
   <ai_consumption_priority>critical</ai_consumption_priority>
   <content_structure>markdown_body</content_structure>
-  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/lusaka/README.md</file_path>
+  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/cairo/README.md</file_path>
   <last_modified>2025-07-31T12:00:00Z</last_modified>
   <ai_index_version>1.0</ai_index_version>
 </ai_document_metadata>
 
 <project_overview_metadata>
-  <project_type>template_library</project_type>
+  <project_type>context_engineering_system</project_type>
   <version>1.0</version>
-  <command_count>comprehensive</command_count>
-  <component_count>extensive</component_count>
-  <progressive_disclosure_support>true</progressive_disclosure_support>
+  <consultation_system>30_minute_interactive</consultation_system>
+  <specialized_agents>10_plus</specialized_agents>
+  <session_management>true</session_management>
   <orchestration_enabled>true</orchestration_enabled>
   <target_audience>claude_code_developers</target_audience>
 </project_overview_metadata>
@@ -25,8 +25,8 @@
     <primary_discovery_path>user_documentation</primary_discovery_path>
     <quick_access_sections>
       <section ref="quick_start">30-second installation</section>
-      <section ref="what_you_get">Template inventory</section>
-      <section ref="progressive_disclosure">3-layer system</section>
+      <section ref="what_you_get">Context engineering system</section>
+      <section ref="consultation_process">30+ minute interactive consultation</section>
       <section ref="installation">Setup instructions</section>
     </quick_access_sections>
   </discovery_metadata>
@@ -37,11 +37,11 @@
       <file type="guide" ref="ADAPTATION-GUIDE.md" relation="customization_help"/>
       <file type="assessment" ref="ULTRATHINK-FRAMEWORK-ASSESSMENT.md" relation="value_proposition"/>
     </related_documentation>
-    <key_commands>
-      <command ref="quick-command" layer="1"/>
-      <command ref="build-command" layer="2"/>
-      <command ref="assemble-command" layer="3"/>
-    </key_commands>
+    <key_agents>
+      <agent ref="master-orchestrator" role="consultation_coordinator"/>
+      <agent ref="technical-architecture-analyst" role="framework_analysis"/>
+      <agent ref="domain-knowledge-engineer" role="business_intelligence"/>
+    </key_agents>
   </relationship_map>
 </ai_navigation>
 
@@ -56,18 +56,18 @@
     <entry_points>
       <point type="installation">setup.sh script</point>
       <point type="discovery">/help command</point>
-      <point type="immediate_use">quick-command templates</point>
+      <point type="immediate_use">context-aware commands</point>
     </entry_points>
-    <learning_progression>
-      <stage level="1">Use auto-generation templates</stage>
-      <stage level="2">Customize with guided options</stage>
-      <stage level="3">Assemble custom components</stage>
-    </learning_progression>
+    <consultation_progression>
+      <phase level="1">Technical architecture analysis</phase>
+      <phase level="2">Domain intelligence extraction</phase>
+      <phase level="3">Context system generation</phase>
+    </consultation_progression>
   </user_journey_metadata>
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-**Comprehensive collection of Claude Code command templates and reusable components for rapid project customization.**
+**THE definitive Claude Code setup tool that transforms Claude into YOUR project expert through comprehensive context engineering.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Status: Stable](https://img.shields.io/badge/Status-Stable-green.svg)](https://github.com/swm-sink/claude-code-modular-prompts/releases)
@@ -75,7 +75,7 @@
 ## 🚀 Quick Start (30 seconds)
 
 ```bash
-# Install template library
+# Install Claude Context Architect
 ./setup.sh /path/to/your/project
 
 # Start using immediately (in Claude Code)
@@ -84,36 +84,37 @@
 /analyze "why is my app slow?"     # Analyze code or problems
 ```
 
-**Templates require customization - use guide commands for step-by-step help.**
+**Begin with 30+ minute interactive consultation to create your context system.**
 
 ## What You Get
 
-**Comprehensive Command Templates:**
+**Context-Aware Command System:**
 - **Core Commands**: Essential development workflows
 - **Quality Commands**: Testing, validation, analysis tools
 - **Specialized Commands**: Advanced workflows and patterns
-- **Meta Commands**: Template adaptation, management, and specialized tools
+- **Meta Commands**: Context engineering, system management, and specialized tools
 
 **Extensive Reusable Components:**
 - **Atomic Components**: Simple building blocks
 - **Regular Components**: Complex reusable patterns
 
-**Template Library Features:**
-- **Command Organization**: Well-structured commands for various workflows
-- **Clear Documentation**: Detailed descriptions and usage examples
-- **Quality Standards**: Consistent format and Claude Code compliance
-- Manual customization guides with placeholder replacement
-- Anti-pattern documentation (48+ documented pitfalls)
-- Multiple integration methods (git submodule, direct copy, selective)
-- Comprehensive testing and validation frameworks
+**Context Engineering Features:**
+- **Interactive Consultation**: 30+ minute guided project analysis system
+- **Specialized Agents**: 10+ context engineering agents for deep understanding
+- **Context Generation**: Multi-file hierarchical context system creation
+- **Session Management**: Pause/resume capability across consultation sessions
+- **User Control**: Interactive approval and modification at every step
+- **Anti-pattern Documentation**: 48+ documented context engineering pitfalls
+- **Multiple Integration Methods**: Git submodule, direct copy, selective installation
+- **Comprehensive Validation**: Context effectiveness testing frameworks
 
 ## How It Works
 
-1. **Import Templates**: Choose integration method (git submodule recommended)
-2. **Customize**: Use guide commands like `/adapt-to-project` for customization checklists
-3. **Replace Placeholders**: Manual find/replace of [INSERT_XXX] placeholders in your editor
-4. **Validate**: Use `/validate-adaptation` to verify your customizations
-5. **Maintain**: Use `/sync-from-reference` for updates from the template library
+1. **Install System**: Choose integration method (git submodule recommended)
+2. **Begin Consultation**: Use `/begin-consultation` to start 30+ minute guided analysis
+3. **Specialized Analysis**: 10+ agents analyze your project's technical and domain aspects
+4. **Context Generation**: Create multi-file hierarchical context system with user approval
+5. **Ongoing Evolution**: Use session management to refine and improve context over time
 
 ## Installation Methods
 
@@ -134,24 +135,24 @@ Choose specific commands/components to copy manually.
 
 ## Usage Examples
 
-**Template Customization:**
+**Context Engineering Consultation:**
 ```
-/adapt-to-project           # Get customization checklist
-/replace-placeholders       # See all placeholders to replace
-/validate-adaptation        # Verify your customizations
-```
-
-**Command Template Usage:**
-```
-/task "implement authentication"    # Use customized task template
-/test "run integration tests"       # Use customized test template  
-/analyze "performance bottlenecks"  # Use customized analysis template
+/begin-consultation         # Start 30+ minute guided project analysis
+/resume-consultation        # Continue paused consultation session
+/validate-context          # Test generated context effectiveness
 ```
 
-**Component Assembly:**
+**Context-Enhanced Commands:**
 ```
-# Build custom commands from atomic components
-# Copy from .claude/components/atomic/ into your slash commands
+/task "implement authentication"    # Claude understands your architecture
+/test "run integration tests"       # Claude knows your testing patterns  
+/analyze "performance bottlenecks"  # Claude understands your tech stack
+```
+
+**Context System Generation:**
+```
+# Multi-file hierarchical context system created during consultation
+# .claude/context/ contains project-specific understanding
 ```
 
 ## Installation
@@ -160,13 +161,13 @@ Choose specific commands/components to copy manually.
 ```bash
 git clone https://github.com/swm-sink/claude-code-modular-prompts
 cd claude-code-modular-prompts
-./setup-minimal.sh /path/to/your/project
+./setup.sh /path/to/your/project
 ```
 
 **Or as git submodule:**
 ```bash
-git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-templates
-cd .claude-templates && ./setup-minimal.sh ../
+git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-context-architect
+cd .claude-context-architect && ./setup.sh ../
 ```
 
 ## File Structure After Installation
@@ -204,7 +205,7 @@ your-project/
 
 **Without these commands**: Write Claude Code prompts from scratch, learn through trial and error, repeat common patterns.
 
-**With these commands**: Use proven patterns immediately, commands adapt automatically to your project.
+**With Claude Context Architect**: Get Claude that truly understands YOUR specific project through comprehensive context engineering.
 
 ## FAQ
 
@@ -212,7 +213,7 @@ your-project/
 Yes - they automatically adapt to any programming language or framework.
 
 **Can I add more commands later?**
-Yes - you can copy additional commands from the full template library if needed.
+Yes - the context engineering system provides comprehensive understanding for any additional workflows.
 
 **What if I need project-specific customization?**
 The commands work universally, but you can modify them in your `.claude/commands/` directory.
@@ -225,16 +226,16 @@ The commands work universally, but you can modify them in your `.claude/commands
 
 ## Advanced Usage
 
-**Need more commands?** This repo also contains:
+**Need deeper understanding?** This system provides:
 
-1. **Template Library**: 81+ additional command templates that require manual customization. See `./setup.sh` for details.
+1. **Context Engineering System**: 30+ minute interactive consultation that transforms Claude into YOUR project expert. See `./setup.sh` for installation.
 
-2. **Atomic Components**: 21 simple building blocks (5-10 lines each) for creating custom commands:
-   - Input validation, output formatting, error handling
-   - File operations, search functionality, progress indicators  
-   - See `.claude/COMPONENT-ASSEMBLY-GUIDE.md` for usage
+2. **Specialized Agent Network**: 10+ context engineering agents for deep project analysis:
+   - Technical architecture analysis, domain intelligence extraction
+   - Code pattern detection, testing strategy analysis
+   - See `.claude/agents/` for agent specializations
 
-**Note**: The template library and components require manual work. Only the 7 core commands work immediately without customization.
+**Note**: Begin with `/begin-consultation` for 30+ minute guided analysis that creates comprehensive project understanding.
 
 ## License
 
@@ -242,4 +243,4 @@ MIT - Use freely in your projects.
 
 ---
 
-*7 essential commands that work immediately with any programming language or framework.*
+*Claude Context Architect - Transform Claude into YOUR project expert through comprehensive context engineering.*
