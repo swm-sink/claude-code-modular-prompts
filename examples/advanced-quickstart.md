@@ -6,7 +6,7 @@
 ### Step 1: Selective Installation (10 minutes)
 ```bash
 # Use git submodule for easy updates
-git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-framework
+git submodule add https://github.com/swm-sink/claude-context-architect .claude-framework
 
 # Create custom selection script
 cat > selective-setup.sh << 'EOF'

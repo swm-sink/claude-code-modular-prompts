@@ -1,13 +1,13 @@
 # Beginner Quick Start Example
-*For users new to Claude Code template libraries*
+*For users new to Claude Code context engineering systems*
 
 ## Scenario: JavaScript Developer, First Time Using Templates
 
 ### Step 1: Installation (5 minutes)
 ```bash
-# Clone the template library
-git clone https://github.com/swm-sink/claude-code-modular-prompts
-cd claude-code-modular-prompts
+# Clone the context engineering system
+git clone https://github.com/swm-sink/claude-context-architect
+cd claude-context-architect
 
 # Install templates into your project
 ./setup.sh ../my-react-app
