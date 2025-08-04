@@ -8,13 +8,13 @@ Based on your needs and experience level:
 
 **Beginners**: Method 2 (Direct Integration)
 ```bash
-git clone https://github.com/swm-sink/claude-code-modular-prompts
-cd claude-code-modular-prompts && ./setup.sh ../your-project
+git clone https://github.com/swm-sink/claude-context-architect
+cd claude-context-architect && ./setup.sh ../your-project
 ```
 
 **Experienced Users**: Method 1 (Git Submodule) 
 ```bash
-git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-framework
+git submodule add https://github.com/swm-sink/claude-context-architect .claude-framework
 cd .claude-framework && ./setup.sh
 ```
 
@@ -85,7 +85,7 @@ This command provides:
 
 1. **Clear Expectations**: Documentation now clearly states this requires manual work
 2. **Step-by-Step Guidance**: Each command provides detailed usage instructions
-3. **Progressive Disclosure**: Information organized by user experience level
+3. **Interactive Consultation System**: Information organized by user experience level
 4. **Error Prevention**: Validation commands help catch common mistakes
 5. **Recovery Options**: Backup and rollback procedures documented
 
