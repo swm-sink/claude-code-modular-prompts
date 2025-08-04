@@ -1,18 +1,18 @@
-# Claude Code Modular Prompts - Architecture Overview
+# Claude Context Architect - Architecture Overview
 
 ## Project Overview
 
-The Claude Code Modular Prompts is a comprehensive template library providing 102 battle-tested Claude Code command templates with guided manual customization, saving users 3-6 months of prompt engineering trial-and-error learning.
+The Claude Context Architect is a comprehensive context engineering system providing 102 battle-tested Claude Code context-aware commands with guided manual customization, saving users 3-6 months of prompt engineering trial-and-error learning.
 
 ## System Architecture
 
 ```mermaid
 graph TB
-    subgraph "Template Library Core"
-        TL[Template Library<br/>102 Commands + 73 Components]
-        AC[Active Commands<br/>64 Templates]
+    subgraph "Context Engineering Core"
+        TL[Context Engineering System<br/>102 Commands + 73 Patterns]
+        AC[Active Commands<br/>64 Context-Aware Commands]
         DC[Deprecated Commands<br/>38 Archived]
-        CO[Components<br/>73 Reusable Fragments]
+        CO[Context Patterns<br/>73 Reusable Patterns]
     end
     
     subgraph "User Integration Methods"

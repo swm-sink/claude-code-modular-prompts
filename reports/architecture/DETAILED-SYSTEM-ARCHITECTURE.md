@@ -1,4 +1,4 @@
-# Detailed System Architecture - Claude Code Modular Prompts
+# Detailed System Architecture - Claude Context Architect
 
 ## Advanced Architecture Diagrams
 
@@ -19,15 +19,15 @@ flowchart TD
         VE[Validation Engine<br/>Completeness Check]
     end
     
-    subgraph "Template Layer"
-        TI[Template Inventory<br/>102 Commands]
-        CI[Component Inventory<br/>73 Components]
+    subgraph "Context Engineering Layer"
+        TI[Context Command Inventory<br/>102 Commands]
+        CI[Context Pattern Inventory<br/>73 Patterns]
         RM[Relationship Mapping<br/>Dependencies]
         PS[Placeholder System<br/>597 Instances]
     end
     
     subgraph "Output Layer"
-        CT[Customized Templates<br/>Project-Specific]
+        CT[Customized Context System<br/>Project-Specific]
         VR[Validation Reports<br/>Completion Status]
         UR_OUT[Usage Recommendations<br/>Best Practices]
         DG[Documentation Generated<br/>Project Context]
