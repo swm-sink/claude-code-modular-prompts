@@ -758,7 +758,7 @@ This ensures commands work correctly whether transforming THIS project or operat
 
 This two-stage transformation plan:
 
-**Stage 1**: Transforms the Claude Code Modular Prompts project from a prompt library into a Research-Driven Context Engineering Framework using transformation-specific agents and tools.
+**Stage 1**: Transforms the Claude Context Architect project from a template library into a Research-Driven Context Engineering Framework using transformation-specific agents and tools.
 
 **Stage 2**: Enables the transformed system to function as a git submodule, providing context engineering capabilities to other projects through framework agents and mode-aware commands.
 
