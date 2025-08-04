@@ -1,5 +1,5 @@
 #!/bin/bash
-# Claude Code Template Library Setup - Interactive Installation
+# Claude Context Architect Setup - Interactive Installation
 
 set -e
 
@@ -12,7 +12,7 @@ NC='\033[0m'
 # Get target directory
 TARGET_DIR="${1:-.}"
 
-echo -e "${BLUE}🚀 Claude Code Template Library Setup${NC}"
+echo -e "${BLUE}🚀 Claude Context Architect Setup${NC}"
 echo ""
 
 # Create absolute path
@@ -28,13 +28,13 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Check if .claude directory exists in source
 if [ ! -d "$SCRIPT_DIR/.claude" ]; then
     echo "❌ Error: .claude directory not found in $SCRIPT_DIR"
-    echo "Expected to find complete template library at: $SCRIPT_DIR/.claude"
+    echo "Expected to find complete context engineering system at: $SCRIPT_DIR/.claude"
     exit 1
 fi
 
-# Count templates for user feedback
-TEMPLATE_COUNT=$(find "$SCRIPT_DIR/.claude" -name "*.md" | wc -l | xargs)
-echo "📚 Found $TEMPLATE_COUNT template files to install"
+# Count context files for user feedback
+CONTEXT_COUNT=$(find "$SCRIPT_DIR/.claude" -name "*.md" | wc -l | xargs)
+echo "📚 Found $CONTEXT_COUNT context engineering files to install"
 
 # Backup existing .claude if it exists
 if [ -d "$TARGET_DIR/.claude" ]; then
@@ -43,13 +43,13 @@ if [ -d "$TARGET_DIR/.claude" ]; then
 fi
 
 # Copy .claude directory with progress
-echo -e "${BLUE}📋 Copying templates to $TARGET_DIR/.claude${NC}"
+echo -e "${BLUE}📋 Copying context engineering system to $TARGET_DIR/.claude${NC}"
 cp -r "$SCRIPT_DIR/.claude" "$TARGET_DIR/"
 
 # Verify copy succeeded
 COPIED_COUNT=$(find "$TARGET_DIR/.claude" -name "*.md" 2>/dev/null | wc -l | xargs)
-if [ "$COPIED_COUNT" != "$TEMPLATE_COUNT" ]; then
-    echo "❌ Error: Copy verification failed ($COPIED_COUNT != $TEMPLATE_COUNT files)"
+if [ "$COPIED_COUNT" != "$CONTEXT_COUNT" ]; then
+    echo "❌ Error: Copy verification failed ($COPIED_COUNT != $CONTEXT_COUNT files)"
     exit 1
 fi
 
@@ -57,36 +57,38 @@ fi
 if [ ! -f "$TARGET_DIR/CLAUDE.md" ]; then
     echo "📝 Creating CLAUDE.md project memory file"
     cat > "$TARGET_DIR/CLAUDE.md" << 'EOF'
-# Claude Code Project
+# Claude Context Architect Project
 
 **Project Type**: [Your project type here]
 **Tech Stack**: [Your technology stack]
 
-## Template Library
+## Context Engineering System
 
-Claude Code template library installed with 64 active commands.
+Claude Context Architect installed - THE definitive Claude Code setup tool.
 
-To customize templates automatically, run:
+To begin 30+ minute consultation, run:
 ```
-/adapt-to-project
+/begin-consultation
 ```
 
-This will detect your project type and replace all placeholders automatically.
+This will start interactive consultation with specialized agents to create your context system.
 
-## 🚀 Commands That Work Right Now
+## 🚀 Ready for Consultation
 
-These 5 commands work immediately (no customization needed):
-- `/quick-help` - Command guide and help system
-- `/quick-task` - Universal task execution (any language/framework)
-- `/quick-dev` - Development assistance and code review
-- `/quick-quality` - Code quality analysis and fixes
-- `/quick-test` - Testing generation and execution
+Begin with any of these consultation commands:
+- `/begin-consultation` - Start 30+ minute guided project analysis
+- `/quick-help` - Get help with consultation process
+- `/session-status` - Check current consultation progress
+- `/resume-consultation` - Continue paused consultation session
+- `/validate-context` - Test generated context effectiveness
 
-## 📚 After Customization (64 total commands)
+## 📚 After Consultation (Complete Context System)
 
-Run `/adapt-to-project` to unlock project-specific commands:
-- `/help`, `/task`, `/dev`, `/quality`, `/test` (enhanced versions)
-- Plus 59 additional specialized commands for your tech stack
+After consultation, you'll have:
+- Multi-file hierarchical context system tailored to your project
+- Specialized Claude that understands your architecture and patterns
+- Session management for ongoing context evolution
+- Validation framework to ensure context effectiveness
 
 EOF
 fi
@@ -95,12 +97,12 @@ echo ""
 echo -e "${GREEN}✅ Setup Complete!${NC}"
 echo ""
 echo "📍 Location: $TARGET_DIR/.claude"
-echo "📊 Templates: $COPIED_COUNT files installed"
+echo "📊 Context System: $COPIED_COUNT files installed"
 echo ""
 echo -e "${BLUE}🎯 Next Steps:${NC}"
 echo "1. Open Claude Code in your project directory"
-echo "2. Run: /adapt-to-project"
-echo "3. Answer a few questions for automatic customization"
-echo "4. Start using your customized commands!"
+echo "2. Run: /begin-consultation"
+echo "3. Complete 30+ minute guided consultation with specialized agents"
+echo "4. Get Claude that truly understands YOUR project!"
 echo ""
-echo -e "${YELLOW}💡 Need help? Run /help in Claude Code${NC}"
+echo -e "${YELLOW}💡 Need help? Run /quick-help for consultation guidance${NC}"
