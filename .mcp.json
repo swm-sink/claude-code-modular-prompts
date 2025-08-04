@@ -12,9 +12,9 @@
       "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "/Users/smenssink/conductor/repo/claude-code-modular-prompts/raleigh"],
       "env": {}
     },
-    "template-validator": {
+    "context-validator": {
       "command": "python",
-      "args": ["/Users/smenssink/conductor/repo/claude-code-modular-prompts/raleigh/scripts/mcp_template_validator.py"],
+      "args": ["/Users/smenssink/conductor/repo/claude-code-modular-prompts/raleigh/scripts/mcp_context_validator.py"],
       "env": {
         "PYTHONPATH": "/Users/smenssink/conductor/repo/claude-code-modular-prompts/raleigh"
       }
@@ -22,19 +22,19 @@
   },
   "tools": {
     "filesystem": {
-      "read_file": "Enable reading template files and configurations",
-      "write_file": "Enable creating new templates with validation", 
-      "list_directory": "Browse template library structure"
+      "read_file": "Enable reading context files and configurations",
+      "write_file": "Enable creating new context patterns with validation", 
+      "list_directory": "Browse context engineering structure"
     },
     "git": {
-      "git_log": "Track template evolution and changes",
-      "git_diff": "Compare template versions",
-      "git_status": "Check template library status"
+      "git_log": "Track context system evolution and changes",
+      "git_diff": "Compare context system versions",
+      "git_status": "Check context engineering system status"
     },
-    "template-validator": {
+    "context-validator": {
       "validate_command": "Validate slash command metadata and structure",
       "check_compatibility": "Verify Claude Code compatibility",
-      "suggest_improvements": "Recommend template enhancements"
+      "suggest_improvements": "Recommend context engineering enhancements"
     }
   },
   "security": {
@@ -54,7 +54,7 @@
   },
   "integration": {
     "claude_code_version": ">=1.0.0",
-    "template_library_version": "1.0",
+    "context_system_version": "1.0",
     "compatibility_mode": "enhanced",
     "auto_discovery": true,
     "performance_monitoring": true
