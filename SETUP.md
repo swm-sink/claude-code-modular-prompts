@@ -4,14 +4,14 @@
 
 ### Method 1: Git Submodule (Recommended)
 ```bash
-git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-framework
+git submodule add https://github.com/swm-sink/claude-context-architect .claude-framework
 cd .claude-framework && ./setup.sh
 ```
 
 ### Method 2: Direct Integration
 ```bash
-git clone https://github.com/swm-sink/claude-code-modular-prompts
-cd claude-code-modular-prompts && ./setup.sh ../your-project
+git clone https://github.com/swm-sink/claude-context-architect
+cd claude-context-architect && ./setup.sh ../your-project
 ```
 
 ### Method 3: Selective Copy
