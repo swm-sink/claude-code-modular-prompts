@@ -81,7 +81,7 @@ cairo/                              # Project root
 - **Contents**: 35 commands, 5 agents, context templates
 
 ### .claude/project/ (Preserved Content)
-- **Purpose**: Original Claude Code Modular Prompts content
+- **Purpose**: Original Claude Context Architect content
 - **Lifetime**: During transformation only
 - **In Submodule**: NO - being transformed/migrated
 - **Contents**: 88 commands, 96 components, original context
