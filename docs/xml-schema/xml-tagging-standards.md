@@ -40,7 +40,7 @@
 
 ## Purpose
 
-This document establishes consistent implementation guidelines for applying XML tags across the Claude Code Modular Prompts template library. These standards ensure uniform AI consumption patterns and maintainable metadata infrastructure.
+This document establishes consistent implementation guidelines for applying XML tags across the Claude Context Architect system. These standards ensure uniform AI consumption patterns and maintainable metadata infrastructure.
 
 ## Core Tagging Principles
 

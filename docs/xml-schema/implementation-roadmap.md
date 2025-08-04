@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document provides a step-by-step implementation guide for Agent 3 to apply the XML tagging system across the Claude Code Modular Prompts template library. The roadmap is organized into four phases with specific tasks, validation checkpoints, and success criteria.
+This document provides a step-by-step implementation guide for Agent 3 to apply the XML tagging system across the Claude Context Architect system. The roadmap is organized into four phases with specific tasks, validation checkpoints, and success criteria.
 
 ## Phase 1: Core Infrastructure (Days 1-2)
 
@@ -350,7 +350,7 @@ jobs:
 ## Handoff to Agent 4
 
 Upon completion, provide:
-1. Fully tagged template library
+1. Fully tagged context engineering system
 2. Complete AI navigation system
 3. Validation results and metrics
 4. Maintenance guidelines
@@ -358,4 +358,4 @@ Upon completion, provide:
 
 ---
 
-This roadmap ensures systematic, validated implementation of the XML tagging system, enabling effective AI navigation and modular prompt assembly across the Claude Code template library.
+This roadmap ensures systematic, validated implementation of the XML tagging system, enabling effective AI navigation and modular prompt assembly across the Claude Context Architect system.
