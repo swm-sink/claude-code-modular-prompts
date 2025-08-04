@@ -4,8 +4,8 @@
 
 ```bash
 # Install 7 essential commands
-git clone https://github.com/swm-sink/claude-code-modular-prompts
-cd claude-code-modular-prompts
+git clone https://github.com/swm-sink/claude-context-architect
+cd claude-context-architect
 ./setup-minimal.sh /path/to/your/project
 
 # Test it works
