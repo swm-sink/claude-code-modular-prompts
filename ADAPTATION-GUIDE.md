@@ -61,7 +61,7 @@ project_config:
 
 ## Update Process
 
-### Future Updates from Template Library
+### Future Updates from Context Engineering System
 ```bash
 /sync-from-reference  # Get manual update instructions
 ```
