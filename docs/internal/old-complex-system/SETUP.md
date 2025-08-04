@@ -1,8 +1,8 @@
-# 🚀 Claude Code Template Setup Guide
-## Realistic Timeline: 1-2 Hours to Production-Ready Templates
+# 🚀 Claude Context Architect Setup Guide
+## Realistic Timeline: 1-2 Hours to Production-Ready Context System
 
 **Time Required**: 1-2 hours (5 min setup + 45-90 min customization)  
-**Result**: 102 customized Claude Code templates with anti-pattern prevention
+**Result**: Claude Context Architect system with anti-pattern prevention
 
 ---
 
@@ -21,7 +21,7 @@
 
 ### Method 1: Git Submodule (Recommended)
 
-Best for: Projects that want to receive template updates
+Best for: Projects that want to receive system updates
 
 **Pros**: Easy updates, clean separation, reference preservation  
 **Cons**: Requires git submodule knowledge  
@@ -31,7 +31,7 @@ Best for: Projects that want to receive template updates
 # 1. Navigate to your project root
 cd /path/to/your/project
 
-# 2. Add template library as submodule
+# 2. Add context engineering system as submodule
 git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-framework
 
 # 3. Initialize the templates
@@ -41,8 +41,8 @@ cd .claude-framework
 
 # 4. Return to project and verify
 cd ..
-ls -la .claude/         # Your customizable templates
-ls -la .claude-framework/ # Reference library (read-only)
+ls -la .claude/         # Your customizable context system
+ls -la .claude-framework/ # Reference system (read-only)
 ```
 
 ### Method 2: Direct Integration
@@ -54,7 +54,7 @@ Best for: Projects that want full control without submodules
 **Time**: 5 minutes setup + 45-90 minutes customization
 
 ```bash
-# 1. Clone the template library
+# 1. Clone the context engineering system
 git clone https://github.com/swm-sink/claude-code-modular-prompts
 
 # 2. Run integration script
@@ -64,7 +64,7 @@ cd claude-code-modular-prompts
 
 # 3. Navigate to your project and verify
 cd /path/to/your/project
-ls -la .claude/         # Your templates
+ls -la .claude/         # Your context system
 ls -la .claude-framework/ # Reference copy
 ```
 

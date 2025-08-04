@@ -1,6 +1,6 @@
-# Claude Code Template Library - Real Examples
+# Claude Context Architect - Real Examples
 
-This document shows **real before/after examples** of how to manually customize the Claude Code templates for your specific project. Each example demonstrates the manual Find & Replace process you'll need to perform.
+This document shows **real before/after examples** of how to manually customize the Claude Context Architect for your specific project. Each example demonstrates the manual Find & Replace process you'll need to perform.
 
 ## 📋 Table of Contents
 1. [Quick Reference: Standard Placeholders](#quick-reference-standard-placeholders)
@@ -323,7 +323,7 @@ For specific team processes:
 
 ## 🔄 Keeping Templates Updated
 
-When new versions of the template library are released:
+When new versions of the context system are released:
 
 1. **Check for Updates**:
    ```bash

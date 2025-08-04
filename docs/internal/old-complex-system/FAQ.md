@@ -426,7 +426,7 @@ jobs:
 - **New templates**: Community-contributed commands
 - **Anti-pattern additions**: New failure modes discovered
 - **Documentation**: Better examples and troubleshooting
-- **Component library**: New reusable prompt components
+- **Context engineering patterns**: New reusable prompt components
 
 **Staying Updated:**
 ```bash

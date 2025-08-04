@@ -1,4 +1,4 @@
-# Contributing to Claude Code Template Library
+# Contributing to Claude Context Architect
 
 Thank you for your interest in contributing! This project thrives on community contributions, especially **adaptation patterns** that help others customize the templates for their specific use cases.
 
@@ -265,6 +265,6 @@ By contributing, you agree that your contributions will be licensed under the sa
 
 ---
 
-**Thank you for making Claude Code Template Library better for everyone!** 🙏
+**Thank you for making Claude Context Architect better for everyone!** 🙏
 
 *Remember: The best contributions come from real-world usage. Share what worked for you!*

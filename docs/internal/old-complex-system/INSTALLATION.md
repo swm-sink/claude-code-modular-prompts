@@ -1,6 +1,6 @@
-# 🚀 Installation Guide - Claude Code Template Library
+# 🚀 Installation Guide - Claude Context Architect
 
-**Complete Installation and Customization Guide** - Everything you need to know to successfully install and customize 102 Claude Code templates for your project.
+**Complete Installation and Customization Guide** - Everything you need to know to successfully install and customize the Claude Context Architect for your project.
 
 ## 📋 Pre-Installation Checklist
 
@@ -33,7 +33,7 @@
 # Step 1: Navigate to your project root
 cd /path/to/your/project
 
-# Step 2: Add template library as submodule
+# Step 2: Add context engineering system as submodule
 git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-framework
 
 # Step 3: Initialize the templates
@@ -59,7 +59,7 @@ ls -la .claude-framework/
 **Time**: 5 minutes setup + 45-90 minutes customization
 
 ```bash
-# Step 1: Clone the template library
+# Step 1: Clone the context engineering system
 git clone https://github.com/swm-sink/claude-code-modular-prompts
 
 # Step 2: Run integration script
