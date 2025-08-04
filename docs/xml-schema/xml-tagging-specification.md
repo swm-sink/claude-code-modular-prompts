@@ -1,5 +1,5 @@
 # XML Tagging System Specification for AI Consumption
-## Claude Code Modular Prompts Template Library
+## Claude Context Architect Context Engineering System
 
 ### Version 1.0
 **Created**: 2025-07-31
@@ -9,13 +9,13 @@
 
 ## 1. Overview
 
-This specification defines an XML tagging system designed exclusively for AI consumption across the Claude Code Modular Prompts template library. The system complements existing YAML frontmatter while providing enhanced semantic understanding for AI systems.
+This specification defines an XML tagging system designed exclusively for AI consumption across the Claude Context Architect context engineering system. The system complements existing YAML frontmatter while providing enhanced semantic understanding for AI systems.
 
 ### Key Design Principles
 
 1. **AI-First Design**: All tags optimize for machine understanding, not human readability
 2. **Semantic Relationships**: Enable AI to understand connections between components
-3. **Progressive Disclosure Support**: Tags indicate complexity layers and user journey paths
+3. **Interactive Consultation System Support**: Tags indicate complexity layers and user journey paths
 4. **Compatibility Tracking**: Explicit component interaction validation
 5. **Context Engineering**: Tags guide AI understanding of prompt context and usage
 
@@ -189,7 +189,7 @@ This specification defines an XML tagging system designed exclusively for AI con
 </relationship_map>
 ```
 
-### 3.2 Progressive Disclosure Navigation
+### 3.2 Interactive Consultation System Navigation
 
 ```xml
 <progressive_disclosure_map>
@@ -270,7 +270,7 @@ This specification defines an XML tagging system designed exclusively for AI con
     <self_check_questions>
       <question>What is the primary purpose of this command/component?</question>
       <question>What are the required dependencies?</question>
-      <question>Which layer of progressive disclosure does this belong to?</question>
+      <question>Which layer of interactive consultation does this belong to?</question>
     </self_check_questions>
   </understanding_verification>
 </ai_context_engineering>
@@ -414,7 +414,7 @@ allowed-tools: [Read, Write, Edit, Grep, Glob, Bash]
 ### Phase 2: Relationship Mapping (Week 2)
 1. Complete component-command relationship matrix
 2. Define orchestration patterns
-3. Map progressive disclosure flows
+3. Map interactive consultation flows
 
 ### Phase 3: Context Engineering (Week 3)
 1. Tag all context documents
@@ -433,7 +433,7 @@ allowed-tools: [Read, Write, Edit, Grep, Glob, Bash]
 ### A. Common Tag Values
 
 ```xml
-<!-- Progressive Disclosure Layers -->
+<!-- Interactive Consultation System Layers -->
 <progressive_disclosure_layer>
   1 = Auto-generation (30-second success)
   2 = Guided customization (5-minute success)
