@@ -5,7 +5,7 @@ This directory contains project documentation organized by purpose and audience.
 ## Directory Structure
 
 ### User Documentation
-- **`CUSTOMIZATION-WORKFLOW-GUIDE.md`** - Step-by-step customization process
+- **`CUSTOMIZATION-WORKFLOW-GUIDE.md`** - Step-by-step context engineering setup process
 
 ### Internal Documentation (`internal/`)
 - **`claude-code-best-practices.md`** - Development guidelines
@@ -14,7 +14,7 @@ This directory contains project documentation organized by purpose and audience.
 - **`old-complex-system/`** - Historical reference materials
 
 ### Planning Documentation (`planning/`)
-- **`PROGRESSIVE-DISCLOSURE-BLUEPRINT.md`** - System architecture plans
+- **`PROGRESSIVE-DISCLOSURE-BLUEPRINT.md`** - Context-aware system architecture plans
 - **`IMPLEMENTATION-COMPLETE-FINAL-REPORT.md`** - Implementation outcomes
 - **`EXTREME-DETAIL-TRANSFORMATION-PLAN.md`** - Transformation strategy
 - **Other planning documents** - Various implementation plans and reviews
@@ -22,7 +22,7 @@ This directory contains project documentation organized by purpose and audience.
 ## Navigation Guide
 
 ### For Users
-1. Start with `CUSTOMIZATION-WORKFLOW-GUIDE.md` for adaptation help
+1. Start with `CUSTOMIZATION-WORKFLOW-GUIDE.md` for context engineering guidance
 2. See root-level `SETUP.md` and `ADAPTATION-GUIDE.md` for setup instructions
 
 ### For Developers  
