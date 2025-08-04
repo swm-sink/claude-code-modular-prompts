@@ -23,23 +23,23 @@
 /quick-dev --optimize queries   # Optimize database queries
 ```
 
-## Progressive Disclosure System
+## Context-Aware Command System
 
-### Layer 1: Auto-Generation (30 seconds)
+### Quick Commands (30 seconds)
 ```
 /quick-command search "find all TODO comments"
 /quick-command analyze "check for security issues"
 /quick-command transform "convert callbacks to async/await"
 ```
 
-### Layer 2: Guided Customization (5 minutes)
+### Guided Development (5 minutes)
 ```
 /build-command search --with-context --recursive
 /build-command analyze --security-focus --output-json
 /build-command validate --strict --auto-fix
 ```
 
-### Layer 3: Component Assembly (15-30 minutes)
+### Advanced Workflows (15-30 minutes)
 ```
 /assemble-command security-audit
 /assemble-command data-pipeline
