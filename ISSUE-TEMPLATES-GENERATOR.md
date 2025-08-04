@@ -89,10 +89,10 @@ Based on competitive research findings, validate or revise our "THE definitive" 
 - [ ] All deliverables completed
 - [ ] Positioning validated or revised with justification
 - [ ] COMPETITIVE-ANALYSIS.md updated with decision
-- [ ] Ready for template library cleanup phase
+- [ ] Ready for context engineering system cleanup phase
 ```
 
-### **T0.03: Audit CLAUDE.md for template library references**
+### **T0.03: Audit CLAUDE.md for context engineering system references**
 
 ```markdown
 ## Task Details
@@ -102,18 +102,18 @@ Based on competitive research findings, validate or revise our "THE definitive" 
 **Dependencies**: None (parallel with T0.01-T0.02)
 
 ## Description
-Conduct line-by-line audit of CLAUDE.md to identify ALL template library references that need to be removed for Context Architect rebrand.
+Conduct line-by-line audit of CLAUDE.md to identify ALL context engineering system references that need to be removed for Context Architect rebrand.
 
 ## Deliverables
 - [ ] Read entire CLAUDE.md line by line
-- [ ] Search for "template", "library", "progressive disclosure", "component"
+- [ ] Search for outdated terminology that needs updating
 - [ ] Document every reference with line numbers
-- [ ] Create comprehensive list in TEMPLATE-LIBRARY-AUDIT.md
+- [ ] Create comprehensive list in CONTEXT-ENGINEERING-AUDIT.md
 - [ ] Categorize references by type (header, metadata, content)
 
 ## Context Files Referenced
 - Read: `CLAUDE.md`
-- Create: `TEMPLATE-LIBRARY-AUDIT.md`
+- Create: `CONTEXT-ENGINEERING-AUDIT.md`
 
 ## Validation Criteria
 - [ ] Every template/library reference documented with line number
@@ -134,45 +134,45 @@ Conduct line-by-line audit of CLAUDE.md to identify ALL template library referen
 - [ ] Ready for T0.04 systematic removal
 ```
 
-### **T0.04: Remove ALL template library references from CLAUDE.md**
+### **T0.04: Remove ALL context engineering system references from CLAUDE.md**
 
 ```markdown
 ## Task Details
 **Task ID**: T0.04
 **Phase**: Phase 0 - Context Cleanup & Foundation
 **Estimated Time**: 45 minutes
-**Dependencies**: T0.03 (Template library audit)
+**Dependencies**: T0.03 (Context engineering audit)
 
 ## Description
-Systematically remove ALL template library references from CLAUDE.md and replace with Context Architect equivalent language.
+Systematically remove ALL context engineering system references from CLAUDE.md and replace with Context Architect equivalent language.
 
 ## Deliverables
-- [ ] Replace every reference identified in TEMPLATE-LIBRARY-AUDIT.md
+- [ ] Replace every reference identified in CONTEXT-ENGINEERING-AUDIT.md
 - [ ] Update title to "Claude Context Architect"
 - [ ] Replace all template/library language with context engineering language
 - [ ] Update project metadata XML
 - [ ] Verify zero template references remain
 
 ## Context Files Referenced
-- Read: `TEMPLATE-LIBRARY-AUDIT.md` (from T0.03)
+- Read: `CONTEXT-ENGINEERING-AUDIT.md` (from T0.03)
 - Update: `CLAUDE.md`
 - Reference: `COMPETITIVE-ANALYSIS.md` (for positioning language)
 
 ## Validation Criteria
-- [ ] Zero mentions of "template", "library", "progressive disclosure"
+- [ ] Zero mentions of outdated terminology
 - [ ] Title clearly states "Claude Context Architect"
 - [ ] All project metadata updated to reflect context engineering focus
 - [ ] Language consistently uses context engineering terminology
 
 ## Implementation Notes
 - Use find/replace systematically for each reference
-- Replace "template library" → "context engineering system"
-- Replace "progressive disclosure" → "interactive consultation"
+- Replace outdated terminology with modern equivalents
+- Update to context engineering language throughout
 - Update XML metadata project_type to "automated_setup_and_onboarding_tool"
 
 ## Definition of Done
 - [ ] All deliverables completed
-- [ ] CLAUDE.md has zero template library references
+- [ ] CLAUDE.md has zero outdated references
 - [ ] Context Architect identity clearly established
 - [ ] Ready for README.md cleanup
 ```
