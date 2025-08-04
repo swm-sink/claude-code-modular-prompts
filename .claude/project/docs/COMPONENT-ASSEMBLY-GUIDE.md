@@ -1,9 +1,9 @@
-# Component Assembly Guide
-**Layer 3: Advanced Component Assembly System**
+# Context Pattern Assembly Guide
+**Layer 3: Advanced Context Pattern Assembly System**
 
 ## Overview
 
-The Component Assembly System (Layer 3) is designed for power users who need maximum flexibility and control over their Claude Code workflows. This system allows you to combine individual components to create sophisticated, custom commands tailored to your specific needs.
+The Context Pattern Assembly System (Layer 3) is designed for power users who need maximum flexibility and control over their Claude Code workflows. This system allows you to combine individual context patterns to create sophisticated, custom commands tailored to your specific needs.
 
 ## Who Should Use Layer 3?
 
@@ -16,16 +16,16 @@ The Component Assembly System (Layer 3) is designed for power users who need max
 **When to Use Layer 3:**
 - Layer 1 (auto-generation) is too simple
 - Layer 2 (guided customization) doesn't offer enough control
-- You need to combine multiple specialized components
+- You need to combine multiple specialized context patterns
 - You're building complex, multi-step workflows
 - You need enterprise-grade features and validation
 
-## Component Library Overview
+## Context Pattern Library Overview
 
-### 🧩 Atomic Components (21 components)
+### 🧩 Context Patterns (21 patterns)
 **Simple, single-purpose building blocks:**
 
-#### Input/Output Components
+#### Input/Output Patterns
 - `file-reader` - Read files with various input methods
 - `file-writer` - Write/update files with safety checks
 - `parameter-parser` - Parse command arguments and options

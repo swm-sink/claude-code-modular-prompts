@@ -1,14 +1,14 @@
-# Template Library vs User Workspace Separation
+# Context Engineering System vs User Workspace Separation
 
 ## Overview
-This document defines the clear architectural separation between the template library (reference implementation) and user workspaces (customized implementations).
+This document defines the clear architectural separation between the context engineering system (reference implementation) and user workspaces (customized implementations).
 
 ## Core Concept
 
-### Template Library (This Repository)
-**Purpose**: Reference implementation with placeholders for customization
+### Context Engineering System (This Repository)
+**Purpose**: Reference implementation with context patterns for customization
 **Location**: `claude-code-modular-prompts` repository
-**Usage**: Source of truth for templates and patterns
+**Usage**: Source of truth for context patterns and configurations
 
 ### User Workspace (Your Project)
 **Purpose**: Customized implementation with project-specific values
@@ -17,12 +17,12 @@ This document defines the clear architectural separation between the template li
 
 ## Architectural Separation
 
-### Template Library Structure
+### Context Engineering System Structure
 ```
-claude-code-modular-prompts/          # Template library root
+claude-code-modular-prompts/          # Context engineering system root
 ├── .claude/                          # Template implementation
-│   ├── TEMPLATE-LIBRARY-ARCHITECTURE.md
-│   ├── commands/                     # 102 command templates with placeholders
+│   ├── CONTEXT-SYSTEM-ARCHITECTURE.md
+│   ├── commands/                     # 102 context-aware commands with placeholders
 │   │   ├── core/                    # Essential commands
 │   │   ├── deprecated/              # 38 archived commands
 │   │   ├── development/             # Development workflow

@@ -1,9 +1,9 @@
-# Progressive Disclosure System
-**Three-Layer Architecture for Claude Code Command Generation**
+# Context-Aware Command System
+**Three-Layer Context-Aware Architecture for Claude Code Command Generation**
 
 ## System Overview
 
-The Progressive Disclosure System solves the complexity paradox in prompt engineering by providing three distinct layers of interaction, each optimized for different user needs and expertise levels.
+The Context-Aware Command System solves the complexity paradox in prompt engineering by providing three distinct layers of interaction, each optimized for different user needs and expertise levels.
 
 ### The Complexity Challenge
 
@@ -12,13 +12,13 @@ Traditional approaches fail because they try to serve everyone with one solution
 - **Too Complex**: Casual users are overwhelmed and abandon the system  
 - **One-Size-Fits-All**: Satisfies no one completely
 
-### Our Solution: Progressive Disclosure
+### Our Solution: Context-Aware Design
 
 Instead of forcing all users through the same interface, we provide three distinct layers:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    PROGRESSIVE DISCLOSURE                    │
+│                  CONTEXT-AWARE COMMAND SYSTEM               │
 ├─────────────────────────────────────────────────────────────┤
 │ Layer 1: Auto-Generation        80% users, 30-second success│
 │ Layer 2: Guided Customization   15% users, 5-minute success │  
@@ -26,7 +26,7 @@ Instead of forcing all users through the same interface, we provide three distin
 └─────────────────────────────────────────────────────────────┘
 ```
 
-## Layer 1: Auto-Generation System
+## Layer 1: Context-Aware Auto-Generation System
 
 ### Purpose
 **Instant gratification** for users who want results immediately without learning anything.

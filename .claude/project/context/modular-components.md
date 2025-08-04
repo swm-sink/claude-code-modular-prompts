@@ -1,14 +1,14 @@
-# Modular Components Reference
+# Context Engineering Patterns Reference
 
-**Comprehensive searchable reference for all 63 Claude Code framework components organized by category with descriptions, paths, and search tags.**
+**Comprehensive searchable reference for all 63 Claude Code framework context patterns organized by category with descriptions, paths, and search tags.**
 
 ## Table of Contents
 
-1. [Actions Components](#actions-components)
-2. [Analysis Components](#analysis-components)
-3. [Constitutional AI Components](#constitutional-ai-components)
-4. [Context Management Components](#context-management-components)
-5. [Git Operations Components](#git-operations-components)
+1. [Actions Patterns](#actions-patterns)
+2. [Analysis Patterns](#analysis-patterns)
+3. [Constitutional AI Patterns](#constitutional-ai-patterns)
+4. [Context Management Patterns](#context-management-patterns)
+5. [Git Operations Patterns](#git-operations-patterns)
 6. [Intelligence Components](#intelligence-components)
 7. [Interaction Components](#interaction-components)
 8. [Learning Components](#learning-components)

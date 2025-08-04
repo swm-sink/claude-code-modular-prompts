@@ -1,13 +1,13 @@
-# Progressive Disclosure System Guide
+# Context-Aware Command System Guide
 
 ## Overview
 
-The Progressive Disclosure System is a three-layer approach to command complexity that allows users to access functionality at their comfort level while providing clear escalation paths.
+The Context-Aware Command System is a three-layer approach to command complexity that allows users to access functionality at their comfort level while providing clear escalation paths.
 
 ## 🎯 Core Principles
 
-### Progressive Complexity
-- **Layer 1**: Instant success with zero learning curve (80% of users)
+### Context-Aware Complexity
+- **Layer 1**: Instant success with context awareness (80% of users)
 - **Layer 2**: Guided customization with smart options (15% of users)  
 - **Layer 3**: Professional assembly with full control (5% of users)
 
@@ -27,7 +27,7 @@ The Progressive Disclosure System is a three-layer approach to command complexit
 **Purpose**: Instant command generation with intelligent defaults
 
 **Features**:
-- Template-based auto-generation
+- Context-based auto-generation
 - Intelligent context detection
 - Zero configuration required
 - Immediate functional output
