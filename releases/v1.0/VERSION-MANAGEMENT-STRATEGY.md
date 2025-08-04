@@ -1,8 +1,8 @@
-# Version Management Strategy - Claude Code Template Library
+# Version Management Strategy - Claude Context Architect
 
 **Document Version**: 1.0  
 **Effective Date**: 2025-07-29  
-**Scope**: Template library versioning, release management, and update procedures
+**Scope**: Context engineering system versioning, release management, and update procedures
 
 ---
 
@@ -12,11 +12,11 @@
 Establish a robust versioning strategy that enables:
 - **Stable releases** with clear compatibility guarantees
 - **Smooth updates** for existing installations
-- **Backward compatibility** for customized templates
+- **Backward compatibility** for customized context patterns
 - **Clear communication** of breaking changes
 
 ### Versioning Philosophy
-- **Template users first** - Minimize disruption to customized installations
+- **Context engineering users first** - Minimize disruption to customized installations
 - **Semantic clarity** - Version numbers convey clear meaning about changes
 - **Documentation-driven** - All changes documented with migration guides
 - **Release stability** - Production releases undergo comprehensive testing
