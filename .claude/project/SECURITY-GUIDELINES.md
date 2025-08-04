@@ -1,4 +1,4 @@
-# Security Guidelines for Claude Code Modular Prompts
+# Security Guidelines for Claude Context Architect
 
 ## Overview
 This document outlines security best practices and remediation measures implemented in Step 87.
