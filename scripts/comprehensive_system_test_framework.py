@@ -3,12 +3,12 @@
 Comprehensive System Testing Framework
 ======================================
 
-Master test suite for validating all layers of the Progressive Disclosure System
+Master test suite for validating all layers of the Interactive Consultation System System
 and ensuring the Claude Code Modular Prompts project works as documented.
 
 Test Coverage:
 - 88 Claude Code commands with YAML compliance
-- 3-layer Progressive Disclosure System functionality
+- 3-layer Interactive Consultation System System functionality
 - 91 component library integration
 - Documentation accuracy verification
 - End-to-end workflow validation
@@ -77,12 +77,12 @@ class ComprehensiveSystemTester:
         print("\n📋 Phase 1: YAML Compliance Testing")
         self.test_yaml_compliance()
         
-        # Phase 2: Progressive Disclosure System Testing
-        print("\n🎯 Phase 2: Progressive Disclosure System Testing")
+        # Phase 2: Interactive Consultation System System Testing
+        print("\n🎯 Phase 2: Interactive Consultation System System Testing")
         self.test_progressive_disclosure_system()
         
-        # Phase 3: Component Library Testing
-        print("\n🧩 Phase 3: Component Library Testing")
+        # Phase 3: Specialized Agent System Testing
+        print("\n🧩 Phase 3: Specialized Agent System Testing")
         self.test_component_library()
         
         # Phase 4: Integration Testing
@@ -211,8 +211,8 @@ class ComprehensiveSystemTester:
             print(f"    ❌ Deprecated 'tools' fields found in {len(deprecated_tools_found)} files")
     
     def test_progressive_disclosure_system(self):
-        """Test all three layers of Progressive Disclosure System"""
-        print("  Testing 3-layer Progressive Disclosure System...")
+        """Test all three layers of Interactive Consultation System System"""
+        print("  Testing 3-layer Interactive Consultation System System...")
         
         # Test Layer 1: Quick Command
         layer1_path = self.commands_dir / "core" / "quick-command.md"
@@ -306,7 +306,7 @@ class ComprehensiveSystemTester:
                 "assemble-command.md not found"
             ))
         
-        print("    ✅ Progressive Disclosure System structure validated")
+        print("    ✅ Interactive Consultation System System structure validated")
     
     def test_component_library(self):
         """Test the 91-component library"""
@@ -371,7 +371,7 @@ class ComprehensiveSystemTester:
                 "Atomic components directory not found"
             ))
         
-        print(f"    ✅ Component Library: {actual_count} components verified")
+        print(f"    ✅ Specialized Agent System: {actual_count} components verified")
     
     def test_system_integration(self):
         """Test cross-layer integration and workflows"""
@@ -415,13 +415,13 @@ class ComprehensiveSystemTester:
         
         if upgrade_paths >= 3:
             self.test_results.append(TestReport(
-                "Progressive Disclosure Upgrade Paths",
+                "Interactive Consultation System Upgrade Paths",
                 TestResult.PASS,
                 f"Found upgrade path references in {upgrade_paths} files"
             ))
         else:
             self.test_results.append(TestReport(
-                "Progressive Disclosure Upgrade Paths",
+                "Interactive Consultation System Upgrade Paths",
                 TestResult.WARNING,
                 f"Limited upgrade path documentation: {upgrade_paths} references"
             ))
@@ -465,18 +465,18 @@ class ComprehensiveSystemTester:
                     f"CLAUDE.md component count doesn't match actual {self.expected_component_count}"
                 ))
             
-            # Check Progressive Disclosure claims
+            # Check Interactive Consultation System claims
             if "progressive disclosure" in content.lower() and "3-layer" in content.lower():
                 self.test_results.append(TestReport(
-                    "Documentation Progressive Disclosure",
+                    "Documentation Interactive Consultation System",
                     TestResult.PASS,
-                    "CLAUDE.md correctly documents 3-layer Progressive Disclosure System"
+                    "CLAUDE.md correctly documents 3-layer Interactive Consultation System System"
                 ))
             else:
                 self.test_results.append(TestReport(
-                    "Documentation Progressive Disclosure",
+                    "Documentation Interactive Consultation System",
                     TestResult.WARNING,
-                    "Progressive Disclosure System not prominently documented"
+                    "Interactive Consultation System System not prominently documented"
                 ))
         else:
             self.test_results.append(TestReport(
@@ -548,7 +548,7 @@ class ComprehensiveSystemTester:
         
         if not critical_failures:
             print("   ✅ All critical systems operational")
-            print("   ✅ Progressive Disclosure System validated")
+            print("   ✅ Interactive Consultation System System validated")
             print("   ✅ Component library accessible")
             print("   ✅ Documentation accuracy verified")
             print("   🚀 SYSTEM STATUS: PRODUCTION READY")
