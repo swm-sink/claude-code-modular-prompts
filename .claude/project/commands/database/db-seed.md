@@ -158,7 +158,7 @@ credentials_protected = sum(1 for c in protected_configs.values() if c.get("cred
 
 🔒 **SECURITY NOTICE**: {credentials_protected} database credential(s) detected and masked for protection
 
-## v1.0 Progressive Disclosure Integration
+## v1.0 Interactive Consultation Integration
 
 ### 🚀 Layer 1: Quick Seed (via /quick-command)
 ```bash

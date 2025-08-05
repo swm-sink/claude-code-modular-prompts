@@ -127,7 +127,7 @@ estimated_duration = estimate_migration_time()
 - Replication lag: **ACCEPTABLE** (<2 seconds)
 - Estimated duration: **{estimated_duration}**
 
-## v1.0 Progressive Disclosure Integration
+## v1.0 Interactive Consultation Integration
 
 ### 🚀 Layer 1: Quick Migration (via /quick-command)
 ```bash
