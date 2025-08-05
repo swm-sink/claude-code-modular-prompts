@@ -1,6 +1,6 @@
 ---
 name: /welcome
-description: Interactive welcome and onboarding system for new users of the template library (v1.0)
+description: Interactive welcome and onboarding system for new users of the context engineering system (v1.0)
 version: "1.0"
 usage: '[beginner|intermediate|advanced|validate|quick-start]'
 allowed-tools:
@@ -153,9 +153,9 @@ progressive-disclosure:
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-# /welcome - Interactive Template Library Welcome (v1.0)
+# /welcome - Interactive Context Engineering System Welcome (v1.0)
 
-Welcome to the Claude Code Modular Prompts Template Library! This enhanced interactive guide will help you get started based on your experience level with built-in validation and progressive disclosure.
+Welcome to the Claude Context Architect Context Engineering System! This enhanced interactive guide will help you get started based on your experience level with built-in validation and progressive disclosure.
 
 ## 🚀 Quick Start Options
 
@@ -179,7 +179,7 @@ Welcome to the Claude Code Modular Prompts Template Library! This enhanced inter
 
 **Enhanced for v1.0 with validation and error handling**
 
-If you're new to Claude Code template libraries:
+If you're new to Claude Code context engineering systems:
 
 ### Pre-Setup Validation:
 ```bash
