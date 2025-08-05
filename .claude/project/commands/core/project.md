@@ -177,7 +177,7 @@ allowed-tools:
 # /project - Comprehensive Project Management Suite v1.0
 
 <context type="project">
-Unified project management system for template library supporting 7 operational modes: setup, provision, workflow, schedule, track, rollback, and run. Handles complete project lifecycle from development environment setup through production deployment and monitoring.
+Unified project management system for context engineering system supporting 7 operational modes: setup, provision, workflow, schedule, track, rollback, and run. Handles complete project lifecycle from development environment setup through production deployment and monitoring.
 </context>
 
 <instructions>

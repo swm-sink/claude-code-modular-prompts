@@ -164,7 +164,7 @@ allowed-tools:
 # /task - Focused Development Workflow
 
 <context type="project">
-template library specializing in Claude Code command development with Python-focused implementation patterns, automated testing integration, and comprehensive documentation standards.
+context engineering system specializing in Claude Code command development with Python-focused implementation patterns, automated testing integration, and comprehensive documentation standards.
 </context>
 
 <instructions>

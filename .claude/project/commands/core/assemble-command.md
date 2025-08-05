@@ -1,6 +1,6 @@
 ---
 name: assemble-command
-description: Layer 3 Progressive Disclosure - Advanced component assembly for professional workflows with 96 components and enterprise capabilities
+description: Layer 3 Interactive Consultation - Advanced component assembly for professional workflows with 96 components and enterprise capabilities
 category: core
 parameters: 
   - name: WORKFLOW_TYPE
@@ -29,7 +29,7 @@ prerequisites:
   - "Comfort with 15-30 minute assembly process"
   - "Need for complex, reusable workflows"
 output_format: structured
-tags: [professional-assembly, progressive-disclosure, layer-3, enterprise-grade, component-library, v2-enhanced]
+tags: [professional-assembly, interactive-consultation, layer-3, enterprise-grade, component-library, v2-enhanced]
 version: "1.0"
 author: "template-library"
 last_updated: "2025-07-31"
@@ -146,7 +146,7 @@ allowed-tools:
   
   <knowledge_dependencies>
     <required_context>
-      <context_file ref=".claude/context/progressive-disclosure-guide.md" importance="critical"/>
+      <context_file ref=".claude/context/interactive-consultation-guide.md" importance="critical"/>
       <context_file ref=".claude/components/COMPONENT-LIBRARY-INDEX.md" importance="critical"/>
       <context_file ref=".claude/context/component-assembly-patterns.md" importance="high"/>
     </required_context>
@@ -181,7 +181,7 @@ allowed-tools:
 # 🔧 Layer 3: Professional Assembly v1.0
 
 <context type="project">
-Progressive Disclosure System Layer 3 for template library providing enterprise-grade component assembly with 96 components across 6 professional categories. Designed for power users (5% of users) requiring maximum flexibility, complex workflow orchestration, and 15-30 minute professional assembly processes.
+Interactive Consultation System Layer 3 for context engineering system providing enterprise-grade component assembly with 96 components across 6 professional categories. Designed for power users (5% of users) requiring maximum flexibility, complex workflow orchestration, and 15-30 minute professional assembly processes.
 </context>
 
 <instructions>
@@ -316,7 +316,7 @@ Execute advanced component assembly using $WORKFLOW_TYPE, $MODE, $TEMPLATE_NAME,
 - **Coordination**: multi-agent-coordination, distributed-intelligence, collaborative-reasoning
 - **Advanced Reasoning**: react-reasoning, tree-of-thoughts-framework, strategic-planning
 
-## 🔄 Progressive Disclosure Navigation
+## 🔄 Interactive Consultation Navigation
 
 ### **Current Layer (Layer 3):**
 **Perfect for**: Power users, enterprise requirements, complex workflows, maximum control

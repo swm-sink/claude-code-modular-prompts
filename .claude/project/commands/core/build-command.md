@@ -1,6 +1,6 @@
 ---
 name: build-command
-description: Layer 2 Progressive Disclosure - Generate commands with intelligent guided customization options and 5-minute success guarantee
+description: Layer 2 Interactive Consultation - Generate commands with intelligent guided customization options and 5-minute success guarantee
 category: core
 parameters: 
   - name: TYPE
@@ -24,7 +24,7 @@ prerequisites:
   - "Understanding of desired command functionality"
   - "Basic familiarity with customization needs"
 output_format: structured
-tags: [guided-customization, progressive-disclosure, layer-2, smart-options, v2-enhanced]
+tags: [guided-customization, interactive-consultation, layer-2, smart-options, v2-enhanced]
 version: "1.0"
 author: "template-library"
 last_updated: "2025-07-31"
@@ -137,7 +137,7 @@ allowed-tools:
   
   <knowledge_dependencies>
     <required_context>
-      <context_file ref=".claude/context/progressive-disclosure-guide.md" importance="critical"/>
+      <context_file ref=".claude/context/interactive-consultation-guide.md" importance="critical"/>
       <context_file ref=".claude/context/customization-patterns.md" importance="high"/>
       <context_file ref=".claude/context/option-filtering-rules.md" importance="high"/>
     </required_context>
@@ -171,7 +171,7 @@ allowed-tools:
 # 🛠️ Layer 2: Guided Customization v1.0
 
 <context type="project">
-Progressive Disclosure System Layer 2 for template library providing intelligent guided customization with smart option filtering. Bridges the gap between Layer 1 auto-generation and Layer 3 professional assembly with 5-minute success guarantee and maximum 5 customization options.
+Interactive Consultation System Layer 2 for context engineering system providing intelligent guided customization with smart option filtering. Bridges the gap between Layer 1 auto-generation and Layer 3 professional assembly with 5-minute success guarantee and maximum 5 customization options.
 </context>
 
 <instructions>
@@ -314,7 +314,7 @@ Choose options to customize (1,2,3) or press Enter for current settings:
 Choose options to customize (1,2,3) or press Enter for current settings:
 ```
 
-## 🔄 Progressive Disclosure Navigation
+## 🔄 Interactive Consultation Navigation
 
 ### **Current Layer (Layer 2):**
 **Perfect for**: Users who need specific adjustments, controlled complexity, 5-minute customization

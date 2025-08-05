@@ -35,7 +35,7 @@ allowed-tools:
 # 🛠️ Universal Development Assistance v1.0
 
 <context type="project">
-Instant development assistance system for template library with universal language support and multi-mode analysis. Supports code review, debugging, optimization, and explanation across all technology stacks with smart context detection and framework-specific guidance.
+Instant development assistance system for context engineering system with universal language support and multi-mode analysis. Supports code review, debugging, optimization, and explanation across all technology stacks with smart context detection and framework-specific guidance.
 </context>
 
 <instructions>

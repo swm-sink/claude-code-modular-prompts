@@ -33,7 +33,7 @@ allowed-tools:
 # 🎯 Universal Task Execution v1.0
 
 <context type="project">
-Universal task execution system for template library with intelligent project analysis, language-agnostic implementation, and framework-flexible approach. Works immediately with any project structure without setup or configuration requirements.
+Universal task execution system for context engineering system with intelligent project analysis, language-agnostic implementation, and framework-flexible approach. Works immediately with any project structure without setup or configuration requirements.
 </context>
 
 <instructions>

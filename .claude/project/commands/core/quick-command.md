@@ -1,6 +1,6 @@
 ---
 name: quick-command
-description: Layer 1 Progressive Disclosure - Auto-generate complete commands from simple descriptions with 30-second success guarantee
+description: Layer 1 Interactive Consultation - Auto-generate complete commands from simple descriptions with 30-second success guarantee
 category: core
 parameters: 
   - name: TYPE
@@ -20,7 +20,7 @@ prerequisites:
   - "Clear understanding of desired command functionality"
   - "Basic description of target files or operations"
 output_format: structured
-tags: [auto-generation, progressive-disclosure, layer-1, zero-setup, v2-enhanced]
+tags: [auto-generation, interactive-consultation, layer-1, zero-setup, v2-enhanced]
 version: "1.0"
 author: "template-library"
 last_updated: "2025-07-31"
@@ -130,7 +130,7 @@ allowed-tools:
   
   <knowledge_dependencies>
     <required_context>
-      <context_file ref=".claude/context/progressive-disclosure-guide.md" importance="critical"/>
+      <context_file ref=".claude/context/interactive-consultation-guide.md" importance="critical"/>
       <context_file ref=".claude/context/command-templates.md" importance="high"/>
     </required_context>
     <helpful_context>
@@ -161,7 +161,7 @@ allowed-tools:
 # 🚀 Layer 1: Auto-Generation v1.0 
 
 <context type="project">
-Progressive Disclosure System Layer 1 for template library providing 30-second command auto-generation with zero learning curve. Supports 5 command types (search, analyze, transform, validate, report) with intelligent template selection and automatic component assembly.
+Interactive Consultation System Layer 1 for context engineering system providing 30-second command auto-generation with zero learning curve. Supports 5 command types (search, analyze, transform, validate, report) with intelligent template selection and automatic component assembly.
 </context>
 
 <instructions>
@@ -276,7 +276,7 @@ Auto-generate complete, working commands from $TYPE and $DESCRIPTION using intel
 - **Output Quality**: Consistent formatting, clear indicators, actionable messages, progress tracking
 - **Best Practices**: Claude Code conventions, security considerations, performance optimization
 
-## 🔄 Progressive Disclosure Navigation
+## 🔄 Interactive Consultation Navigation
 
 ### **Current Layer (Layer 1):**
 **Perfect for**: Newcomers, quick tasks, immediate results, zero complexity

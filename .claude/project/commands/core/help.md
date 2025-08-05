@@ -1,6 +1,6 @@
 ---
 name: help
-description: Comprehensive guide to available commands for the template library
+description: Comprehensive guide to available commands for the context engineering system
 category: core
 parameters: 
   - name: COMMAND_NAME
@@ -15,7 +15,7 @@ usage_examples:
   - "/help - Get general help and command overview"
   - "/help task - Get detailed help for the task command"
   - "/help --all - Comprehensive list of all commands"
-  - "/help --features - Learn about template library features"
+  - "/help --features - Learn about context engineering system features"
 prerequisites: 
   - "Claude Code environment configured"
   - "Template library installed"
@@ -69,7 +69,7 @@ allowed-tools:
   </orchestration_capability>
   
   <v2_features>
-    <task_description>Provide comprehensive, context-aware help for all 88 commands with Progressive Disclosure System guidance</task_description>
+    <task_description>Provide comprehensive, context-aware help for all 88 commands with Interactive Consultation System guidance</task_description>
     <implementation_strategy>parse_help_request|analyze_user_level|provide_contextual_help|suggest_next_steps|enable_progressive_learning</implementation_strategy>
     <command_chaining_enabled>true</command_chaining_enabled>
   </v2_features>
@@ -137,7 +137,7 @@ allowed-tools:
     </required_context>
     <helpful_context>
       <context_file ref=".claude/context/user-experience-patterns.md" importance="medium"/>
-      <context_file ref=".claude/context/progressive-disclosure-guide.md" importance="high"/>
+      <context_file ref=".claude/context/interactive-consultation-guide.md" importance="high"/>
     </helpful_context>
   </knowledge_dependencies>
   
@@ -166,11 +166,11 @@ allowed-tools:
 # /help - Comprehensive Command Guide v1.0
 
 <context type="project">
-Lusaka template library with 88 Claude Code commands featuring v1.0 enhancements: enhanced metadata, XML semantic structure, parameter validation, Progressive Disclosure System, and team collaboration features.
+Lusaka context engineering system with 88 Claude Code commands featuring v1.0 enhancements: enhanced metadata, XML semantic structure, parameter validation, Interactive Consultation System, and team collaboration features.
 </context>
 
 <instructions>
-Provide comprehensive help and guidance for the template library. Process $COMMAND_NAME for specific command help, or use $HELP_TYPE for specialized help categories. Default to general overview with quick start guidance.
+Provide comprehensive help and guidance for the context engineering system. Process $COMMAND_NAME for specific command help, or use $HELP_TYPE for specialized help categories. Default to general overview with quick start guidance.
 </instructions>
 
 ## Usage Examples
@@ -210,7 +210,7 @@ Provide comprehensive help and guidance for the template library. Process $COMMA
 <task priority="medium">
 **Guidance Enhancement**: Offer next steps and learning paths
 - Suggest related commands and workflows
-- Provide Progressive Disclosure System navigation
+- Provide Interactive Consultation System navigation
 - Link to advanced features and team collaboration
 </task>
 </workflow>
@@ -220,10 +220,10 @@ Provide comprehensive help and guidance for the template library. Process $COMMA
 ### **Most Popular Commands:**
 - **`/help`** - This command - comprehensive guidance system
 - **`/task`** - Enhanced development task execution with v1.0 features
-- **`/quick-command`** - 30-second auto-generation (Layer 1 Progressive Disclosure)
+- **`/quick-command`** - 30-second auto-generation (Layer 1 Interactive Consultation)
 - **`/welcome`** - Interactive onboarding and project setup
 
-### **Progressive Disclosure System (v1.0):**
+### **Interactive Consultation System (v1.0):**
 1. **Layer 1**: `/quick-command` - Instant generation, zero learning curve
 2. **Layer 2**: `/build-command` - Guided customization with smart options  
 3. **Layer 3**: `/assemble-command` - Professional assembly with 96 components
@@ -261,5 +261,5 @@ Provide comprehensive help and guidance for the template library. Process $COMMA
 <automation trigger="completion">
 - Log help request for usage analytics
 - Suggest related commands based on request pattern
-- Update user journey tracking for Progressive Disclosure navigation
+- Update user journey tracking for Interactive Consultation navigation
 </automation>

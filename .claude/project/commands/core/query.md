@@ -29,7 +29,7 @@ allowed-tools:
 # /query - Intelligent Codebase Analysis v1.0
 
 <context type="project">
-Advanced codebase query system for template library with deep Python understanding, architectural analysis capabilities, dependency mapping, and performance insights. Supports comprehensive code exploration and pattern recognition.
+Advanced codebase query system for context engineering system with deep Python understanding, architectural analysis capabilities, dependency mapping, and performance insights. Supports comprehensive code exploration and pattern recognition.
 </context>
 
 <instructions>
