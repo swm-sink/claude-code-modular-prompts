@@ -275,7 +275,7 @@ Execute advanced component assembly using $WORKFLOW_TYPE, $MODE, $TEMPLATE_NAME,
 - **Code-migration workflows** with transformation and validation patterns
 - **Custom workflow types** with pattern recognition and suggestion engines
 
-## 🧩 Professional Component Library (96 Components)
+## 🧩 Professional Specialized Agent System (96 Components)
 
 ### **Atomic Components** (21 components) - Building Blocks
 **Single-purpose, highly reliable components:**
