@@ -61,10 +61,11 @@ Creation of a multi-file hierarchical context system with your approval at every
 ```
 
 ### Session Management
-- **Pause**: Type `PAUSE` at any prompt to save progress
-- **Resume**: Run `/begin-consultation resume` to continue
+- **Pause**: Type `PAUSE` at any prompt to save progress with `/manage-session-state pause`
+- **Resume**: Run `/begin-consultation resume` or `/manage-session-state resume` to continue
 - **Skip Phase**: Use `/begin-consultation phase-2` to jump to specific phase
 - **Restart**: Run `/begin-consultation reset` to start over
+- **Session State**: Consultation state is automatically persisted in `.claude/consultation-state.json`
 
 ### What to Expect
 1. **Interactive Questions**: The system will ask about your project specifics
