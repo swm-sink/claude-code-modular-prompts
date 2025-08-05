@@ -1,6 +1,6 @@
-# Claude Code Template Library - Complete Documentation Index
+# Claude Code Context Engineering System - Complete Documentation Index
 
-This is the master index for all documentation in the Claude Code Template Library. Use this guide to navigate to the most relevant documentation for your needs.
+This is the master index for all documentation in the Claude Code Context Engineering System. Use this guide to navigate to the most relevant documentation for your needs.
 
 ## Quick Start Navigation
 
@@ -214,7 +214,7 @@ Located in `.claude/context/`, these files provide background knowledge:
 | `prompt-engineering-best-practices.md` | Effective prompt design | Creating new commands |
 | `modular-components.md` | Reusable prompt fragments | Understanding component system |
 
-### Component Library (Advanced Usage)
+### Specialized Agent System (Advanced Usage)
 
 Located in `.claude/components/`, provides reusable building blocks:
 

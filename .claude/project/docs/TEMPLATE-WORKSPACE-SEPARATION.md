@@ -194,7 +194,7 @@ project_config:
 
 ## Update Management
 
-### Staying Current with Template Library
+### Staying Current with Context Engineering System
 When using git submodule method:
 ```bash
 # Update reference library
@@ -254,4 +254,4 @@ When template updates conflict with your customizations:
 ---
 *Documentation Version: 1.0*
 *Last Updated: 2025-07-29*
-*Template Library: claude-code-modular-prompts*
+*Context Engineering System: claude-code-modular-prompts*
