@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Comprehensive Integration Testing Suite for Progressive Disclosure System
+Comprehensive Integration Testing Suite for Interactive Consultation System System
 =========================================================================
 
-Tests all aspects of the Progressive Disclosure System to validate:
+Tests all aspects of the Interactive Consultation System System to validate:
 1. Layer 1 (Auto-generation) → Layer 2 (Guided) → Layer 3 (Assembly) upgrade paths
 2. Complete user workflows from beginner to expert
 3. Cross-component integration with 91 components
@@ -22,7 +22,7 @@ from typing import Dict, List, Any, Tuple
 import yaml
 
 class ProgressiveDisclosureIntegrationTester:
-    """Comprehensive integration tester for the Progressive Disclosure System."""
+    """Comprehensive integration tester for the Interactive Consultation System System."""
     
     def __init__(self, claude_dir: str = ".claude"):
         self.claude_dir = Path(claude_dir)
@@ -38,10 +38,10 @@ class ProgressiveDisclosureIntegrationTester:
         
     def run_comprehensive_integration_tests(self) -> Dict[str, Any]:
         """Run complete integration test suite."""
-        print("🚀 Starting Comprehensive Progressive Disclosure Integration Testing")
+        print("🚀 Starting Comprehensive Interactive Consultation System Integration Testing")
         print("=" * 80)
         
-        # Test 1: Progressive Disclosure Layer Transitions
+        # Test 1: Interactive Consultation System Layer Transitions
         print("\n📊 TEST 1: Layer Transition Integration")
         self.test_layer_transitions()
         
@@ -67,7 +67,7 @@ class ProgressiveDisclosureIntegrationTester:
         
     def test_layer_transitions(self):
         """Test Layer 1 → Layer 2 → Layer 3 upgrade paths."""
-        print("Testing Progressive Disclosure layer transitions...")
+        print("Testing Interactive Consultation System layer transitions...")
         
         # Layer 1: Auto-Generation System
         layer1_results = self.test_layer1_integration()
@@ -399,7 +399,7 @@ class ProgressiveDisclosureIntegrationTester:
         self.results["documentation_alignment"] = alignment_tests
         
     def check_progressive_disclosure_promises(self) -> Dict[str, Any]:
-        """Check if Progressive Disclosure System promises match implementation."""
+        """Check if Interactive Consultation System System promises match implementation."""
         implementation_report = self.claude_dir.parent / "PROGRESSIVE-DISCLOSURE-IMPLEMENTATION-COMPLETE.md"
         
         if not implementation_report.exists():
@@ -798,7 +798,7 @@ class ProgressiveDisclosureIntegrationTester:
 
 def main():
     """Run comprehensive integration testing."""
-    print("🚀 Progressive Disclosure System - Comprehensive Integration Testing")
+    print("🚀 Interactive Consultation System System - Comprehensive Integration Testing")
     print("=" * 80)
     
     # Initialize tester
