@@ -1,4 +1,4 @@
-# Component Library Index
+# Specialized Agent System Index
 
 ## Overview
 This document provides a complete index of the 91 reusable components organized by functional domain.
@@ -271,6 +271,6 @@ Common component combinations:
 4. Archive after transition period
 
 ---
-*Component Library Version: 1.1*
+*Specialized Agent System Version: 1.1*
 *Total Components: 91*
 *Last Updated: 2025-07-31*

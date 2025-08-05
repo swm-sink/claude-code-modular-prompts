@@ -42,6 +42,6 @@ Show maximum 3-5 options to avoid choice paralysis.
 - Scoring algorithms
 
 ## Notes
-- Critical for Layer 2 Progressive Disclosure
+- Critical for Phase 2 Interactive Consultation
 - Prevents option overload
 - Enhances user experience through intelligent defaults
