@@ -16,10 +16,10 @@ dependencies:
 validation:
   pre-execution: check_claude_code_environment
   post-execution: verify_user_path_selection
-progressive-disclosure: 
-  layer-1: quick-start auto-generation
-  layer-2: guided path selection  
-  layer-3: advanced customization
+interactive-consultation: 
+  phase-1: quick-start auto-generation
+  phase-2: guided path selection  
+  phase-3: advanced customization
 ---
 
 <!-- AI_METADATA_START -->
@@ -35,7 +35,7 @@ progressive-disclosure:
 <command_metadata>
   <command_id>welcome</command_id>
   <command_count>88</command_count>
-  <progressive_disclosure_layer>N/A</progressive_disclosure_layer>
+  <interactive_consultation_layer>N/A</interactive_consultation_layer>
   
   <component_dependencies>
     <required_components>
@@ -62,7 +62,7 @@ progressive-disclosure:
   </orchestration_capability>
   
   <v2_features>
-    <task_description>Interactive onboarding system with experience-level adaptation and Progressive Disclosure System integration</task_description>
+    <task_description>Interactive onboarding system with experience-level adaptation and Interactive Consultation System integration</task_description>
     <implementation_strategy>assess_user_level|provide_contextual_guidance|demonstrate_capabilities|validate_setup|enable_next_steps</implementation_strategy>
     <command_chaining_enabled>true</command_chaining_enabled>
   </v2_features>
@@ -94,10 +94,10 @@ progressive-disclosure:
   
   <usage_context>
     <when_to_use>
-      <scenario>first_time_template_library_user</scenario>
+      <scenario>first_time_context_engineering_user</scenario>
       <scenario>returning_user_needing_refresher</scenario>
       <scenario>validating_current_setup_status</scenario>
-      <scenario>exploring_progressive_disclosure_options</scenario>
+      <scenario>exploring_interactive_consultation_options</scenario>
     </when_to_use>
     <when_not_to_use>
       <scenario>experienced_user_with_specific_task</scenario>
@@ -160,7 +160,7 @@ Welcome to the Claude Context Architect Context Engineering System! This enhance
 ## 🚀 Quick Start Options
 
 ### **Usage**: `/welcome [option]`
-- **`/welcome quick-start`** - 30-second auto-setup (Layer 1 Progressive Disclosure)
+- **`/welcome quick-start`** - 30-second auto-setup (Phase 1 Interactive Consultation)
 - **`/welcome beginner`** - Guided beginner path with validation
 - **`/welcome intermediate`** - Streamlined setup for Claude Code users  
 - **`/welcome advanced`** - Component assembly and customization
@@ -248,7 +248,7 @@ If you're experienced with template customization:
 5. **Validation Framework**: Comprehensive compatibility matrix and component interaction validation
 
 ### v1.0 Enhanced Architecture:
-- **96 Component Library**: Professional-grade building blocks across 6 categories
+- **96 Specialized Agent System**: Professional-grade building blocks across 6 categories
   - 21 Atomic Components (I/O, data processing, workflow control)
   - 15+ Analysis Components (codebase discovery, quality metrics)
   - 10+ Orchestration Components (agent orchestration, task planning)
@@ -278,9 +278,9 @@ If you're experienced with template customization:
 
 ## What's Available in v1.0
 
-### Enhanced Template Library:
+### Enhanced Context Engineering System:
 - **88 Command Templates**: 100% Claude Code compliant, organized in categories (core, quality, specialized, meta)
-- **3-Layer Progressive Disclosure System**: From 30-second auto-generation to professional assembly
+- **3-Phase Interactive Consultation System**: From 30-second auto-generation to professional assembly
 - **91 Components**: Professional-grade building blocks across 6 categories with compatibility validation
 - **Enterprise Assembly System**: Templates + validation framework for complex workflows
 
@@ -312,7 +312,7 @@ If you're experienced with template customization:
 ```
 
 ### Progressive Learning Path:
-4. **Read Enhanced Documentation**: README.md includes v1.0 installation and Progressive Disclosure guides
+4. **Read Enhanced Documentation**: README.md includes v1.0 installation and Interactive Consultation guides
 5. **Explore with Validation**: Template library includes validation options for each command
 6. **Advanced Assembly**: Use `/assemble-command` for professional-grade customization
 
@@ -336,7 +336,7 @@ If you're experienced with template customization:
 
 ## v1.0 Key Benefits
 
-**Remember**: This is now an intelligent template library with 3-layer Progressive Disclosure:
+**Remember**: This is now an intelligent context engineering system with 3-phase Interactive Consultation:
 - **Layer 1**: Zero-learning curve auto-generation for 80% of users
 - **Layer 2**: Smart guided customization for 15% of users  
 - **Layer 3**: Professional component assembly for 5% of users

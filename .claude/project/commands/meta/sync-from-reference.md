@@ -17,11 +17,11 @@ validation:
   pre-execution: Backup current .claude directory before any changes
   during-execution: Validate each file operation for safety
   post-execution: Run comprehensive validation after sync
-progressive-disclosure:
-  layer-integration: Preserves layer-specific customizations during sync
-  layer-1-protection: Quick command templates preserved
-  layer-2-protection: Customization configs maintained
-  layer-3-protection: Component assembly framework protected
+interactive-consultation:
+  layer-integration: Preserves phase-specific customizations during sync
+  phase-1-protection: Quick command templates preserved
+  phase-2-protection: Customization configs maintained
+  phase-3-protection: Component assembly framework protected
 safety-features:
   automatic-backup: Creates timestamped backup before sync
   conflict-detection: Identifies customized files before overwriting
@@ -37,11 +37,11 @@ tracking:
 
 ## 🎯 Enhanced Framework Synchronization with Safety Features
 
-**v1.0 Enhancement**: This command now provides intelligent sync capabilities with automatic backup, rollback support, and Progressive Disclosure layer protection to safely update your framework while preserving all customizations.
+**v1.0 Enhancement**: This command now provides intelligent sync capabilities with automatic backup, rollback support, and Interactive Consultation phase protection to safely update your framework while preserving all customizations.
 
 ### 🚀 What's New in v1.0
 - **Automatic Backup**: Creates timestamped backup before any changes
-- **Layer Protection**: Preserves Progressive Disclosure customizations
+- **Phase Protection**: Preserves Interactive Consultation customizations
 - **Rollback Support**: Can restore previous state if issues occur
 - **Smart Conflict Detection**: Identifies customized files before overwriting
 - **Dry Run Mode**: Preview all changes without applying them

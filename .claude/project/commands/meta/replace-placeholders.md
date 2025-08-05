@@ -20,8 +20,8 @@ validation:
   pre-execution: validate_placeholder_integrity
   during-execution: validate_each_replacement_step
   post-execution: comprehensive_placeholder_validation
-progressive-disclosure:
-  layer-integration: "Supports Layer 2 guided customization with intelligent defaults"
+interactive-consultation:
+  layer-integration: "Supports Phase 2 guided customization with intelligent defaults"
   validation-points: "Real-time validation during manual replacement process"
   error-recovery: "Built-in rollback and verification at each step"
 safety:
@@ -47,7 +47,7 @@ enhancement:
 <command_metadata>
   <command_id>replace-placeholders</command_id>
   <command_count>88</command_count>
-  <progressive_disclosure_layer>2</progressive_disclosure_layer>
+  <interactive_consultation_layer>2</interactive_consultation_layer>
   
   <component_dependencies>
     <required_components>
@@ -145,7 +145,7 @@ enhancement:
       <context_file ref=".claude/context/template-customization-guide.md" importance="critical"/>
     </critical_context>
     <helpful_context>
-      <context_file ref=".claude/context/progressive-disclosure-guide.md" importance="high"/>
+      <context_file ref=".claude/context/interactive-consultation-guide.md" importance="high"/>
       <context_file ref=".claude/context/safety-procedures.md" importance="high"/>
       <context_file ref=".claude/context/comprehensive-project-learnings.md" importance="medium"/>
     </helpful_context>
@@ -237,7 +237,7 @@ The v1.0 approach enhances the manual process with **validation, safety, and gui
 - **Smart Defaults**: Pre-filled values based on project analysis
 - **Validation During Input**: Real-time validation of provided values
 - **Cross-Reference Checking**: Ensure values are consistent and compatible
-- **Progressive Disclosure Integration**: Determine appropriate layer recommendations
+- **Interactive Consultation Integration**: Determine appropriate phase recommendations
 
 ### 📁 Phase 3: Enhanced File Coverage
 **Comprehensive file analysis with validation**
@@ -294,8 +294,8 @@ The v1.0 approach enhances the manual process with **validation, safety, and gui
 [INSERT_USER_BASE] → internal, b2b, b2c, enterprise (domain-classified)
 ```
 
-### 🧩 v1.0 Progressive Disclosure Placeholders
-**New placeholders for Layer integration**
+### 🧩 v1.0 Interactive Consultation Placeholders
+**New placeholders for Phase integration**
 
 ```yaml
 [INSERT_LAYER_PREFERENCE] → layer-1, layer-2, layer-3 (complexity-recommended)
@@ -415,7 +415,7 @@ File: .claude/commands/core/query.md (✅ backup verified)
 🔍 VALIDATION CHECKPOINTS:
 □ YAML header integrity: All 88 commands validated
 □ Component compatibility: 96 components cross-validated
-□ Progressive Disclosure: Layer configurations validated
+□ Interactive Consultation: Phase configurations validated
 □ Command functionality: Sample commands tested
 □ No orphaned placeholders: Full scan completed
 
@@ -439,7 +439,7 @@ File: .claude/commands/core/query.md (✅ backup verified)
 
 #### v1.0 Enhanced Find & Replace Tips:
 - **Editor Detection** - I provide instructions specific to your editor
-- **Batch Processing** - Efficient replacement strategies for large template libraries
+- **Batch Processing** - Efficient replacement strategies for large context engineering systems
 - **Validation Integration** - Built-in validation after each replacement step
 - **Error Recovery** - Automatic detection and recovery procedures
 
@@ -485,7 +485,7 @@ File: .claude/commands/core/query.md (✅ backup verified)
 When you're ready, I'll collect your project details with:
 - **🎯 Smart defaults** based on project analysis
 - **🔍 Real-time validation** of provided values  
-- **🧩 Progressive Disclosure integration** with layer recommendations
+- **🧩 Interactive Consultation integration** with phase recommendations
 - **📊 Comprehensive reporting** with actionable insights
 
 **Ready to experience v1.0 enhanced placeholder replacement with comprehensive validation and safety?**

@@ -22,8 +22,8 @@ validation:
   pre-execution: validate_project_structure
   during-execution: validate_each_replacement
   post-execution: comprehensive_validation_suite
-progressive-disclosure:
-  layer-integration: "Supports all three layers with intelligent mode selection"
+interactive-consultation:
+  layer-integration: "Supports all three consultation phases with intelligent mode selection"
   auto-detection: "Smart project type detection with fallback options"
   error-recovery: "Built-in rollback and error handling throughout process"
 performance:
@@ -45,7 +45,7 @@ performance:
 <command_metadata>
   <command_id>adapt-to-project</command_id>
   <command_count>88</command_count>
-  <progressive_disclosure_layer>all</progressive_disclosure_layer>
+  <interactive_consultation_layer>all</interactive_consultation_layer>
   
   <component_dependencies>
     <required_components>
@@ -89,7 +89,7 @@ performance:
   <discovery_metadata>
     <primary_discovery_path>project_customization_automation</primary_discovery_path>
     <alternative_paths>
-      <path>template_library_adaptation</path>
+      <path>context_engineering_adaptation</path>
       <path>automated_project_setup</path>
       <path>intelligent_customization</path>
     </alternative_paths>
@@ -98,7 +98,7 @@ performance:
   <relationship_map>
     <upstream_dependencies>
       <file type="context" ref=".claude/context/project-detection-patterns.md" relation="detection_methodology"/>
-      <file type="context" ref=".claude/context/progressive-disclosure-guide.md" relation="layer_integration"/>
+      <file type="context" ref=".claude/context/interactive-consultation-guide.md" relation="phase_integration"/>
       <file type="context" ref=".claude/context/replacement-validation-patterns.md" relation="validation_framework"/>
     </upstream_dependencies>
     <downstream_consumers>
@@ -116,10 +116,10 @@ performance:
   
   <usage_context>
     <when_to_use>
-      <scenario>first_time_template_library_setup</scenario>
+      <scenario>first_time_context_engineering_setup</scenario>
       <scenario>new_project_template_adaptation</scenario>
       <scenario>comprehensive_project_customization</scenario>
-      <scenario>progressive_disclosure_layer_integration</scenario>
+      <scenario>interactive_consultation_phase_integration</scenario>
     </when_to_use>
     <when_not_to_use>
       <scenario>minor_template_adjustments</scenario>
@@ -229,7 +229,7 @@ I'll perform multi-layer scanning of your project with enhanced detection capabi
 - **Container Detection**: Docker, Kubernetes configuration analysis
 - **Cloud Platform**: AWS, GCP, Azure infrastructure detection
 
-### 📊 Progressive Disclosure Integration
+### 📊 Interactive Consultation Integration
 
 Based on detected complexity, I'll automatically recommend the appropriate layer:
 - **Simple Projects** → Layer 1 (Auto-generation with `/quick-command`)
@@ -269,7 +269,7 @@ For any details I can't auto-detect, I'll ask intelligent questions with pre-fil
 🤖 Confidence: 95% - web application, TypeScript ecosystem
 🤖 Team size? [default: small] (solo/small/medium/large)  
 👤 [Enter] # Uses default
-🤖 Progressive Disclosure: Recommending Layer 2 (Guided Customization)
+🤖 Interactive Consultation: Recommending Phase 2 (Guided Customization)
 🤖 ✅ Customizing 88 templates for small team web development with TypeScript...
 ```
 
@@ -322,7 +322,7 @@ I'll automatically update **all** templates with comprehensive validation at eac
 - **Technology stacks** → Complete ecosystem replacement (React+TypeScript, Django+Postgres, etc.)
 - **Framework versions** → Version-aware replacements with compatibility checking
 
-#### Progressive Disclosure Integration:
+#### Interactive Consultation Integration:
 - **Layer 1 configs** → Quick-command templates with your project context
 - **Layer 2 configs** → Build-command configurations with smart filtering
 - **Layer 3 configs** → Assembly templates with enterprise components
@@ -356,7 +356,7 @@ I'll perform comprehensive validation with detailed reporting and actionable ins
 #### Multi-Layer Validation:
 - **Structural Validation**: YAML compliance across all 88 commands
 - **Component Compatibility**: Validate 96 components for interaction compatibility
-- **Progressive Disclosure**: Verify all three layers function correctly
+- **Interactive Consultation**: Verify all three phases function correctly
 - **Performance Validation**: Ensure optimizations don't break functionality
 - **Integration Testing**: Test cross-command functionality and workflows
 
@@ -370,7 +370,7 @@ I'll perform comprehensive validation with detailed reporting and actionable ins
 
 #### Comprehensive Success Metrics:
 - **📊 Replacement Summary**: Detailed breakdown of all 200+ replacements made
-- **🎯 Layer Integration**: Progressive Disclosure configuration status
+- **🎯 Phase Integration**: Interactive Consultation configuration status
 - **📋 Command Inventory**: 88 customized commands organized by category and complexity
 - **🧩 Component Status**: 96 components with compatibility matrix
 - **⚡ Performance Report**: Optimization results and success metrics
@@ -381,7 +381,7 @@ I'll perform comprehensive validation with detailed reporting and actionable ins
 ##### Immediate Next Steps (Personalized):
 1. **Start Here**: `/welcome [your-experience-level]` - Personalized onboarding
 2. **First Command**: Recommended command based on your project type
-3. **Layer Navigation**: Suggested Progressive Disclosure layer to begin with
+3. **Phase Navigation**: Suggested Interactive Consultation phase to begin with
 4. **Quick Wins**: 3-5 commands that provide immediate value
 5. **Advanced Features**: Relevant advanced commands for your tech stack
 
@@ -439,7 +439,7 @@ I'll perform comprehensive validation with detailed reporting and actionable ins
 🤖 Starting v1.0 intelligent project detection...
 🤖 Found package.json + docker-compose.yml - Next.js + PostgreSQL detected!
 🤖 Project: "ecommerce-dashboard" | Confidence: 97% | Domain: web-dev
-🤖 Progressive Disclosure: Recommending Layer 2 (Guided Customization)
+🤖 Interactive Consultation: Recommending Phase 2 (Guided Customization)
 🤖 Team size? [default: small] 
 👤 [Enter]
 🤖 ✅ 88 templates + 96 components customized! Layer 2 ready.

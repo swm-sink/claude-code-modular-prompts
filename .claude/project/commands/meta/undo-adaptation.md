@@ -16,11 +16,11 @@ validation:
   pre-execution: Verify backup availability before recovery
   during-execution: Validate each recovery operation
   post-execution: Run comprehensive validation after recovery
-progressive-disclosure:
-  layer-integration: Layer-aware recovery preserves appropriate customizations
-  layer-1-recovery: Quick command and template restoration
-  layer-2-recovery: Customization framework restoration
-  layer-3-recovery: Component assembly system restoration
+interactive-consultation:
+  layer-integration: Phase-aware recovery preserves appropriate customizations
+  phase-1-recovery: Quick command and template restoration
+  phase-2-recovery: Customization framework restoration
+  phase-3-recovery: Component assembly system restoration
 recovery-features:
   automatic-detection: Finds all available backups automatically
   selective-recovery: Choose specific files or directories to restore
@@ -43,7 +43,7 @@ tracking:
 
 ### 🚀 What's New in v1.0
 - **Automatic Backup Detection**: Finds all available backups and sync points
-- **Layer-Aware Recovery**: Preserves customizations by Progressive Disclosure layer
+- **Phase-Aware Recovery**: Preserves customizations by Interactive Consultation phase
 - **Selective Recovery**: Choose specific files or directories to restore
 - **Preview Mode**: See exactly what will be restored before applying
 - **Git Integration**: Seamless recovery from version control
@@ -354,8 +354,8 @@ test -d .claude/commands && echo "✓ Commands directory" || echo "✗ Commands 
 test -d .claude/components && echo "✓ Components directory" || echo "✗ Components missing"
 test -d .claude/context && echo "✓ Context directory" || echo "✗ Context missing"
 
-# Check Progressive Disclosure layers
-echo "Checking Progressive Disclosure..."
+# Check Interactive Consultation phases
+echo "Checking Interactive Consultation..."
 test -f .claude/commands/core/quick-command.md && echo "✓ Layer 1" || echo "✗ Layer 1"
 test -f .claude/commands/core/build-command.md && echo "✓ Layer 2" || echo "✗ Layer 2"
 test -f .claude/commands/core/assemble-command.md && echo "✓ Layer 3" || echo "✗ Layer 3"

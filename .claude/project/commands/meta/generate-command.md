@@ -20,8 +20,8 @@ validation:
   pre-execution: Validate task description clarity and framework compatibility
   during-execution: Monitor command generation quality and completeness
   post-execution: Verify generated command follows v1.0 standards
-progressive-disclosure:
-  layer-integration: Meta-generation across all Progressive Disclosure layers
+interactive-consultation:
+  layer-integration: Meta-generation across all Interactive Consultation phases
   escalation-path: Simple generation → framework-specific → custom templates
   de-escalation: Use pre-built templates for common patterns
 safety-measures:

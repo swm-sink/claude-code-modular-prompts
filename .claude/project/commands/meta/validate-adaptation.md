@@ -15,11 +15,11 @@ validation:
   pre-execution: Check for .claude/ directory existence
   during-execution: Validate each checklist item systematically
   post-execution: Generate readiness score and action plan
-progressive-disclosure:
-  layer-integration: Validates adaptations for all 3 layers
-  layer-1-checks: Auto-generation template readiness
-  layer-2-checks: Customization JSON configs validation
-  layer-3-checks: Component assembly framework integrity
+interactive-consultation:
+  layer-integration: Validates adaptations for all 3 phases
+  phase-1-checks: Auto-generation template readiness
+  phase-2-checks: Customization JSON configs validation
+  phase-3-checks: Component assembly framework integrity
 error-recovery:
   missing-structure: Provides recovery instructions
   incomplete-adaptation: Generates specific fix commands
@@ -43,7 +43,7 @@ export-formats:
 <command_metadata>
   <command_id>validate-adaptation</command_id>
   <command_count>88</command_count>
-  <progressive_disclosure_layer>all</progressive_disclosure_layer>
+  <interactive_consultation_layer>all</interactive_consultation_layer>
   
   <component_dependencies>
     <required_components>
@@ -111,7 +111,7 @@ export-formats:
       <scenario>post_adaptation_verification</scenario>
       <scenario>readiness_assessment_before_productive_use</scenario>
       <scenario>troubleshooting_adaptation_issues</scenario>
-      <scenario>progressive_disclosure_layer_verification</scenario>
+      <scenario>interactive_consultation_phase_verification</scenario>
     </when_to_use>
     <when_not_to_use>
       <scenario>during_active_adaptation_process</scenario>
@@ -172,12 +172,12 @@ export-formats:
 
 # Validate Adaptation (v1.0)
 
-## 🎯 Enhanced Validation with Progressive Disclosure Support
+## 🎯 Enhanced Validation with Interactive Consultation Support
 
-**v1.0 Enhancement**: This command now provides layer-aware validation with automated scanning capabilities and comprehensive readiness assessment across all three Progressive Disclosure layers.
+**v1.0 Enhancement**: This command now provides phase-aware validation with automated scanning capabilities and comprehensive readiness assessment across all three Interactive Consultation phases.
 
 ### 🚀 What's New in v1.0
-- **Layer-Aware Validation**: Specific checks for each Progressive Disclosure layer
+- **Phase-Aware Validation**: Specific checks for each Interactive Consultation phase
 - **Automated Scanning**: Uses Bash and Glob tools for systematic validation
 - **Export Capabilities**: Generate reports in multiple formats
 - **Error Recovery**: Detailed remediation for validation failures
@@ -290,7 +290,7 @@ Final score: 45% (Basic adaptation needed)
 ### Automated Validation Commands
 ```bash
 # v1.0 Enhanced validation with layer support
-echo "=== Progressive Disclosure Layer Validation ==="
+echo "=== Interactive Consultation Phase Validation ==="
 
 # Layer 1: Auto-Generation Readiness
 echo "Layer 1 - Quick Command Templates:"
@@ -461,10 +461,10 @@ RECOMMENDED ACTIONS
 
 ### Error Recovery Guidance
 
-#### Missing Progressive Disclosure Commands
+#### Missing Interactive Consultation Commands
 ```bash
 # Quick fix for missing layer commands
-echo "Installing Progressive Disclosure commands..."
+echo "Installing Interactive Consultation commands..."
 cp .claude-framework/commands/core/quick-command.md .claude/commands/core/
 cp .claude-framework/commands/core/build-command.md .claude/commands/core/
 cp .claude-framework/commands/core/assemble-command.md .claude/commands/core/
