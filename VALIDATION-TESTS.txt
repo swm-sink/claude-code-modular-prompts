@@ -1,0 +1,28 @@
+# CONTAMINATION CLEANUP VALIDATION TESTS
+
+## Test 1: Core Command Contamination
+find .claude/project/commands/core -name '*.md' -exec grep -l 'Progressive Disclosure' {} \;
+
+## Test 2: YAML Integrity  
+find .claude/project/commands/core -name '*.md' -exec head -30 {} \; | grep -E '^(name|description|usage|allowed-tools):'
+
+## Test 3: User-Visible Help Text
+grep -r 'Progressive Disclosure' .claude/project/commands/core/ || echo 'PASS: No contamination found'
+
+## Test 4: Cross-Reference Consistency
+grep -r 'template library' .claude/project/commands/ || echo 'PASS: No template library references'
+
+## Expected Results: ALL TESTS SHOULD FAIL (show contamination) BEFORE cleanup
+
+# TDD CYCLE 2: META COMMANDS VALIDATION TESTS
+
+## Test 1: Meta Command Contamination Count
+find .claude/project/commands/meta -name '*.md' -exec grep -c 'Progressive Disclosure\|Template Library\|Component Library' {} + | awk '{sum += $1} END {print "Total contaminations: " sum}'
+
+## Test 2: Specific Meta Command Contamination Detection  
+grep -r 'Progressive Disclosure\|Template Library\|Component Library' .claude/project/commands/meta/ | wc -l
+
+## Test 3: User Workflow Commands Contamination
+grep -l 'Progressive Disclosure\|Template Library\|Component Library' .claude/project/commands/meta/*.md
+
+## Expected: Tests should show ~30 contaminations before cleanup
