@@ -83,10 +83,19 @@ Creation of a multi-file hierarchical context system with your approval at every
 - **Session lost**: Check `.claude/consultation-state.json` for recovery
 - **Context conflicts**: Review generated files before finalizing
 
+## 🤖 Agent Coordination System
+This consultation uses specialized agents to provide expert analysis:
+- **Context Engineer**: Builds hierarchical context structures and navigation patterns
+- **Command Builder**: Creates project-specific Claude Code commands
+- **Research Validator**: Validates patterns with evidence-based research
+
+The consultation is orchestrated by `/coordinate-agents` which manages agent handoffs and maintains session state throughout the process.
+
 ## Next Steps
 After consultation completion:
 1. Test Claude with project-specific commands (`/task`, `/analyze`, `/debug`)
-2. Refine context using `/update-context` command
-3. Share successful patterns with your team
+2. Refine context using `/update-context` command  
+3. Use `/coordinate-agents` for advanced agent coordination tasks
+4. Share successful patterns with your team
 
-**Result**: Claude becomes a true expert in YOUR specific project, not just generic development tasks.
+**Result**: Claude becomes a true expert in YOUR specific project through coordinated specialist intelligence, not just generic development tasks.
