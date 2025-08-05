@@ -44,6 +44,7 @@ The consultation state is maintained in `.claude/consultation-state.json` with t
 
 ### Agent Coordination State
 - **active_agents**: Currently engaged agents with their specialization status
+- **agent_execution**: Agent integration system execution status and results tracking
 - **agent_outputs**: Generated content from each specialized agent with quality metrics
 - **agent_handoffs**: Completed inter-agent information transfers with validation
 - **agent_conflicts**: Any conflicts detected between agent recommendations
@@ -56,6 +57,7 @@ The consultation state is maintained in `.claude/consultation-state.json` with t
 - **Milestone Checkpoints**: Automatic saves at phase transitions and major decision points
 - **User Response Capture**: Immediate persistence after each user interaction
 - **Agent Output Preservation**: Real-time saving of specialized agent analysis and recommendations
+- **Agent Execution Tracking**: Complete tracking of agent invocations, execution status, and results through integration with `/integrate-agents`
 
 **Manual Save Operations:**
 - **On-Demand Saving**: Explicit save triggers with `/manage-session-state save`

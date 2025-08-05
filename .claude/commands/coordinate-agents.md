@@ -52,6 +52,26 @@ The system coordinates multiple specialized AI agents, each with unique expertis
 - Navigation patterns and cross-references
 - Session state for future consultation updates
 
+## ⚡ Agent Integration System
+
+### Automated Agent Execution
+The coordination system integrates with `/integrate-agents` for automated agent execution:
+```bash
+# Execute agents by phase
+/integrate-agents phase-1 /path/to/project
+/integrate-agents phase-2 /path/to/project  
+/integrate-agents phase-3 /path/to/project
+
+# Execute individual agents
+/integrate-agents context-engineer /path/to/project
+```
+
+### Integration Architecture
+- **Agent Definitions**: Specialized agents defined in `.claude/agents/`
+- **Execution Scripts**: `scripts/integrate-agents.sh` and `scripts/invoke-agent.sh`
+- **Session Integration**: All agent executions tracked in consultation state
+- **Quality Assurance**: Agent boundaries enforced through integration system
+
 ## 🔄 Agent Handoff Protocols & Quality Assurance
 
 ### Strict Agent Specialization Boundaries
