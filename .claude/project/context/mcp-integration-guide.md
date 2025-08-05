@@ -6,7 +6,7 @@
 
 MCP integration enables the template library to maintain persistent memory across sessions, learn from user interactions, and provide context-aware automation that improves over time.
 
-## Core MCP Capabilities for Template Library
+## Core MCP Capabilities for Context Engineering System
 
 ### 1. Persistent Session Memory
 ```json

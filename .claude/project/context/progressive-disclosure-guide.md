@@ -154,7 +154,7 @@ The Context-Aware Command System is a three-layer approach to command complexity
 
 ## 🔗 Integration with Core Systems
 
-### Template Library Integration
+### Context Engineering System Integration
 - Templates support all three layers
 - Layer-appropriate examples and documentation
 - Consistent experience across command types
@@ -171,4 +171,4 @@ The Context-Aware Command System is a three-layer approach to command complexity
 
 ---
 
-**Usage**: This guide should be referenced by all Progressive Disclosure commands (`quick-command`, `build-command`, `assemble-command`) and any commands implementing layer-based functionality.
+**Usage**: This guide should be referenced by all Interactive Consultation commands (`quick-command`, `build-command`, `assemble-command`) and any commands implementing phase-based functionality.

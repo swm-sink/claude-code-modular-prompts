@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide documents proven patterns for Layer 2 guided customization in the Progressive Disclosure System, specifically for the `/build-command` system and related customization workflows.
+This guide documents proven patterns for Phase 2 guided customization in the Interactive Consultation System, specifically for the `/build-command` system and related customization workflows.
 
 ## 🎯 Core Customization Principles
 
@@ -161,7 +161,7 @@ Command Type: "search"
 
 ## 🔗 Integration Patterns
 
-### Progressive Disclosure Integration
+### Interactive Consultation Integration
 - **Layer 1 Foundation**: Build upon auto-generated baseline from quick-command
 - **Layer 3 Escalation**: Provide clear path to assemble-command for complex needs
 - **Bidirectional Flow**: Support both escalation and de-escalation
