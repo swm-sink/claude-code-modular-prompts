@@ -122,7 +122,7 @@ Comprehensive CI/CD setup with automated configuration and integration.
 ### ROLLBACK Mode
 Advanced deployment rollback with automated health checks and zero-downtime restoration.
 
-## V1.0 Progressive Disclosure Examples
+## V1.0 Interactive Consultation Examples
 
 ### Layer 1 (Simple Pipeline)
 ```bash

@@ -223,7 +223,7 @@ Generated files for your project:
 
 Which template would you like to use for your project?
 
-## V1.0 Progressive Disclosure Examples
+## V1.0 Interactive Consultation Examples
 
 ### Layer 1 (Auto-Configuration)
 ```bash

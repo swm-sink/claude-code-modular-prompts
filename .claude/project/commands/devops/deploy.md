@@ -178,7 +178,7 @@ Post-deployment for your project:
 
 Which environment would you like to deploy to? (Environment will be validated for security compliance)
 
-## V1.0 Progressive Disclosure Examples
+## V1.0 Interactive Consultation Examples
 
 ### Layer 1 (One-Click Deploy)
 ```bash

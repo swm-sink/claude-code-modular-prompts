@@ -174,7 +174,7 @@ Your workflow requires:
 
 What type of rollback do you need to perform?
 
-## V1.0 Progressive Disclosure Examples
+## V1.0 Interactive Consultation Examples
 
 ### Layer 1 (Instant Rollback)
 ```bash

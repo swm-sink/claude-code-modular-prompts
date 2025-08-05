@@ -39,7 +39,7 @@ security: input-validation-framework.md
 # Run CI/CD Pipeline for your project (v1.0)
 
 ## V1.0 Enhanced Features
-- 🚀 **Progressive Disclosure Integration**: Seamlessly works across all layers
+- 🚀 **Interactive Consultation Integration**: Seamlessly works across all phases
 - 🛡️ **Advanced Safety Mechanisms**: Automatic rollback and validation gates
 - 🔄 **Intelligent Error Recovery**: Self-healing pipeline execution
 - 📊 **Real-time Monitoring**: Live pipeline status and resource tracking
@@ -241,7 +241,7 @@ Common issues for GitHub Actions:
 
 Which pipeline would you like to run?
 
-## V1.0 Progressive Disclosure Examples
+## V1.0 Interactive Consultation Examples
 
 ### Layer 1 (Quick Start)
 ```bash
