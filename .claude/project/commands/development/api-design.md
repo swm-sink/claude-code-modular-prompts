@@ -18,8 +18,8 @@ validation:
   pre-execution: "Validate API design patterns and REST compliance"
   during-execution: "Monitor schema validation and endpoint consistency"
   post-execution: "Verify generated API documentation and test coverage"
-progressive-disclosure:
-  layer-integration: "Layer 1: Basic endpoints, Layer 2: Authentication/validation, Layer 3: Full API architecture"
+interactive-consultation:
+  layer-integration: "Phase 1: Basic endpoints, Phase 2: Authentication/validation, Phase 3: Full API architecture"
   options:
     - name: basic
       description: "Simple CRUD endpoints with standard patterns"
@@ -46,21 +46,21 @@ performance:
 
 I'll help you design **RESTful** APIs with enterprise-grade patterns, automated scaffolding, and comprehensive validation.
 
-## 🚀 Progressive Disclosure Layers
+## 🚀 Interactive Consultation Phases
 
-### Layer 1: Quick API Generation (30 seconds)
+### Phase 1: Quick API Generation (30 seconds)
 ```bash
 /api-design users GET    # Generate basic user list endpoint
 /api-design posts POST   # Create post creation endpoint
 ```
 
-### Layer 2: Enhanced API Features (5 minutes)
+### Phase 2: Enhanced API Features (5 minutes)
 ```bash
 /api-design users GET --with-pagination --with-filtering
 /api-design auth POST --with-jwt --with-refresh-tokens
 ```
 
-### Layer 3: Enterprise Architecture (15-30 minutes)
+### Phase 3: Enterprise Architecture (15-30 minutes)
 ```bash
 /api-design --enterprise --with-gateway --with-monitoring
 ```

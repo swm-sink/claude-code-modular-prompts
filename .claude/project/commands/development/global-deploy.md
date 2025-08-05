@@ -20,8 +20,8 @@ validation:
   pre-execution: "Validate regions, check compliance requirements, verify infrastructure"
   during-execution: "Monitor deployment progress, track performance metrics, manage traffic"
   post-execution: "Verify global health, validate localization, confirm compliance"
-progressive-disclosure:
-  layer-integration: "Layer 1: Single region deploy, Layer 2: Multi-region with basic routing, Layer 3: Full global orchestration"
+interactive-consultation:
+  layer-integration: "Phase 1: Single region deploy, Phase 2: Multi-region with basic routing, Phase 3: Full global orchestration"
   options:
     - name: regional
       description: "Deploy to single region with basic configuration"
@@ -53,23 +53,23 @@ ai-features:
 
 Advanced global deployment system with AI-driven localization, cultural intelligence, and multi-region orchestration capabilities.
 
-## 🌍 Progressive Disclosure Layers
+## 🌍 Interactive Consultation Phases
 
-### Layer 1: Regional Deployment (5 minutes)
+### Phase 1: Regional Deployment (5 minutes)
 ```bash
 /global-deploy US              # Deploy to single region
 /global-deploy EU --gdpr        # EU deployment with compliance
 /global-deploy APAC --optimize  # Asia-Pacific with CDN optimization
 ```
 
-### Layer 2: Multi-Region Deployment (15 minutes)
+### Phase 2: Multi-Region Deployment (15 minutes)
 ```bash
 /global-deploy "US,EU,APAC" --strategy canary
 /global-deploy "US,EU" --traffic-split 70:30
 /global-deploy global --exclude "CN,RU"
 ```
 
-### Layer 3: Full Global Orchestration (30+ minutes)
+### Phase 3: Full Global Orchestration (30+ minutes)
 ```bash
 /global-deploy global --localize auto --compliance full
 /global-deploy global --strategy blue-green --cultural-adapt

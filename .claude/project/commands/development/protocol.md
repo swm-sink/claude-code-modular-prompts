@@ -19,8 +19,8 @@ validation:
   pre-execution: "Safety assessment and risk evaluation"
   during-execution: "Continuous compliance monitoring and quality gates"
   post-execution: "Comprehensive audit trail and approval verification"
-progressive-disclosure:
-  layer-integration: "Layer 1: Basic safety checks, Layer 2: Full compliance frameworks, Layer 3: Enterprise governance"
+interactive-consultation:
+  layer-integration: "Phase 1: Basic safety checks, Phase 2: Full compliance frameworks, Phase 3: Enterprise governance"
   options:
     - name: standard
       description: "Standard safety protocols for general development"
@@ -52,21 +52,21 @@ ai-safety:
 
 Advanced protocol-driven development with AI safety frameworks, automated compliance validation, and enterprise governance integration.
 
-## 🚀 Progressive Disclosure Layers
+## 🚀 Interactive Consultation Phases
 
-### Layer 1: Standard Safety Protocols (2 minutes)
+### Phase 1: Standard Safety Protocols (2 minutes)
 ```bash
 /protocol "implement user feature"              # Auto-detect safety requirements
 /protocol "database migration" --safety medium  # Specify safety level
 ```
 
-### Layer 2: Compliance Frameworks (10 minutes)
+### Phase 2: Compliance Frameworks (10 minutes)
 ```bash
 /protocol "payment processing" --compliance PCI-DSS
 /protocol "health records" --compliance HIPAA --safety high
 ```
 
-### Layer 3: Enterprise Governance (30+ minutes)
+### Phase 3: Enterprise Governance (30+ minutes)
 ```bash
 /protocol "financial system" --governance SOX --approval-chain
 /protocol "ai model deployment" --safety critical --ethics-review

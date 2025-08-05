@@ -21,8 +21,8 @@ validation:
   pre-execution: "Validate mode selection and target existence"
   during-execution: "Monitor operation progress and quality metrics"
   post-execution: "Verify changes maintain code integrity"
-progressive-disclosure:
-  layer-integration: "Layer 1: Single operations, Layer 2: Chained workflows, Layer 3: Full development orchestration"
+interactive-consultation:
+  layer-integration: "Phase 1: Single operations, Phase 2: Chained workflows, Phase 3: Full development orchestration"
   options:
     - name: quick
       description: "Fast single operations (format, lint, debug)"
@@ -53,23 +53,23 @@ ai-features:
 
 Comprehensive development workflow solution combining AI-assisted code formatting, linting, refactoring, debugging, feature development, project initialization, analysis, and dependency management.
 
-## 🚀 Progressive Disclosure Usage
+## 🚀 Interactive Consultation Usage
 
-### Layer 1: Quick Operations (30 seconds)
+### Phase 1: Quick Operations (30 seconds)
 ```bash
 /dev format            # Auto-detect and format all files
 /dev lint --fix        # Find and fix all linting issues
 /dev debug "error msg" # AI-assisted debugging
 ```
 
-### Layer 2: Workflow Chains (5 minutes)
+### Phase 2: Workflow Chains (5 minutes)
 ```bash
 /dev format --then lint --then test  # Quality workflow
 /dev refactor --extract-method --with-tests  # Safe refactoring
 /dev feature "user auth" --scaffold  # Feature scaffolding
 ```
 
-### Layer 3: Full Orchestration (15+ minutes)
+### Phase 3: Full Orchestration (15+ minutes)
 ```bash
 /dev feature "payment system" --full-stack --with-api --with-tests
 /dev analyze --deep --optimize --refactor

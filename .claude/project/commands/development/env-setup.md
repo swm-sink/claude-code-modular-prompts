@@ -19,8 +19,8 @@ validation:
   pre-execution: "Validate environment names, check permissions, scan for secrets"
   during-execution: "Monitor configuration changes, validate connections"
   post-execution: "Verify environment health, test connectivity, audit changes"
-progressive-disclosure:
-  layer-integration: "Layer 1: Basic env vars, Layer 2: Secret management, Layer 3: Full infrastructure as code"
+interactive-consultation:
+  layer-integration: "Phase 1: Basic env vars, Phase 2: Secret management, Phase 3: Full infrastructure as code"
   options:
     - name: basic
       description: "Simple environment variables setup"
@@ -52,22 +52,22 @@ security-features:
 
 I'll help you set up and manage secure environment configurations with automated secret management, zero-trust security, and infrastructure as code integration.
 
-## 🚀 Progressive Disclosure Layers
+## 🚀 Interactive Consultation Phases
 
-### Layer 1: Quick Environment Setup (30 seconds)
+### Phase 1: Quick Environment Setup (30 seconds)
 ```bash
 /env-setup development    # Basic development environment
 /env-setup production     # Production with auto-detection
 /env-setup --auto-detect  # Detect and configure automatically
 ```
 
-### Layer 2: Managed Configuration (5 minutes)
+### Phase 2: Managed Configuration (5 minutes)
 ```bash
 /env-setup staging --with-secrets --vault integration
 /env-setup production --clone-from staging --override DB_HOST=prod-db
 ```
 
-### Layer 3: Infrastructure as Code (15+ minutes)
+### Phase 3: Infrastructure as Code (15+ minutes)
 ```bash
 /env-setup --iac --terraform --with-gitops
 /env-setup --kubernetes --helm-values --sealed-secrets
