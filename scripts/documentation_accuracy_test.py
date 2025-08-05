@@ -11,7 +11,7 @@ Critical Areas:
 - Command count claims vs actual files
 - Component count claims vs actual files  
 - Feature documentation vs implementation
-- Progressive Disclosure System claims vs functionality
+- Interactive Consultation System claims vs functionality
 - Example workflows vs actual command availability
 
 Author: Testing Framework Agent
@@ -58,7 +58,7 @@ class DocumentationAccuracyTester:
             "FAQ.md"
         ]
         
-        # Progressive Disclosure commands
+        # Interactive Consultation System commands
         self.progressive_disclosure_commands = [
             "quick-command.md",
             "build-command.md",
@@ -82,8 +82,8 @@ class DocumentationAccuracyTester:
         print("\n💡 Verifying Command Examples")
         self.verify_command_examples()
         
-        # Test 4: Progressive Disclosure Claims
-        print("\n🎚️  Verifying Progressive Disclosure Claims")
+        # Test 4: Interactive Consultation System Claims
+        print("\n🎚️  Verifying Interactive Consultation System Claims")
         self.verify_progressive_disclosure_claims()
         
         # Test 5: Workflow Documentation
@@ -189,7 +189,7 @@ class DocumentationAccuracyTester:
         
         # Features to verify
         features_to_verify = {
-            "Progressive Disclosure System": ["3-layer", "layer 1", "layer 2", "layer 3"],
+            "Interactive Consultation System": ["3-layer", "layer 1", "layer 2", "layer 3"],
             "Quick Command Auto-Generation": ["30-second", "auto-generate", "intelligence"],
             "Component Library": ["91 component", "atomic component", "assembly"],
             "YAML Compliance": ["100%", "claude code", "allowed-tools"],
@@ -233,7 +233,7 @@ class DocumentationAccuracyTester:
     def verify_feature_implementation(self, feature_name: str) -> bool:
         """Verify that claimed features actually exist"""
         
-        if feature_name == "Progressive Disclosure System":
+        if feature_name == "Interactive Consultation System":
             # Check for the 3 progressive disclosure commands
             return all((self.commands_dir / "core" / cmd).exists() 
                       for cmd in self.progressive_disclosure_commands)
@@ -327,16 +327,16 @@ class DocumentationAccuracyTester:
         print(f"    ✅ Command Examples: Verified availability of documented examples")
     
     def verify_progressive_disclosure_claims(self):
-        """Verify Progressive Disclosure System documentation claims"""
+        """Verify Interactive Consultation System documentation claims"""
         
-        # Check main Progressive Disclosure documentation
+        # Check main Interactive Consultation System documentation
         progressive_docs = []
         
-        # Find Progressive Disclosure related documentation
+        # Find Interactive Consultation System related documentation
         for doc_file in self.project_root.rglob("*progressive*disclosure*.md"):
             progressive_docs.append(doc_file)
         
-        # Check main documentation files for Progressive Disclosure content
+        # Check main documentation files for Interactive Consultation System content
         for doc_name in self.key_docs:
             doc_path = self.project_root / doc_name
             if doc_path.exists():
@@ -347,14 +347,14 @@ class DocumentationAccuracyTester:
         if not progressive_docs:
             self.test_results.append(DocumentationTest(
                 "system",
-                "Progressive Disclosure Documentation",
+                "Interactive Consultation System Documentation",
                 DocTestResult.FAIL,
-                "No Progressive Disclosure documentation found",
+                "No Interactive Consultation System documentation found",
                 0.0
             ))
             return
         
-        # Test claims in Progressive Disclosure documentation
+        # Test claims in Interactive Consultation System documentation
         for doc_path in progressive_docs:
             content = doc_path.read_text().lower()
             
@@ -373,7 +373,7 @@ class DocumentationAccuracyTester:
             if layer_score >= 100:
                 self.test_results.append(DocumentationTest(
                     doc_path.name,
-                    "Progressive Disclosure Layers",
+                    "Interactive Consultation System Layers",
                     DocTestResult.PASS,
                     f"All 3 layers documented and implemented",
                     layer_score
@@ -381,7 +381,7 @@ class DocumentationAccuracyTester:
             elif layer_score >= 66:
                 self.test_results.append(DocumentationTest(
                     doc_path.name,
-                    "Progressive Disclosure Layers",
+                    "Interactive Consultation System Layers",
                     DocTestResult.WARNING,
                     f"{verified_layers}/3 layers documented and implemented",
                     layer_score
@@ -389,16 +389,16 @@ class DocumentationAccuracyTester:
             else:
                 self.test_results.append(DocumentationTest(
                     doc_path.name,
-                    "Progressive Disclosure Layers",
+                    "Interactive Consultation System Layers",
                     DocTestResult.FAIL,
                     f"Only {verified_layers}/3 layers documented and implemented",
                     layer_score
                 ))
         
-        print(f"    ✅ Progressive Disclosure: {len(progressive_docs)} documentation files verified")
+        print(f"    ✅ Interactive Consultation System: {len(progressive_docs)} documentation files verified")
     
     def verify_layer_exists(self, layer_name: str) -> bool:
-        """Verify that a Progressive Disclosure layer exists"""
+        """Verify that a Interactive Consultation System layer exists"""
         layer_commands = {
             "layer 1": "quick-command.md",
             "layer 2": "build-command.md", 
