@@ -25,6 +25,127 @@
 
 **ENFORCEMENT**: Any AI assistant working on this project must honor this policy. Changes made without following this process should be immediately reverted and the proper approval process initiated.
 
+## 🎯 **SINGLE SOURCE OF TRUTH: claude.todos.yaml**
+
+**🚨 CRITICAL: ALL ORCHESTRATION IS MANAGED IN `claude.todos.yaml`**
+
+### **MANDATORY ENFORCEMENT: claude.todos.yaml IS THE ONLY SOURCE**
+
+**🔒 MANDATORY FOR ALL AI AGENTS AND ASSISTANTS:**
+
+**Before ANY work on this project, EVERY AI agent MUST:**
+
+1. **READ `claude.todos.yaml` FIRST** - This is the SINGLE SOURCE containing all tasks, state, and orchestration
+2. **CLAIM TASKS ATOMICALLY** - Use proper claiming protocol before starting any work
+3. **UPDATE PROGRESS CONTINUOUSLY** - Every 5 minutes or at major milestones
+4. **FOLLOW PROTOCOLS EXACTLY** - Task claiming, progress updates, completion, and failure handling
+5. **DOCUMENT ALL OUTCOMES** - Files created/modified, test results, commit hashes
+
+**WHY YAML FORMAT:**
+- ✅ **Atomic Operations**: Supports concurrent agent updates safely
+- ✅ **Human Readable**: Easy debugging and monitoring
+- ✅ **Machine Parseable**: Fast and reliable parsing
+- ✅ **Comments Supported**: Context and instructions inline
+- ✅ **Git Friendly**: Clean diffs and merge conflict resolution
+
+**ENFORCEMENT PROTOCOL:**
+- ❌ **VIOLATION**: Any work done without reading claude.todos.yaml first
+- ❌ **VIOLATION**: Starting tasks without proper claiming
+- ❌ **VIOLATION**: Not updating progress regularly
+- ❌ **VIOLATION**: Ignoring coordination protocols
+- ❌ **VIOLATION**: Creating any other tracking files (no claude.local.md, etc.)
+- ⚠️ **CONSEQUENCE**: All violating work will be rejected and must be redone properly
+
+**RATIONALE**: Previous dual-file system (claude.local.md + claude.todos.md) created synchronization issues. The consolidated YAML format in claude.todos.yaml provides optimal balance for both human operators and AI agents, supporting parallel execution while maintaining data integrity.
+
+### **MANDATORY DEVELOPMENT PROCESS ENFORCEMENT**
+
+**🔬 ALL AI AGENTS MUST FOLLOW THIS RIGOROUS DEVELOPMENT PROCESS:**
+
+#### **Phase 1: Deep Exploration (MANDATORY)**
+1. **Explore Dependencies** - Use Read, Glob, Grep to understand all related files and connections
+2. **Map Context** - Identify all affected components, configurations, and documentation
+3. **Analyze Impact** - Trace how changes will affect other parts of the system
+4. **Document Findings** - Record discoveries and dependencies before proceeding
+
+#### **Phase 2: Detailed Planning (MANDATORY)**
+1. **Create Comprehensive Plan** - Detailed strategy for achieving the objective
+2. **Identify All Requirements** - Technical, functional, and contextual requirements
+3. **Map Dependencies** - Sequence of work based on dependencies and prerequisites
+4. **Define Success Criteria** - Clear, measurable outcomes for completion
+
+#### **Phase 3: Atomic Task Breakdown (MANDATORY)**
+1. **Break Into Atomic Tasks** - Each task must be independently completable
+2. **Sequence Tasks** - Order based on dependencies and logical flow
+3. **Validate Atomicity** - Each task should result in one meaningful commit
+4. **Estimate Complexity** - Identify tasks requiring additional breakdown
+
+#### **Phase 4: Task Critique & Validation (MANDATORY)**
+1. **Context Completeness Check** - Ensure all required context is captured
+2. **Dependency Verification** - Confirm all dependencies are identified and sequenced
+3. **Risk Assessment** - Identify potential failure points and mitigation strategies
+4. **Alignment Verification** - Ensure tasks align with overall vision and claude.todos.yaml
+
+#### **Phase 5: TDD Implementation (MANDATORY - ZERO TOLERANCE)**
+1. **RED Phase** - Write failing tests that define expected behavior
+2. **GREEN Phase** - Implement minimal code to make tests pass
+3. **REFACTOR Phase** - Improve implementation while maintaining tests
+4. **INTEGRATION Phase** - Ensure new code integrates properly with existing system
+
+**🚨 CRITICAL TDD ENFORCEMENT:**
+- **MANDATORY**: Every implementation MUST follow complete RED-GREEN-REFACTOR-INTEGRATION cycle
+- **ZERO TOLERANCE**: Any work completed without TDD will be IMMEDIATELY DELETED
+- **NO EXCEPTIONS**: Tests must be written BEFORE implementation, not after
+- **VERIFICATION REQUIRED**: Must demonstrate test failures before implementation
+- **CODE DELETION PENALTY**: All non-TDD work will be completely removed and restarted
+
+#### **Phase 6: Atomic Commits (MANDATORY)**
+1. **One Commit Per Atomic Task** - Each task gets exactly one commit
+2. **Descriptive Commit Messages** - Clear description of what was accomplished
+3. **Include Test Evidence** - Reference test results in commit message
+4. **Link to Task** - Reference the atomic task number/ID in commit
+
+#### **Phase 7: Regular Quality Review (MANDATORY)**
+1. **5-Commit Review Intervals** - Review last 5 commits every 5 completed tasks
+2. **Quality Assessment** - Check for code quality, test coverage, documentation
+3. **Alignment Check** - Ensure recent work still aligns with overall vision
+4. **Integration Validation** - Verify all commits work together properly
+
+#### **Phase 8: Continuous Improvement (MANDATORY)**
+1. **Identify Issues** - Based on review findings, identify improvement areas
+2. **Create Fix Tasks** - Convert issues into atomic tasks for resolution
+3. **Prioritize Fixes** - Urgent fixes before continuing, minor fixes as needed
+4. **Update Process** - Learn from mistakes and enhance development process
+
+**PROCESS VIOLATION CONSEQUENCES:**
+- ❌ **VIOLATION**: Starting work without deep exploration
+- ❌ **VIOLATION**: Implementing without detailed planning
+- ❌ **VIOLATION**: Creating non-atomic tasks or commits
+- ❌ **VIOLATION**: Skipping TDD methodology → **IMMEDIATE WORK DELETION**
+- ❌ **VIOLATION**: Missing scheduled quality reviews
+- ⚠️ **CONSEQUENCE**: Work must be paused, reviewed, and potentially redone following proper process
+
+**🗑️ HARSH TDD ENFORCEMENT:**
+- **IMMEDIATE DELETION**: Any implementation without TDD will be completely deleted
+- **NO RECOVERY**: Deleted work cannot be recovered or reused
+- **RESTART REQUIRED**: Must begin entire task again with proper TDD cycle
+- **NO WARNINGS**: First violation = immediate deletion
+- **ZERO TOLERANCE**: This policy applies to ALL work, regardless of complexity or urgency
+
+### **Current Project Status**
+
+**Current Status**: MAJOR ARCHITECTURE PIVOT - Integration → Deep Discovery Generation
+
+**Master Plan Location**: `claude.todos.yaml` contains the complete 104-task atomic task list for transforming Claude Context Architect from an integration system to a **Deep Discovery Generation Engine**.
+
+**Key Transformation**:
+- **FROM**: Template library with command integration
+- **TO**: Sequential sub-agent system that analyzes repositories and generates project-specific commands, agents, and context
+
+**Session Management**: All task tracking, progress updates, and execution control managed in `claude.todos.yaml`. This file (CLAUDE.md) provides permanent project memory while claude.todos.yaml manages active orchestration and transformation work.
+
+**Vision**: Claude Context Architect uses specialized discovery agents to perform deep repository analysis, building comprehensive "Project DNA", then generates completely customized `.claude/` directories that make Claude work like a team member who knows YOUR specific project inside and out.
+
 <!-- AI_METADATA_START -->
 <ai_document_metadata>
   <document_type>documentation</document_type>
@@ -37,12 +158,13 @@
 
 <project_metadata>
   <project_name>Claude Context Architect</project_name>
-  <project_type>automated_setup_and_onboarding_tool</project_type>
-  <automation_scope>complete_project_setup</automation_scope>
-  <user_experience>one_command_setup</user_experience>
+  <project_type>deep_discovery_generation_engine</project_type>
+  <automation_scope>project_specific_claude_generation</automation_scope>
+  <user_experience>deep_discovery_consultation</user_experience>
   <target_users>claude_code_developers</target_users>
-  <setup_automation>true</setup_automation>
-  <orchestration_enabled>true</orchestration_enabled>
+  <session_management>claude_local_md_mandatory</session_management>
+  <agent_enforcement>central_source_required</agent_enforcement>
+  <architecture>sequential_sub_agent_discovery</architecture>
 </project_metadata>
 
 <ai_navigation>
@@ -125,14 +247,14 @@
 
 ## 🔄 PROJECT EVOLUTION (2025-08-03)
 
-### The Pivot: From Template Library to Setup Tool
-After extensive research and user feedback analysis, we pivoted to creating **Claude Context Architect** - THE definitive Claude Code setup tool that turns Claude into YOUR project expert through comprehensive context engineering.
+### Evolution: Focus on Deep Context Engineering
+After extensive research and user feedback analysis, we developed **Claude Context Architect** - THE definitive Claude Code setup tool that turns Claude into YOUR project expert through comprehensive context engineering.
 
-**Why the pivot**: 
-- Template libraries solve the wrong problem - users need automated setup, not manual customization
+**Why context engineering is critical**: 
+- Generic Claude lacks deep project understanding - users need specialized project intelligence
 - Research revealed massive onboarding pain points in Claude Code ecosystem
-- Setup tools like create-react-app and rails new show the power of one-command automation
-- Claude Code users spend hours on manual configuration that should take minutes
+- Context engineering tools provide the missing layer between Claude and your specific codebase
+- Claude Code users need deep project understanding, not just command templates
 
 ### Current Vision: Context Engineering System (2025-08-03)
 We're building **Claude Context Architect** - THE definitive Claude Code setup tool with:
@@ -522,14 +644,14 @@ Accelerated from previous 14-step process while maintaining quality:
 - **Scalability**: Agent network can handle complex transformation requirements
 - **Maintainability**: Clear separation of concerns and responsibilities
 
-## 🔧 TEMPLATE LIBRARY MAINTENANCE STANDARDS
+## 🔧 CONTEXT ENGINEERING STANDARDS
 
-### Structural Integrity Requirements
-- **Commands directory**: ONLY .md files allowed (no scripts, reports, or binaries)
-- **YAML frontmatter**: Consistent field names (`usage`, `allowed-tools` - NOT `tools`)
-- **No duplicates**: Zero duplicate command names across all directories
-- **Accurate counts**: Documentation must reflect actual file counts at all times
-- **Proper categorization**: Commands placed in correct directory (core, quality, specialized, etc.)
+### Context Integrity Requirements
+- **Context files**: Hierarchical structure with clear dependencies and inheritance
+- **Agent coordination**: Consistent interfaces between specialized context engineering agents
+- **No conflicts**: Zero conflicting context information across system components
+- **Accurate references**: Context must reflect actual project state at all times
+- **Proper layering**: Context organized by scope (project, domain, technical, workflow)
 
 ### Quality Control Checkpoints
 - **Pre-commit validation**: Verify file placement and YAML consistency before any changes
@@ -583,7 +705,7 @@ Accelerated from previous 14-step process while maintaining quality:
 - ❌ Building adaptation workflows from scratch
 - ❌ Creating project configuration systems
 - ❌ Learning Claude Code setup through trial and error
-- ❌ Learning prompt engineering patterns the hard way
+- ❌ Learning context engineering patterns the hard way
 
 ## Installation & Manual Setup
 
@@ -656,7 +778,7 @@ You'll need to manually find and replace these in your editor:
 - **Validation Workflows**: Execute validation, testing, and quality checks in parallel batches
 - **Documentation Requirement**: Document batch operation patterns for future reference
 
-## 🎯 CRITICAL UNDERSTANDING: This is a PROMPT ENGINEERING Project
+## 🎯 CRITICAL UNDERSTANDING: This is a CONTEXT ENGINEERING Project
 
 **THIS IS A CONTEXT ENGINEERING PROJECT!** Claude Context Architect provides:
 - **Interactive Consultation**: 30+ minute guided project analysis
@@ -685,17 +807,17 @@ You'll need to manually find and replace these in your editor:
 - ✅ Guides that warn about security considerations
 - ❌ NOT automated security enforcement
 
-## Template Library Components
+## Context Engineering System Components
 
 | Component | Count | Purpose |
 |-----------|-------|---------|
-| Command Templates | Extensive collection | Ready-to-use Claude Code slash commands |
-| Agent Templates | 10+ | Specialized context engineering agents |
+| Context-Aware Commands | Extensive collection | Commands optimized for project-specific context |
+| Specialized Agents | 10+ | Context engineering agents for deep project analysis |
 | Consultation Phases | 3 | Technical analysis, domain intelligence, context generation |
-| Context Templates | Multiple | Multi-file hierarchical context system patterns |
-| Context Files | 15+ | Anti-patterns, best practices, guides |
+| Context Architectures | Multiple | Multi-file hierarchical context system patterns |
+| Context Guidelines | 15+ | Anti-patterns, best practices, engineering guides |
 | Documentation | 30+ files | Complete system guides and references |
-| Claude Code Features | 100% | Proper YAML format, tool permissions, categories |
+| Claude Code Integration | 100% | Native integration with proper YAML format, tool permissions |
 
 ## Immutable Rules
 1. Maximum 3 directory levels
@@ -772,17 +894,17 @@ Claude Context Architect now supports advanced team collaboration through hierar
 - Best practice documentation integration
 </configuration>
 
-## Template Library Components
+## Context Engineering System Architecture
 | Component | What Exists | What It Does |
 |-----------|---------|--------|
-| Consultation System | 30+ minute interactive process | Deep project analysis and context extraction |
-| Specialized Agents | 10+ context engineering agents | Each agent analyzes specific aspects of your project |
-| Context Generation | Multi-file hierarchical system | Creates comprehensive project understanding |
+| Interactive Consultation | 30+ minute guided analysis | Deep project analysis and context extraction |
+| Specialized Agent Network | 10+ context engineering agents | Each agent analyzes specific aspects of your project |
+| Context Generation Engine | Multi-file hierarchical system | Creates comprehensive project understanding |
 | Session Management | Pause/resume capability | Allows consultation across multiple sessions |
 | Project Intelligence | Architecture + domain analysis | Understands your specific patterns and workflows |
-| Interactive Approval | User control at every step | You approve and modify all generated context |
+| Interactive Control | User approval at every step | You approve and modify all generated context |
 | TDD Enforcement | Strict testing requirements | Code deletion penalty ensures quality |
-| Validation Framework | Context effectiveness testing | Proves improved Claude responses |
+| Context Validation | Effectiveness testing framework | Proves improved Claude responses |
 | Git Integration | Project history analysis | Learns from your project's evolution |
 | Pure Claude Code | Native integration only | No external dependencies or complexity |
 
@@ -791,16 +913,16 @@ Claude Context Architect now supports advanced team collaboration through hierar
 This is a **context engineering system** focusing on transforming Claude Code into YOUR project expert. The consultation process provides deep project understanding and creates specialized context that makes Claude truly useful for your specific codebase.
 
 ### 🎯 RELEASE STATUS: v1.0 PRODUCTION READY ✅
-**Complete Template Library System**: FULLY IMPLEMENTED
-- ✅ Comprehensive command templates with 100% Claude Code compliance
-- ✅ Advanced orchestration capabilities - commands can invoke other commands
-- ✅ Task-based prompting with clear implementation strategies
-- ✅ Extensive component templates organized across professional categories
-- ✅ 30+ minute consultation system completely implemented
-- ✅ Professional assembly system with validation and compatibility matrix
+**Complete Context Engineering System**: FULLY IMPLEMENTED
+- ✅ Comprehensive context-aware commands with 100% Claude Code compliance
+- ✅ Advanced agent orchestration - specialized agents coordinate seamlessly
+- ✅ Deep consultation methodology with clear implementation strategies
+- ✅ Extensive context engineering patterns organized across domains
+- ✅ 30+ minute interactive consultation system completely implemented
+- ✅ Professional context validation with effectiveness testing matrix
 - ✅ 48+ anti-patterns documented with comprehensive guidance
 - ✅ Enterprise-grade quality assurance and validation throughout
-- ✅ Complete user documentation and assembly guides
+- ✅ Complete user documentation and context engineering guides
 - ✅ Production-ready v1.0 system suitable for professional deployment
 - ✅ Zero false claims - all documented features fully implemented and tested
 
@@ -833,21 +955,21 @@ cairo/                           # Main project directory
 ├── tests/                       # Testing framework
 ├── CLAUDE.md                    # This file (project memory)
 ├── README.md                    # Main project overview
-├── claude.local.md              # Private project instructions
+├── claude.todos.yaml            # Single source of truth for orchestration
 └── setup.sh                     # Installation script
 ```
 
 ## Experimental Framework Notice
-This is an **experimental prompt engineering framework** for research and development:
-- Focus is on prompt effectiveness and architectural exploration
-- Commands require functional validation before production use
-- All commands are maintained as unique implementations
-- Validation templates provide path to production readiness
+This is a **production context engineering system** for professional development:
+- Focus is on context effectiveness and project intelligence extraction
+- Agents require functional validation and proven consultation methodologies
+- All agents are maintained as specialized implementations
+- Context validation provides measurable effectiveness improvements
 
 ## Testing Framework
 
 ### Structural Validation Approach
-A testing framework has been implemented focusing on structural validation for the experimental prompt engineering framework:
+A testing framework has been implemented focusing on structural validation for the context engineering system:
 
 **Testing Directory**: `tests/`
 - **Methodology**: `tests/TESTING-METHODOLOGY.md` - Complete testing approach documentation
@@ -877,11 +999,11 @@ A testing framework has been implemented focusing on structural validation for t
 
 ## Context Engineering for Prompt Development
 
-### 🎯 Understanding Context in Prompt Engineering
-**Context engineering** here means managing what information Claude has access to when responding to slash commands:
-- **NOT about code execution context**
-- **IS about prompt context windows and token management**
-- **Optimizing what Claude "knows" when processing commands**
+### 🎯 Understanding Context Engineering for Claude Code
+**Context engineering** here means systematically building Claude's understanding of your specific project:
+- **NOT about generic prompt optimization**
+- **IS about project-specific intelligence and domain understanding**
+- **Optimizing what Claude "knows" about YOUR codebase, patterns, and workflows**
 
 ### ⚠️ CRITICAL CONTEXT FOR PROMPT DEVELOPERS
 **IMPORTANT**: These files shape how Claude understands and prevents common pitfalls:
@@ -896,10 +1018,10 @@ A testing framework has been implemented focusing on structural validation for t
    - Prevents metric invention and false success claims
    - Essential for honest assessment
 
-3. **Prompt Engineering Best Practices** (`.claude/context/prompt-engineering-best-practices.md`)
-   - Core principles for effective prompts
-   - Token optimization strategies
-   - Example-driven development patterns
+3. **Context Engineering Best Practices** (`.claude/context/context-engineering-best-practices.md`)
+   - Core principles for effective context design
+   - Token optimization and context hierarchy strategies
+   - Project-specific context development patterns
 
 ### 📚 Prompt Component Library
 4. **Modular Components** (`.claude/context/modular-components.md`) - Extensive reusable prompt fragments
@@ -1031,7 +1153,7 @@ A testing framework has been implemented focusing on structural validation for t
 
 ---
 
-## 📖 HOW TO USE THIS TEMPLATE LIBRARY
+## 📖 HOW TO USE THIS CONTEXT ENGINEERING SYSTEM
 
 ### Step 1: Import Reference Framework
 ```bash
@@ -1094,22 +1216,22 @@ cd claude-code-modular-prompts && ./setup.sh ../your-project
 
 ## 📚 LIBRARY PRESERVATION STRATEGY
 
-### Why ALL Content Matters in a Template Library
+### Why ALL Content Matters in a Context Engineering System
 
 **Core Principle**: In a context engineering system, seemingly "scattered" content is often valuable reference material:
 
-- **Reports & Documentation**: Show real-world template usage patterns and evolution
-- **Anti-patterns**: Prevent users from making documented mistakes  
-- **Research Materials**: Provide context for why templates were designed certain ways
-- **Deprecated Templates**: Serve as historical reference and migration guides
-- **Context Files**: Essential for understanding prompt engineering principles
-- **Test Results**: Validate template effectiveness and guide improvements
+- **Reports & Documentation**: Show real-world context engineering patterns and system evolution
+- **Anti-patterns**: Prevent users from making documented context engineering mistakes  
+- **Research Materials**: Provide context for why specific approaches were designed
+- **Historical Context**: Serve as reference for understanding system evolution
+- **Context Files**: Essential for understanding context engineering principles
+- **Test Results**: Validate context effectiveness and guide system improvements
 
 ### Organization vs Deletion Philosophy
 
 **✅ LIBRARY ORGANIZATION** (What We Do):
 - Catalog and categorize all command templates
-- Make component library easily discoverable  
+- Make context engineering patterns easily discoverable  
 - Organize documentation by access patterns
 - Create clear navigation paths to content
 - Preserve all research and learning materials
@@ -1119,16 +1241,16 @@ cd claude-code-modular-prompts && ./setup.sh ../your-project
 - Deleting "duplicate" templates (might serve different use cases)
 - Removing "outdated" documentation (valuable for understanding evolution) 
 - Throwing away reports (contain usage insights)
-- Eliminating context files (essential for prompt engineering)
+- Eliminating context files (essential for context engineering)
 - Purging template variants (different use cases may need different approaches)
 
-### Template Library Success Metrics
+### Context Engineering System Success Metrics
 
-1. **Accessibility**: Can users quickly find relevant templates?
-2. **Completeness**: Are all use cases covered by available templates?
-3. **Context**: Do users understand when/why to use each template?
-4. **Evolution**: Can users see how templates developed over time?
-5. **Prevention**: Are anti-patterns clearly documented to avoid common mistakes?
+1. **Accessibility**: Can users quickly access relevant context engineering capabilities?
+2. **Completeness**: Are all project aspects covered by the consultation system?
+3. **Understanding**: Do users understand when/why to use each agent and context pattern?
+4. **Evolution**: Can users see how their project context develops over time?
+5. **Prevention**: Are anti-patterns clearly documented to avoid common context engineering mistakes?
 
 *Last honest assessment: 2025-07-29*
 
