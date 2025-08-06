@@ -30,6 +30,9 @@ htmlcov/
 *.bak
 *~
 
+# Archive of deprecated integration approach
+.archive-integration-approach/
+
 # Test artifacts and workspaces
 integration_test_workspace/
 *_test_workspace/

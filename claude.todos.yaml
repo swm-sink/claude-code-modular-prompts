@@ -27,16 +27,16 @@ orchestration:
   
   session:
     started: "2025-08-05T14:30:00Z"
-    last_checkpoint: "2025-08-05T22:15:00Z"
-    last_commit: "6180f7e"
+    last_checkpoint: "2025-08-05T22:20:00Z"
+    last_commit: "c988b59"
     
   progress:
     total_tasks: 104
-    completed: 7
+    completed: 9
     in_progress: 0
     failed: 0
     blocked: 0
-    pending: 97
+    pending: 95
     
   confidence:
     level: 0.8
@@ -168,7 +168,10 @@ phases:
           
       8:
         description: "Move tests/test_agent_integration_system.sh to archive"
-        status: "pending"
+        status: "complete"
+        completed_by: "task-8-agent"
+        completed_at: "2025-08-05T22:20:00Z"
+        commit: "c988b59"
         risk: "low"
         dependencies: []
         can_parallel: true
@@ -178,10 +181,17 @@ phases:
           tdd_level: "lightweight"
           source: "tests/test_agent_integration_system.sh"
           target: ".archive-integration-approach/tests/test_agent_integration_system.sh"
+        outcome:
+          moved_from: "tests/test_agent_integration_system.sh"
+          moved_to: ".archive-integration-approach/tests/test_agent_integration_system.sh"
+          file_size: 2936
           
       9:
         description: "Move tests/test_agent_integration_e2e.sh to archive"
-        status: "pending"
+        status: "complete"
+        completed_by: "task-9-agent"
+        completed_at: "2025-08-05T22:20:00Z"
+        commit: "c988b59"
         risk: "low"
         dependencies: []
         can_parallel: true
@@ -191,6 +201,10 @@ phases:
           tdd_level: "lightweight"
           source: "tests/test_agent_integration_e2e.sh"
           target: ".archive-integration-approach/tests/test_agent_integration_e2e.sh"
+        outcome:
+          moved_from: "tests/test_agent_integration_e2e.sh"
+          moved_to: ".archive-integration-approach/tests/test_agent_integration_e2e.sh"
+          file_size: 5077
           
       10:
         description: "Create .archive-integration-approach/LEARNING.md documenting why integration approach was wrong"
@@ -405,6 +419,8 @@ files:
       - "tests/test_task_5_move_command_builder.sh"
       - "tests/test_task_6_move_research_validator.sh"
       - "tests/test_task_7_move_invoke_agent.sh"
+      - "tests/test_task_8_move_integration_system_test.sh"
+      - "tests/test_task_9_move_e2e_test.sh"
       
   moved:
     phase_1:
@@ -414,6 +430,8 @@ files:
       - ".claude/agents/command-builder.md → .archive-integration-approach/agents/"
       - ".claude/agents/research-validator.md → .archive-integration-approach/agents/"
       - "scripts/invoke-agent.sh → .archive-integration-approach/scripts/"
+      - "tests/test_agent_integration_system.sh → .archive-integration-approach/tests/"
+      - "tests/test_agent_integration_e2e.sh → .archive-integration-approach/tests/"
       
   to_create:
     phase_3:
