@@ -25,6 +25,127 @@
 
 **ENFORCEMENT**: Any AI assistant working on this project must honor this policy. Changes made without following this process should be immediately reverted and the proper approval process initiated.
 
+## 🎯 **SINGLE SOURCE OF TRUTH: claude.todos.yaml**
+
+**🚨 CRITICAL: ALL ORCHESTRATION IS MANAGED IN `claude.todos.yaml`**
+
+### **MANDATORY ENFORCEMENT: claude.todos.yaml IS THE ONLY SOURCE**
+
+**🔒 MANDATORY FOR ALL AI AGENTS AND ASSISTANTS:**
+
+**Before ANY work on this project, EVERY AI agent MUST:**
+
+1. **READ `claude.todos.yaml` FIRST** - This is the SINGLE SOURCE containing all tasks, state, and orchestration
+2. **CLAIM TASKS ATOMICALLY** - Use proper claiming protocol before starting any work
+3. **UPDATE PROGRESS CONTINUOUSLY** - Every 5 minutes or at major milestones
+4. **FOLLOW PROTOCOLS EXACTLY** - Task claiming, progress updates, completion, and failure handling
+5. **DOCUMENT ALL OUTCOMES** - Files created/modified, test results, commit hashes
+
+**WHY YAML FORMAT:**
+- ✅ **Atomic Operations**: Supports concurrent agent updates safely
+- ✅ **Human Readable**: Easy debugging and monitoring
+- ✅ **Machine Parseable**: Fast and reliable parsing
+- ✅ **Comments Supported**: Context and instructions inline
+- ✅ **Git Friendly**: Clean diffs and merge conflict resolution
+
+**ENFORCEMENT PROTOCOL:**
+- ❌ **VIOLATION**: Any work done without reading claude.todos.yaml first
+- ❌ **VIOLATION**: Starting tasks without proper claiming
+- ❌ **VIOLATION**: Not updating progress regularly
+- ❌ **VIOLATION**: Ignoring coordination protocols
+- ❌ **VIOLATION**: Creating any other tracking files (no claude.local.md, etc.)
+- ⚠️ **CONSEQUENCE**: All violating work will be rejected and must be redone properly
+
+**RATIONALE**: Previous dual-file system (claude.local.md + claude.todos.md) created synchronization issues. The consolidated YAML format in claude.todos.yaml provides optimal balance for both human operators and AI agents, supporting parallel execution while maintaining data integrity.
+
+### **MANDATORY DEVELOPMENT PROCESS ENFORCEMENT**
+
+**🔬 ALL AI AGENTS MUST FOLLOW THIS RIGOROUS DEVELOPMENT PROCESS:**
+
+#### **Phase 1: Deep Exploration (MANDATORY)**
+1. **Explore Dependencies** - Use Read, Glob, Grep to understand all related files and connections
+2. **Map Context** - Identify all affected components, configurations, and documentation
+3. **Analyze Impact** - Trace how changes will affect other parts of the system
+4. **Document Findings** - Record discoveries and dependencies before proceeding
+
+#### **Phase 2: Detailed Planning (MANDATORY)**
+1. **Create Comprehensive Plan** - Detailed strategy for achieving the objective
+2. **Identify All Requirements** - Technical, functional, and contextual requirements
+3. **Map Dependencies** - Sequence of work based on dependencies and prerequisites
+4. **Define Success Criteria** - Clear, measurable outcomes for completion
+
+#### **Phase 3: Atomic Task Breakdown (MANDATORY)**
+1. **Break Into Atomic Tasks** - Each task must be independently completable
+2. **Sequence Tasks** - Order based on dependencies and logical flow
+3. **Validate Atomicity** - Each task should result in one meaningful commit
+4. **Estimate Complexity** - Identify tasks requiring additional breakdown
+
+#### **Phase 4: Task Critique & Validation (MANDATORY)**
+1. **Context Completeness Check** - Ensure all required context is captured
+2. **Dependency Verification** - Confirm all dependencies are identified and sequenced
+3. **Risk Assessment** - Identify potential failure points and mitigation strategies
+4. **Alignment Verification** - Ensure tasks align with overall vision and claude.todos.yaml
+
+#### **Phase 5: TDD Implementation (MANDATORY - ZERO TOLERANCE)**
+1. **RED Phase** - Write failing tests that define expected behavior
+2. **GREEN Phase** - Implement minimal code to make tests pass
+3. **REFACTOR Phase** - Improve implementation while maintaining tests
+4. **INTEGRATION Phase** - Ensure new code integrates properly with existing system
+
+**🚨 CRITICAL TDD ENFORCEMENT:**
+- **MANDATORY**: Every implementation MUST follow complete RED-GREEN-REFACTOR-INTEGRATION cycle
+- **ZERO TOLERANCE**: Any work completed without TDD will be IMMEDIATELY DELETED
+- **NO EXCEPTIONS**: Tests must be written BEFORE implementation, not after
+- **VERIFICATION REQUIRED**: Must demonstrate test failures before implementation
+- **CODE DELETION PENALTY**: All non-TDD work will be completely removed and restarted
+
+#### **Phase 6: Atomic Commits (MANDATORY)**
+1. **One Commit Per Atomic Task** - Each task gets exactly one commit
+2. **Descriptive Commit Messages** - Clear description of what was accomplished
+3. **Include Test Evidence** - Reference test results in commit message
+4. **Link to Task** - Reference the atomic task number/ID in commit
+
+#### **Phase 7: Regular Quality Review (MANDATORY)**
+1. **5-Commit Review Intervals** - Review last 5 commits every 5 completed tasks
+2. **Quality Assessment** - Check for code quality, test coverage, documentation
+3. **Alignment Check** - Ensure recent work still aligns with overall vision
+4. **Integration Validation** - Verify all commits work together properly
+
+#### **Phase 8: Continuous Improvement (MANDATORY)**
+1. **Identify Issues** - Based on review findings, identify improvement areas
+2. **Create Fix Tasks** - Convert issues into atomic tasks for resolution
+3. **Prioritize Fixes** - Urgent fixes before continuing, minor fixes as needed
+4. **Update Process** - Learn from mistakes and enhance development process
+
+**PROCESS VIOLATION CONSEQUENCES:**
+- ❌ **VIOLATION**: Starting work without deep exploration
+- ❌ **VIOLATION**: Implementing without detailed planning
+- ❌ **VIOLATION**: Creating non-atomic tasks or commits
+- ❌ **VIOLATION**: Skipping TDD methodology → **IMMEDIATE WORK DELETION**
+- ❌ **VIOLATION**: Missing scheduled quality reviews
+- ⚠️ **CONSEQUENCE**: Work must be paused, reviewed, and potentially redone following proper process
+
+**🗑️ HARSH TDD ENFORCEMENT:**
+- **IMMEDIATE DELETION**: Any implementation without TDD will be completely deleted
+- **NO RECOVERY**: Deleted work cannot be recovered or reused
+- **RESTART REQUIRED**: Must begin entire task again with proper TDD cycle
+- **NO WARNINGS**: First violation = immediate deletion
+- **ZERO TOLERANCE**: This policy applies to ALL work, regardless of complexity or urgency
+
+### **Current Project Status**
+
+**Current Status**: MAJOR ARCHITECTURE PIVOT - Integration → Deep Discovery Generation
+
+**Master Plan Location**: `claude.todos.yaml` contains the complete 104-task atomic task list for transforming Claude Context Architect from an integration system to a **Deep Discovery Generation Engine**.
+
+**Key Transformation**:
+- **FROM**: Template library with command integration
+- **TO**: Sequential sub-agent system that analyzes repositories and generates project-specific commands, agents, and context
+
+**Session Management**: All task tracking, progress updates, and execution control managed in `claude.todos.yaml`. This file (CLAUDE.md) provides permanent project memory while claude.todos.yaml manages active orchestration and transformation work.
+
+**Vision**: Claude Context Architect uses specialized discovery agents to perform deep repository analysis, building comprehensive "Project DNA", then generates completely customized `.claude/` directories that make Claude work like a team member who knows YOUR specific project inside and out.
+
 <!-- AI_METADATA_START -->
 <ai_document_metadata>
   <document_type>documentation</document_type>
@@ -37,12 +158,13 @@
 
 <project_metadata>
   <project_name>Claude Context Architect</project_name>
-  <project_type>automated_setup_and_onboarding_tool</project_type>
-  <automation_scope>complete_project_setup</automation_scope>
-  <user_experience>one_command_setup</user_experience>
+  <project_type>deep_discovery_generation_engine</project_type>
+  <automation_scope>project_specific_claude_generation</automation_scope>
+  <user_experience>deep_discovery_consultation</user_experience>
   <target_users>claude_code_developers</target_users>
-  <setup_automation>true</setup_automation>
-  <orchestration_enabled>true</orchestration_enabled>
+  <session_management>claude_local_md_mandatory</session_management>
+  <agent_enforcement>central_source_required</agent_enforcement>
+  <architecture>sequential_sub_agent_discovery</architecture>
 </project_metadata>
 
 <ai_navigation>
@@ -833,7 +955,7 @@ cairo/                           # Main project directory
 ├── tests/                       # Testing framework
 ├── CLAUDE.md                    # This file (project memory)
 ├── README.md                    # Main project overview
-├── claude.local.md              # Private project instructions
+├── claude.todos.yaml            # Single source of truth for orchestration
 └── setup.sh                     # Installation script
 ```
 

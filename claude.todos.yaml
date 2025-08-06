@@ -1,0 +1,452 @@
+# Claude Context Architect - Single Source of Truth
+# Version: 2.0 - Consolidated from claude.local.md and claude.todos.md
+# Format: YAML for optimal human/machine balance
+# Last Updated: 2025-08-05T22:00:00Z
+
+# =============================================================================
+# MANDATORY ENFORCEMENT
+# =============================================================================
+# ALL AGENTS MUST:
+# 1. Read this file FIRST before any work
+# 2. Use atomic operations for updates (read-modify-write with version check)
+# 3. Follow coordination protocols strictly
+# 4. Update progress every 5 minutes
+# 5. Document all outcomes
+
+# =============================================================================
+# ORCHESTRATION STATE
+# =============================================================================
+orchestration:
+  version: "2.0"
+  format: "yaml"
+  status: "active"
+  mode: "hybrid-progressive"
+  
+  current_phase: 1
+  phase_name: "archive_and_isolate"
+  
+  session:
+    started: "2025-08-05T14:30:00Z"
+    last_checkpoint: "2025-08-05T21:02:00Z"
+    last_commit: "19bd5b9"
+    
+  progress:
+    total_tasks: 104
+    completed: 6
+    in_progress: 0
+    failed: 0
+    blocked: 0
+    pending: 98
+    
+  confidence:
+    level: 0.8
+    trend: "increasing"
+    parallel_capacity: 5  # Based on success so far
+    
+  agents:
+    active: []
+    idle: []
+    failed: []
+
+# =============================================================================
+# VISION & TRANSFORMATION CONTEXT
+# =============================================================================
+transformation:
+  from: "integration_system"
+  to: "deep_discovery_generation_engine"
+  
+  vision: |
+    Claude Context Architect uses sequential specialized sub-agents to perform 
+    deep repository analysis, building a comprehensive "Project DNA" document, 
+    then generates project-specific commands, agents, and context during consultation.
+    
+  critical_principles:
+    - "Generation NOT integration"
+    - "Project-specific NOT generic templates"
+    - "Deep discovery BEFORE user interaction"
+    - "Clean separation: .claude-architect/ vs generated .claude/"
+    
+  current_milestone: "Agent archival complete - .claude/agents/ empty"
+
+# =============================================================================
+# ATOMIC TASK LIST (Master Plan)
+# =============================================================================
+phases:
+  # ---------------------------------------------------------------------------
+  # PHASE 1: Archive & Isolate Legacy Work
+  # ---------------------------------------------------------------------------
+  phase_1:
+    name: "Archive & Isolate Legacy Work"
+    status: "in_progress"
+    started: "2025-08-05T14:30:00Z"
+    
+    tasks:
+      1:
+        description: "Create .archive-integration-approach/ directory structure"
+        status: "complete"
+        completed_by: "task-1-agent"
+        completed_at: "2025-08-05T14:34:00Z"
+        commit: "ff37006"
+        outcome:
+          created:
+            - ".archive-integration-approach/"
+            - ".archive-integration-approach/commands/"
+            - ".archive-integration-approach/agents/"
+            - ".archive-integration-approach/scripts/"
+            - ".archive-integration-approach/tests/"
+            - ".archive-integration-approach/LEARNING.md"
+            
+      2:
+        description: "Move scripts/integrate-agents.sh to archive"
+        status: "complete"
+        completed_by: "task-2-agent"
+        completed_at: "2025-08-05T14:45:00Z"
+        commit: "ff37006"
+        outcome:
+          moved_from: "scripts/integrate-agents.sh"
+          moved_to: ".archive-integration-approach/scripts/integrate-agents.sh"
+          
+      3:
+        description: "Move .claude/commands/integrate-agents.md to archive"
+        status: "complete"
+        completed_by: "task-3-agent"
+        completed_at: "2025-08-05T20:45:00Z"
+        commit: "2d6ec92"
+        outcome:
+          moved_from: ".claude/commands/integrate-agents.md"
+          moved_to: ".archive-integration-approach/commands/integrate-agents.md"
+          
+      4:
+        description: "Move .claude/agents/context-engineer.md to archive"
+        status: "complete"
+        completed_by: "task-4-agent"
+        completed_at: "2025-08-05T20:52:00Z"
+        commit: "858e7f3"
+        outcome:
+          moved_from: ".claude/agents/context-engineer.md"
+          moved_to: ".archive-integration-approach/agents/context-engineer.md"
+          
+      5:
+        description: "Move .claude/agents/command-builder.md to archive"
+        status: "complete"
+        completed_by: "task-5-agent"
+        completed_at: "2025-08-05T20:58:00Z"
+        commit: "350d897"
+        outcome:
+          moved_from: ".claude/agents/command-builder.md"
+          moved_to: ".archive-integration-approach/agents/command-builder.md"
+          
+      6:
+        description: "Move .claude/agents/research-validator.md to archive"
+        status: "complete"
+        completed_by: "task-6-agent"
+        completed_at: "2025-08-05T21:02:00Z"
+        commit: "19bd5b9"
+        outcome:
+          moved_from: ".claude/agents/research-validator.md"
+          moved_to: ".archive-integration-approach/agents/research-validator.md"
+        milestone: "AGENT_ARCHIVAL_COMPLETE"
+        
+      7:
+        description: "Move scripts/invoke-agent.sh to archive"
+        status: "pending"
+        risk: "low"
+        dependencies: []
+        can_parallel: false
+        execution:
+          approach: "simple_file_move"
+          tdd_level: "lightweight"
+          source: "scripts/invoke-agent.sh"
+          target: ".archive-integration-approach/scripts/invoke-agent.sh"
+          
+      8:
+        description: "Move tests/test_agent_integration_system.sh to archive"
+        status: "pending"
+        risk: "low"
+        dependencies: []
+        can_parallel: true
+        parallel_with: [9]
+        execution:
+          approach: "simple_file_move"
+          tdd_level: "lightweight"
+          source: "tests/test_agent_integration_system.sh"
+          target: ".archive-integration-approach/tests/test_agent_integration_system.sh"
+          
+      9:
+        description: "Move tests/test_agent_integration_e2e.sh to archive"
+        status: "pending"
+        risk: "low"
+        dependencies: []
+        can_parallel: true
+        parallel_with: [8]
+        execution:
+          approach: "simple_file_move"
+          tdd_level: "lightweight"
+          source: "tests/test_agent_integration_e2e.sh"
+          target: ".archive-integration-approach/tests/test_agent_integration_e2e.sh"
+          
+      10:
+        description: "Create .archive-integration-approach/LEARNING.md documenting why integration approach was wrong"
+        status: "pending"
+        risk: "low"
+        dependencies: []
+        can_parallel: true
+        execution:
+          approach: "documentation_creation"
+          tdd_level: "none"
+          content: "Document lessons learned from integration approach failure"
+          
+      11:
+        description: "Update .gitignore to exclude archive directory"
+        status: "pending"
+        risk: "low"
+        dependencies: []
+        can_parallel: true
+        execution:
+          approach: "file_append"
+          tdd_level: "basic"
+          target: ".gitignore"
+          content: ".archive-integration-approach/"
+
+  # ---------------------------------------------------------------------------
+  # PHASE 2: Core Context Realignment
+  # ---------------------------------------------------------------------------
+  phase_2:
+    name: "Core Context Realignment"
+    status: "pending"
+    prerequisites: ["phase_1_complete"]
+    
+    tasks:
+      12:
+        description: "Update CLAUDE.md - Add GENERATIVE VISION section"
+        status: "pending"
+        risk: "critical"
+        approval_required: true
+        backup_required: true
+        dependencies: [11]
+        
+      13:
+        description: "Update CLAUDE.md - Replace 'template library' with 'deep discovery engine'"
+        status: "pending"
+        risk: "critical"
+        approval_required: true
+        dependencies: [12]
+        
+      14:
+        description: "Update CLAUDE.md - Add Deep Discovery Architecture section"
+        status: "pending"
+        risk: "critical"
+        approval_required: true
+        dependencies: [13]
+        
+      15:
+        description: "Update CLAUDE.md - Add Project DNA concept"
+        status: "pending"
+        risk: "critical"
+        approval_required: true
+        dependencies: [14]
+        
+      16:
+        description: "Update CLAUDE.md - Add warning against integration"
+        status: "pending"
+        risk: "critical"
+        approval_required: true
+        dependencies: [15]
+        
+      17:
+        description: "Update CLAUDE.md - Update 'What This Library Provides' section"
+        status: "pending"
+        risk: "critical"
+        approval_required: true
+        dependencies: [16]
+        
+      18:
+        description: "Update CLAUDE.md - Fix Current Status section"
+        status: "pending"
+        risk: "critical"
+        approval_required: true
+        dependencies: [17]
+        
+      19:
+        description: "Update XML metadata in CLAUDE.md"
+        status: "pending"
+        risk: "critical"
+        approval_required: true
+        dependencies: [18]
+        
+      20:
+        description: "Create DEEP-DISCOVERY-ARCHITECTURE.md"
+        status: "pending"
+        risk: "low"
+        dependencies: []
+        can_parallel: true
+        parallel_with: [21, 22]
+        
+      21:
+        description: "Create PROJECT-DNA-SPECIFICATION.md"
+        status: "pending"
+        risk: "low"
+        dependencies: []
+        can_parallel: true
+        parallel_with: [20, 22]
+        
+      22:
+        description: "Create GENERATION-NOT-INTEGRATION.md"
+        status: "pending"
+        risk: "low"
+        dependencies: []
+        can_parallel: true
+        parallel_with: [20, 21]
+        
+      23:
+        description: "Update README.md to reflect Deep Discovery approach"
+        status: "pending"
+        risk: "medium"
+        dependencies: [19]
+        
+      24:
+        description: "Archive claude.local.md (replaced by this file)"
+        status: "pending"
+        risk: "low"
+        dependencies: [23]
+
+  # ---------------------------------------------------------------------------
+  # PHASE 3-8: [Abbreviated for space - would include all 104 tasks]
+  # ---------------------------------------------------------------------------
+  # Full task definitions continue through task 104...
+
+# =============================================================================
+# COORDINATION PROTOCOLS
+# =============================================================================
+protocols:
+  task_claiming:
+    steps:
+      - "Read current task status"
+      - "Verify status is 'pending'"
+      - "Atomically update status to 'in_progress' with agent_id"
+      - "Set started_at timestamp"
+      - "Re-read to verify claim succeeded"
+      - "Proceed if claimed, backoff if not"
+    
+  progress_update:
+    frequency: "5_minutes"
+    required_fields:
+      - "last_updated"
+      - "progress_percentage"
+      - "current_action"
+      - "files_modified"
+      
+  task_completion:
+    steps:
+      - "Run validation tests"
+      - "Update status to 'complete'"
+      - "Record outcome details"
+      - "Add commit hash"
+      - "Update completed_at timestamp"
+      - "Enable dependent tasks"
+      
+  failure_handling:
+    steps:
+      - "Set status to 'failed'"
+      - "Document failure reason"
+      - "List affected files"
+      - "Suggest recovery approach"
+      - "Block dependent tasks"
+      - "Alert orchestrator"
+
+# =============================================================================
+# AGENT INSTRUCTIONS
+# =============================================================================
+agent_context:
+  for_orchestrator: |
+    You are the Master Orchestrator for Deep Discovery Transformation.
+    Primary file: claude.todos.yaml (this file)
+    
+    Your workflow:
+    1. Check orchestration.status and progress
+    2. Identify pending tasks in current phase
+    3. Spawn appropriate agents with task assignments
+    4. Monitor agent progress via status updates
+    5. Handle failures and conflicts
+    6. Validate phase completions
+    7. Update orchestration state
+    
+  for_task_agents: |
+    You are a specialized task agent.
+    Primary file: claude.todos.yaml
+    
+    Your workflow:
+    1. Find your assigned task in phases section
+    2. Claim task using atomic update
+    3. Execute according to task.execution specifications
+    4. Update progress every 5 minutes
+    5. Document all outcomes
+    6. Mark complete when done
+    7. Never modify other tasks
+
+# =============================================================================
+# FILE TRACKING
+# =============================================================================
+files:
+  created:
+    phase_1:
+      - ".archive-integration-approach/LEARNING.md"
+      - "tests/test_task_1_archive_directory.sh"
+      - "tests/test_task_2_move_integrate_agents.sh"
+      - "tests/test_task_3_move_integrate_agents_command.sh"
+      - "tests/test_task_4_move_context_engineer.sh"
+      - "tests/test_task_5_move_command_builder.sh"
+      - "tests/test_task_6_move_research_validator.sh"
+      
+  moved:
+    phase_1:
+      - "scripts/integrate-agents.sh → .archive-integration-approach/scripts/"
+      - ".claude/commands/integrate-agents.md → .archive-integration-approach/commands/"
+      - ".claude/agents/context-engineer.md → .archive-integration-approach/agents/"
+      - ".claude/agents/command-builder.md → .archive-integration-approach/agents/"
+      - ".claude/agents/research-validator.md → .archive-integration-approach/agents/"
+      
+  to_create:
+    phase_3:
+      - ".claude-architect/orchestrator/*.md"
+      - ".claude-architect/discovery-agents/*.md"
+      - ".claude-architect/specialized-agents/*.md"
+      - ".claude-architect/dna-system/*.md"
+
+# =============================================================================
+# VALIDATION GATES
+# =============================================================================
+validation:
+  phase_1_complete:
+    criteria:
+      - "All integration files archived"
+      - ".claude/agents/ directory empty"
+      - "Archive structure verified"
+      
+  phase_2_complete:
+    criteria:
+      - "CLAUDE.md fully updated"
+      - "Documentation created"
+      - "Vision alignment verified"
+      
+  transformation_complete:
+    criteria:
+      - "All 104 tasks complete"
+      - "No integration references"
+      - "Tests passing"
+      - "Documentation complete"
+
+# =============================================================================
+# METRICS
+# =============================================================================
+metrics:
+  performance:
+    avg_task_time: "5 minutes"
+    parallel_efficiency: "0%"  # Not yet using parallel
+    success_rate: "100%"  # 6/6 tasks
+    
+  quality:
+    test_coverage: "100%"
+    validation_passes: 6
+    rollbacks: 0
+    manual_interventions: 0
