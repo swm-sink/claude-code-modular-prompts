@@ -321,6 +321,24 @@ The Deep Discovery Architecture consists of specialized agents working in phases
 
 This architecture ensures that every `.claude/` setup is uniquely tailored to YOUR project's specific needs, patterns, and conventions.
 
+## ⚠️ WARNING: Integration Approach is Fundamentally Wrong
+
+**CRITICAL**: Do NOT attempt to integrate pre-built templates or commands. This project generates project-specific solutions through deep discovery.
+
+### Why Integration Fails
+- **Integration assumes similarity** between projects - fatal flaw for diverse codebases
+- **Templates create pollution** - generic solutions that don't fit specific needs  
+- **Pre-built components miss nuance** - can't capture unique project DNA
+- **Manual customization burden** - users forced to adapt rather than receive tailored solutions
+
+### The Correct Approach: Generation Through Discovery
+1. **Analyze** the specific project deeply
+2. **Extract** unique patterns and conventions (Project DNA)
+3. **Generate** custom commands and agents for that exact project
+4. **Validate** that generated solutions match project needs
+
+**Remember**: We're building a DNA sequencer, not a LEGO kit. Discovery precedes creation.
+
 ## 🔄 PROJECT EVOLUTION (2025-08-03)
 
 ### Evolution: Focus on Deep Context Engineering
