@@ -283,6 +283,44 @@ Repository Analysis → Project DNA Extraction → Custom Generation → Validat
 
 This is why we're archiving all integration-focused code and building a new generation-focused architecture.
 
+### Deep Discovery Architecture
+
+The Deep Discovery Architecture consists of specialized agents working in phases:
+
+#### Phase 1: Repository Analysis
+**Discovery Agents** scan your entire codebase to understand:
+- Framework usage patterns and dependencies
+- File organization and naming conventions
+- Testing strategies and coverage patterns
+- Build and deployment configurations
+- Documentation structure and style
+
+#### Phase 2: Pattern Recognition
+**Pattern Recognition Agents** identify:
+- Recurring code patterns and abstractions
+- Common workflows and processes
+- Team-specific conventions and preferences
+- Historical evolution through git history
+- Anti-patterns and technical debt
+
+#### Phase 3: Context Generation
+**Context Builder Agents** create:
+- Multi-layered context hierarchies
+- Project-specific command templates
+- Domain-aware agent configurations
+- Workflow automation rules
+- Custom validation criteria
+
+#### Phase 4: Validation & Refinement
+**Quality Gate Agents** ensure:
+- Generated content matches project style
+- Commands work with existing tooling
+- Context improves Claude's responses
+- No conflicts with existing patterns
+- Continuous improvement through feedback
+
+This architecture ensures that every `.claude/` setup is uniquely tailored to YOUR project's specific needs, patterns, and conventions.
+
 ## 🔄 PROJECT EVOLUTION (2025-08-03)
 
 ### Evolution: Focus on Deep Context Engineering
