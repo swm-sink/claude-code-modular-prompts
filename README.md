@@ -1,4 +1,4 @@
-# Claude Context Architect - THE Definitive Claude Code Setup Tool
+# Claude Context Architect - Deep Discovery Generation Engine for Claude Code
 
 <!-- AI_METADATA_START -->
 <ai_document_metadata>
@@ -11,7 +11,7 @@
 </ai_document_metadata>
 
 <project_overview_metadata>
-  <project_type>context_engineering_system</project_type>
+  <project_type>deep_discovery_generation_engine</project_type>
   <version>1.0</version>
   <consultation_system>30_minute_interactive</consultation_system>
   <specialized_agents>10_plus</specialized_agents>
@@ -25,7 +25,7 @@
     <primary_discovery_path>user_documentation</primary_discovery_path>
     <quick_access_sections>
       <section ref="quick_start">30-second installation</section>
-      <section ref="what_you_get">Context engineering system</section>
+      <section ref="what_you_get">Deep discovery and generation</section>
       <section ref="consultation_process">30+ minute interactive consultation</section>
       <section ref="installation">Setup instructions</section>
     </quick_access_sections>
@@ -67,54 +67,61 @@
 </context_engineering>
 <!-- AI_METADATA_END -->
 
-**THE definitive Claude Code setup tool that transforms Claude into YOUR project expert through comprehensive context engineering.**
+**A Deep Discovery Generation Engine that analyzes YOUR project's unique DNA and generates custom Claude Code commands, agents, and context specifically for YOUR codebase.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Status: Stable](https://img.shields.io/badge/Status-Stable-green.svg)](https://github.com/swm-sink/claude-code-modular-prompts/releases)
 
-## 🚀 Quick Start (30 seconds)
+## 🚀 Quick Start
 
 ```bash
 # Install Claude Context Architect
 ./setup.sh /path/to/your/project
 
-# Start using immediately (in Claude Code)
-/help                              # See all commands
-/task "add user authentication"    # Execute any development task
-/analyze "why is my app slow?"     # Analyze code or problems
+# Begin the discovery and generation process
+/begin-discovery                   # Analyzes your repository
+/analyze-project-dna               # Extracts unique patterns
+/generate-commands                 # Creates YOUR custom commands
 ```
 
-**Begin with 30+ minute interactive consultation to create your context system.**
+**The system performs deep discovery of your project's DNA, then generates custom commands, agents, and context specifically for YOUR codebase.**
 
 ## What You Get
 
-**Context-Aware Command System:**
-- **Core Commands**: Essential development workflows
-- **Quality Commands**: Testing, validation, analysis tools
-- **Specialized Commands**: Advanced workflows and patterns
-- **Meta Commands**: Context engineering, system management, and specialized tools
+**Deep Discovery Generation Engine:**
+- **Project DNA Analysis**: Discovers your unique architecture, patterns, and conventions
+- **Custom Command Generation**: Creates commands specific to YOUR project needs
+- **Specialized Agent Creation**: Generates agents that understand YOUR domain
+- **Tailored Context System**: Builds context that reflects YOUR codebase
 
-**Extensive Reusable Components:**
-- **Atomic Components**: Simple building blocks
-- **Regular Components**: Complex reusable patterns
+**NOT Pre-Built Templates:**
+- **NOT** generic commands that need customization
+- **NOT** one-size-fits-all solutions
+- **NOT** template libraries to integrate
+- **INSTEAD**: Project-specific generation based on deep analysis
 
-**Context Engineering Features:**
-- **Interactive Consultation**: 30+ minute guided project analysis system
-- **Specialized Agents**: 10+ context engineering agents for deep understanding
-- **Context Generation**: Multi-file hierarchical context system creation
-- **Session Management**: Pause/resume capability across consultation sessions
-- **User Control**: Interactive approval and modification at every step
-- **Anti-pattern Documentation**: 48+ documented context engineering pitfalls
-- **Multiple Integration Methods**: Git submodule, direct copy, selective installation
-- **Comprehensive Validation**: Context effectiveness testing frameworks
+**Discovery & Generation Features:**
+- **Deep Repository Analysis**: Comprehensive scanning of your entire codebase
+- **Pattern Recognition**: Identifies your team's conventions and workflows
+- **Project DNA Extraction**: Captures technical architecture, domain knowledge, anti-patterns
+- **Custom Generation**: Creates solutions tailored exactly to your project
+- **Validation & Refinement**: Ensures generated content matches your needs
+- **Continuous Evolution**: Learns and improves with your project over time
 
 ## How It Works
 
-1. **Install System**: Choose integration method (git submodule recommended)
-2. **Begin Consultation**: Use `/begin-consultation` to start 30+ minute guided analysis
-3. **Specialized Analysis**: 10+ agents analyze your project's technical and domain aspects
-4. **Context Generation**: Create multi-file hierarchical context system with user approval
-5. **Ongoing Evolution**: Use session management to refine and improve context over time
+### The Generation Pipeline
+```
+Repository Analysis → Project DNA Extraction → Custom Generation → Validation
+         ↑                     ↑                      ↑              ↑
+    Discovery Agents    Pattern Recognition    Context Builder   Quality Gates
+```
+
+1. **Deep Discovery Phase**: Analyze your entire repository to understand patterns
+2. **DNA Extraction**: Identify unique characteristics of your project
+3. **Custom Generation**: Create project-specific commands, agents, and context
+4. **Validation**: Ensure generated solutions match your actual needs
+5. **Continuous Improvement**: Refine based on usage and feedback
 
 ## Installation Methods
 
@@ -135,24 +142,28 @@ Choose specific commands/components to copy manually.
 
 ## Usage Examples
 
-**Context Engineering Consultation:**
+**Discovery & Generation Process:**
 ```
-/begin-consultation         # Start 30+ minute guided project analysis
-/resume-consultation        # Continue paused consultation session
-/validate-context          # Test generated context effectiveness
-```
-
-**Context-Enhanced Commands:**
-```
-/task "implement authentication"    # Claude understands your architecture
-/test "run integration tests"       # Claude knows your testing patterns  
-/analyze "performance bottlenecks"  # Claude understands your tech stack
+/begin-discovery            # Start deep analysis of your repository
+/analyze-project-dna        # Extract unique patterns and conventions
+/generate-commands          # Create project-specific Claude commands
+/validate-generation        # Ensure generated solutions match your needs
 ```
 
-**Context System Generation:**
+**After Generation - Your Custom Commands:**
 ```
-# Multi-file hierarchical context system created during consultation
-# .claude/context/ contains project-specific understanding
+# The system generates commands specific to YOUR project, such as:
+# /your-test-runner          - Knows YOUR testing framework
+# /your-deploy-process       - Understands YOUR deployment pipeline  
+# /your-code-patterns        - Follows YOUR team's conventions
+```
+
+**What Gets Generated:**
+```
+# Project-specific artifacts created based on YOUR codebase:
+# .claude/commands/          - Commands tailored to your workflows
+# .claude/agents/            - Agents that understand your domain
+# .claude/context/           - Deep understanding of your project
 ```
 
 ## Installation
@@ -170,72 +181,76 @@ git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claud
 cd .claude-context-architect && ./setup.sh ../
 ```
 
-## File Structure After Installation
+## File Structure After Generation
 
 ```
 your-project/
 ├── .claude/
-│   ├── commands/
-│   │   ├── help.md      # /help - Command guide
-│   │   ├── task.md      # /task - Execute any development task
-│   │   ├── analyze.md   # /analyze - Analyze code and problems
-│   │   ├── review.md    # /review - Code review with suggestions  
-│   │   ├── debug.md     # /debug - Debug issues and errors
-│   │   ├── test.md      # /test - Generate and run tests
-│   │   └── docs.md      # /docs - Create documentation
-│   └── settings.json    # Claude Code configuration
-└── CLAUDE.md            # Project memory (optional)
+│   ├── commands/          # YOUR project-specific commands
+│   │   └── [generated based on YOUR workflows]
+│   ├── agents/            # YOUR domain-specific agents
+│   │   └── [generated based on YOUR patterns]
+│   ├── context/           # YOUR project DNA and understanding
+│   │   └── [generated based on YOUR architecture]
+│   └── settings.json      # Claude Code configuration
+└── CLAUDE.md              # YOUR project memory and context
 ```
 
-**Total: 8 files, ~50KB**
+**Generated specifically for YOUR project**
 
-## Universal Compatibility
+## Project DNA Discovery
 
-**Works with any programming language or framework:**
-- JavaScript, TypeScript, Python, Java, Go, Rust, C#, PHP, Ruby
-- React, Vue, Angular, Django, Spring, Laravel, Rails, Express
-- Any project type: web apps, APIs, mobile apps, desktop apps, scripts
+**Discovers and understands YOUR unique project characteristics:**
+- **Technical Architecture**: YOUR frameworks, patterns, dependencies
+- **Domain Knowledge**: YOUR business rules, terminology, workflows
+- **Team Conventions**: YOUR coding standards, review processes, tooling
+- **Anti-patterns**: YOUR project-specific pitfalls and historical lessons
 
 ## Requirements
 
 - Claude Code desktop application
 - Git (for cloning)
 
-## Why This Saves Time
+## Why This Is Different
 
-**Without these commands**: Write Claude Code prompts from scratch, learn through trial and error, repeat common patterns.
+**Traditional Approach**: Use generic templates that don't fit your project, spend hours customizing, still get mismatched solutions.
 
-**With Claude Context Architect**: Get Claude that truly understands YOUR specific project through comprehensive context engineering.
+**Deep Discovery Generation**: Analyzes YOUR specific codebase, extracts YOUR patterns, generates solutions that fit YOUR project perfectly.
 
 ## FAQ
 
-**Do these commands work with my tech stack?**
-Yes - they automatically adapt to any programming language or framework.
+**Does this work with my tech stack?**
+Yes - it discovers YOUR specific stack and generates appropriate solutions.
 
-**Can I add more commands later?**
-Yes - the context engineering system provides comprehensive understanding for any additional workflows.
+**What if my project is unique?**
+That's the point! It analyzes YOUR unique patterns and generates custom solutions.
 
-**What if I need project-specific customization?**
-The commands work universally, but you can modify them in your `.claude/commands/` directory.
+**How long does discovery and generation take?**
+Typically 30-45 minutes for deep analysis and generation of your custom solution.
 
-## Getting Help
+## Getting Started
 
-- Start with `/help` command in Claude Code
-- Use `/task "what you want to accomplish"` for most development needs
-- Commands provide detailed examples and explanations
+- Run the discovery process to analyze your project
+- Review the extracted Project DNA for accuracy
+- Approve the generated commands and agents
+- Start using YOUR custom Claude configuration
 
-## Advanced Usage
+## Advanced Features
 
-**Need deeper understanding?** This system provides:
+**Deep Discovery Capabilities:**
 
-1. **Context Engineering System**: 30+ minute interactive consultation that transforms Claude into YOUR project expert. See `./setup.sh` for installation.
+1. **Repository Analysis**: Comprehensive scanning of your entire codebase to understand structure, patterns, and conventions.
 
-2. **Specialized Agent Network**: 10+ context engineering agents for deep project analysis:
-   - Technical architecture analysis, domain intelligence extraction
-   - Code pattern detection, testing strategy analysis
-   - See `.claude/agents/` for agent specializations
+2. **Pattern Recognition Engine**: Identifies:
+   - Your team's coding patterns and abstractions
+   - Common workflows and processes
+   - Testing strategies and coverage patterns
+   - Anti-patterns and technical debt
 
-**Note**: Begin with `/begin-consultation` for 30+ minute guided analysis that creates comprehensive project understanding.
+3. **Generation Engine**: Creates project-specific:
+   - Commands that match YOUR workflows
+   - Agents that understand YOUR domain
+   - Context that reflects YOUR architecture
 
 ## License
 
@@ -243,4 +258,4 @@ MIT - Use freely in your projects.
 
 ---
 
-*Claude Context Architect - Transform Claude into YOUR project expert through comprehensive context engineering.*
+*Claude Context Architect - Deep Discovery Generation Engine that creates project-specific Claude Code solutions.*
