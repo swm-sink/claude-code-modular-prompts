@@ -878,7 +878,7 @@ Claude Context Architect now supports advanced team collaboration through hierar
 
 **Project Memory (CLAUDE.md)**:
 - Shared project context and decisions
-- Template library architecture and standards  
+- Deep discovery engine architecture and standards  
 - Anti-patterns and validated best practices
 - Commit to git for team synchronization
 
