@@ -52,25 +52,22 @@ The system coordinates multiple specialized AI agents, each with unique expertis
 - Navigation patterns and cross-references
 - Session state for future consultation updates
 
-## ⚡ Agent Integration System
+## ⚡ Agent Execution System
 
-### Automated Agent Execution
-The coordination system integrates with `/integrate-agents` for automated agent execution:
+### Deep Discovery Agent Execution
+The coordination system uses specialized discovery agents to analyze your project:
 ```bash
-# Execute agents by phase
-/integrate-agents phase-1 /path/to/project
-/integrate-agents phase-2 /path/to/project  
-/integrate-agents phase-3 /path/to/project
-
-# Execute individual agents
-/integrate-agents context-engineer /path/to/project
+# Execute discovery analysis by phase
+/coordinate-agents phase-1 /path/to/project  # Technical architecture discovery
+/coordinate-agents phase-2 /path/to/project  # Domain intelligence extraction
+/coordinate-agents phase-3 /path/to/project  # Context generation and validation
 ```
 
-### Integration Architecture
-- **Agent Definitions**: Specialized agents defined in `.claude/agents/`
-- **Execution Scripts**: `scripts/integrate-agents.sh` and `scripts/invoke-agent.sh`
-- **Session Integration**: All agent executions tracked in consultation state
-- **Quality Assurance**: Agent boundaries enforced through integration system
+### Discovery Architecture
+- **Agent Definitions**: Discovery agents created dynamically based on project needs
+- **Execution Flow**: Sequential analysis → Project DNA extraction → Custom generation
+- **Session Integration**: All discoveries tracked in consultation state
+- **Quality Assurance**: Each phase validated before progression
 
 ## 🔄 Agent Handoff Protocols & Quality Assurance
 

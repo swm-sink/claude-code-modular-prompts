@@ -57,7 +57,7 @@ The consultation state is maintained in `.claude/consultation-state.json` with t
 - **Milestone Checkpoints**: Automatic saves at phase transitions and major decision points
 - **User Response Capture**: Immediate persistence after each user interaction
 - **Agent Output Preservation**: Real-time saving of specialized agent analysis and recommendations
-- **Agent Execution Tracking**: Complete tracking of agent invocations, execution status, and results through integration with `/integrate-agents`
+- **Agent Execution Tracking**: Complete tracking of discovery agent invocations, execution status, and analysis results
 
 **Manual Save Operations:**
 - **On-Demand Saving**: Explicit save triggers with `/manage-session-state save`
