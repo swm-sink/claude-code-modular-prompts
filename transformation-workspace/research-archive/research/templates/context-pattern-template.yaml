@@ -1,0 +1,243 @@
+# Context Pattern Extraction Template
+# Purpose: Standardized extraction format for Claude Code context engineering patterns  
+# Version: 1.0
+
+extraction_template:
+  pattern_id: "pattern-context-{name}-{timestamp}"
+  category: "context"
+  subcategory: "" # project_memory, hierarchical_context, navigation_patterns, token_optimization
+  
+  # Basic Pattern Information
+  pattern_info:
+    name: ""
+    description: ""
+    context_scope: "" # project, domain, technical, workflow
+    complexity_level: "" # simple, moderate, complex
+    
+  # CLAUDE.md Structure Analysis
+  claude_md_analysis:
+    file_structure:
+      total_lines: 0
+      section_count: 0
+      subsection_depth: 0 # Maximum nesting level
+      
+    content_organization:
+      header_hierarchy: [] # H1, H2, H3 usage patterns
+      section_types: [] # Types of content sections
+      information_density: 0.0 # 0-1 score for information per token
+      
+    metadata_patterns:
+      frontmatter_usage: "" # yes/no - Uses YAML frontmatter?
+      structured_data: "" # yes/no - Uses structured data sections?
+      version_control: "" # yes/no - Tracks versions/updates?
+      
+    navigation_features:
+      internal_links: 0 # Count of internal cross-references
+      table_of_contents: "" # yes/no - Has TOC?
+      section_linking: "" # yes/no - Links between sections?
+      external_references: 0 # Count of external links
+      
+  # Hierarchical Context Systems
+  hierarchy_analysis:
+    multi_file_structure:
+      file_count: 0 # Total context files
+      file_organization: [] # How files are organized
+      naming_conventions: [] # File naming patterns
+      
+    information_layering:
+      context_layers: [] # Different levels of context
+      inheritance_patterns: [] # How context inherits/cascades
+      scope_boundaries: [] # Clear boundaries between scopes
+      
+    cross_file_relationships:
+      reference_patterns: [] # How files reference each other
+      dependency_management: [] # How dependencies are handled
+      update_propagation: [] # How changes cascade through files
+      
+    navigation_architecture:
+      discovery_mechanisms: [] # How users find relevant context
+      traversal_patterns: [] # How users navigate between contexts
+      search_optimization: [] # How context is optimized for search
+      
+  # Token Optimization Strategies
+  token_optimization:
+    efficiency_techniques:
+      content_compression: [] # Methods for reducing token usage
+      smart_loading: [] # Selective context loading approaches
+      contextual_filtering: [] # Dynamic context selection
+      
+    information_prioritization:
+      relevance_ranking: "" # How information is prioritized
+      dynamic_inclusion: "" # How context adapts to needs
+      token_budgeting: "" # How token limits are managed
+      
+    performance_characteristics:
+      load_time_optimization: []
+      memory_usage_patterns: []
+      response_quality_impact: []
+      
+  # Context Engineering Techniques
+  engineering_patterns:
+    context_generation:
+      automated_generation: "" # yes/no - Automated context creation?
+      template_systems: "" # Template-based generation approaches  
+      dynamic_updates: "" # Real-time context updates?
+      
+    quality_assurance:
+      validation_mechanisms: [] # How context quality is ensured
+      consistency_checks: [] # Methods for maintaining consistency
+      effectiveness_testing: [] # How context effectiveness is measured
+      
+    maintenance_strategies:
+      update_workflows: [] # How context is kept current
+      deprecation_handling: [] # How outdated context is managed
+      version_control: [] # How context versions are managed
+      
+  # Innovation Indicators
+  innovation_analysis:
+    novel_approaches:
+      unique_organization: "" # Novel organizational approaches?
+      creative_navigation: "" # Innovative navigation patterns?
+      advanced_optimization: "" # Advanced optimization techniques?
+      
+    effectiveness_innovations:
+      response_improvement: 0.0 # 0-1 score for response quality improvement
+      efficiency_gains: 0.0 # 0-1 score for efficiency improvements
+      user_experience_enhancement: 0.0 # 0-1 score for UX improvements
+      
+    adoption_potential:
+      reusability: 0.0 # 0-1 score for reuse potential
+      scalability: 0.0 # 0-1 score for scaling to larger contexts
+      maintainability: 0.0 # 0-1 score for long-term maintenance
+      
+  # Evidence Collection
+  evidence:
+    sources:
+      - repository: ""
+        url: ""
+        file_path: ""
+        line_numbers: []
+        extracted_date: ""
+        
+    effectiveness_data:
+      before_after_comparisons: "" # Evidence of improvement
+      user_testimonials: "" # Community feedback
+      performance_metrics: [] # Measurable improvements
+      
+    implementation_details:
+      complete_examples: "" # yes/no - Complete working examples?
+      documentation_quality: "" # good, fair, poor
+      maintenance_evidence: "" # Evidence of active maintenance
+      
+    cross_references:
+      - pattern_id: ""
+        relationship: "" # extends, conflicts, complements, requires
+        description: ""
+        strength: 0.0 # 0-1 correlation strength
+        
+  # Effectiveness Validation
+  effectiveness_metrics:
+    response_quality:
+      accuracy_improvement: 0.0 # 0-1 score for improved accuracy
+      relevance_improvement: 0.0 # 0-1 score for improved relevance  
+      completeness_improvement: 0.0 # 0-1 score for more complete responses
+      
+    efficiency_gains:
+      token_usage_optimization: 0.0 # 0-1 score for token efficiency
+      response_time_improvement: 0.0 # 0-1 score for faster responses
+      context_loading_speed: 0.0 # 0-1 score for faster context loading
+      
+    user_experience:
+      navigation_ease: 0.0 # 0-1 score for ease of navigation
+      information_findability: 0.0 # 0-1 score for finding information
+      maintenance_simplicity: 0.0 # 0-1 score for ease of maintenance
+      
+  # Applicability Assessment  
+  applicability:
+    project_characteristics:
+      project_sizes: [] # small, medium, large, enterprise
+      complexity_levels: [] # simple, moderate, complex
+      team_structures: [] # solo, small-team, large-team
+      
+    domain_suitability:
+      applicable_domains: []
+      domain_specific_adaptations: []
+      cross_domain_applicability: 0.0 # 0-1 score
+      
+    technical_requirements:
+      setup_complexity: "" # simple, moderate, complex
+      maintenance_overhead: "" # low, moderate, high
+      technical_prerequisites: []
+      
+  # Token Analysis
+  token_analysis:
+    token_efficiency:
+      information_per_token: 0.0 # Information density score
+      redundancy_elimination: 0.0 # Redundancy reduction score
+      compression_effectiveness: 0.0 # Compression quality score
+      
+    context_window_usage:
+      optimal_loading_size: 0 # Optimal token count for loading
+      dynamic_sizing: "" # yes/no - Adapts to context window?
+      priority_loading: "" # yes/no - Loads most important first?
+      
+    performance_impact:
+      loading_time_effect: "" # Impact on loading time
+      response_quality_correlation: 0.0 # Quality vs token usage correlation
+      scalability_characteristics: [] # How scales with more context
+      
+  # Confidence Scoring
+  confidence_assessment:
+    evidence_strength:
+      source_count: 0 # Number of evidence sources
+      source_diversity: 0.0 # 0-1 score for source variety
+      implementation_variety: 0.0 # 0-1 score for different implementations
+      
+    validation_strength:
+      currency_score: 0.0 # CRAAP: How recent/current?
+      relevance_score: 0.0 # CRAAP: How relevant to our use?
+      authority_score: 0.0 # CRAAP: How authoritative is source?
+      accuracy_score: 0.0 # CRAAP: How accurate/correct?
+      purpose_score: 0.0 # CRAAP: How aligned with purpose?
+      
+    effectiveness_validation:
+      measured_improvements: 0.0 # Score for measurable improvements
+      user_validation: 0.0 # Score for user-reported effectiveness
+      comparative_analysis: 0.0 # Score for comparative effectiveness
+      
+    overall_confidence: 0.0 # Calculated weighted average
+    
+  # Analysis Metadata
+  extraction_metadata:
+    analyst_id: ""
+    extraction_date: ""
+    analysis_version: "1.0"
+    time_invested: "" # Hours spent analyzing
+    quality_gates_passed: [] # Which quality checks passed
+    
+    notes:
+      key_insights: []
+      concerns: []
+      recommendations: []
+      follow_up_needed: []
+      
+    optimization_opportunities:
+      token_efficiency_improvements: []
+      navigation_enhancements: []
+      maintenance_simplifications: []
+
+# Usage Instructions:
+# 1. Focus on patterns that improve Claude's understanding and responses
+# 2. Document measurable improvements in response quality/efficiency
+# 3. Pay special attention to token optimization techniques
+# 4. Include before/after comparisons where available
+# 5. Cross-reference with command and workflow patterns
+# 6. Validate effectiveness claims with concrete evidence
+# 7. Consider scalability and maintenance implications
+
+# Quality Requirements:
+# - Minimum 3 evidence sources required
+# - Must include effectiveness validation data
+# - Overall confidence must be >= 0.6
+# - Token efficiency analysis required
+# - Working examples with measurable improvements

@@ -1,0 +1,65 @@
+# Essential Patterns Configuration - Simplified
+# Extracted from 313-line pattern library → 60 lines
+# Web Validated: 2025-01-09
+
+# Core patterns for command generation
+patterns:
+  # Framework detection - use with package.json/requirements.txt
+  frameworks:
+    react:
+      detect: ["react", "react-dom"]
+      commands: ["component-create", "hook-generate", "test-component"]
+      conventions: "functional components with hooks"
+    
+    vue:
+      detect: ["vue", "@vue/cli"]
+      commands: ["component-create", "store-module", "test-component"]
+      conventions: "single-file components"
+    
+    django:
+      detect: ["django", "djangorestframework"]
+      commands: ["model-create", "view-generate", "test-api"]
+      conventions: "MVT pattern with DRF"
+    
+    express:
+      detect: ["express", "fastify", "koa"]
+      commands: ["route-create", "middleware-add", "test-endpoint"]
+      conventions: "REST API with middleware"
+    
+    fastapi:
+      detect: ["fastapi", "pydantic"]
+      commands: ["endpoint-create", "model-generate", "test-api"]
+      conventions: "async API with type hints"
+
+  # Common patterns across projects
+  testing:
+    jest: ["test-unit", "test-integration", "mock-generate"]
+    pytest: ["test-function", "fixture-create", "test-api"]
+    mocha: ["test-suite", "test-async", "stub-create"]
+
+  # Database patterns
+  databases:
+    sql: ["migration-create", "seed-data", "query-optimize"]
+    mongo: ["schema-create", "index-add", "aggregate-build"]
+    redis: ["cache-implement", "session-manage", "pub-sub"]
+
+  # CI/CD patterns
+  deployment:
+    docker: ["dockerfile-optimize", "compose-update", "image-build"]
+    kubernetes: ["deployment-create", "service-expose", "config-map"]
+    github_actions: ["workflow-create", "action-test", "secret-manage"]
+
+# Questions to ask during consultation
+discovery_questions:
+  - "What framework/library powers your application?"
+  - "How do you structure your components/modules?"
+  - "What's your testing strategy?"
+  - "How do you handle deployment?"
+  - "What are your naming conventions?"
+
+# Validation before generation
+validation_checks:
+  - "Pattern exists in actual codebase"
+  - "Command would be useful for this project"
+  - "Follows project's actual conventions"
+  - "Not duplicating existing functionality"

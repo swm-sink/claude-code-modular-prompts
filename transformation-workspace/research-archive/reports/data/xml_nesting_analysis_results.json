@@ -1,0 +1,1041 @@
+{
+  "total_files": 72,
+  "file_analysis": [
+    {
+      "file_path": "PROJECT-READINESS-CHECKLIST-100-STEPS.md",
+      "file_type": "Root Documentation",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 14,
+        "2": 34,
+        "3": 36,
+        "4": 10
+      },
+      "xml_blocks_count": 4
+    },
+    {
+      "file_path": "STEP-010-ANTI-PATTERN-IDENTIFICATION.md",
+      "file_type": "Root Documentation",
+      "max_depth": 5,
+      "depth_distribution": {
+        "1": 6,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 1
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": "README.md",
+      "file_type": "Root Documentation",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 14,
+        "2": 35,
+        "3": 42,
+        "4": 20
+      },
+      "xml_blocks_count": 4
+    },
+    {
+      "file_path": "CLAUDE.md",
+      "file_type": "Root Documentation",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 14,
+        "2": 51,
+        "3": 40,
+        "4": 10
+      },
+      "xml_blocks_count": 4
+    },
+    {
+      "file_path": "STEP-004-SCHEMA-PATTERN-ANALYSIS.md",
+      "file_type": "Root Documentation",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 12,
+        "2": 46,
+        "3": 56,
+        "4": 5
+      },
+      "xml_blocks_count": 6
+    },
+    {
+      "file_path": "docs/xml-schema/xml-tagging-standards.md",
+      "file_type": "XML Schema Doc",
+      "max_depth": 2,
+      "depth_distribution": {
+        "0": 1,
+        "1": 38,
+        "2": 24
+      },
+      "xml_blocks_count": 10
+    },
+    {
+      "file_path": "docs/xml-schema/CONTEXT-XML-TEMPLATE.md",
+      "file_type": "XML Schema Doc",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 14,
+        "2": 40,
+        "3": 46,
+        "4": 4
+      },
+      "xml_blocks_count": 4
+    },
+    {
+      "file_path": "docs/xml-schema/DOCUMENTATION-XML-TEMPLATE.md",
+      "file_type": "XML Schema Doc",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 24,
+        "2": 58,
+        "3": 36,
+        "4": 4
+      },
+      "xml_blocks_count": 7
+    },
+    {
+      "file_path": "docs/xml-schema/COMMAND-XML-TEMPLATE.md",
+      "file_type": "XML Schema Doc",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 98,
+        "4": 10
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": "docs/xml-schema/AI-CONSUMPTION-XML-SCHEMA-SPECIFICATION.md",
+      "file_type": "XML Schema Doc",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 20,
+        "2": 49,
+        "3": 70,
+        "4": 12
+      },
+      "xml_blocks_count": 8
+    },
+    {
+      "file_path": "docs/xml-schema/AGENT-3-XML-IMPLEMENTATION-REPORT.md",
+      "file_type": "XML Schema Doc",
+      "max_depth": 6,
+      "depth_distribution": {
+        "1": 8,
+        "0": 1,
+        "2": 4,
+        "3": 6,
+        "4": 37,
+        "5": 35,
+        "6": 2
+      },
+      "xml_blocks_count": 4
+    },
+    {
+      "file_path": "docs/xml-schema/INTEGRATION-EXAMPLES.md",
+      "file_type": "XML Schema Doc",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 60,
+        "2": 192,
+        "3": 236,
+        "4": 52
+      },
+      "xml_blocks_count": 20
+    },
+    {
+      "file_path": "docs/xml-schema/COMPONENT-XML-TEMPLATE.md",
+      "file_type": "XML Schema Doc",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 92,
+        "4": 10
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/context/llm-antipatterns.md",
+      "file_type": "Context File",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 14,
+        "2": 73,
+        "3": 44,
+        "4": 14
+      },
+      "xml_blocks_count": 4
+    },
+    {
+      "file_path": ".claude/commands/core/quick-command.md",
+      "file_type": "Core Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 116,
+        "4": 28
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/core/auto.md",
+      "file_type": "Core Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 130,
+        "4": 34
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/core/project.md",
+      "file_type": "Core Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 132,
+        "4": 34
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/core/help.md",
+      "file_type": "Core Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 128,
+        "4": 32
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/core/research.md",
+      "file_type": "Core Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 124,
+        "4": 34
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/core/assemble-command.md",
+      "file_type": "Core Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 130,
+        "4": 34
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/core/task.md",
+      "file_type": "Core Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 124,
+        "4": 32
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/core/build-command.md",
+      "file_type": "Core Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 126,
+        "4": 34
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/quality/quality.md",
+      "file_type": "Quality Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 140,
+        "4": 40
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/quality/test.md",
+      "file_type": "Quality Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 144,
+        "4": 40
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/quality/analyze-code.md",
+      "file_type": "Quality Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 140,
+        "4": 40
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/meta/adapt-to-project.md",
+      "file_type": "Meta Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 148,
+        "4": 36
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/meta/replace-placeholders.md",
+      "file_type": "Meta Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 136,
+        "4": 36
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/meta/find-commands.md",
+      "file_type": "Meta Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 124,
+        "4": 36
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/meta/welcome.md",
+      "file_type": "Meta Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 126,
+        "4": 34
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/meta/help-plus.md",
+      "file_type": "Meta Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 134,
+        "4": 36
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/commands/meta/validate-adaptation.md",
+      "file_type": "Meta Command",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 62,
+        "3": 140,
+        "4": 36
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/intelligence/cognitive-architecture.md",
+      "file_type": "Intelligence Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 110,
+        "4": 38
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/intelligence/multi-agent-coordination.md",
+      "file_type": "Intelligence Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 112,
+        "4": 38
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/security/secure-config.md",
+      "file_type": "Security Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 108,
+        "4": 32
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/security/command-security-wrapper.md",
+      "file_type": "Security Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 110,
+        "4": 32
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/security/path-validation.md",
+      "file_type": "Security Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 104,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/security/owasp-compliance.md",
+      "file_type": "Security Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 110,
+        "4": 32
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/security/prompt-injection-prevention.md",
+      "file_type": "Security Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 106,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/security/protection-feedback.md",
+      "file_type": "Security Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 108,
+        "4": 32
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/security/input-validation-framework.md",
+      "file_type": "Security Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 108,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/security/path-validation-functions.md",
+      "file_type": "Security Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 108,
+        "4": 32
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/security/harm-prevention-framework.md",
+      "file_type": "Security Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 102,
+        "4": 32
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/security/credential-protection.md",
+      "file_type": "Security Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 104,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/completion-tracker.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 102,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/api-caller.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 100,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/test-runner.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 78,
+        "4": 44
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/git-operations.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 78,
+        "4": 44
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/output-formatter.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 104,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/content-sanitizer.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 78,
+        "4": 44
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/workflow-coordinator.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 106,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/search-files.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 78,
+        "4": 42
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/error-handler.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 102,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/task-summary.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 104,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/user-confirmation.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 78,
+        "4": 42
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/progress-indicator.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 104,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/format-converter.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 78,
+        "4": 44
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/data-transformer.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 104,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/response-validator.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 106,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/state-manager.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 104,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/input-validation.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 104,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/file-reader.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 108,
+        "4": 28
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/dependency-resolver.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 78,
+        "4": 44
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/parameter-parser.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 102,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/atomic/file-writer.md",
+      "file_type": "Atomic Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 102,
+        "4": 22
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/orchestration/agent-orchestration.md",
+      "file_type": "Orchestration Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 112,
+        "4": 38
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/orchestration/dag-orchestrator.md",
+      "file_type": "Orchestration Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 112,
+        "4": 38
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/orchestration/dependency-analysis.md",
+      "file_type": "Orchestration Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 102,
+        "4": 32
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/orchestration/agent-swarm.md",
+      "file_type": "Orchestration Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 108,
+        "4": 38
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/orchestration/progress-tracking.md",
+      "file_type": "Orchestration Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 108,
+        "4": 32
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/orchestration/task-execution.md",
+      "file_type": "Orchestration Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 108,
+        "4": 32
+      },
+      "xml_blocks_count": 5
+    },
+    {
+      "file_path": ".claude/components/orchestration/task-planning.md",
+      "file_type": "Orchestration Component",
+      "max_depth": 4,
+      "depth_distribution": {
+        "1": 16,
+        "2": 64,
+        "3": 108,
+        "4": 32
+      },
+      "xml_blocks_count": 5
+    }
+  ],
+  "category_stats": {
+    "Root Documentation": [
+      4,
+      5,
+      4,
+      4,
+      4
+    ],
+    "XML Schema Doc": [
+      2,
+      4,
+      4,
+      4,
+      4,
+      6,
+      4,
+      4
+    ],
+    "Context File": [
+      4
+    ],
+    "Core Command": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "Quality Command": [
+      4,
+      4,
+      4
+    ],
+    "Meta Command": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "Intelligence Component": [
+      4,
+      4
+    ],
+    "Security Component": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "Atomic Component": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "Orchestration Component": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ]
+  },
+  "overall_stats": {
+    "max_depth_found": 6,
+    "total_depths": [
+      4,
+      5,
+      4,
+      4,
+      4,
+      2,
+      4,
+      4,
+      4,
+      4,
+      6,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "problematic_files": [
+      {
+        "file": "STEP-010-ANTI-PATTERN-IDENTIFICATION.md",
+        "depth": 5,
+        "type": "Root Documentation"
+      },
+      {
+        "file": "docs/xml-schema/AGENT-3-XML-IMPLEMENTATION-REPORT.md",
+        "depth": 6,
+        "type": "XML Schema Doc"
+      }
+    ]
+  }
+}

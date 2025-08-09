@@ -1,0 +1,271 @@
+# Workflow Pattern Extraction Template
+# Purpose: Standardized extraction format for Claude Code workflow patterns
+# Version: 1.0
+
+extraction_template:
+  pattern_id: "pattern-workflows-{name}-{timestamp}"
+  category: "workflows" 
+  subcategory: "" # development_workflows, testing_workflows, deployment_workflows, team_workflows
+  
+  # Basic Pattern Information
+  pattern_info:
+    name: ""
+    description: ""
+    workflow_scope: "" # individual, team, project, organization
+    automation_level: "" # manual, semi-automated, fully-automated
+    
+  # Process Flow Analysis
+  process_flow:
+    workflow_stages:
+      - stage_name: ""
+        description: ""
+        duration: "" # Estimated time for stage
+        inputs: [] # What inputs are required
+        outputs: [] # What outputs are produced
+        tools_used: [] # Claude Code tools/commands used
+        automation_level: "" # manual, semi, auto for this stage
+        
+    stage_transitions:
+      - from_stage: ""
+        to_stage: ""
+        trigger_conditions: [] # What triggers the transition
+        transition_time: "" # Time for transition
+        validation_gates: [] # Quality checks before proceeding
+        
+    workflow_variants:
+      - variant_name: ""
+        description: ""
+        use_cases: [] # When this variant is used
+        differences: [] # How it differs from main workflow
+        
+  # Automation Patterns
+  automation_analysis:
+    automated_components:
+      - component: ""
+        automation_type: "" # trigger-based, schedule-based, event-driven
+        implementation: "" # How automation is implemented
+        reliability: 0.0 # 0-1 score for reliability
+        
+    trigger_mechanisms:
+      - trigger_type: "" # file-change, time-based, user-action, etc.
+        conditions: [] # Specific conditions that trigger
+        response_actions: [] # What happens when triggered
+        error_handling: [] # How errors are handled
+        
+    state_management:
+      state_tracking: "" # How workflow state is tracked
+      persistence_mechanism: "" # How state persists between sessions
+      recovery_procedures: [] # How to recover from failures
+      rollback_capabilities: [] # Can workflow be rolled back?
+      
+  # Quality Gates & Validation
+  quality_assurance:
+    validation_points:
+      - checkpoint_name: ""
+        validation_criteria: [] # What is checked
+        validation_method: "" # How validation is performed
+        failure_actions: [] # What happens if validation fails
+        
+    quality_metrics:
+      - metric_name: ""
+        measurement_method: "" # How metric is measured
+        success_threshold: "" # What constitutes success
+        improvement_tracking: "" # How improvements are tracked
+        
+    error_handling:
+      error_detection: [] # How errors are detected
+      error_classification: [] # Types of errors handled
+      recovery_strategies: [] # How recovery is performed
+      escalation_procedures: [] # When human intervention needed
+      
+  # Performance Characteristics
+  performance_analysis:
+    timing_metrics:
+      total_workflow_time: "" # End-to-end time
+      stage_breakdown: [] # Time per stage
+      bottleneck_identification: [] # Where delays occur
+      optimization_opportunities: [] # Ways to improve speed
+      
+    resource_requirements:
+      computational_overhead: "" # light, moderate, heavy
+      memory_requirements: "" # low, moderate, high  
+      tool_dependencies: [] # Required tools/dependencies
+      human_involvement: "" # Level of human involvement needed
+      
+    scalability_patterns:
+      throughput_capacity: "" # How many workflows can run concurrently
+      scaling_limitations: [] # What limits scaling
+      resource_scaling: [] # How resources scale with load
+      
+  # Success Patterns & Anti-patterns
+  pattern_analysis:
+    success_factors:
+      - factor: ""
+        importance: 0.0 # 0-1 score for importance
+        implementation: "" # How this factor is achieved
+        evidence: "" # Evidence this factor matters
+        
+    failure_patterns:
+      - anti_pattern: ""
+        symptoms: [] # How to recognize this problem
+        causes: [] # Root causes
+        prevention: [] # How to avoid
+        remediation: [] # How to fix if it occurs
+        
+    best_practices:
+      - practice: ""
+        rationale: "" # Why this practice helps
+        implementation: "" # How to implement
+        validation: "" # How to verify it's working
+        
+  # Team Collaboration Aspects
+  collaboration_patterns:
+    team_coordination:
+      role_definitions: [] # Who does what
+      communication_protocols: [] # How team communicates
+      decision_making_process: [] # How decisions are made
+      conflict_resolution: [] # How conflicts are resolved
+      
+    knowledge_sharing:
+      documentation_requirements: [] # What must be documented
+      knowledge_transfer_mechanisms: [] # How knowledge is shared
+      onboarding_procedures: [] # How new team members learn
+      
+    workflow_governance:
+      approval_processes: [] # What requires approval
+      compliance_requirements: [] # Regulatory/policy compliance  
+      audit_trails: [] # How actions are logged
+      version_control: [] # How workflow versions are managed
+      
+  # Innovation Indicators
+  innovation_analysis:
+    novelty_assessment:
+      unique_approach: "" # What makes this workflow unique?
+      creative_automation: [] # Innovative automation approaches
+      problem_solving_innovation: [] # Novel solutions to common problems
+      
+    effectiveness_improvements:
+      time_savings: 0.0 # 0-1 score for time efficiency gains
+      quality_improvements: 0.0 # 0-1 score for quality gains
+      error_reduction: 0.0 # 0-1 score for error reduction
+      
+    adoption_potential:
+      reusability: 0.0 # 0-1 score for reuse in other contexts
+      adaptability: 0.0 # 0-1 score for adaptation to other domains
+      learning_curve: "" # easy, moderate, steep
+      
+  # Evidence Collection
+  evidence:
+    sources:
+      - repository: ""
+        url: ""
+        file_path: ""
+        line_numbers: []
+        extracted_date: ""
+        
+    implementation_evidence:
+      working_examples: "" # yes/no - Complete working examples?
+      usage_documentation: "" # yes/no - Clear usage docs?
+      performance_data: [] # Measurable performance metrics
+      user_testimonials: [] # Community feedback
+      
+    effectiveness_validation:
+      before_after_metrics: [] # Measured improvements
+      comparative_analysis: [] # Comparison with alternatives
+      long_term_sustainability: "" # Evidence of sustained use
+      
+    cross_references:
+      - pattern_id: ""
+        relationship: "" # extends, conflicts, complements, requires
+        description: ""
+        strength: 0.0 # 0-1 correlation strength
+        
+  # Applicability Assessment
+  applicability:
+    use_case_mapping:
+      primary_use_cases: []
+      secondary_use_cases: []
+      inappropriate_use_cases: [] # When NOT to use this workflow
+      
+    context_requirements:
+      team_size_requirements: [] # solo, small, medium, large
+      project_complexity: [] # simple, moderate, complex  
+      domain_applicability: [] # Applicable domains
+      organizational_maturity: [] # Startup, growth, enterprise
+      
+    adaptation_requirements:
+      customization_needed: "" # Level of customization required
+      integration_complexity: "" # How hard to integrate
+      training_requirements: [] # What training is needed
+      change_management: [] # How to manage adoption
+      
+  # Success Metrics
+  success_measurement:
+    quantitative_metrics:
+      - metric: ""
+        baseline_value: "" # Starting point
+        target_value: "" # Goal to achieve
+        measurement_method: "" # How to measure
+        reporting_frequency: "" # How often to measure
+        
+    qualitative_indicators:
+      - indicator: ""
+        assessment_method: "" # How to evaluate
+        success_criteria: "" # What constitutes success
+        stakeholder_feedback: [] # Who provides feedback
+        
+  # Confidence Scoring
+  confidence_assessment:
+    evidence_strength:
+      source_count: 0 # Number of evidence sources
+      source_diversity: 0.0 # 0-1 score for source variety
+      implementation_variety: 0.0 # 0-1 score for different implementations
+      
+    validation_strength:
+      currency_score: 0.0 # CRAAP: How recent/current?
+      relevance_score: 0.0 # CRAAP: How relevant to our use?
+      authority_score: 0.0 # CRAAP: How authoritative is source?
+      accuracy_score: 0.0 # CRAAP: How accurate/correct?
+      purpose_score: 0.0 # CRAAP: How aligned with purpose?
+      
+    implementation_confidence:
+      working_examples_score: 0.0 # Quality of working examples
+      performance_validation: 0.0 # Quality of performance data
+      user_adoption_evidence: 0.0 # Evidence of successful adoption
+      
+    overall_confidence: 0.0 # Calculated weighted average
+    
+  # Analysis Metadata
+  extraction_metadata:
+    analyst_id: ""
+    extraction_date: ""
+    analysis_version: "1.0"
+    time_invested: "" # Hours spent analyzing
+    quality_gates_passed: [] # Which quality checks passed
+    
+    notes:
+      key_insights: []
+      concerns: []
+      recommendations: []
+      follow_up_needed: []
+      
+    workflow_complexity_analysis:
+      complexity_score: 0.0 # 0-1 score for workflow complexity
+      maintenance_requirements: [] # Ongoing maintenance needs
+      optimization_opportunities: [] # Ways to improve workflow
+
+# Usage Instructions:
+# 1. Focus on end-to-end workflows, not individual commands
+# 2. Document automation patterns and trigger mechanisms
+# 3. Include timing and performance characteristics
+# 4. Pay attention to team collaboration aspects
+# 5. Identify both success patterns and anti-patterns
+# 6. Validate effectiveness claims with concrete evidence
+# 7. Consider scalability and long-term sustainability
+
+# Quality Requirements:
+# - Minimum 2 evidence sources required (workflows span multiple repos)
+# - Must include working implementation examples  
+# - Overall confidence must be >= 0.6
+# - Performance characteristics must be documented
+# - Success metrics and validation methods required

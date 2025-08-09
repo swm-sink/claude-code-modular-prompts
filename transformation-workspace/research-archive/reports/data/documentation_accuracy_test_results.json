@@ -1,0 +1,194 @@
+{
+  "timestamp": "2025-07-31",
+  "total_tests": 25,
+  "passed": 16,
+  "failed": 9,
+  "warnings": 0,
+  "overall_score": 58.58585858585858,
+  "grade": "D",
+  "document_scores": {
+    "CLAUDE.md": 86.28787878787878,
+    "README.md": 58.57142857142857,
+    "USAGE.md": 43.65079365079365,
+    "FAQ.md": 45.83333333333333
+  },
+  "critical_failures": 5,
+  "system_status": "NEEDS WORK",
+  "test_details": [
+    {
+      "document": "CLAUDE.md",
+      "test_name": "Command Count Claims",
+      "result": "PASS",
+      "details": "Command count claims are accurate: [88, 88, 88, 88] (actual: 88)",
+      "score": 100.0
+    },
+    {
+      "document": "CLAUDE.md",
+      "test_name": "Component Count Claims",
+      "result": "PASS",
+      "details": "Component count claims are accurate: [94] (actual: 94)",
+      "score": 100.0
+    },
+    {
+      "document": "README.md",
+      "test_name": "Command Count Claims",
+      "result": "FAIL",
+      "details": "Command count claims are inaccurate: [85, 85] (actual: 88)",
+      "score": 0.0
+    },
+    {
+      "document": "README.md",
+      "test_name": "Component Count Claims",
+      "result": "PASS",
+      "details": "Component count claims are accurate: [93, 93] (actual: 94)",
+      "score": 100.0
+    },
+    {
+      "document": "CLAUDE.md",
+      "test_name": "Feature Claim - Progressive Disclosure System",
+      "result": "PASS",
+      "details": "Feature documented and implemented (4/4 keywords)",
+      "score": 100.0
+    },
+    {
+      "document": "CLAUDE.md",
+      "test_name": "Feature Claim - Quick Command Auto-Generation",
+      "result": "PASS",
+      "details": "Feature documented and implemented (2/3 keywords)",
+      "score": 66.66666666666666
+    },
+    {
+      "document": "CLAUDE.md",
+      "test_name": "Feature Claim - Component Library",
+      "result": "PASS",
+      "details": "Feature documented and implemented (3/3 keywords)",
+      "score": 100.0
+    },
+    {
+      "document": "CLAUDE.md",
+      "test_name": "Feature Claim - YAML Compliance",
+      "result": "FAIL",
+      "details": "Feature documented but not implemented (3/3 keywords)",
+      "score": 50.0
+    },
+    {
+      "document": "CLAUDE.md",
+      "test_name": "Feature Claim - Template Adaptation",
+      "result": "PASS",
+      "details": "Feature documented and implemented (3/3 keywords)",
+      "score": 100.0
+    },
+    {
+      "document": "README.md",
+      "test_name": "Feature Claim - Component Library",
+      "result": "PASS",
+      "details": "Feature documented and implemented (2/3 keywords)",
+      "score": 66.66666666666666
+    },
+    {
+      "document": "README.md",
+      "test_name": "Feature Claim - YAML Compliance",
+      "result": "FAIL",
+      "details": "Feature documented but not implemented (1/3 keywords)",
+      "score": 16.666666666666664
+    },
+    {
+      "document": "README.md",
+      "test_name": "Feature Claim - Template Adaptation",
+      "result": "PASS",
+      "details": "Feature documented and implemented (3/3 keywords)",
+      "score": 100.0
+    },
+    {
+      "document": "USAGE.md",
+      "test_name": "Feature Claim - YAML Compliance",
+      "result": "FAIL",
+      "details": "Feature documented but not implemented (1/3 keywords)",
+      "score": 16.666666666666664
+    },
+    {
+      "document": "FAQ.md",
+      "test_name": "Feature Claim - Quick Command Auto-Generation",
+      "result": "PASS",
+      "details": "Feature documented and implemented (1/3 keywords)",
+      "score": 33.33333333333333
+    },
+    {
+      "document": "FAQ.md",
+      "test_name": "Feature Claim - YAML Compliance",
+      "result": "FAIL",
+      "details": "Feature documented but not implemented (1/3 keywords)",
+      "score": 16.666666666666664
+    },
+    {
+      "document": "FAQ.md",
+      "test_name": "Feature Claim - Template Adaptation",
+      "result": "PASS",
+      "details": "Feature documented and implemented (2/3 keywords)",
+      "score": 66.66666666666666
+    },
+    {
+      "document": "CLAUDE.md",
+      "test_name": "Command Examples",
+      "result": "FAIL",
+      "details": "Only 13/40 command examples exist",
+      "score": 32.5
+    },
+    {
+      "document": "README.md",
+      "test_name": "Command Examples",
+      "result": "FAIL",
+      "details": "Only 8/30 command examples exist",
+      "score": 26.666666666666668
+    },
+    {
+      "document": "USAGE.md",
+      "test_name": "Command Examples",
+      "result": "FAIL",
+      "details": "Only 3/21 command examples exist",
+      "score": 14.285714285714285
+    },
+    {
+      "document": "FAQ.md",
+      "test_name": "Command Examples",
+      "result": "FAIL",
+      "details": "Only 2/3 command examples exist",
+      "score": 66.66666666666666
+    },
+    {
+      "document": "CLAUDE.md",
+      "test_name": "Progressive Disclosure Layers",
+      "result": "PASS",
+      "details": "All 3 layers documented and implemented",
+      "score": 100.0
+    },
+    {
+      "document": "CLAUDE.md",
+      "test_name": "Workflow Timelines",
+      "result": "PASS",
+      "details": "Realistic timelines documented",
+      "score": 100.0
+    },
+    {
+      "document": "CLAUDE.md",
+      "test_name": "Workflow Steps",
+      "result": "PASS",
+      "details": "Found 8 documented workflow steps",
+      "score": 100.0
+    },
+    {
+      "document": "README.md",
+      "test_name": "Workflow Timelines",
+      "result": "PASS",
+      "details": "Realistic timelines documented",
+      "score": 100.0
+    },
+    {
+      "document": "USAGE.md",
+      "test_name": "Workflow Timelines",
+      "result": "PASS",
+      "details": "Realistic timelines documented",
+      "score": 100.0
+    }
+  ]
+}
