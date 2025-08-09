@@ -1,6 +1,0 @@
-{
-  "max_file_size_mb": 5,
-  "batch_size": 50,
-  "use_streaming": true,
-  "cache_frequently_used": true
-}

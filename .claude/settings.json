@@ -1,0 +1,26 @@
+{
+  "tools": {
+    "enabled": [
+      "Read",
+      "Write",
+      "Edit",
+      "MultiEdit",
+      "Glob",
+      "Grep",
+      "LS",
+      "Bash",
+      "WebSearch",
+      "WebFetch"
+    ],
+    "dangerouslySkipConfirmation": false
+  },
+  "model": "sonnet",
+  "context": {
+    "maxTokens": 200000,
+    "preserveContext": true
+  },
+  "commands": {
+    "directory": ".claude/commands",
+    "autoDiscover": true
+  }
+}

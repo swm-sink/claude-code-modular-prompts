@@ -1,270 +1,118 @@
-# Claude Context Architect - Deep Discovery Generation Engine for Claude Code
+# Claude Context Architect - Pure Claude Native
 
-<!-- AI_METADATA_START -->
-<ai_document_metadata>
-  <document_type>documentation</document_type>
-  <ai_consumption_priority>critical</ai_consumption_priority>
-  <content_structure>markdown_body</content_structure>
-  <file_path>/Users/smenssink/conductor/repo/claude-code-modular-prompts/cairo/README.md</file_path>
-  <last_modified>2025-07-31T12:00:00Z</last_modified>
-  <ai_index_version>1.0</ai_index_version>
-</ai_document_metadata>
+A **100% Claude Code native** system for deep project discovery and custom command generation.
 
-<project_overview_metadata>
-  <project_type>deep_discovery_generation_engine</project_type>
-  <version>1.0</version>
-  <consultation_system>30_minute_interactive</consultation_system>
-  <specialized_agents>10_plus</specialized_agents>
-  <session_management>true</session_management>
-  <orchestration_enabled>true</orchestration_enabled>
-  <target_audience>claude_code_developers</target_audience>
-</project_overview_metadata>
+## What This Is
 
-<ai_navigation>
-  <discovery_metadata>
-    <primary_discovery_path>user_documentation</primary_discovery_path>
-    <quick_access_sections>
-      <section ref="quick_start">30-second installation</section>
-      <section ref="what_you_get">Deep discovery and generation</section>
-      <section ref="consultation_process">30+ minute interactive consultation</section>
-      <section ref="installation">Setup instructions</section>
-    </quick_access_sections>
-  </discovery_metadata>
-  
-  <relationship_map>
-    <related_documentation>
-      <file type="guide" ref="SETUP.md" relation="installation_details"/>
-      <file type="guide" ref="ADAPTATION-GUIDE.md" relation="customization_help"/>
-      <file type="assessment" ref="ULTRATHINK-FRAMEWORK-ASSESSMENT.md" relation="value_proposition"/>
-    </related_documentation>
-    <key_agents>
-      <agent ref="master-orchestrator" role="consultation_coordinator"/>
-      <agent ref="technical-architecture-analyst" role="framework_analysis"/>
-      <agent ref="domain-knowledge-engineer" role="business_intelligence"/>
-    </key_agents>
-  </relationship_map>
-</ai_navigation>
+This is a pure Claude Code native implementation that:
+- **Analyzes** your project deeply (30-60 minutes)
+- **Extracts** your project's DNA (patterns, conventions, architecture)
+- **Generates** custom commands specific to YOUR project
+- **Zero dependencies** - Everything runs in Claude conversation
 
-<context_engineering>
-  <ai_understanding_scope>
-    <scope_level>project</scope_level>
-    <context_retention>session</context_retention>
-    <memory_priority>9</memory_priority>
-  </ai_understanding_scope>
-  
-  <user_journey_metadata>
-    <entry_points>
-      <point type="installation">setup.sh script</point>
-      <point type="discovery">/help command</point>
-      <point type="immediate_use">context-aware commands</point>
-    </entry_points>
-    <consultation_progression>
-      <phase level="1">Technical architecture analysis</phase>
-      <phase level="2">Domain intelligence extraction</phase>
-      <phase level="3">Context system generation</phase>
-    </consultation_progression>
-  </user_journey_metadata>
-</context_engineering>
-<!-- AI_METADATA_END -->
-
-**A Deep Discovery Generation Engine that analyzes YOUR project's unique DNA and generates custom Claude Code commands, agents, and context specifically for YOUR codebase.**
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status: Stable](https://img.shields.io/badge/Status-Stable-green.svg)](https://github.com/swm-sink/claude-code-modular-prompts/releases)
-
-## 🚀 Quick Start (10-15 Minutes Total)
+## Quick Start (10-15 minutes)
 
 ```bash
-# Install Claude Context Architect
-./setup.sh /path/to/your/project
+# 1. Setup Claude structure
+/setup
 
-# Three simple commands to transform Claude for YOUR project:
-/welcome-simple                    # Get oriented (1 min)
-/discover-project-simple          # Analyze your project (3-5 min)
-/generate-commands-simple         # Generate custom commands (2-3 min)
+# 2. Deep discovery (30-60 min interactive)
+/discover
+
+# 3. Generate custom commands
+/generate
 ```
 
-**That's it!** Claude now understands YOUR project and has generated custom commands specifically for YOUR codebase.
+That's it. Three commands. Pure Claude native.
 
-## What You Get
+## What Makes This Different
 
-**Deep Discovery Generation Engine:**
-- **Project DNA Analysis**: Discovers your unique architecture, patterns, and conventions
-- **Custom Command Generation**: Creates commands specific to YOUR project needs
-- **Specialized Agent Creation**: Generates agents that understand YOUR domain
-- **Tailored Context System**: Builds context that reflects YOUR codebase
+### ❌ What This Is NOT
+- Not shell scripts pretending to be smart
+- Not YAML configs that don't execute
+- Not templates you have to customize
+- Not instruction manuals for Claude
 
-**NOT Pre-Built Templates:**
-- **NOT** generic commands that need customization
-- **NOT** one-size-fits-all solutions
-- **NOT** template libraries to integrate
-- **INSTEAD**: Project-specific generation based on deep analysis
+### ✅ What This IS
+- **Executable commands** that run immediately
+- **XML semantic tagging** for Claude understanding
+- **Direct tool usage** (Read, Write, Glob, Grep)
+- **Project-specific** generation, not generic templates
 
-**Discovery & Generation Features:**
-- **Deep Repository Analysis**: Comprehensive scanning of your entire codebase
-- **Pattern Recognition**: Identifies your team's conventions and workflows
-- **Project DNA Extraction**: Captures technical architecture, domain knowledge, anti-patterns
-- **Custom Generation**: Creates solutions tailored exactly to your project
-- **Validation & Refinement**: Ensures generated content matches your needs
-- **Continuous Evolution**: Learns and improves with your project over time
-
-## How It Works
-
-### The Generation Pipeline
-```
-Repository Analysis → Project DNA Extraction → Custom Generation → Validation
-         ↑                     ↑                      ↑              ↑
-    Discovery Agents    Pattern Recognition    Context Builder   Quality Gates
-```
-
-1. **Deep Discovery Phase**: Analyze your entire repository to understand patterns
-2. **DNA Extraction**: Identify unique characteristics of your project
-3. **Custom Generation**: Create project-specific commands, agents, and context
-4. **Validation**: Ensure generated solutions match your actual needs
-5. **Continuous Improvement**: Refine based on usage and feedback
-
-## Installation Methods
-
-### Method 1: Git Submodule (Recommended)
-```bash
-git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-framework
-cd .claude-framework && ./setup.sh
-```
-
-### Method 2: Direct Integration
-```bash
-git clone https://github.com/swm-sink/claude-code-modular-prompts
-cd claude-code-modular-prompts && ./setup.sh ../your-project
-```
-
-### Method 3: Selective Copy
-Choose specific commands/components to copy manually.
-
-## Usage Examples
-
-**Discovery & Generation Process:**
-```
-/begin-discovery            # Start deep analysis of your repository
-/analyze-project-dna        # Extract unique patterns and conventions
-/generate-commands          # Create project-specific Claude commands
-/validate-generation        # Ensure generated solutions match your needs
-```
-
-**After Generation - Your Custom Commands:**
-```
-# The system generates commands specific to YOUR project, such as:
-# /your-test-runner          - Knows YOUR testing framework
-# /your-deploy-process       - Understands YOUR deployment pipeline  
-# /your-code-patterns        - Follows YOUR team's conventions
-```
-
-**What Gets Generated:**
-```
-# Project-specific artifacts created based on YOUR codebase:
-# .claude/commands/          - Commands tailored to your workflows
-# .claude/agents/            - Agents that understand your domain
-# .claude/context/           - Deep understanding of your project
-```
-
-## Installation
-
-**Recommended:**
-```bash
-git clone https://github.com/swm-sink/claude-code-modular-prompts
-cd claude-code-modular-prompts
-./setup.sh /path/to/your/project
-```
-
-**Or as git submodule:**
-```bash
-git submodule add https://github.com/swm-sink/claude-code-modular-prompts .claude-context-architect
-cd .claude-context-architect && ./setup.sh ../
-```
-
-## File Structure After Generation
+## Project Structure
 
 ```
-your-project/
-├── .claude/
-│   ├── commands/          # YOUR project-specific commands
-│   │   └── [generated based on YOUR workflows]
-│   ├── agents/            # YOUR domain-specific agents
-│   │   └── [generated based on YOUR patterns]
-│   ├── context/           # YOUR project DNA and understanding
-│   │   └── [generated based on YOUR architecture]
-│   └── settings.json      # Claude Code configuration
-└── CLAUDE.md              # YOUR project memory and context
+.claude/
+├── commands/           # Your executable commands
+│   ├── setup.md       # Initialize structure
+│   ├── discover.md    # Deep analysis
+│   └── generate.md    # Create custom commands
+├── context/           # Project understanding
+└── settings.json      # Minimal config
+
+outputs/               # Generated artifacts
+├── PROJECT-DNA.md    # Your project's extracted patterns
+└── generated/        # Your custom commands
 ```
 
-**Generated specifically for YOUR project**
+## Core Principles
 
-## Project DNA Discovery
+1. **Everything in conversation** - No external scripts
+2. **Commands execute** - Not instruction manuals
+3. **XML for semantics** - Claude understands structure
+4. **Zero dependencies** - Only Claude's native tools
+5. **Project-specific** - Generated for YOUR codebase
 
-**Discovers and understands YOUR unique project characteristics:**
-- **Technical Architecture**: YOUR frameworks, patterns, dependencies
-- **Domain Knowledge**: YOUR business rules, terminology, workflows
-- **Team Conventions**: YOUR coding standards, review processes, tooling
-- **Anti-patterns**: YOUR project-specific pitfalls and historical lessons
+## The Three Commands
+
+### `/setup`
+- Creates `.claude/` structure
+- Detects your technology stack
+- Initializes context
+- **Time**: 1-2 minutes
+
+### `/discover`
+- Deep 30-60 minute consultation
+- Analyzes architecture, domain, patterns
+- Creates PROJECT-DNA.md
+- **Time**: 30-60 minutes interactive
+
+### `/generate`
+- Reads your PROJECT-DNA
+- Generates custom commands
+- Creates executable, not templates
+- **Time**: 5-10 minutes
 
 ## Requirements
 
-- Claude Code desktop application
-- Git (for cloning)
+- Claude Code CLI
+- A project to analyze
+- 30-60 minutes for discovery
 
-## Why This Is Different
+## No Installation Needed
 
-**Traditional Approach**: Use generic templates that don't fit your project, spend hours customizing, still get mismatched solutions.
+This IS the installation. Just run `/setup`.
 
-**Deep Discovery Generation**: Analyzes YOUR specific codebase, extracts YOUR patterns, generates solutions that fit YOUR project perfectly.
+## Philosophy
 
-## 🎨 The Elegant Architecture
+> "If it doesn't execute, delete it."  
+> "If it needs a script, rewrite as a command."  
+> "If it's YAML config, convert to XML tags."  
+> "If it's documentation, make it functional."
 
-**Simple but Sophisticated** - We use Claude's native abilities, not complex scripts:
-- **Just 5 essential scripts** instead of dozens
-- **Prompts over programs** - Claude interprets markdown, not Python
-- **Direct execution** - No complex backends or orchestration layers
-- **Transparent operation** - Everything is readable, modifiable markdown
-- **10-15 minutes** instead of hours - Elegant efficiency
+## Anti-Patterns We Avoid
 
-## FAQ
-
-**Does this work with my tech stack?**
-Yes - it discovers YOUR specific stack and generates appropriate solutions.
-
-**What if my project is unique?**
-That's the point! It analyzes YOUR unique patterns and generates custom solutions.
-
-**How long does discovery and generation take?**
-Just 10-15 minutes total! We've simplified to an elegant, efficient process.
-
-## Getting Started
-
-- Run the discovery process to analyze your project
-- Review the extracted Project DNA for accuracy
-- Approve the generated commands and agents
-- Start using YOUR custom Claude configuration
-
-## Advanced Features
-
-**Deep Discovery Capabilities:**
-
-1. **Repository Analysis**: Comprehensive scanning of your entire codebase to understand structure, patterns, and conventions.
-
-2. **Pattern Recognition Engine**: Identifies:
-   - Your team's coding patterns and abstractions
-   - Common workflows and processes
-   - Testing strategies and coverage patterns
-   - Anti-patterns and technical debt
-
-3. **Generation Engine**: Creates project-specific:
-   - Commands that match YOUR workflows
-   - Agents that understand YOUR domain
-   - Context that reflects YOUR architecture
+Based on extensive research and validation:
+- ❌ Hallucinated metrics (87.3% improvement!)
+- ❌ Theatrical success claims
+- ❌ Over-engineering
+- ❌ Template pollution
+- ❌ Context bloat
 
 ## License
 
-MIT - Use freely in your projects.
+MIT
 
 ---
 
-*Claude Context Architect - Deep Discovery Generation Engine that creates project-specific Claude Code solutions.*
+*Pure Claude Code native. Zero scripts. Zero configs. Just commands that work.*
