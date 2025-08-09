@@ -45,38 +45,40 @@ transformation:
     - "Minimum viable simplicity"
     - "Fix architectural mismatch (analyze user project, not external repos)"
     
-  current_status: "PRE-FLIGHT preparation in progress"
+  current_status: "PRE-FLIGHT COMPLETE - Ready for transformation"
   
   timeline:
     total_hours: 33  # Was 32 days for complex approach
     phases: 7
-    start_date: "TBD - after pre-flight approval"
+    start_date: "2025-01-09 - PRE-FLIGHT complete"
 
 # =============================================================================
 # ORCHESTRATION STATE
 # =============================================================================
 orchestration:
-  version: "3.0"
+  version: "4.0"
   format: "yaml"
-  status: "integration_active"
-  mode: "phased_transformation"
+  status: "transformation_ready"
+  mode: "aggressive_simplification"
   
-  current_phase: 7
-  phase_name: "Integration & Wiring"
+  current_phase: "PRE_FLIGHT_COMPLETE"
+  phase_name: "Ready for Phase 1"
   
   session:
-    planning_completed: "2025-08-07T00:00:00Z"
-    last_update: "2025-01-09T00:00:00Z"
-    integration_milestone: "2025-01-09T00:00:00Z"
+    planning_completed: "2025-01-09T18:30:00Z"
+    last_update: "2025-01-09T18:30:00Z"
+    pre_flight_complete: "2025-01-09T18:30:00Z"
     
   progress:
-    total_phases: 8
-    completed_phases: 0  # Reset to accurate: no phase fully complete
-    integrated_phases: 3  # Foundation, Research, Commands now integrated
-    total_estimated_days: 32
+    total_phases: 7
+    completed_phases: 0  # Pre-flight complete, phases not started
+    pre_flight: "COMPLETE"
     
   decision_points:
-    phase_1_start: "pending_approval"
+    phase_1_start: "APPROVED - ready to begin"
+    aggressive_approach: "CONFIRMED"
+    delete_backend: "CONFIRMED"
+    script_limit: "5 MAXIMUM"
     
   flexibility:
     adaptation_allowed: true
@@ -86,696 +88,218 @@ orchestration:
       major: "Fundamental assumption invalid"
 
 # =============================================================================
-# 8-PHASE MASTER PLAN
+# PRE-FLIGHT COMPLETE
+# =============================================================================
+pre_flight:
+  status: "COMPLETE"
+  completed_at: "2025-01-09T18:30:00Z"
+  checklist:
+    - "Current state validated: 1,772 files"
+    - "SSOT structure established"
+    - "CLAUDE.md updated with vision"
+    - "claude.local.md session tracking"
+    - "technical-reality.md created"
+    - "Backup and git checkpoint created"
+
+# =============================================================================
+# 7-PHASE AGGRESSIVE TRANSFORMATION PLAN
 # =============================================================================
 phases:
   # ---------------------------------------------------------------------------
-  # PHASE 1: Foundation Reset & Vision Alignment
+  # PHASE 1: Assessment & Validation (4 hours)
   # ---------------------------------------------------------------------------
   phase_1:
-    name: "Foundation Reset & Vision Alignment"
-    duration: "3 days"
-    status: "pending"
+    name: "Assessment & Validation"
+    duration: "4 hours"
+    status: "NOT_STARTED"
     
     objectives:
-      - "Archive current speed-focused smart onboarding system"
-      - "Establish new depth-focused architecture"
-      - "Create foundation commands for deep discovery"
+      - "Test 3 simple commands to verify they work"
+      - "Validate anti-pattern relevance with web searches"
+      - "Identify 12 essential YAMLs from 84 backend files"
+      - "Map dependencies and integration points"
       
     tasks:
-      1_1:
-        name: "Archive smart onboarding system"
-        description: |
-          Move all smart onboarding files to .archive-smart-onboarding/
-          Document lessons learned about speed vs depth tradeoff
-          Preserve valuable detection logic for potential reuse
-        priority: "high"
-        estimated_hours: 2
-        dependencies: []
-        deliverables:
-          - ".archive-smart-onboarding/ directory"
-          - "LESSONS-LEARNED.md"
-          
-      1_2:
-        name: "Create new architecture structure"
-        description: |
-          Establish .claude-architect/ directory with:
-          - research/        # Web research & pattern analysis
-          - consultation/    # Interactive consultation flow
-          - context-engine/  # Context generation system
-          - agent-factory/   # Agent development platform
-          - command-forge/   # Command generation engine
-          - orchestration/   # Session & state management
-        priority: "high"
-        estimated_hours: 1
-        dependencies: ["1_1"]
-        deliverables:
-          - "Complete directory structure"
-          - "README.md for each directory"
-          
-      1_3:
-        name: "Create foundation commands"
-        description: |
-          Build core slash commands:
-          - /deep-discovery       # Master orchestrator
-          - /research-patterns    # Web research engine
-          - /consult-interactive  # Consultation framework
-          - /generate-context     # Context engineering
-          - /develop-agents       # Agent creation
-        priority: "high"
-        estimated_hours: 4
-        dependencies: ["1_2"]
-        deliverables:
-          - "5 foundation command files"
-          - "Command documentation"
+      - "Test /welcome-simple, /discover-project-simple, /generate-commands-simple"
+      - "Validate framework patterns with web searches (React 19, Python 2025, etc.)"
+      - "Test anti-pattern effectiveness (do they prevent hallucination?)"
+      - "Identify which backend YAMLs contain essential logic"
+      - "Document what actually works vs theoretical"
           
     success_criteria:
-      - "Clean architectural foundation established"
-      - "Clear separation from speed-focused approach"
-      - "Foundation commands created and documented"
-      
-    flexibility_points:
-      - "Can preserve useful parts of smart-onboarding"
-      - "Architecture adjustable based on discoveries"
-      - "Commands can be renamed as patterns emerge"
+      - "Know exactly what works and what doesn't"
+      - "Anti-patterns validated as still relevant"
+      - "12 essential YAMLs identified from 84"
+      - "Dependencies mapped"
+          
 
   # ---------------------------------------------------------------------------
-  # PHASE 2: Deep Research Infrastructure
+  # PHASE 2: Value Extraction & Preservation (5 hours)
   # ---------------------------------------------------------------------------
   phase_2:
-    name: "Deep Research Infrastructure"
-    duration: "4 days"
-    status: "pending"
+    name: "Value Extraction & Preservation"
+    duration: "5 hours"
+    status: "NOT_STARTED"
     
     objectives:
-      - "Build capability to analyze leading Claude Code repositories"
-      - "Create pattern extraction and validation engine"
-      - "Establish evidence-based research framework"
+      - "Consolidate anti-patterns into ANTIPATTERNS-MASTER.md"
+      - "Extract 12 essential YAMLs from 84 backend files"
+      - "Convert complex YAML logic to simple Claude prompts"
+      - "Web validate all preserved patterns"
       
     tasks:
-      2_1:
-        name: "Research data collection system"
-        description: |
-          Identify and catalog 20+ leading Claude Code repositories
-          Create research database structure
-          Build repository analysis framework
-        priority: "high"
-        estimated_hours: 6
-        dependencies: ["phase_1_complete"]
-        deliverables:
-          - "Repository catalog (20+ repos)"
-          - "Research database schema"
-          - "Analysis framework"
-          
-      2_2:
-        name: "Pattern extraction engine"
-        description: |
-          Build system to:
-          - Analyze repository structures
-          - Extract command patterns
-          - Identify framework adaptations
-          - Document success patterns
-        priority: "high"
-        estimated_hours: 8
-        dependencies: ["2_1"]
-        deliverables:
-          - "Pattern extraction commands"
-          - "Pattern database"
-          - "Success pattern documentation"
-          
-      2_3:
-        name: "Evidence validation system"
-        description: |
-          Implement CRAAP test framework
-          3+ source validation requirement
-          Cross-reference verification
-          Confidence scoring system
-        priority: "high"
-        estimated_hours: 6
-        dependencies: ["2_2"]
-        deliverables:
-          - "Validation framework"
-          - "Confidence scoring algorithm"
-          - "Evidence documentation"
-          
-      2_4:
-        name: "Research commands"
-        description: |
-          Create specialized research commands:
-          - /analyze-repository [url]
-          - /extract-patterns [domain]
-          - /validate-evidence [pattern]
-          - /research-report
-        priority: "medium"
-        estimated_hours: 4
-        dependencies: ["2_3"]
-        deliverables:
-          - "4 research command files"
-          - "Research command documentation"
+      - "Merge all anti-pattern files into single ANTIPATTERNS-MASTER.md"
+      - "Validate each anti-pattern with web search (still relevant?)"
+      - "Extract 12 YAMLs: consultation-flow, patterns, templates, validation, etc."
+      - "Convert 273-line analysis-framework.yaml to 20-line prompt"
+      - "Create web-validated-patterns.yaml with sources and confidence"
           
     success_criteria:
-      - "Can analyze any Claude Code repository"
-      - "Extract and validate patterns with evidence"
-      - "Generate comprehensive research reports"
-      
-    flexibility_points:
-      - "Number of repositories adjustable (10-50)"
-      - "Research depth calibratable"
-      - "Can add/remove sources dynamically"
+      - "All valuable content preserved"
+      - "Zero duplication"
+      - "Everything web validated"
+      - "Complex logic simplified to prompts"
+          
 
   # ---------------------------------------------------------------------------
-  # PHASE 3: Interactive Consultation Framework
+  # PHASE 3: Architecture Simplification (4 hours)
   # ---------------------------------------------------------------------------
   phase_3:
-    name: "Interactive Consultation Framework"
-    duration: "5 days"
-    status: "pending"
+    name: "Architecture Simplification"
+    duration: "4 hours"
+    status: "NOT_STARTED"
     
     objectives:
-      - "Build 20-30 minute guided consultation experience"
-      - "Create intelligent questioning system"
-      - "Implement session management"
+      - "Fix architectural mismatch (analyze user project, not external)"
+      - "Create simple directory structure"
+      - "Reduce to 5 shell scripts only"
+      - "DELETE .claude-architect/ completely"
       
     tasks:
-      3_1:
-        name: "Multi-stage consultation flow"
-        description: |
-          Design and implement:
-          - Stage 1: Project Discovery (5-7 min)
-          - Stage 2: Technical Deep Dive (7-10 min)
-          - Stage 3: Domain Extraction (7-10 min)
-          - Stage 4: Preference Learning (3-5 min)
-        priority: "high"
-        estimated_hours: 10
-        dependencies: ["phase_2_complete"]
-        deliverables:
-          - "Consultation flow architecture"
-          - "Stage transition logic"
-          - "Time management system"
-          
-      3_2:
-        name: "Intelligent questioning system"
-        description: |
-          Build dynamic question generation
-          Smart defaults with overrides
-          Skip logic for detected info
-          Confidence-based depth adjustment
-        priority: "high"
-        estimated_hours: 8
-        dependencies: ["3_1"]
-        deliverables:
-          - "Question generation engine"
-          - "Default value system"
-          - "Skip logic implementation"
-          
-      3_3:
-        name: "Session management system"
-        description: |
-          Implement pause/resume capability
-          Progress tracking and estimation
-          State persistence across sessions
-          Rollback and revision support
-        priority: "high"
-        estimated_hours: 6
-        dependencies: ["3_1"]
-        deliverables:
-          - "Session state management"
-          - "Progress tracking system"
-          - "Persistence mechanism"
-          
-      3_4:
-        name: "Consultation commands"
-        description: |
-          Create consultation commands:
-          - /consult-technical
-          - /consult-domain
-          - /consult-workflow
-          - /session-manage
-        priority: "medium"
-        estimated_hours: 4
-        dependencies: ["3_2", "3_3"]
-        deliverables:
-          - "4 consultation commands"
-          - "Consultation documentation"
-          
+      - "Change commands from 'analyze external repos' to 'analyze THIS project'"
+      - "Create clean structure: .claude/commands/, .claude/context/, outputs/"
+      - "Delete all Python scripts (109 files)"
+      - "Keep only: setup.sh, consultation.sh, validate.sh, reset.sh, export.sh"
+      - "rm -rf .claude-architect/ (DELETE completely, no archive)"
+    
     success_criteria:
-      - "Complete 20-30 minute consultation flow"
-      - "Intelligent, context-aware questioning"
-      - "Full session management capability"
-      
-    flexibility_points:
-      - "Consultation stages reorderable"
-      - "Question depth adjustable"
-      - "Can add domain-specific modules"
-      - "Time per stage flexible"
+      - "Commands analyze user's project"
+      - "Simple, clear directory structure"
+      - "Only 5 scripts exist"
+      - "Backend deleted completely"
 
   # ---------------------------------------------------------------------------
-  # PHASE 4: Context Engineering System
+  # PHASE 4: Build Deep Consultation System (7 hours)
   # ---------------------------------------------------------------------------
   phase_4:
-    name: "Context Engineering System"
-    duration: "5 days"
-    status: "pending"
+    name: "Build Deep Consultation System"
+    duration: "7 hours"
+    status: "NOT_STARTED"
     
     objectives:
-      - "Build multi-file hierarchical context generation"
-      - "Create context validation framework"
-      - "Implement token optimization"
+      - "Create 30-60 minute consultation flow"
+      - "Use Claude's native intelligence, not YAMLs"
+      - "Build session management (pause/resume)"
+      - "Generate context that makes Claude understand project"
       
     tasks:
-      4_1:
-        name: "Hierarchical context structure"
-        description: |
-          Design and implement:
-          - Master CLAUDE.md enhancement
-          - Technical architecture context
-          - Domain knowledge context
-          - Pattern documentation
-          - Workflow descriptions
-          - Decision logs
-          - Navigation system
-        priority: "high"
-        estimated_hours: 8
-        dependencies: ["phase_3_complete"]
-        deliverables:
-          - "Context file templates"
-          - "Hierarchy definition"
-          - "Navigation patterns"
-          
-      4_2:
-        name: "Context generation engine"
-        description: |
-          Build template-based generation
-          Dynamic sections by project type
-          Cross-reference creation
-          Token optimization
-        priority: "high"
-        estimated_hours: 8
-        dependencies: ["4_1"]
-        deliverables:
-          - "Generation engine"
-          - "Template system"
-          - "Optimization algorithms"
-          
-      4_3:
-        name: "Context validation system"
-        description: |
-          Create effectiveness testing
-          Before/after comparisons
-          Token usage analysis
-          Coverage checks
-        priority: "high"
-        estimated_hours: 6
-        dependencies: ["4_2"]
-        deliverables:
-          - "Validation framework"
-          - "Test suite"
-          - "Metrics system"
-          
-      4_4:
-        name: "Context commands"
-        description: |
-          Build context commands:
-          - /generate-context
-          - /update-context
-          - /validate-context
-          - /optimize-context
-        priority: "medium"
-        estimated_hours: 4
-        dependencies: ["4_3"]
-        deliverables:
-          - "4 context commands"
-          - "Context documentation"
-          
-    success_criteria:
-      - "Multi-file context system generation"
-      - "Measurable improvement in responses"
-      - "Optimal token usage"
+      - "Build /deep-consultation command using Claude native prompts"
+      - "Create progressive disclosure flow (architecture → domain → patterns)"
+      - "Implement session state in simple JSON (pause/resume capability)"
+      - "Generate PROJECT-DNA.md from consultation insights"
+      - "Create 5 project-specific commands based on discoveries"
+      - "Web validate all technical patterns and frameworks"
       
-    flexibility_points:
-      - "Context structure customizable"
-      - "Depth adjustable"
-      - "Project-specific files addable"
-      - "Token limits configurable"
+    success_criteria:
+      - "30-60 minute consultation works end-to-end"
+      - "Session can pause and resume across conversations"
+      - "PROJECT-DNA.md captures real project insights"
+      - "Generated commands actually work on user's project"
 
   # ---------------------------------------------------------------------------
-  # PHASE 5: Agent Development Platform
+  # PHASE 5: Integration & Testing (5 hours)
   # ---------------------------------------------------------------------------
   phase_5:
-    name: "Agent Development Platform"
-    duration: "5 days"
-    status: "pending"
+    name: "Integration & Testing"
+    duration: "5 hours"
+    status: "NOT_STARTED"
     
     objectives:
-      - "Create real specialized agents"
-      - "Build agent orchestration system"
-      - "Implement performance monitoring"
+      - "Integrate all components into working system"
+      - "Test with real projects"
+      - "Validate consultation produces value"
+      - "Ensure generated commands work"
       
     tasks:
-      5_1:
-        name: "Core agent types"
-        description: |
-          Develop specialized agents:
-          - Architecture Analyzer
-          - Domain Expert
-          - Pattern Detective
-          - Workflow Optimizer
-          - Quality Guardian
-          - Research Validator
-        priority: "high"
-        estimated_hours: 12
-        dependencies: ["phase_4_complete"]
-        deliverables:
-          - "6 specialized agents"
-          - "Agent specifications"
-          - "Capability definitions"
-          
-      5_2:
-        name: "Agent development framework"
-        description: |
-          Build template system
-          Capability boundaries
-          Communication protocols
-          Performance optimization
-        priority: "high"
-        estimated_hours: 8
-        dependencies: ["5_1"]
-        deliverables:
-          - "Development framework"
-          - "Protocol definitions"
-          - "Optimization system"
-          
-      5_3:
-        name: "Agent orchestration"
-        description: |
-          Create task routing
-          Parallel execution
-          Result aggregation
-          Conflict resolution
-        priority: "high"
-        estimated_hours: 6
-        dependencies: ["5_2"]
-        deliverables:
-          - "Orchestration engine"
-          - "Routing algorithms"
-          - "Resolution protocols"
-          
-      5_4:
-        name: "Agent commands"
-        description: |
-          Build agent commands:
-          - /develop-agent
-          - /deploy-agent
-          - /coordinate-agents
-          - /monitor-agents
-        priority: "medium"
-        estimated_hours: 4
-        dependencies: ["5_3"]
-        deliverables:
-          - "4 agent commands"
-          - "Agent documentation"
-          
-    success_criteria:
-      - "5+ specialized agents operational"
-      - "Effective multi-agent coordination"
-      - "Measurable task improvement"
+      - "Test /deep-consultation on 3 different project types"
+      - "Validate consultation flow completes in 30-60 minutes"
+      - "Test session pause/resume functionality"
+      - "Verify PROJECT-DNA.md accurately captures project"
+      - "Test generated commands on actual project code"
+      - "Validate web search results are current and accurate"
       
-    flexibility_points:
-      - "Agent types expandable"
-      - "Capabilities enhanceable"
-      - "Domain-specific agents addable"
-      - "Orchestration adjustable"
+    success_criteria:
+      - "All test projects complete successfully"
+      - "Consultation stays within time bounds"
+      - "Generated commands work without errors"
+      - "No hallucinations in output"
 
   # ---------------------------------------------------------------------------
-  # PHASE 6: Command Generation Engine
+  # PHASE 6: Final Cleanup & Documentation (3 hours)
   # ---------------------------------------------------------------------------
   phase_6:
-    name: "Command Generation Engine"
-    duration: "4 days"
-    status: "pending"
+    name: "Final Cleanup & Documentation"
+    duration: "3 hours"
+    status: "NOT_STARTED"
     
     objectives:
-      - "Generate project-specific commands"
-      - "Ensure convention adherence"
-      - "Implement optimization system"
+      - "DELETE all unnecessary files (1,772 → ~100)"
+      - "Create clean README with usage instructions"
+      - "Document consultation process"
+      - "Ensure SSOT/DRY compliance"
       
     tasks:
-      6_1:
-        name: "Command categories"
-        description: |
-          Define generation for:
-          - Component generators
-          - Test creators
-          - API builders
-          - Debug helpers
-          - Workflow automation
-        priority: "high"
-        estimated_hours: 6
-        dependencies: ["phase_5_complete"]
-        deliverables:
-          - "Category definitions"
-          - "Generation templates"
-          - "Pattern library"
-          
-      6_2:
-        name: "Generation engine"
-        description: |
-          Build pattern-based creation
-          Convention adherence
-          Parameter handling
-          Validation system
-        priority: "high"
-        estimated_hours: 8
-        dependencies: ["6_1"]
-        deliverables:
-          - "Generation engine"
-          - "Validation system"
-          - "Convention checker"
-          
-      6_3:
-        name: "Command optimization"
-        description: |
-          Create usage tracking
-          Performance optimization
-          Error handling
-          Documentation generation
-        priority: "medium"
-        estimated_hours: 4
-        dependencies: ["6_2"]
-        deliverables:
-          - "Optimization system"
-          - "Tracking mechanism"
-          - "Documentation generator"
-          
-      6_4:
-        name: "Generation commands"
-        description: |
-          Build generation commands:
-          - /generate-commands
-          - /test-command
-          - /optimize-command
-          - /document-commands
-        priority: "medium"
-        estimated_hours: 4
-        dependencies: ["6_3"]
-        deliverables:
-          - "4 generation commands"
-          - "Generation documentation"
-          
-    success_criteria:
-      - "10+ project commands generated"
-      - "Commands follow conventions"
-      - "High success rate"
+      - "DELETE .claude-architect/ completely (rm -rf)"
+      - "DELETE all Python scripts (109 files)"
+      - "DELETE duplicate documentation and plans"
+      - "Keep only essential context files (12 YAMLs)"
+      - "Create single README.md with clear instructions"
+      - "Document exactly how to run consultation"
       
-    flexibility_points:
-      - "Command types customizable"
-      - "Generation rules adjustable"
-      - "New categories addable"
-      - "Optimization flexible"
+    success_criteria:
+      - "Files reduced from 1,772 to ~100"
+      - "No duplicate information anywhere"
+      - "Clear usage instructions"
+      - "SSOT/DRY fully enforced"
 
   # ---------------------------------------------------------------------------
-  # PHASE 7: Integration & Orchestration
+  # PHASE 7: End-to-End Validation (3 hours)
   # ---------------------------------------------------------------------------
   phase_7:
-    name: "Integration & Orchestration"
-    duration: "3 days"
-    status: "active"
-    started: "2025-01-09"
+    name: "End-to-End Validation"
+    duration: "3 hours"
+    status: "NOT_STARTED"
     
     objectives:
-      - "Connect all components into cohesive experience"
-      - "Implement progress management"
-      - "Ensure quality throughout"
+      - "Complete end-to-end test of full system"
+      - "Validate 30-60 minute consultation experience"
+      - "Ensure all deliverables work as promised"
+      - "Final git commit with clean state"
       
     tasks:
-      7_1:
-        name: "Master orchestration flow"
-        description: |
-          Integrate all phases:
-          - Research (15-20 min)
-          - Consultation (20-30 min)
-          - Generation (10-15 min)
-        priority: "high"
-        estimated_hours: 8
-        dependencies: ["phase_6_complete"]
-        status: "partial_complete"
-        achievements:
-          - "Frontend-backend integration complete"
-          - "/discover-project integrated with research backend"
-          - "/generate-commands integrated with command-forge backend"
-          - "/deep-discovery orchestrates integrated commands"
-          - "Integration validation script created (100% pass)"
-        deliverables:
-          - "Orchestration system"
-          - "Phase transitions"
-          - "Time management"
-          - "INTEGRATION-ACHIEVEMENT.md"
-          - "validate-integration.sh"
-          
-      7_2:
-        name: "Progress management"
-        description: |
-          Build real-time tracking
-          Time estimation
-          Checkpoint system
-          Completion metrics
-        priority: "high"
-        estimated_hours: 4
-        dependencies: ["7_1"]
-        deliverables:
-          - "Progress tracker"
-          - "Metrics system"
-          - "Checkpoint mechanism"
-          
-      7_3:
-        name: "Quality assurance"
-        description: |
-          Create end-to-end testing
-          Performance optimization
-          Error recovery
-          UX refinement
-        priority: "high"
-        estimated_hours: 6
-        dependencies: ["7_1"]
-        deliverables:
-          - "Test suite"
-          - "Optimization report"
-          - "Error handling"
-          
-      7_4:
-        name: "Orchestration commands"
-        description: |
-          Build orchestration commands:
-          - /deep-discovery
-          - /discovery-status
-          - /discovery-customize
-          - /discovery-report
-        priority: "medium"
-        estimated_hours: 4
-        dependencies: ["7_2", "7_3"]
-        deliverables:
-          - "4 orchestration commands"
-          - "Orchestration documentation"
-          
-    success_criteria:
-      - "Complete 30-60 minute flow"
-      - "Smooth phase transitions"
-      - "Comprehensive output"
+      - "Run complete consultation from scratch"
+      - "Time the full 30-60 minute experience"
+      - "Validate PROJECT-DNA.md quality"
+      - "Test all generated commands"
+      - "Ensure no hallucinations with web validation"
+      - "Create final git commit with tag v1.0-minimal"
       
-    flexibility_points:
-      - "Phase order adjustable"
-      - "Time allocation flexible"
-      - "Phases skippable"
-      - "Customization throughout"
+    success_criteria:
+      - "Complete consultation runs successfully"
+      - "Time is 30-60 minutes as promised"
+      - "All outputs are accurate and useful"
+      - "System ready for production use"
 
-  # ---------------------------------------------------------------------------
-  # PHASE 8: Validation & Release
-  # ---------------------------------------------------------------------------
-  phase_8:
-    name: "Validation & Release"
-    duration: "3 days"
-    status: "pending"
-    
-    objectives:
-      - "Ensure system meets vision"
-      - "Complete testing matrix"
-      - "Prepare for release"
-      
-    tasks:
-      8_1:
-        name: "Testing matrix"
-        description: |
-          Test scenarios:
-          - Simple project (30 min)
-          - Complex project (60 min)
-          - Team project (45 min)
-          - Legacy project (50 min)
-        priority: "high"
-        estimated_hours: 8
-        dependencies: ["phase_7_complete"]
-        deliverables:
-          - "Test results"
-          - "Performance metrics"
-          - "Issue log"
-          
-      8_2:
-        name: "Success metrics"
-        description: |
-          Validate metrics:
-          - Context quality > 90%
-          - User satisfaction > 4.5/5
-          - Time to value < 5 min
-          - Command effectiveness > 85%
-        priority: "high"
-        estimated_hours: 4
-        dependencies: ["8_1"]
-        deliverables:
-          - "Metrics report"
-          - "Improvement recommendations"
-          
-      8_3:
-        name: "Documentation"
-        description: |
-          Create documentation:
-          - User guide
-          - Agent documentation
-          - Context guide
-          - Command manual
-        priority: "high"
-        estimated_hours: 6
-        dependencies: ["8_1"]
-        deliverables:
-          - "Complete documentation"
-          - "Video tutorials"
-          - "Quick start guide"
-          
-      8_4:
-        name: "Release preparation"
-        description: |
-          Prepare for release:
-          - Package distribution
-          - Demo videos
-          - Announcement
-          - Support materials
-        priority: "medium"
-        estimated_hours: 4
-        dependencies: ["8_2", "8_3"]
-        deliverables:
-          - "Release package"
-          - "Marketing materials"
-          - "Support documentation"
-          
-    success_criteria:
-      - "All scenarios pass"
-      - "Metrics meet thresholds"
-      - "Documentation complete"
-      - "Ready for release"
-      
-    flexibility_points:
-      - "Test scenarios expandable"
-      - "Metrics adjustable"
-      - "Documentation depth variable"
-      - "Release timeline flexible"
 
 # =============================================================================
 # ADAPTATION & FLEXIBILITY STRATEGY
@@ -815,19 +339,18 @@ success_metrics:
   overall:
     - "Complete setup in 30-60 minutes"
     - "Deep project understanding demonstrated"
-    - "Project-specific agents and commands"
-    - "Measurable improvement in responses"
-    - "User satisfaction positive"
+    - "Project-specific commands generated"
+    - "Zero hallucinations (web validated)"
+    - "Files reduced from 1,772 to ~100"
     
   phase_level:
-    phase_1: "Clean architecture (binary)"
-    phase_2: "20+ repositories analyzed (count)"
-    phase_3: "Consultation < 30 min (time)"
-    phase_4: "Context improves 50%+ (quality)"
-    phase_5: "5+ agents operational (count)"
-    phase_6: "10+ commands generated (count)"
-    phase_7: "End-to-end < 60 min (time)"
-    phase_8: "All tests pass (percentage)"
+    phase_1: "3 working commands validated"
+    phase_2: "12 essential YAMLs extracted"
+    phase_3: "Architecture simplified to 5 scripts"
+    phase_4: "30-60 minute consultation working"
+    phase_5: "All tests pass successfully"
+    phase_6: "Files reduced to ~100"
+    phase_7: "End-to-end validation complete"
 
 # =============================================================================
 # RISK MITIGATION
@@ -859,39 +382,39 @@ risk_management:
 # =============================================================================
 implementation:
   philosophy:
-    - "Iterative: Build, test, refine each phase"
-    - "User-centric: Regular testing and feedback"
-    - "Evidence-based: Validate with research"
-    - "Flexible: Adapt based on learnings"
-    - "Quality-first: Don't rush, build right"
+    - "Aggressive: DELETE not archive"
+    - "Simple: Use Claude's native intelligence"
+    - "Fast: 33 hours not 32 days"
+    - "Validated: Web search everything"
+    - "SSOT/DRY: No duplication ever"
     
   resource_requirements:
-    time: "32 days with 20% buffer"
-    testing: "Multiple test projects"
-    research: "Access to 20+ repositories"
-    validation: "User testers for feedback"
+    time: "33 hours total (was 32 days)"
+    testing: "3 test projects"
+    validation: "Web search validation"
+    simplicity: "5 scripts maximum"
 
 # =============================================================================
 # NEXT STEPS
 # =============================================================================
 next_steps:
   immediate:
-    - "Get approval to start Phase 1"
-    - "Archive smart onboarding system"
-    - "Create new architecture"
-    - "Build foundation commands"
+    - "Start Phase 1: Assessment & Validation"
+    - "Test 3 simple commands"
+    - "Web validate anti-patterns"
+    - "Identify 12 essential YAMLs"
     
-  this_week:
-    - "Complete Phase 1"
-    - "Begin Phase 2 research"
-    - "Establish testing framework"
-    - "Start repository analysis"
+  today:
+    - "Complete Phase 1 (4 hours)"
+    - "Begin Phase 2: Value Extraction"
+    - "Start consolidating anti-patterns"
+    - "Web validate everything"
     
-  communication:
-    - "Document pivot rationale"
-    - "Update stakeholders"
-    - "Create progress dashboard"
-    - "Establish feedback channels"
+  tomorrow:
+    - "Complete architecture simplification"
+    - "Build consultation system"
+    - "Test and validate"
+    - "Final cleanup"
 
 # =============================================================================
 # ENFORCEMENT PROTOCOL
@@ -899,14 +422,14 @@ next_steps:
 enforcement:
   mandatory_rules:
     - "This file is the SINGLE SOURCE OF TRUTH for planning"
-    - "All work must align with the 8-phase structure"
+    - "All work must align with the 7-phase structure"
     - "No parallel planning documents allowed"
     - "Updates must be atomic and versioned"
     - "Progress must be tracked here"
     
   violation_consequences:
     - "Work outside this plan will be rejected"
-    - "Parallel plans will be archived"
+    - "Parallel plans will be DELETED"
     - "Non-aligned work must be redone"
     
   update_protocol:
@@ -914,16 +437,16 @@ enforcement:
     - "Make atomic update"
     - "Increment version"
     - "Document change reason"
-    - "Notify stakeholders"
+    - "Update claude.local.md session state"
 
 # =============================================================================
 # END OF SINGLE SOURCE OF TRUTH
 # =============================================================================
-# This document represents the complete plan for transforming the current
-# 30-second smart onboarding into a 30-60 minute deep discovery consultation
-# system. All project work must align with this plan.
+# This document represents the complete plan for transforming the complex
+# 1,772-file system into a ~100-file minimal viable deep consultation system
+# using Claude's native intelligence. All project work must align with this plan.
 #
-# Version: 3.0
-# Status: Planning Complete - Awaiting Phase 1 Approval
-# Next Action: Begin Phase 1 upon approval
+# Version: 4.0
+# Status: Planning Complete - Ready for Phase 1
+# Next Action: Begin Phase 1 - Assessment & Validation
 # =============================================================================
