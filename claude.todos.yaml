@@ -1,452 +1,284 @@
-# Claude Context Architect - Master Transformation Plan
-# Version: 4.0 - Minimum Viable Deep Consultation
+# Claude Context Architect - PURE CLAUDE CODE NATIVE TRANSFORMATION
+# Version: 5.0 - Direct Transformation to Pure Claude Native
 # Format: YAML (Single Source of Truth)
-# Last Updated: 2025-01-09T18:00:00Z
+# Last Updated: 2025-01-09T22:45:00Z
 
 # =============================================================================
-# 🚨 MANDATORY ENFORCEMENT - THIS IS THE SINGLE SOURCE OF TRUTH
+# 🚨 CRITICAL PIVOT: PURE CLAUDE CODE NATIVE ARCHITECTURE
 # =============================================================================
-# ALL AGENTS AND HUMANS MUST:
-# 1. Read this file FIRST before any work on the project
-# 2. Use this as the ONLY source for project planning and execution
-# 3. Update this file atomically for any plan changes
-# 4. Follow the 8-phase structure defined here
-# 5. Document all progress and outcomes here
-#
-# THIS SUPERSEDES ALL OTHER PLANNING DOCUMENTS
-# Previous plans in other files are OBSOLETE
+# NEW DISCOVERY: We're not actually Claude Code native yet!
+# - Shell scripts violate Claude Code principles
+# - YAML configs should be XML semantic tagging
+# - Commands are instruction manuals, not executable
+# 
+# DECISION: Direct transformation to PURE Claude Code native
+# - ZERO shell scripts (everything as Claude commands)
+# - ZERO YAML configs (only frontmatter allowed)
+# - ALL commands executable (not instruction manuals)
+# - XML semantic tagging for Claude understanding
 # =============================================================================
 
 # =============================================================================
 # VISION & TRANSFORMATION CONTEXT
 # =============================================================================
 transformation:
-  vision: "30-60 minute deep consultation with minimum viable simplicity"
+  vision: "Pure Claude Code native system - everything in conversation"
   
   from:
     files: 1772
-    working_commands: 3
-    backend_yamls: 84
-    scripts: "5 shell + 109 Python"
-    architecture: "Complex but broken (frontend/backend mismatch)"
+    shell_scripts: 5
+    yaml_configs: "84+ files"
+    commands: "instruction manuals (not executable)"
+    architecture: "Hybrid broken system"
     
   to:
-    files: "~100"
-    working_commands: "10-15"
-    essential_yamls: 12
-    scripts: "5 shell only"
-    architecture: "Simple and functional (Claude-native)"
+    files: "<50"
+    shell_scripts: 0
+    yaml_configs: 0  # Only frontmatter allowed
+    commands: "3-10 executable commands"
+    architecture: "Pure Claude Code native with XML semantic tagging"
     
   key_principles:
-    - "Claude-native intelligence over scripted orchestration"
-    - "Web validation for zero hallucination"
-    - "SSOT and DRY enforcement"
-    - "Progressive validation at each step"
+    - "Everything happens in Claude conversation"
+    - "Commands execute, don't instruct"
+    - "XML semantic tagging for understanding"
+    - "ZERO external dependencies"
     - "Minimum viable simplicity"
-    - "Fix architectural mismatch (analyze user project, not external repos)"
     
-  current_status: "PRE-FLIGHT COMPLETE - Ready for transformation"
+  current_status: "Phase 2 COMPLETE - Ready for nuclear transformation"
   
   timeline:
-    total_hours: 33  # Was 32 days for complex approach
-    phases: 7
-    start_date: "2025-01-09 - PRE-FLIGHT complete"
+    total_hours: 1.5  # 90 minutes to pure Claude native
+    phases: 3  # Reduced from 7
+    start_date: "2025-01-09T23:00:00Z"
 
 # =============================================================================
 # ORCHESTRATION STATE
 # =============================================================================
 orchestration:
-  version: "4.0"
+  version: "5.0"
   format: "yaml"
-  status: "transformation_ready"
-  mode: "aggressive_simplification"
+  status: "nuclear_transformation_ready"
+  mode: "direct_pure_claude_native"
   
-  current_phase: "PRE_FLIGHT_COMPLETE"
-  phase_name: "Ready for Phase 1"
+  current_phase: "PHASE_2_COMPLETE"
+  phase_name: "Ready for Nuclear Cleanup"
   
   session:
-    planning_completed: "2025-01-09T18:30:00Z"
-    last_update: "2025-01-09T18:30:00Z"
-    pre_flight_complete: "2025-01-09T18:30:00Z"
+    phase_2_completed: "2025-01-09T22:30:00Z"
+    plan_updated: "2025-01-09T22:45:00Z"
     
   progress:
-    total_phases: 7
-    completed_phases: 0  # Pre-flight complete, phases not started
-    pre_flight: "COMPLETE"
+    total_phases: 3  # NEW aggressive plan
+    completed_phases: 0  # Starting fresh transformation
     
   decision_points:
-    phase_1_start: "APPROVED - ready to begin"
-    aggressive_approach: "CONFIRMED"
-    delete_backend: "CONFIRMED"
-    script_limit: "5 MAXIMUM"
-    
-  flexibility:
-    adaptation_allowed: true
-    pivot_triggers:
-      minor: "Time variance < 20%"
-      moderate: "Time variance 20-40% or technical blocker"
-      major: "Fundamental assumption invalid"
+    pure_claude_native: "CONFIRMED"
+    delete_all_scripts: "CONFIRMED"
+    delete_all_yaml: "CONFIRMED"
+    xml_semantic_tagging: "CONFIRMED"
 
 # =============================================================================
-# PRE-FLIGHT COMPLETE
+# 3-PHASE PURE CLAUDE NATIVE TRANSFORMATION
 # =============================================================================
-pre_flight:
-  status: "COMPLETE"
-  completed_at: "2025-01-09T18:30:00Z"
-  checklist:
-    - "Current state validated: 1,772 files"
-    - "SSOT structure established"
-    - "CLAUDE.md updated with vision"
-    - "claude.local.md session tracking"
-    - "technical-reality.md created"
-    - "Backup and git checkpoint created"
 
-# =============================================================================
-# 7-PHASE AGGRESSIVE TRANSFORMATION PLAN
-# =============================================================================
 phases:
   # ---------------------------------------------------------------------------
-  # PHASE 1: Assessment & Validation (4 hours)
+  # PHASE 1: Nuclear Cleanup (30 minutes)
   # ---------------------------------------------------------------------------
   phase_1:
-    name: "Assessment & Validation"
-    duration: "4 hours"
+    name: "Nuclear Cleanup"
+    duration: "30 minutes"
     status: "NOT_STARTED"
     
     objectives:
-      - "Test 3 simple commands to verify they work"
-      - "Validate anti-pattern relevance with web searches"
-      - "Identify 12 essential YAMLs from 84 backend files"
-      - "Map dependencies and integration points"
+      - "DELETE everything except 7 essential files"
+      - "Remove ALL shell scripts"
+      - "Remove ALL YAML configs"
+      - "Achieve 97%+ file reduction"
       
-    tasks:
-      - "Test /welcome-simple, /discover-project-simple, /generate-commands-simple"
-      - "Validate framework patterns with web searches (React 19, Python 2025, etc.)"
-      - "Test anti-pattern effectiveness (do they prevent hallucination?)"
-      - "Identify which backend YAMLs contain essential logic"
-      - "Document what actually works vs theoretical"
-          
+    keep_only:
+      - "CLAUDE.md (project memory)"
+      - "claude.local.md (session state)"
+      - "claude.todos.yaml (this file)"
+      - "transformation-workspace/extracted/ANTIPATTERNS-MASTER.md"
+      - "transformation-workspace/extracted/consultation-flow-simple.md"
+      - "transformation-workspace/extracted/generation-engine-simple.md"
+      - "transformation-workspace/extracted/web-validated-sources.md"
+      
+    delete_operations:
+      - "rm -rf .claude-architect/ (84 YAML files)"
+      - "rm -rf scripts/ (5 shell scripts)"
+      - "rm -rf docs/ reports/ releases/ tests/"
+      - "rm -rf .claude/ (current broken commands)"
+      - "rm -rf .backup* .main.archive/"
+      
     success_criteria:
-      - "Know exactly what works and what doesn't"
-      - "Anti-patterns validated as still relevant"
-      - "12 essential YAMLs identified from 84"
-      - "Dependencies mapped"
-          
+      - "File count: 1,772 → <20 files"
+      - "Zero shell scripts remaining"
+      - "Zero YAML configs remaining"
+      - "All value preserved in 7 essential files"
 
   # ---------------------------------------------------------------------------
-  # PHASE 2: Value Extraction & Preservation (5 hours)
+  # PHASE 2: Core System Build (45 minutes)
   # ---------------------------------------------------------------------------
   phase_2:
-    name: "Value Extraction & Preservation"
-    duration: "5 hours"
+    name: "Core System Build"
+    duration: "45 minutes"
     status: "NOT_STARTED"
     
     objectives:
-      - "Consolidate anti-patterns into ANTIPATTERNS-MASTER.md"
-      - "Extract 12 essential YAMLs from 84 backend files"
-      - "Convert complex YAML logic to simple Claude prompts"
-      - "Web validate all preserved patterns"
+      - "Build 3 executable Claude commands"
+      - "Convert patterns to XML semantic tagging"
+      - "Embed all logic in commands (not external files)"
       
-    tasks:
-      - "Merge all anti-pattern files into single ANTIPATTERNS-MASTER.md"
-      - "Validate each anti-pattern with web search (still relevant?)"
-      - "Extract 12 YAMLs: consultation-flow, patterns, templates, validation, etc."
-      - "Convert 273-line analysis-framework.yaml to 20-line prompt"
-      - "Create web-validated-patterns.yaml with sources and confidence"
-          
+    commands_to_create:
+      setup:
+        file: ".claude/commands/setup.md"
+        type: "executable"
+        uses: "Write,Read,Glob,LS"
+        purpose: "Initialize project structure using Claude tools"
+        
+      discover:
+        file: ".claude/commands/discover.md"
+        type: "executable"
+        uses: "Read,Glob,Grep,Write"
+        purpose: "Analyze project and create PROJECT-DNA.md"
+        
+      generate:
+        file: ".claude/commands/generate.md"
+        type: "executable"
+        uses: "Read,Write"
+        purpose: "Create project-specific commands"
+        
+    pattern_conversion:
+      from: "essential-patterns.yaml"
+      to: "XML semantic tags embedded in commands"
+      method: "Direct embedding as <pattern_library> tags"
+      
     success_criteria:
-      - "All valuable content preserved"
-      - "Zero duplication"
-      - "Everything web validated"
-      - "Complex logic simplified to prompts"
-          
+      - "3 working executable commands"
+      - "Commands execute, don't instruct"
+      - "Zero external dependencies"
+      - "XML semantic structure throughout"
 
   # ---------------------------------------------------------------------------
-  # PHASE 3: Architecture Simplification (4 hours)
+  # PHASE 3: Validation & Polish (15 minutes)
   # ---------------------------------------------------------------------------
   phase_3:
-    name: "Architecture Simplification"
-    duration: "4 hours"
+    name: "Validation & Polish"
+    duration: "15 minutes"
     status: "NOT_STARTED"
     
     objectives:
-      - "Fix architectural mismatch (analyze user project, not external)"
-      - "Create simple directory structure"
-      - "Reduce to 5 shell scripts only"
-      - "DELETE .claude-architect/ completely"
+      - "Test end-to-end workflow"
+      - "Verify pure Claude native"
+      - "Confirm <50 total files"
       
-    tasks:
-      - "Change commands from 'analyze external repos' to 'analyze THIS project'"
-      - "Create clean structure: .claude/commands/, .claude/context/, outputs/"
-      - "Delete all Python scripts (109 files)"
-      - "Keep only: setup.sh, consultation.sh, validate.sh, reset.sh, export.sh"
-      - "rm -rf .claude-architect/ (DELETE completely, no archive)"
-    
-    success_criteria:
-      - "Commands analyze user's project"
-      - "Simple, clear directory structure"
-      - "Only 5 scripts exist"
-      - "Backend deleted completely"
-
-  # ---------------------------------------------------------------------------
-  # PHASE 4: Build Deep Consultation System (7 hours)
-  # ---------------------------------------------------------------------------
-  phase_4:
-    name: "Build Deep Consultation System"
-    duration: "7 hours"
-    status: "NOT_STARTED"
-    
-    objectives:
-      - "Create 30-60 minute consultation flow"
-      - "Use Claude's native intelligence, not YAMLs"
-      - "Build session management (pause/resume)"
-      - "Generate context that makes Claude understand project"
+    test_flow:
+      - "/setup → Should create structure"
+      - "/discover → Should create PROJECT-DNA.md"
+      - "/generate → Should create commands"
       
-    tasks:
-      - "Build /deep-consultation command using Claude native prompts"
-      - "Create progressive disclosure flow (architecture → domain → patterns)"
-      - "Implement session state in simple JSON (pause/resume capability)"
-      - "Generate PROJECT-DNA.md from consultation insights"
-      - "Create 5 project-specific commands based on discoveries"
-      - "Web validate all technical patterns and frameworks"
+    validation_checks:
+      - "All commands executable"
+      - "No shell script dependencies"
+      - "No YAML config dependencies"
+      - "File count under 50"
+      - "Works in pure Claude conversation"
       
     success_criteria:
-      - "30-60 minute consultation works end-to-end"
-      - "Session can pause and resume across conversations"
-      - "PROJECT-DNA.md captures real project insights"
-      - "Generated commands actually work on user's project"
-
-  # ---------------------------------------------------------------------------
-  # PHASE 5: Integration & Testing (5 hours)
-  # ---------------------------------------------------------------------------
-  phase_5:
-    name: "Integration & Testing"
-    duration: "5 hours"
-    status: "NOT_STARTED"
-    
-    objectives:
-      - "Integrate all components into working system"
-      - "Test with real projects"
-      - "Validate consultation produces value"
-      - "Ensure generated commands work"
-      
-    tasks:
-      - "Test /deep-consultation on 3 different project types"
-      - "Validate consultation flow completes in 30-60 minutes"
-      - "Test session pause/resume functionality"
-      - "Verify PROJECT-DNA.md accurately captures project"
-      - "Test generated commands on actual project code"
-      - "Validate web search results are current and accurate"
-      
-    success_criteria:
-      - "All test projects complete successfully"
-      - "Consultation stays within time bounds"
-      - "Generated commands work without errors"
-      - "No hallucinations in output"
-
-  # ---------------------------------------------------------------------------
-  # PHASE 6: Final Cleanup & Documentation (3 hours)
-  # ---------------------------------------------------------------------------
-  phase_6:
-    name: "Final Cleanup & Documentation"
-    duration: "3 hours"
-    status: "NOT_STARTED"
-    
-    objectives:
-      - "DELETE all unnecessary files (1,772 → ~100)"
-      - "Create clean README with usage instructions"
-      - "Document consultation process"
-      - "Ensure SSOT/DRY compliance"
-      
-    tasks:
-      - "DELETE .claude-architect/ completely (rm -rf)"
-      - "DELETE all Python scripts (109 files)"
-      - "DELETE duplicate documentation and plans"
-      - "Keep only essential context files (12 YAMLs)"
-      - "Create single README.md with clear instructions"
-      - "Document exactly how to run consultation"
-      
-    success_criteria:
-      - "Files reduced from 1,772 to ~100"
-      - "No duplicate information anywhere"
-      - "Clear usage instructions"
-      - "SSOT/DRY fully enforced"
-
-  # ---------------------------------------------------------------------------
-  # PHASE 7: End-to-End Validation (3 hours)
-  # ---------------------------------------------------------------------------
-  phase_7:
-    name: "End-to-End Validation"
-    duration: "3 hours"
-    status: "NOT_STARTED"
-    
-    objectives:
-      - "Complete end-to-end test of full system"
-      - "Validate 30-60 minute consultation experience"
-      - "Ensure all deliverables work as promised"
-      - "Final git commit with clean state"
-      
-    tasks:
-      - "Run complete consultation from scratch"
-      - "Time the full 30-60 minute experience"
-      - "Validate PROJECT-DNA.md quality"
-      - "Test all generated commands"
-      - "Ensure no hallucinations with web validation"
-      - "Create final git commit with tag v1.0-minimal"
-      
-    success_criteria:
-      - "Complete consultation runs successfully"
-      - "Time is 30-60 minutes as promised"
-      - "All outputs are accurate and useful"
-      - "System ready for production use"
-
-
-# =============================================================================
-# ADAPTATION & FLEXIBILITY STRATEGY
-# =============================================================================
-adaptation_strategy:
-  decision_points:
-    - "After each phase completion"
-    - "Weekly progress reviews"
-    - "When blockers encountered"
-    - "If assumptions proven invalid"
-    
-  minor_adjustments:
-    trigger: "Time variance < 20%"
-    action: "Continue with timeline adjustment"
-    approval_required: false
-    
-  moderate_pivots:
-    trigger: "Time variance 20-40% or technical blocker"
-    action: "Update plan and reallocate resources"
-    approval_required: true
-    
-  major_realignment:
-    trigger: "Fundamental assumption invalid"
-    action: "Revisit vision and rebuild plan"
-    approval_required: true
-    
-  continuous_improvement:
-    - "Learn from each phase"
-    - "Update best practices"
-    - "Refine estimates"
-    - "Enhance processes"
-
-# =============================================================================
-# SUCCESS METRICS & KPIS
-# =============================================================================
-success_metrics:
-  overall:
-    - "Complete setup in 30-60 minutes"
-    - "Deep project understanding demonstrated"
-    - "Project-specific commands generated"
-    - "Zero hallucinations (web validated)"
-    - "Files reduced from 1,772 to ~100"
-    
-  phase_level:
-    phase_1: "3 working commands validated"
-    phase_2: "12 essential YAMLs extracted"
-    phase_3: "Architecture simplified to 5 scripts"
-    phase_4: "30-60 minute consultation working"
-    phase_5: "All tests pass successfully"
-    phase_6: "Files reduced to ~100"
-    phase_7: "End-to-end validation complete"
-
-# =============================================================================
-# RISK MITIGATION
-# =============================================================================
-risk_management:
-  identified_risks:
-    scope_creep:
-      probability: "medium"
-      impact: "high"
-      mitigation: "Clear phase boundaries, strict criteria"
-      
-    technical_complexity:
-      probability: "medium"
-      impact: "medium"
-      mitigation: "Prototype early, fail fast"
-      
-    time_overrun:
-      probability: "low"
-      impact: "medium"
-      mitigation: "Time boxing, session management"
-      
-    user_resistance:
-      probability: "low"
-      impact: "high"
-      mitigation: "Show value early, demonstrate ROI"
-
-# =============================================================================
-# IMPLEMENTATION APPROACH
-# =============================================================================
-implementation:
-  philosophy:
-    - "Aggressive: DELETE not archive"
-    - "Simple: Use Claude's native intelligence"
-    - "Fast: 33 hours not 32 days"
-    - "Validated: Web search everything"
-    - "SSOT/DRY: No duplication ever"
-    
-  resource_requirements:
-    time: "33 hours total (was 32 days)"
-    testing: "3 test projects"
-    validation: "Web search validation"
-    simplicity: "5 scripts maximum"
-
-# =============================================================================
-# NEXT STEPS
-# =============================================================================
-next_steps:
-  immediate:
-    - "Start Phase 1: Assessment & Validation"
-    - "Test 3 simple commands"
-    - "Web validate anti-patterns"
-    - "Identify 12 essential YAMLs"
-    
-  today:
-    - "Complete Phase 1 (4 hours)"
-    - "Begin Phase 2: Value Extraction"
-    - "Start consolidating anti-patterns"
-    - "Web validate everything"
-    
-  tomorrow:
-    - "Complete architecture simplification"
-    - "Build consultation system"
-    - "Test and validate"
-    - "Final cleanup"
+      - "Complete working system"
+      - "100% Claude Code native"
+      - "User onboarding in 10-15 minutes"
+      - "All patterns preserved as XML"
 
 # =============================================================================
 # ENFORCEMENT PROTOCOL
 # =============================================================================
 enforcement:
   mandatory_rules:
-    - "This file is the SINGLE SOURCE OF TRUTH for planning"
-    - "All work must align with the 7-phase structure"
-    - "No parallel planning documents allowed"
-    - "Updates must be atomic and versioned"
-    - "Progress must be tracked here"
+    - "If it doesn't execute → DELETE IT"
+    - "If it needs a shell script → REWRITE AS COMMAND"
+    - "If it's in YAML → CONVERT TO XML MARKDOWN"
+    - "If it's documentation → MAKE IT FUNCTIONAL"
+    - "If it adds complexity → ELIMINATE IT"
     
+  validation_question: "Can a user clone this repo, run 3 commands, and get value in 10-15 minutes?"
+  required_answer: "Yes, with zero external dependencies"
+  
   violation_consequences:
-    - "Work outside this plan will be rejected"
-    - "Parallel plans will be DELETED"
-    - "Non-aligned work must be redone"
+    - "Work stops immediately"
+    - "Violation must be fixed before continuing"
+    - "All non-compliant work deleted"
     
-  update_protocol:
-    - "Read current version"
-    - "Make atomic update"
-    - "Increment version"
-    - "Document change reason"
-    - "Update claude.local.md session state"
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+metrics:
+  file_reduction:
+    from: 1772
+    to: "<50"
+    percentage: "97%+"
+    
+  complexity_elimination:
+    shell_scripts: "5 → 0"
+    yaml_configs: "84+ → 0"
+    external_deps: "Many → 0"
+    
+  user_experience:
+    onboarding_time: "10-15 minutes"
+    commands_to_value: 3
+    context_switches: 0
+    
+  claude_native_compliance:
+    percentage: "100%"
+    violations: 0
+    
+# =============================================================================
+# MINIMUM VIABLE FEATURES
+# =============================================================================
+mvp:
+  core_journey:
+    - "User runs /setup → Analyzes project"
+    - "User runs /discover → Creates PROJECT-DNA.md"
+    - "User runs /generate → Creates custom commands"
+    - "User uses generated commands → They work"
+    
+  eliminated:
+    - "Shell script orchestration"
+    - "YAML configuration files"
+    - "Complex backend"
+    - "Extensive documentation"
+    - "Testing frameworks"
+    
+  preserved:
+    - "48 web-validated anti-patterns (as XML)"
+    - "Consultation flow (as command logic)"
+    - "Pattern templates (as XML content)"
+    - "Project memory (CLAUDE.md)"
+    - "Session tracking (this file)"
 
 # =============================================================================
-# END OF SINGLE SOURCE OF TRUTH
+# FINAL STRUCTURE
 # =============================================================================
-# This document represents the complete plan for transforming the complex
-# 1,772-file system into a ~100-file minimal viable deep consultation system
-# using Claude's native intelligence. All project work must align with this plan.
-#
-# Version: 4.0
-# Status: Planning Complete - Ready for Phase 1
-# Next Action: Begin Phase 1 - Assessment & Validation
-# =============================================================================
+final_structure: |
+  lisbon/
+  ├── .claude/
+  │   ├── commands/
+  │   │   ├── setup.md         # Executable
+  │   │   ├── discover.md      # Executable
+  │   │   └── generate.md      # Executable
+  │   └── settings.json        # Only required config
+  ├── outputs/                 # Created by commands
+  ├── CLAUDE.md               # Project memory
+  ├── claude.todos.yaml       # This file
+  └── README.md               # Usage instructions
+  
+  ZERO shell scripts
+  ZERO YAML files (except frontmatter)
+  100% Claude conversation
+  <50 total files
+
+---
+# This plan achieves MAXIMUM SIMPLICITY with ALL VALUE PRESERVED
