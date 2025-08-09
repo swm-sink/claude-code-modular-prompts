@@ -1,0 +1,193 @@
+# Command Pattern Extraction Template
+# Purpose: Standardized extraction format for Claude Code command patterns
+# Version: 1.0
+
+extraction_template:
+  pattern_id: "pattern-commands-{name}-{timestamp}"
+  category: "commands"
+  subcategory: "" # generation_commands, analysis_commands, workflow_commands, utility_commands
+  
+  # Basic Pattern Information
+  pattern_info:
+    name: ""
+    description: ""
+    domain_focus: "" # web-development, data-science, devops, etc.
+    complexity_level: "" # simple, moderate, complex
+    
+  # Command Structure Analysis
+  command_structure:
+    yaml_frontmatter:
+      name: ""
+      description: ""
+      usage: ""
+      allowed_tools: []
+      category: ""
+      model: ""
+      argument_hint: ""
+      
+    content_sections:
+      overview: "" # Has overview section? (yes/no)
+      examples: "" # Has usage examples? (yes/no)
+      parameters: "" # Has parameter documentation? (yes/no)
+      error_handling: "" # Has error handling? (yes/no)
+      see_also: "" # Has cross-references? (yes/no)
+      
+    innovation_markers:
+      unique_structure: "" # Novel organization approach?
+      creative_parameters: "" # Innovative parameter handling?
+      advanced_workflows: "" # Complex workflow integration?
+      
+  # Parameter Pattern Analysis
+  parameter_patterns:
+    input_handling:
+      required_params: []
+      optional_params: []
+      default_values: []
+      validation_approach: "" # How are parameters validated?
+      
+    parameter_types:
+      file_paths: "" # Uses file path parameters? (yes/no)
+      selection_options: "" # Uses selection/choice parameters? (yes/no)
+      configuration_blocks: "" # Uses config objects? (yes/no)
+      
+    dynamic_behavior:
+      context_aware: "" # Adapts based on project context? (yes/no)
+      smart_defaults: "" # Provides intelligent defaults? (yes/no)
+      progressive_disclosure: "" # Reveals options progressively? (yes/no)
+      
+  # Tool Usage Patterns
+  tool_usage:
+    primary_tools: [] # Most frequently used tools
+    tool_combinations: [] # Specific tool sequence patterns
+    innovative_usage: [] # Creative tool applications
+    
+    file_operations:
+      read_patterns: "" # How files are read
+      write_patterns: "" # How files are written
+      search_patterns: "" # How searching is performed
+      
+    workflow_integration:
+      batch_operations: "" # Performs batch operations? (yes/no)
+      state_management: "" # Manages state across operations? (yes/no)
+      error_recovery: "" # Has error recovery mechanisms? (yes/no)
+      
+  # Innovation Indicators
+  innovation_analysis:
+    novelty_score: 0.0 # 0-1 score for uniqueness
+    adoption_potential: 0.0 # 0-1 score for broader applicability
+    complexity_appropriate: "" # Complexity matches problem? (yes/no)
+    
+    unique_aspects:
+      - "" # List unique features or approaches
+      
+    potential_improvements:
+      - "" # Areas for enhancement
+      
+    anti_patterns_avoided:
+      - "" # Bad practices successfully avoided
+      
+  # Evidence Collection
+  evidence:
+    sources:
+      - repository: ""
+        url: ""
+        file_path: ""
+        line_numbers: []
+        extracted_date: ""
+        
+    validation_data:
+      working_examples: "" # Has working examples? (yes/no)
+      test_coverage: "" # Has tests? (yes/no)  
+      documentation_quality: "" # good, fair, poor
+      community_usage: "" # Evidence of community adoption
+      
+    cross_references:
+      - pattern_id: ""
+        relationship: "" # extends, conflicts, complements, requires
+        description: ""
+        strength: 0.0 # 0-1 correlation strength
+        
+  # Effectiveness Metrics
+  effectiveness:
+    usage_indicators:
+      frequency_of_use: "" # How often command appears to be used
+      user_feedback: "" # Positive/negative community feedback
+      maintenance_activity: "" # Recent updates and improvements
+      
+    quality_metrics:
+      code_quality: 0.0 # 0-1 score for implementation quality
+      documentation_completeness: 0.0 # 0-1 score for docs
+      error_handling_quality: 0.0 # 0-1 score for robustness
+      
+    business_value:
+      time_savings_estimate: "" # Estimated time saved per use
+      quality_improvement: "" # How it improves output quality
+      learning_curve: "" # easy, moderate, steep
+      
+  # Applicability Assessment
+  applicability:
+    domains: [] # Applicable domains
+    team_sizes: [] # solo, small, medium, large
+    project_types: [] # new, legacy, maintenance, research
+    skill_levels: [] # beginner, intermediate, advanced
+    
+    prerequisites:
+      knowledge_required: []
+      tools_required: []
+      setup_complexity: "" # simple, moderate, complex
+      
+    adaptation_requirements:
+      customization_needed: "" # How much customization needed?
+      integration_complexity: "" # How hard to integrate?
+      maintenance_requirements: "" # Ongoing maintenance needed?
+      
+  # Confidence Scoring
+  confidence_assessment:
+    evidence_strength:
+      source_count: 0 # Number of evidence sources
+      source_diversity: 0.0 # 0-1 score for source variety
+      source_authority: 0.0 # 0-1 score for source credibility
+      
+    validation_strength:
+      currency_score: 0.0 # CRAAP: How recent/current?
+      relevance_score: 0.0 # CRAAP: How relevant to our use?
+      authority_score: 0.0 # CRAAP: How authoritative is source?
+      accuracy_score: 0.0 # CRAAP: How accurate/correct?
+      purpose_score: 0.0 # CRAAP: How aligned with purpose?
+      
+    implementation_confidence:
+      working_examples_score: 0.0 # Quality of examples
+      documentation_score: 0.0 # Quality of documentation  
+      community_validation_score: 0.0 # Community acceptance
+      
+    overall_confidence: 0.0 # Calculated weighted average
+    
+  # Analysis Metadata
+  extraction_metadata:
+    analyst_id: ""
+    extraction_date: ""
+    analysis_version: "1.0"
+    time_invested: "" # Hours spent analyzing
+    quality_gates_passed: [] # Which quality checks passed
+    
+    notes:
+      key_insights: []
+      concerns: []
+      recommendations: []
+      follow_up_needed: []
+
+# Usage Instructions:
+# 1. Copy this template for each command pattern analysis
+# 2. Fill in all applicable fields with evidence-based data
+# 3. Use "N/A" for truly non-applicable fields
+# 4. Use "" (empty) only for unknown/unfilled fields
+# 5. All scores should be evidence-based, not subjective
+# 6. Include specific examples and evidence in text fields
+# 7. Cross-reference related patterns for comprehensive analysis
+
+# Quality Requirements:
+# - Minimum 3 evidence sources required
+# - Overall confidence must be >= 0.6
+# - CRAAP validation must be complete
+# - At least 2 cross-references identified
+# - Working examples must be validated

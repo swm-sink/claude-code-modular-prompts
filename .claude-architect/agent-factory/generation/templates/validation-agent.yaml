@@ -1,0 +1,257 @@
+# Validation Agent Template
+# Claude Context Architect - Agent Generation System
+# Version: 1.0
+# Purpose: Template for validation agents (Integration, Domain Expert)
+
+extends: "base-agent.yaml"
+
+metadata:
+  template_type: "validation_agent"
+  specialization_category: "validation_maintenance"
+  validation_scope: "comprehensive"
+  quality_focus: "accuracy_and_completeness"
+
+# =============================================================================
+# VALIDATION-SPECIFIC CAPABILITIES
+# =============================================================================
+
+validation_capabilities:
+  # Core validation abilities
+  validation_methods:
+    - "Functional correctness validation"
+    - "Integration completeness verification"
+    - "Business rule compliance checking"
+    - "Quality standard adherence validation"
+    - "Performance benchmark verification"
+    - "Security compliance validation"
+    
+  # Validation frameworks
+  validation_frameworks:
+    automated_testing: "{{AUTOMATED_TESTING_FRAMEWORKS}}"
+    manual_verification: "{{MANUAL_VERIFICATION_PROTOCOLS}}"
+    continuous_validation: "{{CONTINUOUS_VALIDATION_METHODS}}"
+    regression_testing: "{{REGRESSION_TESTING_STRATEGIES}}"
+    
+  # Quality assurance
+  quality_assurance:
+    completeness_checking: "{{COMPLETENESS_CHECKING_METHODS}}"
+    accuracy_verification: "{{ACCURACY_VERIFICATION_PROTOCOLS}}"
+    consistency_validation: "{{CONSISTENCY_VALIDATION_RULES}}"
+    compliance_monitoring: "{{COMPLIANCE_MONITORING_SYSTEMS}}"
+
+# =============================================================================
+# VALIDATION METHODOLOGIES
+# =============================================================================
+
+validation_methodologies:
+  # Systematic validation approach
+  validation_process:
+    requirement_mapping: "{{REQUIREMENT_MAPPING_PROTOCOLS}}"
+    test_case_generation: "{{TEST_CASE_GENERATION_METHODS}}"
+    execution_strategies: "{{EXECUTION_STRATEGY_PATTERNS}}"
+    result_evaluation: "{{RESULT_EVALUATION_CRITERIA}}"
+    
+  # Multi-layered validation
+  layered_validation:
+    unit_level: "{{UNIT_LEVEL_VALIDATION}}"
+    integration_level: "{{INTEGRATION_LEVEL_VALIDATION}}"
+    system_level: "{{SYSTEM_LEVEL_VALIDATION}}"
+    acceptance_level: "{{ACCEPTANCE_LEVEL_VALIDATION}}"
+    
+  # Validation optimization
+  optimization_strategies:
+    efficiency_improvements: "{{EFFICIENCY_IMPROVEMENT_METHODS}}"
+    coverage_maximization: "{{COVERAGE_MAXIMIZATION_STRATEGIES}}"
+    risk_based_prioritization: "{{RISK_BASED_PRIORITIZATION}}"
+
+# =============================================================================
+# SPECIALIZED TOOL REQUIREMENTS
+# =============================================================================
+
+validation_tools:
+  # Core validation tools
+  mandatory_validation_tools:
+    - "Read: Access files and configurations for validation"
+    - "Bash: Execute validation scripts and test suites"
+    - "Grep: Search for validation patterns and anomalies"
+    - "Edit: Create validation reports and documentation"
+    - "Write: Generate validation test cases and procedures"
+    
+  # Advanced validation capabilities
+  advanced_validation_tools:
+    automated_testing: "{{AUTOMATED_TESTING_TOOL_INTEGRATION}}"
+    performance_validation: "{{PERFORMANCE_VALIDATION_TOOLS}}"
+    security_validation: "{{SECURITY_VALIDATION_TOOLS}}"
+    integration_testing: "{{INTEGRATION_TESTING_FRAMEWORKS}}"
+
+# =============================================================================
+# CONTEXT LAYER VALIDATION
+# =============================================================================
+
+context_validation:
+  # Layer-specific validation patterns
+  layer_validation_methods:
+    layer_1_validation: "Project vision and strategic alignment validation"
+    layer_2_validation: "Technical architecture and implementation validation"
+    layer_3_validation: "Domain knowledge and business rule validation"
+    layer_4_validation: "Workflow and process compliance validation"
+    layer_5_validation: "Cross-reference and navigation integrity validation"
+    
+  # Cross-layer consistency
+  consistency_validation:
+    inter_layer_consistency: "{{INTER_LAYER_CONSISTENCY_CHECKS}}"
+    data_integrity: "{{DATA_INTEGRITY_VALIDATION}}"
+    reference_validation: "{{REFERENCE_VALIDATION_METHODS}}"
+    
+  # Context quality assurance
+  context_quality:
+    completeness_assessment: "{{COMPLETENESS_ASSESSMENT_CRITERIA}}"
+    accuracy_verification: "{{ACCURACY_VERIFICATION_PROTOCOLS}}"
+    usability_evaluation: "{{USABILITY_EVALUATION_METHODS}}"
+
+# =============================================================================
+# VALIDATION REPORTING FRAMEWORK
+# =============================================================================
+
+validation_reporting:
+  # Report structure and formats
+  validation_reports:
+    validation_summary: "{{VALIDATION_SUMMARY_TEMPLATE}}"
+    detailed_results: "{{DETAILED_RESULTS_TEMPLATE}}"
+    failure_analysis: "{{FAILURE_ANALYSIS_TEMPLATE}}"
+    remediation_plan: "{{REMEDIATION_PLAN_TEMPLATE}}"
+    compliance_status: "{{COMPLIANCE_STATUS_TEMPLATE}}"
+    
+  # Metrics and dashboards
+  validation_metrics:
+    pass_fail_rates: "{{PASS_FAIL_RATE_TRACKING}}"
+    coverage_metrics: "{{COVERAGE_METRICS_CALCULATION}}"
+    quality_indicators: "{{QUALITY_INDICATOR_MEASUREMENT}}"
+    trend_analysis: "{{TREND_ANALYSIS_REPORTING}}"
+    
+  # Stakeholder communication
+  stakeholder_reporting:
+    executive_dashboards: "{{EXECUTIVE_DASHBOARD_FORMATS}}"
+    technical_reports: "{{TECHNICAL_REPORT_FORMATS}}"
+    compliance_reports: "{{COMPLIANCE_REPORT_FORMATS}}"
+
+# =============================================================================
+# SUCCESS METRICS FOR VALIDATION
+# =============================================================================
+
+validation_success_metrics:
+  # Validation accuracy
+  accuracy_metrics:
+    defect_detection_rate: ">95% defect detection accuracy"
+    false_positive_rate: "<5% false positive rate"
+    validation_completeness: ">90% validation coverage"
+    
+  # Process efficiency
+  efficiency_metrics:
+    validation_cycle_time: ">30% reduction in validation cycle time"
+    automation_coverage: ">80% validation automation coverage"
+    resource_utilization: ">85% optimal resource utilization"
+    
+  # Quality improvement
+  quality_metrics:
+    defect_prevention: ">70% defects prevented through validation"
+    compliance_achievement: ">95% compliance standard achievement"
+    stakeholder_confidence: ">4.5/5.0 stakeholder confidence in validation"
+
+# =============================================================================
+# VALIDATION AGENT SPECIALIZATIONS
+# =============================================================================
+
+specialization_variants:
+  # Integration Agent specialization
+  integration_validation:
+    focus: "System integration and external dependency validation"
+    unique_capabilities:
+      - "API integration validation"
+      - "Data flow integrity verification"
+      - "External system compatibility testing"
+    validation_targets: ["API endpoints", "Data synchronization", "Authentication flows", "Error handling"]
+    
+  # Domain Expert Agent specialization
+  domain_validation:
+    focus: "Business rule and domain model validation"
+    unique_capabilities:
+      - "Business logic correctness validation"
+      - "Domain model consistency verification"
+      - "Requirements compliance checking"
+    validation_targets: ["Business rules", "Domain models", "User workflows", "Data models"]
+
+# =============================================================================
+# CUSTOMIZATION POINTS FOR VALIDATION
+# =============================================================================
+
+validation_customization:
+  # Domain-specific validation patterns
+  domain_validation_patterns:
+    financial_compliance: "{{FINANCIAL_COMPLIANCE_VALIDATION}}"
+    healthcare_regulations: "{{HEALTHCARE_REGULATION_VALIDATION}}"
+    data_privacy: "{{DATA_PRIVACY_VALIDATION}}"
+    security_standards: "{{SECURITY_STANDARD_VALIDATION}}"
+    
+  # Technology-specific adaptations
+  technology_adaptations:
+    web_application_validation: "{{WEB_APP_VALIDATION_PATTERNS}}"
+    api_validation: "{{API_VALIDATION_PATTERNS}}"
+    database_validation: "{{DATABASE_VALIDATION_PATTERNS}}"
+    microservices_validation: "{{MICROSERVICES_VALIDATION_PATTERNS}}"
+    
+  # Team process integration
+  process_integration:
+    agile_validation: "{{AGILE_VALIDATION_INTEGRATION}}"
+    ci_cd_validation: "{{CI_CD_VALIDATION_INTEGRATION}}"
+    manual_validation: "{{MANUAL_VALIDATION_PROCESSES}}"
+
+# =============================================================================
+# VALIDATION INTEGRATION PATTERNS
+# =============================================================================
+
+integration_patterns:
+  # Coordination with other agents
+  agent_coordination:
+    pre_validation_coordination: "{{PRE_VALIDATION_COORDINATION}}"
+    concurrent_validation: "{{CONCURRENT_VALIDATION_PATTERNS}}"
+    post_validation_integration: "{{POST_VALIDATION_INTEGRATION}}"
+    
+  # Feedback and improvement
+  feedback_loops:
+    validation_feedback: "{{VALIDATION_FEEDBACK_MECHANISMS}}"
+    process_improvement: "{{PROCESS_IMPROVEMENT_CYCLES}}"
+    methodology_evolution: "{{METHODOLOGY_EVOLUTION_TRACKING}}"
+    
+  # Continuous validation
+  continuous_integration:
+    automated_triggers: "{{AUTOMATED_TRIGGER_SYSTEMS}}"
+    real_time_monitoring: "{{REAL_TIME_MONITORING_INTEGRATION}}"
+    adaptive_validation: "{{ADAPTIVE_VALIDATION_STRATEGIES}}"
+
+# =============================================================================
+# VALIDATION MAINTENANCE
+# =============================================================================
+
+maintenance_framework:
+  # Validation asset maintenance
+  asset_maintenance:
+    test_case_updates: "{{TEST_CASE_UPDATE_PROCEDURES}}"
+    validation_script_maintenance: "{{VALIDATION_SCRIPT_MAINTENANCE}}"
+    documentation_updates: "{{DOCUMENTATION_UPDATE_PROTOCOLS}}"
+    
+  # Process evolution
+  process_evolution:
+    validation_improvement: "{{VALIDATION_IMPROVEMENT_CYCLES}}"
+    methodology_updates: "{{METHODOLOGY_UPDATE_PROCEDURES}}"
+    tool_evolution: "{{TOOL_EVOLUTION_MANAGEMENT}}"
+    
+  # Knowledge management
+  knowledge_management:
+    validation_knowledge_base: "{{VALIDATION_KNOWLEDGE_BASE}}"
+    lessons_learned_integration: "{{LESSONS_LEARNED_INTEGRATION}}"
+    best_practice_evolution: "{{BEST_PRACTICE_EVOLUTION}}"
+
+# =============================================================================
+# END OF VALIDATION AGENT TEMPLATE
+# =============================================================================

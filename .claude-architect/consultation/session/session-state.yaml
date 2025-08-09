@@ -1,0 +1,699 @@
+# Session State Schema - Deep Discovery Consultation
+# Complete state preservation for 30-60 minute consultation sessions
+# Purpose: Enable reliable pause/resume across multiple sessions
+# Version: 1.0 - Production Session Management
+
+# =============================================================================
+# SESSION METADATA
+# =============================================================================
+session_metadata:
+  version: "1.0"
+  schema_version: "2025.08.07"
+  session_id:
+    format: "uuid4"
+    example: "550e8400-e29b-41d4-a716-446655440000"
+    required: true
+    
+  timestamps:
+    session_created:
+      format: "ISO 8601"
+      example: "2025-08-07T14:30:00Z"
+      required: true
+      
+    last_updated:
+      format: "ISO 8601" 
+      example: "2025-08-07T15:15:30Z"
+      required: true
+      
+    last_activity:
+      format: "ISO 8601"
+      example: "2025-08-07T15:15:30Z"
+      required: true
+      description: "Last user interaction time"
+      
+    estimated_completion:
+      format: "ISO 8601"
+      example: "2025-08-07T16:00:00Z"
+      required: false
+      description: "Projected completion time based on progress"
+  
+  session_info:
+    name:
+      type: "string"
+      example: "Deep Discovery - React E-commerce Platform"
+      required: false
+      description: "User-friendly session name"
+      
+    description:
+      type: "string" 
+      example: "Consultation for enterprise e-commerce platform with 5-person team"
+      required: false
+      
+    user_preferences:
+      pace:
+        type: "enum"
+        values: ["quick", "standard", "deep", "custom"]
+        default: "standard"
+        
+      skip_detected:
+        type: "boolean"
+        default: true
+        description: "Skip questions when information already detected"
+        
+      explanation_level:
+        type: "enum"
+        values: ["minimal", "standard", "detailed"]
+        default: "standard"
+
+# =============================================================================
+# CONSULTATION PROGRESS STATE
+# =============================================================================
+progress_state:
+  current_position:
+    stage:
+      type: "integer"
+      range: [1, 4]
+      required: true
+      description: "Current consultation stage (1=Discovery, 2=Technical, 3=Domain, 4=Preferences)"
+      
+    stage_name:
+      type: "enum"
+      values: ["project_discovery", "technical_deep_dive", "domain_extraction", "preference_learning"]
+      required: true
+      
+    substage:
+      type: "string"
+      example: "project_essence"
+      required: false
+      description: "Current category within stage"
+      
+    question_index:
+      type: "integer"
+      minimum: 0
+      required: true
+      description: "Index of current question within stage"
+      
+    question_id:
+      type: "string"
+      example: "PE001"
+      required: false
+      description: "Unique identifier for current question"
+      
+    total_questions_stage:
+      type: "integer"
+      required: true
+      description: "Total questions planned for current stage"
+      
+    completed_questions_stage:
+      type: "integer"
+      required: true
+      description: "Questions completed in current stage"
+  
+  stage_completion:
+    stage_1_discovery:
+      status:
+        type: "enum"
+        values: ["not_started", "in_progress", "completed", "skipped"]
+        default: "not_started"
+        
+      completion_percentage:
+        type: "integer"
+        range: [0, 100]
+        default: 0
+        
+      essential_completed:
+        type: "boolean"
+        default: false
+        description: "All essential questions answered"
+        
+      time_spent:
+        type: "integer"
+        description: "Minutes spent in this stage"
+        default: 0
+        
+      questions_answered:
+        type: "integer"
+        default: 0
+        
+      confidence_score:
+        type: "number"
+        range: [0.0, 1.0]
+        default: 0.0
+        description: "Confidence in stage completion quality"
+    
+    stage_2_technical:
+      status:
+        type: "enum"
+        values: ["not_started", "in_progress", "completed", "skipped"]
+        default: "not_started"
+        
+      completion_percentage:
+        type: "integer"
+        range: [0, 100]
+        default: 0
+        
+      essential_completed:
+        type: "boolean"
+        default: false
+        
+      time_spent:
+        type: "integer"
+        default: 0
+        
+      questions_answered:
+        type: "integer"
+        default: 0
+        
+      confidence_score:
+        type: "number"
+        range: [0.0, 1.0]
+        default: 0.0
+    
+    stage_3_domain:
+      status:
+        type: "enum"
+        values: ["not_started", "in_progress", "completed", "skipped"]
+        default: "not_started"
+        
+      completion_percentage:
+        type: "integer"
+        range: [0, 100]
+        default: 0
+        
+      essential_completed:
+        type: "boolean"
+        default: false
+        
+      time_spent:
+        type: "integer"
+        default: 0
+        
+      questions_answered:
+        type: "integer"
+        default: 0
+        
+      confidence_score:
+        type: "number"
+        range: [0.0, 1.0]
+        default: 0.0
+    
+    stage_4_preferences:
+      status:
+        type: "enum"
+        values: ["not_started", "in_progress", "completed", "skipped"]
+        default: "not_started"
+        
+      completion_percentage:
+        type: "integer"
+        range: [0, 100]
+        default: 0
+        
+      essential_completed:
+        type: "boolean"
+        default: false
+        
+      time_spent:
+        type: "integer"
+        default: 0
+        
+      questions_answered:
+        type: "integer"
+        default: 0
+        
+      confidence_score:
+        type: "number"
+        range: [0.0, 1.0]
+        default: 0.0
+
+# =============================================================================
+# TIME TRACKING STATE
+# =============================================================================
+time_tracking:
+  total_elapsed:
+    type: "integer"
+    description: "Total minutes spent in consultation"
+    default: 0
+    
+  target_remaining:
+    type: "integer"
+    description: "Estimated minutes remaining to completion"
+    required: false
+    
+  stage_targets:
+    stage_1_target: 7  # 5-7 minutes
+    stage_2_target: 9  # 7-10 minutes 
+    stage_3_target: 9  # 7-10 minutes
+    stage_4_target: 4  # 3-5 minutes
+    
+  stage_actuals:
+    stage_1_actual:
+      type: "integer"
+      default: 0
+      
+    stage_2_actual:
+      type: "integer"
+      default: 0
+      
+    stage_3_actual:
+      type: "integer"
+      default: 0
+      
+    stage_4_actual:
+      type: "integer"
+      default: 0
+  
+  session_boundaries:
+    total_target:
+      type: "integer"
+      default: 30
+      description: "Target consultation length in minutes"
+      
+    soft_limit:
+      type: "integer"
+      default: 35
+      description: "Soft limit before speed adjustments"
+      
+    hard_limit:
+      type: "integer" 
+      default: 45
+      description: "Hard limit before forced quick mode"
+      
+    overtime_mode:
+      type: "boolean"
+      default: false
+      description: "Whether consultation is in overtime"
+
+# =============================================================================
+# ACCUMULATED CONTEXT STATE
+# =============================================================================
+accumulated_context:
+  # ---------------------------------------------------------------------------
+  # Stage 1: Project Discovery Context
+  # ---------------------------------------------------------------------------
+  project_foundation:
+    project_type:
+      value: ""
+      confidence: 0.0
+      source: "user_input"  # user_input, detected, inferred
+      
+    project_description:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    primary_domain:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    team_size:
+      value: 0
+      confidence: 0.0
+      source: "user_input"
+      
+    development_stage:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    expertise_level:
+      value: ""
+      confidence: 0.0
+      source: "inferred"
+      values: ["beginner", "intermediate", "expert", "team_lead"]
+      
+    primary_goal:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    main_challenge:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    claude_motivation:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+
+  # ---------------------------------------------------------------------------
+  # Stage 2: Technical Architecture Context
+  # ---------------------------------------------------------------------------
+  technical_architecture:
+    architecture_pattern:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    primary_language:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    primary_framework:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    frontend_technology:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    backend_technology:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    database_approach:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    testing_strategy:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    deployment_approach:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    performance_requirements:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    development_workflow:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+
+  # ---------------------------------------------------------------------------  
+  # Stage 3: Domain Knowledge Context
+  # ---------------------------------------------------------------------------
+  domain_expertise:
+    core_business_entities:
+      value: []
+      confidence: 0.0
+      source: "user_input"
+      
+    domain_terminology:
+      value: []
+      confidence: 0.0
+      source: "user_input"
+      
+    critical_business_rules:
+      value: []
+      confidence: 0.0
+      source: "user_input"
+      
+    primary_workflows:
+      value: []
+      confidence: 0.0
+      source: "user_input"
+      
+    user_journey_patterns:
+      value: []
+      confidence: 0.0
+      source: "user_input"
+      
+    integration_requirements:
+      value: []
+      confidence: 0.0
+      source: "user_input"
+      
+    data_relationships:
+      value: []
+      confidence: 0.0
+      source: "user_input"
+      
+    compliance_requirements:
+      value: []
+      confidence: 0.0
+      source: "user_input"
+
+  # ---------------------------------------------------------------------------
+  # Stage 4: Preferences and Style Context  
+  # ---------------------------------------------------------------------------
+  preferences_style:
+    coding_standards:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    code_organization:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    naming_conventions:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    documentation_style:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    communication_preference:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    explanation_depth:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+      
+    development_tools:
+      value: []
+      confidence: 0.0
+      source: "user_input"
+      
+    workflow_rhythm:
+      value: ""
+      confidence: 0.0
+      source: "user_input"
+
+# =============================================================================
+# QUALITY METRICS STATE
+# =============================================================================
+quality_metrics:
+  overall_consultation:
+    completeness_score:
+      type: "number"
+      range: [0.0, 1.0]
+      default: 0.0
+      description: "Percentage of essential information captured"
+      
+    confidence_score:
+      type: "number"
+      range: [0.0, 1.0]
+      default: 0.0
+      description: "Confidence in information accuracy"
+      
+    coverage_score:
+      type: "number"
+      range: [0.0, 1.0]
+      default: 0.0
+      description: "Breadth of project understanding achieved"
+      
+    consistency_score:
+      type: "number"
+      range: [0.0, 1.0]
+      default: 0.0
+      description: "Consistency across responses"
+  
+  information_gaps:
+    critical_gaps:
+      type: "array"
+      default: []
+      description: "Essential information still needed"
+      
+    recommended_gaps:
+      type: "array"
+      default: []
+      description: "Recommended information to improve quality"
+      
+    optional_gaps:
+      type: "array"
+      default: []
+      description: "Nice-to-have information missing"
+  
+  validation_checkpoints:
+    stage_1_validation:
+      passed: false
+      issues: []
+      
+    stage_2_validation:
+      passed: false
+      issues: []
+      
+    stage_3_validation:
+      passed: false
+      issues: []
+      
+    stage_4_validation:
+      passed: false
+      issues: []
+
+# =============================================================================
+# USER INTERACTION STATE
+# =============================================================================
+user_interaction:
+  engagement_level:
+    current_level:
+      type: "enum"
+      values: ["low", "medium", "high"]
+      default: "medium"
+      
+    response_quality:
+      type: "enum"
+      values: ["brief", "standard", "detailed"]
+      default: "standard"
+      
+    enthusiasm_indicators:
+      asks_questions: false
+      provides_examples: false
+      elaborates_answers: false
+      shows_interest: false
+  
+  control_preferences:
+    preferred_pace:
+      type: "enum"
+      values: ["quick", "standard", "deep"]
+      default: "standard"
+      
+    skip_preferences:
+      skip_detected_info: true
+      skip_obvious_questions: true
+      skip_non_applicable: true
+      
+    navigation_usage:
+      used_back: false
+      used_skip: false
+      used_pause: false
+      used_quick_mode: false
+  
+  communication_style:
+    detected_style:
+      type: "enum"
+      values: ["technical", "business", "learning", "mixed"]
+      default: "mixed"
+      
+    response_patterns:
+      average_length: 0
+      technical_depth: "medium"
+      context_provided: "standard"
+      
+    adaptation_applied:
+      expertise_adjustment: "none"
+      depth_adjustment: "none"
+      explanation_adjustment: "none"
+
+# =============================================================================
+# SESSION CONTROL STATE
+# =============================================================================
+session_control:
+  current_status:
+    type: "enum"
+    values: ["active", "paused", "completed", "abandoned"]
+    required: true
+    
+  pause_information:
+    pause_reason:
+      type: "string"
+      required: false
+      
+    pause_timestamp:
+      type: "string"
+      format: "ISO 8601"
+      required: false
+      
+    resume_instructions:
+      type: "string"
+      required: false
+      
+    checkpoint_summary:
+      type: "string"
+      required: false
+      description: "What was accomplished before pause"
+  
+  recovery_information:
+    last_known_good_state:
+      stage: 1
+      question_id: ""
+      timestamp: ""
+      
+    rollback_available:
+      type: "boolean"
+      default: false
+      
+    recovery_checkpoints:
+      type: "array"
+      default: []
+      description: "Available rollback points"
+
+# =============================================================================
+# EXAMPLE SESSION STATE INSTANCE
+# =============================================================================
+example_session_state:
+  session_metadata:
+    session_id: "550e8400-e29b-41d4-a716-446655440000"
+    timestamps:
+      session_created: "2025-08-07T14:30:00Z"
+      last_updated: "2025-08-07T14:45:30Z"
+      last_activity: "2025-08-07T14:45:30Z"
+      estimated_completion: "2025-08-07T15:15:00Z"
+    session_info:
+      name: "Deep Discovery - React E-commerce Platform"
+      description: "Consultation for enterprise e-commerce platform with 5-person team"
+      user_preferences:
+        pace: "standard"
+        skip_detected: true
+        explanation_level: "detailed"
+
+  progress_state:
+    current_position:
+      stage: 2
+      stage_name: "technical_deep_dive"
+      substage: "architecture_foundation"
+      question_index: 3
+      question_id: "AF003"
+      total_questions_stage: 20
+      completed_questions_stage: 11
+    stage_completion:
+      stage_1_discovery:
+        status: "completed"
+        completion_percentage: 100
+        essential_completed: true
+        time_spent: 8
+        questions_answered: 12
+        confidence_score: 0.85
+
+  accumulated_context:
+    project_foundation:
+      project_type:
+        value: "E-commerce web application"
+        confidence: 0.9
+        source: "user_input"
+      team_size:
+        value: 5
+        confidence: 1.0
+        source: "user_input"
+      expertise_level:
+        value: "expert"
+        confidence: 0.8
+        source: "inferred"
+
+  session_control:
+    current_status: "active"
+    pause_information:
+      pause_reason: null
+      pause_timestamp: null
+      resume_instructions: null
+      checkpoint_summary: null

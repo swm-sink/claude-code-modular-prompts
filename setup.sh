@@ -1,5 +1,5 @@
 #!/bin/bash
-# Claude Context Architect Setup - Interactive Installation
+# Claude Context Architect Setup - Simple & Elegant Installation
 
 set -e
 
@@ -34,7 +34,7 @@ fi
 
 # Count context files for user feedback
 CONTEXT_COUNT=$(find "$SCRIPT_DIR/.claude" -name "*.md" | wc -l | xargs)
-echo "📚 Found $CONTEXT_COUNT context engineering files to install"
+echo "📚 Found $CONTEXT_COUNT command files to install"
 
 # Backup existing .claude if it exists
 if [ -d "$TARGET_DIR/.claude" ]; then
@@ -64,31 +64,34 @@ if [ ! -f "$TARGET_DIR/CLAUDE.md" ]; then
 
 ## Context Engineering System
 
-Claude Context Architect installed - THE definitive Claude Code setup tool.
+Claude Context Architect installed - THE elegant Claude Code setup tool.
 
-To begin 30+ minute consultation, run:
+To begin your 10-15 minute project analysis:
 ```
-/begin-consultation
+/welcome-simple
 ```
 
-This will start interactive consultation with specialized agents to create your context system.
+This will guide you through the simple, elegant discovery process.
 
-## 🚀 Ready for Consultation
+## 🚀 Quick Start
 
-Begin with any of these consultation commands:
-- `/begin-consultation` - Start 30+ minute guided project analysis
-- `/quick-help` - Get help with consultation process
-- `/session-status` - Check current consultation progress
-- `/resume-consultation` - Continue paused consultation session
-- `/validate-context` - Test generated context effectiveness
+1. **Start Here**: `/welcome-simple` - Get oriented and begin
+2. **Discover**: `/discover-project-simple` - Analyze your project patterns
+3. **Generate**: `/generate-commands-simple` - Create custom commands
+4. **List**: `/list-commands` - See all available commands
+5. **Session**: `/session-manage` - Save/resume your session
 
-## 📚 After Consultation (Complete Context System)
+## 📚 What You'll Get
 
-After consultation, you'll have:
-- Multi-file hierarchical context system tailored to your project
-- Specialized Claude that understands your architecture and patterns
-- Session management for ongoing context evolution
-- Validation framework to ensure context effectiveness
+After the simple 10-15 minute process:
+- PROJECT-DNA.md with your discovered patterns
+- Custom commands tailored to YOUR project
+- Simple, functional Claude integration
+- No complex orchestration or heavy frameworks
+
+## Philosophy
+
+Simple. Elegant. Functional. No theater, just results.
 
 EOF
 fi
@@ -97,12 +100,12 @@ echo ""
 echo -e "${GREEN}✅ Setup Complete!${NC}"
 echo ""
 echo "📍 Location: $TARGET_DIR/.claude"
-echo "📊 Context System: $COPIED_COUNT files installed"
+echo "📊 Commands Installed: $COPIED_COUNT files ready"
 echo ""
 echo -e "${BLUE}🎯 Next Steps:${NC}"
 echo "1. Open Claude Code in your project directory"
-echo "2. Run: /begin-consultation"
-echo "3. Complete 30+ minute guided consultation with specialized agents"
-echo "4. Get Claude that truly understands YOUR project!"
+echo "2. Run: /welcome-simple"
+echo "3. Complete 10-15 minute project discovery"
+echo "4. Get custom commands for YOUR project!"
 echo ""
-echo -e "${YELLOW}💡 Need help? Run /quick-help for consultation guidance${NC}"
+echo -e "${YELLOW}💡 Simple. Elegant. Functional.${NC}"

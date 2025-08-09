@@ -1,0 +1,337 @@
+# Agent Communication Message Format
+# Claude Context Architect - Deep Discovery Generation Engine
+# Version: 1.0
+# Purpose: Define standard message formats for inter-agent communication
+
+metadata:
+  version: "1.0"
+  created: "2025-08-07"
+  system: "Claude Context Architect Agent Coordination"
+  purpose: "Standardized inter-agent communication protocols"
+  performance_requirement: "<100ms message processing overhead"
+
+# =============================================================================
+# CORE MESSAGE STRUCTURE
+# =============================================================================
+
+standard_message_format:
+  message_envelope:
+    message_id: "uuid4_format"
+    timestamp: "iso8601_utc"
+    sender_agent: "agent_identifier"
+    recipient_agent: "target_agent_or_broadcast"
+    message_type: "enum[request, response, event, notification, error]"
+    priority: "enum[urgent, high, normal, low]"
+    session_id: "consultation_session_identifier"
+    correlation_id: "request_response_correlation"
+    
+  message_payload:
+    content_type: "enum[task_request, analysis_result, coordination_event, error_report]"
+    data: "type_specific_payload"
+    metadata:
+      context_layer_references: "array[layer_dependencies]"
+      tool_requirements: "array[required_claude_tools]"
+      performance_metrics: "object[timing_memory_usage]"
+      validation_checksum: "message_integrity_hash"
+
+# =============================================================================
+# MESSAGE TYPE SPECIFICATIONS
+# =============================================================================
+
+message_types:
+  
+  task_request:
+    description: "Agent requesting another agent to perform work"
+    required_fields:
+      - "task_description"
+      - "expected_deliverable" 
+      - "success_criteria"
+      - "deadline"
+      - "priority_level"
+    optional_fields:
+      - "context_references"
+      - "prerequisite_tasks"
+      - "resource_constraints"
+    example:
+      message_type: "request"
+      content_type: "task_request"
+      data:
+        task_description: "Analyze architecture patterns in React components"
+        expected_deliverable: "Architecture assessment report"
+        success_criteria: ">85% pattern identification accuracy"
+        deadline: "2025-08-07T14:00:00Z"
+        priority_level: "high"
+        context_references: ["layer_2_technical_architecture"]
+        
+  analysis_result:
+    description: "Agent reporting completed analysis or work"
+    required_fields:
+      - "task_correlation_id"
+      - "completion_status"
+      - "result_data"
+      - "confidence_score"
+      - "processing_time"
+    optional_fields:
+      - "recommendations"
+      - "identified_issues"
+      - "follow_up_actions"
+    example:
+      message_type: "response"
+      content_type: "analysis_result"
+      data:
+        task_correlation_id: "task_12345"
+        completion_status: "success"
+        result_data: 
+          patterns_found: ["component_composition", "custom_hooks", "context_api"]
+          architecture_score: 87
+        confidence_score: 0.92
+        processing_time: "00:02:45"
+        recommendations: ["Consider implementing error boundaries"]
+        
+  coordination_event:
+    description: "System-wide coordination messages"
+    required_fields:
+      - "event_type"
+      - "event_data"
+      - "affected_agents"
+    optional_fields:
+      - "cascade_requirements"
+      - "rollback_instructions"
+    example:
+      message_type: "event"
+      content_type: "coordination_event"
+      data:
+        event_type: "context_layer_update"
+        event_data:
+          updated_layer: "layer_2_technical_architecture"
+          change_summary: "New framework detection: Next.js 14"
+        affected_agents: ["architecture_agent", "code_generation_agent"]
+        
+  error_report:
+    description: "Error conditions and failure notifications"
+    required_fields:
+      - "error_type"
+      - "error_message"
+      - "failed_task_id"
+      - "error_severity"
+    optional_fields:
+      - "stack_trace"
+      - "recovery_suggestions"
+      - "escalation_required"
+    example:
+      message_type: "error"
+      content_type: "error_report"
+      data:
+        error_type: "context_dependency_missing"
+        error_message: "Required Layer 3 context not available"
+        failed_task_id: "task_67890"
+        error_severity: "medium"
+        recovery_suggestions: ["Wait for Domain Expert Agent completion"]
+
+# =============================================================================
+# PERFORMANCE AND RELIABILITY
+# =============================================================================
+
+performance_requirements:
+  message_size_limits:
+    maximum_message_size: "1MB"
+    recommended_size: "10KB"
+    large_payload_handling: "reference_with_separate_storage"
+    
+  processing_timeouts:
+    message_processing: "5 seconds"
+    response_timeout: "30 seconds"
+    batch_operation_timeout: "5 minutes"
+    
+  reliability_guarantees:
+    delivery_guarantee: "at_least_once"
+    ordering_guarantee: "per_session_fifo"
+    durability: "session_persistent"
+    
+  error_handling:
+    retry_policy:
+      max_retries: 3
+      backoff_strategy: "exponential"
+      retry_timeout: [1, 2, 4] # seconds
+    circuit_breaker:
+      failure_threshold: 5
+      recovery_timeout: "30 seconds"
+
+# =============================================================================
+# MESSAGE ROUTING AND ADDRESSING
+# =============================================================================
+
+routing_system:
+  agent_addressing:
+    identifier_format: "domain_agent_instance"
+    examples:
+      - "architecture_agent_001"
+      - "testing_agent_primary"
+      - "coordination_master"
+    
+  broadcast_targets:
+    all_agents: "broadcast_all"
+    category_specific:
+      - "broadcast_core_coordination"
+      - "broadcast_specialized_analysis"
+      - "broadcast_domain_specific"
+    layer_specific:
+      - "broadcast_layer_1_agents"
+      - "broadcast_layer_2_agents"
+      
+  routing_rules:
+    direct_addressing: "single_recipient"
+    smart_routing: "capability_based_routing"
+    load_balancing: "round_robin_within_agent_type"
+    failover: "backup_agent_activation"
+
+# =============================================================================
+# SECURITY AND VALIDATION
+# =============================================================================
+
+security_framework:
+  message_integrity:
+    checksum_algorithm: "SHA256"
+    signature_required: false # internal agent communication
+    payload_encryption: false # trusted environment
+    
+  access_control:
+    agent_authentication: "session_based_identity"
+    capability_enforcement: "agent_role_permissions"
+    context_layer_access: "layer_based_authorization"
+    
+  audit_logging:
+    log_all_messages: true
+    retention_period: "session_duration"
+    log_format: "structured_json"
+    sensitive_data_masking: true
+
+# =============================================================================
+# INTEGRATION WITH CONSULTATION SYSTEM
+# =============================================================================
+
+consultation_integration:
+  session_management:
+    session_lifecycle_events:
+      - "session_started"
+      - "phase_transition"
+      - "session_paused"
+      - "session_resumed"
+      - "session_completed"
+      
+  progress_tracking:
+    milestone_notifications: true
+    progress_percentage_updates: true
+    time_remaining_estimates: true
+    quality_gate_validations: true
+    
+  user_interaction:
+    approval_required_messages: "user_confirmation_request"
+    status_updates: "consultation_progress_update"
+    error_escalation: "user_intervention_required"
+
+# =============================================================================
+# COORDINATION WITH CLAUDE CODE TOOLS
+# =============================================================================
+
+claude_tool_integration:
+  tool_request_format:
+    tool_name: "claude_tool_identifier"
+    parameters: "tool_specific_parameters"
+    timeout: "tool_execution_timeout"
+    retry_policy: "tool_failure_handling"
+    
+  parallel_tool_execution:
+    batch_operations: "multiple_tools_single_message"
+    concurrency_limits: "max_5_concurrent_tools"
+    result_aggregation: "structured_tool_results"
+    
+  tool_coordination:
+    resource_locking: "prevent_conflicting_operations"
+    operation_ordering: "dependency_based_sequencing"
+    error_propagation: "tool_failure_handling"
+
+# =============================================================================
+# MESSAGE EXAMPLES AND TEMPLATES
+# =============================================================================
+
+message_templates:
+  
+  architecture_analysis_request:
+    message_type: "request"
+    sender_agent: "coordination_master"
+    recipient_agent: "architecture_agent_001"
+    content_type: "task_request"
+    data:
+      task_description: "Analyze project architecture for scalability patterns"
+      expected_deliverable: "Architecture assessment with recommendations"
+      success_criteria: ">85% pattern identification, scalability score >70"
+      deadline: "2025-08-07T15:30:00Z"
+      priority_level: "high"
+      context_references: ["layer_1_project_overview", "layer_2_technical_architecture"]
+      tool_requirements: ["Read", "Grep", "LS"]
+      
+  code_generation_coordination:
+    message_type: "event"
+    sender_agent: "architecture_agent_001"
+    recipient_agent: "broadcast_code_generation"
+    content_type: "coordination_event"
+    data:
+      event_type: "architecture_patterns_identified"
+      event_data:
+        primary_patterns: ["microservices", "event_sourcing"]
+        framework_stack: ["node_js", "express", "mongodb"]
+        coding_conventions: "airbnb_eslint_config"
+      cascade_requirements:
+        - agent: "code_generation_agent"
+          action: "update_generation_templates"
+        - agent: "testing_agent"
+          action: "align_test_patterns"
+          
+  tdd_enforcement_workflow:
+    message_type: "request"
+    sender_agent: "coordination_master"
+    recipient_agent: "testing_agent_primary"
+    content_type: "task_request"
+    data:
+      task_description: "Enforce TDD for new feature development"
+      expected_deliverable: "Test suite with >90% coverage"
+      success_criteria: "All tests written before implementation"
+      deadline: "2025-08-07T16:00:00Z"
+      priority_level: "urgent"
+      special_instructions:
+        tdd_enforcement: "code_deletion_penalty_active"
+        validation_required: "before_code_generation"
+      workflow_coordination:
+        - step: "write_failing_tests"
+          agent: "testing_agent_primary"
+        - step: "generate_minimal_implementation"
+          agent: "code_generation_agent"
+          dependency: "tests_failing_confirmed"
+        - step: "refactor_and_optimize"
+          agent: "refactoring_agent"
+          dependency: "tests_passing_confirmed"
+
+# =============================================================================
+# VERSION CONTROL AND EVOLUTION
+# =============================================================================
+
+protocol_evolution:
+  version_compatibility:
+    supported_versions: ["1.0"]
+    backward_compatibility: "minor_version_changes_only"
+    migration_strategy: "gradual_agent_update"
+    
+  extension_points:
+    custom_message_types: "plugin_architecture"
+    domain_specific_payloads: "extensible_data_schema"
+    new_routing_patterns: "configurable_routing_rules"
+    
+  validation_framework:
+    schema_validation: "json_schema_based"
+    message_format_testing: "automated_validation_suite"
+    compatibility_testing: "cross_version_validation"
+
+# =============================================================================
+# END OF MESSAGE FORMAT SPECIFICATION
+# =============================================================================

@@ -1,0 +1,494 @@
+# Request-Response Communication Patterns
+# Claude Context Architect - Deep Discovery Generation Engine
+# Version: 1.0
+# Purpose: Define request-response patterns for synchronous agent coordination
+
+metadata:
+  version: "1.0"
+  created: "2025-08-07"
+  system: "Claude Context Architect Agent Coordination"
+  purpose: "Synchronous request-response communication patterns"
+  performance_requirement: "<2 second average response time"
+
+# =============================================================================
+# CORE REQUEST-RESPONSE PATTERNS
+# =============================================================================
+
+request_response_framework:
+  pattern_types:
+    synchronous: "blocking_request_with_immediate_response"
+    asynchronous: "non_blocking_request_with_callback"
+    batch: "multiple_requests_single_response"
+    streaming: "continuous_response_stream"
+    
+  timeout_management:
+    default_timeout: "30 seconds"
+    long_running_timeout: "5 minutes"
+    quick_query_timeout: "5 seconds"
+    batch_operation_timeout: "10 minutes"
+    
+  reliability_patterns:
+    retry_with_backoff: "exponential_backoff_strategy"
+    circuit_breaker: "failure_isolation_pattern"
+    graceful_degradation: "fallback_response_pattern"
+    request_deduplication: "idempotent_request_handling"
+
+# =============================================================================
+# SYNCHRONOUS PATTERNS
+# =============================================================================
+
+synchronous_patterns:
+  
+  direct_request_response:
+    description: "Simple 1:1 request-response for immediate results"
+    use_cases:
+      - "Quick context layer queries"
+      - "Agent capability validation"
+      - "Status checks and health monitoring"
+      - "Simple data retrieval"
+    
+    pattern_specification:
+      request_format:
+        correlation_id: "unique_request_identifier"
+        requested_agent: "target_agent_identifier"
+        operation: "requested_operation_name"
+        parameters: "operation_specific_parameters"
+        timeout_override: "optional_custom_timeout"
+        
+      response_format:
+        correlation_id: "matching_request_correlation_id"
+        status: "enum[success, failure, partial]"
+        result: "operation_result_data"
+        processing_time: "operation_duration"
+        error_details: "failure_reason_if_applicable"
+        
+    example_workflow:
+      request:
+        correlation_id: "req_001"
+        requested_agent: "architecture_agent_001"
+        operation: "get_architecture_score"
+        parameters:
+          context_layer: "layer_2_technical_architecture"
+          scoring_criteria: ["scalability", "maintainability", "performance"]
+          
+      response:
+        correlation_id: "req_001"
+        status: "success"
+        result:
+          overall_score: 82
+          scores:
+            scalability: 85
+            maintainability: 78
+            performance: 83
+        processing_time: "00:00:03"
+        
+  validation_request:
+    description: "Request validation of work or decisions from authoritative agent"
+    use_cases:
+      - "Code review validation"
+      - "Architecture decision approval"
+      - "Security clearance verification"
+      - "Domain expert validation"
+    
+    pattern_specification:
+      validation_levels:
+        basic: "simple_pass_fail_validation"
+        detailed: "validation_with_improvement_suggestions"
+        comprehensive: "full_analysis_with_alternatives"
+        
+      validation_criteria:
+        mandatory_checks: "must_pass_validations"
+        optional_checks: "nice_to_have_validations"
+        custom_criteria: "domain_specific_validations"
+        
+    example_workflow:
+      request:
+        correlation_id: "val_001"
+        requested_agent: "security_agent_001"
+        operation: "validate_security_implementation"
+        parameters:
+          validation_level: "comprehensive"
+          artifact_type: "authentication_system"
+          artifact_location: "src/auth/"
+          security_requirements: ["oauth2", "jwt", "rate_limiting"]
+          
+      response:
+        correlation_id: "val_001"
+        status: "partial"
+        result:
+          validation_score: 75
+          passed_checks: ["oauth2_implementation", "jwt_validation"]
+          failed_checks: ["rate_limiting_missing"]
+          recommendations: [
+            {
+              priority: "high",
+              issue: "Rate limiting not implemented",
+              suggestion: "Add express-rate-limit middleware"
+            }
+          ]
+        processing_time: "00:01:45"
+
+# =============================================================================
+# ASYNCHRONOUS PATTERNS
+# =============================================================================
+
+asynchronous_patterns:
+  
+  long_running_analysis:
+    description: "Non-blocking requests for time-intensive operations"
+    use_cases:
+      - "Comprehensive code analysis"
+      - "Large codebase pattern extraction"
+      - "Performance profiling and optimization"
+      - "Security vulnerability scanning"
+    
+    pattern_specification:
+      initial_response:
+        acknowledgment: "request_received_and_queued"
+        estimated_completion: "time_estimate"
+        progress_callback_url: "progress_update_mechanism"
+        cancellation_token: "operation_cancellation_reference"
+        
+      progress_updates:
+        update_frequency: "every_30_seconds_or_milestone"
+        progress_format:
+          percentage_complete: "0_to_100_scale"
+          current_phase: "description_of_current_work"
+          time_remaining: "estimated_time_to_completion"
+          
+      final_response:
+        completion_notification: "operation_completed_message"
+        full_results: "comprehensive_analysis_results"
+        summary_report: "executive_summary_format"
+        
+    example_workflow:
+      initial_request:
+        correlation_id: "async_001"
+        requested_agent: "performance_agent_001"
+        operation: "comprehensive_performance_analysis"
+        parameters:
+          analysis_scope: "entire_codebase"
+          profiling_depth: "deep"
+          optimization_recommendations: true
+          
+      acknowledgment_response:
+        correlation_id: "async_001"
+        status: "accepted"
+        estimated_completion: "2025-08-07T16:45:00Z"
+        progress_updates_enabled: true
+        
+      progress_update:
+        correlation_id: "async_001"
+        progress_percentage: 65
+        current_phase: "Memory usage pattern analysis"
+        time_remaining: "00:08:30"
+        intermediate_findings: ["memory_leak_detected_in_user_service"]
+        
+      completion_response:
+        correlation_id: "async_001"
+        status: "success"
+        result:
+          performance_score: 68
+          critical_issues: 3
+          optimization_opportunities: 12
+          estimated_improvement: "40% response time reduction possible"
+        full_report_location: "context/performance_analysis_detailed.md"
+
+# =============================================================================
+# BATCH PATTERNS
+# =============================================================================
+
+batch_patterns:
+  
+  parallel_agent_coordination:
+    description: "Coordinate multiple agents simultaneously for complex tasks"
+    use_cases:
+      - "Multi-agent code review process"
+      - "Comprehensive project analysis"
+      - "Parallel testing and validation"
+      - "Cross-cutting concern analysis"
+    
+    pattern_specification:
+      batch_request_format:
+        batch_id: "unique_batch_identifier"
+        coordination_strategy: "enum[parallel, sequential, mixed]"
+        agent_tasks: "array_of_individual_agent_requests"
+        aggregation_rules: "how_to_combine_results"
+        success_criteria: "batch_completion_requirements"
+        
+      result_aggregation:
+        aggregation_strategies:
+          consensus: "majority_agreement_required"
+          synthesis: "combine_complementary_results"
+          prioritized: "weighted_by_agent_expertise"
+          comprehensive: "include_all_perspectives"
+          
+    example_workflow:
+      batch_request:
+        batch_id: "batch_001"
+        coordination_strategy: "parallel"
+        agent_tasks:
+          - agent: "architecture_agent_001"
+            task: "analyze_architectural_patterns"
+            priority: "high"
+          - agent: "security_agent_001"
+            task: "security_vulnerability_scan"
+            priority: "high"
+          - agent: "performance_agent_001"
+            task: "performance_bottleneck_analysis"
+            priority: "medium"
+        aggregation_rules:
+          strategy: "comprehensive"
+          conflict_resolution: "expert_weighted_consensus"
+          
+      batch_response:
+        batch_id: "batch_001"
+        overall_status: "success"
+        individual_results:
+          architecture_agent_001:
+            status: "success"
+            score: 85
+            key_findings: ["microservices_pattern_well_implemented"]
+          security_agent_001:
+            status: "success"
+            vulnerabilities_found: 2
+            security_score: 78
+          performance_agent_001:
+            status: "success"
+            bottlenecks_identified: 4
+            performance_score: 72
+        aggregated_assessment:
+          overall_project_health: 78
+          priority_recommendations: [
+            "Address security vulnerabilities",
+            "Optimize database query patterns",
+            "Consider caching strategy implementation"
+          ]
+
+# =============================================================================
+# STREAMING PATTERNS
+# =============================================================================
+
+streaming_patterns:
+  
+  continuous_consultation_updates:
+    description: "Real-time streaming of consultation progress and insights"
+    use_cases:
+      - "Live consultation progress updates"
+      - "Real-time code generation feedback"
+      - "Continuous testing result streams"
+      - "Interactive debugging sessions"
+    
+    pattern_specification:
+      stream_initiation:
+        stream_id: "unique_stream_identifier"
+        stream_type: "enum[progress, results, interactive]"
+        update_frequency: "time_based_or_event_based"
+        client_preferences: "filtering_and_formatting_options"
+        
+      stream_message_format:
+        stream_id: "matching_stream_identifier"
+        sequence_number: "message_ordering"
+        timestamp: "message_generation_time"
+        message_type: "enum[update, result, interaction_request]"
+        payload: "stream_specific_data"
+        
+      stream_termination:
+        completion_reason: "enum[success, error, cancelled, timeout]"
+        final_summary: "stream_session_summary"
+        persistent_artifacts: "generated_files_and_context"
+        
+    example_workflow:
+      stream_request:
+        stream_id: "stream_001"
+        stream_type: "progress"
+        consultation_phase: "architecture_analysis"
+        update_frequency: "event_based"
+        
+      stream_messages:
+        - stream_id: "stream_001"
+          sequence_number: 1
+          message_type: "update"
+          payload:
+            phase: "Architecture Analysis"
+            progress: 25
+            current_activity: "Analyzing React component structure"
+            insights: ["Complex component hierarchy detected"]
+            
+        - stream_id: "stream_001"
+          sequence_number: 2
+          message_type: "interaction_request"
+          payload:
+            question: "Should we prioritize component refactoring or focus on new feature architecture?"
+            options: ["refactoring_focus", "new_features_focus", "balanced_approach"]
+            timeout: "60 seconds"
+            
+      stream_completion:
+        stream_id: "stream_001"
+        completion_reason: "success"
+        final_summary:
+          total_messages: 15
+          duration: "00:12:30"
+          key_insights: ["Component architecture needs refactoring", "Performance optimizations identified"]
+        persistent_artifacts: ["architecture_analysis.md", "refactoring_recommendations.md"]
+
+# =============================================================================
+# ERROR HANDLING AND RECOVERY
+# =============================================================================
+
+error_handling:
+  
+  failure_categories:
+    transient_failures:
+      examples: ["network_timeout", "temporary_resource_unavailable"]
+      recovery_strategy: "retry_with_backoff"
+      max_retry_attempts: 3
+      
+    persistent_failures:
+      examples: ["invalid_request_format", "unsupported_operation"]
+      recovery_strategy: "return_error_with_details"
+      escalation_required: true
+      
+    agent_failures:
+      examples: ["agent_unavailable", "agent_overloaded"]
+      recovery_strategy: "failover_to_backup_agent"
+      load_balancing: true
+      
+    system_failures:
+      examples: ["context_corruption", "session_expired"]
+      recovery_strategy: "graceful_degradation"
+      user_notification: true
+  
+  error_response_format:
+    error_type: "categorized_error_classification"
+    error_code: "machine_readable_error_identifier"
+    error_message: "human_readable_error_description"
+    error_details: "detailed_diagnostic_information"
+    recovery_suggestions: "recommended_recovery_actions"
+    retry_after: "suggested_retry_timing"
+    escalation_info: "when_to_escalate_to_user"
+    
+  circuit_breaker_pattern:
+    failure_threshold: 5
+    recovery_timeout: "30 seconds"
+    half_open_test_requests: 3
+    monitoring_window: "5 minutes"
+
+# =============================================================================
+# PERFORMANCE OPTIMIZATION
+# =============================================================================
+
+performance_optimization:
+  
+  request_optimization:
+    request_batching:
+      batch_size_optimal: 5
+      batch_timeout: "2 seconds"
+      batch_efficiency_threshold: "80%"
+      
+    request_prioritization:
+      priority_levels: ["urgent", "high", "normal", "low"]
+      queue_management: "priority_based_scheduling"
+      starvation_prevention: "aging_mechanism"
+      
+    caching_strategy:
+      response_caching: "frequently_requested_data"
+      cache_ttl: "5 minutes"
+      cache_invalidation: "context_change_based"
+      
+  resource_management:
+    connection_pooling:
+      pool_size: 10
+      connection_timeout: "30 seconds"
+      idle_timeout: "5 minutes"
+      
+    memory_management:
+      request_memory_limit: "100MB"
+      response_memory_limit: "50MB"
+      garbage_collection: "automatic"
+      
+    concurrency_control:
+      max_concurrent_requests: 20
+      agent_specific_limits: "per_agent_configuration"
+      backpressure_handling: "queue_depth_monitoring"
+
+# =============================================================================
+# INTEGRATION EXAMPLES
+# =============================================================================
+
+integration_examples:
+  
+  tdd_workflow_coordination:
+    description: "Coordinate TDD enforcement across multiple agents"
+    agents_involved: ["testing_agent", "code_generation_agent", "review_agent"]
+    request_sequence:
+      1:
+        agent: "testing_agent"
+        operation: "write_failing_tests"
+        dependency: "none"
+        
+      2:
+        agent: "code_generation_agent"
+        operation: "implement_minimal_solution"
+        dependency: "tests_confirmed_failing"
+        
+      3:
+        agent: "testing_agent"
+        operation: "verify_tests_pass"
+        dependency: "implementation_complete"
+        
+      4:
+        agent: "review_agent"
+        operation: "code_quality_review"
+        dependency: "tests_passing"
+        
+  architecture_to_implementation:
+    description: "Flow from architecture analysis to code generation"
+    agents_involved: ["architecture_agent", "code_generation_agent", "documentation_agent"]
+    parallel_optimization: true
+    request_coordination:
+      phase_1:
+        agent: "architecture_agent"
+        operation: "analyze_current_architecture"
+        expected_output: "architecture_assessment"
+        
+      phase_2_parallel:
+        - agent: "code_generation_agent"
+          operation: "generate_scaffolding"
+          dependency: "architecture_assessment"
+        - agent: "documentation_agent"
+          operation: "update_architecture_docs"
+          dependency: "architecture_assessment"
+          
+      phase_3:
+        agent: "code_generation_agent"
+        operation: "refine_implementation"
+        dependency: "documentation_updated"
+
+# =============================================================================
+# MONITORING AND METRICS
+# =============================================================================
+
+monitoring_framework:
+  
+  performance_metrics:
+    response_time_percentiles: ["p50", "p95", "p99"]
+    throughput_measurement: "requests_per_minute"
+    error_rate_tracking: "errors_per_total_requests"
+    agent_utilization: "percentage_time_active"
+    
+  quality_metrics:
+    request_success_rate: "successful_responses_percentage"
+    data_accuracy: "response_accuracy_validation"
+    user_satisfaction: "feedback_based_scoring"
+    consultation_effectiveness: "outcome_measurement"
+    
+  operational_metrics:
+    queue_depth_monitoring: "pending_requests_count"
+    resource_utilization: "memory_cpu_usage_tracking"
+    circuit_breaker_status: "failure_protection_state"
+    agent_health_status: "individual_agent_availability"
+
+# =============================================================================
+# END OF REQUEST-RESPONSE PATTERNS
+# =============================================================================

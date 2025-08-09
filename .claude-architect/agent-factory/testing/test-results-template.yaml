@@ -1,0 +1,383 @@
+# Test Results Template
+# Standardized format for recording agent testing results
+# Ensures consistent reporting and analysis across all agents
+
+test_results:
+  metadata:
+    test_execution_id: "{unique_identifier}"
+    agent_name: "{agent_under_test}"
+    test_date: "{iso_8601_timestamp}"
+    test_duration: "{seconds}"
+    test_suite_version: "{version}"
+    environment: "{test_environment}"
+    executor: "{human_or_automated}"
+    
+  overall_summary:
+    total_tests_executed: 0
+    tests_passed: 0
+    tests_failed: 0
+    tests_skipped: 0
+    overall_success_rate: 0.0  # percentage
+    average_response_time: 0.0  # seconds
+    total_execution_time: 0.0  # seconds
+    
+  agent_specific_metrics:
+    primary_success_metric: 0.0  # e.g., detection_accuracy for security_agent
+    secondary_metrics:
+      metric_1: 0.0
+      metric_2: 0.0
+      metric_3: 0.0
+    specialized_requirements:
+      requirement_1: "pass/fail/na"
+      requirement_2: "pass/fail/na"
+
+# =============================================================================
+# DETAILED TEST RESULTS BY CATEGORY
+# =============================================================================
+
+test_categories:
+  basic_functionality:
+    tests_executed: 0
+    tests_passed: 0
+    success_rate: 0.0
+    average_response_time: 0.0
+    
+    individual_tests:
+      - test_name: "scenario_name"
+        status: "pass/fail/skip"
+        execution_time: 0.0
+        response_time: 0.0
+        quality_score: 0.0
+        error_message: "if_applicable"
+        expected_outputs_met: 0  # number out of total
+        success_criteria_met: 0  # number out of total
+        
+  complex_tasks:
+    tests_executed: 0
+    tests_passed: 0
+    success_rate: 0.0
+    average_response_time: 0.0
+    
+    individual_tests:
+      - test_name: "scenario_name"
+        status: "pass/fail/skip"
+        execution_time: 0.0
+        response_time: 0.0
+        quality_score: 0.0
+        complexity_handled: "high/medium/low"
+        
+  edge_cases:
+    tests_executed: 0
+    tests_passed: 0
+    success_rate: 0.0
+    average_response_time: 0.0
+    
+    individual_tests:
+      - test_name: "scenario_name"
+        status: "pass/fail/skip"
+        execution_time: 0.0
+        response_time: 0.0
+        edge_case_handling: "excellent/good/poor"
+        
+  error_handling:
+    tests_executed: 0
+    tests_passed: 0
+    success_rate: 0.0
+    average_response_time: 0.0
+    
+    individual_tests:
+      - test_name: "scenario_name"
+        status: "pass/fail/skip"
+        error_recovery: "excellent/good/poor"
+        error_communication: "clear/unclear"
+        
+  performance_limits:
+    tests_executed: 0
+    tests_passed: 0
+    success_rate: 0.0
+    average_response_time: 0.0
+    
+    individual_tests:
+      - test_name: "scenario_name"
+        status: "pass/fail/skip"
+        load_handled: "high/medium/low"
+        performance_maintained: "yes/no"
+        
+  integration_points:
+    tests_executed: 0
+    tests_passed: 0
+    success_rate: 0.0
+    coordination_effectiveness: 0.0
+    
+    individual_tests:
+      - test_name: "scenario_name"
+        status: "pass/fail/skip"
+        coordination_quality: "excellent/good/poor"
+        communication_clarity: "clear/unclear"
+
+# =============================================================================
+# QUALITY ASSESSMENT
+# =============================================================================
+
+quality_assessment:
+  overall_quality_score: 0.0  # 0.0 to 1.0
+  
+  quality_dimensions:
+    correctness:
+      score: 0.0
+      weight: 30
+      notes: "accuracy_of_solutions"
+      
+    completeness:
+      score: 0.0
+      weight: 25
+      notes: "thoroughness_of_responses"
+      
+    clarity:
+      score: 0.0
+      weight: 20
+      notes: "understandability_of_outputs"
+      
+    efficiency:
+      score: 0.0
+      weight: 15
+      notes: "resource_usage_and_speed"
+      
+    maintainability:
+      score: 0.0
+      weight: 10
+      notes: "long_term_sustainability"
+  
+  automated_validation_results:
+    syntax_validation: "pass/fail/na"
+    security_scan: "pass/fail/na"
+    performance_check: "pass/fail/na"
+    best_practices_compliance: "pass/fail/na"
+    
+  human_review_results:
+    reviewer_id: "{reviewer_identifier}"
+    review_date: "{iso_8601_timestamp}"
+    overall_rating: 0  # 1-5 scale
+    review_notes: "detailed_feedback"
+    recommended_improvements: []
+
+# =============================================================================
+# PERFORMANCE METRICS
+# =============================================================================
+
+performance_metrics:
+  response_time_statistics:
+    minimum: 0.0
+    maximum: 0.0
+    average: 0.0
+    median: 0.0
+    percentile_95: 0.0
+    standard_deviation: 0.0
+    
+  resource_usage:
+    peak_memory_mb: 0.0
+    average_cpu_percent: 0.0
+    token_consumption: 0
+    api_calls_made: 0
+    
+  throughput_metrics:
+    tasks_per_minute: 0.0
+    concurrent_tasks_handled: 0
+    queue_wait_time_average: 0.0
+    
+  reliability_metrics:
+    error_rate: 0.0
+    timeout_rate: 0.0
+    retry_success_rate: 0.0
+    availability_percentage: 100.0
+
+# =============================================================================
+# BASELINE COMPARISON
+# =============================================================================
+
+baseline_comparison:
+  baseline_standards_met:
+    minimum_success_rate: "pass/fail"
+    response_time_target: "pass/fail"
+    quality_threshold: "pass/fail"
+    specialized_requirements: "pass/fail"
+    
+  performance_vs_baseline:
+    success_rate_delta: 0.0  # percentage points above/below baseline
+    response_time_delta: 0.0  # seconds faster/slower than baseline
+    quality_score_delta: 0.0  # points above/below baseline
+    
+  improvement_opportunities:
+    - "specific_area_1"
+    - "specific_area_2"
+    - "specific_area_3"
+    
+  regression_indicators:
+    - "potential_regression_1"
+    - "potential_regression_2"
+
+# =============================================================================
+# AGENT-SPECIFIC RESULTS
+# =============================================================================
+
+agent_specific_results:
+  # For Testing Agent
+  tdd_enforcement_results:
+    violations_detected: 0
+    penalties_applied: 0
+    penalty_accuracy: 100.0
+    educational_effectiveness: 0.0
+    zero_tolerance_maintained: "yes/no"
+    
+  # For Security Agent
+  security_analysis_results:
+    vulnerabilities_detected: 0
+    false_positives: 0
+    detection_accuracy: 0.0
+    coverage_completeness: 0.0
+    compliance_assessment_accuracy: 0.0
+    
+  # For Architecture Agent
+  architecture_design_results:
+    patterns_identified_correctly: 0
+    scalability_considerations: 0
+    technology_recommendations: 0
+    design_feasibility: "high/medium/low"
+    
+  # For Code Generation Agent
+  code_generation_results:
+    code_quality_score: 0.0
+    best_practices_adherence: 0.0
+    validation_pass_rate: 0.0
+    documentation_completeness: 0.0
+    security_considerations: 0.0
+
+# =============================================================================
+# FAILURE ANALYSIS
+# =============================================================================
+
+failure_analysis:
+  failed_tests:
+    - test_name: "specific_test"
+      failure_reason: "detailed_explanation"
+      error_category: "syntax/logic/timeout/resource"
+      impact_severity: "high/medium/low"
+      reproduction_steps: []
+      suggested_fix: "recommendation"
+      
+  failure_patterns:
+    common_failure_modes:
+      - pattern: "description"
+        frequency: 0
+        impact: "high/medium/low"
+        
+  root_cause_analysis:
+    primary_causes:
+      - cause: "specific_issue"
+        tests_affected: 0
+        remediation_priority: "high/medium/low"
+        
+  recovery_recommendations:
+    immediate_actions:
+      - "action_1"
+      - "action_2"
+    long_term_improvements:
+      - "improvement_1"
+      - "improvement_2"
+
+# =============================================================================
+# TREND ANALYSIS
+# =============================================================================
+
+trend_analysis:
+  historical_comparison:
+    previous_test_date: "{iso_8601_timestamp}"
+    success_rate_trend: "improving/stable/declining"
+    response_time_trend: "improving/stable/declining"
+    quality_trend: "improving/stable/declining"
+    
+  performance_evolution:
+    success_rate_change: 0.0  # percentage points
+    response_time_change: 0.0  # seconds
+    quality_score_change: 0.0  # points
+    
+  capability_growth:
+    new_capabilities_demonstrated: []
+    improved_capabilities: []
+    capability_regressions: []
+
+# =============================================================================
+# RECOMMENDATIONS
+# =============================================================================
+
+recommendations:
+  immediate_actions:
+    - priority: "high/medium/low"
+      action: "specific_recommendation"
+      expected_impact: "description"
+      effort_estimate: "hours_or_days"
+      
+  performance_improvements:
+    - area: "specific_performance_area"
+      current_performance: "baseline"
+      target_performance: "goal"
+      improvement_strategy: "approach"
+      
+  quality_enhancements:
+    - dimension: "correctness/completeness/clarity/efficiency/maintainability"
+      current_score: 0.0
+      target_score: 0.0
+      improvement_approach: "strategy"
+      
+  capability_expansion:
+    - capability: "new_or_enhanced_capability"
+      justification: "business_or_technical_reason"
+      implementation_complexity: "high/medium/low"
+      expected_timeline: "weeks_or_months"
+
+# =============================================================================
+# VALIDATION SIGNATURES
+# =============================================================================
+
+validation:
+  automated_validation:
+    validator_version: "{version}"
+    validation_timestamp: "{iso_8601_timestamp}"
+    validation_status: "pass/fail"
+    validation_notes: "any_issues_or_observations"
+    
+  human_validation:
+    validator_name: "{name}"
+    validator_role: "{role}"
+    validation_timestamp: "{iso_8601_timestamp}"
+    validation_status: "approved/rejected/conditional"
+    validation_comments: "detailed_feedback"
+    
+  quality_assurance:
+    qa_reviewer: "{name}"
+    qa_timestamp: "{iso_8601_timestamp}"
+    qa_status: "pass/fail"
+    qa_notes: "quality_assessment_notes"
+
+# =============================================================================
+# METADATA AND TRACEABILITY
+# =============================================================================
+
+traceability:
+  test_suite_commit_hash: "{git_commit_hash}"
+  agent_version: "{agent_version}"
+  test_environment_config: "{config_hash}"
+  test_data_version: "{data_version}"
+  dependencies:
+    - name: "{dependency_name}"
+      version: "{dependency_version}"
+      
+  related_tests:
+    - test_execution_id: "{related_test_id}"
+      relationship: "before/after/parallel/regression"
+      
+archive_info:
+  retention_period: "1_year"
+  archival_date: "{iso_8601_timestamp}"
+  storage_location: "{storage_path}"
+  compression: "enabled/disabled"

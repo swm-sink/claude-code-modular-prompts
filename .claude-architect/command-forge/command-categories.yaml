@@ -1,0 +1,353 @@
+# Command Generation Categories Framework
+# Version: 1.0
+# Purpose: Define categories and patterns for project-specific command generation
+# Based on discoveries from Phases 1-5
+
+# =============================================================================
+# COMMAND CATEGORY DEFINITIONS
+# =============================================================================
+
+categories:
+  # ---------------------------------------------------------------------------
+  # Component Generators - Create project-specific components
+  # ---------------------------------------------------------------------------
+  component_generators:
+    name: "Component Generators"
+    description: "Commands that generate components based on project patterns"
+    priority: "high"
+    
+    patterns:
+      - name: "create-component"
+        template: "component-generator-template.md"
+        variables:
+          - component_type
+          - naming_convention
+          - directory_structure
+          - test_pattern
+        discovery_source: "technical_architecture_analysis"
+        
+      - name: "scaffold-module"
+        template: "module-scaffolder-template.md"
+        variables:
+          - module_name
+          - dependencies
+          - interfaces
+          - documentation_style
+        discovery_source: "code_pattern_detection"
+        
+      - name: "generate-ui-component"
+        template: "ui-component-template.md"
+        variables:
+          - framework_specific
+          - styling_approach
+          - state_management
+          - accessibility_standards
+        discovery_source: "framework_analysis"
+    
+    success_metrics:
+      - "Components follow project conventions"
+      - "Includes appropriate tests"
+      - "Documentation generated"
+      - "Type-safe implementations"
+
+  # ---------------------------------------------------------------------------
+  # Test Creators - Generate test suites based on project testing patterns
+  # ---------------------------------------------------------------------------
+  test_creators:
+    name: "Test Creators"
+    description: "Commands that generate tests following project patterns"
+    priority: "high"
+    
+    patterns:
+      - name: "generate-unit-test"
+        template: "unit-test-generator-template.md"
+        variables:
+          - test_framework
+          - assertion_style
+          - mock_patterns
+          - coverage_requirements
+        discovery_source: "testing_pattern_analysis"
+        
+      - name: "create-integration-test"
+        template: "integration-test-template.md"
+        variables:
+          - test_boundaries
+          - fixture_patterns
+          - database_strategy
+          - api_testing_approach
+        discovery_source: "integration_analysis"
+        
+      - name: "scaffold-e2e-test"
+        template: "e2e-test-template.md"
+        variables:
+          - e2e_framework
+          - selector_strategy
+          - page_object_pattern
+          - test_data_management
+        discovery_source: "e2e_pattern_detection"
+    
+    success_metrics:
+      - "Tests follow project patterns"
+      - "Appropriate coverage levels"
+      - "Fast execution times"
+      - "Clear failure messages"
+
+  # ---------------------------------------------------------------------------
+  # API Builders - Generate API endpoints and contracts
+  # ---------------------------------------------------------------------------
+  api_builders:
+    name: "API Builders"
+    description: "Commands that generate API endpoints and documentation"
+    priority: "high"
+    
+    patterns:
+      - name: "create-api-endpoint"
+        template: "api-endpoint-template.md"
+        variables:
+          - api_style  # REST, GraphQL, gRPC
+          - authentication_pattern
+          - validation_approach
+          - error_handling
+        discovery_source: "api_pattern_analysis"
+        
+      - name: "generate-api-client"
+        template: "api-client-template.md"
+        variables:
+          - client_language
+          - retry_strategy
+          - caching_approach
+          - type_generation
+        discovery_source: "client_pattern_detection"
+        
+      - name: "scaffold-api-documentation"
+        template: "api-docs-template.md"
+        variables:
+          - documentation_format  # OpenAPI, GraphQL Schema
+          - example_generation
+          - versioning_strategy
+        discovery_source: "documentation_analysis"
+    
+    success_metrics:
+      - "Consistent API patterns"
+      - "Complete documentation"
+      - "Type-safe contracts"
+      - "Proper error handling"
+
+  # ---------------------------------------------------------------------------
+  # Debug Helpers - Generate debugging and troubleshooting commands
+  # ---------------------------------------------------------------------------
+  debug_helpers:
+    name: "Debug Helpers"
+    description: "Commands that assist with debugging and troubleshooting"
+    priority: "medium"
+    
+    patterns:
+      - name: "debug-component"
+        template: "debug-helper-template.md"
+        variables:
+          - logging_framework
+          - debug_output_format
+          - performance_tracking
+          - state_inspection
+        discovery_source: "debugging_pattern_analysis"
+        
+      - name: "trace-request"
+        template: "request-tracer-template.md"
+        variables:
+          - tracing_framework
+          - correlation_id_pattern
+          - distributed_tracing
+        discovery_source: "observability_analysis"
+        
+      - name: "analyze-performance"
+        template: "performance-analyzer-template.md"
+        variables:
+          - profiling_tools
+          - metric_collection
+          - bottleneck_detection
+        discovery_source: "performance_pattern_detection"
+    
+    success_metrics:
+      - "Clear debug output"
+      - "Performance insights"
+      - "Root cause identification"
+      - "Minimal overhead"
+
+  # ---------------------------------------------------------------------------
+  # Workflow Automation - Automate common development workflows
+  # ---------------------------------------------------------------------------
+  workflow_automation:
+    name: "Workflow Automation"
+    description: "Commands that automate repetitive development tasks"
+    priority: "high"
+    
+    patterns:
+      - name: "setup-feature"
+        template: "feature-setup-template.md"
+        variables:
+          - branch_strategy
+          - commit_conventions
+          - pr_template
+          - ci_pipeline
+        discovery_source: "workflow_analysis"
+        
+      - name: "deploy-service"
+        template: "deployment-automation-template.md"
+        variables:
+          - deployment_platform
+          - environment_management
+          - secret_handling
+          - rollback_strategy
+        discovery_source: "deployment_pattern_analysis"
+        
+      - name: "migrate-data"
+        template: "data-migration-template.md"
+        variables:
+          - migration_framework
+          - versioning_approach
+          - rollback_capability
+          - data_validation
+        discovery_source: "database_pattern_detection"
+    
+    success_metrics:
+      - "Reduced manual steps"
+      - "Consistent processes"
+      - "Error prevention"
+      - "Time savings"
+
+  # ---------------------------------------------------------------------------
+  # Refactoring Tools - Commands for code improvement and modernization
+  # ---------------------------------------------------------------------------
+  refactoring_tools:
+    name: "Refactoring Tools"
+    description: "Commands that help refactor and improve existing code"
+    priority: "medium"
+    
+    patterns:
+      - name: "extract-service"
+        template: "service-extraction-template.md"
+        variables:
+          - service_boundaries
+          - interface_design
+          - data_ownership
+          - communication_pattern
+        discovery_source: "architecture_analysis"
+        
+      - name: "modernize-component"
+        template: "modernization-template.md"
+        variables:
+          - target_patterns
+          - migration_strategy
+          - backward_compatibility
+        discovery_source: "legacy_pattern_detection"
+    
+    success_metrics:
+      - "Improved code quality"
+      - "Maintained functionality"
+      - "Better performance"
+      - "Enhanced maintainability"
+
+  # ---------------------------------------------------------------------------
+  # Documentation Generators - Create project-specific documentation
+  # ---------------------------------------------------------------------------
+  documentation_generators:
+    name: "Documentation Generators"
+    description: "Commands that generate documentation following project standards"
+    priority: "medium"
+    
+    patterns:
+      - name: "document-module"
+        template: "module-documentation-template.md"
+        variables:
+          - documentation_format
+          - diagram_generation
+          - example_style
+          - api_documentation
+        discovery_source: "documentation_pattern_analysis"
+        
+      - name: "generate-readme"
+        template: "readme-generator-template.md"
+        variables:
+          - sections_required
+          - badge_style
+          - example_format
+          - contributing_guidelines
+        discovery_source: "readme_analysis"
+    
+    success_metrics:
+      - "Complete documentation"
+      - "Consistent formatting"
+      - "Up-to-date examples"
+      - "Clear explanations"
+
+# =============================================================================
+# GENERATION CONFIGURATION
+# =============================================================================
+
+generation_config:
+  template_engine:
+    type: "pattern-based"
+    variable_resolution: "dynamic"
+    validation: "strict"
+    
+  discovery_integration:
+    sources:
+      - "technical_architecture_analysis"  # From Phase 3
+      - "domain_pattern_extraction"        # From Phase 3
+      - "code_pattern_detection"           # From Phase 2
+      - "workflow_analysis"                # From Phase 3
+      - "framework_detection"              # From Phase 1
+    
+    confidence_threshold: 0.8  # Minimum confidence for pattern application
+    
+  optimization:
+    caching: true
+    parallel_generation: true
+    incremental_updates: true
+    
+  quality_gates:
+    syntax_validation: true
+    convention_checking: true
+    test_generation: true
+    documentation_required: true
+
+# =============================================================================
+# SUCCESS CRITERIA
+# =============================================================================
+
+success_criteria:
+  overall:
+    - "10+ project-specific commands generated"
+    - "Commands follow discovered conventions"
+    - "High success rate (>85%) in execution"
+    - "Measurable productivity improvement"
+    
+  per_category:
+    - "Each category generates 2+ commands"
+    - "Templates properly parameterized"
+    - "Variables resolved from discoveries"
+    - "Documentation auto-generated"
+
+# =============================================================================
+# IMPLEMENTATION TIMELINE
+# =============================================================================
+
+implementation:
+  phase_6_tasks:
+    task_6_1:
+      status: "in_progress"
+      deliverable: "This category definition file"
+      
+    task_6_2:
+      status: "pending"
+      deliverable: "Generation engine implementation"
+      
+    task_6_3:
+      status: "pending"
+      deliverable: "Optimization system"
+      
+    task_6_4:
+      status: "pending"
+      deliverable: "Generation commands"
+
+# End of Command Categories Framework

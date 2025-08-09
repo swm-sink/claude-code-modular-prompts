@@ -1,0 +1,297 @@
+# Convention Enforcer
+# Claude Context Architect - Agent Generation System
+# Version: 1.0
+# Purpose: Enforce project-specific conventions, standards, and coding practices
+
+metadata:
+  component_type: "convention_enforcement"
+  version: "1.0"
+  created: "2025-08-07"
+  purpose: "Enforce and maintain project-specific conventions and standards in generated agents"
+
+# =============================================================================
+# CONVENTION DETECTION FRAMEWORK
+# =============================================================================
+
+convention_detection:
+  # Code style detection
+  code_style_analysis:
+    language_conventions:
+      python:
+        style_guides: ["PEP 8", "Black", "Flake8", "Pylint"]
+        naming_conventions: ["snake_case functions", "PascalCase classes", "UPPER_CASE constants"]
+        formatting_patterns: ["line length", "indentation", "import organization"]
+        
+      javascript:
+        style_guides: ["ESLint", "Prettier", "Airbnb", "Standard"]
+        naming_conventions: ["camelCase", "PascalCase classes", "UPPER_SNAKE_CASE constants"]
+        formatting_patterns: ["semicolons", "quotes", "trailing commas"]
+        
+      java:
+        style_guides: ["Google Java Style", "Oracle Code Conventions", "Checkstyle"]
+        naming_conventions: ["camelCase", "PascalCase classes", "UPPER_SNAKE_CASE constants"]
+        formatting_patterns: ["braces", "indentation", "line wrapping"]
+        
+      typescript:
+        style_guides: ["TypeScript ESLint", "Prettier", "TSLint (deprecated)"]
+        naming_conventions: ["camelCase", "PascalCase", "interface prefixes"]
+        formatting_patterns: ["type annotations", "generics", "import statements"]
+        
+  # Architecture convention detection
+  architecture_conventions:
+    project_structure:
+      mvc_pattern: "Model-View-Controller structure detection and enforcement"
+      component_architecture: "Component-based architecture conventions"
+      layered_architecture: "N-tier architecture layer conventions"
+      microservices: "Microservice naming and organization conventions"
+      
+    file_organization:
+      directory_structure: "Standard directory naming and organization patterns"
+      file_naming: "Consistent file naming conventions across project"
+      module_organization: "Module and package organization standards"
+      
+  # Documentation conventions
+  documentation_conventions:
+    code_documentation:
+      docstring_formats: ["Google Style", "NumPy Style", "Sphinx", "JSDoc"]
+      comment_standards: ["Inline comments", "Block comments", "TODO formatting"]
+      api_documentation: ["OpenAPI", "GraphQL schema", "REST documentation"]
+      
+    project_documentation:
+      readme_structure: "Standardized README structure and content"
+      changelog_format: "Changelog formatting and versioning standards"
+      contribution_guidelines: "Contributor documentation standards"
+
+# =============================================================================
+# CONVENTION ENFORCEMENT PATTERNS
+# =============================================================================
+
+enforcement_patterns:
+  # Automated enforcement
+  automated_enforcement:
+    linting_integration:
+      pre_commit_hooks: "Integration with pre-commit linting and formatting"
+      ci_cd_validation: "Continuous integration convention validation"
+      editor_integration: "IDE and editor plugin integration for real-time enforcement"
+      
+    code_generation_enforcement:
+      template_compliance: "Ensure generated code follows project conventions"
+      automatic_formatting: "Automatic code formatting according to project standards"
+      convention_validation: "Validate generated code against established conventions"
+      
+  # Progressive enforcement
+  progressive_enforcement:
+    warning_system: "Graduated warning system for convention violations"
+    education_integration: "Educational messages and resources for convention adoption"
+    migration_assistance: "Assistance in migrating existing code to new conventions"
+    
+  # Team-specific enforcement
+  team_enforcement:
+    role_based_enforcement: "Different enforcement levels based on team member roles"
+    gradual_adoption: "Gradual introduction of new conventions with team buy-in"
+    consensus_building: "Convention establishment through team consensus processes"
+
+# =============================================================================
+# PROJECT-SPECIFIC CONVENTION PATTERNS
+# =============================================================================
+
+project_conventions:
+  # Framework-specific conventions
+  framework_conventions:
+    react_conventions:
+      component_structure: "Functional vs class components, hooks usage patterns"
+      naming_patterns: "Component naming, prop naming, event handler naming"
+      file_organization: "Component file structure, test file co-location"
+      state_management: "Redux, Context API, or custom state management patterns"
+      
+    django_conventions:
+      app_structure: "Django app organization and naming conventions"
+      model_conventions: "Model field naming, method organization, meta classes"
+      view_patterns: "Class-based vs function-based views, URL naming"
+      template_organization: "Template structure and naming conventions"
+      
+    spring_conventions:
+      package_structure: "Package organization and naming conventions"
+      annotation_usage: "Consistent annotation patterns and configuration"
+      bean_naming: "Spring bean naming and configuration patterns"
+      rest_api_conventions: "REST endpoint naming and response patterns"
+      
+  # Domain-specific conventions
+  domain_conventions:
+    api_conventions:
+      rest_standards: "RESTful API design patterns and naming conventions"
+      versioning_strategy: "API versioning and backward compatibility standards"
+      error_handling: "Consistent error response formats and codes"
+      authentication: "Authentication and authorization pattern standards"
+      
+    database_conventions:
+      table_naming: "Database table and column naming conventions"
+      index_strategy: "Database indexing strategy and naming patterns"
+      migration_patterns: "Database migration file organization and naming"
+      query_optimization: "Query writing standards and optimization patterns"
+      
+  # Testing conventions
+  testing_conventions:
+    test_organization:
+      test_file_structure: "Test file naming and organization patterns"
+      test_case_naming: "Test method and class naming conventions"
+      test_data_management: "Test data setup and teardown patterns"
+      
+    testing_patterns:
+      unit_test_standards: "Unit test structure and assertion patterns"
+      integration_test_patterns: "Integration test organization and execution"
+      e2e_test_conventions: "End-to-end test structure and maintenance"
+
+# =============================================================================
+# CONVENTION CUSTOMIZATION ENGINE
+# =============================================================================
+
+customization_engine:
+  # Convention adaptation algorithms
+  adaptation_algorithms:
+    convention_discovery:
+      existing_pattern_analysis: "Analyze existing codebase for convention patterns"
+      team_preference_detection: "Detect team preferences from code review patterns"
+      industry_standard_matching: "Match project patterns to industry standards"
+      
+    convention_prioritization:
+      impact_assessment: "Assess impact of different convention choices"
+      adoption_ease_evaluation: "Evaluate ease of convention adoption by team"
+      consistency_optimization: "Optimize for maximum consistency across project"
+      
+  # Dynamic convention enforcement
+  dynamic_enforcement:
+    context_aware_enforcement: "Apply different conventions based on code context"
+    progressive_enforcement: "Gradually increase enforcement strictness over time"
+    exception_handling: "Handle legitimate exceptions to established conventions"
+    
+  # Convention evolution management
+  evolution_management:
+    convention_updates: "Manage evolution of conventions over time"
+    migration_strategies: "Strategies for migrating to new convention standards"
+    backward_compatibility: "Maintain backward compatibility during convention changes"
+
+# =============================================================================
+# AGENT-SPECIFIC CONVENTION INTEGRATION
+# =============================================================================
+
+agent_integration:
+  # Code Generation Agent conventions
+  code_generation_conventions:
+    template_standards: "Code generation template adherence to project conventions"
+    consistency_validation: "Validate generated code consistency with existing patterns"
+    style_application: "Automatic application of project coding style to generated code"
+    
+  # Review Agent conventions
+  review_conventions:
+    convention_checking: "Automated convention checking during code reviews"
+    style_guide_enforcement: "Style guide validation and enforcement"
+    best_practice_validation: "Best practice adherence checking"
+    
+  # Documentation Agent conventions
+  documentation_conventions:
+    documentation_standards: "Enforce documentation format and structure standards"
+    content_consistency: "Maintain consistent terminology and style in documentation"
+    template_adherence: "Ensure documentation follows established templates"
+    
+  # Testing Agent conventions
+  testing_conventions:
+    test_structure_standards: "Enforce consistent test structure and organization"
+    naming_convention_validation: "Validate test naming conventions"
+    assertion_pattern_consistency: "Maintain consistent assertion patterns across tests"
+
+# =============================================================================
+# CONVENTION VALIDATION FRAMEWORK
+# =============================================================================
+
+validation_framework:
+  # Automated validation
+  automated_validation:
+    static_analysis: "Static code analysis for convention compliance"
+    dynamic_analysis: "Runtime validation of convention adherence"
+    continuous_validation: "Continuous monitoring of convention compliance"
+    
+  # Manual validation
+  manual_validation:
+    peer_review_integration: "Integration of convention checking into peer review"
+    audit_processes: "Periodic convention compliance audits"
+    team_feedback_integration: "Team feedback on convention effectiveness"
+    
+  # Validation reporting
+  reporting_framework:
+    compliance_metrics: "Metrics tracking convention compliance rates"
+    violation_reporting: "Detailed reporting of convention violations"
+    trend_analysis: "Analysis of convention compliance trends over time"
+
+# =============================================================================
+# TEAM ADOPTION AND TRAINING
+# =============================================================================
+
+adoption_training:
+  # Training and education
+  education_framework:
+    convention_documentation: "Comprehensive documentation of project conventions"
+    training_materials: "Educational materials for convention adoption"
+    best_practice_examples: "Examples demonstrating proper convention usage"
+    
+  # Adoption strategies
+  adoption_strategies:
+    gradual_introduction: "Gradual introduction of new conventions to minimize disruption"
+    pilot_programs: "Pilot programs for testing new convention adoption"
+    feedback_integration: "Integration of team feedback into convention refinement"
+    
+  # Support systems
+  support_systems:
+    mentoring_programs: "Mentoring programs for convention adoption"
+    help_documentation: "Comprehensive help documentation for convention questions"
+    community_support: "Team community support for convention-related issues"
+
+# =============================================================================
+# SUCCESS METRICS AND MONITORING
+# =============================================================================
+
+success_metrics:
+  # Compliance metrics
+  compliance_metrics:
+    adherence_rate: ">90% code adherence to established conventions"
+    consistency_score: ">85% consistency across different code modules"
+    violation_reduction: ">70% reduction in convention violations over time"
+    
+  # Team adoption metrics
+  adoption_metrics:
+    team_adoption_rate: ">80% team adoption of established conventions"
+    training_completion: ">95% team completion of convention training programs"
+    satisfaction_score: ">4.0/5.0 team satisfaction with convention standards"
+    
+  # Quality impact metrics
+  quality_metrics:
+    code_quality_improvement: ">25% improvement in overall code quality scores"
+    maintenance_efficiency: ">30% improvement in code maintenance efficiency"
+    defect_reduction: ">20% reduction in convention-related defects"
+
+# =============================================================================
+# INTEGRATION WITH GENERATION PIPELINE
+# =============================================================================
+
+pipeline_integration:
+  # Pre-generation validation
+  pre_generation:
+    convention_rule_loading: "Load project-specific convention rules before generation"
+    template_validation: "Validate templates against convention requirements"
+    customization_validation: "Validate customizations for convention compliance"
+    
+  # Generation-time enforcement
+  generation_time:
+    real_time_validation: "Real-time convention validation during code generation"
+    automatic_correction: "Automatic correction of minor convention violations"
+    warning_generation: "Generate warnings for potential convention issues"
+    
+  # Post-generation validation
+  post_generation:
+    compliance_verification: "Verify generated code compliance with all conventions"
+    integration_testing: "Test integration of generated code with existing conventions"
+    documentation_updates: "Update documentation to reflect generated code conventions"
+
+# =============================================================================
+# END OF CONVENTION ENFORCER
+# =============================================================================

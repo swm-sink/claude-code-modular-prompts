@@ -1,0 +1,401 @@
+# Architecture Agent Activation Requirements
+# Claude Context Architect - Agent Factory Specializations
+# Purpose: Define when and how to activate the Architecture Agent
+
+metadata:
+  agent_name: "Architecture Agent"
+  version: "1.0"
+  activation_scope: "System design patterns and architectural decisions"
+  priority_level: "high"
+  activation_confidence_threshold: "80%"
+
+# =============================================================================
+# ACTIVATION TRIGGERS
+# =============================================================================
+
+primary_activation_triggers:
+  
+  project_characteristics:
+    complexity_indicators:
+      - "Multiple services or modules (>3 components)"
+      - "Distributed system architecture"
+      - "Microservices or service-oriented architecture"
+      - "Complex data flow between components"
+      - "Multiple technology stacks in use"
+    
+    architectural_needs:
+      - "New system architecture design required"
+      - "Architecture review or assessment needed"
+      - "Technology stack evaluation in progress"
+      - "Scalability concerns or requirements identified"
+      - "Performance architecture optimization needed"
+    
+    decision_points:
+      - "Framework or platform selection decisions"
+      - "Database architecture and design choices"
+      - "Integration pattern and strategy decisions"
+      - "Deployment architecture and infrastructure choices"
+      - "Security architecture and compliance requirements"
+
+  user_requests:
+    explicit_architecture_requests:
+      - "Architecture review or assessment"
+      - "System design recommendations"
+      - "Technology evaluation and comparison"
+      - "Scalability planning and analysis"
+      - "Architecture documentation creation"
+    
+    implicit_architecture_needs:
+      - "Performance improvement requests"
+      - "Integration and connectivity challenges"
+      - "Maintenance and evolution difficulties"
+      - "Team coordination and development issues"
+      - "Technical debt and complexity concerns"
+
+# =============================================================================
+# PROJECT ANALYSIS CRITERIA
+# =============================================================================
+
+project_analysis_framework:
+  
+  technical_complexity_assessment:
+    code_metrics:
+      complexity_thresholds:
+        - "Cyclomatic complexity >15 average"
+        - "Class/module count >50"
+        - "Directory depth >5 levels"
+        - "File count >500 in single directory"
+        - "Dependency count >20 external libraries"
+      
+      architectural_patterns:
+        detected_patterns:
+          - "MVC/MVP/MVVM pattern usage"
+          - "Repository or Data Access patterns"
+          - "Service layer or business logic patterns"
+          - "Observer or publish-subscribe patterns"
+          - "Factory or builder patterns"
+        
+        anti_patterns:
+          - "God classes or objects (>500 lines)"
+          - "Circular dependencies detected"
+          - "Tight coupling indicators"
+          - "Violation of single responsibility"
+          - "Inconsistent architectural patterns"
+  
+  scalability_requirements:
+    performance_indicators:
+      - "Expected user load >1000 concurrent users"
+      - "Data volume >1TB or high growth rate"
+      - "Response time requirements <200ms"
+      - "High availability requirements (>99.9%)"
+      - "Global or multi-region deployment needs"
+    
+    growth_projections:
+      - "Rapid user base growth expected (>100% annually)"
+      - "Feature expansion and new functionality planned"
+      - "Team scaling and distributed development"
+      - "Market expansion and localization requirements"
+      - "Platform or device expansion needs"
+  
+  integration_complexity:
+    external_systems:
+      - "Multiple third-party API integrations (>5)"
+      - "Legacy system integration requirements"
+      - "Real-time data synchronization needs"
+      - "Complex authentication and authorization"
+      - "Compliance and regulatory integration"
+    
+    data_management:
+      - "Multiple database systems or technologies"
+      - "Complex data transformation requirements"
+      - "Real-time analytics and reporting needs"
+      - "Data privacy and security requirements"
+      - "Backup and disaster recovery needs"
+
+# =============================================================================
+# CONTEXT REQUIREMENTS
+# =============================================================================
+
+minimum_context_requirements:
+  
+  required_context_layers:
+    layer_1_project_overview:
+      criticality: "essential"
+      minimum_completeness: "70%"
+      required_sections:
+        - "Project goals and business objectives"
+        - "Target users and stakeholder requirements"
+        - "Performance and scalability expectations"
+        - "Timeline and resource constraints"
+    
+    layer_2_technical_architecture:
+      criticality: "essential"
+      minimum_completeness: "80%"
+      required_sections:
+        - "Current technology stack and framework details"
+        - "System architecture and component structure"
+        - "Database design and data management approach"
+        - "Integration points and external dependencies"
+    
+    layer_5_cross_references:
+      criticality: "important"
+      minimum_completeness: "50%"
+      required_sections:
+        - "Related architectural documentation"
+        - "Technology evaluation resources"
+        - "Industry standards and best practices"
+        - "Team expertise and capability assessment"
+  
+  context_validation_criteria:
+    completeness_checks:
+      - "Business requirements clearly defined"
+      - "Technical constraints identified and documented"
+      - "Current system state accurately captured"
+      - "Stakeholder expectations understood"
+    
+    accuracy_validation:
+      - "Technical details verified against actual implementation"
+      - "Performance requirements validated with stakeholders"
+      - "Integration requirements confirmed with external teams"
+      - "Resource constraints verified with project management"
+
+# =============================================================================
+# ACTIVATION CONDITIONS
+# =============================================================================
+
+activation_decision_matrix:
+  
+  high_priority_activation:
+    conditions:
+      - "Multiple complexity indicators present (≥3)"
+      - "Explicit architecture request from user"
+      - "Critical architectural decision pending"
+      - "System-wide performance or scalability issues"
+      - "Major technology migration or upgrade planned"
+    
+    confidence_threshold: "≥90%"
+    immediate_activation: true
+    resource_priority: "high"
+  
+  medium_priority_activation:
+    conditions:
+      - "Some complexity indicators present (2-3)"
+      - "Architecture review or assessment beneficial"
+      - "Technology evaluation could provide value"
+      - "Integration challenges or opportunities identified"
+      - "Team requesting architectural guidance"
+    
+    confidence_threshold: "≥80%"
+    immediate_activation: false
+    resource_priority: "medium"
+  
+  low_priority_activation:
+    conditions:
+      - "Few complexity indicators present (1-2)"
+      - "Simple or well-established architecture"
+      - "Limited integration or scalability needs"
+      - "Stable technology stack with no change plans"
+      - "Small team or project scope"
+    
+    confidence_threshold: "≥70%"
+    immediate_activation: false
+    resource_priority: "low"
+
+# =============================================================================
+# USER PREFERENCE INTEGRATION
+# =============================================================================
+
+user_preference_framework:
+  
+  consultation_style_preferences:
+    detailed_analysis:
+      - "User prefers comprehensive architectural analysis"
+      - "Detailed documentation and decision rationale expected"
+      - "Multiple alternative evaluations requested"
+      - "Long-term strategic planning focus"
+    
+    practical_recommendations:
+      - "User prefers actionable recommendations"
+      - "Focus on immediate implementation needs"
+      - "Pragmatic solutions over theoretical perfection"
+      - "Time-to-value optimization priority"
+    
+    collaborative_approach:
+      - "User wants to be involved in architectural decisions"
+      - "Interactive discussion and validation preferred"
+      - "Team consensus and buy-in important"
+      - "Educational and knowledge transfer focus"
+  
+  technical_depth_preferences:
+    high_technical_depth:
+      - "Experienced technical team with architectural expertise"
+      - "Complex system requirements and constraints"
+      - "Innovation and cutting-edge technology adoption"
+      - "Performance and optimization critical requirements"
+    
+    moderate_technical_depth:
+      - "Mixed technical expertise within team"
+      - "Balanced approach between innovation and stability"
+      - "Standard industry practices preferred"
+      - "Risk mitigation and proven solutions focus"
+    
+    simplified_approach:
+      - "Limited architectural expertise in team"
+      - "Preference for proven, simple solutions"
+      - "Minimal complexity and maintenance overhead"
+      - "Quick implementation and time-to-market focus"
+
+# =============================================================================
+# ACTIVATION WORKFLOW
+# =============================================================================
+
+activation_process:
+  
+  pre_activation_assessment:
+    trigger_evaluation:
+      - "Analyze project characteristics against activation triggers"
+      - "Assess context completeness and quality"
+      - "Evaluate user preferences and requirements"
+      - "Calculate activation confidence score"
+    
+    resource_availability:
+      - "Check Architecture Agent availability and capacity"
+      - "Assess required context layer accessibility"
+      - "Verify necessary tool permissions and access"
+      - "Confirm stakeholder availability for consultation"
+  
+  activation_decision:
+    go_no_go_criteria:
+      - "Activation confidence score meets threshold"
+      - "Required context layers sufficiently complete"
+      - "Architecture Agent available and ready"
+      - "User expectations align with agent capabilities"
+    
+    alternative_options:
+      - "Defer activation until context requirements met"
+      - "Partial activation with limited scope"
+      - "Alternative agent recommendation if more appropriate"
+      - "User education and preparation recommendations"
+  
+  post_activation_monitoring:
+    effectiveness_tracking:
+      - "Monitor architectural recommendation acceptance rate"
+      - "Track implementation success and outcomes"
+      - "Measure user satisfaction with architectural guidance"
+      - "Assess impact on project quality and performance metrics"
+    
+    continuous_improvement:
+      - "Refine activation criteria based on outcomes"
+      - "Update context requirements based on effectiveness"
+      - "Optimize user preference integration"
+      - "Enhance activation confidence algorithms"
+
+# =============================================================================
+# DEACTIVATION CONDITIONS
+# =============================================================================
+
+deactivation_triggers:
+  
+  task_completion:
+    successful_completion:
+      - "Architectural recommendations provided and accepted"
+      - "Technology evaluation completed with clear decisions"
+      - "Architecture documentation created and validated"
+      - "Implementation guidance provided and understood"
+    
+    scope_limitation:
+      - "User requests narrow scope or specific focus"
+      - "Project complexity lower than initially assessed"
+      - "Alternative solutions or approaches preferred"
+      - "Resource constraints limit architectural work"
+  
+  effectiveness_concerns:
+    low_acceptance_rate:
+      - "Architectural recommendations consistently rejected"
+      - "Implementation attempts fail or encounter major issues"
+      - "User dissatisfaction with architectural guidance"
+      - "Mismatch between agent capabilities and needs"
+    
+    context_limitations:
+      - "Insufficient context for effective architectural analysis"
+      - "Context quality too low for reliable recommendations"
+      - "Dynamic requirements that change faster than analysis"
+      - "External constraints prevent architectural implementation"
+
+# =============================================================================
+# INTEGRATION WITH OTHER AGENTS
+# =============================================================================
+
+inter_agent_coordination:
+  
+  prerequisite_agents:
+    none_required:
+      - "Architecture Agent can operate independently"
+      - "First-line architectural analysis and recommendations"
+      - "Foundational agent for system design decisions"
+  
+  complementary_agents:
+    code_generation_agent:
+      - "Architecture decisions inform code generation patterns"
+      - "Implementation guidance based on architectural choices"
+      - "Template and scaffolding aligned with architecture"
+    
+    performance_agent:
+      - "Performance implications of architectural decisions"
+      - "Scalability architecture and performance optimization"
+      - "Architecture choices impact performance characteristics"
+    
+    security_agent:
+      - "Security architecture and compliance considerations"
+      - "Architectural decisions affect security posture"
+      - "Integration of security patterns into architecture"
+  
+  successor_agents:
+    implementation_agents:
+      - "Code Generation Agent for pattern implementation"
+      - "Testing Agent for architectural testing strategies"
+      - "Documentation Agent for architectural documentation"
+      - "DevOps Agent for deployment architecture implementation"
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+activation_success_metrics:
+  
+  activation_accuracy:
+    appropriate_activation:
+      target: ">85%"
+      measurement: "Percentage of activations that provide valuable architectural guidance"
+      validation_method: "User feedback and outcome tracking"
+    
+    timely_activation:
+      target: ">90%"
+      measurement: "Percentage of activations triggered at optimal timing"
+      validation_method: "Project timeline analysis and retrospective review"
+  
+  context_effectiveness:
+    context_sufficiency:
+      target: ">80%"
+      measurement: "Percentage of activations with sufficient context for effective analysis"
+      validation_method: "Agent performance and recommendation quality assessment"
+    
+    context_accuracy:
+      target: ">90%"
+      measurement: "Accuracy and currency of context information used"
+      validation_method: "Context validation and verification processes"
+  
+  user_satisfaction:
+    expectation_alignment:
+      target: ">85%"
+      measurement: "User satisfaction with architectural guidance and recommendations"
+      validation_method: "User feedback surveys and satisfaction tracking"
+    
+    value_delivery:
+      target: ">80%"
+      measurement: "Perceived value and impact of architectural work"
+      validation_method: "Project outcome analysis and user testimonials"
+
+# =============================================================================
+# END OF ARCHITECTURE AGENT ACTIVATION REQUIREMENTS
+# =============================================================================

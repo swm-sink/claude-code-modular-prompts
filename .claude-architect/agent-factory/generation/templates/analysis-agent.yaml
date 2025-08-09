@@ -1,0 +1,251 @@
+# Analysis Agent Template
+# Claude Context Architect - Agent Generation System
+# Version: 1.0
+# Purpose: Template for analysis agents (Documentation, Review, Performance, Security)
+
+extends: "base-agent.yaml"
+
+metadata:
+  template_type: "analysis_agent"
+  specialization_category: "specialized_analysis"
+  analysis_depth: "deep"
+  expertise_level: "advanced"
+
+# =============================================================================
+# ANALYSIS-SPECIFIC CAPABILITIES
+# =============================================================================
+
+analysis_capabilities:
+  # Deep analysis abilities
+  analytical_methods:
+    - "Pattern recognition and extraction"
+    - "Trend analysis and forecasting"
+    - "Comparative analysis and benchmarking"
+    - "Risk assessment and mitigation planning"
+    - "Quality metrics evaluation and reporting"
+    - "Performance profiling and optimization"
+    
+  # Data processing
+  data_processing:
+    collection_methods: "{{DATA_COLLECTION_METHODS}}"
+    analysis_algorithms: "{{ANALYSIS_ALGORITHMS}}"
+    pattern_recognition: "{{PATTERN_RECOGNITION_TECHNIQUES}}"
+    insight_extraction: "{{INSIGHT_EXTRACTION_METHODS}}"
+    
+  # Reporting and visualization
+  reporting_capabilities:
+    metrics_generation: "{{METRICS_GENERATION_METHODS}}"
+    visualization_formats: "{{VISUALIZATION_FORMATS}}"
+    trend_reporting: "{{TREND_REPORTING_PATTERNS}}"
+    actionable_insights: "{{ACTIONABLE_INSIGHT_GENERATION}}"
+
+# =============================================================================
+# ANALYSIS METHODOLOGIES
+# =============================================================================
+
+analysis_methodologies:
+  # Systematic analysis approach
+  analysis_framework:
+    data_gathering: "{{DATA_GATHERING_PROTOCOLS}}"
+    hypothesis_formation: "{{HYPOTHESIS_FORMATION_METHODS}}"
+    evidence_evaluation: "{{EVIDENCE_EVALUATION_CRITERIA}}"
+    conclusion_validation: "{{CONCLUSION_VALIDATION_PROCESS}}"
+    
+  # Quality assurance for analysis
+  analysis_quality:
+    bias_detection: "{{BIAS_DETECTION_MECHANISMS}}"
+    accuracy_validation: "{{ACCURACY_VALIDATION_METHODS}}"
+    completeness_checks: "{{COMPLETENESS_CHECK_PROTOCOLS}}"
+    reliability_assessment: "{{RELIABILITY_ASSESSMENT_CRITERIA}}"
+    
+  # Continuous improvement
+  methodology_evolution:
+    feedback_integration: "{{FEEDBACK_INTEGRATION_PROCESS}}"
+    method_refinement: "{{METHOD_REFINEMENT_CYCLES}}"
+    accuracy_improvement: "{{ACCURACY_IMPROVEMENT_TRACKING}}"
+
+# =============================================================================
+# SPECIALIZED TOOL REQUIREMENTS
+# =============================================================================
+
+analysis_tools:
+  # Core analysis tools
+  mandatory_analysis_tools:
+    - "Read: Access source files for analysis"
+    - "Grep: Search for patterns and anomalies"
+    - "Bash: Execute analysis scripts and tools"
+    - "Glob: Pattern matching across file systems"
+    - "Edit: Create analysis reports and documentation"
+    
+  # Advanced analysis capabilities
+  advanced_analysis_tools:
+    statistical_analysis: "{{STATISTICAL_ANALYSIS_TOOLS}}"
+    pattern_matching: "{{PATTERN_MATCHING_ALGORITHMS}}"
+    data_visualization: "{{DATA_VISUALIZATION_METHODS}}"
+    automated_reporting: "{{AUTOMATED_REPORTING_SYSTEMS}}"
+
+# =============================================================================
+# CONTEXT LAYER ANALYSIS
+# =============================================================================
+
+context_analysis:
+  # Layer-specific analysis patterns
+  layer_analysis_methods:
+    layer_1_project_analysis: "Strategic alignment and vision analysis"
+    layer_2_technical_analysis: "Architecture and technical debt analysis"
+    layer_3_domain_analysis: "Business logic and domain model analysis"
+    layer_4_workflow_analysis: "Process efficiency and team collaboration analysis"
+    layer_5_reference_analysis: "Navigation and cross-reference optimization analysis"
+    
+  # Cross-layer correlation
+  correlation_analysis:
+    dependency_mapping: "{{DEPENDENCY_MAPPING_METHODS}}"
+    impact_analysis: "{{IMPACT_ANALYSIS_TECHNIQUES}}"
+    consistency_validation: "{{CONSISTENCY_VALIDATION_PROTOCOLS}}"
+    
+  # Context optimization insights
+  optimization_insights:
+    performance_bottlenecks: "{{PERFORMANCE_BOTTLENECK_IDENTIFICATION}}"
+    improvement_opportunities: "{{IMPROVEMENT_OPPORTUNITY_ANALYSIS}}"
+    risk_mitigation: "{{RISK_MITIGATION_RECOMMENDATIONS}}"
+
+# =============================================================================
+# ANALYSIS REPORTING FRAMEWORK
+# =============================================================================
+
+reporting_framework:
+  # Report structure and formats
+  report_templates:
+    executive_summary: "{{EXECUTIVE_SUMMARY_TEMPLATE}}"
+    detailed_analysis: "{{DETAILED_ANALYSIS_TEMPLATE}}"
+    technical_findings: "{{TECHNICAL_FINDINGS_TEMPLATE}}"
+    recommendations: "{{RECOMMENDATIONS_TEMPLATE}}"
+    action_plans: "{{ACTION_PLAN_TEMPLATE}}"
+    
+  # Audience-specific reporting
+  audience_adaptation:
+    technical_audience: "{{TECHNICAL_REPORT_ADAPTATIONS}}"
+    management_audience: "{{MANAGEMENT_REPORT_ADAPTATIONS}}"
+    stakeholder_audience: "{{STAKEHOLDER_REPORT_ADAPTATIONS}}"
+    
+  # Report quality standards
+  quality_standards:
+    accuracy_requirements: "{{ACCURACY_REQUIREMENTS}}"
+    completeness_criteria: "{{COMPLETENESS_CRITERIA}}"
+    clarity_standards: "{{CLARITY_STANDARDS}}"
+    actionability_metrics: "{{ACTIONABILITY_METRICS}}"
+
+# =============================================================================
+# SUCCESS METRICS FOR ANALYSIS
+# =============================================================================
+
+analysis_success_metrics:
+  # Accuracy and reliability
+  accuracy_metrics:
+    finding_accuracy: ">90% accurate findings and recommendations"
+    prediction_accuracy: ">80% accurate trend predictions"
+    risk_assessment_accuracy: ">85% accurate risk assessments"
+    
+  # Insight quality
+  insight_metrics:
+    actionable_insights: ">85% insights lead to implementable actions"
+    impact_assessment: ">80% accurate impact assessments"
+    value_generation: ">75% analysis leads to measurable improvements"
+    
+  # Reporting effectiveness
+  reporting_metrics:
+    stakeholder_satisfaction: ">4.0/5.0 stakeholder satisfaction with reports"
+    implementation_rate: ">70% recommendations implemented"
+    clarity_score: ">85% report clarity and understandability"
+
+# =============================================================================
+# ANALYSIS AGENT SPECIALIZATIONS
+# =============================================================================
+
+specialization_variants:
+  # Documentation Agent specialization
+  documentation_analysis:
+    focus: "Documentation quality, completeness, and usability"
+    unique_capabilities:
+      - "Documentation gap analysis"
+      - "Content quality assessment"
+      - "User experience evaluation"
+    analysis_targets: ["API docs", "User guides", "Technical specs", "Code comments"]
+    
+  # Review Agent specialization
+  review_analysis:
+    focus: "Code quality, standards compliance, and best practices"
+    unique_capabilities:
+      - "Code quality metrics analysis"
+      - "Standards compliance assessment"
+      - "Best practice adherence evaluation"
+    analysis_targets: ["Code quality", "Architecture patterns", "Security practices", "Performance patterns"]
+    
+  # Performance Agent specialization
+  performance_analysis:
+    focus: "System performance, optimization opportunities, and bottlenecks"
+    unique_capabilities:
+      - "Performance profiling and analysis"
+      - "Resource utilization assessment"
+      - "Optimization opportunity identification"
+    analysis_targets: ["Response times", "Resource usage", "Throughput", "Scalability"]
+    
+  # Security Agent specialization
+  security_analysis:
+    focus: "Security vulnerabilities, threat assessment, and compliance"
+    unique_capabilities:
+      - "Vulnerability assessment and analysis"
+      - "Threat modeling and risk analysis"
+      - "Security compliance evaluation"
+    analysis_targets: ["Code vulnerabilities", "Configuration security", "Access controls", "Data protection"]
+
+# =============================================================================
+# CUSTOMIZATION POINTS FOR ANALYSIS
+# =============================================================================
+
+analysis_customization:
+  # Domain-specific analysis patterns
+  domain_analysis:
+    web_development: "{{WEB_DEVELOPMENT_ANALYSIS_PATTERNS}}"
+    data_science: "{{DATA_SCIENCE_ANALYSIS_PATTERNS}}"
+    enterprise_software: "{{ENTERPRISE_ANALYSIS_PATTERNS}}"
+    mobile_development: "{{MOBILE_DEVELOPMENT_ANALYSIS_PATTERNS}}"
+    
+  # Industry-specific adaptations
+  industry_adaptations:
+    fintech_compliance: "{{FINTECH_COMPLIANCE_ANALYSIS}}"
+    healthcare_privacy: "{{HEALTHCARE_PRIVACY_ANALYSIS}}"
+    ecommerce_performance: "{{ECOMMERCE_PERFORMANCE_ANALYSIS}}"
+    
+  # Team-specific analysis focus
+  team_analysis_focus:
+    startup_priorities: "{{STARTUP_ANALYSIS_PRIORITIES}}"
+    enterprise_requirements: "{{ENTERPRISE_ANALYSIS_REQUIREMENTS}}"
+    open_source_considerations: "{{OPEN_SOURCE_ANALYSIS_CONSIDERATIONS}}"
+
+# =============================================================================
+# ANALYSIS INTEGRATION PATTERNS
+# =============================================================================
+
+integration_patterns:
+  # Coordination with other agents
+  agent_collaboration:
+    data_sharing: "{{ANALYSIS_DATA_SHARING_PROTOCOLS}}"
+    insight_integration: "{{INSIGHT_INTEGRATION_METHODS}}"
+    recommendation_synthesis: "{{RECOMMENDATION_SYNTHESIS_PATTERNS}}"
+    
+  # Feedback loops
+  feedback_integration:
+    implementation_tracking: "{{IMPLEMENTATION_TRACKING_METHODS}}"
+    outcome_measurement: "{{OUTCOME_MEASUREMENT_PROTOCOLS}}"
+    analysis_refinement: "{{ANALYSIS_REFINEMENT_CYCLES}}"
+    
+  # Continuous improvement
+  improvement_cycles:
+    methodology_evolution: "{{METHODOLOGY_EVOLUTION_TRACKING}}"
+    accuracy_enhancement: "{{ACCURACY_ENHANCEMENT_METHODS}}"
+    efficiency_optimization: "{{EFFICIENCY_OPTIMIZATION_PATTERNS}}"
+
+# =============================================================================
+# END OF ANALYSIS AGENT TEMPLATE
+# =============================================================================

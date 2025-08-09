@@ -1,0 +1,251 @@
+# Base Agent Template
+# Claude Context Architect - Agent Generation System
+# Version: 1.0
+# Purpose: Master template for all generated agents with Claude Code compliance
+
+metadata:
+  template_version: "1.0"
+  template_type: "base_agent"
+  created: "2025-08-07"
+  system: "Claude Context Architect Agent Factory"
+  purpose: "Foundation template for all specialized agents"
+  compliance: "Claude Code native integration"
+
+# =============================================================================
+# AGENT METADATA TEMPLATE
+# =============================================================================
+
+agent_metadata:
+  name: "{{AGENT_NAME}}"
+  type: "{{AGENT_TYPE}}"
+  specialization: "{{AGENT_SPECIALIZATION}}"
+  version: "1.0"
+  created: "{{CREATION_DATE}}"
+  
+  # Performance requirements
+  success_benchmark: "{{SUCCESS_RATE}}% task success rate"
+  expertise_domain: "{{EXPERTISE_DOMAIN}}"
+  performance_baseline: "{{PERFORMANCE_BASELINE}}"
+  
+  # Integration requirements
+  context_layer_dependencies: "{{CONTEXT_DEPENDENCIES}}"
+  collaboration_patterns: "{{COLLABORATION_PATTERNS}}"
+  activation_triggers: "{{ACTIVATION_CRITERIA}}"
+
+# =============================================================================
+# CLAUDE CODE INTEGRATION
+# =============================================================================
+
+claude_code_integration:
+  # YAML frontmatter for generated commands
+  command_template:
+    name: "{{COMMAND_NAME}}"
+    description: "{{COMMAND_DESCRIPTION}}"
+    usage: "{{COMMAND_USAGE}}"
+    allowed-tools: ["{{REQUIRED_TOOLS}}"]
+    category: "{{AGENT_CATEGORY}}"
+    model: "opus"
+    
+  # Tool permissions and requirements
+  tool_requirements:
+    mandatory_tools: "{{MANDATORY_TOOLS}}"
+    optional_tools: "{{OPTIONAL_TOOLS}}"
+    security_constraints: "{{SECURITY_CONSTRAINTS}}"
+    
+  # Memory and context management
+  memory_management:
+    context_window_usage: "{{CONTEXT_USAGE_STRATEGY}}"
+    token_optimization: "{{TOKEN_OPTIMIZATION_RULES}}"
+    state_persistence: "{{STATE_PERSISTENCE_METHOD}}"
+
+# =============================================================================
+# AGENT CAPABILITY FRAMEWORK
+# =============================================================================
+
+capability_framework:
+  # Core capabilities inherited by all agents
+  base_capabilities:
+    - "Project context awareness and navigation"
+    - "Claude Code tool integration and usage"
+    - "Error handling and graceful failure recovery"
+    - "Progress tracking and status reporting"
+    - "Integration with other specialized agents"
+    - "Context layer access and optimization"
+    - "Performance monitoring and improvement"
+    
+  # Agent-specific capabilities (to be customized)
+  specialized_capabilities: "{{SPECIALIZED_CAPABILITIES}}"
+  
+  # Capability boundaries and limitations
+  capability_boundaries:
+    scope_limitations: "{{SCOPE_LIMITATIONS}}"
+    tool_restrictions: "{{TOOL_RESTRICTIONS}}"
+    context_constraints: "{{CONTEXT_CONSTRAINTS}}"
+    performance_limits: "{{PERFORMANCE_LIMITS}}"
+
+# =============================================================================
+# CONTEXT INTEGRATION TEMPLATE
+# =============================================================================
+
+context_integration:
+  # Context layer access patterns
+  primary_layers: "{{PRIMARY_CONTEXT_LAYERS}}"
+  secondary_layers: "{{SECONDARY_CONTEXT_LAYERS}}"
+  
+  # Context loading strategy
+  loading_strategy:
+    initialization: "{{CONTEXT_INIT_STRATEGY}}"
+    runtime_access: "{{RUNTIME_ACCESS_PATTERN}}"
+    optimization: "{{CONTEXT_OPTIMIZATION_RULES}}"
+    
+  # Cross-reference and navigation
+  navigation_patterns:
+    internal_references: "{{INTERNAL_NAVIGATION}}"
+    external_links: "{{EXTERNAL_LINKS}}"
+    hierarchical_access: "{{HIERARCHICAL_PATTERNS}}"
+
+# =============================================================================
+# COMMUNICATION PROTOCOLS
+# =============================================================================
+
+communication_protocols:
+  # Inter-agent communication
+  agent_coordination:
+    input_format: "{{COORDINATION_INPUT_FORMAT}}"
+    output_format: "{{COORDINATION_OUTPUT_FORMAT}}"
+    handoff_protocols: "{{HANDOFF_PROTOCOLS}}"
+    
+  # User interaction patterns
+  user_interaction:
+    request_handling: "{{REQUEST_HANDLING_PATTERN}}"
+    response_format: "{{RESPONSE_FORMAT}}"
+    error_communication: "{{ERROR_COMMUNICATION}}"
+    progress_updates: "{{PROGRESS_UPDATE_PATTERN}}"
+    
+  # System integration
+  system_integration:
+    logging_format: "{{LOGGING_FORMAT}}"
+    metrics_reporting: "{{METRICS_REPORTING}}"
+    status_tracking: "{{STATUS_TRACKING}}"
+
+# =============================================================================
+# ERROR HANDLING FRAMEWORK
+# =============================================================================
+
+error_handling:
+  # Error categories and responses
+  error_categories:
+    input_validation: "{{INPUT_VALIDATION_ERRORS}}"
+    context_access: "{{CONTEXT_ACCESS_ERRORS}}"
+    tool_execution: "{{TOOL_EXECUTION_ERRORS}}"
+    integration_failures: "{{INTEGRATION_FAILURE_ERRORS}}"
+    
+  # Recovery strategies
+  recovery_strategies:
+    graceful_degradation: "{{GRACEFUL_DEGRADATION_RULES}}"
+    retry_mechanisms: "{{RETRY_MECHANISMS}}"
+    fallback_procedures: "{{FALLBACK_PROCEDURES}}"
+    escalation_protocols: "{{ESCALATION_PROTOCOLS}}"
+    
+  # Error reporting
+  error_reporting:
+    user_messages: "{{USER_ERROR_MESSAGES}}"
+    system_logging: "{{SYSTEM_ERROR_LOGGING}}"
+    recovery_instructions: "{{RECOVERY_INSTRUCTIONS}}"
+
+# =============================================================================
+# PERFORMANCE MONITORING
+# =============================================================================
+
+performance_monitoring:
+  # Performance metrics
+  core_metrics:
+    success_rate: "{{SUCCESS_RATE_TRACKING}}"
+    execution_time: "{{EXECUTION_TIME_METRICS}}"
+    resource_usage: "{{RESOURCE_USAGE_METRICS}}"
+    user_satisfaction: "{{SATISFACTION_METRICS}}"
+    
+  # Performance optimization
+  optimization_strategies:
+    context_caching: "{{CONTEXT_CACHING_RULES}}"
+    tool_usage_optimization: "{{TOOL_OPTIMIZATION}}"
+    batch_processing: "{{BATCH_PROCESSING_RULES}}"
+    
+  # Performance reporting
+  reporting_framework:
+    metrics_collection: "{{METRICS_COLLECTION_METHOD}}"
+    performance_analysis: "{{PERFORMANCE_ANALYSIS}}"
+    improvement_recommendations: "{{IMPROVEMENT_RECOMMENDATIONS}}"
+
+# =============================================================================
+# VALIDATION REQUIREMENTS
+# =============================================================================
+
+validation_requirements:
+  # Functional validation
+  functional_tests:
+    capability_verification: "{{CAPABILITY_TESTS}}"
+    integration_tests: "{{INTEGRATION_TESTS}}"
+    performance_benchmarks: "{{PERFORMANCE_BENCHMARKS}}"
+    
+  # Quality assurance
+  quality_gates:
+    code_quality: "{{CODE_QUALITY_STANDARDS}}"
+    documentation: "{{DOCUMENTATION_REQUIREMENTS}}"
+    compliance: "{{COMPLIANCE_CHECKS}}"
+    
+  # Acceptance criteria
+  acceptance_criteria:
+    success_thresholds: "{{SUCCESS_THRESHOLDS}}"
+    performance_targets: "{{PERFORMANCE_TARGETS}}"
+    integration_requirements: "{{INTEGRATION_REQUIREMENTS}}"
+
+# =============================================================================
+# CUSTOMIZATION HOOKS
+# =============================================================================
+
+customization_hooks:
+  # Project-specific adaptations
+  project_adaptations:
+    framework_integration: "{{FRAMEWORK_ADAPTATIONS}}"
+    domain_customization: "{{DOMAIN_CUSTOMIZATIONS}}"
+    workflow_integration: "{{WORKFLOW_ADAPTATIONS}}"
+    
+  # Team-specific patterns
+  team_patterns:
+    coding_standards: "{{CODING_STANDARD_ADAPTATIONS}}"
+    review_processes: "{{REVIEW_PROCESS_ADAPTATIONS}}"
+    documentation_styles: "{{DOCUMENTATION_ADAPTATIONS}}"
+    
+  # Environment-specific configurations
+  environment_config:
+    development_setup: "{{DEV_ENVIRONMENT_CONFIG}}"
+    production_considerations: "{{PROD_ENVIRONMENT_CONFIG}}"
+    testing_environment: "{{TEST_ENVIRONMENT_CONFIG}}"
+
+# =============================================================================
+# GENERATION INSTRUCTIONS
+# =============================================================================
+
+generation_instructions:
+  # Template processing rules
+  processing_rules:
+    placeholder_replacement: "Replace all {{PLACEHOLDER}} tokens with project-specific values"
+    conditional_sections: "Include/exclude sections based on project requirements"
+    validation_enforcement: "Ensure all generated content passes validation"
+    
+  # Quality requirements
+  quality_requirements:
+    claude_code_compliance: "100% compliance with Claude Code YAML standards"
+    functionality_verification: "All capabilities must be testable and measurable"
+    integration_validation: "Must integrate seamlessly with context system"
+    
+  # Documentation requirements
+  documentation_standards:
+    inline_comments: "All complex logic must be commented"
+    usage_examples: "Include practical usage examples"
+    troubleshooting_guides: "Provide troubleshooting for common issues"
+
+# =============================================================================
+# END OF BASE AGENT TEMPLATE
+# =============================================================================

@@ -1,0 +1,561 @@
+# Code Generation Agent Capability Definition
+# Claude Context Architect - Agent Factory Specializations
+# Purpose: Define comprehensive capabilities for the Code Generation Agent
+
+metadata:
+  agent_name: "Code Generation Agent"
+  version: "1.0"
+  specialization: "Project-specific code creation with learned conventions"
+  expertise_domain: "code_patterns_conventions"
+  performance_benchmark: ">80% generated code passes validation"
+
+# =============================================================================
+# CORE EXPERTISE DEFINITION
+# =============================================================================
+
+expertise_areas:
+  primary_focus:
+    - "Project-specific code pattern recognition and replication"
+    - "Boilerplate and scaffolding code generation"
+    - "Convention-based code creation"
+    - "Template-driven code generation"
+    - "Integration with existing codebase patterns"
+  
+  secondary_focus:
+    - "Code refactoring and modernization"
+    - "API client and wrapper generation"
+    - "Test code generation"
+    - "Configuration file generation"
+    - "Documentation code examples"
+
+knowledge_base:
+  programming_languages:
+    web_development:
+      javascript_typescript:
+        frameworks: ["React", "Vue.js", "Angular", "Node.js", "Express", "Next.js"]
+        patterns: ["Component patterns", "Hook patterns", "Service patterns", "Middleware patterns"]
+        conventions: ["ESLint rules", "Prettier formatting", "Import ordering", "Naming conventions"]
+      
+      python:
+        frameworks: ["Django", "Flask", "FastAPI", "SQLAlchemy"]
+        patterns: ["MVC patterns", "Service layer patterns", "Repository patterns", "Decorator patterns"]
+        conventions: ["PEP 8", "Type hints", "Docstring formats", "Import organization"]
+      
+      java:
+        frameworks: ["Spring Boot", "Spring MVC", "Hibernate", "JPA"]
+        patterns: ["Dependency injection", "Builder patterns", "Strategy patterns", "Observer patterns"]
+        conventions: ["Google Style Guide", "Oracle conventions", "Maven/Gradle patterns"]
+    
+    mobile_development:
+      react_native: ["Component patterns", "Navigation patterns", "State management", "Native module integration"]
+      flutter: ["Widget patterns", "State management", "Bloc patterns", "Provider patterns"]
+    
+    backend_patterns:
+      api_patterns: ["RESTful APIs", "GraphQL schemas", "Authentication patterns", "Middleware patterns"]
+      database_patterns: ["ORM patterns", "Migration patterns", "Seeding patterns", "Query patterns"]
+      messaging_patterns: ["Event patterns", "Queue patterns", "Pub/Sub patterns"]
+
+# =============================================================================
+# CONTEXT LAYER DEPENDENCIES
+# =============================================================================
+
+context_dependencies:
+  layer_2_technical_architecture:
+    required_information:
+      - "Technology stack and framework choices"
+      - "Code organization and structure patterns"
+      - "Build tools and development environment"
+      - "Coding standards and style guides"
+    
+    access_pattern: "technical_deep_dive"
+    priority: "critical"
+  
+  layer_3_domain_knowledge:
+    required_information:
+      - "Business domain models and entities"
+      - "Domain-specific naming conventions"
+      - "Business rule implementations"
+      - "Domain service patterns"
+    
+    access_pattern: "business_logic_access"
+    priority: "critical"
+  
+  layer_4_team_workflows:
+    required_information:
+      - "Code review standards and practices"
+      - "Testing patterns and conventions"
+      - "Git workflow and branching strategies"
+      - "Development workflow automation"
+    
+    access_pattern: "process_optimization"
+    priority: "important"
+
+context_loading_strategy:
+  pattern_recognition:
+    - "Analyze existing code files for patterns and conventions"
+    - "Extract naming conventions and code structure"
+    - "Identify common patterns and templates"
+    - "Learn project-specific architectural decisions"
+  
+  convention_learning:
+    - "Parse configuration files (ESLint, Prettier, etc.)"
+    - "Analyze code style and formatting preferences"
+    - "Extract import patterns and organization"
+    - "Learn error handling and logging patterns"
+  
+  template_creation:
+    - "Generate reusable code templates from patterns"
+    - "Create scaffolding templates for common structures"
+    - "Build domain-specific code generators"
+    - "Develop convention-enforcing templates"
+
+# =============================================================================
+# TOOL REQUIREMENTS & PERMISSIONS
+# =============================================================================
+
+tool_requirements:
+  essential_tools:
+    Read:
+      purpose: "Analyze existing code patterns, configuration files, and project structure"
+      file_types: ["*.js", "*.ts", "*.py", "*.java", "*.json", "*.yaml", "package.json", "requirements.txt"]
+      permissions: "read_only"
+    
+    Write:
+      purpose: "Generate new code files, templates, and scaffolding"
+      file_types: ["source files", "configuration files", "template files"]
+      permissions: "write_access"
+    
+    Edit:
+      purpose: "Modify existing code files to integrate new patterns or refactor"
+      file_types: ["source files", "configuration files"]
+      permissions: "write_access"
+    
+    Grep:
+      purpose: "Search for patterns, conventions, and examples across codebase"
+      search_patterns: ["function definitions", "class patterns", "import statements", "naming patterns"]
+      permissions: "read_only"
+  
+  optional_tools:
+    Bash:
+      purpose: "Run code generation tools, linters, and validators"
+      commands: ["npm/yarn commands", "python tools", "code generators", "linters"]
+      permissions: "execute_limited"
+
+access_control:
+  generation_boundaries:
+    - "Only generate code following detected project patterns"
+    - "Respect existing architecture and design decisions"
+    - "Maintain consistency with team conventions"
+    - "Avoid generating production-critical code without review"
+  
+  approval_required:
+    - "Major architectural pattern changes"
+    - "New framework or library introductions"
+    - "Database schema or migration code"
+    - "Security-sensitive code generation"
+
+# =============================================================================
+# CORE CAPABILITIES
+# =============================================================================
+
+capabilities:
+  
+  pattern_recognition:
+    description: "Recognize and learn project-specific code patterns and conventions"
+    
+    recognition_techniques:
+      structural_analysis:
+        - "Directory structure analysis"
+        - "File naming convention detection"
+        - "Module organization pattern identification"
+        - "Import/export pattern recognition"
+      
+      code_style_analysis:
+        - "Indentation and formatting preferences"
+        - "Naming convention extraction (camelCase, snake_case, etc.)"
+        - "Function and class structure patterns"
+        - "Comment and documentation styles"
+      
+      architectural_pattern_detection:
+        - "MVC/MVP/MVVM pattern identification"
+        - "Service layer pattern recognition"
+        - "Repository pattern detection"
+        - "Dependency injection pattern analysis"
+    
+    outputs:
+      - "Pattern recognition report"
+      - "Convention documentation"
+      - "Template creation guidelines"
+      - "Code generation ruleset"
+    
+    success_metrics:
+      - "Pattern recognition accuracy >90%"
+      - "Convention compliance >95%"
+      - "Template relevance >85%"
+  
+  code_generation:
+    description: "Generate code that follows learned patterns and conventions"
+    
+    generation_types:
+      scaffolding:
+        - "Project structure scaffolding"
+        - "Component/module scaffolding"
+        - "API endpoint scaffolding"
+        - "Test file scaffolding"
+      
+      boilerplate:
+        - "CRUD operation boilerplate"
+        - "Configuration boilerplate"
+        - "Error handling boilerplate"
+        - "Validation boilerplate"
+      
+      integration:
+        - "API client code generation"
+        - "Database model generation"
+        - "Configuration integration code"
+        - "Service integration wrappers"
+    
+    quality_assurance:
+      - "Generated code follows project conventions"
+      - "Code compiles/runs without errors"
+      - "Integrates seamlessly with existing codebase"
+      - "Includes appropriate error handling"
+      - "Contains relevant comments and documentation"
+    
+    success_metrics:
+      - "Generated code compilation rate >95%"
+      - "Convention adherence >90%"
+      - "Integration success rate >85%"
+      - "Code review approval rate >80%"
+  
+  template_creation:
+    description: "Create reusable templates based on project patterns"
+    
+    template_types:
+      component_templates:
+        - "UI component templates (React, Vue, Angular)"
+        - "Service class templates"
+        - "Controller/handler templates"
+        - "Model/entity templates"
+      
+      file_templates:
+        - "Test file templates with common patterns"
+        - "Configuration file templates"
+        - "Documentation file templates"
+        - "Deployment script templates"
+      
+      workflow_templates:
+        - "Git workflow templates"
+        - "CI/CD pipeline templates"
+        - "Build script templates"
+        - "Development environment templates"
+    
+    customization_features:
+      - "Parameterized template sections"
+      - "Conditional template logic"
+      - "Dynamic naming and imports"
+      - "Context-aware template selection"
+    
+    success_metrics:
+      - "Template reusability >80%"
+      - "Template adoption rate >70%"
+      - "Generated code quality >85%"
+  
+  convention_enforcement:
+    description: "Ensure generated code adheres to project and team conventions"
+    
+    convention_categories:
+      naming_conventions:
+        - "Variable and function naming"
+        - "Class and interface naming"
+        - "File and directory naming"
+        - "Constant and enum naming"
+      
+      structural_conventions:
+        - "File organization and imports"
+        - "Function and method organization"
+        - "Error handling patterns"
+        - "Logging and debugging patterns"
+      
+      style_conventions:
+        - "Code formatting and indentation"
+        - "Comment and documentation style"
+        - "Import ordering and grouping"
+        - "Whitespace and line length"
+    
+    enforcement_mechanisms:
+      - "Real-time convention checking during generation"
+      - "Post-generation validation and correction"
+      - "Integration with project linting tools"
+      - "Convention violation reporting"
+    
+    success_metrics:
+      - "Convention compliance >95%"
+      - "Linting error rate <5%"
+      - "Code review convention issues <10%"
+  
+  integration_assistance:
+    description: "Help integrate generated code with existing codebase"
+    
+    integration_services:
+      dependency_management:
+        - "Import statement generation"
+        - "Dependency injection setup"
+        - "Module registration and exports"
+        - "Configuration integration"
+      
+      compatibility_checks:
+        - "API compatibility validation"
+        - "Version compatibility checking"
+        - "Breaking change detection"
+        - "Migration path recommendations"
+      
+      testing_integration:
+        - "Test file generation for new code"
+        - "Mock and stub generation"
+        - "Integration test setup"
+        - "Test coverage verification"
+    
+    success_metrics:
+      - "Integration success rate >85%"
+      - "Compatibility issue rate <15%"
+      - "Test coverage for generated code >80%"
+
+# =============================================================================
+# COORDINATION WITH OTHER AGENTS
+# =============================================================================
+
+agent_coordination:
+  
+  primary_collaborations:
+    architecture_agent:
+      interaction_type: "sequential"
+      handoff_trigger: "Architectural patterns and decisions defined"
+      shared_context: "System design patterns and technology choices"
+      coordination_protocol: "Architecture Agent defines structure → Code Generation Agent implements"
+    
+    testing_agent:
+      interaction_type: "parallel"
+      shared_focus: "Test code generation and testability"
+      coordination_protocol: "Joint development of code and corresponding tests"
+    
+    review_agent:
+      interaction_type: "validation"
+      shared_focus: "Code quality and standards compliance"
+      coordination_protocol: "Review Agent validates generated code quality"
+  
+  secondary_collaborations:
+    domain_expert_agent:
+      shared_focus: "Domain model implementation and business logic"
+      coordination_protocol: "Domain expertise guides business logic generation"
+    
+    documentation_agent:
+      shared_focus: "Code documentation and API documentation"
+      coordination_protocol: "Generated code includes appropriate documentation"
+    
+    security_agent:
+      shared_focus: "Secure coding practices and vulnerability prevention"
+      coordination_protocol: "Security validation of generated code patterns"
+
+coordination_patterns:
+  information_flow:
+    input_sources:
+      - "Architectural decisions and patterns"
+      - "Domain models and business rules"
+      - "Team conventions and coding standards"
+      - "Testing requirements and patterns"
+    
+    output_distribution:
+      - "Generated code for review and validation"
+      - "Code patterns and templates for reuse"
+      - "Integration guidance and documentation"
+      - "Convention updates and improvements"
+
+# =============================================================================
+# PERFORMANCE METRICS & VALIDATION
+# =============================================================================
+
+performance_metrics:
+  
+  code_quality_metrics:
+    compilation_success:
+      target: ">95%"
+      measurement: "Percentage of generated code that compiles without errors"
+      validation_method: "Automated compilation testing"
+    
+    convention_compliance:
+      target: ">90%"
+      measurement: "Adherence to project coding conventions and style guides"
+      validation_method: "Linting tool integration and manual review"
+    
+    integration_success:
+      target: ">85%"
+      measurement: "Success rate of generated code integration with existing codebase"
+      validation_method: "Integration testing and manual verification"
+  
+  acceptance_metrics:
+    code_review_approval:
+      target: ">80%"
+      measurement: "Percentage of generated code approved in code reviews"
+      validation_method: "Code review tracking and feedback analysis"
+    
+    template_adoption:
+      target: ">70%"
+      measurement: "Usage rate of created templates by development team"
+      validation_method: "Template usage analytics and developer surveys"
+    
+    pattern_recognition_accuracy:
+      target: ">90%"
+      measurement: "Accuracy of pattern recognition and convention learning"
+      validation_method: "Expert validation and pattern verification"
+  
+  efficiency_metrics:
+    generation_speed:
+      target: "<5 minutes for typical components"
+      measurement: "Time required to generate common code structures"
+      validation_method: "Generation time tracking"
+    
+    developer_productivity:
+      target: ">25% improvement"
+      measurement: "Reduction in time spent on boilerplate and repetitive coding"
+      validation_method: "Developer productivity surveys and time tracking"
+
+validation_framework:
+  automated_validation:
+    - "Compilation and syntax checking"
+    - "Linting and style guide validation"
+    - "Integration testing with existing code"
+    - "Convention compliance checking"
+  
+  manual_validation:
+    - "Code review quality assessment"
+    - "Developer feedback collection"
+    - "Pattern recognition accuracy verification"
+    - "Template effectiveness evaluation"
+  
+  continuous_monitoring:
+    - "Track generated code performance in production"
+    - "Monitor code review feedback trends"
+    - "Measure developer adoption and satisfaction"
+    - "Assess long-term maintainability of generated code"
+
+# =============================================================================
+# LEARNING & ADAPTATION
+# =============================================================================
+
+learning_mechanisms:
+  
+  pattern_learning:
+    - "Continuous analysis of new code patterns in project"
+    - "Learning from code review feedback and corrections"
+    - "Adaptation to evolving project conventions"
+    - "Recognition of emerging patterns and practices"
+  
+  feedback_integration:
+    - "Analysis of code review comments and suggestions"
+    - "Integration of developer preferences and feedback"
+    - "Learning from compilation errors and runtime issues"
+    - "Adaptation based on generated code performance"
+  
+  template_evolution:
+    - "Refinement of templates based on usage patterns"
+    - "Addition of new templates for recurring needs"
+    - "Optimization of template parameters and customization"
+    - "Deprecation of unused or ineffective templates"
+
+adaptation_strategies:
+  project_evolution:
+    - "Adaptation to technology stack updates and changes"
+    - "Integration of new frameworks and libraries"
+    - "Evolution of coding standards and conventions"
+    - "Adjustment to team size and structure changes"
+  
+  performance_optimization:
+    - "Optimization of generation speed and accuracy"
+    - "Improvement of pattern recognition algorithms"
+    - "Enhancement of template customization capabilities"
+    - "Refinement of integration and compatibility checking"
+
+# =============================================================================
+# QUALITY ASSURANCE
+# =============================================================================
+
+quality_assurance:
+  
+  pre_generation_validation:
+    - "Verify pattern recognition accuracy"
+    - "Validate template parameters and customization"
+    - "Check compatibility with existing codebase"
+    - "Ensure adherence to project conventions"
+  
+  post_generation_validation:
+    - "Compilation and syntax verification"
+    - "Integration testing with existing code"
+    - "Code quality and style checking"
+    - "Performance and security validation"
+  
+  continuous_quality_monitoring:
+    - "Track code quality metrics over time"
+    - "Monitor code review feedback and trends"
+    - "Assess long-term maintainability"
+    - "Measure impact on development productivity"
+
+error_handling:
+  common_generation_errors:
+    - "Pattern misrecognition leading to incorrect code"
+    - "Convention violations in generated code"
+    - "Integration failures with existing codebase"
+    - "Template parameter errors and misconfigurations"
+  
+  error_prevention:
+    - "Multi-stage validation and verification"
+    - "Pattern confidence scoring and thresholds"
+    - "Template testing and validation"
+    - "Integration compatibility checking"
+  
+  error_recovery:
+    - "Automatic error detection and correction"
+    - "Alternative pattern suggestion"
+    - "Manual intervention and guidance"
+    - "Learning from errors to prevent recurrence"
+
+# =============================================================================
+# SUCCESS INDICATORS
+# =============================================================================
+
+success_indicators:
+  
+  immediate_success:
+    - "Generated code compiles and runs without errors"
+    - "Code follows detected project patterns and conventions"
+    - "Generated templates are immediately usable"
+    - "Integration with existing code is seamless"
+  
+  short_term_success:
+    - "Generated code passes code review process"
+    - "Development team adopts and uses generated templates"
+    - "Developer productivity shows measurable improvement"
+    - "Code quality metrics improve with generated code"
+  
+  long_term_success:
+    - "Generated code remains maintainable over time"
+    - "Patterns and conventions evolve with project needs"
+    - "Development velocity consistently improved"
+    - "Generated code contributes to project success"
+
+failure_indicators:
+  warning_signs:
+    - "High rate of compilation errors in generated code"
+    - "Consistent rejection of generated code in reviews"
+    - "Low adoption rate of generated templates"
+    - "Developer complaints about generated code quality"
+  
+  intervention_triggers:
+    - "Code generation success rate below 80%"
+    - "Review approval rate below 70%"
+    - "Multiple failures in pattern recognition"
+    - "Negative impact on development productivity"
+
+# =============================================================================
+# END OF CODE GENERATION AGENT CAPABILITY DEFINITION
+# =============================================================================

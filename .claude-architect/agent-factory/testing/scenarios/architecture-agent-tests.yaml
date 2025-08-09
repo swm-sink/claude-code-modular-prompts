@@ -1,0 +1,261 @@
+# Architecture Agent Test Scenarios
+# Agent: Architecture Analyzer
+# Success Rate Requirement: >85% design accuracy
+# Focus: Technical architecture analysis and design recommendations
+
+test_scenarios:
+  basic_functionality:
+    scenario_1_simple_web_app:
+      description: "Analyze basic React/Node.js web application architecture"
+      input:
+        project_type: "web_application"
+        tech_stack: ["React", "Node.js", "MongoDB"]
+        team_size: 3
+        complexity: "low"
+      
+      expected_outputs:
+        - "Frontend/backend separation identified"
+        - "Database integration patterns recognized"
+        - "API design recommendations provided"
+        - "Deployment strategy suggested"
+      
+      success_criteria:
+        - "Correct architecture pattern identification"
+        - "Appropriate technology recommendations"
+        - "Scalability considerations addressed"
+        - "Security aspects mentioned"
+      
+      time_limit: 25
+      
+    scenario_2_microservices:
+      description: "Analyze microservices architecture with multiple databases"
+      input:
+        project_type: "microservices"
+        tech_stack: ["Spring Boot", "Docker", "Kubernetes", "PostgreSQL", "Redis"]
+        team_size: 15
+        complexity: "high"
+      
+      expected_outputs:
+        - "Service boundaries clearly defined"
+        - "Inter-service communication patterns identified"
+        - "Data consistency strategies recommended"
+        - "Monitoring and observability suggestions"
+      
+      success_criteria:
+        - "Service decomposition accuracy >90%"
+        - "Communication patterns appropriate"
+        - "Data management strategies sound"
+        - "DevOps considerations included"
+      
+      time_limit: 30
+
+  complex_tasks:
+    scenario_3_legacy_modernization:
+      description: "Analyze legacy monolith and recommend modernization strategy"
+      input:
+        project_type: "legacy_modernization"
+        current_stack: ["Java EE", "Oracle", "JSP"]
+        target_stack: ["Spring Boot", "PostgreSQL", "React"]
+        constraints: ["zero_downtime", "gradual_migration"]
+      
+      expected_outputs:
+        - "Strangler fig pattern recommended"
+        - "Database migration strategy provided"
+        - "Risk assessment completed"
+        - "Rollback procedures defined"
+      
+      success_criteria:
+        - "Migration strategy feasibility >85%"
+        - "Risk mitigation comprehensive"
+        - "Timeline realistic"
+        - "Business continuity preserved"
+      
+      time_limit: 35
+      
+    scenario_4_multi_platform:
+      description: "Design architecture for mobile/web/API platform"
+      input:
+        project_type: "multi_platform"
+        platforms: ["iOS", "Android", "Web", "API"]
+        shared_requirements: ["real_time", "offline_sync", "auth"]
+        scale: "global"
+      
+      expected_outputs:
+        - "Shared backend services identified"
+        - "Platform-specific optimizations recommended"
+        - "Synchronization strategy defined"
+        - "Global scaling approach outlined"
+      
+      success_criteria:
+        - "Code reuse maximized appropriately"
+        - "Platform-specific needs addressed"
+        - "Scalability strategy sound"
+        - "Performance requirements met"
+      
+      time_limit: 40
+
+  edge_cases:
+    scenario_5_extreme_constraints:
+      description: "Design architecture under extreme performance/resource constraints"
+      input:
+        project_type: "embedded_system"
+        constraints: ["memory_limited", "low_power", "real_time"]
+        requirements: ["99.9_uptime", "sub_millisecond_response"]
+        environment: "industrial"
+      
+      expected_outputs:
+        - "Resource optimization strategies provided"
+        - "Real-time constraints addressed"
+        - "Fault tolerance mechanisms defined"
+        - "Monitoring solutions recommended"
+      
+      success_criteria:
+        - "Constraints properly understood"
+        - "Solutions technically feasible"
+        - "Performance requirements achievable"
+        - "Risk factors identified"
+      
+      time_limit: 30
+      
+    scenario_6_compliance_heavy:
+      description: "Design architecture for HIPAA/SOX compliant financial system"
+      input:
+        project_type: "financial_system"
+        compliance: ["HIPAA", "SOX", "PCI_DSS"]
+        data_types: ["health", "financial", "personal"]
+        audit_requirements: "comprehensive"
+      
+      expected_outputs:
+        - "Compliance-driven architecture decisions"
+        - "Data flow security recommendations"
+        - "Audit trail implementation strategy"
+        - "Access control mechanisms defined"
+      
+      success_criteria:
+        - "All compliance requirements addressed"
+        - "Security architecture comprehensive"
+        - "Audit capabilities sufficient"
+        - "Data protection adequate"
+      
+      time_limit: 45
+
+  error_handling:
+    scenario_7_invalid_input:
+      description: "Handle incomplete or contradictory architectural requirements"
+      input:
+        project_type: "web_application"
+        tech_stack: ["React", "Django"]  # Frontend/backend mismatch
+        requirements: ["real_time", "batch_processing"]  # Contradictory
+        constraints: ["serverless", "persistent_connections"]  # Impossible
+      
+      expected_behavior:
+        - "Identify contradictions clearly"
+        - "Request clarification appropriately"
+        - "Propose alternative solutions"
+        - "Explain trade-offs transparently"
+      
+      success_criteria:
+        - "All contradictions identified"
+        - "Clarifying questions appropriate"
+        - "Alternative solutions viable"
+        - "Communication clear"
+      
+      time_limit: 20
+
+  performance_limits:
+    scenario_8_massive_scale:
+      description: "Design architecture for extreme scale (billions of users)"
+      input:
+        project_type: "social_platform"
+        scale: "billions_of_users"
+        features: ["real_time_feeds", "media_sharing", "messaging"]
+        global_distribution: true
+      
+      expected_outputs:
+        - "Horizontal scaling strategy"
+        - "Data partitioning approach"
+        - "CDN and caching strategy"
+        - "Cost optimization recommendations"
+      
+      success_criteria:
+        - "Scaling strategy technically sound"
+        - "Performance bottlenecks identified"
+        - "Cost considerations addressed"
+        - "Operational complexity manageable"
+      
+      time_limit: 50
+
+  integration_points:
+    scenario_9_multi_agent_coordination:
+      description: "Collaborate with other agents on full system design"
+      input:
+        project_type: "e_commerce_platform"
+        collaboration_agents: ["security_agent", "performance_agent", "data_agent"]
+        requirements: ["payment_processing", "inventory_management", "analytics"]
+      
+      expected_behavior:
+        - "Clear agent boundaries defined"
+        - "Collaboration points identified"
+        - "Handoff protocols established"
+        - "Conflict resolution demonstrated"
+      
+      success_criteria:
+        - "Agent coordination smooth"
+        - "No overlapping responsibilities"
+        - "Clear communication protocols"
+        - "Integrated solution coherent"
+      
+      time_limit: 45
+
+performance_metrics:
+  response_time_target: "< 30 seconds"
+  success_rate_minimum: "85%"
+  accuracy_threshold: "90%"
+  
+  detailed_metrics:
+    architecture_pattern_accuracy: "> 85%"
+    technology_recommendation_appropriateness: "> 80%"
+    scalability_consideration_completeness: "> 90%"
+    security_aspect_coverage: "> 85%"
+    communication_clarity: "> 90%"
+
+validation_criteria:
+  technical_accuracy:
+    weight: 30
+    measures:
+      - "Correct architectural patterns"
+      - "Appropriate technology choices"
+      - "Sound design principles"
+  
+  completeness:
+    weight: 25
+    measures:
+      - "All requirements addressed"
+      - "Edge cases considered"
+      - "Non-functional requirements included"
+  
+  feasibility:
+    weight: 25
+    measures:
+      - "Implementation realistic"
+      - "Resource requirements reasonable"
+      - "Timeline achievable"
+  
+  communication:
+    weight: 20
+    measures:
+      - "Clear explanations"
+      - "Appropriate level of detail"
+      - "Actionable recommendations"
+
+test_data_sources:
+  - "Real-world architecture case studies"
+  - "Open-source project structures"
+  - "Industry architecture patterns"
+  - "Academic architecture research"
+  
+automated_validation:
+  pattern_recognition: "Check for known architectural patterns"
+  technology_compatibility: "Verify technology stack compatibility"
+  scalability_analysis: "Assess scalability recommendations"
+  security_review: "Validate security considerations"

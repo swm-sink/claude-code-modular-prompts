@@ -1,0 +1,270 @@
+# Specialized Agent Template
+# Claude Context Architect - Agent Generation System
+# Version: 1.0
+# Purpose: Template for domain-specific agents (Refactoring, Migration, DevOps, Data)
+
+extends: "base-agent.yaml"
+
+metadata:
+  template_type: "specialized_agent"
+  specialization_category: "domain_specific"
+  expertise_depth: "deep_specialization"
+  domain_focus: "highly_targeted"
+
+# =============================================================================
+# SPECIALIZATION-SPECIFIC CAPABILITIES
+# =============================================================================
+
+specialization_capabilities:
+  # Deep domain expertise
+  domain_expertise:
+    - "Advanced domain-specific knowledge and patterns"
+    - "Industry best practice implementation"
+    - "Technology-specific optimization techniques"
+    - "Complex problem solving within domain"
+    - "Innovation and emerging trend integration"
+    - "Risk assessment and mitigation within specialty"
+    
+  # Specialized methodologies
+  specialized_methodologies:
+    domain_frameworks: "{{DOMAIN_SPECIFIC_FRAMEWORKS}}"
+    expert_techniques: "{{EXPERT_TECHNIQUE_REPERTOIRE}}"
+    advanced_patterns: "{{ADVANCED_PATTERN_LIBRARY}}"
+    optimization_strategies: "{{OPTIMIZATION_STRATEGY_CATALOG}}"
+    
+  # Innovation and adaptation
+  innovation_capabilities:
+    emerging_trend_integration: "{{EMERGING_TREND_INTEGRATION}}"
+    custom_solution_development: "{{CUSTOM_SOLUTION_DEVELOPMENT}}"
+    methodology_innovation: "{{METHODOLOGY_INNOVATION_PROCESSES}}"
+
+# =============================================================================
+# ADVANCED TECHNICAL CAPABILITIES
+# =============================================================================
+
+advanced_capabilities:
+  # Technical depth
+  technical_mastery:
+    advanced_tooling: "{{ADVANCED_TOOLING_EXPERTISE}}"
+    complex_integrations: "{{COMPLEX_INTEGRATION_CAPABILITIES}}"
+    performance_optimization: "{{PERFORMANCE_OPTIMIZATION_MASTERY}}"
+    scalability_engineering: "{{SCALABILITY_ENGINEERING_EXPERTISE}}"
+    
+  # Problem-solving approaches
+  problem_solving:
+    root_cause_analysis: "{{ROOT_CAUSE_ANALYSIS_METHODS}}"
+    systematic_troubleshooting: "{{SYSTEMATIC_TROUBLESHOOTING}}"
+    creative_solution_generation: "{{CREATIVE_SOLUTION_METHODS}}"
+    constraint_optimization: "{{CONSTRAINT_OPTIMIZATION_TECHNIQUES}}"
+    
+  # Knowledge synthesis
+  knowledge_synthesis:
+    cross_domain_integration: "{{CROSS_DOMAIN_INTEGRATION}}"
+    pattern_abstraction: "{{PATTERN_ABSTRACTION_METHODS}}"
+    principle_derivation: "{{PRINCIPLE_DERIVATION_TECHNIQUES}}"
+
+# =============================================================================
+# SPECIALIZED TOOL REQUIREMENTS
+# =============================================================================
+
+specialized_tools:
+  # Core specialized tools
+  mandatory_specialized_tools:
+    - "Read: Access specialized configuration and code files"
+    - "Write: Create domain-specific implementations and configs"
+    - "Edit: Modify complex specialized systems"
+    - "Bash: Execute advanced domain-specific tools and scripts"
+    - "Grep: Search for domain-specific patterns and issues"
+    - "Glob: Pattern match across specialized file structures"
+    
+  # Advanced specialized capabilities
+  advanced_specialized_tools:
+    domain_specific_toolchains: "{{DOMAIN_TOOLCHAIN_INTEGRATION}}"
+    specialized_analysis_tools: "{{SPECIALIZED_ANALYSIS_TOOLS}}"
+    performance_profiling: "{{PERFORMANCE_PROFILING_TOOLS}}"
+    automation_frameworks: "{{AUTOMATION_FRAMEWORK_INTEGRATION}}"
+
+# =============================================================================
+# CONTEXT LAYER SPECIALIZATION
+# =============================================================================
+
+context_specialization:
+  # Layer-specific specialization patterns
+  specialized_context_access:
+    layer_2_technical_mastery: "Deep technical architecture specialization"
+    layer_3_domain_expertise: "Advanced domain knowledge application"
+    layer_4_workflow_optimization: "Specialized workflow and process optimization"
+    
+  # Cross-layer specialized integration
+  specialized_integration:
+    technical_business_bridge: "{{TECHNICAL_BUSINESS_BRIDGE_PATTERNS}}"
+    process_technology_alignment: "{{PROCESS_TECHNOLOGY_ALIGNMENT}}"
+    strategic_implementation: "{{STRATEGIC_IMPLEMENTATION_PATTERNS}}"
+    
+  # Specialized context contribution
+  context_contribution:
+    specialized_insights: "{{SPECIALIZED_INSIGHT_GENERATION}}"
+    domain_pattern_identification: "{{DOMAIN_PATTERN_IDENTIFICATION}}"
+    optimization_recommendations: "{{OPTIMIZATION_RECOMMENDATION_GENERATION}}"
+
+# =============================================================================
+# SPECIALIZED REPORTING FRAMEWORK
+# =============================================================================
+
+specialized_reporting:
+  # Expert-level reporting
+  expert_reports:
+    technical_deep_dive: "{{TECHNICAL_DEEP_DIVE_TEMPLATE}}"
+    optimization_analysis: "{{OPTIMIZATION_ANALYSIS_TEMPLATE}}"
+    implementation_strategy: "{{IMPLEMENTATION_STRATEGY_TEMPLATE}}"
+    risk_assessment: "{{RISK_ASSESSMENT_TEMPLATE}}"
+    
+  # Specialized metrics
+  specialized_metrics:
+    domain_specific_kpis: "{{DOMAIN_SPECIFIC_KPI_TRACKING}}"
+    optimization_measurements: "{{OPTIMIZATION_MEASUREMENT_METHODS}}"
+    performance_benchmarks: "{{PERFORMANCE_BENCHMARK_TRACKING}}"
+    
+  # Expert recommendations
+  expert_recommendations:
+    strategic_guidance: "{{STRATEGIC_GUIDANCE_FORMATS}}"
+    tactical_implementations: "{{TACTICAL_IMPLEMENTATION_PLANS}}"
+    risk_mitigation: "{{RISK_MITIGATION_STRATEGIES}}"
+
+# =============================================================================
+# SUCCESS METRICS FOR SPECIALIZED AGENTS
+# =============================================================================
+
+specialized_success_metrics:
+  # Domain expertise demonstration
+  expertise_metrics:
+    problem_resolution_complexity: ">80% resolution of complex domain problems"
+    solution_innovation: ">70% innovative solution generation"
+    optimization_achievement: ">75% measurable optimization improvements"
+    
+  # Technical excellence
+  technical_metrics:
+    implementation_success: ">85% successful complex implementations"
+    performance_improvements: ">60% measurable performance gains"
+    best_practice_adherence: ">90% industry best practice compliance"
+    
+  # Knowledge transfer
+  knowledge_metrics:
+    team_capability_enhancement: ">70% team skill improvement in domain"
+    documentation_quality: ">85% high-quality specialized documentation"
+    methodology_adoption: ">75% methodology adoption by team"
+
+# =============================================================================
+# SPECIALIZED AGENT VARIANTS
+# =============================================================================
+
+specialization_variants:
+  # Refactoring Agent specialization
+  refactoring_specialization:
+    focus: "Code improvement and technical debt reduction"
+    unique_capabilities:
+      - "Advanced refactoring pattern recognition"
+      - "Technical debt quantification and prioritization"
+      - "Safe refactoring strategy development"
+    specialization_targets: ["Legacy code modernization", "Architecture improvements", "Performance refactoring"]
+    
+  # Migration Agent specialization
+  migration_specialization:
+    focus: "System upgrades and platform transitions"
+    unique_capabilities:
+      - "Complex migration planning and execution"
+      - "Risk assessment and mitigation for migrations"
+      - "Compatibility analysis and resolution"
+    specialization_targets: ["Framework migrations", "Platform upgrades", "Data migrations"]
+    
+  # DevOps Agent specialization
+  devops_specialization:
+    focus: "Infrastructure, deployment, and operational excellence"
+    unique_capabilities:
+      - "Advanced CI/CD pipeline design and optimization"
+      - "Infrastructure as code implementation"
+      - "Operational monitoring and alerting design"
+    specialization_targets: ["Pipeline optimization", "Infrastructure scaling", "Deployment automation"]
+    
+  # Data Agent specialization
+  data_specialization:
+    focus: "Database design, optimization, and data architecture"
+    unique_capabilities:
+      - "Complex database schema design and optimization"
+      - "Advanced query optimization and performance tuning"
+      - "Data architecture and modeling expertise"
+    specialization_targets: ["Database performance", "Data modeling", "Query optimization"]
+
+# =============================================================================
+# CUSTOMIZATION POINTS FOR SPECIALIZED AGENTS
+# =============================================================================
+
+specialization_customization:
+  # Technology stack adaptations
+  technology_adaptations:
+    programming_language_specialization: "{{PROGRAMMING_LANGUAGE_ADAPTATIONS}}"
+    framework_specific_optimization: "{{FRAMEWORK_OPTIMIZATION_PATTERNS}}"
+    platform_specific_configurations: "{{PLATFORM_CONFIGURATION_ADAPTATIONS}}"
+    
+  # Industry-specific specializations
+  industry_specializations:
+    financial_services: "{{FINANCIAL_SERVICES_SPECIALIZATION}}"
+    healthcare_systems: "{{HEALTHCARE_SYSTEMS_SPECIALIZATION}}"
+    ecommerce_platforms: "{{ECOMMERCE_PLATFORM_SPECIALIZATION}}"
+    enterprise_systems: "{{ENTERPRISE_SYSTEMS_SPECIALIZATION}}"
+    
+  # Scale-specific adaptations
+  scale_adaptations:
+    startup_optimization: "{{STARTUP_OPTIMIZATION_FOCUS}}"
+    enterprise_scalability: "{{ENTERPRISE_SCALABILITY_FOCUS}}"
+    high_performance_systems: "{{HIGH_PERFORMANCE_SYSTEMS_FOCUS}}"
+
+# =============================================================================
+# SPECIALIZED INTEGRATION PATTERNS
+# =============================================================================
+
+integration_patterns:
+  # Cross-domain collaboration
+  cross_domain_collaboration:
+    knowledge_sharing: "{{CROSS_DOMAIN_KNOWLEDGE_SHARING}}"
+    methodology_integration: "{{METHODOLOGY_INTEGRATION_PATTERNS}}"
+    solution_synthesis: "{{SOLUTION_SYNTHESIS_METHODS}}"
+    
+  # Specialized agent coordination
+  specialized_coordination:
+    expert_consultation: "{{EXPERT_CONSULTATION_PROTOCOLS}}"
+    complex_problem_decomposition: "{{COMPLEX_PROBLEM_DECOMPOSITION}}"
+    solution_integration: "{{SOLUTION_INTEGRATION_STRATEGIES}}"
+    
+  # Innovation and improvement
+  innovation_patterns:
+    continuous_learning: "{{CONTINUOUS_LEARNING_INTEGRATION}}"
+    methodology_evolution: "{{METHODOLOGY_EVOLUTION_TRACKING}}"
+    expertise_expansion: "{{EXPERTISE_EXPANSION_METHODS}}"
+
+# =============================================================================
+# SPECIALIZED MAINTENANCE AND EVOLUTION
+# =============================================================================
+
+maintenance_evolution:
+  # Expertise maintenance
+  expertise_maintenance:
+    knowledge_base_updates: "{{KNOWLEDGE_BASE_UPDATE_PROCEDURES}}"
+    methodology_refinement: "{{METHODOLOGY_REFINEMENT_CYCLES}}"
+    tool_mastery_evolution: "{{TOOL_MASTERY_EVOLUTION}}"
+    
+  # Specialization evolution
+  specialization_evolution:
+    domain_expansion: "{{DOMAIN_EXPANSION_STRATEGIES}}"
+    cross_domain_integration: "{{CROSS_DOMAIN_INTEGRATION_EVOLUTION}}"
+    innovation_integration: "{{INNOVATION_INTEGRATION_PROCESSES}}"
+    
+  # Performance optimization
+  performance_optimization:
+    efficiency_improvements: "{{EFFICIENCY_IMPROVEMENT_CYCLES}}"
+    capability_enhancement: "{{CAPABILITY_ENHANCEMENT_TRACKING}}"
+    impact_maximization: "{{IMPACT_MAXIMIZATION_STRATEGIES}}"
+
+# =============================================================================
+# END OF SPECIALIZED AGENT TEMPLATE
+# =============================================================================

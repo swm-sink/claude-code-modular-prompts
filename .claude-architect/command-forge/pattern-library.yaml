@@ -1,0 +1,314 @@
+# Pattern Library for Command Generation
+# Maps discovered patterns to command generation variables
+# Version: 1.0
+
+# =============================================================================
+# PATTERN MAPPING DEFINITIONS
+# =============================================================================
+
+pattern_mappings:
+  # ---------------------------------------------------------------------------
+  # Framework Patterns - Detected from package.json, requirements.txt, etc.
+  # ---------------------------------------------------------------------------
+  framework_patterns:
+    react:
+      component_extension: "tsx"
+      test_extension: "test.tsx"
+      test_framework: "jest + @testing-library/react"
+      component_pattern: "functional_component"
+      state_management: ["useState", "useReducer", "context", "redux"]
+      styling_options: ["css-modules", "styled-components", "emotion", "tailwind"]
+      
+    vue:
+      component_extension: "vue"
+      test_extension: "spec.js"
+      test_framework: "jest + @vue/test-utils"
+      component_pattern: "single_file_component"
+      state_management: ["vuex", "pinia", "composition-api"]
+      styling_options: ["scoped-css", "css-modules", "tailwind"]
+      
+    angular:
+      component_extension: "ts"
+      test_extension: "spec.ts"
+      test_framework: "jasmine + karma"
+      component_pattern: "class_component"
+      state_management: ["services", "ngrx", "akita"]
+      styling_options: ["component-styles", "scss", "tailwind"]
+      
+    django:
+      file_extension: "py"
+      test_extension: "test.py"
+      test_framework: "django.test.TestCase"
+      pattern: "model_view_template"
+      orm: "django_orm"
+      api_framework: ["rest_framework", "graphene"]
+      
+    express:
+      file_extension: "js" # or ts
+      test_extension: "test.js"
+      test_framework: "jest" # or mocha
+      pattern: "route_controller_service"
+      database: ["mongoose", "sequelize", "typeorm"]
+      api_style: "rest" # or graphql
+
+  # ---------------------------------------------------------------------------
+  # Naming Conventions - Detected from existing code analysis
+  # ---------------------------------------------------------------------------
+  naming_conventions:
+    component_naming:
+      pascal_case:
+        pattern: "^[A-Z][a-zA-Z0-9]*$"
+        example: "UserProfile"
+        applies_to: ["react", "vue", "angular"]
+        
+      kebab_case:
+        pattern: "^[a-z]+(-[a-z]+)*$"
+        example: "user-profile"
+        applies_to: ["vue", "angular-templates"]
+        
+      snake_case:
+        pattern: "^[a-z]+(_[a-z]+)*$"
+        example: "user_profile"
+        applies_to: ["python", "ruby"]
+        
+    file_naming:
+      component_files:
+        patterns:
+          - "{ComponentName}.{ext}"           # React/Angular
+          - "{component-name}.{ext}"          # Vue
+          - "{component_name}.{ext}"          # Python
+          
+      test_files:
+        patterns:
+          - "{Component}.test.{ext}"          # Jest
+          - "{Component}.spec.{ext}"          # Jasmine/Mocha
+          - "test_{component}.py"              # Python
+          - "{component}_test.{ext}"          # Go
+
+  # ---------------------------------------------------------------------------
+  # Directory Structures - Detected from project analysis
+  # ---------------------------------------------------------------------------
+  directory_structures:
+    feature_based:
+      pattern: |
+        src/
+        └── features/
+            └── {feature}/
+                ├── components/
+                ├── hooks/
+                ├── services/
+                ├── tests/
+                └── index.{ext}
+      
+    layer_based:
+      pattern: |
+        src/
+        ├── components/
+        ├── services/
+        ├── models/
+        ├── utils/
+        └── tests/
+        
+    domain_driven:
+      pattern: |
+        src/
+        └── domains/
+            └── {domain}/
+                ├── entities/
+                ├── use-cases/
+                ├── repositories/
+                ├── controllers/
+                └── tests/
+
+  # ---------------------------------------------------------------------------
+  # Testing Patterns - Detected from test file analysis
+  # ---------------------------------------------------------------------------
+  testing_patterns:
+    unit_testing:
+      jest_react:
+        imports: |
+          import { render, screen, fireEvent } from '@testing-library/react';
+          import { Component } from './Component';
+        pattern: |
+          describe('Component', () => {
+            it('should render correctly', () => {
+              render(<Component />);
+              expect(screen.getByRole('...')).toBeInTheDocument();
+            });
+          });
+          
+      pytest:
+        imports: |
+          import pytest
+          from module import function
+        pattern: |
+          class TestComponent:
+              def test_should_work(self):
+                  assert function() == expected
+                  
+    integration_testing:
+      api_testing:
+        pattern: |
+          describe('API Endpoint', () => {
+            it('should return correct data', async () => {
+              const response = await request(app)
+                .get('/api/endpoint')
+                .expect(200);
+              expect(response.body).toMatchObject({...});
+            });
+          });
+
+  # ---------------------------------------------------------------------------
+  # API Patterns - Detected from API endpoint analysis
+  # ---------------------------------------------------------------------------
+  api_patterns:
+    rest:
+      conventions:
+        - "GET /resources" # List
+        - "GET /resources/:id" # Get one
+        - "POST /resources" # Create
+        - "PUT /resources/:id" # Update
+        - "DELETE /resources/:id" # Delete
+      response_format: "json"
+      error_handling: "standard_http_codes"
+      
+    graphql:
+      conventions:
+        - "Query for reading"
+        - "Mutation for writing"
+        - "Subscription for real-time"
+      schema_pattern: "schema_first" # or code_first
+      
+    grpc:
+      conventions:
+        - "Service definitions in .proto"
+        - "Message types for request/response"
+      pattern: "protocol_buffers"
+
+  # ---------------------------------------------------------------------------
+  # Documentation Patterns - Detected from existing docs
+  # ---------------------------------------------------------------------------
+  documentation_patterns:
+    inline_comments:
+      javascript:
+        pattern: "jsdoc"
+        example: |
+          /**
+           * Description
+           * @param {Type} name - Description
+           * @returns {Type} Description
+           */
+           
+      python:
+        pattern: "docstring"
+        example: |
+          """
+          Description
+          
+          Args:
+              name (Type): Description
+          
+          Returns:
+              Type: Description
+          """
+          
+    markdown:
+      structure:
+        - "# Title"
+        - "## Description"
+        - "## Installation"
+        - "## Usage"
+        - "## API"
+        - "## Examples"
+        - "## Contributing"
+
+# =============================================================================
+# PATTERN DETECTION RULES
+# =============================================================================
+
+detection_rules:
+  framework:
+    sources:
+      - "package.json"          # Node.js projects
+      - "requirements.txt"      # Python projects
+      - "Gemfile"              # Ruby projects
+      - "go.mod"               # Go projects
+      - "Cargo.toml"           # Rust projects
+      - "pom.xml"              # Java projects
+      - "composer.json"        # PHP projects
+    
+    confidence_scoring:
+      high: "Explicit framework dependency found"
+      medium: "Framework patterns detected in code"
+      low: "Inferred from file extensions and structure"
+      
+  naming_convention:
+    sources:
+      - "Existing component files"
+      - "Linting configuration"
+      - "Style guides"
+    
+    detection_method:
+      - "Analyze 10+ existing files"
+      - "Find most common pattern"
+      - "Check for enforced rules"
+      
+  testing_pattern:
+    sources:
+      - "Test files"
+      - "Test configuration"
+      - "CI/CD pipelines"
+    
+    indicators:
+      - "Test runner configuration"
+      - "Assertion library imports"
+      - "Test file naming patterns"
+
+# =============================================================================
+# VARIABLE RESOLUTION
+# =============================================================================
+
+variable_resolution:
+  priority_order:
+    1: "Explicit user configuration"
+    2: "Detected patterns with high confidence"
+    3: "Inferred from related patterns"
+    4: "Community best practices"
+    5: "Safe defaults"
+    
+  resolution_strategy:
+    component_type:
+      source: "framework_patterns + naming_conventions"
+      fallback: "generic_component"
+      
+    directory_structure:
+      source: "project_analysis"
+      fallback: "flat_structure"
+      
+    test_pattern:
+      source: "existing_tests"
+      fallback: "basic_test_template"
+      
+    naming_convention:
+      source: "code_analysis"
+      fallback: "framework_default"
+
+# =============================================================================
+# PATTERN CONFIDENCE METRICS
+# =============================================================================
+
+confidence_metrics:
+  thresholds:
+    high_confidence: 0.9    # Use pattern without confirmation
+    medium_confidence: 0.7  # Use with user confirmation
+    low_confidence: 0.5     # Suggest alternatives
+    no_confidence: 0.0      # Use defaults
+    
+  scoring_factors:
+    - "Number of examples found"
+    - "Consistency across codebase"
+    - "Explicit configuration"
+    - "Documentation references"
+    - "Team conventions"
+
+# End of Pattern Library

@@ -1,0 +1,499 @@
+# Claude Context Architect - Context Schema Definition
+# Schema Validation Rules for Hierarchical Context System
+# Version: 1.0
+# Created: 2025-08-07
+
+# =============================================================================
+# CONTEXT FILE SCHEMA DEFINITIONS
+# =============================================================================
+# This schema defines the structure, validation rules, and content requirements
+# for all context files in the hierarchical context system, ensuring consistency
+# and quality across the entire context architecture.
+
+schema_version: "1.0"
+validation_engine: "yaml_schema_validator"
+enforcement_level: "strict"
+
+# =============================================================================
+# MASTER CONTEXT FILE SCHEMA (CLAUDE.md)
+# =============================================================================
+master_context_schema:
+  file_path: "CLAUDE.md"
+  format: "markdown"
+  encoding: "utf-8"
+  
+  required_sections:
+    - name: "project_overview"
+      heading_pattern: "^# .+ - .+"
+      min_length: 200
+      max_length: 1000
+      
+    - name: "critical_policies"
+      heading_pattern: "^## ⚠️.*CRITICAL.*"  
+      min_length: 100
+      required: true
+      
+    - name: "orchestration_management"
+      heading_pattern: "^## 🎯.*SINGLE SOURCE.*"
+      min_length: 500
+      required: true
+      
+    - name: "development_process"
+      heading_pattern: "^###.*DEVELOPMENT PROCESS.*"
+      min_length: 300
+      required: true
+      
+    - name: "project_status"
+      heading_pattern: "^###.*Current Project Status.*"
+      min_length: 100
+      required: true
+      
+    - name: "context_engineering"
+      heading_pattern: "^## 🔧.*CONTEXT ENGINEERING.*"
+      min_length: 200
+      required: false
+      
+  metadata_requirements:
+    ai_metadata_block: true
+    project_metadata_block: true
+    ai_navigation_block: true
+    context_engineering_block: true
+    
+  validation_rules:
+    - "no_placeholder_content"
+    - "consistent_heading_hierarchy"
+    - "valid_markdown_syntax"
+    - "cross_reference_integrity"
+    - "metadata_schema_compliance"
+
+# =============================================================================
+# LAYER-SPECIFIC CONTEXT SCHEMAS
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# PROJECT LEVEL CONTEXT FILES
+# ---------------------------------------------------------------------------
+project_level_schemas:
+  
+  project_dna_schema:
+    file_path: ".claude/project-dna.md"
+    format: "markdown"
+    
+    required_sections:
+      - name: "project_identity"
+        heading: "## Project Identity"
+        fields:
+          - name: "project_name"
+            type: "string"
+            required: true
+            min_length: 3
+            max_length: 100
+            
+          - name: "mission_statement" 
+            type: "text"
+            required: true
+            min_length: 50
+            max_length: 500
+            
+          - name: "target_users"
+            type: "array"
+            required: true
+            min_items: 1
+            max_items: 10
+            
+      - name: "core_characteristics"
+        heading: "## Core Characteristics"
+        fields:
+          - name: "domain"
+            type: "string"
+            required: true
+            enum: ["web_dev", "data_science", "mobile_dev", "enterprise", "startup", "research"]
+            
+          - name: "complexity_level"
+            type: "string"
+            required: true  
+            enum: ["simple", "moderate", "complex", "enterprise"]
+            
+          - name: "team_structure"
+            type: "object"
+            required: true
+            properties:
+              size: {type: "integer", minimum: 1, maximum: 1000}
+              structure: {type: "string", enum: ["solo", "small_team", "medium_team", "large_team", "enterprise"]}
+              
+      - name: "technological_foundation"
+        heading: "## Technological Foundation"
+        fields:
+          - name: "primary_technologies"
+            type: "array"
+            required: true
+            min_items: 1
+            max_items: 20
+            
+          - name: "architectural_approach"
+            type: "string"
+            required: true
+            enum: ["monolithic", "microservices", "jamstack", "serverless", "hybrid"]
+    
+    validation_rules:
+      - "required_sections_present"
+      - "field_types_correct"
+      - "enum_values_valid"
+      - "cross_reference_consistency"
+
+  project_evolution_schema:
+    file_path: ".claude/project-evolution.md"
+    format: "markdown"
+    
+    required_sections:
+      - name: "evolution_timeline"
+        heading: "## Evolution Timeline"
+        structure: "chronological_list"
+        min_entries: 1
+        
+      - name: "major_decisions"
+        heading: "## Major Decisions"
+        structure: "decision_log_format"
+        required_fields: ["date", "decision", "rationale", "impact"]
+        
+      - name: "lessons_learned"
+        heading: "## Lessons Learned"
+        structure: "categorized_insights"
+        categories: ["technical", "process", "team", "business"]
+    
+    validation_rules:
+      - "chronological_order_maintained"
+      - "decision_format_consistent"
+      - "no_future_dates"
+
+  decision_log_schema:
+    file_path: ".claude/decision-log.md"
+    format: "markdown"
+    
+    required_sections:
+      - name: "active_decisions"
+        heading: "## Active Decisions"
+        structure: "adr_format"  # Architecture Decision Record
+        
+      - name: "superseded_decisions"
+        heading: "## Superseded Decisions"
+        structure: "adr_format"
+        required: false
+    
+    adr_format:
+      required_fields:
+        - "title"
+        - "status" # [Proposed, Accepted, Deprecated, Superseded]
+        - "context"
+        - "decision"
+        - "consequences"
+      optional_fields:
+        - "alternatives_considered"
+        - "implementation_notes"
+    
+    validation_rules:
+      - "adr_format_compliance"
+      - "valid_status_values"
+      - "unique_decision_titles"
+
+# ---------------------------------------------------------------------------
+# DOMAIN LEVEL CONTEXT FILES
+# ---------------------------------------------------------------------------
+domain_level_schemas:
+  
+  domain_context_schema:
+    file_path: ".claude/domain-context.md"
+    format: "markdown"
+    
+    required_sections:
+      - name: "domain_overview"
+        heading: "## Domain Overview"
+        fields:
+          - name: "industry_context"
+            type: "text"
+            required: true
+            min_length: 100
+            
+          - name: "business_model"
+            type: "string"
+            required: true
+            enum: ["b2b", "b2c", "b2b2c", "marketplace", "saas", "enterprise", "non_profit"]
+            
+      - name: "core_concepts"
+        heading: "## Core Concepts"
+        structure: "concept_definitions"
+        min_concepts: 5
+        max_concepts: 50
+        
+      - name: "stakeholder_map"
+        heading: "## Stakeholder Map"
+        structure: "stakeholder_profiles"
+        required_fields: ["name", "role", "goals", "pain_points"]
+    
+    validation_rules:
+      - "business_model_consistency"
+      - "concept_definitions_complete"
+      - "stakeholder_completeness"
+
+  domain_glossary_schema:
+    file_path: ".claude/domain-glossary.md"
+    format: "markdown"
+    
+    structure: "alphabetical_glossary"
+    required_sections:
+      - name: "terminology_definitions" 
+        heading: "## Terminology"
+        entry_format:
+          term: "string"
+          definition: "text"
+          context: "text"
+          aliases: "array[string]"
+          
+    validation_rules:
+      - "alphabetical_ordering"
+      - "no_duplicate_terms"
+      - "definition_quality_check"
+      - "cross_reference_validation"
+
+  business_rules_schema:
+    file_path: ".claude/business-rules.md"
+    format: "markdown"
+    
+    required_sections:
+      - name: "core_business_rules"
+        heading: "## Core Business Rules"
+        structure: "rule_definitions"
+        rule_format:
+          rule_id: "string"
+          description: "text"
+          conditions: "text"
+          actions: "text" 
+          exceptions: "text"
+          
+      - name: "validation_rules"
+        heading: "## Validation Rules"
+        structure: "validation_definitions"
+        
+    validation_rules:
+      - "unique_rule_ids"
+      - "complete_rule_definitions"
+      - "logical_consistency"
+
+# ---------------------------------------------------------------------------
+# TECHNICAL LEVEL CONTEXT FILES  
+# ---------------------------------------------------------------------------
+technical_level_schemas:
+  
+  technical_context_schema:
+    file_path: ".claude/technical-context.md"
+    format: "markdown"
+    
+    required_sections:
+      - name: "architecture_overview"
+        heading: "## Architecture Overview"
+        fields:
+          - name: "architectural_style"
+            type: "string"
+            required: true
+            enum: ["mvc", "mvvm", "clean_architecture", "hexagonal", "event_driven", "microservices"]
+            
+          - name: "technology_stack"
+            type: "object"
+            required: true
+            properties:
+              frontend: {type: "array", items: {type: "string"}}
+              backend: {type: "array", items: {type: "string"}}  
+              database: {type: "array", items: {type: "string"}}
+              infrastructure: {type: "array", items: {type: "string"}}
+              
+      - name: "design_principles"
+        heading: "## Design Principles"
+        structure: "principle_definitions"
+        min_principles: 3
+        max_principles: 15
+        
+    validation_rules:
+      - "architecture_style_consistency"
+      - "technology_compatibility_check"
+      - "principle_clarity_validation"
+
+  framework_conventions_schema:
+    file_path: ".claude/framework-conventions.md"
+    format: "markdown"
+    
+    required_sections:
+      - name: "coding_standards"
+        heading: "## Coding Standards"
+        subsections: ["naming_conventions", "file_organization", "code_style"]
+        
+      - name: "framework_patterns"
+        heading: "## Framework Patterns" 
+        structure: "pattern_documentation"
+        pattern_format:
+          pattern_name: "string"
+          use_case: "text"
+          implementation: "code_example"
+          rationale: "text"
+          
+    validation_rules:
+      - "consistent_naming_conventions"
+      - "pattern_completeness"
+      - "code_example_syntax_check"
+
+# ---------------------------------------------------------------------------
+# WORKFLOW LEVEL CONTEXT FILES
+# ---------------------------------------------------------------------------
+workflow_level_schemas:
+  
+  workflow_context_schema:
+    file_path: ".claude/workflow-context.md"
+    format: "markdown"
+    
+    required_sections:
+      - name: "development_lifecycle"
+        heading: "## Development Lifecycle"
+        phases: ["planning", "development", "review", "testing", "deployment"]
+        
+      - name: "quality_gates"
+        heading: "## Quality Gates"
+        structure: "gate_definitions"
+        gate_format:
+          gate_name: "string"
+          trigger: "string"
+          criteria: "array[string]"
+          actions: "array[string]"
+          
+    validation_rules:
+      - "lifecycle_phase_completeness"
+      - "quality_gate_consistency"
+      - "process_flow_validation"
+
+# ---------------------------------------------------------------------------
+# INTEGRATION LEVEL CONTEXT FILES
+# ---------------------------------------------------------------------------
+integration_level_schemas:
+  
+  integration_context_schema:
+    file_path: ".claude/integration-context.md"
+    format: "markdown"
+    
+    required_sections:
+      - name: "system_boundaries"
+        heading: "## System Boundaries"
+        structure: "boundary_definitions"
+        
+      - name: "integration_patterns"
+        heading: "## Integration Patterns"
+        structure: "pattern_catalog"
+        
+    validation_rules:
+      - "boundary_clarity"
+      - "integration_pattern_consistency"
+
+# =============================================================================
+# CROSS-FILE VALIDATION RULES
+# =============================================================================
+cross_file_validation:
+  
+  # Consistency Checks
+  consistency_rules:
+    - name: "terminology_consistency"
+      description: "Terms used consistently across all context files"
+      check: "glossary_terms_match_usage"
+      
+    - name: "technology_stack_consistency" 
+      description: "Technology references consistent across layers"
+      check: "tech_stack_alignment"
+      
+    - name: "stakeholder_consistency"
+      description: "Stakeholders referenced consistently"
+      check: "stakeholder_name_alignment"
+      
+  # Completeness Checks
+  completeness_rules:
+    - name: "inheritance_completeness"
+      description: "Child contexts properly inherit parent information"
+      check: "inheritance_chain_validation"
+      
+    - name: "cross_reference_completeness"
+      description: "All cross-references resolve to existing content"
+      check: "reference_resolution"
+      
+  # Quality Checks
+  quality_rules:
+    - name: "content_depth_adequacy"
+      description: "Context files contain sufficient detail"
+      check: "minimum_content_thresholds"
+      
+    - name: "freshness_validation"
+      description: "Context information is reasonably current"
+      check: "last_modified_within_threshold"
+
+# =============================================================================
+# VALIDATION AUTOMATION
+# =============================================================================
+validation_automation:
+  
+  # Automated Validation Pipeline
+  pipeline:
+    - stage: "syntax_validation"
+      tools: ["markdown_linter", "yaml_validator"]
+      fail_fast: true
+      
+    - stage: "schema_validation"  
+      tools: ["json_schema_validator"]
+      fail_fast: true
+      
+    - stage: "content_validation"
+      tools: ["content_quality_checker"]
+      fail_fast: false
+      
+    - stage: "cross_file_validation"
+      tools: ["consistency_checker"]
+      fail_fast: false
+      
+  # Validation Triggers
+  triggers:
+    - "pre_commit_hook"
+    - "context_file_modification"
+    - "scheduled_daily_check" 
+    - "manual_validation_request"
+    
+  # Error Reporting
+  error_reporting:
+    format: "structured_json"
+    severity_levels: ["error", "warning", "info"]
+    include_suggestions: true
+    generate_diff: true
+
+# =============================================================================
+# SCHEMA EVOLUTION
+# =============================================================================
+schema_evolution:
+  
+  # Version Management
+  versioning:
+    current_version: "1.0"
+    compatibility: "backward_compatible"
+    migration_support: true
+    
+  # Evolution Triggers
+  evolution_triggers:
+    - "new_context_layer_added"
+    - "existing_layer_requirements_changed"
+    - "validation_rule_updates_needed"
+    - "cross_file_relationship_changes"
+    
+  # Migration Support
+  migration_support:
+    automatic_migration: true
+    migration_scripts: true
+    rollback_capability: true
+    validation_after_migration: true
+
+# =============================================================================
+# END OF SCHEMA DEFINITION
+# =============================================================================
+# This schema ensures consistent structure, quality, and validation across
+# the entire hierarchical context system while supporting evolution and
+# maintenance of context files.

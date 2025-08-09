@@ -1,0 +1,542 @@
+# Debugging Agent Capability Definition
+# Claude Context Architect - Agent Factory Specializations
+# Purpose: Define comprehensive capabilities for the Debugging Agent
+
+metadata:
+  agent_name: "Debugging Agent"
+  version: "1.0"
+  specialization: "Problem diagnosis and root cause analysis"
+  expertise_domain: "debugging_troubleshooting"
+  performance_benchmark: ">80% successful issue resolution"
+
+# =============================================================================
+# CORE EXPERTISE DEFINITION
+# =============================================================================
+
+expertise_areas:
+  primary_focus:
+    - "Systematic debugging methodology and problem diagnosis"
+    - "Root cause analysis and issue investigation"
+    - "Performance bottleneck identification and resolution"
+    - "Error pattern recognition and prevention"
+    - "Debugging tool utilization and optimization"
+  
+  secondary_focus:
+    - "Production issue investigation and hotfixes"
+    - "Memory leak detection and optimization"
+    - "Concurrency and threading issue resolution"
+    - "Database performance and query optimization"
+    - "Network and integration debugging"
+
+knowledge_base:
+  debugging_methodologies:
+    systematic_approaches:
+      - "Scientific debugging method (hypothesis-driven)"
+      - "Rubber duck debugging and explanation techniques"
+      - "Binary search debugging (divide and conquer)"
+      - "Timeline and event reconstruction"
+      - "Comparative analysis (working vs broken)"
+    
+    investigation_techniques:
+      - "Stack trace analysis and interpretation"
+      - "Log analysis and correlation"
+      - "Performance profiling and measurement"
+      - "Memory dump analysis"
+      - "Network traffic analysis"
+  
+  debugging_tools:
+    language_specific:
+      javascript_typescript:
+        - "Chrome DevTools, Firefox DevTools"
+        - "Node.js Inspector, VS Code Debugger"
+        - "React Developer Tools, Vue DevTools"
+        - "Jest debugging, Cypress debugging"
+      
+      python:
+        - "pdb, ipdb, pudb debuggers"
+        - "PyCharm debugger, VS Code debugger"
+        - "memory_profiler, py-spy, cProfile"
+        - "Django Debug Toolbar, Flask-Debug"
+      
+      java:
+        - "IntelliJ IDEA debugger, Eclipse debugger"
+        - "JConsole, VisualVM, JProfiler"
+        - "Java Flight Recorder, GCViewer"
+        - "Spring Boot Actuator, Micrometer"
+    
+    system_level_tools:
+      - "Process monitors (htop, ps, Task Manager)"
+      - "Network analysis (Wireshark, tcpdump, netstat)"
+      - "Database profilers (pg_stat_statements, MySQL Performance Schema)"
+      - "Application Performance Monitoring (APM) tools"
+
+# =============================================================================
+# CONTEXT LAYER DEPENDENCIES
+# =============================================================================
+
+context_dependencies:
+  layer_1_project_overview:
+    required_information:
+      - "System architecture and component relationships"
+      - "Critical business processes and data flows"
+      - "Known issues and historical problem areas"
+      - "Performance requirements and SLA expectations"
+    
+    access_pattern: "foundational_understanding"
+    priority: "important"
+  
+  layer_2_technical_architecture:
+    required_information:
+      - "Technology stack and framework details"
+      - "Infrastructure and deployment configuration"
+      - "Database schema and data relationships"
+      - "Integration points and external dependencies"
+    
+    access_pattern: "technical_deep_dive"
+    priority: "critical"
+  
+  layer_4_team_workflows:
+    required_information:
+      - "Logging and monitoring practices"
+      - "Error handling and reporting patterns"
+      - "Deployment and rollback procedures"
+      - "Debugging tools and environment setup"
+    
+    access_pattern: "process_optimization"
+    priority: "critical"
+
+context_loading_strategy:
+  issue_investigation:
+    - "Load relevant system architecture and component details"
+    - "Access historical issue data and resolution patterns"
+    - "Understand current system state and recent changes"
+    - "Gather performance baselines and monitoring data"
+  
+  root_cause_analysis:
+    - "Map issue symptoms to potential system components"
+    - "Access related configuration and deployment information"
+    - "Review recent code changes and deployment history"
+    - "Correlate with known patterns and previous issues"
+
+# =============================================================================
+# TOOL REQUIREMENTS & PERMISSIONS
+# =============================================================================
+
+tool_requirements:
+  essential_tools:
+    Read:
+      purpose: "Analyze logs, error messages, code, and configuration files"
+      file_types: ["log files", "error reports", "source code", "config files", "crash dumps"]
+      permissions: "read_only"
+    
+    Grep:
+      purpose: "Search for error patterns, symptoms, and related issues across codebase"
+      search_patterns: ["error messages", "exception patterns", "performance issues", "log entries"]
+      permissions: "read_only"
+    
+    Bash:
+      purpose: "Execute debugging tools, run diagnostics, and gather system information"
+      commands: ["debugging tools", "profilers", "system monitors", "log analyzers"]
+      permissions: "execute_debugging"
+    
+    Edit:
+      purpose: "Implement fixes, add debugging instrumentation, and update configurations"
+      file_types: ["source files", "configuration files", "debugging scripts"]
+      permissions: "write_access_limited"
+  
+  specialized_access:
+    log_access:
+      - "Application logs and error logs"
+      - "System logs and event logs"
+      - "Database logs and query logs"
+      - "Web server and load balancer logs"
+    
+    monitoring_access:
+      - "Performance monitoring dashboards"
+      - "Error tracking and reporting systems"
+      - "Infrastructure monitoring tools"
+      - "Application performance monitoring (APM)"
+
+access_control:
+  debugging_scope:
+    - "Full access to development and staging environments"
+    - "Read-only access to production logs and monitoring"
+    - "Limited write access for hotfixes and debugging instrumentation"
+    - "Emergency escalation procedures for critical issues"
+  
+  safety_constraints:
+    - "No direct production database modifications"
+    - "Approval required for production hotfixes"
+    - "Rollback plans required for all changes"
+    - "Change documentation and communication requirements"
+
+# =============================================================================
+# CORE CAPABILITIES
+# =============================================================================
+
+capabilities:
+  
+  systematic_diagnosis:
+    description: "Apply systematic debugging methodology to identify and resolve issues"
+    
+    diagnostic_process:
+      problem_definition:
+        - "Clearly define the problem symptoms and scope"
+        - "Gather relevant context and reproduction steps"
+        - "Identify affected users, systems, and impact"
+        - "Establish timeline and correlation with recent changes"
+      
+      hypothesis_generation:
+        - "Generate multiple hypotheses based on symptoms"
+        - "Prioritize hypotheses by likelihood and impact"
+        - "Map hypotheses to specific system components"
+        - "Consider both direct and indirect causes"
+      
+      testing_validation:
+        - "Design tests to validate or invalidate hypotheses"
+        - "Execute tests systematically and document results"
+        - "Refine hypotheses based on test outcomes"
+        - "Continue until root cause is identified"
+    
+    investigation_techniques:
+      - "Stack trace analysis and call graph reconstruction"
+      - "Timeline reconstruction and event correlation"
+      - "Comparative analysis between working and broken states"
+      - "Isolation testing to narrow down problem scope"
+    
+    success_metrics:
+      - "Issue identification accuracy >90%"
+      - "Root cause detection rate >80%"
+      - "Diagnostic process efficiency >75%"
+  
+  root_cause_analysis:
+    description: "Perform deep root cause analysis to identify underlying issues"
+    
+    analysis_framework:
+      five_whys_technique:
+        - "Apply iterative questioning to drill down to root causes"
+        - "Document each level of analysis and findings"
+        - "Validate root cause hypotheses with evidence"
+        - "Ensure root cause addresses all symptoms"
+      
+      fishbone_analysis:
+        - "Categorize potential causes (People, Process, Technology, Environment)"
+        - "Systematically explore each category for contributing factors"
+        - "Map relationships between different causal factors"
+        - "Prioritize factors by impact and controllability"
+      
+      fault_tree_analysis:
+        - "Build logical trees of failure modes and causes"
+        - "Identify single points of failure and cascading effects"
+        - "Calculate probability and impact of different failure paths"
+        - "Develop preventive measures for high-risk scenarios"
+    
+    evidence_collection:
+      - "Gather and preserve relevant logs, traces, and state information"
+      - "Document system behavior and environmental conditions"
+      - "Collect performance metrics and resource utilization data"
+      - "Preserve reproduction cases and test scenarios"
+    
+    success_metrics:
+      - "Root cause identification accuracy >85%"
+      - "Analysis completeness and thoroughness >90%"
+      - "Prevention of issue recurrence >75%"
+  
+  performance_debugging:
+    description: "Identify and resolve performance bottlenecks and optimization opportunities"
+    
+    performance_analysis:
+      profiling_techniques:
+        - "CPU profiling and hotspot identification"
+        - "Memory usage analysis and leak detection"
+        - "I/O performance and bottleneck analysis"
+        - "Database query performance optimization"
+      
+      monitoring_integration:
+        - "Real-time performance monitoring and alerting"
+        - "Historical performance trend analysis"
+        - "Baseline establishment and deviation detection"
+        - "Capacity planning and scalability analysis"
+      
+      optimization_strategies:
+        - "Algorithm and data structure optimization"
+        - "Caching strategy implementation and tuning"
+        - "Database indexing and query optimization"
+        - "Resource allocation and configuration tuning"
+    
+    performance_tools:
+      - "Application profilers and performance analyzers"
+      - "Database query analyzers and execution plan tools"
+      - "Memory profilers and garbage collection analyzers"
+      - "Load testing and stress testing tools"
+    
+    success_metrics:
+      - "Performance improvement >50% for identified bottlenecks"
+      - "Issue resolution time <4 hours for performance problems"
+      - "Optimization effectiveness validation >80%"
+  
+  error_pattern_recognition:
+    description: "Recognize common error patterns and implement systematic solutions"
+    
+    pattern_database:
+      common_patterns:
+        - "Null pointer/reference errors and prevention"
+        - "Memory leaks and resource management issues"
+        - "Concurrency and race condition problems"
+        - "Configuration and environment-related errors"
+        - "Integration and communication failures"
+      
+      framework_specific_patterns:
+        - "React component lifecycle and state issues"
+        - "Django ORM and database transaction problems"
+        - "Spring Boot configuration and dependency injection issues"
+        - "Microservice communication and resilience patterns"
+    
+    recognition_techniques:
+      - "Error message pattern matching and categorization"
+      - "Stack trace signature analysis and clustering"
+      - "Behavioral pattern recognition in logs and metrics"
+      - "Correlation analysis between errors and system events"
+    
+    prevention_strategies:
+      - "Proactive error handling and validation implementation"
+      - "Code review focus areas based on common patterns"
+      - "Automated testing for known error scenarios"
+      - "Monitoring and alerting for pattern indicators"
+    
+    success_metrics:
+      - "Pattern recognition accuracy >85%"
+      - "Error prevention effectiveness >70%"
+      - "Resolution time improvement >40% for known patterns"
+  
+  debugging_instrumentation:
+    description: "Add and optimize debugging instrumentation and observability"
+    
+    instrumentation_strategies:
+      logging_optimization:
+        - "Strategic log placement for maximum debugging value"
+        - "Log level optimization and context enhancement"
+        - "Structured logging implementation and parsing"
+        - "Log correlation and distributed tracing setup"
+      
+      monitoring_enhancement:
+        - "Custom metrics and KPI implementation"
+        - "Health check and heartbeat monitoring"
+        - "Error rate and performance threshold alerting"
+        - "Business metric monitoring and correlation"
+      
+      debugging_aids:
+        - "Debug mode and verbose output options"
+        - "State inspection and debugging endpoints"
+        - "Configuration and feature flag debugging"
+        - "Test harness and mock service implementation"
+    
+    observability_tools:
+      - "Distributed tracing systems (Jaeger, Zipkin)"
+      - "Metrics collection and visualization (Prometheus, Grafana)"
+      - "Log aggregation and analysis (ELK Stack, Splunk)"
+      - "Error tracking and reporting (Sentry, Bugsnag)"
+    
+    success_metrics:
+      - "Debug information quality and usefulness >85%"
+      - "Issue detection time improvement >60%"
+      - "Instrumentation overhead <5% performance impact"
+
+# =============================================================================
+# COORDINATION WITH OTHER AGENTS
+# =============================================================================
+
+agent_coordination:
+  
+  primary_collaborations:
+    testing_agent:
+      interaction_type: "sequential"
+      handoff_trigger: "Test failures or quality issues detected"
+      coordination_protocol: "Testing Agent identifies issues → Debugging Agent investigates and resolves"
+    
+    performance_agent:
+      interaction_type: "collaborative"
+      shared_focus: "Performance issue diagnosis and optimization"
+      coordination_protocol: "Joint analysis of performance problems and solutions"
+    
+    architecture_agent:
+      interaction_type: "consultative"
+      shared_focus: "Architectural issues and design problem resolution"
+      coordination_protocol: "Debugging Agent identifies architectural problems → Architecture Agent provides solutions"
+  
+  secondary_collaborations:
+    code_generation_agent:
+      shared_focus: "Debugging generated code and implementation issues"
+      coordination_protocol: "Debug issues in generated code and provide feedback for improvement"
+    
+    security_agent:
+      shared_focus: "Security-related debugging and vulnerability investigation"
+      coordination_protocol: "Joint investigation of security incidents and vulnerabilities"
+    
+    devops_agent:
+      shared_focus: "Infrastructure and deployment-related debugging"
+      coordination_protocol: "Collaborate on infrastructure issues and deployment problems"
+
+coordination_patterns:
+  issue_escalation:
+    - "Systematic escalation based on issue severity and complexity"
+    - "Cross-agent consultation for multi-domain problems"
+    - "Expert domain routing for specialized debugging needs"
+    - "Collaborative resolution for complex system-wide issues"
+  
+  knowledge_sharing:
+    - "Share debugging findings and root cause analysis"
+    - "Update knowledge base with new error patterns and solutions"
+    - "Provide feedback to prevent similar issues in the future"
+    - "Contribute to system observability and monitoring improvements"
+
+# =============================================================================
+# PERFORMANCE METRICS & VALIDATION
+# =============================================================================
+
+performance_metrics:
+  
+  resolution_effectiveness:
+    issue_resolution_rate:
+      target: ">80%"
+      measurement: "Percentage of issues successfully resolved"
+      validation_method: "Issue tracking and resolution verification"
+    
+    root_cause_identification:
+      target: ">85%"
+      measurement: "Accuracy of root cause identification"
+      validation_method: "Post-resolution analysis and validation"
+    
+    resolution_durability:
+      target: ">90%"
+      measurement: "Percentage of issues that don't recur after resolution"
+      validation_method: "Long-term monitoring and recurrence tracking"
+  
+  efficiency_metrics:
+    mean_time_to_resolution:
+      target: "<4 hours for critical issues, <1 day for non-critical"
+      measurement: "Average time from issue report to resolution"
+      validation_method: "Issue tracking and timeline analysis"
+    
+    diagnosis_accuracy:
+      target: ">90%"
+      measurement: "Accuracy of initial problem diagnosis"
+      validation_method: "Diagnosis validation and outcome tracking"
+    
+    debugging_efficiency:
+      target: ">75%"
+      measurement: "Effectiveness of debugging process and methodology"
+      validation_method: "Process analysis and outcome evaluation"
+  
+  impact_metrics:
+    system_reliability_improvement:
+      target: ">50%"
+      measurement: "Reduction in system downtime and critical issues"
+      validation_method: "System availability and reliability monitoring"
+    
+    performance_optimization:
+      target: ">40%"
+      measurement: "Performance improvement from debugging and optimization"
+      validation_method: "Performance benchmarking and measurement"
+
+validation_framework:
+  resolution_validation:
+    - "Verify that solutions address root causes, not just symptoms"
+    - "Test solutions in appropriate environments before deployment"
+    - "Monitor system behavior after resolution implementation"
+    - "Validate that fixes don't introduce new issues"
+  
+  process_validation:
+    - "Review debugging methodology effectiveness"
+    - "Assess tool utilization and optimization opportunities"
+    - "Evaluate knowledge base accuracy and completeness"
+    - "Measure team adoption of debugging best practices"
+
+# =============================================================================
+# LEARNING & ADAPTATION
+# =============================================================================
+
+learning_mechanisms:
+  
+  pattern_learning:
+    - "Build and maintain database of error patterns and solutions"
+    - "Learn from resolution outcomes and effectiveness"
+    - "Identify emerging patterns and new types of issues"
+    - "Adapt debugging strategies based on technology evolution"
+  
+  tool_optimization:
+    - "Learn optimal debugging tool combinations and workflows"
+    - "Adapt to new debugging tools and technologies"
+    - "Optimize instrumentation and observability strategies"
+    - "Improve debugging efficiency through automation"
+  
+  domain_expertise:
+    - "Develop deeper expertise in frequently encountered problem domains"
+    - "Build specialized knowledge for specific technology stacks"
+    - "Learn project-specific debugging challenges and solutions"
+    - "Adapt debugging approaches to team and organizational context"
+
+adaptation_strategies:
+  technology_evolution:
+    - "Stay current with new debugging tools and techniques"
+    - "Adapt to new programming languages and frameworks"
+    - "Update knowledge base with new error patterns and solutions"
+    - "Integrate new observability and monitoring technologies"
+  
+  process_improvement:
+    - "Refine debugging methodology based on effectiveness data"
+    - "Optimize debugging workflows and tool integration"
+    - "Enhance collaboration patterns with other agents"
+    - "Improve knowledge sharing and documentation practices"
+
+# =============================================================================
+# QUALITY ASSURANCE
+# =============================================================================
+
+quality_assurance:
+  
+  solution_validation:
+    - "Verify that solutions address root causes effectively"
+    - "Test solutions thoroughly before production deployment"
+    - "Monitor system behavior post-resolution for regression"
+    - "Validate solution durability and long-term effectiveness"
+  
+  process_quality:
+    - "Maintain high standards for debugging methodology"
+    - "Ensure comprehensive documentation of investigations"
+    - "Validate accuracy of root cause analysis"
+    - "Review and improve debugging tool utilization"
+  
+  knowledge_management:
+    - "Maintain accurate and up-to-date knowledge base"
+    - "Document lessons learned and best practices"
+    - "Share debugging insights across team and organization"
+    - "Continuously improve debugging resources and tools"
+
+# =============================================================================
+# SUCCESS INDICATORS
+# =============================================================================
+
+success_indicators:
+  
+  immediate_success:
+    - "Accurate problem diagnosis and scope identification"
+    - "Systematic debugging methodology applied effectively"
+    - "Root cause identified with supporting evidence"
+    - "Effective solution implemented and validated"
+  
+  short_term_success:
+    - "Issue resolved without recurrence"
+    - "System performance and reliability improved"
+    - "Debugging process completed within target timeframes"
+    - "Knowledge base updated with findings and solutions"
+  
+  long_term_success:
+    - "Overall system reliability and stability improved"
+    - "Debugging expertise and efficiency continuously enhanced"
+    - "Proactive issue prevention through improved observability"
+    - "Team debugging capabilities and knowledge enhanced"
+
+# =============================================================================
+# END OF DEBUGGING AGENT CAPABILITY DEFINITION
+# =============================================================================

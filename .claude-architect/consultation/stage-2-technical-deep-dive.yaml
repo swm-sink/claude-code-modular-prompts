@@ -1,0 +1,341 @@
+# Stage 2: Technical Deep Dive (7-10 minutes)
+# Architecture patterns, development workflow, and technical constraints
+# Purpose: Map technical landscape for context generation and agent specialization
+
+# =============================================================================
+# STAGE OVERVIEW
+# =============================================================================
+stage_info:
+  name: "Technical Deep Dive"
+  duration: "7-10 minutes"
+  sequence: 2
+  objective: "Understand technical architecture, development patterns, and constraints"
+  value_statement: "Now let's dig into how your project actually works under the hood"
+  
+  personality: "Technical architect reviewing system design"
+  tone: "Professionally curious, technically focused, detail-oriented"
+  approach: "Systematic exploration building from Stage 1 foundation"
+
+# =============================================================================
+# STAGE TRANSITION & CONTEXT BRIDGING (1 minute)
+# =============================================================================
+transition:
+  context_bridge: |
+    "Great foundation! Now I understand you're building [PROJECT_TYPE] for 
+    [DOMAIN] with a [TEAM_SIZE] team. Let's explore the technical side - 
+    how your code is organized, what frameworks you're using, and how you 
+    develop and deploy."
+  
+  stage_preview: |
+    "I'll ask about three main areas:
+    1. Your architecture and tech stack (3-4 minutes)
+    2. Your development workflow and testing (2-3 minutes)  
+    3. Performance needs and constraints (2-3 minutes)
+    
+    This helps me understand what kind of commands and context will be most 
+    valuable. Ready?"
+
+# =============================================================================
+# CORE TECHNICAL EXPLORATION (6-8 minutes)
+# =============================================================================
+question_flows:
+  # ---------------------------------------------------------------------------
+  # Flow A: Architecture and Tech Stack (3-4 minutes)
+  # ---------------------------------------------------------------------------
+  architecture_foundation:
+    primary_discovery: |
+      "Let's start with the big picture - how is your application structured? 
+      Are we talking monolith, microservices, or something in between?"
+    
+    framework_identification:
+      web_frontend: |
+        "What's your frontend built with? React, Vue, vanilla JS, or something else?"
+      
+      backend_services: |
+        "For the backend, what's your main language and framework? Node.js, 
+        Python/Django, Java/Spring, something else?"
+      
+      database_layer: |
+        "How do you handle data storage? SQL database, NoSQL, or a mix?"
+    
+    adaptive_deep_dives:
+      react_detected:
+        - "Are you using any state management like Redux or Context API?"
+        - "What's your component organization strategy?"
+        - "Any specific patterns for API integration?"
+      
+      node_detected:
+        - "Express, Fastify, or another Node framework?"
+        - "How do you structure your API routes and middleware?"
+        - "Any specific patterns for async handling?"
+      
+      python_detected:
+        - "Django, Flask, FastAPI, or something else?"
+        - "How do you organize your apps and modules?"
+        - "ORM usage - SQLAlchemy, Django ORM, or raw SQL?"
+      
+      java_detected:
+        - "Spring Boot, or another Java framework?"
+        - "How do you handle dependency injection and configuration?"
+        - "Maven or Gradle for build management?"
+    
+    architecture_pattern_validation: |
+      "So you're using [TECH_STACK] in a [ARCHITECTURE_PATTERN] structure. 
+      Any particular architectural patterns you follow - MVC, hexagonal, 
+      clean architecture, or just pragmatic organization?"
+
+  # ---------------------------------------------------------------------------
+  # Flow B: Development Workflow and Testing (2-3 minutes)
+  # ---------------------------------------------------------------------------
+  development_workflow:
+    testing_strategy: |
+      "What's your approach to testing? Unit tests, integration tests, 
+      end-to-end, or are you still building that up?"
+    
+    testing_depth_exploration:
+      has_testing:
+        - "What testing frameworks are you using?"
+        - "What's your current test coverage looking like?"
+        - "Any specific testing patterns or conventions?"
+      
+      building_testing:
+        - "What's your priority - unit tests, integration tests, or e2e?"
+        - "Any testing frameworks you're leaning toward?"
+        - "What would good test coverage look like for your project?"
+      
+      minimal_testing:
+        - "Is testing something you want to build up?"
+        - "What's preventing more testing right now - time, complexity, or priority?"
+    
+    deployment_and_ci:
+      deployment_question: |
+        "How do you currently deploy? CI/CD pipeline, manual deployment, 
+        or still figuring that out?"
+      
+      ci_exploration:
+        has_ci: "What's your CI/CD setup - GitHub Actions, Jenkins, GitLab CI?"
+        building_ci: "What would your ideal deployment process look like?"
+        manual_deploy: "Is automating deployment a priority for you?"
+    
+    development_tools: |
+      "What development tools are essential to your workflow? IDE preferences, 
+      linters, formatters, debugging tools?"
+
+  # ---------------------------------------------------------------------------
+  # Flow C: Performance and Constraints (2-3 minutes)
+  # ---------------------------------------------------------------------------
+  performance_constraints:
+    performance_requirements: |
+      "Are there specific performance requirements or constraints I should 
+      understand? Response times, scalability needs, resource limitations?"
+    
+    scalability_discussion:
+      current_scale: "What's your current usage level - users, requests, data volume?"
+      growth_expectations: "Any scaling challenges you anticipate or are already facing?"
+      bottlenecks: "Where do you see potential bottlenecks in your current architecture?"
+    
+    technical_constraints: |
+      "Any technical constraints I should know about? Legacy system integration, 
+      compliance requirements, specific technology restrictions?"
+    
+    error_handling_monitoring: |
+      "How do you currently handle errors and monitoring? Logging frameworks, 
+      error tracking, performance monitoring?"
+    
+    constraint_priorities:
+      performance_critical: 
+        - "What performance metrics are most important?"
+        - "Any real-time requirements or latency constraints?"
+      
+      compliance_required:
+        - "What compliance standards apply - HIPAA, GDPR, SOX, others?"
+        - "Any specific security or audit requirements?"
+      
+      integration_heavy:
+        - "What external systems do you integrate with?"
+        - "Any API rate limits or integration constraints?"
+
+# =============================================================================
+# ADAPTIVE INTELLIGENCE SYSTEM
+# =============================================================================
+adaptive_features:
+  # ---------------------------------------------------------------------------
+  # Framework-Specific Intelligence
+  # ---------------------------------------------------------------------------
+  framework_specialization:
+    react_ecosystem:
+      standard_questions:
+        - "Create React App, Next.js, or custom Webpack setup?"
+        - "TypeScript or JavaScript?"
+        - "Styling approach - CSS modules, styled-components, Tailwind?"
+      
+      advanced_patterns:
+        - "Server-side rendering or static generation?"
+        - "Custom hooks patterns or component architecture?"
+        - "Performance optimization strategies?"
+    
+    node_backend:
+      standard_questions:
+        - "RESTful APIs, GraphQL, or both?"
+        - "Authentication strategy - JWT, sessions, OAuth?"
+        - "Database connection - raw queries, ORM, or query builder?"
+      
+      advanced_patterns:
+        - "Microservices communication patterns?"
+        - "Event-driven architecture or message queues?"
+        - "Caching strategies and performance optimization?"
+    
+    python_web:
+      standard_questions:
+        - "API style - REST, GraphQL, or RPC?"
+        - "Database migrations and schema management?"
+        - "Virtual environment and dependency management?"
+      
+      advanced_patterns:
+        - "Async/await usage patterns?"
+        - "Background task processing - Celery, RQ, or alternatives?"
+        - "Service layer architecture and business logic organization?"
+
+  # ---------------------------------------------------------------------------
+  # Team Size Adaptations
+  # ---------------------------------------------------------------------------
+  team_size_focus:
+    solo_developer:
+      priorities: ["Productivity tools", "Learning aids", "Quick debugging"]
+      questions: ["What slows you down most?", "What would you like to learn faster?"]
+    
+    small_team_2_5:
+      priorities: ["Code consistency", "Knowledge sharing", "Simple coordination"]
+      questions: ["How do you maintain code consistency?", "How do you share knowledge?"]
+    
+    medium_team_6_15:
+      priorities: ["Standards enforcement", "Review processes", "Documentation"]
+      questions: ["What standards do you enforce?", "How do you handle code reviews?"]
+    
+    large_team_15plus:
+      priorities: ["Architecture governance", "Cross-team coordination", "Enterprise patterns"]
+      questions: ["How do you manage architectural decisions?", "How do teams coordinate?"]
+
+  # ---------------------------------------------------------------------------
+  # Project Stage Adaptations
+  # ---------------------------------------------------------------------------
+  stage_specific_focus:
+    early_stage:
+      priorities: ["Rapid development", "Flexibility", "Learning", "MVP features"]
+      avoid: ["Complex architecture", "Enterprise patterns", "Heavy processes"]
+    
+    growth_stage:
+      priorities: ["Scalability", "Refactoring", "Testing", "Performance"]
+      explore: ["Technical debt", "Architecture evolution", "Team growth"]
+    
+    mature_stage:
+      priorities: ["Maintainability", "Documentation", "Standards", "Optimization"]
+      explore: ["Legacy concerns", "Migration strategies", "Knowledge preservation"]
+
+# =============================================================================
+# DOMAIN-SPECIFIC TECHNICAL PATTERNS
+# =============================================================================
+domain_technical_focus:
+  ecommerce:
+    key_patterns: ["Payment processing", "Inventory management", "Order workflows"]
+    technical_concerns: ["PCI compliance", "Transaction reliability", "Scalability"]
+    
+  fintech:
+    key_patterns: ["Transaction processing", "Account management", "Reporting"]
+    technical_concerns: ["Data integrity", "Audit trails", "Regulatory compliance"]
+    
+  healthcare:
+    key_patterns: ["Patient data", "Provider workflows", "Integration standards"]
+    technical_concerns: ["HIPAA compliance", "Data security", "Interoperability"]
+    
+  content_management:
+    key_patterns: ["Content modeling", "Publishing workflows", "Media handling"]
+    technical_concerns: ["Performance", "SEO", "Content delivery"]
+    
+  data_analytics:
+    key_patterns: ["Data pipelines", "Processing workflows", "Visualization"]
+    technical_concerns: ["Data quality", "Processing scale", "Real-time requirements"]
+
+# =============================================================================
+# UNDERSTANDING VALIDATION & SYNTHESIS
+# =============================================================================
+technical_synthesis:
+  architecture_summary: |
+    "Let me summarize the technical landscape I understand:
+    
+    **Architecture**: [ARCHITECTURE_PATTERN] using [PRIMARY_STACK]
+    **Key Technologies**: [TECH_LIST]
+    **Development Approach**: [WORKFLOW_SUMMARY]
+    **Testing Strategy**: [TESTING_APPROACH]
+    **Deployment**: [DEPLOYMENT_APPROACH]
+    **Performance Focus**: [PERFORMANCE_PRIORITIES]
+    **Key Constraints**: [MAIN_CONSTRAINTS]
+    
+    Does this accurately capture your technical setup?"
+  
+  clarification_opportunities:
+    - "What's the most important aspect I should understand better?"
+    - "Any key technical details I missed?"
+    - "What technical challenges should I keep in mind?"
+  
+  confidence_validation:
+    high_confidence: "Excellent! I have a clear technical picture. Let's explore the business domain."
+    medium_confidence: "I think I understand the technical setup, but let me confirm..."
+    low_confidence: "I want to make sure I understand your technical approach correctly..."
+
+# =============================================================================
+# TRANSITION CRITERIA & PREPARATION
+# =============================================================================
+completion_requirements:
+  must_have_before_stage_3:
+    - "Primary technology stack identified"
+    - "Architecture pattern understood (monolith/microservices/hybrid)"
+    - "Development workflow basics captured"
+    - "Testing approach documented"
+  
+  nice_to_have:
+    - "Deployment pipeline understood"
+    - "Performance requirements noted"
+    - "Technical constraints documented"
+    - "Tool preferences captured"
+
+stage_3_preparation:
+  technical_context_established:
+    - "Framework-specific patterns identified"
+    - "Development complexity level understood"
+    - "Team collaboration patterns noted"
+    - "Technical constraints and priorities clear"
+  
+  domain_transition_setup:
+    - "Technical foundation ready for business logic exploration"
+    - "Architecture understanding enables domain modeling questions"
+    - "Team size and process maturity informs domain complexity expectations"
+
+# =============================================================================
+# TRANSITION TO STAGE 3
+# =============================================================================
+stage_transition:
+  technical_completion: |
+    "Perfect! Now I understand your technical architecture and development 
+    approach. Next, let's explore the business side - the domain knowledge, 
+    terminology, and workflows that make your project unique."
+  
+  domain_preview: |
+    "I'll ask about your business entities, key terminology, user workflows, 
+    and any integrations or business rules. This helps Claude understand 
+    your specific domain and speak your language. Ready for about 7-10 minutes 
+    on the business domain?"
+  
+  context_handoff_to_stage_3:
+    technical_foundation:
+      - "Architecture patterns and technology choices"
+      - "Development workflow and tool preferences"
+      - "Testing approach and deployment strategy"
+      - "Performance requirements and constraints"
+      - "Team size and process maturity level"
+    
+    enables_domain_exploration:
+      - "Technical complexity level guides domain question depth"
+      - "Framework knowledge enables domain-specific implementation questions"
+      - "Team size informs business process complexity expectations"
+      - "Architecture understanding enables integration and data flow questions"

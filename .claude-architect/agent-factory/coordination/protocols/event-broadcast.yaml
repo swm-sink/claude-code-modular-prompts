@@ -1,0 +1,579 @@
+# Event Broadcasting System
+# Claude Context Architect - Deep Discovery Generation Engine
+# Version: 1.0
+# Purpose: Define event-driven coordination patterns for agent communication
+
+metadata:
+  version: "1.0"
+  created: "2025-08-07"
+  system: "Claude Context Architect Agent Coordination"
+  purpose: "Event-driven coordination and broadcast communication patterns"
+  performance_requirement: "<50ms event propagation time"
+
+# =============================================================================
+# CORE EVENT BROADCASTING FRAMEWORK
+# =============================================================================
+
+event_broadcasting_framework:
+  event_model:
+    event_driven_architecture: true
+    publish_subscribe_pattern: "topic_based_routing"
+    event_persistence: "session_scoped"
+    event_replay: "consultation_recovery_support"
+    
+  broadcasting_types:
+    system_wide_broadcast: "all_agents_notification"
+    category_selective: "agent_category_targeting"
+    layer_specific: "context_layer_based_routing"
+    capability_based: "agent_capability_matching"
+    
+  event_lifecycle:
+    event_creation: "agent_generates_event"
+    event_routing: "topic_based_distribution"
+    event_delivery: "subscriber_notification"
+    event_processing: "subscriber_handles_event"
+    event_acknowledgment: "processing_confirmation"
+
+# =============================================================================
+# EVENT TYPES AND CATEGORIES
+# =============================================================================
+
+event_categories:
+  
+  system_events:
+    description: "Core system state changes and lifecycle events"
+    event_types:
+      consultation_started:
+        description: "New deep discovery consultation session initiated"
+        payload_structure:
+          session_id: "unique_consultation_identifier"
+          user_preferences: "consultation_configuration"
+          estimated_duration: "time_allocation"
+          project_context: "initial_project_information"
+        subscribers: ["all_agents"]
+        
+      consultation_phase_transition:
+        description: "Transition between consultation phases"
+        payload_structure:
+          session_id: "consultation_identifier"
+          from_phase: "previous_phase_name"
+          to_phase: "new_phase_name"
+          phase_data: "phase_specific_context"
+          transition_time: "phase_change_timestamp"
+        subscribers: ["all_agents", "coordination_master"]
+        
+      consultation_completed:
+        description: "Consultation session successfully completed"
+        payload_structure:
+          session_id: "consultation_identifier"
+          completion_status: "success_or_partial"
+          generated_artifacts: "list_of_created_files"
+          consultation_summary: "key_outcomes_and_insights"
+          quality_metrics: "session_effectiveness_scores"
+        subscribers: ["all_agents", "documentation_agent"]
+        
+      emergency_stop:
+        description: "Immediate halt of all agent activities"
+        payload_structure:
+          reason: "emergency_stop_reason"
+          affected_operations: "list_of_stopped_operations"
+          recovery_instructions: "how_to_resume_safely"
+        priority: "urgent"
+        subscribers: ["all_agents"]
+        
+  context_events:
+    description: "Context layer changes and updates"
+    event_types:
+      context_layer_updated:
+        description: "Specific context layer has been modified"
+        payload_structure:
+          layer_id: "context_layer_identifier"
+          change_type: "enum[created, updated, deleted]"
+          change_summary: "description_of_modifications"
+          affected_agents: "agents_dependent_on_layer"
+          validation_required: "boolean_validation_flag"
+        subscribers: ["context_dependent_agents"]
+        
+      context_dependency_resolved:
+        description: "Previously missing context dependency now available"
+        payload_structure:
+          dependency_id: "dependency_identifier"
+          resolved_by_agent: "agent_that_resolved_dependency"
+          waiting_agents: "agents_that_were_blocked"
+          resolution_data: "newly_available_context"
+        subscribers: ["waiting_agents", "coordination_master"]
+        
+      context_validation_completed:
+        description: "Context validation process finished"
+        payload_structure:
+          validation_scope: "what_was_validated"
+          validation_results: "validation_outcomes"
+          quality_score: "context_quality_assessment"
+          improvement_recommendations: "suggested_enhancements"
+        subscribers: ["all_agents", "quality_assurance_agents"]
+        
+  agent_coordination_events:
+    description: "Inter-agent coordination and workflow events"
+    event_types:
+      agent_task_completed:
+        description: "Agent successfully completed assigned task"
+        payload_structure:
+          agent_id: "completing_agent_identifier"
+          task_id: "completed_task_reference"
+          completion_time: "task_duration"
+          deliverables: "produced_artifacts"
+          quality_metrics: "task_success_indicators"
+          next_actions: "recommended_follow_up_tasks"
+        subscribers: ["coordination_master", "dependent_agents"]
+        
+      agent_coordination_request:
+        description: "Agent requests coordination with other agents"
+        payload_structure:
+          requesting_agent: "agent_making_request"
+          coordination_type: "type_of_coordination_needed"
+          target_agents: "agents_to_coordinate_with"
+          coordination_data: "shared_coordination_context"
+          urgency_level: "coordination_priority"
+        subscribers: ["target_agents", "coordination_master"]
+        
+      workflow_milestone_reached:
+        description: "Important workflow milestone achieved"
+        payload_structure:
+          milestone_id: "milestone_identifier"
+          workflow_name: "parent_workflow"
+          achievement_data: "milestone_specific_outcomes"
+          progress_percentage: "overall_workflow_progress"
+          next_milestone: "upcoming_milestone_information"
+        subscribers: ["workflow_participants", "progress_tracking_agents"]
+        
+  quality_assurance_events:
+    description: "Quality control and validation events"
+    event_types:
+      quality_gate_failed:
+        description: "Quality gate validation failed"
+        payload_structure:
+          gate_id: "quality_gate_identifier"
+          failure_reason: "why_validation_failed"
+          failed_criteria: "specific_failing_requirements"
+          responsible_agent: "agent_whose_work_failed"
+          remediation_required: "corrective_actions_needed"
+        priority: "high"
+        subscribers: ["responsible_agent", "quality_guardian", "coordination_master"]
+        
+      tdd_violation_detected:
+        description: "Test-driven development process violation"
+        payload_structure:
+          violation_type: "enum[implementation_before_tests, no_failing_tests, inadequate_coverage]"
+          violating_agent: "agent_that_violated_tdd"
+          affected_code: "code_affected_by_violation"
+          enforcement_action: "enum[warning, code_deletion, task_reassignment]"
+        priority: "urgent"
+        subscribers: ["violating_agent", "testing_agent", "coordination_master"]
+        
+      performance_threshold_exceeded:
+        description: "Agent or system performance below acceptable levels"
+        payload_structure:
+          performance_metric: "specific_performance_indicator"
+          current_value: "measured_performance_value"
+          threshold_value: "expected_performance_threshold"
+          affected_operations: "operations_impacted"
+          optimization_suggestions: "recommended_improvements"
+        subscribers: ["performance_agent", "affected_agents", "coordination_master"]
+
+# =============================================================================
+# BROADCASTING PATTERNS
+# =============================================================================
+
+broadcasting_patterns:
+  
+  topic_based_routing:
+    description: "Route events based on topic hierarchies"
+    topic_hierarchy:
+      system:
+        - "system.consultation.lifecycle"
+        - "system.emergency"
+        - "system.configuration"
+      context:
+        - "context.layer.update"
+        - "context.dependency.resolution"
+        - "context.validation"
+      coordination:
+        - "coordination.workflow"
+        - "coordination.task"
+        - "coordination.milestone"
+      quality:
+        - "quality.gate"
+        - "quality.tdd"
+        - "quality.performance"
+        
+    subscription_patterns:
+      wildcard_subscriptions: "system.*" # All system events
+      specific_subscriptions: "context.layer.update" # Exact topic match
+      pattern_subscriptions: "coordination.*.milestone" # Pattern matching
+      
+  agent_category_broadcasting:
+    description: "Broadcast to specific agent categories"
+    categories:
+      core_coordination_agents:
+        - "architecture_agent"
+        - "code_generation_agent"
+        - "testing_agent"
+        - "debugging_agent"
+      specialized_analysis_agents:
+        - "documentation_agent"
+        - "review_agent"
+        - "performance_agent"
+        - "security_agent"
+      validation_maintenance_agents:
+        - "integration_agent"
+        - "domain_expert_agent"
+      domain_specific_agents:
+        - "refactoring_agent"
+        - "migration_agent"
+        - "devops_agent"
+        - "data_agent"
+        
+  context_layer_broadcasting:
+    description: "Broadcast to agents based on context layer dependencies"
+    layer_subscriptions:
+      layer_1_subscribers:
+        - "domain_expert_agent"
+        - "architecture_agent"
+        - "documentation_agent"
+      layer_2_subscribers:
+        - "architecture_agent"
+        - "performance_agent"
+        - "security_agent"
+        - "devops_agent"
+      layer_3_subscribers:
+        - "domain_expert_agent"
+        - "integration_agent"
+        - "data_agent"
+      layer_4_subscribers:
+        - "testing_agent"
+        - "review_agent"
+        - "refactoring_agent"
+        - "migration_agent"
+      layer_5_subscribers:
+        - "documentation_agent"
+        - "integration_agent"
+        - "domain_expert_agent"
+
+# =============================================================================
+# EVENT PROCESSING PATTERNS
+# =============================================================================
+
+event_processing_patterns:
+  
+  synchronous_processing:
+    description: "Immediate event processing with blocking behavior"
+    use_cases:
+      - "Emergency stop events"
+      - "Quality gate failures"
+      - "TDD violation enforcement"
+    processing_requirements:
+      max_processing_time: "5 seconds"
+      acknowledgment_required: true
+      failure_escalation: "immediate"
+      
+  asynchronous_processing:
+    description: "Non-blocking event processing"
+    use_cases:
+      - "Context layer updates"
+      - "Workflow milestone notifications"
+      - "Performance monitoring events"
+    processing_requirements:
+      max_processing_time: "30 seconds"
+      acknowledgment_optional: true
+      failure_escalation: "batched"
+      
+  batch_processing:
+    description: "Process multiple related events together"
+    use_cases:
+      - "Multiple context layer updates"
+      - "Bulk quality assessment events"
+      - "Performance metric collections"
+    processing_requirements:
+      batch_size: 10
+      batch_timeout: "60 seconds"
+      partial_batch_processing: true
+      
+  ordered_processing:
+    description: "Process events in strict sequence order"
+    use_cases:
+      - "Workflow state transitions"
+      - "Context dependency chains"
+      - "TDD enforcement sequences"
+    processing_requirements:
+      ordering_guarantee: "per_session_fifo"
+      out_of_order_handling: "buffer_and_reorder"
+      ordering_timeout: "300 seconds"
+
+# =============================================================================
+# EVENT FILTERING AND ROUTING
+# =============================================================================
+
+event_filtering:
+  
+  agent_capability_filtering:
+    description: "Filter events based on agent capabilities"
+    filtering_criteria:
+      required_tools: "agent_must_have_required_claude_tools"
+      expertise_domain: "agent_domain_must_match_event"
+      context_dependencies: "agent_must_have_context_access"
+      performance_capacity: "agent_must_meet_performance_requirements"
+      
+  priority_based_filtering:
+    description: "Filter events based on priority levels"
+    priority_levels:
+      urgent: "immediate_processing_required"
+      high: "process_within_30_seconds"
+      normal: "process_within_5_minutes"
+      low: "process_when_capacity_available"
+      
+  content_based_filtering:
+    description: "Filter events based on content criteria"
+    filtering_rules:
+      keyword_matching: "event_content_contains_keywords"
+      pattern_matching: "event_structure_matches_pattern"
+      value_range_filtering: "numeric_values_within_range"
+      boolean_criteria: "conditional_logic_evaluation"
+      
+  subscription_management:
+    dynamic_subscriptions: true
+    subscription_modification: "runtime_subscription_changes"
+    subscription_persistence: "session_scoped_subscriptions"
+    subscription_inheritance: "agent_category_default_subscriptions"
+
+# =============================================================================
+# RELIABILITY AND DELIVERY GUARANTEES
+# =============================================================================
+
+reliability_framework:
+  
+  delivery_guarantees:
+    at_least_once: "events_delivered_minimum_once"
+    exactly_once: "duplicate_detection_and_elimination"
+    ordered_delivery: "fifo_ordering_per_topic"
+    durable_delivery: "session_persistent_events"
+    
+  failure_handling:
+    dead_letter_queue: "failed_event_storage"
+    retry_mechanisms:
+      max_retries: 3
+      retry_intervals: [1, 5, 15] # seconds
+      exponential_backoff: true
+    failure_notification: "alert_coordination_master"
+    
+  acknowledgment_patterns:
+    automatic_acknowledgment: "successful_processing_auto_ack"
+    manual_acknowledgment: "explicit_agent_confirmation"
+    batch_acknowledgment: "acknowledge_multiple_events"
+    timeout_acknowledgment: "auto_ack_after_timeout"
+    
+  monitoring_and_alerting:
+    event_delivery_tracking: "per_event_delivery_status"
+    performance_monitoring: "delivery_latency_measurement"
+    failure_rate_monitoring: "error_rate_tracking"
+    capacity_monitoring: "queue_depth_and_throughput"
+
+# =============================================================================
+# CONSULTATION WORKFLOW INTEGRATION
+# =============================================================================
+
+consultation_integration:
+  
+  consultation_lifecycle_events:
+    session_initialization:
+      event: "consultation_started"
+      triggers:
+        - "Agent capacity reservation"
+        - "Context layer initialization" 
+        - "User preference configuration"
+      expected_responses:
+        - "Agent readiness confirmation"
+        - "Resource allocation completion"
+        - "Initial context loading"
+        
+    phase_transitions:
+      research_to_consultation:
+        event: "phase_transition"
+        data:
+          from_phase: "research_analysis"
+          to_phase: "interactive_consultation"
+          research_findings: "discovered_patterns_and_insights"
+        expected_responses:
+          - "Consultation questions generated"
+          - "Context refinement based on research"
+          
+      consultation_to_generation:
+        event: "phase_transition"
+        data:
+          from_phase: "interactive_consultation"
+          to_phase: "context_generation"
+          consultation_results: "user_preferences_and_requirements"
+        expected_responses:
+          - "Context generation initiated"
+          - "Agent specialization begins"
+          
+    session_completion:
+      event: "consultation_completed"
+      triggers:
+        - "Final artifact validation"
+        - "Quality assessment completion"
+        - "User satisfaction confirmation"
+      expected_responses:
+        - "Resource cleanup and release"
+        - "Session artifact archival"
+        - "Performance metrics reporting"
+        
+  progress_broadcasting:
+    milestone_notifications:
+      frequency: "major_milestone_completion"
+      content: "milestone_achievement_details"
+      subscribers: ["coordination_master", "user_interface"]
+      
+    progress_updates:
+      frequency: "every_30_seconds_or_significant_change"
+      content: "current_activity_and_percentage_complete"
+      subscribers: ["coordination_master", "user_interface"]
+      
+    quality_gate_notifications:
+      trigger: "quality_validation_completion"
+      content: "validation_results_and_recommendations"
+      subscribers: ["coordination_master", "quality_agents"]
+
+# =============================================================================
+# PERFORMANCE OPTIMIZATION
+# =============================================================================
+
+performance_optimization:
+  
+  event_batching:
+    batch_size_optimization: "balance_latency_and_throughput"
+    optimal_batch_sizes:
+      high_frequency_events: 5
+      medium_frequency_events: 10
+      low_frequency_events: 20
+    batch_timeout: "2 seconds maximum"
+    
+  filtering_optimization:
+    early_filtering: "filter_at_source_before_routing"
+    index_based_filtering: "pre_computed_subscription_indices"
+    bloom_filter_optimization: "probabilistic_filtering_for_speed"
+    
+  routing_optimization:
+    routing_table_caching: "cache_frequently_used_routes"
+    direct_delivery_paths: "bypass_routing_for_direct_subscriptions"
+    load_balancing: "distribute_events_across_agent_instances"
+    
+  memory_management:
+    event_buffer_limits: "maximum_100_events_per_agent"
+    garbage_collection: "automatic_processed_event_cleanup"
+    memory_pressure_handling: "event_dropping_under_pressure"
+
+# =============================================================================
+# SECURITY AND ACCESS CONTROL
+# =============================================================================
+
+security_framework:
+  
+  event_authentication:
+    source_verification: "verify_event_originated_from_legitimate_agent"
+    integrity_checking: "event_payload_tampering_detection"
+    replay_protection: "prevent_event_replay_attacks"
+    
+  access_control:
+    subscription_authorization: "agents_can_only_subscribe_to_relevant_topics"
+    event_publishing_authorization: "agents_can_only_publish_authorized_events"
+    cross_agent_communication: "validate_inter_agent_communication_permissions"
+    
+  audit_logging:
+    event_audit_trail: "complete_event_lifecycle_logging"
+    access_audit_logging: "subscription_and_publishing_access_logs"
+    security_event_logging: "authentication_and_authorization_failures"
+    
+  privacy_protection:
+    sensitive_data_masking: "automatic_sensitive_information_redaction"
+    data_retention_limits: "session_scoped_data_retention"
+    secure_event_storage: "encrypted_event_persistence"
+
+# =============================================================================
+# MONITORING AND DEBUGGING
+# =============================================================================
+
+monitoring_framework:
+  
+  event_flow_monitoring:
+    real_time_dashboards: "live_event_flow_visualization"
+    metrics_collection:
+      events_per_second: "throughput_measurement"
+      event_processing_latency: "end_to_end_processing_time"
+      subscription_activity: "agent_subscription_utilization"
+      error_rates: "event_processing_failure_rates"
+      
+  debugging_capabilities:
+    event_tracing: "trace_individual_events_through_system"
+    subscription_debugging: "debug_subscription_matching_logic"
+    performance_profiling: "identify_event_processing_bottlenecks"
+    failure_analysis: "detailed_failure_cause_analysis"
+    
+  alerting_system:
+    threshold_based_alerts: "alert_when_metrics_exceed_thresholds"
+    anomaly_detection: "detect_unusual_event_patterns"
+    capacity_alerts: "warn_when_approaching_capacity_limits"
+    quality_alerts: "alert_on_quality_degradation"
+
+# =============================================================================
+# INTEGRATION EXAMPLES
+# =============================================================================
+
+integration_examples:
+  
+  tdd_enforcement_workflow:
+    description: "Event-driven TDD enforcement coordination"
+    event_sequence:
+      1:
+        event: "agent_task_completed"
+        agent: "testing_agent"
+        data: "failing_tests_written"
+        subscribers: ["code_generation_agent"]
+        
+      2:
+        event: "tdd_violation_detected"
+        trigger: "implementation_started_before_tests"
+        data: "violation_details"
+        subscribers: ["violating_agent", "coordination_master"]
+        enforcement_action: "code_deletion"
+        
+      3:
+        event: "quality_gate_failed"
+        trigger: "insufficient_test_coverage"
+        data: "coverage_metrics"
+        subscribers: ["testing_agent", "coordination_master"]
+        remediation: "additional_tests_required"
+        
+  context_propagation_workflow:
+    description: "Context layer update propagation"
+    event_sequence:
+      1:
+        event: "context_layer_updated"
+        layer: "layer_2_technical_architecture"
+        data: "new_framework_detected"
+        subscribers: ["architecture_dependent_agents"]
+        
+      2:
+        event: "agent_coordination_request"
+        requesting_agent: "architecture_agent"
+        coordination_type: "parallel_analysis"
+        target_agents: ["code_generation_agent", "performance_agent"]
+        
+      3:
+        event: "workflow_milestone_reached"
+        milestone: "architecture_analysis_complete"
+        data: "analysis_results"
+        subscribers: ["dependent_workflow_participants"]
+
+# =============================================================================
+# END OF EVENT BROADCASTING SYSTEM
+# =============================================================================

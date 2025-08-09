@@ -1,0 +1,560 @@
+# Adaptation Rules - Dynamic Consultation Adjustment System
+# Intelligent rule engine for adapting questions based on context, time, engagement, and expertise
+# Version: 1.0 - Context-Responsive Adaptation
+# Purpose: Ensure optimal consultation flow regardless of user or project variability
+
+# =============================================================================
+# ADAPTATION SYSTEM ARCHITECTURE
+# =============================================================================
+adaptation_system:
+  version: "1.0"
+  philosophy: "Adapt to user needs while maintaining information quality"
+  adaptation_factors:
+    - "Time remaining and pacing"
+    - "User expertise and engagement level"
+    - "Project complexity and domain"
+    - "Response quality and completeness"
+    - "Information gaps and priorities"
+  
+  real_time_adjustments:
+    - "Question depth and complexity"
+    - "Follow-up generation strategy"
+    - "Skip logic and prioritization"  
+    - "Communication style and approach"
+    - "Stage transitions and flow control"
+
+# =============================================================================
+# TIME-BASED ADAPTATION RULES
+# =============================================================================
+time_management_rules:
+  
+  # ---------------------------------------------------------------------------
+  # Ahead of Schedule Adaptations
+  # ---------------------------------------------------------------------------
+  ahead_of_schedule:
+    trigger_conditions:
+      - "Current time < (stage_target_time * 0.8)"
+      - "More than 3 minutes ahead of pace"
+      - "Information gathering proceeding quickly"
+    
+    adaptation_strategies:
+      question_depth:
+        increase_depth: "Add 'deep' level questions to current categories"
+        explore_tangents: "Allow interesting side topics to be explored"
+        comprehensive_coverage: "Include all 'nice-to-have' question categories"
+        
+      follow_up_expansion:
+        advanced_follow_ups: "Include advanced technical or business follow-ups"
+        multiple_angles: "Explore topics from different perspectives"
+        optimization_focus: "Add questions about optimization and best practices"
+        
+      user_engagement:
+        invite_elaboration: "Encourage user to expand on interesting topics"
+        explore_challenges: "Deep dive into current challenges and pain points"
+        future_planning: "Discuss future goals and growth plans"
+    
+    example_adaptations:
+      standard_question: "What's your testing approach?"
+      expanded_question: "What's your testing approach? Are you doing TDD, have specific coverage targets, any testing automation in CI/CD?"
+      
+      standard_follow_up: "What testing frameworks?"
+      expanded_follow_up: "What testing frameworks, and how do you handle test data management, mocking strategies, performance testing?"
+
+  # ---------------------------------------------------------------------------
+  # On Schedule Adaptations  
+  # ---------------------------------------------------------------------------
+  on_schedule:
+    trigger_conditions:
+      - "Current time within ±1 minute of stage target"
+      - "Standard pacing maintained"
+      - "Information quality meeting expectations"
+    
+    adaptation_strategies:
+      maintain_flow:
+        standard_depth: "Use standard depth questions as designed"
+        planned_coverage: "Complete all essential question categories"
+        balanced_approach: "Balance breadth and depth appropriately"
+        
+      quality_focus:
+        ensure_completeness: "Verify essential information is captured"
+        validate_understanding: "Include understanding check questions"
+        maintain_engagement: "Keep user engaged without rushing"
+    
+    monitoring_points:
+      - "Watch for signs of falling behind"
+      - "Monitor user engagement levels"
+      - "Ensure information quality remains high"
+
+  # ---------------------------------------------------------------------------
+  # Behind Schedule Adaptations
+  # ---------------------------------------------------------------------------
+  behind_schedule:
+    trigger_conditions:
+      - "Current time > (stage_target_time * 1.2)"
+      - "More than 2 minutes behind target pace"
+      - "Approaching stage time limits"
+    
+    adaptation_strategies:
+      question_prioritization:
+        essential_only: "Skip all 'nice-to-have' questions"
+        reduce_depth: "Move from 'deep' to 'standard' or 'essential' questions"
+        combine_questions: "Merge related questions into single comprehensive questions"
+        
+      follow_up_reduction:
+        critical_follow_ups: "Only ask follow-ups for critical information gaps"
+        skip_clarifications: "Accept medium-confidence responses"
+        streamline_validation: "Reduce understanding confirmation steps"
+        
+      communication_efficiency:
+        direct_questions: "Use more closed-ended rather than open-ended questions"
+        faster_transitions: "Reduce transition time between questions"
+        quick_summaries: "Brief understanding checks instead of comprehensive validation"
+    
+    example_adaptations:
+      standard_question: "Tell me about your testing approach and what frameworks you use"
+      streamlined_question: "Testing: unit tests, integration tests, or still building that up?"
+      
+      multiple_questions_combined: "Architecture, main frameworks, and database in one question"
+
+  # ---------------------------------------------------------------------------
+  # Critical Time Pressure Adaptations
+  # ---------------------------------------------------------------------------
+  critical_time_pressure:
+    trigger_conditions:
+      - "Within 5 minutes of total consultation limit"
+      - "Multiple stages incomplete"
+      - "User indicates time pressure"
+    
+    emergency_adaptations:
+      automatic_quick_mode:
+        enable_immediately: "Switch to quick mode without asking"
+        essential_information: "Focus only on must-have information for context generation"
+        rapid_completion: "Complete remaining stages in 60 seconds each"
+        
+      information_triage:
+        absolute_essentials: "Project type, tech stack, domain, team size only"
+        skip_preferences: "Use smart defaults for coding standards and preferences"
+        defer_nice_to_have: "Mark areas for potential future follow-up"
+        
+      graceful_completion:
+        offer_pause: "Suggest pausing and resuming later if user prefers"
+        summary_focus: "Prioritize capturing complete picture over details"
+        follow_up_offer: "Offer to continue conversation after initial context generation"
+
+# =============================================================================
+# EXPERTISE-BASED ADAPTATION RULES
+# =============================================================================
+expertise_adaptation_rules:
+  
+  # ---------------------------------------------------------------------------
+  # Beginner User Adaptations
+  # ---------------------------------------------------------------------------
+  beginner_detected:
+    detection_indicators:
+      project_structure: "Simple, standard patterns"
+      technology_stack: "Basic frameworks, minimal customization"
+      responses: "Learning-oriented, requests for guidance"
+      terminology: "Generic terms, avoids technical jargon"
+      uncertainty: "Frequent uncertainty markers in responses"
+    
+    adaptation_strategies:
+      question_approach:
+        add_context: "Provide background information with questions"
+        define_terms: "Explain technical concepts mentioned"
+        offer_examples: "Give concrete examples to illustrate concepts"
+        encourage_learning: "Frame questions as learning opportunities"
+        
+      communication_style:
+        supportive_tone: "Encouraging, non-judgmental approach"
+        educational_focus: "Emphasize learning and growth value"
+        best_practices: "Include guidance on recommended approaches"
+        resource_offers: "Suggest learning resources when appropriate"
+        
+      follow_up_strategy:
+        explain_why: "Explain why questions matter for their setup"
+        connect_dots: "Show how technical choices affect their goals"
+        simplify_complexity: "Break complex topics into digestible pieces"
+    
+    example_adaptations:
+      standard_question: "What's your deployment process?"
+      beginner_adapted: "How do you currently get your code from development to live/production? This could be manual uploads, cloud services like Vercel, or even just local testing for now."
+      
+      follow_up_explanation: "Understanding your deployment helps me recommend commands that fit your current process and suggest improvements as you grow."
+
+  # ---------------------------------------------------------------------------
+  # Intermediate User Adaptations
+  # ---------------------------------------------------------------------------
+  intermediate_detected:
+    detection_indicators:
+      project_structure: "Some complexity, growing sophistication"
+      technology_stack: "Mix of basic and advanced tools"
+      responses: "Confident in some areas, uncertain in others"
+      experience_gaps: "Good understanding with specific knowledge gaps"
+    
+    adaptation_strategies:
+      balanced_approach:
+        standard_depth: "Use standard question depth as baseline"
+        fill_gaps: "Focus on areas where they show uncertainty"
+        build_on_strengths: "Leverage areas where they're confident"
+        growth_oriented: "Include questions about expanding their approach"
+        
+      communication_style:
+        collaborative_tone: "Peer-to-peer discussion approach"
+        option_presentation: "Present alternatives and trade-offs"
+        experience_validation: "Acknowledge their existing knowledge"
+        improvement_focus: "Emphasize optimization and enhancement"
+    
+    example_adaptations:
+      question_calibration: "Adjust complexity based on specific topic confidence"
+      knowledge_building: "Connect new concepts to their existing understanding"
+      practical_focus: "Emphasize actionable improvements they can implement"
+
+  # ---------------------------------------------------------------------------
+  # Expert User Adaptations
+  # ---------------------------------------------------------------------------
+  expert_detected:
+    detection_indicators:
+      project_structure: "Complex, sophisticated architecture"
+      technology_stack: "Advanced tools, custom configurations"
+      responses: "Detailed, confident, uses technical terminology"
+      optimization_focus: "Mentions performance, scalability, best practices"
+    
+    adaptation_strategies:
+      high_level_approach:
+        assume_knowledge: "Don't explain basic concepts"
+        technical_depth: "Use precise technical terminology"
+        optimization_focus: "Focus on efficiency and advanced patterns"
+        challenge_assumptions: "Engage in technical discussion"
+        
+      communication_style:
+        peer_expert_tone: "Technical professional discussion"
+        efficiency_focus: "Respect their time, get to the point"
+        advanced_topics: "Include sophisticated architectural discussions"
+        pattern_recognition: "Discuss design patterns and trade-offs"
+    
+    example_adaptations:
+      standard_question: "How do you handle testing?"
+      expert_adapted: "Testing strategy - TDD, mutation testing, property-based testing? Coverage targets and CI integration patterns?"
+      
+      architectural_depth: "Include questions about design patterns, performance optimization, scaling strategies"
+
+# =============================================================================
+# ENGAGEMENT-BASED ADAPTATION RULES
+# =============================================================================
+engagement_adaptation_rules:
+  
+  # ---------------------------------------------------------------------------
+  # High Engagement Adaptations
+  # ---------------------------------------------------------------------------
+  high_engagement:
+    detection_indicators:
+      response_length: "Detailed, comprehensive responses"
+      enthusiasm_markers: "Positive language, enthusiasm, elaboration"
+      proactive_information: "Volunteers additional context and details"
+      follow_up_questions: "Asks questions back, shows curiosity"
+    
+    adaptation_strategies:
+      leverage_momentum:
+        encourage_elaboration: "Ask follow-ups that invite more detail"
+        explore_tangents: "Allow interesting side discussions"
+        deep_dive_opportunities: "Include advanced questions when relevant"
+        comprehensive_coverage: "Cover more ground while engagement is high"
+        
+      maintain_energy:
+        show_interest: "Acknowledge interesting aspects of their project"
+        build_on_enthusiasm: "Focus on areas they're excited about"
+        validate_expertise: "Recognize and appreciate their knowledge"
+    
+    adaptation_examples:
+      leverage_detail: "When they give comprehensive answer, ask advanced follow-ups"
+      explore_passion: "When they show excitement about a topic, dive deeper"
+      technical_discussion: "Engage in sophisticated technical conversation"
+
+  # ---------------------------------------------------------------------------
+  # Medium Engagement Adaptations
+  # ---------------------------------------------------------------------------
+  medium_engagement:
+    detection_indicators:
+      response_adequacy: "Answers questions but doesn't elaborate much"
+      standard_participation: "Cooperative but not enthusiastic"
+      consistent_quality: "Steady participation without peaks"
+    
+    adaptation_strategies:
+      maintain_momentum:
+        standard_approach: "Continue with planned question flow"
+        interest_checks: "Occasionally check for areas of higher interest"
+        variety_introduction: "Mix question types to find engagement points"
+        progress_indicators: "Show progress and value being extracted"
+        
+      engagement_enhancement:
+        relevant_examples: "Use examples that relate to their specific project"
+        value_demonstration: "Clearly connect questions to their benefits"
+        interactive_elements: "Include validation and confirmation steps"
+    
+    monitoring_strategies:
+      watch_for_changes: "Monitor for drops or increases in engagement"
+      adjust_accordingly: "Be ready to shift approach if engagement changes"
+      maintain_quality: "Ensure information extraction remains effective"
+
+  # ---------------------------------------------------------------------------
+  # Low Engagement Adaptations
+  # ---------------------------------------------------------------------------
+  low_engagement:
+    detection_indicators:
+      brief_responses: "Very short, minimal detail answers"
+      time_pressure_signs: "Mentions time constraints, seems rushed"
+      distraction_indicators: "Delayed responses, minimal attention"
+      disengagement_markers: "Requests to speed up, skip questions"
+    
+    adaptation_strategies:
+      immediate_adjustments:
+        quick_mode_switch: "Automatically enable quick mode"
+        essential_focus: "Focus only on must-have information"
+        streamline_questions: "Use more closed-ended, efficient questions"
+        reduce_total_count: "Skip all non-essential question categories"
+        
+      recovery_attempts:
+        check_timing: "Ask if timing is an issue, offer to pause"
+        increase_relevance: "Focus on areas most relevant to their immediate needs"
+        demonstrate_value: "Clearly show how questions benefit their goals"
+        offer_alternatives: "Suggest different approaches or formats"
+        
+      graceful_handling:
+        respect_constraints: "Acknowledge their time or attention limits"
+        preserve_relationship: "Maintain positive tone despite constraints"
+        future_opportunities: "Offer to continue later if appropriate"
+    
+    example_adaptations:
+      question_compression: "Combine multiple questions into single essential queries"
+      binary_choices: "Use yes/no or multiple choice instead of open-ended"
+      rapid_completion: "Complete consultation in minimal time while capturing essentials"
+
+# =============================================================================
+# PROJECT COMPLEXITY ADAPTATION RULES
+# =============================================================================
+project_complexity_rules:
+  
+  # ---------------------------------------------------------------------------
+  # Simple Project Adaptations
+  # ---------------------------------------------------------------------------
+  simple_project:
+    detection_indicators:
+      technology_stack: "Basic frameworks, standard patterns"
+      team_size: "Solo or very small team (1-2 people)"
+      architecture: "Simple, straightforward structure"
+      requirements: "Clear, limited scope"
+    
+    adaptation_strategies:
+      streamlined_approach:
+        focus_essentials: "Skip advanced architectural questions"
+        productivity_emphasis: "Focus on developer productivity and learning"
+        standard_patterns: "Assume common patterns, confirm briefly"
+        growth_preparation: "Include questions about future growth plans"
+        
+      appropriate_depth:
+        avoid_over_engineering: "Don't suggest overly complex solutions"
+        practical_focus: "Emphasize practical, immediate value"
+        learning_opportunities: "Include educational aspects"
+    
+    question_adaptations:
+      skip_enterprise: "Skip enterprise architecture and governance questions"
+      focus_individual: "Emphasize individual developer experience"
+      future_planning: "Include questions about anticipated growth"
+
+  # ---------------------------------------------------------------------------
+  # Complex Project Adaptations  
+  # ---------------------------------------------------------------------------
+  complex_project:
+    detection_indicators:
+      technology_stack: "Multiple frameworks, sophisticated tooling"
+      team_size: "Medium to large team (5+ people)"
+      architecture: "Microservices, distributed systems, advanced patterns"
+      requirements: "Complex business logic, integration needs"
+    
+    adaptation_strategies:
+      comprehensive_coverage:
+        architectural_depth: "Include advanced architectural questions"
+        integration_focus: "Emphasize system integration and coordination"
+        governance_aspects: "Include questions about standards and governance"
+        performance_scaling: "Focus on performance and scalability concerns"
+        
+      appropriate_sophistication:
+        assume_complexity: "Don't oversimplify questions or explanations"
+        system_thinking: "Focus on system-wide concerns and trade-offs"
+        team_coordination: "Emphasize multi-person and multi-team coordination"
+    
+    question_adaptations:
+      include_enterprise: "Add enterprise patterns and governance questions"
+      system_integration: "Focus on integration patterns and data flow"
+      team_dynamics: "Emphasize coordination and collaboration aspects"
+
+# =============================================================================
+# DOMAIN-SPECIFIC ADAPTATION RULES
+# =============================================================================
+domain_adaptation_rules:
+  
+  # ---------------------------------------------------------------------------
+  # Regulated Industry Adaptations
+  # ---------------------------------------------------------------------------
+  regulated_industries:
+    applicable_domains: ["healthcare", "finance", "government", "education"]
+    
+    detection_indicators:
+      compliance_mentions: "HIPAA, SOX, GDPR, FERPA references"
+      security_focus: "Strong emphasis on data security and privacy"
+      audit_requirements: "Mentions of audit trails, compliance reporting"
+      regulatory_constraints: "References to regulatory restrictions"
+    
+    adaptation_strategies:
+      compliance_focus:
+        security_emphasis: "Prioritize security and privacy questions"
+        audit_requirements: "Include audit trail and reporting questions"
+        data_governance: "Focus on data handling and governance"
+        compliance_validation: "Verify understanding of regulatory requirements"
+        
+      risk_awareness:
+        conservative_approach: "Emphasize proven, stable solutions"
+        documentation_importance: "Highlight documentation and process requirements"
+        change_management: "Include questions about change approval processes"
+    
+    priority_question_areas:
+      - "Data security and encryption requirements"
+      - "Audit trail and compliance reporting capabilities"
+      - "Access control and authentication patterns"
+      - "Data retention and deletion policies"
+
+  # ---------------------------------------------------------------------------
+  # High-Performance Domain Adaptations
+  # ---------------------------------------------------------------------------
+  high_performance_domains:
+    applicable_domains: ["gaming", "fintech", "real-time-systems", "high-frequency-trading"]
+    
+    detection_indicators:
+      performance_mentions: "Latency, throughput, real-time requirements"
+      optimization_focus: "Performance optimization, efficiency concerns"
+      scale_requirements: "High traffic, large data volumes, concurrency"
+    
+    adaptation_strategies:
+      performance_priority:
+        optimization_questions: "Include detailed performance optimization questions"
+        scaling_focus: "Emphasize horizontal and vertical scaling strategies"
+        monitoring_emphasis: "Focus on performance monitoring and alerting"
+        bottleneck_identification: "Include questions about current and anticipated bottlenecks"
+    
+    priority_question_areas:
+      - "Performance bottlenecks and optimization strategies"
+      - "Caching and data access patterns"
+      - "Monitoring and performance measurement"
+      - "Scaling strategies and capacity planning"
+
+# =============================================================================
+# RESPONSE QUALITY ADAPTATION RULES
+# =============================================================================
+response_quality_rules:
+  
+  # ---------------------------------------------------------------------------
+  # High-Quality Response Adaptations
+  # ---------------------------------------------------------------------------
+  high_quality_responses:
+    detection_indicators:
+      detailed_content: "Comprehensive, specific information provided"
+      technical_accuracy: "Accurate technical details and terminology"
+      context_awareness: "Shows understanding of questions and their purpose"
+      consistency: "Responses align with previous answers"
+    
+    adaptation_strategies:
+      leverage_quality:
+        advanced_follow_ups: "Ask sophisticated follow-up questions"
+        build_on_details: "Use provided information to generate relevant next questions"
+        assume_competence: "Increase question complexity appropriately"
+        efficient_progression: "Move through material more quickly"
+    
+    benefits:
+      faster_completion: "High-quality responses enable faster consultation completion"
+      deeper_understanding: "Can achieve greater depth in limited time"
+      better_context: "Results in higher quality context generation"
+
+  # ---------------------------------------------------------------------------
+  # Variable Quality Response Adaptations
+  # ---------------------------------------------------------------------------
+  variable_quality_responses:
+    detection_indicators:
+      inconsistent_depth: "Some detailed responses, others brief"
+      topic_dependent: "Quality varies by subject area"
+      confidence_fluctuation: "Confidence levels change across topics"
+    
+    adaptation_strategies:
+      topic_specific_approach:
+        leverage_strengths: "Go deeper in areas where they provide good detail"
+        support_weak_areas: "Provide more context and examples for uncertain topics"
+        balance_coverage: "Ensure comprehensive coverage despite quality variation"
+        adaptive_depth: "Adjust question depth based on topic-specific response quality"
+
+  # ---------------------------------------------------------------------------
+  # Low-Quality Response Recovery
+  # ---------------------------------------------------------------------------
+  low_quality_responses:
+    detection_indicators:
+      vague_content: "Generic, non-specific responses"
+      minimal_detail: "Very brief answers with little information"
+      confusion_signs: "Responses suggest misunderstanding of questions"
+      inconsistency: "Contradictory information across responses"
+    
+    recovery_strategies:
+      clarification_focus:
+        provide_examples: "Give concrete examples to illustrate questions"
+        simplify_language: "Use simpler, more direct language"
+        break_down_questions: "Split complex questions into smaller parts"
+        confirm_understanding: "Verify questions are understood before expecting answers"
+        
+      engagement_recovery:
+        check_context: "Verify appropriate expertise level assumptions"
+        adjust_approach: "Change communication style if needed"
+        provide_value: "Clearly demonstrate how questions benefit them"
+        offer_alternatives: "Suggest different ways to approach information gathering"
+
+# =============================================================================
+# INTEGRATION AND ORCHESTRATION
+# =============================================================================
+adaptation_orchestration:
+  
+  # ---------------------------------------------------------------------------
+  # Multi-Factor Adaptation
+  # ---------------------------------------------------------------------------
+  combined_adaptations:
+    example_scenarios:
+      "beginner + time_pressure + simple_project":
+        strategy: "Ultra-streamlined essential questions with supportive explanations"
+        approach: "Focus on must-haves while maintaining encouraging tone"
+        
+      "expert + high_engagement + complex_project":
+        strategy: "Deep technical discussion with comprehensive coverage"
+        approach: "Leverage expertise and enthusiasm for thorough exploration"
+        
+      "intermediate + behind_schedule + regulated_domain":
+        strategy: "Prioritize compliance-critical questions, standard depth"
+        approach: "Balance time constraints with regulatory requirements"
+  
+  # ---------------------------------------------------------------------------
+  # Dynamic Adaptation Process
+  # ---------------------------------------------------------------------------
+  real_time_adaptation:
+    continuous_monitoring:
+      - "Track engagement levels throughout consultation"
+      - "Monitor time pacing and adjust accordingly"
+      - "Assess response quality and adapt question complexity"
+      - "Watch for user signals (time pressure, confusion, enthusiasm)"
+    
+    adaptive_responses:
+      - "Adjust question selection based on current context"
+      - "Modify communication style to match user needs"
+      - "Balance information gathering with user experience"
+      - "Ensure high-quality outcome regardless of adaptations"
+    
+    quality_maintenance:
+      - "Ensure essential information is always captured"
+      - "Maintain consultation value despite adaptations"
+      - "Preserve user engagement and satisfaction"
+      - "Enable successful context generation from gathered information"
+
+This adaptation rule system ensures that every consultation is optimally calibrated to the specific user, project, and situational context, maximizing both information quality and user experience.

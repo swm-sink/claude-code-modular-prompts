@@ -1,0 +1,489 @@
+# Session Control Commands - Deep Discovery Consultation
+# User-facing commands for session management and control
+# Purpose: Give users complete control over their consultation session
+# Version: 1.0 - Production Session Control System
+
+# =============================================================================
+# SESSION CONTROL COMMAND ARCHITECTURE
+# =============================================================================
+session_commands:
+  version: "1.0"
+  command_philosophy: "user_empowerment_and_control"
+  integration: "seamless_consultation_flow"
+  design_principles:
+    accessibility: "Simple, memorable commands for easy session control"
+    transparency: "Clear feedback on all session control actions"
+    safety: "Confirmation for destructive actions, easy recovery"
+    flexibility: "Support various user preferences and workflows"
+    intelligence: "Smart defaults and context-aware suggestions"
+
+# =============================================================================
+# PRIMARY SESSION CONTROL COMMANDS
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# PAUSE COMMAND - Save State and Exit Gracefully
+# ---------------------------------------------------------------------------
+pause_command:
+  command_name: "pause"
+  aliases: ["stop", "break", "save-and-exit"]
+  category: "session_control"
+  
+  usage_patterns:
+    immediate_pause: "/pause"
+    pause_with_reason: "/pause Need to step away for meeting"
+    pause_with_instructions: "/pause Will continue tomorrow morning"
+    checkpoint_pause: "/pause --checkpoint Save major progress point"
+  
+  execution_logic:
+    step_1_preparation:
+      - "Capture current question and response state"
+      - "Calculate accurate progress and time metrics" 
+      - "Assess information quality and completeness"
+      - "Prepare session summary for user"
+      
+    step_2_user_interaction:
+      - "Present current progress summary"
+      - "Confirm pause intention and collect reason"
+      - "Offer session naming or notes options"
+      - "Provide resume guidance and session ID"
+      
+    step_3_state_persistence:
+      - "Generate unique session ID if new session"
+      - "Save complete session state to persistent storage"
+      - "Create backup checkpoint"
+      - "Update session metadata with pause information"
+      
+    step_4_graceful_exit:
+      - "Confirm successful save with session details"
+      - "Provide clear resume instructions"
+      - "Thank user and close consultation cleanly"
+  
+  output_template: |
+    ⏸️ **Consultation Paused Successfully**
+    
+    **Progress Saved**:
+    • Session ID: {session_id}
+    • Progress: {overall_completion}% complete
+    • Time invested: {elapsed_time} minutes
+    • Quality score: {quality_score}%
+    • Current position: Stage {stage_number}, {current_focus}
+    
+    **When you're ready to continue**:
+    Use: `/resume {session_id}` or `/resume "{session_name}"`
+    
+    **Estimated time to completion**: {estimated_remaining} minutes
+    
+    **What we'll cover next**: {next_steps_preview}
+    
+    Thank you for your time! Your progress is safely saved.
+  
+  error_handling:
+    save_failure:
+      message: "Failed to save session. Retrying with backup method..."
+      recovery: "Attempt alternative save location and notify user"
+      
+    permission_denied:
+      message: "Cannot save to default location. Trying alternative..."
+      recovery: "Use temporary save location and guide user to resolution"
+      
+    disk_full:
+      message: "Storage full. Cleaning up old sessions..."
+      recovery: "Clean old sessions automatically and retry save"
+
+# ---------------------------------------------------------------------------
+# RESUME COMMAND - Continue from Saved State
+# ---------------------------------------------------------------------------
+resume_command:
+  command_name: "resume"
+  aliases: ["continue", "restart", "load"]
+  category: "session_control"
+  
+  usage_patterns:
+    resume_by_id: "/resume 550e8400-e29b-41d4-a716-446655440000"
+    resume_by_name: "/resume React E-commerce Deep Dive"
+    resume_interactive: "/resume --interactive"
+    quick_resume: "/resume --quick Latest session, skip warm-up"
+  
+  execution_logic:
+    step_1_session_discovery:
+      - "Identify target session by ID, name, or interaction"
+      - "Validate session file integrity and accessibility"
+      - "Check schema compatibility and version"
+      - "Prepare session loading and context reconstruction"
+      
+    step_2_context_reconstruction:
+      - "Load complete session state and validate consistency"
+      - "Rebuild project understanding and consultation context"
+      - "Restore progress tracking and quality metrics"
+      - "Recalibrate user preferences and communication style"
+      
+    step_3_warm_up_process:
+      - "Present comprehensive progress summary"
+      - "Validate context accuracy with user"
+      - "Check for any project changes since last session"
+      - "Confirm readiness to continue from current position"
+      
+    step_4_seamless_continuation:
+      - "Position at exact continuation point"
+      - "Apply intelligent context bridging"
+      - "Resume questioning flow with full context"
+      - "Monitor for successful re-engagement"
+  
+  output_template: |
+    🔄 **Session Resumed Successfully**
+    
+    **Welcome back to your deep discovery consultation!**
+    
+    **Session Overview**:
+    • Session: {session_name}
+    • Progress: {overall_completion}% complete
+    • Time invested: {elapsed_time} minutes
+    • Quality: {quality_score}% ({quality_rating})
+    • Gap since last session: {time_since_last_session}
+    
+    **What we discovered about your project**:
+    {key_discoveries_summary}
+    
+    **Current focus**: We're in Stage {stage_number} ({stage_name}), exploring {current_area}.
+    
+    **Next steps**: {next_questions_preview}
+    
+    **Estimated remaining time**: {estimated_remaining} minutes
+    
+    Does this summary accurately capture where we left off? Ready to continue?
+  
+  error_handling:
+    session_not_found:
+      message: "Session not found. Here are available sessions:"
+      recovery: "Present list of available sessions for selection"
+      
+    corrupted_session:
+      message: "Session file corrupted. Attempting recovery..."
+      recovery: "Try backup restoration or graceful degradation"
+      
+    version_incompatibility:
+      message: "Session from older version. Applying migration..."
+      recovery: "Migrate session format and continue"
+
+# ---------------------------------------------------------------------------
+# STATUS COMMAND - Show Current Progress
+# ---------------------------------------------------------------------------
+status_command:
+  command_name: "status"
+  aliases: ["progress", "check", "where-am-i"]
+  category: "session_monitoring"
+  
+  usage_patterns:
+    quick_status: "/status"
+    detailed_status: "/status --detailed"
+    visual_status: "/status --visual"
+    time_focus: "/status --time"
+  
+  execution_logic:
+    information_gathering:
+      - "Calculate current progress across all dimensions"
+      - "Assess information quality and confidence levels"
+      - "Determine time progress and estimates"
+      - "Identify information gaps and next priorities"
+      
+    presentation_formatting:
+      - "Format progress information for clarity"
+      - "Generate appropriate visual representations"
+      - "Prepare actionable next steps summary"
+      - "Include session management options"
+  
+  output_formats:
+    compact_status:
+      template: |
+        📊 **Consultation Status**
+        Stage {current_stage}/4 ({overall_completion}%) • {elapsed_time}/{target_time}min • {quality_rating}
+        Current: {current_focus} | Next: {next_focus} | Est. remaining: {est_remaining}min
+        
+    standard_status:
+      template: |
+        📈 **Deep Discovery Consultation Progress**
+        
+        **Overall Progress**: {overall_completion}% complete
+        **Time**: {elapsed_time}/{target_time} minutes ({time_status})
+        **Quality Score**: {quality_score}% ({quality_rating})
+        
+        **Stage Progress**:
+        ✅ Stage 1: Project Discovery ({stage_1_completion}%)
+        {stage_2_status} Stage 2: Technical Deep Dive ({stage_2_completion}%)
+        {stage_3_status} Stage 3: Domain Extraction ({stage_3_completion}%)
+        {stage_4_status} Stage 4: Preference Learning ({stage_4_completion}%)
+        
+        **Currently**: {current_stage_detail}
+        **Next Focus**: {next_area_preview}
+        **Estimated Remaining**: {estimated_remaining} minutes
+        
+    detailed_status:
+      template: |
+        🔍 **Comprehensive Consultation Status**
+        
+        **Session Information**:
+        • Session ID: {session_id}
+        • Started: {session_start_time}
+        • Last updated: {last_update_time}
+        
+        **Progress Breakdown**:
+        {detailed_stage_progress}
+        
+        **Understanding Quality**:
+        • Overall confidence: {overall_confidence}%
+        • Strongest areas: {high_confidence_areas}
+        • Areas needing attention: {low_confidence_areas}
+        • Information gaps: {gap_count} identified
+        
+        **Time Analysis**:
+        • Total elapsed: {total_elapsed} minutes
+        • Stage breakdown: {stage_time_breakdown}
+        • Current pace: {pace_analysis}
+        • Completion estimate: {completion_estimate}
+        
+        **Session Controls**:
+        • `/pause` to save and exit
+        • `/resume` to continue later
+        • `/export` to save progress summary
+
+# ---------------------------------------------------------------------------
+# RESTART COMMAND - Begin Fresh Session
+# ---------------------------------------------------------------------------
+restart_command:
+  command_name: "restart"
+  aliases: ["new-session", "start-over", "fresh-start"]
+  category: "session_control"
+  
+  usage_patterns:
+    simple_restart: "/restart"
+    confirmed_restart: "/restart --confirm"
+    save_and_restart: "/restart --save-current"
+    clean_restart: "/restart --clean"
+  
+  execution_logic:
+    safety_confirmation:
+      - "Check if current session has unsaved progress"
+      - "Present clear restart implications to user"
+      - "Require explicit confirmation for data loss"
+      - "Offer option to save current session first"
+      
+    session_cleanup:
+      - "Save current session if requested"
+      - "Clean current session state"
+      - "Reset all progress and context variables"
+      - "Prepare fresh consultation environment"
+      
+    fresh_initialization:
+      - "Initialize new consultation session"
+      - "Present fresh welcome and orientation"
+      - "Begin from Stage 1 with clean state"
+      - "Apply any user preference carryovers"
+  
+  safety_prompts:
+    unsaved_progress_warning: |
+      ⚠️ **Restart Confirmation Required**
+      
+      You have unsaved progress in your current consultation:
+      • Progress: {current_progress}% complete
+      • Time invested: {elapsed_time} minutes
+      • Quality achieved: {quality_score}%
+      
+      **Options**:
+      1. Save current session and start fresh: `/restart --save-current`
+      2. Continue current session: `/resume` or `/status`
+      3. Restart without saving: `/restart --confirm`
+      
+      What would you like to do?
+      
+    confirmation_required: |
+      🔄 **Final Restart Confirmation**
+      
+      This will permanently delete your current consultation progress.
+      
+      Are you sure you want to start completely fresh?
+      Type `/restart --confirm` to proceed or `/status` to check current progress.
+
+# ---------------------------------------------------------------------------
+# REVIEW COMMAND - See Accumulated Context
+# ---------------------------------------------------------------------------
+review_command:
+  command_name: "review"
+  aliases: ["summary", "what-we-know", "context"]
+  category: "session_monitoring"
+  
+  usage_patterns:
+    full_review: "/review"
+    stage_review: "/review stage-1"
+    topic_review: "/review technical"
+    confidence_review: "/review --confidence"
+  
+  execution_logic:
+    context_compilation:
+      - "Gather all accumulated consultation context"
+      - "Organize information by stages and categories"
+      - "Calculate confidence levels for each area"
+      - "Identify key insights and discoveries"
+      
+    intelligent_summarization:
+      - "Generate coherent project understanding summary"
+      - "Highlight most confident insights"
+      - "Note areas requiring additional exploration"
+      - "Present in user-friendly narrative format"
+  
+  output_formats:
+    project_overview_summary:
+      template: |
+        📋 **Project Understanding Summary**
+        
+        **Your Project**: {project_type} - {project_description}
+        
+        **Key Details**:
+        • Team: {team_size} people, {expertise_level} level
+        • Stage: {development_stage}
+        • Domain: {primary_domain}
+        • Main Goal: {primary_goal}
+        
+        **Technical Architecture**:
+        • Framework: {primary_framework}
+        • Architecture: {architecture_pattern}
+        • Database: {database_approach}
+        • Deployment: {deployment_approach}
+        
+        **Domain Knowledge**:
+        • Core Entities: {business_entities}
+        • Key Workflows: {primary_workflows}
+        • Business Rules: {critical_rules}
+        
+        **Preferences**:
+        • Coding Style: {coding_standards}
+        • Communication: {communication_preference}
+        • Tools: {development_tools}
+        
+        **Confidence Levels**:
+        • Project Foundation: {foundation_confidence}%
+        • Technical Understanding: {technical_confidence}%
+        • Domain Knowledge: {domain_confidence}%
+        • Preferences: {preferences_confidence}%
+
+# ---------------------------------------------------------------------------
+# EXPORT COMMAND - Save Session for Sharing
+# ---------------------------------------------------------------------------
+export_command:
+  command_name: "export"
+  aliases: ["save-summary", "share", "document"]
+  category: "session_utility"
+  
+  usage_patterns:
+    standard_export: "/export"
+    named_export: "/export My-Project-Discovery-Summary"
+    format_specific: "/export --format markdown"
+    portable_export: "/export --portable"
+  
+  execution_logic:
+    content_preparation:
+      - "Compile comprehensive consultation results"
+      - "Generate project understanding documentation"
+      - "Include progress metrics and quality indicators"
+      - "Prepare shareable format without sensitive details"
+      
+    format_generation:
+      - "Generate requested export format"
+      - "Apply appropriate formatting and structure"
+      - "Include metadata and generation timestamp"
+      - "Validate export completeness and accuracy"
+      
+    file_creation:
+      - "Write export to specified location"
+      - "Set appropriate file permissions"
+      - "Confirm successful export creation"
+      - "Provide access instructions to user"
+  
+  export_formats:
+    markdown_summary:
+      filename: "project-discovery-summary-{timestamp}.md"
+      content: "Structured markdown with sections and formatting"
+      
+    json_data:
+      filename: "consultation-data-{timestamp}.json"
+      content: "Complete session data in structured JSON format"
+      
+    portable_text:
+      filename: "project-context-{timestamp}.txt"
+      content: "Plain text summary suitable for any system"
+
+# =============================================================================
+# ADVANCED SESSION CONTROL FEATURES
+# =============================================================================
+
+# ---------------------------------------------------------------------------
+# Smart Session Management
+# ---------------------------------------------------------------------------
+smart_features:
+  auto_save_triggers:
+    time_based: "Every 5 minutes during active consultation"
+    progress_based: "After completing each major section"
+    user_action: "Before pause, skip, or navigation commands"
+    quality_checkpoint: "When confidence scores update significantly"
+    
+  intelligent_defaults:
+    session_naming: "Auto-generate based on project type and timestamp"
+    export_location: "User-configurable default with sensible fallbacks"
+    pause_behavior: "Remember user preferences for pause/resume patterns"
+    
+  context_awareness:
+    command_suggestions: "Suggest relevant commands based on current state"
+    timing_recommendations: "Advise on optimal pause/resume points"
+    quality_guidance: "Suggest actions when quality metrics are low"
+
+# ---------------------------------------------------------------------------
+# User Experience Enhancements
+# ---------------------------------------------------------------------------
+user_experience:
+  command_discovery:
+    help_integration: "Session commands included in general help system"
+    contextual_suggestions: "Show relevant commands at appropriate times"
+    command_completion: "Support tab completion and command suggestions"
+    
+  feedback_and_confirmation:
+    action_confirmations: "Clear feedback on all session control actions"
+    progress_updates: "Show progress changes after session operations"
+    error_explanations: "Helpful error messages with suggested solutions"
+    
+  accessibility_features:
+    keyboard_shortcuts: "Support common keyboard shortcuts where applicable"
+    command_aliases: "Multiple ways to invoke each command"
+    visual_indicators: "Clear visual feedback for session state changes"
+
+# =============================================================================
+# ERROR HANDLING AND RECOVERY
+# =============================================================================
+error_handling:
+  common_errors:
+    invalid_session_id:
+      detection: "Session ID format validation and existence check"
+      response: "Suggest similar sessions or show available sessions"
+      recovery: "Guide user to correct session selection"
+      
+    corrupted_session_file:
+      detection: "JSON parsing and schema validation"
+      response: "Attempt backup recovery with user notification"
+      recovery: "Graceful degradation or alternative session options"
+      
+    permission_issues:
+      detection: "File system permission checks"
+      response: "Clear explanation and resolution suggestions"
+      recovery: "Alternative save locations or permission fixes"
+      
+    storage_full:
+      detection: "Disk space checks before save operations"
+      response: "Automatic cleanup with user notification"
+      recovery: "Clean old sessions and retry operations"
+  
+  recovery_strategies:
+    graceful_degradation: "Continue with reduced functionality when possible"
+    alternative_methods: "Provide backup approaches for failed operations"
+    user_guidance: "Clear instructions for resolving common issues"
+    automatic_retry: "Smart retry logic for transient failures"
+
+This comprehensive session command system gives users complete control over their consultation experience, with intelligent defaults, clear feedback, and robust error handling to ensure a smooth and reliable session management experience.

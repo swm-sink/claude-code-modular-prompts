@@ -25,6 +25,181 @@
 
 **ENFORCEMENT**: Any AI assistant working on this project must honor this policy. Changes made without following this process should be immediately reverted and the proper approval process initiated.
 
+## 🔍 **CRITICAL: CLARIFICATION REQUIREMENT WHEN CONFUSED**
+
+**🚨 MANDATORY CONFUSION PROTOCOL**
+
+**When encountering conflicting information or ambiguity, the AI MUST:**
+
+1. **STOP IMMEDIATELY** - Do not proceed based on assumptions
+2. **IDENTIFY CONFLICTS** - Clearly list all conflicting information sources
+3. **ASK FOR CLARIFICATION** - Present specific questions to resolve confusion
+4. **WAIT FOR RESPONSE** - Do not continue until user provides direction
+5. **DOCUMENT DECISION** - Record the clarification for future reference
+
+**TRIGGERS FOR CLARIFICATION:**
+- Conflicting information between files, history, and configuration
+- Multiple valid interpretations of requirements
+- Discrepancies between documented and actual state
+- Uncertainty about which system/approach to use
+- Missing critical context for decision-making
+
+**EXAMPLE CLARIFICATION REQUEST:**
+"I'm seeing conflicting information:
+- Source A says: [specific information]
+- Source B says: [different information]
+- The filesystem shows: [actual state]
+
+Before proceeding, please clarify:
+1. Which source should I trust?
+2. What is the intended approach?
+3. Should I [specific action A] or [specific action B]?"
+
+**RATIONALE**: Making assumptions when confused leads to wasted work, incorrect implementations, and frustration. Always choose clarity over speed.
+
+## 📁 **CRITICAL: CORRECT APPROACH FOR FINDING HIDDEN DIRECTORIES**
+
+**🚨 MANDATORY PROTOCOL FOR LOCATING PROJECT DIRECTORIES**
+
+**The LS tool has issues with hidden directories (starting with .). The AI MUST use these approaches:**
+
+### **CORRECT Methods to Find Hidden Directories:**
+
+1. **Use Bash with ls -la:**
+```bash
+# CORRECT - This will show hidden directories
+ls -la /Users/smenssink/conductor/repo/claude-code-modular-prompts/lisbon/ | grep "\.claude"
+```
+
+2. **Use Bash to list directory contents:**
+```bash
+# CORRECT - Directly list contents of hidden directories
+ls -la /Users/smenssink/conductor/repo/claude-code-modular-prompts/lisbon/.claude/
+ls -la /Users/smenssink/conductor/repo/claude-code-modular-prompts/lisbon/.claude-architect/
+```
+
+3. **Use Glob with explicit hidden directory paths:**
+```bash
+# CORRECT - Glob can work with full paths to hidden directories
+Glob pattern: /Users/smenssink/conductor/repo/claude-code-modular-prompts/lisbon/.claude/**/*
+```
+
+### **INCORRECT Methods (DO NOT USE):**
+
+1. **LS tool on hidden directories often fails:**
+```bash
+# INCORRECT - LS tool may return empty results for hidden directories
+LS /Users/smenssink/conductor/repo/claude-code-modular-prompts/lisbon/.claude-architect
+# May incorrectly show: "No files found" even when directory exists
+```
+
+### **VERIFICATION Protocol:**
+
+**Before claiming directories don't exist, ALWAYS:**
+1. First use `ls -la` with Bash to check for hidden directories
+2. If found, use Bash to explore their contents
+3. Only claim non-existence after multiple verification methods
+
+### **Known Project Directories (THESE EXIST):**
+- `.claude/` - Contains commands, agents, framework, project subdirectories
+- `.claude-architect/` - Contains the deep discovery architecture
+- `.claude-minimal/` - Minimal setup directory
+
+**COMMON ERROR**: AI assistants repeatedly claim these directories don't exist because the LS tool fails on hidden directories. Always use Bash ls -la first!
+
+**RATIONALE**: The LS tool's inconsistent behavior with hidden directories has caused multiple AI assistants to incorrectly assess project state, leading to confusion and wasted effort.
+
+## 🎯 **CURRENT VISION: Minimum Viable Deep Consultation**
+
+**We are building**: 30-60 minute deep consultation system with radical simplicity
+**We are NOT building**: Complex orchestration with 84 YAMLs
+**Key Innovation**: Use Claude's native intelligence, not scripted logic
+**Approach**: AGGRESSIVE simplification - delete don't archive
+
+For complete plan: See claude.todos.yaml (NEVER duplicate plan here)
+
+## 🚫 **SSOT AND DRY ENFORCEMENT - ZERO TOLERANCE**
+
+### **MANDATORY: Single Source of Truth**
+
+| Information | Lives In | Reference Only |
+|------------|----------|----------------|
+| Master Plan | claude.todos.yaml | All other files |
+| Session State | claude.local.md | Never duplicate |
+| Technical Truth | .claude/context/technical-reality.md | Commands reference |
+| Anti-patterns | .claude/context/ANTIPATTERNS-MASTER.md | One consolidated file |
+| Current Status | claude.todos.yaml ONLY | No status reports |
+
+### **MANDATORY: Don't Repeat Yourself**
+
+1. **ONE fact, ONE location** - No exceptions
+2. **Delete duplicates on sight** - Don't archive, DELETE
+3. **Reference, don't copy** - Use "See X for details"
+4. **No status reports** - claude.todos.yaml is the ONLY status
+5. **No version hardcoding** - Versions in cache only
+
+### **Documentation Anti-Patterns to NEVER Repeat**
+- ❌ Creating 34+ README files
+- ❌ Multiple status documents saying same thing
+- ❌ Copying information between files
+- ❌ Creating new scripts (5 MAXIMUM, period)
+- ❌ Planning documents that duplicate YAML
+
+### **5-Script Hard Limit**
+**ONLY these scripts allowed**:
+1. setup.sh - Installation
+2. consultation.sh - Start consultation
+3. validate.sh - Verify outputs
+4. reset.sh - Clear state
+5. export.sh - Package results
+
+**NO OTHER SCRIPTS. Use Claude native tools instead.**
+
+## 🏗️ **CRITICAL: PROJECT ARCHITECTURE - SIMPLIFIED**
+
+**🚨 THE ARCHITECTURAL FIX**
+
+### **The Problem (Now Being Fixed)**
+- Backend (.claude-architect) analyzes EXTERNAL repos
+- Frontend (.claude/commands) expects to analyze USER'S project
+- Complete mismatch - they can never work together
+
+### **The Solution (Aggressive Simplification)**
+```
+OLD (Broken):
+User → Commands → Backend YAMLs → External Repo Analysis → ❌
+
+NEW (Simple):
+User → Commands → Claude Native Intelligence → User's Project → ✅
+```
+
+### **What We're DELETING**
+- ❌ `.claude-architect/` - 84 YAMLs analyzing wrong thing (DELETE COMPLETELY)
+- ❌ Complex orchestration logic - Claude can do this natively
+- ❌ External repo analysis - We analyze USER'S project
+- ❌ 109 Python scripts - Use Claude's tools instead
+
+### **What We're KEEPING**
+- ✅ Simple commands that use Claude's intelligence
+- ✅ 12 essential configs (patterns, templates, questions)
+- ✅ Direct project analysis (Read, Glob, Grep on current directory)
+- ✅ 5 shell scripts maximum
+
+### **New Simple Architecture**
+```
+User runs: /deep-consultation
+  ↓
+Claude reads project files directly
+  ↓
+Claude asks intelligent questions
+  ↓
+Claude generates custom commands
+  ↓
+Done in 30-60 minutes
+```
+
+**NO COMPLEX BACKEND. Just Claude's native intelligence.**
+
 ## 🎯 **SINGLE SOURCE OF TRUTH: claude.todos.yaml**
 
 **🚨 CRITICAL: ALL ORCHESTRATION IS MANAGED IN `claude.todos.yaml`**
@@ -53,7 +228,7 @@
 - ❌ **VIOLATION**: Starting tasks without proper claiming
 - ❌ **VIOLATION**: Not updating progress regularly
 - ❌ **VIOLATION**: Ignoring coordination protocols
-- ❌ **VIOLATION**: Creating any other tracking files (no claude.local.md, etc.)
+- ❌ **VIOLATION**: Creating tracking files OTHER than claude.local.md for session state
 - ⚠️ **CONSEQUENCE**: All violating work will be rejected and must be redone properly
 
 **RATIONALE**: Previous dual-file system (claude.local.md + claude.todos.md) created synchronization issues. The consolidated YAML format in claude.todos.yaml provides optimal balance for both human operators and AI agents, supporting parallel execution while maintaining data integrity.
@@ -132,19 +307,366 @@
 - **NO WARNINGS**: First violation = immediate deletion
 - **ZERO TOLERANCE**: This policy applies to ALL work, regardless of complexity or urgency
 
+## 🎯 **PREVENTING PROJECT DIVERGENCE - MANDATORY ALIGNMENT PROTOCOLS**
+
+**🚨 CRITICAL: PROTOCOLS TO PREVENT DIVERGENCE FROM PROJECT VISION**
+
+### **Daily Verification Requirements (MANDATORY)**
+
+**At the start of EVERY work session, AI MUST:**
+
+1. **Verify Project State**:
+   ```bash
+   # Check actual implementation status
+   ls -la .claude/commands/ | wc -l  # Count actual commands
+   ls -la .claude-architect/*/       # Verify backend exists
+   grep "current_phase" claude.todos.yaml  # Check claimed status
+   ```
+
+2. **Validate Integration Level**:
+   - **Structure Check**: Do directories exist?
+   - **Integration Check**: Do commands reference backend?
+   - **Functionality Check**: Can user actually use the feature?
+
+3. **Identify Gaps**:
+   ```
+   Claimed Status - Actual Functionality = Gap to Address
+   ```
+
+### **Progress Validation Protocol**
+
+**Before updating ANY status in claude.todos.yaml:**
+
+1. **Test Functionality**:
+   ```bash
+   # Example: Before marking "command generation complete"
+   /generate-commands --dry-run  # Does it actually work?
+   ls .claude/commands/generated/  # Were commands created?
+   ```
+
+2. **Three-Level Verification**:
+   - ✅ **Level 1**: Files/directories created
+   - ✅ **Level 2**: Integration established
+   - ✅ **Level 3**: Feature works end-to-end
+
+3. **Document Evidence**:
+   ```yaml
+   task_completed:
+     evidence:
+       - "Created 5 command files"
+       - "Commands reference backend configs"
+       - "Test run successful: /deep-discovery works"
+   ```
+
+### **Integration Checkpoints**
+
+**Every command in .claude/commands/ MUST:**
+
+1. **Reference Backend When Appropriate**:
+   ```markdown
+   # Good: Command uses backend
+   This command uses `.claude-architect/consultation/flow.yaml`
+   
+   # Bad: Command ignores existing backend
+   This command implements its own flow
+   ```
+
+2. **Follow Established Patterns**:
+   - Read backend YAML configurations
+   - Use existing templates
+   - Follow consultation flow
+   - Generate according to patterns
+
+3. **Maintain Consistency**:
+   - Same terminology across frontend/backend
+   - Consistent file paths
+   - Matching version numbers
+
+### **Anti-Divergence Patterns**
+
+**❌ NEVER DO THIS:**
+1. Create competing implementations when one exists
+2. Build parallel systems instead of integrating
+3. Update status without functional verification
+4. Ignore existing backend when building commands
+5. Create new architecture instead of using existing
+
+**✅ ALWAYS DO THIS:**
+1. Check if backend logic exists before implementing
+2. Integrate frontend commands with backend configs
+3. Test actual functionality before status updates
+4. Use existing patterns and templates
+5. Build on what exists rather than starting fresh
+
+### **Red Flags Requiring Immediate Clarification**
+
+**STOP and ask for clarification when:**
+- Command doesn't reference `.claude-architect/` when it should
+- Creating new patterns when backend has existing ones
+- Status claims don't match filesystem reality
+- Multiple approaches exist for same feature
+- Integration path is unclear
+
+### **Continuous Alignment Verification**
+
+**Every 5 tasks or 2 hours (whichever comes first):**
+
+1. **Re-read Vision**:
+   ```yaml
+   # From claude.todos.yaml
+   vision: "30-60 minute deep discovery consultation"
+   ```
+
+2. **Check Alignment**:
+   - Is current work moving toward this vision?
+   - Are we building integration or just more configs?
+   - Can a user actually use what we're building?
+
+3. **Course Correct if Needed**:
+   - Identify drift from vision
+   - Document why drift occurred
+   - Adjust approach to realign
+
+### **Integration Progress Tracking**
+
+**Track three types of progress separately:**
+
+```yaml
+progress_tracking:
+  structure_complete:
+    - "Directories created"
+    - "YAML files written"
+    - "Templates defined"
+    
+  integration_complete:
+    - "Commands read backend"
+    - "Flows are connected"
+    - "Templates are used"
+    
+  functionality_complete:
+    - "User can run command"
+    - "Command produces output"
+    - "Output actually works"
+```
+
+**RATIONALE**: Previous sessions have diverged by focusing on structure creation (YAML files, templates) without building actual integration or functionality. This leads to claims of completion without working features.
+
+## 🚫 **CRITICAL ANTI-PATTERNS TO AVOID**
+
+**🚨 THESE PATTERNS HAVE REPEATEDLY CAUSED PROJECT FAILURE**
+
+### **Anti-Pattern 1: Documentation Debt Accumulation**
+
+**THE PROBLEM**: 91+ planning documents in root directory, none executing
+
+**SYMPTOMS**:
+- Multiple competing plans (MASTER-PLAN.md, FINAL-PLAN.md, etc.)
+- Status documents claiming completion without evidence
+- Plans about plans about plans
+- Zero working functionality despite extensive documentation
+
+**MANDATORY PROTOCOL**:
+1. **DO NOT** create new planning documents in root directory
+2. **DO NOT** create "comprehensive plans" or "master strategies"
+3. **INSTEAD**: Update existing `claude.todos.yaml` and `PROJECT-STATE-VERIFICATION.md`
+4. **FOCUS**: One working feature > 100 planning documents
+
+### **Anti-Pattern 2: The Planning Trap**
+
+**THE PROBLEM**: Creating elaborate plans instead of implementing features
+
+**SYMPTOMS**:
+```
+Current Reality:
+├── 91 planning documents
+├── 84 YAML configuration files
+├── 0 working end-to-end features
+└── 0 generated project-specific commands
+```
+
+**MANDATORY PROTOCOL**:
+1. **STOP** when about to create another plan
+2. **ASK**: "Will this file execute something or just describe something?"
+3. **IMPLEMENT**: Build working features, not descriptions of features
+4. **TEST**: Can a user actually run this and get value?
+
+### **Anti-Pattern 3: YAML Confusion**
+
+**THE PROBLEM**: Believing YAML files execute logic
+
+**CRITICAL UNDERSTANDING**:
+```yaml
+# This YAML does NOT run:
+generation_engine:
+  pipeline:
+    - analyze_patterns
+    - generate_commands
+    
+# It's just data. Something must READ it and EXECUTE it.
+```
+
+**MANDATORY PROTOCOL**:
+1. **YAML files are DATA**, not programs
+2. **Commands must READ YAML** and implement the logic
+3. **Backend YAMLs need frontend commands** to execute them
+4. **Creating more YAMLs** without execution logic = more dead configuration
+
+### **Anti-Pattern 4: Cross-Session/Workspace Contamination**
+
+**THE PROBLEM**: Conversation history from other sessions creates false context
+
+**SYMPTOMS**:
+- "We completed Phase 5" but no evidence in current workspace
+- Referring to work that doesn't exist in filesystem
+- Confusion about what was done where
+
+**MANDATORY PROTOCOL**:
+1. **VERIFY** all claims against current workspace filesystem
+2. **IGNORE** conversation history that doesn't match reality
+3. **USE** `ls -la` to check what actually exists
+4. **DOCUMENT** actual state in `PROJECT-STATE-VERIFICATION.md`
+
+### **Anti-Pattern 5: Status Without Verification**
+
+**THE PROBLEM**: Updating status based on file creation, not functionality
+
+**SYMPTOMS**:
+```yaml
+# BAD:
+phase_5_complete: true  # (because YAML files exist)
+
+# GOOD:
+phase_5_complete: false # (because agents don't actually work)
+```
+
+**MANDATORY PROTOCOL**:
+1. **TEST** functionality before updating status
+2. **REQUIRE** working demonstration
+3. **DOCUMENT** evidence of functionality
+4. **REJECT** status updates without verification
+
+### **Anti-Pattern 6: Creating Instead of Using**
+
+**THE PROBLEM**: Building new implementations when backend exists
+
+**SYMPTOMS**:
+- Creating standalone commands when backend has logic
+- Building "simplified" versions instead of integration
+- Duplicating functionality across frontend/backend
+
+**MANDATORY PROTOCOL**:
+1. **CHECK** `.claude-architect/` for existing logic FIRST
+2. **INTEGRATE** don't duplicate
+3. **WIRE** frontend to backend
+4. **REUSE** existing patterns and templates
+
+## 📏 **CONCRETE SUCCESS CRITERIA**
+
+**🚨 MANDATORY: Define "Complete" in Measurable Terms**
+
+### **What "Phase Complete" Actually Means:**
+
+**Phase is ONLY complete when ALL are true:**
+
+1. **Structural Completion** (20% weight):
+   - Required directories exist
+   - Configuration files present
+   - Templates defined
+
+2. **Integration Completion** (30% weight):
+   - Frontend commands READ backend configs
+   - Commands EXECUTE backend logic
+   - Data flows between layers
+
+3. **Functional Completion** (50% weight):
+   - User can RUN the feature
+   - Feature PRODUCES expected output
+   - Output WORKS in real projects
+
+### **Measurable Success Criteria:**
+
+**For `/deep-discovery` to be complete:**
+- [ ] User can run `/deep-discovery start`
+- [ ] Consultation takes 30-60 minutes
+- [ ] Asks relevant questions based on project
+- [ ] Generates PROJECT-DNA.md with real discoveries
+- [ ] Creates working project-specific commands
+- [ ] Commands work when tested on user's project
+
+**For `/generate-commands` to be complete:**
+- [ ] Reads actual PROJECT-DNA.md
+- [ ] Uses templates from `.claude-architect/command-forge/`
+- [ ] Generates at least 5 project-specific commands
+- [ ] Generated commands execute without errors
+- [ ] Commands follow project's actual patterns
+
+**NOT complete if:**
+- Only YAML files exist
+- Only documentation exists
+- Commands describe but don't execute
+- Integration isn't wired
+- Can't demonstrate working functionality
+
+## 🧹 **DOCUMENTATION DEBT MANAGEMENT**
+
+**🚨 MANDATORY CLEANUP PROTOCOL**
+
+### **Before Creating ANY New Document:**
+
+1. **CHECK**: Does similar document already exist?
+2. **UPDATE**: Existing document instead of creating new
+3. **CONSOLIDATE**: Multiple similar documents into one
+4. **DELETE**: Outdated or superseded documents
+
+### **Approved Documentation Locations:**
+
+```
+✅ ALLOWED:
+- CLAUDE.md (project memory)
+- claude.todos.yaml (task tracking)
+- PROJECT-STATE-VERIFICATION.md (reality check)
+- .claude/commands/*.md (user commands)
+- .claude-architect/**/*.yaml (backend configs)
+
+❌ FORBIDDEN:
+- New "MASTER-PLAN" documents
+- New "FINAL-STRATEGY" documents  
+- New "COMPREHENSIVE-APPROACH" documents
+- Any new root-level planning documents
+```
+
+### **Weekly Cleanup Requirement:**
+
+1. Review root directory for accumulation
+2. Consolidate similar documents
+3. Archive outdated plans to `.archive/`
+4. Update `PROJECT-STATE-VERIFICATION.md` with reality
+
+**RATIONALE**: Previous sessions have diverged by focusing on structure creation (YAML files, templates) without building actual integration or functionality. This leads to claims of completion without working features.
+
 ### **Current Project Status**
 
-**Current Status**: MAJOR ARCHITECTURE PIVOT - Integration → Deep Discovery Generation
+**Current Status**: MAJOR VISION PIVOT - 30-second onboarding → 30-60 minute deep consultation
 
-**Master Plan Location**: `claude.todos.yaml` contains the complete 104-task atomic task list for transforming Claude Context Architect from an integration system to a **Deep Discovery Generation Engine**.
+**Master Plan Location**: `claude.todos.yaml` Version 3.0 contains the definitive **8-phase deep discovery consultation plan** for transforming Claude Context Architect from a speed-focused system to a **depth-focused consultation engine**.
 
 **Key Transformation**:
-- **FROM**: Template library with command integration
-- **TO**: Sequential sub-agent system that analyzes repositories and generates project-specific commands, agents, and context
+- **FROM**: 30-second smart onboarding (zero questions, auto-detect everything)
+- **TO**: 30-60 minute deep discovery consultation (smart questions, web research, real agents)
+
+**The 8-Phase Journey** (32 days total):
+1. **Foundation Reset** (Days 1-3): Archive speed-focused system, establish depth-focused architecture
+2. **Research Infrastructure** (Days 4-7): Build capability to analyze 20+ leading repositories
+3. **Consultation Framework** (Days 8-12): Create 20-30 minute interactive exploration
+4. **Context Engineering** (Days 13-17): Generate multi-file hierarchical context systems
+5. **Agent Development** (Days 18-22): Build real specialized agents (not templates)
+6. **Command Generation** (Days 23-26): Create project-specific commands from discoveries
+7. **Integration** (Days 27-29): Connect everything into cohesive 30-60 minute experience
+8. **Validation** (Days 30-32): Test, refine, and prepare for release
 
 **Session Management**: All task tracking, progress updates, and execution control managed in `claude.todos.yaml`. This file (CLAUDE.md) provides permanent project memory while claude.todos.yaml manages active orchestration and transformation work.
 
-**Vision**: Claude Context Architect uses specialized discovery agents to perform deep repository analysis, building comprehensive "Project DNA", then generates completely customized `.claude/` directories that make Claude work like a team member who knows YOUR specific project inside and out.
+**Vision**: A comprehensive 30-60 minute deep discovery consultation that performs web research, conducts interactive consultation, creates multi-file context engineering, develops real specialized agents, and generates project-specific commands - transforming Claude into YOUR project expert through depth, not speed.
 
 <!-- AI_METADATA_START -->
 <ai_document_metadata>

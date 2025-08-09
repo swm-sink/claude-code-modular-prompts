@@ -1,0 +1,1002 @@
+# Question Bank - Intelligent Project Discovery Questions
+# Comprehensive database of context-aware questions for deep project understanding
+# Version: 1.0 - Context-Driven Question Generation
+# Purpose: Extract genuine understanding through adaptive questioning
+
+# =============================================================================
+# QUESTION BANK STRUCTURE
+# =============================================================================
+question_bank:
+  version: "1.0"
+  total_questions: 75
+  coverage: "All consultation stages and project types"
+  intelligence_features:
+    - "Context-aware question selection"
+    - "Response-based follow-up generation"
+    - "Smart default assumptions"
+    - "Skip logic for detected information"
+    - "Depth calibration by expertise"
+
+# =============================================================================
+# STAGE 1: PROJECT DISCOVERY QUESTIONS (25 questions)
+# =============================================================================
+stage_1_project_discovery:
+  # ---------------------------------------------------------------------------
+  # Category: Project Essence (8 questions)
+  # ---------------------------------------------------------------------------
+  project_essence:
+    PE001:
+      question: "Tell me about your project - what are you building and what problem does it solve?"
+      category: "project_essence"
+      depth_level: "essential"
+      prerequisites: []
+      follow_ups:
+        unclear_response: "PE002"
+        technical_heavy: "PE003"
+        too_broad: "PE004"
+        clear_response: "PE005"
+      
+    PE002:
+      question: "Could you give me a specific example of how someone would use this?"
+      category: "project_essence"
+      depth_level: "standard"
+      prerequisites: ["PE001"]
+      follow_ups:
+        clear_example: "PE005"
+        still_unclear: "PE003"
+      
+    PE003:
+      question: "Who benefits from this - what's the human impact or business value?"
+      category: "project_essence"
+      depth_level: "standard"
+      prerequisites: ["PE001"]
+      follow_ups:
+        clear_value: "PE005"
+        needs_more: "PE004"
+      
+    PE004:
+      question: "What's the core thing it does that makes it valuable? The one essential feature?"
+      category: "project_essence"
+      depth_level: "deep"
+      prerequisites: ["PE001"]
+      follow_ups:
+        core_identified: "PE005"
+        
+    PE005:
+      question: "Is this more of a [detected_type] - does that sound right?"
+      category: "project_essence"
+      depth_level: "essential"
+      prerequisites: ["PE001"]
+      dynamic: true
+      context_fills: ["detected_type"]
+      
+    PE006:
+      question: "What makes your approach different from existing solutions?"
+      category: "project_essence"
+      depth_level: "deep"
+      prerequisites: ["PE001", "PE005"]
+      
+    PE007:
+      question: "Who are your primary users or target audience?"
+      category: "project_essence"
+      depth_level: "standard"
+      prerequisites: ["PE001"]
+      
+    PE008:
+      question: "What would happen if this project didn't exist - what gap would remain?"
+      category: "project_essence"
+      depth_level: "deep"
+      prerequisites: ["PE001", "PE003"]
+
+  # ---------------------------------------------------------------------------
+  # Category: Scale and Context (9 questions)
+  # ---------------------------------------------------------------------------
+  scale_context:
+    SC001:
+      question: "What's the current size and stage of this project? Brand new, actively growing, or more established?"
+      category: "scale_context"
+      depth_level: "essential"
+      prerequisites: []
+      follow_ups:
+        new_project: "SC002"
+        established: "SC003"
+        legacy: "SC004"
+        
+    SC002:
+      question: "What stage are you in - planning, early development, or building an MVP?"
+      category: "scale_context"
+      depth_level: "standard"
+      prerequisites: ["SC001"]
+      condition: "response_contains('new', 'starting', 'early')"
+      
+    SC003:
+      question: "How long has this been running? What's working well so far?"
+      category: "scale_context"
+      depth_level: "standard"
+      prerequisites: ["SC001"]
+      condition: "response_contains('established', 'running', 'months')"
+      
+    SC004:
+      question: "What's driving changes now? Migration, modernization, or growth needs?"
+      category: "scale_context"
+      depth_level: "standard"
+      prerequisites: ["SC001"]
+      condition: "response_contains('legacy', 'old', 'existing')"
+      
+    SC005:
+      question: "How many people are actively working on this? Solo, small team, or larger group?"
+      category: "scale_context"
+      depth_level: "essential"
+      prerequisites: []
+      follow_ups:
+        solo: "SC006"
+        small_team: "SC007"
+        large_team: "SC008"
+        
+    SC006:
+      question: "As a solo developer, what's your biggest time sink or productivity challenge?"
+      category: "scale_context"
+      depth_level: "standard"
+      prerequisites: ["SC005"]
+      condition: "team_size == 1"
+      
+    SC007:
+      question: "How does your small team coordinate and maintain consistency?"
+      category: "scale_context"
+      depth_level: "standard"
+      prerequisites: ["SC005"]
+      condition: "team_size <= 5"
+      
+    SC008:
+      question: "With a larger team, how do you handle standards and knowledge sharing?"
+      category: "scale_context"
+      depth_level: "standard"
+      prerequisites: ["SC005"]
+      condition: "team_size > 5"
+      
+    SC009:
+      question: "What's the complexity level - single service, multiple components, or distributed system?"
+      category: "scale_context"
+      depth_level: "standard"
+      prerequisites: ["SC001"]
+
+  # ---------------------------------------------------------------------------
+  # Category: Goals and Challenges (8 questions)
+  # ---------------------------------------------------------------------------
+  goals_challenges:
+    GC001:
+      question: "What's working well right now, and what's the biggest challenge or pain point?"
+      category: "goals_challenges"
+      depth_level: "essential"
+      prerequisites: []
+      
+    GC002:
+      question: "What brought you to want better Claude integration? What are you hoping Claude can help with?"
+      category: "goals_challenges"
+      depth_level: "essential"
+      prerequisites: []
+      
+    GC003:
+      question: "If we fast-forward 6 months and this Claude setup is working perfectly, what would that look like?"
+      category: "goals_challenges"
+      depth_level: "standard"
+      prerequisites: ["GC002"]
+      
+    GC004:
+      question: "What would be different in your daily workflow if Claude truly understood your project?"
+      category: "goals_challenges"
+      depth_level: "deep"
+      prerequisites: ["GC002", "GC003"]
+      
+    GC005:
+      question: "Is the priority more about speed, quality, learning, or team coordination?"
+      category: "goals_challenges"
+      depth_level: "standard"
+      prerequisites: ["GC001"]
+      
+    GC006:
+      question: "What repetitive tasks are you most tired of doing manually?"
+      category: "goals_challenges"
+      depth_level: "standard"
+      prerequisites: ["GC001"]
+      
+    GC007:
+      question: "Where do you spend the most time that could be optimized?"
+      category: "goals_challenges"
+      depth_level: "deep"
+      prerequisites: ["GC001", "GC006"]
+      
+    GC008:
+      question: "What knowledge is hardest to preserve or share on your project?"
+      category: "goals_challenges"
+      depth_level: "deep"
+      prerequisites: ["SC005"]
+      condition: "team_size > 1"
+
+# =============================================================================
+# STAGE 2: TECHNICAL DEEP DIVE QUESTIONS (20 questions)
+# =============================================================================
+stage_2_technical_deep_dive:
+  # ---------------------------------------------------------------------------
+  # Category: Architecture Foundation (8 questions)
+  # ---------------------------------------------------------------------------
+  architecture_foundation:
+    AF001:
+      question: "How is your application structured? Monolith, microservices, or something in between?"
+      category: "architecture"
+      depth_level: "essential"
+      prerequisites: []
+      follow_ups:
+        monolith: "AF002"
+        microservices: "AF003"
+        hybrid: "AF004"
+        
+    AF002:
+      question: "What's your main language and framework for this monolith?"
+      category: "architecture"
+      depth_level: "standard"
+      prerequisites: ["AF001"]
+      condition: "response_contains('monolith', 'single')"
+      
+    AF003:
+      question: "How many services are we talking about, and what handles communication between them?"
+      category: "architecture"
+      depth_level: "standard"
+      prerequisites: ["AF001"]
+      condition: "response_contains('microservices', 'services', 'distributed')"
+      
+    AF004:
+      question: "What parts are separate services vs. integrated components?"
+      category: "architecture"
+      depth_level: "standard"
+      prerequisites: ["AF001"]
+      condition: "response_contains('hybrid', 'modular', 'mixed')"
+      
+    AF005:
+      question: "What's your frontend built with? React, Vue, vanilla JS, or something else?"
+      category: "architecture"
+      depth_level: "essential"
+      prerequisites: []
+      condition: "has_frontend"
+      framework_specific: true
+      
+    AF006:
+      question: "How do you handle data storage? SQL database, NoSQL, files, or a mix?"
+      category: "architecture"
+      depth_level: "essential"
+      prerequisites: []
+      
+    AF007:
+      question: "Any particular architectural patterns you follow - MVC, clean architecture, domain-driven design?"
+      category: "architecture"
+      depth_level: "deep"
+      prerequisites: ["AF001", "AF002"]
+      
+    AF008:
+      question: "What's your approach to handling state and data flow?"
+      category: "architecture"
+      depth_level: "standard"
+      prerequisites: ["AF005", "AF006"]
+
+  # ---------------------------------------------------------------------------
+  # Category: Framework-Specific Questions (6 questions)
+  # ---------------------------------------------------------------------------
+  framework_specific:
+    FS001:
+      question: "Are you using Create React App, Next.js, Vite, or a custom setup?"
+      category: "framework_specific"
+      depth_level: "standard"
+      prerequisites: ["AF005"]
+      condition: "framework == 'react'"
+      
+    FS002:
+      question: "How do you handle state management - useState/useReducer, Redux, Zustand, or Context?"
+      category: "framework_specific"
+      depth_level: "standard"
+      prerequisites: ["FS001"]
+      condition: "framework == 'react'"
+      
+    FS003:
+      question: "Express, Fastify, Koa, or another Node.js framework?"
+      category: "framework_specific"
+      depth_level: "standard"
+      prerequisites: ["AF002"]
+      condition: "language == 'node' || language == 'javascript'"
+      
+    FS004:
+      question: "Django, Flask, FastAPI, or something else for Python?"
+      category: "framework_specific"
+      depth_level: "standard"
+      prerequisites: ["AF002"]
+      condition: "language == 'python'"
+      
+    FS005:
+      question: "Spring Boot, Quarkus, or another Java framework?"
+      category: "framework_specific"
+      depth_level: "standard"
+      prerequisites: ["AF002"]
+      condition: "language == 'java'"
+      
+    FS006:
+      question: "What ORM or database access pattern do you use?"
+      category: "framework_specific"
+      depth_level: "standard"
+      prerequisites: ["AF006", "FS004"]
+      condition: "has_database"
+
+  # ---------------------------------------------------------------------------
+  # Category: Development Workflow (6 questions)
+  # ---------------------------------------------------------------------------
+  development_workflow:
+    DW001:
+      question: "What's your approach to testing? Unit tests, integration, e2e, or still building that up?"
+      category: "development_workflow"
+      depth_level: "essential"
+      prerequisites: []
+      
+    DW002:
+      question: "What testing frameworks and tools are you using or considering?"
+      category: "development_workflow"
+      depth_level: "standard"
+      prerequisites: ["DW001"]
+      condition: "has_testing || wants_testing"
+      
+    DW003:
+      question: "How do you currently deploy? CI/CD pipeline, manual deployment, or figuring that out?"
+      category: "development_workflow"
+      depth_level: "essential"
+      prerequisites: []
+      
+    DW004:
+      question: "What's your CI/CD setup - GitHub Actions, Jenkins, GitLab CI, or something else?"
+      category: "development_workflow"
+      depth_level: "standard"
+      prerequisites: ["DW003"]
+      condition: "has_cicd"
+      
+    DW005:
+      question: "What development tools are essential to your workflow? IDE, linters, debuggers?"
+      category: "development_workflow"
+      depth_level: "standard"
+      prerequisites: []
+      
+    DW006:
+      question: "How do you handle code reviews and quality control?"
+      category: "development_workflow"
+      depth_level: "standard"
+      prerequisites: []
+      condition: "team_size > 1"
+
+# =============================================================================
+# STAGE 3: DOMAIN EXTRACTION QUESTIONS (15 questions)
+# =============================================================================
+stage_3_domain_extraction:
+  # ---------------------------------------------------------------------------
+  # Category: Business Concepts (6 questions)
+  # ---------------------------------------------------------------------------
+  business_concepts:
+    BC001:
+      question: "What are the core business entities in your system? The main 'things' it manages?"
+      category: "business_concepts"
+      depth_level: "essential"
+      prerequisites: []
+      
+    BC002:
+      question: "What domain-specific terminology should Claude understand? Industry terms, acronyms, concepts?"
+      category: "business_concepts"
+      depth_level: "essential"
+      prerequisites: []
+      
+    BC003:
+      question: "What business rules are most critical? The 'must always' or 'never allow' rules?"
+      category: "business_concepts"
+      depth_level: "standard"
+      prerequisites: ["BC001"]
+      
+    BC004:
+      question: "How do these business entities relate to each other? What are the key relationships?"
+      category: "business_concepts"
+      depth_level: "standard"
+      prerequisites: ["BC001"]
+      
+    BC005:
+      question: "What calculations, validations, or business logic are most complex?"
+      category: "business_concepts"
+      depth_level: "deep"
+      prerequisites: ["BC003"]
+      
+    BC006:
+      question: "Are there industry standards, compliance requirements, or regulations that affect the business logic?"
+      category: "business_concepts"
+      depth_level: "deep"
+      prerequisites: ["BC003"]
+
+  # ---------------------------------------------------------------------------
+  # Category: User Workflows (5 questions)
+  # ---------------------------------------------------------------------------
+  user_workflows:
+    UW001:
+      question: "What are the main user journeys through your system? The most common paths?"
+      category: "user_workflows"
+      depth_level: "essential"
+      prerequisites: []
+      
+    UW002:
+      question: "What workflows are most complex or error-prone? Where do users get stuck?"
+      category: "user_workflows"
+      depth_level: "standard"
+      prerequisites: ["UW001"]
+      
+    UW003:
+      question: "What are the most frequent user tasks or operations?"
+      category: "user_workflows"
+      depth_level: "standard"
+      prerequisites: ["UW001"]
+      
+    UW004:
+      question: "Are there different user types with different workflows or permissions?"
+      category: "user_workflows"
+      depth_level: "standard"
+      prerequisites: ["UW001"]
+      
+    UW005:
+      question: "What workflows involve multiple steps or approvals? The multi-stage processes?"
+      category: "user_workflows"
+      depth_level: "deep"
+      prerequisites: ["UW001", "UW002"]
+
+  # ---------------------------------------------------------------------------
+  # Category: Integration Patterns (4 questions)
+  # ---------------------------------------------------------------------------
+  integration_patterns:
+    IP001:
+      question: "What external systems do you integrate with? APIs, databases, services?"
+      category: "integration_patterns"
+      depth_level: "standard"
+      prerequisites: []
+      
+    IP002:
+      question: "How do you handle data exchange - REST APIs, GraphQL, webhooks, file transfers?"
+      category: "integration_patterns"
+      depth_level: "standard"
+      prerequisites: ["IP001"]
+      condition: "has_integrations"
+      
+    IP003:
+      question: "Are there data synchronization challenges or consistency requirements?"
+      category: "integration_patterns"
+      depth_level: "deep"
+      prerequisites: ["IP001"]
+      condition: "has_integrations"
+      
+    IP004:
+      question: "What authentication or security patterns do your integrations require?"
+      category: "integration_patterns"
+      depth_level: "deep"
+      prerequisites: ["IP001", "IP002"]
+      condition: "has_integrations"
+
+# =============================================================================
+# STAGE 4: PREFERENCE LEARNING QUESTIONS (15 questions)
+# =============================================================================
+stage_4_preference_learning:
+  # ---------------------------------------------------------------------------
+  # Category: Coding Standards (6 questions)
+  # ---------------------------------------------------------------------------
+  coding_standards:
+    CS001:
+      question: "Do you have specific coding style guidelines? Formal standards or just conventions?"
+      category: "coding_standards"
+      depth_level: "essential"
+      prerequisites: []
+      
+    CS002:
+      question: "How do you prefer to structure and organize code? Any specific patterns or principles?"
+      category: "coding_standards"
+      depth_level: "standard"
+      prerequisites: []
+      
+    CS003:
+      question: "What naming conventions do you follow? camelCase, snake_case, specific prefixes?"
+      category: "coding_standards"
+      depth_level: "standard"
+      prerequisites: []
+      
+    CS004:
+      question: "How detailed should code comments be? Minimal, moderate, or comprehensive?"
+      category: "coding_standards"
+      depth_level: "standard"
+      prerequisites: []
+      
+    CS005:
+      question: "Any specific patterns for error handling, logging, or debugging?"
+      category: "coding_standards"
+      depth_level: "deep"
+      prerequisites: ["CS001"]
+      
+    CS006:
+      question: "What's your preference for code formatting - automated tools, manual, or specific styles?"
+      category: "coding_standards"
+      depth_level: "standard"
+      prerequisites: ["CS001"]
+
+  # ---------------------------------------------------------------------------
+  # Category: Communication Style (5 questions)
+  # ---------------------------------------------------------------------------
+  communication_style:
+    CM001:
+      question: "How do you like explanations presented - technical detail, high-level overview, or step-by-step?"
+      category: "communication_style"
+      depth_level: "essential"
+      prerequisites: []
+      
+    CM002:
+      question: "When Claude makes suggestions, would you prefer options, recommendations, or direct solutions?"
+      category: "communication_style"
+      depth_level: "standard"
+      prerequisites: []
+      
+    CM003:
+      question: "How much context should Claude provide with answers - minimal, moderate, or comprehensive?"
+      category: "communication_style"
+      depth_level: "standard"
+      prerequisites: []
+      
+    CM004:
+      question: "Do you prefer formal documentation style or conversational explanations?"
+      category: "communication_style"
+      depth_level: "standard"
+      prerequisites: []
+      
+    CM005:
+      question: "When learning new concepts, do you prefer examples, theory, or hands-on exploration?"
+      category: "communication_style"
+      depth_level: "deep"
+      prerequisites: ["CM001"]
+
+  # ---------------------------------------------------------------------------
+  # Category: Workflow Preferences (4 questions)
+  # ---------------------------------------------------------------------------
+  workflow_preferences:
+    WP001:
+      question: "What development tools and IDEs do you use? VS Code, IntelliJ, terminal-based?"
+      category: "workflow_preferences"
+      depth_level: "standard"
+      prerequisites: []
+      
+    WP002:
+      question: "How do you prefer to receive feedback - inline comments, separate summaries, or interactive discussion?"
+      category: "workflow_preferences"
+      depth_level: "standard"
+      prerequisites: []
+      
+    WP003:
+      question: "Any specific preferences for command structure - short/long names, categories, parameters?"
+      category: "workflow_preferences"
+      depth_level: "deep"
+      prerequisites: []
+      
+    WP004:
+      question: "What's your typical development rhythm - long focused sessions, short iterations, or mixed?"
+      category: "workflow_preferences"
+      depth_level: "deep"
+      prerequisites: []
+
+# =============================================================================
+# SMART DEFAULTS SYSTEM
+# =============================================================================
+smart_defaults:
+  # ---------------------------------------------------------------------------
+  # Web Application Defaults
+  # ---------------------------------------------------------------------------
+  web_application:
+    conditions:
+      - "mentions('react', 'vue', 'angular', 'frontend')"
+      - "mentions('api', 'backend', 'server')"
+      - "mentions('database', 'data storage')"
+    
+    assumptions:
+      architecture: "Client-server with API"
+      testing: "Unit tests and some integration tests"
+      deployment: "Cloud hosting (AWS, Vercel, Netlify)"
+      performance: "Standard web performance expectations"
+      
+    skip_questions:
+      - "AF001"  # Architecture structure (assume client-server)
+      - "DW003"  # Deployment (assume cloud-based)
+      
+    confirm_assumptions:
+      - "I'm assuming this is a client-server web app - is that right?"
+      - "Typical web performance expectations apply here?"
+
+  # ---------------------------------------------------------------------------
+  # Data Science Project Defaults
+  # ---------------------------------------------------------------------------
+  data_science:
+    conditions:
+      - "mentions('jupyter', 'pandas', 'numpy', 'analysis')"
+      - "mentions('machine learning', 'ai', 'model')"
+      - "mentions('data', 'dataset', 'analysis')"
+    
+    assumptions:
+      architecture: "Notebook-based with supporting scripts"
+      testing: "Data validation and model testing"
+      deployment: "Research/analysis focus, limited deployment"
+      performance: "Processing time and memory optimization"
+      
+    skip_questions:
+      - "AF001"  # Architecture (assume notebook-based)
+      - "UW001"  # User workflows (assume analyst workflows)
+      
+    confirm_assumptions:
+      - "This looks like data science/ML work - is that the focus?"
+      - "Are you primarily doing analysis or building production models?"
+
+  # ---------------------------------------------------------------------------
+  # DevOps/Infrastructure Defaults
+  # ---------------------------------------------------------------------------
+  devops_infrastructure:
+    conditions:
+      - "mentions('terraform', 'kubernetes', 'docker', 'infrastructure')"
+      - "mentions('ci/cd', 'pipeline', 'deployment')"
+      - "mentions('monitoring', 'logging', 'observability')"
+    
+    assumptions:
+      architecture: "Infrastructure as code"
+      testing: "Infrastructure testing and validation"
+      deployment: "Automated pipeline deployment"
+      performance: "System reliability and uptime"
+      
+    skip_questions:
+      - "BC001"  # Business entities (infrastructure focus)
+      - "UW001"  # User workflows (system administration focus)
+      
+    confirm_assumptions:
+      - "This is infrastructure/DevOps focused work?"
+      - "Automation and reliability are primary concerns?"
+
+# =============================================================================
+# RESPONSE HANDLING PATTERNS
+# =============================================================================
+response_handling:
+  # ---------------------------------------------------------------------------
+  # Pattern Recognition
+  # ---------------------------------------------------------------------------
+  patterns:
+    detailed_technical_response:
+      indicators:
+        - "Length > 100 words"
+        - "Contains technical terms"
+        - "Mentions specific tools/frameworks"
+      
+      response_strategy:
+        - "Expert-level user detected"
+        - "Increase technical depth in follow-ups"
+        - "Reduce explanatory questions"
+        - "Focus on optimization and advanced patterns"
+    
+    brief_high_level_response:
+      indicators:
+        - "Length < 30 words"
+        - "Generic terms used"
+        - "Limited specifics"
+      
+      response_strategy:
+        - "May need more exploration"
+        - "Add clarifying questions"
+        - "Provide examples to prompt detail"
+        - "Check understanding level"
+    
+    business_focused_response:
+      indicators:
+        - "Mentions users, customers, revenue"
+        - "Business metrics and KPIs"
+        - "Process and workflow language"
+      
+      response_strategy:
+        - "Business-minded user"
+        - "Focus on value and outcomes in technical questions"
+        - "Emphasize efficiency and productivity"
+        - "Connect technical choices to business impact"
+    
+    learning_oriented_response:
+      indicators:
+        - "Mentions learning, trying, experimenting"
+        - "Uncertainty about best practices"
+        - "Requests for guidance"
+      
+      response_strategy:
+        - "Learning mindset detected"
+        - "Provide more context and explanation"
+        - "Include best practice guidance"
+        - "Focus on teaching opportunities"
+
+  # ---------------------------------------------------------------------------
+  # Confidence Scoring
+  # ---------------------------------------------------------------------------
+  confidence_scoring:
+    high_confidence_indicators:
+      - "Specific technical details provided"
+      - "Clear business context"
+      - "Consistent responses across questions"
+      - "Good understanding of own project"
+    
+    medium_confidence_indicators:
+      - "Some specifics but gaps remain"
+      - "Consistent but not comprehensive"
+      - "Minor contradictions resolved"
+    
+    low_confidence_indicators:
+      - "Vague or inconsistent responses"
+      - "Contradictory information"
+      - "Uncertainty about own project"
+      - "Very brief or unclear answers"
+    
+    confidence_actions:
+      high: "Proceed with standard flow, may enable quick mode"
+      medium: "Add confirming questions, validate understanding"
+      low: "Stop and clarify, provide examples, simplify questions"
+
+  # ---------------------------------------------------------------------------
+  # Follow-up Triggering
+  # ---------------------------------------------------------------------------
+  follow_up_triggers:
+    mentions_performance:
+      follow_ups:
+        - "What kind of performance requirements are we talking about?"
+        - "Any specific latency or throughput needs?"
+        - "What performance metrics matter most?"
+    
+    mentions_scale:
+      follow_ups:
+        - "What kind of scaling challenges do you anticipate?"
+        - "Current usage vs. expected growth?"
+        - "What components would scale first?"
+    
+    mentions_compliance:
+      follow_ups:
+        - "What compliance standards apply - HIPAA, GDPR, SOX?"
+        - "Any specific audit or security requirements?"
+        - "How does compliance affect your architecture choices?"
+    
+    mentions_legacy:
+      follow_ups:
+        - "What aspects of the legacy system are most challenging?"
+        - "Migration timeline and strategy?"
+        - "What must be preserved vs. what can be modernized?"
+    
+    mentions_team_challenges:
+      follow_ups:
+        - "What are the biggest coordination challenges?"
+        - "How do you maintain consistency across team members?"
+        - "What knowledge sharing gaps exist?"
+
+# =============================================================================
+# ADAPTATION RULES
+# =============================================================================
+adaptation_rules:
+  # ---------------------------------------------------------------------------
+  # Time-Based Adaptations
+  # ---------------------------------------------------------------------------
+  time_management:
+    ahead_of_schedule:
+      # More than 3 minutes remaining in stage
+      actions:
+        - "Add depth questions for interesting topics"
+        - "Explore optional nice-to-have categories"
+        - "Allow user to elaborate on answers"
+        - "Include advanced follow-up questions"
+    
+    on_schedule:
+      # Within 1 minute of target time
+      actions:
+        - "Maintain standard question flow"
+        - "Include all essential questions"
+        - "Moderate depth on follow-ups"
+        - "Standard transition timing"
+    
+    behind_schedule:
+      # More than 2 minutes over stage target
+      actions:
+        - "Switch to essential questions only"
+        - "Skip nice-to-have categories"
+        - "Reduce follow-up depth"
+        - "Offer quick mode transition"
+    
+    approaching_total_limit:
+      # Within 5 minutes of 30-minute total
+      actions:
+        - "Automatically enable quick mode"
+        - "Focus only on must-have information"
+        - "Prepare for rapid completion"
+        - "Offer to pause and resume later"
+
+  # ---------------------------------------------------------------------------
+  # Expertise-Based Adaptations
+  # ---------------------------------------------------------------------------
+  expertise_calibration:
+    beginner_detected:
+      indicators:
+        - "Simple project structure"
+        - "Basic framework usage"
+        - "Learning-oriented responses"
+        - "Requests for guidance"
+      
+      adaptations:
+        - "Add more context to technical questions"
+        - "Define technical terms and concepts"
+        - "Focus on learning and best practices"
+        - "Provide examples with questions"
+        - "Emphasize educational value"
+    
+    intermediate_detected:
+      indicators:
+        - "Some technical depth but gaps"
+        - "Mixed confidence levels"
+        - "Growing project complexity"
+        - "Some but not extensive experience"
+      
+      adaptations:
+        - "Standard question depth"
+        - "Include some advanced topics"
+        - "Provide context when needed"
+        - "Balance explanation with efficiency"
+    
+    expert_detected:
+      indicators:
+        - "Detailed technical knowledge"
+        - "Complex architecture patterns"
+        - "Confident, specific responses"
+        - "Advanced tool usage"
+      
+      adaptations:
+        - "Higher technical depth"
+        - "Assume familiarity with concepts"
+        - "Focus on optimization and nuance"
+        - "Reduce explanatory content"
+        - "Enable advanced discussion"
+
+  # ---------------------------------------------------------------------------
+  # Domain-Specific Adaptations
+  # ---------------------------------------------------------------------------
+  domain_focus:
+    ecommerce_detected:
+      key_questions:
+        - "Payment processing and PCI compliance?"
+        - "Inventory management and real-time updates?"
+        - "Order workflow and fulfillment process?"
+        - "Customer data and personalization?"
+      
+    fintech_detected:
+      key_questions:
+        - "Transaction processing and audit trails?"
+        - "Regulatory compliance (PCI, SOX, etc.)?"
+        - "Data security and encryption requirements?"
+        - "Real-time vs. batch processing needs?"
+      
+    healthcare_detected:
+      key_questions:
+        - "HIPAA compliance and data protection?"
+        - "Patient data workflows and access controls?"
+        - "Integration with healthcare systems (HL7, FHIR)?"
+        - "Audit requirements and data retention?"
+      
+    content_management_detected:
+      key_questions:
+        - "Content modeling and taxonomy structure?"
+        - "Publishing workflows and approval processes?"
+        - "SEO and content delivery optimization?"
+        - "Multi-language or multi-site management?"
+
+  # ---------------------------------------------------------------------------
+  # Engagement-Based Adaptations
+  # ---------------------------------------------------------------------------
+  engagement_monitoring:
+    high_engagement:
+      indicators:
+        - "Detailed, thoughtful responses"
+        - "Follow-up questions from user"
+        - "Enthusiasm in answers"
+        - "Proactive information sharing"
+      
+      actions:
+        - "Continue current depth level"
+        - "Allow exploration of interesting tangents"
+        - "Include advanced questions"
+        - "Enable deep mode if requested"
+    
+    medium_engagement:
+      indicators:
+        - "Adequate responses but not enthusiastic"
+        - "Answers questions but doesn't elaborate"
+        - "Standard engagement level"
+      
+      actions:
+        - "Maintain standard questioning pace"
+        - "Add examples to make more interesting"
+        - "Check for time pressure or fatigue"
+        - "Offer break or quick mode options"
+    
+    low_engagement:
+      indicators:
+        - "Very brief responses"
+        - "Seems rushed or distracted"
+        - "Minimal detail provided"
+        - "Requests to speed up"
+      
+      actions:
+        - "Switch to quick mode automatically"
+        - "Focus on absolute essentials"
+        - "Check if pause is needed"
+        - "Reduce total question count"
+
+# =============================================================================
+# QUESTION FLOW INTELLIGENCE
+# =============================================================================
+flow_intelligence:
+  # ---------------------------------------------------------------------------
+  # Dynamic Question Selection
+  # ---------------------------------------------------------------------------
+  selection_algorithm:
+    priority_factors:
+      time_remaining: 0.3      # 30% weight
+      information_gaps: 0.25   # 25% weight  
+      user_engagement: 0.2     # 20% weight
+      question_depth: 0.15     # 15% weight
+      prerequisite_completion: 0.1  # 10% weight
+    
+    selection_process:
+      1: "Calculate priority score for all applicable questions"
+      2: "Filter by prerequisites and conditions"
+      3: "Apply skip logic for redundant information"
+      4: "Select highest priority question"
+      5: "Prepare context-aware follow-up options"
+  
+  # ---------------------------------------------------------------------------
+  # Skip Logic Implementation
+  # ---------------------------------------------------------------------------
+  skip_conditions:
+    information_already_extracted:
+      - "Repository analysis provides clear project type"
+      - "Git history shows obvious team size patterns"
+      - "Package.json/requirements.txt reveals tech stack"
+      - "Previous answers contain requested information"
+    
+    smart_inference_possible:
+      - "React project → assume SPA architecture"
+      - "Package.json with jest → has testing framework"
+      - "Dockerfile present → containerized deployment"
+      - "Multiple contributors → team coordination needs"
+    
+    user_expertise_obvious:
+      - "Complex configuration files → expert user"
+      - "Basic setup, learning responses → beginner user"
+      - "Enterprise patterns → experienced team"
+    
+    domain_context_clear:
+      - "E-commerce patterns obvious from code"
+      - "Healthcare compliance indicators present"
+      - "Financial data structures evident"
+      - "Content management patterns clear"
+
+  # ---------------------------------------------------------------------------
+  # Context Accumulation
+  # ---------------------------------------------------------------------------
+  context_building:
+    progressive_understanding:
+      stage_1: "Foundation: type, scale, goals, team"
+      stage_2: "Technical: architecture, tools, processes" 
+      stage_3: "Domain: entities, workflows, business rules"
+      stage_4: "Style: preferences, conventions, communication"
+    
+    cross_stage_connections:
+      - "Technical choices influenced by team size"
+      - "Domain complexity affects architecture needs"
+      - "Business requirements drive performance needs"
+      - "Team preferences shape development workflow"
+    
+    validation_points:
+      - "Confirm understanding at stage transitions"
+      - "Check for contradictions across stages"
+      - "Validate inferences with user"
+      - "Summarize complete picture before generation"

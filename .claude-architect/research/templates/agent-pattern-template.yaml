@@ -1,0 +1,230 @@
+# Agent Pattern Extraction Template  
+# Purpose: Standardized extraction format for Claude Code agent patterns
+# Version: 1.0
+
+extraction_template:
+  pattern_id: "pattern-agents-{name}-{timestamp}"
+  category: "agents"
+  subcategory: "" # specialized_agents, orchestration_agents, validation_agents, research_agents
+  
+  # Basic Pattern Information
+  pattern_info:
+    name: ""
+    description: ""
+    domain_focus: "" # web-development, data-science, devops, etc.
+    specialization_level: "" # narrow, moderate, broad
+    
+  # Agent Architecture Analysis
+  agent_architecture:
+    definition_structure:
+      agent_file_location: "" # Where agent is defined
+      definition_format: "" # markdown, yaml, json, etc.
+      documentation_approach: "" # How agent is documented
+      
+    role_specification:
+      primary_role: "" # Main responsibility/purpose
+      secondary_roles: [] # Additional responsibilities
+      role_boundaries: "" # What agent explicitly does NOT do
+      
+    capability_definition:
+      core_capabilities: []
+      specialized_skills: []
+      tool_permissions: []
+      knowledge_domains: []
+      
+    interaction_patterns:
+      input_handling: "" # How agent receives tasks
+      output_format: "" # How agent delivers results
+      communication_protocol: "" # How agent communicates
+      escalation_procedures: "" # When agent asks for help
+      
+  # Specialization Strategies
+  specialization_analysis:
+    specialization_approach:
+      domain_expertise: "" # Deep knowledge in specific area
+      task_expertise: "" # Specialized in specific task types
+      workflow_expertise: "" # Expert in process orchestration
+      tool_expertise: "" # Master of specific tool combinations
+      
+    boundary_management:
+      scope_definition: "" # How boundaries are clearly defined
+      handoff_protocols: "" # How work is handed off to others
+      conflict_resolution: "" # How conflicts with other agents resolved
+      
+    knowledge_management:
+      expertise_documentation: "" # How expertise is documented
+      knowledge_updates: "" # How agent knowledge is updated
+      learning_mechanisms: "" # How agent improves over time
+      
+  # Coordination Patterns
+  coordination_analysis:
+    agent_relationships:
+      peer_agents: [] # Other agents at same level
+      supervisor_agents: [] # Agents that coordinate this agent
+      subordinate_agents: [] # Agents this agent coordinates
+      
+    task_distribution:
+      task_routing: "" # How tasks are assigned to this agent
+      workload_balancing: "" # How work is distributed
+      priority_handling: "" # How urgent tasks are managed
+      
+    result_aggregation:
+      output_integration: "" # How agent results are combined
+      quality_validation: "" # How output quality is ensured
+      conflict_resolution: "" # How conflicting results handled
+      
+    communication_protocols:
+      status_reporting: "" # How progress is communicated
+      error_reporting: "" # How errors are escalated
+      collaboration_methods: "" # How agents work together
+      
+  # Performance & Effectiveness
+  effectiveness_metrics:
+    success_indicators:
+      task_completion_rate: 0.0 # 0-1 score for successful task completion
+      quality_consistency: 0.0 # 0-1 score for output quality
+      response_time: "" # Typical time to complete tasks
+      
+    optimization_patterns:
+      efficiency_improvements: []
+      quality_enhancements: []
+      automation_capabilities: []
+      
+    failure_analysis:
+      common_failure_points: []
+      error_recovery_mechanisms: []
+      limitation_acknowledgment: []
+      
+  # Innovation Indicators
+  innovation_analysis:
+    novelty_assessment:
+      unique_specialization: "" # Novel area of specialization?
+      innovative_coordination: "" # Creative coordination approach?
+      advanced_capabilities: "" # Advanced technical capabilities?
+      
+    adoption_potential:
+      reusability: 0.0 # 0-1 score for reuse in other contexts
+      scalability: 0.0 # 0-1 score for handling increased load  
+      maintainability: 0.0 # 0-1 score for long-term maintenance
+      
+    competitive_advantage:
+      unique_value_proposition: ""
+      improvement_over_alternatives: ""
+      adoption_barriers: []
+      
+  # Evidence Collection
+  evidence:
+    sources:
+      - repository: ""
+        url: ""
+        file_path: ""
+        line_numbers: []
+        extracted_date: ""
+        
+    implementation_details:
+      agent_definition_complete: "" # yes/no
+      usage_examples_provided: "" # yes/no
+      integration_documented: "" # yes/no
+      performance_metrics: "" # yes/no
+      
+    validation_data:
+      working_implementations: "" # Evidence agent actually works
+      user_testimonials: "" # Community feedback on agent
+      maintenance_activity: "" # Recent updates and improvements
+      adoption_indicators: "" # Evidence of broader adoption
+      
+    cross_references:
+      - pattern_id: ""
+        relationship: "" # extends, conflicts, complements, requires
+        description: ""
+        strength: 0.0 # 0-1 correlation strength
+        
+  # Applicability Assessment
+  applicability:
+    use_cases:
+      primary_scenarios: []
+      secondary_scenarios: []
+      anti_patterns: [] # When NOT to use this agent pattern
+      
+    context_requirements:
+      team_size_requirements: [] # solo, small, medium, large
+      project_complexity: [] # simple, moderate, complex
+      domain_applicability: [] # Applicable domains
+      
+    integration_considerations:
+      setup_complexity: "" # simple, moderate, complex
+      dependency_requirements: []
+      maintenance_overhead: ""
+      
+  # Performance Characteristics  
+  performance_analysis:
+    resource_requirements:
+      computational_overhead: "" # light, moderate, heavy
+      memory_requirements: "" # low, moderate, high
+      tool_dependencies: []
+      
+    scalability_patterns:
+      horizontal_scaling: "" # Can multiple instances run?
+      vertical_scaling: "" # Can handle increased complexity?
+      load_distribution: "" # How load is managed
+      
+    reliability_characteristics:
+      error_tolerance: "" # How well handles errors
+      recovery_mechanisms: [] # How recovers from failures
+      monitoring_capabilities: [] # How performance is monitored
+      
+  # Confidence Scoring
+  confidence_assessment:
+    evidence_strength:
+      source_count: 0 # Number of evidence sources
+      source_diversity: 0.0 # 0-1 score for source variety
+      implementation_variety: 0.0 # 0-1 score for different implementations
+      
+    validation_strength:
+      currency_score: 0.0 # CRAAP: How recent/current?
+      relevance_score: 0.0 # CRAAP: How relevant to our use?
+      authority_score: 0.0 # CRAAP: How authoritative is source?
+      accuracy_score: 0.0 # CRAAP: How accurate/correct?
+      purpose_score: 0.0 # CRAAP: How aligned with purpose?
+      
+    implementation_confidence:
+      working_examples_score: 0.0 # Quality of working examples
+      documentation_score: 0.0 # Quality of documentation
+      community_validation_score: 0.0 # Community acceptance
+      
+    overall_confidence: 0.0 # Calculated weighted average
+    
+  # Analysis Metadata
+  extraction_metadata:
+    analyst_id: ""
+    extraction_date: ""
+    analysis_version: "1.0"
+    time_invested: "" # Hours spent analyzing
+    quality_gates_passed: [] # Which quality checks passed
+    
+    notes:
+      key_insights: []
+      concerns: []
+      recommendations: []
+      follow_up_needed: []
+      
+    comparative_analysis:
+      similar_agents: [] # Other agents with similar roles
+      differentiation_factors: [] # What makes this unique
+      improvement_opportunities: [] # How could be enhanced
+
+# Usage Instructions:
+# 1. Copy this template for each agent pattern analysis
+# 2. Focus on architectural patterns, not just individual agents
+# 3. Document coordination and communication patterns carefully
+# 4. Include evidence of actual effectiveness, not just theory
+# 5. Cross-reference with related command and workflow patterns
+# 6. Pay special attention to innovation and unique approaches
+# 7. Validate all claims with concrete evidence
+
+# Quality Requirements:
+# - Minimum 2 evidence sources required (agents are less common)
+# - Overall confidence must be >= 0.6  
+# - Must include working implementation examples
+# - Coordination patterns must be clearly documented
+# - Performance characteristics must be evidence-based

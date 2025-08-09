@@ -1,0 +1,439 @@
+# Claude Context Architect - Template Engine Configuration
+# Version: 1.0
+# Created: 2025-08-07
+# Purpose: Configure template processing for context generation
+
+# =============================================================================
+# TEMPLATE ENGINE CONFIGURATION
+# =============================================================================
+template_engine:
+  version: "1.0"
+  engine_type: "handlebars_extended"
+  template_syntax: "handlebars"
+  
+  # Template Processing Configuration
+  processing:
+    strict_mode: true  # Fail on undefined variables
+    escape_html: false  # Don't escape markdown content
+    allow_protototype_properties: false  # Security setting
+    no_escape_variables: ["PROJECT_NAME", "GENERATION_TIMESTAMP"]
+    
+  # Custom Helper Functions
+  helpers:
+    # Date/Time Helpers
+    timestamp: "Generate ISO timestamp"
+    format_date: "Format date strings"
+    relative_time: "Calculate relative time"
+    
+    # Conditional Helpers
+    if_exists: "Render if variable exists and not empty"
+    if_confident: "Render if confidence score above threshold"
+    if_stage_completed: "Render if consultation stage completed"
+    
+    # Content Helpers
+    truncate: "Truncate text to specified length"
+    capitalize: "Capitalize first letter"
+    slugify: "Convert to URL-friendly slug"
+    word_count: "Count words for token estimation"
+    
+    # List Helpers
+    join_with_and: "Join list with 'and' before last item"
+    unique: "Remove duplicates from list"
+    sort_by_priority: "Sort items by priority field"
+    
+    # Validation Helpers
+    confidence_badge: "Generate confidence indicator"
+    token_usage_indicator: "Show token budget usage"
+    validation_status: "Show validation checkpoints"
+
+# =============================================================================
+# TEMPLATE LAYER DEFINITIONS
+# =============================================================================
+template_layers:
+  
+  # Layer 1: Project Foundation
+  foundation:
+    template_file: "foundation-template.md"
+    output_file: "CLAUDE.md"
+    priority: 10
+    token_budget: 2000
+    dependencies: []
+    
+    required_variables:
+      - PROJECT_NAME
+      - PROJECT_DOMAIN
+      - PROJECT_TYPE
+      - TEAM_SIZE
+    
+    optional_variables:
+      - PROJECT_MISSION
+      - PROJECT_VISION
+      - PRIMARY_GOALS
+      - VALUE_PROPOSITIONS
+      - DESIGN_PRINCIPLES
+      - TECHNOLOGY_STACK
+    
+    validation_rules:
+      - name: "project_identity_complete"
+        condition: "PROJECT_NAME && PROJECT_DOMAIN && PROJECT_TYPE"
+        error: "Core project identity missing"
+      
+      - name: "reasonable_team_size"
+        condition: "TEAM_SIZE >= 1 && TEAM_SIZE <= 1000"
+        error: "Team size should be between 1 and 1000"
+    
+    confidence_factors:
+      - variable: "PROJECT_MISSION"
+        weight: 0.2
+        description: "Clear mission statement"
+      
+      - variable: "DESIGN_PRINCIPLES"
+        weight: 0.15
+        description: "Documented design principles"
+      
+      - variable: "LESSONS_LEARNED"
+        weight: 0.1
+        description: "Historical context"
+  
+  # Layer 2: Domain Intelligence
+  domain:
+    template_file: "domain-template.md" 
+    output_file: ".claude/domain-context.md"
+    priority: 9
+    token_budget: 1500
+    dependencies: ["foundation"]
+    
+    required_variables:
+      - BUSINESS_DOMAIN
+      - CORE_DOMAIN_CONCEPTS
+      - KEY_STAKEHOLDERS
+      - DOMAIN_TERMINOLOGY
+    
+    optional_variables:
+      - BUSINESS_RULES
+      - USER_PERSONAS
+      - USER_JOURNEYS
+      - DATA_ENTITIES
+      - EXTERNAL_INTEGRATIONS
+    
+    validation_rules:
+      - name: "domain_concepts_defined"
+        condition: "CORE_DOMAIN_CONCEPTS.length > 0"
+        error: "At least one domain concept required"
+      
+      - name: "terminology_exists"
+        condition: "DOMAIN_TERMINOLOGY.length > 0"
+        error: "Domain terminology is required"
+    
+    confidence_factors:
+      - variable: "BUSINESS_RULES"
+        weight: 0.25
+        description: "Documented business rules"
+      
+      - variable: "USER_PERSONAS"
+        weight: 0.2
+        description: "User persona definitions"
+      
+      - variable: "DATA_ENTITIES"
+        weight: 0.15
+        description: "Data model documentation"
+  
+  # Layer 3: Technical Architecture
+  technical:
+    template_file: "technical-template.md"
+    output_file: ".claude/technical-context.md" 
+    priority: 8
+    token_budget: 2000
+    dependencies: ["foundation", "domain"]
+    
+    required_variables:
+      - PRIMARY_FRAMEWORK
+      - PROGRAMMING_LANGUAGE
+      - ARCHITECTURE_STYLE
+      - KEY_LIBRARIES
+    
+    optional_variables:
+      - ARCHITECTURAL_DECISIONS
+      - DESIGN_PATTERNS
+      - NAMING_CONVENTIONS
+      - TESTING_PYRAMID
+      - PERFORMANCE_REQUIREMENTS
+    
+    validation_rules:
+      - name: "tech_stack_defined"
+        condition: "PRIMARY_FRAMEWORK && PROGRAMMING_LANGUAGE"
+        error: "Primary technology stack must be defined"
+      
+      - name: "architecture_documented"
+        condition: "ARCHITECTURE_STYLE"
+        error: "Architecture style must be specified"
+    
+    confidence_factors:
+      - variable: "ARCHITECTURAL_DECISIONS"
+        weight: 0.3
+        description: "Documented architecture decisions"
+      
+      - variable: "DESIGN_PATTERNS"
+        weight: 0.2
+        description: "Design pattern usage"
+      
+      - variable: "TESTING_PYRAMID"
+        weight: 0.2
+        description: "Testing strategy"
+  
+  # Layer 4: Workflow Orchestration
+  workflow:
+    template_file: "workflow-template.md"
+    output_file: ".claude/workflow-context.md"
+    priority: 7
+    token_budget: 1200
+    dependencies: ["foundation", "domain", "technical"]
+    
+    required_variables:
+      - DEVELOPMENT_METHODOLOGY
+      - GIT_WORKFLOW
+      - CODE_REVIEW_REQUIREMENTS
+    
+    optional_variables:
+      - FEATURE_DEVELOPMENT_STAGES
+      - BRANCH_TYPES
+      - QUALITY_GATES
+      - DEPLOYMENT_STRATEGY
+      - COMMUNICATION_PROTOCOLS
+    
+    validation_rules:
+      - name: "workflow_defined"
+        condition: "DEVELOPMENT_METHODOLOGY && GIT_WORKFLOW"
+        error: "Basic development workflow must be defined"
+    
+    confidence_factors:
+      - variable: "FEATURE_DEVELOPMENT_STAGES"
+        weight: 0.25
+        description: "Documented development process"
+      
+      - variable: "QUALITY_GATES"
+        weight: 0.2
+        description: "Quality assurance processes"
+      
+      - variable: "DEPLOYMENT_STRATEGY"
+        weight: 0.15
+        description: "Deployment procedures"
+  
+  # Layer 5: Integration Mesh
+  integration:
+    template_file: "integration-template.md"
+    output_file: ".claude/integration-context.md"
+    priority: 6
+    token_budget: 800
+    dependencies: ["foundation", "domain", "technical", "workflow"]
+    
+    required_variables:
+      - LOGGING_ARCHITECTURE
+      - MONITORING_STRATEGY
+      - API_ARCHITECTURE_STYLE
+    
+    optional_variables:
+      - SECURITY_PATTERNS
+      - EXTERNAL_INTEGRATIONS
+      - ERROR_HANDLING_STRATEGIES
+      - DISASTER_RECOVERY_STRATEGY
+    
+    validation_rules:
+      - name: "observability_defined"
+        condition: "LOGGING_ARCHITECTURE && MONITORING_STRATEGY"
+        error: "Basic observability must be defined"
+    
+    confidence_factors:
+      - variable: "SECURITY_PATTERNS"
+        weight: 0.3
+        description: "Security considerations"
+      
+      - variable: "ERROR_HANDLING_STRATEGIES"
+        weight: 0.25
+        description: "Error handling approach"
+
+# =============================================================================
+# TEMPLATE PROCESSING RULES
+# =============================================================================
+processing_rules:
+  
+  # Generation Order
+  generation_order:
+    strategy: "dependency_graph"
+    parallel_processing: false  # Generate sequentially for inheritance
+    fail_fast: true  # Stop on first error
+  
+  # Variable Resolution
+  variable_resolution:
+    inheritance_strategy: "cascade_merge"
+    parent_precedence: false  # Child values override parent
+    undefined_behavior: "error"  # Fail on undefined required variables
+    
+    # Variable Inheritance Rules
+    inheritance_rules:
+      - from_layer: "foundation"
+        to_layers: ["domain", "technical", "workflow", "integration"]
+        variables: ["PROJECT_NAME", "DOMAIN_CONTEXT", "TECHNOLOGY_STACK", "TEAM_SIZE"]
+      
+      - from_layer: "domain"
+        to_layers: ["technical", "workflow", "integration"] 
+        variables: ["DOMAIN_VOCABULARY", "BUSINESS_LOGIC_PATTERNS"]
+      
+      - from_layer: "technical"
+        to_layers: ["workflow", "integration"]
+        variables: ["CODING_PATTERNS", "FRAMEWORK_CONVENTIONS", "TESTING_REQUIREMENTS"]
+      
+      - from_layer: "workflow"
+        to_layers: ["integration"]
+        variables: ["WORKFLOW_PROCEDURES", "QUALITY_STANDARDS"]
+  
+  # Content Generation Rules
+  content_generation:
+    # Conditional Section Rules
+    conditional_sections:
+      - condition: "confidence_score < 7"
+        action: "add_low_confidence_warning"
+      
+      - condition: "required_variables_missing > 0"
+        action: "add_missing_info_note"
+      
+      - condition: "token_count > budget * 1.1"
+        action: "add_token_overflow_warning"
+    
+    # Content Quality Rules
+    quality_rules:
+      - rule: "minimum_section_length"
+        threshold: 50  # characters
+        action: "flag_thin_content"
+      
+      - rule: "maximum_section_length" 
+        threshold: 2000  # characters
+        action: "suggest_section_split"
+      
+      - rule: "cross_reference_validation"
+        action: "validate_internal_links"
+  
+  # Post-Processing
+  post_processing:
+    - step: "token_count_estimation"
+      method: "approximate_word_count"
+      multiplier: 1.3  # tokens per word estimate
+    
+    - step: "confidence_score_calculation"
+      method: "weighted_average"
+      factors: "confidence_factors"
+    
+    - step: "validation_checkpoint_insertion"
+      method: "append_validation_comments"
+    
+    - step: "metadata_injection"
+      method: "add_generation_metadata"
+
+# =============================================================================
+# OUTPUT CONFIGURATION
+# =============================================================================
+output_configuration:
+  
+  # File Generation
+  file_output:
+    encoding: "utf-8"
+    line_endings: "unix"  # \n instead of \r\n
+    trailing_newline: true
+    preserve_permissions: true
+  
+  # Directory Structure
+  directory_structure:
+    base_directory: ".claude"
+    create_missing_directories: true
+    backup_existing_files: true
+    backup_suffix: ".backup"
+  
+  # Content Formatting
+  content_formatting:
+    markdown_flavor: "github"
+    code_block_language_detection: true
+    table_formatting: "github"
+    line_length_soft_limit: 120
+  
+  # Validation Output
+  validation_output:
+    generate_validation_report: true
+    validation_report_file: "context-generation-report.md"
+    include_confidence_scores: true
+    include_token_usage: true
+    include_variable_mapping: true
+
+# =============================================================================
+# ERROR HANDLING & RECOVERY
+# =============================================================================
+error_handling:
+  
+  # Error Recovery Strategies
+  recovery_strategies:
+    missing_required_variable: "prompt_for_input"
+    template_syntax_error: "fail_with_details"
+    circular_dependency: "fail_immediately"
+    token_budget_exceeded: "warn_and_continue"
+    validation_failure: "warn_and_flag"
+  
+  # Fallback Mechanisms
+  fallbacks:
+    missing_optional_section: "skip_section"
+    low_confidence_data: "include_with_warning"
+    template_render_error: "include_placeholder"
+  
+  # Logging Configuration
+  logging:
+    log_level: "INFO"
+    log_file: "template-generation.log"
+    include_timestamps: true
+    include_stack_traces: true
+
+# =============================================================================
+# PERFORMANCE OPTIMIZATION
+# =============================================================================
+performance:
+  
+  # Caching
+  caching:
+    template_compilation_cache: true
+    variable_resolution_cache: true
+    validation_result_cache: true
+    cache_duration: "1_hour"
+  
+  # Memory Management
+  memory_management:
+    max_template_size: "10MB"
+    max_variable_count: 10000
+    memory_cleanup_interval: "5_minutes"
+  
+  # Processing Limits
+  limits:
+    max_processing_time: "30_seconds"
+    max_recursion_depth: 10
+    max_include_depth: 5
+
+# =============================================================================
+# DEVELOPMENT & DEBUGGING
+# =============================================================================
+development:
+  
+  # Debug Configuration
+  debug:
+    verbose_logging: false
+    template_debug_comments: false
+    variable_dump: false
+    timing_information: false
+  
+  # Testing Support
+  testing:
+    dry_run_mode: false
+    validation_only_mode: false
+    generate_test_data: false
+    test_data_file: "test-variables.yaml"
+  
+  # Development Helpers
+  helpers:
+    auto_reload_templates: false
+    syntax_checking: true
+    variable_completion_suggestions: true

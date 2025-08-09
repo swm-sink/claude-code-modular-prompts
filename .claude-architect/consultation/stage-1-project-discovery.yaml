@@ -1,0 +1,312 @@
+# Stage 1: Project Discovery (5-7 minutes)
+# Interactive project understanding and context establishment
+# Purpose: Build foundation for technical and domain exploration
+
+# =============================================================================
+# STAGE OVERVIEW
+# =============================================================================
+stage_info:
+  name: "Project Discovery"
+  duration: "5-7 minutes"
+  sequence: 1
+  objective: "Establish project essence, scale, and context foundation"
+  value_statement: "Let's understand what makes your project unique and special"
+  
+  personality: "Curious expert consultant meeting new client"
+  tone: "Engaging, professional, genuinely interested"
+  approach: "Open questions that invite storytelling and explanation"
+
+# =============================================================================
+# OPENING & CONTEXT SETTING (1 minute)
+# =============================================================================
+opening:
+  welcome_message: |
+    "Great! I'm excited to learn about your project and help Claude become 
+    your expert project assistant. This will take about 20-30 minutes, and 
+    you'll see immediate value as we build understanding together.
+    
+    We'll start with understanding your project's essence - what makes it 
+    unique and what you're trying to achieve. Ready to dive in?"
+  
+  expectations_setting:
+    - "This is a conversation, not an interrogation"
+    - "You can pause, skip, or go back anytime"
+    - "I'll show you what I'm learning as we go"
+    - "Every question has a purpose for your Claude setup"
+  
+  user_control_introduction:
+    - "Say 'skip' if you want to move to the next question"
+    - "Say 'pause' if you need to step away"
+    - "Say 'back' if you want to revise a previous answer"
+    - "Say 'quick mode' for essential questions only"
+
+# =============================================================================
+# CORE DISCOVERY QUESTIONS (3-4 minutes)
+# =============================================================================
+question_flows:
+  # ---------------------------------------------------------------------------
+  # Flow A: Project Essence Discovery
+  # ---------------------------------------------------------------------------
+  project_essence:
+    primary_question: |
+      "Tell me about your project - what are you building and what problem 
+      does it solve?"
+    
+    follow_ups:
+      if_unclear: "Could you give me a specific example of how someone would use this?"
+      if_technical_only: "Who benefits from this - what's the human impact?"
+      if_too_broad: "What's the core thing it does that makes it valuable?"
+    
+    adaptive_responses:
+      web_app: "Is this more of a SaaS product, internal tool, or something else?"
+      api_service: "What kind of applications or systems consume this API?"
+      library_framework: "What problem does this solve for other developers?"
+      data_processing: "What kind of insights or outcomes does this enable?"
+      mobile_app: "What's the main user journey or task people accomplish?"
+    
+    understanding_check: |
+      "So if I understand correctly, you're building [SUMMARY]. The main value 
+      is [VALUE_PROPOSITION]. Is that right?"
+
+  # ---------------------------------------------------------------------------
+  # Flow B: Scale and Context Discovery  
+  # ---------------------------------------------------------------------------
+  scale_context:
+    primary_question: |
+      "What's the current size and stage of this project? Are we talking 
+      about something brand new, actively growing, or more established?"
+    
+    follow_ups:
+      if_new: "What stage are you in - planning, early development, or MVP?"
+      if_established: "How long has this been running? What's working well?"
+      if_legacy: "What's driving changes now? Migration, modernization, growth?"
+    
+    team_discovery: |
+      "How many people are actively working on this? Are you flying solo, 
+      part of a small team, or working with a larger group?"
+    
+    complexity_indicators:
+      - "How many different components or services?"
+      - "Multiple environments (dev/staging/prod)?"
+      - "External integrations or dependencies?"
+      - "Compliance or regulatory requirements?"
+    
+    understanding_check: |
+      "Got it - so this is a [STAGE] project with [TEAM_SIZE], and the 
+      complexity level seems [COMPLEXITY]. Does that sound right?"
+
+  # ---------------------------------------------------------------------------
+  # Flow C: Goals and Challenges Discovery
+  # ---------------------------------------------------------------------------
+  goals_challenges:
+    current_state: |
+      "What's working well right now, and what's the biggest challenge or 
+      pain point you're facing?"
+    
+    claude_motivation: |
+      "What brought you to want better Claude integration? What are you 
+      hoping Claude can help you with specifically?"
+    
+    success_vision: |
+      "If we fast-forward 6 months and this Claude setup is working perfectly, 
+      what would that look like? What would be different?"
+    
+    priority_discovery:
+      options:
+        - "Speed up development and reduce repetitive tasks"
+        - "Better code quality and consistency"
+        - "Improved documentation and knowledge sharing"
+        - "Faster debugging and problem-solving"
+        - "Better understanding of complex codebases"
+        - "Team coordination and standards"
+    
+    understanding_check: |
+      "So the main goal is [PRIMARY_GOAL], and success would look like 
+      [SUCCESS_VISION]. The biggest current challenge is [CHALLENGE]. 
+      Have I captured that correctly?"
+
+# =============================================================================
+# ADAPTIVE INTELLIGENCE SYSTEM
+# =============================================================================
+adaptive_features:
+  # ---------------------------------------------------------------------------
+  # Skip Logic - When to Automatically Skip Questions
+  # ---------------------------------------------------------------------------
+  skip_conditions:
+    project_type_detected:
+      condition: "Repository analysis clearly identifies project type"
+      action: "Confirm detected type rather than ask open-ended question"
+      example: "I can see this is a React web application - is that right?"
+    
+    team_size_evident:
+      condition: "Git history shows clear team size patterns"
+      action: "Confirm inferred team size"
+      example: "Looks like you have about 3-4 active contributors - sound right?"
+    
+    standard_patterns:
+      condition: "Project follows very standard patterns"
+      action: "Quick confirmation mode instead of deep exploration"
+      
+  # ---------------------------------------------------------------------------
+  # Depth Calibration - Adjusting Question Complexity
+  # ---------------------------------------------------------------------------
+  expertise_adaptation:
+    beginner_indicators:
+      - "Simple project structure"
+      - "Basic framework usage"
+      - "Limited Git history"
+      - "Standard naming conventions"
+    
+    beginner_approach:
+      - "More explanation with questions"
+      - "Define technical terms used"
+      - "Focus on learning and growth goals"
+      - "Emphasize guidance and best practices"
+    
+    expert_indicators:
+      - "Complex architecture patterns"
+      - "Custom tooling or advanced configurations"
+      - "Sophisticated Git workflows"
+      - "Domain-specific optimizations"
+    
+    expert_approach:
+      - "Technical depth and nuanced discussion"
+      - "Focus on optimization and efficiency"
+      - "Assume familiarity with patterns"
+      - "Emphasize advanced capabilities"
+    
+    team_lead_indicators:
+      - "Multi-contributor project"
+      - "Documentation focus"
+      - "Consistent standards across files"
+      - "CI/CD and workflow automation"
+    
+    team_lead_approach:
+      - "Focus on coordination and consistency"
+      - "Emphasize team productivity"
+      - "Standards and best practices discussion"
+      - "Knowledge sharing capabilities"
+
+  # ---------------------------------------------------------------------------
+  # Context-Aware Follow-ups
+  # ---------------------------------------------------------------------------
+  dynamic_follow_ups:
+    based_on_project_type:
+      api_service: 
+        - "What kind of data does this API work with?"
+        - "Who are the main consumers - internal teams or external clients?"
+      
+      web_application:
+        - "Is this more about content, functionality, or data management?"
+        - "What's the primary user interaction pattern?"
+      
+      data_processing:
+        - "What's the source and destination of this data?"
+        - "Is this batch processing, real-time, or both?"
+      
+      internal_tool:
+        - "What workflow or process does this optimize?"
+        - "How many people use this regularly?"
+    
+    based_on_responses:
+      mentions_performance: "What kind of performance requirements are we talking about?"
+      mentions_compliance: "What compliance or regulatory requirements apply?"
+      mentions_scaling: "What kind of growth or scaling challenges do you anticipate?"
+      mentions_legacy: "What aspects of the legacy system are most challenging?"
+
+# =============================================================================
+# TRANSITION CRITERIA & VALIDATION
+# =============================================================================
+completion_requirements:
+  must_have_before_stage_2:
+    - "Project type clearly identified"
+    - "Team size and structure understood"
+    - "Primary domain or industry context established"
+    - "Current development stage known"
+  
+  nice_to_have:
+    - "Specific pain points documented"
+    - "Success criteria articulated"
+    - "Expertise level gauged"
+    - "Claude integration motivation clear"
+
+validation_checkpoint:
+  summary_presentation: |
+    "Let me confirm what I understand about your project:
+    
+    - **Project Type**: [TYPE] - [SHORT_DESCRIPTION]
+    - **Team**: [SIZE] people at [STAGE] stage
+    - **Domain**: [DOMAIN/INDUSTRY]
+    - **Main Goal**: [PRIMARY_GOAL]
+    - **Current Challenge**: [MAIN_CHALLENGE]
+    
+    Does this capture the essence of what we're working with?"
+  
+  correction_opportunity: |
+    "What should I adjust or add to better understand your project?"
+  
+  confidence_check:
+    high_confidence: "Great! I have a clear picture. Let's dive into the technical details."
+    medium_confidence: "I think I understand, but let me ask one quick clarifying question..."
+    low_confidence: "I want to make sure I understand correctly - could you help me clarify..."
+
+# =============================================================================
+# USER CONTROL & EXPERIENCE
+# =============================================================================
+user_control_features:
+  pace_control:
+    quick_mode: 
+      description: "Essential questions only - 3 minutes total"
+      questions: ["Project type?", "Team size?", "Main goal?"]
+    
+    standard_mode:
+      description: "Balanced exploration - 5-7 minutes"
+      approach: "All question flows with adaptive follow-ups"
+    
+    deep_mode:
+      description: "Comprehensive understanding - 8-10 minutes"  
+      approach: "Full exploration with examples and context"
+  
+  navigation_options:
+    skip_question: "Move to next question in current flow"
+    skip_flow: "Move to next question category"
+    back_one: "Return to previous question for revision"
+    pause_here: "Save progress and pause consultation"
+    
+  engagement_maintenance:
+    progress_indicators:
+      - "We're about 25% through the discovery process"
+      - "This information helps me understand your context"
+      - "I can already see some patterns that will be useful"
+    
+    value_reinforcement:
+      - "This helps me recommend the right agent types"
+      - "Understanding this guides the context generation"
+      - "This informs what commands will be most valuable"
+
+# =============================================================================
+# TRANSITION TO STAGE 2
+# =============================================================================
+stage_transition:
+  summary_bridge: |
+    "Perfect! I now understand your project context. Next, let's dive into 
+    the technical architecture so I can understand how your code is structured 
+    and what development patterns you use. This will take about 7-10 minutes."
+  
+  expectation_setting: |
+    "I'll ask about your tech stack, development workflow, and any performance 
+    or architectural considerations. Sound good?"
+  
+  context_handoff:
+    established_foundation:
+      - "Project identity and purpose"
+      - "Team structure and expertise level"
+      - "Domain context and industry"
+      - "Current challenges and goals"
+      - "Claude integration motivation"
+    
+    preps_for_stage_2:
+      - "Technical discussion appropriate to expertise level"
+      - "Architecture questions relevant to project type"
+      - "Workflow questions scaled to team size"
+      - "Performance questions based on domain needs"
