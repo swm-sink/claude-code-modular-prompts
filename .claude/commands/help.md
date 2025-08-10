@@ -2,51 +2,42 @@
 name: help
 description: Get help with Conductor Commands
 usage: "/help [command-name]"
-allowed-tools: [Read]
+allowed-tools: [Read, Glob]
 ---
 
 # Conductor Commands Help
 
-## How to Use
+Type `/help <command>` for details or see all commands below.
 
-- Type `/help` for this overview
-- Type `/help <command>` for specific command details
-- Example: `/help implement`
+## Getting Started
+`/welcome` - Interactive guide  
+`/orchestrate` - Full project setup
+`/quick-setup` - Fast initialization
+`/initialize` - Minimal structure
 
-## Available Commands
+## Development
+`/implement` - TDD feature building
+`/plan` - Implementation strategy
+`/generate` - Code generation
+`/refactor` - Safe code improvement
+`/debug` - Issue troubleshooting
 
-### Getting Started
-- `/welcome` - Interactive guide for new users
-- `/orchestrate` - Quick project setup
-- `/project-analysis` - Analyze your codebase
+## Analysis
+`/project-analysis` - Codebase analysis
+`/explore` - Deep exploration
+`/discover` - Pattern discovery
+`/anti-pattern-audit` - Find issues
 
-### Development
-- `/implement` - Build features with TDD
-- `/plan` - Plan implementation strategy
-- `/generate` - Generate code matching patterns
-- `/explore` - Deep exploration of project
+## Testing
+`/test-unit` - Unit tests
+`/test-integration` - Integration tests
+`/test-e2e` - End-to-end tests
+`/validate` - Quality validation
 
-### Testing & Quality
-- `/test-unit` - Create unit tests
-- `/test-integration` - Integration tests
-- `/test-e2e` - End-to-end tests
-- `/validate` - Validate code quality
-- `/anti-pattern-audit` - Find issues
+## Operations
+`/commit` - Git commits
+`/deploy` - Deployment prep
+`/context-generation` - Create CLAUDE.md
+`/setup` - Project configuration
 
-### Utilities
-- `/commit` - Create git commits
-- `/context-generation` - Generate CLAUDE.md
-- `/discover` - Discover project patterns
-- `/setup` - Initialize Claude Code structure
-
-### Initialization
-- `/initialize` - Basic initialization
-- `/quick-setup` - Fast project setup
-
-### Tips
-- Commands are prompts that guide Claude
-- Keep conversations focused
-- Use `/clear` between unrelated tasks
-- Check CLAUDE.md for project context
-
-Need specific help? Ask for any command details!
+Need specific help? Just ask!

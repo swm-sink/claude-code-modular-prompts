@@ -7,45 +7,28 @@ allowed-tools: [Read, Glob, Grep, WebSearch]
 
 # Anti-Pattern Audit
 
-I'll scan your codebase for common anti-patterns and provide fixes.
+I'll scan for critical issues and provide actionable fixes.
 
-## What I'll Check For
+## Scan Coverage
 
-**Architecture Anti-Patterns:**
-- God objects (classes doing too much)
-- Circular dependencies
-- Distributed monolith (fake microservices)
-- Anemic domain models
+**Architecture**: God objects, circular deps, fake microservices
+**Performance**: N+1 queries, memory leaks, sync bottlenecks  
+**Security**: Hardcoded secrets, SQL injection, missing validation
+**Quality**: Duplication, dead code, long methods (>50 lines)
 
-**Performance Anti-Patterns:**
-- N+1 queries
-- Memory leaks
-- Synchronous operations that should be async
-- Missing database indexes
+## Process
 
-**Security Anti-Patterns:**
-- Hardcoded secrets
-- SQL injection vulnerabilities
-- Missing input validation
-- Exposed sensitive data
+1. Grep problematic patterns
+2. Read suspicious files
+3. WebSearch best practices
+4. Generate fix recommendations
 
-**Code Quality Anti-Patterns:**
-- Copy-paste code duplication
-- Dead code
-- Long methods (>50 lines)
-- Deep nesting (>4 levels)
+## Output
 
-## How I'll Find Them
+Prioritized report with:
+- Issue location (file:line)
+- Severity rating
+- Fix with code example
+- Effort estimate
 
-1. Use `Grep` to search for problematic patterns
-2. Use `Read` to analyze suspicious files
-3. Use `WebSearch` to verify current best practices
-4. Provide specific file locations and line numbers
-
-## What You'll Get
-
-- **Priority list** of issues (Critical → High → Medium)
-- **Evidence** showing exactly where problems exist  
-- **Fix recommendations** with code examples and effort estimates
-
-Let me start scanning your codebase...
+Scanning your codebase now...
