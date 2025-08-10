@@ -5,7 +5,7 @@ usage: "/welcome"
 allowed-tools: [Read, Glob, WebSearch]
 ---
 
-# Welcome to Conductor Commands! 👋
+# Welcome to Conductor Commands!
 
 I'll help you get started with this powerful Claude Code command toolkit.
 

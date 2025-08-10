@@ -15,31 +15,35 @@ allowed-tools: [Read]
 
 ## Available Commands
 
-### 🚀 Getting Started
+### Getting Started
 - `/welcome` - Interactive guide for new users
 - `/orchestrate` - Quick project setup
 - `/project-analysis` - Analyze your codebase
 
-### 💻 Development
+### Development
 - `/implement` - Build features with TDD
 - `/plan` - Plan implementation strategy
 - `/generate` - Generate code matching patterns
 - `/explore` - Deep exploration of project
 
-### ✅ Testing & Quality
+### Testing & Quality
 - `/test-unit` - Create unit tests
 - `/test-integration` - Integration tests
 - `/test-e2e` - End-to-end tests
 - `/validate` - Validate code quality
 - `/anti-pattern-audit` - Find issues
 
-### 🔧 Utilities
+### Utilities
 - `/commit` - Create git commits
 - `/context-generation` - Generate CLAUDE.md
 - `/discover` - Discover project patterns
 - `/setup` - Initialize Claude Code structure
 
-### 📚 Tips
+### Initialization
+- `/initialize` - Basic initialization
+- `/quick-setup` - Fast project setup
+
+### Tips
 - Commands are prompts that guide Claude
 - Keep conversations focused
 - Use `/clear` between unrelated tasks
