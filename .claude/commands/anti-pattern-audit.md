@@ -1,150 +1,69 @@
 ---
 name: anti-pattern-audit
-description: ML-powered anti-pattern detection with automated fix generation
-usage: "/anti-pattern-audit [--depth surface|deep|exhaustive] [--fix-mode suggest|apply]"
-allowed-tools: [Read, Glob, Grep, WebSearch, Task, Edit, Bash]
+description: Find and fix common anti-patterns in your code
+usage: "/anti-pattern-audit [--fix]"
+allowed-tools: [Read, Glob, Grep, Edit]
 ---
 
-# Advanced Anti-Pattern Detection & Remediation
+# Anti-Pattern Audit
 
-I'll use pattern recognition and parallel analysis to find and fix anti-patterns at scale.
+I'll scan for common issues and suggest fixes.
 
-## Phase 1: Multi-Dimensional Pattern Detection (8 Parallel Agents)
+## Quick Scan
 
-**Agent 1: Architectural Anti-Patterns**
-- God objects (classes >500 lines, >20 methods)
-- Circular dependencies (import cycle detection)
-- Layering violations (cross-layer calls)
-- Anemic domain models (data-only classes)
-- Distributed monoliths (false microservices)
+Checking for anti-patterns...
 
-**Agent 2: Performance Anti-Patterns**
-- N+1 query patterns in data access
-- Synchronous operations in async contexts
-- Memory leaks (unclosed resources, event listeners)
-- Inefficient algorithms (O(n²) where O(n) possible)
-- Missing database indexes on JOIN/WHERE columns
+### Code Issues
+- **Long functions**: > 50 lines
+- **Deep nesting**: > 4 levels  
+- **Code duplication**: Similar blocks
+- **Dead code**: Unused functions
+- **Complex conditions**: Hard to read
 
-**Agent 3: Security Anti-Patterns**
-- Hardcoded secrets/API keys/passwords
-- SQL injection vulnerabilities
-- XSS attack vectors
-- Insecure deserialization
-- Missing authentication/authorization
+### Architecture Issues
+- **God objects**: Classes doing too much
+- **Circular dependencies**: A→B→A
+- **Missing abstractions**: Repeated patterns
+- **Tight coupling**: Hard dependencies
 
-**Agent 4: Code Smell Detection**
-- Long methods (>50 lines)
-- Deep nesting (>4 levels)
-- Code duplication (>10 line similarities)
-- Dead code (unreachable/unused)
-- Feature envy (methods using other class data)
+### Security Issues
+- **Hardcoded secrets**: API keys, passwords
+- **SQL injection**: Unescaped queries
+- **Missing validation**: User input
 
-**Agent 5: Testing Anti-Patterns**
-- Missing tests for critical paths
-- Test interdependencies
-- Slow tests (>1s per unit test)
-- Flaky tests (non-deterministic)
-- Poor test coverage (<80% for critical code)
+## Found Issues
 
-**Agent 6: Concurrency Anti-Patterns**
-- Race conditions
-- Deadlock potential
-- Thread-unsafe singletons
-- Missing synchronization
-- Busy waiting loops
+<if-issues-found>
+### Priority 1: Critical
+- [Issue]: [file:line]
+  **Fix**: [suggested solution]
 
-**Agent 7: API Design Anti-Patterns**
-- Breaking changes without versioning
-- Inconsistent naming conventions
-- Missing error handling
-- Chatty interfaces (multiple calls needed)
-- Missing pagination for lists
+### Priority 2: Important
+- [Issue]: [file:line]
+  **Fix**: [suggested solution]
 
-**Agent 8: Modern Best Practices Violations**
-- WebSearch latest standards for your tech stack
-- Check OWASP Top 10 compliance
-- Verify accessibility standards
-- Check for deprecated API usage
-- Identify outdated patterns
+### Priority 3: Nice to fix
+- [Issue]: [file:line]
+  **Fix**: [suggested solution]
+</if-issues-found>
 
-## Phase 2: Pattern Correlation & Risk Scoring
+<if-no-issues>
+✅ No major anti-patterns detected!
 
-**Machine Learning-Inspired Scoring:**
-```
-Risk Score = Σ(severity × frequency × impact × exposure)
+Minor suggestions:
+- [Improvement opportunity]
+- [Code style suggestion]
+</if-no-issues>
 
-Where:
-- Severity: How bad is the anti-pattern (1-10)
-- Frequency: How often it appears (count)
-- Impact: Business/performance impact (1-10)
-- Exposure: Attack surface or user-facing (0-1)
-```
+## Fix Options
 
-**Pattern Clustering:**
-- Group related anti-patterns
-- Identify systemic issues
-- Find root architectural problems
-- Detect team knowledge gaps
+**Manual review**: See issues above
+**Auto-fix** (with --fix): I'll apply safe fixes
+**Detailed report**: Use `/analyze --depth deep`
 
-## Phase 3: Automated Fix Generation
+## Summary
+- **Critical issues**: [count]
+- **Total issues**: [count]
+- **Files affected**: [count]
 
-**Fix Strategy Selection:**
-
-**Level 1: Safe Automated Fixes**
-- Remove dead code
-- Add missing null checks
-- Fix obvious typos
-- Update deprecated APIs
-
-**Level 2: Guided Refactoring**
-- Extract long methods
-- Introduce design patterns
-- Add abstraction layers
-- Implement dependency injection
-
-**Level 3: Architectural Remediation**
-- Break circular dependencies
-- Introduce async patterns
-- Implement caching layers
-- Add security middleware
-
-## Phase 4: Fix Validation & Testing
-
-**Automated Verification:**
-```bash
-# Before applying fixes:
-# 1. Create git branch
-# 2. Run existing tests
-# 3. Apply fixes incrementally
-# 4. Run tests after each fix
-# 5. Measure performance impact
-```
-
-## Phase 5: Continuous Improvement
-
-**Learning from Patterns:**
-- Create custom rules for your codebase
-- Generate team-specific lint rules
-- Build architectural fitness functions
-- Create pre-commit hooks
-
-## Output Report Structure
-
-```markdown
-# Critical Issues (Fix immediately)
-[Issues that could cause data loss, security breaches, or downtime]
-
-# High Priority (This sprint)
-[Performance problems, user-facing bugs]
-
-# Medium Priority (This quarter)
-[Code quality, maintainability issues]
-
-# Technical Debt Registry
-[Long-term improvements, refactoring opportunities]
-
-# Recommended Process Changes
-[Team practices, tooling, education needs]
-```
-
-Initiating comprehensive anti-pattern detection...
+*Next steps*: Fix critical issues first, then run tests.
