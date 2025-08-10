@@ -45,8 +45,7 @@ I'll scan your codebase for common anti-patterns and provide fixes.
 ## What You'll Get
 
 - **Priority list** of issues (Critical → High → Medium)
-- **Evidence** showing exactly where problems exist
-- **Fix recommendations** with code examples
-- **Effort estimates** for each fix
+- **Evidence** showing exactly where problems exist  
+- **Fix recommendations** with code examples and effort estimates
 
 Let me start scanning your codebase...
