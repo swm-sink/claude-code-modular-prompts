@@ -1,50 +1,102 @@
 ---
 name: debug
-description: Interactive debugging assistant for finding and fixing issues
-usage: "/debug [error-message|file:line]"
-allowed-tools: [Read, Grep, WebSearch, Edit]
+description: Advanced debugging with parallel root cause analysis and predictive fixes
+usage: "/debug [error-message|file:line] [--mode quick|thorough|forensic]"
+allowed-tools: [Read, Grep, WebSearch, Edit, Task, Bash]
 ---
 
-# Debug Assistant
+# Advanced Debugging with Root Cause Analysis
 
-I'll help you troubleshoot and fix issues in your code.
+I'll use parallel investigation and causal reasoning to find and fix your issue quickly.
 
-## What I Can Debug
+## Phase 1: Parallel Investigation (5 Concurrent Agents)
 
-- **Runtime errors**: Stack traces, error messages
-- **Logic bugs**: Unexpected behavior, wrong outputs  
-- **Performance issues**: Slow code, memory leaks
-- **Integration problems**: API failures, dependency conflicts
+**Agent 1: Error Pattern Analysis**
+- Parse error message/stack trace with regex
+- Identify error type and severity
+- Extract relevant file paths and line numbers
+- Classify error category (syntax/runtime/logic/performance)
 
-## My Debugging Process
+**Agent 2: Historical Analysis**
+- Git blame to find when code was introduced
+- Check recent commits for related changes
+- Identify if this is a regression
+- Find similar past issues and their fixes
 
-1. **Analyze the Error**
-   - Parse error message or stack trace
-   - Identify the failing component
-   - Trace execution path
+**Agent 3: Dependency Investigation**
+- Check for version mismatches
+- Identify breaking changes in dependencies
+- Scan for circular dependencies
+- Verify environment consistency
 
-2. **Investigate Root Cause**
-   - Read relevant code sections
-   - Check recent changes
-   - Search for known issues
+**Agent 4: Similar Issues Research**
+- WebSearch for exact error message
+- Search GitHub issues for your dependencies
+- Check Stack Overflow for solutions
+- Find patches or workarounds
 
-3. **Provide Solutions**
-   - Specific fix with code
-   - Alternative approaches
-   - Prevention strategies
+**Agent 5: Code Flow Analysis**
+- Trace execution path to error
+- Identify all code paths leading to failure
+- Map data flow and transformations
+- Detect race conditions or deadlocks
 
-## Interactive Mode
+## Phase 2: Root Cause Determination
 
-I'll ask clarifying questions:
-- What were you trying to do?
-- When did this start happening?
-- What have you already tried?
+**Causal Chain Analysis:**
+1. Immediate cause (what broke)
+2. Proximate cause (why it broke)
+3. Root cause (what allowed it to break)
+4. Systemic cause (process failure that enabled it)
 
-## Output
+**Hypothesis Testing:**
+- Generate 3-5 potential causes
+- Rank by probability
+- Create minimal reproduction
+- Test each hypothesis
 
-- Root cause analysis
-- Step-by-step fix
-- Code corrections
-- Test to verify fix
+## Phase 3: Solution Generation
 
-Share your error or issue to begin...
+**Multi-Strategy Fix Approach:**
+
+**Quick Fix** (Immediate relief):
+- Patch the symptom
+- Add error handling
+- Implement workaround
+
+**Proper Fix** (Address root cause):
+- Refactor problematic code
+- Fix architectural issues
+- Update dependencies
+
+**Preventive Fix** (Avoid recurrence):
+- Add tests to catch this
+- Improve error messages
+- Add validation/guards
+- Document the issue
+
+## Phase 4: Verification Protocol
+
+**Automated Testing:**
+```bash
+# Test the fix works
+# Test it doesn't break other things
+# Test edge cases are handled
+# Performance benchmark if relevant
+```
+
+## Phase 5: Learning Integration
+
+**Documentation Updates:**
+- Add to troubleshooting guide
+- Update error handling patterns
+- Create knowledge base entry
+- Share team postmortem
+
+## Debugging Modes
+
+**Quick Mode**: Fast diagnosis, immediate patch
+**Thorough Mode**: Complete root cause analysis
+**Forensic Mode**: Deep investigation with full history
+
+Starting parallel debugging investigation...
