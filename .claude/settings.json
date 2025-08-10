@@ -31,7 +31,6 @@
       "Bash(sudo:*)"
     ]
   },
-  "model": "sonnet",
   "context": {
     "maxTokens": 200000,
     "preserveContext": true,
@@ -40,7 +39,7 @@
   "commands": {
     "directory": ".claude/commands",
     "autoDiscover": true,
-    "categories": ["core", "development", "testing", "utility"]
+    "categories": ["core", "development", "testing", "utility", "initialization"]
   },
   "ignorePatterns": [
     "node_modules/**",
