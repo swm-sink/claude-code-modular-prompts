@@ -50,6 +50,9 @@ etc/
 *_audit.txt
 !reports/
 
-# Never ignore .claude directory
+# Claude Code local settings
+.claude/settings.local.json
+
+# Never ignore .claude directory (except local settings)
 !.claude/
 !.claude/**

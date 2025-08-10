@@ -10,17 +10,49 @@
       "LS",
       "Bash",
       "WebSearch",
-      "WebFetch"
+      "WebFetch",
+      "Task",
+      "TodoWrite"
     ],
     "dangerouslySkipConfirmation": false
+  },
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(npm run test:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npm run typecheck:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./secrets/**)",
+      "Bash(rm -rf:*)",
+      "Bash(sudo:*)"
+    ]
   },
   "model": "sonnet",
   "context": {
     "maxTokens": 200000,
-    "preserveContext": true
+    "preserveContext": true,
+    "autoCompact": true
   },
   "commands": {
     "directory": ".claude/commands",
-    "autoDiscover": true
+    "autoDiscover": true,
+    "categories": ["core", "development", "testing", "utility"]
+  },
+  "ignorePatterns": [
+    "node_modules/**",
+    ".git/**",
+    "build/**",
+    "dist/**",
+    "coverage/**",
+    "*.log",
+    "*.tmp"
+  ],
+  "hooks": {
+    "preCommit": ["npm run lint", "npm run test"],
+    "postToolUse": []
   }
 }
