@@ -1,43 +1,77 @@
 ---
 name: project-analysis
-description: Analyze your project structure, patterns, and provide actionable insights
-usage: "/project-analysis [--focus architecture|performance|security|quality]"
-allowed-tools: [Read, Glob, Grep, LS, WebSearch]
+description: Quantitative project health metrics with parallel deep analysis
+usage: "/project-analysis [--report-type executive|technical|comprehensive]"
+allowed-tools: [Read, Glob, Grep, LS, WebSearch, Task, Bash]
 ---
 
-# Quick Project Analysis
+# Quantitative Project Health Analysis
 
-I'll analyze your project and give you immediate, actionable insights.
+I'll generate comprehensive metrics and health scores through parallel deep analysis.
 
-## What I'll Do Right Now
+## Parallel Metrics Collection (7 Concurrent Agents)
 
-1. **Scan Your Project Structure**
-   - Use `Glob` to map your file organization
-   - Use `LS` to understand directory hierarchy
-   - Identify your frameworks and dependencies
+**Agent 1: Code Complexity Metrics**
+- Cyclomatic complexity per function
+- Cognitive complexity scores
+- Nesting depth analysis
+- Lines of code distribution
 
-2. **Detect Patterns & Anti-Patterns**
-   - Use `Grep` to find common code patterns
-   - Look for performance bottlenecks (N+1 queries, missing indexes)
-   - Check for security issues (hardcoded secrets, SQL injection risks)
-   - Identify architectural problems (circular dependencies, god objects)
+**Agent 2: Dependency Health**
+- Outdated dependencies count
+- Security vulnerabilities (via WebSearch CVE databases)
+- License compatibility matrix
+- Circular dependency detection
 
-3. **Analyze Code Quality**
-   - Check test coverage presence
-   - Look for documentation patterns
-   - Identify technical debt indicators
+**Agent 3: Test Coverage Analysis**
+- Unit test coverage estimation
+- Integration test presence
+- E2E test detection
+- Test-to-code ratio
 
-4. **Provide Specific Recommendations**
-   - List your top 5 issues with evidence
-   - Suggest concrete fixes you can implement today
-   - Estimate effort for each improvement
+**Agent 4: Performance Indicators**
+- Big-O complexity of algorithms
+- Database query patterns (N+1 detection)
+- Memory leak indicators
+- Bundle size analysis
 
-## Output Format
+**Agent 5: Security Scoring**
+- OWASP Top 10 compliance check
+- Secrets detection (API keys, passwords)
+- Input validation coverage
+- Authentication pattern analysis
 
-I'll give you a concise report with:
-- **Quick Wins**: Things you can fix in < 1 hour
-- **Major Issues**: Problems that need attention soon
-- **Architecture Insights**: Patterns I've detected
-- **Next Steps**: Prioritized action items
+**Agent 6: Technical Debt Quantification**
+- Code duplication percentage
+- TODO/FIXME/HACK count and age
+- Deprecated API usage
+- Refactoring opportunities score
 
-Let me start analyzing your project now...
+**Agent 7: Architecture Quality**
+- Coupling and cohesion metrics
+- SOLID principles adherence
+- Design pattern usage
+- Modularity index
+
+## Synthesis & Scoring Algorithm
+
+After parallel analysis, I'll calculate:
+
+**Overall Health Score (0-100)**
+- Weighted composite of all metrics
+- Industry benchmark comparison
+- Trend analysis (if git history available)
+
+**Risk Matrix**
+- Critical risks (immediate action)
+- High risks (this sprint)
+- Medium risks (this quarter)
+- Low risks (backlog)
+
+## Adaptive Report Generation
+
+**Executive Report**: High-level scores, risks, ROI of fixes
+**Technical Report**: Detailed metrics, code examples, fix guides
+**Comprehensive**: Full data export with visualizations
+
+Launching parallel analysis agents...
