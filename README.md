@@ -1,118 +1,51 @@
-# Claude Context Architect - Pure Claude Native
+# Conductor Commands
 
-A **100% Claude Code native** system for deep project discovery and custom command generation.
+Simple, effective Claude Code commands for enhanced development workflows.
+
+## Quick Start
+
+```bash
+# Clone the repository
+git clone [repo-url] 
+cd conductor-commands
+
+# Start using commands in Claude Code
+/orchestrate        # Set up for your project
+/project-analysis   # Analyze your codebase
+/anti-pattern-audit # Find and fix issues
+```
 
 ## What This Is
 
-This is a pure Claude Code native implementation that:
-- **Analyzes** your project deeply (30-60 minutes)
-- **Extracts** your project's DNA (patterns, conventions, architecture)
-- **Generates** custom commands specific to YOUR project
-- **Zero dependencies** - Everything runs in Claude conversation
+A collection of Claude Code slash commands that make Claude take action using its native tools. 
 
-## Quick Start (10-15 minutes)
+**Key Features:**
+- 19 ready-to-use commands
+- Simple 40-50 line prompts
+- Action-oriented design
+- Pure Claude Code native
 
-```bash
-# 1. Setup Claude structure
-/setup
+For detailed project information, see [`CLAUDE.md`](CLAUDE.md).
 
-# 2. Deep discovery (30-60 min interactive)
-/discover
+## Available Commands
 
-# 3. Generate custom commands
-/generate
-```
+See [`CLAUDE.md#available-commands`](CLAUDE.md#available-commands) for the complete list of 19 commands organized by category.
 
-That's it. Three commands. Pure Claude native.
+## Documentation
 
-## What Makes This Different
-
-### ❌ What This Is NOT
-- Not shell scripts pretending to be smart
-- Not YAML configs that don't execute
-- Not templates you have to customize
-- Not instruction manuals for Claude
-
-### ✅ What This IS
-- **Executable commands** that run immediately
-- **XML semantic tagging** for Claude understanding
-- **Direct tool usage** (Read, Write, Glob, Grep)
-- **Project-specific** generation, not generic templates
-
-## Project Structure
-
-```
-.claude/
-├── commands/           # Your executable commands
-│   ├── setup.md       # Initialize structure
-│   ├── discover.md    # Deep analysis
-│   └── generate.md    # Create custom commands
-├── context/           # Project understanding
-└── settings.json      # Minimal config
-
-outputs/               # Generated artifacts
-├── PROJECT-DNA.md    # Your project's extracted patterns
-└── generated/        # Your custom commands
-```
-
-## Core Principles
-
-1. **Everything in conversation** - No external scripts
-2. **Commands execute** - Not instruction manuals
-3. **XML for semantics** - Claude understands structure
-4. **Zero dependencies** - Only Claude's native tools
-5. **Project-specific** - Generated for YOUR codebase
-
-## The Three Commands
-
-### `/setup`
-- Creates `.claude/` structure
-- Detects your technology stack
-- Initializes context
-- **Time**: 1-2 minutes
-
-### `/discover`
-- Deep 30-60 minute consultation
-- Analyzes architecture, domain, patterns
-- Creates PROJECT-DNA.md
-- **Time**: 30-60 minutes interactive
-
-### `/generate`
-- Reads your PROJECT-DNA
-- Generates custom commands
-- Creates executable, not templates
-- **Time**: 5-10 minutes
-
-## Requirements
-
-- Claude Code CLI
-- A project to analyze
-- 30-60 minutes for discovery
-
-## No Installation Needed
-
-This IS the installation. Just run `/setup`.
+- [`CLAUDE.md`](CLAUDE.md) - Complete project context and guidelines
+- [`docs/COMMAND-CREATION-GUIDE.md`](docs/COMMAND-CREATION-GUIDE.md) - How to create commands
+- [`TESTING-STRATEGY.md`](TESTING-STRATEGY.md) - Testing approach
+- [`PROJECT-STATUS.md`](PROJECT-STATUS.md) - Current project status
 
 ## Philosophy
 
-> "If it doesn't execute, delete it."  
-> "If it needs a script, rewrite as a command."  
-> "If it's YAML config, convert to XML tags."  
-> "If it's documentation, make it functional."
+See [`CLAUDE.md#project-philosophy`](CLAUDE.md#project-philosophy) for our core principles.
 
-## Anti-Patterns We Avoid
+## Contributing
 
-Based on extensive research and validation:
-- ❌ Hallucinated metrics (87.3% improvement!)
-- ❌ Theatrical success claims
-- ❌ Over-engineering
-- ❌ Template pollution
-- ❌ Context bloat
+See [`CLAUDE.md#development-guidelines`](CLAUDE.md#development-guidelines) for command creation principles and the [Command Creation Guide](docs/COMMAND-CREATION-GUIDE.md) for detailed instructions.
 
 ## License
 
 MIT
-
----
-
-*Pure Claude Code native. Zero scripts. Zero configs. Just commands that work.*
