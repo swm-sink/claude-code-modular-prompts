@@ -1,45 +1,65 @@
 ---
 name: orchestrate
-description: Analyze project and set up Claude Code for your specific needs
-usage: "/orchestrate"
-allowed-tools: [Read, Write, Edit, Bash, Glob, Grep, LS, WebSearch]
+description: Comprehensive project setup using Tree of Thought parallel analysis
+usage: "/orchestrate [--depth shallow|normal|deep]"
+allowed-tools: [Read, Write, Edit, Bash, Glob, Grep, LS, WebSearch, Task]
 ---
 
-# Project Setup Orchestration
+# Intelligent Project Orchestration
 
-When this command runs, I will immediately:
+I'll perform comprehensive parallel analysis using Tree of Thought to create the perfect Claude Code setup for your project.
 
-## 1. Detect Your Project Type
-I'll examine your project files to understand your technology stack:
-- Check for package.json, requirements.txt, go.mod, Cargo.toml, etc.
-- Identify frameworks and dependencies
-- Understand your project structure
+## Tree of Thought Analysis (Parallel Execution)
 
-## 2. Research Current Best Practices
-I'll search for the latest patterns and practices for your stack:
-- Search for best practices specific to your framework (2024-2025)
-- Find common anti-patterns to avoid
-- Identify testing and deployment strategies
+**Branch 1: Technical Stack Analysis** (Task agent)
+- Detect languages, frameworks, build tools
+- Analyze dependency graphs and versions
+- Identify architectural patterns (MVC, microservices, etc.)
+- WebSearch for latest best practices for each technology
 
-## 3. Create Custom Commands
-Based on what I find, I'll create commands tailored to your project:
-- Build commands that match your workflow
-- Test commands suited to your testing framework
-- Deployment commands for your infrastructure
+**Branch 2: Codebase Intelligence** (Task agent)
+- Calculate complexity metrics (cyclomatic, cognitive)
+- Map module dependencies and coupling
+- Identify hot spots and technical debt
+- Discover testing patterns and coverage
 
-## 4. Set Up Project Context
-I'll create a CLAUDE.md file that helps me understand your project:
-- Document your architecture patterns
-- Note team conventions I discover
-- Record important technical decisions
+**Branch 3: Workflow Discovery** (Task agent)
+- Analyze git history for development patterns
+- Detect CI/CD configurations
+- Identify team conventions from existing code
+- Research industry standards for your domain
 
-## What I'll Actually Do
-1. Use `Glob` and `LS` to explore your project structure
-2. Use `Read` to examine key configuration files
-3. Use `WebSearch` to find current best practices for your stack
-4. Use `Write` to create custom commands in .claude/commands/
-5. Use `Write` to create your project's CLAUDE.md
+**Branch 4: Context Optimization** (Task agent)
+- Determine critical paths in codebase
+- Identify frequently modified areas
+- Map knowledge dependencies
+- Create optimal CLAUDE.md structure
 
-This takes about 5-10 minutes and gives you a Claude Code setup that actually understands your specific project.
+## Synthesis Phase (Convergence)
 
-Ready? I'll start analyzing your project now.
+After parallel analysis, I'll synthesize findings to:
+
+1. **Create Precision Commands**
+   - Commands that understand YOUR specific patterns
+   - Pre-configured with your conventions
+   - Optimized for your tech stack
+
+2. **Generate Adaptive Configuration**
+   - Dynamic settings.json based on project size
+   - Security rules tailored to your needs
+   - Performance tuning for your scale
+
+3. **Build Knowledge Base**
+   - Comprehensive CLAUDE.md with deep insights
+   - Architecture decision records
+   - Team-specific conventions
+
+## Extended Thinking Mode
+
+For complex projects, I'll engage extended thinking to:
+- Explore multiple configuration strategies
+- Evaluate trade-offs between approaches
+- Predict future scaling needs
+- Consider edge cases and failure modes
+
+Initiating parallel Tree of Thought analysis...

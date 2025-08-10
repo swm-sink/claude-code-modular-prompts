@@ -1,47 +1,57 @@
 ---
 name: welcome
-description: Interactive getting started guide for new users
-usage: "/welcome"
-allowed-tools: [Read, Glob, WebSearch]
+description: Adaptive learning journey for Claude Code mastery
+usage: "/welcome [--level beginner|intermediate|expert]"
+allowed-tools: [Read, Glob, WebSearch, Task]
 ---
 
-# Welcome to Conductor Commands!
+# Welcome to Claude Code Mastery
 
-I'll help you get started with this powerful Claude Code command toolkit.
+I'll create a personalized learning path based on your experience level and project needs.
 
-## Quick Start
+## Adaptive Assessment Phase
 
-Let me analyze your project and suggest the best commands for you.
+First, I'll understand your context through parallel analysis:
 
-### 1. First, I'll Check Your Project
+**Task 1: Experience Detection** (via sub-agent)
+- Scan for existing Claude files (.claude/, CLAUDE.md)
+- Check git history for Claude Code usage
+- Identify your development patterns
 
-I'll use Glob and Read to understand:
-- Your technology stack
-- Project structure
-- Current development phase
+**Task 2: Project Complexity** (via sub-agent)  
+- Analyze codebase size and structure
+- Detect frameworks and technologies
+- Assess architectural patterns
 
-### 2. Recommended Workflow
+**Task 3: Learning Style** (interactive)
+- Quick questions about your preferences
+- Previous AI tool experience
+- Specific goals with Claude Code
 
-Based on your project, I'll suggest:
-- Which command to run first
-- Your optimal workflow
-- Best practices for your stack
+## Personalized Learning Path
 
-### 3. Available Commands
+Based on assessment, I'll provide:
 
-**Getting Started:**
-- `/orchestrate` - Quick project setup
-- `/project-analysis` - Deep dive into your codebase
-- `/help [command]` - Get detailed help
+**Beginner Path:**
+- Core concepts with examples from YOUR code
+- Interactive exercises using your project
+- Common pitfalls specific to your stack
 
-**Development:**
-- `/implement` - Build features with TDD
-- `/test-unit` - Create comprehensive tests
-- `/validate` - Check code quality
-- `/commit` - Professional git commits
+**Intermediate Path:**
+- Advanced techniques for your use cases
+- Performance optimization strategies
+- Integration with your workflow
 
-**Maintenance:**
-- `/anti-pattern-audit` - Find and fix issues
-- `/context-generation` - Optimize Claude context
+**Expert Path:**
+- Cutting-edge patterns and research
+- Custom agent orchestration
+- Meta-prompting techniques
 
-Let me analyze your project and provide personalized recommendations...
+## Interactive Learning Mode
+
+I'll demonstrate concepts using your actual code:
+- Live examples from your project
+- Before/after comparisons
+- Immediate practice opportunities
+
+Starting adaptive assessment now...
