@@ -1,22 +1,42 @@
 ---
 name: quick-setup
-description: Get started with Conductor Commands in 30 seconds
+description: Fast initialization with essential project detection and setup
 usage: "/quick-setup"
-allowed-tools: [Write]
+allowed-tools: [Read, Write, Glob, LS]
 ---
 
 # Quick Setup
 
-I'll create the essential commands you need to get started.
+I'll detect your project type and create a tailored Claude Code configuration.
 
-## Instant Setup
+## What I'll Do
 
-I'll create these commands for you:
-1. `/analyze` - Quick project analysis
-2. `/fix` - Find and fix issues
-3. `/test` - Create tests for your code
-4. `/docs` - Generate documentation
+1. **Detect Your Stack**
+   - Check for package.json, requirements.txt, go.mod, Cargo.toml
+   - Identify frameworks (React, Django, Express, etc.)
+   - Determine project structure
 
-This gives you a working Claude Code setup immediately.
+2. **Create Configuration**
+   - Generate appropriate .claude/settings.json
+   - Set up command discovery
+   - Configure tool permissions
 
-Creating your commands now...
+3. **Initialize CLAUDE.md**
+   - Document project context
+   - Set up conventions
+   - Define workflows
+
+4. **Recommend Commands**
+   - Based on your tech stack
+   - Tailored to project phase
+   - Best practices for your framework
+
+## Output
+
+You'll get:
+- Configured Claude Code project
+- Project-specific CLAUDE.md
+- Recommended next commands
+- Setup verification report
+
+Starting project detection now...

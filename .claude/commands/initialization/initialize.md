@@ -1,33 +1,42 @@
 ---
 name: initialize
-description: Quick setup for Conductor Commands in your project
-usage: "/initialize"
-allowed-tools: [Read, Write, Glob, LS]
+description: Minimal Claude Code initialization - creates essential structure only
+usage: "/initialize [--minimal]"
+allowed-tools: [Write, LS]
 ---
 
-# Quick Project Setup
+# Initialize Claude Code
 
-I'll quickly set up Conductor Commands for your project.
+I'll create the minimal structure needed for Claude Code to work.
 
-## What I'll Do
+## Minimal Setup (Default)
 
-1. **Detect Your Stack**
-   - Check for package.json, requirements.txt, go.mod, etc.
-   - Identify your main framework and tools
+Creates only the essentials:
+1. `.claude/` directory structure
+2. Basic `settings.json` with safe defaults
+3. Empty `CLAUDE.md` template
 
-2. **Create Basic Structure**
-   - Set up `.claude/commands/` if needed
-   - Create a starter CLAUDE.md for your project
+## What Gets Created
 
-3. **Generate Helper Commands**
-   - Create a few commands specific to your tech stack
-   - Add common workflow commands you'll need
+```
+.claude/
+├── commands/       # Your custom commands go here
+├── agents/         # Specialized agents (optional)
+└── settings.json   # Claude Code configuration
+```
 
-## Quick Setup Process
+## Settings Defaults
 
-This takes about 2 minutes and gives you:
-- Project-aware CLAUDE.md
-- Basic commands for your workflow
-- Ready-to-use Claude Code setup
+- Safe tool permissions (Read, Write, Edit)
+- Command auto-discovery enabled
+- Context management configured
+- No dangerous operations allowed
 
-Let me scan your project and set things up...
+## Next Steps
+
+After initialization:
+- Run `/quick-setup` for project detection
+- Run `/orchestrate` for comprehensive setup
+- Add your first command with `/generate`
+
+Creating minimal structure now...
