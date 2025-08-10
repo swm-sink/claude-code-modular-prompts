@@ -1,145 +1,45 @@
 ---
 name: discover
-description: Deep project discovery and DNA extraction
+description: Discover project patterns and conventions
 usage: "/discover"
 allowed-tools: [Read, Write, Glob, Grep, WebSearch]
-model: opus
 ---
 
-# Discover Command - Extract Your Project's DNA
+# Discover Command
 
-<command_execution>
-This command performs 30-60 minute deep discovery of your project.
-Everything executes through Claude's tools. No external dependencies.
-</command_execution>
+## What I'll Do
 
-## Deep Discovery Process
+I'll discover your project's unique patterns, conventions, and "DNA" by:
+1. Analyzing code structure
+2. Identifying naming conventions
+3. Finding architectural patterns
+4. Detecting testing approaches
+5. Understanding workflow patterns
 
-### Phase 1: Technical Architecture (10-15 minutes)
-I'll analyze your entire codebase:
+## What I'll Discover
 
-- **Framework Detection**: Using Glob and Read to identify all frameworks
-- **Dependency Analysis**: Reading lock files and configs
-- **Pattern Recognition**: Using Grep to find recurring patterns
-- **Testing Strategy**: Identifying test frameworks and coverage
-- **Build System**: Understanding compilation and deployment
+- **Architecture**: Design patterns and structure
+- **Conventions**: Naming, formatting, organization
+- **Dependencies**: Key libraries and frameworks
+- **Testing**: Test patterns and coverage
+- **Workflow**: Development processes
+- **Anti-patterns**: Issues to avoid
 
-### Phase 2: Domain Intelligence (10-15 minutes)
-I'll extract business understanding:
+## My Process
 
-- **Business Logic**: Analyzing core domain files
-- **Data Models**: Understanding entities and relationships
-- **API Patterns**: REST, GraphQL, gRPC detection
-- **User Flows**: Identifying key user journeys
-- **Integration Points**: External services and APIs
+1. **Scan** - Comprehensive file analysis
+2. **Pattern Match** - Identify recurring patterns
+3. **Research** - Validate with best practices
+4. **Document** - Create PROJECT-DNA.md
+5. **Recommend** - Suggest improvements
 
-### Phase 3: Team Conventions (10-15 minutes)
-I'll learn your team's style:
+## Output
 
-- **Coding Standards**: Naming conventions, file organization
-- **Git Patterns**: Commit messages, branching strategy
-- **Documentation Style**: Comments, README patterns
-- **Error Handling**: Exception patterns and logging
-- **Performance Patterns**: Caching, optimization strategies
+I'll create a PROJECT-DNA.md file containing:
+- Core patterns and conventions
+- Architecture decisions
+- Testing strategies
+- Workflow patterns
+- Team practices
 
-<pattern_library>
-  <anti_patterns>
-    <!-- Extracted from ANTIPATTERNS-MASTER.md -->
-    <category name="llm_hallucination">
-      <pattern>invented_metrics</pattern>
-      <pattern>false_success_claims</pattern>
-      <pattern>theatrical_language</pattern>
-      <prevention>demand_evidence</prevention>
-    </category>
-    <category name="over_engineering">
-      <pattern>unnecessary_abstraction</pattern>
-      <pattern>premature_optimization</pattern>
-      <pattern>framework_obsession</pattern>
-      <prevention>start_simple</prevention>
-    </category>
-    <category name="context_pollution">
-      <pattern>irrelevant_history</pattern>
-      <pattern>token_waste</pattern>
-      <pattern>context_bloat</pattern>
-      <prevention>targeted_context</prevention>
-    </category>
-  </anti_patterns>
-  
-  <consultation_flow>
-    <!-- Extracted from consultation-flow-simple.md -->
-    <stage name="discovery" duration="5-7 minutes">
-      <tools>Glob, Read, LS, Grep</tools>
-      <focus>project_structure, tech_stack, conventions</focus>
-    </stage>
-    <stage name="deep_dive" duration="10-15 minutes">
-      <tools>Read, Grep, WebSearch</tools>
-      <focus>architecture, patterns, dependencies</focus>
-    </stage>
-    <stage name="synthesis" duration="5-10 minutes">
-      <tools>Write</tools>
-      <focus>create_project_dna, recommendations</focus>
-    </stage>
-  </consultation_flow>
-  
-  <generation_patterns>
-    <!-- Extracted from generation-engine-simple.md -->
-    <approach>template_based</approach>
-    <customization>project_specific</customization>
-    <validation>test_generated_commands</validation>
-  </generation_patterns>
-</pattern_library>
-
-## Output: PROJECT-DNA.md
-
-I'll create a comprehensive PROJECT-DNA.md containing:
-
-```markdown
-# Project DNA - [Your Project Name]
-
-## Technical Architecture
-- Primary Language: [Detected]
-- Frameworks: [List]
-- Testing: [Strategy]
-- Build: [System]
-
-## Domain Model
-- Core Entities: [Identified]
-- Business Rules: [Extracted]
-- User Journeys: [Mapped]
-
-## Team Conventions
-- Code Style: [Analyzed]
-- Git Workflow: [Detected]
-- Documentation: [Pattern]
-
-## Recommended Commands
-Based on your project DNA, I recommend generating:
-- `/test-[your-framework]` - Run your specific test suite
-- `/deploy-[your-platform]` - Deploy to your platform
-- `/analyze-[your-domain]` - Domain-specific analysis
-```
-
-## Interactive Process
-
-Throughout discovery, I'll:
-1. **Ask clarifying questions** when patterns are ambiguous
-2. **Provide confidence scores** for each finding
-3. **Show evidence** for all conclusions
-4. **Validate with you** before finalizing
-
-<web_validation>
-  <!-- References from web-validated-sources.md -->
-  <validation confidence="high">
-    All patterns validated against 2024-2025 best practices.
-    Zero hallucination through evidence-based discovery.
-  </validation>
-</web_validation>
-
-## Next Step
-
-After discovery completes, run `/generate` to create project-specific commands based on your PROJECT-DNA.md
-
-<execution_guarantee>
-This command performs real analysis using Claude's tools.
-Not a template. Not instructions. Actual execution.
-</execution_guarantee>
+This becomes your project's reference guide for consistency.
