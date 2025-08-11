@@ -1,158 +1,34 @@
 ---
 name: build
-description: Adaptive development from simple edits to complex features
-usage: "/build <what-to-build> [--approach auto|quick|tdd|architect]"
-allowed-tools: [Read, Write, Edit, MultiEdit, Grep, Task]
+description: Build features and components with TDD approach
+usage: "/build <what-to-build> [approach]"
+tools: [Read, Write, Edit, MultiEdit, Grep]
 ---
 
-# Adaptive Feature Building
+# Build Feature
 
-I'll build your feature with the right approach based on complexity.
+I'll implement your feature following your existing patterns and TDD principles.
 
-## Understanding the Request
+## Planning Phase
 
-Building: **[what-to-build]**
+First, let me understand:
+1. **Read existing code** to identify patterns and conventions
+2. **Assess scope** - single file edit vs. multi-component feature
+3. **Check dependencies** - what files/systems will be affected
 
-Let me assess the scope:
-- Checking existing patterns...
-- Estimating complexity...
-- Identifying dependencies...
+## Implementation Strategy
 
-<simple-build>
-<!-- For single-file changes, simple functions -->
+**For simple changes**: Direct implementation following existing patterns
+**For complex features**: Break into smaller components with tests
+**For new functionality**: Create minimal viable implementation first
 
-## Quick Implementation (< 2 minutes)
+## TDD Process
 
-This is straightforward. I'll:
-1. Follow your existing patterns in [detected file/pattern]
-2. Add the [feature type] directly
-3. Include basic validation
+1. **Write failing test** that defines expected behavior
+2. **Implement minimal code** to make the test pass
+3. **Refactor** to improve design while keeping tests green
+4. **Repeat** for each requirement
 
-*Creating now with smart defaults...*
+## Ready to Build
 
-[Direct implementation - no over-engineering]
-</simple-build>
-
-<standard-build>
-<!-- For multi-file features, moderate complexity -->
-
-## Standard Development (3-5 minutes)
-
-This involves [detected scope]. 
-
-**One quick question**: [Most important clarification]
-- Option A: [Common approach with trade-offs]
-- Option B: [Alternative approach with trade-offs]
-
-*I'll handle everything else based on your patterns.*
-
-### Implementation Plan
-1. **Core logic**: [where and what]
-2. **Integration**: [how it connects]
-3. **Testing**: [test approach]
-4. **Documentation**: [what to update]
-
-*Proceeding with [selected approach]...*
-
-[Implementation with progress updates]
-</standard-build>
-
-<complex-build>
-<!-- For system-wide changes, high complexity -->
-
-## Comprehensive Development (5-10 minutes)
-
-This is a substantial feature affecting multiple areas.
-
-### Essential Clarifications
-
-**Architecture question**: [Key structural decision]
-> Your answer: 
-
-**Requirements question**: [Core functionality scope]
-> Your answer:
-
-*Making intelligent assumptions for:*
-- Code style (detected from your codebase)
-- Testing approach (using your framework)
-- Error handling (following your patterns)
-
-### Multi-Phase Implementation
-
-**Phase 1: Foundation** (Task agent)
-- Core data structures
-- Basic interfaces
-- Initial validation
-
-**Phase 2: Business Logic** (Task agent)
-- Main functionality
-- Edge case handling
-- Error management
-
-**Phase 3: Integration** (Task agent)
-- Connect to existing system
-- Update dependent modules
-- Migration if needed
-
-**Phase 4: Quality** (Standard execution)
-- Comprehensive tests
-- Documentation
-- Performance optimization
-
-### Execution with TDD
-
-1. **RED**: Writing failing tests first
-2. **GREEN**: Implementing minimal solution
-3. **REFACTOR**: Optimizing for your patterns
-
-*Starting implementation...*
-
-[Detailed progress with checkpoints]
-</complex-build>
-
-<architect-mode>
-<!-- For --approach architect or major system design -->
-
-## Architecture-First Development
-
-This requires careful design. Let me create a plan:
-
-### System Design
-- Component breakdown
-- Interface definitions
-- Data flow design
-
-### Risk Assessment
-- Breaking changes: [identified]
-- Performance impact: [estimated]
-- Security considerations: [analyzed]
-
-**Proceed with full implementation?** (Y/n)
-
-[If yes, execute complex-build flow]
-</architect-mode>
-
-## Build Progress
-
-[Real-time updates based on mode]
-- ✅ Pattern detection complete
-- ⏳ Creating [current file/component]
-- ⏳ Writing tests
-- ⏳ Updating documentation
-
-## Build Complete!
-
-Successfully built: **[what was built]**
-
-### What I Created/Modified:
-- [List of files and changes]
-
-### Assumptions Made:
-- [List key decisions]
-
-### Next Steps:
-- Run tests: `[test command]`
-- Review changes: `git diff`
-- Commit: `/commit`
-
-*Used [mode] approach based on complexity assessment.*
+What would you like me to build? I'll analyze your codebase and implement it properly.

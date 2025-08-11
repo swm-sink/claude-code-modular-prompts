@@ -2,54 +2,24 @@
 name: debug
 description: Adaptive debugging based on issue complexity
 usage: "/debug [error-message|file:line]"
-allowed-tools: [Read, Grep, WebSearch, Edit]
+tools: [Read, Grep, WebSearch, Edit]
 ---
 
-# Adaptive Debugging
+# Debug Issue
 
-Looking at: **[error/issue]**
+I'll analyze and fix the issue using an approach appropriate to its complexity.
 
-Assessing complexity...
+## Investigation Process
 
-<simple-mode>
-<!-- Syntax errors, typos -->
-## Quick Fix
-**Found**: [issue] at `file:line`
-**Cause**: [immediate cause]
-**Fixing**: [applying solution]
-</simple-mode>
+1. **Understand the error** - Read error messages, logs, or code location
+2. **Identify the cause** - Trace through code and dependencies
+3. **Find the solution** - Research if needed, apply appropriate fix
+4. **Verify the fix** - Test that the issue is resolved
 
-<standard-mode>
-<!-- Runtime errors, logic bugs -->
-## Systematic Debug
-1. **What broke**: [error analysis]
-2. **Root cause**: [investigation]
-3. **Solution**: [fix description]
+## Adaptive Approach
 
-Implementing fix now...
-</standard-mode>
+**Simple issues** (syntax, typos): Quick fix with immediate solution
+**Logic bugs**: Step-by-step analysis to find root cause  
+**Complex issues**: Deep investigation with research and testing
 
-<complex-mode>
-<!-- System issues, race conditions -->
-## Deep Investigation
-- Researching similar issues
-- Checking dependencies
-- Analyzing recent changes
-
-**Root cause chain**:
-Symptom → Cause → Root
-
-**Fix approach**:
-- Immediate: [patch]
-- Proper: [solution]
-- Prevention: [tests]
-
-*Need external research? (Y/n)*
-</complex-mode>
-
-## Resolution
-✅ **Fixed**: [what]
-📍 **Location**: [where]
-
-**Verify**: `[test command]`
-**Prevent**: Add [test/validation]
+What issue would you like me to debug?

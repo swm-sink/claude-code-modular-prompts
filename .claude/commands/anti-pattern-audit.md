@@ -2,7 +2,7 @@
 name: anti-pattern-audit
 description: Find and fix common anti-patterns in your code
 usage: "/anti-pattern-audit [--fix]"
-allowed-tools: [Read, Glob, Grep, Edit]
+tools: [Read, Glob, Grep, Edit]
 ---
 
 # Anti-Pattern Audit
@@ -31,29 +31,15 @@ Checking for anti-patterns...
 - **SQL injection**: Unescaped queries
 - **Missing validation**: User input
 
-## Found Issues
+## Scanning Process
 
-<if-issues-found>
-### Priority 1: Critical
-- [Issue]: [file:line]
-  **Fix**: [suggested solution]
+1. **Use Grep and Glob** to search for common anti-patterns
+2. **Read suspicious files** to confirm issues
+3. **Categorize findings** by priority level
+4. **Provide specific fixes** with file locations
 
-### Priority 2: Important
-- [Issue]: [file:line]
-  **Fix**: [suggested solution]
-
-### Priority 3: Nice to fix
-- [Issue]: [file:line]
-  **Fix**: [suggested solution]
-</if-issues-found>
-
-<if-no-issues>
-✅ No major anti-patterns detected!
-
-Minor suggestions:
-- [Improvement opportunity]
-- [Code style suggestion]
-</if-no-issues>
+If issues are found, I'll present them in priority order.
+If no major issues exist, I'll note minor improvements.
 
 ## Fix Options
 
@@ -61,9 +47,4 @@ Minor suggestions:
 **Auto-fix** (with --fix): I'll apply safe fixes
 **Detailed report**: Use `/analyze --depth deep`
 
-## Summary
-- **Critical issues**: [count]
-- **Total issues**: [count]
-- **Files affected**: [count]
-
-*Next steps*: Fix critical issues first, then run tests.
+After scanning, I'll provide a summary with specific counts and actionable next steps.
