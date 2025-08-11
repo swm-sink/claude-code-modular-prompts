@@ -2,7 +2,7 @@
 name: refactor
 description: Safely refactor code with confidence
 usage: "/refactor [file|directory] [--type extract|rename|simplify]"
-allowed-tools: [Read, Write, Edit, Grep, WebSearch]
+tools: [Read, Write, Edit, Grep, WebSearch]
 ---
 
 # Code Refactoring

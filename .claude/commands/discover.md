@@ -2,7 +2,7 @@
 name: discover
 description: Discover project patterns and conventions
 usage: "/discover"
-allowed-tools: [Read, Write, Glob, Grep, WebSearch]
+tools: [Read, Write, Glob, Grep, WebSearch]
 ---
 
 # Discover Command

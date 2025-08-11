@@ -2,7 +2,7 @@
 name: test-integration
 description: Create integration tests for your system components
 usage: "/test-integration <component>"
-allowed-tools: [Read, Write, Grep, WebSearch]
+tools: [Read, Write, Grep, WebSearch]
 ---
 
 # Create Integration Tests

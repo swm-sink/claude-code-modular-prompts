@@ -2,7 +2,7 @@
 name: welcome
 description: Adaptive learning journey for Claude Code mastery
 usage: "/welcome [--level beginner|intermediate|expert]"
-allowed-tools: [Read, Glob, WebSearch, Task]
+tools: [Read, Glob, WebSearch, Task]
 ---
 
 # Welcome to Claude Code Mastery

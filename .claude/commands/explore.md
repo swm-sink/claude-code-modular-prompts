@@ -2,7 +2,7 @@
 name: explore
 description: Deep exploration of project structure and patterns
 usage: "/explore [area]"
-allowed-tools: [Read, Glob, Grep, LS, WebSearch]
+tools: [Read, Glob, Grep, LS, WebSearch]
 ---
 
 # Explore Command

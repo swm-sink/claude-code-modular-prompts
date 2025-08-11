@@ -2,7 +2,7 @@
 name: implement
 description: TDD implementation with Chain of Thought reasoning and verification
 usage: "/implement <feature-description> [--approach careful|balanced|rapid]"
-allowed-tools: [Read, Write, Edit, WebSearch, Grep, Task, Bash]
+tools: [Read, Write, Edit, WebSearch, Grep, Task, Bash]
 ---
 
 # Chain of Thought TDD Implementation

@@ -2,7 +2,7 @@
 name: quick-setup
 description: Fast initialization with essential project detection and setup
 usage: "/quick-setup"
-allowed-tools: [Read, Write, Glob, LS]
+tools: [Read, Write, Glob, LS]
 ---
 
 # Quick Setup

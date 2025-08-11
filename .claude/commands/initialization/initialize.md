@@ -2,7 +2,7 @@
 name: initialize
 description: Minimal Claude Code initialization - creates essential structure only
 usage: "/initialize [--minimal]"
-allowed-tools: [Write, LS]
+tools: [Write, LS]
 ---
 
 # Initialize Claude Code

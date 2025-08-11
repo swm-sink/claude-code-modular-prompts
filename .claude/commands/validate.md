@@ -2,7 +2,7 @@
 name: validate
 description: Validate code quality, tests, and best practices
 usage: "/validate [file|directory]"
-allowed-tools: [Read, Grep, WebSearch, Bash]
+tools: [Read, Grep, WebSearch, Bash]
 ---
 
 # Validate Code Quality

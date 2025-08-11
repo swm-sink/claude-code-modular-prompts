@@ -2,7 +2,7 @@
 name: test-e2e
 description: Create end-to-end tests for complete user workflows
 usage: "/test-e2e <workflow>"
-allowed-tools: [Read, Write, WebSearch]
+tools: [Read, Write, WebSearch]
 ---
 
 # Create End-to-End Tests

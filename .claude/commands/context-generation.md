@@ -2,7 +2,7 @@
 name: context-generation
 description: Create a CLAUDE.md file that helps Claude understand your project
 usage: "/context-generation"
-allowed-tools: [Read, Write, Glob, Grep, WebSearch]
+tools: [Read, Write, Glob, Grep, WebSearch]
 ---
 
 # Generate Project Context

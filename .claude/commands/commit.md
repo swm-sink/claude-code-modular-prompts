@@ -2,7 +2,7 @@
 name: commit
 description: Create a well-structured git commit
 usage: "/commit [message]"
-allowed-tools: [Bash]
+tools: [Bash]
 ---
 
 # Create Git Commit

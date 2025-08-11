@@ -2,7 +2,7 @@
 name: plan
 description: Create an implementation plan for your feature or project
 usage: "/plan <feature-description>"
-allowed-tools: [Read, Write, Glob, WebSearch]
+tools: [Read, Write, Glob, WebSearch]
 ---
 
 # Create Implementation Plan

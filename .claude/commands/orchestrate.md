@@ -2,7 +2,7 @@
 name: orchestrate
 description: Comprehensive project setup using Tree of Thought parallel analysis
 usage: "/orchestrate [--depth shallow|normal|deep]"
-allowed-tools: [Read, Write, Edit, Bash, Glob, Grep, LS, WebSearch, Task]
+tools: [Read, Write, Edit, Bash, Glob, Grep, LS, WebSearch, Task]
 ---
 
 # Intelligent Project Orchestration

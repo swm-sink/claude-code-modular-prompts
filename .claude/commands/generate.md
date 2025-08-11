@@ -2,7 +2,7 @@
 name: generate
 description: Generate code following project patterns
 usage: "/generate [type] [name]"
-allowed-tools: [Read, Write, Edit, Glob, Grep]
+tools: [Read, Write, Edit, Glob, Grep]
 ---
 
 # Generate Command

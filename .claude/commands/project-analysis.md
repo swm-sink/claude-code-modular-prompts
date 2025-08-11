@@ -2,7 +2,7 @@
 name: project-analysis
 description: Quantitative project health metrics with parallel deep analysis
 usage: "/project-analysis [--report-type executive|technical|comprehensive]"
-allowed-tools: [Read, Glob, Grep, LS, WebSearch, Task, Bash]
+tools: [Read, Glob, Grep, LS, WebSearch, Task, Bash]
 ---
 
 # Quantitative Project Health Analysis

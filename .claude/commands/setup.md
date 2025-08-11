@@ -2,7 +2,7 @@
 name: setup
 description: Initialize Claude Code project structure
 usage: "/setup"
-allowed-tools: [Write, Read, Glob, LS, Edit]
+tools: [Write, Read, Glob, LS, Edit]
 ---
 
 # Setup Command

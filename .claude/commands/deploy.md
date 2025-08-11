@@ -2,7 +2,7 @@
 name: deploy
 description: Prepare and validate code for deployment
 usage: "/deploy [--env production|staging] [--checklist]"
-allowed-tools: [Read, Grep, Bash, WebSearch]
+tools: [Read, Grep, Bash, WebSearch]
 ---
 
 # Deployment Preparation

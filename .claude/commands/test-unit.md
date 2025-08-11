@@ -2,7 +2,7 @@
 name: test-unit
 description: Adaptive unit test generation with complexity-aware strategies
 usage: "/test-unit <file-path> [--coverage minimal|standard|exhaustive]"
-allowed-tools: [Read, Write, Grep, WebSearch, Task, Bash]
+tools: [Read, Write, Grep, WebSearch, Task, Bash]
 ---
 
 # Adaptive Unit Test Generation
