@@ -10,8 +10,8 @@
 ```
 lisbon/
 ├── .claude/
-│   ├── commands/        # 22 working commands (20 main + 2 initialization)
-│   │   └── initialization/  # 2 setup commands
+│   ├── commands/        # Claude Code commands (main + initialization)
+│   │   └── initialization/  # initialization commands
 │   └── settings.json    # Claude Code configuration
 ├── docs/                # Documentation and analysis
 ├── CLAUDE.md           # This file - project context
@@ -21,7 +21,7 @@ lisbon/
 ```
 
 ### What Exists
-- **22 Claude Code commands** in `.claude/commands/` (20 main + 2 initialization)
+- **Claude Code commands** in `.claude/commands/` (main + initialization)
 - **Simple prompts** that make Claude use its tools (Read, Write, WebSearch, etc.)
 - **Optimized commands** (most 30-45 lines)
 - **Documentation** explaining the approach
@@ -72,9 +72,10 @@ Claude Code commands are markdown files that:
 - `/debug` - Interactive debugging
 
 ### Testing
-- `/test-unit` - Create unit tests
-- `/test-integration` - Integration tests
-- `/test-e2e` - End-to-end tests
+- `/test` - Smart test generation (adaptive complexity)
+- `/test-unit` - Specific unit test creation
+- `/test-integration` - Specific integration tests
+- `/test-e2e` - Specific end-to-end tests
 
 ### Utilities
 - `/commit` - Create git commits
@@ -99,12 +100,38 @@ Example:
 # Provides actionable insights
 ```
 
+## Command Usage Guidelines
+
+### When to Use Core vs Specific Commands
+
+**Testing Commands**:
+- Use `/test` for adaptive test generation (best for most cases)
+- Use `/test-unit`, `/test-integration`, `/test-e2e` when you need specific test types
+
+**Analysis Commands**:
+- Use `/analyze` for comprehensive project analysis
+- Use `/project-analysis` for legacy workflows or specific metrics
+- Use `/explore` for deep code investigation
+- Use `/discover` for pattern identification
+
+**Development Commands**:
+- Use `/build` for complete feature development
+- Use `/implement` for TDD-focused implementation
+- Use `/generate` for code generation only
+- Use `/plan` for strategy without implementation
+
+**Setup Commands**:
+- Use `/start` for new projects or features (recommended)
+- Use `/orchestrate` for comprehensive project setup
+- Use `/setup` for configuration-focused setup
+- Use `/initialize`, `/quick-setup` for minimal initialization
+
 ## Development Guidelines
 
 ### Creating New Commands
 - Keep under 100 lines (40-50 ideal)
 - Use YAML frontmatter correctly
-- Specify allowed-tools
+- Specify tools (NOT allowed-tools)
 - Write clear, actionable instructions
 - Test in actual Claude Code
 
@@ -114,7 +141,7 @@ Example:
 name: command-name
 description: Brief description
 usage: "/command-name [args]"
-allowed-tools: [Read, Write, WebSearch]
+tools: [Read, Write, WebSearch]  # MUST use "tools" not "allowed-tools"
 ---
 ```
 
@@ -154,7 +181,7 @@ See `TESTING-STRATEGY.md` for details.
 - **This file (CLAUDE.md)**: Project context and truth
 - **README.md**: User documentation
 - **claude.todos.yaml**: Development tracking
-- **PROJECT-STATUS.md**: Current status report
+- **docs/reports/PROJECT-STATUS.md**: Current status report
 
 ### Documentation Strategy
 - One fact, one location
@@ -164,22 +191,61 @@ See `TESTING-STRATEGY.md` for details.
 
 ## Current State
 
-All 22 commands follow our simplicity principle:
+All commands follow our simplicity principle:
 - Commands optimized to 30-45 lines (most under 40)
-- XML pseudo-code has been removed
+- XML pseudo-code has been removed (conditional logic replaced with descriptions)
 - Commands are action-oriented prompts
 - No complex orchestration or frameworks
-- Three new essential commands added (debug, refactor, deploy)
+- YAML field standardized to `tools` (not `allowed-tools`)
+- No placeholders like `[INSERT_XXX]` - commands work as-is
+- Clear documentation when to use general vs specific commands
 - Performance optimized (reduced token usage by ~30%)
+
+## Critical Lessons Learned (NEVER FORGET)
+
+### ⚠️ MANDATORY COMPLIANCE ITEMS
+These were discovered through deep assessment and MUST be maintained:
+
+1. **Command Count Accuracy**: There are exactly 26 commands (24 main + 2 initialization)
+   - Documentation MUST match actual file count
+   - Use "Claude Code commands" instead of specific numbers when possible
+
+2. **YAML Field Standard**: ALWAYS use `tools:` not `allowed-tools:`
+   - This is the correct field name per Claude Code specifications
+   - All 26 commands have been standardized to this
+
+3. **XML Pseudo-Code Ban**: NO non-executable XML tags
+   - ❌ WRONG: `<if-issues-found>`, `<simple-mode>`, conditional blocks
+   - ✅ RIGHT: Descriptive text like "For simple functions: Basic tests"
+   - Semantic XML for structure is fine, but no fake logic
+
+4. **Command Size Limits**: Maximum 40-50 lines (100 absolute max)
+   - Commands like `test`, `build`, `analyze`, `start` were reduced from 150+ to ~35 lines
+   - Brevity improves performance and clarity
+
+5. **No Placeholders**: Commands must work immediately
+   - ❌ WRONG: `[INSERT_PROJECT_NAME]`, `[count]` variables
+   - ✅ RIGHT: Complete, ready-to-use commands
+
+6. **Clear Command Hierarchy**: Document overlaps explicitly
+   - `/test` is general adaptive, `/test-unit` etc. are specific
+   - `/analyze` is comprehensive, `/project-analysis` is legacy
+   - `/build` is full feature, `/implement` is TDD-focused
+   - `/start` is recommended, `/orchestrate` is comprehensive
+
+7. **Project Organization**: Keep reports in `docs/reports/`
+   - Status files belong in subdirectories, not root
+   - Update all references when moving files
 
 ## For LLM Agents
 
 ### When working on this project:
 1. Commands are prompts that guide Claude's behavior
-2. Keep commands simple (40-50 lines)
+2. Keep commands simple (40-50 lines) - this is CRITICAL
 3. Use Claude's native tools directly
 4. Don't create complex systems that can't work in stateless environment
 5. Test commands by running them in Claude Code
+6. ALWAYS check the "Critical Lessons Learned" section above
 
 ### Available tools you should use in commands:
 - Read, Write, Edit, MultiEdit
@@ -197,5 +263,6 @@ All 22 commands follow our simplicity principle:
 
 ---
 
-*Last updated: 2025-01-10*
+*Last updated: 2025-01-11*
 *This file is the single source of truth for project context*
+*Critical lessons section added to prevent regression*

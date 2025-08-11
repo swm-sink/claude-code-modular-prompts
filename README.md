@@ -20,7 +20,7 @@ cd conductor-commands
 A collection of Claude Code slash commands that make Claude take action using its native tools. 
 
 **Key Features:**
-- 19 ready-to-use commands
+- Ready-to-use commands
 - Simple 40-50 line prompts
 - Action-oriented design
 - Pure Claude Code native
@@ -29,14 +29,14 @@ For detailed project information, see [`CLAUDE.md`](CLAUDE.md).
 
 ## Available Commands
 
-See [`CLAUDE.md#available-commands`](CLAUDE.md#available-commands) for the complete list of 19 commands organized by category.
+See [`CLAUDE.md#available-commands`](CLAUDE.md#available-commands) for the complete list of commands organized by category.
 
 ## Documentation
 
 - [`CLAUDE.md`](CLAUDE.md) - Complete project context and guidelines
 - [`docs/COMMAND-CREATION-GUIDE.md`](docs/COMMAND-CREATION-GUIDE.md) - How to create commands
 - [`TESTING-STRATEGY.md`](TESTING-STRATEGY.md) - Testing approach
-- [`PROJECT-STATUS.md`](PROJECT-STATUS.md) - Current project status
+- [`docs/reports/PROJECT-STATUS.md`](docs/reports/PROJECT-STATUS.md) - Current project status
 
 ## Philosophy
 
