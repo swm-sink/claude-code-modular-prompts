@@ -2,7 +2,7 @@
 name: help
 description: Get help with Conductor Commands
 usage: "/help [command-name]"
-allowed-tools: [Read, Glob]
+tools: [Read, Glob]
 ---
 
 # Conductor Commands Help
@@ -10,10 +10,15 @@ allowed-tools: [Read, Glob]
 Type `/help <command>` for details or see all commands below.
 
 ## Getting Started
-`/welcome` - Interactive guide  
+`/welcome` - Interactive guide
+`/start` - Project initialization
 `/orchestrate` - Full project setup
-`/quick-setup` - Fast initialization
-`/initialize` - Minimal structure
+`/setup` - Project configuration
+
+## Core Commands
+`/analyze` - Comprehensive analysis
+`/build` - Build features with TDD
+`/test` - Generate tests
 
 ## Development
 `/implement` - TDD feature building
@@ -22,22 +27,27 @@ Type `/help <command>` for details or see all commands below.
 `/refactor` - Safe code improvement
 `/debug` - Issue troubleshooting
 
-## Analysis
+## Analysis & Quality
 `/project-analysis` - Codebase analysis
 `/explore` - Deep exploration
 `/discover` - Pattern discovery
 `/anti-pattern-audit` - Find issues
+`/validate` - Quality validation
 
-## Testing
+## Testing (Specific)
 `/test-unit` - Unit tests
 `/test-integration` - Integration tests
 `/test-e2e` - End-to-end tests
-`/validate` - Quality validation
 
 ## Operations
 `/commit` - Git commits
 `/deploy` - Deployment prep
 `/context-generation` - Create CLAUDE.md
-`/setup` - Project configuration
+
+## Initialization Commands
+`/initialize` - Minimal structure
+`/quick-setup` - Fast initialization
+
+*Total: 26 commands*
 
 Need specific help? Just ask!
